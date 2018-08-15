@@ -528,5 +528,29 @@
 			"result": "Platinum x250",
 			"colorResult": "#b7b7b7"
 		}
+	],
+	"two": [{
+			"name": "Extreme Polishing",
+			"time": "1:00",
+			"ingredientOne": "Silver x100",
+			"colorOne": "#D9D9D9",
+			"ingredientTwo": "Silver x100",
+			"colorTwo": "#D9D9D9",
+			"result": "Glass x1",
+			"colorResult": "#DF902C"
+		}
+	],
+	"three": [{
+			"name": "Extreme Polishing",
+			"time": "1:00",
+			"ingredientOne": "Silver x100",
+			"colorOne": "#D9D9D9",
+			"ingredientTwo": "Silver x100",
+			"colorTwo": "#D9D9D9",
+			"ingredientThree": "Silver x100",
+			"colorThree": "#D9D9D9",
+			"result": "Glass x1",
+			"colorResult": "#DF902C"
+		}
 	]
 }
