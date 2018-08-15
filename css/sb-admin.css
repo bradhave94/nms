@@ -388,3 +388,67 @@ div#loading-gif {
  div#dataTable_filter label {
     font-weight: bold;
 }
+
+td img {
+    width: 40px;
+    height: 40px;
+	margin-right: 10px;
+}
+
+td span {
+    top: 3.2px;
+    position: relative;
+}
+
+div#content-wrapper {
+    position: relative;
+	background-size: cover;
+}
+
+div.home {
+    background-image: url(https://nmswp.azureedge.net/wp-content/uploads/2018/07/homepage-features-build-1920x900-2.jpg);
+}
+
+div.oneslot {
+    background-image: url(https://nmswp.azureedge.net/wp-content/uploads/2018/07/homepage-features-command-1920x900.jpg);
+}
+
+div.twoslot {
+    background-image: url(https://nmswp.azureedge.net/wp-content/uploads/2018/07/homepage-features-explore-1920x900.jpg);
+}
+
+div.threeslot {
+    background-image: url(https://nmswp.azureedge.net/wp-content/uploads/2018/07/homepage-features-community-1920x900-2.jpg);
+}
+
+div.craftingguide {
+    background-image: url(https://nmswp.azureedge.net/wp-content/themes/nomanssky/img/patterns/bg-long-huge.jpg);
+}
+
+footer.sticky-footer {
+    z-index: 1;
+    width: 100%;
+    background: url(https://nmswp.azureedge.net/wp-content/themes/nomanssky/img/patterns/bg-long-huge.jpg);
+    color: #fff;
+	background-size: cover;
+}
+
+div#slotWrapper {
+    background: #1C2E3A;
+	color: #fff;
+}
+
+div#content-wrapper:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    opacity: .7;
+}
+
+#content-wrapper .container-fluid {
+    z-index: 1;
+    position: relative;
+}
