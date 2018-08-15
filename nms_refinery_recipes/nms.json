@@ -54,14 +54,6 @@
 			"colorOne": "#D86564",
 			"result": "Condensed Carbon (150)",
 			"colorResult": "#D86564"
-		},
-		{
-			"name": "Rare Metal Detoxification",
-			"time": "2",
-			"ingredientOne": "Rare Metal Element (1)",
-			"colorOne": "#b7b7b7",
-			"result": "Pure Ferrite (150)",
-			"colorResult": "#cccccc"
 		}
 	]
 }
