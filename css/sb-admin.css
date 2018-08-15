@@ -3,6 +3,24 @@
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
  */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@font-face {
+    font-family: 'geosanslight-nmsregular';
+    src: url(fonts/geonms-webfont.eot);
+    src: url(fonts/geonms-webfont.eot?#iefix) format("embedded-opentype"), url(fonts/geonms-webfont.woff) format("woff"), url(fonts/geonms-webfont.ttf) format("truetype"), url(fonts/geonms-webfont.svg#geosanslight-nmsregular) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "geosanslight-nmsregular",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 7.5px;
+    letter-spacing: .75rem;
+    text-transform: uppercase;
+    margin: 0;
+}
 
 html {
   position: relative;
@@ -11,6 +29,7 @@ html {
 
 body {
   height: 100%;
+  font-family: Raleway,Helvetica,Arial,sans-serif;
 }
 
 #wrapper {
@@ -451,4 +470,8 @@ div#content-wrapper:after {
 #content-wrapper .container-fluid {
     z-index: 1;
     position: relative;
+}
+
+.oneslot .table td:last-child, .oneslot .table td:nth-child(3) {
+    padding: 1.25em;
 }
