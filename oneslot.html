@@ -89,17 +89,17 @@
 								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 									<thead>
 										<tr>
-											<th>Ingredient 1 (count)</th>
-											<th>Result (count)</th>
-											<th>Time (in seconds)</th>
+											<th>Input</th>
+											<th>Output</th>
+											<th>Time To Process</th>
 											<th>Name</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
-											<th>Ingredient 1 (count)</th>
-											<th>Result (count)</th>
-											<th>Time (in seconds)</th>
+											<th>Input</th>
+											<th>Output</th>
+											<th>Time To Process</th>
 											<th>Name</th>
 										</tr>
 									</tfoot>
@@ -155,7 +155,7 @@
 			})
 			.done(function(data) {
 				$(data.one).each(function(index, item) {
-					$( "#oneslot" ).append( '<tr> <td bgcolor="'+ item.colorOne +'">' + item.ingredientOne + '</td> <td bgcolor="'+ item.colorResult +'">' + item.result + '</td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+					$( "#oneslot" ).append( '<tr>  <td style="color:'+ item.textColorOne +'" bgcolor="'+ item.colorOne +'">' + item.ingredientOne + '</td> <td style="color:'+ item.textColorResult +'" bgcolor="'+ item.colorResult +'">' + item.result + '</td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
 				})
 
 				console.log('success', data) 

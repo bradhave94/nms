@@ -1,67 +1,532 @@
 {
 	"one": [{
 			"name": "Extreme Polishing",
-			"time": "60",
-			"ingredientOne": "Silver [100]",
+			"time": "1:00",
+			"ingredientOne": "Silver x100",
 			"colorOne": "#D9D9D9",
-			"result": "Glass [1]",
+			"result": "Glass x1",
 			"colorResult": "#DF902C"
 		},
 		{
 			"name": "Metal Restructuring",
-			"time": "0.6",
-			"ingredientOne": "Gold [1]",
+			"time": "1:00",
+			"ingredientOne": "Gold x1",
 			"colorOne": "#ECC117",
-			"result": "Pyrite [1]",
+			"result": "Pyrite x1",
 			"colorResult": "#F0B165"
 		},
 		{
 			"name": "Reality Warping",
-			"time": "0.6",
-			"ingredientOne": "Platinum [5]",
+			"time": "1:00",
+			"ingredientOne": "Platinum x5",
 			"colorOne": "#b7b7b7",
-			"result": "Nanite Clusters [1]",
+			"result": "Nanite Clusters x1",
+			"colorResult": "#D1E2F4"
+		},
+		{
+			"name": "Reality Filtering - <strong>Bug: Invalid item output, gives big ball</strong>",
+			"time": "0:30",
+			"ingredientOne": "Pugneum x10",
+			"colorOne": "#b7b7b7",
+			"result": "Nanite Clusters x1",
 			"colorResult": "#D1E2F4"
 		},
 		{
 			"name": "Assisted Decomposition",
-			"time": "0.6",
-			"ingredientOne": "Mordite [3]",
+			"time": "1:00",
+			"ingredientOne": "Mordite x3",
 			"colorOne": "#8D7CC5",
-			"result": "Coprite [1]",
+			"result": "Coprite x1",
 			"colorResult": "#A25F3B"
 		},
 		{
 			"name": "Inefficient Burn",
-			"time": "0.2",
-			"ingredientOne": "Oxygen [1]",
+			"time": "0:20",
+			"ingredientOne": "Oxygen x1",
 			"colorOne": "#E49898",
-			"result": "Carbon",
+			"result": "Carbon x1",
 			"colorResult": "#D86564"
 		},
 		{
 			"name": "Condense Di-hydrogen",
-			"time": "120",
-			"ingredientOne": "Di-hydrogen [30]",
+			"time": "2:00",
+			"ingredientOne": "Di-hydrogen x30",
 			"colorOne": "#A8C2F6",
-			"result": "Di-hydrogen Jelly [1]",
+			"result": "Di-hydrogen Jelly x1",
 			"colorResult": "#D86564"
 		},
 		{
 			"name": "Carbon Melting",
-			"time": "2",
-			"ingredientOne": "Carbon Crystal [1]",
+			"time": "3:20",
+			"ingredientOne": "Carbon Crystal x1",
 			"colorOne": "#D86564",
-			"result": "Condensed Carbon [150]",
+			"result": "Condensed Carbon x150",
 			"colorResult": "#D86564"
 		},
 		{
 			"name": "Rare Metal Detoxification",
-			"time": "2",
-			"ingredientOne": "Rare Metal Element [1]",
+			"time": "3:20",
+			"ingredientOne": "Rare Metal Element x1",
 			"colorOne": "#b7b7b7",
-			"result": "Pure Ferrite [150]",
+			"result": "Pure Ferrite x150",
 			"colorResult": "#cccccc"
+		},
+		{
+			"name": "Cobalt Cracking",
+			"time": "3:20",
+			"ingredientOne": "TetraCobalt x1",
+			"colorOne": "#9fc5e8",
+			"result": "Ionised Cobalt x150",
+			"colorResult": "#9fc5e8"
+		},
+		{
+			"name": "Chloride De-latticing",
+			"time": "3:20",
+			"ingredientOne": "Chloride Lattice x1",
+			"colorOne": "#b6d7a8",
+			"result": "Chlorine x150",
+			"colorResult": "#b6d7a8"
+		},
+		{
+			"name": "Sodium Stabilisation",
+			"time": "3:20",
+			"ingredientOne": "Destablised Sodium x1",
+			"colorOne": "#f6b26b",
+			"result": "Sodium Nitrate x150",
+			"colorResult": "#f6b26b"
+		},
+		{
+			"name": "Oxygen Decompression",
+			"time": "3:20",
+			"ingredientOne": "Superoxide Crystal x1",
+			"colorOne": "#e06666",
+			"result": "Oxygen x150",
+			"colorResult": "#ea9999"
+		},
+		{
+			"name": "Di-hydrogen Cycling",
+			"time": "1:00",
+			"ingredientOne": "Di-hydrogen Jelly x1",
+			"colorOne": "#e06666",
+			"result": "Di-hydrogen x50",
+			"colorResult": "#a4c2f4"
+		},
+		{
+			"name": "Ionise Mineral",
+			"time": "1:30",
+			"ingredientOne": "Cobalt x2",
+			"colorOne": "#9fc5e8",
+			"result": "Ionised Cobalt x1",
+			"colorResult": "#9fc5e8"
+		},
+		{
+			"name": "Deionise Mineral",
+			"time": "0:30",
+			"ingredientOne": "Ionised Cobalt x1",
+			"colorOne": "#9fc5e8",
+			"result": "Cobalt x2",
+			"colorResult": "#9fc5e8"
+		},
+		{
+			"name": "Condense Carbon",
+			"time": "0:45",
+			"ingredientOne": "Carbon x2",
+			"colorOne": "#e06666",
+			"result": "Condensed Carbon x1",
+			"colorResult": "#e06666"
+		},
+		{
+			"name": "Release Carbon",
+			"time": "0:30",
+			"ingredientOne": "Condensed Carbon x1",
+			"colorOne": "#e06666",
+			"result": "Carbon x2",
+			"colorResult": "#e06666"
+		},
+		{
+			"name": "Process Sodium",
+			"time": "1:00",
+			"ingredientOne": "Sodium x2",
+			"colorOne": "#f6b26b",
+			"result": "Sodium Nitrate x1",
+			"colorResult": "#f6b26b"
+		},
+		{
+			"name": "Free Sodium",
+			"time": "1:00",
+			"ingredientOne": "Sodium Nitrate x1",
+			"colorOne": "#f6b26b",
+			"result": "Sodium x2",
+			"colorResult": "#f6b26b"
+		},
+		{
+			"name": "Extract Metallic Elements",
+			"time": "0:30",
+			"ingredientOne": "Ferrite Dust x1",
+			"colorOne": "#b7b7b7",
+			"result": "Pure Ferrite x1",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Magnetise Metal",
+			"time": "1:00",
+			"ingredientOne": "Pure Ferrite x2",
+			"colorOne": "#b7b7b7",
+			"result": "Magnetised Ferrite x1",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Demagnetise Metal",
+			"time": "0:40",
+			"ingredientOne": "Magnetised Ferrite x1",
+			"colorOne": "#b7b7b7",
+			"result": "Pure Ferrite x2",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Extract Chromatic Material",
+			"time": "1:10",
+			"ingredientOne": "Cadmium x1",
+			"colorOne": "#e06666",
+			"result": "Chromatic Metal x1",
+			"colorResult": "#85200c",
+			"textColorResult": "#fff"
+		},
+		{
+			"name": "Extract Chromatic Material",
+			"time": "0:25",
+			"ingredientOne": "Indium x2",
+			"colorOne": "#6d9eeb",
+			"result": "Chromatic Metal x4",
+			"colorResult": "#85200c",
+			"textColorResult": "#fff"
+		},
+		{
+			"name": "Extract Chromatic Material",
+			"time": "0:40",
+			"ingredientOne": "Emeril x2",
+			"colorOne": "#93c47d",
+			"result": "Chromatic Metal x3",
+			"colorResult": "#85200c",
+			"textColorResult": "#fff"
+		},
+		{
+			"name": "Extract Chromatic Material",
+			"time": "1:30",
+			"ingredientOne": "Copper x2",
+			"colorOne": "#f6b26b",
+			"result": "Chromatic Metal x1",
+			"colorResult": "#85200c",
+			"textColorResult": "#fff"
+		},
+		{
+			"name": "Extract Chromatic Material",
+			"time": "0:50",
+			"ingredientOne": "Activated Cadmium x1",
+			"colorOne": "#e06666",
+			"result": "Chromatic Metal x2",
+			"colorResult": "#85200c",
+			"textColorResult": "#fff"
+		},
+		{
+			"name": "Extract Chromatic Material",
+			"time": "0:40",
+			"ingredientOne": "Activated Indium x1",
+			"colorOne": "#6d9eeb",
+			"result": "Chromatic Metal x4",
+			"colorResult": "#85200c",
+			"textColorResult": "#fff"
+		},
+		{
+			"name": "Extract Chromatic Material",
+			"time": "0:50",
+			"ingredientOne": "Activated Emeril x1",
+			"colorOne": "#93c47d",
+			"result": "Chromatic Metal x3",
+			"colorResult": "#85200c",
+			"textColorResult": "#fff"
+		},
+		{
+			"name": "Extract Chromatic Material",
+			"time": "1:00",
+			"ingredientOne": "Activated Copper x1",
+			"colorOne": "#f6b26b",
+			"result": "Chromatic Metal x1",
+			"colorResult": "#85200c",
+			"textColorResult": "#fff"
+		},
+		{
+			"name": "Ferrite Dust Extraction",
+			"time": "1:30",
+			"ingredientOne": "Paraffinium x1",
+			"colorOne": "#666666",
+			"textColorOne": "#fff",
+			"result": "Ferrite Dust x1",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Ferrite Dust Extraction",
+			"time": "1:30",
+			"ingredientOne": "Pyrite x1",
+			"colorOne": "#f6b26b",
+			"result": "Ferrite Dust x1",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Ferrite Dust Extraction",
+			"time": "1:30",
+			"ingredientOne": "Ammonia x1",
+			"colorOne": "#93c47d",
+			"result": "Ferrite Dust x1",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Ferrite Dust Extraction",
+			"time": "1:30",
+			"ingredientOne": "Uranium x1",
+			"colorOne": "#ffd966",
+			"result": "Ferrite Dust x1",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Ferrite Dust Extraction",
+			"time": "1:30",
+			"ingredientOne": "Dioxite x1",
+			"colorOne": "#6d9eeb",
+			"result": "Ferrite Dust x1",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Ferrite Dust Extraction",
+			"time": "1:30",
+			"ingredientOne": "Phosphorus x1",
+			"colorOne": "#e06666",
+			"result": "Ferrite Dust x1",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Concentrate Salt",
+			"time": "1:30",
+			"ingredientOne": "Salt x2",
+			"colorOne": "#b6d7a8",
+			"result": "Chlorine x1",
+			"colorResult": "#b6d7a8"
+		},
+		{
+			"name": "RECIPE_WATER2 - <strong>Bug: missing language string</strong>",
+			"time": "1:00",
+			"ingredientOne": "Chlorine x1",
+			"colorOne": "#b6d7a8",
+			"result": "Salt x1",
+			"colorResult": "#b6d7a8"
+		},
+		{
+			"name": "Gas Transfer",
+			"time": "1:30",
+			"ingredientOne": "Sulphurine x3",
+			"colorOne": "#93c47d",
+			"result": "Radon x1",
+			"colorResult": "#8e7cc3"
+		},
+		{
+			"name": "Gas Transfer",
+			"time": "1:30",
+			"ingredientOne": "Radon x3",
+			"colorOne": "#8e7cc3",
+			"result": "Nitrogen x1",
+			"colorResult": "#f6b26b"
+		},
+		{
+			"name": "Gas Transfer",
+			"time": "1:30",
+			"ingredientOne": "Nitrogen x3",
+			"colorOne": "#f6b26b",
+			"result": "Sulphurine x1",
+			"colorResult": "#93c47d"
+		},
+		{
+			"name": "Recyle Waste Materials",
+			"time": "2:30",
+			"ingredientOne": "Residual Goop x1",
+			"colorOne": "#7c9d5d",
+			"result": "Viscous Fluid x1",
+			"colorResult": "#7c9d5d"
+		},
+		{
+			"name": "Recyle Waste Materials",
+			"time": "2:30",
+			"ingredientOne": "Runaway Mould x5",
+			"colorOne": "#7c9d5d",
+			"result": "Nanite Clusters x1",
+			"colorResult": "#cfe2f3"
+		},
+		{
+			"name": "Recyle Waste Materials",
+			"time": "2:30",
+			"ingredientOne": "Rusted Metal x5",
+			"colorOne": "#7c9d5d",
+			"result": "Ferrite Dust x1",
+			"colorResult": "#cccccc"
+		},
+		{
+			"name": "Recyle Waste Materials",
+			"time": "2:30",
+			"ingredientOne": "Living Slime x1",
+			"colorOne": "#7c9d5d",
+			"result": "Runaway Mould x1",
+			"colorResult": "#7c9d5d"
+		},
+		{
+			"name": "Recyle Waste Materials",
+			"time": "2:30",
+			"ingredientOne": "Viscous Fluid x1",
+			"colorOne": "#7c9d5d",
+			"result": "Living Slime x1",
+			"colorResult": "#7c9d5d"
+		},
+		{
+			"name": "Tritium Cycling",
+			"time": "1:30",
+			"ingredientOne": "Tritium x5",
+			"colorOne": "#f3f3f3",
+			"result": "Di-hydrogen x1",
+			"colorResult": "#a4c2f4"
+		},
+		{
+			"name": "Burn Plantlife",
+			"time": "0:30",
+			"ingredientOne": "Fungal Mould x1",
+			"colorOne": "#b6d7a8",
+			"result": "Carbon x2",
+			"colorResult": "#e06666"
+		},
+		{
+			"name": "Burn Plantlife",
+			"time": "0:30",
+			"ingredientOne": "Frost Crystal x1",
+			"colorOne": "#6fa8dc",
+			"result": "Carbon x2",
+			"colorResult": "#e06666"
+		},
+		{
+			"name": "Burn Plantlife",
+			"time": "0:30",
+			"ingredientOne": "Gamma Root x1",
+			"colorOne": "#f6b26b",
+			"result": "Carbon x2",
+			"colorResult": "#e06666"
+		},
+		{
+			"name": "Burn Plantlife",
+			"time": "0:30",
+			"ingredientOne": "Cactus Flesh x1",
+			"colorOne": "#93c47d",
+			"result": "Carbon x2",
+			"colorResult": "#e06666"
+		},
+		{
+			"name": "Burn Plantlife",
+			"time": "0:30",
+			"ingredientOne": "Solanium x1",
+			"colorOne": "#cc4125",
+			"result": "Carbon x2",
+			"colorResult": "#e06666"
+		},
+		{
+			"name": "Burn Plantlife",
+			"time": "0:30",
+			"ingredientOne": "Star Bulb x1",
+			"colorOne": "#9fc5e8",
+			"result": "Carbon x2",
+			"colorResult": "#e06666"
+		},
+		{
+			"name": "Extract Organic Sodium",
+			"time": "1:00",
+			"ingredientOne": "Marrow Bulb x1",
+			"colorOne": "#7c9d5d",
+			"result": "Sodium x1",
+			"colorResult": "#f6b26b"
+		},
+		{
+			"name": "Extract Micro-Bubbles",
+			"time": "1:00",
+			"ingredientOne": "Kelp Sac x1",
+			"colorOne": "#6fa8dc",
+			"result": "Oxygen x1",
+			"colorResult": "#ea9999"
+		},
+		{
+			"name": "Organic Reassembly",
+			"time": "3:00",
+			"ingredientOne": "Coprite x3",
+			"colorOne": "#a7603e",
+			"result": "Mordite x2",
+			"colorResult": "#8e7cc3"
+		},
+		{
+			"name": "Extreme Alloy Separation",
+			"time": "5:00",
+			"ingredientOne": "Aronium x1",
+			"colorOne": "#e69138",
+			"result": "Silver x250",
+			"colorResult": "#d9d9d9"
+		},
+		{
+			"name": "Extreme Alloy Separation",
+			"time": "5:00",
+			"ingredientOne": "Dirty Bronze x1",
+			"colorOne": "#e69138",
+			"result": "Silver x250",
+			"colorResult": "#d9d9d9"
+		},
+		{
+			"name": "Extreme Alloy Separation",
+			"time": "4:10",
+			"ingredientOne": "Herox x1",
+			"colorOne": "#e69138",
+			"result": "Silver x250",
+			"colorResult": "#d9d9d9"
+		},
+		{
+			"name": "Extreme Alloy Separation",
+			"time": "5:00",
+			"ingredientOne": "Lemmium x1",
+			"colorOne": "#e69138",
+			"result": "Gold x125",
+			"colorResult": "#f1c232"
+		},
+		{
+			"name": "Extreme Alloy Separation",
+			"time": "5:00",
+			"ingredientOne": "Magno-Gold x1",
+			"colorOne": "#e69138",
+			"result": "Gold x125",
+			"colorResult": "#f1c232"
+		},
+		{
+			"name": "Extreme Alloy Separation",
+			"time": "5:00",
+			"ingredientOne": "Grantine x1",
+			"colorOne": "#e69138",
+			"result": "Gold x125",
+			"colorResult": "#f1c232"
+		},
+		{
+			"name": "Extreme Alloy Separation",
+			"time": "5:00",
+			"ingredientOne": "Geodesite x1",
+			"colorOne": "#e69138",
+			"result": "Platinum x250",
+			"colorResult": "#b7b7b7"
+		},
+		{
+			"name": "Extreme Alloy Separation",
+			"time": "5:00",
+			"ingredientOne": "Iridesite x1",
+			"colorOne": "#e69138",
+			"result": "Platinum x250",
+			"colorResult": "#b7b7b7"
 		}
 	]
 }

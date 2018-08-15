@@ -384,3 +384,7 @@ div#loading-gif {
  div#loading-gif img {
    width: 75px;
  }
+
+ div#dataTable_filter label {
+    font-weight: bold;
+}
