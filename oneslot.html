@@ -210,7 +210,7 @@
 			})
 			.done(function(data) {
 				$(data.one).each(function(index, item) {
-					$( "#oneslot" ).append( '<tr>  <td style="color:'+ item.textColorOne +'" bgcolor="'+ item.colorOne +'">' + item.ingredientOne + '</td> <td style="color:'+ item.textColorResult +'" bgcolor="'+ item.colorResult +'">' + item.result + '</td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+					$( "#oneslot" ).append( '<tr>  <td style="color:'+ item.textColorOne +'" bgcolor="'+ item.colorOne +'"><img src="img/'+item.imageOne +'.jpg" /><span>' + item.ingredientOne + '</span></td> <td style="color:'+ item.textColorResult +'" bgcolor="'+ item.colorResult +'"><img src="img/'+item.imageOne +'.jpg" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
 				})
 				console.log('success', data) 
 				$('#dataTable').DataTable();
