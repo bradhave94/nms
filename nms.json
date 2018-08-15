@@ -2,39 +2,39 @@
 	"one": [{
 			"name": "Extreme Polishing",
 			"time": "60",
-			"ingredientOne": "Silver (100)",
+			"ingredientOne": "Silver [100]",
 			"colorOne": "#D9D9D9",
-			"result": "Glass (1)",
+			"result": "Glass [1]",
 			"colorResult": "#DF902C"
 		},
 		{
 			"name": "Metal Restructuring",
 			"time": "0.6",
-			"ingredientOne": "Gold (1)",
+			"ingredientOne": "Gold [1]",
 			"colorOne": "#ECC117",
-			"result": "Pyrite (1)",
+			"result": "Pyrite [1]",
 			"colorResult": "#F0B165"
 		},
 		{
 			"name": "Reality Warping",
 			"time": "0.6",
-			"ingredientOne": "Platinum (5)",
+			"ingredientOne": "Platinum [5]",
 			"colorOne": "#b7b7b7",
-			"result": "Nanite Clusters (1)",
+			"result": "Nanite Clusters [1]",
 			"colorResult": "#D1E2F4"
 		},
 		{
 			"name": "Assisted Decomposition",
 			"time": "0.6",
-			"ingredientOne": "Mordite (3)",
+			"ingredientOne": "Mordite [3]",
 			"colorOne": "#8D7CC5",
-			"result": "Coprite (1)",
+			"result": "Coprite [1]",
 			"colorResult": "#A25F3B"
 		},
 		{
 			"name": "Inefficient Burn",
 			"time": "0.2",
-			"ingredientOne": "Oxygen (1)",
+			"ingredientOne": "Oxygen [1]",
 			"colorOne": "#E49898",
 			"result": "Carbon",
 			"colorResult": "#D86564"
@@ -42,25 +42,25 @@
 		{
 			"name": "Condense Di-hydrogen",
 			"time": "120",
-			"ingredientOne": "Di-hydrogen (30)",
+			"ingredientOne": "Di-hydrogen [30]",
 			"colorOne": "#A8C2F6",
-			"result": "Di-hydrogen Jelly (1)",
+			"result": "Di-hydrogen Jelly [1]",
 			"colorResult": "#D86564"
 		},
 		{
 			"name": "Carbon Melting",
 			"time": "2",
-			"ingredientOne": "Carbon Crystal (1)",
+			"ingredientOne": "Carbon Crystal [1]",
 			"colorOne": "#D86564",
-			"result": "Condensed Carbon (150)",
+			"result": "Condensed Carbon [150]",
 			"colorResult": "#D86564"
 		},
 		{
 			"name": "Rare Metal Detoxification",
 			"time": "2",
-			"ingredientOne": "Rare Metal Element (1)",
+			"ingredientOne": "Rare Metal Element [1]",
 			"colorOne": "#b7b7b7",
-			"result": "Pure Ferrite (150)",
+			"result": "Pure Ferrite [150]",
 			"colorResult": "#cccccc"
 		}
 	]
