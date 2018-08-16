@@ -425,31 +425,35 @@ div#content-wrapper {
 }
 
 div.home {
-    background-image: url(https://nmswp.azureedge.net/wp-content/uploads/2018/07/homepage-features-build-1920x900-2.jpg);
+    background-image: url(../img/next.jpg);
 }
 
 div.oneslot {
-    background-image: url(https://nmswp.azureedge.net/wp-content/uploads/2018/07/homepage-features-command-1920x900.jpg);
+    background-image: url(../img/command.jpg);
 }
 
 div.twoslot {
-    background-image: url(https://nmswp.azureedge.net/wp-content/uploads/2018/07/homepage-features-explore-1920x900.jpg);
+    background-image: url(../img/exsplore.jpg);
 }
 
 div.threeslot {
-    background-image: url(https://nmswp.azureedge.net/wp-content/uploads/2018/07/homepage-features-community-1920x900-2.jpg);
+    background-image: url(../img/community.jpg);
 }
 
 div.craftingguide {
-    background-image: url(https://nmswp.azureedge.net/wp-content/themes/nomanssky/img/patterns/bg-long-huge.jpg);
+    background-image: url(../img/bg-long-huge.jpg);
 }
 
 footer.sticky-footer {
     z-index: 1;
     width: 100%;
-    background: url(https://nmswp.azureedge.net/wp-content/themes/nomanssky/img/patterns/bg-long-huge.jpg);
+    background: url(../img/bg-long-huge.jpg);
     color: #fff;
 	background-size: cover;
+}
+
+.card-header img {
+    width: 60px;
 }
 
 div#slotWrapper {
@@ -468,7 +472,7 @@ div#content-wrapper:after {
 }
 
 #content-wrapper .container-fluid {
-    z-index: 1;
+    z-index: 2;
     position: relative;
 }
 
@@ -599,4 +603,85 @@ a.dropdown-item:hover {
 
 a.dropdown-item.active {
     background: #000;
+}
+
+.card-header {
+    background-color: #2E7BA1;
+}
+
+.card-header span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding-left: 10px;
+    display: inline-block;
+    top: 2px;
+    position: relative;
+}
+
+.card-header {
+    background-image: url(../img/resources.png);
+    background-position: center;
+    position: relative;
+}
+
+.card-header:after {
+    content: "";
+    background: #000;
+    top: 0px;
+    width: 100%;
+    height: 101%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: .9;
+}
+
+.card-header img, .card-header span {
+    position: relative;
+    z-index: 1;
+}
+
+.book {
+  z-index: 1;position:  absolute;bottom:  0;left:  0;right:  0;
+}
+
+.text-center.book img {
+    width: 900px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .text-center.book img {
+   display: none;
+  }
+
+  ul.sidebar.navbar-nav {
+      display: none;
+  }
+
+  a.navbar-brand.mr-1 {
+      width: 100%;
+  }
+
+  div.dataTables_wrapper div.dataTables_length {
+    text-align: left;
+  }
+
+  div#dataTable_wrapper > .row > .col-sm-12 {
+    padding: 0;
+    text-align: left;
+  }
+
+ div#dataTable_wrapper > .row > .col-sm-12  label {
+    width: 100%;
+    font-weight: 100 !important;
+  }
+  
+  table.table-bordered.dataTable td {
+    text-align: center;
+    padding: .5em !important;
+    vertical-align: middle;
+  }
+
 }
