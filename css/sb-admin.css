@@ -596,3 +596,7 @@ a.dropdown-item:hover {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+a.dropdown-item.active {
+    background: #000;
+}
