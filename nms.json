@@ -3,10 +3,8 @@
 			"name": "Extreme Polishing",
 			"time": "1:00",
 			"ingredientOne": "Silver x100",
-			"colorOne": "#5B5A55",
 			"imgOne": "silver",
 			"result": "Glass x1",
-			"colorResult": "#F3A921",
 			"imgResult": "glass"
 		},
 		{
@@ -14,9 +12,7 @@
 			"time": "1:00",
 			"ingredientOne": "Gold x1",
 			"imgOne": "gold",
-			"colorOne": "#6C5015",
 			"result": "Pyrite x1",
-			"colorResult": "#925210",
 			"imgResult": "pyrite"
 		},
 		{
@@ -24,9 +20,7 @@
 			"time": "1:00",
 			"ingredientOne": "Platinum x5",
 			"imgOne": "platinum",
-			"colorOne": "#385457",
 			"result": "Nanite Clusters x1",
-			"colorResult": "#1A2E41",
 			"imgResult": "nanite"
 		},
 		{
@@ -34,9 +28,7 @@
 			"time": "0:30",
 			"ingredientOne": "Pugneum x10",
 			"imgOne": "pugneum",
-			"colorOne": "#5B5A55",
 			"result": "Nanite Clusters x1",
-			"colorResult": "#1A2E41",
 			"imgResult": "nanite"
 		},
 		{
@@ -44,9 +36,7 @@
 			"time": "1:00",
 			"imgOne": "mordite",
 			"ingredientOne": "Mordite x3",
-			"colorOne": "#3A2538",
 			"result": "Coprite x1",
-			"colorResult": "#503F2D",
 			"imgResult": "coprite"
 		},
 		{
@@ -54,9 +44,7 @@
 			"time": "0:20",
 			"imgOne": "oxygen",
 			"ingredientOne": "Oxygen x1",
-			"colorOne": "#7D3633",
 			"result": "Carbon x1",
-			"colorResult": "#7C3231",
 			"imgResult": "carbon"
 		},
 		{
@@ -64,9 +52,7 @@
 			"time": "2:00",
 			"imgOne": "di-hydrogen",
 			"ingredientOne": "Di-hydrogen x30",
-			"colorOne": "#27465C",
 			"result": "Di-hydrogen Jelly x1",
-			"colorResult": "#C21744",
 			"imgResult": "di-hydrogen-jelly"
 			
 		},
@@ -75,9 +61,7 @@
 			"time": "3:20",
 			"imgOne": "carbon-crystal",
 			"ingredientOne": "Carbon Crystal x1",
-			"colorOne": "#BC3731",
 			"result": "Condensed Carbon x150",
-			"colorResult": "#7C322E",
 			"imgResult": "condensed-carbon"
 		},
 		{
@@ -85,9 +69,7 @@
 			"time": "3:20",
 			"imgOne": "rare-metal-element",
 			"ingredientOne": "Rare Metal Element x1",
-			"colorOne": "#8B7F73",
 			"result": "Pure Ferrite x150",
-			"colorResult": "#5A5B54",
 			"imgResult": "pure-ferrite"
 		},
 		{
@@ -95,9 +77,7 @@
 			"time": "3:20",
 			"imgOne": "tetracobalt",
 			"ingredientOne": "TetraCobalt x1",
-			"colorOne": "#2E4765",
 			"result": "Ionised Cobalt x150",
-			"colorResult": "#0A4762",
 			"imgResult": "ionised-cobalt"
 		},
 		{
@@ -105,29 +85,23 @@
 			"time": "3:20",
 			"imgOne": "destablised-sodium",
 			"ingredientOne": "Destablised Sodium x1",
-			"colorOne": "#F06E16",
 			"result": "Sodium x150",
-			"colorResult": "#9C4E1D",
 			"imgResult": "sodium"
 		},
 		{
 			"name": "Sodium Stabilisation",
 			"time": "3:20",
-			"imgOne": "chloride-lattice",
-			"ingredientOne": "Chloride Lattice x1",
-			"colorOne": "#1F8943",
-			"result": "Sodium Nitrate x150",
-			"colorResult": "#AB5021",
-			"imgResult": "sodium-nitrate"
+			"imgOne": "destablised-sodium",
+			"ingredientOne": "Destablised Sodium x1",
+			"imgResult": "sodium-nitrate",
+			"result": "Sodium Nitrate x150"
 		},
 		{
 			"name": "Oxygen Decompression",
 			"time": "3:20",
 			"imgOne": "superoxide-crystal",
 			"ingredientOne": "Superoxide Crystal x1",
-			"colorOne": "#B83430",
 			"result": "Oxygen x150",
-			"colorResult": "#7D3633",
 			"imgResult": "oxygen"
 		},
 		{
@@ -135,9 +109,7 @@
 			"time": "1:00",
 			"imgOne": "di-hydrogen-jelly",
 			"ingredientOne": "Di-hydrogen Jelly x1",
-			"colorOne": "#C11746",
 			"result": "Di-hydrogen x50",
-			"colorResult": "#28455C",
 			"imgResult": "di-hydrogen"
 		},
 		{
@@ -145,9 +117,7 @@
 			"time": "1:30",
 			"imgOne": "ionised-cobalt",
 			"ingredientOne": "Cobalt x2",
-			"colorOne": "#0A4762",
 			"result": "Ionised Cobalt x1",
-			"colorResult": "#0A4762",
 			"imgResult": "ionised-cobalt"
 		},
 		{
@@ -155,9 +125,7 @@
 			"time": "0:30",
 			"imgOne": "ionised-cobalt",
 			"ingredientOne": "Ionised Cobalt x1",
-			"colorOne": "#0A4762",
 			"result": "Cobalt x2",
-			"colorResult": "#0A4762",
 			"imgResult": "ionised-cobalt"
 		},
 		{
@@ -165,19 +133,15 @@
 			"time": "0:45",
 			"imgOne": "carbon",
 			"ingredientOne": "Carbon x2",
-			"colorOne": "#7C3231",
-			"result": "Condensed Carbon x1",
-			"colorResult": "#7C322E",
-			"imgResult": "condensed-carbon"
+			"imgResult": "condensed-carbon",
+			"result": "Condensed Carbon x1"
 		},
 		{
 			"name": "Release Carbon",
 			"time": "0:30",
 			"imgOne": "condensed-carbon",
 			"ingredientOne": "Condensed Carbon x1",
-			"colorOne": "#7C322E",
 			"result": "Carbon x2",
-			"colorResult": "#7C3231",
 			"imgResult": "carbon"
 		},
 		{
@@ -185,9 +149,7 @@
 			"time": "1:00",
 			"imgOne": "sodium",
 			"ingredientOne": "Sodium x2",
-			"colorOne": "#9C4E1D",
 			"result": "Sodium Nitrate x1",
-			"colorResult": "#AB5021",
 			"imgResult": "sodium-nitrate"
 		},
 		{
@@ -195,9 +157,7 @@
 			"time": "1:00",
 			"imgOne": "sodium-nitrate",
 			"ingredientOne": "Sodium Nitrate x1",
-			"colorOne": "#AB5021",
 			"result": "Sodium x2",
-			"colorResult": "#9C4E1D",
 			"imgResult": "sodium"
 		},
 		{
@@ -205,9 +165,7 @@
 			"time": "0:30",
 			"imgOne": "ferrite-dust",
 			"ingredientOne": "Ferrite Dust x1",
-			"colorOne": "#5B5A55",
 			"result": "Pure Ferrite x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "pure-ferrite"
 		},
 		{
@@ -215,9 +173,7 @@
 			"time": "1:00",
 			"imgOne": "pure-ferrite",
 			"ingredientOne": "Pure Ferrite x2",
-			"colorOne": "#5B5A55",
 			"result": "Magnetised Ferrite x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "magnetised-ferrite"
 		},
 		{
@@ -225,9 +181,7 @@
 			"time": "0:40",
 			"imgOne": "magnetised-ferrite",
 			"ingredientOne": "Magnetised Ferrite x1",
-			"colorOne": "#5B5A55",
 			"result": "Pure Ferrite x2",
-			"colorResult": "#5B5A55",
 			"imgResult": "pure-ferrite"
 			
 		},
@@ -236,9 +190,7 @@
 			"time": "1:10",
 			"imgOne": "cadmium",
 			"ingredientOne": "Cadmium x1",
-			"colorOne": "#591215",
 			"result": "Chromatic Metal x1",
-			"colorResult": "#221214",
 			"textColorResult": "#fff",
 			"imgResult": "chromatic-metal"
 		},
@@ -247,9 +199,7 @@
 			"time": "0:25",
 			"imgOne": "indium",
 			"ingredientOne": "Indium x2",
-			"colorOne": "#0C335E",
 			"result": "Chromatic Metal x4",
-			"colorResult": "#221214",
 			"textColorResult": "#fff",
 			"imgResult": "chromatic-metal"
 		},
@@ -258,9 +208,7 @@
 			"time": "0:40",
 			"imgOne": "emeril",
 			"ingredientOne": "Emeril x2",
-			"colorOne": "#294D23",
 			"result": "Chromatic Metal x3",
-			"colorResult": "#221214",
 			"textColorResult": "#fff",
 			"imgResult": "chromatic-metal"
 		},
@@ -269,9 +217,7 @@
 			"time": "1:30",
 			"imgOne": "copper",
 			"ingredientOne": "Copper x2",
-			"colorOne": "#966714",
 			"result": "Chromatic Metal x1",
-			"colorResult": "#221214",
 			"textColorResult": "#fff",
 			"imgResult": "chromatic-metal"
 		},
@@ -280,9 +226,7 @@
 			"time": "0:50",
 			"imgOne": "cadmium",
 			"ingredientOne": "Activated Cadmium x1",
-			"colorOne": "#591215",
 			"result": "Chromatic Metal x2",
-			"colorResult": "#221214",
 			"textColorResult": "#fff",
 			"imgResult": "chromatic-metal"
 		},
@@ -291,9 +235,7 @@
 			"time": "0:40",
 			"imgOne": "indium",
 			"ingredientOne": "Activated Indium x1",
-			"colorOne": "#0C335E",
 			"result": "Chromatic Metal x4",
-			"colorResult": "#221214",
 			"textColorResult": "#fff",
 			"imgResult": "chromatic-metal"
 		},
@@ -302,9 +244,7 @@
 			"time": "0:50",
 			"imgOne": "emeril",
 			"ingredientOne": "Activated Emeril x1",
-			"colorOne": "#294D23",
 			"result": "Chromatic Metal x3",
-			"colorResult": "#221214",
 			"textColorResult": "#fff",
 			"imgResult": "chromatic-metal"
 		},
@@ -313,9 +253,7 @@
 			"time": "1:00",
 			"imgOne": "copper",
 			"ingredientOne": "Activated Copper x1",
-			"colorOne": "#966714",
 			"result": "Chromatic Metal x1",
-			"colorResult": "#221214",
 			"textColorResult": "#fff",
 			"imgResult": "chromatic-metal"
 		},
@@ -324,10 +262,8 @@
 			"time": "1:30",
 			"imgOne": "paraffinium",
 			"ingredientOne": "Paraffinium x1",
-			"colorOne": "#383442",
 			"textColorOne": "#fff",
 			"result": "Ferrite Dust x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "ferrite-dust"
 		},
 		{
@@ -335,9 +271,7 @@
 			"time": "1:30",
 			"imgOne": "pyrite",
 			"ingredientOne": "Pyrite x1",
-			"colorOne": "#925210",
 			"result": "Ferrite Dust x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "ferrite-dust"
 		},
 		{
@@ -345,9 +279,7 @@
 			"time": "1:30",
 			"imgOne": "ammonia",
 			"ingredientOne": "Ammonia x1",
-			"colorOne": "#0A733C",
 			"result": "Ferrite Dust x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "ferrite-dust"
 		},
 		{
@@ -355,9 +287,7 @@
 			"time": "1:30",
 			"imgOne": "uranium",
 			"ingredientOne": "Uranium x1",
-			"colorOne": "#A27713",
 			"result": "Ferrite Dust x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "ferrite-dust"
 		},
 		{
@@ -365,9 +295,7 @@
 			"time": "1:30",
 			"imgOne": "dioxite",
 			"ingredientOne": "Dioxite x1",
-			"colorOne": "#1A3D8E",
 			"result": "Ferrite Dust x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "ferrite-dust"
 		},
 		{
@@ -375,9 +303,7 @@
 			"time": "1:30",
 			"imgOne": "phoshorus",
 			"ingredientOne": "Phosphorus x1",
-			"colorOne": "#8E230F",
 			"result": "Ferrite Dust x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "ferrite-dust"
 		},
 		{
@@ -385,9 +311,7 @@
 			"time": "1:30",
 			"imgOne": "salt",
 			"ingredientOne": "Salt x2",
-			"colorOne": "#1B623A",
 			"result": "Chlorine x1",
-			"colorResult": "#09753D",
 			"imgResult": "chlorine"
 		},
 		{
@@ -395,9 +319,7 @@
 			"time": "1:00",
 			"imgOne": "sodium",
 			"ingredientOne": "Sodium x1",
-			"colorOne": "#9C4E1D",
 			"result": "Salt x1",
-			"colorResult": "#1B623A",
 			"imgResult": "salt"
 		},
 		{
@@ -405,9 +327,7 @@
 			"time": "1:30",
 			"imgOne": "sulphurine",
 			"ingredientOne": "Sulphurine x3",
-			"colorOne": "#1F4633",
 			"result": "Radon x1",
-			"colorResult": "#372F5E",
 			"imgResult": "radon"
 		},
 		{
@@ -415,9 +335,7 @@
 			"time": "1:30",
 			"imgOne": "radon",
 			"ingredientOne": "Radon x3",
-			"colorOne": "#372F5E",
 			"result": "Nitrogen x1",
-			"colorResult": "#8D6622",
 			"imgResult": "nitrogen"
 		},
 		{
@@ -425,9 +343,7 @@
 			"time": "1:30",
 			"imgOne": "nitrogen",
 			"ingredientOne": "Nitrogen x3",
-			"colorOne": "#8D6622",
 			"result": "Sulphurine x1",
-			"colorResult": "#214534",
 			"imgResult": "sulphurine"
 		},
 		{
@@ -435,9 +351,7 @@
 			"time": "2:30",
 			"imgOne": "residual-goop",
 			"ingredientOne": "Residual Goop x1",
-			"colorOne": "#4E6C33",
 			"result": "Viscous Fluid x1",
-			"colorResult": "#40512E",
 			"imgResult": "viscous-fluid"
 		},
 		{
@@ -445,9 +359,7 @@
 			"time": "2:30",
 			"imgOne": "runaway-mould",
 			"ingredientOne": "Runaway Mould x5",
-			"colorOne": "#40512E",
 			"result": "Nanite Clusters x1",
-			"colorResult": "#1A2E41",
 			"imgResult": "nanite"
 		},
 		{
@@ -455,9 +367,7 @@
 			"time": "2:30",
 			"imgOne": "rusted-metal",
 			"ingredientOne": "Rusted Metal x5",
-			"colorOne": "#40512E",
 			"result": "Ferrite Dust x1",
-			"colorResult": "#5B5A55",
 			"imgResult": "ferrite-dust"
 		},
 		{
@@ -465,9 +375,7 @@
 			"time": "2:30",
 			"imgOne": "living-slime",
 			"ingredientOne": "Living Slime x1",
-			"colorOne": "#40512F",
 			"result": "Runaway Mould x1",
-			"colorResult": "#40512E",
 			"imgResult": "runaway-mould"
 		},
 		{
@@ -475,9 +383,7 @@
 			"time": "2:30",
 			"imgOne": "viscous-fluid",
 			"ingredientOne": "Viscous Fluid x1",
-			"colorOne": "#40512E",
 			"result": "Living Slime x1",
-			"colorResult": "#40512F",
 			"imgResult": "living-slime"
 		},
 		{
@@ -485,10 +391,8 @@
 			"time": "1:30",
 			"imgOne": "tritium",
 			"ingredientOne": "Tritium x5",
-			"colorOne": "#DBDCCF",
 			"textColorOne": "#333",
 			"result": "Di-hydrogen x1",
-			"colorResult": "#26465D",
 			"imgResult": "di-hydrogen"
 		},
 		{
@@ -496,9 +400,7 @@
 			"time": "0:30",
 			"imgOne": "fungal-mould",
 			"ingredientOne": "Fungal Mould x1",
-			"colorOne": "#09753D",
 			"result": "Carbon x2",
-			"colorResult": "#7C3231",
 			"imgResult": "carbon"
 		},
 		{
@@ -506,9 +408,7 @@
 			"time": "0:30",
 			"imgOne": "frost-crystal",
 			"ingredientOne": "Frost Crystal x1",
-			"colorOne": "#193E8C",
 			"result": "Carbon x2",
-			"colorResult": "#7C3231",
 			"imgResult": "carbon"
 		},
 		{
@@ -516,9 +416,7 @@
 			"time": "0:30",
 			"imgOne": "gamma-root",
 			"ingredientOne": "Gamma Root x1",
-			"colorOne": "#7E5E21",
 			"result": "Carbon x2",
-			"colorResult": "#7C3231",
 			"imgResult": "carbon"
 		},
 		{
@@ -526,9 +424,7 @@
 			"time": "0:30",
 			"imgOne": "cactus-flesh",
 			"ingredientOne": "Cactus Flesh x1",
-			"colorOne": "#1C6827",
 			"result": "Carbon x2",
-			"colorResult": "#7C3231",
 			"imgResult": "carbon"
 		},
 		{
@@ -536,9 +432,7 @@
 			"time": "0:30",
 			"imgOne": "solanium",
 			"ingredientOne": "Solanium x1",
-			"colorOne": "#3F6E83",
 			"result": "Carbon x2",
-			"colorResult": "#7C3231",
 			"imgResult": "carbon"
 		},
 		{
@@ -546,9 +440,7 @@
 			"time": "0:30",
 			"imgOne": "star-bulb",
 			"ingredientOne": "Star Bulb x1",
-			"colorOne": "#1D6473",
 			"result": "Carbon x2",
-			"colorResult": "#7C3231",
 			"imgResult": "carbon"
 		},
 		{
@@ -556,9 +448,7 @@
 			"time": "1:00",
 			"imgOne": "marrow-bulb",
 			"ingredientOne": "Marrow Bulb x1",
-			"colorOne": "#445730",
 			"result": "Sodium x1",
-			"colorResult": "#9C4E1D",
 			"imgResult": "sodium"
 		},
 		{
@@ -566,9 +456,7 @@
 			"time": "1:00",
 			"imgOne": "kelp-sac",
 			"ingredientOne": "Kelp Sac x1",
-			"colorOne": "#0C4965",
 			"result": "Oxygen x1",
-			"colorResult": "#7D3633",
 			"imgResult": "oxygen"
 		},
 		{
@@ -576,9 +464,7 @@
 			"time": "3:00",
 			"imgOne": "coprite",
 			"ingredientOne": "Coprite x3",
-			"colorOne": "#503F2D",
 			"result": "Mordite x2",
-			"colorResult": "#3A2538",
 			"imgResult": "mordite"
 		},
 		{
@@ -587,10 +473,7 @@
 			"imgOne": "aronium",
 			"textColorOne": "#333",
 			"ingredientOne": "Aronium x1",
-			"colorOne": "#F6A723",
-			"textColorOne": "#333",
 			"result": "Silver x250",
-			"colorResult": "#5B5A56",
 			"imgResult": "silver"
 		},
 		{
@@ -599,9 +482,7 @@
 			"imgOne": "dirty-bronze",
 			"textColorOne": "#333",
 			"ingredientOne": "Dirty Bronze x1",
-			"colorOne": "#F6A723",
 			"result": "Silver x250",
-			"colorResult": "#5B5A56",
 			"imgResult": "silver"
 		},
 		{
@@ -610,9 +491,7 @@
 			"imgOne": "herox",
 			"textColorOne": "#333",
 			"ingredientOne": "Herox x1",
-			"colorOne": "#F6A723",
 			"result": "Silver x250",
-			"colorResult": "#5B5A56",
 			"imgResult": "silver"
 		},
 		{
@@ -621,9 +500,7 @@
 			"imgOne": "lemmium",
 			"textColorOne": "#333",
 			"ingredientOne": "Lemmium x1",
-			"colorOne": "#F6A723",
 			"result": "Gold x125",
-			"colorResult": "#6E5012",
 			"imgResult": "gold"
 		},
 		{
@@ -632,9 +509,7 @@
 			"imgOne": "magno-gold",
 			"textColorOne": "#333",
 			"ingredientOne": "Magno-Gold x1",
-			"colorOne": "#F6A723",
 			"result": "Gold x125",
-			"colorResult": "#6E5012",
 			"imgResult": "gold"
 		},
 		{
@@ -643,9 +518,7 @@
 			"imgOne": "grantine",
 			"textColorOne": "#333",
 			"ingredientOne": "Grantine x1",
-			"colorOne": "#F6A723",
 			"result": "Gold x125",
-			"colorResult": "#6E5012",
 			"imgResult": "gold"
 		},
 		{
@@ -654,9 +527,7 @@
 			"imgOne": "geodesite",
 			"textColorOne": "#333",
 			"ingredientOne": "Geodesite x1",
-			"colorOne": "#F6A723",
 			"result": "Platinum x250",
-			"colorResult": "#385457",
 			"imgResult": "platinum"
 		},
 		{
@@ -665,36 +536,42 @@
 			"imgOne": "iridesite",
 			"textColorOne": "#333",
 			"ingredientOne": "Iridesite x1",
-			"colorOne": "#F6A723",
 			"result": "Platinum x250",
-			"colorResult": "#385457",
 			"imgResult": "platinum"
 		}
 	],
 	"two": [{
-			"name": "Extreme Polishing",
+			"name": "Alchemical Construction",
+			"time": "1:00",
+			"imgOne": "coprite",
+			"ingredientOne": "Coprite x1",
+			"imgTwo": "residual-goop",
+			"ingredientTwo": "Residual Goop x1",
+			"imgResult": "gold",
+			"result": "Gold x1"
+		},
+		{
+			"name": "Transmutation",
 			"time": "1:00",
 			"imgOne": "silver",
-			"ingredientOne": "Silver x100",
-			"colorOne": "#5B5A56",
-			"ingredientTwo": "Silver x100",
-			"colorTwo": "#5B5A56",
-			"result": "Glass x1",
-			"colorResult": "#DF902C"
+			"ingredientOne": "Silver x1",
+			"imgTwo": "gold",
+			"ingredientTwo": "Gold x1",
+			"imgResult": "platinum",
+			"result": "Platinum x1"
 		}
 	],
 	"three": [{
-			"name": "Extreme Polishing",
-			"time": "1:00",
-			"imgOne": "silver",
-			"ingredientOne": "Silver x100",
-			"colorOne": "#5B5A56",
-			"ingredientTwo": "Silver x100",
-			"colorTwo": "#5B5A56",
-			"ingredientThree": "Silver x100",
-			"colorThree": "#5B5A56",
-			"result": "Glass x1",
-			"colorResult": "#DF902C"
+			"name": "Rare Metal Fusion",
+			"time": "2:00",
+			"imgOne": "ferrite-dust",
+			"ingredientOne": "Ferrite Dust x35",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite x35",
+			"imgThree": "magnetised-ferrite",
+			"ingredientThree": "Magnetised Ferrite x35",
+			"imgResult": "rare-metal-element",
+			"result": "Rare Metal Element x1"
 		}
 	]
 }

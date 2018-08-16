@@ -475,3 +475,128 @@ div#content-wrapper:after {
 .oneslot .table td:last-child, .oneslot .table td:nth-child(3) {
     padding: 1.25em;
 }
+
+.twoslot .table td:last-child, .twoslot .table td:nth-child(4) {
+    padding: 1.25em;
+}
+
+.threeslot .table td:last-child, .threeslot .table td:nth-child(5) {
+    padding: 1.25em;
+}
+
+.card.bg-basic.o-hidden.h-100 {
+    border: 2px solid #ff8400;
+    background: #000;
+    color: #fff;
+    -webkit-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+}
+
+.card.bg-basic.o-hidden.h-100 .card-footer {
+    border-top: 2px solid #ff8400;
+    -webkit-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+}
+
+.card.bg-basic.o-hidden.h-100 a {
+  color: #fff;
+}
+
+.card.bg-basic.o-hidden.h-100 .card-footer:hover   {
+  background: #ff8400;
+}
+
+a.card-footer.clearfix.small.z-1 {
+    text-shadow: 0 2px 0 rgba(0,0,0,.4);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+nav.navbar.navbar-expand.navbar-dark.bg-dark.static-top {
+    padding: 0;
+    background-color: #000 !important;
+    box-shadow: 0 0 30px 0 #000;
+}
+
+a.navbar-brand.mr-1 {
+    padding: 0;
+}
+
+ul.sidebar.navbar-nav {
+    background: #000;
+}
+
+ol.breadcrumb {
+    background: #000;
+    border: 2px solid #ff8400;
+}
+
+ol.breadcrumb:first-child a {
+    color: #ff8400;
+}
+
+ol.breadcrumb:nth-child(2) {
+    color: #fff;
+}
+
+p.text-center.credits, p.text-center.credits a {
+    color: #fff;
+}
+
+li#dataTable_previous a, li#dataTable_next a {
+    background: #000;
+    border: 2px solid #ff8400;
+    color: #fff;
+}
+
+.page-item.active .page-link {
+    background: #ff8400;
+    border: 2px solid #ff8400;
+}
+
+.page-link {
+    background: #000;
+    color: #fff;
+    border: 2px solid #ff8400;
+}
+
+select.custom-select.custom-select-sm.form-control.form-control-sm {
+    background: #000;
+    color: #fff;
+    border: 2px solid #ff8400;
+}
+
+input.form-control.form-control-sm {
+    background: #000;
+    color: #fff;
+    border: 2px solid #ff8400;
+}
+
+.dropdown-menu {
+    background: #000;
+}
+
+a.dropdown-item {
+      -webkit-transition: all ease-in-out .2s;
+    -o-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a.dropdown-item:hover {
+  background: #000;
+  color: #fff;
+}
+
+.mr-5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a.dropdown-item.active {
+    background: #000;
+}
