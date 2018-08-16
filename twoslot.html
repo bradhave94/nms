@@ -42,7 +42,7 @@
 
 		<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-			<a class="navbar-brand mr-1" href="#">NMS Next Guide</a>
+			<a class="navbar-brand mr-1"><img src="img/logo-nms.png"/></a>
 
 		</nav>
 
@@ -79,14 +79,6 @@
 
 				<div class="container-fluid">
 
-					<!-- Breadcrumbs-->
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="#">Home</a>
-						</li>
-						<li class="breadcrumb-item active">2 Slot</li>
-					</ol>
-
 					<!-- DataTables Example -->
 					<div class="card mb-3" id="slotWrapper">
 						<div class="card-header">
@@ -94,7 +86,7 @@
 							2 Slot Recipes</div>
 						<div class="card-body">
 							<div class="table-responsive">
-								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" id="dataTable">
 									<thead>
 										<tr>
 											<th>Input 1</th>
@@ -189,7 +181,7 @@
 		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
 		<!-- Custom scripts for all pages-->
-		<script src="js/sb-admin.min.js"></script>
+		<script src="js/sb-admin.js"></script>
 
     <script type="text/javascript">
       $.ajax({
@@ -200,14 +192,12 @@
       })
       .done(function(data) {
         $(data.two).each(function(index, item) {
-          $( "#twoslot" ).append( '<tr>  <td style="color:'+ item.textColorOne +'" bgcolor="'+ item.colorOne +'">' + item.ingredientOne + '</td> <td style="color:'+ item.textColorTwo +'" bgcolor="'+ item.colorTwo +'">' + item.ingredientTwo + '</td> <td style="color:'+ item.textColorResult +'" bgcolor="'+ item.colorResult +'">' + item.result + '</td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
-        })
-
-        console.log('success', data) 
-
+					$( "#twoslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.jpg" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.ingredientTwo)+'" style="color:'+ item.textColorTwo +'"><img src="img/'+item.imgTwo +'.jpg" /><span>' + item.ingredientTwo + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.jpg" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+				})
         $('#dataTable').DataTable();
         $('#slotWrapper').fadeIn();
         $('#loading-gif').fadeOut();
+				
       })
       .fail(function(xhr) {
         console.log('error', xhr);

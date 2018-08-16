@@ -44,7 +44,7 @@
 
 		<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-			<a class="navbar-brand mr-1" href="#">NMS Next Guide</a>
+			<a class="navbar-brand mr-1"><img src="img/logo-nms.png"/></a>
 
 		</nav>
 
@@ -80,14 +80,6 @@
 			<div id="content-wrapper" class="oneslot">
 
 				<div class="container-fluid">
-
-					<!-- Breadcrumbs-->
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="#">Home</a>
-						</li>
-						<li class="breadcrumb-item active">1 Slot</li>
-					</ol>
 
 					<!-- DataTables Example -->
 					<div class="card mb-3" id="slotWrapper" style="display: none">
@@ -190,7 +182,7 @@
 		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
 		<!-- Custom scripts for all pages-->
-		<script src="js/sb-admin.min.js"></script>
+		<script src="js/sb-admin.js"></script>
 		<script type="text/javascript">
 			$.ajax({
 					url: 'nms.json',
@@ -200,12 +192,12 @@
 			})
 			.done(function(data) {
 				$(data.one).each(function(index, item) {
-					$( "#oneslot" ).append( '<tr>  <td style="color:'+ item.textColorOne +'" bgcolor="'+ item.colorOne +'"><img src="img/'+item.imgOne +'.jpg" /><span>' + item.ingredientOne + '</span></td> <td style="color:'+ item.textColorResult +'" bgcolor="'+ item.colorResult +'"><img src="img/'+item.imgResult  +'.jpg" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+					$( "#oneslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.jpg" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.jpg" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
 				})
-				console.log('success', data) 
 				$('#dataTable').DataTable();
 				$('#slotWrapper').fadeIn();
 				$('#loading-gif').fadeOut();
+				
 			})
 			.fail(function(xhr) {
 				console.log('error', xhr);
