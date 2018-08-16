@@ -2,16 +2,15 @@
 <html lang="en">
 
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62190812-5"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62190812-5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-62190812-5');
-    </script>
+		gtag('config', 'UA-62190812-5');
+		</script>
 
 
 		<meta charset="utf-8">
@@ -22,7 +21,7 @@
 
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
 
-		<title>3 Slot | NMS Next 1.55 Refinery Recipes</title>
+		<title>Portable Refiner | NMS Next 1.55 Refinery Recipes</title>
 
 		<!-- Bootstrap core CSS-->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,9 +35,12 @@
 		<!-- Custom styles for this template-->
 		<link href="css/sb-admin.css" rel="stylesheet">
 
+		<script src="vendor/jquery/jquery.min.js"></script>
+
 	</head>
 
 	<body id="page-top">
+		<div id="loading-gif" class="text-center"><img src="img/loading.gif" /></div>
 
 		<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
@@ -62,9 +64,9 @@
 						<span>Refiners</span>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="pagesDropdown">
-						<a class="dropdown-item" href="oneslot.html">1 Slot</a>
-						<a class="dropdown-item" href="twoslot.html">2 Slot</a>
-						<a class="dropdown-item active" href="threeslot.html">3 Slot</a>
+						<a class="dropdown-item active" href="portable-refiner.html">Portable Refiner</a>
+						<a class="dropdown-item" href="medium-refiner.html">Medium Refiner</a>
+						<a class="dropdown-item" href="large-refiner.html">Large Refiner</a>
 					</div>
 				</li>
 				<li class="nav-item">
@@ -75,23 +77,21 @@
 				</li>
 			</ul>
 
-			<div id="content-wrapper" class="threeslot">
+			<div id="content-wrapper" class="oneslot">
 
-				<div class="container-fluid"> 
+				<div class="container-fluid">
 
 					<!-- DataTables Example -->
-					<div class="card mb-3" id="slotWrapper">
+					<div class="card mb-3" id="slotWrapper" style="display: none">
 						<div class="card-header">
-							<img src="img/large.png">
-							<span>Large Refiner</span></div>
+							<img src="img/portable.png">
+							<span>Portable Refiner</span></div>
 						<div class="card-body">
 							<div class="table-responsive">
-							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" id="dataTable">
+								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 									<thead>
 										<tr>
-											<th>Input 1</th>
-                      <th>Input 2</th>
-                      <th>Input 3</th>
+											<th>Input</th>
 											<th>Output</th>
 											<th>Time To Process</th>
 											<th>Name</th>
@@ -99,30 +99,28 @@
 									</thead>
 									<tfoot>
 										<tr>
-											<th>Input 1</th>
-                      <th>Input 2</th>
-                      <th>Input 3</th>
+											<th>Input</th>
 											<th>Output</th>
 											<th>Time To Process</th>
 											<th>Name</th>
 										</tr>
 									</tfoot>
-                  <tbody id="threeslot">
+									<tbody id="oneslot">
 
-                    </tbody>
+									</tbody>
 								</table>
 							</div>
 						</div>
 					</div>
 
-          <!-- Icon Cards-->
+			<!-- Icon Cards-->
           <div class="row">
             <div class="col-xl-4 col-sm-12 mb-4">
               <div class="card bg-basic o-hidden h-100">
                 <div class="card-body">
-                  <div class="mr-5">1 Slot Refiner</div>
+                  <div class="mr-5"><img src="img/medium.png" /> <span>Medium Refiner</span></div>
                 </div>
-                <a class="card-footer clearfix small z-1" href="oneslot.html">
+                <a class="card-footer clearfix small z-1" href="medium-refiner.html">
                   <span class="float-left">View recipes</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
@@ -133,9 +131,9 @@
             <div class="col-xl-4 col-sm-12 mb-4">
               <div class="card bg-basic o-hidden h-100">
                 <div class="card-body">
-                  <div class="mr-5">2 Slot Refiner</div>
+                  <div class="mr-5"><img src="img/large.png" /> <span>Large Refiner</span></div>
                 </div>
-                <a class="card-footer clearfix small z-1" href="twoslot.html">
+                <a class="card-footer clearfix small z-1" href="large-refiner.html">
                   <span class="float-left">View recipes</span>
                   <span class="float-right">
                     <i class="fas fa-angle-right"></i>
@@ -146,7 +144,7 @@
             <div class="col-xl-4 col-sm-12 mb-4">
               <div class="card bg-basic o-hidden h-100">
                 <div class="card-body">
-                  <div class="mr-5">Crafting Guide</div>
+                  <div class="mr-5"><img src="img/resources.png" /> <span>Crafting Guide</span></div>
                 </div>
                 <a class="card-footer clearfix small z-1" href="crafting-guide.html">
                   <span class="float-left">View guide</span>
@@ -157,6 +155,7 @@
               </div>
             </div>
           </div>
+
 
 				</div>
 				<!-- /.container-fluid -->
@@ -173,42 +172,41 @@
 		</a>
 
 		<!-- Bootstrap core JavaScript-->
-		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 		<!-- Core plugin JavaScript-->
 		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
 		<!-- Page level plugin JavaScript-->
-		<script src="vendor/datatables/jquery.dataTables.js"></script>
+		<script src="vendor/datatables/jquery.dataTables.js" ></script>
 		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
 		<!-- Custom scripts for all pages-->
 		<script src="js/sb-admin.js"></script>
-
-    <script type="text/javascript">
-      $.ajax({
-        url: 'nms.json',
-        dataType: 'json',
-        type: 'get',
-        cache: false
-      })
-      .done(function(data) {
-        $(data.three).each(function(index, item) {
-					$( "#threeslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.jpg" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.ingredientTwo)+'" style="color:'+ item.textColorTwo +'"><img src="img/'+item.imgTwo +'.jpg" /><span>' + item.ingredientTwo + '</span></td> <td bgcolor="'+getColor(item.ingredientThree)+'" style="color:'+ item.textColorThree +'"><img src="img/'+item.imgThree +'.jpg" /><span>' + item.ingredientThree + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.jpg" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+		<script type="text/javascript">
+			$.ajax({
+					url: 'nms.json',
+					dataType: 'json',
+					type: 'get',
+					cache: false
+			})
+			.done(function(data) {
+				$(data.one).each(function(index, item) {
+					$( "#oneslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.jpg" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.jpg" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
 				})
-
-        $('#dataTable').DataTable();
-        $('#slotWrapper').fadeIn();
-        $('#loading-gif').fadeOut();
-      })
-      .fail(function(xhr) {
-        console.log('error', xhr);
-        $('#loading-gif').fadeOut();
-        alert('Error: ' + xhr.statusText)
-      });
-    </script>
+				$('#dataTable').DataTable();
+				$('#slotWrapper').fadeIn();
+				$('#loading-gif').fadeOut();
+				
+			})
+			.fail(function(xhr) {
+				console.log('error', xhr);
+				$('#loading-gif').fadeOut();
+				alert('Error: ' + xhr.statusText)
+			});
+		</script>
 
 	</body>
 
 </html>
+

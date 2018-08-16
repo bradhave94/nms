@@ -651,6 +651,17 @@ a.dropdown-item.active {
     max-width: 100%;
 }
 
+.mr-5 img {
+    height: 50px;
+    width: auto;
+}
+
+.mr-5 span {
+    top: 4px;
+    position: relative;
+    padding-left: 10px;
+}
+
 @media (max-width: 767px) {
   .text-center.book img {
    display: none;
