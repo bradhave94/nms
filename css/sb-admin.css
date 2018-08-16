@@ -497,6 +497,7 @@ div#content-wrapper:after {
     transition: all ease-in-out .2s;
 }
 
+
 .card.bg-basic.o-hidden.h-100 .card-footer {
     border-top: 2px solid #ff8400;
     -webkit-transition: all ease-in-out .2s;
@@ -662,9 +663,43 @@ a.dropdown-item.active {
     padding-left: 10px;
 }
 
+.table td {
+    vertical-align: middle;
+}
+
+@media (max-width: 1171px) {
+  td span {
+      width: 200px;
+      display: block;
+      padding-top: 5px;
+  }
+    table.table-bordered.dataTable td {
+      text-align: center;
+      padding: 1em !important;
+      vertical-align: middle;
+  } 
+}
+
 @media (max-width: 767px) {
+    .card.bg-basic.o-hidden.h-100 span {
+      display: block;
+    }
+
+    .card.bg-basic.o-hidden.h-100 {
+    text-align: center;
+  }
+
+  .card .mr-5 {
+      width: 100%;
+  }
+
+  a.card-footer.clearfix.small.z-1 .float-left {
+      display: inline-block;
+      float: none !important;
+  }
+
   .text-center.book img {
-   display: none;
+    display: none;
   }
 
   ul.sidebar.navbar-nav {
