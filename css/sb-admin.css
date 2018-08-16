@@ -433,7 +433,7 @@ div.oneslot {
 }
 
 div.twoslot {
-    background-image: url(../img/exsplore.jpg);
+    background-image: url(../img/featured.jpg);
 }
 
 div.threeslot {
@@ -442,14 +442,6 @@ div.threeslot {
 
 div.craftingguide {
     background-image: url(../img/bg-long-huge.jpg);
-}
-
-footer.sticky-footer {
-    z-index: 1;
-    width: 100%;
-    background: url(../img/bg-long-huge.jpg);
-    color: #fff;
-	background-size: cover;
 }
 
 .card-header img {
@@ -485,6 +477,14 @@ div#content-wrapper:after {
 }
 
 .threeslot .table td:last-child, .threeslot .table td:nth-child(5) {
+    padding: 1.25em;
+}
+
+.threeslot .table td:last-child, .threeslot .table td:nth-child(5) {
+    padding: 1.25em;
+}
+
+.all .table td:last-child, .all .table td:nth-child(6) {
     padding: 1.25em;
 }
 

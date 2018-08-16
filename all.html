@@ -21,7 +21,7 @@
 
 		<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
 
-		<title>Portable Refiner | NMS Next 1.55 Refinery Recipes</title>
+		<title>All Refiners | NMS Next 1.55 Refinery Recipes</title>
 
 		<!-- Bootstrap core CSS-->
 		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -64,10 +64,10 @@
 						<span>Refiners</span>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="pagesDropdown">
-						<a class="dropdown-item active" href="portable-refiner.html">Portable Refiner</a>
+						<a class="dropdown-item" href="portable-refiner.html">Portable Refiner</a>
 						<a class="dropdown-item" href="medium-refiner.html">Medium Refiner</a>
 						<a class="dropdown-item" href="large-refiner.html">Large Refiner</a>
-						<a class="dropdown-item" href="all.html">All Refiners</a>
+						<a class="dropdown-item active" href="all.html">All Refiners</a>
 					</div>
 				</li>
 				<li class="nav-item">
@@ -78,7 +78,7 @@
 				</li>
 			</ul>
 
-			<div id="content-wrapper" class="oneslot">
+			<div id="content-wrapper" class="all">
 
 				<div class="container-fluid">
 
@@ -92,7 +92,10 @@
 								<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 									<thead>
 										<tr>
-											<th>Input</th>
+											<th>Refiner</th>
+											<th>Input 1</th>
+											<th>Input 2</th>
+											<th>Input 3</th>
 											<th>Output</th>
 											<th>Time To Process</th>
 											<th>Name</th>
@@ -100,13 +103,16 @@
 									</thead>
 									<tfoot>
 										<tr>
-											<th>Input</th>
+											<th>Refiner</th>
+											<th>Input 1</th>
+											<th>Input 2</th>
+											<th>Input 3</th>
 											<th>Output</th>
 											<th>Time To Process</th>
 											<th>Name</th>
 										</tr>
 									</tfoot>
-									<tbody id="oneslot">
+									<tbody id="all">
 
 									</tbody>
 								</table>
@@ -115,8 +121,23 @@
 					</div>
 
 			<!-- Icon Cards-->
-          <div class="row">
-            <div class="col-xl-4 col-sm-12 mb-4">
+           <div class="row">
+
+           <div class="col-xl-3 col-sm-12 mb-3">
+              <div class="card bg-basic o-hidden h-100">
+                <div class="card-body">
+                  <div class="mr-5"><img src="img/portable.png" /> <span>Portable Refiner</span></div>
+                </div>
+                <a class="card-footer clearfix small z-1" href="portable-refiner.html">
+                  <span class="float-left">View recipes</span>
+                  <span class="float-right">
+                    <i class="fas fa-angle-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-12 mb-3">
               <div class="card bg-basic o-hidden h-100">
                 <div class="card-body">
                   <div class="mr-5"><img src="img/medium.png" /> <span>Medium Refiner</span></div>
@@ -129,7 +150,8 @@
                 </a>
               </div>
             </div>
-            <div class="col-xl-4 col-sm-12 mb-4">
+
+            <div class="col-xl-3 col-sm-12 mb-3">
               <div class="card bg-basic o-hidden h-100">
                 <div class="card-body">
                   <div class="mr-5"><img src="img/large.png" /> <span>Large Refiner</span></div>
@@ -142,7 +164,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-xl-4 col-sm-12 mb-4">
+            <div class="col-xl-3 col-sm-12 mb-3">
               <div class="card bg-basic o-hidden h-100">
                 <div class="card-body">
                   <div class="mr-5"><img src="img/resources.png" /> <span>Crafting Guide</span></div>
@@ -193,10 +215,16 @@
 			})
 			.done(function(data) {
 				$(data.one).each(function(index, item) {
-					$( "#oneslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.png" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.png" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+					$( "#all" ).append( '<tr>  <td>Portable Refiner</td> <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.png" /><span>' + item.ingredientOne + '</span></td> <td></td><td></td><td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.png" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+				})
+				$(data.two).each(function(index, item) {
+					$( "#all" ).append( '<tr>  <td>Medium refiner</td> <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.png" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.ingredientTwo)+'" style="color:'+ item.textColorTwo +'"><img src="img/'+item.imgTwo +'.png" /><span>' + item.ingredientTwo + '</span></td> <td></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.png" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+				})
+				$(data.three).each(function(index, item) {
+					$( "#all" ).append( '<tr>  <td>Large Refiner</td> <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.png" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.ingredientTwo)+'" style="color:'+ item.textColorTwo +'"><img src="img/'+item.imgTwo +'.png" /><span>' + item.ingredientTwo + '</span></td> <td bgcolor="'+getColor(item.ingredientThree)+'" style="color:'+ item.textColorThree +'"><img src="img/'+item.imgThree +'.png" /><span>' + item.ingredientThree + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.png" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
 				})
 				$('#dataTable').DataTable({
-					"order": [[ 1, "asc" ]]
+					"order": [[ 4, "asc" ]]
 				});
 				$('#slotWrapper').fadeIn();
 				$('#loading-gif').fadeOut();

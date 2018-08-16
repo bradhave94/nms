@@ -80,6 +80,8 @@ function getColor(color) {
 		return "#1B623A"
 	else if (color.includes("Solanium"))
 		return "#78361E"
+	else if (color.includes("Chlorine"))
+		return "#113611"
 	else if (color.includes("Chloride Lattice"))
 		return "#1E8941"
 	else if (color.includes("Coprite"))
@@ -115,7 +117,7 @@ function getColor(color) {
 	else if (color.includes("Frost Crystal"))
 		return "#193F8C"
 	else if (color.includes("Kelp Sac"))
-		return "#0D5A71"
+		return "#1B768F"
 	else if (color.includes("Oxygen"))
 		return "#7B3430"
 	else if (color.includes("Living Slime"))
@@ -156,5 +158,15 @@ function getColor(color) {
 		return "#DDDCD0"
 	else if (color.includes("Uranium"))
 		return "#A37610"
+	else if (color.includes("Unstable Plasma"))
+		return "#C01746"
+	else if (color.includes("Warp Cell"))
+		return "#C01746"
+	else if (color.includes("Starship Launch Fuel"))
+		return "#C01746"
+	else if (color.includes("Ion Battery"))
+		return "#F3A923"
+	else if (color.includes("Life Support Gel"))
+		return "#C01746"
 
 }
