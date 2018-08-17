@@ -667,6 +667,23 @@ a.dropdown-item.active {
     vertical-align: middle;
 }
 
+span.enlarge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #b0c1be;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    z-index: 999999999;
+    display: block;
+}
+
+span.enlarge.two {
+    right: 12rem;
+}
+
 @media (max-width: 1171px) {
   td span {
       width: 200px;

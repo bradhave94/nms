@@ -106,6 +106,8 @@ function getColor(color) {
 		return "#F1AA22"
 	else if (color.includes("Lemmium"))
 		return "#F1AA22"
+	else if (color.includes("Thermic Condensate"))
+		return "#F1AA22"
 	else if (color.includes("Platinum"))
 		return "#385457"
 	else if (color.includes("Pyrite"))
@@ -168,5 +170,7 @@ function getColor(color) {
 		return "#F3A923"
 	else if (color.includes("Life Support Gel"))
 		return "#C01746"
+	else if (color.includes("Deuterium"))
+		return "#25465C"
 
 }

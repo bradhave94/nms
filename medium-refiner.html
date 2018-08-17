@@ -191,7 +191,7 @@
       })
       .done(function(data) {
         $(data.two).each(function(index, item) {
-					$( "#twoslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.png" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.ingredientTwo)+'" style="color:'+ item.textColorTwo +'"><img src="img/'+item.imgTwo +'.jpg" /><span>' + item.ingredientTwo + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.jpg" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+					$( "#twoslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.png" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.ingredientTwo)+'" style="color:'+ item.textColorTwo +'"><img src="img/'+item.imgTwo +'.png" /><span>' + item.ingredientTwo + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.png" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
 				})
         $('#dataTable').DataTable({
 					"order": [[ 2, "asc" ]]

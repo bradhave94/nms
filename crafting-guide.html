@@ -32,6 +32,8 @@
     <!-- Page level plugin CSS-->
     <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
+    <link href="css/imageviewer.css" rel="stylesheet">
+
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
 
@@ -82,9 +84,14 @@
           <div class="container-fluid">
 
             <!-- Page Content -->
-            <img style="max-width: 100%" src="img/craftguide.png">
-
+           
+            <div id="image-gallery-1" class="cf" style=" position: relative; ">
+            <span class="enlarge">Click To Enlarge</span>
+                <img style="max-width: 100%" src="img/craftguide.png" alt="No Man's Sky Crafting Guide" class="gallery-items">
+                
+            </div>
             <br><br>
+
 
             <p class="text-center credits">Credits: <a target="_blank" href="https://www.reddit.com/user/Dibilowas">https://www.reddit.com/user/Dibilowas</a></p>
 
@@ -158,6 +165,19 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
+
+    <script src="js/imageviewer.js"></script>
+
+    <script>
+    $(function () {
+        var viewer = ImageViewer();
+        $('.gallery-items').click(function () {
+            var imgSrc = this.src
+    
+            viewer.show(imgSrc);
+        });
+    });
+    </script>
 
     <!-- Demo scripts for this page-->
     <script src="js/demo/datatables-demo.js"></script>
