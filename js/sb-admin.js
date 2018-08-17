@@ -1,15 +1,15 @@
-(function($) {
+(function ($) {
 	"use strict"; // Start of use strict
 
 	// Toggle the side navigation
-	$("#sidebarToggle").click(function(e) {
+	$("#sidebarToggle").click(function (e) {
 		e.preventDefault();
 		$("body").toggleClass("sidebar-toggled");
 		$(".sidebar").toggleClass("toggled");
 	});
 
 	// Prevent the content wrapper from scrolling when the fixed side navigation hovered over
-	$('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
+	$('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function (e) {
 		if ($window.width() > 768) {
 			var e0 = e.originalEvent,
 				delta = e0.wheelDelta || -e0.detail;
@@ -19,7 +19,7 @@
 	});
 
 	// Scroll to top button appear
-	$(document).scroll(function() {
+	$(document).scroll(function () {
 		var scrollDistance = $(this).scrollTop();
 		if (scrollDistance > 100) {
 			$('.scroll-to-top').fadeIn();
@@ -29,7 +29,7 @@
 	});
 
 	// Smooth scrolling using jQuery easing
-	$(document).on('click', 'a.scroll-to-top', function(event) {
+	$(document).on('click', 'a.scroll-to-top', function (event) {
 		var $anchor = $(this);
 		$('html, body').stop().animate({
 			scrollTop: ($($anchor.attr('href')).offset().top)
@@ -106,6 +106,8 @@ function getColor(color) {
 		return "#F1AA22"
 	else if (color.includes("Lemmium"))
 		return "#F1AA22"
+	else if (color.includes("Thermic Condensate"))
+		return "#F1AA22"
 	else if (color.includes("Platinum"))
 		return "#385457"
 	else if (color.includes("Pyrite"))
@@ -168,5 +170,6 @@ function getColor(color) {
 		return "#F3A923"
 	else if (color.includes("Life Support Gel"))
 		return "#C01746"
-
+	else if (color.includes("Deuterium"))
+		return "#25465C"
 }
