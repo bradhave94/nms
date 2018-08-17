@@ -65,6 +65,7 @@
 						<a class="dropdown-item" href="portable-refiner.html">Portable Refiner</a>
 						<a class="dropdown-item" href="medium-refiner.html">Medium Refiner</a>
 						<a class="dropdown-item active" href="large-refiner.html">Large Refiner</a>
+						<a class="dropdown-item" href="all.html">All Refiners</a>
 					</div>
 				</li>
 				<li class="nav-item">
@@ -195,7 +196,7 @@
       })
       .done(function(data) {
         $(data.three).each(function(index, item) {
-					$( "#threeslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.jpg" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.ingredientTwo)+'" style="color:'+ item.textColorTwo +'"><img src="img/'+item.imgTwo +'.jpg" /><span>' + item.ingredientTwo + '</span></td> <td bgcolor="'+getColor(item.ingredientThree)+'" style="color:'+ item.textColorThree +'"><img src="img/'+item.imgThree +'.jpg" /><span>' + item.ingredientThree + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.jpg" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
+					$( "#threeslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.png" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.ingredientTwo)+'" style="color:'+ item.textColorTwo +'"><img src="img/'+item.imgTwo +'.png" /><span>' + item.ingredientTwo + '</span></td> <td bgcolor="'+getColor(item.ingredientThree)+'" style="color:'+ item.textColorThree +'"><img src="img/'+item.imgThree +'.png" /><span>' + item.ingredientThree + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.png" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
 				})
 
         $('#dataTable').DataTable();
