@@ -6,11 +6,11 @@
 */
 
 /*** picture view plugin ****/
-(function ($, window, document, undefined) {
+(function($, window, document, undefined) {
     "use strict";
 
     //an empty function
-    var noop = function () {};
+    var noop = function() { };
 
     var $body = $('body'),
         $window = $(window),
@@ -41,7 +41,7 @@
     // requestAnimationFrame polyfill by Erik Möller
     // fixes from Paul Irish and Tino Zijdel
 
-    (function () {
+    (function() {
         var lastTime = 0;
         var vendors = ['ms', 'moz', 'webkit', 'o'];
         for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
@@ -50,19 +50,19 @@
         }
 
         if (!window.requestAnimationFrame)
-            window.requestAnimationFrame = function (callback, element) {
+            window.requestAnimationFrame = function(callback, element) {
                 var currTime = new Date().getTime();
                 var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-                var id = window.setTimeout(function () {
-                        callback(currTime + timeToCall);
-                    },
+                var id = window.setTimeout(function() {
+                    callback(currTime + timeToCall);
+                },
                     timeToCall);
                 lastTime = currTime + timeToCall;
                 return id;
             };
 
         if (!window.cancelAnimationFrame)
-            window.cancelAnimationFrame = function (id) {
+            window.cancelAnimationFrame = function(id) {
                 clearTimeout(id);
             };
     }());
@@ -75,9 +75,9 @@
     var imageViewHtml = '<div class="iv-loader"></div> <div class="iv-snap-view">' + '<div class="iv-snap-image-wrap">' + '<div class="iv-snap-handle"></div>' + '</div>' + '<div class="iv-zoom-slider"><div class="iv-zoom-handle"></div></div></div>' + '<div class="iv-image-view" ><div class="iv-image-wrap" ></div></div>';
 
     //add a full screen view
-    $(function () {
-        if(!$body.length) $body = $('body');
-        $body.append('<div id="iv-container">' + imageViewHtml +'<span class="enlarge two">Double Click or Scroll To Zoom</span>' +  '<div class="iv-close"></div><div>');
+    $(function() {
+        if (!$body.length) $body = $('body');
+        $body.append('<div id="iv-container">' + imageViewHtml + '<span class="enlarge two">Double Click or Scroll To Zoom</span>' + '<div class="iv-close"></div><div>');
     });
 
     function Slider(container, options) {
@@ -88,14 +88,14 @@
         this.sliderId = options.sliderId || 'slider' + Math.ceil(Math.random() * 1000000);
     }
 
-    Slider.prototype.init = function () {
+    Slider.prototype.init = function() {
         var self = this,
             container = this.container,
             eventSuffix = '.' + this.sliderId;
 
         //assign event on snap image wrap
-        this.container.on('touchstart' + eventSuffix + ' mousedown' + eventSuffix, function (estart) {
-          estart.preventDefault();
+        this.container.on('touchstart' + eventSuffix + ' mousedown' + eventSuffix, function(estart) {
+            estart.preventDefault();
             var touchMove = (estart.type == "touchstart" ? "touchmove" : "mousemove") + eventSuffix,
                 touchEnd = (estart.type == "touchstart" ? "touchend" : "mouseup") + eventSuffix,
                 eOrginal = estart.originalEvent,
@@ -109,7 +109,7 @@
 
             if (start === false) return;
 
-            var moveListener = function (emove) {
+            var moveListener = function(emove) {
                 emove.preventDefault();
 
                 eOrginal = emove.originalEvent;
@@ -127,7 +127,7 @@
 
             };
 
-            var endListener = function () {
+            var endListener = function() {
                 $document.off(touchMove, moveListener);
                 $document.off(touchEnd, endListener);
                 self.onEnd();
@@ -172,7 +172,7 @@
 
     ImageViewer.prototype = {
         constructor: ImageViewer,
-        _init: function () {
+        _init: function() {
             var viewer = this,
                 options = viewer.options,
                 zooming = false, // tell weather we are zooming trough touch
@@ -187,7 +187,7 @@
 
             var snapSlider = new Slider(snapImgWrap, {
                 sliderId: viewer._viewerId,
-                onStart: function () {
+                onStart: function() {
 
                     if (!viewer.loaded) return false;
 
@@ -204,7 +204,7 @@
                     clearInterval(imageSlider.slideMomentumCheck);
                     cancelAnimationFrame(imageSlider.sliderMomentumFrame);
                 },
-                onMove: function (e, position) {
+                onMove: function(e, position) {
                     var xPerc = this.curHandleLeft + position.dx * 100 / this.width,
                         yPerc = this.curHandleTop + position.dy * 100 / this.height;
 
@@ -237,7 +237,7 @@
             /*Add slide interaction to image*/
             var imageSlider = viewer._imageSlider = new Slider(imageWrap, {
                 sliderId: viewer._viewerId,
-                onStart: function (e, position) {
+                onStart: function(e, position) {
                     if (!viewer.loaded) return false;
                     if (zooming) return;
                     var self = this;
@@ -252,7 +252,7 @@
                     //clear all animation frame and interval
                     viewer._clearFrames();
 
-                    self.slideMomentumCheck = setInterval(function () {
+                    self.slideMomentumCheck = setInterval(function() {
                         if (!self.currentPos) return;
                         self.positions.shift();
                         self.positions.push({
@@ -261,7 +261,7 @@
                         })
                     }, 50);
                 },
-                onMove: function (e, position) {
+                onMove: function(e, position) {
                     if (zooming) return;
                     this.currentPos = position;
 
@@ -270,7 +270,7 @@
                         dy: -position.dy * snapSlider.height / this.imgHeight
                     });
                 },
-                onEnd: function () {
+                onEnd: function() {
                     if (zooming) return;
                     var self = this;
 
@@ -306,11 +306,11 @@
 
             /*Add zoom interation in mouse wheel*/
             var changedDelta = 0;
-            imageWrap.on("mousewheel" + eventSuffix + " DOMMouseScroll" + eventSuffix, function (e) {
-                if(!options.zoomOnMouseWheel) return;
+            imageWrap.on("mousewheel" + eventSuffix + " DOMMouseScroll" + eventSuffix, function(e) {
+                if (!options.zoomOnMouseWheel) return;
 
                 if (!viewer.loaded) return;
-				$('.enlarge.two').fadeOut();
+                $('.enlarge.two').fadeOut();
 
 
                 //clear all animation frame and interval
@@ -320,14 +320,14 @@
                 var delta = Math.max(-1, Math.min(1, (e.originalEvent.wheelDelta || -e.originalEvent.detail))),
                     zoomValue = viewer.zoomValue * (100 + delta * ZOOM_CONSTANT) / 100;
 
-                if(!(zoomValue >= 100 && zoomValue <= options.maxZoom)){
+                if (!(zoomValue >= 100 && zoomValue <= options.maxZoom)) {
                     changedDelta += Math.abs(delta);
                 }
-                else{
+                else {
                     changedDelta = 0;
                 }
 
-                if(changedDelta > MOUSE_WHEEL_COUNT) return;
+                if (changedDelta > MOUSE_WHEEL_COUNT) return;
 
                 e.preventDefault();
 
@@ -348,7 +348,7 @@
 
 
             //apply pinch and zoom feature
-            imageWrap.on('touchstart' + eventSuffix, function (estart) {
+            imageWrap.on('touchstart' + eventSuffix, function(estart) {
                 if (!viewer.loaded) return;
                 var touch0 = estart.originalEvent.touches[0],
                     touch1 = estart.originalEvent.touches[1];
@@ -369,7 +369,7 @@
                         y: ((touch1.pageY + touch0.pageY) / 2) - contOffset.top
                     }
 
-                var moveListener = function (emove) {
+                var moveListener = function(emove) {
                     emove.preventDefault();
 
                     var touch0 = emove.originalEvent.touches[0],
@@ -380,7 +380,7 @@
                     viewer.zoom(zoomValue, center);
                 };
 
-                var endListener = function () {
+                var endListener = function() {
                     $document.off('touchmove', moveListener);
                     $document.off('touchend', endListener);
                     zooming = false;
@@ -392,17 +392,17 @@
             });
 
 
-            //handle double tap for zoom in and zoom out
+           //handle double tap for zoom in and zoom out
             var touchtime = 0,
                 point;
-            imageWrap.on('click' + eventSuffix, function (e) {
+            imageWrap.on('click' + eventSuffix, function(e) {
+                $('.enlarge.two').fadeOut();
                 if (touchtime == 0) {
                     touchtime = Date.now();
                     point = {
                         x: e.pageX,
                         y: e.pageY
-                    }
-					;
+                    };
                 } else {
                     if ((Date.now() - touchtime) < 500 && Math.abs(e.pageX - point.x) < 50 && Math.abs(e.pageY - point.y) < 50) {
                         if (viewer.zoomValue == options.zoomValue) {
@@ -413,16 +413,15 @@
                         touchtime = 0;
                     } else {
                         touchtime = 0;
-                    
-					$('.enlarge.two').fadeOut();}
+                    }
                 }
-            });
+            });;
 
             //zoom in zoom out using zoom handle
             var slider = viewer.snapView.find('.iv-zoom-slider');
             var zoomSlider = new Slider(slider, {
                 sliderId: viewer._viewerId,
-                onStart: function (eStart) {
+                onStart: function(eStart) {
 
                     if (!viewer.loaded) return false;
 
@@ -431,7 +430,7 @@
                     this.onMove(eStart);
 
                 },
-                onMove: function (e, position) {
+                onMove: function(e, position) {
                     var newLeft = (e.pageX || e.originalEvent.touches[0].pageX) - this.leftOffset - this.handleWidth / 2;
 
                     newLeft = Math.max(0, newLeft);
@@ -448,31 +447,31 @@
             var snapViewTimeout, snapViewVisible;
 
             function showSnapView(noTimeout) {
-                if(!options.snapView) return;
+                if (!options.snapView) return;
 
                 if (snapViewVisible || viewer.zoomValue <= 100 || !viewer.loaded) return;
                 clearTimeout(snapViewTimeout);
                 snapViewVisible = true;
                 viewer.snapView.css('opacity', 1);
                 if (!noTimeout) {
-                    snapViewTimeout = setTimeout(function () {
+                    snapViewTimeout = setTimeout(function() {
                         viewer.snapView.css('opacity', 0);
                         snapViewVisible = false;
                     }, 4000);
                 }
             }
 
-            imageWrap.on('touchmove' + eventSuffix + ' mousemove' + eventSuffix, function () {
+            imageWrap.on('touchmove' + eventSuffix + ' mousemove' + eventSuffix, function() {
                 showSnapView();
             });
 
             var snapEventsCallback = {};
-            snapEventsCallback['mouseenter' + eventSuffix + ' touchstart' + eventSuffix] = function () {
+            snapEventsCallback['mouseenter' + eventSuffix + ' touchstart' + eventSuffix] = function() {
                 snapViewVisible = false;
                 showSnapView(true);
             };
 
-            snapEventsCallback['mouseleave' + eventSuffix + ' touchend' + eventSuffix] = function () {
+            snapEventsCallback['mouseleave' + eventSuffix + ' touchend' + eventSuffix] = function() {
                 snapViewVisible = false;
                 showSnapView();
             };
@@ -481,26 +480,26 @@
 
 
             //calculate elments size on window resize
-            if (options.refreshOnResize) $window.on('resize' + eventSuffix, function () {
+            if (options.refreshOnResize) $window.on('resize' + eventSuffix, function() {
                 viewer.refresh()
             });
 
             if (viewer._fullPage) {
                 //prevent scrolling the backside if container if fixed positioned
-                container.on('touchmove' + eventSuffix + ' mousewheel' + eventSuffix + ' DOMMouseScroll' + eventSuffix, function (e) {
+                container.on('touchmove' + eventSuffix + ' mousewheel' + eventSuffix + ' DOMMouseScroll' + eventSuffix, function(e) {
                     e.preventDefault();
                 });
 
                 //assign event on close button
-                container.find('.iv-close').on('click' + eventSuffix, function () {
+                container.find('.iv-close').on('click' + eventSuffix, function() {
                     viewer.hide()
-					$('.enlarge.two').fadeIn();;
+                    $('.enlarge.two').fadeIn();;
                 });
             }
         },
 
         //method to zoom images
-        zoom: function (perc, point) {
+        zoom: function(perc, point) {
             perc = Math.round(Math.max(100, perc));
             perc = Math.min(this.options.maxZoom, perc);
 
@@ -520,7 +519,7 @@
             self._clearFrames();
 
             var step = 0;
-            
+
             //calculate base top,left,bottom,right
             var containerDim = self.containerDim,
                 imageDim = self.imageDim;
@@ -530,10 +529,10 @@
                 baseBottom = containerDim.h - baseTop;
 
             function zoom() {
-                step++;				
+                step++;
 
                 if (step < 20) {
-                    self._zoomFrame = requestAnimationFrame(zoom)	;
+                    self._zoomFrame = requestAnimationFrame(zoom);
                 }
 
                 var tickZoom = easeOutQuart(step, curPerc, perc - curPerc, 20);
@@ -544,20 +543,20 @@
                     imgHeight = self.imageDim.h * tickZoom / 100,
                     newLeft = -((point.x - curLeft) * ratio - point.x),
                     newTop = -((point.y - curTop) * ratio - point.y);
-                
+
                 //fix for left and top
                 newLeft = Math.min(newLeft, baseLeft);
                 newTop = Math.min(newTop, baseTop);
-                
+
                 //fix for right and bottom
-                if((newLeft + imgWidth) < baseRight){
+                if ((newLeft + imgWidth) < baseRight) {
                     newLeft = baseRight - imgWidth; //newLeft - (newLeft + imgWidth - baseRight)
                 }
-                
-                if((newTop + imgHeight) < baseBottom){            
-                    newTop =  baseBottom - imgHeight; //newTop + (newTop + imgHeight - baseBottom)
+
+                if ((newTop + imgHeight) < baseBottom) {
+                    newTop = baseBottom - imgHeight; //newTop + (newTop + imgHeight - baseBottom)
                 }
-                
+
 
                 curImg.css({
                     height: imgHeight + 'px',
@@ -576,16 +575,16 @@
 
             zoom();
         },
-        _clearFrames: function () {
+        _clearFrames: function() {
             clearInterval(this._imageSlider.slideMomentumCheck);
             cancelAnimationFrame(this._imageSlider.sliderMomentumFrame);
             cancelAnimationFrame(this._zoomFrame)
         },
-        resetZoom: function () {
+        resetZoom: function() {
             this.zoom(this.options.zoomValue);
         },
         //calculate dimensions of image, container and reset the image
-        _calculateDimensions: function () {
+        _calculateDimensions: function() {
             //calculate content width of image and snap image
             var self = this,
                 curImg = self.currentImg,
@@ -644,12 +643,12 @@
             self._zoomSliderLength = snapViewWidth - self.zoomHandle.outerWidth();
 
         },
-        refresh: function () {
+        refresh: function() {
             if (!this.loaded) return;
             this._calculateDimensions();
             this.resetZoom();
         },
-        _resizeHandle: function (imgWidth, imgHeight, imgLeft, imgTop) {
+        _resizeHandle: function(imgWidth, imgHeight, imgLeft, imgTop) {
             var curImg = this.currentImg,
                 imageWidth = imgWidth || this.imageDim.w * this.zoomValue / 100,
                 imageHeight = imgHeight || this.imageDim.h * this.zoomValue / 100,
@@ -666,23 +665,23 @@
                 height: handleHeight + '%'
             });
         },
-        show: function (image, hiResImg) {
+        show: function(image, hiResImg) {
             if (this._fullPage) {
                 this.container.show();
                 if (image) this.load(image, hiResImg);
             }
         },
-        hide: function () {
+        hide: function() {
             if (this._fullPage) {
                 this.container.hide();
             }
         },
-        options: function (key, value) {
+        options: function(key, value) {
             if (!value) return this.options[key];
 
             this.options[key] = value;
         },
-        destroy: function (key, value) {
+        destroy: function(key, value) {
             var eventSuffix = '.' + this._viewerId;
             if (this._fullPage) {
                 container.off(eventSuffix);
@@ -693,7 +692,7 @@
             $window.off(eventSuffix);
             return null;
         },
-        load: function (image, hiResImg) {
+        load: function(image, hiResImg) {
             var self = this,
                 container = this.container;
 
@@ -744,10 +743,10 @@
         snapView: true,
         maxZoom: 500,
         refreshOnResize: true,
-        zoomOnMouseWheel : true
+        zoomOnMouseWheel: true
     }
 
-    window.ImageViewer = function (container, options) {
+    window.ImageViewer = function(container, options) {
         var imgElm, imgSrc, hiResImg;
         if (!(container && (typeof container == "string" || container instanceof Element || container[0] instanceof Element))) {
             options = container;
@@ -781,12 +780,12 @@
     };
 
 
-    $.fn.ImageViewer = function (options) {
-        return this.each(function () {
+    $.fn.ImageViewer = function(options) {
+        return this.each(function() {
             var $this = $(this);
             var viewer = window.ImageViewer($this, options);
             $this.data('ImageViewer', viewer);
         });
     }
 
-}((window.jQuery), window, document));
+}((window.jQuery), window, document));;;
