@@ -712,6 +712,10 @@ a.navbar-brand.mr-1 img {
          text-align: center;
          padding: 1rem 0 !important;
          font-size: 1.5rem;
+         order: 2;
+    }
+    table.table-bordered.dataTable     td:nth-last-child(3) {
+        order: 1;
     }
      table.table-bordered.dataTable td:before {
          position: absolute;
@@ -820,6 +824,5 @@ a.navbar-brand.mr-1 img {
 	.crafting td:empty, .all td:empty {
     	display: none !important;
 	}
-	
 	
 }
