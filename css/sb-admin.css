@@ -114,6 +114,9 @@
      font-weight: 400;
      font-size: 0.5rem;
 }
+a.navbar-brand.mr-1 img {
+    max-width: 100%;
+}
  @media (min-width: 768px) {
      .navbar-nav .form-inline .input-group {
          width: auto;
@@ -123,9 +126,6 @@
      width: 90px !important;
      background-color: #212529;
      min-height: calc(100vh - 56px);
-}
- .sidebar .nav-item:last-child {
-     margin-bottom: 1rem;
 }
  .sidebar .nav-item .nav-link {
      text-align: center;
@@ -630,6 +630,34 @@
     }
 }
  @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+	 .sidebar .nav-item .dropdown-menu {
+		top: 100% !important;
+		left: 0 !important;
+	}
+	 #wrapper {
+		display: block;
+	}
+	div#slotWrapper .card-body {
+		padding: 5px;
+	}
+	ul.sidebar.navbar-nav {
+		width: 100% !important;
+		min-height: auto !important;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		padding-top: 10px;
+	}
+	a.navbar-brand.mr-1 {
+		text-align: center;
+	}
      .container-fluid {
          padding: 0;
     }
