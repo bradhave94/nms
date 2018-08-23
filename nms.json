@@ -3446,6 +3446,118 @@
 			"imgResult": "grantine",
 			"result": "Grantine",
 			"sub": ""
+		},
+		{
+			"time": "18,000,000",
+			"imgOne": "quantum-processor",
+			"ingredientOne": "Quantum Processor",
+			"imgTwo": "portable-reactor",
+			"ingredientTwo": "Portable Reactor",
+			"imgThree": "geodesite",
+			"ingredientThree": "Geodesite",
+			"imgResult": "fusion-ignitor",
+			"result": "Fusion Ignitor",
+			"sub": "Circuit Board Superconductor Liquid Explosives Fusion Accelerant Dirty Bronze Herox Lemmium Poly Fibre Heat Capacitor Enriched Carbon Semiconductor Acid Unstable Gel Organic Catalyst Nitrogen Salt Thermic Condensate Cactus Flesh Star Bulb Frost Crystal Solanium Radon Condensed Carbon Sulpurine Mordite Fungal Mould Pyrite Pure Ferrite Ammonia Ionised Cobalt Uranium"
+		},
+		{
+			"time": "5,000,000",
+			"imgOne": "liquid-explosive",
+			"ingredientOne": "Liquid Explosives",
+			"imgTwo": "fusion-accelerant",
+			"ingredientTwo": "Fusion Accelerant",
+			"imgResult": "portable-reactor",
+			"result": "Portable Reactor",
+			"sub": "Enriched Carbon Acid Unstable Gel Organic Catalyst Nitrogen Salt Thermic Condensate Cactus Flesh Radon Condensed Carbon Mordite Fungal Mould Sulpurine"
+		},
+		{
+			"time": "1,000,500",
+			"imgOne": "acid",
+			"ingredientOne": "Acid",
+			"imgTwo": "unstable-gel",
+			"ingredientTwo": "Unstable Gel",
+			"imgResult": "liquid-explosive",
+			"result": "Liquid Explosive",
+			"sub": "Cactus Flesh Mordite Fungal Mould"
+		},
+		{
+			"time": "288,000",
+			"imgOne": "mordite",
+			"ingredientOne": "Mordite x25",
+			"imgTwo": "fungal-mould",
+			"ingredientTwo": "Fungal Mould x600",
+			"imgResult": "acid",
+			"result": "Acid",
+			"sub": ""
+		},
+		{
+			"time": "80,000",
+			"imgOne": "cactus-flesh",
+			"ingredientOne": "Cactus Flesh x200",
+			"imgResult": "unstable-gel",
+			"result": "Unstable Gel",
+			"sub": ""
+		},
+		{
+			"time": "2,000,000",
+			"imgOne": "organic-catalyst",
+			"ingredientOne": "Organic Catalyst",
+			"imgTwo": "nitrogen-salt",
+			"ingredientTwo": "Nitrogen Salt",
+			"imgResult": "fusion-accelerant",
+			"result": "Fusion Accelerant",
+			"sub": "Enriched Carbon Thermic Condensate  Radon Nitrogen Sulpurine Condensed Carbon "
+		},
+		{
+			"time": "0",
+			"imgOne": "thermic-condensate",
+			"ingredientOne": "Thermic Condensate",
+			"imgTwo": "enriched-carbon",
+			"ingredientTwo": "Enriched Carbon",
+			"imgResult": "organic-catalyst",
+			"result": "Organic Catalyst",
+			"sub": " Radon Nitrogen Sulpurine Condensed Carbon "
+		},
+		{
+			"time": "150,000",
+			"imgOne": "dirty-bronze",
+			"ingredientOne": "Dirty Bronze",
+			"imgTwo": "herox",
+			"ingredientTwo": "Herox",
+			"imgThree": "lemmium",
+			"ingredientThree": "Lemmium",
+			"imgResult": "geodesite",
+			"result": "Geodesite",
+			"sub": "Pyrite Pure Ferrite Ammonia Ionised Cobalt Uranium"
+		},
+		{
+			"time": "25,000",
+			"imgOne": "pyrite",
+			"ingredientOne": "Pyrite",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite",
+			"imgResult": "dirty-bronze",
+			"result": "Dirty Bronze",
+			"sub": ""
+		},
+		{
+			"time": "25,000",
+			"imgOne": "ammonia",
+			"ingredientOne": "Ammonia",
+			"imgTwo": "ionised-cobalt",
+			"ingredientTwo": "Ionised Cobalt",
+			"imgResult": "herox",
+			"result": "Herox",
+			"sub": ""
+		},
+		{
+			"time": "25,000",
+			"imgOne": "uranium",
+			"ingredientOne": "Uranium",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite",
+			"imgResult": "lemmium",
+			"result": "Lemmium",
+			"sub": ""
 		}
 	]
 }
