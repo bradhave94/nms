@@ -4,8 +4,8 @@
 			"time": "2:30",
 			"ingredientOne": "Residual Goop x1",
 			"imgOne": "residual-goop",
-			"result": "Viscous Fluids x1",
-			"imgResult": "viscous-fluids"
+			"result": "Viscous Fluid x1",
+			"imgResult": "viscous-fluid"
 		},
 		{
 			"name": "Recycle Waste Materials",
@@ -19,7 +19,7 @@
 			"name": "Recycle Waste Materials",
 			"time": "2:30",
 			"ingredientOne": "Rusted Metal x1",
-			"imgOne": "rusted-metel",
+			"imgOne": "rusted-metal",
 			"result": "Ferrite Dust x2",
 			"imgResult": "ferrite-dust"
 		},
@@ -34,8 +34,8 @@
 		{
 			"name": "Recycle Waste Materials",
 			"time": "2:30",
-			"ingredientOne": "Viscous Fluids x1",
-			"imgOne": "viscous-fluids",
+			"ingredientOne": "Viscous Fluid x1",
+			"imgOne": "viscous-fluid",
 			"result": "Living Slime x1",
 			"imgResult": "living-slime"
 		},
