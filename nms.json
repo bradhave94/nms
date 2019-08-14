@@ -622,6 +622,16 @@
 		}
 	],
 	"two": [{
+			"name": "Salt Crystal Polishing",
+			"time": "0:20",
+			"imgOne": "cyto-phosphate",
+			"ingredientOne": "Cyto-Phosphate x50",
+			"imgTwo": "salt",
+			"ingredientTwo": "Salt x1",
+			"imgResult": "glass",
+			"result": "Glass x1"
+		},
+		{
 			"name": "Fertiliser Synthesis",
 			"time": "1:30",
 			"imgOne": "sodium-nitrate",
