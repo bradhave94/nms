@@ -1,5 +1,29 @@
 {
 	"one": [{
+			"name": "Doom Cycling",
+			"time": "1:00",
+			"ingredientOne": "Hadal Core x1",
+			"imgOne": "hadal-core",
+			"result": "Nanite Cluster x50",
+			"imgResult": "nanite"
+		},
+		{
+			"name": "Calcite Transmutation",
+			"time": "1:00",
+			"ingredientOne": "Living Pearl x1",
+			"imgOne": "living-pearl",
+			"result": "Gold x100",
+			"imgResult": "gold"
+		},
+		{
+			"name": "Biological Purge",
+			"time": "1:00",
+			"ingredientOne": "Hypnotic Eye x1",
+			"imgOne": "hypnotic-eye",
+			"result": "Living Slime x50",
+			"imgResult": "living-slime"
+		},
+		{
 			"name": "Algal Processing",
 			"time": "1:00",
 			"ingredientOne": "Cyto-Phosphate x1",
@@ -115,7 +139,7 @@
 		},
 		{
 			"name": "Di-hydrogen Cycling",
-			"time": "1:00",
+			"time": "1:40",
 			"imgOne": "di-hydrogen-jelly",
 			"ingredientOne": "Di-hydrogen Jelly x1",
 			"result": "Di-hydrogen x50",
@@ -550,6 +574,146 @@
 		}
 	],
 	"two": [{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "paraffinium",
+			"ingredientOne": "Paraffinium x2",
+			"imgTwo": "ferrite-dust",
+			"ingredientTwo": "Ferrite Dust x1",
+			"imgResult": "ammonia",
+			"result": "Ammonia x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "pyrite",
+			"ingredientOne": "Pyrite x2",
+			"imgTwo": "ferrite-dust",
+			"ingredientTwo": "Ferrite Dust x1",
+			"imgResult": "paraffinium",
+			"result": "Paraffinium x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "ammonia",
+			"ingredientOne": "Ammonia x2",
+			"imgTwo": "ferrite-dust",
+			"ingredientTwo": "Ferrite Dust x1",
+			"imgResult": "dioxite",
+			"result": "Dioxite x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "uranium",
+			"ingredientOne": "Uranium x2",
+			"imgTwo": "ferrite-dust",
+			"ingredientTwo": "Ferrite Dust x1",
+			"imgResult": "pyrite",
+			"result": "Pyrite x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "dioxite",
+			"ingredientOne": "Dioxite x2",
+			"imgTwo": "ferrite-dust",
+			"ingredientTwo": "Ferrite Dust x1",
+			"imgResult": "phosphorus",
+			"result": "Phosphorus x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "phosphorus",
+			"ingredientOne": "Phosphorus x2",
+			"imgTwo": "ferrite-dust",
+			"ingredientTwo": "Ferrite Dust x1",
+			"imgResult": "uranium",
+			"result": "Uranium x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "paraffinium",
+			"ingredientOne": "Paraffinium x2",
+			"imgTwo": "ferrite-dust",
+			"ingredientTwo": "Ferrite Dust x1",
+			"imgResult": "ammonia",
+			"result": "Ammonia x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "paraffinium",
+			"ingredientOne": "Paraffinium x2",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite x1",
+			"imgResult": "ammonia",
+			"result": "Ammonia x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "pyrite",
+			"ingredientOne": "Pyrite x2",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite x1",
+			"imgResult": "paraffinium",
+			"result": "Paraffinium x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "ammonia",
+			"ingredientOne": "Ammonia x2",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite x1",
+			"imgResult": "dioxite",
+			"result": "Dioxite x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "uranium",
+			"ingredientOne": "Uranium x2",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite x1",
+			"imgResult": "Pyrite",
+			"result": "Pyrite x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "dioxite",
+			"ingredientOne": "Dioxite x2",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite x1",
+			"imgResult": "Phosphorus",
+			"result": "Phosphorus x1"
+		},
+		{
+			"name": "Environmental Element Transfer",
+			"time": "1:30",
+			"imgOne": "phosphorus",
+			"ingredientOne": "Phosphorus x2",
+			"imgTwo": "pure-ferrite",
+			"ingredientTwo": "Pure Ferrite x1",
+			"imgResult": "uranium",
+			"result": "Uranium x1"
+		},
+		{
+			"name": "Chlorine Expansion",
+			"time": "1:30",
+			"imgOne": "chlorine",
+			"ingredientOne": "Chlorine x1",
+			"imgTwo": "oxygen",
+			"ingredientTwo": "Oxygen x2",
+			"imgResult": "chlorine",
+			"result": "Chlorine x6"
+		},
+		{
 			"name": "Algal Salination",
 			"time": "1:00",
 			"imgOne": "cyto-phosphate",
