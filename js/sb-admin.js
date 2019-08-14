@@ -173,4 +173,10 @@ function getColor(color) {
 		return "#C01746"
 	else if (color.includes("Deuterium"))
 		return "#25465C"
+	else if (color.includes("Technology"))
+		return "#0059A4"
+	else if (color.includes("Hexite"))
+		return "#6D4829"
+	else if (color.includes("Pearl"))
+		return "#006D49"
 }
