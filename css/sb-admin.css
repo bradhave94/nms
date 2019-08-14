@@ -727,10 +727,10 @@ a.navbar-brand.mr-1 img {
          transform: translateY(-50%);
     }
     .oneslot table.table-bordered.dataTable td:nth-of-type(1):before {
-         content: "Output";
+         content: "Input";
     }
      .oneslot table.table-bordered.dataTable td:nth-of-type(2):before {
-         content: "Input";
+         content: "Output";
     }
      .oneslot table.table-bordered.dataTable td:nth-of-type(3):before {
          content: "Time";
