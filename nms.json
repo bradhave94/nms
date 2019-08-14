@@ -573,7 +573,27 @@
 			"imgResult": "platinum"
 		}
 	],
-	"two": [		{
+	"two": [{
+			"name": "Fertiliser Synthesis",
+			"time": "1:30",
+			"imgOne": "sodium-nitrate",
+			"ingredientOne": "Sodium Nitrate x2",
+			"imgTwo": "mordite",
+			"ingredientTwo": "Mordite x1",
+			"imgResult": "marrow-bulb",
+			"result": "Marrow Bulb x4"
+		},
+		{
+			"name": "Fertiliser Synthesis",
+			"time": "1:30",
+			"imgOne": "sodium",
+			"ingredientOne": "Sodium x2",
+			"imgTwo": "mordite",
+			"ingredientTwo": "Mordite x1",
+			"imgResult": "marrow-bulb",
+			"result": "Marrow Bulb x3"
+		},
+		{
 			"name": "Environmental Element Transfer",
 			"time": "1:30",
 			"imgOne": "pyrite",
