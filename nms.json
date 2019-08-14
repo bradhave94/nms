@@ -1,5 +1,13 @@
 {
 	"one": [{
+			"name": "Algal Processing",
+			"time": "1:00",
+			"ingredientOne": "Cyto-Phosphate x1",
+			"imgOne": "cyto-phosphate",
+			"result": "Condensed Carbon x1",
+			"imgResult": "condensed-carbon"
+		},
+		{
 			"name": "Extreme Polishing",
 			"time": "1:00",
 			"ingredientOne": "Silver x100",
@@ -542,6 +550,16 @@
 		}
 	],
 	"two": [{
+			"name": "Algal Salination",
+			"time": "1:00",
+			"imgOne": "cyto-phosphate",
+			"ingredientOne": "Cyto-Phosphate x1",
+			"imgTwo": "salt",
+			"ingredientTwo": "Salt x1",
+			"imgResult": "chlorine",
+			"result": "Chlorine x2"
+		},
+		{
 			"name": "Alchemical Construction",
 			"time": "1:00",
 			"imgOne": "coprite",
@@ -550,6 +568,16 @@
 			"ingredientTwo": "Residual Goop x1",
 			"imgResult": "gold",
 			"result": "Gold x1"
+		},
+		{
+			"name": "Alchemical Construction",
+			"time": "1:00",
+			"imgOne": "coprite",
+			"ingredientOne": "Coprite x1",
+			"imgTwo": "Hexite",
+			"ingredientTwo": "Hexite x1",
+			"imgResult": "nanite",
+			"result": "Nanite Cluster x1"
 		},
 		{
 			"name": "Transmutation",
