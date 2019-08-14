@@ -577,7 +577,7 @@
 			"name": "Fertiliser Synthesis",
 			"time": "1:30",
 			"imgOne": "sodium-nitrate",
-			"ingredientOne": "Sodium Nitrate x2",
+			"ingredientOne": "Sodium Nitrate x1",
 			"imgTwo": "mordite",
 			"ingredientTwo": "Mordite x1",
 			"imgResult": "marrow-bulb",
