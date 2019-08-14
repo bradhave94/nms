@@ -573,17 +573,7 @@
 			"imgResult": "platinum"
 		}
 	],
-	"two": [{
-			"name": "Environmental Element Transfer",
-			"time": "1:30",
-			"imgOne": "paraffinium",
-			"ingredientOne": "Paraffinium x2",
-			"imgTwo": "ferrite-dust",
-			"ingredientTwo": "Ferrite Dust x1",
-			"imgResult": "ammonia",
-			"result": "Ammonia x1"
-		},
-		{
+	"two": [		{
 			"name": "Environmental Element Transfer",
 			"time": "1:30",
 			"imgOne": "pyrite",
