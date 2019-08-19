@@ -179,4 +179,12 @@ function getColor(color) {
 		return "#6D4829"
 	else if (color.includes("Pearl"))
 		return "#006D49"
+	else if (color.includes("Phosphate"))
+		return "#1B7C3B"
+	else if (color.includes("Hypnotic"))
+		return "#1B7C3B"
+	else if (color.includes("Hadal"))
+		return "#1B7C3B"
+	else if (color.includes("Sulphide"))
+		return "#1B7C3B"
 }
