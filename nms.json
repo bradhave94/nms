@@ -125,7 +125,7 @@
 			"time": "1:00",
 			"imgOne": "mordite",
 			"ingredientOne": "Mordite x3",
-			"result": "Coprite x1",
+			"result": "Faecium x1",
 			"imgResult": "coprite"
 		},
 		{
@@ -552,7 +552,7 @@
 			"name": "Organic Reassembly",
 			"time": "3:00",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x3",
+			"ingredientOne": "Faecium x3",
 			"result": "Mordite x2",
 			"imgResult": "mordite"
 		},
@@ -803,7 +803,7 @@
 			"name": "Alchemical Construction",
 			"time": "1:00",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "residual-goop",
 			"ingredientTwo": "Residual Goop x1",
 			"imgResult": "gold",
@@ -813,7 +813,7 @@
 			"name": "Alchemical Construction",
 			"time": "1:00",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "hexite",
 			"ingredientTwo": "Hexite x1",
 			"imgResult": "nanite",
@@ -887,7 +887,7 @@
 			"imgTwo": "carbon",
 			"ingredientTwo": "Carbon x1",
 			"imgResult": "coprite",
-			"result": "Coprite x1"
+			"result": "Faecium x1"
 		},
 		{
 			"name": "Organic Reassembly",
@@ -1098,7 +1098,7 @@
 			"imgTwo": "mordite",
 			"ingredientTwo": "Mordite x1",
 			"imgResult": "coprite",
-			"result": "Coprite x3"
+			"result": "Faecium x3"
 		},
 		{
 			"name": "Runaway Decomposition",
@@ -1108,7 +1108,7 @@
 			"imgTwo": "mordite",
 			"ingredientTwo": "Mordite x1",
 			"imgResult": "coprite",
-			"result": "Coprite x4"
+			"result": "Faecium x4"
 		},
 		{
 			"name": "Fertilizer Synthesis",
@@ -1444,11 +1444,11 @@
 			"name": "Oxygenate Microbes",
 			"time": "1:30",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "oxygen",
 			"ingredientTwo": "Oxygen x1",
 			"imgResult": "coprite",
-			"result": "Coprite x3"
+			"result": "Faecium x3"
 		},
 		{
 			"name": "Pugneum Washing",
@@ -1494,7 +1494,7 @@
 			"name": "Feed Microbes",
 			"time": "1:30",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "carbon",
 			"ingredientTwo": "Carbon x2",
 			"imgResult": "condensed-carbon",
@@ -1524,7 +1524,7 @@
 			"name": "Feed Microbes",
 			"time": "1:30",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "sodium",
 			"ingredientTwo": "Sodium x1",
 			"imgResult": "sodium-nitrate",
@@ -1554,7 +1554,7 @@
 			"name": "Feed Microbes",
 			"time": "1:30",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "condensed-carbon",
 			"ingredientTwo": "Condensed Carbon x1",
 			"imgResult": "condensed-carbon",
@@ -1584,7 +1584,7 @@
 			"name": "Feed Microbes",
 			"time": "1:30",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "sodium-nitrate",
 			"ingredientTwo": "Sodium Nitrate x1",
 			"imgResult": "sodium-nitrate",
@@ -1634,7 +1634,7 @@
 			"name": "Pugneum Alchemy",
 			"time": "1:30",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "pugneum",
 			"ingredientTwo": "Pugneum x1",
 			"imgResult": "gold",
@@ -1644,7 +1644,7 @@
 			"name": "Feed Microbes",
 			"time": "1:30",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x1",
+			"ingredientOne": "Faecium x1",
 			"imgTwo": "mordite",
 			"ingredientTwo": "Mordite x1",
 			"imgResult": "condensed-carbon",
@@ -2289,7 +2289,7 @@
 			"imgTwo": "nitrogen",
 			"ingredientTwo": "Nitrogen x1",
 			"imgResult": "coprite",
-			"result": "Coprite x1"
+			"result": "Faecium x1"
 		}
 	],
 	"three": [{
@@ -3533,7 +3533,7 @@
 			"ingredientThree": "Iridesite",
 			"imgResult": "stasis-device",
 			"result": "Stasis Device",
-			"sub": "Circuit Board Superconductor Living Glass Cryo-Pump Aronium Magno-Gold Grantine Heat Capacitor Poly Fiber Enriched Carbon Semiconductor Thermic Condensate Nitrogen Salt Lubricant Hot Ice Frost Crystal Solanium Cactus Flesh Star Bulb Radon Condensed Carbon Sulphurine Coprite Gamma Roots Phosphorus Dioxite"
+			"sub": "Circuit Board Superconductor Living Glass Cryo-Pump Aronium Magno-Gold Grantine Heat Capacitor Poly Fiber Enriched Carbon Semiconductor Thermic Condensate Nitrogen Salt Lubricant Hot Ice Frost Crystal Solanium Cactus Flesh Star Bulb Radon Condensed Carbon Sulphurine Faecium Gamma Roots Phosphorus Dioxite"
 		},
 		{
 			"time": "5,400,000",
@@ -3553,7 +3553,7 @@
 			"ingredientTwo": "Cryo-Pump",
 			"imgResult": "cryogenic-chamber",
 			"result": "Cryogenic Chamber",
-			"sub": "Enriched Carbon  Thermic Condensate Nitrogen Salt Lubricant Hot Ice Frost Crystal   Radon Condensed Carbon Sulphurine Coprite Gamma Roots"
+			"sub": "Enriched Carbon  Thermic Condensate Nitrogen Salt Lubricant Hot Ice Frost Crystal   Radon Condensed Carbon Sulphurine Faecium Gamma Roots"
 		},
 		{
 			"time": "150,000",
@@ -3655,7 +3655,7 @@
 			"ingredientTwo": "Lubricant",
 			"imgResult": "living-glass",
 			"result": "Living Glass",
-			"sub": "Coprite Gamma Roots"
+			"sub": "Faecium Gamma Roots"
 		},
 		{
 			"time": "36,000",
@@ -3668,7 +3668,7 @@
 		{
 			"time": "160,000",
 			"imgOne": "coprite",
-			"ingredientOne": "Coprite x50",
+			"ingredientOne": "Faecium x50",
 			"imgTwo": "gamma-root",
 			"ingredientTwo": "Gamma Root x400",
 			"imgResult": "lubricant",
