@@ -85,7 +85,7 @@ function getColor(color) {
 		return "#113611"
 	else if (color.includes("Chloride Lattice"))
 		return "#1E8941"
-	else if (color.includes("Coprite"))
+	else if (color.includes("Faecium"))
 		return "#533E2D"
 	else if (color.includes("Di-hydrogen Jelly"))
 		return "#C21646"
