@@ -16,8 +16,9 @@ test
   function showInfo(data, tabletop) {
     alert('Successfully processed!')
     console.log(data);
+    console.log(data[0.header]);
   data.forEach(function(data) {
-    header.innerHTML = data.header;
+    header.innerHTML = data[0].header;
     header2.innerHTML = data.header2;
     body.innerHTML = data.body;
     body2.innerHTML = data.body2;
