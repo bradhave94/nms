@@ -583,9 +583,6 @@ a.navbar-brand.mr-1 img {
  span.enlarge.two {
      right: 12rem;
 }
- .crafting tr td:last-child, .crafting thead th:last-child, .crafting tfoot th:last-child {
-     display: none;
-}
  tbody#crafting td img {
      width: 60px;
      height: 60px;
