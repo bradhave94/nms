@@ -86,16 +86,12 @@
                               <tr>
                                  <th>Input</th>
                                  <th>Output</th>
-                                 <th>Time To Process</th>
-                                 <th>Name</th>
                               </tr>
                            </thead>
                            <tfoot>
                               <tr>
                                  <th>Input</th>
                                  <th>Output</th>
-                                 <th>Time To Process</th>
-                                 <th>Name</th>
                               </tr>
                            </tfoot>
                            <tbody id="oneslot">
@@ -154,6 +150,9 @@
       <!-- /#wrapper -->
       <!-- Scroll to Top Button-->
       <a class="scroll-to-top rounded" href="#page-top">
+      <div id="loading-gif" class="text-center">
+         <img src="img/loading.gif" />
+      </div>
       <i class="fas fa-angle-up"></i>
       </a>
       <!-- Bootstrap core JavaScript-->
@@ -166,28 +165,50 @@
       <!-- Custom scripts for all pages-->
       <script src="js/sb-admin.js"></script>
       <script type="text/javascript">
-         $.ajax({
-         		url: 'nms.json',
-         		dataType: 'json',
-         		type: 'get',
-         		cache: false
-         })
-         .done(function(data) {
-         	$(data.one).each(function(index, item) {
-         		$( "#oneslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ingredientOne)+'" style="color:'+ item.textColorOne +'"><img src="img/'+item.imgOne +'.png" /><span>' + item.ingredientOne + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.textColorResult +'"><img src="img/'+item.imgResult  +'.png" /><span>' + item.result + '</span></td> <td>' + item.time + '</td> <td>' + item.name + '</td> </tr>' );
-         	})
-         	$('#dataTable').DataTable({
-         		"order": [[ 1, "asc" ]]
-         	});
-         	$('#slotWrapper').fadeIn();
-         	$('#loading-gif').fadeOut();
-         	
-         })
-         .fail(function(xhr) {
-         	console.log('error', xhr);
-         	$('#loading-gif').fadeOut();
-         	alert('Error: ' + xhr.statusText)
-         });
-      </script>
+         var publicSpreadsheetUrl =
+           "https://docs.google.com/spreadsheets/d/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/edit?usp=sharing";
+   
+         function init() {
+           Tabletop.init({
+             key: publicSpreadsheetUrl,
+             callback: showInfo,
+             simpleSheet: true
+           });
+         }
+   
+         function showInfo(data, tabletop) {
+           var itemsProcessed = 0;
+   
+           data.forEach(function(item, index) {
+   
+               if (isEmpty(item.ing_3) && isEmpty(item.ing_2)) {
+                  $( "#oneslot" ).append( '<tr>  <td bgcolor="'+getColor(item.ing_1)+'" style="color:'+ item.ing_1 +'"><img src="img/'+ item.ing_1.replace(/ /g, "-").toLowerCase() +'.png" /><span>' + item.ing_1 + ' x' + item.ing_1_num + '</span></td> <td bgcolor="'+getColor(item.result)+'" style="color:'+ item.result + '"><img src="img/'+ item.result.replace(/ /g, "-").toLowerCase()  +'.png" /><span>' + item.result + ' x' + item.result_num + '</span></td>');    
+               }
+               itemsProcessed++;
+               if(itemsProcessed === data.length) {
+                   callback();
+               }
+           });
+         }
+   
+         function isEmpty(obj) {
+           for (var key in obj) {
+             if (obj.hasOwnProperty(key)) return false;
+           }
+           return true;
+         }
+   
+         window.addEventListener("DOMContentLoaded", init);
+   
+         function callback() {
+           $("#dataTable").DataTable({
+             order: [[1, "asc"]]
+           });
+           $("#loading-gif").fadeOut();
+           $("#slotWrapper").fadeIn();
+           
+         }
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
    </body>
 </html>

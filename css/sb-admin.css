@@ -333,6 +333,7 @@ a.navbar-brand.mr-1 img {
      width: 100%;
      top: 50%;
      transform: translateY(-50%);
+     z-index: 9;
 }
  div#loading-gif img {
      width: 75px;

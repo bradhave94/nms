@@ -158,7 +158,7 @@ function getColor(color) {
 	else if (color.includes("Superoxide Crystal"))
 		return "#BA3930"
 	else if (color.includes("Tritium"))
-		return "#DDDCD0"
+		return "#192E3F"
 	else if (color.includes("Uranium"))
 		return "#A37610"
 	else if (color.includes("Unstable Plasma"))
@@ -187,4 +187,8 @@ function getColor(color) {
 		return "#1B7C3B"
 	else if (color.includes("Sulphide"))
 		return "#1B7C3B"
+	else if (color.includes("Larval Core"))
+		return "#007951"
+	else if (color.includes("Silicate Powder"))
+		return "#232c28"		
 }
