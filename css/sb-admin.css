@@ -545,13 +545,7 @@ a.navbar-brand.mr-1 img {
      position: relative;
      z-index: 1;
 }
- .book {
-     z-index: 1;
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     right: 0;
-}
+
  .text-center.book img {
      width: 650px;
      max-width: 100%;
