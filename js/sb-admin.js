@@ -42,7 +42,7 @@
 
 function getColor(color) {
 	if (color.includes("Magno-Gold"))
-		return "#F6A723"
+		return "#c47e08"
 	else if (color.includes("Gold"))
 		return "#6E5012"
 	else if (color.includes("Carbon Crystal"))
@@ -66,7 +66,7 @@ function getColor(color) {
 	else if (color.includes("Ammonia"))
 		return "#0A723C"
 	else if (color.includes("Aronium"))
-		return "#F6A723"
+		return "#c47e08"
 	else if (color.includes("Ferrite"))
 		return "#5B5A55"
 	else if (color.includes("Silver"))
@@ -96,19 +96,19 @@ function getColor(color) {
 	else if (color.includes("Mordite"))
 		return "#392634"
 	else if (color.includes("Dirty Bronze"))
-		return "#F1AA22"
+		return "#c47e08"
 	else if (color.includes("Grantine"))
-		return "#F1AA22"
+		return "#c47e08"
 	else if (color.includes("Herox"))
-		return "#F1AA22"
+		return "#c47e08"
 	else if (color.includes("Geodesite"))
-		return "#F1AA22"
+		return "#c47e08"
 	else if (color.includes("Iridesite"))
-		return "#F1AA22"
+		return "#c47e08"
 	else if (color.includes("Lemmium"))
-		return "#F1AA22"
+		return "#c47e08"
 	else if (color.includes("Thermic Condensate"))
-		return "#F1AA22"
+		return "#c47e08"
 	else if (color.includes("Platinum"))
 		return "#385457"
 	else if (color.includes("Pyrite"))
@@ -140,7 +140,7 @@ function getColor(color) {
 	else if (color.includes("Phosphorus"))
 		return "#8C240F"
 	else if (color.includes("Nanite"))
-		return "#192E3F"
+		return "#274964"
 	else if (color.includes("Pugneum"))
 		return "#4C2A56"
 	else if (color.includes("Rare Metal Element"))
@@ -150,7 +150,7 @@ function getColor(color) {
 	else if (color.includes("Viscous Fluid"))
 		return "#40512F"
 	else if (color.includes("Glass"))
-		return "#F3A923"
+		return "#c47e08"
 	else if (color.includes("Star Bulb"))
 		return "#296879"
 	else if (color.includes("Rusted Metal"))
@@ -158,7 +158,7 @@ function getColor(color) {
 	else if (color.includes("Superoxide Crystal"))
 		return "#BA3930"
 	else if (color.includes("Tritium"))
-		return "#192E3F"
+		return "#274964"
 	else if (color.includes("Uranium"))
 		return "#A37610"
 	else if (color.includes("Unstable Plasma"))
@@ -168,7 +168,7 @@ function getColor(color) {
 	else if (color.includes("Starship Launch Fuel"))
 		return "#C01746"
 	else if (color.includes("Ion Battery"))
-		return "#F3A923"
+		return "#c47e08"
 	else if (color.includes("Life Support Gel"))
 		return "#C01746"
 	else if (color.includes("Deuterium"))
@@ -190,5 +190,7 @@ function getColor(color) {
 	else if (color.includes("Larval Core"))
 		return "#007951"
 	else if (color.includes("Silicate Powder"))
-		return "#232c28"		
+		return "#232c28"
+	else if (color.includes("Salvaged Data"))
+		return "#0063B7"				
 }

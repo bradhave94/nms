@@ -368,20 +368,8 @@ a.navbar-brand.mr-1 img {
      position: relative;
      background-size: cover;
 }
- div.home, div.feedback {
+ div.home, div.feedback, #content-wrapper {
      background-image: url(../img/next.jpg);
-}
- div.oneslot {
-     background-image: url(../img/command.jpg);
-}
- div.twoslot {
-     background-image: url(../img/featured.jpg);
-}
- div.threeslot {
-     background-image: url(../img/community.jpg);
-}
- div.craftingguide {
-     background-image: url(../img/bg-long-huge.jpg);
 }
  .card-header img {
      width: 60px;
