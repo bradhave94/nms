@@ -326,7 +326,11 @@
 
       function callback() {
         $("#dataTable").DataTable({
-          order: [[2, "asc"]]
+          order: [[2, "asc"]],
+          language: {
+              searchPlaceholder: "Search",
+              search: ""
+          }
         });
         $("#loading-gif").fadeOut();
         $("#slotWrapper").fadeIn();

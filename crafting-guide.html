@@ -364,7 +364,11 @@
       function callback() {
         $("#dataTable").DataTable({
           order: [[4, "desc"]],
-          pageLength: 50
+          pageLength: 50,
+          language: {
+              searchPlaceholder: "Search",
+              search: ""
+          }
         });
         $("#slotWrapper").fadeIn();
         $("#loading-gif").fadeOut();

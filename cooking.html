@@ -369,7 +369,11 @@
       function callback() {
         $("#dataTable").DataTable({
           order: [[4, "asc"]],
-          pageLength: 10
+          pageLength: 10,
+          language: {
+              searchPlaceholder: "Search",
+              search: ""
+          }
         });
         $("#slotWrapper").fadeIn();
         $("#loading-gif").fadeOut();
