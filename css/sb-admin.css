@@ -602,6 +602,11 @@ a.navbar-brand.mr-1 img {
      div#dataTable_wrapper>.row>.col-sm-12 label {
          width: 100%;
          font-weight: 100 !important;
+         text-align: center;
+         padding-top: 2rem;
+    }
+    div#dataTable_filter {
+        padding-bottom: 1rem;
     }
      table.table-bordered.dataTable td {
          text-align: center;
@@ -609,7 +614,7 @@ a.navbar-brand.mr-1 img {
          vertical-align: middle;
     }
 }
- @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+ @media only screen and (max-width: 992px) {
 	 .sidebar .nav-item .dropdown-menu {
 		top: 100% !important;
 		left: 0 !important;
@@ -633,8 +638,21 @@ a.navbar-brand.mr-1 img {
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
-		padding-top: 10px;
-	}
+        padding-top: 10px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .sidebar .nav-item .nav-link {
+        padding: 2rem 2rem;
+        width: auto;
+    }
+    .form-control-sm {
+        height: 60px;
+        font-size: 1rem;
+    }
+    .sidebar .nav-item .nav-link i {
+        font-size: 3rem;
+    }
 	a.navbar-brand.mr-1 {
 		text-align: center;
 	}
@@ -763,9 +781,6 @@ a.navbar-brand.mr-1 img {
      .all table.table-bordered.dataTable td:nth-of-type(4):before {
          content: "Input";
     }
-     .all table.table-bordered.dataTable td:nth-of-type(5):before {
-         content: "Output";
-    }
      .all table.table-bordered.dataTable td:nth-of-type(6):before {
          content: "Time";
     }
@@ -803,6 +818,59 @@ a.navbar-brand.mr-1 img {
 	}
 	.crafting td:empty, .all td:empty {
     	display: none !important;
+    }
+    .cooking table.table-bordered.dataTable td {
+        padding-left: 30% !important;
+    }
+    .cooking table.table-bordered.dataTable td:last-child {
+    	display: none;
+	}
+	.cooking table.table-bordered.dataTable thead tr th:nth-child(1), .crafting table.table-bordered.dataTable thead tr th:nth-child(2), .crafting table.table-bordered.dataTable thead tr th:nth-child(3), .crafting table.table-bordered.dataTable thead tr th:last-child {
+         display: none !important;
+    }
+	.cooking table.table-bordered.dataTable td:nth-of-type(1) {
+        display: none;
+    }
+     .cooking table.table-bordered.dataTable td:nth-of-type(2) {
+         display: none;
+    }
+     .cooking table.table-bordered.dataTable td:nth-of-type(3):before {
+         content: "Ingredient 3";
+    }
+     .cooking table.table-bordered.dataTable td:nth-of-type(4):before {
+         content: "Ingredient 2";
+    }
+    .cooking table.table-bordered.dataTable td:nth-of-type(5):before {
+         content: "Ingredient 1";
+    }
+    .cooking table.table-bordered.dataTable td:nth-of-type(6):before {
+        content: "Result";
+   }
+	.cooking table.table-bordered.dataTable td:nth-child(6) {
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 1;
+		order: 1;
+		border-top: 10px solid #ff8400 !important;
+		background: #000;
+		color: #fff !important;
+	}
+	.cooking td:empty, .all td:empty {
+    	display: none !important;
 	}
 	
+}
+.form-control-sm {
+    height: calc(3rem + 2px);
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: auto;
+    min-width: 300px;
+    font-size: 1.5rem;
+}
+
+select.custom-select.custom-select-sm.form-control.form-control-sm {
+    font-size: 1rem;
 }
