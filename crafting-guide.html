@@ -368,7 +368,10 @@
           language: {
               searchPlaceholder: "Search",
               search: ""
-          }
+          },
+          "columnDefs": [
+              { "targets": [1,2,3,5], "searchable": false }
+          ]
         });
         $("#slotWrapper").fadeIn();
         $("#loading-gif").fadeOut();
