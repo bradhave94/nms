@@ -338,7 +338,10 @@
           language: {
               searchPlaceholder: "Search",
               search: ""
-          }
+          },
+          "columnDefs": [
+              { "targets": [1,2,3], "searchable": false }
+          ]
         });
         $("#loading-gif").fadeOut();
         $("#slotWrapper").fadeIn();
