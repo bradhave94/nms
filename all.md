@@ -1,5 +1,5 @@
 ---
-title: All Refiner Recipes | No Man's Sky Refiner Recipes
+title: All Refiner Recipes | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide
 permalink: "/all"
 position: 4
 layout: page
@@ -21,10 +21,10 @@ page_id: all
                 <thead>
                     <tr>
                         <th>Refiner</th>
-                        <th>Input 1</th>
-                        <th>Input 2</th>
-                        <th>Input 3</th>
-                        <th>Output</th>
+                        <th><div>Input 1</div></th>
+                        <th><div>Input 2</div></th>
+                        <th><div>Input 3</div></th>
+                        <th><div>Output</div></th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -163,16 +163,33 @@ page_id: all
             order: [
                 [4, "asc"]
             ],
+            ordering: false,
             language: {
                 searchPlaceholder: "Search",
                 search: ""
-            },
-            "columnDefs": [{
-                "targets": [0, 1, 2, 3],
-                "searchable": false
-            }]
+            }
         });
-        $("#slotWrapper").fadeIn();
+
+        $('#dataTable thead th').each( function () {
+            var title = $(this).text();
+            $(this).find('div').append( '<input type="text" class="form-control form-control-sm cell-search" placeholder="Search '+title+'" />' );
+        } );
+    
+        var table = $('#dataTable').DataTable();
+    
+        // Apply the search
+        table.columns().every( function () {
+            var that = this;
+    
+            $( 'input', this.header() ).on( 'keyup change clear', function () {
+                if ( that.search() !== this.value ) {
+                    that
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );
+    
         $("#loading-gif").fadeOut();
     }
 </script>

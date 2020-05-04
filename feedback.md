@@ -1,5 +1,5 @@
 ---
-title: Feedback | No Man's Sky Recipes
+title: Feedback | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide
 permalink: "/feedback"
 position: 7
 layout: page

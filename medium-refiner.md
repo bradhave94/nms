@@ -1,5 +1,5 @@
 ---
-title: Medium Refiner | No Man's Sky Refiner Recipes
+title: Medium Refiner | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide
 permalink: "/medium-refiner"
 position: 2
 layout: page
@@ -18,9 +18,9 @@ page_id: medium
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" id="dataTable">
                 <thead>
                     <tr>
-                        <th>Input 1</th>
-                        <th>Input 2</th>
-                        <th>Output</th>
+                        <th><div>Input 1</div></th>
+                        <th><div>Input 2</div></th>
+                        <th><div>Output</div></th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -102,16 +102,33 @@ page_id: medium
             order: [
                 [2, "asc"]
             ],
+            ordering: false,
             language: {
                 searchPlaceholder: "Search",
                 search: ""
-            },
-            "columnDefs": [{
-                "targets": [0, 1],
-                "searchable": false
-            }]
+            }
         });
-        $("#loading-gif").fadeOut();
+        
+        $('#dataTable thead th').each( function () {
+            var title = $(this).text();
+            $(this).find('div').append( '<input type="text" class="form-control form-control-sm cell-search" placeholder="Search '+title+'" />' );
+        } );
+    
+        var table = $('#dataTable').DataTable();
+    
+        // Apply the search
+        table.columns().every( function () {
+            var that = this;
+    
+            $( 'input', this.header() ).on( 'keyup change clear', function () {
+                if ( that.search() !== this.value ) {
+                    that
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );
+        
         $("#slotWrapper").fadeIn();
     }
 </script>

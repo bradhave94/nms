@@ -1,5 +1,5 @@
 ---
-title: Portable Refiner | No Man's Sky Refiner Recipes
+title: Portable Refiner | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide
 permalink: "/portable-refiner"
 position: 1
 description: All portable refiner recipes for No Man's Sky
@@ -18,8 +18,8 @@ layout: page
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Input</th>
-                        <th>Output</th>
+                        <th><div>Input</div></th>
+                        <th><div>Output</div></th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -96,15 +96,32 @@ layout: page
             order: [
                 [1, "asc"]
             ],
+            ordering: false,
             language: {
                 searchPlaceholder: "Search",
                 search: ""
-            },
-            "columnDefs": [{
-                "targets": [0],
-                "searchable": false
-            }]
+            }
         });
+
+        $('#dataTable thead th').each( function () {
+            var title = $(this).text();
+            $(this).find('div').append( '<input type="text" class="form-control form-control-sm cell-search" placeholder="Search '+title+'" />' );
+        } );
+    
+        var table = $('#dataTable').DataTable();
+    
+        // Apply the search
+        table.columns().every( function () {
+            var that = this;
+    
+            $( 'input', this.header() ).on( 'keyup change clear', function () {
+                if ( that.search() !== this.value ) {
+                    that
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );
         $("#slotWrapper").fadeIn();
     }
 </script>
