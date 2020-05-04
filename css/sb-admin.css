@@ -1,14 +1,12 @@
-/*! * Start Bootstrap - SB Admin v5.0.1 (https://startbootstrap.com/template-overviews/sb-admin) * Copyright 2013-2018 Start Bootstrap * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE) */
- @import url('https://fonts.googleapis.com/css?family=Raleway');
  @font-face {
-     font-family: 'geosanslight-nmsregular';
-     src: url(fonts/geonms-webfont.eot);
-     src: url(fonts/geonms-webfont.eot?#iefix) format("embedded-opentype"), url(fonts/geonms-webfont.woff) format("woff"), url(fonts/geonms-webfont.ttf) format("truetype"), url(fonts/geonms-webfont.svg#geosanslight-nmsregular) format("svg");
+     font-family: 'geo';
+     src: url(../fonts/geo.ttf);
+     src: url(../fonts/geo.eot?#iefix) format("embedded-opentype"), url(../fonts/geo.woff) format("woff"), url(../fonts/geo.ttf) format("truetype"), url(../fonts/geo.svg#geosanslight-nmsregular) format("svg");
      font-weight: 400;
      font-style: normal 
 }
  h1, h2, h3, h4, h5, h6 {
-     font-family: "geosanslight-nmsregular", Helvetica, Arial, sans-serif;
+     font-family: "geo", Helvetica, Arial, sans-serif;
      font-weight: 700;
      letter-spacing: 7.5px;
      letter-spacing: .75rem;
@@ -21,7 +19,7 @@
 }
  body {
      height: 100%;
-     font-family: Raleway, Helvetica, Arial, sans-serif;
+     font-family: "geo", Helvetica, Arial, sans-serif;;
 }
  #wrapper {
      display: -webkit-box;
@@ -115,7 +113,8 @@
      font-size: 0.5rem;
 }
 a.navbar-brand.mr-1 img {
-    max-width: 100%;
+    max-width: 300px;
+    padding: 1rem 2rem 1rem 1rem;
 }
  @media (min-width: 768px) {
      .navbar-nav .form-inline .input-group {
@@ -369,7 +368,7 @@ a.navbar-brand.mr-1 img {
      background-size: cover;
 }
  div.home, div.feedback, #content-wrapper {
-     background-image: url(../img/next.jpg);
+     background-image: url(../uploads/next.jpg);
 }
  .card-header img {
      width: 60px;
@@ -506,7 +505,7 @@ a.navbar-brand.mr-1 img {
 }
  .card-header span {
      text-transform: uppercase;
-     letter-spacing: 2px;
+     letter-spacing: 3px;
      font-weight: 600;
      padding-left: 10px;
      display: inline-block;
@@ -514,7 +513,7 @@ a.navbar-brand.mr-1 img {
      position: relative;
 }
  .card-header {
-     background-image: url(../img/resources.png);
+     background-image: url(../uploads/resources.png);
      background-position: center;
      position: relative;
 }
