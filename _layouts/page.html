@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62190812-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "UA-62190812-5");
+    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{page.description}}" />
+    <meta name="keywords" content="No Man's Sky, Refiners, Refiner Recipes, Crafting Guide, Cooking Guide" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Bradley Haveman" />
+    <link rel="icon" type="image/png" href="uploads/favicon-32x32.png" sizes="32x32" />
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <!-- Page level plugin CSS-->
+    <link href="css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet" />
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <script data-ad-client="ca-pub-8524094599848175" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+<body id="page-top" class="refiner">
+   
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+        <a href="/" class="navbar-brand mr-1"><img src="uploads/logo-nms.png" /></a>
+    </nav>
+
+    <div id="wrapper">
+
+        {% include nav.html %}
+
+        <div id="content-wrapper" class="{{page.page_id}}">
+            
+            <div class="container-fluid">
+
+                {{ content }}
+
+                {% include cards.html %}
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.js"></script>
+
+</body>
+
+</html>
