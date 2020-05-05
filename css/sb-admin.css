@@ -368,7 +368,58 @@ a.navbar-brand.mr-1 img {
      background-size: cover;
 }
  div.home, div.feedback, #content-wrapper {
-     background-image: url(../uploads/next.jpg);
+     
+}
+.bg1 {
+    background-image: url(../uploads/next.jpg);
+}
+.bg2 {
+    background-image: url(../uploads/bg2.jpg);
+}
+.bg3 {
+    background-image: url(../uploads/bg3.jpg);
+}
+.bg4 {
+    background-image: url(../uploads/bg4.jpg);
+}
+.bg5 {
+    background-image: url(../uploads/bg5.jpg);
+}
+.bg6 {
+    background-image: url(../uploads/bg6.jpg);
+}
+.bg7 {
+    background-image: url(../uploads/bg7.jpg);
+}
+.bg8 {
+    background-image: url(../uploads/bg8.jpg);
+}
+.bg9 {
+    background-image: url(../uploads/bg9.jpg);
+}
+.home .container-fluid {
+    text-align: center;
+    color: #fff;
+}
+.home h1 {
+    font-weight: 100;
+    padding-top: 3rem;
+}
+.home h6 {
+    font-weight: 100;
+    padding: 1rem 0;
+}
+.home h6 a {
+    opacity: .7;
+    color: #fff;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.home h6 a:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 1;
 }
  .card-header img {
      width: 60px;

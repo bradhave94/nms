@@ -40,8 +40,7 @@ page_id: crafting
 </div>
 
 <script type="text/javascript">
-    var publicSpreadsheetUrl =
-          "https://docs.google.com/spreadsheets/d/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/edit?usp=sharing";
+    var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/edit?usp=sharing";
     
       function init() {
           Tabletop.init({
