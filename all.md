@@ -3,10 +3,10 @@ title: All Refiner Recipes | No Man's Sky Refiner Recipes, Crafting Guide and Co
   Guide
 permalink: "/all"
 position: 4
-layout: page
 description: All refiner recipes for No Man's Sky
 type: refiner
 page_id: all
+layout: page
 ---
 
 <div class="card mb-3" id="slotWrapper">
@@ -14,7 +14,7 @@ page_id: all
         <img src="uploads/portable.png" />
         <img src="uploads/medium.png" />
         <img src="uploads/large.png" />
-        <span>All</span>
+        <span>All Refiners</span>
     </div>
     <div class="card-body">
         <div class="table-responsive">
