@@ -1,6 +1,5 @@
 ---
-title: Portable Refiner | No Man's Sky Refiner Recipes, Crafting Guide and Cooking
-  Guide
+title: Portable Refiner | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide
 permalink: "/portable-refiner"
 position: 1
 description: All portable refiner recipes for No Man's Sky
