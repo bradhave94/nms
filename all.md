@@ -1,5 +1,6 @@
 ---
-title: All Refiner Recipes | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide
+title: All Refiner Recipes | No Man's Sky Refiner Recipes, Crafting Guide and Cooking
+  Guide
 permalink: "/all"
 position: 4
 layout: page
