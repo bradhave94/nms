@@ -5,12 +5,12 @@
             <span>Home</span>
         </a>
     </li>
-    <li class="nav-item dropdown {% if page.type == 'refiner' %}active show{% endif %}">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{% if page.type == 'refiner' %}true{% else %}false{% endif %}">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
             <span>Refiners</span>
         </a>
-        <div class="dropdown-menu {% if page.type == 'refiner' %}show{% endif %}" aria-labelledby="pagesDropdown">
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item  {% if page.url == '/portable-refiner' %}active{% endif %}" href="portable-refiner">Portable </a>
             <a class="dropdown-item  {% if page.url == '/medium-refiner' %}active{% endif %}" href="medium-refiner">Medium</a>
             <a class="dropdown-item  {% if page.url == '/large-refiner' %}active{% endif %}" href="large-refiner">Large </a>
