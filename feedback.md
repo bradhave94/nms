@@ -26,7 +26,7 @@ page_id: feedback
                 <textarea id="message" name="message" cols="40" rows="5" required="required" class="form-control"></textarea>
             </div>
             <div class="form-group">
-                <div class="g-recaptcha" data-sitekey="6LcAi90UAAAAABajOBg3a6bjOafwVmsrpb9Isqzi"></div>
+                <div class="g-recaptcha-response" data-sitekey="6LcAi90UAAAAABajOBg3a6bjOafwVmsrpb9Isqzi"></div>
                 <br/>
                 <button name="submit" type="submit" class="btn btn-primary">
                     Submit
