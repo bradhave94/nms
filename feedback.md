@@ -10,8 +10,8 @@ page_id: feedback
 <div class="container">
     <div class="row">
       <div class="col-sm-8 offset-md-2">
-      <h2>Send your feedback</h2>
-        <p>Let us know if you have ideas or suggestions on how to improve this guide</p>
+      <h2>Send us your feedback</h2>
+        <p>Let us know if you have any ideas or suggestions on how to improve this our site.</p>
         <form action="https://formspree.io/mzbjbkzw" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
