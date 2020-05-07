@@ -124,7 +124,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   font-size: 0.5rem;
 }
 a.navbar-brand.mr-1 img {
-  max-width: 350px;
+  max-width: 100%;
   padding: 1rem 2rem 1rem 1rem;
 }
 @media (min-width: 768px) {
@@ -837,16 +837,12 @@ a.article:hover {
     margin-right: .25rem;
   }
   .navbar-expand .navbar-collapse {
-    -webkit-box-pack: justify !important;
-    -ms-flex-pack: justify !important;
-    justify-content: space-between !important;
+    -webkit-box-pack: end !important;
+    -ms-flex-pack: end !important;
+        justify-content: flex-end !important;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
   }
   #sidebar {
     margin-left: -350px;
