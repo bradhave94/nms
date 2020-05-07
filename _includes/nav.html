@@ -1,40 +1,27 @@
-<ul class="sidebar navbar-nav">
-    <li class="nav-item {% if page.url == '/' %}active{% endif %}">
-        <a class="nav-link" href="/">
-            <i class="fas fa-fw fa-home"></i>
-            <span>Home</span>
-        </a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Refiners</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item  {% if page.url == '/portable-refiner' %}active{% endif %}" href="portable-refiner">Portable </a>
-            <a class="dropdown-item  {% if page.url == '/medium-refiner' %}active{% endif %}" href="medium-refiner">Medium</a>
-            <a class="dropdown-item  {% if page.url == '/large-refiner' %}active{% endif %}" href="large-refiner">Large </a>
-            <a class="dropdown-item  {% if page.url == '/all' %}active{% endif %}" href="all">All</a>
-        </div>
-    </li>
-    
-    <li class="nav-item">
-        <a class="nav-link {% if page.url == '/crafting-guide' %}active{% endif %}" href="crafting-guide">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Crafting</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link {% if page.url == '/cooking' %}active{% endif %}" href="cooking">
-            <i class="fas fa-fw fa-birthday-cake"></i>
-            <span>Cooking </span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link {% if page.url == '/feedback' %}active{% endif %}" href="feedback">
-            <i class="fas fa-fw fa-question"></i>
-            <span>Feedback</span>
-        </a>
-    </li>
-    
-</ul>
+<!-- Sidebar Holder -->
+<nav id="sidebar">
+    <ul class="list-unstyled components">
+        <li class="{% if page.url == '/' %}active{% endif %}">
+            <a href="/"><i class="fas fa-fw fa-home"></i>Home</a>
+        </li>
+        <li class="{% if page.type == 'refiner' %}active{% endif %}">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="{% if page.type == 'refiner' %}true{% else %}false{% endif %}" class="dropdown-toggle"><i class="fas fa-fw fa-industry" aria-hidden="true"></i>Refiners</a>
+            <ul class="collapse list-unstyled {% if page.type == 'refiner' %}show{% endif %}" id="homeSubmenu">
+                <li class="{% if page.url == '/portable-refiner' %}active{% endif %}"><a href="portable-refiner"><i class="fas fa-fw fa-caret-right" aria-hidden="true"></i>Portable</a></li>
+                <li class="{% if page.url == '/medium-refiner' %}active{% endif %}"> <a href="medium-refiner"><i class="fas fa-fw fa-caret-right" aria-hidden="true"></i>Medium</a></li>
+                <li class="{% if page.url == '/large-refiner' %}active{% endif %}"><a href="large-refiner"><i class="fas fa-fw fa-caret-right" aria-hidden="true"></i>Large </a></li>
+                <li class="{% if page.url == '/all' %}active{% endif %}"><a href="all"><i class="fas fa-fw fa-caret-right" aria-hidden="true"></i>All</a></li>
+            </ul>
+        </li>
+        <li class="{% if page.url == '/crafting-guide' %}active{% endif %}">
+            <a href="crafting-guide"><i class="fas fa-fw fa-cog"></i>Crafting</a>
+        </li>
+        <li class="{% if page.url == '/cooking' %}active{% endif %}">
+            <a href="cooking"><i class="fas fa-fw fa-birthday-cake"></i>Cooking</a>
+        </li>
+        <li class="{% if page.url == '/feedback' %}active{% endif %}">
+            <a href="feedback"><i class="fas fa-fw fa-question"></i>Feedback</a>
+        </li>
+    </ul>
+
+</nav>

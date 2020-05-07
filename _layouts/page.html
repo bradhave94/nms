@@ -50,28 +50,39 @@
 
     <script>
         (function($){
-
-        $(document).ready(function() {
-            var classes = [ 'bg1', 'bg2', 'bg3', 'bg4', 'bg5', 'bg6', 'bg7', 'bg8', 'bg9' ];
-            $('#content-wrapper').addClass(classes[ Math.floor( Math.random()*classes.length ) ] );
-        });
-
+            $(document).ready(function() {
+                var classes = [ 'bg1', 'bg2', 'bg4', 'bg5', 'bg6', 'bg7', 'bg8', 'bg9' ];
+                $('#content-wrapper').addClass(classes[ Math.floor( Math.random()*classes.length ) ] );
+            });
         })(jQuery);
     </script>
 
 </head>
 
-<body id="page-top" class="refiner">
-   
-    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-        <a href="/" class="navbar-brand mr-1"><img src="uploads/logo-nms.png" /></a>
-    </nav>
+<body id="page-top" class="{{page.type}}">
 
-    <div id="wrapper">
+    <div id="wrapper" class="wrapper">
 
         {% include nav.html %}
 
-        <div id="content-wrapper" class="{{page.page_id}}">
+        <div id="content-wrapper" class="{{page.page_id}} bg0">
+
+            <nav class="navbar navbar-expand">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse justify-content-between" id="nmsNav">
+
+                      
+                            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+
+                            <a href="/" class="navbar-brand mr-1"><img src="uploads/logo-nms.png" title="" style=""></a>
+                            
+                    </div>
+                </div>
+            </nav>
             
             <div class="container-fluid">
 
@@ -97,6 +108,8 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

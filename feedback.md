@@ -5,9 +5,10 @@ position: 7
 layout: page
 description: Leave feedback for No Man's Sky Recipes
 page_id: feedback
+type: feedback
 ---
 
-<div class="container">
+<div class="container feedback">
     <div class="row">
       <div class="col-sm-8 offset-md-2">
       <h2>Send us your feedback</h2>

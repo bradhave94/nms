@@ -16,15 +16,22 @@ layout: page
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <div id="loading" class="text-center" style="padding: 2rem">
+                <img src="uploads/loading.gif" width="50"/>
+            </div>
+            <table class="table table-bordered loading" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <tr>
+                    <tr class='tr-title'>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                    <tr class="text-center">
                         <th><div>Input</div></th>
                         <th><div>Output</div></th>
                     </tr>
                 </thead>
                 <tfoot>
-                    <tr>
+                    <tr class='tr-title'>
                         <th>Input</th>
                         <th>Output</th>
                     </tr>
@@ -53,20 +60,16 @@ layout: page
         data.refiner.elements.forEach(function(item, index) {
             if (isEmpty(item.ing_3) && isEmpty(item.ing_2)) {
                 $("#oneslot").append(
-                    '<tr>  <td bgcolor="' +
+                    '<tr>  <td onclick="getText(\''+item.ing_1+'\')" bgcolor="' +
                     getColor(item.ing_1) +
-                    '" style="color:' +
-                    item.ing_1 +
                     '"><img src="uploads/' +
                     item.ing_1.replace(/ /g, "-").toLowerCase() +
                     '.png" /><span>' +
                     item.ing_1 +
                     " x" +
                     item.ing_1_num +
-                    '</span></td> <td bgcolor="' +
+                    '</span></td> <td onclick="getText(\''+item.result+'\')" bgcolor="' +
                     getColor(item.result) +
-                    '" style="color:' +
-                    item.result +
                     '"><img src="uploads/' +
                     item.result.replace(/ /g, "-").toLowerCase() +
                     '.png" /><span>' +
@@ -100,13 +103,13 @@ layout: page
             ordering: false,
             language: {
                 searchPlaceholder: "Search",
-                search: ""
+                search: '<a class="clearSearch" onclick="clearSearch()"><i class="fa fa-times" aria-hidden="true"></i></a>'
             }
         });
 
         $('#dataTable thead th').each( function () {
             var title = $(this).text();
-            $(this).find('div').append( '<input type="text" class="form-control form-control-sm cell-search" placeholder="Search '+title+'" />' );
+            $(this).find('div').html( '<input type="text" class="form-control form-control-sm cell-search" placeholder="Search '+title+'" />' );
         } );
     
         var table = $('#dataTable').DataTable();
@@ -123,7 +126,9 @@ layout: page
                 }
             } );
         } );
-        $("#slotWrapper").fadeIn();
+
+        $("#loading").remove();
+        $(".loading").removeClass('loading');
     }
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
