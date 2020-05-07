@@ -1128,13 +1128,13 @@ a.clearSearch:hover {
     cursor: pointer;
 }
 td {
-    background: transparent;
+    opacity: 1;
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 td:not(:empty):hover {
-    background: #142029;
+  opacity: .65;
     cursor: pointer;
 }
 .loading {
