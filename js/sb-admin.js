@@ -38,10 +38,28 @@
 		event.preventDefault();
 	});
 
+	
+
+	function closeMenu(){
+		$('#sidebar').removeClass('active');
+		$('#sidebarCollapse').removeClass('active');
+		$('body').removeClass('open');
+	}
+	
+	$('.menu-overlay').click( function(e) {
+		closeMenu();
+	});
+
 	$('#sidebarCollapse').on('click', function () {
 		$('#sidebar').toggleClass('active');
+		$('body').toggleClass('open');
 		$(this).toggleClass('active');
 	});
+	
+	$("#sidebarCollapse").click( function(e) {
+		e.stopPropagation(); // this stops the event from bubbling up to the body
+	});
+
 
 	
 })(jQuery); // End of use strict
