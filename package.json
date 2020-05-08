@@ -1,0 +1,20 @@
+{
+    "name": "no-mans-sky-recipes",
+    "version": "41.0.0",
+    "title": "No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide",
+    "timezone": "UTC",
+    "collections": {
+        "posts": {
+            "title": "Posts",
+            "output": true
+        },
+        "uploads": {
+            "title": "Uploads",
+            "output": true
+        }
+    },
+    "email": "traveller@nomansskyrecipes.com",
+    "description": "Looking for one stop shop for all your No Man's Sky needs? Look no more! No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide",
+    "url": "https://nomansskyrecipes.com/",
+    "github_username": "bradhave94"
+}
