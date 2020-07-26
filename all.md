@@ -23,19 +23,19 @@ layout: page
             </div>
             <table class="table table-bordered loading" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <tr class='tr-title'>
-                        <th>Refiner</th>
-                        <th>Input 1</th>
-                        <th>Input 2</th>
-                        <th>Input 3</th>
-                        <th>Output</th>
-                    </tr>
                     <tr class="text-center">
                         <th><div>Refiner</div></th>
                         <th><div>Input 1</div></th>
                         <th><div>Input 2</div></th>
                         <th><div>Input 3</div></th>
                         <th><div>Output</div></th>
+                    </tr>
+                    <tr class='tr-title'>
+                        <th>Refiner</th>
+                        <th>Input 1</th>
+                        <th>Input 2</th>
+                        <th>Input 3</th>
+                        <th>Output</th>
                     </tr>
                 </thead>
                 <tfoot>

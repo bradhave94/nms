@@ -159,7 +159,8 @@ page_id: cooking
               order: [
                   [4, "asc"]
               ],
-              ordering: false,
+              ordering: true,
+              orderCellsTop: true,
               pageLength: 10,
               language: {
                   searchPlaceholder: "Search",
@@ -177,7 +178,7 @@ page_id: cooking
             // Apply the search
             table.columns().every( function () {
                 var that = this;
-        
+                console.log(this)
                 $( 'input', this.header() ).on( 'keyup change clear', function () {
                     if ( that.search() !== this.value ) {
                         that

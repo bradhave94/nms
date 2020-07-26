@@ -121,7 +121,8 @@ page_id: large
             order: [
                 [3, "asc"]
             ],
-            ordering: false,
+            ordering: true,
+            orderCellsTop: true,
             language: {
                 searchPlaceholder: "Search",
                 search: '<a class="clearSearch" onclick="clearSearch()"><i class="fa fa-times" aria-hidden="true"></i></a>'

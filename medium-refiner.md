@@ -110,7 +110,8 @@ page_id: medium
             order: [
                 [2, "asc"]
             ],
-            ordering: false,
+            ordering: true,
+            orderCellsTop: true,
             language: {
                 searchPlaceholder: "Search",
                 search: '<a class="clearSearch" onclick="clearSearch()"><i class="fa fa-times" aria-hidden="true"></i></a>'
