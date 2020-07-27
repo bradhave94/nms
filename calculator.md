@@ -1,6 +1,6 @@
 ---
-title: Crafting Calculator | No Man's Sky Crafting Calculator,  Refiner Recipes, Crafting Guide and Cooking
-  Guide
+title: Crafting Calculator | No Man's Sky Crafting Calculator,  Refiner Recipes, Crafting
+  Guide and Cooking Guide
 permalink: "/calculator"
 position: 1
 description: No Man's Sky Crafting Calculator
