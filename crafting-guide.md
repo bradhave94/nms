@@ -151,8 +151,6 @@ page_id: crafting
                   [4, "desc"]
               ],
               pageLength: 50,
-              ordering: true,
-              orderCellsTop: true,
               language: {
                   searchPlaceholder: "Search",
                   search: '<a class="clearSearch" onclickc="clearSearch()"><i class="fa fa-times" aria-hidden="true"></i></a>'

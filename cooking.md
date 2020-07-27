@@ -159,8 +159,6 @@ page_id: cooking
               order: [
                   [4, "asc"]
               ],
-              ordering: true,
-              orderCellsTop: true,
               pageLength: 10,
               language: {
                   searchPlaceholder: "Search",

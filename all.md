@@ -37,7 +37,7 @@ layout: page
                         <th><div>Input 3</div></th>
                         <th><div>Output</div></th>
                     </tr>
-                </thead>
+                </thead>             
                 <tfoot>
                     <tr class='tr-title'>
                         <th>Refiner</th>
@@ -174,8 +174,6 @@ layout: page
             order: [
                 [4, "asc"]
             ],
-            ordering: true,
-            orderCellsTop: true,
             language: {
                 searchPlaceholder: "Search",
                 search: '<a class="clearSearch" onclick="clearSearch()"><i class="fa fa-times" aria-hidden="true"></i></a>'
@@ -192,8 +190,8 @@ layout: page
         // Apply the search
         table.columns().every( function () {
             var that = this;
-    
             $( 'input', this.header() ).on( 'keyup change clear', function () {
+                console.log('s')
                 if ( that.search() !== this.value ) {
                     that
                         .search( this.value )
