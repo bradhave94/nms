@@ -769,7 +769,7 @@ body.open {
   overflow: hidden;
 }
 body .menu-overlay {
-  content: '';
+  content: "";
   background: #000;
   position: absolute;
   width: 100%;
@@ -785,7 +785,7 @@ body .menu-overlay {
   transition: all 0.2s ease;
 }
 body.open .menu-overlay {
-  opacity: .2;
+  opacity: 0.2;
   visibility: visible;
 }
 #sidebar ul li a:hover {
@@ -857,12 +857,12 @@ a.article:hover {
 }
 @media (max-width: 768px) {
   #sidebarCollapse {
-    margin-right: .25rem;
+    margin-right: 0.25rem;
   }
   .navbar-expand .navbar-collapse {
     -webkit-box-pack: end !important;
     -ms-flex-pack: end !important;
-        justify-content: flex-end !important;
+    justify-content: flex-end !important;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1126,37 +1126,232 @@ select.custom-select.custom-select-sm.form-control.form-control-sm {
   font-size: 1rem;
 }
 .table-responsive {
-    position: relative;
+  position: relative;
 }
 .container.feedback {
   padding-top: 3rem;
 }
 a.clearSearch {
-    font-size: 1rem;
-    position: absolute;
-    right: 1rem;
-    top: 52%;
-    transform: translateY(-50%);
-    line-height: 0;
-    opacity: 1;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+  font-size: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 52%;
+  transform: translateY(-50%);
+  line-height: 0;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 a.clearSearch:hover {
-    opacity: .8;
-    cursor: pointer;
+  opacity: 0.8;
+  cursor: pointer;
 }
 td {
-    opacity: 1;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 td:not(:empty):hover {
-  opacity: .65;
-    cursor: pointer;
+  opacity: 0.65;
+  cursor: pointer;
 }
 .loading {
-    display: none;
+  display: none;
+}
+.calc li.part > a {
+  font-size: 2rem;
+  line-height: 4rem;
+  color: #fff;
+}
+.calc ul.parts,
+.calc li.part > ul {
+  padding: 0;
+  margin: auto;
+  list-style: none;
+}
+
+.calc li.part ul {
+  list-style: none;
+}
+
+.calc #accordian h3 {
+  background: #003040;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#003040),
+    to(#002535)
+  );
+  background: -o-linear-gradient(#003040, #002535);
+  background: linear-gradient(#003040, #002535);
+}
+.calc #accordian h3 a {
+  padding: 0 10px;
+  line-height: 34px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.calc #accordian h3:hover {
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+.calc i {
+  margin-right: 10px;
+}
+
+.calc #accordian li {
+  list-style-type: none;
+}
+
+.calc #accordian ul ul li a,
+.calc #accordian h4 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
+  position: relative;
+}
+
+.calc #accordian ul ul li a:hover {
+  background: #003545;
+  border-left: 5px solid lightgreen;
+}
+
+.calc #accordian ul ul {
+  display: none;
+}
+
+.calc #accordian li.active > ul {
+  display: block;
+}
+
+.calc #accordian ul ul ul {
+  margin-left: 15px;
+  border-left: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+.calc li.part > a:hover,
+.calc li.part > a:hover ~ i {
+  text-decoration: none;
+  color: #ff8400;
+}
+
+.calc input[type="number"] {
+  background: #000;
+  border: none;
+  color: #fff;
+  width: 60px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  height: 40px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.calc input::-webkit-outer-spin-button,
+.calc input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.calc input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.calc span.minus,
+.calc span.plus {
+  font-size: 2rem;
+  width: 35px;
+  height: 35px;
+  background: #ff8400;
+  color: #000;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 700;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+.calc span.minus:hover,
+.calc span.plus:hover {
+  opacity: 0.75;
+}
+.calc .qw,
+.calc .q {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.calc ul.parts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.calc li.part {
+
+  padding: 1rem;
+}
+@media (min-width: 768px) { .calc li.part {
+  width: 50%;
+
+}}
+.calc ol > li {
+  width: 50%;
+}
+.calc ul.parts-list > li > a {
+  font-size: 1.25rem;
+  line-height: 3;
+}
+.calc ul.parts-list i.fas.fa-fw.fa-plus {
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+}
+.calc ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 4rem !important;
+  padding: 0;
+}
+.calc .total h6 {
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+.calc span.quantity {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
