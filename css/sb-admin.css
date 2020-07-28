@@ -939,7 +939,7 @@ a.article:hover {
   }
   table.table-bordered.dataTable td {
     text-align: center;
-    padding: 1rem !important;
+    padding: 0.5rem !important;
     vertical-align: middle;
   }
 }
@@ -998,12 +998,14 @@ a.article:hover {
     border: none;
   }
   @media only screen and (max-width: 992px) {
-    table.table-bordered.dataTable thead {
+    table.table-bordered.dataTable thead tr.tr-title {
       display: none;
     }
   }
   table.table-bordered.dataTable thead tr {
     display: block;
+    margin-top: 0;
+    border: none;
   }
   table.table-bordered.dataTable thead tr td {
     display: block;
@@ -1011,8 +1013,14 @@ a.article:hover {
   }
   table.table-bordered.dataTable thead tr th {
     display: block !important;
-    width: 97% !important;
+    width: 100% !important;
     padding-right: 0px;
+    margin: 1rem 0;
+  }
+  input.form-control.form-control-sm.cell-search {
+    font-size: 1.5rem;
+    height: 4rem;
+    line-height: 2rem;
   }
   table.table-bordered.dataTable tfoot {
     display: none;
@@ -1056,9 +1064,8 @@ a.article:hover {
   .threeslot table.table-bordered.dataTable thead tr th:nth-child(3) {
     display: none !important;
   }
-  .all table.table-bordered.dataTable thead tr th:nth-child(2),
-  .all table.table-bordered.dataTable thead tr th:nth-child(3),
-  .all table.table-bordered.dataTable thead tr th:nth-child(4) {
+  .all table.table-bordered.dataTable thead tr th:nth-child(1),
+  .all table.table-bordered.dataTable td:first-child {
     display: none !important;
   }
   .crafting table.table-bordered.dataTable td:last-child {
@@ -1074,7 +1081,6 @@ a.article:hover {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    border-top: 10px solid #ff8400 !important;
     background: #000;
     color: #fff !important;
   }
@@ -1091,6 +1097,14 @@ a.article:hover {
   .crafting table.table-bordered.dataTable thead tr th:last-child {
     display: none !important;
   }
+  .cooking table.table-bordered.dataTable thead tr th:nth-child(1),
+  .cooking table.table-bordered.dataTable thead tr th:nth-child(2),
+  .cooking table.table-bordered.dataTable thead tr th:nth-child(3),
+  .cooking table.table-bordered.dataTable thead tr th:nth-child(4),
+  .cooking table.table-bordered.dataTable thead tr th:nth-child(5),
+  .cooking table.table-bordered.dataTable thead tr th:last-child {
+    display: none !important;
+  }
   .cooking table.table-bordered.dataTable td:nth-of-type(1) {
     display: none;
   }
@@ -1101,9 +1115,10 @@ a.article:hover {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    border-top: 10px solid #ff8400 !important;
     background: #000;
     color: #fff !important;
+    padding: 1.5rem !important;
+    font-size: 1.65rem;
   }
   .cooking td:empty,
   .all td:empty {
@@ -1320,20 +1335,43 @@ td:not(:empty):hover {
 }
 
 .calc li.part {
-
+  width: 100%;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
-@media (min-width: 768px) { .calc li.part {
-  width: 50%;
-
-}}
 .calc ol > li {
-  width: 50%;
+  width: 100%;
+}
+.calc ul.parts-list > li {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 .calc ul.parts-list > li > a {
-  font-size: 1.25rem;
-  line-height: 3;
+  font-size: 1.5rem;
+  line-height: 3.25;
+  margin-bottom: 1rem;
 }
+
+@media (min-width: 768px) {
+  .calc li.part {
+    width: 50%;
+    margin-bottom: 0rem;
+  }
+  .calc ol > li {
+    width: 50%;
+  }
+  .calc ul.parts-list > li {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+  }
+  .calc ul.parts-list > li > a {
+    font-size: 1.25rem;
+    margin-bottom: 0rem;
+    line-height: 3;
+  }
+}
+
+
 .calc ul.parts-list i.fas.fa-fw.fa-plus {
   font-size: 0.75rem;
   padding-left: 0.5rem;
