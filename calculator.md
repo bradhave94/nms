@@ -37,8 +37,6 @@ layout: page
         var itemsProcessed = 0;
 
         var result = data.calc.elements.map(function(e) { return e.name; }).indexOf('Iridesite');
-        
-
         data.calc.elements.forEach(function(item, index) {
             let str = item.parts;
             let parts = str.length ? str.split(",") : null;
@@ -58,7 +56,6 @@ layout: page
                     </ul>
                 `;
             }
-
 
             if(item.parts) {
                 $(".parts").append(
@@ -83,7 +80,6 @@ layout: page
             });
             $(".remove").remove()
             
-
             itemsProcessed++;
             if (itemsProcessed === data.calc.elements.length) {
 

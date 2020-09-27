@@ -20,27 +20,27 @@ page_id: crafting
             <table class="crafting table table-bordered loading" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr class='tr-title'>
+                        <th>Value</th>
                         <th>Resources 1</th>
                         <th>Resources 2</th>
                         <th>Resources 3</th>
                         <th>Product</th>
-                        <th>Value</th>
                     </tr>
                     <tr class="text-center">
+                        <th><div>Value</div></th>
                         <th><div>Resources 1</div></th>
                         <th><div>Resources 2</div></th>
                         <th><div>Resources 3</div></th>
                         <th><div>Product</div></th>
-                        <th><div>Value</div></th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr class='tr-title'>
+                        <th>Value</th>
                         <th>Resources 1</th>
                         <th>Resources 2</th>
                         <th>Resources 3</th>
                         <th>Product</th>
-                        <th>Value</th>
                     </tr>
                 </tfoot>
                 <tbody id="crafting"></tbody>
@@ -65,7 +65,9 @@ page_id: crafting
           data.crafting.elements.forEach(function(item, index) {
               if (!isEmpty(item.resources_3)) {
                   $("#crafting").append(
-                      '<tr>  <td onclickc="getText(\''+item.resources_1+'\')"><img src="uploads/' +
+                      '<tr>  <td onclickc="getText(\''+item.value+'\')">' +
+                      item.value +
+                      '</td> <td onclickc="getText(\''+item.resources_1+'\')"><img src="uploads/' +
                       item.resources_1.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
                       item.resources_1 +
@@ -76,22 +78,24 @@ page_id: crafting
                       '80.png" /><span>' +
                       item.resources_2 +
                       " " +
-                      item.resources_2_num.replace(/one/g, "") +
+                      item.resources_3_num.replace(/one/g, "") +
                       '</span></td> <td onclickc="getText(\''+item.resources_3+'\')"><img src="uploads/' +
                       item.resources_3.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
                       item.resources_3 +
+                      " " +
+                      item.resources_3_num.replace(/one/g, "") +
                       '</span></td> <td onclickc="getText(\''+item.product+'\')"><img src="uploads/' +
                       item.product.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
                       item.product +
-                      '</span></td> <td onclickc="getText(\''+item.value+'\')">' +
-                      item.value +
-                      "</td></tr>"
+                      '</span></td></tr>'
                   );
               } else if (!isEmpty(item.resources_2)) {
                   $("#crafting").append(
-                      '<tr>   <td onclickc="getText(\''+item.resources_1+'\')"><img src="uploads/' +
+                      '<tr>  <td onclickc="getText(\''+item.value+'\')">' +
+                      item.value +
+                      '</td>  <td onclickc="getText(\''+item.resources_1+'\')"><img src="uploads/' +
                       item.resources_1.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
                       item.resources_1 +
@@ -107,13 +111,13 @@ page_id: crafting
                       item.product.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
                       item.product +
-                      '</span></td> <td onclickc="getText(\''+item.value+'\')">' +
-                      item.value +
-                      "</td> </tr>"
+                      '</span></td> </tr>'
                   );
               } else {
                   $("#crafting").append(
-                      '<tr>   <td onclickc="getText(\''+item.resources_1+'\')"><img src="uploads/' +
+                      '<tr>  <td onclickc="getText(\''+item.value+'\')">' +
+                      item.value +
+                      '</td> <td onclickc="getText(\''+item.resources_1+'\')"><img src="uploads/' +
                       item.resources_1.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
                       item.resources_1 +
@@ -123,9 +127,7 @@ page_id: crafting
                       item.product.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
                       item.product +
-                      '</span></td> <td onclickc="getText(\''+item.value+'\')">' +
-                      item.value +
-                      "</td> </tr>"
+                      '</span></td> </tr>'
                   );
               }
     
@@ -148,9 +150,9 @@ page_id: crafting
       function callback() {
           $("#dataTable").DataTable({
               order: [
-                  [4, "desc"]
+                  [0, "desc"]
               ],
-              pageLength: 50,
+              pageLength: 100,
               language: {
                   searchPlaceholder: "Search",
                   search: '<a class="clearSearch" onclickc="clearSearch()"><i class="fa fa-times" aria-hidden="true"></i></a>'
