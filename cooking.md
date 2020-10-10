@@ -159,6 +159,7 @@ page_id: cooking
               order: [
                   [4, "asc"]
               ],
+              lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
               pageLength: 10,
               language: {
                   searchPlaceholder: "Search",

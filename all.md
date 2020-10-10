@@ -174,6 +174,7 @@ layout: page
             order: [
                 [4, "asc"]
             ],
+            lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
             language: {
                 searchPlaceholder: "Search",
                 search: '<a class="clearSearch" onclick="clearSearch()"><i class="fa fa-times" aria-hidden="true"></i></a>'
