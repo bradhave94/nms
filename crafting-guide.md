@@ -65,9 +65,8 @@ page_id: crafting
           data.crafting.elements.forEach(function(item, index) {
               if (!isEmpty(item.resources_3)) {
                   $("#crafting").append(
-                      '<tr>  <td onclickc="getText(\''+item.value+'\')">' +
-                      item.value +
-                      '</td> <td onclickc="getText(\''+item.resources_1+'\')"><img src="uploads/' +
+                      '<tr>  <td onclickc="getText(\''+item.value+'\')">' + item.value + '</td>' +
+                    '<td onclickc="getText(\''+item.resources_1+'\')"><img src="uploads/' +
                       item.resources_1.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
                       item.resources_1 +
@@ -78,7 +77,7 @@ page_id: crafting
                       '80.png" /><span>' +
                       item.resources_2 +
                       " " +
-                      item.resources_3_num.replace(/one/g, "") +
+                      item.resources_2_num.replace(/one/g, "") +
                       '</span></td> <td onclickc="getText(\''+item.resources_3+'\')"><img src="uploads/' +
                       item.resources_3.replace(/ /g, "-").toLowerCase() +
                       '80.png" /><span>' +
