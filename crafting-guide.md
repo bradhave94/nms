@@ -61,7 +61,7 @@ page_id: crafting
     //   }
 
       function init() {
-          Papa.parse('https://docs.google.com/spreadsheets/d/e/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/pub?output=csv', {
+          Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vROLg0CZP-mEtST-Lw8CBsWjw2Amm68XMFEL1xoix02LgopFq8SpjaOfv7lgxEn0MSJl9QlMGPoSKDu/pub?output=csv', {
           download: true,
           header: true,
           complete: showInfo
