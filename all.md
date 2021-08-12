@@ -163,7 +163,7 @@ layout: page
             }
 
             itemsProcessed++;
-            if (itemsProcessed === data.length) {
+            if (itemsProcessed === data.data.length) {
                 callback();
             }
         });
