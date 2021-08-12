@@ -52,13 +52,20 @@ page_id: crafting
 <script type="text/javascript">
     var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/edit?usp=sharing";
     
+    //   function init() {
+    //       Tabletop.init({
+    //           key: publicSpreadsheetUrl,
+    //           callback: showInfo,
+    //           simpleSheet: false
+    //       });
+    //   }
+
       function init() {
-          Tabletop.init({
-              key: publicSpreadsheetUrl,
-              callback: showInfo,
-              simpleSheet: false
-          });
-      }
+          Papa.parse('https://docs.google.com/spreadsheets/d/e/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/pub?output=csv', {
+          download: true,
+          header: true,
+          complete: showInfo()
+        })
     
       function showInfo(data, tabletop) {
           var itemsProcessed = 0;
@@ -185,4 +192,4 @@ page_id: crafting
       }
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+<script src="./js/papaparse.js"></script>
