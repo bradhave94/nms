@@ -73,6 +73,7 @@ layout: page
       }
 
     function showInfo(data, tabletop) {
+        console.log(data)
         var itemsProcessed = 0;
         data.forEach(function(item, index) {
             if (!isEmpty(item.ing_3)) {
