@@ -56,13 +56,6 @@ layout: page
 <script type="text/javascript">
     var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/edit?usp=sharing";
 
-    // function init() {
-    //     Tabletop.init({
-    //         key: publicSpreadsheetUrl,
-    //         callback: showInfo,
-    //         simpleSheet: false
-    //     });
-    // }
 
     function init() {
           Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vROLg0CZP-mEtST-Lw8CBsWjw2Amm68XMFEL1xoix02LgopFq8SpjaOfv7lgxEn0MSJl9QlMGPoSKDu/pub?gid=0&single=true&output=csv', {
@@ -73,7 +66,6 @@ layout: page
       }
 
     function showInfo(data, tabletop) {
-        console.log(data)
         var itemsProcessed = 0;
         data.data.forEach(function(item, index) {
             if (!isEmpty(item.ing_3)) {

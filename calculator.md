@@ -23,21 +23,19 @@ layout: page
 </div>
 
 <script type="text/javascript">
-    var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/edit?usp=sharing";
-
     function init() {
-        Tabletop.init({
-            key: publicSpreadsheetUrl,
-            callback: showInfo,
-            simpleSheet: false
-        });
+          Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vROLg0CZP-mEtST-Lw8CBsWjw2Amm68XMFEL1xoix02LgopFq8SpjaOfv7lgxEn0MSJl9QlMGPoSKDu/pub?gid=562263784&single=true&output=csv', {
+          download: true,
+          header: true,
+          complete: showInfo
+        })
     }
 
     function showInfo(data, tabletop) {
         var itemsProcessed = 0;
 
-        var result = data.calc.elements.map(function(e) { return e.name; }).indexOf('Iridesite');
-        data.calc.elements.forEach(function(item, index) {
+        var result = data.data.map(function(e) { return e.name; }).indexOf('Iridesite');
+        data.data.forEach(function(item, index) {
             let str = item.parts;
             let parts = str.length ? str.split(",") : null;
             let raw = []
@@ -50,9 +48,9 @@ layout: page
                     <ul class="parts-list">
                         ${depth ? '<div class="q mb-3">Quantity: <div class="qw pl-2"><span class="minus">-</span><input type="number" name="quantity" min="1" value="1"><span class="plus">+</span></div></div>' : ''}
 
-                        ${p.map(part => `<li>${data.calc.elements[data.calc.elements.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts ? '<a href="#">' : ''}<img src="uploads/${part.split(":")[0].replace(/\s/g, '-').toLowerCase()}80.png" width="40" alt="${part.split(":")[0]}" />${part.split(":")[0]}${q*part.split(":")[1] ? ` x&nbsp;<span class="quantity" data-quantity="${q*part.split(":")[1]}">${q*part.split(":")[1]}${data.calc.elements[data.calc.elements.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts ? '</span><i class="fas fa-fw fa-plus" aria-hidden="true"></i></a>' : ''}` : ` x&nbsp;<span class="quantity" data-quantity="${q* part.split(":")[1]}">1</span>${data.calc.elements[data.calc.elements.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts ? '<i class="fas fa-fw fa-plus" aria-hidden="true"></i></a>' : ''}` }
+                        ${p.map(part => `<li>${data.data[data.data.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts ? '<a href="#">' : ''}<img src="uploads/${part.split(":")[0].replace(/\s/g, '-').toLowerCase()}80.png" width="40" alt="${part.split(":")[0]}" />${part.split(":")[0]}${q*part.split(":")[1] ? ` x&nbsp;<span class="quantity" data-quantity="${q*part.split(":")[1]}">${q*part.split(":")[1]}${data.data[data.data.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts ? '</span><i class="fas fa-fw fa-plus" aria-hidden="true"></i></a>' : ''}` : ` x&nbsp;<span class="quantity" data-quantity="${q* part.split(":")[1]}">1</span>${data.data[data.data.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts ? '<i class="fas fa-fw fa-plus" aria-hidden="true"></i></a>' : ''}` }
 
-                        ${data.calc.elements[data.calc.elements.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts ? getParts(data.calc.elements[data.calc.elements.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts.split(","), false, null, part.split(":")[1]) : raw[raw.map(function(e) { return e.name; }).indexOf(part.split(":")[0])] ? `<span class="remove d-none">${raw[raw.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].quantity += parseInt(q* part.split(":")[1])}</span>` : `<span class="remove d-none">${raw.push({name: part.split(":")[0], quantity: parseInt(q*part.split(":")[1])})}</span>`}</li>`).join("")}
+                        ${data.data[data.data.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts ? getParts(data.data[data.data.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].parts.split(","), false, null, part.split(":")[1]) : raw[raw.map(function(e) { return e.name; }).indexOf(part.split(":")[0])] ? `<span class="remove d-none">${raw[raw.map(function(e) { return e.name; }).indexOf(part.split(":")[0])].quantity += parseInt(q* part.split(":")[1])}</span>` : `<span class="remove d-none">${raw.push({name: part.split(":")[0], quantity: parseInt(q*part.split(":")[1])})}</span>`}</li>`).join("")}
 
                         ${depth ? `<div class="total"><h6>Raw Materials: </h6></div><ol class="${name}-total"></ol>` : ''}
                     </ul>
@@ -83,7 +81,7 @@ layout: page
             $(".remove").remove()
 
             itemsProcessed++;
-            if (itemsProcessed === data.calc.elements.length) {
+            if (itemsProcessed === data.data.length) {
 
                 $("#loading").remove();
                 $(".loading").removeClass('loading');
@@ -155,4 +153,4 @@ layout: page
     }
     window.addEventListener("DOMContentLoaded", init);
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+<script src="./js/papaparse.js"></script>

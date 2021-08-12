@@ -44,20 +44,18 @@ layout: page
 </div>
 
 <script type="text/javascript">
-    var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/edit?usp=sharing";
-
     function init() {
-        Tabletop.init({
-            key: publicSpreadsheetUrl,
-            callback: showInfo,
-            simpleSheet: false
-        });
+          Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vROLg0CZP-mEtST-Lw8CBsWjw2Amm68XMFEL1xoix02LgopFq8SpjaOfv7lgxEn0MSJl9QlMGPoSKDu/pub?gid=0&single=true&output=csv', {
+          download: true,
+          header: true,
+          complete: showInfo
+        })
     }
 
     function showInfo(data, tabletop) {
         var itemsProcessed = 0;
 
-        data.refiner.elements.forEach(function(item, index) {
+        data.data.forEach(function(item, index) {
             if (isEmpty(item.ing_3) && isEmpty(item.ing_2)) {
                 $("#oneslot").append(
                     '<tr>  <td onclick="getText(\''+item.ing_1+'\')" bgcolor="' +
@@ -80,7 +78,7 @@ layout: page
                 );
             }
             itemsProcessed++;
-            if (itemsProcessed === data.refiner.elements.length) {
+            if (itemsProcessed === data.data.length) {
                 callback();
             }
         });
@@ -131,4 +129,4 @@ layout: page
         $(".loading").removeClass('loading');
     }
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+<script src="./js/papaparse.js"></script>
