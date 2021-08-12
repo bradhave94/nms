@@ -66,6 +66,7 @@ page_id: crafting
           header: true,
           complete: showInfo
         })
+      }
     
       function showInfo(data, tabletop) {
           var itemsProcessed = 0;
