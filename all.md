@@ -75,7 +75,7 @@ layout: page
     function showInfo(data, tabletop) {
         console.log(data)
         var itemsProcessed = 0;
-        data.forEach(function(item, index) {
+        data.data.forEach(function(item, index) {
             if (!isEmpty(item.ing_3)) {
                 $("#all").append(
                     '<tr>  <td onclick="getText(\'Large\')" >Large </td> <td onclick="getText(\''+item.ing_1+'\')" bgcolor="' +
