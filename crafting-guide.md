@@ -69,6 +69,7 @@ page_id: crafting
       }
     
       function showInfo(data, tabletop) {
+          console.log(data)
           var itemsProcessed = 0;
           data.crafting.elements.forEach(function(item, index) {
               if (!isEmpty(item.resources_3)) {
