@@ -174,7 +174,6 @@ page_id: cooking
             // Apply the search
             table.columns().every( function () {
                 var that = this;
-                console.log(this)
                 $( 'input', this.header() ).on( 'keyup change clear', function () {
                     if ( that.search() !== this.value ) {
                         that

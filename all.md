@@ -193,7 +193,6 @@ layout: page
         table.columns().every( function () {
             var that = this;
             $( 'input', this.header() ).on( 'keyup change clear', function () {
-                console.log('s')
                 if ( that.search() !== this.value ) {
                     that
                         .search( this.value )
