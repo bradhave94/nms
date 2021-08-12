@@ -64,7 +64,7 @@ page_id: crafting
           Papa.parse('https://docs.google.com/spreadsheets/d/e/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/pub?output=csv', {
           download: true,
           header: true,
-          complete: showInfo()
+          complete: showInfo
         })
     
       function showInfo(data, tabletop) {
