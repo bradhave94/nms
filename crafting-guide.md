@@ -71,7 +71,7 @@ page_id: crafting
       function showInfo(data, tabletop) {
           console.log(data)
           var itemsProcessed = 0;
-          data.crafting.elements.forEach(function(item, index) {
+          data.data.forEach(function(item, index) {
               if (!isEmpty(item.resources_3)) {
                   $("#crafting").append(
                       '<tr>  <td onclickc="getText(\''+item.value+'\')">' + item.value + '</td>' +
@@ -140,7 +140,7 @@ page_id: crafting
               }
     
               itemsProcessed++;
-              if (itemsProcessed === data.crafting.elements.length) {
+              if (itemsProcessed === data.data.elements.length) {
                   callback();
               }
           });

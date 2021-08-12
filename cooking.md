@@ -56,20 +56,17 @@ page_id: cooking
 </div>
 
 <script type="text/javascript">
-    var publicSpreadsheetUrl =
-          "https://docs.google.com/spreadsheets/d/1rgIYbl3zCD3qGTE-5ZCCmHiol7-9QzIIujkAfmgKoSo/edit?usp=sharing";
-    
       function init() {
-          Tabletop.init({
-              key: publicSpreadsheetUrl,
-              callback: showInfo,
-              simpleSheet: false
-          });
+          Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vROLg0CZP-mEtST-Lw8CBsWjw2Amm68XMFEL1xoix02LgopFq8SpjaOfv7lgxEn0MSJl9QlMGPoSKDu/pub?gid=1611798043&single=true&output=csv', {
+          download: true,
+          header: true,
+          complete: showInfo
+        })
       }
     
       function showInfo(data, tabletop) {
           var itemsProcessed = 0;
-          data.cooking.elements.forEach(function(item, index) {
+          data.data.forEach(function(item, index) {
               if (!isEmpty(item.ing_3)) {
                   $("#all").append(
                       '<tr> <td onclick="getText(\''+item.type+'\')">' +
@@ -139,7 +136,7 @@ page_id: cooking
               }
     
               itemsProcessed++;
-              if (itemsProcessed === data.cooking.elements.length) {
+              if (itemsProcessed === data.data.length) {
                   callback();
               }
           });
