@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.btn {
+		@apply inline-flex items-center justify-center rounded border border-transparent font-medium text-center text-base leading-snug transition py-3 px-6 shadow-lg ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2;
+	}
+}
+
+[astro-icon] > * {
+	stroke-width: 1.5;
+}
+
+[astro-icon].icon-bold > * {
+	stroke-width: 2;
+}
+
+[data-aw-toggle-menu] path {
+	@apply transition;
+}
+[data-aw-toggle-menu].expanded g > path:first-child {
+	@apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+}
+
+[data-aw-toggle-menu].expanded g > path:last-child {
+	@apply rotate-45 translate-y-[-8px] translate-x-[14px];
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+	@apply border border-slate-400 dark:border-slate-800
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+	@apply text-slate-900 dark:text-white
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+	@apply p-3
+}
+
+table.dataTable tbody td {
+	padding: 0 !important;
+}
+
+
+table.dataTable tbody th a, table.dataTable tbody td a {
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+	display: block;
+}
