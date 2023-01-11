@@ -1,5 +1,5 @@
 ---
-import products from "../../data/Products.json";
+import products from "../../assets/data/Products.json";
 export async function getStaticPaths() {
   return products.map(({ Id, Name, Description }) => {
     return {

@@ -1,5 +1,6 @@
 ---
-import raw from "../../data/RawMaterials.json";
+import raw from "../../assets/data/RawMaterials.json";
+
 export async function getStaticPaths() {
   return raw.map(({ Id, Name, Description }) => {
     return {
