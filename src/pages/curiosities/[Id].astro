@@ -1,5 +1,5 @@
 ---
-import curiosities from "../../data/Curiosity.json";
+import curiosities from "../../assets/data/Curiosity.json";
 export async function getStaticPaths() {
   return curiosities.map(({ Id, Name, Description }) => {
     return {
