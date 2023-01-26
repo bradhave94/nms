@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+import Table from '../components/Table.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,6 +12,7 @@ import Card from '../components/Card.astro';
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
+		<Table />
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -39,7 +42,7 @@ import Card from '../components/Card.astro';
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 80ch;
 	}
 	h1 {
 		font-size: 3rem;

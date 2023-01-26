@@ -11,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.1"
+    "astro": "^2.0.1",
+    "tabulator-tables": "^5.4.3"
   }
 }
