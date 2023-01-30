@@ -1,35 +1,41 @@
 ---
+import { Picture } from '@astrojs/image/components';
+
 import 'tabulator-tables/dist/css/tabulator_simple.min.css';
 
 import Layout from '../layouts/Layout.astro';
-import Table from '../components/Table.astro';
 import refinery from '../data/Refinery.json';
 
 import { getById, getSlug } from '../utils/lookup.js';
 
-function getInputs(elements) {
+function createArray(item) {
 	let inputs = [];
-	elements.forEach((element) => {
+
+	item.Inputs.forEach((element) => {
 		let i = getById(element.Id);
 		inputs.push({
 			name: i.Name,
+			description: i.Description,
 			amount: element.Quantity,
+			image: i.Icon,
+			colour: i.Colour,
 		});
 	});
-	return inputs;
-}
 
-function createArray(item) {
-	let inputs = getInputs(item.Inputs);
+	let o = getById(item.Output.Id);
+	let output = {
+		name: o.Name,
+		description: o.Description,
+		amount: item.Output.Quantity,
+		image: o.Icon,
+		colour: o.Colour,
+	};
+
 	let newItem = {
 		input_1: inputs[0],
 		input_2: inputs[1],
 		input_3: inputs[2],
-		output: {
-			name: getById(item.Output.Id).Name,
-			amount: item.Output.Quantity,
-		},
-		time: item.Time,
+		output: output,
 	};
 	return newItem;
 }
@@ -39,61 +45,137 @@ let columns = [
 	{ title: 'Input 2', field: 'input_2' },
 	{ title: 'Input 3', field: 'input_3' },
 	{ title: 'Output', field: 'output' },
-	{ title: 'Time', field: 'time' },
 ];
 
 const data = refinery.map(createArray);
 ---
 
-<Layout title="Welcome to Astro.">
+<style>
+	.table-wrapper {
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+	}
+	.d-none {
+		opacity: 0;
+
+		height: 500px;
+		overflow: hidden;
+	}
+</style>
+
+<Layout>
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		<label for="fSearch">Search</label>
+		<input type="text" id="fSearch" name="fSearch" />
+		<div class="table-wrapper d-none">
+			<table id="refiner-table">
+				<thead>
+					<tr>
+						{
+							columns.map((item) => (
+								<>
+									<th>{item.title}</th>
+								</>
+							))
+						}
+					</tr>
+				</thead>
+				<tbody>
+					{
+						data.map((item) => (
+							<>
+								<tr>
+									<td>
+										<div style={'background: #' + item.input_1.colour}>
+											<span>
+												{item.input_1.name} x
+												<span class="amount">{item.input_1.amount}</span>
+											</span>
+											<Picture
+												src={
+													'https://app.nmsassistant.com/assets/images/' +
+													item.input_1.image
+												}
+												alt={item.input_1.name}
+												widths={[50]}
+												aspectRatio="1:1"
+												sizes="50px"
+											/>
+										</div>
+									</td>
+									{item.input_2 != undefined ? (
+										<td>
+											<span>
+												{item.input_2.name} x
+												<span class="amount">{item.input_2.amount}</span>
+											</span>
+											<Picture
+												src={
+													'https://app.nmsassistant.com/assets/images/' +
+													item.input_2.image
+												}
+												alt={item.input_2.name}
+												widths={[50]}
+												aspectRatio="1:1"
+												sizes="50px"
+											/>
+										</td>
+									) : (
+										<td />
+									)}
+									{item.input_3 != undefined ? (
+										<td>
+											<span>
+												{item.input_3.name} x
+												<span class="amount">{item.input_3.amount}</span>
+											</span>
+											<Picture
+												src={
+													'https://app.nmsassistant.com/assets/images/' +
+													item.input_3.image
+												}
+												alt={item.input_3.name}
+												widths={[50]}
+												aspectRatio="1:1"
+												sizes="50px"
+											/>
+										</td>
+									) : (
+										<td />
+									)}
+									<td>
+										<span>
+											{item.output.name} x
+											<span class="amount">{item.output.amount}</span>
+										</span>
+										<Picture
+											src={
+												'https://app.nmsassistant.com/assets/images/' +
+												item.output.image
+											}
+											alt={item.output.name}
+											widths={[50]}
+											aspectRatio="1:1"
+											sizes="50px"
+										/>
+									</td>
+								</tr>
+							</>
+						))
+					}
+				</tbody>
+			</table>
+		</div>
 		<div>
-            <button id="print-table">Print Table</button>
-        </div>
-        <label for="fSearch">Search</label>
-        <input type="text" id="fSearch" name="fSearch" />
-        <table id="example-table">
-            <thead>
-                <tr>
-                    {
-                        columns.map((item) => (
-                            <>
-                                <th>{item.title}</th>
-                            </>
-                        ))
-                    }
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    data.map((item) => (
-                        <>
-                            <tr>
-                                <td>{item.input_1.name}</td>
-                                <td>{item.input_2?.name}</td>
-                                <td>{item.input_3?.name}</td>
-                                <td>{item.output.name}</td>
-                                <td>{item.time}</td>
-                            </tr>
-                        </>
-                    ))
-                }
-            </tbody>
-        </table>
+			<button id="print-table">Print Table</button>
+		</div>
 	</main>
 </Layout>
-
 
 <script>
 	import { TabulatorFull as Tabulator } from 'tabulator-tables';
 
-	//create Tabulator on DOM element with id "example-table"
-	var table = new Tabulator('#example-table', {
+	var table = new Tabulator('#refiner-table', {
 		columns: [
 			{
 				title: 'Input 1',
@@ -101,6 +183,7 @@ const data = refinery.map(createArray);
 				sorterParams: {
 					alignEmptyValues: 'bottom',
 				},
+				formatter: 'html',
 			},
 			{
 				title: 'Input 2',
@@ -108,6 +191,7 @@ const data = refinery.map(createArray);
 				sorterParams: {
 					alignEmptyValues: 'bottom',
 				},
+				formatter: 'html',
 			},
 			{
 				title: 'Input 3',
@@ -115,6 +199,7 @@ const data = refinery.map(createArray);
 				sorterParams: {
 					alignEmptyValues: 'bottom',
 				},
+				formatter: 'html',
 			},
 			{
 				title: 'Output',
@@ -122,40 +207,29 @@ const data = refinery.map(createArray);
 				sorterParams: {
 					alignEmptyValues: 'bottom',
 				},
-			},
-			{
-				title: 'Time',
-				field: 'time',
-				sorterParams: {
-					alignEmptyValues: 'bottom',
-				},
+				formatter: 'html',
 			},
 		],
-		initialSort: [
-			{ column: 'output', dir: 'asc' }, //sort by this first
-		],
-        maxHeight:"100%", // use this and version 4.6 of Tabulator
-        height: "500px",
-		layout: 'fitColumns', //fit columns to width of table (optional)
+		initialSort: [{ column: 'output', dir: 'asc' }],
+		layout: 'fitColumns',
+		rowHeight: 62, //set rows to 40px height
 		pagination: true,
 		paginationSize: 25,
-		paginationSizeSelector: [10, 25, 50, 100, true], //select list with an "all" option at the end of the list
+		paginationSizeSelector: [10, 25, 50, 100, true],
 		paginationCounter: 'rows',
-		placeholder: 'No Data Available',
-		printHeader: '<h1>Refinery<h1>',
+		placeholder: 'No results found',
 		printAsHtml: true,
 	});
 
-	//print button
+	table.on('tableBuilt', function (data) {
+		table.element.parentElement.classList.remove('d-none');
+	});
+
 	document.getElementById('print-table').addEventListener('click', function () {
 		table.print(false, true);
 	});
 
 	function matchAny(data, filterParams) {
-		//data - the data for the row being filtered
-		//filterParams - params object passed to the filter
-		//RegExp - modifier "i" - case insensitve
-
 		var match = false;
 		const regex = RegExp(filterParams.value, 'i');
 
