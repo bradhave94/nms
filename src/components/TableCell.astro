@@ -1,0 +1,40 @@
+---
+import { Picture } from '@astrojs/image/components';
+export interface Props {
+	cell: {
+		name: string;
+		amount: number;
+		colour: string;
+		image: string;
+	};
+}
+
+const { cell } = Astro.props;
+---
+
+{
+	cell != undefined ? (
+		<td>
+			<span class="d-none sort" role="presentation">
+				{cell.name}
+			</span>
+			<div style={'background: #' + cell.colour}>
+				<span>
+					{cell.name} { cell.amount != undefined ? <span class="amount">x{cell.amount}</span> : null }
+				</span>
+				{ cell.image != undefined ? (
+					<Picture
+						src={'https://app.nmsassistant.com/assets/images/' + cell.image}
+						alt={cell.name}
+						widths={[50]}
+						aspectRatio="1:1"
+						sizes="50px"
+						background={null}
+					/>
+				) : null}
+			</div>
+		</td>
+	) : (
+		<td></td>
+	)
+}
