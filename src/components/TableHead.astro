@@ -1,0 +1,22 @@
+---
+export interface Props {
+	columns: Array<{
+		title: string;
+		field: string;
+	}>;
+}
+
+const { columns } = Astro.props;
+---
+
+<thead>
+	<tr>
+		{
+			columns.map((column) => (
+				<>
+					<th>{column.title}</th>
+				</>
+			))
+		}
+	</tr>
+</thead>

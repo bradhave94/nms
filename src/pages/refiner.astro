@@ -1,29 +1,52 @@
 ---
-import { Picture } from '@astrojs/image/components';
-
+// Importing required CSS for styling the table
 import 'tabulator-tables/dist/css/tabulator_simple.min.css';
 
+// Importing required components and data
 import Layout from '../layouts/Layout.astro';
+import Table from '../components/Table.astro';
 import refinery from '../data/Refinery.json';
+import { getById, Item } from '../utils/lookup.js';
 
-import { getById, getSlug } from '../utils/lookup.js';
+// Interfaces for defining the shape of input and output objects
+interface Input {
+	Id: string;
+	Quantity: number;
+}
 
-function createArray(item) {
-	let inputs = [];
+interface Output {
+	Id: string;
+	Quantity: number;
+}
 
-	item.Inputs.forEach((element) => {
-		let i = getById(element.Id);
-		inputs.push({
+interface Refinery {
+	Inputs: Input[];
+	Output: Output;
+}
+
+// Function to create an array of data for each Refinery item
+const createArray = (item: Refinery) => {
+	// Map the inputs and get the details of each input item using `getById` function
+	const inputs = item.Inputs.map((element) => {
+		const i: Item | undefined = getById(element.Id);
+		// If item is not found, return undefined
+		if (!i) return;
+		// Return the item details
+		return {
 			name: i.Name,
 			description: i.Description,
 			amount: element.Quantity,
 			image: i.Icon,
 			colour: i.Colour,
-		});
+		};
 	});
 
-	let o = getById(item.Output.Id);
-	let output = {
+	// Get the details of the output item using `getById` function
+	const o: Item | undefined = getById(item.Output.Id);
+	// If item is not found, return undefined
+	if (!o) return;
+	// Return the item details
+	const output = {
 		name: o.Name,
 		description: o.Description,
 		amount: item.Output.Quantity,
@@ -31,221 +54,34 @@ function createArray(item) {
 		colour: o.Colour,
 	};
 
-	let newItem = {
+	// Combine the inputs and output data in a new object
+	const newItem = {
 		input_1: inputs[0],
 		input_2: inputs[1],
 		input_3: inputs[2],
-		output: output,
+		output,
 	};
 	return newItem;
-}
+};
 
-let columns = [
+// Define the columns to be displayed in the table
+const columns = [
 	{ title: 'Input 1', field: 'input_1' },
 	{ title: 'Input 2', field: 'input_2' },
 	{ title: 'Input 3', field: 'input_3' },
 	{ title: 'Output', field: 'output' },
 ];
 
-const data = refinery.map(createArray);
+// Map the refinery data and create an array of filtered items
+const data = refinery.map(createArray).filter(Boolean);
+
+console.log(Object.keys(data[0]).length);
 ---
 
-<style>
-	.table-wrapper {
-		opacity: 1;
-		transition: opacity 0.5s ease-in-out;
-	}
-	.d-none {
-		opacity: 0;
 
-		height: 500px;
-		overflow: hidden;
-	}
-</style>
 
-<Layout>
+<Layout title="Refiner">
 	<main>
-		<label for="fSearch">Search</label>
-		<input type="text" id="fSearch" name="fSearch" />
-		<div class="table-wrapper d-none">
-			<table id="refiner-table">
-				<thead>
-					<tr>
-						{
-							columns.map((item) => (
-								<>
-									<th>{item.title}</th>
-								</>
-							))
-						}
-					</tr>
-				</thead>
-				<tbody>
-					{
-						data.map((item) => (
-							<>
-								<tr>
-									<td>
-										<div style={'background: #' + item.input_1.colour}>
-											<span>
-												{item.input_1.name} x
-												<span class="amount">{item.input_1.amount}</span>
-											</span>
-											<Picture
-												src={
-													'https://app.nmsassistant.com/assets/images/' +
-													item.input_1.image
-												}
-												alt={item.input_1.name}
-												widths={[50]}
-												aspectRatio="1:1"
-												sizes="50px"
-											/>
-										</div>
-									</td>
-									{item.input_2 != undefined ? (
-										<td>
-											<span>
-												{item.input_2.name} x
-												<span class="amount">{item.input_2.amount}</span>
-											</span>
-											<Picture
-												src={
-													'https://app.nmsassistant.com/assets/images/' +
-													item.input_2.image
-												}
-												alt={item.input_2.name}
-												widths={[50]}
-												aspectRatio="1:1"
-												sizes="50px"
-											/>
-										</td>
-									) : (
-										<td />
-									)}
-									{item.input_3 != undefined ? (
-										<td>
-											<span>
-												{item.input_3.name} x
-												<span class="amount">{item.input_3.amount}</span>
-											</span>
-											<Picture
-												src={
-													'https://app.nmsassistant.com/assets/images/' +
-													item.input_3.image
-												}
-												alt={item.input_3.name}
-												widths={[50]}
-												aspectRatio="1:1"
-												sizes="50px"
-											/>
-										</td>
-									) : (
-										<td />
-									)}
-									<td>
-										<span>
-											{item.output.name} x
-											<span class="amount">{item.output.amount}</span>
-										</span>
-										<Picture
-											src={
-												'https://app.nmsassistant.com/assets/images/' +
-												item.output.image
-											}
-											alt={item.output.name}
-											widths={[50]}
-											aspectRatio="1:1"
-											sizes="50px"
-										/>
-									</td>
-								</tr>
-							</>
-						))
-					}
-				</tbody>
-			</table>
-		</div>
-		<div>
-			<button id="print-table">Print Table</button>
-		</div>
+		<Table columns={columns} data={data} />
 	</main>
 </Layout>
-
-<script>
-	import { TabulatorFull as Tabulator } from 'tabulator-tables';
-
-	var table = new Tabulator('#refiner-table', {
-		columns: [
-			{
-				title: 'Input 1',
-				field: 'input_1',
-				sorterParams: {
-					alignEmptyValues: 'bottom',
-				},
-				formatter: 'html',
-			},
-			{
-				title: 'Input 2',
-				field: 'input_2',
-				sorterParams: {
-					alignEmptyValues: 'bottom',
-				},
-				formatter: 'html',
-			},
-			{
-				title: 'Input 3',
-				field: 'input_3',
-				sorterParams: {
-					alignEmptyValues: 'bottom',
-				},
-				formatter: 'html',
-			},
-			{
-				title: 'Output',
-				field: 'output',
-				sorterParams: {
-					alignEmptyValues: 'bottom',
-				},
-				formatter: 'html',
-			},
-		],
-		initialSort: [{ column: 'output', dir: 'asc' }],
-		layout: 'fitColumns',
-		rowHeight: 62, //set rows to 40px height
-		pagination: true,
-		paginationSize: 25,
-		paginationSizeSelector: [10, 25, 50, 100, true],
-		paginationCounter: 'rows',
-		placeholder: 'No results found',
-		printAsHtml: true,
-	});
-
-	table.on('tableBuilt', function (data) {
-		table.element.parentElement.classList.remove('d-none');
-	});
-
-	document.getElementById('print-table').addEventListener('click', function () {
-		table.print(false, true);
-	});
-
-	function matchAny(data, filterParams) {
-		var match = false;
-		const regex = RegExp(filterParams.value, 'i');
-
-		for (var key in data) {
-			if (regex.test(data[key]) == true) {
-				match = true;
-			}
-		}
-		return match;
-	}
-
-	const input = document.getElementById('fSearch');
-	input.addEventListener('keyup', function () {
-		table.setFilter(matchAny, { value: input.value });
-		if (input.value == ' ') {
-			table.clearFilter();
-		}
-	});
-</script>

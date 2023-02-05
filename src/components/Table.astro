@@ -1,0 +1,142 @@
+---
+import TableHead from '../components/TableHead.astro';
+import TableCell from '../components/TableCell.astro';
+
+export interface Props {
+	columns: Array<{
+		title: string;
+		field: string;
+	}>;
+	data: Array<{
+		input_1: object;
+		input_2: object;
+		input_3: object;
+		output: object;
+	}>;
+}
+
+const { columns, data } = Astro.props;
+---
+
+<style>
+	.table-wrapper {
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+	}
+	.d-hidden {
+		opacity: 0;
+		height: 500px;
+		overflow: hidden;
+	}
+</style>
+
+<label for="fSearch">Search</label>
+<input type="text" id="fSearch" name="fSearch" />
+
+<div class="table-wrapper d-hidden">
+	<table id="table">
+		<TableHead columns={columns} />
+		<tbody>
+			{
+				data.map((row) => (
+					<>
+						<tr>
+							{columns.map((column) => (
+								<TableCell cell={row[column.field]} />
+							))}
+						</tr>
+					</>
+				))
+			}
+		</tbody>
+	</table>
+
+</div>
+<div>
+	<button id="print-table">Print Table</button>
+</div>
+
+
+<script>
+	import { TabulatorFull as Tabulator } from 'tabulator-tables';
+
+	var table = new Tabulator('#table', {
+		columns: [
+			{
+				title: 'Input 1',
+				field: 'input_1',
+				sorterParams: {
+					alignEmptyValues: 'bottom',
+				},
+				formatter: 'html',
+			},
+			{
+				title: 'Input 2',
+				field: 'input_2',
+				sorterParams: {
+					alignEmptyValues: 'bottom',
+				},
+				formatter: 'html',
+			},
+			{
+				title: 'Input 3',
+				field: 'input_3',
+				sorterParams: {
+					alignEmptyValues: 'bottom',
+				},
+				formatter: 'html',
+			},
+			{
+				title: 'Output',
+				field: 'output',
+				sorterParams: {
+					alignEmptyValues: 'bottom',
+				},
+				formatter: 'html',
+			},
+		],
+		initialSort: [{ column: 'output', dir: 'asc' }],
+		layout: 'fitColumns',
+		rowHeight: 62, //set rows to 40px height
+		pagination: true,
+		paginationSize: 25,
+		paginationSizeSelector: [10, 25, 50, 100, true],
+		paginationCounter: 'rows',
+		placeholder: 'No results found',
+		printAsHtml: true,
+	});
+
+	table.on('dataLoaded', function () {
+		table.element.parentElement.classList.remove('d-hidden');
+	});
+
+	table.on('cellClick', function (e: any) {
+		//e - the click event object
+		//cell - cell component
+		console.log(e);
+	});
+
+	document.getElementById('print-table').addEventListener('click', function () {
+		table.print(false, true);
+	});
+
+	function matchAny(data: { [x: string]: string }, filterParams: { value: string | RegExp }) {
+		var match = false;
+		const regex = RegExp(filterParams.value, 'i');
+
+		for (var key in data) {
+			if (regex.test(data[key]) == true) {
+				match = true;
+			}
+		}
+		return match;
+	}
+
+	const input = document.getElementById('fSearch') as HTMLInputElement;
+	input.addEventListener('keyup', function () {
+		table.setFilter(matchAny, { value: input.value });
+		if (input.value == ' ') {
+			table.clearFilter();
+		}
+	});
+</script>
