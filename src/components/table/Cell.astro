@@ -1,11 +1,14 @@
 ---
 import { Picture } from '@astrojs/image/components';
+
 export interface Props {
 	cell: {
 		name: string;
 		amount: number;
 		colour: string;
 		image: string;
+		description: string;
+		value: number;
 	};
 }
 
@@ -13,16 +16,21 @@ const { cell } = Astro.props;
 ---
 
 {
-	cell != undefined ? (
+	typeof cell == 'string' || typeof cell == 'number'  ? (
+		<td>
+			<div>{cell}</div>
+		</td>
+	) : cell != undefined ? (
 		<td>
 			<span class="d-none sort" role="presentation">
 				{cell.name}
 			</span>
 			<div style={'background: #' + cell.colour}>
 				<span>
-					{cell.name} { cell.amount != undefined ? <span class="amount">x{cell.amount}</span> : null }
+					{cell.name}{' '}
+					{cell.amount != undefined ? <span class="amount">x{cell.amount}</span> : null}
 				</span>
-				{ cell.image != undefined ? (
+				{cell.image != undefined ? (
 					<Picture
 						src={'https://app.nmsassistant.com/assets/images/' + cell.image}
 						alt={cell.name}
@@ -35,6 +43,6 @@ const { cell } = Astro.props;
 			</div>
 		</td>
 	) : (
-		<td></td>
+		<td />
 	)
 }

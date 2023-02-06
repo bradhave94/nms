@@ -11,6 +11,7 @@ type Item = {
 	Description: string;
 	Icon: string;
 	Colour: string;
+  BaseValueUnits: number;
 };
 
 // Mapping the prefixes of item id to the actual data sources
