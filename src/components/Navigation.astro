@@ -1,0 +1,84 @@
+---
+import ResponsiveToggle from './ResponsiveToggle.astro';
+---
+
+<div id="main-navigation" class="active">
+	<div class="container stretch">
+		<a href="/">
+			<img src={(await import('../assets/img/logo.svg')).default} alt="Your Logo" />
+		</a>
+		<div class="wrapper">
+			<nav class="desktop-menu">
+				<ul>
+					<li class="menu-item">
+						<a href="/">Home</a>
+					</li>
+					<li class="menu-item">
+						<a href="/refiner/">Refiner</a>
+					</li>
+					<li class="menu-item">
+						<a href="/crafting-guide/">Crafting</a>
+					</li>
+				</ul>
+			</nav>
+			<ResponsiveToggle />
+		</div>
+	</div>
+</div>
+
+<style lang="scss">
+	#main-navigation {
+		background: var(--background);
+		position: sticky;
+		top: 0;
+		transition: all 0.3s;
+		margin-left: -300px;
+		min-width: 300px;
+		max-width: 300px;
+
+		&.active {
+			margin-left: 0;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		#main-navigation {
+			margin-left: -350px;
+			position: fixed;
+			z-index: 9999;
+			height: 100vh;
+			min-width: 0;
+			width: 300px;
+			max-width: 75%;
+			overflow: scroll;
+
+			&.active {
+				margin-left: 0;
+				transform: none;
+			}
+		}
+
+	}
+</style>
+
+
+<script>
+	//write a function to toggle the active class on the main navigation on page resize
+	function toggleMainNav() {
+		const mainNav = document.getElementById('main-navigation');
+		const mainNavWidth = mainNav.offsetWidth;
+		const windowWidth = window.innerWidth;
+
+		if (windowWidth > 1200) {
+			mainNav.classList.add('active');
+		} else if (windowWidth <= 1200) {
+			mainNav.classList.remove('active');
+		}
+	}
+
+	//call the function on page load
+	toggleMainNav();
+
+	//call the function on page resize
+	window.addEventListener('resize', toggleMainNav);
+</script>

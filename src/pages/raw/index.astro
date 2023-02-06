@@ -1,0 +1,17 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Card from '@components/Card.astro';
+import raw from '@data/RawMaterials.json';
+---
+
+<Layout title="Refiner">
+	<main>
+		{
+			raw.map((item) => (
+				<div>
+					<Card item={item} />
+				</div>
+			))
+		}
+	</main>
+</Layout>

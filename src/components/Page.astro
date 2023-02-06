@@ -1,0 +1,13 @@
+---
+import { getById, getSlug, Item } from '@utils/lookup.js';
+export interface Props {
+	item: Item;
+}
+const { item } = Astro.props;
+---
+
+
+<h1 style={"background-color: #" + item.Colour}>{item.Name}</h1>
+<p>{item.Group}</p>
+<p>{item.Description}</p>
+<p>{item.BaseValueUnits}</p>

@@ -1,0 +1,14 @@
+---
+import { getById, getSlug, Item } from '@utils/lookup.js';
+export interface Props {
+	item: Item;
+}
+const { item } = Astro.props;
+---
+
+
+<div>
+    <a href={getSlug(item.Id) + item.Id}>
+        {item.Name}
+    </a>
+</div>

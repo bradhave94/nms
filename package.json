@@ -15,5 +15,8 @@
 		"@astrojs/sitemap": "^1.0.1",
 		"astro": "^2.0.1",
 		"tabulator-tables": "^5.4.3"
+	},
+	"devDependencies": {
+		"sass": "^1.58.0"
 	}
 }

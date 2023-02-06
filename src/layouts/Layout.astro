@@ -1,5 +1,9 @@
 ---
+import '../assets/scss/globals.scss';
 import { SITE } from '@config';
+import Navigation from '@components/Navigation.astro';
+import Topbar from '@components/Topbar.astro';
+import Footer from '@components/Footer.astro';
 
 export interface Props {
 	title?: string;
@@ -47,58 +51,59 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 		<meta
-		  property="twitter:image"
-		  content={socialImageURL.endsWith(".svg")
-			? fallbackImageURL
-			: socialImageURL}
+			property="twitter:image"
+			content={socialImageURL.endsWith('.svg') ? fallbackImageURL : socialImageURL}
 		/>
 
-	  </head>
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 	<body>
-		<slot />
+		<Navigation />
+		<div class="main-wrapper" >
+			<Topbar />
+			<main id="main-content">
+				<slot />
+			</main>
+			<Footer />
+		</div>
+
 	</body>
 </html>
-<style is:global>
-	:root {
-		--primary: #1c2e3a;
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+
+<style lang="scss">
+	html,
+	body {
+		height: 100%;
+		overflow-x: hidden;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: var(--primary);
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+	body {
+		display: flex;
+		width: 100%;
+		align-items: stretch;
+		perspective: 1500px;
+		background-color: var(--background);
+		main {
+			flex: 1 0 auto;
+		}
+		footer {
+			flex-shrink: 0;
+		}
 	}
 	.d-none {
-		display: none;
+		display: none !important;
 	}
-	.table-wrapper .tabulator-cell {
-		padding: 0;
-	}
-	.table-wrapper .tabulator-cell > div {
-		display: inline-flex;
-		flex-direction: row-reverse;
-		justify-content: start;
-		align-items: center;
+	.main-wrapper {
+		overflow-x: hidden;
 		width: 100%;
-		height: 100%;
-		color: #fff;
-		gap: 10px;
-		padding: 0 5px;
 	}
-	.table-wrapper
-		.tabulator-cell
-		> div:is(
-			[style='background: #DEDCD1'],
-			[style='background: #F3A923'],
-			[style='background: #DE921F'],
-			[style='background: #CCCCCC'],
-			[style='background: #FFAD00'],
-
-		) {
-		color: #000;
+	#main-content {
+		padding: 1rem;
+		background-color: var(--secondary);
 	}
 </style>

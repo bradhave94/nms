@@ -1,6 +1,4 @@
 ---
-// Importing required CSS for styling the table
-import 'tabulator-tables/dist/css/tabulator_simple.min.css';
 
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
@@ -27,6 +25,7 @@ const createArray = (item: Curiosities) => {
 		if (!i) return;
 		// Return the item details
 		return {
+			id: i.Id,
 			name: i.Name,
 			description: i.Description,
 			value: i.BaseValueUnits,
@@ -42,6 +41,7 @@ const createArray = (item: Curiosities) => {
 		input_2: RequiredItems[1],
 		input_3: RequiredItems[2],
 		output: {
+			id: item.Id,
 			name: item.Name,
 			description: item.Description,
 			value: item.BaseValueUnits,
@@ -71,7 +71,9 @@ const data = curiosities.map(createArray).filter(Boolean);
 
 <Layout title="Refiner">
 	<main>
-		<Table columns={columns} data={data} />
+		{curiosities.map((column) => (
+			column.Name
+		))}
 	</main>
 </Layout>
 

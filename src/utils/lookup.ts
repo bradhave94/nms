@@ -10,6 +10,7 @@ type Item = {
 	Id: string;
 	Name: string;
 	Description: string;
+	Group: string;
 	Icon: string;
 	Colour: string;
 	BaseValueUnits: number;
@@ -30,6 +31,7 @@ const slugs = {
 	prod: '/products/',
 	cook: '/cooking/',
 	cur: '/curiosities/',
+	conTech: '/constructed-technology/',
 };
 
 // Returns the slug corresponding to the item id

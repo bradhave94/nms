@@ -12,15 +12,16 @@ export interface Props {
 		input_2: object;
 		input_3: object;
 		output: object;
-		description?: string,
-		value?: number
+		description?: string;
+		value?: number;
 	}>;
 }
 
 const { columns, data } = Astro.props;
 ---
 
-<style>
+<style lang="scss">
+	@import './tabulator.scss';
 	.table-wrapper {
 		opacity: 1;
 		transition: opacity 0.5s ease-in-out;
@@ -32,8 +33,10 @@ const { columns, data } = Astro.props;
 	}
 </style>
 
-<label for="fSearch">Search</label>
-<input type="text" id="fSearch" name="fSearch" />
+<div class="tabulator-search">
+	<input type="text" id="search" name="search" placeholder="" />
+	<label for="search">Search</label>
+</div>
 
 <div class="table-wrapper d-hidden">
 	<table id="table" data-columns={JSON.stringify(columns)}>
@@ -52,29 +55,30 @@ const { columns, data } = Astro.props;
 			}
 		</tbody>
 	</table>
-
 </div>
 <div>
 	<button id="print-table">Print Table</button>
 </div>
 
-
 <script>
 	import { TabulatorFull as Tabulator } from 'tabulator-tables';
 
-	const columns = JSON.parse(document.getElementById('table').dataset.columns).map(function(element){
+	const columns = JSON.parse(document.getElementById('table').dataset.columns).map(function (
+		element
+	) {
 		return {
-				title: element.title,
-				field: element.field,
-				sorterParams: {
-					alignEmptyValues: 'bottom',
-				},
-				formatter: 'html',
-			}
+			title: element.title,
+			field: element.field,
+			sorterParams: {
+				alignEmptyValues: 'bottom',
+			},
+			formatter: 'html',
+		};
 	});
 
 	var table = new Tabulator('#table', {
 		columns: columns,
+
 		initialSort: [{ column: 'output', dir: 'asc' }],
 		layout: 'fitColumns',
 		rowHeight: 62, //set rows to 40px height
@@ -84,6 +88,18 @@ const { columns, data } = Astro.props;
 		paginationCounter: 'rows',
 		placeholder: 'No results found',
 		printAsHtml: true,
+		columnDefaults: {
+			tooltip: function (e, cell, onRendered) {
+				const description = cell._cell.element.querySelector('.description')?.innerText;
+				var el = document.createElement('div');
+				el.innerText = description;
+				el.style.backgroundColor = 'black';
+				el.style.color = 'white';
+				el.style.border = 'none';
+				el.style.padding = '10px';
+				return el;
+			},
+		},
 	});
 
 	table.on('dataLoaded', function () {
@@ -105,14 +121,14 @@ const { columns, data } = Astro.props;
 		const regex = RegExp(filterParams.value, 'i');
 
 		for (var key in data) {
-			if (regex.test(data[key]) == true) {W
+			if (regex.test(data[key]) == true) {
 				match = true;
 			}
 		}
 		return match;
 	}
 
-	const input = document.getElementById('fSearch') as HTMLInputElement;
+	const input = document.getElementById('search') as HTMLInputElement;
 	input.addEventListener('keyup', function () {
 		table.setFilter(matchAny, { value: input.value });
 		if (input.value == ' ') {
@@ -120,4 +136,3 @@ const { columns, data } = Astro.props;
 		}
 	});
 </script>
-

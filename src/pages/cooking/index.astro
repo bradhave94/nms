@@ -1,6 +1,4 @@
 ---
-// Importing required CSS for styling the table
-import 'tabulator-tables/dist/css/tabulator_simple.min.css';
 
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
@@ -34,6 +32,7 @@ const createArray = (item: Processor) => {
 		if (!i) return;
 		// Return the item details
 		return {
+			id: i.Id,
 			name: i.Name,
 			description: i.Description,
 			value: i.BaseValueUnits,
@@ -49,6 +48,7 @@ const createArray = (item: Processor) => {
 	if (!o) return;
 	// Return the item details
 	const output = {
+		id: o.Id,
 		name: o.Name,
 		description: o.Description,
 		value: o.BaseValueUnits,
