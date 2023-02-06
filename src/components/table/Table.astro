@@ -1,12 +1,17 @@
 ---
 import TableHead from '@components/table/Head.astro';
 import TableCell from '@components/table/Cell.astro';
+import { Picture } from '@astrojs/image/components';
 
 export interface Props {
+	title: string;
+	image: string;
+	image_width: number;
 	columns: Array<{
 		title: string;
 		field: string;
 	}>;
+	sort?: string;
 	data: Array<{
 		input_1: object;
 		input_2: object;
@@ -17,7 +22,7 @@ export interface Props {
 	}>;
 }
 
-const { columns, data } = Astro.props;
+const { title, image, image_width, columns, sort, data } = Astro.props;
 ---
 
 <style lang="scss">
@@ -31,15 +36,97 @@ const { columns, data } = Astro.props;
 		height: 500px;
 		overflow: hidden;
 	}
+	.card-header {
+		background-image: url(/images/resources.png);
+		background-position: center;
+		position: relative;
+		padding: 0.75rem 1.25rem;
+		margin-bottom: 0;
+		background-color: rgba(0, 0, 0, 0.03);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&::after {
+			content: '';
+			background: #000;
+			top: 0px;
+			width: 100%;
+			height: 102%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			opacity: 0.9;
+		}
+		> div {
+			position: relative;
+			z-index: 1;
+		}
+		span {
+			letter-spacing: 2px;
+			padding-left: 10px;
+			display: inline-block;
+			top: 2px;
+			position: relative;
+			font-size: 1.25rem;
+		}
+		.d-flex {
+			display: flex;
+			align-items: center;
+		}
+		.tabulator-search {
+			position: relative;
+			text-align: right;
+
+			label {
+				color: #fff;
+				opacity: 0.3;
+				position: absolute;
+				right: calc(200px - 0.75rem);
+				top: 50%;
+				transform: translateX(100%) translateY(-50%);
+			}
+
+			input:active + label,
+			input:focus + label,
+			input:valid + label {
+				opacity: 0;
+			}
+
+			input {
+				background: $footerButtonBackgroundColor;
+				color: $footerButtonColor;
+				padding: 0.5rem 0.75rem;
+				border: 1px solid $footerButtonColor;
+				width: 200px;
+				border-radius: 3px;
+			}
+		}
+	}
 </style>
 
-<div class="tabulator-search">
-	<input type="text" id="search" name="search" placeholder="" />
-	<label for="search">Search</label>
-</div>
-
 <div class="table-wrapper d-hidden">
-	<table id="table" data-columns={JSON.stringify(columns)}>
+	<div class="card-header">
+		<div class="d-flex">
+			<Picture
+				class="logo"
+				src={import(`../../assets/img/${image}.png`)}
+				widths={[image_width]}
+				sizes={image_width + 'px'}
+				aspectRatio={null}
+				background={null}
+				alt="descriptive text"
+			/>
+			<span>{title}</span>
+		</div>
+
+		<div class="tabulator-search">
+			<input required type="text" id="search" name="search" placeholder="" />
+			<label for="search">Search</label>
+		</div>
+	</div>
+	<table id="table" data-columns={JSON.stringify(columns)} data-sort={sort || 'output'}>
 		<TableHead columns={columns} />
 		<tbody>
 			{
@@ -62,11 +149,12 @@ const { columns, data } = Astro.props;
 
 <script>
 	import { TabulatorFull as Tabulator } from 'tabulator-tables';
+	const sort = document.getElementById('table').dataset.sort;
 
 	const columns = JSON.parse(document.getElementById('table').dataset.columns).map(function (
 		element
 	) {
-		return {
+		let item = {
 			title: element.title,
 			field: element.field,
 			sorterParams: {
@@ -74,12 +162,18 @@ const { columns, data } = Astro.props;
 			},
 			formatter: 'html',
 		};
+		if (sort === element.field && sort === 'value') {
+			item.sorter = 'number';
+		}
+		return item;
 	});
+
+	console.log(columns);
 
 	var table = new Tabulator('#table', {
 		columns: columns,
 
-		initialSort: [{ column: 'output', dir: 'asc' }],
+		initialSort: [{ column: sort, dir: sort !== 'value' ? 'asc' : 'desc' }],
 		layout: 'fitColumns',
 		rowHeight: 62, //set rows to 40px height
 		pagination: true,
@@ -92,6 +186,9 @@ const { columns, data } = Astro.props;
 			tooltip: function (e, cell, onRendered) {
 				const description = cell._cell.element.querySelector('.description')?.innerText;
 				var el = document.createElement('div');
+				if (!description) {
+					return;
+				}
 				el.innerText = description;
 				el.style.backgroundColor = 'black';
 				el.style.color = 'white';

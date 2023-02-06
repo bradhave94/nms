@@ -7,6 +7,9 @@
 @use "size" as *;
 @use "space" as *;
 
+/* font-family: NMSFuturaProBook */
+@import url('https://font.nmscd.com/assets/font/NMSFuturaProBook_Kerned/Web-TT/NMSFuturaProBook_Kerned.css');
+
 body {
   color: var(--font-color);
   background-color: var(--background);

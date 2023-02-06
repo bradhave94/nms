@@ -1,7 +1,7 @@
 //Main Theme Variables
 $backgroundColor: #1c2e3a !default; //background color of tabulator
 $borderColor: #999 !default; //border to tabulator
-$textSize: 14px !default; //table text size
+$textSize: 16px !default; //table text size
 
 //header theming
 $headerBackgroundColor: #222222 !default; //border to tabulator
@@ -18,9 +18,9 @@ $sortArrowInactive: #bbb !default;
 //row theming
 $rowBackgroundColor: #1c2e3a !default; //table row background color
 $rowAltBackgroundColor: #1c2e3a !default; //table row background color
-$rowBorderColor: #fff !default; //table border color
+$rowBorderColor: #dee2e6 !default; //table border color
 $rowTextColor: #fff !default; //table text color
-$rowHoverBackground: #bbb !default; //row background color on hover
+$rowHoverBackground: #1c2e3a !default; //row background color on hover
 
 $rowSelectedBackground: #9abcea !default; //row background color when selected
 $rowSelectedBackgroundHover: #769bcc !default; //row background color when selected and hovered
@@ -132,7 +132,7 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 			.tabulator-col-content {
 				box-sizing: border-box;
 				position: relative;
-				padding: 4px;
+				padding: 8px;
 
 				//header menu button
 				.tabulator-header-popup-button {
@@ -562,6 +562,8 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 			background: $footerButtonBackgroundColor;
 			color: $footerButtonColor;
 
+			transition: all 0.15s ease-in-out;
+
 			&.active {
 				color: $footerButtonBackgroundColor;
 				background: $footerButtonColor;
@@ -574,7 +576,8 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 			&:not(.disabled) {
 				&:hover {
 					cursor: pointer;
-					color: #fff;
+					color: $footerButtonBackgroundColor;
+					background: $footerButtonColor;
 				}
 			}
 		}
@@ -735,12 +738,14 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 		display: inline-flex;
 		position: relative;
 		box-sizing: border-box;
-		border-right: 1px solid $rowBorderColor;
+		border: 1px solid $rowBorderColor;
 		vertical-align: middle;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		align-items: center;
+		opacity: 1;
+		transition: opacity 0.25s ease-in-out;
 
 		a {
 			display: block;
@@ -952,6 +957,14 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 
 			border-radius: 14px;
 		}
+
+		&:hover {
+			opacity: .8;
+		}
+
+		&:empty {
+			cursor: default;
+		}
 	}
 
 	//row grouping element
@@ -1057,7 +1070,8 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 	border-radius: 2px;
 	box-shadow: none;
 
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 20px;
 
 	pointer-events: none;
 }
@@ -1453,30 +1467,7 @@ body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
 }
 
 
-.tabulator-search {
-	position: relative;
 
-	label {
-		color: #fff;
-		opacity: .3;
-		position: absolute;
-		left: .75rem;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
-	input:active + label,
-	input:focus + label  {
-		opacity: 0;
-	}
-
-	input {
-		background: $footerButtonBackgroundColor;
-		color: $footerButtonColor;
-		padding: .5rem .75rem;
-		border: 1px solid $footerButtonColor;
-	}
-}
 
 .table-wrapper .tabulator-cell {
 	padding: 0;
