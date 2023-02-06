@@ -3,10 +3,10 @@
 import 'tabulator-tables/dist/css/tabulator_simple.min.css';
 
 // Importing required components and data
-import Layout from '../layouts/Layout.astro';
-import Table from '../components/Table.astro';
-import refinery from '../data/Refinery.json';
-import { getById, Item } from '../utils/lookup.js';
+import Layout from '../../layouts/Layout.astro';
+import Table from '../../components/Table.astro';
+import refinery from '../../data/Refinery.json';
+import { getById, Item } from '../../utils/lookup.js';
 
 // Interfaces for defining the shape of input and output objects
 interface Input {
@@ -75,7 +75,6 @@ const columns = [
 // Map the refinery data and create an array of filtered items
 const data = refinery.map(createArray).filter(Boolean);
 
-console.log(Object.keys(data[0]).length);
 ---
 
 
@@ -85,3 +84,4 @@ console.log(Object.keys(data[0]).length);
 		<Table columns={columns} data={data} />
 	</main>
 </Layout>
+

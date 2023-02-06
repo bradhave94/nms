@@ -12,6 +12,7 @@
 	},
 	"dependencies": {
 		"@astrojs/image": "^0.13.0",
+		"@astrojs/sitemap": "^1.0.1",
 		"astro": "^2.0.1",
 		"tabulator-tables": "^5.4.3"
 	}

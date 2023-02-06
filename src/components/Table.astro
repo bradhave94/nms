@@ -34,7 +34,7 @@ const { columns, data } = Astro.props;
 <input type="text" id="fSearch" name="fSearch" />
 
 <div class="table-wrapper d-hidden">
-	<table id="table">
+	<table id="table" data-columns='["cat", "dog", "bird"]'>
 		<TableHead columns={columns} />
 		<tbody>
 			{
@@ -59,6 +59,8 @@ const { columns, data } = Astro.props;
 
 <script>
 	import { TabulatorFull as Tabulator } from 'tabulator-tables';
+
+	console.log(JSON.parse(document.getElementById('table').dataset.columns))
 
 	var table = new Tabulator('#table', {
 		columns: [
@@ -125,7 +127,7 @@ const { columns, data } = Astro.props;
 		const regex = RegExp(filterParams.value, 'i');
 
 		for (var key in data) {
-			if (regex.test(data[key]) == true) {
+			if (regex.test(data[key]) == true) {W
 				match = true;
 			}
 		}
@@ -140,3 +142,4 @@ const { columns, data } = Astro.props;
 		}
 	});
 </script>
+
