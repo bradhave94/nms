@@ -60,12 +60,13 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 </html>
 <style is:global>
 	:root {
+		--primary: #1c2e3a;
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #f6f6f6;
+		background-color: var(--primary);
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

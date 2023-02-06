@@ -5,29 +5,23 @@ import 'tabulator-tables/dist/css/tabulator_simple.min.css';
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
-import refinery from '@data/Refinery.json';
+import curiosities from '@data/Curiosities.json';
 import { getById, Item } from '@utils/lookup.js';
 
 // Interfaces for defining the shape of input and output objects
-interface Input {
+interface RequiredItems {
 	Id: string;
 	Quantity: number;
 }
 
-interface Output {
-	Id: string;
-	Quantity: number;
+interface Curiosities extends Item {
+	RequiredItems: RequiredItems[];
 }
 
-interface Refinery {
-	Inputs: Input[];
-	Output: Output;
-}
-
-// Function to create an array of data for each Refinery item
-const createArray = (item: Refinery) => {
+// Function to create an array of data for each Curiosities item
+const createArray = (item: Curiosities) => {
 	// Map the inputs and get the details of each input item using `getById` function
-	const inputs = item.Inputs.map((element) => {
+	const RequiredItems = item.RequiredItems.map((element) => {
 		const i: Item | undefined = getById(element.Id);
 		// If item is not found, return undefined
 		if (!i) return;
@@ -42,28 +36,19 @@ const createArray = (item: Refinery) => {
 		};
 	});
 
-	// Get the details of the output item using `getById` function
-	const o: Item | undefined = getById(item.Output.Id);
-	// If item is not found, return undefined
-	if (!o) return;
-	// Return the item details
-	const output = {
-		name: o.Name,
-		description: o.Description,
-		value: o.BaseValueUnits,
-		amount: item.Output.Quantity,
-		image: o.Icon,
-		colour: o.Colour,
-	};
-
 	// Combine the inputs and output data in a new object
 	const newItem = {
-		input_1: inputs[0],
-		input_2: inputs[1],
-		input_3: inputs[2],
-		output,
-		description: output.description,
-		value: output.value,
+		input_1: RequiredItems[0],
+		input_2: RequiredItems[1],
+		input_3: RequiredItems[2],
+		output: {
+			name: item.Name,
+			description: item.Description,
+			value: item.BaseValueUnits,
+			image: item.Icon,
+			colour: item.Colour
+		},
+		value: item.BaseValueUnits,
 	};
 	return newItem;
 };
@@ -73,12 +58,13 @@ const columns = [
 	{ title: 'Input 1', field: 'input_1' },
 	{ title: 'Input 2', field: 'input_2' },
 	{ title: 'Input 3', field: 'input_3' },
-	{ title: 'Output', field: 'output' }
+	{ title: 'Name', field: 'output' },
+	{ title: 'Value', field: 'value' }
 
 ];
 
 // Map the refinery data and create an array of filtered items
-const data = refinery.map(createArray).filter(Boolean);
+const data = curiosities.map(createArray).filter(Boolean);
 ---
 
 
