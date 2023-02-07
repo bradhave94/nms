@@ -1,6 +1,7 @@
 ---
 import TableHead from '@components/table/Head.astro';
 import TableCell from '@components/table/Cell.astro';
+import { Icon } from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
 
 export interface Props {
@@ -121,10 +122,14 @@ const { title, image, image_width, columns, sort, data } = Astro.props;
 			<span>{title}</span>
 		</div>
 
-		<div class="tabulator-search">
-			<input required type="text" id="search" name="search" placeholder="" />
-			<label for="search">Search</label>
+
+		<div class="d-flex">
+			<div class="tabulator-search">
+				<input required type="text" id="search" name="search" placeholder="" />
+				<label for="search">Search</label>
+			</div>
 		</div>
+
 	</div>
 	<table id="table" data-columns={JSON.stringify(columns)} data-sort={sort || 'output'}>
 		<TableHead columns={columns} />
@@ -143,9 +148,7 @@ const { title, image, image_width, columns, sort, data } = Astro.props;
 		</tbody>
 	</table>
 </div>
-<div>
-	<button id="print-table">Print Table</button>
-</div>
+
 
 <script>
 	import { TabulatorFull as Tabulator } from 'tabulator-tables';
@@ -207,10 +210,6 @@ const { title, image, image_width, columns, sort, data } = Astro.props;
 		//e - the click event object
 		//cell - cell component
 		console.log(e);
-	});
-
-	document.getElementById('print-table').addEventListener('click', function () {
-		table.print(false, true);
 	});
 
 	function matchAny(data: { [x: string]: string }, filterParams: { value: string | RegExp }) {

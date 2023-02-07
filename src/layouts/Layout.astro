@@ -24,6 +24,8 @@ const {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(ogImage ? ogImage : SITE.ogImage, Astro.url.origin).href;
 const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
+
+const bg = `bg${Math.floor(Math.random()*12) + 1 }`
 ---
 
 <!DOCTYPE html>
@@ -56,12 +58,14 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 			property="twitter:image"
 			content={socialImageURL.endsWith('.svg') ? fallbackImageURL : socialImageURL}
 		/>
+
+		<link rel="preload" as="image" href={'/images/backgrounds/'+bg+'.jpg'}>
 	</head>
 	<body>
 		<Navigation />
 		<div class="main-wrapper" >
 			<Topbar />
-			<main id="main-content">
+			<main id="main-content" class={bg}>
 				<slot />
 			</main>
 			<Footer />
@@ -98,6 +102,9 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 	}
 	#main-content {
 		padding: 1rem;
-		background-color: var(--secondary);
+		background-size: cover;
+		background-position: center;
 	}
 </style>
+
+
