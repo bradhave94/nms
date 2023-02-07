@@ -25,7 +25,7 @@ export interface Props {
 const { title, image, image_width, columns, sort, data } = Astro.props;
 ---
 
-<style lang="scss">
+<style lang="scss" is:global>
 	@import "../../assets/scss/tabulator.scss";
 	.table-wrapper {
 		opacity: 1;
