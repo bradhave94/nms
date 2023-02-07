@@ -1,79 +1,17 @@
 ---
-
-// Importing required components and data
 import Layout from '@layouts/Layout.astro';
-import Table from '@components/table/Table.astro';
-import curiosities from '@data/Curiosities.json';
-import { getById, Item } from '@utils/lookup.js';
-
-// Interfaces for defining the shape of input and output objects
-interface RequiredItems {
-	Id: string;
-	Quantity: number;
-}
-
-interface Curiosities extends Item {
-	RequiredItems: RequiredItems[];
-}
-
-// Function to create an array of data for each Curiosities item
-const createArray = (item: Curiosities) => {
-	// Map the inputs and get the details of each input item using `getById` function
-	const RequiredItems = item.RequiredItems.map((element) => {
-		const i: Item | undefined = getById(element.Id);
-		// If item is not found, return undefined
-		if (!i) return;
-		// Return the item details
-		return {
-			id: i.Id,
-			name: i.Name,
-			description: i.Description,
-			value: i.BaseValueUnits,
-			amount: element.Quantity,
-			image: i.Icon,
-			colour: i.Colour,
-		};
-	});
-
-	// Combine the inputs and output data in a new object
-	const newItem = {
-		input_1: RequiredItems[0],
-		input_2: RequiredItems[1],
-		input_3: RequiredItems[2],
-		output: {
-			id: item.Id,
-			name: item.Name,
-			description: item.Description,
-			value: item.BaseValueUnits,
-			image: item.Icon,
-			colour: item.Colour
-		},
-		value: item.BaseValueUnits,
-	};
-	return newItem;
-};
-
-// Define the columns to be displayed in the table
-const columns = [
-	{ title: 'Input 1', field: 'input_1' },
-	{ title: 'Input 2', field: 'input_2' },
-	{ title: 'Input 3', field: 'input_3' },
-	{ title: 'Name', field: 'output' },
-	{ title: 'Value', field: 'value' }
-
-];
-
-// Map the refinery data and create an array of filtered items
-const data = curiosities.map(createArray).filter(Boolean);
+import Card from '@components/Card.astro';
+import data from '@data/Curiosities.json';
 ---
-
-
 
 <Layout title="Refiner">
 	<main>
-		{curiosities.map((column) => (
-			column.Name
-		))}
+		{
+			data.map((item) => (
+				<div>
+					<Card item={item} />
+				</div>
+			))
+		}
 	</main>
 </Layout>
-

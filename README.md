@@ -51,3 +51,6 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 Find and replace
 <(.*?)>
+
+Icons
+https://icones.js.org/collection/cil

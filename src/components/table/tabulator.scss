@@ -1485,7 +1485,7 @@ body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
 }
 .table-wrapper
 	.tabulator-cell
-	> div:is(
+	div:is(
 		[style='background: #DEDCD1'],
 		[style='background: #F3A923'],
 		[style='background: #DE921F'],
