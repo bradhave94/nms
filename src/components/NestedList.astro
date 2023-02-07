@@ -1,0 +1,14 @@
+---
+const { items } = Astro.props;
+---
+
+<ul>
+	{
+		items.map((item) => (
+			<li>
+				{item.Name} x{item.Quantity}
+				{item.RequiredItems && <Astro.self items={item.RequiredItems} />}
+			</li>
+		))
+	}
+</ul>

@@ -1,4 +1,5 @@
 ---
+import NestedList from './NestedList.astro';
 import { getById, Item } from '@utils/lookup.js';
 
 const item: Item = Astro.props.item;
@@ -6,7 +7,6 @@ const item: Item = Astro.props.item;
 let rawItems = [];
 
 const createArray = (item: Item) => {
-
 	const array = [];
 
 	for (let i = 0; i < item.RequiredItems.length; i++) {
@@ -17,7 +17,6 @@ const createArray = (item: Item) => {
 		if (itemData.RequiredItems.length) {
 			RequiredItems = createArray(itemData);
 		} else {
-
 			let record = rawItems.find((r: Item) => r.Name === itemData.Name);
 
 			if (!record) {
@@ -28,11 +27,9 @@ const createArray = (item: Item) => {
 					Quantity: item2.Quantity,
 				});
 			} else {
-				console.log(itemData.Name)
 				let index = rawItems.indexOf(record);
-				rawItems[index].Quantity += item2.Quantity
+				rawItems[index].Quantity += item2.Quantity;
 			}
-			console.log(rawItems)
 		}
 		array.push({
 			Name: itemData.Name,
@@ -47,6 +44,11 @@ const createArray = (item: Item) => {
 };
 
 const data = createArray(item);
+
+const Movies = () => {
+	// Output the result to the page
+	return '<div>test</div>';
+};
 ---
 
 <h1 style={'background-color: #' + item.Colour}>{item.Name}</h1>
@@ -55,16 +57,24 @@ const data = createArray(item);
 <p>{item.BaseValueUnits}</p>
 
 <h1>Crafing</h1>
+
+<ul style="display: flex;">
 {
-	item.RequiredItems.map((item: Item) => (
-		<div>
-			<h2>
-				{getById(item.Id).Name} <small>x{item.Quantity}</small>
-			</h2>
-		</div>
+	data.map((item) => (
+		<li>
+			{item.Name}
+			<NestedList items={item.RequiredItems} />
+		</li>
 	))
 }
+</ul>
 
-{JSON.stringify(data, null, 2)}
-<br><br><br><br><br><br><br><br><br>
-{JSON.stringify(rawItems, null, 2)}
+<!-- {JSON.stringify(data, null, 2)}
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+{JSON.stringify(rawItems, null, 2)} -->
+
+<style is:global>
+	ul ul {
+		padding-left: 30px;
+	}
+</style>
