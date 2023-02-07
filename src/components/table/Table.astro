@@ -34,7 +34,6 @@ const { title, image, image_width, columns, sort, data } = Astro.props;
 	}
 	.d-hidden {
 		opacity: 0;
-		height: 500px;
 		overflow: hidden;
 	}
 	.card-header {
@@ -180,7 +179,7 @@ const { title, image, image_width, columns, sort, data } = Astro.props;
 		layout: 'fitColumns',
 		rowHeight: 62, //set rows to 40px height
 		pagination: true,
-		paginationSize: 25,
+		paginationSize: 10,
 		paginationSizeSelector: [10, 25, 50, 100, true],
 		paginationCounter: 'rows',
 		placeholder: 'No results found',

@@ -47,9 +47,36 @@
     @media (max-width: 1200px) {
         .topbar {
             text-align: right;
+			min-height: 75px;
         }
 
+		#sidebarCollapse {
+			span {
+				margin: 5px auto;
+			}
+			span:first-of-type {
+				transform: none
+			}
+			span:nth-of-type(2) {
+				opacity: 1;
+			}
+			span:last-of-type {
+				transform: none
+			}
 
+			&.active span:first-of-type {
+				transform: rotate(45deg) translate(2px, 2px);
+				margin: 0
+			}
+			&.active span:nth-of-type(2) {
+				opacity: 0;
+				margin: 0
+			}
+			&.active span:last-of-type {
+				transform: rotate(-45deg) translate(1px, -1px);
+				margin: 0
+			}
+		}
     }
 </style>
 

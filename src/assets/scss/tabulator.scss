@@ -18,7 +18,7 @@ $sortArrowInactive: #bbb !default;
 //row theming
 $rowBackgroundColor: #1c2e3a !default; //table row background color
 $rowAltBackgroundColor: #1c2e3a !default; //table row background color
-$rowBorderColor: #dee2e6 !default; //table border color
+$rowBorderColor: #dee2e688 !default; //table border color
 $rowTextColor: #fff !default; //table text color
 $rowHoverBackground: #1c2e3a !default; //row background color on hover
 
@@ -120,6 +120,8 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 			text-align: left;
 			vertical-align: bottom;
 			overflow: hidden;
+
+			min-width: 210px !important;
 
 			&.tabulator-moving {
 				position: absolute;
@@ -479,6 +481,8 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 
 			padding: 5px 10px;
 
+			letter-spacing: 1px;
+
 			&:empty {
 				display: none;
 			}
@@ -526,7 +530,7 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 
 			color: $footerTextColor;
 			font-family: inherit;
-			font-weight: inherit;
+			font-weight: normal;
 			font-size: inherit;
 		}
 
@@ -738,7 +742,8 @@ $footerButtonColor: #ff8400 !default; //footer bottom active text color
 		display: inline-flex;
 		position: relative;
 		box-sizing: border-box;
-		border: 1px solid $rowBorderColor;
+		border-left: 1px solid $rowBorderColor;
+		border-bottom: 1px solid $rowBorderColor;
 		vertical-align: middle;
 		white-space: nowrap;
 		overflow: hidden;
@@ -1471,6 +1476,7 @@ body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
 
 .table-wrapper .tabulator-cell {
 	padding: 0;
+	min-width: 210px;
 }
 .table-wrapper .tabulator-cell div {
 	display: inline-flex;
@@ -1492,10 +1498,22 @@ body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
 		[style='background: #CCCCCC'],
 		[style='background: #FFAD00']
 
+		,
+		[style='background: #6AD01E'],
+		[style='background: #FFC356'],
+		[style='background: #D35300'],
+		[style='background: #8A7F72']
+
+
+
 	) {
 	color: #000;
 }
 
 .tabulator-row .tabulator-cell[tabulator-field="value"] {
 	padding: 0 5px
+}
+
+.table-wrapper .tabulator-cell picture {
+	min-width: 50px;
 }

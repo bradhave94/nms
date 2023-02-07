@@ -1,13 +1,70 @@
 ---
-import { getById, getSlug, Item } from '@utils/lookup.js';
-export interface Props {
-	item: Item;
-}
-const { item } = Astro.props;
+import { getById, Item } from '@utils/lookup.js';
+
+const item: Item = Astro.props.item;
+
+let rawItems = [];
+
+const createArray = (item: Item) => {
+
+	const array = [];
+
+	for (let i = 0; i < item.RequiredItems.length; i++) {
+		const item2: Item = item.RequiredItems[i];
+		const itemData = getById(item2.Id);
+		let RequiredItems: Array<any> = itemData.RequiredItems;
+
+		if (itemData.RequiredItems.length) {
+			RequiredItems = createArray(itemData);
+		} else {
+
+			let record = rawItems.find((r: Item) => r.Name === itemData.Name);
+
+			if (!record) {
+				rawItems.push({
+					Name: itemData.Name,
+					Icon: itemData.Icon,
+					Colour: itemData.Colour,
+					Quantity: item2.Quantity,
+				});
+			} else {
+				console.log(itemData.Name)
+				let index = rawItems.indexOf(record);
+				rawItems[index].Quantity += item2.Quantity
+			}
+			console.log(rawItems)
+		}
+		array.push({
+			Name: itemData.Name,
+			Icon: itemData.Icon,
+			Colour: itemData.Colour,
+			Quantity: item2.Quantity,
+			RequiredItems: RequiredItems,
+		});
+	}
+
+	return array;
+};
+
+const data = createArray(item);
 ---
 
-
-<h1 style={"background-color: #" + item.Colour}>{item.Name}</h1>
+<h1 style={'background-color: #' + item.Colour}>{item.Name}</h1>
 <p>{item.Group}</p>
 <p>{item.Description}</p>
 <p>{item.BaseValueUnits}</p>
+
+<h1>Crafing</h1>
+{
+	item.RequiredItems.map((item: Item) => (
+		<div>
+			<h2>
+				{getById(item.Id).Name} <small>x{item.Quantity}</small>
+			</h2>
+		</div>
+	))
+}
+
+{JSON.stringify(data, null, 2)}
+<br><br><br><br><br><br><br><br><br>
+{JSON.stringify(rawItems, null, 2)}

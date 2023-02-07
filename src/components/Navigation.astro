@@ -33,12 +33,17 @@ const menuitems = [
 		icon: 'cil:birthday-cake',
 	},
 	{
+		title: 'calculator',
+		path: '/calculator',
+		icon: 'cil:birthday-cake',
+	},
+	{
 		title: 'More',
 		path: '#',
 		icon: 'cil:plus',
 		children: [
 			{ title: 'Technology', path: '/constructed-technology' },
-			{ title: 'Curiosities', path: '/curiosities'},
+			{ title: 'Curiosities', path: '/curiosities',  },
 			{ title: 'Raw Materials', path: '/raw' },
 		],
 	},
@@ -180,7 +185,7 @@ const slug = Astro.url.pathname;
 
 	@media (max-width: 1200px) {
 		#main-navigation {
-			margin-left: -350px;
+			margin-left: 0;
 			position: fixed;
 			z-index: 9999;
 			height: 100vh;
@@ -190,7 +195,7 @@ const slug = Astro.url.pathname;
 			overflow: scroll;
 
 			&.active {
-				margin-left: 0;
+				margin-left: -350px;
 				transform: none;
 			}
 		}
@@ -230,29 +235,6 @@ const slug = Astro.url.pathname;
 </style>
 
 <script>
-	//write a function to toggle the active class on the main navigation on page resize
-	function toggleMainNav() {
-		const mainNav = document.getElementById('main-navigation');
-		const sidebarCollapse = document.getElementById('sidebarCollapse');
-		const mainNavWidth = mainNav.offsetWidth;
-		const windowWidth = window.innerWidth;
-
-		if (windowWidth > 1200) {
-			mainNav.classList.add('active');
-			sidebarCollapse.classList.remove('active');
-
-		} else if (windowWidth <= 1200) {
-			mainNav.classList.remove('active');
-			sidebarCollapse.classList.add('active');
-		}
-	}
-
-	//call the function on page load
-	toggleMainNav();
-
-	//call the function on page resize
-	window.addEventListener('resize', toggleMainNav);
-
 	// variables
 	const mainNav = document.querySelector('#main-navigation');
 	const mainMenu = mainNav.querySelector('ul');

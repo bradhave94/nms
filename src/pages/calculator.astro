@@ -1,0 +1,19 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Card from '@components/Card.astro';
+import data from '@data/Products.json';
+
+data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
+---
+
+<Layout title="Refiner">
+	<main>
+		{
+			data.map((item) => (
+				<div>
+					<Card item={item} />
+				</div>
+			))
+		}
+	</main>
+</Layout>

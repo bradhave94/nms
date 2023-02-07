@@ -99,11 +99,26 @@ const bg = `bg${Math.floor(Math.random()*12) + 1 }`
 	.main-wrapper {
 		overflow-x: hidden;
 		width: 100%;
+
 	}
 	#main-content {
 		padding: 1rem;
 		background-size: cover;
 		background-position: center;
+		position: relative;
+		isolation: isolate;
+		min-height: 100vh;
+	}
+	#main-content::after {
+		content: "";
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #000;
+		position: absolute;
+		top: 0;
+		opacity: 0.7;
+		z-index: -1;
 	}
 </style>
 

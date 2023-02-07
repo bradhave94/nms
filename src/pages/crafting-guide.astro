@@ -67,7 +67,12 @@ const data = products.map(createArray).filter(Boolean);
 ---
 
 
-
+<style lang="scss" is:global>
+.table-wrapper .tabulator-cell div {
+	background: transparent !important;
+	color: #fff !important;
+}
+</style>
 <Layout title="Crafting Guide">
 	<main>
 		<Table title="Crafting" image="crafting" image_width={100} columns={columns} data={data} sort="value" />
