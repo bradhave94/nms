@@ -8,7 +8,13 @@
 @use "space" as *;
 
 /* font-family: NMSFuturaProBook */
-@import url('https://font.nmscd.com/assets/font/NMSFuturaProBook_Kerned/Web-TT/NMSFuturaProBook_Kerned.css');
+@font-face {
+  font-family: 'FuturaProBook';
+  src: url('/fonts/FuturaProBook.woff2') format('woff2'),
+       url('/fonts/FuturaProBook.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   color: var(--font-color);

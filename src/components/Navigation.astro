@@ -55,9 +55,11 @@ const slug = Astro.url.pathname;
 				src={logo}
 				widths={[300]}
 				sizes="300px"
+				width={300}
+				height={55}
 				aspectRatio={null}
 				background={null}
-				alt="descriptive text"
+				alt="No Man's Sky Recipes"
 			/>
 		</a>
 		<div class="wrapper">
@@ -231,13 +233,17 @@ const slug = Astro.url.pathname;
 	//write a function to toggle the active class on the main navigation on page resize
 	function toggleMainNav() {
 		const mainNav = document.getElementById('main-navigation');
+		const sidebarCollapse = document.getElementById('sidebarCollapse');
 		const mainNavWidth = mainNav.offsetWidth;
 		const windowWidth = window.innerWidth;
 
 		if (windowWidth > 1200) {
 			mainNav.classList.add('active');
+			sidebarCollapse.classList.remove('active');
+
 		} else if (windowWidth <= 1200) {
 			mainNav.classList.remove('active');
+			sidebarCollapse.classList.add('active');
 		}
 	}
 

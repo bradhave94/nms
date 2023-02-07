@@ -56,9 +56,6 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 			property="twitter:image"
 			content={socialImageURL.endsWith('.svg') ? fallbackImageURL : socialImageURL}
 		/>
-
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://font.nmscd.com" />
 	</head>
 	<body>
 		<Navigation />
