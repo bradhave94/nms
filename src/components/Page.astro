@@ -51,23 +51,24 @@ const getOutputs = (item) => {
 		// Return the item details
 		return {
 			Name: i.Name,
-			Quantity: element.Quantity
+			Quantity: element.Quantity,
 		};
 	});
 
 	return {
 		Name: Astro.props.item.Name,
 		Quantity: 1,
-		RequiredItems: RequiredItems
-	}
-
+		RequiredItems: RequiredItems,
+	};
 };
 
-const data = [{
-	Name: Astro.props.item.Name,
-	Quantity: 1,
-	RequiredItems: createArray(item)
-}]
+const data = [
+	{
+		Name: Astro.props.item.Name,
+		Quantity: 1,
+		RequiredItems: createArray(item),
+	},
+];
 const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 ---
 
@@ -77,35 +78,81 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 <p>{item.BaseValueUnits}</p>
 
 <h1>Crafing</h1>
-
+<input class="quantity" type="number" min="1" value="1" />
 <ul>
-{
-	data.map((item) => (
-		<li>
-			{item.Name} x{item.Quantity}
-			{item.RequiredItems && <NestedList items={item.RequiredItems} />}
-		</li>
-	))
-
-}
-{
-	output.map((item) => (
-		<li>
-			{item.Name} x{item.Quantity}
-			{item.RequiredItems && <NestedList items={item.RequiredItems} />}
-		</li>
-	))
-}
+	{
+		data.map(
+			(item) =>
+				item.RequiredItems.length != 0 && (
+					<li>
+						{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
+						{item.RequiredItems && <NestedList items={item.RequiredItems} />}
+					</li>
+				)
+		)
+	}
+	{
+		output.map(
+			(item) =>
+				item.RequiredItems.length != 0 && (
+					<li>
+						{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
+						{item.RequiredItems && <NestedList items={item.RequiredItems} />}
+					</li>
+				)
+		)
+	}
 </ul>
-
-{JSON.stringify(output, null, 2)}
-
-<!-- {JSON.stringify(data, null, 2)}
-<br /><br /><br /><br /><br /><br /><br /><br /><br />
-{JSON.stringify(rawItems, null, 2)} -->
 
 <style is:global>
 	ul ul {
 		padding-left: 30px;
 	}
+
+	span {
+		cursor: pointer;
+	}
+	input[type='number'] {
+		background: #000;
+		border: none;
+		color: #fff;
+		width: 100px;
+		padding: 0.25rem 0.5rem;
+		font-size: 1.1rem;
+		text-align: center;
+		height: 40px;
+	}
 </style>
+
+<script>
+	const quantityInputs = document.querySelector('input.quantity');
+
+	const handleClick = (isMinus) => {
+		let count = parseInt(quantityInputs.value) + (isMinus ? -1 : 1);
+		count = count < 1 ? 1 : count;
+		quantityInputs.value = count;
+		quantityInputs.dispatchEvent(new Event('change'));
+		return false;
+	};
+
+	document.querySelectorAll('.minus').forEach(function (el) {
+		el.addEventListener('click', handleClick.bind(el, true));
+	});
+	document.querySelectorAll('.plus').forEach(function (el) {
+		el.addEventListener('click', handleClick.bind(el, false));
+	});
+
+	const inputField = document.querySelector('.quantity');
+	const elements = document.querySelectorAll('[data-quantity]');
+
+	inputField.addEventListener('input', () => {
+		const value = parseFloat(inputField.value);
+		console.log(elements);
+
+		elements.forEach((element) => {
+			const oldValue = parseFloat(element.getAttribute('data-quantity'));
+			const newValue = oldValue * value;
+			element.innerHTML = newValue.toString();
+		});
+	});
+</script>

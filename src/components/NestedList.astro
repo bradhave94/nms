@@ -6,7 +6,7 @@ const { items } = Astro.props;
 	{
 		items.map((item) => (
 			<li>
-				{item.Name} x{item.Quantity}
+				{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
 				{item.RequiredItems && <Astro.self items={item.RequiredItems} />}
 			</li>
 		))
