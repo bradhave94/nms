@@ -43,50 +43,21 @@ const createArray = (item: Item) => {
 
 const getOutputs = (item) => {
 	// Map the inputs and get the details of each input item using `getById` function
-	const inputs = item.Inputs.map((element) => {
+	const RequiredItems = item.Inputs.map((element) => {
 		const i: Item | undefined = getById(element.Id);
 		// If item is not found, return undefined
 		if (!i) return;
 		// Return the item details
 		return {
-			ref: element.id,
-			id: i.Id,
-			name: i.Name,
-			description: i.Description,
-			value: i.BaseValueUnits,
-			amount: element.Quantity,
-			image: i.Icon,
-			colour: i.Colour,
+			Name: i.Name,
+			Quantity: element.Quantity
 		};
 	});
 
-	// Get the details of the output item using `getById` function
-	const o: Item | undefined = getById(item.Output.Id);
-	// If item is not found, return undefined
-	if (!o) return;
-	// Return the item details
-	const output = {
-		id: o.Id,
-		name: o.Name,
-		description: o.Description,
-		value: o.BaseValueUnits,
-		amount: item.Output.Quantity,
-		image: o.Icon,
-		colour: o.Colour,
-	};
-
-	// Combine the inputs and output data in a new object
-	const newItem = {
-		input_1: inputs[0],
-		input_2: inputs[1],
-		input_3: inputs[2],
-		output
-	};
-	return newItem;
+	return RequiredItems;
 };
 
 const data = createArray(item);
-
 const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 ---
 
@@ -97,7 +68,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 
 <h1>Crafing</h1>
 
-<ul style="display: flex;">
+<ul>
 {
 	data.map((item) => (
 		<li>
@@ -105,12 +76,18 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 			{item.RequiredItems && <NestedList items={item.RequiredItems} />}
 		</li>
 	))
+
+}
+{output.length &&
+	<li>
+		{ output.map((item) => (
+			<NestedList items={item} />
+		)) }
+	</li>
 }
 </ul>
 
 
-<h1>Refine</h1>
-{JSON.stringify(output, null, 2)}
 
 <!-- {JSON.stringify(data, null, 2)}
 <br /><br /><br /><br /><br /><br /><br /><br /><br />
