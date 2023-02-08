@@ -43,6 +43,7 @@ const createArray = (item: Item) => {
 
 const getOutputs = (item) => {
 	// Map the inputs and get the details of each input item using `getById` function
+
 	const RequiredItems = item.Inputs.map((element) => {
 		const i: Item | undefined = getById(element.Id);
 		// If item is not found, return undefined
@@ -54,10 +55,19 @@ const getOutputs = (item) => {
 		};
 	});
 
-	return RequiredItems;
+	return {
+		Name: Astro.props.item.Name,
+		Quantity: 1,
+		RequiredItems: RequiredItems
+	}
+
 };
 
-const data = createArray(item);
+const data = [{
+	Name: Astro.props.item.Name,
+	Quantity: 1,
+	RequiredItems: createArray(item)
+}]
 const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 ---
 
@@ -72,22 +82,23 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 {
 	data.map((item) => (
 		<li>
-			{item.Name}
+			{item.Name} x{item.Quantity}
 			{item.RequiredItems && <NestedList items={item.RequiredItems} />}
 		</li>
 	))
 
 }
-{output.length &&
-	<li>
-		{ output.map((item) => (
-			<NestedList items={item} />
-		)) }
-	</li>
+{
+	output.map((item) => (
+		<li>
+			{item.Name} x{item.Quantity}
+			{item.RequiredItems && <NestedList items={item.RequiredItems} />}
+		</li>
+	))
 }
 </ul>
 
-
+{JSON.stringify(output, null, 2)}
 
 <!-- {JSON.stringify(data, null, 2)}
 <br /><br /><br /><br /><br /><br /><br /><br /><br />
