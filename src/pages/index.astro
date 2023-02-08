@@ -4,129 +4,36 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Welcome to Astro.">
 	<section class="margin-48">
-		<div class="container">
-			<h1>Accessible Astro <em>Starter</em></h1><br />
-		</div>
-	</section>
-	<section class="padding-48 color-primary">
-		<div class="container">
-			<h2 class="margin-16 bottom">Auto Grid</h2>
-		</div>
-		<div class="container" data-auto-grid="3">
-			<div
-				class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
-				data-animation="fade-in"
-			>
-				<h3>Column 1</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-					accusantium placeat eius officiis veniam totam. Earum eos et voluptate dolorem.
-				</p>
-			</div>
-			<div
-				class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
-				data-animation="fade-in"
-				data-animation-delay="0.25s"
-			>
-				<h3>Column 2</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-					accusantium placeat eius officiis veniam totam. Earum eos et voluptate dolorem.
-				</p>
-			</div>
-			<div
-				class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
-				data-animation="fade-in"
-				data-animation-delay="0.5s"
-			>
-				<h3>Column 3</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-					accusantium placeat eius officiis veniam totam. Earum eos et voluptate dolorem.
-				</p>
-			</div>
-		</div>
-		<div class="container margin-16 top">
-			<a href="#" class="button">Tab to me first!</a>&nbsp;
-			<a href="#" class="button color-secondary">Then it's my turn</a>
-		</div>
-	</section>
-	<section class="margin-64">
-		<div class="container">
-			<div class="grid">
-				<div class="small-12">
-					<h2>12 Column Grid</h2>
-				</div>
-				<div class="small-12 medium-3 space-content">
-					<h3>Sidebar</h3>
-					<ul>
-						<li>Lorem ipsum dolor sit amet.</li>
-						<li>Lorem ipsum dolor sit amet.</li>
-						<li>Lorem ipsum dolor sit amet.</li>
-						<li>Lorem ipsum dolor sit amet.</li>
-					</ul>
-				</div>
-				<div class="small-12 medium-8 offset-medium-4 space-content">
-					<h3>Main</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi mollitia
-						alias sunt accusamus reiciendis fuga delectus, repellendus molestiae dolore
-						illo iusto eligendi eaque qui hic facilis assumenda! Velit, minus, nobis. <strong
-							><a href="#">And lastly tab to me</a></strong
-						>.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi mollitia
-						alias sunt accusamus reiciendis fuga delectus, repellendus molestiae dolore
-						illo iusto eligendi eaque qui hic facilis assumenda! Velit, minus, nobis.
-					</p>
-				</div>
-			</div>
-		</div>
+		<h1>Leave feedback</h1>
+		<form action="https://formspree.io/mzbjbkzw" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" class="form-control here" />
+            </div>
+            <div class="form-group">
+                <label for="name">Email</label>
+                <input id="email" name="_replyto" type="email" class="form-control here" />
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" cols="40" rows="5" required="required" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="g-recaptcha-response" data-sitekey="6LcAi90UAAAAABajOBg3a6bjOafwVmsrpb9Isqzi"></div>
+                <br/>
+                <button name="submit" type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+            </div>
+        </form>
 	</section>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 80ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	input, textarea ,button {
+		background-color: black !important;
+		width: 100%;
+		margin: 10px 0;
+		padding: 10px
 	}
 </style>
