@@ -4,6 +4,9 @@ import products from '../data/Products.json';
 import cooking from '../data/Cooking.json';
 import curiosities from '../data/Curiosities.json';
 import conTech from '../data/ConstructedTechnology.json';
+import other from '../data/Others.json';
+import refiner from '../data/Refinery.json';
+import nut from '../data/NutrientProcessor.json';
 
 // Defining the interface for an Item
 type Item = {
@@ -16,6 +19,10 @@ type Item = {
 	BaseValueUnits: number;
 	RequiredItems?: [],
 	Quantity?: number,
+	Output?: {
+		Id: string,
+		Quantity: number
+	}
 };
 
 // Mapping the prefixes of item id to the actual data sources
@@ -25,6 +32,9 @@ const dataSources = {
 	cook: cooking,
 	cur: curiosities,
 	conTech,
+	other,
+	ref: refiner,
+	nut: nut
 };
 
 // Mapping the prefixes of item id to the corresponding slugs
@@ -34,6 +44,9 @@ const slugs = {
 	cook: '/cooking/',
 	cur: '/curiosities/',
 	conTech: '/constructed-technology/',
+	other: '/others/',
+	ref: '/refinery/',
+	nut: '/nutrient-processor/'
 };
 
 // Returns the slug corresponding to the item id
@@ -50,6 +63,18 @@ const findById = (source: Item[], id: string): Item => {
 	return source.find((p) => p.Id === id);
 };
 
+const findOutput = (id: string) => {
+	// Find the item from the data source with a matching id
+	const outputs = []
+	for (const source in dataSources) {
+		dataSources[source].forEach((item) => {
+			if(item.Output && item.Output.Id === id) outputs.push(item)
+		})
+	}
+	return outputs
+
+};
+
 // Returns the item corresponding to the id from the appropriate data source
 const getById = (id: string): Item => {
 	// Extract the prefix of the item id by splitting the id by its numeric part
@@ -63,5 +88,5 @@ const getById = (id: string): Item => {
 };
 
 // Export the getSlug and getById functions, and the Item interface
-export { getSlug, getById };
+export { getSlug, getById, findOutput };
 export type { Item };

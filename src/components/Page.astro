@@ -1,6 +1,6 @@
 ---
 import NestedList from './NestedList.astro';
-import { getById, Item } from '@utils/lookup.js';
+import { getById, findOutput, Item } from '@utils/lookup.js';
 
 const item: Item = Astro.props.item;
 
@@ -8,7 +8,6 @@ let rawItems = [];
 
 const createArray = (item: Item) => {
 	const array = [];
-
 	for (let i = 0; i < item.RequiredItems.length; i++) {
 		const item2: Item = item.RequiredItems[i];
 		const itemData = getById(item2.Id);
@@ -39,16 +38,56 @@ const createArray = (item: Item) => {
 			RequiredItems: RequiredItems,
 		});
 	}
-
 	return array;
+};
+
+const getOutputs = (item) => {
+	// Map the inputs and get the details of each input item using `getById` function
+	const inputs = item.Inputs.map((element) => {
+		const i: Item | undefined = getById(element.Id);
+		// If item is not found, return undefined
+		if (!i) return;
+		// Return the item details
+		return {
+			ref: element.id,
+			id: i.Id,
+			name: i.Name,
+			description: i.Description,
+			value: i.BaseValueUnits,
+			amount: element.Quantity,
+			image: i.Icon,
+			colour: i.Colour,
+		};
+	});
+
+	// Get the details of the output item using `getById` function
+	const o: Item | undefined = getById(item.Output.Id);
+	// If item is not found, return undefined
+	if (!o) return;
+	// Return the item details
+	const output = {
+		id: o.Id,
+		name: o.Name,
+		description: o.Description,
+		value: o.BaseValueUnits,
+		amount: item.Output.Quantity,
+		image: o.Icon,
+		colour: o.Colour,
+	};
+
+	// Combine the inputs and output data in a new object
+	const newItem = {
+		input_1: inputs[0],
+		input_2: inputs[1],
+		input_3: inputs[2],
+		output
+	};
+	return newItem;
 };
 
 const data = createArray(item);
 
-const Movies = () => {
-	// Output the result to the page
-	return '<div>test</div>';
-};
+const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 ---
 
 <h1 style={'background-color: #' + item.Colour}>{item.Name}</h1>
@@ -63,11 +102,15 @@ const Movies = () => {
 	data.map((item) => (
 		<li>
 			{item.Name}
-			<NestedList items={item.RequiredItems} />
+			{item.RequiredItems && <NestedList items={item.RequiredItems} />}
 		</li>
 	))
 }
 </ul>
+
+
+<h1>Refine</h1>
+{JSON.stringify(output, null, 2)}
 
 <!-- {JSON.stringify(data, null, 2)}
 <br /><br /><br /><br /><br /><br /><br /><br /><br />
