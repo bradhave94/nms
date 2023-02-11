@@ -1,5 +1,0 @@
-@for $counter from 1 through 12 {
-	.bg#{$counter} {
-		background-image: url(/images/backgrounds/bg#{$counter}.jpg);
-	}
-}
