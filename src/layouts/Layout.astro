@@ -2,9 +2,10 @@
 import '../assets/css/main.css';
 import { SITE } from '@config';
 
-import DesktopNav from '../components/DesktopNav.jsx';
-import Sidenav from '../components/Sidenav.jsx';
+import Navbar from '../components/Navbar.jsx'
+import Footer from '../components/Footer.jsx'
 
+import Grid from '../components/Grid.jsx'
 
 export interface Props {
 	title?: string;
@@ -25,12 +26,10 @@ const socialImageURL = new URL(ogImage ? ogImage : SITE.ogImage, Astro.url.origi
 const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 
 const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
-
-
 ---
 
 <!DOCTYPE html>
-<html lang="en" style="background-color: black;">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -63,17 +62,12 @@ const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.jpg'} />
 	</head>
 	<body>
-		{/* Static sidebar for desktop */}
-		<div>
+		<Navbar  client:load />
+		<main>
+			<Grid />
+			<slot />
 
-
-        <DesktopNav />
-		<div class="flex flex-1 flex-col md:pl-64">
-			<Sidenav client:load />
-			<main class="flex-1 text-white">
-				<slot />
-			  </main>
-		</div>
-	</div>
+		</main>
+		<Footer client:idle />
 	</body>
 </html>
