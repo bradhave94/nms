@@ -1,7 +1,8 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
 import data from '@data/Products.json';
+
+import { getById, getSlug, Item } from '@utils/lookup.js';
 
 data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 ---
@@ -10,9 +11,9 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 	<main>
 		{
 			data.map((item) => (
-				<div>
+				<a class="block" href={getSlug(item.Id) + item.Id}>
 					{item.Name}
-				</div>
+				</a>
 			))
 		}
 	</main>

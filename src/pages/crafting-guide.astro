@@ -5,18 +5,13 @@ import Table from '@components/table/Table.astro';
 import products from '@data/Products.json';
 import { getById, Item } from '@utils/lookup.js';
 
-// Interfaces for defining the shape of input and output objects
-interface RequiredItems {
-	Id: string;
-	Quantity: number;
-}
-
-interface Products extends Item {
-	RequiredItems: RequiredItems[];
-}
 
 // Function to create an array of data for each Products item
-const createArray = (item: Products) => {
+const createArray = (item: Item) => {
+
+	// If the item has no inputs, return undefined
+	if (item.RequiredItems.length == 0) return;
+
 	// Map the inputs and get the details of each input item using `getById` function
 	const RequiredItems = item.RequiredItems.map((element) => {
 		const i: Item | undefined = getById(element.Id);

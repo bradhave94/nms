@@ -10,12 +10,43 @@
 @tailwind components;
 @tailwind utilities;
 
+#table {
+    @apply  border-0
+}
+
 #table .tabulator-row .tabulator-cell {
-    @apply p-0 border-b border-r border-gray-500 transition-all hover:opacity-80
+    @apply p-0 border-b border-r border-gray-500 transition-all hover:opacity-80 min-w-[297px] inline-flex items-center text-white
+}
+
+#table  .tabulator-row .tabulator-cell[tabulator-field="value"] {
+    @apply text-base px-3
+}
+
+#table .tabulator-row .tabulator-cell:last-of-type {
+    @apply border-r-0
+}
+
+#table .tabulator-cell > a {
+    @apply w-full h-full block
 }
 
 #table .tabulator-cell > a > div {
-    @apply flex flex-row-reverse items-center justify-end  h-full text-white text-base gap-2
+    @apply flex flex-row-reverse items-center justify-end  h-full text-white text-base gap-2 px-2
+}
+
+#table .tabulator-cell > a > div:is(
+    [style="background: #FFC356"],
+    [style="background: #DEDCD1"],
+    [style="background: #F3A923"],
+    [style="background: #DE921F"],
+    [style="background: #8A7F72"],
+    [style="background: #6AD01E"]
+    ) {
+    @apply text-black
+}
+
+#table .tabulator-cell > a > div[style="background: #CCCCCC"] {
+    @apply !bg-slate-900
 }
 
 #table .tabulator-row {
@@ -24,6 +55,42 @@
 
 #table .tabulator-row.tabulator-row-even {
     @apply bg-gray-800
+}
+
+#table .tabulator-header .tabulator-col {
+    @apply bg-black text-base text-white p-2
+}
+
+#table .tabulator-header .tabulator-col:last-of-type {
+    @apply border-r-0
+}
+
+#table .tabulator-arrow {
+    @apply border-b-orange-500
+}
+
+#table .tabulator-col.tabulator-sortable[aria-sort="descending"] .tabulator-arrow {
+    @apply border-t-orange-500
+}
+
+#table .tabulator-footer {
+    @apply bg-black text-base text-white p-2 border-0
+}
+
+#table .tabulator-page {
+    @apply inline-flex items-center  transition-colors rounded border-0 bg-orange-500 px-2.5 py-1.5 text-xs font-medium text-black shadow-sm hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2
+}
+
+#table .tabulator-page.active {
+    @apply bg-orange-700 hover:bg-orange-800
+}
+
+#table .tabulator-page-size {
+    @apply rounded-md border-gray-300 py-[4.5px] pl-3 pr-10 text-xs focus:border-orange-500 focus:outline-none focus:ring-orange-500 sm:text-sm bg-orange-500 border-0 text-black
+}
+
+#table .tabulator-paginator {
+    @apply text-white ml-5
 }
 
 .nms-bg {

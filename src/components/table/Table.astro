@@ -27,8 +27,8 @@ const { title, image, image_width, columns, sort, data } = Astro.props;
 ---
 
 <div class="table-wrapper d-hidden">
-	<div class="card-header">
-		<div class="d-flex">
+	<div class="card-header p-4 relative flex items-center justify-between bg-center before:bg-black/80 before:w-full before:h-full before:absolute before:left-0 " style="background-image: url(/images/resources.png)">
+		<div class="flex items-center gap-2 z-10 relative">
 			<Picture
 				class="logo"
 				src={import(`../../assets/img/${image}.png`)}
@@ -38,13 +38,13 @@ const { title, image, image_width, columns, sort, data } = Astro.props;
 				background={null}
 				alt="descriptive text"
 			/>
-			<span>{title}</span>
+			<h1 class="text-2xl">{title}</h1>
 		</div>
 
-		<div class="d-flex">
-			<div class="tabulator-search">
-				<input required type="text" id="search" name="search" placeholder="" />
-				<label for="search">Search</label>
+		<div class="flex items-center z-10">
+			<div class="tabulator-search relative">
+				<input class="rounded-md w-full bg-black border-orange-500 focus:border-orange-500 focus:ring-orange-500 peer" required type="text" id="search" name="search" placeholder="" />
+				<label class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0" for="search">Search</label>
 			</div>
 		</div>
 	</div>

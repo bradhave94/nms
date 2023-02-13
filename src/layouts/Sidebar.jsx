@@ -15,7 +15,7 @@ const navigation = [
 	{ name: 'Refining', href: '/refiner', icon: FunnelIcon, current: false },
 	{ name: 'Cooking', href: '/cooking', icon: CakeIcon, current: false },
 	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon, current: false },
-	{ name: 'Calculator', href: '#', icon: CalculatorIcon, current: false },
+	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon, current: false },
 ];
 
 function classNames(...classes) {
@@ -130,7 +130,7 @@ export default function Example(props) {
 				{/* Static sidebar for desktop */}
 				<div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-80 lg:flex-col">
 					{/* Sidebar component, swap this element with another sidebar if you like */}
-					<div className="flex min-h-0 flex-1 flex-col border-r border-gray-600 bg-black">
+					<div className="flex min-h-0 flex-1 flex-col bg-black">
 						<div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
 							<div className="flex flex-shrink-0 items-center mb-2 px-4">
 								<img
@@ -162,7 +162,6 @@ export default function Example(props) {
 										/>
 										{item.name}
 									</a>
-
 								))}
 							</nav>
 						</div>
@@ -180,9 +179,9 @@ export default function Example(props) {
 						</button>
 					</div>
 					<main className="flex-1">
-							<div className="nms-bg mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-								{props.layout}
-							</div>
+						<div className="nms-bg mx-auto px-4 sm:px-6 lg:px-8 py-6">
+							{props.layout}
+						</div>
 					</main>
 				</div>
 			</div>

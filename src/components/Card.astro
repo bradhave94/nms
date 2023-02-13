@@ -4,15 +4,16 @@ const card = Astro.props.card;
 
 ---
 
-<article class="flex flex-wrap transition hover:shadow-xl bg-gray-800 shadow-gray-800/25">
+<article class="flex flex-wrap transition hover:shadow-xl bg-black rounded-md overflow-hidden">
 	<div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
 		<time
 			datetime="2022-10-10"
 			class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-white"
 		>
-			<span>Recipes</span>
-			<span class="w-px flex-1 bg-white/10"></span>
 			<span>{card.items}</span>
+
+			<span class="w-px flex-1 bg-white/10"></span>
+			<span>Recipes</span>
 		</time>
 	</div>
 
@@ -40,7 +41,7 @@ const card = Astro.props.card;
 		<div class="sm:flex sm:items-end sm:justify-end">
 			<a
 				href={card.link}
-				class="block tracking-wider bg-orange-500 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-orange-700"
+				class="block tracking-wider bg-orange-500 px-5 py-3 text-center text-xs font-bold text-gray-900 transition hover:bg-orange-700"
 			>
 				{card.button}
 			</a>

@@ -88,7 +88,8 @@ const getById = (id: string): Item => {
 };
 
 const getLength = (list) => {
-	return dataSources[list].length;
+	let length = dataSources[list].filter(item => !item.RequiredItems || item.RequiredItems.length != 0 ).length;
+	return length
 }
 
 
