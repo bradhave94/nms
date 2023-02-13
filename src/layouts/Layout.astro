@@ -2,10 +2,9 @@
 import '../assets/css/main.css';
 import { SITE } from '@config';
 
-import Navbar from '../components/Navbar.jsx'
-import Footer from '../components/Footer.jsx'
 
-import Grid from '../components/Grid.jsx'
+import Footer from '../components/Footer.jsx';
+import Sidebar from './Sidebar.jsx';
 
 export interface Props {
 	title?: string;
@@ -25,11 +24,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(ogImage ? ogImage : SITE.ogImage, Astro.url.origin).href;
 const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 
+
 const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
+
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-black font-nms text-lg text-white">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -61,13 +62,9 @@ const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 
 		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.jpg'} />
 	</head>
-	<body>
-		<Navbar  client:load />
-		<main>
-			<Grid />
-			<slot />
-
-		</main>
-		<Footer client:idle />
+	<body class={bg + " h-full"}>
+		<Sidebar client:load>
+			<slot slot="layout" />
+		</Sidebar>
 	</body>
 </html>

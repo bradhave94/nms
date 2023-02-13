@@ -87,6 +87,11 @@ const getById = (id: string): Item => {
 	return findById(source, id);
 };
 
+const getLength = (list) => {
+	return dataSources[list].length;
+}
+
+
 // Export the getSlug and getById functions, and the Item interface
-export { getSlug, getById, findOutput };
+export { getSlug, getById, findOutput, getLength };
 export type { Item };

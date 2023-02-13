@@ -1,3 +1,99 @@
+@font-face {
+    font-family: 'FuturaProBook';
+    src: url('/fonts/FuturaProBook.woff2') format('woff2'),
+        url('/fonts/FuturaProBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#table .tabulator-row .tabulator-cell {
+    @apply p-0 border-b border-r border-gray-500 transition-all hover:opacity-80
+}
+
+#table .tabulator-cell > a > div {
+    @apply flex flex-row-reverse items-center justify-end  h-full text-white text-base gap-2
+}
+
+#table .tabulator-row {
+    @apply bg-gray-800
+}
+
+#table .tabulator-row.tabulator-row-even {
+    @apply bg-gray-800
+}
+
+.nms-bg {
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+}
+.nms-bg::after {
+    content: "";
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.bg1 .nms-bg {
+    background-image: url("/images/backgrounds/bg1.jpg");
+}
+
+.bg2 .nms-bg {
+    background-image: url("/images/backgrounds/bg2.jpg");
+}
+
+.bg3 .nms-bg {
+    background-image: url("/images/backgrounds/bg3.jpg");
+}
+
+.bg4 .nms-bg {
+    background-image: url("/images/backgrounds/bg4.jpg");
+}
+
+.bg5 .nms-bg {
+    background-image: url("/images/backgrounds/bg5.jpg");
+}
+
+.bg6 .nms-bg {
+    background-image: url("/images/backgrounds/bg6.jpg");
+}
+
+.bg7 .nms-bg {
+    background-image: url("/images/backgrounds/bg7.jpg");
+}
+
+.bg8 .nms-bg {
+    background-image: url("/images/backgrounds/bg8.jpg");
+}
+
+.bg9 .nms-bg {
+    background-image: url("/images/backgrounds/bg9.jpg");
+}
+
+.bg10 .nms-bg {
+    background-image: url("/images/backgrounds/bg10.jpg");
+}
+
+.bg11 .nms-bg {
+    background-image: url("/images/backgrounds/bg11.jpg");
+}
+
+.bg12 .nms-bg {
+    background-image: url("/images/backgrounds/bg12.jpg");
+}
+
+.bg13 .nms-bg {
+    background-image: url("/images/backgrounds/bg13.jpg");
+}
