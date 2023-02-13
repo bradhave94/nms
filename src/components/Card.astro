@@ -4,7 +4,7 @@ const card = Astro.props.card;
 
 ---
 
-<article class="flex flex-wrap transition hover:shadow-xl bg-gray-800 shadow-gray-800/25">
+<article class="flex flex-wrap transition hover:shadow-xl bg-black border-2 border-orange-500 rounded-md">
 	<div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
 		<time
 			datetime="2022-10-10"
@@ -40,7 +40,7 @@ const card = Astro.props.card;
 		<div class="sm:flex sm:items-end sm:justify-end">
 			<a
 				href={card.link}
-				class="block tracking-wider bg-orange-500 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-orange-700"
+				class="block tracking-wider bg-orange-500 px-5 py-3 text-center rounded-br-md text-xs font-bold uppercase text-gray-900 transition hover:bg-orange-700 relative -bottom-[1px] -right-[1px]"
 			>
 				{card.button}
 			</a>
