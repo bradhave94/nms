@@ -10,12 +10,14 @@ import {
 	HomeIcon,
 } from '@heroicons/react/24/solid';
 
+
+
 const navigation = [
-	{ name: 'Home', href: '/', icon: HomeIcon, current: true },
-	{ name: 'Refining', href: '/refiner', icon: FunnelIcon, current: false },
-	{ name: 'Cooking', href: '/cooking', icon: CakeIcon, current: false },
-	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon, current: false },
-	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon, current: false },
+	{ name: 'Home', href: '/', icon: HomeIcon },
+	{ name: 'Refining', href: '/refiner', icon: FunnelIcon },
+	{ name: 'Cooking', href: '/cooking', icon: CakeIcon },
+	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
+	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon },
 ];
 
 function classNames(...classes) {
@@ -23,18 +25,11 @@ function classNames(...classes) {
 }
 
 export default function Example(props) {
+	console.log(props.slug)
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 
 	return (
 		<>
-			{/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
 			<div>
 				<Transition.Root show={sidebarOpen} as={Fragment}>
 					<Dialog as="div" className="relative z-40 lg:hidden" onClose={setSidebarOpen}>
@@ -87,9 +82,9 @@ export default function Example(props) {
 									<div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
 										<div className="flex flex-shrink-0 items-center px-4">
 											<img
-												className="h-8 w-auto"
-												src="https://nomansskyrecipes.com/uploads/logo-nms.png"
-												alt="Your Company"
+												className="h-[31px] w-auto"
+												src="/images/logo-nms.png"
+												alt="No Man's Sky Recipes"
 											/>
 										</div>
 										<nav className="mt-5 space-y-1 px-2">
@@ -98,21 +93,21 @@ export default function Example(props) {
 													key={item.name}
 													href={item.href}
 													className={classNames(
-														item.current
-															? 'bg-gray-900 text-white'
-															: 'text-white hover:bg-gray-900',
-														'group flex items-center px-2 py-2 text-base font-medium rounded-md'
+														item.href == props.slug
+															? 'bg-orange-500 text-black'
+															: 'text-white hover:bg-orange-500 hover:text-black',
+														'group flex items-center px-2 py-4 text-lg font-medium rounded-md transition-colors'
 													)}
 												>
 													<item.icon
-														className={classNames(
-															item.current
-																? 'text-gray-500'
-																: 'text-gray-400 group-hover:text-gray-500',
-															'mr-4 flex-shrink-0 h-6 w-6'
-														)}
-														aria-hidden="true"
-													/>
+											className={classNames(
+												item.href == props.slug
+													? 'text-black'
+													: 'text-gray-400 group-hover:text-black',
+												'mr-3 flex-shrink-0 h-9 w-9 transition-colors'
+											)}
+											aria-hidden="true"
+										/>
 													{item.name}
 												</a>
 											))}
@@ -134,9 +129,9 @@ export default function Example(props) {
 						<div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
 							<div className="flex flex-shrink-0 items-center mb-2 px-4">
 								<img
-									className="h-auto w-72"
+									className="h-[31px] w-auto"
 									src="https://nomansskyrecipes.com/uploads/logo-nms.png"
-									alt="Your Company"
+									alt="No Man's Sky Refiner Recipes"
 								/>
 							</div>
 							<nav className="mt-5 flex-1 space-y-1 bg-black px-2">
@@ -145,7 +140,7 @@ export default function Example(props) {
 										key={item.name}
 										href={item.href}
 										className={classNames(
-											item.current
+											item.href == props.slug
 												? 'bg-orange-500 text-black'
 												: 'text-white hover:bg-orange-500 hover:text-black',
 											'group flex items-center px-2 py-4 text-lg font-medium rounded-md transition-colors'
@@ -153,7 +148,7 @@ export default function Example(props) {
 									>
 										<item.icon
 											className={classNames(
-												item.current
+												item.href == props.slug
 													? 'text-black'
 													: 'text-gray-400 group-hover:text-black',
 												'mr-3 flex-shrink-0 h-9 w-9 transition-colors'

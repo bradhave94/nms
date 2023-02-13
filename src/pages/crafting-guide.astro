@@ -5,10 +5,8 @@ import Table from '@components/table/Table.astro';
 import products from '@data/Products.json';
 import { getById, Item } from '@utils/lookup.js';
 
-
 // Function to create an array of data for each Products item
 const createArray = (item: Item) => {
-
 	// If the item has no inputs, return undefined
 	if (item.RequiredItems.length == 0) return;
 
@@ -40,7 +38,7 @@ const createArray = (item: Item) => {
 			description: item.Description,
 			value: item.BaseValueUnits,
 			image: item.Icon,
-			colour: item.Colour
+			colour: item.Colour,
 		},
 		value: item.BaseValueUnits,
 	};
@@ -53,17 +51,22 @@ const columns = [
 	{ title: 'Input 2', field: 'input_2' },
 	{ title: 'Input 3', field: 'input_3' },
 	{ title: 'Name', field: 'output' },
-	{ title: 'Value', field: 'value' }
-
+	{ title: 'Value', field: 'value' },
 ];
 
 // Map the refinery data and create an array of filtered items
 const data = products.map(createArray).filter(Boolean);
 ---
-<Layout title="Crafting Guide">
+
+<Layout title="Crafting Guide" slug="/crafting-guide">
 	<main>
-		<Table title="Crafting" image="crafting" image_width={100} columns={columns} data={data} sort="value" />
+		<Table
+			title="Crafting"
+			image="crafting"
+			image_width={100}
+			columns={columns}
+			data={data}
+			sort="value"
+		/>
 	</main>
 </Layout>
-
-

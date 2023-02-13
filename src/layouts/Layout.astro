@@ -11,6 +11,7 @@ export interface Props {
 	author?: string;
 	description?: string;
 	ogImage?: string;
+	slug?: string;
 }
 
 const {
@@ -18,6 +19,7 @@ const {
 	author = SITE.author,
 	description = SITE.desc,
 	ogImage = SITE.ogImage,
+	slug
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -63,7 +65,7 @@ const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.jpg'} />
 	</head>
 	<body class={bg + " h-full"}>
-		<Sidebar client:load>
+		<Sidebar client:load slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>
 	</body>
