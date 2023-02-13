@@ -25,7 +25,6 @@ function classNames(...classes) {
 }
 
 export default function Example(props) {
-	console.log(props.slug)
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 
 	return (

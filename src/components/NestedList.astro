@@ -1,4 +1,5 @@
 ---
+import { Picture } from '@astrojs/image/components';
 const { items } = Astro.props;
 ---
 
@@ -6,8 +7,25 @@ const { items } = Astro.props;
 	{
 		items.map((item) => (
 			<li>
-				{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-				{item.RequiredItems && <Astro.self items={item.RequiredItems} />}
+				<div class="flex">
+					<div class="mr-4 flex-shrink-0 self-start">
+						<Picture
+							src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
+							alt={item.Name}
+							widths={[50]}
+							aspectRatio="1:1"
+							sizes="50px"
+							width={50}
+							height={50}
+							background={null}
+						/>
+					</div>
+					<div>
+						<h4 class="text-lg font-bold mt-1">{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span></h4>
+						<p class="mt-1">{item.RequiredItems && <Astro.self items={item.RequiredItems} />}</p>
+					</div>
+				</div>
+
 			</li>
 		))
 	}
