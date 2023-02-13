@@ -163,10 +163,10 @@ export default function Example(props) {
 					</div>
 				</div>
 				<div className="flex flex-1 flex-col lg:pl-80">
-					<div className="sticky top-0 z-10 bg-black pl-1 py-1 sm:pl-3 sm:pt-3 lg:hidden">
+					<div className="sticky top-0 z-10 bg-black p-4 text-right lg:hidden">
 						<button
 							type="button"
-							className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-white hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+							className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center border rounded-md text-white hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
 							onClick={() => setSidebarOpen(true)}
 						>
 							<span className="sr-only">Open sidebar</span>
