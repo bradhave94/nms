@@ -15,11 +15,15 @@
 }
 
 #table .tabulator-row .tabulator-cell {
-    @apply p-0 border-b border-r border-gray-500 transition-all hover:opacity-80 min-w-[300px] inline-flex items-center text-white
+    @apply p-0 border-b border-r border-gray-500 transition-all hover:opacity-80 min-w-[275px] inline-flex items-center text-white
 }
 
 #table  .tabulator-row .tabulator-cell[tabulator-field="value"] {
     @apply text-base px-3
+}
+
+#table .tabulator-row .tabulator-cell picture {
+    @apply min-w-[50px]
 }
 
 #table .tabulator-row .tabulator-cell:last-of-type {
@@ -58,7 +62,7 @@
 }
 
 #table .tabulator-header .tabulator-col {
-    @apply bg-black text-base text-white p-2 min-w-[300px] !important
+    @apply bg-black text-base text-white p-2 min-w-[275px] !important
 }
 
 #table .tabulator-header .tabulator-col:last-of-type {
@@ -74,7 +78,7 @@
 }
 
 #table .tabulator-footer {
-    @apply bg-black text-base text-white p-2 border-0
+    @apply bg-black text-base text-white p-2 border-0 overflow-x-scroll
 }
 
 #table .tabulator-page {
