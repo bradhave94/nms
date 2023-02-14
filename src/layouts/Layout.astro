@@ -16,7 +16,6 @@ const {
 	title = SITE.title,
 	author = SITE.author,
 	description = SITE.desc,
-	ogImage = SITE.ogImage,
 	slug
 } = Astro.props;
 
@@ -53,7 +52,7 @@ const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 
-		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.jpg'} />
+		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.webp'} />
 	</head>
 	<body class={bg + " h-full"}>
 		<Sidebar client:load slug={slug}>

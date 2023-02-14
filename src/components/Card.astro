@@ -7,10 +7,17 @@ const {card, hide} = Astro.props;
 
 <article class="flex flex-wrap flex-col 2xl:flex-row transition hover:shadow-xl bg-black rounded-md overflow-hidden">
 	<div class="sm:basis-56">
-		<img
-			alt="Guitar"
-			src={card.image}
+
+		<Picture
 			class="aspect-square h-full w-full object-contain p-1"
+			src={card.image}
+			alt={card.name}
+			widths={[256]}
+			aspectRatio="1:1"
+			sizes="255px"
+			width={256}
+			height={256}
+			background={null}
 		/>
 	</div>
 

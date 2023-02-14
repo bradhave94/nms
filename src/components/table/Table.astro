@@ -8,6 +8,7 @@ export interface Props {
 	title: string;
 	image: string;
 	image_width: number;
+	image_height: number;
 	columns: Array<{
 		title: string;
 		field: string;
@@ -23,7 +24,7 @@ export interface Props {
 	}>;
 }
 
-const { title, image, image_width, columns, sort, data } = Astro.props;
+const { title, image, image_width, image_height, columns, sort, data } = Astro.props;
 ---
 
 <style>
@@ -46,9 +47,11 @@ const { title, image, image_width, columns, sort, data } = Astro.props;
 				src={import(`../../assets/img/${image}.png`)}
 				widths={[image_width]}
 				sizes={image_width + 'px'}
+				width={image_width}
+				height={image_height}
 				aspectRatio={null}
 				background={null}
-				alt="descriptive text"
+				alt={title}
 			/>
 			<h1 class="text-2xl">{title}</h1>
 		</div>
