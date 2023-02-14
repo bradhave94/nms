@@ -17,9 +17,9 @@ const {card, hide} = Astro.props;
 	<div class="flex flex-1 flex-col justify-between">
 		<div class="border-l p-4 border-white/10 sm:!border-l-transparent sm:p-6">
 			<a href={card.link}>
-				<h3 class="font-bold text-3xl tracking-wider text-white">
+				<h2 class="font-bold text-3xl tracking-wider text-white">
 					{card.name}
-				</h3>
+				</h2>
 				{card.value ?
 				<p class="flex items-center gap-2 py-2 pb-4">
 					<Picture
