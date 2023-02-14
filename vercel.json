@@ -1,0 +1,6 @@
+{
+	"redirects": [
+		{ "source": "/me", "destination": "/profile.html", "permanent": true },
+		{ "source": "/large-refiner", "destination": "/refining", "permanent": true }
+	]
+}

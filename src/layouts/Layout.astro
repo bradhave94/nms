@@ -53,6 +53,17 @@ const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 		<meta property="twitter:description" content={description} />
 
 		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.webp'} />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-9GEFK3YPV3');
+		</script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8524094599848175" crossorigin="anonymous"></script>
 	</head>
 	<body class={bg + " h-full"}>
 		<Sidebar client:load slug={slug}>
