@@ -11,7 +11,9 @@ import {
 	HomeModernIcon,
 	QuestionMarkCircleIcon,
 	Cog8ToothIcon,
-	EnvelopeIcon
+	EnvelopeIcon,
+	BoltIcon,
+	ListBulletIcon
 } from '@heroicons/react/24/solid';
 
 
@@ -25,6 +27,8 @@ const navigation = [
 	{ name: 'Curiosities', href: '/curiosities', icon: QuestionMarkCircleIcon },
 	{ name: 'Technology', href: '/constructed-technology', icon: Cog8ToothIcon },
 	{ name: 'Buildings', href: '/buildings', icon: HomeModernIcon },
+	{ name: 'Raw Materials', href: '/raw', icon: BoltIcon },,
+	{ name: 'All Items', href: '/all', icon: ListBulletIcon },,
 	{ name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 
@@ -103,7 +107,7 @@ export default function Example(props) {
 														item.href == props.slug
 															? 'bg-orange-500 text-black'
 															: 'text-white hover:bg-orange-500 hover:text-black',
-														'group flex items-center px-2 py-4 text-lg font-medium rounded-md transition-colors'
+														'group flex items-center px-2 py-2 text-lg font-medium rounded-md transition-colors'
 													)}
 												>
 													<item.icon
@@ -111,7 +115,7 @@ export default function Example(props) {
 												item.href == props.slug
 													? 'text-black'
 													: 'text-gray-400 group-hover:text-black',
-												'mr-3 flex-shrink-0 h-9 w-9 transition-colors'
+												'mr-3 flex-shrink-0 h-6 w-6 transition-colors'
 											)}
 											aria-hidden="true"
 										/>
@@ -150,7 +154,7 @@ export default function Example(props) {
 											item.href == props.slug
 												? 'bg-orange-500 text-black'
 												: 'text-white hover:bg-orange-500 hover:text-black',
-											'group flex items-center px-2 py-4 text-lg font-medium rounded-md transition-colors'
+											'group flex items-center px-2 py-2 text-lg font-medium rounded-md transition-colors'
 										)}
 									>
 										<item.icon
@@ -158,7 +162,7 @@ export default function Example(props) {
 												item.href == props.slug
 													? 'text-black'
 													: 'text-gray-400 group-hover:text-black',
-												'mr-3 flex-shrink-0 h-9 w-9 transition-colors'
+												'mr-3 flex-shrink-0 h-6 w-6 transition-colors'
 											)}
 											aria-hidden="true"
 										/>
