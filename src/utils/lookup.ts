@@ -7,6 +7,7 @@ import conTech from '../data/ConstructedTechnology.json';
 import other from '../data/Others.json';
 import refiner from '../data/Refinery.json';
 import nut from '../data/NutrientProcessor.json';
+import build from '../data/Buildings.json';
 
 // Defining the interface for an Item
 type Item = {
@@ -35,6 +36,7 @@ const dataSources = {
 	other,
 	ref: refiner,
 	nut: nut,
+	build,
 };
 
 // Mapping the prefixes of item id to the corresponding slugs
@@ -47,6 +49,7 @@ const slugs = {
 	other: '/others/',
 	ref: '/refinery/',
 	nut: '/nutrient-processor/',
+	build: '/buildings/',
 };
 
 // Returns the slug corresponding to the item id
