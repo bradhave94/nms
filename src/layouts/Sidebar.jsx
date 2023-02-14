@@ -8,6 +8,10 @@ import {
 	CakeIcon,
 	XMarkIcon,
 	HomeIcon,
+	HomeModernIcon,
+	QuestionMarkCircleIcon,
+	Cog8ToothIcon,
+	EnvelopeIcon
 } from '@heroicons/react/24/solid';
 
 
@@ -18,6 +22,10 @@ const navigation = [
 	{ name: 'Cooking', href: '/cooking', icon: CakeIcon },
 	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
 	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon },
+	{ name: 'Curiosities', href: '/curiosities', icon: QuestionMarkCircleIcon },
+	{ name: 'Technology', href: '/constructed-technology', icon: Cog8ToothIcon },
+	{ name: 'Buildings', href: '/buildings', icon: HomeModernIcon },
+	{ name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 
 function classNames(...classes) {

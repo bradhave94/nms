@@ -2,7 +2,7 @@ export default function Example() {
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-3">
 			{/* Contact information */}
-			<div className="relative overflow-hidden bg-gradient-to-b from-teal-500 to-teal-600 py-10 px-6 sm:px-10 xl:p-12">
+			<div className="relative overflow-hidden bg-gradient-to-b from-orange-500 to-orange-600 py-10 px-6 sm:px-10 xl:p-12">
 				{/* Decorative angle backgrounds */}
 				<div className="pointer-events-none absolute inset-0 sm:hidden" aria-hidden="true">
 					<svg
@@ -100,31 +100,13 @@ export default function Example() {
 						</defs>
 					</svg>
 				</div>
-				<h3 className="text-lg font-medium text-white">Contact information</h3>
-				<p className="mt-6 max-w-3xl text-base text-teal-50">
-					Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst
-					amet. Sapien tortor lacus arcu.
+				<h1 className="text-3xl font-medium text-white">Share your feedback</h1>
+				<p className="mt-6 max-w-3xl text-base text-orange-50">
+					Let us know if you have any ideas or suggestions on how to improve our site.
 				</p>
 				<ul role="list" className="mt-8 flex space-x-12">
 					<li>
-						<a className="text-teal-200 hover:text-teal-100" href="#">
-							<span className="sr-only">Facebook</span>
-							<svg
-								className="h-7 w-7"
-								aria-hidden="true"
-								fill="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									fillRule="evenodd"
-									d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-									clipRule="evenodd"
-								/>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a className="text-teal-200 hover:text-teal-100" href="#">
+						<a className="text-orange-200 hover:text-orange-100" href="#">
 							<span className="sr-only">GitHub</span>
 							<svg
 								className="h-7 w-7"
@@ -141,7 +123,7 @@ export default function Example() {
 						</a>
 					</li>
 					<li>
-						<a className="text-teal-200 hover:text-teal-100" href="#">
+						<a className="text-orange-200 hover:text-orange-100" href="#">
 							<span className="sr-only">Twitter</span>
 							<svg
 								className="h-7 w-7"
@@ -157,52 +139,29 @@ export default function Example() {
 			</div>
 
 			{/* Contact form */}
-			<div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-				<h3 className="text-lg font-medium text-warm-gray-900">Send us a message</h3>
+			<div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 bg-black">
+				<h3 className="text-lg font-medium text-white">Send us a message</h3>
 				<form
-					action="#"
+					action="https://formspree.io/mzbjbkzw"
 					method="POST"
 					className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
 				>
 					<div>
-						<label
-							htmlFor="first-name"
-							className="block text-sm font-medium text-warm-gray-900"
-						>
-							First name
+						<label htmlFor="name" className="block text-sm font-medium text-white">
+							Name
 						</label>
 						<div className="mt-1">
 							<input
 								type="text"
-								name="first-name"
-								id="first-name"
+								name="name"
+								id="name"
 								autoComplete="given-name"
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-orange-500 focus:ring-orange-500"
 							/>
 						</div>
 					</div>
 					<div>
-						<label
-							htmlFor="last-name"
-							className="block text-sm font-medium text-warm-gray-900"
-						>
-							Last name
-						</label>
-						<div className="mt-1">
-							<input
-								type="text"
-								name="last-name"
-								id="last-name"
-								autoComplete="family-name"
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
-							/>
-						</div>
-					</div>
-					<div>
-						<label
-							htmlFor="email"
-							className="block text-sm font-medium text-warm-gray-900"
-						>
+						<label htmlFor="email" className="block text-sm font-medium text-white">
 							Email
 						</label>
 						<div className="mt-1">
@@ -211,38 +170,12 @@ export default function Example() {
 								name="email"
 								type="email"
 								autoComplete="email"
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
-							/>
-						</div>
-					</div>
-					<div>
-						<div className="flex justify-between">
-							<label
-								htmlFor="phone"
-								className="block text-sm font-medium text-warm-gray-900"
-							>
-								Phone
-							</label>
-							<span id="phone-optional" className="text-sm text-warm-gray-500">
-								Optional
-							</span>
-						</div>
-						<div className="mt-1">
-							<input
-								type="text"
-								name="phone"
-								id="phone"
-								autoComplete="tel"
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
-								aria-describedby="phone-optional"
+								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-orange-500 focus:ring-orange-500"
 							/>
 						</div>
 					</div>
 					<div className="sm:col-span-2">
-						<label
-							htmlFor="subject"
-							className="block text-sm font-medium text-warm-gray-900"
-						>
+						<label htmlFor="subject" className="block text-sm font-medium text-white">
 							Subject
 						</label>
 						<div className="mt-1">
@@ -250,28 +183,20 @@ export default function Example() {
 								type="text"
 								name="subject"
 								id="subject"
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-orange-500 focus:ring-orange-500"
 							/>
 						</div>
 					</div>
 					<div className="sm:col-span-2">
-						<div className="flex justify-between">
-							<label
-								htmlFor="message"
-								className="block text-sm font-medium text-warm-gray-900"
-							>
-								Message
-							</label>
-							<span id="message-max" className="text-sm text-warm-gray-500">
-								Max. 500 characters
-							</span>
-						</div>
+						<label htmlFor="message" className="block text-sm font-medium text-white">
+							Message
+						</label>
 						<div className="mt-1">
 							<textarea
 								id="message"
 								name="message"
 								rows={4}
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500"
+								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-orange-500 focus:ring-orange-500"
 								aria-describedby="message-max"
 								defaultValue={''}
 							/>
@@ -280,7 +205,7 @@ export default function Example() {
 					<div className="sm:col-span-2 sm:flex sm:justify-end">
 						<button
 							type="submit"
-							className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-teal-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:w-auto"
+							className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-orange-500 px-6 py-3 text-base font-medium text-black shadow-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 sm:w-auto"
 						>
 							Submit
 						</button>

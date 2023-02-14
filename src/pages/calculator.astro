@@ -1,8 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import Card from '@components/Card.astro';
+import Search from '@components/Search.astro';
+import { getSlug, sort } from '@utils/lookup.js';
 import data from '@data/Products.json';
-import Card from '../components/Card.astro';
-import { getSlug } from '@utils/lookup.js';
 
 data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 ---
@@ -12,7 +13,9 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 	description="No Man's Sky Crafting Calculator"
 	slug="/calculator"
 >
-	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>
+	<Search />
+	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
 			data.map((item) =>
 				item.RequiredItems.length > 0 ? (
@@ -25,7 +28,6 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 							link: getSlug(item.Id) + item.Id,
 							value: item.BaseValueUnits,
 						}}
-						hide={true}
 					/>
 				) : null
 			)

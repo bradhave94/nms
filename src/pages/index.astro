@@ -1,61 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro'
+import Card from '../components/Card.astro';
 import { getLength } from '@utils/lookup.js';
 
 const cards = [
 	{
-		name: "Refining",
-        description: 'Refining is a process of combining various ingredients with the use of a refiner.',
-        button: "View Recipes",
-        image: '/images/refiner.webp',
-        items: getLength('ref'),
-        link: '/refiner'
-
+		name: 'Refining',
+		description:
+			'Refining is a process of combining various ingredients with the use of a refiner.',
+		button: 'View Recipes',
+		image: '/images/refiner.webp',
+		items: getLength('ref'),
+		link: '/refining',
 	},
 
 	{
-		name: "Cooking",
-        description: 'Cooking is a process of combining various ingredients with the use of a Nutrient Processor.',
-        button: "View Recipes",
-        image: '/images/cooker.webp',
-        items: getLength('nut'),
-        link: '/cooking'
+		name: 'Cooking',
+		description:
+			'Cooking is a process of combining various ingredients with the use of a Nutrient Processor.',
+		button: 'View Recipes',
+		image: '/images/cooker.webp',
+		items: getLength('nut'),
+		link: '/cooking',
 	},
 	{
-		name: "Crafting",
-        description: 'The player can craft technology upgrades for themseleves using blueprints found throughout the universe.',
-        button: "View Recipes",
-        image: '/images/crafting.webp',
-        items: getLength('prod'),
-        link: '/crafting-guide'
+		name: 'Crafting',
+		description:
+			'The player can craft technology upgrades for themseleves using blueprints found throughout the universe.',
+		button: 'View Recipes',
+		image: '/images/crafting.webp',
+		items: getLength('prod'),
+		link: '/crafting-guide',
 	},
 	{
-		name: "Calculator",
-        description: 'See how many resource you will need to craft certain items',
-        button: "View Recipes",
-        image: '/images/calculator.webp',
-        items: "All",
-        link: '/calculator'
+		name: 'Calculator',
+		description: 'See how many resource you will need to craft certain items',
+		button: 'View Recipes',
+		image: '/images/calculator.webp',
+		items: 'All',
+		link: '/calculator',
 	},
-
-]
+];
 ---
 
 <Layout title="No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide" slug="/">
+	<div class="px-4 sm:px-6 lg:px-8">
+		<h1 class="mt-4 text-4xl text-white text-center sm:text-6xl">No Man's Sky Recipes</h1>
+		<p class="mt-2 mb-10 text-1xl text-white text-center sm:text-3xl tracking-widest">
+			Refiners | Crafting | Cooking
+		</p>
 
-    <div class="px-4 sm:px-6 lg:px-8">
-
-        <h1 class="mt-4 text-4xl text-white text-center sm:text-6xl">No Man's Sky Recipes</h1>
-        <p class="mt-2 mb-10 text-1xl  text-white text-center sm:text-3xl tracking-widest">Refiners | Crafting | Cooking</p>
-
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {
-                cards.map((card) => (
-
-                        <Card card={card} />
-                ))
-            }
-        </div>
-    </div>
+		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+			{cards.map((card) => <Card card={card} />)}
+		</div>
+	</div>
 </Layout>

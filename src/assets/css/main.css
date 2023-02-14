@@ -38,19 +38,21 @@
     @apply flex flex-row-reverse items-center justify-end  h-full text-white text-base gap-2 px-2
 }
 
-#table .tabulator-cell > a > div:is(
+div:is(
     [style="background: #FFC356"],
     [style="background: #DEDCD1"],
     [style="background: #F3A923"],
     [style="background: #DE921F"],
     [style="background: #8A7F72"],
-    [style="background: #6AD01E"]
+    [style="background: #6AD01E"],
+    [style="background: #FFAD00"],
+    [style="background: #CCCCCC"]
     ) {
-    @apply text-black
+    @apply !text-black
 }
 
 #table .tabulator-cell > a > div[style="background: #CCCCCC"] {
-    @apply !bg-slate-900
+    @apply !bg-slate-900 !text-white
 }
 
 #table .tabulator-row {

@@ -5,26 +5,12 @@ import credit from '../assets/img/credits.png';
 const {card, hide} = Astro.props;
 ---
 
-<article class="flex flex-wrap transition hover:shadow-xl bg-black rounded-md overflow-hidden">
-	{ !hide ?
-	<div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
-		<time
-			datetime="2022-10-10"
-			class="flex items-center justify-between gap-4 text-xs font-bold uppercase text-white"
-		>
-			<span>{card.items}</span>
-
-			<span class="w-px flex-1 bg-white/10"></span>
-			<span>Recipes</span>
-		</time>
-	</div>
-	: null }
-
+<article class="flex flex-wrap flex-col 2xl:flex-row transition hover:shadow-xl bg-black rounded-md overflow-hidden">
 	<div class="sm:basis-56">
 		<img
 			alt="Guitar"
 			src={card.image}
-			class="aspect-square h-full w-full object-cover p-1"
+			class="aspect-square h-full w-full object-contain p-1"
 		/>
 	</div>
 

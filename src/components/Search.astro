@@ -1,0 +1,39 @@
+<div class="flex items-center justify-center z-10 mt-8 mb-4">
+	<div class="tabulator-search relative">
+		<input
+			id="search"
+			class="rounded-md w-full bg-black border-orange-500 focus:border-orange-500 focus:ring-orange-500 peer"
+			required
+			type="text"
+			id="search"
+			name="search"
+			placeholder=""
+		/>
+		<label
+			class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
+			for="search">Search</label
+		>
+	</div>
+</div>
+
+<script>
+	const search = document.getElementById('search');
+	search.addEventListener('keyup', (event) => {
+		if (event.isComposing || event.keyCode === 229) {
+			return;
+		}
+		var filter, ul, li, a, i, txtValue;
+		filter = search.value.toUpperCase();
+		ul = document.getElementById('items');
+		li = ul.getElementsByTagName('article');
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName('a')[0];
+			txtValue = a.textContent || a.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				li[i].style.display = '';
+			} else {
+				li[i].style.display = 'none';
+			}
+		}
+	});
+</script>

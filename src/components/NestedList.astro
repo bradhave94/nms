@@ -24,9 +24,8 @@ const { items } = Astro.props;
 								/>
 							</div>
 							<div class="flex items-center">
-								<h4 class="text-lg font-bold">
-									{item.Name} x
-									<span data-quantity={item.Quantity}>{item.Quantity}</span>
+								<h4 class="lg:text-lg">
+									{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
 								</h4>
 							</div>
 						</div>
@@ -49,9 +48,8 @@ const { items } = Astro.props;
 							/>
 						</div>
 						<div>
-							<h4 class="text-lg font-bold mt-1">
-								{item.Name} x
-								<span data-quantity={item.Quantity}>{item.Quantity}</span>
+							<h4 class="lg:text-lg mt-1">
+								{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
 							</h4>
 						</div>
 					</div>
