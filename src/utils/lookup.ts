@@ -17,12 +17,12 @@ type Item = {
 	Icon: string;
 	Colour: string;
 	BaseValueUnits: number;
-	RequiredItems?: [],
-	Quantity?: number,
+	RequiredItems?: [];
+	Quantity?: number;
 	Output?: {
-		Id: string,
-		Quantity: number
-	}
+		Id: string;
+		Quantity: number;
+	};
 };
 
 // Mapping the prefixes of item id to the actual data sources
@@ -34,7 +34,7 @@ const dataSources = {
 	conTech,
 	other,
 	ref: refiner,
-	nut: nut
+	nut: nut,
 };
 
 // Mapping the prefixes of item id to the corresponding slugs
@@ -46,7 +46,7 @@ const slugs = {
 	conTech: '/constructed-technology/',
 	other: '/others/',
 	ref: '/refinery/',
-	nut: '/nutrient-processor/'
+	nut: '/nutrient-processor/',
 };
 
 // Returns the slug corresponding to the item id
@@ -65,14 +65,13 @@ const findById = (source: Item[], id: string): Item => {
 
 const findOutput = (id: string) => {
 	// Find the item from the data source with a matching id
-	const outputs = []
+	const outputs = [];
 	for (const source in dataSources) {
 		dataSources[source].forEach((item) => {
-			if(item.Output && item.Output.Id === id) outputs.push(item)
-		})
+			if (item.Output && item.Output.Id === id) outputs.push(item);
+		});
 	}
-	return outputs
-
+	return outputs;
 };
 
 // Returns the item corresponding to the id from the appropriate data source
@@ -88,11 +87,27 @@ const getById = (id: string): Item => {
 };
 
 const getLength = (list) => {
-	let length = dataSources[list].filter(item => !item.RequiredItems || item.RequiredItems.length != 0 ).length;
-	return length
-}
+	let length = dataSources[list].filter(
+		(item) => !item.RequiredItems || item.RequiredItems.length != 0
+	).length;
+	return length;
+};
 
+const sort = (data) => {
+	const sortData = data.sort((a, b) => {
+		const nameA = a.Name.toUpperCase();
+		const nameB = b.Name.toUpperCase();
+		if (nameA < nameB) {
+			return -1;
+		}
+		if (nameA > nameB) {
+			return 1;
+		}
+		return 0;
+	});
+	return sortData;
+};
 
 // Export the getSlug and getById functions, and the Item interface
-export { getSlug, getById, findOutput, getLength };
+export { getSlug, getById, findOutput, getLength, sort };
 export type { Item };

@@ -72,21 +72,17 @@ const columns = [
 	{ title: 'Input 1', field: 'input_1' },
 	{ title: 'Input 2', field: 'input_2' },
 	{ title: 'Input 3', field: 'input_3' },
-	{ title: 'Output', field: 'output' }
-
+	{ title: 'Output', field: 'output' },
 ];
 
 // Map the refinery data and create an array of filtered items
 const data = refinery.map(createArray).filter(Boolean);
 ---
 
-
-
-<Layout title="Refiner" slug="/refiner">
-	<section class="margin-48">
-		<div class="container stretch">
-			<Table title="Refiner" image="refiner" image_width={60} columns={columns} data={data} />
-		</div>
-	</section>
+<Layout
+	title="Refiner Recipes | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide"
+	description="Rrefiner recipes for No Man's Sky"
+	slug="/refining"
+>
+	<Table title="Refining" image="refiner" image_width={60} columns={columns} data={data} />
 </Layout>
-

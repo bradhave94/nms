@@ -1,17 +1,25 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
+import Card from '../../components/Card.astro'
+import { getSlug, sort } from '@utils/lookup.js';
 import data from '@data/ConstructedTechnology.json';
+let sortData = sort(data);
 ---
 
-<Layout title="Refiner">
-	<main>
+<Layout title="Constructed Technology | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide">
+	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			data.map((item) => (
-				<div>
-					{item.Name}
-				</div>
+			sortData.map((item) => (
+				<Card card={{
+					name: item.Name,
+					description: item.Description,
+					button: "View Details",
+					image: 'https://app.nmsassistant.com/assets/images/' + item.Icon,
+					link: getSlug(item.Id) + item.Id,
+					value: item.BaseValueUnits
+				}} hide={true} />
+
 			))
 		}
-	</main>
+	</div>
 </Layout>

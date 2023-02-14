@@ -20,22 +20,26 @@ const createArray = (item: Item) => {
 
 		if (itemData.RequiredItems.length) {
 			RequiredItems = createArray(itemData);
+
 		} else {
 			let record = rawItems.find((r: Item) => r.Name === itemData.Name);
-
 			if (!record) {
 				rawItems.push({
+					Id: itemData.Id,
 					Name: itemData.Name,
 					Icon: itemData.Icon,
 					Colour: itemData.Colour,
 					Quantity: item2.Quantity,
 				});
+
 			} else {
 				let index = rawItems.indexOf(record);
 				rawItems[index].Quantity += item2.Quantity;
+
 			}
 		}
 		array.push({
+			Id: itemData.Id,
 			Name: itemData.Name,
 			Icon: itemData.Icon,
 			Colour: itemData.Colour,
@@ -78,6 +82,7 @@ const data = [
 		Name: Astro.props.item.Name,
 		Quantity: 1,
 		RequiredItems: createArray(item),
+		rawItems: rawItems,
 	},
 ];
 const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
@@ -124,14 +129,22 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 		</div>
 	</div>
 
-	<input class="quantity" type="number" min="1" value="1" />
+	<div class="flex items-center mb-4 gap-4 justify-end">
+		<label for="quantity">Quantity</label>
+		<input class="quantity bg-black border-orange-500" name="quantity" type="number" min="1" value="1" />
+	</div>
 
-	<div class={data.length + output.length == 1 ? "grid-cols-1" : "grid-cols-2" + " grid gap-4 items-start justify-center"}>
+
+	<div
+		class={data.length + output.length == 1
+			? 'grid-cols-1'
+			: 'grid-cols-2' + ' grid gap-4 items-start justify-center'}
+	>
 		{
 			data.map((item) =>
 				item.RequiredItems.length != 0 ? (
 					<div class="bg-gray-900">
-						<Accordion>
+						<Accordion open={data.length + output.length == 1 ? true : false}>
 							<div class="flex" slot="title">
 								<div class="mr-4 flex-shrink-0 self-start">
 									<Picture
@@ -158,6 +171,53 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 							<div slot="content">
 								{item.RequiredItems.length != 0 ? (
 									<NestedList items={item} />
+								) : null}
+
+								{item.rawItems.length != 0 ? (
+									<div>
+										<div class="relative mt-8 mb-4">
+											<div
+												class="absolute inset-0 flex items-center"
+												aria-hidden="true"
+											>
+												<div class="w-full border-t border-gray-300" />
+											</div>
+											<div class="relative flex justify-center">
+												<span class="bg-white px-3 text-lg font-medium text-gray-900">
+													Raw Items
+												</span>
+											</div>
+										</div>
+										<div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+											{item.rawItems.map((item) => (
+												<div class="flex">
+													<div class="mr-4 flex-shrink-0 self-start">
+														<Picture
+															src={
+																'https://app.nmsassistant.com/assets/images/' +
+																item.Icon
+															}
+															alt={item.Name}
+															widths={[50]}
+															aspectRatio="1:1"
+															sizes="50px"
+															width={50}
+															height={50}
+															background={null}
+														/>
+													</div>
+													<div class="flex items-center">
+														<h4 class="text-sm">
+															{item.Name} x
+															<span data-quantity={item.Quantity}>
+																{item.Quantity}
+															</span>
+														</h4>
+													</div>
+												</div>
+											))}
+										</div>
+									</div>
 								) : null}
 							</div>
 						</Accordion>

@@ -13,6 +13,6 @@ export async function getStaticPaths() {
 const item: Item  = getById(Astro.params.id);
 ---
 
-<Layout title={item.Name}>
+<Layout title={item.Name + " | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide"}>
 	<Page item={item} />
 </Layout>

@@ -1,9 +1,12 @@
-<button class="accordion flex items-center justify-between w-full p-3 group">
+---
+const { open } = Astro.props;
+---
+<button class="accordion flex items-center justify-between w-full p-3 group hover:bg-black transition-colors">
     <slot name="title" />
     <svg class="w-5 hidden group-[.active]:block" aria-hidden="true" data-prefix="fas" data-icon="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
     <svg class="w-5 block group-[.active]:hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
 </button>
-<div class="overflow-hidden hidden m-4 pl-6 border-l">
+<div class="overflow-hidden hidden m-2 pl-6 border-l" style={open ? "display: block" : null}>
     <slot name="content" />
 </div>
 

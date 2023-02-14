@@ -1,10 +1,12 @@
 ---
-const card = Astro.props.card;
+import { Picture } from '@astrojs/image/components';
 
-
+import credit from '../assets/img/credits.png';
+const {card, hide} = Astro.props;
 ---
 
 <article class="flex flex-wrap transition hover:shadow-xl bg-black rounded-md overflow-hidden">
+	{ !hide ?
 	<div class="rotate-180 p-2 [writing-mode:_vertical-lr]">
 		<time
 			datetime="2022-10-10"
@@ -16,8 +18,9 @@ const card = Astro.props.card;
 			<span>Recipes</span>
 		</time>
 	</div>
+	: null }
 
-	<div class="hidden sm:block sm:basis-56">
+	<div class="sm:basis-56">
 		<img
 			alt="Guitar"
 			src={card.image}
@@ -31,6 +34,20 @@ const card = Astro.props.card;
 				<h3 class="font-bold text-3xl tracking-wider text-white">
 					{card.name}
 				</h3>
+				{card.value ?
+				<p class="flex items-center gap-2 py-2 pb-4">
+					<Picture
+						src={credit}
+						alt="Credits"
+						widths={[25]}
+						aspectRatio="1:1"
+						sizes="25px"
+						width={25}
+						height={25}
+						background={null}
+					/>
+					{card.value}
+				</p> : null}
 			</a>
 
 			<p class="mt-2 leading-relaxed xl:tracking-wider text-sm xl:text-base text-gray-200">

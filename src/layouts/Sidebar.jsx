@@ -14,7 +14,7 @@ import {
 
 const navigation = [
 	{ name: 'Home', href: '/', icon: HomeIcon },
-	{ name: 'Refining', href: '/refiner', icon: FunnelIcon },
+	{ name: 'Refining', href: '/refining', icon: FunnelIcon },
 	{ name: 'Cooking', href: '/cooking', icon: CakeIcon },
 	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
 	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon },

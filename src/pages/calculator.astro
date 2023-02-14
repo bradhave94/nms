@@ -1,20 +1,34 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import data from '@data/Products.json';
-
-import { getById, getSlug, Item } from '@utils/lookup.js';
+import Card from '../components/Card.astro';
+import { getSlug } from '@utils/lookup.js';
 
 data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 ---
 
-<Layout title="Calculator" slug="/calculator">
-	<main>
+<Layout
+	title="Crafting Calculator | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide"
+	description="No Man's Sky Crafting Calculator"
+	slug="/calculator"
+>
+	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			data.map((item) => (
-				<a class="block" href={getSlug(item.Id) + item.Id}>
-					{item.Name}
-				</a>
-			))
+			data.map((item) =>
+				item.RequiredItems.length > 0 ? (
+					<Card
+						card={{
+							name: item.Name,
+							description: item.Description,
+							button: 'View Recipes',
+							image: 'https://app.nmsassistant.com/assets/images/' + item.Icon,
+							link: getSlug(item.Id) + item.Id,
+							value: item.BaseValueUnits,
+						}}
+						hide={true}
+					/>
+				) : null
+			)
 		}
-	</main>
+	</div>
 </Layout>
