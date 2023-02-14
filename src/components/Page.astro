@@ -1,6 +1,8 @@
 ---
+import { Picture } from '@astrojs/image/components';
 import NestedList from './NestedList.astro';
 import { getById, findOutput, Item } from '@utils/lookup.js';
+import credit from "../assets/img/credits.png"
 
 const item: Item = Astro.props.item;
 
@@ -50,12 +52,16 @@ const getOutputs = (item) => {
 		if (!i) return;
 		// Return the item details
 		return {
+			Id: i.Id,
 			Name: i.Name,
+			Icon: i.Icon,
 			Quantity: element.Quantity,
 		};
 	});
 
 	return {
+		Id: Astro.props.item.Id,
+		Icon: Astro.props.item.Icon,
 		Name: Astro.props.item.Name,
 		Quantity: 1,
 		RequiredItems: RequiredItems,
@@ -64,6 +70,8 @@ const getOutputs = (item) => {
 
 const data = [
 	{
+		Id: Astro.props.item.Id,
+		Icon: Astro.props.item.Icon,
 		Name: Astro.props.item.Name,
 		Quantity: 1,
 		RequiredItems: createArray(item),
@@ -72,21 +80,74 @@ const data = [
 const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 ---
 
-<h1 style={'background-color: #' + item.Colour}>{item.Name}</h1>
-<p>{item.Group}</p>
-<p>{item.Description}</p>
-<p>{item.BaseValueUnits}</p>
+<div class="mx-auto max-w-6xl mt-24 bg-gray-800 p-8">
+	<div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
+		<div class="flex flex-col-reverse items-center">
 
-<h1>Crafing</h1>
-<input class="quantity" type="number" min="1" value="1" />
+			<Picture
+			src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
+			alt={item.Name}
+			widths={[256]}
+			aspectRatio="1:1"
+			sizes="256px"
+			width={256}
+			height={256}
+			background={null}
+		/>
+		</div>
+		<div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
+
+			<h1 class="text-4xl inline-block">{item.Name}</h1>
+			<p class="flex items-center gap-2 py-2 pb-4">
+				{item.BaseValueUnits}
+				<Picture
+					src={credit}
+					alt="Credits"
+					widths={[25]}
+					aspectRatio="1:1"
+					sizes="25px"
+					width={25}
+					height={25}
+					background={null}
+				/>
+			</p>
+			<p class="text-lg">{item.Description}</p>
+		</div>
+	</div>
+	<div class="relative mt-8">
+		<div class="absolute inset-0 flex items-center" aria-hidden="true">
+		  <div class="w-full border-t border-gray-300"></div>
+		</div>
+		<div class="relative flex justify-center">
+		  <span class="bg-white px-3 text-lg font-medium text-gray-900">Crafing</span>
+		</div>
+	  </div>
+
+	  <input class="quantity" type="number" min="1" value="1" />
 <ul>
 	{
 		data.map(
 			(item) =>
 				item.RequiredItems.length != 0 && (
 					<li>
-						{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-						{item.RequiredItems && <NestedList items={item.RequiredItems} />}
+						<div class="flex">
+							<div class="mr-4 flex-shrink-0 self-start">
+								<Picture
+									src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
+									alt={item.Name}
+									widths={[50]}
+									aspectRatio="1:1"
+									sizes="50px"
+									width={50}
+									height={50}
+									background={null}
+								/>
+							</div>
+							<div>
+								<h4 class="text-lg font-bold mt-1">{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span></h4>
+								<p class="mt-1">{item.RequiredItems && <NestedList items={item.RequiredItems} />}</p>
+							</div>
+						</div>
 					</li>
 				)
 		)
@@ -95,14 +156,33 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 		output.map(
 			(item) =>
 				item.RequiredItems.length != 0 && (
-					<li>
-						{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-						{item.RequiredItems && <NestedList items={item.RequiredItems} />}
+				<li>
+						<div class="flex">
+							<div class="mr-4 flex-shrink-0 self-start">
+								<Picture
+									src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
+									alt={item.Name}
+									widths={[50]}
+									aspectRatio="1:1"
+									sizes="50px"
+									width={50}
+									height={50}
+									background={null}
+								/>
+							</div>
+							<div>
+								<h4 class="text-lg font-bold mt-1">{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span></h4>
+								<p class="mt-1">{item.RequiredItems && <NestedList items={item.RequiredItems} />}</p>
+							</div>
+						</div>
 					</li>
 				)
 		)
 	}
 </ul>
+</div>
+
+
 
 <style is:global>
 	ul ul {
