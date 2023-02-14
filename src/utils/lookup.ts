@@ -4,10 +4,13 @@ import products from '../data/Products.json';
 import cooking from '../data/Cooking.json';
 import curiosities from '../data/Curiosities.json';
 import conTech from '../data/ConstructedTechnology.json';
+import tech from '../data/Technology.json';
+import tMod from '../data/TechnologyModule.json';
 import other from '../data/Others.json';
 import refiner from '../data/Refinery.json';
 import nut from '../data/NutrientProcessor.json';
 import build from '../data/Buildings.json';
+import trade from '../data/Trade.json';
 
 // Defining the interface for an Item
 type Item = {
@@ -33,10 +36,13 @@ const dataSources = {
 	cook: cooking,
 	cur: curiosities,
 	conTech,
+	tech,
+	tMod,
 	other,
 	ref: refiner,
 	nut: nut,
 	build,
+	trade
 };
 
 // Mapping the prefixes of item id to the corresponding slugs
@@ -45,11 +51,14 @@ const slugs = {
 	prod: '/products/',
 	cook: '/cooking/',
 	cur: '/curiosities/',
-	conTech: '/constructed-technology/',
+	conTech: '/technology/',
+	tech: '/technology/',
+	tMod: '/technology/',
 	other: '/others/',
 	ref: '/refinery/',
 	nut: '/nutrient-processor/',
 	build: '/buildings/',
+	trade: '/trade/'
 };
 
 // Returns the slug corresponding to the item id

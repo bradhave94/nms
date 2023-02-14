@@ -7,12 +7,13 @@ import products from '@data/Products.json';
 import raw from '@data/RawMaterials.json';
 import cooking from '@data/Cooking.json';
 import curiosities from '@data/Curiosities.json';
-import technology from '@data/ConstructedTechnology.json';
+import conTech from '@data/ConstructedTechnology.json';
+import tech from '@data/Technology.json';
 import buildings from '@data/Buildings.json';
+import other from '@data/Others.json';
+import trade from '@data/Trade.json';
 
-const data = sort([...raw, ...products, ...cooking, ...curiosities, ...technology, ...buildings]);
-
-
+const data = sort([...raw, ...products, ...cooking, ...curiosities, ...conTech, ...tech, ...buildings, ...other, ...trade]);
 ---
 
 <Layout
@@ -24,18 +25,18 @@ const data = sort([...raw, ...products, ...cooking, ...curiosities, ...technolog
 	<Search />
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			data.map((item) =>
+			data.map((item) => (
 				<Card
-						card={{
-							name: item.Name,
-							description: item.Description,
-							button: 'View Item',
-							image: 'https://app.nmsassistant.com/assets/images/' + item.Icon,
-							link: getSlug(item.Id) + item.Id,
-							value: item.BaseValueUnits,
-						}}
-					/>
-			)
+					card={{
+						name: item.Name,
+						description: item.Description,
+						button: 'View Item',
+						image: 'https://app.nmsassistant.com/assets/images/' + item.Icon,
+						link: getSlug(item.Id) + item.Id,
+						value: item.BaseValueUnits,
+					}}
+				/>
+			))
 		}
 	</div>
 </Layout>

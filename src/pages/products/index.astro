@@ -1,0 +1,29 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Card from '@components/Card.astro';
+import Search from '@components/Search.astro';
+import { getSlug, sort } from '@utils/lookup.js';
+import data from '@data/RawMaterials.json';
+let sortData = sort(data);
+---
+
+<Layout title="Raw" slug="/raw">
+	<h1 class="text-center text-4xl sm:text-6xl mt-2">Raw Materials</h1>
+	<Search />
+	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+		{
+			sortData.map((item) => (
+				<Card
+					card={{
+						name: item.Name,
+						description: item.Description,
+						button: 'View Item',
+						image: 'https://app.nmsassistant.com/assets/images/' + item.Icon,
+						link: getSlug(item.Id) + item.Id,
+						value: item.BaseValueUnits,
+					}}
+				/>
+			))
+		}
+	</div>
+</Layout>

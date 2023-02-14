@@ -25,7 +25,7 @@ const navigation = [
 	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
 	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon },
 	{ name: 'Curiosities', href: '/curiosities', icon: QuestionMarkCircleIcon },
-	{ name: 'Technology', href: '/constructed-technology', icon: Cog8ToothIcon },
+	{ name: 'Technology', href: '/technology', icon: Cog8ToothIcon },
 	{ name: 'Buildings', href: '/buildings', icon: HomeModernIcon },
 	{ name: 'Raw Materials', href: '/raw', icon: BoltIcon },,
 	{ name: 'All Items', href: '/all', icon: ListBulletIcon },,

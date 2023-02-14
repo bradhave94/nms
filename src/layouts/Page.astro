@@ -14,9 +14,10 @@ const createArray = (item: Item) => {
 	const array = [];
 
 	for (let i = 0; i < item.RequiredItems.length; i++) {
-		const item2: Item = item.RequiredItems[i];
+		const item2: Item = item.RequiredItems[i] || {};
 		const itemData = getById(item2.Id);
-		let RequiredItems: Array<any> = itemData.RequiredItems;
+		if (itemData == undefined) return;
+		let RequiredItems: Array<any> = itemData.RequiredItems || [];
 		if (itemData.RequiredItems.length) {
 			RequiredItems = createArray(itemData);
 		} else {
@@ -71,7 +72,7 @@ const getOutputs = (item) => {
 	};
 };
 
-const data = item.RequiredItems.length
+const data = item.RequiredItems?.length
 	? [
 			{
 				Id: Astro.props.item.Id,
@@ -137,7 +138,9 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 						<div class="w-full border-t border-gray-300" />
 					</div>
 					<div class="relative flex justify-center">
-						<span class="bg-white px-3 lg:text-lg font-medium text-gray-900">Crafing</span>
+						<span class="bg-white px-3 lg:text-lg font-medium text-gray-900">
+							Crafing
+						</span>
 					</div>
 				</div>
 
@@ -145,7 +148,8 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 					class={
 						data.length == 1
 							? 'grid-cols-1'
-							: 'md:grid-cols-2 grid-cols-1' + ' grid gap-4 items-start justify-center'
+							: 'md:grid-cols-2 grid-cols-1' +
+							  ' grid gap-4 items-start justify-center'
 					}
 				>
 					{data.map((item) =>
@@ -254,15 +258,17 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 					</div>
 					<div class="relative flex justify-center">
 						<span class="bg-white px-3 lg:text-lg font-medium text-gray-900">
-							{item.Id.includes("cook") ? 'Cooking' : 'Refining'}
+							{item.Id.includes('cook') ? 'Cooking' : 'Refining'}
 						</span>
 					</div>
 				</div>
 				<div
 					class={
 						output.length == 3
-							? 'xl:grid-cols-3 lg:grid-cols-2' + ' grid-cols-1 grid gap-4 items-start justify-center'
-							: 'md:grid-cols-2' + ' grid-cols-1 grid gap-4 items-start justify-center'
+							? 'xl:grid-cols-3 lg:grid-cols-2' +
+							  ' grid-cols-1 grid gap-4 items-start justify-center'
+							: 'md:grid-cols-2' +
+							  ' grid-cols-1 grid gap-4 items-start justify-center'
 					}
 				>
 					{output.map((item) =>
