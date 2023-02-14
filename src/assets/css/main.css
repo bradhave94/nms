@@ -4,6 +4,7 @@
         url('/fonts/FuturaProBook.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @tailwind base;
@@ -101,7 +102,7 @@ div:is(
 
 .nms-bg {
     padding: 1rem;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     position: relative;
     isolation: isolate;
@@ -120,53 +121,53 @@ div:is(
 }
 
 .bg1 .nms-bg {
-    background-image: url("/images/backgrounds/bg1.jpg");
+    background-image: url("/images/backgrounds/bg1.webp");
 }
 
 .bg2 .nms-bg {
-    background-image: url("/images/backgrounds/bg2.jpg");
+    background-image: url("/images/backgrounds/bg2.webp");
 }
 
 .bg3 .nms-bg {
-    background-image: url("/images/backgrounds/bg3.jpg");
+    background-image: url("/images/backgrounds/bg3.webp");
 }
 
 .bg4 .nms-bg {
-    background-image: url("/images/backgrounds/bg4.jpg");
+    background-image: url("/images/backgrounds/bg4.webp");
 }
 
 .bg5 .nms-bg {
-    background-image: url("/images/backgrounds/bg5.jpg");
+    background-image: url("/images/backgrounds/bg5.webp");
 }
 
 .bg6 .nms-bg {
-    background-image: url("/images/backgrounds/bg6.jpg");
+    background-image: url("/images/backgrounds/bg6.webp");
 }
 
 .bg7 .nms-bg {
-    background-image: url("/images/backgrounds/bg7.jpg");
+    background-image: url("/images/backgrounds/bg7.webp");
 }
 
 .bg8 .nms-bg {
-    background-image: url("/images/backgrounds/bg8.jpg");
+    background-image: url("/images/backgrounds/bg8.webp");
 }
 
 .bg9 .nms-bg {
-    background-image: url("/images/backgrounds/bg9.jpg");
+    background-image: url("/images/backgrounds/bg9.webp");
 }
 
 .bg10 .nms-bg {
-    background-image: url("/images/backgrounds/bg10.jpg");
+    background-image: url("/images/backgrounds/bg10.webp");
 }
 
 .bg11 .nms-bg {
-    background-image: url("/images/backgrounds/bg11.jpg");
+    background-image: url("/images/backgrounds/bg11.webp");
 }
 
 .bg12 .nms-bg {
-    background-image: url("/images/backgrounds/bg12.jpg");
+    background-image: url("/images/backgrounds/bg12.webp");
 }
 
 .bg13 .nms-bg {
-    background-image: url("/images/backgrounds/bg13.jpg");
+    background-image: url("/images/backgrounds/bg13.webp");
 }

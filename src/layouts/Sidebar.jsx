@@ -94,7 +94,7 @@ export default function Example(props) {
 										<div className="flex flex-shrink-0 items-center px-4">
 											<img
 												className="h-[31px] w-auto"
-												src="/images/logo-nms.png"
+												src="/images/logo-nms.webp"
 												alt="No Man's Sky Recipes"
 											/>
 										</div>
@@ -141,7 +141,7 @@ export default function Example(props) {
 							<div className="flex flex-shrink-0 items-center mb-2 px-4">
 								<img
 									className="h-[31px] w-auto"
-									src="https://nomansskyrecipes.com/uploads/logo-nms.png"
+									src="/images/logo-nms.webp"
 									alt="No Man's Sky Refiner Recipes"
 								/>
 							</div>
