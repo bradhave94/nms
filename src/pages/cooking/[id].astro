@@ -15,7 +15,7 @@ const item: Item  = getById(Astro.params.id);
 
 <Layout
 	title={item.Name + " | No Man's Sky Recipes"}
-	description={item.Name + " | " + item.Description.replace(/\r?\n|\r/g, "")}
+	description={item.Name + " | " + item.Description}
 	slug="/cooking"
 >
 	<Page item={item} />
