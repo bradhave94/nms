@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { getLength } from '@utils/lookup.js';
+
+const cards = [
+	{
+		name: 'Refining',
+		description:
+			'Refining is a process of combining various ingredients with the use of a refiner.',
+		button: 'View Recipes',
+		image: '/images/refiner.webp',
+		items: getLength('ref'),
+		link: '/refining',
+	},
+
+	{
+		name: 'Cooking',
+		description:
+			'Cooking is a process of combining various ingredients with the use of a Nutrient Processor.',
+		button: 'View Recipes',
+		image: '/images/cooker.webp',
+		items: getLength('nut'),
+		link: '/cooking',
+	},
+	{
+		name: 'Crafting',
+		description:
+			'The player can craft technology upgrades for themseleves using blueprints found throughout the universe.',
+		button: 'View Recipes',
+		image: '/images/crafting.webp',
+		items: getLength('prod'),
+		link: '/crafting-guide',
+	},
+	{
+		name: 'Calculator',
+		description:
+			'A calculator for helping your farming efforts by calculating exactly what you need to craft any item.',
+		button: 'View Recipes',
+		image: '/images/calculator.webp',
+		items: 'All',
+		link: '/calculator',
+	},
+	{
+		name: 'Technology',
+		description:
+			"Technology is an item that upgrades a player's exosuit, multi-tool, exocraft, and starship. You learn how to install technologies from blueprints. ",
+		button: 'View Recipes',
+		image: 'https://app.nmsassistant.com/assets/images/constructedTechnology/57.png',
+		items: 'All',
+		link: '/calculator',
+	},
+	{
+		name: 'Buildings',
+		description:
+			'Base building allows the player to build multiple bases, which can be used for farming, storage and recharging Hazard Protection or Shield.',
+		button: 'View Recipes',
+		image: 'https://app.nmsassistant.com/assets/images/building/46.png',
+		items: 'All',
+		link: '/calculator',
+	},
+	{
+		name: 'Curiosities',
+		description:
+			'Curiosities are items that can be found in the universe. They can be sold for units or used to craft other items.',
+		button: 'View Recipes',
+		image: 'https://app.nmsassistant.com/assets/images/curiosities/40.png',
+		items: 'All',
+		link: '/calculator',
+	},
+	{
+		name: 'Raw Materials',
+		description: "List of the raw materials in No Man's Sky",
+		button: 'View Recipes',
+		image: 'https://app.nmsassistant.com/assets/images/rawMaterials/1.png',
+		items: 'All',
+		link: '/calculator',
+	},
+];
+---
+
+<Layout title="No Man's Sky Recipes, Crafting Guide and Cooking Guide" slug="/">
+	<h1 class="mt-4 text-4xl text-white text-center sm:text-6xl">No Man's Sky Recipes</h1>
+	<p class="mt-2 mb-10 text-1xl text-white text-center sm:text-3xl tracking-widest">
+		Refiners | Crafting | Cooking
+	</p>
+
+	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+		{cards.map((card) => <Card card={card} />)}
+	</div>
+
+</Layout>

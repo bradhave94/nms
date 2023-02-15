@@ -1,0 +1,8 @@
+{
+	"redirects": [
+		{ "source": "/portable-refiner", "destination": "/refining", "permanent": true },
+		{ "source": "/medium-refiner", "destination": "/refining", "permanent": true },
+		{ "source": "/large-refiner", "destination": "/refining", "permanent": true },
+		{ "source": "/all", "destination": "/refining", "permanent": true }
+	]
+}

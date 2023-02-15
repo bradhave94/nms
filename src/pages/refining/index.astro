@@ -1,0 +1,88 @@
+---
+// Importing required components and data
+import Layout from '@layouts/Layout.astro';
+import Table from '@components/table/Table.astro';
+import refinery from '@data/Refinery.json';
+import { getById, Item } from '@utils/lookup.js';
+
+// Interfaces for defining the shape of input and output objects
+interface Input {
+	Id: string;
+	Quantity: number;
+}
+
+interface Output {
+	Id: string;
+	Quantity: number;
+}
+
+interface Refinery {
+	Inputs: Input[];
+	Output: Output;
+}
+
+// Function to create an array of data for each item
+const createArray = (item: Refinery) => {
+	// Map the inputs and get the details of each input item using `getById` function
+	const inputs = item.Inputs.map((element) => {
+		const i: Item | undefined = getById(element.Id);
+		// If item is not found, return undefined
+		if (!i) return;
+		// Return the item details
+		return {
+			id: i.Id,
+			name: i.Name,
+			description: i.Description,
+			value: i.BaseValueUnits,
+			amount: element.Quantity,
+			image: i.Icon,
+			colour: i.Colour,
+		};
+	});
+
+	// Get the details of the output item using `getById` function
+	const o: Item | undefined = getById(item.Output.Id);
+	// If item is not found, return undefined
+	if (!o) return;
+	// Return the item details
+	const output = {
+		id: o.Id,
+		name: o.Name,
+		description: o.Description,
+		value: o.BaseValueUnits,
+		amount: item.Output.Quantity,
+		image: o.Icon,
+		colour: o.Colour,
+	};
+
+	// Combine the inputs and output data in a new object
+	const newItem = {
+		input_1: inputs[0],
+		input_2: inputs[1],
+		input_3: inputs[2],
+		output,
+		description: output.description,
+		value: output.value,
+	};
+	return newItem;
+};
+
+// Define the columns to be displayed in the table
+const columns = [
+	{ title: 'Input 1', field: 'input_1' },
+	{ title: 'Input 2', field: 'input_2' },
+	{ title: 'Input 3', field: 'input_3' },
+	{ title: 'Output', field: 'output' },
+];
+
+// Map the data and create an array of filtered items
+const data = refinery.map(createArray).filter(Boolean);
+---
+
+<Layout
+	title={"Refiner recipes | No Man's Sky Recipes"}
+	description="A table of refiner recipes items for No Man's Sky. Our guide has everything you need to take your game to the next level."
+	slug="/refining"
+>
+	<Table title="Refining" image="refiner" image_width={60} image_height={60} columns={columns} data={data} />
+</Layout>

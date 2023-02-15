@@ -1,0 +1,77 @@
+---
+import '../assets/css/main.css';
+import { SITE } from '@config';
+
+import Sidebar from '@layouts/Sidebar.jsx';
+import Footer from '@components/Footer.jsx';
+
+export interface Props {
+	title?: string;
+	author?: string;
+	description?: string;
+	ogImage?: string;
+	slug?: string;
+}
+
+const {
+	title = SITE.title,
+	author = SITE.author,
+	description = SITE.desc,
+	slug
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+
+const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
+
+---
+
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-black font-nms text-lg text-white">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/images/icon.png" sizes="32x32" />
+		<link rel="canonical" href={canonicalURL} />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- General Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="author" content={author} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalURL} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+
+		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.webp'} />
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8524094599848175"
+     crossorigin="anonymous"></script>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-9GEFK3YPV3');
+		</script>
+	</head>
+	<body class={slug == "/" ? "bg4" : bg + " h-full"}>
+		<Sidebar client:load slug={slug}>
+			<slot slot="layout" />
+		</Sidebar>
+		<Footer />
+	</body>
+</html>

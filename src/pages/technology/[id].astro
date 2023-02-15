@@ -1,0 +1,24 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Page from '@layouts/Page.astro';
+import { getById, sort, Item } from '@utils/lookup.js';
+import conTech from '@data/ConstructedTechnology.json';
+import techModule from '@data/TechnologyModule.json';
+import tech from '@data/Technology.json';
+
+export async function getStaticPaths() {
+	const paths = sort([...conTech, ...tech,...techModule]).map((post) => ({
+		params: { id: post.Id.toString() }
+	}));
+	return paths;
+}
+const item: Item  = getById(Astro.params.id);
+---
+
+<Layout
+	title={item.Name + " | No Man's Sky Recipes"}
+	description={item.Name + " | " + item.Description}
+	slug="/technology"
+>
+	<Page item={item} />
+</Layout>

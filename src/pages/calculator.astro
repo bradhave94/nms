@@ -1,0 +1,37 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Card from '@components/Card.astro';
+import Search from '@components/Search.astro';
+import { getSlug, sort } from '@utils/lookup.js';
+import data from '@data/Products.json';
+
+data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
+---
+
+<Layout
+	title="Crafting Calculator | No Man's Sky Recipes, Crafting Guide and Cooking Guide"
+	description="A calculator to help your farming efforts by calculating exactly what you need to craft any item."
+	slug="/calculator"
+>
+	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>
+	<p class="text-xl text-center mt-3">Choose an item below to start</p>
+	<Search />
+	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+		{
+			data.map((item) =>
+				item.RequiredItems.length > 0 ? (
+					<Card
+						card={{
+							name: item.Name,
+							description: item.Description,
+							button: 'View Recipes',
+							image: 'https://app.nmsassistant.com/assets/images/' + item.Icon,
+							link: getSlug(item.Id) + item.Id,
+							value: item.BaseValueUnits,
+						}}
+					/>
+				) : null
+			)
+		}
+	</div>
+</Layout>

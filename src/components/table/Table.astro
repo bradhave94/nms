@@ -1,0 +1,163 @@
+---
+import '../../assets/css/tabulator.css';
+import TableHead from '@components/table/Head.astro';
+import TableCell from '@components/table/Cell.astro';
+import { Picture } from '@astrojs/image/components';
+
+export interface Props {
+	title: string;
+	image: string;
+	image_width: number;
+	image_height: number;
+	columns: Array<{
+		title: string;
+		field: string;
+	}>;
+	sort?: string;
+	data: Array<{
+		input_1: object;
+		input_2: object;
+		input_3: object;
+		output: object;
+		description?: string;
+		value?: number;
+	}>;
+}
+
+const { title, image, image_width, image_height, columns, sort, data } = Astro.props;
+---
+
+<style>
+	.table-wrapper {
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+	}
+	.d-hidden {
+		opacity: 0;
+		height: 500px;
+		overflow: hidden;
+	}
+</style>
+
+<div class="table-wrapper d-hidden">
+	<div class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-center before:bg-black/80 before:w-full before:h-full before:absolute before:left-0 before:top-0 " style="background-image: url(/images/resources.png)">
+		<div class="flex items-center gap-2 z-10 relative">
+			<Picture
+				class="logo"
+				src={import(`../../assets/img/${image}.png`)}
+				widths={[image_width]}
+				sizes={image_width + 'px'}
+				width={image_width}
+				height={image_height}
+				aspectRatio={null}
+				background={null}
+				alt={title}
+			/>
+			<h1 class="text-2xl">{title}</h1>
+		</div>
+
+		<div class="flex items-center z-10">
+			<div class="tabulator-search relative">
+				<input class="rounded-md w-full bg-black border-orange-500 focus:border-orange-500 focus:ring-orange-500 peer" required type="text" id="search" name="search" placeholder="" />
+				<label class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0" for="search">Search</label>
+			</div>
+		</div>
+	</div>
+	<table id="table" data-columns={JSON.stringify(columns)} data-sort={sort || 'output'}>
+		<TableHead columns={columns} />
+		<tbody>
+			{
+				data.map((row) => (
+					<>
+						<tr>
+							{columns.map((column) => (
+								<TableCell cell={row[column.field]} />
+							))}
+						</tr>
+					</>
+				))
+			}
+		</tbody>
+	</table>
+</div>
+
+
+<script>
+	import { TabulatorFull as Tabulator } from 'tabulator-tables';
+	const sort = document.getElementById('table').dataset.sort;
+
+	const columns = JSON.parse(document.getElementById('table').dataset.columns).map(function (
+		element
+	) {
+		let item = {
+			title: element.title,
+			field: element.field,
+			sorterParams: {
+				alignEmptyValues: 'bottom',
+			},
+			formatter: 'html',
+		};
+		if (sort === element.field && sort === 'value') {
+			item.sorter = 'number';
+		}
+		return item;
+	});
+
+	console.log(columns);
+
+	var table = new Tabulator('#table', {
+		columns: columns,
+
+		initialSort: [{ column: sort, dir: sort !== 'value' ? 'asc' : 'desc' }],
+		layout: 'fitColumns',
+		rowHeight: 62, //set rows to 40px height
+		pagination: true,
+		paginationSize: 10,
+		paginationSizeSelector: [10, 25, 50, 100, true],
+		paginationCounter: 'rows',
+		placeholder: 'No results found',
+		printAsHtml: true,
+		columnDefaults: {
+			tooltip: function (e, cell, onRendered) {
+				console.log(e)
+				const description = cell._cell.element.querySelector('.description')?.innerText;
+				var el = document.createElement('div');
+				if (!description) {
+					return;
+				}
+				el.innerText = description;
+				return el;
+			},
+		},
+	});
+
+	table.on('dataLoaded', function () {
+		table.element.parentElement.classList.remove('d-hidden');
+	});
+
+	table.on('cellClick', function (e: any) {
+		//e - the click event object
+		//cell - cell component
+		console.log(e);
+	});
+
+	function matchAny(data: { [x: string]: string }, filterParams: { value: string | RegExp }) {
+		var match = false;
+		const regex = RegExp(filterParams.value, 'i');
+
+		for (var key in data) {
+			if (regex.test(data[key]) == true) {
+				match = true;
+			}
+		}
+		return match;
+	}
+
+	const input = document.getElementById('search') as HTMLInputElement;
+	input.addEventListener('keyup', function () {
+		table.setFilter(matchAny, { value: input.value });
+		if (input.value == ' ') {
+			table.clearFilter();
+		}
+	});
+</script>

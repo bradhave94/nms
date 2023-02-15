@@ -1,0 +1,22 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Page from '@layouts/Page.astro';
+import { getById, Item } from '@utils/lookup.js';
+import data from '@data/Buildings.json';
+
+export async function getStaticPaths() {
+	const paths = data.map((post) => ({
+		params: { id: post.Id.toString() }
+	}));
+	return paths;
+}
+const item: Item  = getById(Astro.params.id);
+---
+
+<Layout
+	title={item.Name + " | No Man's Sky Recipes"}
+	description={item.Name + " | " + item.Description}
+	slug="/building"
+>
+	<Page item={item} />
+</Layout>

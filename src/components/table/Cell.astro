@@ -1,0 +1,62 @@
+---
+import { Picture } from '@astrojs/image/components';
+import { getSlug } from '@utils/lookup.js';
+
+export interface Props {
+	cell: {
+		id: string;
+		name: string;
+		amount: number;
+		colour: string;
+		image: string;
+		description: string;
+		value: number;
+	};
+}
+
+const { cell } = Astro.props;
+---
+
+<style>
+	.sort,
+	.description {
+		display: none !important;
+	}
+</style>
+
+{
+	typeof cell == 'string' || typeof cell == 'number'  ? (
+		<td>
+			{cell}
+		</td>
+	) : cell != undefined ? (
+		<td>
+			<span class="d-none sort">
+				{cell.name}
+			</span>
+			<a href={getSlug(cell.id) + cell.id}>
+				<div style={'background: #' + cell.colour}>
+					<span>
+						{cell.name}
+						{cell.amount != undefined ? <span class="amount">x{cell.amount}</span> : null}
+					</span>
+					{cell.image != undefined ? (
+						<Picture
+							src={'https://app.nmsassistant.com/assets/images/' + cell.image}
+							alt={cell.name}
+							widths={[50]}
+							aspectRatio="1:1"
+							sizes="50px"
+							width={50}
+							height={50}
+							background={null}
+						/>
+					) : null}
+				</div>
+			</a>
+			{cell.description != undefined ? <div class="description d-none">{cell.description}</div> : null}
+		</td>
+	) : (
+		<td />
+	)
+}

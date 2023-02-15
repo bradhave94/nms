@@ -1,0 +1,43 @@
+<div class="flex items-center justify-center z-10 mt-8 mb-4">
+	<div class="tabulator-search relative">
+		<input
+			id="search"
+			class="rounded-md w-full bg-black border-orange-500 focus:border-orange-500 focus:ring-orange-500 peer"
+			required
+			type="text"
+			id="search"
+			name="search"
+			placeholder=""
+		/>
+		<label
+			class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
+			for="search">Search</label
+		>
+	</div>
+</div>
+
+<script>
+	const search = document.querySelector('#search');
+	const items = document.querySelector('#items');
+	const articles = items.querySelectorAll('article');
+	let debounceTimer;
+
+	function handleSearch() {
+		const filter = search.value.toUpperCase();
+
+		articles.forEach((article) => {
+			const a = article.querySelector('a');
+			const txtValue = a.textContent || a.innerText;
+			const isMatch = txtValue.toUpperCase().includes(filter);
+
+			article.style.display = isMatch ? '' : 'none';
+		});
+	}
+
+	function debounce(func, delay) {
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(func, delay);
+	}
+
+	search.addEventListener('input', () => debounce(handleSearch, 200));
+</script>

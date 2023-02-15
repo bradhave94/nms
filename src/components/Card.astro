@@ -1,0 +1,66 @@
+---
+import { Picture } from '@astrojs/image/components';
+
+import credit from '../assets/img/credits.png';
+const { card, hide } = Astro.props;
+---
+
+<article>
+	<a
+		href={card.link}
+		class="flex flex-wrap flex-col 2xl:flex-row transition border border-black hover:border-orange-500 bg-black rounded-md overflow-hidden h-full"
+	>
+		<div class="sm:basis-56">
+			<Picture
+				class="aspect-square h-full w-full object-contain p-1"
+				src={card.image}
+				alt={card.name}
+				widths={[256]}
+				aspectRatio="1:1"
+				sizes="255px"
+				width={256}
+				height={256}
+				background={null}
+			/>
+		</div>
+
+		<div class="flex flex-1 flex-col justify-between">
+			<div class="border-l p-4 border-white/10 sm:!border-l-transparent sm:p-6">
+				<h2 class="font-bold text-3xl tracking-wider text-white">
+					{card.name}
+				</h2>
+				{
+					card.value ? (
+						<p class="flex items-center gap-2 py-2 pb-4">
+							<Picture
+								src={credit}
+								alt="Credits"
+								widths={[25]}
+								aspectRatio="1:1"
+								sizes="25px"
+								width={25}
+								height={25}
+								background={null}
+							/>
+							{card.value}
+						</p>
+					) : null
+				}
+
+				<p
+					class="mt-2 leading-relaxed xl:tracking-wider text-sm xl:text-base text-gray-200"
+				>
+					{card.description}
+				</p>
+			</div>
+
+			<div class="sm:flex sm:items-end sm:justify-end">
+				<button
+					class="block tracking-wider bg-orange-500 px-5 py-3 text-center text-xs font-bold text-gray-900 transition hover:bg-orange-700"
+				>
+					{card.button}
+				</button>
+			</div>
+		</div>
+	</a>
+</article>

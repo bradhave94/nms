@@ -1,0 +1,75 @@
+---
+// Importing required components and data
+import Layout from '@layouts/Layout.astro';
+import Table from '@components/table/Table.astro';
+import products from '@data/Products.json';
+import { getById, Item } from '@utils/lookup.js';
+
+// Function to create an array of data for each Products item
+const createArray = (item: Item) => {
+	// If the item has no inputs, return undefined
+	if (item.RequiredItems.length == 0) return;
+
+	// Map the inputs and get the details of each input item using `getById` function
+	const RequiredItems = item.RequiredItems.map((element) => {
+		const i: Item | undefined = getById(element.Id);
+		// If item is not found, return undefined
+		if (!i) return;
+		// Return the item details
+		return {
+			id: i.Id,
+			name: i.Name,
+			description: i.Description,
+			value: i.BaseValueUnits,
+			amount: element.Quantity,
+			image: i.Icon,
+			colour: i.Colour,
+		};
+	});
+
+	// Combine the inputs and output data in a new object
+	const newItem = {
+		input_1: RequiredItems[0],
+		input_2: RequiredItems[1],
+		input_3: RequiredItems[2],
+		output: {
+			id: item.Id,
+			name: item.Name,
+			description: item.Description,
+			value: item.BaseValueUnits,
+			image: item.Icon,
+			colour: item.Colour,
+		},
+		value: item.BaseValueUnits,
+	};
+	return newItem;
+};
+
+// Define the columns to be displayed in the table
+const columns = [
+	{ title: 'Input 1', field: 'input_1' },
+	{ title: 'Input 2', field: 'input_2' },
+	{ title: 'Input 3', field: 'input_3' },
+	{ title: 'Product', field: 'output' },
+	{ title: 'Value', field: 'value' },
+];
+
+// Map the data and create an array of filtered items
+const data = products.map(createArray).filter(Boolean);
+---
+
+<Layout
+	title="Crafting Guide | No Man's Sky Recipes"
+	description="Unlock new possibilities in No Man's Sky with our comprehensive Crafting Guide. Our guide has everything you need to take your game to the next level."
+	slug="/crafting-guide"
+>
+		<Table
+			title="Crafting"
+			image="crafting"
+			image_width={100}
+			image_height={63}
+			columns={columns}
+			data={data}
+			sort="value"
+		/>
+</Layout>
