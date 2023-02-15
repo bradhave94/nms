@@ -24,9 +24,9 @@ const navigation = [
 	{ name: 'Cooking', href: '/cooking', icon: CakeIcon },
 	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
 	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon },
-	{ name: 'Curiosities', href: '/curiosities', icon: QuestionMarkCircleIcon },
-	{ name: 'Technology', href: '/technology', icon: Cog8ToothIcon },
 	{ name: 'Buildings', href: '/buildings', icon: HomeModernIcon },
+	{ name: 'Technology', href: '/technology', icon: Cog8ToothIcon },
+	{ name: 'Curiosities', href: '/curiosities', icon: QuestionMarkCircleIcon },
 	{ name: 'Raw Materials', href: '/raw', icon: BoltIcon },,
 	{ name: 'All Items', href: '/all', icon: ListBulletIcon },,
 	{ name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
@@ -174,7 +174,7 @@ export default function Example(props) {
 					</div>
 				</div>
 				<div className="flex flex-1 flex-col lg:pl-80">
-					<div className="sticky top-0 z-10 bg-black p-4 text-right lg:hidden">
+					<div className="sticky top-0 z-10 bg-black p-3 text-right lg:hidden">
 						<button
 							type="button"
 							className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center border rounded-md text-white hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
@@ -185,7 +185,7 @@ export default function Example(props) {
 						</button>
 					</div>
 					<main className="flex-1">
-						<div className="nms-bg mx-auto px-4 sm:px-6 lg:px-8 py-6">
+						<div className="nms-bg mx-auto  p-2 sm:px-6 lg:px-8 sm:py-6">
 							{props.layout}
 						</div>
 					</main>

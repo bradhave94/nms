@@ -118,10 +118,10 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 			</p>
 			<p class="lg:text-lg">{item.Description}</p>
 
-			<div class="flex items-center mb-4 gap-4 mt-4">
+			<div class="sm:flex items-center mb-4 gap-4 mt-4">
 				<label for="quantity">Quantity</label>
 				<input
-					class="quantity bg-black border-orange-500"
+					class="quantity bg-black border-orange-500 max-w-full"
 					name="quantity"
 					type="number"
 					min="1"

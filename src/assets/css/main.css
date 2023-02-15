@@ -101,7 +101,6 @@ div:is(
 }
 
 .nms-bg {
-    padding: 1rem;
     background-size: cover;
     background-position: center;
     position: relative;
