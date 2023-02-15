@@ -68,7 +68,7 @@ const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 		  gtag('config', 'G-9GEFK3YPV3');
 		</script>
 	</head>
-	<body class={bg + " h-full"}>
+	<body class={slug == "/" ? "bg4" : bg + " h-full"}>
 		<Sidebar client:load slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>

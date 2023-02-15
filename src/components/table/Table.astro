@@ -119,16 +119,13 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 		printAsHtml: true,
 		columnDefaults: {
 			tooltip: function (e, cell, onRendered) {
+				console.log(e)
 				const description = cell._cell.element.querySelector('.description')?.innerText;
 				var el = document.createElement('div');
 				if (!description) {
 					return;
 				}
 				el.innerText = description;
-				el.style.backgroundColor = 'black';
-				el.style.color = 'white';
-				el.style.border = 'none';
-				el.style.padding = '10px';
 				return el;
 			},
 		},
