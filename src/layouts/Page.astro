@@ -325,8 +325,6 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 
 	inputField.addEventListener('input', () => {
 		const value = parseFloat(inputField.value);
-		console.log(elements);
-
 		elements.forEach((element) => {
 			const oldValue = parseFloat(element.getAttribute('data-quantity'));
 			const newValue = oldValue * value;

@@ -103,8 +103,6 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 		return item;
 	});
 
-	console.log(columns);
-
 	var table = new Tabulator('#table', {
 		columns: columns,
 
@@ -119,7 +117,6 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 		printAsHtml: true,
 		columnDefaults: {
 			tooltip: function (e, cell, onRendered) {
-				console.log(e)
 				const description = cell._cell.element.querySelector('.description')?.innerText;
 				var el = document.createElement('div');
 				if (!description) {
@@ -133,12 +130,6 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 
 	table.on('dataLoaded', function () {
 		table.element.parentElement.classList.remove('d-hidden');
-	});
-
-	table.on('cellClick', function (e: any) {
-		//e - the click event object
-		//cell - cell component
-		console.log(e);
 	});
 
 	function matchAny(data: { [x: string]: string }, filterParams: { value: string | RegExp }) {
