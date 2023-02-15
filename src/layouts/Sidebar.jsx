@@ -192,15 +192,7 @@ export default function Sidebar(props) {
 					</div>
 					<main className="flex-1">
 						<div className="nms-bg mx-auto  p-2 sm:px-6 lg:px-8 sm:py-6">
-							<div className="sorry text-center mb-3">
-								<ins className="adsbygoogle block" data-ad-client="ca-pub-8524094599848175" data-ad-slot="7371375670" data-ad-format="auto" data-full-width-responsive="true"></ins>
-								<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-							</div>
 							{props.layout}
-							<ins className="adsbygoogle block text-center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8524094599848175" data-ad-slot="6101969490"></ins>
-							<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-							</script>
 						</div>
 					</main>
 				</div>
