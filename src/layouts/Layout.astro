@@ -68,9 +68,17 @@ const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 		</script>
 	</head>
 	<body class={slug == "/" ? "bg4" : bg + " h-full"}>
+		<div class="sorry text-center mb-3 flex flex-1 flex-col lg:pl-80">
+			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8524094599848175" data-ad-slot="7371375670" data-ad-format="auto" data-full-width-responsive="true"></ins>
+			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+		</div>
 		<Sidebar client:load slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>
+		<div class="sorry text-center mt-3 flex flex-1 flex-col lg:pl-80">
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-8524094599848175" data-ad-slot="6101969490"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
 		<Footer />
 	</body>
 </html>
