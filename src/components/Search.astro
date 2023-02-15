@@ -17,23 +17,27 @@
 </div>
 
 <script>
-	const search = document.getElementById('search');
-	search.addEventListener('keyup', (event) => {
-		if (event.isComposing || event.keyCode === 229) {
-			return;
-		}
-		var filter, ul, li, a, i, txtValue;
-		filter = search.value.toUpperCase();
-		ul = document.getElementById('items');
-		li = ul.getElementsByTagName('article');
-		for (i = 0; i < li.length; i++) {
-			a = li[i].getElementsByTagName('a')[0];
-			txtValue = a.textContent || a.innerText;
-			if (txtValue.toUpperCase().indexOf(filter) > -1) {
-				li[i].style.display = '';
-			} else {
-				li[i].style.display = 'none';
-			}
-		}
-	});
+	const search = document.querySelector('#search');
+	const items = document.querySelector('#items');
+	const articles = items.querySelectorAll('article');
+	let debounceTimer;
+
+	function handleSearch() {
+		const filter = search.value.toUpperCase();
+
+		articles.forEach((article) => {
+			const a = article.querySelector('a');
+			const txtValue = a.textContent || a.innerText;
+			const isMatch = txtValue.toUpperCase().includes(filter);
+
+			article.style.display = isMatch ? '' : 'none';
+		});
+	}
+
+	function debounce(func, delay) {
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(func, delay);
+	}
+
+	search.addEventListener('input', () => debounce(handleSearch, 200));
 </script>

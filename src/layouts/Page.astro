@@ -121,7 +121,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 			<div class="sm:flex items-center mb-4 gap-4 mt-4">
 				<label for="quantity">Quantity</label>
 				<input
-					class="quantity bg-black border-orange-500 max-w-full"
+					class="quantity bg-black border-orange-500 max-w-full w-24"
 					name="quantity"
 					type="number"
 					min="1"
@@ -174,10 +174,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 										</div>
 										<div class="flex items-center">
 											<h4 class="lg:text-lg">
-												{item.Name} x
-												<span data-quantity={item.Quantity}>
-													{item.Quantity}
-												</span>
+												{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
 											</h4>
 										</div>
 									</div>
@@ -224,14 +221,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 															</div>
 															<div class="flex items-center">
 																<h4 class="text-sm">
-																	{item.Name} x
-																	<span
-																		data-quantity={
-																			item.Quantity
-																		}
-																	>
-																		{item.Quantity}
-																	</span>
+																	{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
 																</h4>
 															</div>
 														</div>
@@ -293,10 +283,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 										</div>
 										<div class="flex items-center">
 											<h4 class="lg:text-lg">
-												{item.Name} x
-												<span data-quantity={item.Quantity}>
-													{item.Quantity}
-												</span>
+												{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
 											</h4>
 										</div>
 									</div>

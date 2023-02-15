@@ -2,7 +2,8 @@
 import '../assets/css/main.css';
 import { SITE } from '@config';
 
-import Sidebar from './Sidebar.jsx';
+import Sidebar from '@layouts/Sidebar.jsx';
+import Footer from '@components/Footer.jsx';
 
 export interface Props {
 	title?: string;
@@ -71,5 +72,6 @@ const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 		<Sidebar client:load slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>
+		<Footer />
 	</body>
 </html>
