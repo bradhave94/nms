@@ -1,3 +1,4 @@
+import { SITE } from '@config';
 const navigation = {
     main: [
       { name: 'Refining', href: '/refining' },
@@ -53,6 +54,9 @@ const navigation = {
               </a>
             ))}
           </div>
+          <p className="mt-8 text-center text-xs leading-5 text-gray-500">
+            No Man's Sky Recipes | Updated to <a className='hover:text-orange-500' target="_blank" rel="noopener" href={SITE.version_link}>{SITE.version_name} {SITE.version}</a>
+          </p>
         </div>
       </footer>
     )

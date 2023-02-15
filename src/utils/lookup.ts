@@ -54,7 +54,7 @@ const slugs = {
 	conTech: '/technology/',
 	tech: '/technology/',
 	tMod: '/technology/',
-	other: '/others/',
+	other: '/other/',
 	ref: '/refinery/',
 	nut: '/nutrient-processor/',
 	build: '/buildings/',
@@ -123,3 +123,5 @@ const sort = (data) => {
 // Export the getSlug and getById functions, and the Item interface
 export { getSlug, getById, findOutput, getLength, sort };
 export type { Item };
+
+// <(.*?)> - Match any character between < and >, and capture it

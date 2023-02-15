@@ -10,10 +10,13 @@ import {
 	HomeIcon,
 	HomeModernIcon,
 	QuestionMarkCircleIcon,
-	Cog8ToothIcon,
+	CogIcon,
 	EnvelopeIcon,
 	BoltIcon,
-	ListBulletIcon
+	ListBulletIcon,
+	ArchiveBoxIcon,
+	ArrowsRightLeftIcon,
+	PaperClipIcon
 } from '@heroicons/react/24/solid';
 
 
@@ -24,11 +27,14 @@ const navigation = [
 	{ name: 'Cooking', href: '/cooking', icon: CakeIcon },
 	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
 	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon },
+	{ name: 'Products', href: '/products', icon: ArchiveBoxIcon },
+	{ name: 'Technology', href: '/technology', icon: CogIcon },
 	{ name: 'Buildings', href: '/buildings', icon: HomeModernIcon },
-	{ name: 'Technology', href: '/technology', icon: Cog8ToothIcon },
 	{ name: 'Curiosities', href: '/curiosities', icon: QuestionMarkCircleIcon },
-	{ name: 'Raw Materials', href: '/raw', icon: BoltIcon },,
-	{ name: 'All Items', href: '/all', icon: ListBulletIcon },,
+	{ name: 'Trade', href: '/trade', icon: ArrowsRightLeftIcon },
+	{ name: 'Other', href: '/other', icon: PaperClipIcon },
+	{ name: 'Raw', href: '/raw', icon: BoltIcon },
+	{ name: 'All Items', href: '/all-items', icon: ListBulletIcon },
 	{ name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 
@@ -107,7 +113,7 @@ export default function Sidebar(props) {
 														item.href == props.slug
 															? 'bg-orange-500 text-black'
 															: 'text-white hover:bg-orange-500 hover:text-black',
-														'group flex items-center px-2 py-2 text-lg font-medium rounded-md transition-colors'
+														'group flex items-center px-2 py-1 text-lg font-medium rounded-md transition-colors'
 													)}
 												>
 													<item.icon
@@ -142,7 +148,7 @@ export default function Sidebar(props) {
 								<img
 									className="h-[31px] w-auto"
 									src="/images/logo-nms.webp"
-									alt="No Man's Sky Refiner Recipes"
+									alt="No Man's Sky Recipes"
 								/>
 							</div>
 							<nav className="mt-5 flex-1 space-y-1 bg-black px-2">
@@ -154,7 +160,7 @@ export default function Sidebar(props) {
 											item.href == props.slug
 												? 'bg-orange-500 text-black'
 												: 'text-white hover:bg-orange-500 hover:text-black',
-											'group flex items-center px-2 py-2 text-lg font-medium rounded-md transition-colors'
+											'group flex items-center px-2 py-1 text-lg font-medium rounded-md transition-colors'
 										)}
 									>
 										<item.icon

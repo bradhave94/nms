@@ -6,13 +6,17 @@ import data from '@data/Trade.json';
 
 export async function getStaticPaths() {
 	const paths = data.map((post) => ({
-		params: { id: post.Id.toString() }
+		params: { id: post.Id.toString() },
 	}));
 	return paths;
 }
-const item: Item  = getById(Astro.params.id);
+const item: Item = getById(Astro.params.id);
 ---
 
-<Layout title={item.Name + " | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide"}>
+<Layout
+	title={item.Name + " | No Man's Sky Recipes"}
+	description={item.Name + " | " + item.Description.replace(/\r?\n|\r/g, "")}
+	slug="/trade"
+>
 	<Page item={item} />
 </Layout>

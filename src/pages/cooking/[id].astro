@@ -13,6 +13,10 @@ export async function getStaticPaths() {
 const item: Item  = getById(Astro.params.id);
 ---
 
-<Layout title={item.Name + " | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide"}>
+<Layout
+	title={item.Name + " | No Man's Sky Recipes"}
+	description={item.Name + " | " + item.Description.replace(/\r?\n|\r/g, "")}
+	slug="/cooking"
+>
 	<Page item={item} />
 </Layout>

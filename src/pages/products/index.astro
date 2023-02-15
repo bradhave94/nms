@@ -3,12 +3,16 @@ import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
 import Search from '@components/Search.astro';
 import { getSlug, sort } from '@utils/lookup.js';
-import data from '@data/RawMaterials.json';
+import data from '@data/Products.json';
 let sortData = sort(data);
 ---
 
-<Layout title="Raw" slug="/raw">
-	<h1 class="text-center text-4xl sm:text-6xl mt-2">Raw Materials</h1>
+<Layout
+	title="Products | No Man's Sky Recipes"
+	description="A list of products for No Man's Sky. Our guide has everything you need to take your game to the next level."
+	slug="/products"
+>
+	<h1 class="text-center text-4xl sm:text-6xl mt-2">Products</h1>
 	<Search />
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{

@@ -21,7 +21,7 @@ interface Refinery {
 	Output: Output;
 }
 
-// Function to create an array of data for each Refinery item
+// Function to create an array of data for each item
 const createArray = (item: Refinery) => {
 	// Map the inputs and get the details of each input item using `getById` function
 	const inputs = item.Inputs.map((element) => {
@@ -75,13 +75,13 @@ const columns = [
 	{ title: 'Output', field: 'output' },
 ];
 
-// Map the refinery data and create an array of filtered items
+// Map the data and create an array of filtered items
 const data = refinery.map(createArray).filter(Boolean);
 ---
 
 <Layout
-	title="Refiner Recipes | No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide"
-	description="Rrefiner recipes for No Man's Sky"
+	title={"Refiner recipes | No Man's Sky Recipes"}
+	description="A table of refiner recipes items for No Man's Sky. Our guide has everything you need to take your game to the next level."
 	slug="/refining"
 >
 	<Table title="Refining" image="refiner" image_width={60} image_height={60} columns={columns} data={data} />

@@ -34,7 +34,8 @@ const cards = [
 	},
 	{
 		name: 'Calculator',
-		description: 'A calculator for helping your farming efforts by calculating exactly what you need to craft any item.',
+		description:
+			'A calculator for helping your farming efforts by calculating exactly what you need to craft any item.',
 		button: 'View Recipes',
 		image: '/images/calculator.webp',
 		items: 'All',
@@ -42,7 +43,8 @@ const cards = [
 	},
 	{
 		name: 'Technology',
-		description: 'Technology is an item that upgrades a player\'s exosuit, multi-tool, exocraft, and starship. You learn how to install technologies from blueprints. ',
+		description:
+			"Technology is an item that upgrades a player's exosuit, multi-tool, exocraft, and starship. You learn how to install technologies from blueprints. ",
 		button: 'View Recipes',
 		image: 'https://app.nmsassistant.com/assets/images/constructedTechnology/57.png',
 		items: 'All',
@@ -50,7 +52,8 @@ const cards = [
 	},
 	{
 		name: 'Buildings',
-		description: 'Base building allows the player to build multiple bases, which can be used for farming, storage and recharging Hazard Protection or Shield.',
+		description:
+			'Base building allows the player to build multiple bases, which can be used for farming, storage and recharging Hazard Protection or Shield.',
 		button: 'View Recipes',
 		image: 'https://app.nmsassistant.com/assets/images/building/46.png',
 		items: 'All',
@@ -58,7 +61,8 @@ const cards = [
 	},
 	{
 		name: 'Curiosities',
-		description: 'Curiosities are items that can be found in the universe. They can be sold for units or used to craft other items.',
+		description:
+			'Curiosities are items that can be found in the universe. They can be sold for units or used to craft other items.',
 		button: 'View Recipes',
 		image: 'https://app.nmsassistant.com/assets/images/curiosities/40.png',
 		items: 'All',
@@ -66,7 +70,7 @@ const cards = [
 	},
 	{
 		name: 'Raw Materials',
-		description: 'List of the raw materials in No Man\'s Sky',
+		description: "List of the raw materials in No Man's Sky",
 		button: 'View Recipes',
 		image: 'https://app.nmsassistant.com/assets/images/rawMaterials/1.png',
 		items: 'All',
@@ -75,7 +79,7 @@ const cards = [
 ];
 ---
 
-<Layout title="No Man's Sky Refiner Recipes, Crafting Guide and Cooking Guide" slug="/">
+<Layout title="No Man's Sky Recipes, Crafting Guide and Cooking Guide" slug="/">
 	<h1 class="mt-4 text-4xl text-white text-center sm:text-6xl">No Man's Sky Recipes</h1>
 	<p class="mt-2 mb-10 text-1xl text-white text-center sm:text-3xl tracking-widest">
 		Refiners | Crafting | Cooking
@@ -84,4 +88,5 @@ const cards = [
 	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{cards.map((card) => <Card card={card} />)}
 	</div>
+
 </Layout>
