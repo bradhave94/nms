@@ -1,0 +1,15 @@
+{
+	"redirects": [
+		{
+			"source": "/portable-refiner",
+			"destination": "/portable-refiner.html",
+			"permanent": true
+		},
+		{ "source": "/medium-refiner", "destination": "/medium-refiner.html", "permanent": true },
+		{ "source": "/large-refiner", "destination": "/large-refiner.html", "permanent": true },
+		{ "source": "/crafting-guide", "destination": "/crafting-guide.html", "permanent": true },
+		{ "source": "/calculator", "destination": "/calculator.html", "permanent": true },
+		{ "source": "/cooking", "destination": "/cooking.html", "permanent": true },
+		{ "source": "/feedback", "destination": "/feedback.html", "permanent": true }
+	]
+}
