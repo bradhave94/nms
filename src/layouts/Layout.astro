@@ -1,6 +1,7 @@
 ---
 import '../assets/css/main.css';
 import { SITE } from '@config';
+import { inject } from '@vercel/analytics';
 
 import Sidebar from '@layouts/Sidebar.jsx';
 import Footer from '@components/Footer.jsx';
@@ -24,6 +25,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 
 const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
+
+inject();
 
 ---
 
