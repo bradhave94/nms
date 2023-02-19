@@ -20,10 +20,15 @@
 	const search = document.querySelector('#search');
 	const items = document.querySelector('#items');
 	const articles = items.querySelectorAll('article');
+	const divs = items.querySelectorAll('div.bg-black');
 	let debounceTimer;
 
 	function handleSearch() {
 		const filter = search.value.toUpperCase();
+
+		divs.forEach((div) => {
+			div.style.display = filter ? 'none' : '';
+		});
 
 		articles.forEach((article) => {
 			const a = article.querySelector('a');
