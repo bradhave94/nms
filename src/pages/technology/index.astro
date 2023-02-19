@@ -18,7 +18,7 @@ let sortData = sort([...conTech, ...tech,...techModule]);
 	<Search />
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			sortData.map((item) => (
+			sortData.map((item, index) => (
 				<Card
 					card={{
 						name: item.Name,
@@ -28,6 +28,7 @@ let sortData = sort([...conTech, ...tech,...techModule]);
 						link: getSlug(item.Id) + item.Id,
 						value: item.BaseValueUnits,
 					}}
+					index={index}
 				/>
 			))
 		}

@@ -2,10 +2,10 @@
 import { Picture } from '@astrojs/image/components';
 
 import credit from '../assets/img/credits.png';
-const { card, hide } = Astro.props;
+const { card, hide, index } = Astro.props;
 ---
 
-<article>
+<article data-index={index}>
 	<a
 		href={card.link}
 		class="flex flex-wrap flex-col 2xl:flex-row transition border border-black hover:border-orange-500 bg-black rounded-md overflow-hidden h-full"
@@ -64,3 +64,20 @@ const { card, hide } = Astro.props;
 		</div>
 	</a>
 </article>
+
+
+{
+	index != 0 && index % 6 == 0 ? (
+		<div class="bg-black rounded-md">
+			<ins
+				class="adsbygoogle"
+				style="display:block"
+				data-ad-format="fluid"
+				data-ad-layout-key="-dp-g+d5-nn-53"
+				data-ad-client="ca-pub-8524094599848175"
+				data-ad-slot="3379583016"
+			/>
+			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+		</div>
+	) : null
+}

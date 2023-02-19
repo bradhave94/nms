@@ -25,7 +25,7 @@ const data = sort([...raw, ...products, ...cooking, ...curiosities, ...conTech, 
 	<Search />
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			data.map((item) => (
+			data.map((item, index) => (
 				<Card
 					card={{
 						name: item.Name,
@@ -35,6 +35,7 @@ const data = sort([...raw, ...products, ...cooking, ...curiosities, ...conTech, 
 						link: getSlug(item.Id) + item.Id,
 						value: item.BaseValueUnits,
 					}}
+					index={index}
 				/>
 			))
 		}
