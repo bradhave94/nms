@@ -91,6 +91,7 @@ inject();
 
 		<script>
 			if (!adsbygoogle.loaded) {
+				const elements = document.querySelectorAll('[data-ad-status]');
 				elements.forEach((element) => {
 					element.parentElement.classList.add('hidden');
 				});
