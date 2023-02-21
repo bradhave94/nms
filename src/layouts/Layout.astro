@@ -14,20 +14,13 @@ export interface Props {
 	slug?: string;
 }
 
-const {
-	title = SITE.title,
-	author = SITE.author,
-	description = SITE.desc,
-	slug
-} = Astro.props;
+const { title = SITE.title, author = SITE.author, description = SITE.desc, slug } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
 
 const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
 
 inject();
-
 ---
 
 <!DOCTYPE html>
@@ -56,26 +49,72 @@ inject();
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 
-		<link rel="preload" as="font" href="/fonts/FuturaProBook.woff2" type="font/woff2" crossorigin="anonymous" />
-		<link rel="preload" as="font" href="/fonts/FuturaProBook.woff" type="font/woff" crossorigin="anonymous" />
+		<link
+			rel="preload"
+			as="font"
+			href="/fonts/FuturaProBook.woff2"
+			type="font/woff2"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			as="font"
+			href="/fonts/FuturaProBook.woff"
+			type="font/woff"
+			crossorigin="anonymous"
+		/>
 		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.webp'} />
 
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8524094599848175" crossorigin="anonymous"></script>
+		<script
+			async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8524094599848175"
+			crossorigin="anonymous"
+		></script>
 
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-		  gtag('config', 'G-9GEFK3YPV3');
+			gtag('config', 'G-9GEFK3YPV3');
 		</script>
 	</head>
-	<body class={slug == "/" ? "bg4" : bg + " h-full"}>
+	<body class={slug == '/' ? 'bg4' : bg + ' h-full'}>
 		<Sidebar client:load slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>
 		<Footer />
+
+		<script>
+			// Get all elements that contain the data-ad-status attribute
+			const elements = document.querySelectorAll('[data-ad-status]');
+
+			// Create a MutationObserver object
+			const observer = new MutationObserver((mutations) => {
+				mutations.forEach((mutation) => {
+					if (
+						mutation.type === 'attributes' &&
+						mutation.attributeName === 'data-ad-status'
+					) {
+						// Get the new value of the data-ad-status attribute
+						const newStatus = mutation.target.getAttribute('data-ad-status');
+
+						// Execute your JavaScript code based on the new value of the attribute
+						console.log(`Ad status changed to ${newStatus}`);
+
+						mutation.target.parentElement.classList.remove('hidden');
+					}
+				});
+			});
+
+			// Start observing each element for mutations
+			elements.forEach((element) => {
+				observer.observe(element, { attributes: true });
+			});
+		</script>
 	</body>
 </html>
