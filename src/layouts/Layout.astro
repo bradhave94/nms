@@ -90,35 +90,10 @@ inject();
 		<Footer />
 
 		<script>
-			// Get all elements that contain the data-ad-status attribute
-			const elements = document.querySelectorAll('[data-ad-status]');
-
-			// Create a MutationObserver object
-			const observer = new MutationObserver((mutations) => {
-				mutations.forEach((mutation) => {
-					if (
-						mutation.type === 'attributes' &&
-						mutation.attributeName === 'data-ad-status'
-					) {
-						// Get the new value of the data-ad-status attribute
-						const newStatus = mutation.target.getAttribute('data-ad-status');
-
-						// Execute your JavaScript code based on the new value of the attribute
-						console.log(`Ad status changed to ${newStatus}`);
-
-						mutation.target.parentElement.classList.remove('hidden');
-					}
-				});
-			});
-
-			// Start observing each element for mutations
-			elements.forEach((element) => {
-				observer.observe(element, { attributes: true });
-			});
-
 			if (!adsbygoogle.loaded) {
-				// do something to alert the user
-				console.log('adsbygoogle not loaded');
+				elements.forEach((element) => {
+					element.parentElement.classList.add('hidden');
+				});
 			}
 		</script>
 	</body>
