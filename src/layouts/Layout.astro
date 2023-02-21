@@ -115,6 +115,11 @@ inject();
 			elements.forEach((element) => {
 				observer.observe(element, { attributes: true });
 			});
+
+			if (!adsbygoogle.loaded) {
+				// do something to alert the user
+				console.log('adsbygoogle not loaded');
+			}
 		</script>
 	</body>
 </html>
