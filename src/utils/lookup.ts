@@ -73,7 +73,7 @@ const labels = {
 	ref: 'Refinery',
 	nut: 'Nutrient Processor',
 	build: 'Buildings',
-	trade: 'Trade'
+	trade: 'Other'
 };
 
 // Returns the slug corresponding to the item id
