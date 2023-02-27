@@ -90,7 +90,7 @@ inject();
 		<Footer />
 
 		<script>
-			if (typeof adsbygoogle !== 'undefined' || !adsbygoogle?.loaded) {
+			if (typeof adsbygoogle === 'undefined') {
 				const elements = document.querySelectorAll('[data-ad-status]');
 				elements.forEach((element) => {
 					element.parentElement.classList.add('hidden');
