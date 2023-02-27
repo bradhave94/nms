@@ -1,48 +1,43 @@
-<div class="flex items-center justify-center z-10 mt-8 mb-4">
-	<div class="tabulator-search relative">
-		<input
-			id="search"
-			class="rounded-md w-full bg-black border-orange-500 focus:border-orange-500 focus:ring-orange-500 peer"
-			required
-			type="text"
-			id="search"
-			name="search"
-			placeholder=""
-		/>
-		<label
-			class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
-			for="search">Search</label
-		>
-	</div>
-</div>
+<button
+	id="open-search"
+	type="button"
+	class="fixed bottom-4 right-4 inline-flex items-center rounded-full border border-transparent bg-orange-600 p-3 text-black shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+>
+	<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+		<path
+			fill-rule="evenodd"
+			d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+			clip-rule="evenodd"></path>
+	</svg>
+</button>
 
 <script>
-	const search = document.querySelector('#search');
-	const items = document.querySelector('#items');
-	const articles = items.querySelectorAll('article');
-	const divs = items.querySelectorAll('div.bg-black');
-	let debounceTimer;
+	// Get references to the open-search, site-search, and search-input elements
+	const openSearch = document.querySelector('#open-search');
+	const siteSearch = document.querySelector('#site-search');
+	const searchInput = document.querySelector('#search-input');
 
-	function handleSearch() {
-		const filter = search.value.toUpperCase();
+	// Define a function to toggle the visibility of the site-search element
+	function toggleSiteSearch() {
+		siteSearch.classList.toggle('hidden');
 
-		divs.forEach((div) => {
-			div.style.display = filter ? 'none' : '';
-		});
-
-		articles.forEach((article) => {
-			const a = article.querySelector('a');
-			const txtValue = a.textContent || a.innerText;
-			const isMatch = txtValue.toUpperCase().includes(filter);
-
-			article.style.display = isMatch ? '' : 'none';
-		});
+		// If the site-search element is now visible, focus on the search-input element
+		if (!siteSearch.classList.contains('hidden')) {
+			searchInput.focus();
+			searchInput.select();
+		}
 	}
 
-	function debounce(func, delay) {
-		clearTimeout(debounceTimer);
-		debounceTimer = setTimeout(func, delay);
-	}
+	// Add an event listener to the open-search element
+	openSearch.addEventListener('click', toggleSiteSearch);
 
-	search.addEventListener('input', () => debounce(handleSearch, 200));
+	// Add a click event listener to the document object
+	siteSearch.addEventListener('click', (event) => {
+		console.log(event.target.id);
+		// Check if the clicked element is outside of the site-search element, and not the element with class "pee"
+		if (event.target.id === 'site-search-modal') {
+			// Hide the site-search element
+			siteSearch.classList.add('hidden');
+		}
+	});
 </script>

@@ -1,10 +1,14 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
-import Search from '@components/Search.astro';
+
 import { getSlug, sort } from '@utils/lookup.js';
 import data from '@data/Products.json';
-let sortData = sort(data);
+export async function getStaticPaths({ paginate }) {
+	return paginate(sort(data), { pageSize: 12 });
+}
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
 ---
 
 <Layout
@@ -12,11 +16,10 @@ let sortData = sort(data);
 	description="A list of products for No Man's Sky. Our guide has everything you need to take your game to the next level."
 	slug="/products"
 >
-	<h1 class="text-center text-4xl sm:text-6xl mt-2">Products</h1>
-	<Search />
+	<h1 class="text-center text-4xl sm:text-6xl mt-2 mb-8">Products</h1>
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			sortData.map((item, index) => (
+			page.data.map((item, index) => (
 				<Card
 					card={{
 						name: item.Name,
@@ -29,6 +32,23 @@ let sortData = sort(data);
 					index={index}
 				/>
 			))
+		}
+	</div>
+	<div class="div flex gap-4 justify-center items-center my-8">
+		{
+			page.url.prev ? (
+				<a class="btn" href={page.url.prev}>
+					Previous
+				</a>
+			) : null
+		}
+		Page: {page.currentPage} of {page.total}
+		{
+			page.url.next ? (
+				<a class="btn" href={page.url.next}>
+					Next
+				</a>
+			) : null
 		}
 	</div>
 </Layout>

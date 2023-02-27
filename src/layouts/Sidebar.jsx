@@ -26,15 +26,15 @@ const navigation = [
 	{ name: 'Refining', href: '/refining', icon: FunnelIcon },
 	{ name: 'Cooking', href: '/cooking', icon: CakeIcon },
 	{ name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
-	{ name: 'Calculator', href: '/calculator', icon: CalculatorIcon },
-	{ name: 'Products', href: '/products', icon: ArchiveBoxIcon },
-	{ name: 'Technology', href: '/technology', icon: CogIcon },
-	{ name: 'Buildings', href: '/buildings', icon: HomeModernIcon },
-	{ name: 'Curiosities', href: '/curiosities', icon: QuestionMarkCircleIcon },
-	{ name: 'Trade', href: '/trade', icon: ArrowsRightLeftIcon },
-	{ name: 'Other', href: '/other', icon: PaperClipIcon },
-	{ name: 'Raw', href: '/raw', icon: BoltIcon },
-	{ name: 'All Items', href: '/all-items', icon: ListBulletIcon },
+	{ name: 'Calculator', href: '/calculator/1', icon: CalculatorIcon },
+	{ name: 'Products', href: '/products/1', icon: ArchiveBoxIcon },
+	{ name: 'Technology', href: '/technology/1', icon: CogIcon },
+	{ name: 'Buildings', href: '/buildings/1', icon: HomeModernIcon },
+	{ name: 'Curiosities', href: '/curiosities/1', icon: QuestionMarkCircleIcon },
+	{ name: 'Trade', href: '/trade/1', icon: ArrowsRightLeftIcon },
+	{ name: 'Other', href: '/other/1', icon: PaperClipIcon },
+	{ name: 'Raw', href: '/raw/1', icon: BoltIcon },
+	{ name: 'All Items', href: '/all-items/1', icon: ListBulletIcon },
 	{ name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 
@@ -110,7 +110,7 @@ export default function Sidebar(props) {
 													key={item.name}
 													href={item.href}
 													className={classNames(
-														item.href == props.slug
+														item.href.includes(props.slug)
 															? 'bg-orange-500 text-black'
 															: 'text-white hover:bg-orange-500 hover:text-black',
 														'group flex items-center px-2 py-1 text-lg font-medium rounded-md transition-colors'
@@ -118,7 +118,7 @@ export default function Sidebar(props) {
 												>
 													<item.icon
 											className={classNames(
-												item.href == props.slug
+												item.href.includes(props.slug)
 													? 'text-black'
 													: 'text-gray-400 group-hover:text-black',
 												'mr-3 flex-shrink-0 h-6 w-6 transition-colors'
@@ -157,7 +157,7 @@ export default function Sidebar(props) {
 										key={item.name}
 										href={item.href}
 										className={classNames(
-											item.href == props.slug
+											item.href.includes(props.slug)
 												? 'bg-orange-500 text-black'
 												: 'text-white hover:bg-orange-500 hover:text-black',
 											'group flex items-center px-2 py-1 text-lg font-medium rounded-md transition-colors'
@@ -165,7 +165,7 @@ export default function Sidebar(props) {
 									>
 										<item.icon
 											className={classNames(
-												item.href == props.slug
+												item.href.includes(props.slug)
 													? 'text-black'
 													: 'text-gray-400 group-hover:text-black',
 												'mr-3 flex-shrink-0 h-6 w-6 transition-colors'

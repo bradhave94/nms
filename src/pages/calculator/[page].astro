@@ -1,11 +1,15 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
-import Search from '@components/Search.astro';
+
 import { getSlug, sort } from '@utils/lookup.js';
 import data from '@data/Products.json';
 
-data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
+export async function getStaticPaths({ paginate }) {
+	return paginate(sort(data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits)), { pageSize: 12 });
+}
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
 ---
 
 <Layout
@@ -14,11 +18,10 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 	slug="/calculator"
 >
 	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>
-	<p class="text-xl text-center mt-3">Choose an item below to start</p>
-	<Search />
+	<p class="text-xl text-center mt-3 mb-8">Choose an item below to start</p>
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			data.map((item) =>
+			page.data.map((item) =>
 				item.RequiredItems.length > 0 ? (
 					<Card
 						card={{
@@ -32,6 +35,23 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 					/>
 				) : null
 			)
+		}
+	</div>
+	<div class="div flex gap-4 justify-center items-center my-8">
+		{
+			page.url.prev ? (
+				<a class="btn" href={page.url.prev}>
+					Previous
+				</a>
+			) : null
+		}
+		Page: {page.currentPage} of {page.total}
+		{
+			page.url.next ? (
+				<a class="btn" href={page.url.next}>
+					Next
+				</a>
+			) : null
 		}
 	</div>
 </Layout>

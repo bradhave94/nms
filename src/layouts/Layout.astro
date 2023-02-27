@@ -4,6 +4,8 @@ import { SITE } from '@config';
 import { inject } from '@vercel/analytics';
 
 import Sidebar from '@layouts/Sidebar.jsx';
+import Search from '@components/Search.astro';
+import SearchModal from '@components/SearchModal.astro';
 import Footer from '@components/Footer.jsx';
 
 export interface Props {
@@ -87,6 +89,8 @@ inject();
 		<Sidebar client:load slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>
+		<SearchModal />
+		<Search />
 		<Footer />
 
 		<script>

@@ -81,7 +81,7 @@ div:is(
 }
 
 #table .tabulator-footer {
-    @apply bg-black text-base text-white p-2 border-0 overflow-x-scroll
+    @apply bg-black text-base text-white py-2 px-10 border-0 overflow-x-scroll
 }
 
 #table .tabulator-page {
@@ -177,4 +177,8 @@ div:is(
 
 .btn {
     @apply inline-flex items-center rounded-md border border-transparent bg-orange-500 px-3 py-2 text-sm font-medium leading-4 text-black shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2
+}
+
+#results li a {
+    @apply select-none px-4 py-2 block hover:bg-orange-500 hover:text-black  focus:bg-orange-500 focus:text-black
 }

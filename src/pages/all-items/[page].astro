@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
-import Search from '@components/Search.astro';
+
 import { getSlug, sort } from '@utils/lookup.js';
 import products from '@data/Products.json';
 import raw from '@data/RawMaterials.json';
@@ -13,19 +13,36 @@ import buildings from '@data/Buildings.json';
 import other from '@data/Others.json';
 import trade from '@data/Trade.json';
 
-const data = sort([...raw, ...products, ...cooking, ...curiosities, ...conTech, ...tech, ...buildings, ...other, ...trade]);
+export async function getStaticPaths({ paginate }) {
+	return paginate(
+		sort([
+			...raw,
+			...products,
+			...cooking,
+			...curiosities,
+			...conTech,
+			...tech,
+			...buildings,
+			...other,
+			...trade,
+		]),
+		{ pageSize: 12 }
+	);
+}
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
 ---
 
 <Layout
 	title="All Items | No Man's Sky Recipes"
 	description="A list of all items for No Man's Sky. Our guide has everything you need to take your game to the next level."
-	slug="/all"
+	slug="/all-items"
 >
-	<h3 class="text-center text-4xl sm:text-6xl mt-2">All Items</h3>
-	<Search />
+	<h3 class="text-center text-4xl sm:text-6xl mt-2 mb-8">All Items</h3>
+
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			data.map((item, index) => (
+			page.data.map((item, index) => (
 				<Card
 					card={{
 						name: item.Name,
@@ -38,6 +55,24 @@ const data = sort([...raw, ...products, ...cooking, ...curiosities, ...conTech, 
 					index={index}
 				/>
 			))
+		}
+	</div>
+
+	<div class="div flex gap-4 justify-center items-center my-8">
+		{
+			page.url.prev ? (
+				<a class="btn" href={page.url.prev}>
+					Previous
+				</a>
+			) : null
+		}
+		Page: {page.currentPage} of {page.total}
+		{
+			page.url.next ? (
+				<a class="btn" href={page.url.next}>
+					Next
+				</a>
+			) : null
 		}
 	</div>
 </Layout>
