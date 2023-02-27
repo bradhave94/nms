@@ -61,12 +61,35 @@ const slugs = {
 	trade: '/trade/'
 };
 
+const labels = {
+	raw: 'Raw Materials',
+	prod: 'Products',
+	cook: 'Cooking',
+	cur: 'Curiosities',
+	conTech: 'Constructed Technology',
+	tech: 'Technology',
+	tMod: 'Technology Modules',
+	other: 'Other',
+	ref: 'Refinery',
+	nut: 'Nutrient Processor',
+	build: 'Buildings',
+	trade: 'Trade'
+};
+
 // Returns the slug corresponding to the item id
 const getSlug = (id: string): string => {
 	// Extract the prefix of the item id by splitting the id by its numeric part
 	const prefix = id.split(/\d/)[0];
 	// Return the slug corresponding to the prefix or "item" if prefix not found
 	return slugs[prefix] || 'item';
+};
+
+// Returns the label corresponding to the item id
+const getLabel = (id: string): string => {
+	// Extract the prefix of the item id by splitting the id by its numeric part
+	const prefix = id.split(/\d/)[0];
+	// Return the slug corresponding to the prefix or "item" if prefix not found
+	return labels[prefix] || 'item';
 };
 
 // Returns the item corresponding to the id from a given data source
@@ -121,7 +144,7 @@ const sort = (data) => {
 };
 
 // Export the getSlug and getById functions, and the Item interface
-export { getSlug, getById, findOutput, getLength, sort };
+export { getSlug, getLabel, getById, findOutput, getLength, sort };
 export type { Item };
 
 // <(.*?)> - Match any character between < and >, and capture it

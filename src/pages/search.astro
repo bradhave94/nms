@@ -1,0 +1,143 @@
+<script>
+	const searchInput = document.getElementById('search-input');
+	const typeCheckboxes = Array.from(document.querySelectorAll('input[name=type-filter]'));
+	const resultsList = document.getElementById('results');
+
+	function groupBy(arr, key) {
+		return arr.reduce((acc, obj) => {
+			const group = obj[key];
+			acc[group] = acc[group] || [];
+			acc[group].push(obj);
+			return acc;
+		}, {});
+	}
+
+	function handleSearchInput() {
+		const searchTerm = searchInput.value.trim().toLowerCase();
+		const selectedTypes = typeCheckboxes
+			.filter((checkbox) => checkbox.checked)
+			.map((checkbox) => checkbox.value);
+
+		fetch('/search.json')
+			.then((response) => response.json())
+			.then((results) => {
+				const filteredResults = results.filter((result) =>
+					result.name.toLowerCase().includes(searchTerm)
+				);
+				const groupedResults = groupBy(filteredResults, 'type');
+				displayResults(groupedResults, selectedTypes);
+			})
+			.catch((error) => {
+				console.error(error);
+				resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
+			});
+	}
+
+	function handleCheckboxChange() {
+		const searchTerm = searchInput.value.trim().toLowerCase();
+		const selectedTypes = typeCheckboxes
+			.filter((checkbox) => checkbox.checked)
+			.map((checkbox) => checkbox.value);
+
+		fetch('/search.json')
+			.then((response) => response.json())
+			.then((results) => {
+				const filteredResults = results.filter((result) =>
+					result.name.toLowerCase().includes(searchTerm)
+				);
+				const groupedResults = groupBy(filteredResults, 'type');
+				displayResults(groupedResults, selectedTypes);
+			})
+			.catch((error) => {
+				console.error(error);
+				resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
+			});
+	}
+
+	searchInput.addEventListener('input', handleSearchInput);
+
+	typeCheckboxes.forEach((checkbox) => {
+		checkbox.addEventListener('change', handleCheckboxChange);
+	});
+
+	function displayResults(groupedResults, selectedTypes) {
+		const existingHtml = resultsList.innerHTML;
+		const newHtml = Object.keys(groupedResults)
+			.map((group) => {
+				const filteredGroupResults = selectedTypes.length
+					? groupedResults[group].filter((result) => selectedTypes.includes(result.type))
+					: groupedResults[group];
+
+				if (filteredGroupResults.length > 0) {
+					const groupHtml = `<h3>${group}</h3>
+          <ul>
+            ${filteredGroupResults
+				.map((result) => `<li><a href="${result.url}">${result.name}</a></li>`)
+				.join('')}
+          </ul>`;
+					return groupHtml;
+				} else {
+					return '';
+				}
+			})
+			.join('');
+
+		if (newHtml !== existingHtml) {
+			resultsList.innerHTML = newHtml;
+		}
+	}
+</script>
+
+<input type="text" name="" id="search-input" />
+<div>
+	<label>
+		<input type="checkbox" name="type-filter" value="Raw Materials" />
+		Raw Materials
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Products" />
+		Products
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Cooking" />
+		Cooking
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Curiosities" />
+		Curiosities
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Constructed Technology" />
+		Constructed Technology
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Technology" />
+		Technology
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Technology Modules" />
+		Technology Modules
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Other" />
+		Other
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Refinery" />
+		Refinery
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Nutrient Processor" />
+		Nutrient Processor
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Buildings" />
+		Buildings
+	</label>
+	<label>
+		<input type="checkbox" name="type-filter" value="Trade" />
+		Trade
+	</label>
+</div>
+
+<div id="results"></div>
