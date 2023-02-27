@@ -13,12 +13,12 @@ let rawItems = [];
 const createArray = (item: Item) => {
 	const array = [];
 
-	for (let i = 0; i < item.RequiredItems.length; i++) {
+	for (let i = 0; i < item.RequiredItems?.length; i++) {
 		const item2: Item = item.RequiredItems[i] || {};
 		const itemData = getById(item2.Id);
 		if (itemData == undefined) return;
 		let RequiredItems: Array<any> = itemData.RequiredItems || [];
-		if (itemData.RequiredItems.length) {
+		if (itemData.RequiredItems?.length) {
 			RequiredItems = createArray(itemData);
 		} else {
 			let record = rawItems.find((r: Item) => r.Name === itemData.Name);
@@ -155,7 +155,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 					}
 				>
 					{data.map((item) =>
-						item.RequiredItems.length != 0 ? (
+						item.RequiredItems?.length != 0 ? (
 							<div class="bg-gray-900">
 								<Accordion open={data.length + output.length == 1 ? true : false}>
 									<div class="flex" slot="title">
@@ -181,7 +181,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 										</div>
 									</div>
 									<div slot="content">
-										{item.RequiredItems.length != 0 ? (
+										{item.RequiredItems?.length != 0 ? (
 											<NestedList items={item} />
 										) : null}
 
@@ -264,7 +264,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 					}
 				>
 					{output.map((item) =>
-						item.RequiredItems.length != 0 ? (
+						item.RequiredItems?.length != 0 ? (
 							<div class="bg-gray-900">
 								<Accordion>
 									<div class="flex" slot="title">
@@ -290,7 +290,7 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 										</div>
 									</div>
 									<div slot="content">
-										{item.RequiredItems.length != 0 ? (
+										{item.RequiredItems?.length != 0 ? (
 											<NestedList items={item} />
 										) : null}
 									</div>
