@@ -6,7 +6,7 @@ import { getSlug, sort } from '@utils/lookup.js';
 import data from '@data/Buildings.json';
 
 export async function getStaticPaths({ paginate }) {
-	return paginate(sort(data), { pageSize: 12 });
+	return paginate(sort(data), { pageSize: 50 });
 }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;

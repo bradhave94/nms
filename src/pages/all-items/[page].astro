@@ -26,7 +26,7 @@ export async function getStaticPaths({ paginate }) {
 			...other,
 			...trade,
 		]),
-		{ pageSize: 12 }
+		{ pageSize: 50 }
 	);
 }
 // All paginated data is passed on the "page" prop

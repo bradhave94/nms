@@ -8,7 +8,7 @@ import techModule from '@data/TechnologyModule.json';
 import tech from '@data/Technology.json';
 
 export async function getStaticPaths({ paginate }) {
-	return paginate(sort([...conTech, ...tech, ...techModule]), { pageSize: 12 });
+	return paginate(sort([...conTech, ...tech, ...techModule]), { pageSize: 50 });
 }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
