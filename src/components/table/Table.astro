@@ -114,18 +114,7 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 		paginationSizeSelector: [10, 25, 50, 100, true],
 		paginationCounter: 'rows',
 		placeholder: 'No results found',
-		printAsHtml: true,
-		columnDefaults: {
-			tooltip: function (e, cell, onRendered) {
-				const description = cell._cell.element.querySelector('.description')?.innerText;
-				var el = document.createElement('div');
-				if (!description) {
-					return;
-				}
-				el.innerText = description;
-				return el;
-			},
-		},
+		printAsHtml: true
 	});
 
 	table.on('dataLoaded', function () {
