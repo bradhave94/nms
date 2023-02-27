@@ -26,7 +26,7 @@ export async function getStaticPaths({ paginate }) {
 			...other,
 			...trade,
 		]),
-		{ pageSize: 50 }
+		{ pageSize: 24 }
 	);
 }
 // All paginated data is passed on the "page" prop
@@ -66,7 +66,7 @@ const { page } = Astro.props;
 				</a>
 			) : null
 		}
-		Page: {page.currentPage} of {page.total}
+		Page: {page.currentPage} of {page.lastPage}
 		{
 			page.url.next ? (
 				<a class="btn" href={page.url.next}>

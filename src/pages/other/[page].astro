@@ -3,10 +3,11 @@ import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
 
 import { getSlug, sort } from '@utils/lookup.js';
-import data from '@data/Others.json';
+import others from '@data/Others.json';
+import trade from '@data/Trade.json';
 
 export async function getStaticPaths({ paginate }) {
-	return paginate(sort(data), { pageSize: 50 });
+	return paginate(sort([...others, ...trade]), { pageSize: 24 });
 }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
@@ -43,7 +44,7 @@ const { page } = Astro.props;
 				</a>
 			) : null
 		}
-		Page: {page.currentPage} of {page.total}
+		Page: {page.currentPage} of {page.lastPage}
 		{
 			page.url.next ? (
 				<a class="btn" href={page.url.next}>

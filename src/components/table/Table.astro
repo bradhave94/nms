@@ -39,8 +39,11 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 	}
 </style>
 
-<div class="table-wrapper d-hidden">
-	<div class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-center before:bg-black/80 before:w-full before:h-full before:absolute before:left-0 before:top-0 " style="background-image: url(/images/resources.png)">
+<div class="table-wrapper d-hidden" data-layout="table">
+	<div
+		class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-center before:bg-black/80 before:w-full before:h-full before:absolute before:left-0 before:top-0"
+		style="background-image: url(/images/resources.png)"
+	>
 		<div class="flex items-center gap-2 z-10 relative">
 			<Picture
 				class="logo"
@@ -54,12 +57,41 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 				alt={title}
 			/>
 			<h1 class="text-2xl">{title}</h1>
+
+
 		</div>
+
+		<div class="relative text-center">
+			<div class="flex gap-2 justify-center" x-data="app">
+				<p>Layout:</p>
+				<div>
+					<a href={"/" + image} class="block cursor-pointer select-none rounded-md px-2 transition-colors bg-orange-500 text-black border border-orange-500 peer-checked:bg-orange-500 peer-checked:text-black">
+						Table
+					</a>
+				</div>
+				<div>
+					<a href={"/" + image + '/cards'} class="block cursor-pointer select-none rounded-md px-2 border transition-colors hover:bg-orange-500 hover:text-black border-orange-500 peer-checked:bg-orange-500 peer-checked:text-black">
+						Cards
+					</a>
+				</div>
+			</div>
+		</div>
+
 
 		<div class="flex items-center z-10">
 			<div class="tabulator-search relative">
-				<input class="rounded-md w-full bg-black border-orange-500 focus:border-orange-500 focus:ring-orange-500 peer" required type="text" id="search" name="search" placeholder="" />
-				<label class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0" for="search">Search</label>
+				<input
+					class="rounded-md w-full bg-black border-orange-500 focus:border-orange-500 focus:ring-orange-500 peer"
+					required
+					type="text"
+					id="search"
+					name="search"
+					placeholder=""
+				/>
+				<label
+					class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
+					for="search">Search</label
+				>
 			</div>
 		</div>
 	</div>
@@ -80,7 +112,6 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 		</tbody>
 	</table>
 </div>
-
 
 <script>
 	import { TabulatorFull as Tabulator } from 'tabulator-tables';
@@ -108,13 +139,12 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 
 		initialSort: [{ column: sort, dir: sort !== 'value' ? 'asc' : 'desc' }],
 		layout: 'fitColumns',
-		rowHeight: 62, //set rows to 40px height
 		pagination: true,
 		paginationSize: 10,
 		paginationSizeSelector: [10, 25, 50, 100, true],
 		paginationCounter: 'rows',
 		placeholder: 'No results found',
-		printAsHtml: true
+		printAsHtml: true,
 	});
 
 	table.on('dataLoaded', function () {
@@ -140,4 +170,5 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 			table.clearFilter();
 		}
 	});
+
 </script>

@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import { getLength } from '@utils/lookup.js';
 
 const cards = [
 	{
@@ -10,7 +9,6 @@ const cards = [
 			'Refining is a process of combining various ingredients with the use of a refiner.',
 		button: 'View Recipes',
 		image: '/images/refiner.webp',
-		items: getLength('ref'),
 		link: '/refining',
 	},
 
@@ -20,7 +18,6 @@ const cards = [
 			'Cooking is a process of combining various ingredients with the use of a Nutrient Processor.',
 		button: 'View Recipes',
 		image: '/images/cooker.webp',
-		items: getLength('nut'),
 		link: '/cooking',
 	},
 	{
@@ -29,7 +26,6 @@ const cards = [
 			'The player can craft technology upgrades for themseleves using blueprints found throughout the universe.',
 		button: 'View Recipes',
 		image: '/images/crafting.webp',
-		items: getLength('prod'),
 		link: '/crafting-guide',
 	},
 	{
@@ -38,8 +34,7 @@ const cards = [
 			'A calculator for helping your farming efforts by calculating exactly what you need to craft any item.',
 		button: 'View Recipes',
 		image: '/images/calculator.webp',
-		items: 'All',
-		link: '/calculator',
+		link: '/calculator/1',
 	},
 	{
 		name: 'Technology',
@@ -47,8 +42,7 @@ const cards = [
 			"Technology is an item that upgrades a player's exosuit, multi-tool, exocraft, and starship. You learn how to install technologies from blueprints. ",
 		button: 'View Recipes',
 		image: 'https://app.nmsassistant.com/assets/images/constructedTechnology/57.png',
-		items: 'All',
-		link: '/technology',
+		link: '/technology/1',
 	},
 	{
 		name: 'Buildings',
@@ -56,8 +50,7 @@ const cards = [
 			'Base building allows the player to build multiple bases, which can be used for farming, storage and recharging Hazard Protection or Shield.',
 		button: 'View Recipes',
 		image: 'https://app.nmsassistant.com/assets/images/building/46.png',
-		items: 'All',
-		link: '/buildings',
+		link: '/buildings/1',
 	},
 	{
 		name: 'Curiosities',
@@ -65,16 +58,14 @@ const cards = [
 			'Curiosities are items that can be found in the universe. They can be sold for units or used to craft other items.',
 		button: 'View Recipes',
 		image: 'https://app.nmsassistant.com/assets/images/curiosities/40.png',
-		items: 'All',
-		link: '/curiosities',
+		link: '/curiosities/1',
 	},
 	{
 		name: 'Raw Materials',
 		description: "List of the raw materials in No Man's Sky",
 		button: 'View Recipes',
 		image: 'https://app.nmsassistant.com/assets/images/rawMaterials/1.png',
-		items: 'All',
-		link: '/raw',
+		link: '/raw/1',
 	},
 ];
 ---

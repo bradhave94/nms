@@ -31,9 +31,8 @@ const navigation = [
 	{ name: 'Technology', href: '/technology/1', icon: CogIcon },
 	{ name: 'Buildings', href: '/buildings/1', icon: HomeModernIcon },
 	{ name: 'Curiosities', href: '/curiosities/1', icon: QuestionMarkCircleIcon },
-	{ name: 'Trade', href: '/trade/1', icon: ArrowsRightLeftIcon },
 	{ name: 'Other', href: '/other/1', icon: PaperClipIcon },
-	{ name: 'Raw', href: '/raw/1', icon: BoltIcon },
+	{ name: 'Raw Materials', href: '/raw/1', icon: BoltIcon },
 	{ name: 'All Items', href: '/all-items/1', icon: ListBulletIcon },
 	{ name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];

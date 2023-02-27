@@ -2,10 +2,11 @@
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import { getById, Item } from '@utils/lookup.js';
-import data from '@data/Others.json';
+import others from '@data/Others.json';
+import trade from '@data/Trade.json';
 
 export async function getStaticPaths() {
-	const paths = data.map((post) => ({
+	const paths = [...others, ...trade].map((post) => ({
 		params: { id: post.Id.toString() }
 	}));
 	return paths;

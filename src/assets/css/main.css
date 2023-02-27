@@ -39,7 +39,7 @@
     @apply flex flex-row-reverse items-center justify-end  h-full text-white text-base gap-2 px-2
 }
 
-div:is(
+:is(
     [style="background: #FFC356"],
     [style="background: #DEDCD1"],
     [style="background: #F3A923"],

@@ -8,7 +8,7 @@ import techModule from '@data/TechnologyModule.json';
 import tech from '@data/Technology.json';
 
 export async function getStaticPaths({ paginate }) {
-	return paginate(sort([...conTech, ...tech, ...techModule]), { pageSize: 50 });
+	return paginate(sort([...conTech, ...tech, ...techModule]), { pageSize: 24 });
 }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
@@ -45,7 +45,7 @@ const { page } = Astro.props;
 				</a>
 			) : null
 		}
-		Page: {page.currentPage} of {page.total}
+		Page: {page.currentPage} of {page.lastPage}
 		{
 			page.url.next ? (
 				<a class="btn" href={page.url.next}>

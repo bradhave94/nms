@@ -8,7 +8,6 @@
 		{ "source": "/all-items", "destination": "/all-items/1", "permanent": true },
 		{ "source": "/raw", "destination": "/raw/1", "permanent": true },
 		{ "source": "/other", "destination": "/other/1", "permanent": true },
-		{ "source": "/trade", "destination": "/trade/1", "permanent": true },
 		{ "source": "/curiosities", "destination": "/curiosities/1", "permanent": true },
 		{ "source": "/technology", "destination": "/technology/1", "permanent": true },
 		{ "source": "/products", "destination": "/products/1", "permanent": true },

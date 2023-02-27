@@ -6,7 +6,7 @@ import { getSlug, sort } from '@utils/lookup.js';
 import data from '@data/Products.json';
 
 export async function getStaticPaths({ paginate }) {
-	return paginate(data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits), { pageSize: 50 });
+	return paginate(data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits), { pageSize: 24 });
 }
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
@@ -45,7 +45,7 @@ const { page } = Astro.props;
 				</a>
 			) : null
 		}
-		Page: {page.currentPage} of {page.total}
+		Page: {page.currentPage} of {page.lastPage}
 		{
 			page.url.next ? (
 				<a class="btn" href={page.url.next}>

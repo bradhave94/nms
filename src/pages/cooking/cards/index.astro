@@ -1,0 +1,295 @@
+---
+
+// Importing required components and data
+import Layout from '@layouts/Layout.astro';
+import { Picture } from '@astrojs/image/components';
+import processor from '@data/NutrientProcessor.json';
+import { getById, getSlug, sortTable, Item } from '@utils/lookup.js';
+
+// Interfaces for defining the shape of input and output objects
+interface Input {
+	Id: string;
+	Quantity: number;
+}
+
+interface Output {
+	Id: string;
+	Quantity: number;
+}
+
+interface Processor {
+	Inputs: Input[];
+	Output: Output;
+}
+
+// Function to create an array of data for each item
+const createArray = (item: Processor) => {
+
+	// Map the inputs and get the details of each input item using `getById` function
+	const inputs = item.Inputs.map((element) => {
+		const i: Item | undefined = getById(element.Id);
+		// If item is not found, return undefined
+		if (!i) return;
+		// Return the item details
+		return {
+			id: i.Id,
+			name: i.Name,
+			description: i.Description,
+			value: i.BaseValueUnits,
+			amount: element.Quantity,
+			image: i.Icon,
+			colour: i.Colour,
+		};
+	});
+
+	// Get the details of the output item using `getById` function
+	const o: Item | undefined = getById(item.Output.Id);
+	// If item is not found, return undefined
+	if (!o) return;
+	// Return the item details
+	const output = {
+		id: o.Id,
+		name: o.Name,
+		description: o.Description,
+		value: o.BaseValueUnits,
+		amount: item.Output.Quantity,
+		image: o.Icon,
+		colour: o.Colour,
+	};
+
+	// Combine the inputs and output data in a new object
+	const newItem = {
+		input_1: inputs[0],
+		input_2: inputs[1],
+		input_3: inputs[2],
+		output,
+		description: output.description,
+		value: output.value,
+	};
+	return newItem;
+};
+
+// Define the columns to be displayed in the table
+const columns = [
+	{ title: 'Input 1', field: 'input_1' },
+	{ title: 'Input 2', field: 'input_2' },
+	{ title: 'Input 3', field: 'input_3' },
+	{ title: 'Output', field: 'output' }
+
+];
+
+// Map the data and create an array of filtered items
+const data = processor.map(createArray).filter(Boolean);
+const sortedData = sortTable(data);
+---
+
+<Layout
+	title={"Refiner recipes | No Man's Sky Recipes"}
+	description="A table of refiner recipes items for No Man's Sky. Our guide has everything you need to take your game to the next level."
+	slug="refining"
+>
+	<div
+		class="card-header mb-4 p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-center before:bg-black/80 before:w-full before:h-full before:absolute before:left-0 before:top-0"
+		style="background-image: url(/images/resources.png)"
+	>
+		<div class="flex items-center gap-2 z-10 relative">
+			<Picture
+				class="logo"
+				src={import(`../../../assets/img/cooking.png`)}
+				widths={[60]}
+				sizes={60 + 'px'}
+				width={60}
+				height={60}
+				aspectRatio={null}
+				background={null}
+				alt="Refining"
+			/>
+			<h1 class="text-2xl">Cooking</h1>
+		</div>
+
+		<div class="relative text-center">
+			<div class="flex gap-2 justify-center" x-data="app">
+				<p>Layout:</p>
+				<div>
+					<a
+						href={'/cooking'}
+						class="block cursor-pointer select-none rounded-md px-2 transition-colors hover:bg-orange-500 hover:text-black border border-orange-500 peer-checked:bg-orange-500 peer-checked:text-black"
+					>
+						Table
+					</a>
+				</div>
+				<div>
+					<a
+						href={'/' + "cooking" + '/cards'}
+						class="block cursor-pointer select-none rounded-md px-2 border transition-colors bg-orange-500 text-black border-orange-500 peer-checked:bg-orange-500 peer-checked:text-black"
+					>
+						Cards
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex items-center z-10">
+			<div class="tabulator-search relative">
+				<input
+					class="rounded-md w-full bg-black border-orange-500 focus:border-orange-500 focus:ring-orange-500 peer"
+					required
+					type="text"
+					id="search"
+					name="search"
+					placeholder=""
+				/>
+				<label
+					class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
+					for="search">Search</label
+				>
+			</div>
+		</div>
+	</div>
+	<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 lg:items-start gap-8" id="items">
+		{
+			sortedData.map((item) => (
+				<div class="bg-black rounded-md overflow-hidden">
+					<a
+						href={getSlug(item.output.id) + item.output.id}
+						class="flex flex-col items-center text-lg w-full p-2 transition-opacity hover:opacity-75"
+						style={'background: #' + item.output.colour}
+					>
+						<Picture
+							src={'https://app.nmsassistant.com/assets/images/' + item.output.image}
+							alt={item.output.name}
+							widths={[50]}
+							aspectRatio="1:1"
+							sizes="50px"
+							width={50}
+							height={50}
+							background={null}
+						/>
+						<h4 class="lg:text-lg">
+							<span class="output">{item.output.name}</span> x
+							<span data-quantity={item.output.amount}>{item.output.amount}</span>
+						</h4>
+					</a>
+					<a
+						href={getSlug(item.input_1.id) + item.input_1.id}
+						class="flex p-2 transition-opacity hover:opacity-75"
+						style={'background: #' + item.input_1.colour}
+					>
+						<div class="mr-4 flex-shrink-0 self-start">
+							<Picture
+								src={
+									'https://app.nmsassistant.com/assets/images/' +
+									item.input_1.image
+								}
+								alt={item.input_1.name}
+								widths={[50]}
+								aspectRatio="1:1"
+								sizes="50px"
+								width={50}
+								height={50}
+								background={null}
+							/>
+						</div>
+						<div class="flex items-center">
+							<h4 class="lg:text-lg">
+								{item.input_1.name} x
+								<span data-quantity={item.input_1.amount}>
+									{item.input_1.amount}
+								</span>
+							</h4>
+						</div>
+					</a>
+					{item.input_2 ? (
+						<a
+							href={getSlug(item.input_2.id) + item.input_2.id}
+							class="flex p-2 transition-opacity hover:opacity-75"
+							style={'background: #' + item.input_2.colour}
+						>
+							<div class="mr-4 flex-shrink-0 self-start">
+								<Picture
+									src={
+										'https://app.nmsassistant.com/assets/images/' +
+										item.input_2.image
+									}
+									alt={item.input_1.name}
+									widths={[50]}
+									aspectRatio="1:1"
+									sizes="50px"
+									width={50}
+									height={50}
+									background={null}
+								/>
+							</div>
+							<div class="flex items-center">
+								<h4 class="lg:text-lg">
+									{item.input_2.name} x
+									<span data-quantity={item.input_2.amount}>
+										{item.input_2.amount}
+									</span>
+								</h4>
+							</div>
+						</a>
+					) : null}
+					{item.input_3 ? (
+						<a
+							href={getSlug(item.input_3.id) + item.input_3.id}
+							class="flex p-2 transition-opacity hover:opacity-75"
+							style={'background: #' + item.input_3.colour}
+						>
+							<div class="mr-4 flex-shrink-0 self-start">
+								<Picture
+									src={
+										'https://app.nmsassistant.com/assets/images/' +
+										item.input_3.image
+									}
+									alt={item.input_3.name}
+									widths={[50]}
+									aspectRatio="1:1"
+									sizes="50px"
+									width={50}
+									height={50}
+									background={null}
+								/>
+							</div>
+							<div class="flex items-center">
+								<h4 class="lg:text-lg">
+									{item.input_3.name} x
+									<span data-quantity={item.input_3.amount}>
+										{item.input_3.amount}
+									</span>
+								</h4>
+							</div>
+						</a>
+					) : null}
+				</div>
+			))
+		}
+	</div>
+
+
+	<script>
+		const search = document.querySelector('#search');
+		const items = document.querySelector('#items');
+		const divs = items.querySelectorAll('div.bg-black');
+		let debounceTimer;
+
+		function handleSearch() {
+			const filter = search.value.toUpperCase();
+
+			divs.forEach((article) => {
+				const a = article.querySelector('.output');
+				const txtValue = a.textContent || a.innerText;
+				const isMatch = txtValue.toUpperCase().includes(filter);
+
+				article.style.display = isMatch ? '' : 'none';
+			});
+		}
+
+		function debounce(func, delay) {
+			clearTimeout(debounceTimer);
+			debounceTimer = setTimeout(func, delay);
+		}
+
+		search.addEventListener('input', () => debounce(handleSearch, 200));
+	</script>
+</Layout>

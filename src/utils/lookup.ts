@@ -58,7 +58,7 @@ const slugs = {
 	ref: '/refinery/',
 	nut: '/nutrient-processor/',
 	build: '/buildings/',
-	trade: '/trade/'
+	trade: '/other/'
 };
 
 const labels = {
@@ -143,8 +143,23 @@ const sort = (data) => {
 	return sortData;
 };
 
+const sortTable = (data) => {
+	const sortData = data.sort((a, b) => {
+		const nameA = a.output.name.toUpperCase();
+		const nameB = b.output.name.toUpperCase();
+		if (nameA < nameB) {
+			return -1;
+		}
+		if (nameA > nameB) {
+			return 1;
+		}
+		return 0;
+	});
+	return sortData;
+};
+
 // Export the getSlug and getById functions, and the Item interface
-export { getSlug, getLabel, getById, findOutput, getLength, sort };
+export { getSlug, getLabel, getById, findOutput, getLength, sort, sortTable };
 export type { Item };
 
 // <(.*?)> - Match any character between < and >, and capture it
