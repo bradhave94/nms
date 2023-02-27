@@ -90,13 +90,11 @@ inject();
 		<Footer />
 
 		<script>
-			if (typeof adsbygoogle !== 'undefined') {
-				if (!adsbygoogle.loaded) {
-					const elements = document.querySelectorAll('[data-ad-status]');
-					elements.forEach((element) => {
-						element.parentElement.classList.add('hidden');
-					});
-				}
+			if (typeof adsbygoogle !== 'undefined' || !adsbygoogle?.loaded) {
+				const elements = document.querySelectorAll('[data-ad-status]');
+				elements.forEach((element) => {
+					element.parentElement.classList.add('hidden');
+				});
 			}
 		</script>
 	</body>
