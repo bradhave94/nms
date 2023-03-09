@@ -1,6 +1,7 @@
 ---
 import { Picture } from '@astrojs/image/components';
 import Accordion from '@components/Accordion.astro';
+import { getSlug } from '@utils/lookup.js';
 const { items } = Astro.props;
 ---
 
@@ -33,24 +34,27 @@ const { items } = Astro.props;
 						</div>
 					</Accordion>
 				) : (
-					<div class="flex m-3" slot="title">
-						<div class="mr-4 flex-shrink-0 self-start">
-							<Picture
-								src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
-								alt={item.Name}
-								widths={[50]}
-								aspectRatio="1:1"
-								sizes="50px"
-								width={50}
-								height={50}
-								background={null}
-							/>
-						</div>
-						<div>
-							<h4 class="lg:text-lg mt-1">
-								{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-							</h4>
-						</div>
+					<div class="m-3" slot="title">
+						<a class="flex hover:underline" href={getSlug(item.Id) + item.Id}>
+							<div class="mr-4 flex-shrink-0 self-start">
+								<Picture
+									src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
+									alt={item.Name}
+									widths={[50]}
+									aspectRatio="1:1"
+									sizes="50px"
+									width={50}
+									height={50}
+									background={null}
+								/>
+							</div>
+							<div>
+								<h4 class="lg:text-lg mt-1">
+									{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
+								</h4>
+							</div>
+						</a>
+
 					</div>
 				)
 		  )
