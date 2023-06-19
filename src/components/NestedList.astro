@@ -50,7 +50,7 @@ const { items } = Astro.props;
 							</div>
 							<div>
 								<h4 class="lg:text-lg mt-1">
-									{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
+									{item.Name} x<span data-quantity={item.Quantity * items.Quantity}>{item.Quantity * items.Quantity}</span>
 								</h4>
 							</div>
 						</a>
