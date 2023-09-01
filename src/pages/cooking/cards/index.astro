@@ -2,7 +2,7 @@
 
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets'
 import processor from '@data/NutrientProcessor.json';
 import { getById, getSlug, sortTable, Item } from '@utils/lookup.js';
 
@@ -93,15 +93,12 @@ const sortedData = sortTable(data);
 		style="background-image: url(/images/resources.png)"
 	>
 		<div class="flex items-center gap-2 z-10 relative">
-			<Picture
+			<Image
 				class="logo"
 				src={import(`../../../assets/img/cooking.png`)}
-				widths={[60]}
 				sizes={60 + 'px'}
 				width={60}
 				height={60}
-				aspectRatio={null}
-				background={null}
 				alt="Refining"
 			/>
 			<h1 class="text-2xl">Cooking</h1>
@@ -155,15 +152,12 @@ const sortedData = sortTable(data);
 						class="flex flex-col items-center text-lg w-full p-2 transition-opacity hover:opacity-75"
 						style={'background: #' + item.output.colour}
 					>
-						<Picture
+						<Image
 							src={'https://app.nmsassistant.com/assets/images/' + item.output.image}
 							alt={item.output.name}
-							widths={[50]}
-							aspectRatio="1:1"
 							sizes="50px"
 							width={50}
 							height={50}
-							background={null}
 						/>
 						<h4 class="lg:text-lg">
 							<span class="output">{item.output.name}</span> x
@@ -176,18 +170,15 @@ const sortedData = sortTable(data);
 						style={'background: #' + item.input_1.colour}
 					>
 						<div class="mr-4 flex-shrink-0 self-start">
-							<Picture
+							<Image
 								src={
 									'https://app.nmsassistant.com/assets/images/' +
 									item.input_1.image
 								}
 								alt={item.input_1.name}
-								widths={[50]}
-								aspectRatio="1:1"
 								sizes="50px"
 								width={50}
 								height={50}
-								background={null}
 							/>
 						</div>
 						<div class="flex items-center">
@@ -206,18 +197,15 @@ const sortedData = sortTable(data);
 							style={'background: #' + item.input_2.colour}
 						>
 							<div class="mr-4 flex-shrink-0 self-start">
-								<Picture
+								<Image
 									src={
 										'https://app.nmsassistant.com/assets/images/' +
 										item.input_2.image
 									}
 									alt={item.input_1.name}
-									widths={[50]}
-									aspectRatio="1:1"
 									sizes="50px"
 									width={50}
 									height={50}
-									background={null}
 								/>
 							</div>
 							<div class="flex items-center">
@@ -237,18 +225,15 @@ const sortedData = sortTable(data);
 							style={'background: #' + item.input_3.colour}
 						>
 							<div class="mr-4 flex-shrink-0 self-start">
-								<Picture
+								<Image
 									src={
 										'https://app.nmsassistant.com/assets/images/' +
 										item.input_3.image
 									}
 									alt={item.input_3.name}
-									widths={[50]}
-									aspectRatio="1:1"
 									sizes="50px"
 									width={50}
 									height={50}
-									background={null}
 								/>
 							</div>
 							<div class="flex items-center">

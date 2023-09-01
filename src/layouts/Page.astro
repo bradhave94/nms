@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets'
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
 
@@ -90,30 +90,24 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 <div class="mx-auto max-w-6xl lg:mt-24 bg-gray-800 p-3 lg:p-8">
 	<div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
 		<div class="flex flex-col-reverse items-center">
-			<Picture
+			<Image
 				src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
 				alt={item.Name}
-				widths={[256]}
-				aspectRatio="1:1"
 				sizes="256px"
 				width={256}
 				height={256}
-				background={null}
 			/>
 		</div>
 		<div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
 			<h1 class="text-4xl inline-block">{item.Name}</h1>
 			<p class="flex items-center gap-2 py-2 pb-4">
 				{item.BaseValueUnits}
-				<Picture
+				<Image
 					src={credit}
 					alt="Credits"
-					widths={[25]}
-					aspectRatio="1:1"
 					sizes="25px"
 					width={25}
 					height={25}
-					background={null}
 				/>
 			</p>
 			<p class="lg:text-lg">{item.Description}</p>
@@ -160,18 +154,15 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 								<Accordion open={data.length + output.length == 1 ? true : false}>
 									<div class="flex" slot="title">
 										<div class="mr-4 flex-shrink-0 self-start">
-											<Picture
+											<Image
 												src={
 													'https://app.nmsassistant.com/assets/images/' +
 													item.Icon
 												}
 												alt={item.Name}
-												widths={[50]}
-												aspectRatio="1:1"
 												sizes="50px"
 												width={50}
 												height={50}
-												background={null}
 											/>
 										</div>
 										<div class="flex items-center">
@@ -207,18 +198,15 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 															style={'background: #' + item.Colour}
 														>
 															<div class="mr-4 flex-shrink-0 self-start">
-																<Picture
+																<Image
 																	src={
 																		'https://app.nmsassistant.com/assets/images/' +
 																		item.Icon
 																	}
 																	alt={item.Name}
-																	widths={[50]}
-																	aspectRatio="1:1"
 																	sizes="50px"
 																	width={50}
 																	height={50}
-																	background={null}
 																/>
 															</div>
 															<div class="flex items-center">
@@ -269,18 +257,15 @@ const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 								<Accordion>
 									<div class="flex" slot="title">
 										<div class="mr-4 flex-shrink-0 self-start">
-											<Picture
+											<Image
 												src={
 													'https://app.nmsassistant.com/assets/images/' +
 													item.Icon
 												}
 												alt={item.Name}
-												widths={[50]}
-												aspectRatio="1:1"
 												sizes="50px"
 												width={50}
 												height={50}
-												background={null}
 											/>
 										</div>
 										<div class="flex items-center">

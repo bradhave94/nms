@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets'
 import Accordion from '@components/Accordion.astro';
 import { getSlug } from '@utils/lookup.js';
 const { items } = Astro.props;
@@ -12,15 +12,12 @@ const { items } = Astro.props;
 					<Accordion>
 						<div class="flex" slot="title">
 							<div class="mr-4 flex-shrink-0 self-start">
-								<Picture
+								<Image
 									src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
 									alt={item.Name}
-									widths={[50]}
-									aspectRatio="1:1"
 									sizes="50px"
 									width={50}
 									height={50}
-									background={null}
 								/>
 							</div>
 							<div class="flex items-center">
@@ -37,15 +34,12 @@ const { items } = Astro.props;
 					<div class="m-3" slot="title">
 						<a class="flex hover:underline" href={getSlug(item.Id) + item.Id}>
 							<div class="mr-4 flex-shrink-0 self-start">
-								<Picture
+								<Image
 									src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
 									alt={item.Name}
-									widths={[50]}
-									aspectRatio="1:1"
 									sizes="50px"
 									width={50}
 									height={50}
-									background={null}
 								/>
 							</div>
 							<div>

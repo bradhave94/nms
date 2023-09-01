@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets'
 import { getSlug } from '@utils/lookup.js';
 
 export interface Props {
@@ -41,15 +41,12 @@ const { cell } = Astro.props;
 						{cell.amount != undefined ? <span class="amount">x{cell.amount}</span> : null}
 					</span>
 					{cell.image != undefined ? (
-						<Picture
+						<Image
 							src={'https://app.nmsassistant.com/assets/images/' + cell.image}
 							alt={cell.name}
-							widths={[50]}
-							aspectRatio="1:1"
 							sizes="50px"
 							width={50}
 							height={50}
-							background={null}
 						/>
 					) : null}
 				</div>
