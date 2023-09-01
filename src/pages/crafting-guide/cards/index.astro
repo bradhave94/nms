@@ -2,54 +2,54 @@
 // Importing required components and data
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets'
 import credit from '@assets/img/credits.png';
 import products from '@data/Products.json';
-import { getById, getSlug, sortTable, Item } from '@utils/lookup.js';
+import { getById, getSlug, type Item } from '@utils/lookup.js';
 
 // Function to create an array of data for each Products item
 const createArray = (item: Item) => {
-	// If the item has no inputs, return undefined
-	if (item.RequiredItems.length == 0) return;
+  // If the item has no inputs, return undefined
+  if (!item.RequiredItems || item.RequiredItems.length === 0) return;
 
-	// Map the inputs and get the details of each input item using `getById` function
-	const RequiredItems = item.RequiredItems.map((element) => {
-		const i: Item | undefined = getById(element.Id);
-		// If item is not found, return undefined
-		if (!i) return;
-		// Return the item details
-		return {
-			id: i.Id,
-			name: i.Name,
-			description: i.Description,
-			value: i.BaseValueUnits,
-			amount: element.Quantity,
-			image: i.Icon,
-			colour: i.Colour,
-		};
-	});
+  // Map the inputs and get the details of each input item using `getById` function
+  const RequiredItems = item.RequiredItems.map((element) => {
+    const i: Item | undefined = getById(element.Id);
+    // If item is not found, return undefined
+    if (!i) return;
+    // Return the item details
+    return {
+      id: i.Id,
+      name: i.Name,
+      description: i.Description,
+      value: i.BaseValueUnits,
+      amount: element.Quantity,
+      image: i.Icon,
+      colour: i.Colour,
+    };
+  });
 
-	// Combine the inputs and output data in a new object
-	const newItem = {
-		input_1: RequiredItems[0],
-		input_2: RequiredItems[1],
-		input_3: RequiredItems[2],
-		output: {
-			id: item.Id,
-			name: item.Name,
-			description: item.Description,
-			value: item.BaseValueUnits,
-			image: item.Icon,
-			colour: item.Colour,
-		},
-		value: item.BaseValueUnits,
-	};
-	return newItem;
+  // Combine the inputs and output data in a new object
+  const newItem = {
+    input_1: RequiredItems[0],
+    input_2: RequiredItems[1],
+    input_3: RequiredItems[2],
+    output: {
+      id: item.Id,
+      name: item.Name,
+      description: item.Description,
+      value: item.BaseValueUnits,
+      image: item.Icon,
+      colour: item.Colour,
+    },
+    value: item.BaseValueUnits,
+  };
+  return newItem;
 };
 
 // Map the data and create an array of filtered items
 const data = products.map(createArray).filter(Boolean);
-data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
+data.sort((a, b) => b.value - a.value);
 ---
 
 <Layout
@@ -62,15 +62,12 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 		style="background-image: url(/images/resources.png)"
 	>
 		<div class="flex items-center gap-2 z-10 relative">
-			<Picture
+			<Image
 				class="logo"
 				src={import(`../../../assets/img/crafting-guide.png`)}
-				widths={[100]}
 				sizes={100 + 'px'}
 				width={100}
 				height={63}
-				aspectRatio={null}
-				background={null}
 				alt="Refining"
 			/>
 			<h1 class="text-2xl">Crafting</h1>
@@ -124,30 +121,24 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 						class="flex flex-col items-center text-lg w-full p-2 transition-opacity hover:opacity-75"
 						style={'background: #' + item.output.colour}
 					>
-						<Picture
+						<Image
 							src={'https://app.nmsassistant.com/assets/images/' + item.output.image}
 							alt={item.output.name}
-							widths={[50]}
-							aspectRatio="1:1"
 							sizes="50px"
 							width={50}
 							height={50}
-							background={null}
 						/>
 
 						<h4 class="lg:text-lg">
 							<span class="output">{item.output.name}</span>
 						</h4>
 						<p class="flex text-sm items-center gap-2 py-2 pb-4">
-							<Picture
+							<Image
 								src={credit}
 								alt="Credits"
-								widths={[15]}
-								aspectRatio="1:1"
 								sizes="15px"
 								width={15}
 								height={15}
-								background={null}
 							/>
 							{item.output.value}
 						</p>
@@ -158,18 +149,15 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 						style={'background: #' + item.input_1.colour}
 					>
 						<div class="mr-4 flex-shrink-0 self-start">
-							<Picture
+							<Image
 								src={
 									'https://app.nmsassistant.com/assets/images/' +
 									item.input_1.image
 								}
 								alt={item.input_1.name}
-								widths={[50]}
-								aspectRatio="1:1"
 								sizes="50px"
 								width={50}
 								height={50}
-								background={null}
 							/>
 						</div>
 						<div class="flex items-center">
@@ -188,18 +176,15 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 							style={'background: #' + item.input_2.colour}
 						>
 							<div class="mr-4 flex-shrink-0 self-start">
-								<Picture
+								<Image
 									src={
 										'https://app.nmsassistant.com/assets/images/' +
 										item.input_2.image
 									}
 									alt={item.input_1.name}
-									widths={[50]}
-									aspectRatio="1:1"
 									sizes="50px"
 									width={50}
 									height={50}
-									background={null}
 								/>
 							</div>
 							<div class="flex items-center">
@@ -219,18 +204,15 @@ data.sort((a, b) => b.BaseValueUnits - a.BaseValueUnits);
 							style={'background: #' + item.input_3.colour}
 						>
 							<div class="mr-4 flex-shrink-0 self-start">
-								<Picture
+								<Image
 									src={
 										'https://app.nmsassistant.com/assets/images/' +
 										item.input_3.image
 									}
 									alt={item.input_3.name}
-									widths={[50]}
-									aspectRatio="1:1"
 									sizes="50px"
 									width={50}
 									height={50}
-									background={null}
 								/>
 							</div>
 							<div class="flex items-center">

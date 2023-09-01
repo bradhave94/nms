@@ -21,7 +21,7 @@ type Item = {
 	Icon: string;
 	Colour: string;
 	BaseValueUnits: number;
-	RequiredItems?: [];
+	RequiredItems?: Item[];
 	Quantity?: number;
 	Output?: {
 		Id: string;
@@ -42,7 +42,7 @@ const dataSources = {
 	ref: refiner,
 	nut: nut,
 	build,
-	trade
+	trade,
 };
 
 // Mapping the prefixes of item id to the corresponding slugs
@@ -58,7 +58,7 @@ const slugs = {
 	ref: '/refinery/',
 	nut: '/nutrient-processor/',
 	build: '/buildings/',
-	trade: '/other/'
+	trade: '/other/',
 };
 
 const labels = {
@@ -73,7 +73,7 @@ const labels = {
 	ref: 'Refinery',
 	nut: 'Nutrient Processor',
 	build: 'Buildings',
-	trade: 'Other'
+	trade: 'Other',
 };
 
 // Returns the slug corresponding to the item id
@@ -122,9 +122,7 @@ const getById = (id: string): Item => {
 };
 
 const getLength = (list) => {
-	let length = dataSources[list].filter(
-		(item) => !item.RequiredItems || item.RequiredItems.length != 0
-	).length;
+	let length = dataSources[list].filter((item) => !item.RequiredItems || item.RequiredItems.length != 0).length;
 	return length;
 };
 

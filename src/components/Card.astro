@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets'
 
 import credit from '../assets/img/credits.png';
 const { card, hide, index } = Astro.props;
@@ -11,16 +11,13 @@ const { card, hide, index } = Astro.props;
 		class="flex flex-wrap flex-col 2xl:flex-row transition border border-black hover:border-orange-500 bg-black rounded-md overflow-hidden h-full"
 	>
 		<div class="sm:basis-56">
-			<Picture
+			<Image
 				class="aspect-square h-full w-full object-contain p-1"
 				src={card.image}
 				alt={card.name}
-				widths={[256]}
-				aspectRatio="1:1"
 				sizes="255px"
 				width={256}
 				height={256}
-				background={null}
 			/>
 		</div>
 
@@ -32,15 +29,12 @@ const { card, hide, index } = Astro.props;
 				{
 					card.value ? (
 						<p class="flex items-center gap-2 py-2 pb-4">
-							<Picture
+							<Image
 								src={credit}
 								alt="Credits"
-								widths={[25]}
-								aspectRatio="1:1"
 								sizes="25px"
 								width={25}
 								height={25}
-								background={null}
 							/>
 							{card.value}
 						</p>

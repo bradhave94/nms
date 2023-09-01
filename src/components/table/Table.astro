@@ -2,7 +2,7 @@
 import '../../assets/css/tabulator.css';
 import TableHead from '@components/table/Head.astro';
 import TableCell from '@components/table/Cell.astro';
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets'
 
 export interface Props {
 	title: string;
@@ -45,15 +45,12 @@ const { title, image, image_width, image_height, columns, sort, data } = Astro.p
 		style="background-image: url(/images/resources.png)"
 	>
 		<div class="flex items-center gap-2 z-10 relative">
-			<Picture
+			<Image
 				class="logo"
 				src={import(`../../assets/img/${image}.png`)}
-				widths={[image_width]}
 				sizes={image_width + 'px'}
 				width={image_width}
 				height={image_height}
-				aspectRatio={null}
-				background={null}
 				alt={title}
 			/>
 			<h1 class="text-2xl">{title}</h1>
