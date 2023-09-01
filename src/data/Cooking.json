@@ -23,7 +23,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook2",
@@ -49,7 +51,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook3",
@@ -75,7 +79,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook4",
@@ -101,7 +107,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook5",
@@ -127,7 +135,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook6",
@@ -153,7 +163,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -10% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -10% hazard protection"
+		]
 	},
 	{
 		"Id": "cook7",
@@ -179,7 +191,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -10% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -10% hazard protection"
+		]
 	},
 	{
 		"Id": "cook8",
@@ -205,7 +219,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook9",
@@ -231,7 +247,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook10",
@@ -257,7 +275,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook11",
@@ -283,7 +303,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook12",
@@ -309,7 +331,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook13",
@@ -323,13 +347,20 @@
 		"Colour": "007953",
 		"CookingValue": 0.7,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/13.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook14",
@@ -343,13 +374,20 @@
 		"Colour": "007951",
 		"CookingValue": 0.3,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/14.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook15",
@@ -363,13 +401,20 @@
 		"Colour": "DEDCD1",
 		"CookingValue": 0.7,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/15.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook16",
@@ -383,13 +428,20 @@
 		"Colour": "007951",
 		"CookingValue": 0.3,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/16.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook17",
@@ -415,7 +467,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook18",
@@ -429,13 +483,20 @@
 		"Colour": "007951",
 		"CookingValue": 0.3,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/18.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook19",
@@ -449,13 +510,20 @@
 		"Colour": "007951",
 		"CookingValue": 0.3,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/19.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook20",
@@ -469,13 +537,20 @@
 		"Colour": "007951",
 		"CookingValue": 0.2,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/20.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -10% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -10% hazard protection"
+		]
 	},
 	{
 		"Id": "cook21",
@@ -501,7 +576,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook22",
@@ -515,13 +592,20 @@
 		"Colour": "007951",
 		"CookingValue": 0.3,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/22.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook23",
@@ -547,7 +631,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook24",
@@ -561,13 +647,20 @@
 		"Colour": "007951",
 		"CookingValue": 0.3,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/24.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook25",
@@ -581,13 +674,20 @@
 		"Colour": "007953",
 		"CookingValue": 0.2,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/25.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -10% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -10% hazard protection"
+		]
 	},
 	{
 		"Id": "cook26",
@@ -613,7 +713,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook27",
@@ -627,13 +729,20 @@
 		"Colour": "007952",
 		"CookingValue": 0.2,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/27.png",
-		"Usages": ["HasCookToCreate", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookToCreate",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -10% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -10% hazard protection"
+		]
 	},
 	{
 		"Id": "cook28",
@@ -659,7 +768,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook29",
@@ -686,7 +797,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook30",
@@ -712,7 +825,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook31",
@@ -738,7 +853,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook32",
@@ -764,7 +881,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook33",
@@ -790,7 +909,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook34",
@@ -816,7 +937,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook35",
@@ -842,7 +965,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook36",
@@ -868,7 +993,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook37",
@@ -894,7 +1021,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook38",
@@ -920,7 +1049,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook39",
@@ -946,7 +1077,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook40",
@@ -973,7 +1106,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook41",
@@ -999,7 +1134,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook42",
@@ -1025,7 +1162,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook43",
@@ -1051,7 +1190,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook44",
@@ -1065,13 +1206,20 @@
 		"Colour": "007951",
 		"CookingValue": 0.4,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/44.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["CONSUME"]
+		"ConsumableRewardTexts": [
+			"CONSUME"
+		]
 	},
 	{
 		"Id": "cook45",
@@ -1097,7 +1245,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook46",
@@ -1123,7 +1273,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook47",
@@ -1149,7 +1301,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook48",
@@ -1175,7 +1329,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook49",
@@ -1201,7 +1357,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook50",
@@ -1227,7 +1385,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook51",
@@ -1253,7 +1413,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook52",
@@ -1279,7 +1441,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook53",
@@ -1305,7 +1469,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook54",
@@ -1331,7 +1497,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook55",
@@ -1357,7 +1525,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook56",
@@ -1383,7 +1553,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook57",
@@ -1409,7 +1581,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook58",
@@ -1435,7 +1609,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook59",
@@ -1461,7 +1637,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook60",
@@ -1487,7 +1665,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook61",
@@ -1501,13 +1681,20 @@
 		"Colour": "DB2400",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/61.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook62",
@@ -1521,13 +1708,20 @@
 		"Colour": "DB2400",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/62.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook63",
@@ -1541,13 +1735,20 @@
 		"Colour": "DB2400",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/63.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook64",
@@ -1561,13 +1762,20 @@
 		"Colour": "DB2400",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/64.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook65",
@@ -1593,7 +1801,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook66",
@@ -1607,13 +1817,20 @@
 		"Colour": "007953",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/66.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook67",
@@ -1627,13 +1844,20 @@
 		"Colour": "007953",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/67.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook68",
@@ -1647,13 +1871,20 @@
 		"Colour": "007953",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/68.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook69",
@@ -1667,13 +1898,20 @@
 		"Colour": "007953",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/69.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook70",
@@ -1699,7 +1937,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook71",
@@ -1713,13 +1953,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/71.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook72",
@@ -1733,13 +1980,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/72.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook73",
@@ -1753,13 +2007,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/73.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook74",
@@ -1773,13 +2034,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/74.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook75",
@@ -1793,13 +2061,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/75.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook76",
@@ -1825,7 +2100,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook77",
@@ -1851,7 +2128,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook78",
@@ -1877,7 +2156,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 40% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 40% life support power"
+		]
 	},
 	{
 		"Id": "cook79",
@@ -1903,7 +2184,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 40% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 40% life support power"
+		]
 	},
 	{
 		"Id": "cook80",
@@ -1929,7 +2212,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 40% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 40% life support power"
+		]
 	},
 	{
 		"Id": "cook81",
@@ -1955,7 +2240,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook82",
@@ -1981,7 +2268,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook83",
@@ -2007,7 +2296,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 40% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 40% life support power"
+		]
 	},
 	{
 		"Id": "cook84",
@@ -2033,7 +2324,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 40% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 40% life support power"
+		]
 	},
 	{
 		"Id": "cook85",
@@ -2059,7 +2352,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 40% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 40% life support power"
+		]
 	},
 	{
 		"Id": "cook86",
@@ -2085,7 +2380,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook87",
@@ -2111,7 +2408,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook88",
@@ -2137,7 +2436,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook89",
@@ -2163,7 +2464,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook90",
@@ -2189,7 +2492,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook91",
@@ -2215,7 +2520,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook92",
@@ -2241,7 +2548,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook93",
@@ -2255,13 +2564,20 @@
 		"Colour": "D35300",
 		"CookingValue": 0.6,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/93.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook94",
@@ -2287,7 +2603,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook95",
@@ -2313,7 +2631,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook96",
@@ -2327,13 +2647,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/96.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook97",
@@ -2347,13 +2674,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/97.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook98",
@@ -2367,13 +2701,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/98.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook99",
@@ -2399,7 +2740,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook100",
@@ -2425,7 +2768,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 5% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 5% life support power"
+		]
 	},
 	{
 		"Id": "cook101",
@@ -2439,13 +2784,20 @@
 		"Colour": "F26D15",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/101.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook102",
@@ -2459,13 +2811,20 @@
 		"Colour": "7B0000",
 		"CookingValue": 0.8,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/102.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook103",
@@ -2479,13 +2838,20 @@
 		"Colour": "7B0000",
 		"CookingValue": 0.8,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/103.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook104",
@@ -2499,13 +2865,20 @@
 		"Colour": "7B0000",
 		"CookingValue": 0.8,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/104.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook105",
@@ -2531,7 +2904,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook106",
@@ -2545,13 +2920,20 @@
 		"Colour": "007953",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/106.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook107",
@@ -2577,7 +2959,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook108",
@@ -2591,13 +2975,20 @@
 		"Colour": "79502E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/108.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook109",
@@ -2611,13 +3002,20 @@
 		"Colour": "79502E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/109.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook110",
@@ -2631,13 +3029,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/110.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook111",
@@ -2651,13 +3056,20 @@
 		"Colour": "095C77",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/111.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook112",
@@ -2683,7 +3095,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook113",
@@ -2709,7 +3123,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook114",
@@ -2735,7 +3151,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook115",
@@ -2761,7 +3179,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook116",
@@ -2787,7 +3207,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook117",
@@ -2813,7 +3235,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook118",
@@ -2905,7 +3329,12 @@
 		"Colour": "007953",
 		"CookingValue": 0.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/121.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2957,7 +3386,12 @@
 		"Colour": "BB3830",
 		"CookingValue": 0.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/123.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2977,7 +3411,12 @@
 		"Colour": "BB3830",
 		"CookingValue": 0.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/124.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2997,7 +3436,12 @@
 		"Colour": "BB3830",
 		"CookingValue": 0.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/125.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3017,7 +3461,12 @@
 		"Colour": "BB3830",
 		"CookingValue": 0.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/126.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3037,13 +3486,20 @@
 		"Colour": "7B0000",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/127.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook128",
@@ -3057,13 +3513,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/128.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook129",
@@ -3089,7 +3552,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook130",
@@ -3103,7 +3568,12 @@
 		"Colour": "D35300",
 		"CookingValue": 0.8,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/130.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3125,13 +3595,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/131.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook132",
@@ -3145,13 +3622,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/132.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook133",
@@ -3165,13 +3649,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/133.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook134",
@@ -3185,13 +3676,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/134.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook135",
@@ -3205,7 +3703,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/135.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3227,13 +3730,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/136.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook137",
@@ -3247,13 +3757,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/137.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook138",
@@ -3267,13 +3784,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/138.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook139",
@@ -3287,13 +3811,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/139.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook140",
@@ -3307,7 +3838,12 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/140.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3329,13 +3865,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/141.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook142",
@@ -3349,7 +3892,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/142.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3371,13 +3919,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/143.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook144",
@@ -3403,7 +3958,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook145",
@@ -3417,13 +3974,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/145.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook146",
@@ -3437,7 +4001,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/146.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3459,13 +4028,20 @@
 		"Colour": "F26D15",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/147.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook148",
@@ -3479,13 +4055,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/148.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook149",
@@ -3499,13 +4082,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/149.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook150",
@@ -3519,13 +4109,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/150.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook151",
@@ -3551,7 +4148,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore (1 - 3)% health"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore (1 - 3)% health"
+		]
 	},
 	{
 		"Id": "cook152",
@@ -3565,13 +4164,20 @@
 		"Colour": "7B0000",
 		"CookingValue": 0.8,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/152.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook153",
@@ -3585,13 +4191,20 @@
 		"Colour": "007953",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/153.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook154",
@@ -3633,7 +4246,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/155.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3655,7 +4273,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/156.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3677,7 +4300,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/157.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3699,7 +4327,12 @@
 		"Colour": "79502E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/158.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3721,7 +4354,12 @@
 		"Colour": "095C77",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/159.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3743,7 +4381,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/160.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3777,7 +4420,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook162",
@@ -3791,13 +4436,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/162.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook163",
@@ -3811,13 +4463,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/163.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook164",
@@ -3831,13 +4490,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/164.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook165",
@@ -3851,13 +4517,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/165.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook166",
@@ -3871,13 +4544,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/166.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook167",
@@ -3891,13 +4571,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/167.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook168",
@@ -3911,13 +4598,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/168.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook169",
@@ -3931,13 +4625,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/169.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook170",
@@ -3951,13 +4652,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/170.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook171",
@@ -3971,13 +4679,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/171.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook172",
@@ -3991,13 +4706,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/172.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook173",
@@ -4012,7 +4734,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/173.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4035,7 +4762,12 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/174.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4058,7 +4790,12 @@
 		"Colour": "7B0000",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/175.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4081,13 +4818,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/176.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook177",
@@ -4102,13 +4846,20 @@
 		"Colour": "7B0000",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/177.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook178",
@@ -4123,13 +4874,20 @@
 		"Colour": "7B0000",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/178.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook179",
@@ -4144,13 +4902,20 @@
 		"Colour": "007953",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/179.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook180",
@@ -4164,13 +4929,20 @@
 		"MaxStackSize": 50.0,
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook181",
@@ -4184,13 +4956,20 @@
 		"MaxStackSize": 50.0,
 		"Colour": "D35300",
 		"CookingValue": 1.0,
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook182",
@@ -4205,13 +4984,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/182.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook183",
@@ -4238,7 +5024,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook184",
@@ -4253,13 +5041,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 0.65,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/184.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook185",
@@ -4274,13 +5069,20 @@
 		"Colour": "F26D15",
 		"CookingValue": 0.65,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/185.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook186",
@@ -4295,13 +5097,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 0.65,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/186.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook187",
@@ -4328,7 +5137,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook188",
@@ -4355,7 +5166,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook189",
@@ -4382,7 +5195,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook190",
@@ -4397,13 +5212,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/190.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook191",
@@ -4418,13 +5240,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/191.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook192",
@@ -4439,13 +5268,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/192.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -50% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -50% hazard protection"
+		]
 	},
 	{
 		"Id": "cook193",
@@ -4460,13 +5296,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/193.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook194",
@@ -4481,13 +5324,20 @@
 		"Colour": "8A7F72",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/194.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook195",
@@ -4502,13 +5352,20 @@
 		"Colour": "1EA3EE",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/195.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook196",
@@ -4523,13 +5380,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/196.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook197",
@@ -4544,13 +5408,20 @@
 		"Colour": "095C77",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/197.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook198",
@@ -4565,13 +5436,20 @@
 		"Colour": "79502E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/198.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook199",
@@ -4586,13 +5464,20 @@
 		"Colour": "F26D15",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/199.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook200",
@@ -4607,13 +5492,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/200.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook201",
@@ -4628,13 +5520,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/201.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook202",
@@ -4649,13 +5548,20 @@
 		"Colour": "F26D15",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/202.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook203",
@@ -4670,13 +5576,20 @@
 		"Colour": "8A7F72",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/203.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook204",
@@ -4690,13 +5603,20 @@
 		"MaxStackSize": 50.0,
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook205",
@@ -4711,13 +5631,20 @@
 		"Colour": "BB3830",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/205.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore -25% hazard protection"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore -25% hazard protection"
+		]
 	},
 	{
 		"Id": "cook206",
@@ -4732,13 +5659,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/206.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook207",
@@ -4752,13 +5686,20 @@
 		"MaxStackSize": 50.0,
 		"Colour": "D35300",
 		"CookingValue": 1.0,
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook208",
@@ -4773,13 +5714,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/208.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook209",
@@ -4794,13 +5742,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/209.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook210",
@@ -4815,13 +5770,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/210.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook211",
@@ -4836,13 +5798,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/211.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook212",
@@ -4857,13 +5826,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/212.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook213",
@@ -4878,13 +5854,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/213.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook214",
@@ -4899,13 +5882,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/214.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook215",
@@ -4920,13 +5910,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/215.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will power 15 seconds sprint overload"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will power 15 seconds sprint overload"
+		]
 	},
 	{
 		"Id": "cook216",
@@ -4941,13 +5938,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/216.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook217",
@@ -4962,13 +5966,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/217.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook218",
@@ -4983,13 +5994,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/218.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook219",
@@ -5004,13 +6022,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/219.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook220",
@@ -5025,13 +6050,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/220.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook221",
@@ -5046,13 +6078,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/221.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook222",
@@ -5067,13 +6106,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/222.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook223",
@@ -5088,13 +6134,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/223.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook224",
@@ -5109,13 +6162,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/224.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook225",
@@ -5130,13 +6190,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/225.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook226",
@@ -5151,13 +6218,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/226.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook227",
@@ -5172,13 +6246,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/227.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook228",
@@ -5193,13 +6274,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/228.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook229",
@@ -5214,13 +6302,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/229.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook230",
@@ -5235,13 +6330,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/230.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook231",
@@ -5256,13 +6358,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/231.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook232",
@@ -5277,13 +6386,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/232.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook233",
@@ -5298,13 +6414,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/233.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook234",
@@ -5319,13 +6442,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/234.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook235",
@@ -5340,13 +6470,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/235.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook236",
@@ -5361,13 +6498,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/236.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook237",
@@ -5382,13 +6526,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/237.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook238",
@@ -5403,13 +6554,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/238.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook239",
@@ -5424,13 +6582,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/239.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook240",
@@ -5445,13 +6610,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/240.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook241",
@@ -5466,13 +6638,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/241.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook242",
@@ -5487,13 +6666,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/242.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook243",
@@ -5508,13 +6694,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/243.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook244",
@@ -5529,13 +6722,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/244.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook245",
@@ -5550,13 +6750,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/245.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook246",
@@ -5571,13 +6778,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/246.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook247",
@@ -5592,13 +6806,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/247.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook248",
@@ -5613,13 +6834,20 @@
 		"Colour": "6AD01E",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/248.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook249",
@@ -5634,13 +6862,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/249.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook250",
@@ -5655,13 +6890,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/250.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook251",
@@ -5676,13 +6918,20 @@
 		"Colour": "D35300",
 		"CookingValue": 1.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/cooking/251.png",
-		"Usages": ["HasCookUsing", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasCookUsing",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook252",
@@ -5708,7 +6957,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook253",
@@ -5734,7 +6985,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook254",
@@ -5760,7 +7013,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook255",
@@ -5786,7 +7041,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook256",
@@ -5812,7 +7069,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook257",
@@ -5838,7 +7097,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook258",
@@ -5864,7 +7125,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook259",
@@ -5890,7 +7153,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook260",
@@ -5916,7 +7181,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook261",
@@ -5942,7 +7209,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook262",
@@ -5968,7 +7237,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook263",
@@ -5994,7 +7265,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook264",
@@ -6020,7 +7293,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook265",
@@ -6045,7 +7320,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook266",
@@ -6070,7 +7347,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook267",
@@ -6095,7 +7374,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook268",
@@ -6120,7 +7401,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook269",
@@ -6145,7 +7428,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook270",
@@ -6170,7 +7455,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook271",
@@ -6196,7 +7483,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook272",
@@ -6222,7 +7511,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook273",
@@ -6248,7 +7539,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook274",
@@ -6274,7 +7567,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook275",
@@ -6300,7 +7595,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook276",
@@ -6326,7 +7623,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook277",
@@ -6351,7 +7650,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook278",
@@ -6376,7 +7677,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook279",
@@ -6401,7 +7704,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook280",
@@ -6427,7 +7732,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Exosuit nutrient system will restore 20% life support power"]
+		"ConsumableRewardTexts": [
+			"Exosuit nutrient system will restore 20% life support power"
+		]
 	},
 	{
 		"Id": "cook281",
@@ -6452,7 +7759,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Ingest item via suit nutrient system"]
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
 	},
 	{
 		"Id": "cook282",

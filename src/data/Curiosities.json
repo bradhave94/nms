@@ -10,7 +10,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/1.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -29,7 +33,12 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/2.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -47,7 +56,9 @@
 		"CurrencyType": "Credits",
 		"Colour": "0063B7",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/3.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -78,7 +89,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/4.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -101,7 +116,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/5.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -128,7 +147,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/6.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -155,7 +178,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/7.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -182,7 +209,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/8.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -209,7 +240,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/9.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -236,7 +271,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/10.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -263,7 +302,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/11.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -290,7 +333,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/12.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -317,7 +364,11 @@
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/13.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -345,7 +396,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "383838",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/14.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -391,7 +446,12 @@
 		"MaxStackSize": 15.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/17.png",
-		"Usages": ["HasUsedToCraft", "HasRefinedToCreate", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasRefinedToCreate",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -460,7 +520,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "0063B7",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/20.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -492,7 +555,12 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/21.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -511,7 +579,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/22.png",
-		"Usages": ["HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -530,7 +601,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/23.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -549,7 +624,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/24.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -568,7 +647,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/25.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -586,7 +667,9 @@
 		"CurrencyType": "Credits",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/26.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -605,7 +688,11 @@
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/27.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -624,13 +711,20 @@
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/28.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Break geode down into usable materials"]
+		"ConsumableRewardTexts": [
+			"Break geode down into usable materials"
+		]
 	},
 	{
 		"Id": "cur29",
@@ -643,13 +737,19 @@
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/29.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Break crystal down into usable materials"]
+		"ConsumableRewardTexts": [
+			"Break crystal down into usable materials"
+		]
 	},
 	{
 		"Id": "cur30",
@@ -662,13 +762,20 @@
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/30.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Break cluster down into usable materials"]
+		"ConsumableRewardTexts": [
+			"Break cluster down into usable materials"
+		]
 	},
 	{
 		"Id": "cur31",
@@ -681,13 +788,19 @@
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/31.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Process ore into usable materials"]
+		"ConsumableRewardTexts": [
+			"Process ore into usable materials"
+		]
 	},
 	{
 		"Id": "cur32",
@@ -700,7 +813,12 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/32.png",
-		"Usages": ["HasUsedToCraft", "HasRefinedToCreate", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasRefinedToCreate",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -719,7 +837,9 @@
 		"Additional": "",
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/33.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -738,7 +858,9 @@
 		"Additional": "",
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/34.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -758,7 +880,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/35.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -778,7 +902,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -798,7 +926,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/37.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -818,7 +948,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/38.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -838,7 +970,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/39.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -858,7 +993,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/40.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -877,7 +1015,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/46.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -894,7 +1036,10 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -911,7 +1056,10 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -928,7 +1076,10 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -945,7 +1096,9 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -963,13 +1116,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Search for rare deep space object"]
+		"ConsumableRewardTexts": [
+			"Search for rare deep space object"
+		]
 	},
 	{
 		"Id": "cur52",
@@ -981,13 +1140,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Search for an abandoned freighter"]
+		"ConsumableRewardTexts": [
+			"Search for an abandoned freighter"
+		]
 	},
 	{
 		"Id": "cur53",
@@ -999,7 +1164,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1017,13 +1186,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Locate paired decryption terminal"]
+		"ConsumableRewardTexts": [
+			"Locate paired decryption terminal"
+		]
 	},
 	{
 		"Id": "cur56",
@@ -1035,7 +1210,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1053,7 +1232,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1071,13 +1254,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Locate paired decryption terminal"]
+		"ConsumableRewardTexts": [
+			"Locate paired decryption terminal"
+		]
 	},
 	{
 		"Id": "cur59",
@@ -1089,7 +1278,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1107,7 +1300,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1125,13 +1322,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Locate paired decryption terminal"]
+		"ConsumableRewardTexts": [
+			"Locate paired decryption terminal"
+		]
 	},
 	{
 		"Id": "cur62",
@@ -1143,7 +1346,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1161,7 +1367,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1179,7 +1388,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "DEDCD1",
-		"Usages": ["HasDevProperties", "IsExpeditionSeason2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsExpeditionSeason2Reward"
+		],
 		"BlueprintCost": 5000,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
@@ -1196,7 +1408,10 @@
 		"BaseValueUnits": 256000.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1214,7 +1429,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1232,7 +1451,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1250,7 +1473,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1267,7 +1494,11 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1310,7 +1541,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasRefinedToCreate", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasRefinedToCreate",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1350,7 +1585,10 @@
 		"BaseValueUnits": 888.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1369,7 +1607,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "cur77",
@@ -1380,7 +1620,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1406,7 +1650,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1425,7 +1673,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Attempt to make contact"]
+		"ConsumableRewardTexts": [
+			"Attempt to make contact"
+		]
 	},
 	{
 		"Id": "cur79",
@@ -1437,13 +1687,20 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Break geode down into usable materials"]
+		"ConsumableRewardTexts": [
+			"Break geode down into usable materials"
+		]
 	},
 	{
 		"Id": "cur80",
@@ -1455,13 +1712,20 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Recover valuable items from Sentinel scrap"]
+		"ConsumableRewardTexts": [
+			"Recover valuable items from Sentinel scrap"
+		]
 	},
 	{
 		"Id": "cur81",
@@ -1473,7 +1737,12 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1490,13 +1759,19 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Broadcast a signal to attract [ The Sentry ]"]
+		"ConsumableRewardTexts": [
+			"Broadcast a signal to attract [ The Sentry ]"
+		]
 	},
 	{
 		"Id": "cur83",
@@ -1531,13 +1806,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "cur85",
@@ -1549,7 +1830,12 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1567,7 +1853,12 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1584,13 +1875,19 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Deactivate signal and dismiss [ The Sentry ]"]
+		"ConsumableRewardTexts": [
+			"Deactivate signal and dismiss [ The Sentry ]"
+		]
 	},
 	{
 		"Id": "cur88",
@@ -1601,13 +1898,18 @@
 		"BaseValueUnits": 2613.0,
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Receive Utopia Foundation supplies"]
+		"ConsumableRewardTexts": [
+			"Receive Utopia Foundation supplies"
+		]
 	},
 	{
 		"Id": "cur89",
@@ -1618,13 +1920,18 @@
 		"BaseValueUnits": 2613.0,
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Receive Utopia Foundation supplies"]
+		"ConsumableRewardTexts": [
+			"Receive Utopia Foundation supplies"
+		]
 	},
 	{
 		"Id": "cur90",
@@ -1635,13 +1942,18 @@
 		"BaseValueUnits": 2613.0,
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Receive Utopia Foundation supplies"]
+		"ConsumableRewardTexts": [
+			"Receive Utopia Foundation supplies"
+		]
 	},
 	{
 		"Id": "cur91",
@@ -1652,13 +1964,18 @@
 		"BaseValueUnits": 2613.0,
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Receive Utopia Foundation supplies"]
+		"ConsumableRewardTexts": [
+			"Receive Utopia Foundation supplies"
+		]
 	},
 	{
 		"Id": "cur92",
@@ -1669,13 +1986,18 @@
 		"BaseValueUnits": 2613.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Receive Utopia Foundation construction coordinates"]
+		"ConsumableRewardTexts": [
+			"Receive Utopia Foundation construction coordinates"
+		]
 	},
 	{
 		"Id": "cur93",
@@ -1686,13 +2008,18 @@
 		"BaseValueUnits": 2613.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Receive Utopia Foundation construction coordinates"]
+		"ConsumableRewardTexts": [
+			"Receive Utopia Foundation construction coordinates"
+		]
 	},
 	{
 		"Id": "cur94",
@@ -1703,13 +2030,18 @@
 		"BaseValueUnits": 2613.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Receive Utopia Foundation construction coordinates"]
+		"ConsumableRewardTexts": [
+			"Receive Utopia Foundation construction coordinates"
+		]
 	},
 	{
 		"Id": "cur95",
@@ -1720,13 +2052,18 @@
 		"BaseValueUnits": 2613.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Receive Utopia Foundation construction coordinates"]
+		"ConsumableRewardTexts": [
+			"Receive Utopia Foundation construction coordinates"
+		]
 	},
 	{
 		"Id": "cur96",
@@ -1737,7 +2074,10 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1755,7 +2095,12 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1785,25 +2130,34 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Locate the ancient site in the dreams of this mind"]
+		"ConsumableRewardTexts": [
+			"Locate the ancient site in the dreams of this mind"
+		]
 	},
 	{
 		"Id": "cur99",
 		"Icon": "curiosities/99.png",
-		"Name": "Dreadnought AI Fragment",
+		"Name": "Carrier AI Fragment",
 		"Group": "Battleship Core Remnant",
 		"Description": "A single splinter of the colossal mainframe at the heart of a Sentinel capital ship. It blinks, its solitary living eye trained upon the one piece of data it retains - the last known location of one of its fleet of Interceptors.\n\nSelect the AI Fragment and use Search Archive (FE_ALT1) to translate information about Interceptor's crash site to your starship's navigation systems.",
 		"BaseValueUnits": 35000.0,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Probe archive for lost interceptors"]
+		"ConsumableRewardTexts": [
+			"Probe archive for lost interceptors"
+		]
 	},
 	{
 		"Id": "cur100",
@@ -1865,12 +2219,18 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	}
 ]

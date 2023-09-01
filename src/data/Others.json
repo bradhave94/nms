@@ -9,13 +9,18 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "other2",
@@ -29,13 +34,18 @@
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/2.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "other3",
@@ -49,7 +59,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/3.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -68,7 +80,9 @@
 		"Additional": "",
 		"Colour": "2C7C9F",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/4.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 2,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -91,7 +105,9 @@
 		"CurrencyType": "Credits",
 		"Additional": "",
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 10,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -115,7 +131,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/9.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -134,7 +154,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/10.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -153,7 +177,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/11.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -172,7 +200,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/12.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -191,7 +223,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/13.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -210,7 +246,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/14.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -253,7 +293,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/16.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -296,7 +340,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/18.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -315,7 +363,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/19.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -334,7 +386,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/20.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -401,7 +457,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/23.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -444,7 +504,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/25.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -463,7 +527,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/26.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -482,7 +550,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/27.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -501,7 +573,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/28.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -520,7 +596,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/29.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -539,7 +619,10 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/30.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -558,7 +641,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/31.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -577,7 +664,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/32.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -596,7 +687,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/33.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -615,7 +710,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/34.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -634,7 +733,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/35.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -653,7 +756,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/36.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -672,7 +779,11 @@
 		"Additional": "",
 		"Colour": "007951",
 		"CdnUrl": "https://cdn.nmsassistant.com/other/37.png",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -690,7 +801,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -708,7 +822,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsEggIngredient", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsEggIngredient",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -726,7 +844,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsRewardFromShipScrap", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsRewardFromShipScrap",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -744,7 +866,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsRewardFromShipScrap", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsRewardFromShipScrap",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -762,7 +888,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsRewardFromShipScrap", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsRewardFromShipScrap",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -780,7 +910,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsRewardFromShipScrap", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsRewardFromShipScrap",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -798,7 +932,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsRewardFromShipScrap", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsRewardFromShipScrap",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1026,7 +1164,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1044,7 +1186,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1062,7 +1208,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1080,7 +1230,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1098,7 +1252,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1116,7 +1274,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1134,7 +1296,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1152,7 +1318,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1170,7 +1340,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1188,7 +1362,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1206,7 +1384,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1224,7 +1405,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1242,7 +1427,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1260,7 +1448,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1278,7 +1469,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1296,7 +1490,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1314,7 +1511,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1332,7 +1532,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1350,7 +1553,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1368,7 +1574,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1386,7 +1595,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1404,7 +1617,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1422,7 +1638,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1440,7 +1659,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1458,7 +1681,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1476,7 +1702,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1494,7 +1723,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1512,7 +1745,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1530,7 +1767,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1548,7 +1789,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1566,7 +1811,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1583,13 +1832,18 @@
 		"BaseValueUnits": 0.0,
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Hatch this egg into a new companion!"]
+		"ConsumableRewardTexts": [
+			"Hatch this egg into a new companion!"
+		]
 	},
 	{
 		"Id": "other107",
@@ -1601,7 +1855,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1619,7 +1877,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1637,7 +1899,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1655,7 +1921,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1673,7 +1943,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1691,7 +1964,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1709,7 +1985,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1842,7 +2121,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1860,7 +2143,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1878,7 +2165,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1942,7 +2233,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1960,7 +2255,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1978,7 +2277,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1996,7 +2299,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2014,7 +2321,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2032,7 +2342,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2050,7 +2363,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2068,7 +2384,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2086,7 +2405,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2104,7 +2426,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2122,7 +2448,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign1Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign1Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2138,7 +2468,10 @@
 		"BaseValueUnits": 0.0,
 		"CurrencyType": "Credits",
 		"Colour": "2C7C9F",
-		"Usages": ["IsExpeditionSeason1Reward", "IsExpeditionSeason2Reward"],
+		"Usages": [
+			"IsExpeditionSeason1Reward",
+			"IsExpeditionSeason2Reward"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2170,7 +2503,9 @@
 		"BaseValueUnits": 0.0,
 		"CurrencyType": "Credits",
 		"Colour": "2C7C9F",
-		"Usages": ["IsExpeditionSeason1Reward"],
+		"Usages": [
+			"IsExpeditionSeason1Reward"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2236,7 +2571,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2254,7 +2593,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2272,7 +2615,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2290,7 +2637,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2308,7 +2659,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2372,7 +2727,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2390,7 +2749,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2431,7 +2794,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2449,7 +2816,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2467,7 +2838,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2485,7 +2860,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2503,7 +2882,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2521,7 +2904,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2539,7 +2926,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2557,7 +2948,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2575,7 +2970,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2593,7 +2992,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2611,7 +3014,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2629,7 +3036,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign2Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign2Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2647,7 +3058,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2665,7 +3080,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2683,7 +3102,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2769,7 +3192,11 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2786,7 +3213,11 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2803,7 +3234,11 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2820,7 +3255,11 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2837,7 +3276,11 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2855,13 +3298,18 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "other206",
@@ -2873,13 +3321,18 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "other207",
@@ -2891,13 +3344,18 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "other208",
@@ -2909,13 +3367,18 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "other209",
@@ -2927,13 +3390,18 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "other210",
@@ -2968,7 +3436,12 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason5Reward",
+			"IsTwitchCampaign7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2986,7 +3459,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsExpeditionSeason5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsExpeditionSeason5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3004,7 +3480,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3022,7 +3502,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3039,7 +3523,11 @@
 		"BaseValueUnits": 88.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3061,7 +3549,11 @@
 		"BaseValueUnits": 88.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3083,7 +3575,11 @@
 		"BaseValueUnits": 88.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3105,13 +3601,18 @@
 		"BaseValueUnits": 888.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Activate beacon and mark navigation coordinates"]
+		"ConsumableRewardTexts": [
+			"Activate beacon and mark navigation coordinates"
+		]
 	},
 	{
 		"Id": "other222",
@@ -3122,13 +3623,18 @@
 		"BaseValueUnits": 888.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Accept the call of the Voice of Freedom"]
+		"ConsumableRewardTexts": [
+			"Accept the call of the Voice of Freedom"
+		]
 	},
 	{
 		"Id": "other231",
@@ -3140,7 +3646,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "FFFFFF",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3181,7 +3690,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3199,7 +3712,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3217,7 +3734,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3235,7 +3756,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3253,7 +3778,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3271,7 +3800,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3289,7 +3822,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3307,7 +3844,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3325,7 +3866,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3343,7 +3888,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3361,7 +3910,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3379,7 +3932,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3397,7 +3954,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3415,7 +3976,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3433,7 +3998,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3451,7 +4020,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3469,7 +4042,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3487,7 +4064,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign3Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign3Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3516,7 +4097,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other270",
@@ -3539,7 +4122,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other271",
@@ -3562,7 +4147,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other272",
@@ -3585,7 +4172,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other273",
@@ -3608,7 +4197,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other274",
@@ -3631,7 +4222,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other275",
@@ -3654,7 +4247,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other276",
@@ -3677,7 +4272,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other277",
@@ -3700,7 +4297,9 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other278",
@@ -3735,7 +4334,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Locate nearby loop hotspots"]
+		"ConsumableRewardTexts": [
+			"Locate nearby loop hotspots"
+		]
 	},
 	{
 		"Id": "other279",
@@ -3771,7 +4372,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Manifest the memory fragment within your own existence"]
+		"ConsumableRewardTexts": [
+			"Manifest the memory fragment within your own existence"
+		]
 	},
 	{
 		"Id": "other280",
@@ -3782,7 +4385,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3799,7 +4406,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3816,7 +4427,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3833,7 +4448,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3850,7 +4469,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3913,7 +4536,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Broadcast an alluring melody into space"]
+		"ConsumableRewardTexts": [
+			"Broadcast an alluring melody into space"
+		]
 	},
 	{
 		"Id": "other288",
@@ -3925,7 +4550,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason7Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3943,7 +4572,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason8Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason8Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3961,7 +4594,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason8Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason8Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3979,7 +4616,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason8Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason8Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3997,7 +4638,12 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2987",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason8Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason8Reward",
+			"IsTwitchCampaign7Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4015,7 +4661,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4033,7 +4683,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4051,7 +4705,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4069,7 +4727,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4087,7 +4749,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4105,7 +4771,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4123,7 +4793,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4141,7 +4815,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4159,7 +4837,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4177,7 +4859,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4195,7 +4881,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4213,7 +4902,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4231,7 +4924,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4249,7 +4946,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4267,7 +4968,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign4Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign4Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4285,7 +4990,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "FFFFFF",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4303,7 +5011,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "FFFFFF",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4321,7 +5032,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4339,7 +5054,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4357,7 +5076,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4375,7 +5098,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4393,7 +5120,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4411,7 +5142,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4429,7 +5164,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4447,7 +5186,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4465,7 +5208,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4483,7 +5230,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4501,7 +5252,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4519,7 +5274,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4537,7 +5296,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4555,7 +5318,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign5Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign5Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4573,7 +5340,10 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4591,7 +5361,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "008951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4609,7 +5383,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "008951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4627,7 +5405,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "008951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4645,7 +5427,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason9Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason9Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4663,7 +5449,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason9Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason9Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4681,7 +5471,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason9Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason9Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4699,7 +5493,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason9Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason9Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4717,7 +5515,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2987",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason9Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason9Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4735,7 +5537,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4753,7 +5559,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4771,7 +5581,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4789,7 +5603,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4807,7 +5625,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4825,7 +5647,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4843,7 +5669,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4861,7 +5691,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4879,7 +5713,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4897,7 +5735,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4915,7 +5757,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4933,7 +5779,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4951,7 +5801,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4969,7 +5823,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsTwitchCampaign6Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign6Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4987,7 +5845,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5005,7 +5867,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5023,7 +5889,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5041,7 +5911,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5059,7 +5933,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5077,7 +5955,9 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5118,7 +5998,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "262626",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5136,7 +6019,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5154,7 +6041,11 @@
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsQuicksilver", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5171,7 +6062,10 @@
 		"BaseValueUnits": 9000.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5201,7 +6095,10 @@
 		"BaseValueUnits": 17000.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5231,7 +6128,10 @@
 		"BaseValueUnits": 4000.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5261,14 +6161,17 @@
 		"BaseValueUnits": 6000.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [
 			{
 				"Id": "prod57",
-				"Quantity": 2
+				"Quantity": 1
 			},
 			{
 				"Id": "prod113",
@@ -5291,7 +6194,11 @@
 		"BaseValueUnits": 16000.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsEggIngredient", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsEggIngredient",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5321,7 +6228,12 @@
 		"BaseValueUnits": 1600.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5332,7 +6244,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Attempt harmonic synchronisation"]
+		"ConsumableRewardTexts": [
+			"Attempt harmonic synchronisation"
+		]
 	},
 	{
 		"Id": "other368",
@@ -5343,7 +6257,12 @@
 		"BaseValueUnits": 1600.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5358,7 +6277,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Attempt harmonic synchronisation"]
+		"ConsumableRewardTexts": [
+			"Attempt harmonic synchronisation"
+		]
 	},
 	{
 		"Id": "other369",
@@ -5369,7 +6290,12 @@
 		"BaseValueUnits": 1600.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5384,7 +6310,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Attempt harmonic synchronisation"]
+		"ConsumableRewardTexts": [
+			"Attempt harmonic synchronisation"
+		]
 	},
 	{
 		"Id": "other370",
@@ -5395,7 +6323,12 @@
 		"BaseValueUnits": 1600.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5410,7 +6343,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Attempt harmonic synchronisation"]
+		"ConsumableRewardTexts": [
+			"Attempt harmonic synchronisation"
+		]
 	},
 	{
 		"Id": "other371",
@@ -5421,7 +6356,11 @@
 		"BaseValueUnits": 1600.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5436,7 +6375,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Attempt harmonic synchronisation"]
+		"ConsumableRewardTexts": [
+			"Attempt harmonic synchronisation"
+		]
 	},
 	{
 		"Id": "other372",
@@ -5448,7 +6389,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5461,11 +6406,15 @@
 		"Icon": "other/373.png",
 		"Name": "Echo Collective",
 		"Group": "Consciousness Housing",
-		"Description": "A shifting vortex of atlantideum, attuned to the growing collective will housed inside Nada's Prime Terminal. Current sentience threshold: ??%.\n\nThe grains oscillate in a pattern, but the message is unintelligble.",
+		"Description": "A shifting vortex of atlantideum, attuned to the growing collective will housed inside Nada's Prime Terminal. Current sentience threshold: ??%.\n\nThe grains oscillate in a pattern, but the message is unintelligible.",
 		"BaseValueUnits": 900.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5483,7 +6432,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason10Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason10Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5501,7 +6454,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason10Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason10Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5519,7 +6476,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason10Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason10Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5537,7 +6498,11 @@
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason10Reward"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason10Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5554,8 +6519,11 @@
 		"BaseValueUnits": 3200.0,
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
-		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5572,8 +6540,11 @@
 		"BaseValueUnits": 3200.0,
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
-		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5585,13 +6556,17 @@
 		"Id": "other380",
 		"Icon": "other/380.png",
 		"Name": "Construct Hands",
-		"Group": "Unlockable Gloves",
+		"Group": "Autophage Appearance Modification",
 		"Description": "An exclusive Exosuit Appearance Override.\n\nA set of complex hydraulic tubes and various gripping surfaces that form a pair of usable arms for a primitive automaton. Plans for a unit of this design were extracted from an autophage left at an abandoned junker's camp.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
-		"BaseValueUnits": 1000.0,
+		"BaseValueUnits": 999.0,
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
-		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason10Reward"],
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason10Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5603,13 +6578,17 @@
 		"Id": "other381",
 		"Icon": "other/381.png",
 		"Name": "Construct Chest",
-		"Group": "Unlockable Torso Customisation",
+		"Group": "Autophage Appearance Modification",
 		"Description": "An exclusive Exosuit Appearance Override.\n\nThe principal metallic carapace for a primitive automaton. Plans for a unit of this design were extracted from an autophage left at an abandoned junker's camp.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
-		"BaseValueUnits": 750.0,
+		"BaseValueUnits": 505.0,
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
-		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason10Reward"],
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason10Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5621,13 +6600,17 @@
 		"Id": "other382",
 		"Icon": "other/382.png",
 		"Name": "Construct Feet",
-		"Group": "Unlockable Boots",
+		"Group": "Autophage Appearance Modification",
 		"Description": "An exclusive Exosuit Appearance Override.\n\nA pair of fleshless feet for a primitive automaton. Plans for a unit of this design were extracted from an autophage left at an abandoned junker's camp.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
-		"BaseValueUnits": 1000.0,
+		"BaseValueUnits": 999.0,
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
-		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason10Reward"],
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason10Reward"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -5639,13 +6622,1079 @@
 		"Id": "other383",
 		"Icon": "other/383.png",
 		"Name": "Construct Legs",
-		"Group": "Unlockable Leg Customisation",
+		"Group": "Autophage Appearance Modification",
 		"Description": "An exclusive Exosuit Appearance Override.\n\nA bipedal movement platform for a primitive automaton. Plans for a unit of this design were extracted from an autophage left at an abandoned junker's camp.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
-		"BaseValueUnits": 750.0,
+		"BaseValueUnits": 505.0,
 		"CurrencyType": "Nanites",
 		"MaxStackSize": 5.0,
-		"Colour": "007951",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate", "IsExpeditionSeason10Reward"],
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason10Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other384",
+		"Icon": "other/384.png",
+		"Name": "Electric Jetpack Trail",
+		"Group": "Jetpack Exhaust Override",
+		"Description": "An exclusive Exosuit Appearance Override.\n\nHumidifiers discharge a highly salinated mist from the rocket nozzles, conducting a dramatic streak of electricity during Jetpack operation.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
+		"BaseValueUnits": 800.0,
+		"CurrencyType": "Nanites",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason11Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other385",
+		"Icon": "other/385.png",
+		"Name": "Scorching Jetpack Trail",
+		"Group": "Jetpack Exhaust Override",
+		"Description": "An exclusive Exosuit Appearance Override.\n\nPressurised jets breathe additional oxygen into the Jetpack flames, brightening and lengthening the exhaust trail.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
+		"BaseValueUnits": 800.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other386",
+		"Icon": "other/386.png",
+		"Name": "Festive Jetpack Trail",
+		"Group": "Jetpack Exhaust Override",
+		"Description": "An exclusive Exosuit Appearance Override.\n\nA multi-coloured scattering of bio-plastic flakes adds a celebratory flair to the Jetpack's output. Expelled material is fully compostable.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
+		"BaseValueUnits": 800.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other387",
+		"Icon": "other/387.png",
+		"Name": "Pyrotechnic Jetpack Trail",
+		"Group": "Jetpack Exhaust Override",
+		"Description": "An exclusive Exosuit Appearance Override.\n\nPellets of chromatic metal ignite during flight, splitting into glittering stars of RGB.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
+		"BaseValueUnits": 800.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other388",
+		"Icon": "other/388.png",
+		"Name": "Plasma Jetpack Trail",
+		"Group": "Jetpack Exhaust Override",
+		"Description": "An exclusive Exosuit Appearance Override.\n\nReplaces the standard Jetpack combustion chamber with a plasma engine. During flight, the exhaust nozzles release dazzling clouds of ionised matter.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
+		"BaseValueUnits": 800.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other389",
+		"Icon": "other/389.png",
+		"Name": "Fusion Jetpack Trail",
+		"Group": "Jetpack Exhaust Override",
+		"Description": "An exclusive Exosuit Appearance Override.\n\nHarnesses natural stellar processes to make the Jetpack output blaze. A light-diffusing compound protects the user and onlookers from retinal damage.\n\nTransform the appearance of your Exosuit at an Appearance Modifier.",
+		"BaseValueUnits": 800.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other390",
+		"Icon": "other/390.png",
+		"Name": "Razawag of the Abyss",
+		"Group": "Exclusive Spacecraft",
+		"Description": "An exclusive Starship.\n\nClaim this ship to add it to your collection, or Exchange it with your current ship. While on a planet, summon ships from the Quick Menu (QUICK_MENU).",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other391",
+		"Icon": "other/391.png",
+		"Name": "Okoroza Peacemaker X",
+		"Group": "Exclusive Spacecraft",
+		"Description": "An exclusive Starship.\n\nClaim this ship to add it to your collection, or Exchange it with your current ship. While on a planet, summon ships from the Quick Menu (QUICK_MENU).",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other392",
+		"Icon": "other/392.png",
+		"Name": "Stellar Nojuku XV",
+		"Group": "Exclusive Spacecraft",
+		"Description": "An exclusive Starship.\n\nClaim this ship to add it to your collection, or Exchange it with your current ship. While on a planet, summon ships from the Quick Menu (QUICK_MENU).",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other393",
+		"Icon": "other/393.png",
+		"Name": "Iyosh's Colourless Flight",
+		"Group": "Exclusive Spacecraft",
+		"Description": "An exclusive Starship.\n\nClaim this ship to add it to your collection, or Exchange it with your current ship. While on a planet, summon ships from the Quick Menu (QUICK_MENU).",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other394",
+		"Icon": "other/394.png",
+		"Name": "Visionary Eagle QL9",
+		"Group": "Exclusive Spacecraft",
+		"Description": "An exclusive Starship.\n\nClaim this ship to add it to your collection, or Exchange it with your current ship. While on a planet, summon ships from the Quick Menu (QUICK_MENU).",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other395",
+		"Icon": "other/395.png",
+		"Name": "X. Larvadoagera Egg",
+		"Group": "Exclusive Companion Egg",
+		"Description": "A living, fertile egg, ready to hatch!\n\nThe biomechanical creature inside is silent, waiting to be hatched from stasis.\n\nScans indicate the being within will grow into a dutiful companion, motivated to assist in exploration.",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other396",
+		"Icon": "other/396.png",
+		"Name": "Obedience of the Dance",
+		"Group": "Exclusive Multifunction Survival Device",
+		"Description": "An exclusive Multi-Tool.\n\nTake this Multi-Tool to add it to your collection, or Exchange it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (QUICK_MENU).",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other397",
+		"Icon": "other/397.png",
+		"Name": "Loop of Lachinos-XVI",
+		"Group": "Exclusive Multifunction Survival Device",
+		"Description": "An exclusive Multi-Tool.\n\nTake this Multi-Tool to add it to your collection, or Exchange it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (QUICK_MENU).",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other398",
+		"Icon": "other/398.png",
+		"Name": "Destroyer of the Horizon 45P/98T",
+		"Group": "Exclusive Multifunction Survival Device",
+		"Description": "An exclusive Multi-Tool.\n\nTake this Multi-Tool to add it to your collection, or Exchange it with your current Multi-Tool. Swap between active Multi-Tools from the Utilities section of the Quick Menu (QUICK_MENU).",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other399",
+		"Icon": "other/399.png",
+		"Name": "Celebratory Firework Pack",
+		"Group": "Pyrotechnics Multi-Pack",
+		"Description": "A three-variety pack of assorted fireworks, containing chromatic, Atlas and patterned variations. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 250.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other400",
+		"Icon": "other/399.png",
+		"Name": "Celebratory Firework Pack",
+		"Group": "Pyrotechnics Multi-Pack",
+		"Description": "A three-variety pack of assorted fireworks, containing chromatic, Atlas and patterned variations. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 250.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other401",
+		"Icon": "other/399.png",
+		"Name": "Celebratory Firework Pack",
+		"Group": "Pyrotechnics Multi-Pack",
+		"Description": "A three-variety pack of assorted fireworks, containing chromatic, Atlas and patterned variations. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 250.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other402",
+		"Icon": "other/399.png",
+		"Name": "Celebratory Firework Pack",
+		"Group": "Pyrotechnics Multi-Pack",
+		"Description": "A three-variety pack of assorted fireworks, containing chromatic, Atlas and patterned variations. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 250.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other403",
+		"Icon": "other/399.png",
+		"Name": "Celebratory Firework Pack",
+		"Group": "Pyrotechnics Multi-Pack",
+		"Description": "A three-variety pack of assorted fireworks, containing chromatic, Atlas and patterned variations. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 250.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign7Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other404",
+		"Icon": "other/404.png",
+		"Name": "Rebuilt Exosuit Module",
+		"Group": "Salvaged Upgrade Components",
+		"Description": "A salvaged upgrade for the Exosuit. Use FE_ALT1 to begin upgrade installation process.\n\nConstructed by the Autophage, this technology package is the result of a high degree of engineering improvisation. As a one-of-a-kind piece of repurposed technology, its exact effect upon suit performance is hard to determine prior to installation within the Exosuit's systems.",
+		"BaseValueUnits": 313.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other405",
+		"Icon": "tradeItems/32.png",
+		"Name": "Once-Useful Springs",
+		"Group": "Multi-Tool Subcomponent",
+		"Description": "A valuable piece of recycled Multi-Tool technology, created by a Multi-Tool Decommissioning Terminal aboard the Space Anomaly.\n\nComponent is useful only as scrap to be sold at a Trade Terminal.",
+		"BaseValueUnits": 12000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 25.0,
+		"Colour": "CCCCCC",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other406",
+		"Icon": "tradeItems/31.png",
+		"Name": "Handful of Cogs",
+		"Group": "Multi-Tool Subcomponent",
+		"Description": "A valuable piece of recycled Multi-Tool technology, created by a Multi-Tool Decommissioning Terminal aboard the Space Anomaly.\n\nComponent is useful only as scrap to be sold at a Trade Terminal.",
+		"BaseValueUnits": 230000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 25.0,
+		"Colour": "CCCCCC",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other407",
+		"Icon": "tradeItems/21.png",
+		"Name": "Reinforced Piping",
+		"Group": "Multi-Tool Subcomponent",
+		"Description": "A valuable piece of recycled Multi-Tool technology, created by a Multi-Tool Decommissioning Terminal aboard the Space Anomaly.\n\nComponent is useful only as scrap to be sold at a Trade Terminal.",
+		"BaseValueUnits": 610000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 25.0,
+		"Colour": "CCCCCC",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other408",
+		"Icon": "tradeItems/18.png",
+		"Name": "Thermal Panels",
+		"Group": "Multi-Tool Subcomponent",
+		"Description": "A valuable piece of recycled Multi-Tool technology, created by a Multi-Tool Decommissioning Terminal aboard the Space Anomaly.\n\nComponent is useful only as scrap to be sold at a Trade Terminal.",
+		"BaseValueUnits": 1310000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 25.0,
+		"Colour": "CCCCCC",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other409",
+		"Icon": "tradeItems/22.png",
+		"Name": "Alloy Scraps",
+		"Group": "Multi-Tool Subcomponent",
+		"Description": "A valuable piece of recycled Multi-Tool technology, created by a Multi-Tool Decommissioning Terminal aboard the Space Anomaly.\n\nComponent is useful only as scrap to be sold at a Trade Terminal.",
+		"BaseValueUnits": 3100000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 25.0,
+		"Colour": "CCCCCC",
+		"Usages": [
+			"HasDevProperties",
+			"IsEggIngredient",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other410",
+		"Icon": "other/410.png",
+		"Name": "Fibreglass Grip",
+		"Group": "Voltaic Component",
+		"Description": "A strap of flexible resin, securely wrapped around a steel pole.\n\nOne of three core components, this forms the backbone of a traditional Autophage Voltaic Staff.",
+		"BaseValueUnits": 333.0,
+		"CurrencyType": "Credits",
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 50
+			},
+			{
+				"Id": "prod3",
+				"Quantity": 3
+			},
+			{
+				"Id": "prod54",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other411",
+		"Icon": "other/411.png",
+		"Name": "Atlantideum Chamber",
+		"Group": "Voltaic Component",
+		"Description": "A compact box of circuitry and ethereal crystals, painstakingly wired by hand.\n\nOne of three core components, this forms the core of a traditional Autophage Voltaic Staff.",
+		"BaseValueUnits": 646.0,
+		"CurrencyType": "Credits",
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod7",
+				"Quantity": 1
+			},
+			{
+				"Id": "cur101",
+				"Quantity": 1
+			},
+			{
+				"Id": "prod81",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other412",
+		"Icon": "other/412.png",
+		"Name": "Concentric Transducer",
+		"Group": "Voltaic Component",
+		"Description": "An electrified arrangement of mechanical wheels. Transforms stored energy into beams or propulsion, according to the specifications of weapons and laser attachments.\n\nOne of three core components, this forms the head of a traditional Autophage Voltaic Staff.",
+		"BaseValueUnits": 999.0,
+		"CurrencyType": "Credits",
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "prod66",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other413",
+		"Icon": "other/413.png",
+		"Name": "Salvaged Battery",
+		"Group": "Autophage Staff Core",
+		"Description": "This tightly-package electronic unit forms the core of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 646.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other414",
+		"Icon": "other/414.png",
+		"Name": "Havoc Core",
+		"Group": "Autophage Staff Core",
+		"Description": "This tightly-package electronic unit forms the core of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 646.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other415",
+		"Icon": "other/415.png",
+		"Name": "Staff Core 3",
+		"Group": "Autophage Staff Core",
+		"Description": "This tightly-package electronic unit forms the core of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 646.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other416",
+		"Icon": "other/416.png",
+		"Name": "Reclaimed Grip",
+		"Group": "Autophage Staff Core",
+		"Description": "This tightly-package electronic unit forms the core of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 646.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other417",
+		"Icon": "other/417.png",
+		"Name": "Radiant Chamber",
+		"Group": "Autophage Staff Core",
+		"Description": "This tightly-package electronic unit forms the core of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 646.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other418",
+		"Icon": "other/418.png",
+		"Name": "Runic Core",
+		"Group": "Autophage Staff Core",
+		"Description": "This tightly-package electronic unit forms the core of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 646.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other419",
+		"Icon": "other/419.png",
+		"Name": "Salvaged Aerator",
+		"Group": "Autophage Staff Head",
+		"Description": "This ornate centerpiece forms the head of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 999.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other420",
+		"Icon": "other/420.png",
+		"Name": "Havoc Coil",
+		"Group": "Autophage Staff Head",
+		"Description": "This ornate centerpiece forms the head of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 999.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other421",
+		"Icon": "other/421.png",
+		"Name": "Staff Head 3",
+		"Group": "Autophage Staff Head",
+		"Description": "This ornate centerpiece forms the head of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 999.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other422",
+		"Icon": "other/422.png",
+		"Name": "Reclaimed Claw",
+		"Group": "Autophage Staff Head",
+		"Description": "This ornate centerpiece forms the head of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 999.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other423",
+		"Icon": "other/423.png",
+		"Name": "Reclaimed Head",
+		"Group": "Autophage Staff Head",
+		"Description": "This ornate centerpiece forms the head of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 999.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other424",
+		"Icon": "other/424.png",
+		"Name": "Radiant Heart",
+		"Group": "Autophage Staff Head",
+		"Description": "This ornate centerpiece forms the head of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 999.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other425",
+		"Icon": "other/425.png",
+		"Name": "Runic Focus",
+		"Group": "Autophage Staff Head",
+		"Description": "This ornate centerpiece forms the head of a Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 999.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other426",
+		"Icon": "other/426.png",
+		"Name": "Salvaged Shaft",
+		"Group": "Autophage Staff Backbone",
+		"Description": "This long pole forms the backbone of a traditional Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 333.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other427",
+		"Icon": "other/427.png",
+		"Name": "Havoc Lance",
+		"Group": "Autophage Staff Backbone",
+		"Description": "This long pole forms the backbone of a traditional Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 333.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other428",
+		"Icon": "other/428.png",
+		"Name": "Staff Pole 3",
+		"Group": "Autophage Staff Backbone",
+		"Description": "This long pole forms the backbone of a traditional Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 333.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other429",
+		"Icon": "other/429.png",
+		"Name": "Recycled Pole",
+		"Group": "Autophage Staff Backbone",
+		"Description": "This long pole forms the backbone of a traditional Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 333.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other430",
+		"Icon": "other/430.png",
+		"Name": "Radiant Bore",
+		"Group": "Autophage Staff Backbone",
+		"Description": "This long pole forms the backbone of a traditional Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 333.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "other431",
+		"Icon": "other/431.png",
+		"Name": "Runic Beam",
+		"Group": "Autophage Staff Backbone",
+		"Description": "This long pole forms the backbone of a traditional Autophage staff.\n\nOne of three core components, this can be assembled into a staff at the Autophage Synthesis Terminal found at all Autophage camps.",
+		"BaseValueUnits": 333.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "8C4B9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,

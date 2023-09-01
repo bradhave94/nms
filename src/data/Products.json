@@ -10,7 +10,11 @@
 		"MaxStackSize": 10.0,
 		"Colour": "C01746",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/1.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -38,7 +42,10 @@
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/2.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -97,7 +104,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/4.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -116,7 +127,11 @@
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/5.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -140,7 +155,10 @@
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/6.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -164,7 +182,10 @@
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/7.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -192,7 +213,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/8.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -211,7 +236,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/9.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -230,7 +259,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/10.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -279,7 +312,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "0063B7",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/12.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -307,7 +343,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "0063B7",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/13.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -335,7 +374,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "0063B7",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/14.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -363,7 +405,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "0063B7",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/15.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -391,7 +436,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "0063B7",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/16.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -453,7 +501,12 @@
 		"MaxStackSize": 10.0,
 		"Colour": "C01746",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/18.png",
-		"Usages": ["HasUsedToCraft", "HasUsedToRecharge", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasUsedToRecharge",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -550,7 +603,11 @@
 		"MaxStackSize": 100.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/21.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -569,7 +626,11 @@
 		"MaxStackSize": 50.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/22.png",
-		"Usages": ["HasUsedToRecharge", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToRecharge",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -632,7 +693,11 @@
 		"MaxStackSize": 100.0,
 		"Colour": "C01746",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/24.png",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -651,7 +716,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "C01746",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/25.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -679,7 +747,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "C01746",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/26.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -707,7 +778,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "C01746",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/27.png",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -769,7 +843,12 @@
 		"MaxStackSize": 20.0,
 		"Colour": "C01746",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/29.png",
-		"Usages": ["HasUsedToRecharge", "HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToRecharge",
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -801,7 +880,11 @@
 		"MaxStackSize": 5000.0,
 		"Colour": "1A2733",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/30.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"CraftingOutputAmount": 1250,
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -826,7 +909,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/31.png",
-		"Usages": ["HasDevProperties", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -845,7 +931,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/32.png",
-		"Usages": ["HasDevProperties", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -864,7 +953,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/33.png",
-		"Usages": ["HasDevProperties", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -883,7 +975,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/34.png",
-		"Usages": ["HasDevProperties", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -902,7 +997,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/35.png",
-		"Usages": ["HasDevProperties", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 1,
@@ -921,7 +1019,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/36.png",
-		"Usages": ["HasDevProperties", "IsNoLongerObtainable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -940,7 +1041,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/49.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -968,7 +1073,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/51.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -996,7 +1104,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/52.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1024,7 +1135,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/53.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsRewardFromShipScrap"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -1052,7 +1167,11 @@
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/54.png",
-		"Usages": ["HasUsedToCraft", "HasRefinedUsing", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasRefinedUsing",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1076,7 +1195,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/55.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1100,7 +1223,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/56.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsRewardFromShipScrap"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1128,7 +1255,11 @@
 		"MaxStackSize": 20.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/57.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1156,7 +1287,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/58.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsRewardFromShipScrap"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1184,7 +1319,12 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/59.png",
-		"Usages": ["HasUsedToCraft", "HasRefinedUsing", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasRefinedUsing",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1212,7 +1352,12 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/60.png",
-		"Usages": ["HasUsedToCraft", "HasRefinedUsing", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasRefinedUsing",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1240,7 +1385,12 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/61.png",
-		"Usages": ["HasUsedToCraft", "HasRefinedUsing", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasRefinedUsing",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1268,7 +1418,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/62.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1296,7 +1450,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/63.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsRewardFromShipScrap"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1324,7 +1482,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/64.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1352,7 +1514,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/65.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsEggIngredient"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1380,7 +1546,11 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/66.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsRewardFromShipScrap"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1441,7 +1611,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/68.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1469,7 +1642,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/69.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1497,7 +1673,10 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/70.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1805,7 +1984,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/79.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1837,7 +2018,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/80.png",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 1,
@@ -1869,7 +2052,10 @@
 		"MaxStackSize": 20.0,
 		"Colour": "0063B7",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/81.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1887,7 +2073,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "1E2328",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/82.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1905,7 +2094,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "1E2328",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/83.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1923,7 +2115,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "1E2328",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/84.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1941,7 +2136,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "1E2328",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/85.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1959,7 +2157,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "1E2328",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/86.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1977,7 +2178,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "1E2328",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/87.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -1995,7 +2199,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "1E2328",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/88.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2013,7 +2220,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "1E2328",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/89.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2031,7 +2241,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/90.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2062,7 +2275,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/91.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2093,7 +2309,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/92.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2124,7 +2343,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/93.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2151,7 +2373,10 @@
 		"CurrencyType": "Credits",
 		"Colour": "311A49",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/94.png",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2168,7 +2393,10 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2185,7 +2413,10 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2202,7 +2433,10 @@
 		"BaseValueUnits": 1616.0,
 		"CurrencyType": "Credits",
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2221,7 +2455,11 @@
 		"MaxStackSize": 150.0,
 		"Colour": "CCCCCC",
 		"CdnUrl": "https://cdn.nmsassistant.com/products/98.png",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2239,8 +2477,12 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 10.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
-		"BlueprintCost": 1,
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 213,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
@@ -2257,7 +2499,9 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2275,7 +2519,9 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2293,7 +2539,9 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "CCCCCC",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2311,13 +2559,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Investigate packet contents"]
+		"ConsumableRewardTexts": [
+			"Investigate packet contents"
+		]
 	},
 	{
 		"Id": "prod111",
@@ -2329,13 +2583,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Investigate packet contents"]
+		"ConsumableRewardTexts": [
+			"Investigate packet contents"
+		]
 	},
 	{
 		"Id": "prod112",
@@ -2347,13 +2607,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Investigate packet contents"]
+		"ConsumableRewardTexts": [
+			"Investigate packet contents"
+		]
 	},
 	{
 		"Id": "prod113",
@@ -2365,7 +2631,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -2396,7 +2666,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -2427,7 +2701,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -2454,7 +2732,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -2485,7 +2767,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 10.0,
 		"Colour": "F3A923",
-		"Usages": ["HasUsedToCraft", "HasDevProperties", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasUsedToCraft",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "FactoryOverride",
 		"BlueprintSource": 0,
@@ -2516,13 +2802,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 25.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Break geode down into usable materials"]
+		"ConsumableRewardTexts": [
+			"Break geode down into usable materials"
+		]
 	},
 	{
 		"Id": "prod120",
@@ -2534,7 +2826,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2552,7 +2847,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2570,7 +2868,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2588,7 +2889,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2606,7 +2910,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2624,7 +2931,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2642,7 +2952,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2660,7 +2973,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2678,7 +2994,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2696,7 +3015,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2714,7 +3036,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2732,7 +3057,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2750,7 +3078,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2768,7 +3099,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2786,7 +3120,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2804,7 +3141,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2822,7 +3162,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2840,7 +3183,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2858,7 +3204,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2876,7 +3225,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2894,7 +3246,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2912,7 +3267,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2930,7 +3288,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2948,7 +3309,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2966,7 +3330,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -2984,7 +3351,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3002,7 +3372,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3020,7 +3393,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3038,13 +3414,19 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 20.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Convert data to Exosuit navigation marker"]
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
 	},
 	{
 		"Id": "prod151",
@@ -3055,7 +3437,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3072,7 +3458,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3089,7 +3479,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3106,7 +3500,11 @@
 		"BaseValueUnits": 16.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3123,7 +3521,12 @@
 		"BaseValueUnits": 35000.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3140,7 +3543,12 @@
 		"BaseValueUnits": 35000.0,
 		"CurrencyType": "Credits",
 		"Colour": "4D2957",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsEggIngredient", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsEggIngredient",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3157,7 +3565,11 @@
 		"BaseValueUnits": 3280.0,
 		"CurrencyType": "Credits",
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3176,7 +3588,9 @@
 			}
 		],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": ["Attract a deep-space sentience"]
+		"ConsumableRewardTexts": [
+			"Attract a deep-space sentience"
+		]
 	},
 	{
 		"Id": "prod161",
@@ -3188,7 +3602,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3206,7 +3623,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3224,7 +3644,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3242,7 +3665,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3260,7 +3686,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3278,7 +3707,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3296,7 +3728,10 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3337,7 +3772,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
-		"Usages": ["HasDevProperties", "IsConsumable", "IsAddedInTrackedUpdate"],
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3355,7 +3794,9 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3383,7 +3824,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3411,7 +3854,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3438,7 +3883,9 @@
 		"CurrencyType": "Credits",
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3466,7 +3913,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3493,7 +3942,9 @@
 		"CurrencyType": "Credits",
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3516,7 +3967,9 @@
 		"CurrencyType": "Credits",
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3547,7 +4000,9 @@
 		"CurrencyType": "Credits",
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3571,7 +4026,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3599,7 +4056,9 @@
 		"MaxStackSize": 5.0,
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3626,7 +4085,9 @@
 		"CurrencyType": "Credits",
 		"Colour": "F3A923",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,
@@ -3653,7 +4114,9 @@
 		"CurrencyType": "Credits",
 		"Colour": "095C77",
 		"Power": 1.0,
-		"Usages": ["HasDevProperties"],
+		"Usages": [
+			"HasDevProperties"
+		],
 		"BlueprintCost": 3,
 		"BlueprintCostType": "SalvagedData",
 		"BlueprintSource": 0,

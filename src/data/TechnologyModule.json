@@ -3303,7 +3303,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/59.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3355,7 +3357,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/60.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3407,7 +3411,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/61.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3459,7 +3465,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/62.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3562,7 +3570,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/63.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3590,7 +3600,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/64.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3618,7 +3630,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/65.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3654,7 +3668,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/66.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3725,7 +3741,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/67.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3753,7 +3771,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/68.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3781,7 +3801,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/69.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3809,7 +3831,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/70.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3864,7 +3888,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/71.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3908,7 +3934,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/72.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3952,7 +3980,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/73.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -3996,7 +4026,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/74.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4083,7 +4115,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/75.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4119,7 +4153,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/76.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4155,7 +4191,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/77.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4191,7 +4229,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/78.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4262,7 +4302,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/79.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4306,7 +4348,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/80.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4350,7 +4394,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/81.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4394,7 +4440,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/82.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4481,7 +4529,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/83.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4525,7 +4575,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/84.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4569,7 +4621,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/85.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4613,7 +4667,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/86.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4700,7 +4756,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/87.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4744,7 +4802,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/88.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4788,7 +4848,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/89.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -4832,7 +4894,9 @@
 		"CurrencyType": "None",
 		"Colour": "2177C8",
 		"CdnUrl": "https://cdn.nmsassistant.com/upgradeModules/90.png",
-		"Usages": ["IsRewardFromShipScrap"],
+		"Usages": [
+			"IsRewardFromShipScrap"
+		],
 		"BlueprintCost": 0,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
@@ -7409,6 +7473,75 @@
 		"MaxStackSize": 5.0,
 		"Colour": "1A2733",
 		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"NumStatsMin": 2,
+		"NumStatsMax": 4,
+		"ProceduralStatBonuses": [
+			{
+				"AlwaysChoose": false,
+				"Name": "Shield Strength",
+				"LocaleKeyTemplate": "percentage",
+				"Image": "shieldStrength",
+				"MinValue": "10",
+				"MaxValue": "35"
+			},
+			{
+				"AlwaysChoose": false,
+				"Name": "Core Health",
+				"LocaleKeyTemplate": "defaultTemplate",
+				"Image": "prot",
+				"MinValue": "20",
+				"MaxValue": "20"
+			},
+			{
+				"AlwaysChoose": false,
+				"Name": "Life Support Tanks",
+				"LocaleKeyTemplate": "percentage",
+				"Image": "recovery",
+				"MinValue": "5",
+				"MaxValue": "110"
+			},
+			{
+				"AlwaysChoose": false,
+				"Name": "Solar Panel Power",
+				"LocaleKeyTemplate": "percentage",
+				"Image": "recovery",
+				"MinValue": "101",
+				"MaxValue": "175"
+			},
+			{
+				"AlwaysChoose": false,
+				"Name": "Fuel Efficiency",
+				"LocaleKeyTemplate": "percentage",
+				"Image": "recovery",
+				"MinValue": "70",
+				"MaxValue": "95"
+			},
+			{
+				"AlwaysChoose": false,
+				"Name": "Sprint Distance",
+				"LocaleKeyTemplate": "percentage",
+				"Image": "recharge",
+				"MinValue": "10",
+				"MaxValue": "60"
+			}
+		]
+	},
+	{
+		"Id": "tMod178",
+		"Icon": "other/404.png",
+		"Name": "Exosuit",
+		"Group": "Salvaged Upgrade Components",
+		"Description": "A salvaged upgrade for the Exosuit. Use FE_ALT1 to begin upgrade installation process.\n\nConstructed by the Autophage, this technology package is the result of a high degree of engineering improvisation. As a one-of-a-kind piece of repurposed technology, its exact effect upon suit performance is hard to determine prior to installation within the Exosuit's systems.",
+		"BaseValueUnits": 480.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "2177C8",
+		"Usages": [
+			"IsAddedInTrackedUpdate"
+		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
