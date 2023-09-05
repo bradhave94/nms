@@ -10,14 +10,14 @@ const { card, hide, index } = Astro.props;
 		href={card.link}
 		class="flex flex-wrap flex-col 2xl:flex-row transition border border-black hover:border-orange-500 bg-black rounded-md overflow-hidden h-full"
 	>
-		<div class="sm:basis-56">
+		<div class="sm:basis-40">
 			<Image
 				class="aspect-square h-full w-full object-contain p-1"
 				src={card.image}
 				alt={card.name}
-				sizes="255px"
-				width={256}
-				height={256}
+				sizes="200px"
+				width={200}
+				height={200}
 			/>
 		</div>
 
