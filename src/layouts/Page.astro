@@ -10,7 +10,7 @@ const item: Item = Astro.props.item;
 
 let rawItems = [];
 
-const createArray = (item: Item) => {
+const createArray = (item: Item, num) => {
 	const array = [];
 
 	for (let i = 0; i < item.RequiredItems?.length; i++) {
@@ -19,7 +19,7 @@ const createArray = (item: Item) => {
 		if (itemData == undefined) return;
 		let RequiredItems: Array<any> = itemData.RequiredItems || [];
 		if (itemData.RequiredItems?.length) {
-			RequiredItems = createArray(itemData);
+			RequiredItems = createArray(itemData, item2.Quantity);
 		} else {
 			let record = rawItems.find((r: Item) => r.Name === itemData.Name);
 			if (!record) {
@@ -28,7 +28,8 @@ const createArray = (item: Item) => {
 					Name: itemData.Name,
 					Icon: itemData.Icon,
 					Colour: itemData.Colour,
-					Quantity: item2.Quantity,
+					Quantity: item2.Quantity * num,
+					itemData: num
 				});
 			} else {
 				let index = rawItems.indexOf(record);
