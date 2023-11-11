@@ -38,7 +38,7 @@ const { cell } = Astro.props;
 				<div style={'background: #' + cell.colour}>
 					<span>
 						{cell.name}
-						{cell.amount != undefined ? <span class="amount">x{cell.amount}</span> : null}
+						{cell.amount != undefined ? <span class="amount"> x{cell.amount}</span> : null}
 					</span>
 					{cell.image != undefined ? (
 						<Image
