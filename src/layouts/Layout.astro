@@ -2,7 +2,6 @@
 import '../assets/css/main.css';
 import { SITE } from '@config';
 import { inject } from '@vercel/analytics';
-import { ViewTransitions } from 'astro:transitions';
 
 import Sidebar from '@layouts/Sidebar.jsx';
 import Search from '@components/Search.astro';
@@ -51,8 +50,6 @@ inject();
 		<meta property="twitter:url" content={canonicalURL} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
-
-		<ViewTransitions />
 
 		<link
 			rel="preload"
