@@ -5,7 +5,7 @@ export const SITE = {
     author: "Bradley Haveman",
     desc: "Unlock new possibilities in No Man's Sky with our comprehensive list of in game items and recipes. From rare resources to exotic ingredients, our guide has everything you need to take your game to the next level. Discover the secrets of the universe today!",
     title: "No Man's Sky Recipes",
-    version: 4.3,
-    version_name: "Singularity",
-    version_link: "https://www.nomanssky.com/2023/06/expedition-ten-singularity/",
+    version: 4.6,
+    version_name: "Orbital",
+    version_link: "https://www.nomanssky.com/orbital-update/",
 };

@@ -568,7 +568,7 @@
 		"Id": "tech15",
 		"Icon": "rawMaterials/4.png",
 		"Name": "Star Seed",
-		"Group": "Priceless Fragment",
+		"Group": "Cosmic Brand",
 		"Description": "The smallest of sparks, housed within a containment field of unknown origins.\n\nThe seed glows with life, desperate to escape and fulfill its potential.",
 		"BaseValueUnits": 1.0,
 		"CurrencyType": "None",
@@ -1408,7 +1408,7 @@
 		"Icon": "technology/37.png",
 		"Name": "Photon Cannon",
 		"Group": "Starship Projectile Weapon",
-		"Description": "A destructive starship projectile launcher, the weapons system for choice for the interstellar trader and pirate alike.\n\nUse CYCLEWEAPON to change weapon mode. Press SHIPFIRE to fire.",
+		"Description": "A destructive starship projectile launcher, the weapons system of choice for the interstellar trader and pirate alike.\n\nUse CYCLEWEAPON to change weapon mode. Press SHIPFIRE to fire.",
 		"BaseValueUnits": 1.0,
 		"CurrencyType": "None",
 		"Colour": "095C77",
@@ -1479,7 +1479,7 @@
 		"Icon": "technology/39.png",
 		"Name": "Economy Scanner",
 		"Group": "Long-range Sensor Technology",
-		"Description": "An upgrade to the starship's galactic-scale sensors. This device allows the user to access detailed economic data about a system without having to visit.",
+		"Description": "An upgrade to the starship's galactic-scale sensors. This device allows the user to access detailed economic data about a system without having to visit. See collected data automatically on the Galaxy Map.\n\nActive the scanner's internal Trade Computer with FE_ALT1 to search for highly-profitable trading surge events.",
 		"BaseValueUnits": 1.0,
 		"CurrencyType": "None",
 		"Colour": "095C77",
@@ -7060,7 +7060,7 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason4Reward"
+			"IsExpeditionSeason04ReduxReward"
 		],
 		"BlueprintCost": 90,
 		"BlueprintCostType": "None",
@@ -7101,7 +7101,7 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason4Reward"
+			"IsExpeditionSeason04ReduxReward"
 		],
 		"BlueprintCost": 90,
 		"BlueprintCostType": "None",
@@ -8078,7 +8078,8 @@
 		"Colour": "1A2733",
 		"Usages": [
 			"HasDevProperties",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason06ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -8164,7 +8165,8 @@
 		"Colour": "1A2733",
 		"Usages": [
 			"HasDevProperties",
-			"IsExpeditionSeason7Reward"
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -8805,7 +8807,7 @@
 	},
 	{
 		"Id": "tech237",
-		"Icon": "technology/235.png",
+		"Icon": "technology/237.png",
 		"Name": "Sentience Resistor",
 		"Group": "Incomplete Sentinel Salvage",
 		"Description": "This Multi-Tool is a piece of hybrid technology, a fusion of crude scrap and a deep, powerful energy - part salvage, part Sentinel, part something undefinable...\n\nThis process of recycled fusion was incomplete when this tool was acquired. Use REPAIR to continue repair operations and free this slot for general use.",
@@ -8830,7 +8832,7 @@
 	},
 	{
 		"Id": "tech238",
-		"Icon": "technology/232.png",
+		"Icon": "technology/238.png",
 		"Name": "Discordant Prism",
 		"Group": "Incomplete Sentinel Salvage",
 		"Description": "This Multi-Tool is a piece of hybrid technology, a fusion of crude scrap and a deep, powerful energy - part salvage, part Sentinel, part something undefinable...\n\nThis process of recycled fusion was incomplete when this tool was acquired. Use REPAIR to continue repair operations and free this slot for general use.",
@@ -8855,7 +8857,7 @@
 	},
 	{
 		"Id": "tech239",
-		"Icon": "technology/234.png",
+		"Icon": "technology/239.png",
 		"Name": "Corrupted Lens",
 		"Group": "Incomplete Sentinel Salvage",
 		"Description": "This Multi-Tool is a piece of hybrid technology, a fusion of crude scrap and a deep, powerful energy - part salvage, part Sentinel, part something undefinable...\n\nThis process of recycled fusion was incomplete when this tool was acquired. Use REPAIR to continue repair operations and free this slot for general use.",
@@ -8884,7 +8886,7 @@
 	},
 	{
 		"Id": "tech240",
-		"Icon": "technology/231.png",
+		"Icon": "technology/240.png",
 		"Name": "Drained Power Core",
 		"Group": "Incomplete Sentinel Salvage",
 		"Description": "This Multi-Tool is a piece of hybrid technology, a fusion of crude scrap and a deep, powerful energy - part salvage, part Sentinel, part something undefinable...\n\nThis process of recycled fusion was incomplete when this tool was acquired. Use REPAIR to continue repair operations and free this slot for general use.",
@@ -9519,6 +9521,240 @@
 			{
 				"Id": "raw2",
 				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech260",
+		"Icon": "technology/260.png",
+		"Name": "Mark of the Denier",
+		"Group": "Cosmic Brand",
+		"Description": "A tiny mote of stardust, no more than a speck. On closer examination, its surface is all crystalline shards and distorted crimson geometry.\n\nIt flickers with pent-up energy, demanding to be free.\n\nEmpower the mark as you discover systems, planets and objects across the universe.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2177C8",
+		"Usages": [
+			"HasChargedBy",
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw7",
+				"Quantity": 16
+			},
+			{
+				"Id": "raw33",
+				"Quantity": 16
+			},
+			{
+				"Id": "raw34",
+				"Quantity": 16
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech261",
+		"Icon": "technology/261.png",
+		"Name": "Hull Fracture",
+		"Group": "Damaged Starship Component",
+		"Description": "Starship subsystem severely damaged. Slot cannot be used for storage or technology until damage is repaired. Use REPAIR to begin repair process.\n\nCore starship functionality is not affected. Repairing this damage will free slot up for general inventory use.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "7B0000",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 80
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech262",
+		"Icon": "technology/262.png",
+		"Name": "Rusted Circuits",
+		"Group": "Damaged Starship Component",
+		"Description": "Starship subsystem severely damaged. Slot cannot be used for storage or technology until damage is repaired. Use REPAIR to begin repair process.\n\nCore starship functionality is not affected. Repairing this damage will free slot up for general inventory use.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "7B0000",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw19",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech263",
+		"Icon": "technology/263.png",
+		"Name": "Hydraulics Damage",
+		"Group": "Damaged Starship Component",
+		"Description": "Starship subsystem severely damaged. Slot cannot be used for storage or technology until damage is repaired. Use REPAIR to begin repair process.\n\nCore starship functionality is not affected. Repairing this damage will free slot up for general inventory use.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "7B0000",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw2",
+				"Quantity": 45
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech264",
+		"Icon": "technology/264.png",
+		"Name": "Corroded Tanks",
+		"Group": "Damaged Starship Component",
+		"Description": "Starship subsystem severely damaged. Slot cannot be used for storage or technology until damage is repaired. Use REPAIR to begin repair process.\n\nCore starship functionality is not affected. Repairing this damage will free slot up for general inventory use.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "7B0000",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw3",
+				"Quantity": 35
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech265",
+		"Icon": "technology/265.png",
+		"Name": "Corrupt Module",
+		"Group": "Damaged Multi-Tool Component",
+		"Description": "Multi-Tool subsystem critically damaged.\n\nSlot cannot be used until damage is repaired. Use REPAIR to begin repair process.\n\nRepairing will free slot up for general use.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "7B0000",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw32",
+				"Quantity": 60
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech266",
+		"Icon": "technology/266.png",
+		"Name": "Loom Damage",
+		"Group": "Damaged Multi-Tool Component",
+		"Description": "Multi-Tool subsystem critically damaged.\n\nSlot cannot be used until damage is repaired. Use REPAIR to begin repair process.\n\nRepairing will free slot up for general use.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "7B0000",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod3",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech267",
+		"Icon": "technology/267.png",
+		"Name": "Burnt-Out Terminal",
+		"Group": "Damaged Multi-Tool Component",
+		"Description": "Multi-Tool subsystem critically damaged.\n\nSlot cannot be used until damage is repaired. Use REPAIR to begin repair process.\n\nRepairing will free slot up for general use.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "7B0000",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw13",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech268",
+		"Icon": "technology/268.png",
+		"Name": "Failed Resistor",
+		"Group": "Damaged Multi-Tool Component",
+		"Description": "Multi-Tool subsystem critically damaged.\n\nSlot cannot be used until damage is repaired. Use REPAIR to begin repair process.\n\nRepairing will free slot up for general use.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "7B0000",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw5",
+				"Quantity": 50
 			}
 		],
 		"StatBonuses": [],

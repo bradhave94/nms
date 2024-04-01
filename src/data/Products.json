@@ -461,7 +461,7 @@
 		"Icon": "products/17.png",
 		"Name": "Warp Cell",
 		"Group": "Hyperdrive Charging Unit",
-		"Description": "This antimatter-based fuel is one of the few power sources capable of meeting the incredible energy requirements of a starship hyperdrive.\n\nSecured within a robust housing, the cell is guarenteed paradox-free during FTL travel.",
+		"Description": "This antimatter-based fuel is one of the few power sources capable of meeting the incredible energy requirements of a starship hyperdrive.\n\nSecured within a robust housing, the cell is guaranteed paradox-free during FTL travel.",
 		"BaseValueUnits": 46750.0,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 10.0,
@@ -3752,7 +3752,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward",
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -4130,6 +4131,86 @@
 				"Quantity": 20
 			}
 		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "prod182",
+		"Icon": "products/182.png",
+		"Name": "C-Class Reactor",
+		"Group": "Starship Generator",
+		"Description": "A starship subcomponent - the reactor core. The basic generator unit is capable of powering a C-Class starship.\n\nAcquire starship components by breaking down existing ships at the Starship Outfitting unit aboard any space station. Visit the Starship Fabricator to design and assemble a new vessel.",
+		"BaseValueUnits": 300.0,
+		"CurrencyType": "Nanites",
+		"MaxStackSize": 5.0,
+		"Colour": "311A49",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "prod183",
+		"Icon": "products/183.png",
+		"Name": "B-Class Reactor",
+		"Group": "Improved Starship Generator",
+		"Description": "A starship subcomponent - the reactor core. The upgraded generator unit is capable of powering a B-Class starship.\n\nAcquire starship components by breaking down existing ships at the Starship Outfitting unit aboard any space station. Visit the Starship Fabricator to design and assemble a new vessel.",
+		"BaseValueUnits": 3000.0,
+		"CurrencyType": "Nanites",
+		"MaxStackSize": 5.0,
+		"Colour": "311A49",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "prod184",
+		"Icon": "products/184.png",
+		"Name": "A-Class Reactor",
+		"Group": "Powerful Starship Generator",
+		"Description": "A starship subcomponent - the reactor core. The advanced generator unit is capable of powering an A-Class starship.\n\nAcquire starship components by breaking down existing ships at the Starship Outfitting unit aboard any space station. Visit the Starship Fabricator to design and assemble a new vessel.",
+		"BaseValueUnits": 6500.0,
+		"CurrencyType": "Nanites",
+		"MaxStackSize": 5.0,
+		"Colour": "311A49",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "prod185",
+		"Icon": "products/185.png",
+		"Name": "S-Class Reactor",
+		"Group": "Supreme Starship Generator",
+		"Description": "A starship subcomponent - the reactor core. The exceptional generator unit is capable of powering an S-Class starship.\n\nAcquire starship components by breaking down existing ships at the Starship Outfitting unit aboard any space station. Visit the Starship Fabricator to design and assemble a new vessel.",
+		"BaseValueUnits": 12000.0,
+		"CurrencyType": "Nanites",
+		"MaxStackSize": 5.0,
+		"Colour": "311A49",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": []
 	}

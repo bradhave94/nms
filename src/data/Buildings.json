@@ -2865,12 +2865,8 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [
 			{
-				"Id": "raw2",
-				"Quantity": 5
-			},
-			{
-				"Id": "trade26",
-				"Quantity": 1
+				"Id": "raw1",
+				"Quantity": 15
 			}
 		],
 		"StatBonuses": [],
@@ -2894,12 +2890,8 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [
 			{
-				"Id": "raw9",
-				"Quantity": 5
-			},
-			{
-				"Id": "trade26",
-				"Quantity": 1
+				"Id": "raw1",
+				"Quantity": 15
 			}
 		],
 		"StatBonuses": [],
@@ -2923,12 +2915,8 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [
 			{
-				"Id": "raw9",
-				"Quantity": 5
-			},
-			{
-				"Id": "trade26",
-				"Quantity": 1
+				"Id": "raw1",
+				"Quantity": 15
 			}
 		],
 		"StatBonuses": [],
@@ -8796,7 +8784,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason2Reward"
+			"IsExpeditionSeason02Reward",
+			"IsExpeditionSeason02ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -8818,7 +8807,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason2Reward"
+			"IsExpeditionSeason02Reward",
+			"IsExpeditionSeason02ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -8845,7 +8835,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason3Reward",
+			"IsExpeditionSeason03Reward",
+			"IsExpeditionSeason03ReduxReward",
 			"IsTwitchCampaign3Reward"
 		],
 		"BlueprintCost": 1,
@@ -8873,7 +8864,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason3Reward"
+			"IsExpeditionSeason03Reward",
+			"IsExpeditionSeason03ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -8900,7 +8892,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason3Reward",
+			"IsExpeditionSeason03Reward",
+			"IsExpeditionSeason03ReduxReward",
 			"IsTwitchCampaign3Reward"
 		],
 		"BlueprintCost": 1,
@@ -8928,7 +8921,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason3Reward",
+			"IsExpeditionSeason03Reward",
+			"IsExpeditionSeason03ReduxReward",
 			"IsTwitchCampaign3Reward"
 		],
 		"BlueprintCost": 1,
@@ -8956,7 +8950,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason3Reward",
+			"IsExpeditionSeason03Reward",
+			"IsExpeditionSeason03ReduxReward",
 			"IsTwitchCampaign3Reward"
 		],
 		"BlueprintCost": 1,
@@ -15801,7 +15796,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason3Reward",
+			"IsExpeditionSeason03Reward",
+			"IsExpeditionSeason03ReduxReward",
 			"IsTwitchCampaign7Reward"
 		],
 		"BlueprintCost": 1,
@@ -15837,7 +15833,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason3Reward",
+			"IsExpeditionSeason03Reward",
+			"IsExpeditionSeason03ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -16863,7 +16860,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason5Reward",
+			"IsExpeditionSeason05Reward",
+			"IsExpeditionSeason05ReduxReward",
 			"IsTwitchCampaign7Reward"
 		],
 		"BlueprintCost": 1,
@@ -16886,7 +16884,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason5Reward",
+			"IsExpeditionSeason05Reward",
+			"IsExpeditionSeason05ReduxReward",
 			"IsTwitchCampaign5Reward"
 		],
 		"BlueprintCost": 1,
@@ -16914,7 +16913,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason5Reward",
+			"IsExpeditionSeason05Reward",
+			"IsExpeditionSeason05ReduxReward",
 			"IsTwitchCampaign4Reward"
 		],
 		"BlueprintCost": 1,
@@ -16942,7 +16942,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason5Reward",
+			"IsExpeditionSeason05Reward",
+			"IsExpeditionSeason05ReduxReward",
 			"IsTwitchCampaign4Reward"
 		],
 		"BlueprintCost": 1,
@@ -17083,7 +17084,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward",
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward",
 			"IsTwitchCampaign5Reward"
 		],
 		"BlueprintCost": 1,
@@ -17111,7 +17113,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward",
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -17139,7 +17142,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward",
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -18498,7 +18502,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason8Reward",
+			"IsExpeditionSeason08Reward",
+			"IsExpeditionSeason08ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -18526,7 +18531,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason8Reward",
+			"IsExpeditionSeason08Reward",
+			"IsExpeditionSeason08ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -18554,7 +18560,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason8Reward",
+			"IsExpeditionSeason08Reward",
+			"IsExpeditionSeason08ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -18828,7 +18835,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -18943,7 +18951,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason8Reward",
+			"IsExpeditionSeason08Reward",
+			"IsExpeditionSeason08ReduxReward",
 			"IsTwitchCampaign7Reward"
 		],
 		"BlueprintCost": 1,
@@ -18975,7 +18984,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason8Reward"
+			"IsExpeditionSeason08Reward",
+			"IsExpeditionSeason08ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19006,7 +19016,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason8Reward"
+			"IsExpeditionSeason08Reward",
+			"IsExpeditionSeason08ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19037,7 +19048,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason8Reward"
+			"IsExpeditionSeason08Reward",
+			"IsExpeditionSeason08ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19064,7 +19076,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason8Reward"
+			"IsExpeditionSeason08Reward",
+			"IsExpeditionSeason08ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19086,7 +19099,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward",
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward",
 			"IsTwitchCampaign7Reward"
 		],
 		"BlueprintCost": 1,
@@ -19288,7 +19302,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason1Reward"
+			"IsExpeditionSeason01Reward",
+			"IsExpeditionSeason01ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19315,8 +19330,10 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason1Reward",
-			"IsExpeditionSeason2Reward"
+			"IsExpeditionSeason01Reward",
+			"IsExpeditionSeason02Reward",
+			"IsExpeditionSeason01ReduxReward",
+			"IsExpeditionSeason02ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19338,8 +19355,10 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason1Reward",
-			"IsExpeditionSeason2Reward"
+			"IsExpeditionSeason01Reward",
+			"IsExpeditionSeason02Reward",
+			"IsExpeditionSeason01ReduxReward",
+			"IsExpeditionSeason02ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19361,8 +19380,10 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason1Reward",
-			"IsExpeditionSeason2Reward"
+			"IsExpeditionSeason01Reward",
+			"IsExpeditionSeason02Reward",
+			"IsExpeditionSeason01ReduxReward",
+			"IsExpeditionSeason02ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19384,7 +19405,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason1Reward"
+			"IsExpeditionSeason01Reward",
+			"IsExpeditionSeason01ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19454,7 +19476,9 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason3Reward"
+			"IsExpeditionSeason03Reward",
+			"IsExpeditionSeason03ReduxReward",
+			"IsExpeditionSeason03Redux2Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19481,7 +19505,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19508,7 +19533,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19535,7 +19561,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19562,7 +19589,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19589,7 +19617,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19616,7 +19645,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19839,7 +19869,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason4Reward"
+			"IsExpeditionSeason04Reward",
+			"IsExpeditionSeason04ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19861,7 +19892,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason4Reward"
+			"IsExpeditionSeason04Reward",
+			"IsExpeditionSeason04ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19888,7 +19920,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason4Reward",
+			"IsExpeditionSeason04Reward",
+			"IsExpeditionSeason04ReduxReward",
 			"IsTwitchCampaign6Reward",
 			"IsTwitchCampaign7Reward"
 		],
@@ -19917,7 +19950,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason5Reward"
+			"IsExpeditionSeason05Reward",
+			"IsExpeditionSeason05ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -19944,7 +19978,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign5Reward"
 		],
 		"BlueprintCost": 1,
@@ -19972,7 +20007,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign5Reward"
 		],
 		"BlueprintCost": 1,
@@ -20000,7 +20036,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign5Reward"
 		],
 		"BlueprintCost": 1,
@@ -20028,7 +20065,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -20056,7 +20094,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -20084,7 +20123,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -20112,7 +20152,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -20140,7 +20181,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign6Reward"
 		],
 		"BlueprintCost": 1,
@@ -20168,7 +20210,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward",
 			"IsTwitchCampaign7Reward"
 		],
 		"BlueprintCost": 1,
@@ -20196,7 +20239,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward"
+			"IsExpeditionSeason06Reward",
+			"IsExpeditionSeason06ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -20442,7 +20486,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward"
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -20932,7 +20977,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21041,7 +21087,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21068,7 +21115,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21095,7 +21143,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason9Reward"
+			"IsExpeditionSeason09Reward",
+			"IsExpeditionSeason09ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21122,7 +21171,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason9Reward"
+			"IsExpeditionSeason09Reward",
+			"IsExpeditionSeason09ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21149,7 +21199,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason9Reward"
+			"IsExpeditionSeason09Reward",
+			"IsExpeditionSeason09ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21176,7 +21227,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason9Reward"
+			"IsExpeditionSeason09Reward",
+			"IsExpeditionSeason09ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21207,7 +21259,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason9Reward"
+			"IsExpeditionSeason09Reward",
+			"IsExpeditionSeason09ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21234,7 +21287,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21315,7 +21369,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21342,7 +21397,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21369,7 +21425,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsQuicksilver",
-			"IsAddedInTrackedUpdate"
+			"IsAddedInTrackedUpdate",
+			"IsTwitchCampaign8Reward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21396,7 +21453,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason10Reward"
+			"IsExpeditionSeason10Reward",
+			"IsExpeditionSeason10ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21423,7 +21481,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason10Reward"
+			"IsExpeditionSeason10Reward",
+			"IsExpeditionSeason10ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21450,7 +21509,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason10Reward"
+			"IsExpeditionSeason10Reward",
+			"IsExpeditionSeason10ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21477,7 +21537,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason10Reward"
+			"IsExpeditionSeason10Reward",
+			"IsExpeditionSeason10ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21504,7 +21565,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason10Reward"
+			"IsExpeditionSeason10Reward",
+			"IsExpeditionSeason10ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21531,7 +21593,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason10Reward"
+			"IsExpeditionSeason10Reward",
+			"IsExpeditionSeason10ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21558,7 +21621,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason10Reward"
+			"IsExpeditionSeason10Reward",
+			"IsExpeditionSeason10ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21584,7 +21648,8 @@
 		"Colour": "2C7C9F",
 		"Usages": [
 			"HasDevProperties",
-			"IsExpeditionSeason10Reward"
+			"IsExpeditionSeason10Reward",
+			"IsExpeditionSeason10ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21606,7 +21671,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21633,7 +21699,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21660,7 +21727,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21687,7 +21755,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21714,7 +21783,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21741,7 +21811,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -21768,7 +21839,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -22257,7 +22329,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -22279,7 +22352,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -22301,7 +22375,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -22323,7 +22398,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason11Reward"
+			"IsExpeditionSeason11Reward",
+			"IsExpeditionSeason11ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -22339,11 +22415,12 @@
 		"Group": "Unlockable Decoration",
 		"Description": "An exclusive buildable base ornament, sculpted from ice.\nThis statue depicts a primitive ancient creature, sought after by many early explorers.",
 		"BaseValueUnits": 500.0,
-		"CurrencyType": "None",
+		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
 		"Usages": [
 			"HasDevProperties",
+			"IsQuicksilver",
 			"IsAddedInTrackedUpdate"
 		],
 		"BlueprintCost": 1,
@@ -22369,41 +22446,12 @@
 		"Group": "Unlockable Decoration",
 		"Description": "An exclusive buildable base ornament, sculpted from ice.\nThis statue depicts a long-necked quadrupedal species.",
 		"BaseValueUnits": 500.0,
-		"CurrencyType": "None",
+		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
 		"Usages": [
 			"HasDevProperties",
-			"IsAddedInTrackedUpdate"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "raw9",
-				"Quantity": 30
-			},
-			{
-				"Id": "raw43",
-				"Quantity": 10
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": []
-	},
-	{
-		"Id": "build1060",
-		"Icon": "building/1060.png",
-		"Name": "Ice Minotaur Statue",
-		"Group": "Unlockable Decoration",
-		"Description": "An exclusive buildable base ornament, sculpted from ice.\nThis statue depicts the hefty Minotaur Exo-Mech.",
-		"BaseValueUnits": 500.0,
-		"CurrencyType": "None",
-		"MaxStackSize": 5.0,
-		"Colour": "2C7C9F",
-		"Usages": [
-			"HasDevProperties",
+			"IsQuicksilver",
 			"IsAddedInTrackedUpdate"
 		],
 		"BlueprintCost": 1,
@@ -22591,11 +22639,12 @@
 		"Group": "Decoration",
 		"Description": "An exclusive placeable decal, to add flair and decoration to bases.\nThis decal represents the pawprints of an unidentified creature.",
 		"BaseValueUnits": 400.0,
-		"CurrencyType": "None",
+		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
 		"Usages": [
 			"HasDevProperties",
+			"IsQuicksilver",
 			"IsAddedInTrackedUpdate"
 		],
 		"BlueprintCost": 1,
@@ -22617,11 +22666,12 @@
 		"Group": "Decoration",
 		"Description": "An exclusive placeable decal, to add flair and decoration to bases.\nThis decal depicts an explorer awakening on a strange world, with no memory of how they got there...",
 		"BaseValueUnits": 400.0,
-		"CurrencyType": "None",
+		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
 		"Usages": [
 			"HasDevProperties",
+			"IsQuicksilver",
 			"IsAddedInTrackedUpdate"
 		],
 		"BlueprintCost": 1,
@@ -22643,11 +22693,12 @@
 		"Group": "Decoration",
 		"Description": "An exclusive placeable decal, to add flair and decoration to bases.\nThis decal depicts a pair of ships leaving atmosphere to explore the stars.",
 		"BaseValueUnits": 400.0,
-		"CurrencyType": "None",
+		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",
 		"Usages": [
 			"HasDevProperties",
+			"IsQuicksilver",
 			"IsAddedInTrackedUpdate"
 		],
 		"BlueprintCost": 1,
@@ -22723,6 +22774,1182 @@
 		"Group": "Decoration",
 		"Description": "Heavy machinery, for lifting and relocating heavy cargo. Despite the crane's size, the rotation-resistant hoist rope and AI-corrected swivel allow for extremely precise movements.",
 		"BaseValueUnits": 800.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1073",
+		"Icon": "building/1073.png",
+		"Name": "Ice Gek Statue",
+		"Group": "Unlockable Decoration",
+		"Description": "An exclusive buildable base ornament, sculpted from ice.\nThis statue depicts a Gek gesturing towards the sky.",
+		"BaseValueUnits": 500.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 30
+			},
+			{
+				"Id": "raw43",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1074",
+		"Icon": "building/1074.png",
+		"Name": "Ice Fighter Statue",
+		"Group": "Unlockable Decoration",
+		"Description": "An exclusive buildable base ornament, sculpted from ice.\nThis statue depicts the iconic starship Alpha Vector.",
+		"BaseValueUnits": 500.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 30
+			},
+			{
+				"Id": "raw43",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1075",
+		"Icon": "building/1075.png",
+		"Name": "Ice Walker Statue",
+		"Group": "Unlockable Decoration",
+		"Description": "An exclusive buildable base ornament, sculpted from ice.\nThis statue depicts the Sentinel Walker, an advanced combat unit.",
+		"BaseValueUnits": 500.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 30
+			},
+			{
+				"Id": "raw43",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1076",
+		"Icon": "building/1076.png",
+		"Name": "Ice Atlas Statue",
+		"Group": "Unlockable Decoration",
+		"Description": "An exclusive buildable base ornament, sculpted from ice.\nThis statue is a decorative replica of an Atlas Interface. Its core rotates, powered by an unknown force...",
+		"BaseValueUnits": 500.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 30
+			},
+			{
+				"Id": "raw43",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1077",
+		"Icon": "building/1077.png",
+		"Name": "Ice Astronaut Statue",
+		"Group": "Unlockable Decoration",
+		"Description": "An exclusive buildable base ornament, sculpted from ice.\nThis astronaut statue is a tribute to all galactic explorers.",
+		"BaseValueUnits": 500.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 30
+			},
+			{
+				"Id": "raw43",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1078",
+		"Icon": "building/1078.png",
+		"Name": "Red Titan Firework",
+		"Group": "Consumable Pyrotechnics Device",
+		"Description": "This exotic firework, tinted with cadmium salts, is inspired by the undulating form of the titanic sandworm. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 60.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 20.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1079",
+		"Icon": "building/1079.png",
+		"Name": "Golden Titan Firework",
+		"Group": "Consumable Pyrotechnics Device",
+		"Description": "This exotic firework, tinted with sodium salts, is inspired by the undulating form of the titanic sandworm. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 60.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 20.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1080",
+		"Icon": "building/1080.png",
+		"Name": "Green Titan Firework",
+		"Group": "Consumable Pyrotechnics Device",
+		"Description": "This exotic firework, tinted with emeril salts, is inspired by the undulating form of the titanic sandworm. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 60.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 20.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1081",
+		"Icon": "building/1081.png",
+		"Name": "Remembrance Poster",
+		"Group": "Decoration",
+		"Description": "An exclusive piece of self-adhesive, crease-proof wall art.\n\nThis poster holds the seeds of what was, what is, what could be.",
+		"BaseValueUnits": 400.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "C7C10F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason12Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1082",
+		"Icon": "building/1082.png",
+		"Name": "Interface Poster",
+		"Group": "Decoration",
+		"Description": "An exclusive piece of self-adhesive, crease-proof wall art.\n\nThis poster depicts an infinite array of Atlas Interfaces, crimson eyes staring tirelessly into the dark.",
+		"BaseValueUnits": 400.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "C7C10F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason12Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1083",
+		"Icon": "building/1083.png",
+		"Name": "Starborn Poster",
+		"Group": "Decoration",
+		"Description": "An exclusive piece of self-adhesive, crease-proof wall art.\n\nThe Traveller approaches, delicately piloting their tiny ship through the stars.\nThe Atlas, infinite, waits.",
+		"BaseValueUnits": 400.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "C7C10F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason12Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1084",
+		"Icon": "building/1084.png",
+		"Name": "Omega Decal",
+		"Group": "Decoration",
+		"Description": "An exclusive placeable decal, to add flair and decoration to bases.\n\nThis decal commemorates completion of the Omega expedition, and the memories gleaned from within the Atlas.",
+		"BaseValueUnits": 400.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate",
+			"IsExpeditionSeason12Reward"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1085",
+		"Icon": "building/1085.png",
+		"Name": "Green Wall Screen",
+		"Group": "Decoration",
+		"Description": "A decorative, wall-mountable video screen.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1086",
+		"Icon": "building/1086.png",
+		"Name": "Orange Wall Screen",
+		"Group": "Decoration",
+		"Description": "A decorative, wall-mountable video screen.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1087",
+		"Icon": "building/1087.png",
+		"Name": "Secure Archive",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1088",
+		"Icon": "building/1088.png",
+		"Name": "Fuel Canister",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1089",
+		"Icon": "building/1089.png",
+		"Name": "Orbital Storage",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 2.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1090",
+		"Icon": "building/1090.png",
+		"Name": "Storage Frame",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1091",
+		"Icon": "building/1091.png",
+		"Name": "Holographic Gek Display",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1092",
+		"Icon": "building/1092.png",
+		"Name": "Holographic Korvax Display",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1093",
+		"Icon": "building/1093.png",
+		"Name": "Holographic Vy'keen Display",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1094",
+		"Icon": "building/1094.png",
+		"Name": "Holographic Wall Display A",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1095",
+		"Icon": "building/1095.png",
+		"Name": "Holographic Wall Display B",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1096",
+		"Icon": "building/1096.png",
+		"Name": "Small Holographic Display A",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 2.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1097",
+		"Icon": "building/1097.png",
+		"Name": "Small Holographic Display B",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 2.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1098",
+		"Icon": "building/1098.png",
+		"Name": "Small Holographic Display C",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 2.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1099",
+		"Icon": "building/1099.png",
+		"Name": "Frame Lighting",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1100",
+		"Icon": "building/1100.png",
+		"Name": "Lighting Array",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1101",
+		"Icon": "building/1101.png",
+		"Name": "Plinth Light",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1102",
+		"Icon": "building/1102.png",
+		"Name": "Pillar Light",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1103",
+		"Icon": "building/1103.png",
+		"Name": "Bio-Crate",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1104",
+		"Icon": "building/1104.png",
+		"Name": "Small Planter",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1105",
+		"Icon": "building/1105.png",
+		"Name": "Server Block A",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1106",
+		"Icon": "building/1106.png",
+		"Name": "Server Block B",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1107",
+		"Icon": "building/1107.png",
+		"Name": "Data Cabinet",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1108",
+		"Icon": "building/1108.png",
+		"Name": "Power Transformer",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1109",
+		"Icon": "building/1109.png",
+		"Name": "Hydraulic Arms",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1110",
+		"Icon": "building/1110.png",
+		"Name": "Standing Sign",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1111",
+		"Icon": "building/1111.png",
+		"Name": "Station Billboard",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1112",
+		"Icon": "building/1112.png",
+		"Name": "Topographic Table",
+		"Group": "Synthetic Space Station Decoration",
+		"Description": "A decorative part designed for use in habitable bases.\n\nThis component has been fabricated in the style of one of the universe's many Space Stations.",
+		"BaseValueUnits": 8.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 8,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1113",
+		"Icon": "building/1113.png",
+		"Name": "Purple Ribbon Firework",
+		"Group": "Consumable Pyrotechnics Device",
+		"Description": "This exotic firework, sparkling with Atlantideum and antimony elements, bursts into a cluster of wildly spiralling ribbons. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 60.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 20.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1114",
+		"Icon": "building/1114.png",
+		"Name": "Blue Ribbon Firework",
+		"Group": "Consumable Pyrotechnics Device",
+		"Description": "This exotic firework, sparkling with indium and antimony elements, bursts into a cluster of wildly spiralling ribbons. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 60.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 20.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1115",
+		"Icon": "building/1115.png",
+		"Name": "Teal Ribbon Firework",
+		"Group": "Consumable Pyrotechnics Device",
+		"Description": "This exotic firework, sparkling with zinc and antimony elements, bursts into a cluster of wildly spiralling ribbons. Ignite to create glittering displays in the sky.\n\nPlace launch tube via the Build Menu (BUILD_MENU). Warning: Aim away from living creatures. Not recommended for indoor use.",
+		"BaseValueUnits": 60.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 20.0,
+		"Colour": "262626",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1116",
+		"Icon": "building/1116.png",
+		"Name": "Scrambled Signal Poster",
+		"Group": "Decoration",
+		"Description": "An exclusive piece of self-adhesive, crease-proof wall art.\nThis poster represents fragments of many long-distance communication signals between the dominant factions of the universe.",
+		"BaseValueUnits": 400.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1117",
+		"Icon": "building/1117.png",
+		"Name": "Ship Parts Poster",
+		"Group": "Decoration",
+		"Description": "An exclusive piece of self-adhesive, crease-proof wall art.\nThis poster was donated by honest ship SalesGek Bakkar. Visit their Starship component store today! Best prices for friends!",
+		"BaseValueUnits": 400.0,
+		"CurrencyType": "Quicksilver",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsQuicksilver",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "build1118",
+		"Icon": "building/1118.png",
+		"Name": "Bake Sale Poster",
+		"Group": "Decoration",
+		"Description": "An exclusive piece of self-adhesive, crease-proof wall art.\nThis poster advertises an assortment of baked goods, including a crusty bread roll and fresh stack of haunted wafers.",
+		"BaseValueUnits": 400.0,
 		"CurrencyType": "Quicksilver",
 		"MaxStackSize": 5.0,
 		"Colour": "2C7C9F",

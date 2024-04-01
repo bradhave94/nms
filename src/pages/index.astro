@@ -77,7 +77,7 @@ const cards = [
 	</p>
 
 	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-		{cards.map((card, index) => <Card card={card} index={index} />)}
+		{cards.map((card, index) => <Card card={card} index={index} loading="eager" />)}
 	</div>
 
 </Layout>

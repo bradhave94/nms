@@ -395,9 +395,11 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "383838",
+		"CookingValue": 0.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/14.png",
 		"Usages": [
 			"HasUsedToCraft",
+			"HasCookToCreate",
 			"HasDevProperties",
 			"IsEggIngredient"
 		],
@@ -495,6 +497,7 @@
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5.0,
 		"Colour": "CCCCCC",
+		"CookingValue": 0.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/19.png",
 		"Usages": [
 			"HasUsedToCraft",
@@ -901,9 +904,11 @@
 		"Additional": "",
 		"MaxStackSize": 5.0,
 		"Colour": "4D2957",
+		"CookingValue": 0.0,
 		"CdnUrl": "https://cdn.nmsassistant.com/curiosities/36.png",
 		"Usages": [
 			"HasUsedToCraft",
+			"HasCookToCreate",
 			"HasDevProperties",
 			"IsEggIngredient"
 		],
@@ -1390,7 +1395,8 @@
 		"Colour": "DEDCD1",
 		"Usages": [
 			"HasDevProperties",
-			"IsExpeditionSeason2Reward"
+			"IsExpeditionSeason02Reward",
+			"IsExpeditionSeason02ReduxReward"
 		],
 		"BlueprintCost": 5000,
 		"BlueprintCostType": "Nanites",
@@ -1432,7 +1438,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward"
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -1454,7 +1461,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward"
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -1476,7 +1484,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason7Reward"
+			"IsExpeditionSeason07Reward",
+			"IsExpeditionSeason07ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -1497,7 +1506,7 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason4Reward"
+			"IsExpeditionSeason04ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -1566,8 +1575,8 @@
 		"Usages": [
 			"HasDevProperties",
 			"IsAddedInTrackedUpdate",
-			"IsExpeditionSeason6Reward",
-			"IsExpeditionSeason7Reward"
+			"IsExpeditionSeason06ReduxReward",
+			"IsExpeditionSeason07ReduxReward"
 		],
 		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
@@ -1741,6 +1750,7 @@
 			"HasUsedToCraft",
 			"HasDevProperties",
 			"IsConsumable",
+			"IsEggIngredient",
 			"IsAddedInTrackedUpdate"
 		],
 		"BlueprintCost": 1,
@@ -1913,7 +1923,7 @@
 	},
 	{
 		"Id": "cur89",
-		"Icon": "curiosities/88.png",
+		"Icon": "curiosities/89.png",
 		"Name": "Utopia Supply Drop Gamma",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the workers valiantly toiling on the steep, exposed mountains of planet New Sesto, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -1935,7 +1945,7 @@
 	},
 	{
 		"Id": "cur90",
-		"Icon": "curiosities/88.png",
+		"Icon": "curiosities/90.png",
 		"Name": "Utopia Supply Drop Delta",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the surviving workers who now confront the [ REDACTED ] of planet Idalth XIV, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -1957,7 +1967,7 @@
 	},
 	{
 		"Id": "cur91",
-		"Icon": "curiosities/88.png",
+		"Icon": "curiosities/91.png",
 		"Name": "Utopia Supply Drop Epsilon",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the workers who so nobly rebuild in the sucking quagmires of planet Endil A8, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -2001,7 +2011,7 @@
 	},
 	{
 		"Id": "cur93",
-		"Icon": "curiosities/92.png",
+		"Icon": "curiosities/93.png",
 		"Name": "Settlement Coordinates Gamma",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -2023,7 +2033,7 @@
 	},
 	{
 		"Id": "cur94",
-		"Icon": "curiosities/92.png",
+		"Icon": "curiosities/94.png",
 		"Name": "Settlement Coordinates Delta",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -2045,7 +2055,7 @@
 	},
 	{
 		"Id": "cur95",
-		"Icon": "curiosities/92.png",
+		"Icon": "curiosities/95.png",
 		"Name": "Settlement Coordinates Epsilon",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -2099,6 +2109,7 @@
 			"HasUsedToCraft",
 			"HasDevProperties",
 			"IsConsumable",
+			"IsEggIngredient",
 			"IsAddedInTrackedUpdate"
 		],
 		"BlueprintCost": 1,
@@ -2174,6 +2185,7 @@
 			"HasRefinedToCreate",
 			"HasDevProperties",
 			"IsConsumable",
+			"IsEggIngredient",
 			"IsAddedInTrackedUpdate"
 		],
 		"BlueprintCost": 1,
@@ -2232,5 +2244,27 @@
 		"ConsumableRewardTexts": [
 			"Convert data to Exosuit navigation marker"
 		]
+	},
+	{
+		"Id": "cur103",
+		"Icon": "curiosities/103.png",
+		"Name": "Pirate Transponder",
+		"Group": "Salvaged Identification Device",
+		"Description": "A unique ID transponder, ripped from the internal signal array of an outlaw starship.\n\nPossesion of such a device implies the destruction of the vessel in question. Turn it over to an envoy of the Mercenaries Guild to collect any associated bounties.",
+		"BaseValueUnits": 85000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
 	}
 ]
