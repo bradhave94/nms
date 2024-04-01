@@ -121,7 +121,8 @@ const filters = [
 		fetch('/search.json')
 			.then((response) => response.json())
 			.then((results) => {
-				const filteredResults = results.filter((result) =>
+				console.log(results);
+				const filteredResults = results.body.filter((result) =>
 					result.name.toLowerCase().includes(searchTerm)
 				);
 				const groupedResults = groupBy(filteredResults, 'type');
@@ -142,9 +143,10 @@ const filters = [
 		fetch('/search.json')
 			.then((response) => response.json())
 			.then((results) => {
-				const filteredResults = results.filter((result) =>
+				const filteredResults = results.body.filter((result) =>
 					result.name.toLowerCase().includes(searchTerm)
 				);
+
 				const groupedResults = groupBy(filteredResults, 'type');
 				displayResults(groupedResults, selectedTypes);
 			})
