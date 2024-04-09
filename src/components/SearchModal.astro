@@ -36,53 +36,22 @@ const filters = [
 <div class="relative z-10 hidden" id="site-search" role="dialog" aria-modal="true">
 	<div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-	<div
-		id="site-search-modal"
-		class="fixed inset-0 z-10 overflow-y-auto p-4 lg:pl-80 sm:p-6 md:p-20"
-	>
-		<div
-			class="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-black shadow-2xl ring-1 ring-orange-500 ring-opacity-5 transition-all"
-		>
+	<div id="site-search-modal" class="fixed inset-0 z-10 overflow-y-auto p-4 lg:pl-80 sm:p-6 md:p-20">
+		<div class="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-black shadow-2xl ring-1 ring-orange-500 ring-opacity-5 transition-all">
 			<div class="relative">
-				<svg
-					class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-white"
-					viewBox="0 0 20 20"
-					fill="currentColor"
-					aria-hidden="true"
-				>
-					<path
-						fill-rule="evenodd"
-						d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-						clip-rule="evenodd"></path>
+				<svg class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+					<path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
 				</svg>
 
-				<input
-					id="search-input"
-					type="text"
-					class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm"
-					placeholder="Search..."
-					role="combobox"
-					aria-expanded="false"
-					aria-controls="options"
-				/>
+				<input id="search-input" type="text" class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." role="combobox" aria-expanded="false" aria-controls="options" />
 				<p class="text-sm px-4">Select Categories</p>
 				<div class="flex flex-wrap gap-2 px-4 pb-4 pt-2">
 					{
 						filters.map((filter) => {
 							return (
 								<div class="inline-flex">
-									<input
-										type="checkbox"
-										class="peer hidden"
-										name="type-filter"
-										id={filter.id}
-										value={filter.name}
-										tabindex="-1"
-									/>
-									<label
-										for={filter.id}
-										class="select-none cursor-pointer rounded-lg border-2 border-orange-500 py-0 px-1.5 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:bg-orange-500 peer-checked:text-black"
-									>
+									<input type="checkbox" class="peer hidden" name="type-filter" id={filter.id} value={filter.name} tabindex="-1" />
+									<label for={filter.id} class="select-none cursor-pointer rounded-lg border-2 border-orange-500 py-0 px-1.5 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:bg-orange-500 peer-checked:text-black">
 										{filter.name}
 									</label>
 								</div>
@@ -92,8 +61,7 @@ const filters = [
 				</div>
 			</div>
 
-			<div class="max-h-72 scroll-py-2 overflow-y-auto p-8 text-sm text-white" id="results">
-			</div>
+			<div class="max-h-72 scroll-py-2 overflow-y-auto p-8 text-sm text-white" id="results"></div>
 		</div>
 	</div>
 </div>
@@ -114,17 +82,13 @@ const filters = [
 
 	function handleSearchInput() {
 		const searchTerm = searchInput.value.trim().toLowerCase();
-		const selectedTypes = typeCheckboxes
-			.filter((checkbox) => checkbox.checked)
-			.map((checkbox) => checkbox.value);
+		const selectedTypes = typeCheckboxes.filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
 
 		fetch('/search.json')
 			.then((response) => response.json())
 			.then((results) => {
 				console.log(results);
-				const filteredResults = results.body.filter((result) =>
-					result.name.toLowerCase().includes(searchTerm)
-				);
+				const filteredResults = results.body.filter((result) => result.name.toLowerCase().includes(searchTerm));
 				const groupedResults = groupBy(filteredResults, 'type');
 				displayResults(groupedResults, selectedTypes);
 			})
@@ -136,16 +100,12 @@ const filters = [
 
 	function handleCheckboxChange() {
 		const searchTerm = searchInput.value.trim().toLowerCase();
-		const selectedTypes = typeCheckboxes
-			.filter((checkbox) => checkbox.checked)
-			.map((checkbox) => checkbox.value);
+		const selectedTypes = typeCheckboxes.filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
 
 		fetch('/search.json')
 			.then((response) => response.json())
 			.then((results) => {
-				const filteredResults = results.body.filter((result) =>
-					result.name.toLowerCase().includes(searchTerm)
-				);
+				const filteredResults = results.body.filter((result) => result.name.toLowerCase().includes(searchTerm));
 
 				const groupedResults = groupBy(filteredResults, 'type');
 				displayResults(groupedResults, selectedTypes);
@@ -166,18 +126,12 @@ const filters = [
 		const existingHtml = resultsList.innerHTML;
 		const newHtml = Object.keys(groupedResults)
 			.map((group) => {
-				const filteredGroupResults = selectedTypes.length
-					? groupedResults[group].filter((result) => selectedTypes.includes(result.type))
-					: groupedResults[group];
+				const filteredGroupResults = selectedTypes.length ? groupedResults[group].filter((result) => selectedTypes.includes(result.type)) : groupedResults[group];
 
 				if (filteredGroupResults.length > 0) {
 					const groupHtml = `<h3 class="text-2xl">${group}</h3>
           <ul role="listbox">
-            ${filteredGroupResults
-				.map(
-					(result) => `<li role="option"><a href="${result.url}">${result.name}</a></li>`
-				)
-				.join('')}
+            ${filteredGroupResults.map((result) => `<li role="option"><a href="${result.url}">${result.name}</a></li>`).join('')}
           </ul>`;
 					return groupHtml;
 				} else {
