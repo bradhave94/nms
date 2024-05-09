@@ -16,7 +16,6 @@
 		"@astrojs/tailwind": "^5.1.0",
 		"@headlessui/react": "^1.7.10",
 		"@heroicons/react": "^2.0.15",
-		"@types/react": "^18.0.28",
 		"@types/react-dom": "^18.0.10",
 		"@vercel/analytics": "^0.1.10",
 		"astro": "^4.8.0",
