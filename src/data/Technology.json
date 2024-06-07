@@ -3074,7 +3074,7 @@
 		"Icon": "technology/81.png",
 		"Name": "Shell Greaser",
 		"Group": "Scatter Blaster Upgrade",
-		"Description": "Advanced self-lubricating components decrease friction within the Scatter Blaster, offering significant improves to reload times.",
+		"Description": "Advanced self-lubricating components decrease friction within the Scatter Blaster, offering significant improvements to reload times.",
 		"BaseValueUnits": 1.0,
 		"CurrencyType": "None",
 		"Colour": "2177C8",
@@ -9165,7 +9165,7 @@
 		"Icon": "technology/248.png",
 		"Name": "Polyphonic Core",
 		"Group": "Autophage Resonance Key",
-		"Description": "An attachment for the Multi-Tool Scanner that allows the device to detect and decode the cloaking signal of nearby Autophage units.\n\nUse SCAN to activate the Scanner. As its detector waveform passes over the local area, it will automatically reveal any nearby Autophage entities.\n\nIn addition, this device can be used to locate Autophage settlements. Select this device and use Locate Autophage Camp (FE_SELECT) to pinpoint a planetary location of interest to the Autophage.",
+		"Description": "An attachment for the Multi-Tool Scanner that allows the device to detect and decode the cloaking signal of nearby Autophage units.\n\nUse SCAN to activate the Scanner. As its detector waveform passes over the local area, it will automatically reveal any nearby Autophage entities.\n\nIn addition, this device can be used to locate Autophage settlements. Use Locate Autophage Camp (FE_SELECT) to pinpoint a planetary gathering of Autophage.",
 		"BaseValueUnits": 1.0,
 		"CurrencyType": "None",
 		"Colour": "2177C8",
@@ -9755,6 +9755,30 @@
 			{
 				"Id": "raw5",
 				"Quantity": 50
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "tech269",
+		"Icon": "technology/269.png",
+		"Name": "Portal Repository",
+		"Group": "Mind Ark Notch",
+		"Description": "A groove cut into the smooth grey stone of the Portal.\n\nA light within pulses gently, expectant.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "cur3",
+				"Quantity": 1
 			}
 		],
 		"StatBonuses": [],
