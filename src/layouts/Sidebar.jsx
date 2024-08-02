@@ -15,7 +15,6 @@ import {
 	BoltIcon,
 	ListBulletIcon,
 	ArchiveBoxIcon,
-	ArrowsRightLeftIcon,
 	PaperClipIcon
 } from '@heroicons/react/24/solid';
 

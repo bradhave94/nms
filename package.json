@@ -11,15 +11,15 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/react": "^3.5.0",
-		"@astrojs/sitemap": "^3.1.5",
+		"@astrojs/react": "^3.6.1",
+		"@astrojs/sitemap": "^3.1.6",
 		"@astrojs/tailwind": "^5.1.0",
 		"@headlessui/react": "^1.7.10",
 		"@heroicons/react": "^2.0.15",
 		"@types/react": "^18.0.28",
 		"@types/react-dom": "^18.0.10",
 		"@vercel/analytics": "^0.1.10",
-		"astro": "^4.10.0",
+		"astro": "^4.13.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"tabulator-tables": "^5.4.3",
