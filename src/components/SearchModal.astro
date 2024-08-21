@@ -101,13 +101,19 @@ const filters = [
 		try {
 			const response = await fetch('/search.json');
 			const results = await response.json();
-			const filteredResults = results.body.filter((result) => result.name.toLowerCase().includes(searchTerm));
+			const filteredResults = results.body.filter((result) => {
+				if (!result || typeof result.name !== 'string') {
+					return false;
+				}
+				return result.name.toLowerCase().includes(searchTerm);
+			});
 			const groupedResults = groupBy(filteredResults, 'type');
 
 			searchCache.set(searchTerm, groupedResults);
 			displayResults(groupedResults, selectedTypes);
+			loadingIndicator.classList.add('hidden');
 		} catch (error) {
-			console.error(error);
+			console.error('Error in performSearch:', error);
 			resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
 		} finally {
 			loadingIndicator.classList.add('hidden');

@@ -149,7 +149,7 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
     return Object.values(data).some((value) => regex.test(value));
   }
 
-  const input = document.getElementById('search') as HTMLInputElement;
+  const input = document.getElementById('search');
   input.addEventListener('keyup', function () {
     table.setFilter(matchAny, { value: input.value });
     if (input.value === ' ') {

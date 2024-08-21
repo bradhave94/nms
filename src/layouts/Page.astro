@@ -248,7 +248,7 @@ const showQuantityInput = data.length + output.length > 0;
 <!-- Quantity input script -->
 {showQuantityInput && (
   <script>
-    const quantityInput = document.querySelector('input.quantity') as HTMLInputElement;
+    const quantityInput = document.querySelector('input.quantity');
     const elements = document.querySelectorAll('[data-quantity]');
 
     if (quantityInput) {
