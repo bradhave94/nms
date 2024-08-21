@@ -2,6 +2,7 @@
 	id="open-search"
 	type="button"
 	class="fixed bottom-4 right-4 inline-flex items-center rounded-full border border-transparent bg-orange-600 p-3 text-black shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+	aria-label="Open search"
 >
 	<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 		<path
@@ -12,31 +13,28 @@
 </button>
 
 <script>
-	// Get references to the open-search, site-search, and search-input elements
-	const openSearch = document.querySelector('#open-search');
-	const siteSearch = document.querySelector('#site-search');
-	const searchInput = document.querySelector('#search-input');
+	const openSearch = document.getElementById('open-search');
+	const siteSearch = document.getElementById('site-search');
+	const searchInput = document.getElementById('search-input');
 
-	// Define a function to toggle the visibility of the site-search element
 	function toggleSiteSearch() {
 		siteSearch.classList.toggle('hidden');
-
-		// If the site-search element is now visible, focus on the search-input element
 		if (!siteSearch.classList.contains('hidden')) {
 			searchInput.focus();
-			searchInput.select();
 		}
 	}
 
-	// Add an event listener to the open-search element
 	openSearch.addEventListener('click', toggleSiteSearch);
 
-	// Add a click event listener to the document object
-	siteSearch.addEventListener('click', (event) => {
-		console.log(event.target.id);
-		// Check if the clicked element is outside of the site-search element, and not the element with class "pee"
+	document.addEventListener('click', (event) => {
 		if (event.target.id === 'site-search-modal') {
-			// Hide the site-search element
+			siteSearch.classList.add('hidden');
+		}
+	});
+
+	// Close search on Escape key press
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape' && !siteSearch.classList.contains('hidden')) {
 			siteSearch.classList.add('hidden');
 		}
 	});

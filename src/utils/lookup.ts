@@ -12,6 +12,11 @@ import nut from '../data/NutrientProcessor.json';
 import build from '../data/Buildings.json';
 import trade from '../data/Trade.json';
 
+export type RequiredItem = {
+	Id: string;
+	Quantity: number;
+};
+
 // Defining the interface for an Item
 type Item = {
 	Id: string;
@@ -27,6 +32,7 @@ type Item = {
 		Id: string;
 		Quantity: number;
 	};
+	Value?: string;
 };
 
 // Mapping the prefixes of item id to the actual data sources
@@ -128,32 +134,19 @@ const getLength = (list) => {
 
 const sort = (data) => {
 	const sortData = data.sort((a, b) => {
-		const nameA = a.Name.toUpperCase();
-		const nameB = b.Name.toUpperCase();
-		if (nameA < nameB) {
-			return -1;
-		}
-		if (nameA > nameB) {
-			return 1;
-		}
-		return 0;
+		const nameA = a?.Name?.toUpperCase() ?? '';
+		const nameB = b?.Name?.toUpperCase() ?? '';
+		return nameA.localeCompare(nameB);
 	});
 	return sortData;
 };
 
 const sortTable = (data) => {
-	const sortData = data.sort((a, b) => {
-		const nameA = a.output.name.toUpperCase();
-		const nameB = b.output.name.toUpperCase();
-		if (nameA < nameB) {
-			return -1;
-		}
-		if (nameA > nameB) {
-			return 1;
-		}
-		return 0;
+	return data.sort((a, b) => {
+		const nameA = a?.output?.name?.toUpperCase() ?? '';
+		const nameB = b?.output?.name?.toUpperCase() ?? '';
+		return nameA.localeCompare(nameB);
 	});
-	return sortData;
 };
 
 // Export the getSlug and getById functions, and the Item interface

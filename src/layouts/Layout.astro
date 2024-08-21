@@ -20,7 +20,7 @@ const { title = SITE.title, author = SITE.author, description = SITE.desc, slug 
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const bg = `bg${Math.floor(Math.random() * 12) + 1}`;
+const bgNumber = Math.floor(Math.random() * 12) + 1;
 
 inject();
 ---
@@ -34,18 +34,16 @@ inject();
 		<link rel="canonical" href={canonicalURL} />
 		<meta name="generator" content={Astro.generator} />
 
-		<!-- General Meta Tags -->
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 		<meta name="author" content={author} />
 
-		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalURL} />
 
-		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={canonicalURL} />
 		<meta property="twitter:title" content={title} />
@@ -65,27 +63,9 @@ inject();
 			type="font/woff"
 			crossorigin="anonymous"
 		/>
-		<link rel="preload" as="image" href={'/images/backgrounds/' + bg + '.webp'} />
-
-		<script
-			async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8524094599848175"
-			crossorigin="anonymous"
-		></script>
-
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-
-			gtag('config', 'G-9GEFK3YPV3');
-		</script>
+		<link rel="preload" as="image" href={`/images/backgrounds/bg${bgNumber}.webp`} />
 	</head>
-	<body class={slug == '/' ? 'bg4' : bg + ' h-full'}>
+	<body class={`bg${bgNumber} h-full ${slug === '/' ? 'home' : ''}`}>
 		<Sidebar client:load slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>

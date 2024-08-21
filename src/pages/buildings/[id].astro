@@ -1,22 +1,30 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
-import { getById, Item } from '@utils/lookup.js';
-import data from '@data/Buildings.json';
+import { getById } from '@utils/lookup.js';
+import type { Item } from '@utils/lookup.js';
+import buildings from '@data/Buildings.json';
 
-export async function getStaticPaths() {
-	const paths = data.map((post) => ({
-		params: { id: post.Id.toString() }
+export function getStaticPaths() {
+	return buildings.map((building) => ({
+		params: { id: building.Id.toString() }
 	}));
-	return paths;
 }
-const item: Item  = getById(Astro.params.id);
+
+const { id } = Astro.params;
+const item = getById(id);
+
+if (!item) {
+	return Astro.redirect('/404');
+}
+
+const { Name, Description } = item;
 ---
 
 <Layout
-	title={item.Name + " | No Man's Sky Recipes"}
-	description={item.Name + " | " + item.Description}
+	title={`${Name} | No Man's Sky Recipes`}
+	description={`${Name} | ${Description}`}
 	slug="building"
 >
-	<Page item={item} />
+	<Page item={item as Item} />
 </Layout>

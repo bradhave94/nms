@@ -1,28 +1,78 @@
 ---
-const { open } = Astro.props;
+const { open = false, id } = Astro.props;
 ---
-<button class="accordion flex items-center justify-between w-full p-3 group hover:bg-black transition-colors">
-    <slot name="title" />
-    <svg class="w-5 hidden group-[.active]:block" aria-hidden="true" data-prefix="fas" data-icon="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
-    <svg class="w-5 block group-[.active]:hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
-</button>
-<div class="overflow-hidden hidden m-2 lg:pl-6 border-l" style={open ? "display: block" : null}>
+<accordion-component class="accordion-container" data-open={open}>
+  <h3>
+    <button
+      id={`accordion-header-${id}`}
+      class="accordion flex items-center justify-between w-full p-3 group hover:bg-black transition-colors"
+      aria-expanded={open}
+      aria-controls={`accordion-panel-${id}`}
+    >
+      <slot name="title" />
+      <svg class="w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+      </svg>
+      <svg class="w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+      </svg>
+    </button>
+  </h3>
+  <div
+    id={`accordion-panel-${id}`}
+    role="region"
+    aria-labelledby={`accordion-header-${id}`}
+    class="overflow-hidden m-2 lg:pl-6 border-l"
+  >
     <slot name="content" />
-</div>
+  </div>
+</accordion-component>
 
 <script>
-	var acc = document.getElementsByClassName('accordion');
-	var i;
+  class Accordion extends HTMLElement {
+    constructor() {
+      super();
+      this.toggle = this.toggle.bind(this);
+    }
 
-	for (i = 0; i < acc.length; i++) {
-		acc[i].addEventListener('click', function () {
-			this.classList.toggle('active');
-			var panel = this.nextElementSibling;
-			if (panel.style.display === 'block') {
-				panel.style.display = 'none';
-			} else {
-				panel.style.display = 'block';
-			}
-		});
-	}
+    connectedCallback() {
+      this.button = this.querySelector('button');
+      this.panel = this.querySelector('[role="region"]');
+      this.open = this.dataset.open === 'true';
+      this.updateState();
+      this.button.addEventListener('click', this.toggle);
+    }
+
+    updateState() {
+      this.button.setAttribute('aria-expanded', this.open);
+      this.panel.hidden = !this.open;
+      this.button.classList.toggle('active', this.open);
+    }
+
+    toggle() {
+      this.open = !this.open;
+      this.updateState();
+    }
+
+    disconnectedCallback() {
+      this.button.removeEventListener('click', this.toggle);
+    }
+  }
+
+  customElements.define('accordion-component', Accordion);
 </script>
+
+<style>
+	.accordion-container button[aria-expanded="true"] .w-5:first-of-type {
+		display: block;
+	}
+	.accordion-container button[aria-expanded="true"] .w-5:last-of-type {
+		display: none;
+	}
+	.accordion-container button[aria-expanded="false"] .w-5:first-of-type {
+		display: none;
+	}
+	.accordion-container button[aria-expanded="false"] .w-5:last-of-type {
+		display: block;
+	}
+</style>

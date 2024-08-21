@@ -1,5 +1,9 @@
 ---
-
-const { items } = Astro.props;
-
+const { page } = Astro.props;
 ---
+
+<div class="flex gap-4 justify-center items-center my-8">
+	{page.url.prev && <a class="btn" href={page.url.prev}>Previous</a>}
+	<span>Page: {page.currentPage} of {page.lastPage}</span>
+	{page.url.next && <a class="btn" href={page.url.next}>Next</a>}
+</div>

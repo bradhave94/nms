@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
-
+import Pagination from '@components/Pagination.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import products from '@data/Products.json';
 import raw from '@data/RawMaterials.json';
@@ -58,21 +58,5 @@ const { page } = Astro.props;
 		}
 	</div>
 
-	<div class="div flex gap-4 justify-center items-center my-8">
-		{
-			page.url.prev ? (
-				<a class="btn" href={page.url.prev}>
-					Previous
-				</a>
-			) : null
-		}
-		Page: {page.currentPage} of {page.lastPage}
-		{
-			page.url.next ? (
-				<a class="btn" href={page.url.next}>
-					Next
-				</a>
-			) : null
-		}
-	</div>
+	<Pagination page={page} />
 </Layout>

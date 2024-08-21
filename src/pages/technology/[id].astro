@@ -1,24 +1,40 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
-import { getById, sort, Item } from '@utils/lookup.js';
-import conTech from '@data/ConstructedTechnology.json';
-import techModule from '@data/TechnologyModule.json';
-import tech from '@data/Technology.json';
+import { sort } from '@utils/lookup.js';
+import type { Item } from '@utils/lookup.js';
+import * as dataSources from '@data/index';
 
 export async function getStaticPaths() {
-	const paths = sort([...conTech, ...tech,...techModule]).map((post) => ({
-		params: { id: post.Id.toString() }
-	}));
-	return paths;
+  // Combine all technology types into a single array
+  const allTech: Item[] = [
+    ...dataSources.ConstructedTechnology,
+    ...dataSources.Technology,
+    ...dataSources.TechnologyModule
+  ] as Item[];
+
+  const sortedTech = sort(allTech);
+  return sortedTech.map((post) => ({
+    params: { id: post.Id.toString() },
+    props: { item: post },
+  }));
 }
-const item: Item  = getById(Astro.params.id);
+
+interface Props {
+  item: Item;
+}
+
+const { item } = Astro.props;
+
+if (!item) {
+  return Astro.redirect('/404');
+}
 ---
 
 <Layout
-	title={item.Name + " | No Man's Sky Recipes"}
-	description={item.Name + " | " + item.Description}
-	slug="technology"
+  title={`${item.Name} | No Man's Sky Recipes`}
+  description={`${item.Name} | ${item.Description}`}
+  slug="technology"
 >
-	<Page item={item} />
+  <Page item={item} />
 </Layout>

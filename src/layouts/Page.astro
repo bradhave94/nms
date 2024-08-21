@@ -1,324 +1,268 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
-
-import { getById, findOutput, Item } from '@utils/lookup.js';
+import { getById, findOutput } from '@utils/lookup.js';
+import type { Item } from '@utils/lookup.js';
 import credit from '../assets/img/credits.png';
 
-const item: Item = Astro.props.item;
+// Define the props interface
+interface Props {
+  item: Item;
+}
 
-let rawItems = [];
+const { item } = Astro.props;
 
-const createArray = (item: Item, num) => {
-	const array = [];
+// Function to create an array of required items
+const createArray = (item: Item, num = 1): Array<any> => {
+  const array = [];
+  const rawItems = [];
 
-	for (let i = 0; i < item.RequiredItems?.length; i++) {
-		const item2: Item = item.RequiredItems[i] || {};
-		const itemData = getById(item2.Id);
-		if (itemData == undefined) return;
-		let RequiredItems: Array<any> = itemData.RequiredItems || [];
-		if (itemData.RequiredItems?.length) {
-			RequiredItems = createArray(itemData, item2.Quantity);
-		} else {
-			let record = rawItems.find((r: Item) => r.Name === itemData.Name);
-			if (!record) {
-				rawItems.push({
-					Id: itemData.Id,
-					Name: itemData.Name,
-					Icon: itemData.Icon,
-					Colour: itemData.Colour,
-					Quantity: item2.Quantity * num,
-					itemData: num
-				});
-			} else {
-				let index = rawItems.indexOf(record);
-				rawItems[index].Quantity += item2.Quantity;
-			}
-		}
-		array.push({
-			Id: itemData.Id,
-			Name: itemData.Name,
-			Icon: itemData.Icon,
-			Colour: itemData.Colour,
-			Quantity: item2.Quantity,
-			RequiredItems: RequiredItems,
-		});
-	}
-	return array;
+  for (const requiredItem of item.RequiredItems || []) {
+    const itemData = getById(requiredItem.Id);
+    if (!itemData) continue;
+
+    const requiredItems = itemData.RequiredItems?.length
+      ? createArray(itemData, requiredItem.Quantity)
+      : [];
+
+    if (!requiredItems.length) {
+      const existingItem = rawItems.find((r: Item) => r.Name === itemData.Name);
+      if (existingItem) {
+        existingItem.Quantity += requiredItem.Quantity * num;
+      } else {
+        rawItems.push({
+          Id: itemData.Id,
+          Name: itemData.Name,
+          Icon: itemData.Icon,
+          Colour: itemData.Colour,
+          Quantity: requiredItem.Quantity * num,
+        });
+      }
+    }
+
+    array.push({
+      Id: itemData.Id,
+      Name: itemData.Name,
+      Icon: itemData.Icon,
+      Colour: itemData.Colour,
+      Quantity: requiredItem.Quantity,
+      RequiredItems: requiredItems,
+    });
+  }
+
+  return array;
 };
 
+// Function to get output items
 const getOutputs = (item) => {
-	// Map the inputs and get the details of each input item using `getById` function
+  const RequiredItems = item.Inputs.map((element) => {
+    const i: Item | undefined = getById(element.Id);
+    if (!i) return;
+    return {
+      Id: i.Id,
+      Icon: i.Icon,
+      Name: i.Name,
+      Quantity: element.Quantity,
+    };
+  }).filter(Boolean);
 
-	const RequiredItems = item.Inputs.map((element) => {
-		const i: Item | undefined = getById(element.Id);
-		// If item is not found, return undefined
-		if (!i) return;
-		// Return the item details
-		return {
-			Id: i.Id,
-			Icon: i.Icon,
-			Name: i.Name,
-			Quantity: element.Quantity,
-		};
-	});
-
-	return {
-		Id: Astro.props.item.Id,
-		Icon: Astro.props.item.Icon,
-		Name: Astro.props.item.Name,
-		Quantity: 1,
-		RequiredItems: RequiredItems,
-	};
+  return {
+    Id: Astro.props.item.Id,
+    Icon: Astro.props.item.Icon,
+    Name: Astro.props.item.Name,
+    Quantity: 1,
+    RequiredItems: RequiredItems,
+  };
 };
 
+// Prepare data for rendering
 const data = item.RequiredItems?.length
-	? [
-			{
-				Id: Astro.props.item.Id,
-				Icon: Astro.props.item.Icon,
-				Name: Astro.props.item.Name,
-				Quantity: 1,
-				RequiredItems: createArray(item),
-				rawItems: rawItems,
-			},
-	  ]
-	: [];
+  ? [{
+      Id: item.Id,
+      Icon: item.Icon,
+      Name: item.Name,
+      Quantity: 1,
+      RequiredItems: createArray(item),
+      rawItems: createArray(item).flatMap(i => i.RequiredItems || []),
+    }]
+  : [];
+
 const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
+const showQuantityInput = data.length + output.length > 0;
 ---
 
 <div class="mx-auto max-w-6xl lg:mt-24 bg-gray-800 p-3 lg:p-8">
-	<div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
-		<div class="flex flex-col-reverse items-center">
-			<Image
-				src={'https://app.nmsassistant.com/assets/images/' + item.Icon}
-				alt={item.Name}
-				sizes="256px"
-				width={256}
-				height={256}
-			/>
-		</div>
-		<div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-			<h1 class="text-4xl inline-block">{item.Name}</h1>
-			<p class="flex items-center gap-2 py-2 pb-4">
-				{item.BaseValueUnits}
-				<Image
-					src={credit}
-					alt="Credits"
-					sizes="25px"
-					width={25}
-					height={25}
-				/>
-			</p>
-			<p class="lg:text-lg">{item.Description}</p>
+  <!-- Item details section -->
+  <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
+    <div class="flex flex-col-reverse items-center">
+      <Image
+        src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+        alt={item.Name}
+        sizes="256px"
+        width={256}
+        height={256}
+      />
+    </div>
+    <div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
+      <h1 class="text-4xl inline-block">{item.Name}</h1>
+      <p class="flex items-center gap-2 py-2 pb-4">
+        {item.BaseValueUnits}
+        <Image
+          src={credit}
+          alt="Credits"
+          sizes="25px"
+          width={25}
+          height={25}
+        />
+      </p>
+      <p class="lg:text-lg">{item.Description}</p>
 
-			{data.length + output.length != 0 ?
-			<div class="sm:flex items-center mb-4 gap-4 mt-4">
-				<label for="quantity">Quantity</label>
-				<input
-					class="quantity bg-black border-orange-500 max-w-full w-24"
-					name="quantity"
-					type="number"
-					min="1"
-					value="1"
-				/>
-			</div>
-			: null }
-		</div>
-	</div>
-	{
-		data.length != 0 ? (
-			<div id="crafting">
-				<div class="relative mt-8 mb-4">
-					<div class="absolute inset-0 flex items-center" aria-hidden="true">
-						<div class="w-full border-t border-gray-300" />
-					</div>
-					<div class="relative flex justify-center">
-						<span class="bg-white px-3 lg:text-lg font-medium text-gray-900">
-							Crafing
-						</span>
-					</div>
-				</div>
+      {showQuantityInput && (
+        <div class="sm:flex items-center mb-4 gap-4 mt-4">
+          <label for="quantity">Quantity</label>
+          <input
+            class="quantity bg-black border-orange-500 max-w-full w-24"
+            name="quantity"
+            type="number"
+            min="1"
+            value="1"
+          />
+        </div>
+      )}
+    </div>
+  </div>
 
-				<div
-					class={
-						data.length == 1
-							? 'grid-cols-1'
-							: 'md:grid-cols-2 grid-cols-1' +
-							  ' grid gap-4 items-start justify-center'
-					}
-				>
-					{data.map((item) =>
-						item.RequiredItems?.length != 0 ? (
-							<div class="bg-gray-900">
-								<Accordion open={data.length + output.length == 1 ? true : false}>
-									<div class="flex" slot="title">
-										<div class="mr-4 flex-shrink-0 self-start">
-											<Image
-												src={
-													'https://app.nmsassistant.com/assets/images/' +
-													item.Icon
-												}
-												alt={item.Name}
-												sizes="50px"
-												width={50}
-												height={50}
-											/>
-										</div>
-										<div class="flex items-center">
-											<h4 class="lg:text-lg">
-												{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-											</h4>
-										</div>
-									</div>
-									<div slot="content">
-										{item.RequiredItems?.length != 0 ? (
-											<NestedList items={item} />
-										) : null}
+  <!-- Crafting section -->
+  {data.length > 0 && (
+    <div id="crafting">
+      <h2 class="relative mt-8 mb-4 text-center">
+        <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
+          Crafting
+        </span>
+      </h2>
 
-										{item.rawItems.length != 0 ? (
-											<div class="mb-4">
-												<div class="relative mt-8 mb-4">
-													<div
-														class="absolute inset-0 flex items-center"
-														aria-hidden="true"
-													>
-														<div class="w-full border-t border-gray-300" />
-													</div>
-													<div class="relative flex justify-center">
-														<span class="bg-white px-3 lg:text-lg font-medium text-gray-900">
-															Raw Items
-														</span>
-													</div>
-												</div>
-												<div class="lg:grid lg:grid-cols-2 lg:items-start">
-													{item.rawItems.map((item) => (
-														<div
-															class="flex p-2"
-															style={'background: #' + item.Colour}
-														>
-															<div class="mr-4 flex-shrink-0 self-start">
-																<Image
-																	src={
-																		'https://app.nmsassistant.com/assets/images/' +
-																		item.Icon
-																	}
-																	alt={item.Name}
-																	sizes="50px"
-																	width={50}
-																	height={50}
-																/>
-															</div>
-															<div class="flex items-center">
-																<h4 class="text-sm">
-																	{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-																</h4>
-															</div>
-														</div>
-													))}
-												</div>
-											</div>
-										) : null}
-									</div>
-								</Accordion>
-							</div>
-						) : null
-					)}
-				</div>
-			</div>
-		) : null
-	}
+      <div class={`grid gap-4 items-start justify-center ${
+        data.length === 1 ? 'grid-cols-1' : 'md:grid-cols-2 grid-cols-1'
+      }`}>
+        {data.map((item) => (
+          <div class="bg-gray-900">
+            <Accordion open={data.length + output.length === 1}>
+              <div class="flex" slot="title">
+                <Image
+                  src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+                  alt={item.Name}
+                  sizes="50px"
+                  width={50}
+                  height={50}
+                  class="mr-4 flex-shrink-0 self-start"
+                />
+                <div class="flex items-center">
+                  <h4 class="lg:text-lg">
+                    {item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
+                  </h4>
+                </div>
+              </div>
+              <div slot="content">
+                {item.RequiredItems?.length > 0 && <NestedList items={item} />}
 
-	{
-		output.length != 0 ? (
-			<div id="refining">
-				<div class="relative mt-8 mb-4">
-					<div class="absolute inset-0 flex items-center" aria-hidden="true">
-						<div class="w-full border-t border-gray-300" />
-					</div>
-					<div class="relative flex justify-center">
-						<span class="bg-white px-3 lg:text-lg font-medium text-gray-900">
-							{item.Id.includes('cook') ? 'Cooking' : 'Refining'}
-						</span>
-					</div>
-				</div>
-				<div
-					class={
-						output.length == 3
-							? 'xl:grid-cols-3 lg:grid-cols-2' +
-							  ' grid-cols-1 grid gap-4 items-start justify-center'
-							: 'md:grid-cols-2' +
-							  ' grid-cols-1 grid gap-4 items-start justify-center'
-					}
-				>
-					{output.map((item) =>
-						item.RequiredItems?.length != 0 ? (
-							<div class="bg-gray-900">
-								<Accordion>
-									<div class="flex" slot="title">
-										<div class="mr-4 flex-shrink-0 self-start">
-											<Image
-												src={
-													'https://app.nmsassistant.com/assets/images/' +
-													item.Icon
-												}
-												alt={item.Name}
-												sizes="50px"
-												width={50}
-												height={50}
-											/>
-										</div>
-										<div class="flex items-center">
-											<h4 class="lg:text-lg">
-												{item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-											</h4>
-										</div>
-									</div>
-									<div slot="content">
-										{item.RequiredItems?.length != 0 ? (
-											<NestedList items={item} />
-										) : null}
-									</div>
-								</Accordion>
-							</div>
-						) : null
-					)}
-				</div>
-			</div>
-		) : null
-	}
+                {item.rawItems.length > 0 && (
+                  <div class="mb-4">
+                    <h3 class="relative mt-8 mb-4 text-center">
+                      <span class="bg-gray-900 px-3 lg:text-lg font-medium text-white">
+                        Raw Items
+                      </span>
+                    </h3>
+                    <div class="lg:grid lg:grid-cols-2 lg:items-start">
+                      {item.rawItems.map((rawItem) => (
+                        <div
+                          class="flex p-2"
+                          style={`background: #${rawItem.Colour}`}
+                        >
+                          <Image
+                            src={`https://app.nmsassistant.com/assets/images/${rawItem.Icon}`}
+                            alt={rawItem.Name}
+                            sizes="50px"
+                            width={50}
+                            height={50}
+                            class="mr-4 flex-shrink-0 self-start"
+                          />
+                          <div class="flex items-center">
+                            <h4 class="text-sm">
+                              {rawItem.Name} x<span data-quantity={rawItem.Quantity}>{rawItem.Quantity}</span>
+                            </h4>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </Accordion>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Refining/Cooking section -->
+  {output.length > 0 && (
+    <div id="refining">
+      <h2 class="relative mt-8 mb-4 text-center">
+        <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
+          {item.Id.includes('cook') ? 'Cooking' : 'Refining'}
+        </span>
+      </h2>
+      <div class={`grid gap-4 items-start justify-center ${
+        output.length === 3 ? 'xl:grid-cols-3 lg:grid-cols-2 grid-cols-1' : 'md:grid-cols-2 grid-cols-1'
+      }`}>
+        {output.map((item) => (
+          <div class="bg-gray-900">
+            <Accordion>
+              <div class="flex" slot="title">
+                <Image
+                  src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+                  alt={item.Name}
+                  sizes="50px"
+                  width={50}
+                  height={50}
+                  class="mr-4 flex-shrink-0 self-start"
+                />
+                <div class="flex items-center">
+                  <h4 class="lg:text-lg">
+                    {item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
+                  </h4>
+                </div>
+              </div>
+              <div slot="content">
+                {item.RequiredItems?.length > 0 && <NestedList items={item} />}
+              </div>
+            </Accordion>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
 </div>
 
-{ data.length + output.length != 0 ?
-<script>
-	const quantityInputs = document.querySelector('input.quantity');
+<!-- Quantity input script -->
+{showQuantityInput && (
+  <script>
+    const quantityInput = document.querySelector('input.quantity') as HTMLInputElement;
+    const elements = document.querySelectorAll('[data-quantity]');
 
-	const handleClick = (isMinus) => {
-		let count = parseInt(quantityInputs.value) + (isMinus ? -1 : 1);
-		count = count < 1 ? 1 : count;
-		quantityInputs.value = count;
-		quantityInputs.dispatchEvent(new Event('change'));
-		return false;
-	};
+    if (quantityInput) {
+      quantityInput.addEventListener('input', () => {
+        // Ensure the input value is at least 1
+        const value = Math.max(1, parseFloat(quantityInput.value) || 1);
+        quantityInput.value = value.toString();
 
-	document.querySelectorAll('.minus').forEach(function (el) {
-		el.addEventListener('click', handleClick.bind(el, true));
-	});
-	document.querySelectorAll('.plus').forEach(function (el) {
-		el.addEventListener('click', handleClick.bind(el, false));
-	});
-
-	const inputField = document.querySelector('.quantity');
-	const elements = document.querySelectorAll('[data-quantity]');
-
-	inputField.addEventListener('input', () => {
-		const value = parseFloat(inputField.value);
-		elements.forEach((element) => {
-			const oldValue = parseFloat(element.getAttribute('data-quantity'));
-			const newValue = oldValue * value;
-			element.innerHTML = newValue.toString();
-		});
-	});
-</script>
-: null }
+        // Update all quantity elements
+        elements.forEach((element) => {
+          const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
+          element.textContent = (baseValue * value).toString();
+        });
+      });
+    }
+  </script>
+)}

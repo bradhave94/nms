@@ -2,57 +2,73 @@
 import { Image } from 'astro:assets'
 import { getSlug } from '@utils/lookup.js';
 
+interface CellData {
+    id: string;
+    name: string;
+    amount?: number;
+    colour: string;
+    image?: string;
+    description?: string;
+    value?: number;
+}
+
 export interface Props {
-	cell: {
-		id: string;
-		name: string;
-		amount: number;
-		colour: string;
-		image: string;
-		description: string;
-		value: number;
-	};
+    cell: CellData | string | number;
 }
 
 const { cell } = Astro.props;
 ---
 
 <style>
-	.sort,
-	.description {
-		display: none !important;
-	}
+    .sort,
+    .description {
+        display: none !important;
+    }
+
+    .cell-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .cell-content {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .cell-text {
+        margin-right: 10px;
+    }
+
+    .amount {
+        font-size: 0.9em;
+        opacity: 0.8;
+    }
 </style>
 
-{
-	typeof cell == 'string' || typeof cell == 'number'  ? (
-		<td>
-			{cell}
-		</td>
-	) : cell != undefined ? (
-		<td>
-			<span class="d-none sort">
-				{cell.name}
-			</span>
-			<a href={getSlug(cell.id) + cell.id}>
-				<div style={'background: #' + cell.colour}>
-					<span>
-						{cell.name}
-						{cell.amount != undefined ? <span class="amount"> x{cell.amount}</span> : null}
-					</span>
-					{cell.image != undefined ? (
-						<Image
-							src={'https://app.nmsassistant.com/assets/images/' + cell.image}
-							alt={cell.name}
-							sizes="50px"
-							width={50}
-							height={50}
-						/>
-					) : null}
-				</div>
-			</a>
-		</td>
-	) : (
-		<td />
-	)
-}
+<td>
+    {typeof cell === 'string' || typeof cell === 'number' ? (
+        cell
+    ) : cell && 'id' in cell ? (
+        <>
+            <span class="d-none sort">{cell.name}</span>
+            <a href={`${getSlug(cell.id)}${cell.id}`} class="cell-link">
+                <div class="cell-content" style={`background: #${cell.colour}`}>
+                    <span class="cell-text">
+                        {cell.name}
+                        {cell.amount && <span class="amount"> x{cell.amount}</span>}
+                    </span>
+                    {cell.image && (
+                        <Image
+                            src={`https://app.nmsassistant.com/assets/images/${cell.image}`}
+                            alt={cell.name}
+                            sizes="50px"
+                            width={50}
+                            height={50}
+                        />
+                    )}
+                </div>
+            </a>
+        </>
+    ) : null}
+</td>

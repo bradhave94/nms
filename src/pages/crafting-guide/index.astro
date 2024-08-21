@@ -3,46 +3,42 @@
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
 import products from '@data/Products.json';
-import { getById, Item } from '@utils/lookup.js';
+import { getById } from '@utils/lookup.js';
+import type { Item, RequiredItem } from '@utils/lookup.js';
 
-// Function to create an array of data for each Products item
-const createArray = (item: Item) => {
-	// If the item has no inputs, return undefined
-	if (item.RequiredItems.length == 0) return;
+interface ItemDetails {
+  id: string;
+  name: string;
+  description: string;
+  value: number;
+  amount?: number;
+  image: string;
+  colour: string;
+}
 
-	// Map the inputs and get the details of each input item using `getById` function
-	const RequiredItems = item.RequiredItems.map((element) => {
-		const i: Item | undefined = getById(element.Id);
-		// If item is not found, return undefined
-		if (!i) return;
-		// Return the item details
-		return {
-			id: i.Id,
-			name: i.Name,
-			description: i.Description,
-			value: i.BaseValueUnits,
-			amount: element.Quantity,
-			image: i.Icon,
-			colour: i.Colour,
-		};
-	});
+const createItemDetails = (item: Item, quantity?: number): ItemDetails => ({
+  id: item.Id,
+  name: item.Name,
+  description: item.Description,
+  value: item.BaseValueUnits,
+  ...(quantity && { amount: quantity }),
+  image: item.Icon,
+  colour: item.Colour,
+});
 
-	// Combine the inputs and output data in a new object
-	const newItem = {
-		input_1: RequiredItems[0],
-		input_2: RequiredItems[1],
-		input_3: RequiredItems[2],
-		output: {
-			id: item.Id,
-			name: item.Name,
-			description: item.Description,
-			value: item.BaseValueUnits,
-			image: item.Icon,
-			colour: item.Colour,
-		},
-		value: item.BaseValueUnits,
-	};
-	return newItem;
+const createArray = (item: Item): { input_1?: ItemDetails; input_2?: ItemDetails; input_3?: ItemDetails; output: ItemDetails; value: number; } | undefined => {
+  if (item.RequiredItems.length === 0) return;
+
+  const requiredItems = item.RequiredItems.map((element) => {
+    const requiredItem = getById(element.Id);
+    return requiredItem ? createItemDetails(requiredItem, element.Quantity) : undefined;
+  }).filter(Boolean) as ItemDetails[];
+
+  return {
+    ...Object.fromEntries(requiredItems.map((item, index) => [`input_${index + 1}`, item])),
+    output: createItemDetails(item),
+    value: item.BaseValueUnits,
+  };
 };
 
 // Define the columns to be displayed in the table
@@ -56,6 +52,7 @@ const columns = [
 
 // Map the data and create an array of filtered items
 const data = products.map(createArray).filter(Boolean);
+
 ---
 
 <Layout
@@ -71,5 +68,5 @@ const data = products.map(createArray).filter(Boolean);
 			columns={columns}
 			data={data}
 			sort="value"
-		/>
+		 />
 </Layout>

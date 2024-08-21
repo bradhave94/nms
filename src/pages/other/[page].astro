@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
-
+import Pagination from '@components/Pagination.astro'; // New import
 import { getSlug, sort } from '@utils/lookup.js';
 import others from '@data/Others.json';
 import trade from '@data/Trade.json';
@@ -9,7 +9,7 @@ import trade from '@data/Trade.json';
 export async function getStaticPaths({ paginate }) {
 	return paginate(sort([...others, ...trade]), { pageSize: 24 });
 }
-// All paginated data is passed on the "page" prop
+
 const { page } = Astro.props;
 ---
 
@@ -21,36 +21,19 @@ const { page } = Astro.props;
 	<h1 class="text-center text-4xl sm:text-6xl mt-2 mb-8">Other Items</h1>
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			page.data.map((item, index) => (
+			page.data.map((item) => (
 				<Card
 					card={{
 						name: item.Name,
 						description: item.Description,
 						button: 'View Item',
-						image: 'https://app.nmsassistant.com/assets/images/' + item.Icon,
-						link: getSlug(item.Id) + item.Id,
+						image: `https://app.nmsassistant.com/assets/images/${item.Icon}`,
+						link: `${getSlug(item.Id)}${item.Id}`,
 						value: item.BaseValueUnits,
 					}}
-					index={index}
 				/>
 			))
 		}
 	</div>
-	<div class="div flex gap-4 justify-center items-center my-8">
-		{
-			page.url.prev ? (
-				<a class="btn" href={page.url.prev}>
-					Previous
-				</a>
-			) : null
-		}
-		Page: {page.currentPage} of {page.lastPage}
-		{
-			page.url.next ? (
-				<a class="btn" href={page.url.next}>
-					Next
-				</a>
-			) : null
-		}
-	</div>
+	<Pagination page={page} />
 </Layout>

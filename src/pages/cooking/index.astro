@@ -4,7 +4,8 @@
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
 import processor from '@data/NutrientProcessor.json';
-import { getById, Item } from '@utils/lookup.js';
+import { getById } from '@utils/lookup.js';
+import type { Item } from '@utils/lookup.js';
 
 // Interfaces for defining the shape of input and output objects
 interface Input {

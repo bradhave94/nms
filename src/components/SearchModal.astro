@@ -43,7 +43,7 @@ const filters = [
 					<path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
 				</svg>
 
-				<input id="search-input" type="text" class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." role="combobox" aria-expanded="false" aria-controls="options" />
+				<input id="search-input" type="text" class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." role="combobox" aria-expanded="false" aria-controls="options" aria-label="Search items" />
 				<p class="text-sm px-4">Select Categories</p>
 				<div class="flex flex-wrap gap-2 px-4 pb-4 pt-2">
 					{
@@ -61,7 +61,11 @@ const filters = [
 				</div>
 			</div>
 
-			<div class="max-h-72 scroll-py-2 overflow-y-auto p-8 text-sm text-white" id="results"></div>
+			<div id="loading-indicator" class="hidden p-4 text-center text-white">
+				Loading...
+			</div>
+
+			<div class="max-h-72 scroll-py-2 overflow-y-auto p-8 text-sm text-white" id="results" aria-live="polite"></div>
 		</div>
 	</div>
 </div>
@@ -70,6 +74,10 @@ const filters = [
 	const searchInput = document.getElementById('search-input');
 	const typeCheckboxes = Array.from(document.querySelectorAll('input[name=type-filter]'));
 	const resultsList = document.getElementById('results');
+	const loadingIndicator = document.getElementById('loading-indicator');
+
+	let searchCache = new Map();
+	let debounceTimer;
 
 	function groupBy(arr, key) {
 		return arr.reduce((acc, obj) => {
@@ -80,40 +88,42 @@ const filters = [
 		}, {});
 	}
 
+	async function performSearch(searchTerm, selectedTypes) {
+		loadingIndicator.classList.remove('hidden');
+
+		if (searchCache.has(searchTerm)) {
+			const cachedResults = searchCache.get(searchTerm);
+			displayResults(cachedResults, selectedTypes);
+			loadingIndicator.classList.add('hidden');
+			return;
+		}
+
+		try {
+			const response = await fetch('/search.json');
+			const results = await response.json();
+			const filteredResults = results.body.filter((result) => result.name.toLowerCase().includes(searchTerm));
+			const groupedResults = groupBy(filteredResults, 'type');
+
+			searchCache.set(searchTerm, groupedResults);
+			displayResults(groupedResults, selectedTypes);
+		} catch (error) {
+			console.error(error);
+			resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
+		} finally {
+			loadingIndicator.classList.add('hidden');
+		}
+	}
+
 	function handleSearchInput() {
 		const searchTerm = searchInput.value.trim().toLowerCase();
 		const selectedTypes = typeCheckboxes.filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
 
-		fetch('/search.json')
-			.then((response) => response.json())
-			.then((results) => {
-				console.log(results);
-				const filteredResults = results.body.filter((result) => result.name.toLowerCase().includes(searchTerm));
-				const groupedResults = groupBy(filteredResults, 'type');
-				displayResults(groupedResults, selectedTypes);
-			})
-			.catch((error) => {
-				console.error(error);
-				resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
-			});
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(() => performSearch(searchTerm, selectedTypes), 300);
 	}
 
 	function handleCheckboxChange() {
-		const searchTerm = searchInput.value.trim().toLowerCase();
-		const selectedTypes = typeCheckboxes.filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
-
-		fetch('/search.json')
-			.then((response) => response.json())
-			.then((results) => {
-				const filteredResults = results.body.filter((result) => result.name.toLowerCase().includes(searchTerm));
-
-				const groupedResults = groupBy(filteredResults, 'type');
-				displayResults(groupedResults, selectedTypes);
-			})
-			.catch((error) => {
-				console.error(error);
-				resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
-			});
+		handleSearchInput();
 	}
 
 	searchInput.addEventListener('input', handleSearchInput);
@@ -127,12 +137,17 @@ const filters = [
 		const newHtml = Object.keys(groupedResults)
 			.map((group) => {
 				const filteredGroupResults = selectedTypes.length ? groupedResults[group].filter((result) => selectedTypes.includes(result.type)) : groupedResults[group];
-
 				if (filteredGroupResults.length > 0) {
-					const groupHtml = `<h3 class="text-2xl">${group}</h3>
-          <ul role="listbox">
-            ${filteredGroupResults.map((result) => `<li role="option"><a href="${result.url}">${result.name}</a></li>`).join('')}
-          </ul>`;
+					const groupHtml = `
+						<h3 class="text-2xl">${group}</h3>
+						<ul role="listbox">
+							${filteredGroupResults.map((result, index) => `
+								<li role="option" tabindex="0" data-index="${index}">
+									<a href="${result.url.replace(/\/+/g, '/')}">${result.name}</a>
+								</li>
+							`).join('')}
+						</ul>
+					`;
 					return groupHtml;
 				} else {
 					return '';
@@ -142,6 +157,35 @@ const filters = [
 
 		if (newHtml !== existingHtml) {
 			resultsList.innerHTML = newHtml;
+			setupKeyboardNavigation();
 		}
+	}
+
+	function setupKeyboardNavigation() {
+		const resultItems = resultsList.querySelectorAll('li[role="option"]');
+		resultItems.forEach((item, index) => {
+			item.addEventListener('keydown', (e) => {
+				switch (e.key) {
+					case 'ArrowDown':
+						e.preventDefault();
+						if (index < resultItems.length - 1) {
+							resultItems[index + 1].focus();
+						}
+						break;
+					case 'ArrowUp':
+						e.preventDefault();
+						if (index > 0) {
+							resultItems[index - 1].focus();
+						} else {
+							searchInput.focus();
+						}
+						break;
+					case 'Enter':
+						e.preventDefault();
+						item.querySelector('a').click();
+						break;
+				}
+			});
+		});
 	}
 </script>

@@ -70,13 +70,18 @@ const cards = [
 ];
 ---
 <Layout title="No Man's Sky Recipes, Crafting Guide and Cooking Guide" slug="home">
-	<h1 class="mt-4 text-4xl text-white text-center sm:text-6xl">No Man's Sky Recipes</h1>
-	<p class="mt-2 mb-10 text-1xl text-white text-center sm:text-3xl tracking-widest">
-		Refiners | Crafting | Cooking
-	</p>
+    <header class="text-center py-10 bg-gradient-to-r from-purple-900/20 to-slate-900/50">
+        <h1 class="text-4xl sm:text-6xl text-white font-bold mb-4">No Man's Sky Recipes</h1>
+        <p class="text-xl sm:text-3xl text-gray-300 tracking-widest">
+            Refiners | Crafting | Cooking
+        </p>
+    </header>
 
-	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-		{cards.map((card, index) => <Card card={card} index={index} loading="eager" />)}
-	</div>
-
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {cards.map((card, index) => (
+                <Card card={card} index={index} loading={index < 4 ? "eager" : "lazy"} />
+            ))}
+        </div>
+    </main>
 </Layout>

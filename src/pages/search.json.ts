@@ -1,33 +1,43 @@
 import type { APIRoute } from 'astro';
-
-import products from '@data/Products.json';
-import raw from '@data/RawMaterials.json';
-import cooking from '@data/Cooking.json';
-import curiosities from '@data/Curiosities.json';
-import conTech from '@data/ConstructedTechnology.json';
-import tech from '@data/Technology.json';
-import buildings from '@data/Buildings.json';
-import other from '@data/Others.json';
-import trade from '@data/Trade.json';
 import { getLabel, getSlug, sort } from '@utils/lookup.js';
+import * as dataSources from '@data/index';
 
-const data = sort([...raw, ...products, ...cooking, ...curiosities, ...conTech, ...tech, ...buildings, ...other, ...trade]);
+// Combine and sort all data
+const data = sort(
+  Object.values(dataSources).flatMap(source =>
+    source.map(item => ({
+      ...item,
+      CraftingOutputAmount: item.CraftingOutputAmount || undefined
+    }))
+  )
+);
 
-const search = data.map((item) => {
-	return {
-		id: item.Id,
-		name: item.Name,
-		type: getLabel(item.Id),
-		url: getSlug(item.Id) + item.Id,
-	};
-});
+// Create search data
+const search = data.map((item) => ({
+	id: item.Id,
+	name: item.Name,
+	type: getLabel(item.Id),
+	url: `/${getSlug(item.Id)}/${item.Id}`.replace(/\/+/g, '/'),
+  }));
 
+export const GET: APIRoute = ({ request }) => {
+  const url = new URL(request.url);
+  const query = url.searchParams.get('q')?.toLowerCase();
 
+  const results = query
+    ? search.filter(item =>
+        item.name.toLowerCase().includes(query) ||
+        item.type.toLowerCase().includes(query)
+      )
+    : search;
 
-export const GET: APIRoute = ({ params, request }) => {
-	return new Response(
-		JSON.stringify({
-			body: search,
-		})
-	);
+  return new Response(
+    JSON.stringify({ body: results }),
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'public, max-age=3600', // Cache for 1 hour
+      },
+    }
+  );
 };

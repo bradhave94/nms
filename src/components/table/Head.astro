@@ -11,12 +11,16 @@ const { columns } = Astro.props;
 
 <thead>
 	<tr>
-		{
-			columns.map((column) => (
-				<>
-					<th>{column.title}</th>
-				</>
-			))
-		}
+		{columns.map((column) => (
+			<th>{column.title}</th>
+		))}
 	</tr>
 </thead>
+
+<style>
+	th {
+		padding: 0.5rem;
+		text-align: left;
+		font-weight: bold;
+	}
+</style>
