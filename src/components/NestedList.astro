@@ -1,15 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import Accordion from '@components/Accordion.astro';
-import { getSlug } from '@utils/lookup.js';
-
-interface Item {
-  Id: string;
-  Name: string;
-  Icon: string;
-  Quantity: number;
-  RequiredItems?: Item[];
-}
+import { getSlug, type Item } from '@utils/lookup.js';
 
 interface Props {
   items: {
@@ -27,7 +19,7 @@ const { items } = Astro.props;
     <Accordion>
       <div class="flex" slot="title">
         <div class="m-3">
-          <a class="flex hover:underline" href={`${getSlug(item.Id)}${item.Id}`}>
+          <a class="flex hover:underline" href={`${getSlug(item.Id)}${item.fishId || item.Id}`}>
             <div class="mr-4 flex-shrink-0 self-start">
               <Image
                 src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
@@ -51,7 +43,7 @@ const { items } = Astro.props;
     </Accordion>
   ) : (
     <div class="m-3">
-      <a class="flex hover:underline" href={`${getSlug(item.Id)}${item.Id}`}>
+      <a class="flex hover:underline" href={`${getSlug(item.Id)}${item.fishId || item.Id}`}>
         <div class="mr-4 flex-shrink-0 self-start">
           <Image
             src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}

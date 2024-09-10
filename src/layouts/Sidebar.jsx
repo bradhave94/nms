@@ -15,7 +15,8 @@ import {
   BoltIcon,
   ListBulletIcon,
   ArchiveBoxIcon,
-  PaperClipIcon
+  PaperClipIcon,
+  ScaleIcon
 } from '@heroicons/react/24/solid';
 import { classNames } from '../utils/classNames';
 
@@ -28,6 +29,7 @@ const navigation = [
   { name: 'Products', href: '/products/1', icon: ArchiveBoxIcon },
   { name: 'Technology', href: '/technology/1', icon: CogIcon },
   { name: 'Buildings', href: '/buildings/1', icon: HomeModernIcon },
+  { name: 'Fish', href: '/fish/1', icon: ScaleIcon },
   { name: 'Curiosities', href: '/curiosities/1', icon: QuestionMarkCircleIcon },
   { name: 'Other', href: '/other/1', icon: PaperClipIcon },
   { name: 'Raw Materials', href: '/raw/1', icon: BoltIcon },

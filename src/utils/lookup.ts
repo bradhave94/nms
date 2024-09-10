@@ -3,6 +3,7 @@ import raw from '../data/RawMaterials.json';
 import products from '../data/Products.json';
 import cooking from '../data/Cooking.json';
 import curiosities from '../data/Curiosities.json';
+import fish from '../data/Fish.json';
 import conTech from '../data/ConstructedTechnology.json';
 import tech from '../data/Technology.json';
 import tMod from '../data/TechnologyModule.json';
@@ -20,6 +21,7 @@ export type RequiredItem = {
 // Defining the interface for an Item
 type Item = {
 	Id: string;
+	fishId?: string;
 	Name: string;
 	Description: string;
 	Group: string;
@@ -40,7 +42,7 @@ const dataSources = {
 	raw,
 	prod: products,
 	cook: cooking,
-	cur: curiosities,
+	cur: [...curiosities, ...fish],
 	conTech,
 	tech,
 	tMod,
@@ -57,6 +59,7 @@ const slugs = {
 	prod: '/products/',
 	cook: '/cooking/',
 	cur: '/curiosities/',
+	fish: '/fish/',
 	conTech: '/technology/',
 	tech: '/technology/',
 	tMod: '/technology/',
@@ -72,6 +75,7 @@ const labels = {
 	prod: 'Products',
 	cook: 'Cooking',
 	cur: 'Curiosities',
+	fish: 'Fish',
 	conTech: 'Technology',
 	tech: 'Technology',
 	tMod: 'Technology',
@@ -82,12 +86,20 @@ const labels = {
 	trade: 'Other',
 };
 
-// Returns the slug corresponding to the item id
 const getSlug = (id: string): string => {
-	// Extract the prefix of the item id by splitting the id by its numeric part
-	const prefix = id.split(/\d/)[0];
-	// Return the slug corresponding to the prefix or "item" if prefix not found
-	return slugs[prefix] || 'item';
+    // Extract the prefix of the item id by splitting the id by its numeric part
+    const prefix = id.split(/\d/)[0];
+
+    // Special handling for 'cur' prefix
+    if (prefix === 'cur') {
+        const item = getById(id);
+        if (item && 'fishId' in item) {
+            return slugs['fish'];
+        }
+    }
+
+    // Return the slug corresponding to the prefix or "item" if prefix not found
+    return slugs[prefix] || 'item';
 };
 
 // Returns the label corresponding to the item id
@@ -104,27 +116,39 @@ const findById = (source: Item[], id: string): Item => {
 	return source.find((p) => p.Id === id);
 };
 
-const findOutput = (id: string) => {
-	// Find the item from the data source with a matching id
-	const outputs = [];
-	for (const source in dataSources) {
-		dataSources[source].forEach((item) => {
-			if (item.Output && item.Output.Id === id) outputs.push(item);
-		});
-	}
-	return outputs;
+const findOutput = (id: string): Item[] => {
+    return Object.values(dataSources).flatMap(source =>
+        source.filter(item => item.Output?.Id === id)
+    );
+};
+
+const findInput = (id: string): Item[] => {
+    return Object.values(dataSources).flatMap(source =>
+        source.filter(item => item.Inputs?.some(input => input.Id === id))
+    );
 };
 
 // Returns the item corresponding to the id from the appropriate data source
-const getById = (id: string): Item => {
+const getById = (id: string): Item | undefined => {
 	// Extract the prefix of the item id by splitting the id by its numeric part
 	const prefix = id.split(/\d/)[0];
 	// Get the data source corresponding to the prefix
 	const source = dataSources[prefix];
-	// If source not found, return undefined
-	if (!source) return;
-	// Find the item from the source and return it
-	return findById(source, id);
+
+	// If source not found, log an error and return undefined
+	if (!source) {
+		console.error(`No data source found for prefix: ${prefix}`);
+		return undefined;
+	}
+	// Find the item from the source
+	const item = source.find((item) => item.Id === id);
+	// If item not found, log a warning and return undefined
+	if (!item) {
+		console.warn(`Item not found: ${id}`);
+		return undefined;
+	}
+	// Return the found item
+	return item;
 };
 
 const getLength = (list) => {
@@ -149,8 +173,8 @@ const sortTable = (data) => {
 	});
 };
 
-// Export the getSlug and getById functions, and the Item interface
-export { getSlug, getLabel, getById, findOutput, getLength, sort, sortTable };
+// Add findInput to the export statement
+export { getSlug, getLabel, getById, findOutput, findInput, getLength, sort, sortTable };
 export type { Item };
 
 // <(.*?)> - Match any character between < and >, and capture it

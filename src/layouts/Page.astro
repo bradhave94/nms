@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
-import { getById, findOutput } from '@utils/lookup.js';
+import { getById, getSlug, findOutput, findInput } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import credit from '../assets/img/credits.png';
 
@@ -33,6 +33,7 @@ const createArray = (item: Item, num = 1): Array<any> => {
       } else {
         rawItems.push({
           Id: itemData.Id,
+          fishId: itemData.fishId,
           Name: itemData.Name,
           Icon: itemData.Icon,
           Colour: itemData.Colour,
@@ -43,6 +44,7 @@ const createArray = (item: Item, num = 1): Array<any> => {
 
     array.push({
       Id: itemData.Id,
+      fishId: itemData.fishId,
       Name: itemData.Name,
       Icon: itemData.Icon,
       Colour: itemData.Colour,
@@ -61,6 +63,7 @@ const getOutputs = (item) => {
     if (!i) return;
     return {
       Id: i.Id,
+      fishId: i.fishId,
       Icon: i.Icon,
       Name: i.Name,
       Quantity: element.Quantity,
@@ -69,11 +72,41 @@ const getOutputs = (item) => {
 
   return {
     Id: Astro.props.item.Id,
+    fishId: Astro.props.item.fishId,
     Icon: Astro.props.item.Icon,
     Name: Astro.props.item.Name,
     Quantity: 1,
     RequiredItems: RequiredItems,
   };
+};
+
+// Function to get input items
+const getInputs = (item) => {
+  return item.map((recipe) => {
+    const outputItem = getById(recipe.Output.Id);
+    if (!outputItem) return;
+    const requiredItems = recipe.Inputs.map(input => {
+      let inputItem = getById(input.Id);
+      if (!inputItem) return null;
+      return {
+        Id: inputItem.Id,
+        fishId: inputItem.fishId,
+        Icon: inputItem.Icon,
+        Name: inputItem.Name,
+        Group: inputItem.Group,
+        Quantity: input.Quantity
+      };
+    }).filter(Boolean);
+
+    return {
+      Id: recipe.Output.Id,
+      fishId: outputItem.fishId,
+      Icon: outputItem.Icon,
+      Name: outputItem.Name,
+      Quantity: recipe.Output.Quantity,
+      RequiredItems: requiredItems
+    };
+  }).filter(Boolean);
 };
 
 // Prepare data for rendering
@@ -89,6 +122,9 @@ const data = item.RequiredItems?.length
   : [];
 
 const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
+const inputData = findInput(item.Id);
+const input = getInputs(inputData);
+console.log(item)
 const showQuantityInput = data.length + output.length > 0;
 ---
 
@@ -214,9 +250,48 @@ const showQuantityInput = data.length + output.length > 0;
         </span>
       </h2>
       <div class={`grid gap-4 items-start justify-center ${
-        output.length === 3 ? 'xl:grid-cols-3 lg:grid-cols-2 grid-cols-1' : 'md:grid-cols-2 grid-cols-1'
+        output.length >= 3 ? 'xl:grid-cols-3 lg:grid-cols-2 grid-cols-1' : 'md:grid-cols-2 grid-cols-1'
       }`}>
         {output.map((item) => (
+          <div class="bg-gray-900">
+            <Accordion>
+              <div class="flex" slot="title">
+                <Image
+                  src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+                  alt={item.Name}
+                  sizes="50px"
+                  width={50}
+                  height={50}
+                  class="mr-4 flex-shrink-0 self-start"
+                />
+                <div class="flex items-center">
+                  <h4 class="lg:text-lg">
+                    {item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
+                  </h4>
+                </div>
+              </div>
+              <div slot="content">
+                {item.RequiredItems?.length > 0 && <NestedList items={item} />}
+              </div>
+            </Accordion>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Used in -->
+  {input.length > 0 && (
+    <div id="usedin">
+      <h2 class="relative mt-8 mb-4 text-center">
+        <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
+          {item.fishId ? 'Cooks into' : 'Used in'}
+        </span>
+      </h2>
+      <div class={`grid gap-4 items-start justify-center ${
+        input.length >= 3 ? 'xl:grid-cols-3 lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'
+      }`}>
+        {input.map((item) => (
           <div class="bg-gray-900">
             <Accordion>
               <div class="flex" slot="title">

@@ -10,3 +10,4 @@ export { default as Refinery } from './Refinery.json';
 export { default as Technology } from './Technology.json';
 export { default as TechnologyModule } from './TechnologyModule.json';
 export { default as Trade } from './Trade.json';
+export { default as Fish } from './Fish.json';

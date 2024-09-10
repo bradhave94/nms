@@ -1,0 +1,21 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Page from '@layouts/Page.astro';
+import data from '@data/Fish.json';
+
+export async function getStaticPaths() {
+	return data.map((post) => ({
+		params: { id: post.fishId.toString() },
+		props: { item: post },
+	}));
+}
+
+const { item } = Astro.props;
+
+const title = `${item.Name} | No Man's Sky Recipes`;
+const description = `${item.Name} | ${item.Description}`;
+---
+
+<Layout {title} {description} slug="fish">
+	<Page item={item as Item} />
+</Layout>
