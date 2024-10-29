@@ -1,3320 +1,3320 @@
 [
 	{
-	  "Id": "conTech1",
-	  "Icon": "constructedTechnology/1.png",
-	  "Name": "Base Computer",
-	  "Group": "Site Evaluation Device",
-	  "Description": "Portable land registration service.\n\nWhen placed, contacts Universal Cartographic Archive to establish ownership of land. Successful registration allows the construction of base modules across any site of the user's choosing.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/1.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw23",
-		  "Quantity": 30
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech2",
-	  "Icon": "constructedTechnology/2.png",
-	  "Name": "Landing Pad",
-	  "Group": "Construction module",
-	  "Description": "A stable, reinforced landing pad for starships.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/2.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 10
-		},
-		{
-		  "Id": "prod7",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 2
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech3",
-	  "Icon": "constructedTechnology/3.png",
-	  "Name": "Galactic Trade Terminal",
-	  "Group": "Trading terminal",
-	  "Description": "A trading terminal that provides instant local access to the market for resources and commodities.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/3.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod7",
-		  "Quantity": 3
-		},
-		{
-		  "Id": "raw10",
-		  "Quantity": 25
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech4",
-	  "Icon": "constructedTechnology/4.png",
-	  "Name": "Health Station",
-	  "Group": "Health recharge module",
-	  "Description": "A wall mounted module that can be used to recharge health.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -10.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/4.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw15",
-		  "Quantity": 20
-		},
-		{
-		  "Id": "raw27",
-		  "Quantity": 50
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech5",
-	  "Icon": "constructedTechnology/5.png",
-	  "Name": "Hazard Protection Unit",
-	  "Group": "Hazard Protection Charging System",
-	  "Description": "A wall mounted module that can be used to recharge the user's Hazard Protection systems.\n\nThe Hazard Protection Unit must be kept charged with a source of fuel.",
-	  "BaseValueUnits": 3.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -10.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/5.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 3,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw15",
-		  "Quantity": 20
-		},
-		{
-		  "Id": "raw29",
-		  "Quantity": 50
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech6",
-	  "Icon": "constructedTechnology/6.png",
-	  "Name": "Save Beacon",
-	  "Group": "Portable waypoint marker",
-	  "Description": "Once activated, beacons provide a permanent navigational waypoint, facilitating repeat visits to specific locations.\n\nAllows user to record their progress at any time.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/6.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "raw13",
-		  "Quantity": 15
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech7",
-	  "Icon": "constructedTechnology/7.png",
-	  "Name": "Save Point",
-	  "Group": "Construction module",
-	  "Description": "A buildable save point for managing your progress.",
-	  "BaseValueUnits": 2.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/7.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 2,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "prod11",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech8",
-	  "Icon": "constructedTechnology/8.png",
-	  "Name": "Signal Booster",
-	  "Group": "Environmental scanner",
-	  "Description": "A versatile scanner that detects nearby buildings. Can decrypt Navigation Data to pinpoint specific locations.\n\nThe Signal Booster can be dismantled and redeployed for easy transportation.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/8.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod3",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 15
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech9",
-	  "Icon": "constructedTechnology/9.png",
-	  "Name": "Antimatter Reactor",
-	  "Group": "Baryogenesis Unit",
-	  "Description": "An autonomous baryogenesis reactor, this device can be left to harvest reality paradoxes and convert them into usable antimatter. User must monitor fuel levels to ensure continued operation.\n\nThe resulting antimatter is safely contained, ready for use in all standard hyperspace power units.",
-	  "BaseValueUnits": 20.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/9.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 20,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "cur21",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "prod1",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech10",
-	  "Icon": "constructedTechnology/10.png",
-	  "Name": "Base Teleport Module",
-	  "Group": "Long-Distance Matter Transfer Device",
-	  "Description": "A personal teleport device, allowing the user to move quickly between their constructed bases, as well as any Space Station Terminuses connected to their network.\n\nUser is urged to verify network integrity before inserting any matter they cannot afford to become separated from.",
-	  "BaseValueUnits": 2.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -20.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/10.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 2,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod3",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 4
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech11",
-	  "Icon": "constructedTechnology/11.png",
-	  "Name": "Fleet Command Room",
-	  "Group": "Expedition Management Terminal",
-	  "Description": "Core Fleet Management Station. This advanced holographic communications station is vital for managing fleet expeditions from the comfort of your capital ship.\n\nUser is advised that multiple stations are required to manage more than one expedition at a time.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/11.png",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw7",
-		  "Quantity": 10
-		},
-		{
-		  "Id": "raw32",
-		  "Quantity": 120
-		},
-		{
-		  "Id": "raw33",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech12",
-	  "Icon": "constructedTechnology/12.png",
-	  "Name": "Construction Research Unit",
-	  "Group": "Technology Recovery Device",
-	  "Description": "Portable blueprint research device.\n\nThis field-deployable research module allows the user to convert old or damaged technology modules into advanced construction blueprints.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/12.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod3",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw10",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech13",
-	  "Icon": "constructedTechnology/13.png",
-	  "Name": "Portable Refiner",
-	  "Group": "Automated Refinery Unit",
-	  "Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Portable Refiner can be dismantled and redeployed for easy transportation. Note: the Portable Refiner requires fuel to operate.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/13.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw3",
-		  "Quantity": 30
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech14",
-	  "Icon": "constructedTechnology/14.png",
-	  "Name": "Medium Refiner",
-	  "Group": "Automated Refinery Unit",
-	  "Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Medium Refiner allows two different substances to be combined into one new material, or materials to be processed at better ratios. \n\nThe Medium Refiner must be installed in a Habitable Base, but does not require additional power sources.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/14.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 100
-		},
-		{
-		  "Id": "prod11",
-		  "Quantity": 5
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech15",
-	  "Icon": "constructedTechnology/15.png",
-	  "Name": "Large Refiner",
-	  "Group": "Automated Refinery Unit",
-	  "Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Large Refiner allows three different substances to be combined into one new material, or materials to be processed at better ratios. \n\nThe Large Refiner must be installed in a Habitable Base, but does not require additional power sources.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/15.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod7",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw13",
-		  "Quantity": 100
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 200
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech16",
-	  "Icon": "constructedTechnology/16.png",
-	  "Name": "Appearance Modifier",
-	  "Group": "Customise Personal Visuals",
-	  "Description": "A buildable module that allows the users to adjust their personal appearance settings.\n\nThe module applies advanced holographic techniques to recalibrate the light around the user, allowing them to adopt whatever appearance they desire. Visual data must be properly formated before use.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -50.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/16.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw8",
-		  "Quantity": 10
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech17",
-	  "Icon": "constructedTechnology/17.png",
-	  "Name": "Nutrient Processor",
-	  "Group": "Portable Sustenance Unit",
-	  "Description": "A portable nutrient extractor, able to process and refine gathered ingredients into edible food products.\n\nUser is advised that consumption of generated products is entirely at their own risk.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/17.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod5",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 25
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech18",
-	  "Icon": "constructedTechnology/18.png",
-	  "Name": "Automated Feeder",
-	  "Group": "Agricultural Robot",
-	  "Description": "A robotic farming unit, designed to automatically supply nearby creatures with food.\n\nWhen powered, will attract nearby animal life. Keep bait tanks full in order to supply lifeforms with desired food.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -20.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/18.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 4
-		},
-		{
-		  "Id": "cook122",
-		  "Quantity": 10
-		},
-		{
-		  "Id": "prod117",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech19",
-	  "Icon": "constructedTechnology/19.png",
-	  "Name": "Livestock Unit",
-	  "Group": "Automatic Harvesting Robot",
-	  "Description": "A robotic farming unit, designed to automatically harvest substances from creatures. Requires power.\n\nCreatures that are ready to be harvested for milk, eggs or other specialist produce will approach the Livestock Unit and deposit their yields. The creatures are unharmed by the process.\n\nWill harvest produce from creatures fed by hand or via an Automated Feeder.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -20.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/19.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 4
-		},
-		{
-		  "Id": "raw50",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "prod52",
-		  "Quantity": 2
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech20",
-	  "Icon": "constructedTechnology/20.png",
-	  "Name": "Message Module",
-	  "Group": "Communications terminal",
-	  "Description": "A small and accessible information container for leaving messages or viewing left messages and short strings of information.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/20.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod3",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech21",
-	  "Icon": "constructedTechnology/21.png",
-	  "Name": "Communications Station",
-	  "Group": "Communications terminal",
-	  "Description": "A terminal for the composition and transmission of messages to other travellers.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/21.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw9",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech22",
-	  "Icon": "constructedTechnology/22.png",
-	  "Name": "Nomad Geobay",
-	  "Group": "Construction module",
-	  "Description": "An underground secure parking facility for the Nomad light Exocraft.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Additional": "",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/22.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 8,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw24",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 2
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech23",
-	  "Icon": "constructedTechnology/23.png",
-	  "Name": "Roamer Geobay",
-	  "Group": "Construction module",
-	  "Description": "An underground secure parking facility for the Roamer medium Exocraft.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Additional": "",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/23.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 4,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw24",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 2
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech24",
-	  "Icon": "constructedTechnology/24.png",
-	  "Name": "Colossus Geobay",
-	  "Group": "Construction module",
-	  "Description": "An underground secure parking facility for the Colossus large Exocraft.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Additional": "",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/24.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 8,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw24",
-		  "Quantity": 100
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 4
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech25",
-	  "Icon": "constructedTechnology/25.png",
-	  "Name": "Pilgrim Geobay",
-	  "Group": "Construction module",
-	  "Description": "An underground secure parking facility for the Pilgrim light Exocraft.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Additional": "",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/25.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw32",
-		  "Quantity": 100
-		},
-		{
-		  "Id": "prod11",
-		  "Quantity": 5
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech26",
-	  "Icon": "constructedTechnology/26.png",
-	  "Name": "Nautilon Chamber",
-	  "Group": "Submarine Docking Bay",
-	  "Description": "An advanced, fully-airlocked docking station for the Nautilon submarine.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/26.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "cur32",
-		  "Quantity": 4
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw16",
-		  "Quantity": 100
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech27",
-	  "Icon": "constructedTechnology/27.png",
-	  "Name": "Exocraft Summoning Station",
-	  "Group": "Vehicle Translocation Device",
-	  "Description": "Construction allows the user to summon any owned Exocraft from anywhere else in that system.\n\nInterfaces with the Exosuit Quick Command Menu to ease of use. Can be compressed and carried within the Exosuit with DECONSTRUCT for later redeployment.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/27.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 12,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw7",
-		  "Quantity": 60
-		},
-		{
-		  "Id": "raw27",
-		  "Quantity": 80
-		},
-		{
-		  "Id": "prod19",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech28",
-	  "Icon": "constructedTechnology/28.png",
-	  "Name": "Construction Terminal",
-	  "Group": "Specialist terminal",
-	  "Description": "A research station tailored to the needs of Construction Overseers, and equipped with architectural and engineering design software.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/28.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw9",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech29",
-	  "Icon": "constructedTechnology/29.png",
-	  "Name": "Exocraft Terminal",
-	  "Group": "Specialist terminal",
-	  "Description": "A research station tailored to the needs of Technicians, and equipped with bespoke vehicular design software.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/29.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw5",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech30",
-	  "Icon": "constructedTechnology/30.png",
-	  "Name": "Weapons Terminal",
-	  "Group": "Specialist terminal",
-	  "Description": "A research station tailored to the needs of Armourers, and equipped for the development of munitions and explosives as well as selected civilian tech.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/30.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		},
-		{
-		  "Id": "raw31",
-		  "Quantity": 25
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech31",
-	  "Icon": "constructedTechnology/31.png",
-	  "Name": "Science Terminal",
-	  "Group": "Specialist terminal",
-	  "Description": "A research station tailored to the needs of Scientists, and equipped for research and development of scientific blueprints.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/31.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech32",
-	  "Icon": "constructedTechnology/32.png",
-	  "Name": "Agricultural Terminal",
-	  "Group": "Specialist terminal",
-	  "Description": "A research station tailored to the needs of Farmers, and equipped for the analysis and cultivation of farmable crops.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/32.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw2",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech33",
-	  "Icon": "constructedTechnology/33.png",
-	  "Name": "Hydroponic Tray",
-	  "Group": "Farming tech",
-	  "Description": "A self contained growth system for the indoor cultivation of agricultural crops.\n\nBuild requirement: Must be placed indoors.",
-	  "BaseValueUnits": 3.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/33.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 3,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw1",
-		  "Quantity": 20
-		},
-		{
-		  "Id": "raw9",
-		  "Quantity": 30
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech34",
-	  "Icon": "constructedTechnology/34.png",
-	  "Name": "Large Hydroponic Tray",
-	  "Group": "Farming tech",
-	  "Description": "A self contained growth system for the indoor cultivation of agricultural crops. Can support up to four plants.\n\nBuild requirement: Must be placed indoors.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -20.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/34.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw1",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw9",
-		  "Quantity": 60
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 4
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech38",
-	  "Icon": "constructedTechnology/38.png",
-	  "Name": "Race Force Amplifier",
-	  "Group": "Race Part",
-	  "Description": "Provides a boost to your Exocraft during races.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Additional": "",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/38.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "prod11",
-		  "Quantity": 2
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech39",
-	  "Icon": "constructedTechnology/39.png",
-	  "Name": "Race Obstacle",
-	  "Group": "Race Part",
-	  "Description": "Provides extra challenge for Exocraft races.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Additional": "",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/39.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech40",
-	  "Icon": "constructedTechnology/40.png",
-	  "Name": "Race Initiator",
-	  "Group": "Race Part",
-	  "Description": "This platform acts as the start and finish line for Exocraft field tests, allowing Travellers to practice manoeuvring and speed.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/40.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "prod7",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech41",
-	  "Icon": "constructedTechnology/41.png",
-	  "Name": "Marine Shelter",
-	  "Group": "Deep Water Survival Module",
-	  "Description": "An emergency survival module.\n\nCan be rapidly deployed on the seabed in the event of an oxygen or other Exosuit life support emergency. Provides temporary shelter from environmental hazards, predators and other hostiles forces found in the deep ocean.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/41.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw3",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "cur17",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "prod54",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech42",
-	  "Icon": "constructedTechnology/42.png",
-	  "Name": "Sphere Creator",
-	  "Group": "Experimental Fabricator",
-	  "Description": "A highly-specific fabrication device, developed with the intention of finding the universe's most perfect sphere.\n\nRequires power to operate. Will create a large sphere, ready for whatever experiments are deemed necessary.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/42.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw24",
-		  "Quantity": 100
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 4
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech43",
-	  "Icon": "constructedTechnology/43.png",
-	  "Name": "Noise Box",
-	  "Group": "Audio Device",
-	  "Description": "A special construction module designed to emit a high-frequency noise. Pitch may be adjusted to the user's requirements.\n\nRequires power to operate.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -1.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/43.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "raw29",
-		  "Quantity": 40
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 2
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech44",
-	  "Icon": "constructedTechnology/44.png",
-	  "Name": "Oxygen Harvester",
-	  "Group": "Atmosphere Processing Device",
-	  "Description": "An autonomous atmosphere extractor, this device can be left to collect and purify oxygen from the air. User must monitor fuel levels to ensure continued operation.\n\nThe resulting gas is compressed and processed, ready for use in all standard life support systems.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/44.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "prod11",
-		  "Quantity": 3
-		},
-		{
-		  "Id": "prod23",
-		  "Quantity": 5
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech45",
-	  "Icon": "constructedTechnology/45.png",
-	  "Name": "Autonomous Mining Unit",
-	  "Group": "Portable mining device",
-	  "Description": "An automated harvester for the mining of resources. Once activated, the AMU extracts minerals without the need for supervision, providing a regular yield until the site is exhausted.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/45.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "raw27",
-		  "Quantity": 100
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech46",
-	  "Icon": "constructedTechnology/46.png",
-	  "Name": "Mineral Extractor",
-	  "Group": "Power Distribution Module",
-	  "Description": "An automated mineral harvester. Determine a site with the Surveying upgrade for the Analysis Visor. Mineral extraction rates and produced minerals will vary from site to site.\n\nRequires power to function. Connect to Silos with Pipelines to allow collection from more convenient sites.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Power": -50.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/46.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 100
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech47",
-	  "Icon": "constructedTechnology/47.png",
-	  "Name": "Gas Extractor",
-	  "Group": "Power Distribution Module",
-	  "Description": "An automated gas harvester. Determine a site with the Surveying upgrade for the Analysis Visor. Gas extraction rates and produced gases will vary from site to site.\n\nRequires power to function. Connect to Silos with Pipelines to allow collection from more convenient sites.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Power": -50.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/47.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 100
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech48",
-	  "Icon": "constructedTechnology/48.png",
-	  "Name": "Supply Depot",
-	  "Group": "Substance Distribution Module",
-	  "Description": "Automated storage unit. Connect to a Supply Grid using Pipelines.\n\nAutomatically stores the output of various Mineral and Gas Extractors, allowing for increased capacity and more efficient siting. Can be located a long distances from the extraction site.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/48.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 10
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech49",
-	  "Icon": "constructedTechnology/49.png",
-	  "Name": "Supply Pipe",
-	  "Group": "Power Distribution Module",
-	  "Description": "Flexible, high-strength piping. Able to withstand a highly-pressurised internal environment.\n\nUsed for connecting various Mineral and Gas Extractors to Silos",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/49.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw1",
-		  "Quantity": 10
-		},
-		{
-		  "Id": "raw8",
-		  "Quantity": 25
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech50",
-	  "Icon": "constructedTechnology/50.png",
-	  "Name": "Solar Panel",
-	  "Group": "Power Distribution Module",
-	  "Description": "An efficient power generator, this solar array will turn sunlight into the electrical energy required to power many base structures.\n\nGenerates no power at night. Partner with Batteries to store energy for the hours of darkness.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Power": 50.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/50.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 8,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw33",
-		  "Quantity": 30
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech51",
-	  "Icon": "constructedTechnology/51.png",
-	  "Name": "Electromagnetic Generator",
-	  "Group": "Power Distribution Module",
-	  "Description": "When suitably placed in an area of high field strength, efficient electromagnetic dynamos are used to generate near limitless power.\n\nLocate appropriate sites with the Surveying upgrade for the Analysis Visor. Power output will vary from site to site.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Power": 1.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/51.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "raw10",
-		  "Quantity": 60
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 75
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech52",
-	  "Icon": "constructedTechnology/52.png",
-	  "Name": "Biofuel Reactor",
-	  "Group": "Power Distribution Module",
-	  "Description": "A small power generator. Burns carbon-based fuel placed in its furnace tank and converts it into usable power.\n\nConnect power generators to base structures and technologies with electrical wiring. Many parts require power to function.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Power": -1.0,
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/52.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw3",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech53",
-	  "Icon": "constructedTechnology/53.png",
-	  "Name": "Electrical Wiring",
-	  "Group": "Power Distribution Module",
-	  "Description": "High-capacity electrical wiring. Use wiring to connect Power Generators to your base. Most technology, as well as structures with embedded lighting systems, require a power source to operate.\n\nWiring can be connected to various switches to facilitate selective power flow.",
-	  "BaseValueUnits": 0.0,
-	  "CurrencyType": "None",
-	  "Additional": "",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/53.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 0,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech54",
-	  "Icon": "constructedTechnology/54.png",
-	  "Name": "Teleport Cable",
-	  "Group": "Power Distribution Module",
-	  "Description": "Advanced fibre-optic cabling, designed to link one or more Short-Range Teleporters.",
-	  "BaseValueUnits": 0.0,
-	  "CurrencyType": "None",
-	  "Additional": "",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/54.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 0,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech55",
-	  "Icon": "constructedTechnology/55.png",
-	  "Name": "Wall Switch",
-	  "Group": "Power Distribution Module",
-	  "Description": "A power management device, the switch will toggle the flow of power when pulled.\n\nSwitches require both power and signal wires to control a device.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/55.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw8",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw15",
-		  "Quantity": 25
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech56",
-	  "Icon": "constructedTechnology/56.png",
-	  "Name": "Floor Switch",
-	  "Group": "Power Distribution Module",
-	  "Description": "A power management device, the switch will toggle the flow of power when stood upon or otherwise activated.\n\nSwitches require both power and signal wires to control a device.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/56.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw8",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw15",
-		  "Quantity": 25
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech57",
-	  "Icon": "constructedTechnology/57.png",
-	  "Name": "Battery",
-	  "Group": "Power Distribution Module",
-	  "Description": "Highly-efficient energy storage units. Connect to a power grid, and onboard power management circuits will automatically draw down spare capacity to charge its cells.\n\nWhen the grid attempts to draw more power than is currently supplied, the battery will automatically deploy power to make up the shortfall.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/57.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 3,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw2",
-		  "Quantity": 100
-		},
-		{
-		  "Id": "raw10",
-		  "Quantity": 60
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech58",
-	  "Icon": "constructedTechnology/58.png",
-	  "Name": "Proximity Switch",
-	  "Group": "Power Distribution Module",
-	  "Description": "A power management device, the switch will toggle the flow of power when an entity is detected nearby.\n\nSwitches require both power and signal wires to control a device.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/58.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw1",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech59",
-	  "Icon": "constructedTechnology/59.png",
-	  "Name": "Button",
-	  "Group": "Power Distribution Module",
-	  "Description": "A power management device, the switch will toggle the flow of power when used.\n\nSwitches require both power and signal wires to control a device.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/59.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw1",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech60",
-	  "Icon": "constructedTechnology/60.png",
-	  "Name": "Power Inverter",
-	  "Group": "Power Distribution Module",
-	  "Description": "A power management device, the switch will toggle the flow of power when used.\n\nSwitches require both power and signal wires to control a device.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/60.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw8",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw15",
-		  "Quantity": 15
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech61",
-	  "Icon": "constructedTechnology/61.png",
-	  "Name": "Auto Switch",
-	  "Group": "Power Distribution Module",
-	  "Description": "A power management device, this switch will toggle the flow of power when signaled by an incoming signal.\n\nSwitches require both power and signal wires to control a device.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/61.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw8",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw15",
-		  "Quantity": 15
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech62",
-	  "Icon": "constructedTechnology/62.png",
-	  "Name": "Short-Range Teleporter",
-	  "Group": "Instantaneous Transport Network",
-	  "Description": "A low-powered teleporter, construction for instantaneous travel across short distances.\n\nWhen wired to both a power source and another short-range teleporter, allows near-instant travel between nearby locations.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/62.png",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		},
-		{
-		  "Id": "raw33",
-		  "Quantity": 30
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech63",
-	  "Icon": "constructedTechnology/63.png",
-	  "Name": "Minotaur Geobay",
-	  "Group": "Heavy Loader Storage Bay",
-	  "Description": "A secure parking, summoning and customisation facility for the Minotaur Heavy Exosuit Hybrid.\n\nDeploy the Minotaur from the Quick Menu. With the aid of an Orbital Exocraft Materialiser mounted inside a freighter, the Minotaur can be instantly deployed to any location within the same system as the mothership.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/63.png",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 5
-		},
-		{
-		  "Id": "raw33",
-		  "Quantity": 100
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 4
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech64",
-	  "Icon": "constructedTechnology/64.png",
-	  "Name": "Multi-Tool Expansion Slot",
-	  "Group": "Upgrade Unit",
-	  "Description": "A flexible upgrade circuit, compatible with all person Multi-Tools.\n\nThis module can be wired into a Multi-Tool at a Space Station Multi-Tool Upgrade Rack, granting the user more space in the Multi-Tool's internal layout to add further upgrades or technology specialisations.",
-	  "BaseValueUnits": 85000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech65",
-	  "Icon": "constructedTechnology/65.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech66",
-	  "Icon": "constructedTechnology/66.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech67",
-	  "Icon": "constructedTechnology/67.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech68",
-	  "Icon": "constructedTechnology/68.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech69",
-	  "Icon": "constructedTechnology/69.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech70",
-	  "Icon": "constructedTechnology/70.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech71",
-	  "Icon": "constructedTechnology/71.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech72",
-	  "Icon": "constructedTechnology/72.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech73",
-	  "Icon": "constructedTechnology/73.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech74",
-	  "Icon": "constructedTechnology/74.png",
-	  "Name": "Storage Container",
-	  "Group": "Storage unit",
-	  "Description": "Spacious additional storage for inventory items.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Power": -5.0,
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 35
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech75",
-	  "Icon": "constructedTechnology/75.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech76",
-	  "Icon": "constructedTechnology/76.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech77",
-	  "Icon": "constructedTechnology/77.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech78",
-	  "Icon": "constructedTechnology/78.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech79",
-	  "Icon": "constructedTechnology/79.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech80",
-	  "Icon": "constructedTechnology/80.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech81",
-	  "Icon": "constructedTechnology/81.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech82",
-	  "Icon": "constructedTechnology/82.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech83",
-	  "Icon": "constructedTechnology/83.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech84",
-	  "Icon": "constructedTechnology/84.png",
-	  "Name": "Freighter Storage Unit",
-	  "Group": "Custom Freighter Module",
-	  "Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
-	  "BaseValueUnits": 5.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsNoLongerObtainable"
-	  ],
-	  "BlueprintCost": 5,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "raw12",
-		  "Quantity": 20
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech85",
-	  "Icon": "constructedTechnology/85.png",
-	  "Name": "Atmosphere Harvester",
-	  "Group": "Autonomous Gas Compressor",
-	  "Description": "An automated siphon unit for the collection of valuable gases. Once activated, the harvester condenses and compresses substances from the air over time. Compressed gas is then stored safely until collected.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod5",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 2
-		},
-		{
-		  "Id": "raw26",
-		  "Quantity": 100
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech86",
-	  "Icon": "constructedTechnology/86.png",
-	  "Name": "ByteBeat Device",
-	  "Group": "Audio Synthesiser",
-	  "Description": "An advanced audio generator, allowing the user to synthesise complex musical arrangements.\n\nMultiple devices may be placed in sequence or connected to lights to generate spectacular displays.",
-	  "BaseValueUnits": 10.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 10,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod1",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "prod6",
-		  "Quantity": 3
-		},
-		{
-		  "Id": "raw33",
-		  "Quantity": 50
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech87",
-	  "Icon": "constructedTechnology/87.png",
-	  "Name": "ByteBeat Cable",
-	  "Group": "ByteBeat Extension",
-	  "Description": "Advanced cabling, designed to link one or more Bytebeat Generators or to connect a Bytebeat Switch to the network.\n\nThe signal will synchronize connected lights and device to the generated waveform.",
-	  "BaseValueUnits": 0.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 0,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech88",
-	  "Icon": "constructedTechnology/88.png",
-	  "Name": "Bytebeat Switch",
-	  "Group": "ByteBeat Extension",
-	  "Description": "A musical switching device, designed to interpret waveform signals generated by a Bytebeat Generator and output electrical impulses to connected lights and other devices.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 2,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw8",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw15",
-		  "Quantity": 15
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech89",
-	  "Icon": "constructedTechnology/89.png",
-	  "Name": "Electrical Cloaking Unit",
-	  "Group": "Power Distribution Module",
-	  "Description": "Device to enable a wireless aesthetic in habitable bases.\n\nConstructing the Electrical Cloaking Unit within a powered base will reduce the visual prominence of all local Electrical Wiring. Hidden wires will continue to supply electricity, provided they are sufficiently powered.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		},
-		{
-		  "Id": "raw33",
-		  "Quantity": 30
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech90",
-	  "Icon": "constructedTechnology/90.png",
-	  "Name": "Salvaged Data",
-	  "Group": "Salvaged Technology",
-	  "Description": "The salvageable heart of some ancient technology. Unreadable in its current form.\n\nThese databanks can be spent at a Construction Research Unit and used to research new Construction Blueprints.",
-	  "BaseValueUnits": 52000.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasRefinedToCreate",
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech91",
-	  "Icon": "constructedTechnology/91.png",
-	  "Name": "AtlasPass v1",
-	  "Group": "Access Card",
-	  "Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n\nProvides access to low level restricted areas and outpost systems.",
-	  "BaseValueUnits": 825.0,
-	  "CurrencyType": "None",
-	  "Colour": "0063B7",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "FactoryOverride",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod7",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw19",
-		  "Quantity": 200
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech92",
-	  "Icon": "constructedTechnology/91.png",
-	  "Name": "AtlasPass v2",
-	  "Group": "Access Card",
-	  "Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to mid-tier restricted areas and outpost systems.",
-	  "BaseValueUnits": 1856.0,
-	  "CurrencyType": "None",
-	  "Colour": "0063B7",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "FactoryOverride",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod7",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw20",
-		  "Quantity": 200
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech93",
-	  "Icon": "constructedTechnology/91.png",
-	  "Name": "AtlasPass v3",
-	  "Group": "Access Card",
-	  "Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to high level restricted areas and outpost systems.",
-	  "BaseValueUnits": 2613.0,
-	  "CurrencyType": "None",
-	  "Colour": "0063B7",
-	  "Usages": [
-		"HasDevProperties"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "FactoryOverride",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod7",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw21",
-		  "Quantity": 200
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech94",
-	  "Icon": "constructedTechnology/94.png",
-	  "Name": "Factory Override Unit",
-	  "Group": "Advanced Research Module",
-	  "Description": "A portable data unit, compatible with most planetary fabricator facilities.\n\nOnce access has been gained to a central control terminal, the Override Unit can divert the facilities resources towards researching new product recipes.",
-	  "BaseValueUnits": 50000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech95",
-	  "Icon": "constructedTechnology/95.png",
-	  "Name": "Salvaged Frigate Module",
-	  "Group": "Capital Ship Wiring Platform",
-	  "Description": "A technology module harvested from the remains of a large interstellar starship. May be collected from freighter crashsites or salvaged during frigate expeditions.\n\nUseless in its current form, a Research Station aboard your freighter may be able to convert it into useable technology.",
-	  "BaseValueUnits": 95000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech96",
-	  "Icon": "constructedTechnology/96.png",
-	  "Name": "Cargo Bulkhead",
-	  "Group": "Auto-Expanding Freighter Module",
-	  "Description": "A technology module harvested from the remains of an abandoned freighter found floating in space. May also be salvaged during frigate expeditions.\n\nPre-packed nano-expanders fill out this portable unit and graft it to an existing freighter, increasing its inventory capacity. Apply at your freighter's Upgrade Terminal.",
-	  "BaseValueUnits": 105000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech97",
-	  "Icon": "products/93.png",
-	  "Name": "Spawning Sac",
-	  "Group": "Sentient Vessel Storage Sac",
-	  "Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse FE_ALT1 to trigger growth and begin the hatching process.",
-	  "BaseValueUnits": 125000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": [
-		"Evolve additional storage"
-	  ]
-	},
-	{
-	  "Id": "conTech98",
-	  "Icon": "products/91.png",
-	  "Name": "Psychonic Egg",
-	  "Group": "Pulsating Yolk Sac",
-	  "Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with FE_ALT1.",
-	  "BaseValueUnits": 126000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": [
-		"Hatch into new sentient technology"
-	  ]
-	},
-	{
-	  "Id": "conTech99",
-	  "Icon": "constructedTechnology/99.png",
-	  "Name": "Storage Augmentation",
-	  "Group": "Starship Expansion Module",
-	  "Description": "A technology module harvested from the remains of a salvaged starship. May also be collected from freighter crash sites or salvaged during frigate expeditions.\n\nCan be used to expand starship storage capacity at the Space Station's Starship Outfitter.",
-	  "BaseValueUnits": 125000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable",
-		"IsRewardFromShipScrap",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech100",
-	  "Icon": "constructedTechnology/100.png",
-	  "Name": "Navigation Data",
-	  "Group": "Encrypted Navigation Data",
-	  "Description": "Encoded navigation data. This highly portable data unit contains all relevant cartographical information for a planetary region.\n\nMay be traded with a Cartographer aboard a Space Station in exchange for usable star charts.",
-	  "BaseValueUnits": 1000.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 20.0,
-	  "Colour": "0063B7",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech101",
-	  "Icon": "constructedTechnology/101.png",
-	  "Name": "Exosuit Upgrade Chart",
-	  "Group": "Encrypted Navigation Data",
-	  "Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a Drop Pod containing an Exosuit Inventory Upgrade.\n\nSelect the coordinates in the inventory and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
-	  "BaseValueUnits": 85000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 20.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 3,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": [
-		"Convert data to Exosuit navigation marker"
-	  ]
-	},
-	{
-	  "Id": "conTech102",
-	  "Icon": "constructedTechnology/102.png",
-	  "Name": "Log Encryption Key",
-	  "Group": "Incomplete Data Sequence",
-	  "Description": "A fragment of the encryption override sequence for a freighter's emergency log.\n\nSeveral parts of the sequence may be required to gain full access to recorded data.",
-	  "BaseValueUnits": 1500.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 5.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech103",
-	  "Icon": "constructedTechnology/103.png",
-	  "Name": "Defence Chit",
-	  "Group": "System Authority Payment Substitute",
-	  "Description": "A token, entitling the bearer to support from the system authorities in dealing with pirate attacks.",
-	  "BaseValueUnits": 10000.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech104",
-	  "Icon": "constructedTechnology/104.png",
-	  "Name": "Memory Fragment",
-	  "Group": "Technology Echo",
-	  "Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with FE_ALT1.",
-	  "BaseValueUnits": 16.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": [
-		"Ingest item via suit nutrient system"
-	  ]
-	},
-	{
-	  "Id": "conTech105",
-	  "Icon": "constructedTechnology/105.png",
-	  "Name": "Memory Fragment (Inventory)",
-	  "Group": "Rogue Technology Echo",
-	  "Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an inventory expansion to aid you on your travels. Absorb this memory with FE_ALT1.",
-	  "BaseValueUnits": 16.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": [
-		"Ingest item via suit nutrient system"
-	  ]
-	},
-	{
-	  "Id": "conTech106",
-	  "Icon": "constructedTechnology/106.png",
-	  "Name": "Archived Technology Package",
-	  "Group": "",
-	  "Description": "An archived wiring package, designed to allow easy storage of core technology. Use FE_ALT1 to begin the installation process.\n\n%TECH_DESC%",
-	  "BaseValueUnits": 16.0,
-	  "CurrencyType": "None",
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech107",
-	  "Icon": "products/84.png",
-	  "Name": "Genetic Repository",
-	  "Group": "",
-	  "Description": "A cryogenically frozen node, designed to facilitate the archival of bio-technology for sentient starships. Use FE_ALT1 to begin the installation process.\n\n%TECH_DESC%",
-	  "BaseValueUnits": 16.0,
-	  "CurrencyType": "None",
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech108",
-	  "Icon": "constructedTechnology/108.png",
-	  "Name": "Exosuit Expansion Unit",
-	  "Group": "Upgrade Unit",
-	  "Description": "An advanced survival technology module that allows expansion of a user's Exosuit Storage.\n\nPre-packed nano-expanders create stablised sub-warp voids within the Exosuit, increasing its inventory capacity. Apply this augmentation at the Exosuit upgrade terminal on board a Space Station.",
-	  "BaseValueUnits": 155000.0,
-	  "CurrencyType": "Credits",
-	  "MaxStackSize": 15.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech109",
-	  "Icon": "constructedTechnology/109.png",
-	  "Name": "Utopia Exosuit Station",
-	  "Group": "Portable Exosuit Research Station",
-	  "Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exosuit Station today!",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 15,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw10",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech110",
-	  "Icon": "constructedTechnology/110.png",
-	  "Name": "Utopia Multi-Tool Station",
-	  "Group": "Portable Multi-Tool Research Station",
-	  "Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Multi-Tool Station today!",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 15,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw11",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech111",
-	  "Icon": "constructedTechnology/111.png",
-	  "Name": "Portable Exocraft Research Station",
-	  "Group": "Portable Exocraft Research Station",
-	  "Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exocraft Station today!",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 15,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw5",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech112",
-	  "Icon": "constructedTechnology/112.png",
-	  "Name": "Utopia Ship Station",
-	  "Group": "Portable Starship Research Station",
-	  "Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Starship Station today!",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 15,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw7",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech113",
-	  "Icon": "constructedTechnology/113.png",
-	  "Name": "Utopia Build Station",
-	  "Group": "Portal Construction Blueprint Terminal",
-	  "Description": "The Utopia Overseers wish for their brave settlers to be sheltered and happy! Together, we will make Bakkin beautiful!\n\nThis officially-licensed portable research station allows access to a generous range of construction blueprints, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Build Station today!",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 15,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "raw2",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech114",
-	  "Icon": "constructedTechnology/114.png",
-	  "Name": "Wonder Projector",
-	  "Group": "Discovery Display Hologram",
-	  "Description": "A buildable holographic display, designed to visualise any discovery currently listed in your Personal Records.\n\nUse the projector to manage these records directly, or view them from the Wonders section of the Catalogue.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 12,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod1",
-		  "Quantity": 1
-		},
-		{
-		  "Id": "raw10",
-		  "Quantity": 25
-		},
-		{
-		  "Id": "raw23",
-		  "Quantity": 40
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech115",
-	  "Icon": "constructedTechnology/115.png",
-	  "Name": "Minotaur Flamethrower Module",
-	  "Group": "Significant Minotaur Weapon Upgrade",
-	  "Description": "A significant upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-	  "BaseValueUnits": 140.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech116",
-	  "Icon": "constructedTechnology/116.png",
-	  "Name": "Minotaur Flamethrower Module",
-	  "Group": "Powerful Minotaur Weapon Upgrade",
-	  "Description": "An extremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-	  "BaseValueUnits": 300.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech117",
-	  "Icon": "constructedTechnology/117.png",
-	  "Name": "Minotaur Flamethrower Module",
-	  "Group": "Supreme Minotaur Weapon Upgrade",
-	  "Description": "A supremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-	  "BaseValueUnits": 480.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "1A2733",
-	  "Usages": [
-		"HasDevProperties",
-		"IsConsumable",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "None",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
-	},
-	{
-	  "Id": "conTech118",
-	  "Icon": "constructedTechnology/118.png",
-	  "Name": "Automated Trap",
-	  "Group": "Self-Sustaining Auto Creel",
-	  "Description": "An autonomous fishing device, designed for long-term deployment in a wide-range of water conditions.\n\nOnce activated, the system will lure and trap any nearby aquatic creatures and store them for later retrieval.",
-	  "BaseValueUnits": 1.0,
-	  "CurrencyType": "None",
-	  "MaxStackSize": 5.0,
-	  "Colour": "2C7C9F",
-	  "Usages": [
-		"HasDevProperties",
-		"IsAddedInTrackedUpdate"
-	  ],
-	  "BlueprintCost": 1,
-	  "BlueprintCostType": "SalvagedData",
-	  "BlueprintSource": 0,
-	  "RequiredItems": [
-		{
-		  "Id": "prod6",
-		  "Quantity": 3
-		},
-		{
-		  "Id": "raw16",
-		  "Quantity": 50
-		},
-		{
-		  "Id": "prod20",
-		  "Quantity": 1
-		}
-	  ],
-	  "StatBonuses": [],
-	  "ConsumableRewardTexts": []
+		"Id": "conTech1",
+		"Icon": "constructedTechnology/1.png",
+		"Name": "Base Computer",
+		"Group": "Site Evaluation Device",
+		"Description": "Portable land registration service.\n\nWhen placed, contacts Universal Cartographic Archive to establish ownership of land. Successful registration allows the construction of base modules across any site of the user's choosing.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/1.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw23",
+				"Quantity": 30
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech2",
+		"Icon": "constructedTechnology/2.png",
+		"Name": "Landing Pad",
+		"Group": "Construction module",
+		"Description": "A stable, reinforced landing pad for starships.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/2.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 10
+			},
+			{
+				"Id": "prod7",
+				"Quantity": 2
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech3",
+		"Icon": "constructedTechnology/3.png",
+		"Name": "Galactic Trade Terminal",
+		"Group": "Trading terminal",
+		"Description": "A trading terminal that provides instant local access to the market for resources and commodities.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/3.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod7",
+				"Quantity": 3
+			},
+			{
+				"Id": "raw10",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech4",
+		"Icon": "constructedTechnology/4.png",
+		"Name": "Health Station",
+		"Group": "Health recharge module",
+		"Description": "A wall mounted module that can be used to recharge health.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -10.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/4.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw15",
+				"Quantity": 20
+			},
+			{
+				"Id": "raw27",
+				"Quantity": 50
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech5",
+		"Icon": "constructedTechnology/5.png",
+		"Name": "Hazard Protection Unit",
+		"Group": "Hazard Protection Charging System",
+		"Description": "A wall mounted module that can be used to recharge the user's Hazard Protection systems.\n\nThe Hazard Protection Unit must be kept charged with a source of fuel.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -10.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/5.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw15",
+				"Quantity": 20
+			},
+			{
+				"Id": "raw29",
+				"Quantity": 50
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech6",
+		"Icon": "constructedTechnology/6.png",
+		"Name": "Save Beacon",
+		"Group": "Portable waypoint marker",
+		"Description": "Once activated, beacons provide a permanent navigational waypoint, facilitating repeat visits to specific locations.\n\nAllows user to record their progress at any time.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/6.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			},
+			{
+				"Id": "raw13",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech7",
+		"Icon": "constructedTechnology/7.png",
+		"Name": "Save Point",
+		"Group": "Construction module",
+		"Description": "A buildable save point for managing your progress.",
+		"BaseValueUnits": 2.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/7.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			},
+			{
+				"Id": "prod11",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech8",
+		"Icon": "constructedTechnology/8.png",
+		"Name": "Signal Booster",
+		"Group": "Environmental scanner",
+		"Description": "A versatile scanner that detects nearby buildings. Can decrypt Navigation Data to pinpoint specific locations.\n\nThe Signal Booster can be dismantled and redeployed for easy transportation.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/8.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod3",
+				"Quantity": 1
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech9",
+		"Icon": "constructedTechnology/9.png",
+		"Name": "Antimatter Reactor",
+		"Group": "Baryogenesis Unit",
+		"Description": "An autonomous baryogenesis reactor, this device can be left to harvest reality paradoxes and convert them into usable antimatter. User must monitor fuel levels to ensure continued operation.\n\nThe resulting antimatter is safely contained, ready for use in all standard hyperspace power units.",
+		"BaseValueUnits": 20.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/9.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 20,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "cur21",
+				"Quantity": 5
+			},
+			{
+				"Id": "prod1",
+				"Quantity": 2
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech10",
+		"Icon": "constructedTechnology/10.png",
+		"Name": "Base Teleport Module",
+		"Group": "Long-Distance Matter Transfer Device",
+		"Description": "A personal teleport device, allowing the user to move quickly between their constructed bases, as well as any Space Station Terminuses connected to their network.\n\nUser is urged to verify network integrity before inserting any matter they cannot afford to become separated from.",
+		"BaseValueUnits": 2.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -20.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/10.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod3",
+				"Quantity": 2
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 4
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech11",
+		"Icon": "constructedTechnology/11.png",
+		"Name": "Fleet Command Room",
+		"Group": "Expedition Management Terminal",
+		"Description": "Core Fleet Management Station. This advanced holographic communications station is vital for managing fleet expeditions from the comfort of your capital ship.\n\nUser is advised that multiple stations are required to manage more than one expedition at a time.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/11.png",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw7",
+				"Quantity": 10
+			},
+			{
+				"Id": "raw32",
+				"Quantity": 120
+			},
+			{
+				"Id": "raw33",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech12",
+		"Icon": "constructedTechnology/12.png",
+		"Name": "Construction Research Unit",
+		"Group": "Technology Recovery Device",
+		"Description": "Portable blueprint research device.\n\nThis field-deployable research module allows the user to convert old or damaged technology modules into advanced construction blueprints.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/12.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod3",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw10",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech13",
+		"Icon": "constructedTechnology/13.png",
+		"Name": "Portable Refiner",
+		"Group": "Automated Refinery Unit",
+		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Portable Refiner can be dismantled and redeployed for easy transportation. Note: the Portable Refiner requires fuel to operate.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/13.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw3",
+				"Quantity": 30
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech14",
+		"Icon": "constructedTechnology/14.png",
+		"Name": "Medium Refiner",
+		"Group": "Automated Refinery Unit",
+		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Medium Refiner allows two different substances to be combined into one new material, or materials to be processed at better ratios. \n\nThe Medium Refiner must be installed in a Habitable Base, but does not require additional power sources.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/14.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 100
+			},
+			{
+				"Id": "prod11",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech15",
+		"Icon": "constructedTechnology/15.png",
+		"Name": "Large Refiner",
+		"Group": "Automated Refinery Unit",
+		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Large Refiner allows three different substances to be combined into one new material, or materials to be processed at better ratios. \n\nThe Large Refiner must be installed in a Habitable Base, but does not require additional power sources.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/15.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod7",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw13",
+				"Quantity": 100
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 200
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech16",
+		"Icon": "constructedTechnology/16.png",
+		"Name": "Appearance Modifier",
+		"Group": "Customise Personal Visuals",
+		"Description": "A buildable module that allows the users to adjust their personal appearance settings.\n\nThe module applies advanced holographic techniques to recalibrate the light around the user, allowing them to adopt whatever appearance they desire. Visual data must be properly formated before use.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -50.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/16.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw8",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech17",
+		"Icon": "constructedTechnology/17.png",
+		"Name": "Nutrient Processor",
+		"Group": "Portable Sustenance Unit",
+		"Description": "A portable nutrient extractor, able to process and refine gathered ingredients into edible food products.\n\nUser is advised that consumption of generated products is entirely at their own risk.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/17.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod5",
+				"Quantity": 1
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech18",
+		"Icon": "constructedTechnology/18.png",
+		"Name": "Automated Feeder",
+		"Group": "Agricultural Robot",
+		"Description": "A robotic farming unit, designed to automatically supply nearby creatures with food.\n\nWhen powered, will attract nearby animal life. Keep bait tanks full in order to supply lifeforms with desired food.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -20.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/18.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 4
+			},
+			{
+				"Id": "cook122",
+				"Quantity": 10
+			},
+			{
+				"Id": "prod117",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech19",
+		"Icon": "constructedTechnology/19.png",
+		"Name": "Livestock Unit",
+		"Group": "Automatic Harvesting Robot",
+		"Description": "A robotic farming unit, designed to automatically harvest substances from creatures. Requires power.\n\nCreatures that are ready to be harvested for milk, eggs or other specialist produce will approach the Livestock Unit and deposit their yields. The creatures are unharmed by the process.\n\nWill harvest produce from creatures fed by hand or via an Automated Feeder.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -20.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/19.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 4
+			},
+			{
+				"Id": "raw50",
+				"Quantity": 50
+			},
+			{
+				"Id": "prod52",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech20",
+		"Icon": "constructedTechnology/20.png",
+		"Name": "Message Module",
+		"Group": "Communications terminal",
+		"Description": "A small and accessible information container for leaving messages or viewing left messages and short strings of information.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/20.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod3",
+				"Quantity": 1
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech21",
+		"Icon": "constructedTechnology/21.png",
+		"Name": "Communications Station",
+		"Group": "Communications terminal",
+		"Description": "A terminal for the composition and transmission of messages to other travellers.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/21.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech22",
+		"Icon": "constructedTechnology/22.png",
+		"Name": "Nomad Geobay",
+		"Group": "Construction module",
+		"Description": "An underground secure parking facility for the Nomad light Exocraft.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Additional": "",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/22.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 8,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw24",
+				"Quantity": 50
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech23",
+		"Icon": "constructedTechnology/23.png",
+		"Name": "Roamer Geobay",
+		"Group": "Construction module",
+		"Description": "An underground secure parking facility for the Roamer medium Exocraft.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Additional": "",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/23.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 4,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw24",
+				"Quantity": 50
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech24",
+		"Icon": "constructedTechnology/24.png",
+		"Name": "Colossus Geobay",
+		"Group": "Construction module",
+		"Description": "An underground secure parking facility for the Colossus large Exocraft.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Additional": "",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/24.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 8,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw24",
+				"Quantity": 100
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 4
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech25",
+		"Icon": "constructedTechnology/25.png",
+		"Name": "Pilgrim Geobay",
+		"Group": "Construction module",
+		"Description": "An underground secure parking facility for the Pilgrim light Exocraft.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Additional": "",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/25.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw32",
+				"Quantity": 100
+			},
+			{
+				"Id": "prod11",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech26",
+		"Icon": "constructedTechnology/26.png",
+		"Name": "Nautilon Chamber",
+		"Group": "Submarine Docking Bay",
+		"Description": "An advanced, fully-airlocked docking station for the Nautilon submarine.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/26.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "cur32",
+				"Quantity": 4
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw16",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech27",
+		"Icon": "constructedTechnology/27.png",
+		"Name": "Exocraft Summoning Station",
+		"Group": "Vehicle Translocation Device",
+		"Description": "Construction allows the user to summon any owned Exocraft from anywhere else in that system.\n\nInterfaces with the Exosuit Quick Command Menu to ease of use. Can be compressed and carried within the Exosuit with DECONSTRUCT for later redeployment.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/27.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 12,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw7",
+				"Quantity": 60
+			},
+			{
+				"Id": "raw27",
+				"Quantity": 80
+			},
+			{
+				"Id": "prod19",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech28",
+		"Icon": "constructedTechnology/28.png",
+		"Name": "Construction Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Construction Overseers, and equipped with architectural and engineering design software.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/28.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw9",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech29",
+		"Icon": "constructedTechnology/29.png",
+		"Name": "Exocraft Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Technicians, and equipped with bespoke vehicular design software.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/29.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw5",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech30",
+		"Icon": "constructedTechnology/30.png",
+		"Name": "Weapons Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Armourers, and equipped for the development of munitions and explosives as well as selected civilian tech.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/30.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			},
+			{
+				"Id": "raw31",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech31",
+		"Icon": "constructedTechnology/31.png",
+		"Name": "Science Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Scientists, and equipped for research and development of scientific blueprints.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/31.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech32",
+		"Icon": "constructedTechnology/32.png",
+		"Name": "Agricultural Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Farmers, and equipped for the analysis and cultivation of farmable crops.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/32.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw2",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech33",
+		"Icon": "constructedTechnology/33.png",
+		"Name": "Hydroponic Tray",
+		"Group": "Farming tech",
+		"Description": "A self contained growth system for the indoor cultivation of agricultural crops.\n\nBuild requirement: Must be placed indoors.",
+		"BaseValueUnits": 3.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/33.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 20
+			},
+			{
+				"Id": "raw9",
+				"Quantity": 30
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech34",
+		"Icon": "constructedTechnology/34.png",
+		"Name": "Large Hydroponic Tray",
+		"Group": "Farming tech",
+		"Description": "A self contained growth system for the indoor cultivation of agricultural crops. Can support up to four plants.\n\nBuild requirement: Must be placed indoors.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -20.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/34.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw9",
+				"Quantity": 60
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 4
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech38",
+		"Icon": "constructedTechnology/38.png",
+		"Name": "Race Force Amplifier",
+		"Group": "Race Part",
+		"Description": "Provides a boost to your Exocraft during races.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Additional": "",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/38.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "prod11",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech39",
+		"Icon": "constructedTechnology/39.png",
+		"Name": "Race Obstacle",
+		"Group": "Race Part",
+		"Description": "Provides extra challenge for Exocraft races.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Additional": "",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/39.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech40",
+		"Icon": "constructedTechnology/40.png",
+		"Name": "Race Initiator",
+		"Group": "Race Part",
+		"Description": "This platform acts as the start and finish line for Exocraft field tests, allowing Travellers to practice manoeuvring and speed.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/40.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "prod7",
+				"Quantity": 2
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech41",
+		"Icon": "constructedTechnology/41.png",
+		"Name": "Marine Shelter",
+		"Group": "Deep Water Survival Module",
+		"Description": "An emergency survival module.\n\nCan be rapidly deployed on the seabed in the event of an oxygen or other Exosuit life support emergency. Provides temporary shelter from environmental hazards, predators and other hostiles forces found in the deep ocean.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/41.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw3",
+				"Quantity": 25
+			},
+			{
+				"Id": "cur17",
+				"Quantity": 5
+			},
+			{
+				"Id": "prod54",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech42",
+		"Icon": "constructedTechnology/42.png",
+		"Name": "Sphere Creator",
+		"Group": "Experimental Fabricator",
+		"Description": "A highly-specific fabrication device, developed with the intention of finding the universe's most perfect sphere.\n\nRequires power to operate. Will create a large sphere, ready for whatever experiments are deemed necessary.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/42.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw24",
+				"Quantity": 100
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 4
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech43",
+		"Icon": "constructedTechnology/43.png",
+		"Name": "Noise Box",
+		"Group": "Audio Device",
+		"Description": "A special construction module designed to emit a high-frequency noise. Pitch may be adjusted to the user's requirements.\n\nRequires power to operate.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -1.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/43.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			},
+			{
+				"Id": "raw29",
+				"Quantity": 40
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech44",
+		"Icon": "constructedTechnology/44.png",
+		"Name": "Oxygen Harvester",
+		"Group": "Atmosphere Processing Device",
+		"Description": "An autonomous atmosphere extractor, this device can be left to collect and purify oxygen from the air. User must monitor fuel levels to ensure continued operation.\n\nThe resulting gas is compressed and processed, ready for use in all standard life support systems.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/44.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "prod11",
+				"Quantity": 3
+			},
+			{
+				"Id": "prod23",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech45",
+		"Icon": "constructedTechnology/45.png",
+		"Name": "Autonomous Mining Unit",
+		"Group": "Portable mining device",
+		"Description": "An automated harvester for the mining of resources. Once activated, the AMU extracts minerals without the need for supervision, providing a regular yield until the site is exhausted.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/45.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			},
+			{
+				"Id": "raw27",
+				"Quantity": 100
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech46",
+		"Icon": "constructedTechnology/46.png",
+		"Name": "Mineral Extractor",
+		"Group": "Power Distribution Module",
+		"Description": "An automated mineral harvester. Determine a site with the Surveying upgrade for the Analysis Visor. Mineral extraction rates and produced minerals will vary from site to site.\n\nRequires power to function. Connect to Silos with Pipelines to allow collection from more convenient sites.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Power": -50.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/46.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech47",
+		"Icon": "constructedTechnology/47.png",
+		"Name": "Gas Extractor",
+		"Group": "Power Distribution Module",
+		"Description": "An automated gas harvester. Determine a site with the Surveying upgrade for the Analysis Visor. Gas extraction rates and produced gases will vary from site to site.\n\nRequires power to function. Connect to Silos with Pipelines to allow collection from more convenient sites.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Power": -50.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/47.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech48",
+		"Icon": "constructedTechnology/48.png",
+		"Name": "Supply Depot",
+		"Group": "Substance Distribution Module",
+		"Description": "Automated storage unit. Connect to a Supply Grid using Pipelines.\n\nAutomatically stores the output of various Mineral and Gas Extractors, allowing for increased capacity and more efficient siting. Can be located a long distances from the extraction site.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/48.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech49",
+		"Icon": "constructedTechnology/49.png",
+		"Name": "Supply Pipe",
+		"Group": "Power Distribution Module",
+		"Description": "Flexible, high-strength piping. Able to withstand a highly-pressurised internal environment.\n\nUsed for connecting various Mineral and Gas Extractors to Silos",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/49.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 10
+			},
+			{
+				"Id": "raw8",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech50",
+		"Icon": "constructedTechnology/50.png",
+		"Name": "Solar Panel",
+		"Group": "Power Distribution Module",
+		"Description": "An efficient power generator, this solar array will turn sunlight into the electrical energy required to power many base structures.\n\nGenerates no power at night. Partner with Batteries to store energy for the hours of darkness.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Power": 50.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/50.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 8,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw33",
+				"Quantity": 30
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech51",
+		"Icon": "constructedTechnology/51.png",
+		"Name": "Electromagnetic Generator",
+		"Group": "Power Distribution Module",
+		"Description": "When suitably placed in an area of high field strength, efficient electromagnetic dynamos are used to generate near limitless power.\n\nLocate appropriate sites with the Surveying upgrade for the Analysis Visor. Power output will vary from site to site.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Power": 1.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/51.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			},
+			{
+				"Id": "raw10",
+				"Quantity": 60
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 75
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech52",
+		"Icon": "constructedTechnology/52.png",
+		"Name": "Biofuel Reactor",
+		"Group": "Power Distribution Module",
+		"Description": "A small power generator. Burns carbon-based fuel placed in its furnace tank and converts it into usable power.\n\nConnect power generators to base structures and technologies with electrical wiring. Many parts require power to function.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Power": -1.0,
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/52.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw3",
+				"Quantity": 25
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech53",
+		"Icon": "constructedTechnology/53.png",
+		"Name": "Electrical Wiring",
+		"Group": "Power Distribution Module",
+		"Description": "High-capacity electrical wiring. Use wiring to connect Power Generators to your base. Most technology, as well as structures with embedded lighting systems, require a power source to operate.\n\nWiring can be connected to various switches to facilitate selective power flow.",
+		"BaseValueUnits": 0.0,
+		"CurrencyType": "None",
+		"Additional": "",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/53.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech54",
+		"Icon": "constructedTechnology/54.png",
+		"Name": "Teleport Cable",
+		"Group": "Power Distribution Module",
+		"Description": "Advanced fibre-optic cabling, designed to link one or more Short-Range Teleporters.",
+		"BaseValueUnits": 0.0,
+		"CurrencyType": "None",
+		"Additional": "",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/54.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech55",
+		"Icon": "constructedTechnology/55.png",
+		"Name": "Wall Switch",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when pulled.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/55.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw8",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw15",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech56",
+		"Icon": "constructedTechnology/56.png",
+		"Name": "Floor Switch",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when stood upon or otherwise activated.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/56.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw8",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw15",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech57",
+		"Icon": "constructedTechnology/57.png",
+		"Name": "Battery",
+		"Group": "Power Distribution Module",
+		"Description": "Highly-efficient energy storage units. Connect to a power grid, and onboard power management circuits will automatically draw down spare capacity to charge its cells.\n\nWhen the grid attempts to draw more power than is currently supplied, the battery will automatically deploy power to make up the shortfall.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/57.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw2",
+				"Quantity": 100
+			},
+			{
+				"Id": "raw10",
+				"Quantity": 60
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech58",
+		"Icon": "constructedTechnology/58.png",
+		"Name": "Proximity Switch",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when an entity is detected nearby.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/58.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech59",
+		"Icon": "constructedTechnology/59.png",
+		"Name": "Button",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when used.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/59.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech60",
+		"Icon": "constructedTechnology/60.png",
+		"Name": "Power Inverter",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when used.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/60.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw8",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw15",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech61",
+		"Icon": "constructedTechnology/61.png",
+		"Name": "Auto Switch",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, this switch will toggle the flow of power when signaled by an incoming signal.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/61.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw8",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw15",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech62",
+		"Icon": "constructedTechnology/62.png",
+		"Name": "Short-Range Teleporter",
+		"Group": "Instantaneous Transport Network",
+		"Description": "A low-powered teleporter, construction for instantaneous travel across short distances.\n\nWhen wired to both a power source and another short-range teleporter, allows near-instant travel between nearby locations.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/62.png",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			},
+			{
+				"Id": "raw33",
+				"Quantity": 30
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech63",
+		"Icon": "constructedTechnology/63.png",
+		"Name": "Minotaur Geobay",
+		"Group": "Heavy Loader Storage Bay",
+		"Description": "A secure parking, summoning and customisation facility for the Minotaur Heavy Exosuit Hybrid.\n\nDeploy the Minotaur from the Quick Menu. With the aid of an Orbital Exocraft Materialiser mounted inside a freighter, the Minotaur can be instantly deployed to any location within the same system as the mothership.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"CdnUrl": "https://cdn.nmsassistant.com/constructedTechnology/63.png",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 5
+			},
+			{
+				"Id": "raw33",
+				"Quantity": 100
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 4
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech64",
+		"Icon": "constructedTechnology/64.png",
+		"Name": "Multi-Tool Expansion Slot",
+		"Group": "Upgrade Unit",
+		"Description": "A flexible upgrade circuit, compatible with all person Multi-Tools.\n\nThis module can be wired into a Multi-Tool at a Space Station Multi-Tool Upgrade Rack, granting the user more space in the Multi-Tool's internal layout to add further upgrades or technology specialisations.",
+		"BaseValueUnits": 85000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech65",
+		"Icon": "constructedTechnology/65.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech66",
+		"Icon": "constructedTechnology/66.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech67",
+		"Icon": "constructedTechnology/67.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech68",
+		"Icon": "constructedTechnology/68.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech69",
+		"Icon": "constructedTechnology/69.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech70",
+		"Icon": "constructedTechnology/70.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech71",
+		"Icon": "constructedTechnology/71.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech72",
+		"Icon": "constructedTechnology/72.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech73",
+		"Icon": "constructedTechnology/73.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech74",
+		"Icon": "constructedTechnology/74.png",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Power": -5.0,
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 35
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech75",
+		"Icon": "constructedTechnology/75.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech76",
+		"Icon": "constructedTechnology/76.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech77",
+		"Icon": "constructedTechnology/77.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech78",
+		"Icon": "constructedTechnology/78.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech79",
+		"Icon": "constructedTechnology/79.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech80",
+		"Icon": "constructedTechnology/80.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech81",
+		"Icon": "constructedTechnology/81.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech82",
+		"Icon": "constructedTechnology/82.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech83",
+		"Icon": "constructedTechnology/83.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech84",
+		"Icon": "constructedTechnology/84.png",
+		"Name": "Freighter Storage Unit",
+		"Group": "Custom Freighter Module",
+		"Description": "Hybrid high-capacity storage unit / shelving module for installation in interstellar freighters.\n\nCompatible with all standard life-support fittings.",
+		"BaseValueUnits": 5.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsNoLongerObtainable"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 50
+			},
+			{
+				"Id": "raw12",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech85",
+		"Icon": "constructedTechnology/85.png",
+		"Name": "Atmosphere Harvester",
+		"Group": "Autonomous Gas Compressor",
+		"Description": "An automated siphon unit for the collection of valuable gases. Once activated, the harvester condenses and compresses substances from the air over time. Compressed gas is then stored safely until collected.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod5",
+				"Quantity": 2
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 2
+			},
+			{
+				"Id": "raw26",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech86",
+		"Icon": "constructedTechnology/86.png",
+		"Name": "ByteBeat Device",
+		"Group": "Audio Synthesiser",
+		"Description": "An advanced audio generator, allowing the user to synthesise complex musical arrangements.\n\nMultiple devices may be placed in sequence or connected to lights to generate spectacular displays.",
+		"BaseValueUnits": 10.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod1",
+				"Quantity": 1
+			},
+			{
+				"Id": "prod6",
+				"Quantity": 3
+			},
+			{
+				"Id": "raw33",
+				"Quantity": 50
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech87",
+		"Icon": "constructedTechnology/87.png",
+		"Name": "ByteBeat Cable",
+		"Group": "ByteBeat Extension",
+		"Description": "Advanced cabling, designed to link one or more Bytebeat Generators or to connect a Bytebeat Switch to the network.\n\nThe signal will synchronize connected lights and device to the generated waveform.",
+		"BaseValueUnits": 0.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech88",
+		"Icon": "constructedTechnology/88.png",
+		"Name": "Bytebeat Switch",
+		"Group": "ByteBeat Extension",
+		"Description": "A musical switching device, designed to interpret waveform signals generated by a Bytebeat Generator and output electrical impulses to connected lights and other devices.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw8",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw15",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech89",
+		"Icon": "constructedTechnology/89.png",
+		"Name": "Electrical Cloaking Unit",
+		"Group": "Power Distribution Module",
+		"Description": "Device to enable a wireless aesthetic in habitable bases.\n\nConstructing the Electrical Cloaking Unit within a powered base will reduce the visual prominence of all local Electrical Wiring. Hidden wires will continue to supply electricity, provided they are sufficiently powered.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			},
+			{
+				"Id": "raw33",
+				"Quantity": 30
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech90",
+		"Icon": "constructedTechnology/90.png",
+		"Name": "Salvaged Data",
+		"Group": "Salvaged Technology",
+		"Description": "The salvageable heart of some ancient technology. Unreadable in its current form.\n\nThese databanks can be spent at a Construction Research Unit and used to research new Construction Blueprints.",
+		"BaseValueUnits": 52000.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasRefinedToCreate",
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech91",
+		"Icon": "constructedTechnology/91.png",
+		"Name": "AtlasPass v1",
+		"Group": "Access Card",
+		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n\nProvides access to low level restricted areas and outpost systems.",
+		"BaseValueUnits": 825.0,
+		"CurrencyType": "None",
+		"Colour": "0063B7",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "FactoryOverride",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod7",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw19",
+				"Quantity": 200
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech92",
+		"Icon": "constructedTechnology/91.png",
+		"Name": "AtlasPass v2",
+		"Group": "Access Card",
+		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to mid-tier restricted areas and outpost systems.",
+		"BaseValueUnits": 1856.0,
+		"CurrencyType": "None",
+		"Colour": "0063B7",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "FactoryOverride",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod7",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw20",
+				"Quantity": 200
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech93",
+		"Icon": "constructedTechnology/91.png",
+		"Name": "AtlasPass v3",
+		"Group": "Access Card",
+		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to high level restricted areas and outpost systems.",
+		"BaseValueUnits": 2613.0,
+		"CurrencyType": "None",
+		"Colour": "0063B7",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "FactoryOverride",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod7",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw21",
+				"Quantity": 200
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech94",
+		"Icon": "constructedTechnology/94.png",
+		"Name": "Factory Override Unit",
+		"Group": "Advanced Research Module",
+		"Description": "A portable data unit, compatible with most planetary fabricator facilities.\n\nOnce access has been gained to a central control terminal, the Override Unit can divert the facilities resources towards researching new product recipes.",
+		"BaseValueUnits": 50000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech95",
+		"Icon": "constructedTechnology/95.png",
+		"Name": "Salvaged Frigate Module",
+		"Group": "Capital Ship Wiring Platform",
+		"Description": "A technology module harvested from the remains of a large interstellar starship. May be collected from freighter crashsites or salvaged during frigate expeditions.\n\nUseless in its current form, a Research Station aboard your freighter may be able to convert it into useable technology.",
+		"BaseValueUnits": 95000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech96",
+		"Icon": "constructedTechnology/96.png",
+		"Name": "Cargo Bulkhead",
+		"Group": "Auto-Expanding Freighter Module",
+		"Description": "A technology module harvested from the remains of an abandoned freighter found floating in space. May also be salvaged during frigate expeditions.\n\nPre-packed nano-expanders fill out this portable unit and graft it to an existing freighter, increasing its inventory capacity. Apply at your freighter's Upgrade Terminal.",
+		"BaseValueUnits": 105000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech97",
+		"Icon": "products/93.png",
+		"Name": "Spawning Sac",
+		"Group": "Sentient Vessel Storage Sac",
+		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse FE_ALT1 to trigger growth and begin the hatching process.",
+		"BaseValueUnits": 125000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [
+			"Evolve additional storage"
+		]
+	},
+	{
+		"Id": "conTech98",
+		"Icon": "products/91.png",
+		"Name": "Psychonic Egg",
+		"Group": "Pulsating Yolk Sac",
+		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with FE_ALT1.",
+		"BaseValueUnits": 126000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [
+			"Hatch into new sentient technology"
+		]
+	},
+	{
+		"Id": "conTech99",
+		"Icon": "constructedTechnology/99.png",
+		"Name": "Storage Augmentation",
+		"Group": "Starship Expansion Module",
+		"Description": "A technology module harvested from the remains of a salvaged starship. May also be collected from freighter crash sites or salvaged during frigate expeditions.\n\nCan be used to expand starship storage capacity at the Space Station's Starship Outfitter.",
+		"BaseValueUnits": 125000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsRewardFromShipScrap",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech100",
+		"Icon": "constructedTechnology/100.png",
+		"Name": "Navigation Data",
+		"Group": "Encrypted Navigation Data",
+		"Description": "Encoded navigation data. This highly portable data unit contains all relevant cartographical information for a planetary region.\n\nMay be traded with a Cartographer aboard a Space Station in exchange for usable star charts.",
+		"BaseValueUnits": 1000.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 20.0,
+		"Colour": "0063B7",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech101",
+		"Icon": "constructedTechnology/101.png",
+		"Name": "Exosuit Upgrade Chart",
+		"Group": "Encrypted Navigation Data",
+		"Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a Drop Pod containing an Exosuit Inventory Upgrade.\n\nSelect the coordinates in the inventory and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"BaseValueUnits": 85000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 20.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [
+			"Convert data to Exosuit navigation marker"
+		]
+	},
+	{
+		"Id": "conTech102",
+		"Icon": "constructedTechnology/102.png",
+		"Name": "Log Encryption Key",
+		"Group": "Incomplete Data Sequence",
+		"Description": "A fragment of the encryption override sequence for a freighter's emergency log.\n\nSeveral parts of the sequence may be required to gain full access to recorded data.",
+		"BaseValueUnits": 1500.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 5.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech103",
+		"Icon": "constructedTechnology/103.png",
+		"Name": "Defence Chit",
+		"Group": "System Authority Payment Substitute",
+		"Description": "A token, entitling the bearer to support from the system authorities in dealing with pirate attacks.",
+		"BaseValueUnits": 10000.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech104",
+		"Icon": "constructedTechnology/104.png",
+		"Name": "Memory Fragment",
+		"Group": "Technology Echo",
+		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with FE_ALT1.",
+		"BaseValueUnits": 16.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
+	},
+	{
+		"Id": "conTech105",
+		"Icon": "constructedTechnology/105.png",
+		"Name": "Memory Fragment (Inventory)",
+		"Group": "Rogue Technology Echo",
+		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an inventory expansion to aid you on your travels. Absorb this memory with FE_ALT1.",
+		"BaseValueUnits": 16.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [
+			"Ingest item via suit nutrient system"
+		]
+	},
+	{
+		"Id": "conTech106",
+		"Icon": "constructedTechnology/106.png",
+		"Name": "Archived Technology Package",
+		"Group": "",
+		"Description": "An archived wiring package, designed to allow easy storage of core technology. Use FE_ALT1 to begin the installation process.\n\n%TECH_DESC%",
+		"BaseValueUnits": 16.0,
+		"CurrencyType": "None",
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech107",
+		"Icon": "products/84.png",
+		"Name": "Genetic Repository",
+		"Group": "",
+		"Description": "A cryogenically frozen node, designed to facilitate the archival of bio-technology for sentient starships. Use FE_ALT1 to begin the installation process.\n\n%TECH_DESC%",
+		"BaseValueUnits": 16.0,
+		"CurrencyType": "None",
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech108",
+		"Icon": "constructedTechnology/108.png",
+		"Name": "Exosuit Expansion Unit",
+		"Group": "Upgrade Unit",
+		"Description": "An advanced survival technology module that allows expansion of a user's Exosuit Storage.\n\nPre-packed nano-expanders create stablised sub-warp voids within the Exosuit, increasing its inventory capacity. Apply this augmentation at the Exosuit upgrade terminal on board a Space Station.",
+		"BaseValueUnits": 155000.0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 15.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech109",
+		"Icon": "constructedTechnology/109.png",
+		"Name": "Utopia Exosuit Station",
+		"Group": "Portable Exosuit Research Station",
+		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exosuit Station today!",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw10",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech110",
+		"Icon": "constructedTechnology/110.png",
+		"Name": "Utopia Multi-Tool Station",
+		"Group": "Portable Multi-Tool Research Station",
+		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Multi-Tool Station today!",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw11",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech111",
+		"Icon": "constructedTechnology/111.png",
+		"Name": "Portable Exocraft Research Station",
+		"Group": "Portable Exocraft Research Station",
+		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exocraft Station today!",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw5",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech112",
+		"Icon": "constructedTechnology/112.png",
+		"Name": "Utopia Ship Station",
+		"Group": "Portable Starship Research Station",
+		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Starship Station today!",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw7",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech113",
+		"Icon": "constructedTechnology/113.png",
+		"Name": "Utopia Build Station",
+		"Group": "Portal Construction Blueprint Terminal",
+		"Description": "The Utopia Overseers wish for their brave settlers to be sheltered and happy! Together, we will make Bakkin beautiful!\n\nThis officially-licensed portable research station allows access to a generous range of construction blueprints, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Build Station today!",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "raw2",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech114",
+		"Icon": "constructedTechnology/114.png",
+		"Name": "Wonder Projector",
+		"Group": "Discovery Display Hologram",
+		"Description": "A buildable holographic display, designed to visualise any discovery currently listed in your Personal Records.\n\nUse the projector to manage these records directly, or view them from the Wonders section of the Catalogue.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 12,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod1",
+				"Quantity": 1
+			},
+			{
+				"Id": "raw10",
+				"Quantity": 25
+			},
+			{
+				"Id": "raw23",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech115",
+		"Icon": "constructedTechnology/115.png",
+		"Name": "Minotaur Flamethrower Module",
+		"Group": "Significant Minotaur Weapon Upgrade",
+		"Description": "A significant upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
+		"BaseValueUnits": 140.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech116",
+		"Icon": "constructedTechnology/116.png",
+		"Name": "Minotaur Flamethrower Module",
+		"Group": "Powerful Minotaur Weapon Upgrade",
+		"Description": "An extremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
+		"BaseValueUnits": 300.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech117",
+		"Icon": "constructedTechnology/117.png",
+		"Name": "Minotaur Flamethrower Module",
+		"Group": "Supreme Minotaur Weapon Upgrade",
+		"Description": "A supremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
+		"BaseValueUnits": 480.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "1A2733",
+		"Usages": [
+			"HasDevProperties",
+			"IsConsumable",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "conTech118",
+		"Icon": "constructedTechnology/118.png",
+		"Name": "Automated Trap",
+		"Group": "Self-Sustaining Auto Creel",
+		"Description": "An autonomous fishing device, designed for long-term deployment in a wide-range of water conditions.\n\nOnce activated, the system will lure and trap any nearby aquatic creatures and store them for later retrieval.",
+		"BaseValueUnits": 1.0,
+		"CurrencyType": "None",
+		"MaxStackSize": 5.0,
+		"Colour": "2C7C9F",
+		"Usages": [
+			"HasDevProperties",
+			"IsAddedInTrackedUpdate"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "SalvagedData",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "prod6",
+				"Quantity": 3
+			},
+			{
+				"Id": "raw16",
+				"Quantity": 50
+			},
+			{
+				"Id": "prod20",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
 	}
-  ]
+]

@@ -14,11 +14,11 @@ const data = sort(
 
 // Create search data
 const search = data.map((item) => ({
-	id: item.Id,
+	id: item.fishId || item.Id,
 	name: item.Name,
 	type: getLabel(item.Id),
-	url: `/${getSlug(item.Id)}/${item.Id}`.replace(/\/+/g, '/'),
-  }));
+	url: `/${getSlug(item.Id)}/${item.fishId || item.Id}`.replace(/\/+/g, '/'),
+}));
 
 export const GET: APIRoute = ({ request }) => {
   const url = new URL(request.url);
