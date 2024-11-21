@@ -1,7 +1,7 @@
 ---
 const { open = false, id } = Astro.props;
 ---
-<accordion-component class="accordion-container" data-open={open}>
+<accordion-component class="accordion-container" data-open={String(open)}>
   <h3>
     <button
       id={`accordion-header-${id}`}
@@ -38,7 +38,12 @@ const { open = false, id } = Astro.props;
     connectedCallback() {
       this.button = this.querySelector('button');
       this.panel = this.querySelector('[role="region"]');
+
+      console.log('Initial dataset.open:', this.dataset.open);
+
       this.open = this.dataset.open === 'true';
+      console.log('Parsed open value:', this.open);
+
       this.updateState();
       this.button.addEventListener('click', this.toggle);
     }

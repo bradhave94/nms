@@ -14,33 +14,49 @@ interface Props {
 const { item } = Astro.props;
 
 // Function to create an array of required items
-const createArray = (item: Item, num = 1): Array<any> => {
+const createArray = (item: Item, num = 1): { array: Array<any>, rawItems: Array<any> } => {
   const array = [];
-  const rawItems = [];
+  const rawItemsMap = new Map();
 
+  const collectRawItems = (item: Item, multiplier = 1) => {
+    if (!item.RequiredItems?.length) {
+      // This is a raw item
+      const key = item.Id;
+      if (rawItemsMap.has(key)) {
+        const existingItem = rawItemsMap.get(key);
+        existingItem.Quantity += multiplier;
+      } else {
+        rawItemsMap.set(key, {
+          Id: item.Id,
+          fishId: item.fishId,
+          Name: item.Name,
+          Icon: item.Icon,
+          Colour: item.Colour,
+          Quantity: multiplier,
+        });
+      }
+      return;
+    }
+
+    // Recursively collect raw items from children
+    for (const reqItem of item.RequiredItems) {
+      const itemData = getById(reqItem.Id);
+      if (!itemData) continue;
+      collectRawItems(itemData, reqItem.Quantity * multiplier);
+    }
+  };
+
+  // First pass: collect raw items
   for (const requiredItem of item.RequiredItems || []) {
     const itemData = getById(requiredItem.Id);
     if (!itemData) continue;
+    collectRawItems(itemData, requiredItem.Quantity * num);
+  }
 
-    const requiredItems = itemData.RequiredItems?.length
-      ? createArray(itemData, requiredItem.Quantity)
-      : [];
-
-    if (!requiredItems.length) {
-      const existingItem = rawItems.find((r: Item) => r.Name === itemData.Name);
-      if (existingItem) {
-        existingItem.Quantity += requiredItem.Quantity * num;
-      } else {
-        rawItems.push({
-          Id: itemData.Id,
-          fishId: itemData.fishId,
-          Name: itemData.Name,
-          Icon: itemData.Icon,
-          Colour: itemData.Colour,
-          Quantity: requiredItem.Quantity * num,
-        });
-      }
-    }
+  // Second pass: build the tree structure
+  for (const requiredItem of item.RequiredItems || []) {
+    const itemData = getById(requiredItem.Id);
+    if (!itemData) continue;
 
     array.push({
       Id: itemData.Id,
@@ -49,11 +65,16 @@ const createArray = (item: Item, num = 1): Array<any> => {
       Icon: itemData.Icon,
       Colour: itemData.Colour,
       Quantity: requiredItem.Quantity,
-      RequiredItems: requiredItems,
+      RequiredItems: itemData.RequiredItems?.length
+        ? createArray(itemData, requiredItem.Quantity).array.map(i => ({...i}))
+        : [],
     });
   }
 
-  return array;
+  return {
+    array,
+    rawItems: Array.from(rawItemsMap.values())
+  };
 };
 
 // Function to get output items
@@ -110,21 +131,21 @@ const getInputs = (item) => {
 };
 
 // Prepare data for rendering
+const { array: requiredItems, rawItems } = createArray(item);
 const data = item.RequiredItems?.length
   ? [{
       Id: item.Id,
       Icon: item.Icon,
       Name: item.Name,
       Quantity: 1,
-      RequiredItems: createArray(item),
-      rawItems: createArray(item).flatMap(i => i.RequiredItems || []),
+      RequiredItems: requiredItems,
+      rawItems: rawItems,
     }]
   : [];
 
 const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
 const inputData = findInput(item.Id);
 const input = getInputs(inputData);
-console.log(item)
 const showQuantityInput = data.length + output.length > 0;
 ---
 
@@ -201,7 +222,6 @@ const showQuantityInput = data.length + output.length > 0;
               </div>
               <div slot="content">
                 {item.RequiredItems?.length > 0 && <NestedList items={item} />}
-
                 {item.rawItems.length > 0 && (
                   <div class="mb-4">
                     <h3 class="relative mt-8 mb-4 text-center">
@@ -249,8 +269,13 @@ const showQuantityInput = data.length + output.length > 0;
           {item.Id.includes('cook') ? 'Cooking' : 'Refining'}
         </span>
       </h2>
+
       <div class={`grid gap-4 items-start justify-center ${
-        output.length >= 3 ? 'xl:grid-cols-3 lg:grid-cols-2 grid-cols-1' : 'md:grid-cols-2 grid-cols-1'
+        output.length >= 3
+          ? 'xl:grid-cols-3 lg:grid-cols-2 grid-cols-1'
+          : output.length === 1
+            ? 'grid-cols-1'
+            : 'md:grid-cols-2 grid-cols-1'
       }`}>
         {output.map((item) => (
           <div class="bg-gray-900">
@@ -323,7 +348,7 @@ const showQuantityInput = data.length + output.length > 0;
 <!-- Quantity input script -->
 {showQuantityInput && (
   <script>
-    const quantityInput = document.querySelector('input.quantity');
+    const quantityInput = document.querySelector('input.quantity')
     const elements = document.querySelectorAll('[data-quantity]');
 
     if (quantityInput) {
