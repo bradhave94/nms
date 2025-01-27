@@ -34,6 +34,13 @@ export default function Footer() {
             {SITE.version_name} {SITE.version}
           </a>
         </p>
+        <div class="disclaimer">
+          <p>This is a fan-made website. No Man's Sky™ and all related assets are trademarks
+          of Hello Games. This site is not affiliated with or endorsed by Hello Games.</p>
+          <p class="mt-2">
+            <a href="/privacy" class="text-orange-500 hover:text-orange-400">Privacy Policy</a>
+          </p>
+        </div>
       </div>
     </footer>
   );

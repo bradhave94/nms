@@ -116,64 +116,13 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: #000;
+    background: #051413s;
     position: absolute;
     top: 0;
     opacity: 0.7;
     z-index: -1;
 }
 
-.bg1 .nms-bg {
-    background-image: url("/images/backgrounds/bg1.webp");
-}
-
-.bg2 .nms-bg {
-    background-image: url("/images/backgrounds/bg2.webp");
-}
-
-.bg3 .nms-bg {
-    background-image: url("/images/backgrounds/bg3.webp");
-}
-
-.bg4 .nms-bg {
-    background-image: url("/images/backgrounds/bg4.webp");
-}
-
-.bg5 .nms-bg {
-    background-image: url("/images/backgrounds/bg5.webp");
-}
-
-.bg6 .nms-bg {
-    background-image: url("/images/backgrounds/bg6.webp");
-}
-
-.bg7 .nms-bg {
-    background-image: url("/images/backgrounds/bg7.webp");
-}
-
-.bg8 .nms-bg {
-    background-image: url("/images/backgrounds/bg8.webp");
-}
-
-.bg9 .nms-bg {
-    background-image: url("/images/backgrounds/bg9.webp");
-}
-
-.bg10 .nms-bg {
-    background-image: url("/images/backgrounds/bg10.webp");
-}
-
-.bg11 .nms-bg {
-    background-image: url("/images/backgrounds/bg11.webp");
-}
-
-.bg12 .nms-bg {
-    background-image: url("/images/backgrounds/bg12.webp");
-}
-
-.bg13 .nms-bg {
-    background-image: url("/images/backgrounds/bg13.webp");
-}
 
 .btn {
     @apply inline-flex items-center rounded-md border border-transparent bg-orange-500 px-3 py-2 text-sm font-medium leading-4 text-black shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2
@@ -181,4 +130,12 @@
 
 #results li a {
     @apply select-none px-4 py-2 block hover:bg-orange-500 hover:text-black  focus:bg-orange-500 focus:text-black
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  line-height: 1.2
 }

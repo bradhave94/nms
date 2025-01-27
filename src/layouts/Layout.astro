@@ -20,8 +20,6 @@ const { title = SITE.title, author = SITE.author, description = SITE.desc, slug 
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const bgNumber = Math.floor(Math.random() * 12) + 1;
-
 inject();
 ---
 
@@ -73,18 +71,25 @@ inject();
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
 		<script>
+			interface Window {
+				dataLayer: any[];
+			}
+
+			// Declare gtag as a function
+			declare function gtag(...args: any[]): void;
+
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
 			}
 			gtag('js', new Date());
-
 			gtag('config', 'G-9GEFK3YPV3');
 		</script>
 
-		<link rel="preload" as="image" href={`/images/backgrounds/bg${bgNumber}.webp`} />
+		<meta name="robots" content="max-image-preview:large" />
+		<meta name="google-adsense-account" content="ca-pub-8524094599848175" />
 	</head>
-	<body class={`bg${bgNumber} h-full ${slug === '/' ? 'home' : ''}`}>
+	<body class={` h-full ${slug === '/' ? 'home' : ''}`}>
 		<Sidebar client:load slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>
