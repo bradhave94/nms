@@ -8,7 +8,7 @@ const { card, hide, index, loading } = Astro.props;
 <article data-index={index}>
 	<a
 		href={card.link}
-		class="flex flex-wrap flex-col  transition border border-black hover:border-orange-500 bg-black rounded-md overflow-hidden h-full"
+		class="flex flex-wrap flex-col  transition border border-black hover:border-blue-500 bg-black rounded-md overflow-hidden h-full"
 	>
 		<div class="sm:basis-40">
 			<Image
@@ -51,7 +51,7 @@ const { card, hide, index, loading } = Astro.props;
 
 			<div class="sm:flex sm:items-end sm:justify-end">
 				<button
-					class="block tracking-wider bg-orange-500 px-5 py-3 text-center text-xs font-bold text-gray-900 transition hover:bg-orange-700"
+					class="block tracking-wider bg-blue-500 px-5 py-3 text-center text-xs font-bold text-gray-900 transition hover:bg-blue-700"
 				>
 					{card.button}
 				</button>

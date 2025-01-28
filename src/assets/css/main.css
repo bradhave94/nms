@@ -73,11 +73,11 @@
 }
 
 #table .tabulator-arrow {
-    @apply border-b-orange-500
+    @apply border-b-blue-500
 }
 
 #table .tabulator-col.tabulator-sortable[aria-sort="descending"] .tabulator-arrow {
-    @apply border-t-orange-500
+    @apply border-t-blue-500
 }
 
 #table .tabulator-footer {
@@ -85,15 +85,15 @@
 }
 
 #table .tabulator-page {
-    @apply inline-flex items-center  transition-colors rounded border-0 bg-orange-500 px-2.5 py-1.5 text-xs font-medium text-black shadow-sm hover:bg-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2
+    @apply inline-flex items-center  transition-colors rounded border-0 bg-blue-500 px-2.5 py-1.5 text-xs font-medium text-black shadow-sm hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
 }
 
 #table .tabulator-page.active {
-    @apply bg-orange-700 hover:bg-orange-800
+    @apply bg-blue-700 hover:bg-blue-800
 }
 
 #table .tabulator-page-size {
-    @apply rounded-md border-gray-300 py-[4.5px] pl-3 pr-10 text-xs focus:border-orange-500 focus:outline-none focus:ring-orange-500 sm:text-sm bg-orange-500 border-0 text-black
+    @apply rounded-md border-gray-300 py-[4.5px] pl-3 pr-10 text-xs focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm bg-blue-500 border-0 text-black
 }
 
 #table .tabulator-paginator {
@@ -101,7 +101,7 @@
 }
 
 .tabulator-tooltip.tabulator-popup-container {
-    @apply text-base p-4 bg-black border-orange-500 rounded-md
+    @apply text-base p-4 bg-black border-blue-500 rounded-md
 }
 
 .nms-bg {
@@ -125,11 +125,11 @@
 
 
 .btn {
-    @apply inline-flex items-center rounded-md border border-transparent bg-orange-500 px-3 py-2 text-sm font-medium leading-4 text-black shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2
+    @apply inline-flex items-center rounded-md border border-transparent bg-blue-500 px-3 py-2 text-sm font-medium leading-4 text-black shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
 }
 
 #results li a {
-    @apply select-none px-4 py-2 block hover:bg-orange-500 hover:text-black  focus:bg-orange-500 focus:text-black
+    @apply select-none px-4 py-2 block hover:bg-blue-500 hover:text-black  focus:bg-blue-500 focus:text-black
 }
 
 .disclaimer {

@@ -48,8 +48,8 @@ export default function Sidebar({ slug, layout }) {
           href={item.href}
           className={classNames(
             item.href.includes(slug)
-              ? 'bg-orange-500 text-black'
-              : 'text-white hover:bg-orange-500 hover:text-black',
+              ? 'bg-blue-500 text-black'
+              : 'text-white hover:bg-blue-500 hover:text-black',
             'group flex items-center px-2 py-1 text-lg font-medium rounded-md transition-colors'
           )}
         >
@@ -154,7 +154,7 @@ export default function Sidebar({ slug, layout }) {
           <div className="sticky top-0 z-10 bg-black p-3 text-right lg:hidden">
             <button
               type="button"
-              className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center border rounded-md text-white hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
+              className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center border rounded-md text-white hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
