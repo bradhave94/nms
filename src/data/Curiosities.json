@@ -399,7 +399,6 @@
     "CookingValue": 0.0,
     "CdnUrl": "https://cdn.nmsassistant.com/curiosities/14.png",
     "Usages": [
-      "HasUsedToCraft",
       "HasCookToCreate",
       "HasDevProperties",
       "IsEggIngredient",
@@ -2800,7 +2799,8 @@
       "HasDevProperties",
       "IsConsumable",
       "IsEggIngredient",
-      "IsAddedInTrackedUpdate"
+      "IsAddedInTrackedUpdate",
+      "HasFishingLocation"
     ],
     "BlueprintCost": 1,
     "BlueprintCostType": "None",
@@ -2810,5 +2810,50 @@
     "ConsumableRewardTexts": [
       "Return your catch to the water"
     ]
+  },
+  {
+    "Id": "cur291",
+    "Icon": "curiosities/291.png",
+    "Name": "Vile Cortex",
+    "Group": "Glorious Trophy",
+    "Description": "The brain stem of a brood mother, pulled from its malignant corpse.\n\nThis is a valuable trophy, signifying victory in the quest to purge the infestations of the vile brood. Turn it over to an envoy of the Mercenaries Guild to mark your triumph.",
+    "BaseValueUnits": 122000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "4D2957",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsEggIngredient",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
+  },
+  {
+    "Id": "cur292",
+    "Icon": "curiosities/292.png",
+    "Name": "Sea Glass",
+    "Group": "Precious Material",
+    "Description": "A etheral shard, this translucent plane is both mineral and alive, both of the water and of another realm.\n\nOf high value to collectors across the universe.",
+    "BaseValueUnits": 266000.0,
+    "CurrencyType": "Credits",
+    "MaxStackSize": 5.0,
+    "Colour": "1A2733",
+    "Usages": [
+      "HasDevProperties",
+      "IsConsumable",
+      "IsAddedInTrackedUpdate"
+    ],
+    "BlueprintCost": 1,
+    "BlueprintCostType": "None",
+    "BlueprintSource": 0,
+    "RequiredItems": [],
+    "StatBonuses": [],
+    "ConsumableRewardTexts": []
   }
 ]
