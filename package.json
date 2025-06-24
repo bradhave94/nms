@@ -1,7 +1,7 @@
 {
-	"name": "@nomansskyrecipes/astro",
+	"name": "@nomansskyrecipes",
 	"type": "module",
-	"version": "2.0.2",
+	"version": "5.7.0",
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
@@ -11,15 +11,15 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/react": "^4.2.2",
-		"@astrojs/sitemap": "^3.3.0",
+		"@astrojs/react": "^4.3.0",
+		"@astrojs/sitemap": "^3.4.1",
 		"@astrojs/tailwind": "^6.0.2",
 		"@headlessui/react": "^1.7.10",
 		"@heroicons/react": "^2.0.15",
 		"@types/react": "^18.0.28",
 		"@types/react-dom": "^18.0.10",
 		"@vercel/analytics": "^0.1.10",
-		"astro": "^5.5.5",
+		"astro": "^5.10.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"tabulator-tables": "^5.4.3",
