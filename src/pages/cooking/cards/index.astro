@@ -75,7 +75,6 @@ const columns = [
 	{ title: 'Input 2', field: 'input_2' },
 	{ title: 'Input 3', field: 'input_3' },
 	{ title: 'Output', field: 'output' }
-
 ];
 
 // Map the data and create an array of filtered items
@@ -164,6 +163,7 @@ const sortedData = sortTable(data);
 							<span data-quantity={item.output.amount}>{item.output.amount}</span>
 						</h4>
 					</a>
+					{item.input_1 && (
 					<a
 						href={getSlug(item.input_1.id) + item.input_1.id}
 						class="flex p-2 transition-opacity hover:opacity-75"
@@ -190,6 +190,7 @@ const sortedData = sortTable(data);
 							</h4>
 						</div>
 					</a>
+					)}
 					{item.input_2 ? (
 						<a
 							href={getSlug(item.input_2.id) + item.input_2.id}

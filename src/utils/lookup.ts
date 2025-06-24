@@ -137,7 +137,7 @@ const getById = (id: string): Item | undefined => {
 
 	// If source not found, log an error and return undefined
 	if (!source) {
-		console.error(`No data source found for prefix: ${prefix}`);
+		console.error(`No data source found for prefix: ${id} : ${prefix}`);
 		return undefined;
 	}
 	// Find the item from the source
