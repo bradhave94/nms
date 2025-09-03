@@ -182,7 +182,6 @@ const showQuantityInput = data.length + output.length > 0;
             class="quantity bg-black border-blue-500 max-w-full w-24"
             name="quantity"
             type="number"
-            min="1"
             value="1"
           />
         </div>
@@ -353,15 +352,15 @@ const showQuantityInput = data.length + output.length > 0;
 
     if (quantityInput) {
       quantityInput.addEventListener('input', () => {
-        // Ensure the input value is at least 1
-        const value = Math.max(1, parseFloat(quantityInput.value) || 1);
-        quantityInput.value = value.toString();
 
+        if (quantityInput.value != '') {
         // Update all quantity elements
         elements.forEach((element) => {
           const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
-          element.textContent = (baseValue * value).toString();
+          element.textContent = (baseValue * quantityInput.value).toString();
         });
+        }
+
       });
     }
   </script>
