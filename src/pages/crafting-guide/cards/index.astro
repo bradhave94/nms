@@ -6,14 +6,33 @@ import { Image } from 'astro:assets'
 import credit from '@assets/img/credits.png';
 import products from '@data/Products.json';
 import { getById, getSlug, type Item } from '@utils/lookup.js';
+import type { RequiredItem } from '@utils/lookup.js';
+
+interface ItemDetails {
+  id: string;
+  name: string;
+  description: string;
+  value: number;
+  amount?: number;
+  image: string;
+  colour: string;
+}
+
+interface ProcessedItem {
+  input_1?: ItemDetails;
+  input_2?: ItemDetails;
+  input_3?: ItemDetails;
+  output: ItemDetails;
+  value: number;
+}
 
 // Function to create an array of data for each Products item
-const createArray = (item: Item) => {
+const createArray = (item: Item): ProcessedItem | undefined => {
   // If the item has no inputs, return undefined
   if (!item.RequiredItems || item.RequiredItems.length === 0) return;
 
   // Map the inputs and get the details of each input item using `getById` function
-  const RequiredItems = item.RequiredItems.map((element) => {
+  const RequiredItems = item.RequiredItems.map((element: RequiredItem) => {
     const i: Item | undefined = getById(element.Id);
     // If item is not found, return undefined
     if (!i) return;
@@ -30,26 +49,28 @@ const createArray = (item: Item) => {
   });
 
   // Combine the inputs and output data in a new object
-  const newItem = {
+  const output = {
+    id: item.Id,
+    name: item.Name,
+    description: item.Description,
+    value: item.BaseValueUnits,
+    image: item.Icon,
+    colour: item.Colour,
+  };
+
+  const newItem: ProcessedItem = {
     input_1: RequiredItems[0],
     input_2: RequiredItems[1],
     input_3: RequiredItems[2],
-    output: {
-      id: item.Id,
-      name: item.Name,
-      description: item.Description,
-      value: item.BaseValueUnits,
-      image: item.Icon,
-      colour: item.Colour,
-    },
-    value: item.BaseValueUnits,
+    output,
+    value: output.value,
   };
   return newItem;
 };
 
 // Map the data and create an array of filtered items
-const data = products.map(createArray).filter(Boolean);
-data.sort((a, b) => b.value - a.value);
+const data = products.map(createArray).filter((item): item is ProcessedItem => item !== undefined);
+const sortedData = [...data].sort((a, b) => b.value - a.value);
 ---
 
 <Layout
@@ -74,7 +95,7 @@ data.sort((a, b) => b.value - a.value);
 		</div>
 
 		<div class="relative text-center">
-			<div class="flex gap-2 justify-center" x-data="app">
+			<div class="flex gap-2 justify-center">
 				<p>Layout:</p>
 				<div>
 					<a
@@ -114,7 +135,7 @@ data.sort((a, b) => b.value - a.value);
 	</div>
 	<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 lg:items-start gap-8" id="items">
 		{
-			data.map((item) => (
+			sortedData.map((item) => (
 				<div class="bg-black rounded-md overflow-hidden">
 					<a
 						href={getSlug(item.output.id) + item.output.id}
@@ -143,116 +164,135 @@ data.sort((a, b) => b.value - a.value);
 							{item.output.value}
 						</p>
 					</a>
-					<a
-						href={getSlug(item.input_1.id) + item.input_1.id}
-						class="flex p-2 transition-opacity hover:opacity-75"
-						style={'background: #' + item.input_1.colour}
-					>
-						<div class="mr-4 flex-shrink-0 self-start">
-							<Image
-								src={
-									'https://app.nmsassistant.com/assets/images/' +
-									item.input_1.image
-								}
-								alt={item.input_1.name}
-								sizes="50px"
-								width={50}
-								height={50}
-							/>
-						</div>
-						<div class="flex items-center">
-							<h4 class="lg:text-lg">
-								{item.input_1.name} x
-								<span data-quantity={item.input_1.amount}>
-									{item.input_1.amount}
-								</span>
-							</h4>
-						</div>
-					</a>
-					{item.input_2 ? (
-						<a
-							href={getSlug(item.input_2.id) + item.input_2.id}
-							class="flex p-2 transition-opacity hover:opacity-75"
-							style={'background: #' + item.input_2.colour}
-						>
-							<div class="mr-4 flex-shrink-0 self-start">
-								<Image
-									src={
-										'https://app.nmsassistant.com/assets/images/' +
-										item.input_2.image
-									}
-									alt={item.input_1.name}
-									sizes="50px"
-									width={50}
-									height={50}
-								/>
-							</div>
-							<div class="flex items-center">
-								<h4 class="lg:text-lg">
-									{item.input_2.name} x
-									<span data-quantity={item.input_2.amount}>
-										{item.input_2.amount}
-									</span>
-								</h4>
-							</div>
-						</a>
-					) : null}
-					{item.input_3 ? (
-						<a
-							href={getSlug(item.input_3.id) + item.input_3.id}
-							class="flex p-2 transition-opacity hover:opacity-75"
-							style={'background: #' + item.input_3.colour}
-						>
-							<div class="mr-4 flex-shrink-0 self-start">
-								<Image
-									src={
-										'https://app.nmsassistant.com/assets/images/' +
-										item.input_3.image
-									}
-									alt={item.input_3.name}
-									sizes="50px"
-									width={50}
-									height={50}
-								/>
-							</div>
-							<div class="flex items-center">
-								<h4 class="lg:text-lg">
-									{item.input_3.name} x
-									<span data-quantity={item.input_3.amount}>
-										{item.input_3.amount}
-									</span>
-								</h4>
-							</div>
-						</a>
-					) : null}
+					{item.input_1 && (() => {
+						const input1 = item.input_1;
+						return (
+							<a
+								href={getSlug(input1.id) + input1.id}
+								class="flex p-2 transition-opacity hover:opacity-75"
+								style={'background: #' + input1.colour}
+							>
+								<div class="mr-4 flex-shrink-0 self-start">
+									<Image
+										src={
+											'https://app.nmsassistant.com/assets/images/' +
+											input1.image
+										}
+										alt={input1.name}
+										sizes="50px"
+										width={50}
+										height={50}
+									/>
+								</div>
+								<div class="flex items-center">
+									<h4 class="lg:text-lg">
+										{input1.name} x
+										<span data-quantity={input1.amount}>
+											{input1.amount}
+										</span>
+									</h4>
+								</div>
+							</a>
+						);
+					})()}
+					{item.input_2 && (() => {
+						const input2 = item.input_2;
+						return (
+							<a
+								href={getSlug(input2.id) + input2.id}
+								class="flex p-2 transition-opacity hover:opacity-75"
+								style={'background: #' + input2.colour}
+							>
+								<div class="mr-4 flex-shrink-0 self-start">
+									<Image
+										src={
+											'https://app.nmsassistant.com/assets/images/' +
+											input2.image
+										}
+										alt={input2.name}
+										sizes="50px"
+										width={50}
+										height={50}
+									/>
+								</div>
+								<div class="flex items-center">
+									<h4 class="lg:text-lg">
+										{input2.name} x
+										<span data-quantity={input2.amount}>
+											{input2.amount}
+										</span>
+									</h4>
+								</div>
+							</a>
+						);
+					})()}
+					{item.input_3 && (() => {
+						const input3 = item.input_3;
+						return (
+							<a
+								href={getSlug(input3.id) + input3.id}
+								class="flex p-2 transition-opacity hover:opacity-75"
+								style={'background: #' + input3.colour}
+							>
+								<div class="mr-4 flex-shrink-0 self-start">
+									<Image
+										src={
+											'https://app.nmsassistant.com/assets/images/' +
+											input3.image
+										}
+										alt={input3.name}
+										sizes="50px"
+										width={50}
+										height={50}
+									/>
+								</div>
+								<div class="flex items-center">
+									<h4 class="lg:text-lg">
+										{input3.name} x
+										<span data-quantity={input3.amount}>
+											{input3.amount}
+										</span>
+									</h4>
+								</div>
+							</a>
+						);
+					})()}
 				</div>
 			))
 		}
 	</div>
 
 	<script>
-		const search = document.querySelector('#search');
-		const items = document.querySelector('#items');
-		const divs = items.querySelectorAll('div.bg-black');
-		let debounceTimer;
+		const search = document.querySelector('#search') as HTMLInputElement | null;
+		const items = document.querySelector('#items') as HTMLElement | null;
+		if (!search || !items) {
+			console.error('Search elements not found');
+		} else {
+			const divs = items.querySelectorAll('div.bg-black');
+			let debounceTimer: ReturnType<typeof setTimeout> | undefined;
 
-		function handleSearch() {
-			const filter = search.value.toUpperCase();
+			function handleSearch(): void {
+				if (!search) return;
+				const filter = search.value.toUpperCase();
 
-			divs.forEach((article) => {
-				const a = article.querySelector('.output');
-				const txtValue = a.textContent || a.innerText;
-				const isMatch = txtValue.toUpperCase().includes(filter);
+				divs.forEach((article) => {
+					const a = article.querySelector('.output') as HTMLElement | null;
+					if (!a) return;
+					const txtValue = a.textContent || (a as HTMLElement).innerText;
+					const isMatch = txtValue.toUpperCase().includes(filter);
 
-				article.style.display = isMatch ? '' : 'none';
-			});
+					(article as HTMLElement).style.display = isMatch ? '' : 'none';
+				});
+			}
+
+			function debounce(func: () => void, delay: number): void {
+				if (debounceTimer) {
+					clearTimeout(debounceTimer);
+				}
+				debounceTimer = setTimeout(func, delay);
+			}
+
+			search.addEventListener('input', () => debounce(handleSearch, 200));
 		}
-
-		function debounce(func, delay) {
-			clearTimeout(debounceTimer);
-			debounceTimer = setTimeout(func, delay);
-		}
-
-		search.addEventListener('input', () => debounce(handleSearch, 200));
 	</script>
 </Layout>

@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets'
 
 import credit from '../assets/img/credits.png';
-const { card, hide, index, loading } = Astro.props;
+const { card, index, loading } = Astro.props;
 ---
 
 <article data-index={index}>
@@ -72,21 +72,29 @@ const { card, hide, index, loading } = Astro.props;
 				data-ad-slot="3379583016"
 				data-ad-status="init"
 			/>
-			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+			<script>
+				const win = window as { adsbygoogle?: unknown[] };
+				const ads = win.adsbygoogle ?? [];
+				ads.push({});
+				win.adsbygoogle = ads;
+			</script>
 		</div>
 	) : null
 }
 
 <script>
+	type AdsByGoogle = { loaded?: boolean };
+	const adsbygoogle = (window as { adsbygoogle?: AdsByGoogle }).adsbygoogle;
+
 	if (typeof adsbygoogle === 'undefined') {
 		const elements = document.querySelectorAll('[data-ad-status]');
 		elements.forEach((element) => {
-			element.parentElement.classList.add('hidden');
+			element.parentElement?.classList.add('hidden');
 		});
 	} else if (!adsbygoogle.loaded) {
 		const elements = document.querySelectorAll('[data-ad-status]');
 		elements.forEach((element) => {
-			element.parentElement.classList.add('hidden');
+			element.parentElement?.classList.add('hidden');
 		});
 	}
 </script>

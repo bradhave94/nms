@@ -5,6 +5,7 @@ import Table from '@components/table/Table.astro';
 import refinery from '@data/Refinery.json';
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
+import type { TableRow } from '@components/table/Table.astro';
 
 // Interfaces for defining the shape of input and output objects
 interface Input {
@@ -22,34 +23,25 @@ interface Refinery {
 	Output: Output;
 }
 
-interface TableItem {
-    input_1?: Item;
-    input_2?: Item;
-    input_3?: Item;
-    output: Item;
+interface ItemData {
+    id: string;
+    name: string;
     description: string;
     value: number;
+    amount: number;
+    image: string;
+    colour: string;
 }
 
-// Improve type safety and readability
-const createArray = (item: Refinery): TableItem | undefined => {
-    const inputs = item.Inputs.map((element) => createItemData(element)).filter(Boolean);
-    const output = createItemData(item.Output);
-
-    if (!output) return undefined;
-
-    return {
-        input_1: inputs[0],
-        input_2: inputs[1],
-        input_3: inputs[2],
-        output,
-        description: output.description,
-        value: output.value,
-    };
+type TableItem = TableRow & {
+    input_1: ItemData;
+    input_2: ItemData;
+    input_3: ItemData;
+    output: ItemData;
 };
 
 // Extract item data creation to a separate function
-const createItemData = (element: Input | Output): Item | undefined => {
+const createItemData = (element: Input | Output): ItemData | undefined => {
     const item: Item | undefined = getById(element.Id);
     if (!item) return undefined;
 
@@ -61,6 +53,23 @@ const createItemData = (element: Input | Output): Item | undefined => {
         amount: element.Quantity,
         image: item.Icon,
         colour: item.Colour,
+    };
+};
+
+// Improve type safety and readability
+const createArray = (item: Refinery): TableItem | undefined => {
+    const inputs = item.Inputs.map((element) => createItemData(element)).filter((item): item is ItemData => item !== undefined);
+    const output = createItemData(item.Output);
+
+    if (!output || !inputs[0] || !inputs[1] || !inputs[2]) return undefined;
+
+    return {
+        input_1: inputs[0],
+        input_2: inputs[1],
+        input_3: inputs[2],
+        output,
+        description: output.description,
+        value: output.value,
     };
 };
 

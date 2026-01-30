@@ -13,28 +13,33 @@
 </button>
 
 <script>
-	const openSearch = document.getElementById('open-search');
-	const siteSearch = document.getElementById('site-search');
-	const searchInput = document.getElementById('search-input');
+	const openSearch = document.getElementById('open-search') as HTMLButtonElement | null;
+	const siteSearch = document.getElementById('site-search') as HTMLElement | null;
+	const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
 
-	function toggleSiteSearch() {
+	function toggleSiteSearch(): void {
+		if (!siteSearch) return;
+
 		siteSearch.classList.toggle('hidden');
-		if (!siteSearch.classList.contains('hidden')) {
+		if (!siteSearch.classList.contains('hidden') && searchInput) {
 			searchInput.focus();
 		}
 	}
 
-	openSearch.addEventListener('click', toggleSiteSearch);
+	if (openSearch) {
+		openSearch.addEventListener('click', toggleSiteSearch);
+	}
 
-	document.addEventListener('click', (event) => {
-		if (event.target.id === 'site-search-modal') {
+	document.addEventListener('click', (event: MouseEvent) => {
+		const target = event.target as HTMLElement;
+		if (target.id === 'site-search-modal' && siteSearch) {
 			siteSearch.classList.add('hidden');
 		}
 	});
 
 	// Close search on Escape key press
-	document.addEventListener('keydown', (event) => {
-		if (event.key === 'Escape' && !siteSearch.classList.contains('hidden')) {
+	document.addEventListener('keydown', (event: KeyboardEvent) => {
+		if (event.key === 'Escape' && siteSearch && !siteSearch.classList.contains('hidden')) {
 			siteSearch.classList.add('hidden');
 		}
 	});

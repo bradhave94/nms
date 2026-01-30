@@ -3,7 +3,7 @@ import '../assets/css/main.css';
 import { SITE } from '@config';
 import { inject } from '@vercel/analytics';
 
-import Sidebar from '@layouts/Sidebar.jsx';
+import Sidebar from '@layouts/Sidebar.tsx';
 import Search from '@components/Search.astro';
 import SearchModal from '@components/SearchModal.astro';
 import Footer from '@components/Footer.jsx';
@@ -70,14 +70,7 @@ inject();
 
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
-		<script>
-			interface Window {
-				dataLayer: any[];
-			}
-
-			// Declare gtag as a function
-			declare function gtag(...args: any[]): void;
-
+		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);

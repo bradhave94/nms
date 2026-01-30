@@ -1,19 +1,14 @@
 import type { APIRoute } from 'astro';
 import { getLabel, getSlug, sort } from '@utils/lookup.js';
+import type { Item } from '@utils/lookup.js';
 import * as dataSources from '@data/index';
 
 // Combine and sort all data
-const data = sort(
-  Object.values(dataSources).flatMap(source =>
-    source.map(item => ({
-      ...item,
-      CraftingOutputAmount: item.CraftingOutputAmount || undefined
-    }))
-  )
-);
+const allData = Object.values(dataSources).flatMap(source => source as Item[]);
+const data = sort(allData as Item[]);
 
 // Create search data
-const search = data.map((item) => ({
+const search = data.map((item: Item) => ({
 	id: item.fishId || item.Id,
 	name: item.Name,
 	type: getLabel(item.Id),

@@ -5,6 +5,7 @@ import Table from '@components/table/Table.astro';
 import products from '@data/Products.json';
 import { getById } from '@utils/lookup.js';
 import type { Item, RequiredItem } from '@utils/lookup.js';
+import type { TableRow } from '@components/table/Table.astro';
 
 interface ItemDetails {
   id: string;
@@ -26,16 +27,21 @@ const createItemDetails = (item: Item, quantity?: number): ItemDetails => ({
   colour: item.Colour,
 });
 
-const createArray = (item: Item): { input_1?: ItemDetails; input_2?: ItemDetails; input_3?: ItemDetails; output: ItemDetails; value: number; } | undefined => {
-  if (item.RequiredItems.length === 0) return;
+const createArray = (item: Item): TableRow | undefined => {
+  if (!('RequiredItems' in item) || !item.RequiredItems || item.RequiredItems.length === 0) return undefined;
 
-  const requiredItems = item.RequiredItems.map((element) => {
+  const requiredItems = item.RequiredItems.map((element: RequiredItem) => {
     const requiredItem = getById(element.Id);
     return requiredItem ? createItemDetails(requiredItem, element.Quantity) : undefined;
-  }).filter(Boolean) as ItemDetails[];
+  }).filter((detail: ItemDetails | undefined): detail is ItemDetails => detail !== undefined);
+
+  // Ensure all three required inputs exist (TableRow requires all three)
+  if (requiredItems.length < 3 || !requiredItems[0] || !requiredItems[1] || !requiredItems[2]) return undefined;
 
   return {
-    ...Object.fromEntries(requiredItems.map((item, index) => [`input_${index + 1}`, item])),
+    input_1: requiredItems[0],
+    input_2: requiredItems[1],
+    input_3: requiredItems[2],
     output: createItemDetails(item),
     value: item.BaseValueUnits,
   };
@@ -50,8 +56,8 @@ const columns = [
 	{ title: 'Value', field: 'value' },
 ];
 
-// Map the data and create an array of filtered items
-const data = products.map(createArray).filter(Boolean);
+// Map the data and create an array of filtered items with proper type guard
+const data = products.map(createArray).filter((item): item is TableRow => item !== undefined);
 
 ---
 

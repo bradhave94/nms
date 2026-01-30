@@ -9,13 +9,24 @@ interface Column {
   field: string;
 }
 
-interface TableRow {
+type CellData = {
+  id: string;
+  name: string;
+  amount?: number;
+  colour: string;
+  image?: string;
+  description?: string;
+  value?: number;
+};
+
+export interface TableRow {
   input_1: object;
   input_2: object;
   input_3: object;
   output: object;
   description?: string;
   value?: number;
+  [key: string]: unknown;
 }
 
 export interface Props {
@@ -43,7 +54,7 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
   }
 </style>
 
-<div class="table-wrapper d-hidden" data-layout="table">
+<div class="table-wrapper d-hidden" data-layout="table" data-astro-transition-persist="table-wrapper">
   <div
     class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-center before:bg-black/80 before:w-full before:h-full before:absolute before:left-0 before:top-0"
     style="background-image: url(/images/resources.png)"
@@ -61,7 +72,7 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
     </div>
 
     <div class="relative text-center">
-      <div class="flex gap-2 justify-center" x-data="app">
+      <div class="flex gap-2 justify-center">
         <p>Layout:</p>
         <div>
           <a
@@ -105,7 +116,7 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
       {data.map((row) => (
         <tr>
           {columns.map((column) => (
-            <TableCell cell={row[column.field]} />
+            <TableCell cell={row[column.field] as CellData | string | number} />
           ))}
         </tr>
       ))}
@@ -115,45 +126,70 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
 
 <script>
   import { TabulatorFull as Tabulator } from 'tabulator-tables';
+  type ColumnData = { title: string; field: string };
 
-  const tableElement = document.getElementById('table') as HTMLTableElement;
-  const sort = tableElement.dataset.sort;
-  const columns = JSON.parse(tableElement.dataset.columns).map((element) => ({
-    title: element.title,
-    field: element.field,
-    sorterParams: {
-      alignEmptyValues: 'bottom',
-    },
-    formatter: 'html',
-    sorter: sort === element.field && sort === 'value' ? 'number' : undefined,
-  }));
+  // Use requestAnimationFrame to defer execution until after React hydration
+  requestAnimationFrame(() => {
+    const tableElement = document.getElementById('table') as HTMLTableElement;
+    if (!tableElement) return;
+    
+    const sort = tableElement.dataset.sort;
+    let columns;
+    try {
+      columns = JSON.parse(tableElement.dataset.columns || '[]').map((element: ColumnData) => ({
+      title: element.title,
+      field: element.field,
+      sorterParams: {
+        alignEmptyValues: 'bottom',
+      },
+      formatter: 'html',
+      sorter: sort === element.field && sort === 'value' ? 'number' : undefined,
+    }));
+    } catch (error) {
+      console.error('Failed to parse table columns:', error);
+      return;
+    }
 
-  const table = new Tabulator('#table', {
-    columns,
-    initialSort: [{ column: sort, dir: sort !== 'value' ? 'asc' : 'desc' }],
-    layout: 'fitColumns',
-    pagination: true,
-    paginationSize: 10,
-    paginationSizeSelector: [10, 25, 50, 100, true],
-    paginationCounter: 'rows',
-    placeholder: 'No results found',
-    printAsHtml: true,
-  });
+    const table = new Tabulator('#table', {
+      columns,
+      initialSort: [{ column: sort, dir: sort !== 'value' ? 'asc' : 'desc' }],
+      layout: 'fitColumns',
+      pagination: true,
+      paginationSize: 10,
+      paginationSizeSelector: [10, 25, 50, 100, true],
+      paginationCounter: 'rows',
+      placeholder: 'No results found',
+      printAsHtml: true,
+    });
 
-  table.on('dataLoaded', function () {
-    table.element.parentElement.classList.remove('d-hidden');
-  });
+    table.on('dataLoaded', function () {
+      if (table.element?.parentElement) {
+        table.element.parentElement.classList.remove('d-hidden');
+      }
+    });
 
-  function matchAny(data: Record<string, string>, filterParams: { value: string }) {
-    const regex = new RegExp(filterParams.value, 'i');
-    return Object.values(data).some((value) => regex.test(value));
-  }
+    function matchAny(data: Record<string, unknown>, filterParams: { value: string }) {
+      // Escape special regex characters to prevent ReDoS attacks
+      const escapedValue = filterParams.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(escapedValue, 'i');
+      return Object.values(data).some((value) => regex.test(String(value)));
+    }
 
-  const input = document.getElementById('search');
-  input.addEventListener('keyup', function () {
-    table.setFilter(matchAny, { value: input.value });
-    if (input.value === ' ') {
-      table.clearFilter();
+    const input = document.getElementById('search') as HTMLInputElement;
+    if (input) {
+      let debounceTimer: ReturnType<typeof setTimeout> | undefined;
+      input.addEventListener('keyup', function () {
+        if (debounceTimer) {
+          clearTimeout(debounceTimer);
+        }
+        debounceTimer = setTimeout(() => {
+          if (input.value.trim() === '') {
+            table.clearFilter();
+          } else {
+            table.setFilter(matchAny, { value: input.value });
+          }
+        }, 150);
+      });
     }
   });
 </script>

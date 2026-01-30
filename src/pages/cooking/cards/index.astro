@@ -6,6 +6,26 @@ import { Image } from 'astro:assets'
 import processor from '@data/NutrientProcessor.json';
 import { getById, getSlug, sortTable, type Item } from '@utils/lookup.js';
 
+interface ItemDetails {
+	id: string;
+	name: string;
+	description: string;
+	value: number;
+	amount?: number;
+	image: string;
+	colour: string;
+	[key: string]: unknown;
+}
+
+interface ProcessedItem {
+	input_1?: ItemDetails;
+	input_2?: ItemDetails;
+	input_3?: ItemDetails;
+	output: ItemDetails;
+	value: number;
+	description?: string;
+}
+
 // Interfaces for defining the shape of input and output objects
 interface Input {
 	Id: string;
@@ -23,7 +43,7 @@ interface Processor {
 }
 
 // Function to create an array of data for each item
-const createArray = (item: Processor) => {
+const createArray = (item: Processor): ProcessedItem | undefined => {
 
 	// Map the inputs and get the details of each input item using `getById` function
 	const inputs = item.Inputs.map((element) => {
@@ -31,7 +51,7 @@ const createArray = (item: Processor) => {
 		// If item is not found, return undefined
 		if (!i) return;
 		// Return the item details
-		return {
+		const details: ItemDetails = {
 			id: i.Id,
 			name: i.Name,
 			description: i.Description,
@@ -40,6 +60,7 @@ const createArray = (item: Processor) => {
 			image: i.Icon,
 			colour: i.Colour,
 		};
+		return details;
 	});
 
 	// Get the details of the output item using `getById` function
@@ -47,7 +68,7 @@ const createArray = (item: Processor) => {
 	// If item is not found, return undefined
 	if (!o) return;
 	// Return the item details
-	const output = {
+	const output: ItemDetails = {
 		id: o.Id,
 		name: o.Name,
 		description: o.Description,
@@ -58,7 +79,7 @@ const createArray = (item: Processor) => {
 	};
 
 	// Combine the inputs and output data in a new object
-	const newItem = {
+	const newItem: ProcessedItem = {
 		input_1: inputs[0],
 		input_2: inputs[1],
 		input_3: inputs[2],
@@ -69,16 +90,16 @@ const createArray = (item: Processor) => {
 	return newItem;
 };
 
-// Define the columns to be displayed in the table
-const columns = [
-	{ title: 'Input 1', field: 'input_1' },
-	{ title: 'Input 2', field: 'input_2' },
-	{ title: 'Input 3', field: 'input_3' },
-	{ title: 'Output', field: 'output' }
-];
+// Define the columns to be displayed in the table (unused but kept for reference)
+// const columns = [
+// 	{ title: 'Input 1', field: 'input_1' },
+// 	{ title: 'Input 2', field: 'input_2' },
+// 	{ title: 'Input 3', field: 'input_3' },
+// 	{ title: 'Output', field: 'output' }
+// ];
 
 // Map the data and create an array of filtered items
-const data = processor.map(createArray).filter(Boolean);
+const data = processor.map(createArray).filter((item): item is ProcessedItem => item !== undefined);
 const sortedData = sortTable(data);
 ---
 
@@ -104,7 +125,7 @@ const sortedData = sortTable(data);
 		</div>
 
 		<div class="relative text-center">
-			<div class="flex gap-2 justify-center" x-data="app">
+			<div class="flex gap-2 justify-center">
 				<p>Layout:</p>
 				<div>
 					<a
@@ -163,90 +184,99 @@ const sortedData = sortTable(data);
 							<span data-quantity={item.output.amount}>{item.output.amount}</span>
 						</h4>
 					</a>
-					{item.input_1 && (
-					<a
-						href={getSlug(item.input_1.id) + item.input_1.id}
-						class="flex p-2 transition-opacity hover:opacity-75"
-						style={'background: #' + item.input_1.colour}
-					>
-						<div class="mr-4 flex-shrink-0 self-start">
-							<Image
-								src={
-									'https://app.nmsassistant.com/assets/images/' +
-									item.input_1.image
-								}
-								alt={item.input_1.name}
-								sizes="50px"
-								width={50}
-								height={50}
-							/>
-						</div>
-						<div class="flex items-center">
-							<h4 class="lg:text-lg">
-								{item.input_1.name} x
-								<span data-quantity={item.input_1.amount}>
-									{item.input_1.amount}
-								</span>
-							</h4>
-						</div>
-					</a>
-					)}
-					{item.input_2 ? (
-						<a
-							href={getSlug(item.input_2.id) + item.input_2.id}
-							class="flex p-2 transition-opacity hover:opacity-75"
-							style={'background: #' + item.input_2.colour}
-						>
-							<div class="mr-4 flex-shrink-0 self-start">
-								<Image
-									src={
-										'https://app.nmsassistant.com/assets/images/' +
-										item.input_2.image
-									}
-									alt={item.input_1.name}
-									sizes="50px"
-									width={50}
-									height={50}
-								/>
-							</div>
-							<div class="flex items-center">
-								<h4 class="lg:text-lg">
-									{item.input_2.name} x
-									<span data-quantity={item.input_2.amount}>
-										{item.input_2.amount}
-									</span>
-								</h4>
-							</div>
-						</a>
-					) : null}
-					{item.input_3 ? (
-						<a
-							href={getSlug(item.input_3.id) + item.input_3.id}
-							class="flex p-2 transition-opacity hover:opacity-75"
-							style={'background: #' + item.input_3.colour}
-						>
-							<div class="mr-4 flex-shrink-0 self-start">
-								<Image
-									src={
-										'https://app.nmsassistant.com/assets/images/' +
-										item.input_3.image
-									}
-									alt={item.input_3.name}
-									sizes="50px"
-									width={50}
-									height={50}
-								/>
-							</div>
-							<div class="flex items-center">
-								<h4 class="lg:text-lg">
-									{item.input_3.name} x
-									<span data-quantity={item.input_3.amount}>
-										{item.input_3.amount}
-									</span>
-								</h4>
-							</div>
-						</a>
-					) : null}
+					{item.input_1 && (() => {
+						const input1 = item.input_1;
+						return (
+							<a
+								href={getSlug(input1.id) + input1.id}
+								class="flex p-2 transition-opacity hover:opacity-75"
+								style={'background: #' + input1.colour}
+							>
+								<div class="mr-4 flex-shrink-0 self-start">
+									<Image
+										src={
+											'https://app.nmsassistant.com/assets/images/' +
+											input1.image
+										}
+										alt={input1.name}
+										sizes="50px"
+										width={50}
+										height={50}
+									/>
+								</div>
+								<div class="flex items-center">
+									<h4 class="lg:text-lg">
+										{input1.name} x
+										<span data-quantity={input1.amount}>
+											{input1.amount}
+										</span>
+									</h4>
+								</div>
+							</a>
+						);
+					})()}
+					{item.input_2 && (() => {
+						const input2 = item.input_2;
+						return (
+							<a
+								href={getSlug(input2.id) + input2.id}
+								class="flex p-2 transition-opacity hover:opacity-75"
+								style={'background: #' + input2.colour}
+							>
+								<div class="mr-4 flex-shrink-0 self-start">
+									<Image
+										src={
+											'https://app.nmsassistant.com/assets/images/' +
+											input2.image
+										}
+										alt={input2.name}
+										sizes="50px"
+										width={50}
+										height={50}
+									/>
+								</div>
+								<div class="flex items-center">
+									<h4 class="lg:text-lg">
+										{input2.name} x
+										<span data-quantity={input2.amount}>
+											{input2.amount}
+										</span>
+									</h4>
+								</div>
+							</a>
+						);
+					})()}
+					{item.input_3 && (() => {
+						const input3 = item.input_3;
+						return (
+							<a
+								href={getSlug(input3.id) + input3.id}
+								class="flex p-2 transition-opacity hover:opacity-75"
+								style={'background: #' + input3.colour}
+							>
+								<div class="mr-4 flex-shrink-0 self-start">
+									<Image
+										src={
+											'https://app.nmsassistant.com/assets/images/' +
+											input3.image
+										}
+										alt={input3.name}
+										sizes="50px"
+										width={50}
+										height={50}
+									/>
+								</div>
+								<div class="flex items-center">
+									<h4 class="lg:text-lg">
+										{input3.name} x
+										<span data-quantity={input3.amount}>
+											{input3.amount}
+										</span>
+									</h4>
+								</div>
+							</a>
+						);
+					})()}
 				</div>
 			))
 		}
@@ -254,28 +284,36 @@ const sortedData = sortTable(data);
 
 
 	<script>
-		const search = document.querySelector('#search');
-		const items = document.querySelector('#items');
-		const divs = items.querySelectorAll('div.bg-black');
-		let debounceTimer;
+		const search = document.querySelector('#search') as HTMLInputElement | null;
+		const items = document.querySelector('#items') as HTMLElement | null;
+		if (!search || !items) {
+			console.error('Search elements not found');
+		} else {
+			const divs = items.querySelectorAll('div.bg-black');
+			let debounceTimer: ReturnType<typeof setTimeout> | undefined;
 
-		function handleSearch() {
-			const filter = search.value.toUpperCase();
+			function handleSearch(): void {
+				if (!search) return;
+				const filter = search.value.toUpperCase();
 
-			divs.forEach((article) => {
-				const a = article.querySelector('.output');
-				const txtValue = a.textContent || a.innerText;
-				const isMatch = txtValue.toUpperCase().includes(filter);
+				divs.forEach((article) => {
+					const a = article.querySelector('.output') as HTMLElement | null;
+					if (!a) return;
+					const txtValue = a.textContent || (a as HTMLElement).innerText;
+					const isMatch = txtValue.toUpperCase().includes(filter);
 
-				article.style.display = isMatch ? '' : 'none';
-			});
+					(article as HTMLElement).style.display = isMatch ? '' : 'none';
+				});
+			}
+
+			function debounce(func: () => void, delay: number): void {
+				if (debounceTimer) {
+					clearTimeout(debounceTimer);
+				}
+				debounceTimer = setTimeout(func, delay);
+			}
+
+			search.addEventListener('input', () => debounce(handleSearch, 200));
 		}
-
-		function debounce(func, delay) {
-			clearTimeout(debounceTimer);
-			debounceTimer = setTimeout(func, delay);
-		}
-
-		search.addEventListener('input', () => debounce(handleSearch, 200));
 	</script>
 </Layout>

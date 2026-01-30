@@ -19,7 +19,7 @@ export type RequiredItem = {
 };
 
 // Defining the interface for an Item
-type Item = {
+export type Item = {
 	Id: string;
 	fishId?: string;
 	Name: string;
@@ -28,13 +28,35 @@ type Item = {
 	Icon: string;
 	Colour: string;
 	BaseValueUnits: number;
-	RequiredItems?: Item[];
+	RequiredItems?: RequiredItem[];
 	Quantity?: number;
 	Output?: {
 		Id: string;
 		Quantity: number;
 	};
 	Value?: string;
+};
+
+type ItemWithOutput = {
+	Id: string;
+	Output: {
+		Id: string;
+		Quantity: number;
+	};
+};
+
+type ItemWithInputs = {
+	Id: string;
+	Inputs: Array<{
+		Id: string;
+		Quantity: number;
+	}>;
+};
+
+type TableItem = {
+	output: {
+		name: string;
+	};
 };
 
 // Mapping the prefixes of item id to the actual data sources
@@ -88,7 +110,7 @@ const labels = {
 
 const getSlug = (id: string): string => {
     // Extract the prefix of the item id by splitting the id by its numeric part
-    const prefix = id.split(/\d/)[0];
+    const prefix = id.split(/\d/)[0] as keyof typeof slugs;
 
     // Special handling for 'cur' prefix
     if (prefix === 'cur') {
@@ -105,68 +127,87 @@ const getSlug = (id: string): string => {
 // Returns the label corresponding to the item id
 const getLabel = (id: string): string => {
 	// Extract the prefix of the item id by splitting the id by its numeric part
-	const prefix = id.split(/\d/)[0];
+	const prefix = id.split(/\d/)[0] as keyof typeof labels;
 	// Return the slug corresponding to the prefix or "item" if prefix not found
 	return labels[prefix] || 'item';
 };
 
-// Returns the item corresponding to the id from a given data source
-const findById = (source: Item[], id: string): Item => {
-	// Find the item from the data source with a matching id
-	return source.find((p) => p.Id === id);
+
+const findOutput = (id: string): ItemWithOutput[] => {
+    const results: ItemWithOutput[] = [];
+    for (const source of Object.values(dataSources)) {
+        for (const item of source) {
+            if ('Output' in item && item.Output?.Id === id) {
+                results.push(item as unknown as ItemWithOutput);
+            }
+        }
+    }
+    return results;
 };
 
-const findOutput = (id: string): Item[] => {
-    return Object.values(dataSources).flatMap(source =>
-        source.filter(item => item.Output?.Id === id)
-    );
-};
-
-const findInput = (id: string): Item[] => {
-    return Object.values(dataSources).flatMap(source =>
-        source.filter(item => item.Inputs?.some(input => input.Id === id))
-    );
+const findInput = (id: string): ItemWithInputs[] => {
+    const results: ItemWithInputs[] = [];
+    for (const source of Object.values(dataSources)) {
+        for (const item of source) {
+            if ('Inputs' in item && Array.isArray(item.Inputs)) {
+                for (const input of item.Inputs) {
+                    if (input.Id === id) {
+                        results.push(item as unknown as ItemWithInputs);
+                        break; // Found match, move to next item
+                    }
+                }
+            }
+        }
+    }
+    return results;
 };
 
 // Returns the item corresponding to the id from the appropriate data source
 const getById = (id: string): Item | undefined => {
 	// Extract the prefix of the item id by splitting the id by its numeric part
-	const prefix = id.split(/\d/)[0];
+	const prefix = id.split(/\d/)[0] as keyof typeof dataSources;
 	// Get the data source corresponding to the prefix
 	const source = dataSources[prefix];
 
-	// If source not found, log an error and return undefined
+	// If source not found, return undefined
 	if (!source) {
-		console.error(`No data source found for prefix: ${id} : ${prefix}`);
+		if (typeof window !== 'undefined' && import.meta.env.DEV) {
+			console.error(`No data source found for prefix: ${id} : ${prefix}`);
+		}
 		return undefined;
 	}
 	// Find the item from the source
 	const item = source.find((item) => item.Id === id);
-	// If item not found, log a warning and return undefined
+	// If item not found, return undefined
 	if (!item) {
-		console.warn(`Item not found: ${id}`);
+		if (typeof window !== 'undefined' && import.meta.env.DEV) {
+			console.warn(`Item not found: ${id}`);
+		}
 		return undefined;
 	}
-	// Return the found item
-	return item;
+	// Return the found item (cast to Item since JSON structure doesn't match exactly)
+	return item as Item;
 };
 
-const getLength = (list) => {
-	let length = dataSources[list].filter((item) => !item.RequiredItems || item.RequiredItems.length != 0).length;
+const getLength = (list: keyof typeof dataSources): number => {
+	const length = dataSources[list].filter((item) => {
+		return !('RequiredItems' in item) || !item.RequiredItems || item.RequiredItems.length !== 0;
+	}).length;
 	return length;
 };
 
-const sort = (data) => {
-	const sortData = data.sort((a, b) => {
+const sort = (data: Item[]): Item[] => {
+	// Create a copy to avoid mutating the original array
+	return [...data].sort((a, b) => {
 		const nameA = a?.Name?.toUpperCase() ?? '';
 		const nameB = b?.Name?.toUpperCase() ?? '';
 		return nameA.localeCompare(nameB);
 	});
-	return sortData;
 };
 
-const sortTable = (data) => {
-	return data.sort((a, b) => {
+const sortTable = <T extends TableItem>(data: T[]): T[] => {
+	// Create a copy to avoid mutating the original array
+	return [...data].sort((a, b) => {
 		const nameA = a?.output?.name?.toUpperCase() ?? '';
 		const nameB = b?.output?.name?.toUpperCase() ?? '';
 		return nameA.localeCompare(nameB);
@@ -175,6 +216,5 @@ const sortTable = (data) => {
 
 // Add findInput to the export statement
 export { getSlug, getLabel, getById, findOutput, findInput, getLength, sort, sortTable };
-export type { Item };
 
 // <(.*?)> - Match any character between < and >, and capture it

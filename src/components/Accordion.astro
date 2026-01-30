@@ -29,38 +29,57 @@ const { open = false, id } = Astro.props;
 </accordion-component>
 
 <script>
-  class Accordion extends HTMLElement {
+  interface AccordionElement extends HTMLElement {
+    button: HTMLButtonElement | null;
+    panel: HTMLElement | null;
+    open: boolean;
+    toggle: () => void;
+    updateState: () => void;
+  }
+
+  class Accordion extends HTMLElement implements AccordionElement {
+    button: HTMLButtonElement | null = null;
+    panel: HTMLElement | null = null;
+    open: boolean = false;
+
     constructor() {
       super();
       this.toggle = this.toggle.bind(this);
     }
 
-    connectedCallback() {
+    connectedCallback(): void {
       this.button = this.querySelector('button');
       this.panel = this.querySelector('[role="region"]');
 
-      console.log('Initial dataset.open:', this.dataset.open);
+      if (!this.button || !this.panel) {
+        if (import.meta.env.DEV) {
+          console.error('Accordion: Required elements not found');
+        }
+        return;
+      }
 
       this.open = this.dataset.open === 'true';
-      console.log('Parsed open value:', this.open);
-
       this.updateState();
       this.button.addEventListener('click', this.toggle);
     }
 
-    updateState() {
-      this.button.setAttribute('aria-expanded', this.open);
+    updateState(): void {
+      if (!this.button || !this.panel) return;
+      
+      this.button.setAttribute('aria-expanded', String(this.open));
       this.panel.hidden = !this.open;
       this.button.classList.toggle('active', this.open);
     }
 
-    toggle() {
+    toggle(): void {
       this.open = !this.open;
       this.updateState();
     }
 
-    disconnectedCallback() {
-      this.button.removeEventListener('click', this.toggle);
+    disconnectedCallback(): void {
+      if (this.button) {
+        this.button.removeEventListener('click', this.toggle);
+      }
     }
   }
 

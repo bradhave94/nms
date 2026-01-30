@@ -71,36 +71,53 @@ const filters = [
 </div>
 
 <script>
-	const searchInput = document.getElementById('search-input');
-	const typeCheckboxes = Array.from(document.querySelectorAll('input[name=type-filter]'));
-	const resultsList = document.getElementById('results');
-	const loadingIndicator = document.getElementById('loading-indicator');
+	interface SearchResult {
+		name: string;
+		type: string;
+		url: string;
+	}
 
-	let searchCache = new Map();
-	let debounceTimer;
+	interface SearchResponse {
+		body: SearchResult[];
+	}
 
-	function groupBy(arr, key) {
-		return arr.reduce((acc, obj) => {
-			const group = obj[key];
+	type GroupedResults = Record<string, SearchResult[]>;
+
+	const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
+	const typeCheckboxes = Array.from(document.querySelectorAll<HTMLInputElement>('input[name=type-filter]'));
+	const resultsList = document.getElementById('results') as HTMLElement | null;
+	const loadingIndicator = document.getElementById('loading-indicator') as HTMLElement | null;
+
+	const searchCache = new Map<string, GroupedResults>();
+	const MAX_CACHE_SIZE = 50; // Limit cache to prevent memory issues
+	let debounceTimer: ReturnType<typeof setTimeout> | undefined;
+
+	function groupBy(arr: SearchResult[], key: keyof SearchResult): GroupedResults {
+		return arr.reduce((acc: GroupedResults, obj: SearchResult) => {
+			const group = String(obj[key]);
 			acc[group] = acc[group] || [];
 			acc[group].push(obj);
 			return acc;
 		}, {});
 	}
 
-	async function performSearch(searchTerm, selectedTypes) {
+	async function performSearch(searchTerm: string, selectedTypes: string[]): Promise<void> {
+		if (!loadingIndicator || !resultsList) return;
+
 		loadingIndicator.classList.remove('hidden');
 
 		if (searchCache.has(searchTerm)) {
 			const cachedResults = searchCache.get(searchTerm);
-			displayResults(cachedResults, selectedTypes);
+			if (cachedResults) {
+				displayResults(cachedResults, selectedTypes);
+			}
 			loadingIndicator.classList.add('hidden');
 			return;
 		}
 
 		try {
 			const response = await fetch('/search.json');
-			const results = await response.json();
+			const results: SearchResponse = await response.json();
 			const filteredResults = results.body.filter((result) => {
 				if (!result || typeof result.name !== 'string') {
 					return false;
@@ -109,68 +126,102 @@ const filters = [
 			});
 			const groupedResults = groupBy(filteredResults, 'type');
 
+			// Limit cache size to prevent memory issues
+			if (searchCache.size >= MAX_CACHE_SIZE) {
+				const firstKey = searchCache.keys().next().value;
+				if (firstKey) {
+					searchCache.delete(firstKey);
+				}
+			}
 			searchCache.set(searchTerm, groupedResults);
 			displayResults(groupedResults, selectedTypes);
 			loadingIndicator.classList.add('hidden');
 		} catch (error) {
-			console.error('Error in performSearch:', error);
-			resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
+			if (import.meta.env.DEV) {
+				console.error('Error in performSearch:', error);
+			}
+			if (resultsList) {
+				resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
+			}
 		} finally {
-			loadingIndicator.classList.add('hidden');
+			if (loadingIndicator) {
+				loadingIndicator.classList.add('hidden');
+			}
 		}
 	}
 
-	function handleSearchInput() {
-		const searchTerm = searchInput.value.trim().toLowerCase();
-		const selectedTypes = typeCheckboxes.filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
+	function handleSearchInput(): void {
+		if (!searchInput) return;
 
-		clearTimeout(debounceTimer);
+		const searchTerm = searchInput.value.trim().toLowerCase();
+		const selectedTypes = typeCheckboxes
+			.filter((checkbox) => checkbox.checked)
+			.map((checkbox) => checkbox.value);
+
+		if (debounceTimer) {
+			clearTimeout(debounceTimer);
+		}
 		debounceTimer = setTimeout(() => performSearch(searchTerm, selectedTypes), 300);
 	}
 
-	function handleCheckboxChange() {
+	function handleCheckboxChange(): void {
 		handleSearchInput();
 	}
 
-	searchInput.addEventListener('input', handleSearchInput);
+	if (searchInput) {
+		searchInput.addEventListener('input', handleSearchInput);
+	}
 
 	typeCheckboxes.forEach((checkbox) => {
 		checkbox.addEventListener('change', handleCheckboxChange);
 	});
 
-	function displayResults(groupedResults, selectedTypes) {
-		const existingHtml = resultsList.innerHTML;
-		const newHtml = Object.keys(groupedResults)
-			.map((group) => {
-				const filteredGroupResults = selectedTypes.length ? groupedResults[group].filter((result) => selectedTypes.includes(result.type)) : groupedResults[group];
-				if (filteredGroupResults.length > 0) {
-					const groupHtml = `
-						<h3 class="text-2xl">${group}</h3>
-						<ul role="listbox">
-							${filteredGroupResults.map((result, index) => `
-								<li role="option" tabindex="0" data-index="${index}">
-									<a href="${result.url.replace(/\/+/g, '/')}">${result.name}</a>
-								</li>
-							`).join('')}
-						</ul>
-					`;
-					return groupHtml;
-				} else {
-					return '';
-				}
-			})
-			.join('');
+	function displayResults(groupedResults: GroupedResults, selectedTypes: string[]): void {
+		if (!resultsList) return;
 
-		if (newHtml !== existingHtml) {
-			resultsList.innerHTML = newHtml;
-			setupKeyboardNavigation();
-		}
+		// Use DOM methods instead of innerHTML for better security
+		resultsList.textContent = ''; // Clear existing content
+
+		Object.keys(groupedResults).forEach((group) => {
+			const filteredGroupResults = selectedTypes.length
+				? groupedResults[group].filter((result) => selectedTypes.includes(result.type))
+				: groupedResults[group];
+			
+			if (filteredGroupResults.length > 0) {
+				const h3 = document.createElement('h3');
+				h3.className = 'text-2xl';
+				h3.textContent = group;
+				resultsList.appendChild(h3);
+
+				const ul = document.createElement('ul');
+				ul.setAttribute('role', 'listbox');
+				
+				filteredGroupResults.forEach((result, index) => {
+					const li = document.createElement('li');
+					li.setAttribute('role', 'option');
+					li.setAttribute('tabindex', '0');
+					li.setAttribute('data-index', String(index));
+					
+					const a = document.createElement('a');
+					a.href = result.url.replace(/\/+/g, '/');
+					a.textContent = result.name;
+					li.appendChild(a);
+					ul.appendChild(li);
+				});
+				
+				resultsList.appendChild(ul);
+			}
+		});
+
+		setupKeyboardNavigation();
 	}
 
-	function setupKeyboardNavigation() {
-		const resultItems = resultsList.querySelectorAll('li[role="option"]');
+	function setupKeyboardNavigation(): void {
+		if (!searchInput || !resultsList) return;
+
+		const resultItems = Array.from(resultsList.querySelectorAll<HTMLElement>('li[role="option"]'));
 		resultItems.forEach((item, index) => {
-			item.addEventListener('keydown', (e) => {
+			item.addEventListener('keydown', (e: KeyboardEvent) => {
 				switch (e.key) {
 					case 'ArrowDown':
 						e.preventDefault();
@@ -186,10 +237,14 @@ const filters = [
 							searchInput.focus();
 						}
 						break;
-					case 'Enter':
+					case 'Enter': {
 						e.preventDefault();
-						item.querySelector('a').click();
+						const link = item.querySelector<HTMLAnchorElement>('a');
+						if (link) {
+							link.click();
+						}
 						break;
+					}
 				}
 			});
 		});

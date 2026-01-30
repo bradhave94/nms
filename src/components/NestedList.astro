@@ -1,20 +1,26 @@
 ---
 import { Image } from 'astro:assets'
 import Accordion from '@components/Accordion.astro';
-import { getSlug, type Item } from '@utils/lookup.js';
+import { getSlug } from '@utils/lookup.js';
+
+interface NestedItem {
+  Id: string;
+  fishId?: string;
+  Name: string;
+  Icon: string;
+  Quantity?: number;
+  RequiredItems?: NestedItem[];
+}
 
 interface Props {
-  items: {
-    RequiredItems?: Item[];
-    Quantity?: number;
-  };
+  items: NestedItem;
 }
 
 const { items } = Astro.props;
 ---
 
 {items.RequiredItems?.map((item, index) => {
-  const quantity = item.Quantity * (items.Quantity || 1);
+  const quantity = (item.Quantity ?? 1) * (items.Quantity ?? 1);
   return item.RequiredItems?.length ? (
     <Accordion>
       <div data-index={index} class="flex" slot="title">

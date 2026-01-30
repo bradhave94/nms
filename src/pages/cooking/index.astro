@@ -6,6 +6,7 @@ import Table from '@components/table/Table.astro';
 import processor from '@data/NutrientProcessor.json';
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
+import type { TableRow } from '@components/table/Table.astro';
 
 // Interfaces for defining the shape of input and output objects
 interface Input {
@@ -22,8 +23,25 @@ interface Processor {
 	Inputs: Input[];
 	Output: Output;
 }
+
+interface ItemDetails {
+	id: string;
+	name: string;
+	description: string;
+	value: number;
+	amount: number;
+	image: string;
+	colour: string;
+}
+
+type TableItem = TableRow & {
+	input_1: ItemDetails;
+	input_2: ItemDetails;
+	input_3: ItemDetails;
+	output: ItemDetails;
+};
 // Function to create an array of data for each item
-const createArray = (item: Processor) => {
+const createArray = (item: Processor): TableItem | undefined => {
 
 	// Map the inputs and get the details of each input item using `getById` function
 	const inputs = item.Inputs.map((element) => {
@@ -31,7 +49,7 @@ const createArray = (item: Processor) => {
 		// If item is not found, return undefined
 		if (!i) return;
 		// Return the item details
-		return {
+		const details: ItemDetails = {
 			id: i.Id,
 			name: i.Name,
 			description: i.Description,
@@ -40,6 +58,7 @@ const createArray = (item: Processor) => {
 			image: i.Icon,
 			colour: i.Colour,
 		};
+		return details;
 	});
 
 	// Get the details of the output item using `getById` function
@@ -47,7 +66,7 @@ const createArray = (item: Processor) => {
 	// If item is not found, return undefined
 	if (!o) return;
 	// Return the item details
-	const output = {
+	const output: ItemDetails = {
 		id: o.Id,
 		name: o.Name,
 		description: o.Description,
@@ -58,7 +77,9 @@ const createArray = (item: Processor) => {
 	};
 
 	// Combine the inputs and output data in a new object
-	const newItem = {
+	if (!inputs[0] || !inputs[1] || !inputs[2]) return undefined;
+
+	const newItem: TableItem = {
 		input_1: inputs[0],
 		input_2: inputs[1],
 		input_3: inputs[2],
@@ -79,7 +100,7 @@ const columns = [
 ];
 
 // Map the data and create an array of filtered items
-const data = processor.map(createArray).filter(Boolean);
+const data = processor.map(createArray).filter((item): item is TableItem => item !== undefined);
 ---
 
 <Layout

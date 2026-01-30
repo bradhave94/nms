@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
-import { getById, getSlug, findOutput, findInput } from '@utils/lookup.js';
+import { getById, findOutput, findInput } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import credit from '../assets/img/credits.png';
 
@@ -13,17 +13,53 @@ interface Props {
 
 const { item } = Astro.props;
 
-// Function to create an array of required items
-const createArray = (item: Item, num = 1): { array: Array<any>, rawItems: Array<any> } => {
-  const array = [];
-  const rawItemsMap = new Map();
+type ProcessedItem = {
+  Id: string;
+  fishId?: string;
+  Name: string;
+  Icon: string;
+  Colour: string;
+  Quantity: number;
+  RequiredItems: ProcessedItem[];
+};
 
-  const collectRawItems = (item: Item, multiplier = 1) => {
+type RawItem = {
+  Id: string;
+  fishId: string | undefined;
+  Name: string;
+  Icon: string;
+  Colour?: string;
+  Group?: string;
+  Quantity: number;
+};
+
+// Function to create an array of required items
+const createArray = (
+  item: Item,
+  num = 1,
+  visited = new Set<string>()
+): { array: ProcessedItem[]; rawItems: RawItem[] } => {
+  // Prevent infinite recursion
+  if (visited.has(item.Id)) {
+    return { array: [], rawItems: [] };
+  }
+  visited.add(item.Id);
+
+  const array: ProcessedItem[] = [];
+  const rawItemsMap = new Map<string, RawItem>();
+
+  const collectRawItems = (item: Item, multiplier = 1, itemVisited = new Set<string>()) => {
+    // Prevent infinite recursion in raw items collection
+    if (itemVisited.has(item.Id)) {
+      return;
+    }
+    itemVisited.add(item.Id);
     if (!item.RequiredItems?.length) {
       // This is a raw item
       const key = item.Id;
       if (rawItemsMap.has(key)) {
         const existingItem = rawItemsMap.get(key);
+        if (!existingItem) return;
         existingItem.Quantity += multiplier;
       } else {
         rawItemsMap.set(key, {
@@ -42,7 +78,7 @@ const createArray = (item: Item, num = 1): { array: Array<any>, rawItems: Array<
     for (const reqItem of item.RequiredItems) {
       const itemData = getById(reqItem.Id);
       if (!itemData) continue;
-      collectRawItems(itemData, reqItem.Quantity * multiplier);
+      collectRawItems(itemData, reqItem.Quantity * multiplier, itemVisited);
     }
   };
 
@@ -66,7 +102,7 @@ const createArray = (item: Item, num = 1): { array: Array<any>, rawItems: Array<
       Colour: itemData.Colour,
       Quantity: requiredItem.Quantity,
       RequiredItems: itemData.RequiredItems?.length
-        ? createArray(itemData, requiredItem.Quantity).array.map(i => ({...i}))
+        ? createArray(itemData, requiredItem.Quantity, new Set(visited)).array.map(i => ({...i}))
         : [],
     });
   }
@@ -77,19 +113,33 @@ const createArray = (item: Item, num = 1): { array: Array<any>, rawItems: Array<
   };
 };
 
+type IOItem = { Id: string; Quantity: number };
+type RecipeOutput = { Inputs?: IOItem[] };
+type RecipeInput = { Output?: IOItem; Inputs?: IOItem[] };
+type UsedInItem = {
+  Id: string;
+  fishId?: string;
+  Icon: string;
+  Name: string;
+  Quantity: number;
+  RequiredItems: RawItem[];
+};
+
 // Function to get output items
-const getOutputs = (item) => {
-  const RequiredItems = item.Inputs.map((element) => {
-    const i: Item | undefined = getById(element.Id);
-    if (!i) return;
-    return {
+const getOutputs = (item: RecipeOutput): UsedInItem | undefined => {
+  if (!item.Inputs?.length) return undefined;
+  const RequiredItems: RawItem[] = [];
+  for (const element of item.Inputs) {
+    const i = getById(element.Id);
+    if (!i) continue;
+    RequiredItems.push({
       Id: i.Id,
       fishId: i.fishId,
       Icon: i.Icon,
       Name: i.Name,
       Quantity: element.Quantity,
-    };
-  }).filter(Boolean);
+    });
+  }
 
   return {
     Id: Astro.props.item.Id,
@@ -102,32 +152,36 @@ const getOutputs = (item) => {
 };
 
 // Function to get input items
-const getInputs = (item) => {
-  return item.map((recipe) => {
+const getInputs = (item: RecipeInput[]): UsedInItem[] => {
+  const results: UsedInItem[] = [];
+  for (const recipe of item) {
+    if (!recipe.Output || !recipe.Inputs) continue;
     const outputItem = getById(recipe.Output.Id);
-    if (!outputItem) return;
-    const requiredItems = recipe.Inputs.map(input => {
-      let inputItem = getById(input.Id);
-      if (!inputItem) return null;
-      return {
+    if (!outputItem) continue;
+    const requiredItems: RawItem[] = [];
+    for (const input of recipe.Inputs) {
+      const inputItem = getById(input.Id);
+      if (!inputItem) continue;
+      requiredItems.push({
         Id: inputItem.Id,
         fishId: inputItem.fishId,
         Icon: inputItem.Icon,
         Name: inputItem.Name,
         Group: inputItem.Group,
         Quantity: input.Quantity
-      };
-    }).filter(Boolean);
+      });
+    }
 
-    return {
+    results.push({
       Id: recipe.Output.Id,
       fishId: outputItem.fishId,
       Icon: outputItem.Icon,
       Name: outputItem.Name,
       Quantity: recipe.Output.Quantity,
       RequiredItems: requiredItems
-    };
-  }).filter(Boolean);
+    });
+  }
+  return results;
 };
 
 // Prepare data for rendering
@@ -143,8 +197,12 @@ const data = item.RequiredItems?.length
     }]
   : [];
 
-const output = findOutput(item.Id).map(getOutputs).filter(Boolean);
-const inputData = findInput(item.Id);
+const output: UsedInItem[] = [];
+for (const entry of findOutput(item.Id) as unknown as RecipeOutput[]) {
+  const mapped = getOutputs(entry);
+  if (mapped) output.push(mapped);
+}
+const inputData = findInput(item.Id) as unknown as RecipeInput[];
 const input = getInputs(inputData);
 const showQuantityInput = data.length + output.length > 0;
 ---
@@ -347,17 +405,18 @@ const showQuantityInput = data.length + output.length > 0;
 <!-- Quantity input script -->
 {showQuantityInput && (
   <script>
-    const quantityInput = document.querySelector('input.quantity')
+    const quantityInput = document.querySelector('input.quantity') as HTMLInputElement | null;
     const elements = document.querySelectorAll('[data-quantity]');
 
     if (quantityInput) {
       quantityInput.addEventListener('input', () => {
 
-        if (quantityInput.value != '') {
+        if (quantityInput.value !== '') {
         // Update all quantity elements
         elements.forEach((element) => {
           const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
-          element.textContent = (baseValue * quantityInput.value).toString();
+          const quantity = parseFloat(quantityInput.value) || 0;
+          element.textContent = (baseValue * quantity).toString();
         });
         }
 

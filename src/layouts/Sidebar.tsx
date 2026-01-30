@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, type ReactNode } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import {
   Bars3Icon,
@@ -16,11 +16,23 @@ import {
   ListBulletIcon,
   ArchiveBoxIcon,
   PaperClipIcon,
-  ScaleIcon
+  ScaleIcon,
 } from '@heroicons/react/24/solid';
+import type { ComponentType, SVGProps } from 'react';
 import { classNames } from '../utils/classNames';
 
-const navigation = [
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+}
+
+interface SidebarProps {
+  slug?: string;
+  layout?: ReactNode;
+}
+
+const navigation: NavigationItem[] = [
   { name: 'Home', href: '/', icon: HomeIcon },
   { name: 'Refining', href: '/refining', icon: FunnelIcon },
   { name: 'Cooking', href: '/cooking', icon: CakeIcon },
@@ -37,34 +49,37 @@ const navigation = [
   { name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 
-export default function Sidebar({ slug, layout }) {
+export default function Sidebar({ slug, layout }: SidebarProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const renderNavItems = (mobile = false) => (
     <nav className={`mt-5 ${mobile ? 'space-y-1 px-2' : 'flex-1 space-y-1 bg-black px-2'}`}>
-      {navigation.map((item) => (
-        <a
-          key={item.name}
-          href={item.href}
-          className={classNames(
-            item.href.includes(slug)
-              ? 'bg-blue-500 text-black'
-              : 'text-white hover:bg-blue-500 hover:text-black',
-            'group flex items-center px-2 py-1 text-lg font-medium rounded-md transition-colors'
-          )}
-        >
-          <item.icon
+      {navigation.map((item) => {
+        const Icon = item.icon;
+        return (
+          <a
+            key={item.name}
+            href={item.href}
             className={classNames(
-              item.href.includes(slug)
-                ? 'text-black'
-                : 'text-gray-400 group-hover:text-black',
-              'mr-3 flex-shrink-0 h-6 w-6 transition-colors'
+              slug && item.href.includes(slug)
+                ? 'bg-blue-500 text-black'
+                : 'text-white hover:bg-blue-500 hover:text-black',
+              'group flex items-center px-2 py-1 text-lg font-medium rounded-md transition-colors'
             )}
-            aria-hidden="true"
-          />
-          {item.name}
-        </a>
-      ))}
+          >
+            <Icon
+              className={classNames(
+                slug && item.href.includes(slug)
+                  ? 'text-black'
+                  : 'text-gray-400 group-hover:text-black',
+                'mr-3 flex-shrink-0 h-6 w-6 transition-colors'
+              )}
+              aria-hidden="true"
+            />
+            {item.name}
+          </a>
+        );
+      })}
     </nav>
   );
 

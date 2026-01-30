@@ -8,7 +8,12 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --max-warnings 0",
+		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix",
+		"type-check": "tsc --noEmit",
+		"check": "npm run type-check",
+		"check:all": "npm run type-check && npm run lint"
 	},
 	"dependencies": {
 		"@astrojs/react": "^4.3.0",
@@ -26,7 +31,13 @@
 		"tailwindcss": "^3.2.6"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.39.2",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
-		"@tailwindcss/forms": "^0.5.3"
+		"@tailwindcss/forms": "^0.5.3",
+		"@typescript-eslint/eslint-plugin": "^8.54.0",
+		"@typescript-eslint/parser": "^8.54.0",
+		"eslint": "^9.39.2",
+		"eslint-plugin-astro": "^1.5.0",
+		"typescript-eslint": "^8.54.0"
 	}
 }
