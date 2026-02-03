@@ -21,8 +21,8 @@ type CellData = {
 
 export interface TableRow {
   input_1: object;
-  input_2: object;
-  input_3: object;
+  input_2?: object;
+  input_3?: object;
   output: object;
   description?: string;
   value?: number;
@@ -132,7 +132,7 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
   requestAnimationFrame(() => {
     const tableElement = document.getElementById('table') as HTMLTableElement;
     if (!tableElement) return;
-    
+
     const sort = tableElement.dataset.sort;
     let columns;
     try {

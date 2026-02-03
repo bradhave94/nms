@@ -36,8 +36,8 @@ interface ItemDetails {
 
 type TableItem = TableRow & {
 	input_1: ItemDetails;
-	input_2: ItemDetails;
-	input_3: ItemDetails;
+	input_2?: ItemDetails;
+	input_3?: ItemDetails;
 	output: ItemDetails;
 };
 // Function to create an array of data for each item
@@ -77,7 +77,8 @@ const createArray = (item: Processor): TableItem | undefined => {
 	};
 
 	// Combine the inputs and output data in a new object
-	if (!inputs[0] || !inputs[1] || !inputs[2]) return undefined;
+	// Must have output and at least one input
+	if (!inputs[0]) return undefined;
 
 	const newItem: TableItem = {
 		input_1: inputs[0],

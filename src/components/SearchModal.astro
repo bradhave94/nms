@@ -104,16 +104,16 @@ const filters = [
 	async function performSearch(searchTerm: string, selectedTypes: string[]): Promise<void> {
 		if (!loadingIndicator || !resultsList) return;
 
-		loadingIndicator.classList.remove('hidden');
-
+		// Check cache first before fetching
 		if (searchCache.has(searchTerm)) {
 			const cachedResults = searchCache.get(searchTerm);
 			if (cachedResults) {
 				displayResults(cachedResults, selectedTypes);
 			}
-			loadingIndicator.classList.add('hidden');
 			return;
 		}
+
+		loadingIndicator.classList.remove('hidden');
 
 		try {
 			const response = await fetch('/search.json');
@@ -135,7 +135,6 @@ const filters = [
 			}
 			searchCache.set(searchTerm, groupedResults);
 			displayResults(groupedResults, selectedTypes);
-			loadingIndicator.classList.add('hidden');
 		} catch (error) {
 			if (import.meta.env.DEV) {
 				console.error('Error in performSearch:', error);

@@ -190,8 +190,10 @@ const getById = (id: string): Item | undefined => {
 };
 
 const getLength = (list: keyof typeof dataSources): number => {
+	// Filter out items that have empty RequiredItems (non-craftable items with no recipe)
 	const length = dataSources[list].filter((item) => {
-		return !('RequiredItems' in item) || !item.RequiredItems || item.RequiredItems.length !== 0;
+		// Include items that don't have RequiredItems property OR have a non-empty RequiredItems array
+		return !('RequiredItems' in item) || !item.RequiredItems || item.RequiredItems.length > 0;
 	}).length;
 	return length;
 };

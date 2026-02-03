@@ -35,8 +35,8 @@ interface ItemData {
 
 type TableItem = TableRow & {
     input_1: ItemData;
-    input_2: ItemData;
-    input_3: ItemData;
+    input_2?: ItemData;
+    input_3?: ItemData;
     output: ItemData;
 };
 
@@ -61,7 +61,8 @@ const createArray = (item: Refinery): TableItem | undefined => {
     const inputs = item.Inputs.map((element) => createItemData(element)).filter((item): item is ItemData => item !== undefined);
     const output = createItemData(item.Output);
 
-    if (!output || !inputs[0] || !inputs[1] || !inputs[2]) return undefined;
+    // Must have output and at least one input
+    if (!output || !inputs[0]) return undefined;
 
     return {
         input_1: inputs[0],

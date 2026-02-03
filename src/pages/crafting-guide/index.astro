@@ -35,8 +35,8 @@ const createArray = (item: Item): TableRow | undefined => {
     return requiredItem ? createItemDetails(requiredItem, element.Quantity) : undefined;
   }).filter((detail: ItemDetails | undefined): detail is ItemDetails => detail !== undefined);
 
-  // Ensure all three required inputs exist (TableRow requires all three)
-  if (requiredItems.length < 3 || !requiredItems[0] || !requiredItems[1] || !requiredItems[2]) return undefined;
+  // Must have at least one input
+  if (requiredItems.length === 0 || !requiredItems[0]) return undefined;
 
   return {
     input_1: requiredItems[0],

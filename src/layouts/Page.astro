@@ -49,13 +49,8 @@ const createArray = (
   const rawItemsMap = new Map<string, RawItem>();
 
   const collectRawItems = (item: Item, multiplier = 1, itemVisited = new Set<string>()) => {
-    // Prevent infinite recursion in raw items collection
-    if (itemVisited.has(item.Id)) {
-      return;
-    }
-    itemVisited.add(item.Id);
     if (!item.RequiredItems?.length) {
-      // This is a raw item
+      // This is a raw item - always count it, don't add to visited
       const key = item.Id;
       if (rawItemsMap.has(key)) {
         const existingItem = rawItemsMap.get(key);
@@ -73,6 +68,12 @@ const createArray = (
       }
       return;
     }
+
+    // For non-raw items, prevent infinite recursion
+    if (itemVisited.has(item.Id)) {
+      return;
+    }
+    itemVisited.add(item.Id);
 
     // Recursively collect raw items from children
     for (const reqItem of item.RequiredItems) {
@@ -102,7 +103,7 @@ const createArray = (
       Colour: itemData.Colour,
       Quantity: requiredItem.Quantity,
       RequiredItems: itemData.RequiredItems?.length
-        ? createArray(itemData, requiredItem.Quantity, new Set(visited)).array.map(i => ({...i}))
+        ? createArray(itemData, requiredItem.Quantity, new Set([...visited])).array.map(i => ({...i}))
         : [],
     });
   }
@@ -137,6 +138,7 @@ const getOutputs = (item: RecipeOutput): UsedInItem | undefined => {
       fishId: i.fishId,
       Icon: i.Icon,
       Name: i.Name,
+      Group: i.Group,
       Quantity: element.Quantity,
     });
   }
@@ -240,6 +242,8 @@ const showQuantityInput = data.length + output.length > 0;
             class="quantity bg-black border-blue-500 max-w-full w-24"
             name="quantity"
             type="number"
+            min="1"
+            max="999999"
             value="1"
           />
         </div>
@@ -412,10 +416,23 @@ const showQuantityInput = data.length + output.length > 0;
       quantityInput.addEventListener('input', () => {
 
         if (quantityInput.value !== '') {
+        // Validate and parse quantity
+        let quantity = parseFloat(quantityInput.value);
+
+        // Ensure quantity is a positive number
+        if (isNaN(quantity) || quantity < 0) {
+          quantity = 0;
+        }
+
+        // Limit to reasonable maximum to prevent UI issues
+        if (quantity > 999999) {
+          quantity = 999999;
+          quantityInput.value = '999999';
+        }
+
         // Update all quantity elements
         elements.forEach((element) => {
           const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
-          const quantity = parseFloat(quantityInput.value) || 0;
           element.textContent = (baseValue * quantity).toString();
         });
         }
