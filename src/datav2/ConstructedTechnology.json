@@ -1,0 +1,4056 @@
+[
+	{
+		"Id": "NAV_DATA",
+		"Icon": "textures/ui/frontend/icons/u4products/product.navdata.dds",
+		"Name": "Navigation Data",
+		"Group": "Encrypted Navigation Data",
+		"Description": "Encoded navigation data. This highly portable data unit contains all relevant cartographical information for a planetary region.\n\nMay be traded with a Cartographer aboard a Space Station in exchange for usable star charts.",
+		"BaseValueUnits": 1000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 4,
+		"Colour": "0063B7",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "NAV_DATA_DROP",
+		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.droppod.dds",
+		"Name": "Exosuit Upgrade Chart",
+		"Group": "Encrypted Navigation Data",
+		"Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a Drop Pod containing an Exosuit Inventory Upgrade.\n\nSelect the coordinates in the inventory and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"BaseValueUnits": 85000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 4,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "LOG_KEY",
+		"Icon": "textures/ui/frontend/icons/u4products/product.logkey.dds",
+		"Name": "Log Encryption Key",
+		"Group": "Incomplete Data Sequence",
+		"Description": "A fragment of the encryption override sequence for a freighter's emergency log.\n\nSeveral parts of the sequence may be required to gain full access to recorded data.",
+		"BaseValueUnits": 1500,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "ACCESS1",
+		"Icon": "textures/ui/frontend/icons/products/product.atlaspass.dds",
+		"Name": "Atlaspass V1",
+		"Group": "Access Card",
+		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n\nProvides access to low level restricted areas and outpost systems.",
+		"BaseValueUnits": 825,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "0063B7",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "YELLOW2",
+				"Quantity": 200
+			},
+			{
+				"Id": "MICROCHIP",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "ACCESS2",
+		"Icon": "textures/ui/frontend/icons/products/product.atlaspass.dds",
+		"Name": "Atlaspass V2",
+		"Group": "Access Card",
+		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to mid-tier restricted areas and outpost systems.",
+		"BaseValueUnits": 1856,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "0063B7",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "RED2",
+				"Quantity": 200
+			},
+			{
+				"Id": "MICROCHIP",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Uncommon",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "ACCESS3",
+		"Icon": "textures/ui/frontend/icons/products/product.atlaspass.dds",
+		"Name": "Atlaspass V3",
+		"Group": "Access Card",
+		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to high level restricted areas and outpost systems.",
+		"BaseValueUnits": 2613,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "0063B7",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "GREEN2",
+				"Quantity": 200
+			},
+			{
+				"Id": "MICROCHIP",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "POLICE_TOKEN",
+		"Icon": "textures/ui/frontend/icons/update3/policetoken.dds",
+		"Name": "Defence Chit",
+		"Group": "System Authority Payment Substitute",
+		"Description": "A token, entitling the bearer to support from the system authorities in dealing with pirate attacks.",
+		"BaseValueUnits": 10000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BP_SALVAGE",
+		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.dds",
+		"Name": "Salvaged Data",
+		"Group": "Salvaged Technology",
+		"Description": "The salvageable heart of some ancient technology. Unreadable in its current form.\n\nThese databanks can be spent at a Construction Research Unit and used to research new Construction Blueprints.",
+		"BaseValueUnits": 52000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "FACT_TOKEN",
+		"Icon": "textures/ui/frontend/icons/u4products/product.researchtoken.dds",
+		"Name": "Factory Override Unit",
+		"Group": "Advanced Research Module",
+		"Description": "A portable data unit, compatible with most planetary fabricator facilities.\n\nOnce access has been gained to a central control terminal, the Override Unit can divert the facilities resources towards researching new product recipes.",
+		"BaseValueUnits": 50000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "FRIG_TOKEN",
+		"Icon": "textures/ui/frontend/icons/u4products/product.frigatetoken.dds",
+		"Name": "Salvaged Frigate Module",
+		"Group": "Capital Ship Wiring Platform",
+		"Description": "A technology module harvested from the remains of a large interstellar starship. May be collected from freighter crashsites or salvaged during frigate expeditions.\n\nUseless in its current form, a Research Station aboard your freighter may be able to convert it into useable technology.",
+		"BaseValueUnits": 95000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "SHIP_INV_TOKEN",
+		"Icon": "textures/ui/frontend/icons/u4products/product.storagetoken.dds",
+		"Name": "Storage Augmentation",
+		"Group": "Starship Expansion Module",
+		"Description": "A technology module harvested from the remains of a salvaged starship. May also be collected from freighter crash sites or salvaged during frigate expeditions.\n\nCan be used to expand starship storage capacity at the Space Station's Starship Outfitter.",
+		"BaseValueUnits": 125000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "FREI_INV_TOKEN",
+		"Icon": "textures/ui/frontend/icons/u4products/product.cargotoken.dds",
+		"Name": "Cargo Bulkhead",
+		"Group": "Auto-Expanding Freighter Module",
+		"Description": "A technology module harvested from the remains of an abandoned freighter found floating in space. May also be salvaged during frigate expeditions.\n\nPre-packed nano-expanders fill out this portable unit and graft it to an existing freighter, increasing its inventory capacity. Apply at your freighter's Upgrade Terminal.",
+		"BaseValueUnits": 105000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "WEAP_INV_TOKEN",
+		"Icon": "textures/ui/frontend/icons/u4products/product.weapontoken.dds",
+		"Name": "Multi-tool Expansion Slot",
+		"Group": "Upgrade Unit",
+		"Description": "A flexible upgrade circuit, compatible with all person Multi-Tools.\n\nThis module can be wired into a Multi-Tool at a Space Station Multi-Tool Upgrade Rack, granting the user more space in the Multi-Tool's internal layout to add further upgrades or technology specialisations.",
+		"BaseValueUnits": 85000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "SUIT_INV_TOKEN",
+		"Icon": "textures/ui/frontend/icons/u4products/product.exosuittoken.dds",
+		"Name": "Exosuit Expansion Unit",
+		"Group": "Upgrade Unit",
+		"Description": "An advanced survival technology module that allows expansion of a user's Exosuit Storage.\n\nPre-packed nano-expanders create stablised sub-warp voids within the Exosuit, increasing its inventory capacity. Apply this augmentation at the Exosuit upgrade terminal on board a Space Station.",
+		"BaseValueUnits": 155000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "ALIEN_INV_TOKEN",
+		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
+		"Name": "Spawning Sac",
+		"Group": "Sentient Vessel Storage Sac",
+		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse FE_ALT1 to trigger growth and begin the hatching process.",
+		"BaseValueUnits": 125000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "ALIEN_TECHBOX",
+		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
+		"Name": "Psychonic Egg",
+		"Group": "Pulsating Yolk Sac",
+		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with FE_ALT1.",
+		"BaseValueUnits": 126000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "TECHBOX",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/roguetech.general.dds",
+		"Name": "Memory Fragment",
+		"Group": "Technology Echo",
+		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with FE_ALT1.",
+		"BaseValueUnits": 16,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHLAS2",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shiplaser.dds",
+		"Name": "Minotaur Laser Module",
+		"Group": "Significant Minotaur Weapon Upgrade",
+		"Description": "A significant upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
+		"BaseValueUnits": 140,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHLAS3",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shiplaser.dds",
+		"Name": "Minotaur Laser Module",
+		"Group": "Powerful Minotaur Weapon Upgrade",
+		"Description": "An extremely powerful upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
+		"BaseValueUnits": 300,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHLAS4",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shiplaser.dds",
+		"Name": "Minotaur Laser Module",
+		"Group": "Supreme Minotaur Weapon Upgrade",
+		"Description": "A supremely powerful upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
+		"BaseValueUnits": 480,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHFLAME2",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.heat.dds",
+		"Name": "Minotaur Flamethrower Module",
+		"Group": "Significant Minotaur Weapon Upgrade",
+		"Description": "A significant upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
+		"BaseValueUnits": 140,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHFLAME3",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.heat.dds",
+		"Name": "Minotaur Flamethrower Module",
+		"Group": "Powerful Minotaur Weapon Upgrade",
+		"Description": "An extremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
+		"BaseValueUnits": 300,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHFLAME4",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.heat.dds",
+		"Name": "Minotaur Flamethrower Module",
+		"Group": "Supreme Minotaur Weapon Upgrade",
+		"Description": "A supremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
+		"BaseValueUnits": 480,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHGUN2",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shipgun.dds",
+		"Name": "Minotaur Cannon Module",
+		"Group": "Significant Minotaur Weapon Upgrade",
+		"Description": "A significant upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
+		"BaseValueUnits": 140,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHGUN3",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shipgun.dds",
+		"Name": "Minotaur Cannon Module",
+		"Group": "Powerful Minotaur Weapon Upgrade",
+		"Description": "An extremely powerful upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
+		"BaseValueUnits": 300,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MECHGUN4",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shipgun.dds",
+		"Name": "Minotaur Cannon Module",
+		"Group": "Supreme Minotaur Weapon Upgrade",
+		"Description": "A supremely powerful upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
+		"BaseValueUnits": 480,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "SUMMON_SUIT",
+		"Icon": "textures/ui/frontend/icons/technology/technology.suitsummoner.dds",
+		"Name": "Exocraft Summoning Unit",
+		"Group": "Vehicle Translocation Device",
+		"Description": "A high-powered matter teleportation device, this personal translocator allows any connected Exocraft to be instantly transported to your location, from anywhere in the galaxy.\n\nInterfaces with the Exosuit Quick Menu for ease of use.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "2177C8",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "EX_PURPLE",
+				"Quantity": 140
+			},
+			{
+				"Id": "COMPUTER",
+				"Quantity": 3
+			},
+			{
+				"Id": "GASGIANT1",
+				"Quantity": 90
+			}
+		],
+		"StatBonuses": [
+			{
+				"Name": "Vehicle Summon",
+				"LocaleKeyTemplate": "enabled",
+				"Image": "summon",
+				"Value": "1"
+			}
+		],
+		"ConsumableRewardTexts": [],
+		"Category": "Suit",
+		"Rarity": "Common",
+		"Chargeable": false,
+		"ChargeBy": [],
+		"Upgrade": false,
+		"Core": false,
+		"ParentTechId": null,
+		"RequiredTech": null
+	},
+	{
+		"Id": "MAINT_FISHTRAP",
+		"Icon": "textures/ui/frontend/icons/categories/hook.dds",
+		"Name": "AUTO-TRAP",
+		"Group": "Self-Sustaining Auto Creel",
+		"Description": "An autonomous fishing device, designed for long-term deployment in a wide-range of water conditions. Return later to collect trapped fish.\n\nTrap cycle: IN PROGRESS",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Category": "Maintenance",
+		"Rarity": "Impossible",
+		"Chargeable": false,
+		"ChargeBy": [],
+		"Upgrade": false,
+		"Core": true,
+		"ParentTechId": null,
+		"RequiredTech": null
+	},
+	{
+		"Id": "ALIEN_TECHBOX",
+		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
+		"Name": "Psychonic Egg",
+		"Group": "Pulsating Yolk Sac",
+		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with FE_ALT1.",
+		"BaseValueUnits": 126000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CookingValue": 0.0,
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "ALIEN_INV_TOKEN",
+		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
+		"Name": "Spawning Sac",
+		"Group": "Sentient Vessel Storage Sac",
+		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse FE_ALT1 to trigger growth and begin the hatching process.",
+		"BaseValueUnits": 125000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CookingValue": 0.0,
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "NAV_DATA_DROP",
+		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.droppod.dds",
+		"Name": "Exosuit Upgrade Chart",
+		"Group": "Encrypted Navigation Data",
+		"Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a Drop Pod containing an Exosuit Inventory Upgrade.\n\nSelect the coordinates in the inventory and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"BaseValueUnits": 85000,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 4,
+		"Colour": "1A2733",
+		"CookingValue": 0.0,
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "TECHBOX",
+		"Icon": "textures/ui/frontend/icons/u4products/proctech/roguetech.general.dds",
+		"Name": "Memory Fragment",
+		"Group": "Technology Echo",
+		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with FE_ALT1.",
+		"BaseValueUnits": 16,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 3,
+		"Colour": "1A2733",
+		"CookingValue": 0.0,
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": []
+	},
+	{
+		"Id": "FRE_ROOM_TELEPO",
+		"Icon": "textures/ui/frontend/icons/buildable/freighterbase/freighterbase_room.telepo.dds",
+		"Name": "Teleport Chamber",
+		"Group": "Long-Distance Matter Transfer Device",
+		"Description": "Vital integrated freighter equipment. This personal teleport device allows the user to move quickly between their freighter, planetary bases, as well as any Space Station Terminuses connected to their network. User is urged to verify network integrity before inserting any matter they cannot afford to become separated from.\n\nThis module is placed as an entire room and comes with its functional units pre-installed.\n",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "ASTEROID1",
+				"Quantity": 60
+			},
+			{
+				"Id": "ANTIMATTER",
+				"Quantity": 3
+			},
+			{
+				"Id": "BIO",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Construction",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BASE_FLAG",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.basecoreflag.dds",
+		"Name": "Base Computer",
+		"Group": "Site Evaluation Device",
+		"Description": "Portable land registration service.\n\nWhen placed, contacts Universal Cartographic Archive to establish ownership of land. Successful registration allows the construction of base modules across any site of the user's choosing.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 30
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILDTERMINAL",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.terminal.dds",
+		"Name": "Galactic Trade Terminal",
+		"Group": "Trading terminal",
+		"Description": "A trading terminal that provides instant local access to the market for resources and commodities.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 25
+			},
+			{
+				"Id": "MICROCHIP",
+				"Quantity": 3
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "HEALTHSTATION",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.healthstation.dds",
+		"Name": "Health Station",
+		"Group": "Health recharge module",
+		"Description": "A wall mounted module that can be used to recharge health.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 20
+			},
+			{
+				"Id": "RADIO1",
+				"Quantity": 50
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "SHIELDSTATION",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.shieldstation.dds",
+		"Name": "Hazard Protection Unit",
+		"Group": "Hazard Protection Charging System",
+		"Description": "A wall mounted module that can be used to recharge the user's Hazard Protection systems.\n\nThe Hazard Protection Unit must be kept charged with a source of fuel.",
+		"BaseValueUnits": 3,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 20
+			},
+			{
+				"Id": "HOT1",
+				"Quantity": 50
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILDBEACON",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.beacon.dds",
+		"Name": "Save Beacon",
+		"Group": "Portable waypoint marker",
+		"Description": "Once activated, beacons provide a permanent navigational waypoint, facilitating repeat visits to specific locations.\n\nAllows user to record their progress at any time.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			},
+			{
+				"Id": "CATALYST2",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILDSIGNAL",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.signal.dds",
+		"Name": "Signal Booster",
+		"Group": "Environmental scanner",
+		"Description": "A versatile scanner that detects nearby buildings. Can decrypt Navigation Data to pinpoint specific locations.\n\nThe Signal Booster can be dismantled and redeployed for easy transportation.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			},
+			{
+				"Id": "NANOTUBES",
+				"Quantity": 1
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILDANTIMATTER",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.antimatter.dds",
+		"Name": "Antimatter Reactor",
+		"Group": "Baryogenesis Unit",
+		"Description": "An autonomous baryogenesis reactor, this device can be left to harvest reality paradoxes and convert them into usable antimatter. User must monitor fuel levels to ensure continued operation.\n\nThe resulting antimatter is safely contained, ready for use in all standard hyperspace power units.",
+		"BaseValueUnits": 20,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 20,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STORM_CRYSTAL",
+				"Quantity": 5
+			},
+			{
+				"Id": "ANTIMATTER",
+				"Quantity": 2
+			},
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "TELEPORTER",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.teleporter.dds",
+		"Name": "Base Teleport Module",
+		"Group": "Long-Distance Matter Transfer Device",
+		"Description": "A personal teleport device, allowing the user to move quickly between their constructed bases, as well as any Space Station Terminuses connected to their network.\n\nUser is urged to verify network integrity before inserting any matter they cannot afford to become separated from.",
+		"BaseValueUnits": 2,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 4
+			},
+			{
+				"Id": "NANOTUBES",
+				"Quantity": 2
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "TELEPORTER_F",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.teleporter.dds",
+		"Name": "Base Teleport Module",
+		"Group": "Long-Distance Matter Transfer Device",
+		"Description": "A personal teleport device, allowing the user to move quickly between their constructed bases, as well as any Space Station Terminuses connected to their network.\n\nUser is urged to verify network integrity before inserting any matter they cannot afford to become separated from.",
+		"BaseValueUnits": 2,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 4
+			},
+			{
+				"Id": "NANOTUBES",
+				"Quantity": 2
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BP_ANALYSER",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.blueprintan.dds",
+		"Name": "Construction Research Unit",
+		"Group": "Technology Recovery Device",
+		"Description": "Portable blueprint research device.\n\nThis field-deployable research module allows the user to convert old or damaged technology modules into advanced construction blueprints.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 20
+			},
+			{
+				"Id": "NANOTUBES",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILD_REFINER1",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.refiner1.dds",
+		"Name": "Portable Refiner",
+		"Group": "Automated Refinery Unit",
+		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Portable Refiner can be dismantled and redeployed for easy transportation. Note: the Portable Refiner requires fuel to operate.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			},
+			{
+				"Id": "OXYGEN",
+				"Quantity": 30
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILD_REFINER2",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.refiner2.dds",
+		"Name": "Medium Refiner",
+		"Group": "Automated Refinery Unit",
+		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Medium Refiner allows two different substances to be combined into one new material, or materials to be processed at better ratios. \n\nThe Medium Refiner must be installed in a Habitable Base, but does not require additional power sources.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 100
+			},
+			{
+				"Id": "JELLY",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILD_REFINER3",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.refiner3.dds",
+		"Name": "Large Refiner",
+		"Group": "Automated Refinery Unit",
+		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Large Refiner allows three different substances to be combined into one new material, or materials to be processed at better ratios. \n\nThe Large Refiner must be installed in a Habitable Base, but does not require additional power sources.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 200
+			},
+			{
+				"Id": "CATALYST2",
+				"Quantity": 100
+			},
+			{
+				"Id": "MICROCHIP",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "COOKER",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.cooker.dds",
+		"Name": "Nutrient Processor",
+		"Group": "Portable Sustenance Unit",
+		"Description": "A portable nutrient extractor, able to process and refine gathered ingredients into edible food products.\n\nUser is advised that consumption of generated products is entirely at their own risk.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			},
+			{
+				"Id": "CARBON_SEAL",
+				"Quantity": 1
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CREATURE_FEED",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.creaturefeeder.dds",
+		"Name": "Automated Feeder",
+		"Group": "Agricultural Robot",
+		"Description": "A robotic farming unit, designed to automatically supply nearby creatures with food.\n\nWhen powered, will attract nearby animal life. Keep bait tanks full in order to supply lifeforms with desired food.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 4
+			},
+			{
+				"Id": "BIO",
+				"Quantity": 1
+			},
+			{
+				"Id": "BAIT_BASIC",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CREATURE_FARM",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.creaturefarmer.dds",
+		"Name": "Livestock Unit",
+		"Group": "Automatic Harvesting Robot",
+		"Description": "A robotic farming unit, designed to automatically harvest substances from creatures. Requires power.\n\nCreatures that are ready to be harvested for milk, eggs or other specialist produce will approach the Livestock Unit and deposit their yields. The creatures are unharmed by the process.\n\nWill harvest produce from creatures fed by hand or via an Automated Feeder.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 4
+			},
+			{
+				"Id": "FARMPROD5",
+				"Quantity": 2
+			},
+			{
+				"Id": "PLANT_POOP",
+				"Quantity": 50
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "MESSAGEMODULE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.messagemodule.dds",
+		"Name": "Message Module",
+		"Group": "Communications terminal",
+		"Description": "A small and accessible information container for leaving messages or viewing left messages and short strings of information.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			},
+			{
+				"Id": "NANOTUBES",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "MESSAGE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.message.dds",
+		"Name": "Communications Station",
+		"Group": "Communications terminal",
+		"Description": "A terminal for the composition and transmission of messages to other travellers.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND2",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "GARAGE_SUB",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.vehiclegarageh.dds",
+		"Name": "Nautilon Chamber",
+		"Group": "Submarine Docking Bay",
+		"Description": "An advanced, fully-airlocked docking station for the Nautilon submarine.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "VENTGEM",
+				"Quantity": 4
+			},
+			{
+				"Id": "WATER1",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "SUMMON_GARAGE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.vehiclesummoner.dds",
+		"Name": "Exocraft Summoning Station",
+		"Group": "Vehicle Translocation Device",
+		"Description": "Construction allows the user to summon any owned Exocraft from anywhere else in that system.\n\nInterfaces with the Exosuit Quick Command Menu for ease of use. Can be compressed and carried within the Exosuit with DECONSTRUCT for later redeployment.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 12,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "RADIO1",
+				"Quantity": 80
+			},
+			{
+				"Id": "ROCKETSUB",
+				"Quantity": 60
+			},
+			{
+				"Id": "GRENFUEL1",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "GARAGE_MECH",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.vehiclegaragemech.dds",
+		"Name": "Minotaur Geobay",
+		"Group": "Heavy Loader Storage Bay",
+		"Description": "A secure parking, summoning and customisation facility for the Minotaur Heavy Exosuit Hybrid.\n\nDeploy the Minotaur from the Quick Menu. With the aid of an Orbital Exocraft Materialiser mounted inside a freighter, the Minotaur can be instantly deployed to any location within the same system as the mothership.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "POWERCELL",
+				"Quantity": 4
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "NPCSCIENCETERM",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcscience.dds",
+		"Name": "Science Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Scientists, and equipped for research and development of scientific blueprints.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAND3",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "NPCWEAPONTERM",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcweapon.dds",
+		"Name": "Weapons Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Armourers, and equipped for the development of munitions and explosives as well as selected civilian tech.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "ROBOT1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "NPCFARMTERM",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcfarm.dds",
+		"Name": "Agricultural Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Farmers, and equipped for the analysis and cultivation of farmable crops.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "FUEL2",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "NPCVEHICLETERM",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcvehicle.dds",
+		"Name": "Exocraft Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Technicians, and equipped with bespoke vehicular design software.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAUNCHSUB",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "NPCBUILDERTERM",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcbuilder.dds",
+		"Name": "Construction Terminal",
+		"Group": "Specialist terminal",
+		"Description": "A research station tailored to the needs of Construction Overseers, and equipped with architectural and engineering design software.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAND2",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER0",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.0.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER1",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.1.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER2",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.2.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER3",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.3.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER4",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.4.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER5",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.5.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER6",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.6.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER7",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.7.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER8",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.8.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CONTAINER9",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.9.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 5,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 5,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 35
+			},
+			{
+				"Id": "CATALYST1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "CHEST",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.storage.dds",
+		"Name": "Storage Container",
+		"Group": "Storage unit",
+		"Description": "Spacious additional storage for inventory items.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND2",
+				"Quantity": 5
+			},
+			{
+				"Id": "POWERCELL",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Construction",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "RACE_START",
+		"Icon": "textures/ui/frontend/icons/buildable/racestart.dds",
+		"Name": "Race Initiator",
+		"Group": "Race Part",
+		"Description": "This platform acts as the start and finish line for Exocraft field tests, allowing Travellers to practice manoeuvring and speed.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "MICROCHIP",
+				"Quantity": 2
+			},
+			{
+				"Id": "POWERCELL",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "RACE_START_SHIP",
+		"Icon": "textures/ui/frontend/icons/buildable/raceshipstart.dds",
+		"Name": "Starship Race Initiator",
+		"Group": "Race Part",
+		"Description": "This platform acts as the start and finish line for Starship field tests, allowing Travellers to practice manoeuvring and speed.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "MICROCHIP",
+				"Quantity": 2
+			},
+			{
+				"Id": "POWERCELL",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "RACE_BOOSTER",
+		"Icon": "textures/ui/frontend/icons/buildable/racebooster.dds",
+		"Name": "Race Force Amplifier",
+		"Group": "Race Part",
+		"Description": "Provides a boost to your Exocraft during races.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "JELLY",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "RACE_RAMP",
+		"Icon": "textures/ui/frontend/icons/buildable/raceramp.dds",
+		"Name": "Race Obstacle",
+		"Group": "Race Part",
+		"Description": "Provides extra challenge for Exocraft races.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "WATERBUBBLE",
+		"Icon": "textures/ui/frontend/icons/buildable/water.waterbubble.dds",
+		"Name": "Marine Shelter",
+		"Group": "Deep Water Survival Module",
+		"Description": "An emergency survival module.\n\nCan be rapidly deployed on the seabed in the event of an oxygen or other Exosuit life support emergency. Provides temporary shelter from environmental hazards, predators and other hostiles forces found in the deep ocean.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CLAMPEARL",
+				"Quantity": 5
+			},
+			{
+				"Id": "FARMPROD3",
+				"Quantity": 1
+			},
+			{
+				"Id": "OXYGEN",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "SPAWNER_BALL",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.spawner_ball.dds",
+		"Name": "Sphere Creator",
+		"Group": "Experimental Fabricator",
+		"Description": "A highly-specific fabrication device, developed with the intention of finding the universe's most perfect sphere.\n\nRequires power to operate. Will create a large sphere, ready for whatever experiments are deemed necessary.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "POWERCELL",
+				"Quantity": 4
+			},
+			{
+				"Id": "LUSH1",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "NOISEBOX",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.noisebox.dds",
+		"Name": "Noise Box",
+		"Group": "Audio Device",
+		"Description": "A special construction module designed to emit a high-frequency noise. Pitch may be adjusted to the user's requirements.\n\nRequires power to operate.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			},
+			{
+				"Id": "POWERCELL",
+				"Quantity": 2
+			},
+			{
+				"Id": "HOT1",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BYTEBEAT",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.bytebeat.dds",
+		"Name": "Bytebeat Device",
+		"Group": "Audio Synthesiser",
+		"Description": "An advanced audio generator, allowing the user to synthesise complex musical arrangements.\n\nMultiple devices may be placed in sequence or connected to lights to generate spectacular displays.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 3
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 50
+			},
+			{
+				"Id": "ANTIMATTER",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "AM_SUITTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_sciencetree.dds",
+		"Name": "Exosuit Research Station",
+		"Group": "Portable Exosuit Research Station",
+		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAND3",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "AM_WEAPONTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_weapontree.dds",
+		"Name": "Multi-tool Research Station",
+		"Group": "Portable Multi-Tool Research Station",
+		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "SAND1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "AM_EXOCRAFTTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_exocrafttree.dds",
+		"Name": "Exocraft Research Station",
+		"Group": "Portable Exocraft Research Station",
+		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAUNCHSUB",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "AM_SHIPTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_shiptree.dds",
+		"Name": "Ship Research Station",
+		"Group": "Portable Starship Research Station",
+		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "ROCKETSUB",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "S9_SUITTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_sciencetree.dds",
+		"Name": "Utopia Exosuit Station",
+		"Group": "Portable Exosuit Research Station",
+		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exosuit Station today!",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAND3",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "S9_WEAPONTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_weapontree.dds",
+		"Name": "Utopia Multi-tool Station",
+		"Group": "Portable Multi-Tool Research Station",
+		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Multi-Tool Station today!",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "SAND1",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "S9_EXOCRAFTTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_exocrafttree.dds",
+		"Name": "Utopia Exocraft Station",
+		"Group": "Portable Exocraft Research Station",
+		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exocraft Station today!",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAUNCHSUB",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "S9_SHIPTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_shiptree.dds",
+		"Name": "Utopia Ship Station",
+		"Group": "Portable Starship Research Station",
+		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Starship Station today!",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "ROCKETSUB",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "S9_BUILDERTREE",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_buildtree.dds",
+		"Name": "Utopia Build Station",
+		"Group": "Portal Construction Blueprint Terminal",
+		"Description": "The Utopia Overseers wish for their brave settlers to be sheltered and happy! Together, we will make Bakkin beautiful!\n\nThis officially-licensed portable research station allows access to a generous range of construction blueprints, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Build Station today!",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 15,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "FUEL2",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "HOLO_DISCO_0",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.holodisco0.dds",
+		"Name": "Wonder Projector",
+		"Group": "Discovery Display Hologram",
+		"Description": "A buildable holographic display, designed to visualise any discovery currently listed in your Personal Records.\n\nUse the projector to manage these records directly, or view them from the Wonders section of the Catalogue.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 12,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAND3",
+				"Quantity": 25
+			},
+			{
+				"Id": "ANTIMATTER",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "O2_HARVESTER",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.o2harvester.dds",
+		"Name": "Oxygen Harvester",
+		"Group": "Atmosphere Processing Device",
+		"Description": "An autonomous atmosphere extractor, this device can be left to collect and purify oxygen from the air. User must monitor fuel levels to ensure continued operation.\n\nThe resulting gas is compressed and processed, ready for use in all standard life support systems.",
+		"BaseValueUnits": 10,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "PRODFUEL2",
+				"Quantity": 5
+			},
+			{
+				"Id": "JELLY",
+				"Quantity": 3
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILDHARVESTER",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.harvester.dds",
+		"Name": "Autonomous Mining Unit",
+		"Group": "Portable mining device",
+		"Description": "An automated harvester for the mining of resources. Once activated, the AMU extracts minerals without the need for supervision, providing a regular yield until the site is exhausted.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "RADIO1",
+				"Quantity": 100
+			},
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			},
+			{
+				"Id": "POWERCELL",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILDGASHARVEST",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.gasharvester.dds",
+		"Name": "Atmosphere Harvester",
+		"Group": "Autonomous Gas Compressor",
+		"Description": "An automated siphon unit for the collection of valuable gases. Once activated, the harvester condenses and compresses substances from the air over time. Compressed gas is then stored safely until collected.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "TOXIC1",
+				"Quantity": 100
+			},
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			},
+			{
+				"Id": "CARBON_SEAL",
+				"Quantity": 2
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BUILDSEAHARVEST",
+		"Icon": "textures/ui/frontend/icons/buildable/buildable.seaharvester.dds",
+		"Name": "Automated Trap",
+		"Group": "Self-Sustaining Auto Creel",
+		"Description": "An autonomous fishing device, designed for long-term deployment in a wide-range of water conditions.\n\nOnce activated, the system will lure and trap any nearby aquatic creatures and store them for later retrieval.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "WATER1",
+				"Quantity": 50
+			},
+			{
+				"Id": "CASING",
+				"Quantity": 3
+			},
+			{
+				"Id": "POWERCELL",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_EXTRACTOR_S",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.extractor_small.dds",
+		"Name": "Mineral Extractor",
+		"Group": "Substance Distribution Module",
+		"Description": "An automated mineral harvester. Determine a site with the Surveying upgrade for the Analysis Visor. Mineral extraction rates and produced minerals will vary from site to site.\n\nRequires power to function. Connect to Silos with Pipelines to allow collection from more convenient sites.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_GASEXTRACTOR",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.gasextractor.dds",
+		"Name": "Gas Extractor",
+		"Group": "Substance Distribution Module",
+		"Description": "An automated gas harvester. Determine a site with the Surveying upgrade for the Analysis Visor. Gas extraction rates and produced gases will vary from site to site.\n\nRequires power to function. Connect to Silos with Pipelines to allow collection from more convenient sites.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 5
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_SILO_S",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.silo_small.dds",
+		"Name": "Supply Depot",
+		"Group": "Substance Distribution Module",
+		"Description": "Automated storage unit. Connect to a Supply Grid using Pipelines.\n\nAutomatically stores the output of various Mineral and Gas Extractors, allowing for increased capacity and more efficient siting. Can be located a long distances from the extraction site.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_SOLAR_S",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.solarpanel_small.dds",
+		"Name": "Solar Panel",
+		"Group": "Power Distribution Module",
+		"Description": "An efficient power generator, this solar array will turn sunlight into the electrical energy required to power many base structures.\n\nGenerates no power at night. Partner with Batteries to store energy for the hours of darkness.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 8,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 30
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 50
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_GENERATOR_S",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.generator_small.dds",
+		"Name": "Electromagnetic Generator",
+		"Group": "Power Distribution Module",
+		"Description": "When suitably placed in an area of high field strength, efficient electromagnetic dynamos are used to generate near limitless power.\n\nLocate appropriate sites with the Surveying upgrade for the Analysis Visor. Power output will vary from site to site.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			},
+			{
+				"Id": "LAND3",
+				"Quantity": 60
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 75
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_BIOGENERATOR",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.biogenerator.dds",
+		"Name": "Biofuel Reactor",
+		"Group": "Power Distribution Module",
+		"Description": "A small power generator. Burns carbon-based fuel placed in its furnace tank and converts it into usable power.\n\nConnect power generators to base structures and technologies with electrical wiring. Many parts require power to function.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			},
+			{
+				"Id": "OXYGEN",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_POWERLINE",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.powerline.dds",
+		"Name": "Electrical Wiring",
+		"Group": "Power Distribution Module",
+		"Description": "High-capacity electrical wiring. Use wiring to connect Power Generators to your base. Most technology, as well as structures with embedded lighting systems, require a power source to operate.\n\nWiring can be connected to various switches to facilitate selective power flow.",
+		"BaseValueUnits": 0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_PORTALLINE",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.portalline.dds",
+		"Name": "Teleport Cable",
+		"Group": "Power Distribution Module",
+		"Description": "Advanced fibre-optic cabling, designed to link one or more Short-Range Teleporters.",
+		"BaseValueUnits": 0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_BYTEBEATLINE",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.bytebeatline.dds",
+		"Name": "Bytebeat Cable",
+		"Group": "ByteBeat Extension",
+		"Description": "Advanced cabling, designed to link one or more Bytebeat Generators or to connect a Bytebeat Switch to the network.\n\nThe signal will synchronize connected lights and device to the generated waveform.",
+		"BaseValueUnits": 0,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_SWITCHWALL",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.switchwall.dds",
+		"Name": "WALL SWITCH",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when pulled.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND1",
+				"Quantity": 25
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_SWITCHPRESS",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.switchpress.dds",
+		"Name": "Floor Switch",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when stood upon or otherwise activated.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND1",
+				"Quantity": 25
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 25
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_BATTERY_S",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.battery_small.dds",
+		"Name": "Battery",
+		"Group": "Power Distribution Module",
+		"Description": "Highly-efficient energy storage units. Connect to a power grid, and onboard power management circuits will automatically draw down spare capacity to charge its cells.\n\nWhen the grid attempts to draw more power than is currently supplied, the battery will automatically deploy power to make up the shortfall.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 3,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND3",
+				"Quantity": 60
+			},
+			{
+				"Id": "FUEL2",
+				"Quantity": 100
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_SWITCHBUTTON",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_button.dds",
+		"Name": "Button",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when used.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "FUEL1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_SWITCHPROX",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_prox.dds",
+		"Name": "Proximity Switch",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when an entity is detected nearby.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "FUEL1",
+				"Quantity": 20
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_PIPELINE",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.pipeline.dds",
+		"Name": "Supply Pipe",
+		"Group": "Substance Distribution Module",
+		"Description": "Flexible, high-strength piping. Able to withstand a highly-pressurised internal environment.\n\nUsed for connecting various Mineral and Gas Extractors to Silos",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND1",
+				"Quantity": 25
+			},
+			{
+				"Id": "FUEL1",
+				"Quantity": 10
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_TRANSISTOR1",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_inverter.dds",
+		"Name": "Power Inverter",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, the switch will toggle the flow of power when used.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND1",
+				"Quantity": 25
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_TRANSISTOR2",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_auto.dds",
+		"Name": "Auto Switch",
+		"Group": "Power Distribution Module",
+		"Description": "A power management device, this switch will toggle the flow of power when signaled by an incoming signal.\n\nSwitches require both power and signal wires to control a device.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND1",
+				"Quantity": 25
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MINIPORTAL",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.miniportal.dds",
+		"Name": "Short-range Teleporter",
+		"Group": "Instantaneous Transport Network",
+		"Description": "A low-powered teleporter, construction for instantaneous travel across short distances.\n\nWhen wired to both a power source and another short-range teleporter, allows near-instant travel between nearby locations.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 30
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "U_MINIPORTAL_CV",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.miniportal.dds",
+		"Name": "Short-range Teleporter",
+		"Group": "Instantaneous Transport Network",
+		"Description": "A low-powered teleporter, construction for instantaneous travel across short distances.\n\nWhen wired to both a power source and another short-range teleporter, allows near-instant travel between nearby locations.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 10,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 2
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 30
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "BYTEBEATSWITCH",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_bytebeat.dds",
+		"Name": "Bytebeat Switch",
+		"Group": "ByteBeat Extension",
+		"Description": "A musical switching device, designed to interpret waveform signals generated by a Bytebeat Generator and output electrical impulses to connected lights and other devices.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 2,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "LAND1",
+				"Quantity": 25
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 15
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	},
+	{
+		"Id": "POWERLINE_HIDER",
+		"Icon": "textures/ui/frontend/icons/buildable/utility.powerline_hider.dds",
+		"Name": "Electrical Cloaking Unit",
+		"Group": "Power Distribution Module",
+		"Description": "Device to enable a wireless aesthetic in habitable bases.\n\nConstructing the Electrical Cloaking Unit within a powered base will reduce the visual prominence of all local Electrical Wiring. Hidden wires will continue to supply electricity, provided they are sufficiently powered.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 1,
+		"Colour": "2C7C9F",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 30
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Tech",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false
+	}
+]
