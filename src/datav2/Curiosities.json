@@ -1,7 +1,8 @@
 [
 	{
 		"Id": "SENTINEL_LOOT",
-		"Icon": "textures/ui/frontend/icons/u4products/product.sentinelloot.dds",
+		"Icon": "SENTINEL_LOOT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.sentinelloot.dds",
 		"Name": "Salvaged Glass",
 		"Group": "Recovered Sentinel Components",
 		"Description": "A sinister shard of purple glass, salvaged from the destroyed remains of Sentinel machinery. Its walls are thin, and it may be broken down to access valuable Sentinel components.\n\nSelect in the Inventory (INVENTORY) and shatter with FE_ALT1.",
@@ -24,11 +25,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/SENTINEL_LOOT"
 	},
 	{
 		"Id": "QUAD_PROD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.quadservo.dds",
+		"Icon": "QUAD_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.quadservo.dds",
 		"Name": "Quad Servo",
 		"Group": "Anomalous Material",
 		"Description": "A highly sprung motor arm salvaged from inside of a Sentinel patrol unit. It occasionally twitches, as if experiencing the echo of combat.",
@@ -51,11 +54,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/QUAD_PROD"
 	},
 	{
 		"Id": "SPIDER_PROD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.spidercrystal.dds",
+		"Icon": "SPIDER_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.spidercrystal.dds",
 		"Name": "Crystallised Heart",
 		"Group": "Corrupted Aeronic Core",
 		"Description": "The functional core of a Sentinel quadruped unit, but warped beyond all recognition. The entire machine is infested with a crystalline material that pulses wildy upon inspection.\n\nA close analysis reveals the machinery itself appears to have been reconfigured, stretching and warping into a whole new form, writhing in the presence of these radiant shards of glass.",
@@ -80,11 +85,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/SPIDER_PROD"
 	},
 	{
 		"Id": "MECH_PROD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.mechcore.dds",
+		"Icon": "MECH_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.mechcore.dds",
 		"Name": "Hardframe Engine",
 		"Group": "Anomalous Material",
 		"Description": "This complex mechanical unit was once the central combustion chamber at the heart of a Sentinel Hardframe unit.\n\nThough now cool to the touch, it still glows with a sinister red heat...",
@@ -109,11 +116,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/MECH_PROD"
 	},
 	{
 		"Id": "WALKER_PROD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.walkerbrain.dds",
+		"Icon": "WALKER_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.walkerbrain.dds",
 		"Name": "Walker Brain",
 		"Group": "Anomalous Material",
 		"Description": "Shifting nanite clusters sewn together with a pugneum filament, this circuit is painfully hot to the touch.\n\nA sinister purple light leaks from deep within its wiring, changing in intensity as it watches its holder.",
@@ -138,11 +147,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/WALKER_PROD"
 	},
 	{
 		"Id": "QUEEN_PROD",
-		"Icon": "textures/ui/frontend/icons/specialshop/special1.specbughat4.dds",
+		"Icon": "QUEEN_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/specialshop/special1.specbughat4.dds",
 		"Name": "Vile Cortex",
 		"Group": "Glorious Trophy",
 		"Description": "The brain stem of a brood mother, pulled from its malignant corpse.\n\nThis is a valuable trophy, signifying victory in the quest to purge the infestations of the vile brood. Turn it over to an envoy of the Mercenaries Guild to mark your triumph.",
@@ -167,11 +178,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/QUEEN_PROD"
 	},
 	{
 		"Id": "PIRATE_PROD",
-		"Icon": "textures/ui/frontend/icons/products/product.pirateloot.dds",
+		"Icon": "PIRATE_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.pirateloot.dds",
 		"Name": "Pirate Transponder",
 		"Group": "Salvaged Identification Device",
 		"Description": "A unique ID transponder, ripped from the internal signal array of an outlaw starship.\n\nPossesion of such a device implies the destruction of the vessel in question. Turn it over to an envoy of the Mercenaries Guild to collect any associated bounties.",
@@ -194,11 +207,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/PIRATE_PROD"
 	},
 	{
 		"Id": "DEEPSEA_PROD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.seaglass.dds",
+		"Icon": "DEEPSEA_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.seaglass.dds",
 		"Name": "Sea Glass",
 		"Group": "Precious Material",
 		"Description": "A etheral shard, this translucent plane is both mineral and alive, both of the water and of another realm.\n\nOf high value to collectors across the universe.",
@@ -221,11 +236,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/DEEPSEA_PROD"
 	},
 	{
 		"Id": "SHIPBRAIN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.sentinelshipbrain.dds",
+		"Icon": "SHIPBRAIN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.sentinelshipbrain.dds",
 		"Name": "Hyaline Brain",
 		"Group": "Sentience Vessel",
 		"Description": "The central processing unit of a Sentinel interceptor ship. The circuitry writhes microscopically, constantly rearranging itself as it scans for anomalies.\n\nA vital component for any entity wishing to construct their own Pilot Interface for a Sentinel Interceptor.\n\nStatus: VOLATILE",
@@ -250,11 +267,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/SHIPBRAIN"
 	},
 	{
 		"Id": "SENTFREI_PROD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.freightercore.dds",
+		"Icon": "SENTFREI_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.freightercore.dds",
 		"Name": "Carrier Ai Fragment",
 		"Group": "Battleship Core Remnant",
 		"Description": "A single splinter of the colossal mainframe at the heart of a Sentinel capital ship. It blinks, its solitary living eye trained upon the one piece of data it retains - the last known location of one of its fleet of Interceptors.\n\nSelect the AI Fragment and use Search Archive (FE_ALT1) to translate information about Interceptor's crash site to your starship's navigation systems.",
@@ -279,11 +298,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/SENTFREI_PROD"
 	},
 	{
 		"Id": "DRONE_SALVAGE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.dronesalvage.dds",
+		"Icon": "DRONE_SALVAGE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.dronesalvage.dds",
 		"Name": "Inverted Mirror",
 		"Group": "Burning Glassy Remnant",
 		"Description": "A pane of watchful g l a s s, retrieved from the smoking remains of the corrupted swarm's Dissonance Resonators. It emits more light than it reflects, casting a faint purple hue on its surroundings.\n\nHighly sought after for salvage operations, as it can be used to bypass the security systems of key Sentinel ship technologies.",
@@ -308,11 +329,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/DRONE_SALVAGE"
 	},
 	{
 		"Id": "DRONE_SHARD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.droneshard.dds",
+		"Icon": "DRONE_SHARD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.droneshard.dds",
 		"Name": "Radiant Shard",
 		"Group": "Glassy Reality Intrusion",
 		"Description": "A fragment of glassy lifeforce, chipped from a larger formation. Dynamic intermolecular binding gives the shard a strangely flexible, sinewy quality. It writhes gently, almost as if it were seeking something...\n\nHighly sought after for salvage operations, as it can be used to bypass the security systems of key Sentinel ship technologies.",
@@ -337,11 +360,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/DRONE_SHARD"
 	},
 	{
 		"Id": "GEODE_LAND",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.dds",
+		"Icon": "GEODE_LAND.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.dds",
 		"Name": "Geode",
 		"Group": "Valuable Mineral Deposit",
 		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -366,11 +391,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/GEODE_LAND"
 	},
 	{
 		"Id": "GEODE_CAVE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.dds",
+		"Icon": "GEODE_CAVE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.dds",
 		"Name": "Geode",
 		"Group": "Valuable Mineral Deposit",
 		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -395,11 +422,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/GEODE_CAVE"
 	},
 	{
 		"Id": "GEODE_CRYSTAL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.crystal.dds",
+		"Icon": "GEODE_CRYSTAL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.crystal.dds",
 		"Name": "Crystal Fragment",
 		"Group": "Concentrated Element Shard",
 		"Description": "A crystalline shard with an unusually dense structure. Potentially highly valuable.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -424,11 +453,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/GEODE_CRYSTAL"
 	},
 	{
 		"Id": "GEODE_SPACE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.space.dds",
+		"Icon": "GEODE_SPACE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.space.dds",
 		"Name": "Tritium Hypercluster",
 		"Group": "Energetic Fragment",
 		"Description": "A shard of pure crystalised Tritium.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -453,11 +484,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/GEODE_SPACE"
 	},
 	{
 		"Id": "GEODE_ASTEROID",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.asteroid.dds",
+		"Icon": "GEODE_ASTEROID.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.asteroid.dds",
 		"Name": "Gold Nugget",
 		"Group": "Valuable Ore",
 		"Description": "A highly valuable ore chunk, ready to be processed into Gold.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -482,11 +515,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/GEODE_ASTEROID"
 	},
 	{
 		"Id": "GEODE_RARE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.waterprod.dds",
+		"Icon": "GEODE_RARE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.waterprod.dds",
 		"Name": "Glowing Mineral",
 		"Group": "Valuable Rock Sample",
 		"Description": "Though its surface is dirtied and dull, polishing this rock reveals a deep inner glow, a glitter beneath a subtly iridescent surface.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -511,11 +546,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/GEODE_RARE"
 	},
 	{
 		"Id": "SCRAP_GOODS",
-		"Icon": "textures/ui/frontend/icons/u4products/product.scrap.goods.dds",
+		"Icon": "SCRAP_GOODS.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.goods.dds",
 		"Name": "Suspicious Packet (goods)",
 		"Group": "Contraband",
 		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of technology.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
@@ -538,11 +575,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/SCRAP_GOODS"
 	},
 	{
 		"Id": "SCRAP_TECH",
-		"Icon": "textures/ui/frontend/icons/u4products/product.scrap.tech.dds",
+		"Icon": "SCRAP_TECH.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.tech.dds",
 		"Name": "Suspicious Packet (tech)",
 		"Group": "Contraband",
 		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of high-value or interesting item.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
@@ -565,11 +604,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/SCRAP_TECH"
 	},
 	{
 		"Id": "SCRAP_WEAP",
-		"Icon": "textures/ui/frontend/icons/u4products/product.scrap.weapon.dds",
+		"Icon": "SCRAP_WEAP.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.weapon.dds",
 		"Name": "Suspicious Packet (arms)",
 		"Group": "Contraband",
 		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of weapon-based technology.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
@@ -592,11 +633,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/SCRAP_WEAP"
 	},
 	{
 		"Id": "POI_LOCATOR",
-		"Icon": "textures/ui/frontend/icons/u4products/product.locator.poi.dds",
+		"Icon": "POI_LOCATOR.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.poi.dds",
 		"Name": "Anomaly Detector",
 		"Group": "Anomalous Homing Device",
 		"Description": "A single-use geometric beacon that probes the surrounding area for near-space anomalies. Such objects are highly unpredictable.\n\nSelect the Detector and use Begin Scan (FE_ALT1) to begin the location process.",
@@ -619,11 +662,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/POI_LOCATOR"
 	},
 	{
 		"Id": "ABAND_LOCATOR",
-		"Icon": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
+		"Icon": "ABAND_LOCATOR.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
 		"Name": "Emergency Signal Scanner",
 		"Group": "Coordinate Data",
 		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal (FE_ALT1) to begin the location process.",
@@ -646,11 +691,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ABAND_LOCATOR"
 	},
 	{
 		"Id": "ABAND_LOCATOR_X",
-		"Icon": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
+		"Icon": "ABAND_LOCATOR_X.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
 		"Name": "Emergency Signal Scanner (active)",
 		"Group": "Coordinate Data",
 		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal (FE_ALT1) to begin the location process.",
@@ -673,11 +720,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ABAND_LOCATOR_X"
 	},
 	{
 		"Id": "STONE_EYE_PROD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.stoneeye.dds",
+		"Icon": "STONE_EYE_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.stoneeye.dds",
 		"Name": "Vigilant Stone",
 		"Group": "Unblinking Eye",
 		"Description": "An eye of living stone: waiting, watching. A relic left by a slumbering guardian, keeping sentry over ancient creature burial grounds.\n\nWarning: Disturbing the eye may disturb the slumber of living stone guardians. Ensure re-animated guardians are defeated before storing this relic in the home.",
@@ -702,11 +751,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/STONE_EYE_PROD"
 	},
 	{
 		"Id": "SACVENOM",
-		"Icon": "textures/ui/frontend/icons/products/product.sacvenom.dds",
+		"Icon": "SACVENOM.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.sacvenom.dds",
 		"Name": "Sac Venom",
 		"Group": "Trade commodity",
 		"Description": "A stabilised poison gland extracted from a terrestrial urchin. The host-urchin is actually a colony of smaller proto-creatures, a formation built on years of slow growth and cooperation.\n\nOf use both medicinally and as a delicacy in some riskier cuisines.\n\nCan be sold at a Galactic Trade Terminal.",
@@ -732,11 +783,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/SACVENOM"
 	},
 	{
 		"Id": "GRAVBALL",
-		"Icon": "textures/ui/frontend/icons/products/product.gravball.dds",
+		"Icon": "GRAVBALL.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.gravball.dds",
 		"Name": "Gravitino Ball",
 		"Group": "Trade commodity",
 		"Description": "A supersymmetric particle cluster created by divergent super-gravitational forces. A micro-rift is created as they form, and extraction of the orb prompts a localised reality weakening. Sentinel forces will respond to stablise any such anomaly.\n\nCan be sold at a Galactic Trade Terminal.",
@@ -762,11 +815,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/GRAVBALL"
 	},
 	{
 		"Id": "ALBUMENPEARL",
-		"Icon": "textures/ui/frontend/icons/products/product.abumenpearl.dds",
+		"Icon": "ALBUMENPEARL.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.abumenpearl.dds",
 		"Name": "Albumen Pearl",
 		"Group": "Trade commodity",
 		"Description": "Gemstone formed over the course of centuries within the egg of a super-incubatory species. Highly ornamental, these gems are themselves living seeds, lucent grains of potential life.\n\nCan be sold at a Galactic Trade Terminal.",
@@ -792,11 +847,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/ALBUMENPEARL"
 	},
 	{
 		"Id": "CAVECUBE",
-		"Icon": "textures/ui/frontend/icons/products/product.vortexcube.dds",
+		"Icon": "CAVECUBE.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.vortexcube.dds",
 		"Name": "Vortex Cube",
 		"Group": "Trade commodity",
 		"Description": "An ancient object, unearthed from the depths of a planetary cave system. Its surface is cold to the touch, and is curiously polished despite its age.\n\nA fusion of metal and rock, these cubes have proved resistant to industrial processing. As such, they are of value only to collectors.\n\nCan be sold at a Galactic Trade Terminal.",
@@ -821,11 +878,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/CAVECUBE"
 	},
 	{
 		"Id": "FIENDCORE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.fiendcore.dds",
+		"Icon": "FIENDCORE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.fiendcore.dds",
 		"Name": "Larval Core",
 		"Group": "Monstrosity",
 		"Description": "A pulsating jellied orb, this gooey sphere is warm to the touch. Its stench triggers a primal fear in mortal beings, a deep-seated gnawing that begs you to drop it and flee.",
@@ -852,11 +911,13 @@
 		"Consumable": true,
 		"CookingIngredient": true,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/FIENDCORE"
 	},
 	{
 		"Id": "STORM_CRYSTAL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.stormcrystal.dds",
+		"Icon": "STORM_CRYSTAL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.stormcrystal.dds",
 		"Name": "Storm Crystal",
 		"Group": "Unique valuable curiosity",
 		"Description": "A rare and highly valuable cluster of storm crystals. These crystalline structures thrive in stormy conditions, and naturally attract lightning strikes, becoming spectacularly luminescent when ionised. Exclusively found on extreme weather planets.",
@@ -882,11 +943,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/STORM_CRYSTAL"
 	},
 	{
 		"Id": "CLAMPEARL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.clampearl.dds",
+		"Icon": "CLAMPEARL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.clampearl.dds",
 		"Name": "Living Pearl",
 		"Group": "Semi-Conscious Gemstone",
 		"Description": "Born in the hearts of enormous glowing molluscs found deep underwater.\n\nUnlike most pearls, this sample is no unliving calcite. Some trace of the mother-clam's consciousness remains within the gem, giving it a lingering, haunting beauty.",
@@ -911,11 +974,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/CLAMPEARL"
 	},
 	{
 		"Id": "VENTGEM",
-		"Icon": "textures/ui/frontend/icons/u4products/product.ventgem.dds",
+		"Icon": "VENTGEM.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.ventgem.dds",
 		"Name": "Crystal Sulphide",
 		"Group": "Compressed Mineral",
 		"Description": "Formed in the incredible, high-pressure furnace of planetary cores, these rich mineral deposits have an almost glass-like quality.\n\nHas a wide variety of industrial uses, taking advantage of both its mineral content and its extreme strength under pressure.",
@@ -941,11 +1006,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/VENTGEM"
 	},
 	{
 		"Id": "FISHCORE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.fishcore.dds",
+		"Icon": "FISHCORE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.fishcore.dds",
 		"Name": "Hadal Core",
 		"Group": "Horrific Sample",
 		"Description": "A highly-pressurised fleshy orb.\n\nOne can feel it push back when touched, a flash of bioluminescence stirring in the inky black core of this mysterious object.",
@@ -972,11 +1039,13 @@
 		"Consumable": false,
 		"CookingIngredient": true,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/FISHCORE"
 	},
 	{
 		"Id": "EYEBALL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.eyeball.dds",
+		"Icon": "EYEBALL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.eyeball.dds",
 		"Name": "Hypnotic Eye",
 		"Group": "Horrific Sample",
 		"Description": "The eye is cold, almost frozen, to the touch. Nonetheless, it is impossible to escape the feeling it is somehow still alive.\n\nExtended exposure is not recommended. Do not stare back into the eye. Do not stare back. Do not stare back.",
@@ -1002,11 +1071,13 @@
 		"Consumable": false,
 		"CookingIngredient": true,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/EYEBALL"
 	},
 	{
 		"Id": "CHART_ROBOT",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.robotcamp.dds",
+		"Icon": "CHART_ROBOT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.robotcamp.dds",
 		"Name": "Echo Locator",
 		"Group": "Harmonic Location Tracker",
 		"Description": "A curious mesh of old and new technology, a hybrid between two entirely separate methods of creation. Nonetheless, this location tracing device appears fully functional.\n\nSelect this device and use Resonate (FE_ALT1) to trace its harmonic origin.",
@@ -1029,11 +1100,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/CHART_ROBOT"
 	},
 	{
 		"Id": "CHART_BUI_SETTL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.settlementbuilders.dds",
+		"Icon": "CHART_BUI_SETTL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.settlementbuilders.dds",
 		"Name": "Autophage Settlement Chart",
 		"Group": "Harmonic Planetary Chart",
 		"Description": "A map showing the location of a nearby Autophage planetary settlement, acquired from an Autophage Synthesis Terminal.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -1056,11 +1129,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/CHART_BUI_SETTL"
 	},
 	{
 		"Id": "ARTIFACT_KEY",
-		"Icon": "textures/ui/frontend/icons/update3/product.ancientkey.dds",
+		"Icon": "ARTIFACT_KEY.png",
+		"IconPath": "textures/ui/frontend/icons/update3/product.ancientkey.dds",
 		"Name": "Ancient Key",
 		"Group": "Timeless Artifact",
 		"Description": "A key of some weight, this aged piece of wrought iron must belong in a nearby lock...",
@@ -1083,11 +1158,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ARTIFACT_KEY"
 	},
 	{
 		"Id": "TRIDENT_KEY",
-		"Icon": "textures/ui/frontend/icons/u4products/product.tridentkey.dds",
+		"Icon": "TRIDENT_KEY.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.tridentkey.dds",
 		"Name": "Trident Key",
 		"Group": "Aquatic Relic",
 		"Description": "A strange forked key, glowing with an ultraviolet light.\n\nDespite its primitive appearance, Exosuit scanning systems reveal traces of nanite foam upon its teeth.",
@@ -1110,11 +1187,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/TRIDENT_KEY"
 	},
 	{
 		"Id": "WAR_CURIO3",
-		"Icon": "textures/ui/frontend/icons/update3/treasureprod.strangebook.dds",
+		"Icon": "WAR_CURIO3.png",
+		"IconPath": "textures/ui/frontend/icons/update3/treasureprod.strangebook.dds",
 		"Name": "Vy'keen Tablet",
 		"Group": "Communion of Hirk",
 		"Description": "A stone tablet bearing line after line of intricate runes. The words are unintelligible, an ancient dialect forgotten by all but the oldest of the Vy'keen elders.\n\nThe hand that carved this stone must have been extraordinary. The stonework is precise, delicate - and yet perfectly conveys the unyielding aggression its writer clearly possessed.",
@@ -1137,11 +1216,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/WAR_CURIO3"
 	},
 	{
 		"Id": "EXP_CURIO3",
-		"Icon": "textures/ui/frontend/icons/products/product.curio.1.dds",
+		"Icon": "EXP_CURIO3.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.curio.1.dds",
 		"Name": "Divergence Cube",
 		"Group": "Anomalous Data Unit",
 		"Description": "A glitching, pulsing data unit. It does not seem to belong in this reality.\n\nThe cube gives the impression of a silent scream, the frozen cries of hundreds of lost minds trapped within.",
@@ -1164,11 +1245,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/EXP_CURIO3"
 	},
 	{
 		"Id": "STATION_KEY",
-		"Icon": "textures/ui/frontend/icons/technology/autotranslator.dds",
+		"Icon": "STATION_KEY.png",
+		"IconPath": "textures/ui/frontend/icons/technology/autotranslator.dds",
 		"Name": "Station Override",
 		"Group": "AI Master Key",
 		"Description": "A portable data drive containing the AI override codes for a Space Station Core.\n\nThe importance of the station AI core ensures that such keys are both highly regulated and extremely profitable on the black market.",
@@ -1191,11 +1274,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/STATION_KEY"
 	},
 	{
 		"Id": "REP_TOKEN",
-		"Icon": "textures/ui/frontend/icons/update3/reptoken.dds",
+		"Icon": "REP_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/update3/reptoken.dds",
 		"Name": "Forged Passport",
 		"Group": "Overwritten Digital Record",
 		"Description": "A counterfeit starship registration document. This digital signature is guaranteed free of previous crimes or misdemeanors.\n\nCan be used to reset any negative faction standing records at a Space Station Core.",
@@ -1218,11 +1303,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/REP_TOKEN"
 	},
 	{
 		"Id": "MIND_ARC",
-		"Icon": "textures/ui/frontend/icons/update3/mindarc.dds",
+		"Icon": "MIND_ARC.png",
+		"IconPath": "textures/ui/frontend/icons/update3/mindarc.dds",
 		"Name": "Mind Ark",
 		"Group": "Advanced Crafted Product",
 		"Description": "A strange piece of technology, a gift from beyond the stars. It shimmers in a way that suggests it is not fully in this world.",
@@ -1260,11 +1347,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MIND_ARC"
 	},
 	{
 		"Id": "SOUL_ENGINE",
-		"Icon": "textures/ui/frontend/icons/update3/soulengine.dds",
+		"Icon": "SOUL_ENGINE.png",
+		"IconPath": "textures/ui/frontend/icons/update3/soulengine.dds",
 		"Name": "Soul Engine",
 		"Group": "Advanced Crafted Product",
 		"Description": "A powerful organic computing unit.\n\nA glitching beat drives this miracle circuit, performing cycle after cycle in an endless, furious loop of calculation.",
@@ -1302,11 +1391,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/SOUL_ENGINE"
 	},
 	{
 		"Id": "TRA_CURIO1",
-		"Icon": "textures/ui/frontend/icons/products/product.gekstatue.dds",
+		"Icon": "TRA_CURIO1.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.gekstatue.dds",
 		"Name": "Gek Relic",
 		"Group": "Medium value curiosity",
 		"Description": "A metal statuette of a creature with a coin placed in its beak.\n \nPopular with many traders who see it as an emblem of fair commerce and peace.",
@@ -1329,11 +1420,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/TRA_CURIO1"
 	},
 	{
 		"Id": "TRA_CURIO2",
-		"Icon": "textures/ui/frontend/icons/products/product.geknip.dds",
+		"Icon": "TRA_CURIO2.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.geknip.dds",
 		"Name": "Geknip",
 		"Group": "Trade commodity",
 		"Description": "Edible product much beloved by the Gek.\n \nAllows beaked traders to release delightfully scented packets of gas for a prolonged period of time.\n \nGekNip gas packets are considered an art form, and the truest representation of the Gek soul.",
@@ -1359,11 +1452,13 @@
 		"Consumable": false,
 		"CookingIngredient": true,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/TRA_CURIO2"
 	},
 	{
 		"Id": "NIPNIPBUDS",
-		"Icon": "textures/ui/frontend/icons/update1/product.nipbud.dds",
+		"Icon": "NIPNIPBUDS.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.nipbud.dds",
 		"Name": "Nipnip Buds",
 		"Group": "Medicinal Substance",
 		"Description": "A pungent bud harvested from the NipNip plant, often used to produce Gek Nip.",
@@ -1389,11 +1484,13 @@
 		"Consumable": false,
 		"CookingIngredient": true,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/NIPNIPBUDS"
 	},
 	{
 		"Id": "WAR_CURIO1",
-		"Icon": "textures/ui/frontend/icons/products/product.effigy.dds",
+		"Icon": "WAR_CURIO1.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.effigy.dds",
 		"Name": "Vy'keen Effigy",
 		"Group": "Medium value curiosity",
 		"Description": "A small wooden icon carved into the shape of a Sentinel drone.\n \nUsed by warriors to enter a temporary trance-like state that eliminates their kind's need for sleep.",
@@ -1416,11 +1513,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/WAR_CURIO1"
 	},
 	{
 		"Id": "WAR_CURIO2",
-		"Icon": "textures/ui/frontend/icons/products/product.vykeendagger.dds",
+		"Icon": "WAR_CURIO2.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.vykeendagger.dds",
 		"Name": "Vy'keen Dagger",
 		"Group": "Trade commodity",
 		"Description": "Largely ceremonial weapon. A vital part of Vy'keen tradition and culture.",
@@ -1443,11 +1542,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/WAR_CURIO2"
 	},
 	{
 		"Id": "EXP_CURIO1",
-		"Icon": "textures/ui/frontend/icons/products/product.korvaxcasing.dds",
+		"Icon": "EXP_CURIO1.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.korvaxcasing.dds",
 		"Name": "Korvax Casing",
 		"Group": "High value curiosity",
 		"Description": "The metallic shell of a disconnected electronic lifeform that was too distant from its kind to be refreshed with a new entity.\n \nHighly prized by all species, not least its own.",
@@ -1470,11 +1571,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/EXP_CURIO1"
 	},
 	{
 		"Id": "EXP_CURIO2",
-		"Icon": "textures/ui/frontend/icons/products/product.korvaxcube.dds",
+		"Icon": "EXP_CURIO2.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.korvaxcube.dds",
 		"Name": "Convergence Cube",
 		"Group": "Trade commodity",
 		"Description": "Device used by the Korvax for the storage of historical and cultural information.",
@@ -1497,11 +1600,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/EXP_CURIO2"
 	},
 	{
 		"Id": "MEGAPROD1",
-		"Icon": "textures/ui/frontend/icons/update3/megaprod.1.dds",
+		"Icon": "MEGAPROD1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/megaprod.1.dds",
 		"Name": "Portable Reactor",
 		"Group": "Advanced Crafted Product",
 		"Description": "A miniature self-controlled nuclear reactor. Generates sub-stellar levels of energy in a hassle-free, widely compatible fuel module.\n\nCrafted from Liquid Explosives and Fusion Accelerant.",
@@ -1535,11 +1640,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MEGAPROD1"
 	},
 	{
 		"Id": "MEGAPROD2",
-		"Icon": "textures/ui/frontend/icons/update3/megaprod.2.dds",
+		"Icon": "MEGAPROD2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/megaprod.2.dds",
 		"Name": "Quantum Processor",
 		"Group": "Advanced Crafted Product",
 		"Description": "A highly advanced computational device, essential for the complex calculations involved in warp travel.\n\nCrafted from Circuit Boards and Superconductors.",
@@ -1573,11 +1680,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MEGAPROD2"
 	},
 	{
 		"Id": "MEGAPROD3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.cryochamber.dds",
+		"Icon": "MEGAPROD3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.cryochamber.dds",
 		"Name": "Cryogenic Chamber",
 		"Group": "Advanced Crafted Product",
 		"Description": "A low temperature chamber, designed to prevent the natural decay of organic matter.\n\nCrafted from Living Glass and a Cryo-Pump.",
@@ -1611,11 +1720,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MEGAPROD3"
 	},
 	{
 		"Id": "ATLAS_STONE",
-		"Icon": "textures/ui/frontend/icons/products/product.atlasstone.dds",
+		"Icon": "ATLAS_STONE.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.atlasstone.dds",
 		"Name": "Atlas Stone",
 		"Group": "Very high value curiosity",
 		"Description": "A spherical gem that seems to pulsate with red light from its centre.\n \nAn extremely rare item often associated with ancient monolithic sites.",
@@ -1638,11 +1749,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_STONE"
 	},
 	{
 		"Id": "ATLAS_SEED_1",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.1.dds",
+		"Icon": "ATLAS_SEED_1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.1.dds",
 		"Name": "Captured Nanode",
 		"Group": "Unique valuable curiosity",
 		"Description": "Atlas Seed containing zonally-shifted quasi-stellar substrate. Warning: do not allow matrix to commune with this dimensional space.",
@@ -1672,11 +1785,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_1"
 	},
 	{
 		"Id": "ATLAS_SEED_2",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.2.dds",
+		"Icon": "ATLAS_SEED_2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.2.dds",
 		"Name": "Englobed Shade",
 		"Group": "Unique valuable curiosity",
 		"Description": "This Atlas Shell holds the remains of a parasitic space-borne lifeform, most likely of extra-dimensional origins.",
@@ -1710,11 +1825,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_2"
 	},
 	{
 		"Id": "ATLAS_SEED_3",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.3.dds",
+		"Icon": "ATLAS_SEED_3.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.3.dds",
 		"Name": "Noospheric Orb",
 		"Group": "Unique valuable curiosity",
 		"Description": "An Atlas Seed capable of resonating on humanoid telepathic frequencies; may attempt to subsume any subordinate intellect in close proximity.",
@@ -1748,11 +1865,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_3"
 	},
 	{
 		"Id": "ATLAS_SEED_4",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.4.dds",
+		"Icon": "ATLAS_SEED_4.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.4.dds",
 		"Name": "Dark Matter",
 		"Group": "Unique valuable curiosity",
 		"Description": "An Atlas Seed shell encompassing a void element harvested from the collapse state of the last universe. Toxic if ingested.",
@@ -1786,11 +1905,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_4"
 	},
 	{
 		"Id": "ATLAS_SEED_5",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.5.dds",
+		"Icon": "ATLAS_SEED_5.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.5.dds",
 		"Name": "Dawn's End",
 		"Group": "Unique valuable curiosity",
 		"Description": "Sculpted tau neutrino-boson matrix fixed within an irreplaceable Atlas Seed shell. May be semi-sentient.",
@@ -1824,11 +1945,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_5"
 	},
 	{
 		"Id": "ATLAS_SEED_6",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.6.dds",
+		"Icon": "ATLAS_SEED_6.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.6.dds",
 		"Name": "Photic Jade",
 		"Group": "Unique valuable curiosity",
 		"Description": "This irreplaceable Atlas Seed is a form of matter-adapted photons coalesced into physical solidity by unknown means.",
@@ -1862,11 +1985,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_6"
 	},
 	{
 		"Id": "ATLAS_SEED_7",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.7.dds",
+		"Icon": "ATLAS_SEED_7.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.7.dds",
 		"Name": "State Phasure",
 		"Group": "Unique valuable curiosity",
 		"Description": "For unknown reasons, this unique Atlas Seed has been phased out of alignment with this quantum reality. Contents cannot be determined.",
@@ -1900,11 +2025,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_7"
 	},
 	{
 		"Id": "ATLAS_SEED_8",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.8.dds",
+		"Icon": "ATLAS_SEED_8.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.8.dds",
 		"Name": "Novae Reclaiment",
 		"Group": "Unique valuable curiosity",
 		"Description": "Atlas Seed contains neutronium elements from a catastrophic supernova event that obliterated a sentient civilization in an earlier era.",
@@ -1938,11 +2065,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_8"
 	},
 	{
 		"Id": "ATLAS_SEED_9",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.9.dds",
+		"Icon": "ATLAS_SEED_9.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.9.dds",
 		"Name": "Modified Quanta",
 		"Group": "Unique valuable curiosity",
 		"Description": "This one-of-a-kind Atlas Seed holds an aesthetically pleasing mathematical construct salvaged from the simulation of an alternate reality.",
@@ -1976,11 +2105,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_9"
 	},
 	{
 		"Id": "ATLAS_SEED_10",
-		"Icon": "textures/ui/frontend/icons/update3/atlasseed.10.dds",
+		"Icon": "ATLAS_SEED_10.png",
+		"IconPath": "textures/ui/frontend/icons/update3/atlasseed.10.dds",
 		"Name": "Heart of the Sun",
 		"Group": "Unique valuable curiosity",
 		"Description": "An Atlas Seed containing a time-locked quantum cilia suspended in a photonic shell. No others are known to exist.",
@@ -2014,11 +2145,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/ATLAS_SEED_10"
 	},
 	{
 		"Id": "HEXCORE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.hexcore.dds",
+		"Icon": "HEXCORE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.hexcore.dds",
 		"Name": "Hex Core",
 		"Group": "Contained Reality Glitch",
 		"Description": "This strange energy orb constantly vibrates, emitting a low-frequency drone. Slight variations in the pattern repeat over and over, almost as if it is attempting to relay a message.",
@@ -2043,11 +2176,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/HEXCORE"
 	},
 	{
 		"Id": "FISHBAIT_1",
-		"Icon": "textures/ui/frontend/icons/products/product.fishbait.1.dds",
+		"Icon": "FISHBAIT_1.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.1.dds",
 		"Name": "Mealworms",
 		"Group": "Fishing Bait",
 		"Description": "A piece of specialist bait, designed to improve the size and rarity of your catch.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
@@ -2078,11 +2213,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/FISHBAIT_1"
 	},
 	{
 		"Id": "FISHBAIT_2",
-		"Icon": "textures/ui/frontend/icons/products/product.fishbait.2.dds",
+		"Icon": "FISHBAIT_2.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.2.dds",
 		"Name": "Spicy Chum",
 		"Group": "Fishing Bait",
 		"Description": "A piece of specialist bait, designed to greatly improve the size and rarity of your catch.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
@@ -2121,11 +2258,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/FISHBAIT_2"
 	},
 	{
 		"Id": "FISHBAIT_3",
-		"Icon": "textures/ui/frontend/icons/products/product.fishbait.3.dds",
+		"Icon": "FISHBAIT_3.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.3.dds",
 		"Name": "Bionic Lure",
 		"Group": "Fishing Bait",
 		"Description": "A specialist lure, designed to vastly improve the size and rarity of your catch. Of particular interest to anglers seeking legendary fish.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
@@ -2164,11 +2303,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/FISHBAIT_3"
 	},
 	{
 		"Id": "FISHBAIT_DAY",
-		"Icon": "textures/ui/frontend/icons/products/product.fishbait.day.dds",
+		"Icon": "FISHBAIT_DAY.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.day.dds",
 		"Name": "Dangling Orb",
 		"Group": "Fishing Bait",
 		"Description": "A specialist lure, designed to attract diurnal fish.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
@@ -2207,11 +2348,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/FISHBAIT_DAY"
 	},
 	{
 		"Id": "FISHBAIT_NIGHT",
-		"Icon": "textures/ui/frontend/icons/products/product.fishbait.night.dds",
+		"Icon": "FISHBAIT_NIGHT.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.night.dds",
 		"Name": "Shadow Lure",
 		"Group": "Fishing Bait",
 		"Description": "A specialist lure, designed to attract nocturnal fish.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
@@ -2250,11 +2393,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/FISHBAIT_NIGHT"
 	},
 	{
 		"Id": "FISHBAIT_STORM",
-		"Icon": "textures/ui/frontend/icons/products/product.fishbait.storm.dds",
+		"Icon": "FISHBAIT_STORM.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.storm.dds",
 		"Name": "Magpulse Lure",
 		"Group": "Fishing Bait",
 		"Description": "A specialist lure, designed to attract fish that are only active during storms.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
@@ -2293,11 +2438,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/FISHBAIT_STORM"
 	},
 	{
 		"Id": "BONE_TEMP",
-		"Icon": "textures/ui/frontend/icons/fossilbones/fossil.head.an.dds",
+		"Icon": "BONE_TEMP.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.an.dds",
 		"Name": "%name% Exhibit",
 		"Group": "Pre-assembled Fossil Display",
 		"Description": "%CRE_DESC%\n\nThis curated fossil exhibit can be sold, traded, or re-deployed within any habitable base.",
@@ -2320,11 +2467,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/BONE_TEMP"
 	},
 	{
 		"Id": "WORMBOOK",
-		"Icon": "textures/ui/frontend/icons/products/wormbook.dds",
+		"Icon": "WORMBOOK.png",
+		"IconPath": "textures/ui/frontend/icons/products/wormbook.dds",
 		"Name": "Writhing Manuscript",
 		"Group": "Cultist Document",
 		"Description": "A translucent sheet of worm-vellum, inscribed with a fanatical text. It writhes when touched.\n\n'The children were the first to notice.\nA thump thump thump, thundering deep below the sand.\nThe first worm split the sky like black lightning as it leapt overhead. \nWorm by worm, they rose from the desert. Migrating.\nEvery storm season, we each hope to be chosen. We arrange ourselves in lines across the desert, arms lifted to the sky.\nAnyone may enter the maw.\nWe are all equal under the great worms.'",
@@ -2347,11 +2496,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/WORMBOOK"
 	},
 	{
 		"Id": "WORMCORE",
-		"Icon": "textures/ui/frontend/icons/products/wormcore.dds",
+		"Icon": "WORMCORE.png",
+		"IconPath": "textures/ui/frontend/icons/products/wormcore.dds",
 		"Name": "Flesh Rope",
 		"Group": "Intestinal Fragment",
 		"Description": "The coiled remains of a Hungering Tendril's digestive tract. Though its meaty walls still convulse, there is surely no way for a fresh tendril to regrow from these meagre scraps...\n\nSuch specialist offal is rarely traded on the Galactic Exchange and is thus highly valuable.",
@@ -2378,11 +2529,13 @@
 		"Consumable": false,
 		"CookingIngredient": true,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/WORMCORE"
 	},
 	{
 		"Id": "WORMPROD",
-		"Icon": "textures/ui/frontend/icons/products/wormspawn.dds",
+		"Icon": "WORMPROD.png",
+		"IconPath": "textures/ui/frontend/icons/products/wormspawn.dds",
 		"Name": "Vile Spawn",
 		"Group": "Hungering Embryo",
 		"Description": "The fragile embryo of a Hungering Tendril, still dripping with mucal butter. It wails and recoils when touched.\n\nMay be extracted from embryotic sacs with the aid of a Visceral Synthesiser.",
@@ -2405,11 +2558,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/WORMPROD"
 	},
 	{
 		"Id": "PIRATE_MAPWHOLE",
-		"Icon": "textures/ui/frontend/icons/products/piratemapwhole.dds",
+		"Icon": "PIRATE_MAPWHOLE.png",
+		"IconPath": "textures/ui/frontend/icons/products/piratemapwhole.dds",
 		"Name": "Pirate Map",
 		"Group": "Illicit Geographic Data",
 		"Description": "Reassembled treasure coordinate data, retrieved from the victims of pirate faction The Blight.",
@@ -2447,11 +2602,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/PIRATE_MAPWHOLE"
 	},
 	{
 		"Id": "WHALE_BEACON",
-		"Icon": "textures/ui/frontend/icons/u4products/product.whalebeacon.dds",
+		"Icon": "WHALE_BEACON.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.whalebeacon.dds",
 		"Name": "Dream Aerial",
 		"Group": "Subconscious Access Device",
 		"Description": "A signal receiver and amplifier, tuned to the wavelength of the unconscious mind. It is every colour all at once, splitting the surrounding light into a shimmering rainbow.\n\nWarning: Carrying this antenna into deep space may attract the attention of cosmic megafauna.",
@@ -2485,53 +2642,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
-	},
-	{
-		"Id": "S8_BEACON",
-		"Icon": "textures/ui/frontend/icons/u4products/product.roguefinder.dds",
-		"Name": "Homeworld Repeater",
-		"Group": "A Last Link Home",
-		"Description": "A makeshift device, cobbled from salvaged electronic components kept in deep storage for many years. This jumble of wires will attempt to make contact with the last-known remnants of the freighter's homeworld.\n\nSelect the device and select Broadcast (FE_ALT1) to begin the location process.",
-		"BaseValueUnits": 16,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 0,
-		"Colour": "311A49",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HYDRALIC",
-				"Quantity": 1
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 20
-			},
-			{
-				"Id": "LAND3",
-				"Quantity": 60
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/WHALE_BEACON"
 	},
 	{
 		"Id": "BIOSHIP_EGG1",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.egg1.dds",
+		"Icon": "BIOSHIP_EGG1.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.egg1.dds",
 		"Name": "Active Void Egg",
 		"Group": "Agitated Curiosity",
 		"Description": "An anomalous egg. Since the encounter with the bizarre deep-space 'creature', its strange music has grown more active, more agitated.\n\nWhen touched, conjures a powerful vision of a world beset by powerful anomalies and strange colours.",
@@ -2554,11 +2671,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/BIOSHIP_EGG1"
 	},
 	{
 		"Id": "BIOSHIP_EGG2",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.egg2.dds",
+		"Icon": "BIOSHIP_EGG2.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.egg2.dds",
 		"Name": "Stirring Void Egg",
 		"Group": "Agitated Curiosity",
 		"Description": "An anomalous egg. Since the encounter with the bizarre deep-space 'creature', its strange music has grown more active, more agitated.\n\nWhen touched, conjures a powerful vision of a dust-covered world of extreme storms.",
@@ -2581,11 +2700,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/BIOSHIP_EGG2"
 	},
 	{
 		"Id": "BIOSHIP_EGG3",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.egg3.dds",
+		"Icon": "BIOSHIP_EGG3.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.egg3.dds",
 		"Name": "Awakened Void Egg",
 		"Group": "Agitated Curiosity",
 		"Description": "An anomalous egg. Since the encounter with the bizarre deep-space 'creature', its strange music has grown more active, more agitated.\n\nWhen touched, conjures a powerful vision of a water world covered in lush and verdant plantlife.",
@@ -2608,11 +2729,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/BIOSHIP_EGG3"
 	},
 	{
 		"Id": "BIOSHIP_EGG4",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.egg4.dds",
+		"Icon": "BIOSHIP_EGG4.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.egg4.dds",
 		"Name": "Cracking Void Egg",
 		"Group": "Agitated Curiosity",
 		"Description": "An anomalous egg. Since the encounter with the bizarre deep-space 'creature', its strange music has grown more active, more agitated.\n\nWhen touched, conjures a powerful visions of a planet of strange anomalies, one minute a world of grass, the next a world of bizarre fungal growths...",
@@ -2635,11 +2758,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/BIOSHIP_EGG4"
 	},
 	{
 		"Id": "BIOSHIP_EGG5",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.egg4.dds",
+		"Icon": "BIOSHIP_EGG5.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.egg4.dds",
 		"Name": "Cracking Void Egg",
 		"Group": "Agitated Curiosity",
 		"Description": "An anomalous egg. Since the encounter with the bizarre deep-space 'creature', its strange music has grown more active, more agitated.\n\nWhen touched, conjures a powerful visions of pink and blue, colours seared into the mind of the holder.\n\nThe Hunter SLASH The Reflection SLASH The Hunter SLASH The Spiral of Reality SLASH The Star Over WaterSLASH The Ascending Orb SLASH The Obscured Companion SLASH The Hunter SLASH The Lowly Insect SLASH The Anomaly SLASH The Sailor SLASH The Ocean King SLASH EUCLID EUCLID EUCLID",
@@ -2662,11 +2787,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/BIOSHIP_EGG5"
 	},
 	{
 		"Id": "MP_REP_PART1",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted Navigation Computer",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to starship navigation, flight stabilisation, and external sensors.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -2689,11 +2816,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART1"
 	},
 	{
 		"Id": "MP_REP_PART1B",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART1B.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted Navigation Computer",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to starship navigation, flight stabilisation, and external sensors.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -2716,11 +2845,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART1B"
 	},
 	{
 		"Id": "MP_REP_PART1C",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART1C.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Navigation Computer",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to starship navigation, flight stabilisation, and external sensors.\n\nThe part appears intact, functional, and ready to be installed in a new ship.",
@@ -2743,11 +2874,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART1C"
 	},
 	{
 		"Id": "MP_REP_PART2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted Communicator Control Unit",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to ship-to-ship communications, quantum transportation, and coordinate tracing.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -2770,11 +2903,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART2"
 	},
 	{
 		"Id": "MP_REP_PART2B",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART2B.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted Communicator Control Unit",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to ship-to-ship communications, quantum transportation, and coordinate tracing.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -2797,11 +2932,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART2B"
 	},
 	{
 		"Id": "MP_REP_PART2C",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART2C.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Communicator Control Unit",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to ship-to-ship communications, quantum transportation, and coordinate tracing.\n\nThe part appears intact, functional, and ready to be installed in a new ship.",
@@ -2824,11 +2961,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART2C"
 	},
 	{
 		"Id": "MP_REP_PART3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted User Authenticator",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to starship-to-Exosuit synchronisation and security.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -2851,11 +2990,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART3"
 	},
 	{
 		"Id": "MP_REP_PART3B",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART3B.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted User Authenticator",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to starship-to-Exosuit synchronisation and security.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -2878,11 +3019,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART3B"
 	},
 	{
 		"Id": "MP_REP_PART3C",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART3C.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "User Authenticator",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to starship-to-Exosuit synchronisation and security.\n\nThe part appears intact, functional, and ready to be installed in a new ship.",
@@ -2905,11 +3048,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/MP_REP_PART3C"
 	},
 	{
 		"Id": "DRONE_FRIEND",
-		"Icon": "textures/ui/frontend/icons/u4products/product.dronefriend.dds",
+		"Icon": "DRONE_FRIEND.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.dronefriend.dds",
 		"Name": "Sentinel Flare (off)",
 		"Group": "Sentinel Communicator",
 		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Activate Flare (FE_ALT1) to signal [The Drone].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
@@ -2932,11 +3077,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/DRONE_FRIEND"
 	},
 	{
 		"Id": "DRONE_FRIEND_X",
-		"Icon": "textures/ui/frontend/icons/u4products/product.dronefriendx.dds",
+		"Icon": "DRONE_FRIEND_X.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.dronefriendx.dds",
 		"Name": "Sentinel Flare",
 		"Group": "Sentinel Communicator",
 		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Deactivate Broadcast (FE_ALT1) to stop signalling [ The Sentry ].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
@@ -2959,11 +3106,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/DRONE_FRIEND_X"
 	},
 	{
 		"Id": "WALKER_PROD_2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.walkerbrain2.dds",
+		"Icon": "WALKER_PROD_2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.walkerbrain2.dds",
 		"Name": "Pristine Brain",
 		"Group": "Anomalous Material",
 		"Description": "Shifting nanite clusters sewn together with a pugneum filament, this circuit is painfully hot to the touch. A sinister purple light leaks from deep within its wiring, changing in intensity as it watches its holder.\n\nUnlike most Walker brains, this one has survived its violent extraction and is pristine and undamaged. It could potentially be installed in a new vessel...",
@@ -2988,11 +3137,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/WALKER_PROD_2"
 	},
 	{
 		"Id": "WALKER_PROD_3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.walkerbrain3.dds",
+		"Icon": "WALKER_PROD_3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.walkerbrain3.dds",
 		"Name": "Hacked Brain",
 		"Group": "Anomalous Material",
 		"Description": "Shifting nanite clusters sewn together with a pugneum filament, this circuit is painfully hot to the touch. The purple light that leaks from within its wiring has softened, as if it has become less hostile.\n\nPreviously embedded within a Sentinel Walker, this semi-organic computer has been altered by Iteration: Tethys. Its new-found freedom from the Atlas has been noted by the universe.",
@@ -3017,11 +3168,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/WALKER_PROD_3"
 	},
 	{
 		"Id": "WALKER_PROD_4",
-		"Icon": "textures/ui/frontend/icons/u4products/product.walkerbrain4.dds",
+		"Icon": "WALKER_PROD_4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.walkerbrain4.dds",
 		"Name": "Radiant Brain",
 		"Group": "Anomalous Material",
 		"Description": "Shifting nanite clusters sewn together with a pugneum filament, this circuit is painfully hot to the touch. The purple light that leaks from within its wiring has softened, as if it has become less hostile.\n\nPreviously embedded within a Sentinel Walker, this semi-organic computer has been altered by both Iteration: Tethys and a Messenger of the Atlas.",
@@ -3046,11 +3199,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/WALKER_PROD_4"
 	},
 	{
 		"Id": "S9_PACK1",
-		"Icon": "textures/ui/frontend/icons/products/holocomdevice.dds",
+		"Icon": "S9_PACK1.png",
+		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Beta",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the workers bravely terraforming the lava-filled wastes of planet Pehaelump, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -3073,11 +3228,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_PACK1"
 	},
 	{
 		"Id": "S9_PACK2",
-		"Icon": "textures/ui/frontend/icons/products/holocomdevice.dds",
+		"Icon": "S9_PACK2.png",
+		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Gamma",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the workers valiantly toiling on the steep, exposed mountains of planet New Sesto, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -3100,11 +3257,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_PACK2"
 	},
 	{
 		"Id": "S9_PACK3",
-		"Icon": "textures/ui/frontend/icons/products/holocomdevice.dds",
+		"Icon": "S9_PACK3.png",
+		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Delta",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the surviving workers who now confront the [ REDACTED ] of planet Idalth XIV, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -3127,11 +3286,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_PACK3"
 	},
 	{
 		"Id": "S9_PACK4",
-		"Icon": "textures/ui/frontend/icons/products/holocomdevice.dds",
+		"Icon": "S9_PACK4.png",
+		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Epsilon",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the workers who so nobly rebuild in the sucking quagmires of planet Endil A8, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -3154,11 +3315,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_PACK4"
 	},
 	{
 		"Id": "S9_MAP1",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
+		"Icon": "S9_MAP1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Beta",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -3181,11 +3344,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_MAP1"
 	},
 	{
 		"Id": "S9_MAP2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
+		"Icon": "S9_MAP2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Gamma",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -3208,11 +3373,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_MAP2"
 	},
 	{
 		"Id": "S9_MAP3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
+		"Icon": "S9_MAP3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Delta",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -3235,11 +3402,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_MAP3"
 	},
 	{
 		"Id": "S9_MAP4",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
+		"Icon": "S9_MAP4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Epsilon",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -3262,11 +3431,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_MAP4"
 	},
 	{
 		"Id": "S9_MYSTERY_ITEM",
-		"Icon": "textures/ui/frontend/icons/update3/treasureprod.strangebook.dds",
+		"Icon": "S9_MYSTERY_ITEM.png",
+		"IconPath": "textures/ui/frontend/icons/update3/treasureprod.strangebook.dds",
 		"Name": "Construction History",
 		"Group": "Classified Dossier",
 		"Description": "This report records the history of a planetary facility forming part of the Utopia Project. Several sections are curiously absent.\n\nDS 2368 :: Facility founded. Plasma deep drill rig operational.\nDS 2384 :: Return growth steady at 1%.\nDS 2400 :: Overseers querying growth rate.\nDS 2416 :: Orbital exp. approved. Station trade booming.\nDS 2432 :: [Redacted] hazard encountered.\nDS 2448 :: [Redacted]\nDS 2464 :: Utopia Project launched.\nDS 2464 :: Facility restored. Plasma deep drill rig operational. Trade routes re-opened.\nDS 2480 :: [Redacted]\nDS 2496 :: Facility restored. Plasma deep drill rig operational. Trade routes re-opened.\nDS 2512 :: [Redacted]\n\nThe last two entries are repeated over and over, across hundreds of pages.",
@@ -3289,11 +3460,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/S9_MYSTERY_ITEM"
 	},
 	{
 		"Id": "FREIGHT_PAINT",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_PAINT.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "Freighter Recolouring",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3316,11 +3489,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_PAINT"
 	},
 	{
 		"Id": "FREIGHT_RED",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_RED.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "RED",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3343,11 +3518,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_RED"
 	},
 	{
 		"Id": "FREIGHT_ORANGE",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_ORANGE.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "ORANGE",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3370,11 +3547,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_ORANGE"
 	},
 	{
 		"Id": "FREIGHT_YELLOW",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_YELLOW.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "YELLOW",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3397,11 +3576,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_YELLOW"
 	},
 	{
 		"Id": "FREIGHT_GREEN",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_GREEN.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "GREEN",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3424,11 +3605,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_GREEN"
 	},
 	{
 		"Id": "FREIGHT_CYAN",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_CYAN.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "TURQUOISE",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3451,11 +3634,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_CYAN"
 	},
 	{
 		"Id": "FREIGHT_BLUE",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_BLUE.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "BLUE",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3478,11 +3663,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_BLUE"
 	},
 	{
 		"Id": "FREIGHT_PURPLE",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_PURPLE.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "PURPLE",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3505,11 +3692,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_PURPLE"
 	},
 	{
 		"Id": "FREIGHT_PINK",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_PINK.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "PINK",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3532,11 +3721,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_PINK"
 	},
 	{
 		"Id": "FREIGHT_WHITE",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_WHITE.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "WHITE",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3559,11 +3750,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_WHITE"
 	},
 	{
 		"Id": "FREIGHT_BLACK",
-		"Icon": "textures/ui/frontend/icons/products/product.freightpaint.dds",
+		"Icon": "FREIGHT_BLACK.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.freightpaint.dds",
 		"Name": "BLACK",
 		"Group": "Freighter Customisation Option",
 		"Description": "Unlocks this colour for freighter customisation.\n\nA self-replicating cloud of highly pigmatised nano-robots swarm the capital ship, changing its external appearance.",
@@ -3586,11 +3779,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/FREIGHT_BLACK"
 	},
 	{
 		"Id": "EXPD_BIOFRIG",
-		"Icon": "textures/ui/frontend/icons/specialshop/special1.expedition.biofrig.dds",
+		"Icon": "EXPD_BIOFRIG.png",
+		"IconPath": "textures/ui/frontend/icons/specialshop/special1.expedition.biofrig.dds",
 		"Name": "Organic Frigate",
 		"Group": "Cosmic Leviathan",
 		"Description": "This peaceful space giant is a mutation of organism and starcraft, and can be tamed to swim through the stars alongside a fleet of frigates.\n\nRecruiting this creature will add it to your frigate fleet. Manage your fleet from a Fleet Command Room aboard your freighter, and consult your Navigator to deploy frigates on lucrative expeditions.",
@@ -3613,11 +3808,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "curiosities/EXPD_BIOFRIG"
 	},
 	{
 		"Id": "F_JELLYCHILD",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.jelly.dds",
+		"Icon": "F_JELLYCHILD.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.jelly.dds",
 		"Name": "Child of Aquarius",
 		"Group": "Precious Spawn",
 		"Description": "An impossibly delicate jellyfish. Its tentacles are as fine as strands of hair, its entire being glassy, dancing on the edge of what is possible.\n\nA gift from the sea, almost too precious to keep...",
@@ -3643,11 +3840,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "curiosities/F_JELLYCHILD"
 	},
 	{
 		"Id": "F_JELLYCHILD",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.jelly.dds",
+		"Icon": "F_JELLYCHILD.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.jelly.dds",
 		"Name": "Child of Aquarius",
 		"Group": "Precious Spawn",
 		"Description": "An impossibly delicate jellyfish. Its tentacles are as fine as strands of hair, its entire being glassy, dancing on the edge of what is possible.\n\nA gift from the sea, almost too precious to keep...",
@@ -3663,11 +3862,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/F_JELLYCHILD"
 	},
 	{
 		"Id": "SENTFREI_PROD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.freightercore.dds",
+		"Icon": "SENTFREI_PROD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.freightercore.dds",
 		"Name": "Carrier Ai Fragment",
 		"Group": "Battleship Core Remnant",
 		"Description": "A single splinter of the colossal mainframe at the heart of a Sentinel capital ship. It blinks, its solitary living eye trained upon the one piece of data it retains - the last known location of one of its fleet of Interceptors.\n\nSelect the AI Fragment and use Search Archive (FE_ALT1) to translate information about Interceptor's crash site to your starship's navigation systems.",
@@ -3683,11 +3884,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/SENTFREI_PROD"
 	},
 	{
 		"Id": "CHART_ROBOT",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.robotcamp.dds",
+		"Icon": "CHART_ROBOT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.robotcamp.dds",
 		"Name": "Echo Locator",
 		"Group": "Harmonic Location Tracker",
 		"Description": "A curious mesh of old and new technology, a hybrid between two entirely separate methods of creation. Nonetheless, this location tracing device appears fully functional.\n\nSelect this device and use Resonate (FE_ALT1) to trace its harmonic origin.",
@@ -3703,11 +3906,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/CHART_ROBOT"
 	},
 	{
 		"Id": "SHIPBRAIN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.sentinelshipbrain.dds",
+		"Icon": "SHIPBRAIN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.sentinelshipbrain.dds",
 		"Name": "Hyaline Brain",
 		"Group": "Sentience Vessel",
 		"Description": "The central processing unit of a Sentinel interceptor ship. The circuitry writhes microscopically, constantly rearranging itself as it scans for anomalies.\n\nA vital component for any entity wishing to construct their own Pilot Interface for a Sentinel Interceptor.\n\nStatus: VOLATILE",
@@ -3723,11 +3928,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/SHIPBRAIN"
 	},
 	{
 		"Id": "S9_MAP1",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
+		"Icon": "S9_MAP1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Beta",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -3743,11 +3950,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S9_MAP1"
 	},
 	{
 		"Id": "S9_MAP2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
+		"Icon": "S9_MAP2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Gamma",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -3763,11 +3972,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S9_MAP2"
 	},
 	{
 		"Id": "S9_MAP3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
+		"Icon": "S9_MAP3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Delta",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -3783,11 +3994,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S9_MAP3"
 	},
 	{
 		"Id": "S9_MAP4",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
+		"Icon": "S9_MAP4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Epsilon",
 		"Group": "Utopia Foundation Settlement Chart",
 		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -3803,11 +4016,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S9_MAP4"
 	},
 	{
 		"Id": "S9_PACK1",
-		"Icon": "textures/ui/frontend/icons/products/holocomdevice.dds",
+		"Icon": "S9_PACK1.png",
+		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Beta",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the workers bravely terraforming the lava-filled wastes of planet Pehaelump, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -3823,11 +4038,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S9_PACK1"
 	},
 	{
 		"Id": "S9_PACK2",
-		"Icon": "textures/ui/frontend/icons/products/holocomdevice.dds",
+		"Icon": "S9_PACK2.png",
+		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Gamma",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the workers valiantly toiling on the steep, exposed mountains of planet New Sesto, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -3843,11 +4060,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S9_PACK2"
 	},
 	{
 		"Id": "S9_PACK3",
-		"Icon": "textures/ui/frontend/icons/products/holocomdevice.dds",
+		"Icon": "S9_PACK3.png",
+		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Delta",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the surviving workers who now confront the [ REDACTED ] of planet Idalth XIV, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -3863,11 +4082,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S9_PACK3"
 	},
 	{
 		"Id": "S9_PACK4",
-		"Icon": "textures/ui/frontend/icons/products/holocomdevice.dds",
+		"Icon": "S9_PACK4.png",
+		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Epsilon",
 		"Group": "Utopia Foundation Supply Cache",
 		"Description": "To support the workers who so nobly rebuild in the sucking quagmires of planet Endil A8, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
@@ -3883,31 +4104,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
-	},
-	{
-		"Id": "S8_BEACON",
-		"Icon": "textures/ui/frontend/icons/u4products/product.roguefinder.dds",
-		"Name": "Homeworld Repeater",
-		"Group": "A Last Link Home",
-		"Description": "A makeshift device, cobbled from salvaged electronic components kept in deep storage for many years. This jumble of wires will attempt to make contact with the last-known remnants of the freighter's homeworld.\n\nSelect the device and select Broadcast (FE_ALT1) to begin the location process.",
-		"BaseValueUnits": 16,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 0,
-		"Colour": "311A49",
-		"CookingValue": 0.0,
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S9_PACK4"
 	},
 	{
 		"Id": "PIRATE_MAPWHOLE",
-		"Icon": "textures/ui/frontend/icons/products/piratemapwhole.dds",
+		"Icon": "PIRATE_MAPWHOLE.png",
+		"IconPath": "textures/ui/frontend/icons/products/piratemapwhole.dds",
 		"Name": "Pirate Map",
 		"Group": "Illicit Geographic Data",
 		"Description": "Reassembled treasure coordinate data, retrieved from the victims of pirate faction The Blight.",
@@ -3923,11 +4126,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/PIRATE_MAPWHOLE"
 	},
 	{
 		"Id": "DRONE_FRIEND_X",
-		"Icon": "textures/ui/frontend/icons/u4products/product.dronefriendx.dds",
+		"Icon": "DRONE_FRIEND_X.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.dronefriendx.dds",
 		"Name": "Sentinel Flare",
 		"Group": "Sentinel Communicator",
 		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Deactivate Broadcast (FE_ALT1) to stop signalling [ The Sentry ].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
@@ -3943,11 +4148,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/DRONE_FRIEND_X"
 	},
 	{
 		"Id": "DRONE_FRIEND",
-		"Icon": "textures/ui/frontend/icons/u4products/product.dronefriend.dds",
+		"Icon": "DRONE_FRIEND.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.dronefriend.dds",
 		"Name": "Sentinel Flare (off)",
 		"Group": "Sentinel Communicator",
 		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Activate Flare (FE_ALT1) to signal [The Drone].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
@@ -3963,11 +4170,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/DRONE_FRIEND"
 	},
 	{
 		"Id": "SENTINEL_LOOT",
-		"Icon": "textures/ui/frontend/icons/u4products/product.sentinelloot.dds",
+		"Icon": "SENTINEL_LOOT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.sentinelloot.dds",
 		"Name": "Salvaged Glass",
 		"Group": "Recovered Sentinel Components",
 		"Description": "A sinister shard of purple glass, salvaged from the destroyed remains of Sentinel machinery. Its walls are thin, and it may be broken down to access valuable Sentinel components.\n\nSelect in the Inventory (INVENTORY) and shatter with FE_ALT1.",
@@ -3983,11 +4192,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/SENTINEL_LOOT"
 	},
 	{
 		"Id": "SCRAP_GOODS",
-		"Icon": "textures/ui/frontend/icons/u4products/product.scrap.goods.dds",
+		"Icon": "SCRAP_GOODS.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.goods.dds",
 		"Name": "Suspicious Packet (goods)",
 		"Group": "Contraband",
 		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of technology.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
@@ -4003,11 +4214,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/SCRAP_GOODS"
 	},
 	{
 		"Id": "SCRAP_TECH",
-		"Icon": "textures/ui/frontend/icons/u4products/product.scrap.tech.dds",
+		"Icon": "SCRAP_TECH.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.tech.dds",
 		"Name": "Suspicious Packet (tech)",
 		"Group": "Contraband",
 		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of high-value or interesting item.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
@@ -4023,11 +4236,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/SCRAP_TECH"
 	},
 	{
 		"Id": "SCRAP_WEAP",
-		"Icon": "textures/ui/frontend/icons/u4products/product.scrap.weapon.dds",
+		"Icon": "SCRAP_WEAP.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.weapon.dds",
 		"Name": "Suspicious Packet (arms)",
 		"Group": "Contraband",
 		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of weapon-based technology.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
@@ -4043,11 +4258,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/SCRAP_WEAP"
 	},
 	{
 		"Id": "MP_REP_PART1",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted Navigation Computer",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to starship navigation, flight stabilisation, and external sensors.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -4063,11 +4280,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/MP_REP_PART1"
 	},
 	{
 		"Id": "MP_REP_PART2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted Communicator Control Unit",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to ship-to-ship communications, quantum transportation, and coordinate tracing.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -4083,11 +4302,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/MP_REP_PART2"
 	},
 	{
 		"Id": "MP_REP_PART3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
+		"Icon": "MP_REP_PART3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.rare.dds",
 		"Name": "Encrypted User Authenticator",
 		"Group": "Starship Component",
 		"Description": "An advanced nanocomputer, performing processing tasks related to starship-to-Exosuit synchronisation and security.\n\nThis part could be in working order, but will require decryption before it can be installed in a new ship. A paired decryption terminal can be located via Exosuit analysis.",
@@ -4103,11 +4324,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/MP_REP_PART3"
 	},
 	{
 		"Id": "GEODE_ASTEROID",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.asteroid.dds",
+		"Icon": "GEODE_ASTEROID.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.asteroid.dds",
 		"Name": "Gold Nugget",
 		"Group": "Valuable Ore",
 		"Description": "A highly valuable ore chunk, ready to be processed into Gold.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -4123,11 +4346,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/GEODE_ASTEROID"
 	},
 	{
 		"Id": "GEODE_CRYSTAL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.crystal.dds",
+		"Icon": "GEODE_CRYSTAL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.crystal.dds",
 		"Name": "Crystal Fragment",
 		"Group": "Concentrated Element Shard",
 		"Description": "A crystalline shard with an unusually dense structure. Potentially highly valuable.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -4143,11 +4368,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/GEODE_CRYSTAL"
 	},
 	{
 		"Id": "GEODE_LAND",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.dds",
+		"Icon": "GEODE_LAND.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.dds",
 		"Name": "Geode",
 		"Group": "Valuable Mineral Deposit",
 		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -4163,11 +4390,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/GEODE_LAND"
 	},
 	{
 		"Id": "GEODE_CAVE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.dds",
+		"Icon": "GEODE_CAVE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.dds",
 		"Name": "Geode",
 		"Group": "Valuable Mineral Deposit",
 		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -4183,11 +4412,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/GEODE_CAVE"
 	},
 	{
 		"Id": "GEODE_SPACE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.geode.space.dds",
+		"Icon": "GEODE_SPACE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.space.dds",
 		"Name": "Tritium Hypercluster",
 		"Group": "Energetic Fragment",
 		"Description": "A shard of pure crystalised Tritium.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -4203,11 +4434,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/GEODE_SPACE"
 	},
 	{
 		"Id": "GEODE_RARE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.waterprod.dds",
+		"Icon": "GEODE_RARE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.waterprod.dds",
 		"Name": "Glowing Mineral",
 		"Group": "Valuable Rock Sample",
 		"Description": "Though its surface is dirtied and dull, polishing this rock reveals a deep inner glow, a glitter beneath a subtly iridescent surface.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
@@ -4223,11 +4456,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/GEODE_RARE"
 	},
 	{
 		"Id": "CHART_BUI_SETTL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.settlementbuilders.dds",
+		"Icon": "CHART_BUI_SETTL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.settlementbuilders.dds",
 		"Name": "Autophage Settlement Chart",
 		"Group": "Harmonic Planetary Chart",
 		"Description": "A map showing the location of a nearby Autophage planetary settlement, acquired from an Autophage Synthesis Terminal.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -4243,11 +4478,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/CHART_BUI_SETTL"
 	},
 	{
 		"Id": "POI_LOCATOR",
-		"Icon": "textures/ui/frontend/icons/u4products/product.locator.poi.dds",
+		"Icon": "POI_LOCATOR.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.poi.dds",
 		"Name": "Anomaly Detector",
 		"Group": "Anomalous Homing Device",
 		"Description": "A single-use geometric beacon that probes the surrounding area for near-space anomalies. Such objects are highly unpredictable.\n\nSelect the Detector and use Begin Scan (FE_ALT1) to begin the location process.",
@@ -4263,11 +4500,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/POI_LOCATOR"
 	},
 	{
 		"Id": "ABAND_LOCATOR",
-		"Icon": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
+		"Icon": "ABAND_LOCATOR.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
 		"Name": "Emergency Signal Scanner",
 		"Group": "Coordinate Data",
 		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal (FE_ALT1) to begin the location process.",
@@ -4283,6 +4522,7 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/ABAND_LOCATOR"
 	}
 ]

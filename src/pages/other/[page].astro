@@ -4,8 +4,8 @@ import Card from '@components/Card.astro';
 import Pagination from '@components/Pagination.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
-import others from '@data/Others.json';
-import trade from '@data/Trade.json';
+import others from '@datav2/Others.json';
+import trade from '@datav2/Trade.json';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
 	return paginate(sort([...others, ...trade] as Item[]), { pageSize: 24 });
@@ -39,8 +39,8 @@ const { page } = Astro.props as PageProps;
 						name: item.Name,
 						description: item.Description,
 						button: 'View Item',
-						image: `https://app.nmsassistant.com/assets/images/${item.Icon}`,
-						link: `${getSlug(item.Id)}${item.Id}`,
+						image: `https://nomansskyrecipes.com/images/items/${item.Icon}`,
+						link: getSlug(item),
 						value: item.BaseValueUnits,
 					}}
 				/>

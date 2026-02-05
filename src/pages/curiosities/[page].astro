@@ -3,7 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
-import data from '@data/Curiosities.json';
+import data from '@datav2/Curiosities.json';
 import Pagination from '@components/Pagination.astro';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
@@ -38,8 +38,8 @@ const { page } = Astro.props as PageProps;
 						name: item.Name,
 						description: item.Description,
 						button: 'View Item',
-						image: 'https://app.nmsassistant.com/assets/images/' + item.Icon,
-						link: getSlug(item.Id) + item.Id,
+						image: 'https://nomansskyrecipes.com/images/items/' + item.Icon,
+						link: getSlug(item),
 						value: item.BaseValueUnits,
 					}}
 					index={index}

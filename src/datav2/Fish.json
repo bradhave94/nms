@@ -1,7 +1,8 @@
 [
 	{
 		"Id": "F_JELLYCHILD",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.jelly.dds",
+		"Icon": "F_JELLYCHILD.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.jelly.dds",
 		"Name": "Child of Aquarius",
 		"Group": "Precious Spawn",
 		"Description": "An impossibly delicate jellyfish. Its tentacles are as fine as strands of hair, its entire being glassy, dancing on the edge of what is possible.\n\nA gift from the sea, almost too precious to keep...",
@@ -19,11 +20,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_JELLYCHILD"
 	},
 	{
 		"Id": "F_BOSS_JELLY",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.jelly.dds",
+		"Icon": "F_BOSS_JELLY.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.jelly.dds",
 		"Name": "Spawn of Arcadia",
 		"Group": "Fragile Medusoid",
 		"Description": "A glassy jellyfish, lights pulsing beneath its skin. Its thin tentacles pluck at the air, their vibrations manipulating the space around its body.\n\nAs it writhes, a faint music drifts from its tendrils, worming its way into your ears. The melody seems to never end, worming its way into your ears, never ending, worming its way into your ears, never ending, never...",
@@ -41,11 +44,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_BOSS_JELLY"
 	},
 	{
 		"Id": "S15_FISH",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.octopus.dds",
+		"Icon": "S15_FISH.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.octopus.dds",
 		"Name": "The Angler",
 		"Group": "Legendary Fish",
 		"Description": "Fire dances across the scales of this impossible marine being. Its starlit eyes stare back at you with a meaning far deeper than any fish should know. As they stare, the world around you fades away.\n\nThe sound of water fills your ears. It wants to be free. You want to be free...",
@@ -63,11 +68,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/S15_FISH"
 	},
 	{
 		"Id": "S15_BOT_1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
+		"Icon": "S15_BOT_1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
 		"Name": "Message in a Bottle",
 		"Group": "Collected Flotsam",
 		"Description": "A sealed bottle, found floating in the water. There appears to be a message from the Angler inside.\n\nUse FE_ALT1 to unseal the bottle and read the message within.",
@@ -85,11 +92,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/S15_BOT_1"
 	},
 	{
 		"Id": "S15_BOT_2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
+		"Icon": "S15_BOT_2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
 		"Name": "Message in a Bottle",
 		"Group": "Collected Flotsam",
 		"Description": "A sealed bottle, found floating in the water. There appears to be a message from the Angler inside.\n\nUse FE_ALT1 to unseal the bottle and read the message within.",
@@ -107,11 +116,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/S15_BOT_2"
 	},
 	{
 		"Id": "S15_BOT_3",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
+		"Icon": "S15_BOT_3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
 		"Name": "Message in a Bottle",
 		"Group": "Collected Flotsam",
 		"Description": "A sealed bottle, found floating in the water. There appears to be a message from the Angler inside.\n\nUse FE_ALT1 to unseal the bottle and read the message within.",
@@ -129,11 +140,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/S15_BOT_3"
 	},
 	{
 		"Id": "S15_BOT_4",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
+		"Icon": "S15_BOT_4.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
 		"Name": "Message in a Bottle",
 		"Group": "Collected Flotsam",
 		"Description": "A sealed bottle, found floating in the water. There appears to be a message from the Angler inside.\n\nUse FE_ALT1 to unseal the bottle and read the message within.",
@@ -151,11 +164,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/S15_BOT_4"
 	},
 	{
 		"Id": "F_ALL_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.default.dds",
+		"Icon": "F_ALL_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.default.dds",
 		"Name": "Tiny Scuttlefish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -173,11 +188,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_COM_S1"
 	},
 	{
 		"Id": "F_ALL_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.crab.dds",
+		"Icon": "F_ALL_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.crab.dds",
 		"Name": "Mud Crab",
 		"Group": "Common Fish",
 		"Description": "",
@@ -195,11 +212,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_COM_S2"
 	},
 	{
 		"Id": "F_ALL_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
+		"Icon": "F_ALL_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
 		"Name": "Pondskipper",
 		"Group": "Common Fish",
 		"Description": "",
@@ -217,11 +236,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_COM_S3"
 	},
 	{
 		"Id": "F_ALL_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
+		"Icon": "F_ALL_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
 		"Name": "Reef Eel",
 		"Group": "Common Fish",
 		"Description": "",
@@ -239,11 +260,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_COM_M1"
 	},
 	{
 		"Id": "F_ALL_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.3.dds",
+		"Icon": "F_ALL_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.3.dds",
 		"Name": "Rockfin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -261,11 +284,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_COM_M2"
 	},
 	{
 		"Id": "F_ALL_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.xl.1.dds",
+		"Icon": "F_ALL_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.xl.1.dds",
 		"Name": "Greenscale Bloater",
 		"Group": "Common Fish",
 		"Description": "",
@@ -283,11 +308,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_COM_L1"
 	},
 	{
 		"Id": "F_ALL_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.shark.dds",
+		"Icon": "F_ALL_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.shark.dds",
 		"Name": "Stonescale Shark",
 		"Group": "Common Fish",
 		"Description": "",
@@ -305,11 +332,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_COM_XL"
 	},
 	{
 		"Id": "F_ALL_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
+		"Icon": "F_ALL_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
 		"Name": "Needlefish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -327,11 +356,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_RARE_S1"
 	},
 	{
 		"Id": "F_ALL_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.starfish.dds",
+		"Icon": "F_ALL_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.starfish.dds",
 		"Name": "Spiny Starfish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -349,11 +380,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_RARE_S2"
 	},
 	{
 		"Id": "F_ALL_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.octopus.dds",
+		"Icon": "F_ALL_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.octopus.dds",
 		"Name": "Hypnotic Octopus",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -371,11 +404,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_RARE_M1"
 	},
 	{
 		"Id": "F_ALL_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
+		"Icon": "F_ALL_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
 		"Name": "Longjaw Snapper",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -393,11 +428,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_RARE_M2"
 	},
 	{
 		"Id": "F_ALL_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.3.dds",
+		"Icon": "F_ALL_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.3.dds",
 		"Name": "Whispering Bonefish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -415,11 +452,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_RARE_L1"
 	},
 	{
 		"Id": "F_ALL_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.ray.dds",
+		"Icon": "F_ALL_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.ray.dds",
 		"Name": "Giant Ray",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -437,11 +476,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_RARE_XL"
 	},
 	{
 		"Id": "F_ALL_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.clam.dds",
+		"Icon": "F_ALL_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.clam.dds",
 		"Name": "Shrieking Oyster",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -459,11 +500,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_EPIC_S1"
 	},
 	{
 		"Id": "F_ALL_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.turtle.dds",
+		"Icon": "F_ALL_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.turtle.dds",
 		"Name": "Moon Turtle",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -481,11 +524,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_EPIC_M1"
 	},
 	{
 		"Id": "F_ALL_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.prawn.dds",
+		"Icon": "F_ALL_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.prawn.dds",
 		"Name": "Colossal Shrimp",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -503,11 +548,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_EPIC_L1"
 	},
 	{
 		"Id": "F_ALL_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
+		"Icon": "F_ALL_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
 		"Name": "Thunderfin",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -525,11 +572,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_EPIC_XL"
 	},
 	{
 		"Id": "F_ALL_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.snail.dds",
+		"Icon": "F_ALL_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.snail.dds",
 		"Name": "Singing Sea-snail",
 		"Group": "Legendary Fish",
 		"Description": "\"A voice like honey from a mouth of mucus.\"",
@@ -547,11 +596,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_LEG_S1"
 	},
 	{
 		"Id": "F_ALL_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product3.fish.jelly.dds",
+		"Icon": "F_ALL_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product3.fish.jelly.dds",
 		"Name": "Golden Jellyfish",
 		"Group": "Legendary Fish",
 		"Description": "\"Its tentacles that glitter like wisps of golden hair, but sting with the fire of thousand suns.\"",
@@ -569,11 +620,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_LEG_M1"
 	},
 	{
 		"Id": "F_ALL_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
+		"Icon": "F_ALL_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
 		"Name": "Dragonfish",
 		"Group": "Legendary Fish",
 		"Description": "\"Territorial, ancient, furious to be caught. The king of the sea.\"",
@@ -591,11 +644,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_LEG_L1"
 	},
 	{
 		"Id": "F_ALL_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
+		"Icon": "F_ALL_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
 		"Name": "The Lunker",
 		"Group": "Legendary Fish",
 		"Description": "\"A true titan of the depths. Nothing compares for sheer mass.\"",
@@ -613,11 +668,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ALL_LEG_XL"
 	},
 	{
 		"Id": "F_TOX_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.worm.dds",
+		"Icon": "F_TOX_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.worm.dds",
 		"Name": "Bileworm",
 		"Group": "Common Fish",
 		"Description": "",
@@ -635,11 +692,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_COM_S1"
 	},
 	{
 		"Id": "F_TOX_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
+		"Icon": "F_TOX_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
 		"Name": "Venomous Triggerfin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -657,11 +716,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_COM_S2"
 	},
 	{
 		"Id": "F_TOX_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.worm.dds",
+		"Icon": "F_TOX_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.worm.dds",
 		"Name": "Sea Cucumber",
 		"Group": "Common Fish",
 		"Description": "",
@@ -679,11 +740,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_COM_S3"
 	},
 	{
 		"Id": "F_TOX_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.eel.dds",
+		"Icon": "F_TOX_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.eel.dds",
 		"Name": "Blistering Eel",
 		"Group": "Common Fish",
 		"Description": "",
@@ -701,11 +764,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_COM_M1"
 	},
 	{
 		"Id": "F_TOX_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.jelly.dds",
+		"Icon": "F_TOX_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.jelly.dds",
 		"Name": "Toxic Jelly",
 		"Group": "Common Fish",
 		"Description": "",
@@ -723,11 +788,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_COM_M2"
 	},
 	{
 		"Id": "F_TOX_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.octopus.dds",
+		"Icon": "F_TOX_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.octopus.dds",
 		"Name": "Green-ring Octopus",
 		"Group": "Common Fish",
 		"Description": "",
@@ -745,11 +812,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_COM_L1"
 	},
 	{
 		"Id": "F_TOX_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
+		"Icon": "F_TOX_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
 		"Name": "Giant Whiskerfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -767,11 +836,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_COM_XL"
 	},
 	{
 		"Id": "F_TOX_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.starfish.dds",
+		"Icon": "F_TOX_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.starfish.dds",
 		"Name": "Caustic Urchin",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -789,11 +860,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_RARE_S1"
 	},
 	{
 		"Id": "F_TOX_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.clam.dds",
+		"Icon": "F_TOX_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.clam.dds",
 		"Name": "Weltscale Clam",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -811,11 +884,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_RARE_S2"
 	},
 	{
 		"Id": "F_TOX_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.1.dds",
+		"Icon": "F_TOX_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.1.dds",
 		"Name": "Acidic Pufferfish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -833,11 +908,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_RARE_M1"
 	},
 	{
 		"Id": "F_TOX_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.default.dds",
+		"Icon": "F_TOX_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.default.dds",
 		"Name": "Toxic Stonefish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -855,11 +932,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_RARE_M2"
 	},
 	{
 		"Id": "F_TOX_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.1.dds",
+		"Icon": "F_TOX_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.1.dds",
 		"Name": "Venomtooth Wriggler",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -877,11 +956,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_RARE_L1"
 	},
 	{
 		"Id": "F_TOX_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.ray.dds",
+		"Icon": "F_TOX_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.ray.dds",
 		"Name": "Bitterscale Ray",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -899,11 +980,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_RARE_XL"
 	},
 	{
 		"Id": "F_TOX_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
+		"Icon": "F_TOX_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
 		"Name": "Waspfish",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -921,11 +1004,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_EPIC_S1"
 	},
 	{
 		"Id": "F_TOX_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
+		"Icon": "F_TOX_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
 		"Name": "Scorpionfish",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -943,11 +1028,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_EPIC_M1"
 	},
 	{
 		"Id": "F_TOX_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.xl.3.dds",
+		"Icon": "F_TOX_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.xl.3.dds",
 		"Name": "Shrieking Venttail",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -965,11 +1052,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_EPIC_L1"
 	},
 	{
 		"Id": "F_TOX_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
+		"Icon": "F_TOX_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
 		"Name": "Viper Eel",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -987,11 +1076,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_EPIC_XL"
 	},
 	{
 		"Id": "F_TOX_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.starfish.dds",
+		"Icon": "F_TOX_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.starfish.dds",
 		"Name": "Emeril Sunstar",
 		"Group": "Legendary Fish",
 		"Description": "\"Its perfect crystalline form glistens with a emerald light that changes the soul of all those whose eyes fall upon it.\"",
@@ -1009,11 +1100,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_LEG_S1"
 	},
 	{
 		"Id": "F_TOX_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.squid.dds",
+		"Icon": "F_TOX_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.squid.dds",
 		"Name": "Vampire Squid",
 		"Group": "Legendary Fish",
 		"Description": "\"A true error of the deep; its hungry bite corrupts your blood, filling your body with a spurting corrosive bile.\"",
@@ -1031,11 +1124,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_LEG_M1"
 	},
 	{
 		"Id": "F_TOX_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
+		"Icon": "F_TOX_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
 		"Name": "Bleached Bonefish",
 		"Group": "Legendary Fish",
 		"Description": "\"Robbed of flesh and stripped of colour by acid seas, the bonefish swims on regardless.\"",
@@ -1053,11 +1148,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_LEG_L1"
 	},
 	{
 		"Id": "F_TOX_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
+		"Icon": "F_TOX_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
 		"Name": "Translucent Gulper",
 		"Group": "Legendary Fish",
 		"Description": "\"Seemingly weak and fragile at the surface, these giant jaws have swallowed alive many an unwary soul who ventured into their abyssal home...\"",
@@ -1075,11 +1172,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TOX_LEG_XL"
 	},
 	{
 		"Id": "F_RAD_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.1.dds",
+		"Icon": "F_RAD_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.1.dds",
 		"Name": "Bulging Snapper",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1097,11 +1196,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_COM_S1"
 	},
 	{
 		"Id": "F_RAD_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
+		"Icon": "F_RAD_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
 		"Name": "Spotted Protofin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1119,11 +1220,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_COM_S2"
 	},
 	{
 		"Id": "F_RAD_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.small.3.dds",
+		"Icon": "F_RAD_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.small.3.dds",
 		"Name": "Field's Dartfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1141,11 +1244,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_COM_S3"
 	},
 	{
 		"Id": "F_RAD_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.default.dds",
+		"Icon": "F_RAD_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.default.dds",
 		"Name": "Forktailed Splicer",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1163,11 +1268,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_COM_M1"
 	},
 	{
 		"Id": "F_RAD_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
+		"Icon": "F_RAD_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
 		"Name": "Inverted Snapper",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1185,11 +1292,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_COM_M2"
 	},
 	{
 		"Id": "F_RAD_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.big.1.dds",
+		"Icon": "F_RAD_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.big.1.dds",
 		"Name": "Glowing Catfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1207,11 +1316,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_COM_L1"
 	},
 	{
 		"Id": "F_RAD_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
+		"Icon": "F_RAD_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
 		"Name": "Polyscale Bloater",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1229,11 +1340,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_COM_XL"
 	},
 	{
 		"Id": "F_RAD_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.clam.dds",
+		"Icon": "F_RAD_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.clam.dds",
 		"Name": "Ionised Clam",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1251,11 +1364,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_RARE_S1"
 	},
 	{
 		"Id": "F_RAD_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.3.dds",
+		"Icon": "F_RAD_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.3.dds",
 		"Name": "Nucleic Skipper",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1273,11 +1388,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_RARE_S2"
 	},
 	{
 		"Id": "F_RAD_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
+		"Icon": "F_RAD_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
 		"Name": "Twisted Gulper",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1295,11 +1412,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_RARE_M1"
 	},
 	{
 		"Id": "F_RAD_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
+		"Icon": "F_RAD_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
 		"Name": "Depleted Razorjaw",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1317,11 +1436,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_RARE_M2"
 	},
 	{
 		"Id": "F_RAD_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
+		"Icon": "F_RAD_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
 		"Name": "Radiant Sunfish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1339,11 +1460,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_RARE_L1"
 	},
 	{
 		"Id": "F_RAD_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.shark.dds",
+		"Icon": "F_RAD_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.shark.dds",
 		"Name": "Boiling Shark",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1361,11 +1484,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_RARE_XL"
 	},
 	{
 		"Id": "F_RAD_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.prawn.dds",
+		"Icon": "F_RAD_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.prawn.dds",
 		"Name": "Geno-prawn",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -1383,11 +1508,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_EPIC_S1"
 	},
 	{
 		"Id": "F_RAD_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
+		"Icon": "F_RAD_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
 		"Name": "Immortal Flatfish",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -1405,11 +1532,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_EPIC_M1"
 	},
 	{
 		"Id": "F_RAD_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
+		"Icon": "F_RAD_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
 		"Name": "Cyclopic Eel",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -1427,11 +1556,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_EPIC_L1"
 	},
 	{
 		"Id": "F_RAD_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.squid.dds",
+		"Icon": "F_RAD_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.squid.dds",
 		"Name": "Alpha Squid",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -1449,11 +1580,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_EPIC_XL"
 	},
 	{
 		"Id": "F_RAD_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.jelly.dds",
+		"Icon": "F_RAD_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.jelly.dds",
 		"Name": "Many-eyed Jellyfish",
 		"Group": "Legendary Fish",
 		"Description": "\"A thousand eyes erupt from its soft flesh: a never-ending cycle of rising, blinking, sinking, and re-emergence.\"",
@@ -1471,11 +1604,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_LEG_S1"
 	},
 	{
 		"Id": "F_RAD_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.ray.dds",
+		"Icon": "F_RAD_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.ray.dds",
 		"Name": "Aberrant Duskfin",
 		"Group": "Legendary Fish",
 		"Description": "\"Its wings beat slowly as it sails though the poisoned seas, a drifter with no place of rest, no end to their journey.\"",
@@ -1493,11 +1628,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_LEG_M1"
 	},
 	{
 		"Id": "F_RAD_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.squid.dds",
+		"Icon": "F_RAD_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.squid.dds",
 		"Name": "Gamma Squid",
 		"Group": "Legendary Fish",
 		"Description": "\"A pale blue glow surrounds it as it drifts through the water - a warning to all those who would come too close...\"",
@@ -1515,11 +1652,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_LEG_L1"
 	},
 	{
 		"Id": "F_RAD_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
+		"Icon": "F_RAD_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
 		"Name": "Helix Sawfish",
 		"Group": "Legendary Fish",
 		"Description": "\"Polymorphic, twisting, always in motion; its body a constant whirr of shifting forms and ripping teeth.\"",
@@ -1537,11 +1676,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_RAD_LEG_XL"
 	},
 	{
 		"Id": "F_HOT_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
+		"Icon": "F_HOT_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
 		"Name": "Oilfin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1559,11 +1700,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_COM_S1"
 	},
 	{
 		"Id": "F_HOT_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.3.dds",
+		"Icon": "F_HOT_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.3.dds",
 		"Name": "Common Sunfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1581,11 +1724,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_COM_S2"
 	},
 	{
 		"Id": "F_HOT_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.snail.dds",
+		"Icon": "F_HOT_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.snail.dds",
 		"Name": "Ash Snail",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1603,11 +1748,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_COM_S3"
 	},
 	{
 		"Id": "F_HOT_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.prawn.dds",
+		"Icon": "F_HOT_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.prawn.dds",
 		"Name": "Boiled Snapper",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1625,11 +1772,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_COM_M1"
 	},
 	{
 		"Id": "F_HOT_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
+		"Icon": "F_HOT_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
 		"Name": "Lavascale Trout",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1647,11 +1796,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_COM_M2"
 	},
 	{
 		"Id": "F_HOT_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.medium.1.dds",
+		"Icon": "F_HOT_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.medium.1.dds",
 		"Name": "Sulphurfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1669,11 +1820,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_COM_L1"
 	},
 	{
 		"Id": "F_HOT_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
+		"Icon": "F_HOT_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
 		"Name": "Basalt-tooth Bloater",
 		"Group": "Common Fish",
 		"Description": "",
@@ -1691,11 +1844,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_COM_XL"
 	},
 	{
 		"Id": "F_HOT_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.ray.dds",
+		"Icon": "F_HOT_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.ray.dds",
 		"Name": "Lamptip Ray",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1713,11 +1868,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_RARE_S1"
 	},
 	{
 		"Id": "F_HOT_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.2.dds",
+		"Icon": "F_HOT_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.2.dds",
 		"Name": "Pyrefin",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1735,11 +1892,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_RARE_S2"
 	},
 	{
 		"Id": "F_HOT_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product3.fish.eel.dds",
+		"Icon": "F_HOT_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product3.fish.eel.dds",
 		"Name": "Flashfire Eel",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1757,11 +1916,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_RARE_M1"
 	},
 	{
 		"Id": "F_HOT_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
+		"Icon": "F_HOT_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
 		"Name": "Solar Roach",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1779,11 +1940,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_RARE_M2"
 	},
 	{
 		"Id": "F_HOT_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.ray.dds",
+		"Icon": "F_HOT_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.ray.dds",
 		"Name": "Fumarole Gulper",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1801,11 +1964,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_RARE_L1"
 	},
 	{
 		"Id": "F_HOT_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
+		"Icon": "F_HOT_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
 		"Name": "Colossal Meltfin",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -1823,11 +1988,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_RARE_XL"
 	},
 	{
 		"Id": "F_HOT_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.clam.dds",
+		"Icon": "F_HOT_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.clam.dds",
 		"Name": "Cadmium Pearlcase",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -1845,11 +2012,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_EPIC_S1"
 	},
 	{
 		"Id": "F_HOT_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.octopus.dds",
+		"Icon": "F_HOT_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.octopus.dds",
 		"Name": "Candelabra Octopus",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -1867,11 +2036,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_EPIC_M1"
 	},
 	{
 		"Id": "F_HOT_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product3.fish.shark.dds",
+		"Icon": "F_HOT_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product3.fish.shark.dds",
 		"Name": "Magma Shark",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -1889,11 +2060,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_EPIC_L1"
 	},
 	{
 		"Id": "F_HOT_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
+		"Icon": "F_HOT_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
 		"Name": "Hellion Bass",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -1911,11 +2084,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_EPIC_XL"
 	},
 	{
 		"Id": "F_HOT_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product3.fish.crab.dds",
+		"Icon": "F_HOT_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product3.fish.crab.dds",
 		"Name": "Starshell Crab",
 		"Group": "Legendary Fish",
 		"Description": "\"Its glittering shell is practically unbreakable, a material of pure perfection.\"",
@@ -1933,11 +2108,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_LEG_S1"
 	},
 	{
 		"Id": "F_HOT_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.small.1.dds",
+		"Icon": "F_HOT_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.small.1.dds",
 		"Name": "Mirrorscale Skipper",
 		"Group": "Legendary Fish",
 		"Description": "\"Impossible to see with mortal eyes as it flashes through the water under boiling, cloudless skies.\"",
@@ -1955,11 +2132,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_LEG_M1"
 	},
 	{
 		"Id": "F_HOT_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
+		"Icon": "F_HOT_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
 		"Name": "Jelly of the Veil",
 		"Group": "Legendary Fish",
 		"Description": "\"A dark cloud follows this creature, and dreams of doom await all those who touch it.\"",
@@ -1977,11 +2156,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_LEG_L1"
 	},
 	{
 		"Id": "F_HOT_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
+		"Icon": "F_HOT_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
 		"Name": "Ancient Irontail",
 		"Group": "Legendary Fish",
 		"Description": "\"Heart of stone and fins of iron, this creature lives on where all else falters.\"",
@@ -1999,11 +2180,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_HOT_LEG_XL"
 	},
 	{
 		"Id": "F_COLD_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.small.3.dds",
+		"Icon": "F_COLD_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.small.3.dds",
 		"Name": "Ice Darter",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2021,11 +2204,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_COM_S1"
 	},
 	{
 		"Id": "F_COLD_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.clam.dds",
+		"Icon": "F_COLD_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.clam.dds",
 		"Name": "Frozen Whelk",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2043,11 +2228,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_COM_S2"
 	},
 	{
 		"Id": "F_COLD_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.medium.2.dds",
+		"Icon": "F_COLD_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.medium.2.dds",
 		"Name": "Frostscale Trout",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2065,11 +2252,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_COM_S3"
 	},
 	{
 		"Id": "F_COLD_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.eel.dds",
+		"Icon": "F_COLD_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.eel.dds",
 		"Name": "Midnight Eel",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2087,11 +2276,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_COM_M1"
 	},
 	{
 		"Id": "F_COLD_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.big.3.dds",
+		"Icon": "F_COLD_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.big.3.dds",
 		"Name": "Thawed Diamondfin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2109,11 +2300,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_COM_M2"
 	},
 	{
 		"Id": "F_COLD_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.medium.1.dds",
+		"Icon": "F_COLD_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.medium.1.dds",
 		"Name": "Glacier Carp",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2131,11 +2324,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_COM_L1"
 	},
 	{
 		"Id": "F_COLD_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.crab.dds",
+		"Icon": "F_COLD_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.crab.dds",
 		"Name": "Giant Hairy Crab",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2153,11 +2348,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_COM_XL"
 	},
 	{
 		"Id": "F_COLD_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.clam.dds",
+		"Icon": "F_COLD_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.clam.dds",
 		"Name": "Frostshell Clam",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2175,11 +2372,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_RARE_S1"
 	},
 	{
 		"Id": "F_COLD_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.prawn.dds",
+		"Icon": "F_COLD_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.prawn.dds",
 		"Name": "Frozen Isopod",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2197,11 +2396,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_RARE_S2"
 	},
 	{
 		"Id": "F_COLD_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.medium.3.dds",
+		"Icon": "F_COLD_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.medium.3.dds",
 		"Name": "Brineskipper",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2219,11 +2420,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_RARE_M1"
 	},
 	{
 		"Id": "F_COLD_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product2.small.2.dds",
+		"Icon": "F_COLD_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.small.2.dds",
 		"Name": "Pale Snowtail",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2241,11 +2444,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_RARE_M2"
 	},
 	{
 		"Id": "F_COLD_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.big.1.dds",
+		"Icon": "F_COLD_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.big.1.dds",
 		"Name": "Frozen Knifejaw",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2263,11 +2468,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_RARE_L1"
 	},
 	{
 		"Id": "F_COLD_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.xl.1.dds",
+		"Icon": "F_COLD_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.xl.1.dds",
 		"Name": "Giant Icefin",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2285,11 +2492,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_RARE_XL"
 	},
 	{
 		"Id": "F_COLD_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.xl.2.dds",
+		"Icon": "F_COLD_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.xl.2.dds",
 		"Name": "Rimescale Snapper",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -2307,11 +2516,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_EPIC_S1"
 	},
 	{
 		"Id": "F_COLD_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.turtle.dds",
+		"Icon": "F_COLD_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.turtle.dds",
 		"Name": "Iceshell Turtle",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -2329,11 +2540,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_EPIC_M1"
 	},
 	{
 		"Id": "F_COLD_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.ray.dds",
+		"Icon": "F_COLD_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.ray.dds",
 		"Name": "Frostbite Ray",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -2351,11 +2564,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_EPIC_L1"
 	},
 	{
 		"Id": "F_COLD_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.shark.dds",
+		"Icon": "F_COLD_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.shark.dds",
 		"Name": "Black-eyed Shark",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -2373,11 +2588,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_EPIC_XL"
 	},
 	{
 		"Id": "F_COLD_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.jelly.dds",
+		"Icon": "F_COLD_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.jelly.dds",
 		"Name": "Crystal Jelly",
 		"Group": "Legendary Fish",
 		"Description": "\"A living snowflake: frozen solid yet still alive, its tentacles a fractal recursion.\"",
@@ -2395,11 +2612,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_LEG_S1"
 	},
 	{
 		"Id": "F_COLD_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.big.2.dds",
+		"Icon": "F_COLD_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.big.2.dds",
 		"Name": "Ghostfin",
 		"Group": "Legendary Fish",
 		"Description": "\"A name only spoken in whispers, its pale body a illusion that flickers beneath the moonlit waves.\"",
@@ -2417,11 +2636,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_LEG_M1"
 	},
 	{
 		"Id": "F_COLD_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.xl.3.dds",
+		"Icon": "F_COLD_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.xl.3.dds",
 		"Name": "Iceblood Gulper",
 		"Group": "Legendary Fish",
 		"Description": "\"A heart that beats but once a hour, a heart that sees faster life spawn and die, spawn and die, spawn and die...\"",
@@ -2439,11 +2660,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_LEG_L1"
 	},
 	{
 		"Id": "F_COLD_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.snail.dds",
+		"Icon": "F_COLD_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.snail.dds",
 		"Name": "Nautilia",
 		"Group": "Legendary Fish",
 		"Description": "\"None would believe the scale of this beast: its colossal shell, its enormous slimy foot. None, except those who have seen it...\"",
@@ -2461,11 +2684,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_COLD_LEG_XL"
 	},
 	{
 		"Id": "F_LUSH_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.2.dds",
+		"Icon": "F_LUSH_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.2.dds",
 		"Name": "Shadowfin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2483,11 +2708,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_COM_S1"
 	},
 	{
 		"Id": "F_LUSH_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.1.dds",
+		"Icon": "F_LUSH_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.1.dds",
 		"Name": "Warty Frogfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2505,11 +2732,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_COM_S2"
 	},
 	{
 		"Id": "F_LUSH_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
+		"Icon": "F_LUSH_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
 		"Name": "Common Shimmertail",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2527,11 +2756,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_COM_S3"
 	},
 	{
 		"Id": "F_LUSH_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.medium.3.dds",
+		"Icon": "F_LUSH_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.medium.3.dds",
 		"Name": "Wandering Kelpfin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2549,11 +2780,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_COM_M1"
 	},
 	{
 		"Id": "F_LUSH_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
+		"Icon": "F_LUSH_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
 		"Name": "Clearwater Skipper",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2571,11 +2804,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_COM_M2"
 	},
 	{
 		"Id": "F_LUSH_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
+		"Icon": "F_LUSH_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
 		"Name": "Flourishing Shalefish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2593,11 +2828,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_COM_L1"
 	},
 	{
 		"Id": "F_LUSH_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
+		"Icon": "F_LUSH_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
 		"Name": "Warden Eel",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2615,11 +2852,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_COM_XL"
 	},
 	{
 		"Id": "F_LUSH_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.3.dds",
+		"Icon": "F_LUSH_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.3.dds",
 		"Name": "Sweetwater Minnow",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2637,11 +2876,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_RARE_S1"
 	},
 	{
 		"Id": "F_LUSH_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.jelly.dds",
+		"Icon": "F_LUSH_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.jelly.dds",
 		"Name": "Mellifluous Jellyfish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2659,11 +2900,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_RARE_S2"
 	},
 	{
 		"Id": "F_LUSH_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
+		"Icon": "F_LUSH_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
 		"Name": "Blue Ribbontail",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2681,11 +2924,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_RARE_M1"
 	},
 	{
 		"Id": "F_LUSH_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.1.dds",
+		"Icon": "F_LUSH_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.1.dds",
 		"Name": "Jungle Redfin",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2703,11 +2948,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_RARE_M2"
 	},
 	{
 		"Id": "F_LUSH_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.shark.dds",
+		"Icon": "F_LUSH_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.shark.dds",
 		"Name": "Marrow Shark",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2725,11 +2972,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_RARE_L1"
 	},
 	{
 		"Id": "F_LUSH_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.ray.dds",
+		"Icon": "F_LUSH_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.ray.dds",
 		"Name": "Giant Sunray",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -2747,11 +2996,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_RARE_XL"
 	},
 	{
 		"Id": "F_LUSH_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.default.dds",
+		"Icon": "F_LUSH_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.default.dds",
 		"Name": "Wispscale Darter",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -2769,11 +3020,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_EPIC_S1"
 	},
 	{
 		"Id": "F_LUSH_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.xl.3.dds",
+		"Icon": "F_LUSH_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.xl.3.dds",
 		"Name": "Deepwater Angler",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -2791,11 +3044,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_EPIC_M1"
 	},
 	{
 		"Id": "F_LUSH_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
+		"Icon": "F_LUSH_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
 		"Name": "Sunspine Basker",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -2813,11 +3068,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_EPIC_L1"
 	},
 	{
 		"Id": "F_LUSH_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.xl.1.dds",
+		"Icon": "F_LUSH_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.xl.1.dds",
 		"Name": "Colossal Mossback",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -2835,11 +3092,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_EPIC_XL"
 	},
 	{
 		"Id": "F_LUSH_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
+		"Icon": "F_LUSH_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
 		"Name": "Glass Angel",
 		"Group": "Legendary Fish",
 		"Description": "\"A creature of dreams, only visible where the light refracts through its soft, perfect jelly.\"",
@@ -2857,11 +3116,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_LEG_S1"
 	},
 	{
 		"Id": "F_LUSH_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.eel.dds",
+		"Icon": "F_LUSH_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.eel.dds",
 		"Name": "Mist Serpent",
 		"Group": "Legendary Fish",
 		"Description": "\"When hunting, can dissolve into a thin dark cloud, impossible to track, impossible to see coming...\"",
@@ -2879,11 +3140,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_LEG_M1"
 	},
 	{
 		"Id": "F_LUSH_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.big.1.dds",
+		"Icon": "F_LUSH_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.big.1.dds",
 		"Name": "Reef Guardian",
 		"Group": "Legendary Fish",
 		"Description": "\"A powerful, muscular body and teeth like razors, these gentle giants protect smaller creatures from predators.\"",
@@ -2901,11 +3164,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_LEG_L1"
 	},
 	{
 		"Id": "F_LUSH_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
+		"Icon": "F_LUSH_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
 		"Name": "Blind Titancore",
 		"Group": "Legendary Fish",
 		"Description": "\"The old man of the sea; scarred, blinded, still swimming on...\"",
@@ -2923,11 +3188,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_LUSH_LEG_XL"
 	},
 	{
 		"Id": "F_DUST_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
+		"Icon": "F_DUST_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
 		"Name": "Fool's Goldfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2945,11 +3212,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_COM_S1"
 	},
 	{
 		"Id": "F_DUST_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.2.dds",
+		"Icon": "F_DUST_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.2.dds",
 		"Name": "Lesser Dustfin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2967,11 +3236,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_COM_S2"
 	},
 	{
 		"Id": "F_DUST_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.worm.dds",
+		"Icon": "F_DUST_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.worm.dds",
 		"Name": "Briny Worm",
 		"Group": "Common Fish",
 		"Description": "",
@@ -2989,11 +3260,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_COM_S3"
 	},
 	{
 		"Id": "F_DUST_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
+		"Icon": "F_DUST_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
 		"Name": "Chalkscale Nibbler",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3011,11 +3284,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_COM_M1"
 	},
 	{
 		"Id": "F_DUST_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.3.dds",
+		"Icon": "F_DUST_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.3.dds",
 		"Name": "Sweeperfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3033,11 +3308,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_COM_M2"
 	},
 	{
 		"Id": "F_DUST_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
+		"Icon": "F_DUST_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
 		"Name": "Twilight Cavefish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3055,11 +3332,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_COM_L1"
 	},
 	{
 		"Id": "F_DUST_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.1.dds",
+		"Icon": "F_DUST_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.1.dds",
 		"Name": "Greater Rocktooth",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3077,11 +3356,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_COM_XL"
 	},
 	{
 		"Id": "F_DUST_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.1.dds",
+		"Icon": "F_DUST_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.1.dds",
 		"Name": "Bladdersac",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3099,11 +3380,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_RARE_S1"
 	},
 	{
 		"Id": "F_DUST_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.starfish.dds",
+		"Icon": "F_DUST_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.starfish.dds",
 		"Name": "Shalebound Starfish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3121,11 +3404,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_RARE_S2"
 	},
 	{
 		"Id": "F_DUST_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
+		"Icon": "F_DUST_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.eel.dds",
 		"Name": "Electric Eel",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3143,11 +3428,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_RARE_M1"
 	},
 	{
 		"Id": "F_DUST_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.crab.dds",
+		"Icon": "F_DUST_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.crab.dds",
 		"Name": "Silicate Crab",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3165,11 +3452,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_RARE_M2"
 	},
 	{
 		"Id": "F_DUST_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.ray.dds",
+		"Icon": "F_DUST_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.ray.dds",
 		"Name": "Mantis Ray",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3187,11 +3476,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_RARE_L1"
 	},
 	{
 		"Id": "F_DUST_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
+		"Icon": "F_DUST_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.2.dds",
 		"Name": "Saltscale Bloater",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3209,11 +3500,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_RARE_XL"
 	},
 	{
 		"Id": "F_DUST_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product3.fish.starfish.dds",
+		"Icon": "F_DUST_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product3.fish.starfish.dds",
 		"Name": "Golden Urchin",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -3231,11 +3524,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_EPIC_S1"
 	},
 	{
 		"Id": "F_DUST_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
+		"Icon": "F_DUST_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.3.dds",
 		"Name": "Bewitching Candlefish",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -3253,11 +3548,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_EPIC_M1"
 	},
 	{
 		"Id": "F_DUST_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
+		"Icon": "F_DUST_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
 		"Name": "Ferrite Bowfin",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -3275,11 +3572,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_EPIC_L1"
 	},
 	{
 		"Id": "F_DUST_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.big.1.dds",
+		"Icon": "F_DUST_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.big.1.dds",
 		"Name": "Cave Prowler",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -3297,11 +3596,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_EPIC_XL"
 	},
 	{
 		"Id": "F_DUST_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.3.dds",
+		"Icon": "F_DUST_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.3.dds",
 		"Name": "Fragile Icthyoscale",
 		"Group": "Legendary Fish",
 		"Description": "\"A delicate creature, a fragment of the past that lives on in the water.\"",
@@ -3319,11 +3620,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_LEG_S1"
 	},
 	{
 		"Id": "F_DUST_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
+		"Icon": "F_DUST_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
 		"Name": "Titanworm Larva",
 		"Group": "Legendary Fish",
 		"Description": "\"The many-mouths arise from the darkness of the ocean; the many-mouths hunger for their home in the sand...\"",
@@ -3341,11 +3644,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_LEG_M1"
 	},
 	{
 		"Id": "F_DUST_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
+		"Icon": "F_DUST_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
 		"Name": "Ossified Deinosuchus",
 		"Group": "Legendary Fish",
 		"Description": "\"A relic of another age, a fusion of life and stone that refuses to die.\"",
@@ -3363,11 +3668,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_LEG_L1"
 	},
 	{
 		"Id": "F_DUST_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.shark.dds",
+		"Icon": "F_DUST_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.shark.dds",
 		"Name": "Megalodon",
 		"Group": "Legendary Fish",
 		"Description": "\"The apex of marine predation, a perfect killing machine. Beware.\"",
@@ -3385,11 +3692,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DUST_LEG_XL"
 	},
 	{
 		"Id": "F_ODD_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.small.1.dds",
+		"Icon": "F_ODD_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.small.1.dds",
 		"Name": "Vectorfin",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3407,11 +3716,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_COM_S1"
 	},
 	{
 		"Id": "F_ODD_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.small.3.dds",
+		"Icon": "F_ODD_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.small.3.dds",
 		"Name": "Hexscale Minnow",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3429,11 +3740,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_COM_S2"
 	},
 	{
 		"Id": "F_ODD_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
+		"Icon": "F_ODD_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
 		"Name": "Aurora Jellyfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3451,11 +3764,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_COM_S3"
 	},
 	{
 		"Id": "F_ODD_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.small.2.dds",
+		"Icon": "F_ODD_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.small.2.dds",
 		"Name": "Murmurfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3473,11 +3788,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_COM_M1"
 	},
 	{
 		"Id": "F_ODD_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.big.2.dds",
+		"Icon": "F_ODD_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.big.2.dds",
 		"Name": "Inverted Brainfish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3495,11 +3812,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_COM_M2"
 	},
 	{
 		"Id": "F_ODD_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.big.1.dds",
+		"Icon": "F_ODD_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.big.1.dds",
 		"Name": "Shimmering Lashtail",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3517,11 +3836,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_COM_L1"
 	},
 	{
 		"Id": "F_ODD_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.snail.dds",
+		"Icon": "F_ODD_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.snail.dds",
 		"Name": "Breach Crawler",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3539,11 +3860,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_COM_XL"
 	},
 	{
 		"Id": "F_ODD_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.starfish.dds",
+		"Icon": "F_ODD_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.starfish.dds",
 		"Name": "Anemone Anomaly",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3561,11 +3884,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_RARE_S1"
 	},
 	{
 		"Id": "F_ODD_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.clam.dds",
+		"Icon": "F_ODD_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.clam.dds",
 		"Name": "Erased Clam",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3583,11 +3908,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_RARE_S2"
 	},
 	{
 		"Id": "F_ODD_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.worm.dds",
+		"Icon": "F_ODD_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.worm.dds",
 		"Name": "Writhing Brainworm",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3605,11 +3932,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_RARE_M1"
 	},
 	{
 		"Id": "F_ODD_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.medium.2.dds",
+		"Icon": "F_ODD_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.medium.2.dds",
 		"Name": "Stargazer",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3627,11 +3956,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_RARE_M2"
 	},
 	{
 		"Id": "F_ODD_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.medium.3.dds",
+		"Icon": "F_ODD_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.medium.3.dds",
 		"Name": "Non-euclidean Flatfish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3649,11 +3980,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_RARE_L1"
 	},
 	{
 		"Id": "F_ODD_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product3.fish.eel.dds",
+		"Icon": "F_ODD_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product3.fish.eel.dds",
 		"Name": "Sunspot Eel",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -3671,11 +4004,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_RARE_XL"
 	},
 	{
 		"Id": "F_ODD_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.worm.dds",
+		"Icon": "F_ODD_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.worm.dds",
 		"Name": "All-seeing Worm",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -3693,11 +4028,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_EPIC_S1"
 	},
 	{
 		"Id": "F_ODD_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.crab.dds",
+		"Icon": "F_ODD_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.crab.dds",
 		"Name": "Screaming Crab",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -3715,11 +4052,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_EPIC_M1"
 	},
 	{
 		"Id": "F_ODD_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.big.3.dds",
+		"Icon": "F_ODD_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.big.3.dds",
 		"Name": "Giant Witchfin",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -3737,11 +4076,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_EPIC_L1"
 	},
 	{
 		"Id": "F_ODD_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.squid.dds",
+		"Icon": "F_ODD_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.squid.dds",
 		"Name": "Void Squid",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -3759,11 +4100,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_EPIC_XL"
 	},
 	{
 		"Id": "F_ODD_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/u4products/product.fishcore.dds",
+		"Icon": "F_ODD_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.fishcore.dds",
 		"Name": "Abyssal Horror Egg",
 		"Group": "Legendary Fish",
 		"Description": "\"Listen to these words: Do not allow this egg to hatch. Cast it back into the sea.\"",
@@ -3781,11 +4124,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_LEG_S1"
 	},
 	{
 		"Id": "F_ODD_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.crab.dds",
+		"Icon": "F_ODD_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.crab.dds",
 		"Name": "Atlantidian Crab",
 		"Group": "Legendary Fish",
 		"Description": "\"Shell and claw of perfect crystal, eyestalks aglow with purple rage; a being displaced from another reality and cast here as crab.\"",
@@ -3803,11 +4148,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_LEG_M1"
 	},
 	{
 		"Id": "F_ODD_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
+		"Icon": "F_ODD_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
 		"Name": "Child of Helios",
 		"Group": "Legendary Fish",
 		"Description": "\"Its song resonates across time and space, calling to its home in the endless black above. One day, it will rise and return to its home among the stars.\"",
@@ -3825,11 +4172,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_LEG_L1"
 	},
 	{
 		"Id": "F_ODD_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.xl.1.dds",
+		"Icon": "F_ODD_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.xl.1.dds",
 		"Name": "Many-mouthed Lunker",
 		"Group": "Legendary Fish",
 		"Description": "\"On the surface or below the waves, the vessel hungers, the vessel feeds...\"",
@@ -3847,11 +4196,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_ODD_LEG_XL"
 	},
 	{
 		"Id": "F_DEEP_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.2.dds",
+		"Icon": "F_DEEP_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.2.dds",
 		"Name": "De-pressurised Blob",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3869,11 +4220,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_COM_S1"
 	},
 	{
 		"Id": "F_DEEP_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.3.dds",
+		"Icon": "F_DEEP_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.3.dds",
 		"Name": "Deepwater Minnow",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3891,11 +4244,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_COM_S2"
 	},
 	{
 		"Id": "F_DEEP_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
+		"Icon": "F_DEEP_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.small.1.dds",
 		"Name": "Sac-fish",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3913,11 +4268,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_COM_S3"
 	},
 	{
 		"Id": "F_DEEP_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.big.1.dds",
+		"Icon": "F_DEEP_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.big.1.dds",
 		"Name": "Silent Angler",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3935,11 +4292,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_COM_M1"
 	},
 	{
 		"Id": "F_DEEP_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.jelly.dds",
+		"Icon": "F_DEEP_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.jelly.dds",
 		"Name": "Whispering Jelly",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3957,11 +4316,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_COM_M2"
 	},
 	{
 		"Id": "F_DEEP_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.turtle.dds",
+		"Icon": "F_DEEP_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.turtle.dds",
 		"Name": "Wandering Shellback",
 		"Group": "Common Fish",
 		"Description": "",
@@ -3979,11 +4340,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_COM_L1"
 	},
 	{
 		"Id": "F_DEEP_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.octopus.dds",
+		"Icon": "F_DEEP_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.octopus.dds",
 		"Name": "Bleached Octopus",
 		"Group": "Common Fish",
 		"Description": "",
@@ -4001,11 +4364,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_COM_XL"
 	},
 	{
 		"Id": "F_DEEP_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.default.dds",
+		"Icon": "F_DEEP_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.default.dds",
 		"Name": "Spratfin",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4023,11 +4388,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_RARE_S1"
 	},
 	{
 		"Id": "F_DEEP_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.worm.dds",
+		"Icon": "F_DEEP_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.worm.dds",
 		"Name": "Marine Glowworm",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4045,11 +4412,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_RARE_S2"
 	},
 	{
 		"Id": "F_DEEP_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
+		"Icon": "F_DEEP_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.medium.2.dds",
 		"Name": "Bloated Eel",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4067,11 +4436,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_RARE_M1"
 	},
 	{
 		"Id": "F_DEEP_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.coral.3.dds",
+		"Icon": "F_DEEP_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.coral.3.dds",
 		"Name": "Luminescent Coral",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4089,11 +4460,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_RARE_M2"
 	},
 	{
 		"Id": "F_DEEP_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.ray.dds",
+		"Icon": "F_DEEP_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.ray.dds",
 		"Name": "Shrieking Flatfish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4111,11 +4484,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_RARE_L1"
 	},
 	{
 		"Id": "F_DEEP_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.squid.dds",
+		"Icon": "F_DEEP_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.squid.dds",
 		"Name": "Colossal Squid",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4133,11 +4508,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_RARE_XL"
 	},
 	{
 		"Id": "F_DEEP_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.small.3.dds",
+		"Icon": "F_DEEP_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.small.3.dds",
 		"Name": "Ghost Skipper",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -4155,11 +4532,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_EPIC_S1"
 	},
 	{
 		"Id": "F_DEEP_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.crab.dds",
+		"Icon": "F_DEEP_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.crab.dds",
 		"Name": "Abyssal Crab",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -4177,11 +4556,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_EPIC_M1"
 	},
 	{
 		"Id": "F_DEEP_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.starfish.dds",
+		"Icon": "F_DEEP_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.starfish.dds",
 		"Name": "Ocean's Star",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -4199,11 +4580,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_EPIC_L1"
 	},
 	{
 		"Id": "F_DEEP_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
+		"Icon": "F_DEEP_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
 		"Name": "Colossal Jawfish",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -4221,11 +4604,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_EPIC_XL"
 	},
 	{
 		"Id": "F_DEEP_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.crab.dds",
+		"Icon": "F_DEEP_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.crab.dds",
 		"Name": "Sentient Crab",
 		"Group": "Legendary Fish",
 		"Description": "\"Deep feeling swims in those watery eyestalks, the thoughtful intelligence of a true ancient.\"",
@@ -4243,11 +4628,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_LEG_S1"
 	},
 	{
 		"Id": "F_DEEP_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.eel.dds",
+		"Icon": "F_DEEP_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.eel.dds",
 		"Name": "Brain Eel",
 		"Group": "Legendary Fish",
 		"Description": "\"It slides beneath the waves; it slides between the ears; it slides within the folds, and swims forever in your dreams.\"",
@@ -4265,11 +4652,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_LEG_M1"
 	},
 	{
 		"Id": "F_DEEP_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.xl.2.dds",
+		"Icon": "F_DEEP_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.xl.2.dds",
 		"Name": "The Hunter Below",
 		"Group": "Legendary Fish",
 		"Description": "\"Streamlined, deadly, perfect: the terror of the deep.\"",
@@ -4287,11 +4676,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_LEG_L1"
 	},
 	{
 		"Id": "F_DEEP_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.leviathanfish.dds",
+		"Icon": "F_DEEP_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.leviathanfish.dds",
 		"Name": "Leviathan Spawn",
 		"Group": "Legendary Fish",
 		"Description": "\"So young and fragile, despite its years beneath the waves. And yet thousands more years must pass before it joins the great herd in the stars...\"",
@@ -4309,11 +4700,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_DEEP_LEG_XL"
 	},
 	{
 		"Id": "F_GAS_COM_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.worm.dds",
+		"Icon": "F_GAS_COM_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.worm.dds",
 		"Name": "Gas-worm",
 		"Group": "Common Fish",
 		"Description": "",
@@ -4331,11 +4724,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_COM_S1"
 	},
 	{
 		"Id": "F_GAS_COM_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.clam.dds",
+		"Icon": "F_GAS_COM_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.clam.dds",
 		"Name": "Pressurised Clam",
 		"Group": "Common Fish",
 		"Description": "",
@@ -4353,11 +4748,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_COM_S2"
 	},
 	{
 		"Id": "F_GAS_COM_S3",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.clam.dds",
+		"Icon": "F_GAS_COM_S3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.clam.dds",
 		"Name": "Inert Whelk",
 		"Group": "Common Fish",
 		"Description": "",
@@ -4375,11 +4772,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_COM_S3"
 	},
 	{
 		"Id": "F_GAS_COM_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.prawn.dds",
+		"Icon": "F_GAS_COM_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.prawn.dds",
 		"Name": "Jelly Prawn",
 		"Group": "Common Fish",
 		"Description": "",
@@ -4397,11 +4796,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_COM_M1"
 	},
 	{
 		"Id": "F_GAS_COM_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.worm.dds",
+		"Icon": "F_GAS_COM_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.worm.dds",
 		"Name": "Encrusted Worm",
 		"Group": "Common Fish",
 		"Description": "",
@@ -4419,11 +4820,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_COM_M2"
 	},
 	{
 		"Id": "F_GAS_COM_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.squid.dds",
+		"Icon": "F_GAS_COM_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.squid.dds",
 		"Name": "Plasmatic Squid",
 		"Group": "Common Fish",
 		"Description": "",
@@ -4441,11 +4844,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_COM_L1"
 	},
 	{
 		"Id": "F_GAS_COM_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.eel.dds",
+		"Icon": "F_GAS_COM_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.eel.dds",
 		"Name": "Cyclonic Eel",
 		"Group": "Common Fish",
 		"Description": "",
@@ -4463,11 +4868,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_COM_XL"
 	},
 	{
 		"Id": "F_GAS_RARE_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.clam.dds",
+		"Icon": "F_GAS_RARE_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.clam.dds",
 		"Name": "Ionised Oyster",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4485,11 +4892,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_RARE_S1"
 	},
 	{
 		"Id": "F_GAS_RARE_S2",
-		"Icon": "textures/ui/frontend/icons/fish/product3.fish.starfish.dds",
+		"Icon": "F_GAS_RARE_S2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product3.fish.starfish.dds",
 		"Name": "Pulp Urchin",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4507,11 +4916,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_RARE_S2"
 	},
 	{
 		"Id": "F_GAS_RARE_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.prawn.dds",
+		"Icon": "F_GAS_RARE_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.prawn.dds",
 		"Name": "Metallic Shrimp",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4529,11 +4940,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_RARE_M1"
 	},
 	{
 		"Id": "F_GAS_RARE_M2",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
+		"Icon": "F_GAS_RARE_M2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.jelly.dds",
 		"Name": "Mineralised Jellyfish",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4551,11 +4964,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_RARE_M2"
 	},
 	{
 		"Id": "F_GAS_RARE_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
+		"Icon": "F_GAS_RARE_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.2.dds",
 		"Name": "Vapourfin",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4573,11 +4988,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_RARE_L1"
 	},
 	{
 		"Id": "F_GAS_RARE_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.xl.1.dds",
+		"Icon": "F_GAS_RARE_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.xl.1.dds",
 		"Name": "Crystalfin Shark",
 		"Group": "Uncommon Fish",
 		"Description": "",
@@ -4595,11 +5012,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_RARE_XL"
 	},
 	{
 		"Id": "F_GAS_EPIC_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.snail.dds",
+		"Icon": "F_GAS_EPIC_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.snail.dds",
 		"Name": "Evaporating Snail",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -4617,11 +5036,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_EPIC_S1"
 	},
 	{
 		"Id": "F_GAS_EPIC_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.crab.dds",
+		"Icon": "F_GAS_EPIC_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.crab.dds",
 		"Name": "Quartzshell Crab",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -4639,11 +5060,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_EPIC_M1"
 	},
 	{
 		"Id": "F_GAS_EPIC_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.octopus.dds",
+		"Icon": "F_GAS_EPIC_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.octopus.dds",
 		"Name": "Tendrilla",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -4661,11 +5084,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_EPIC_L1"
 	},
 	{
 		"Id": "F_GAS_EPIC_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
+		"Icon": "F_GAS_EPIC_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.3.dds",
 		"Name": "Wrackjaw",
 		"Group": "Rare Fish",
 		"Description": "",
@@ -4683,11 +5108,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_EPIC_XL"
 	},
 	{
 		"Id": "F_GAS_LEG_S1",
-		"Icon": "textures/ui/frontend/icons/fish/product5.fish.worm.dds",
+		"Icon": "F_GAS_LEG_S1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product5.fish.worm.dds",
 		"Name": "Mandelbrot Worm",
 		"Group": "Legendary Fish",
 		"Description": "\"The geometry of its impossible body folds within itself, a writhing thread of flesh and spacetime.\"",
@@ -4705,11 +5132,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_LEG_S1"
 	},
 	{
 		"Id": "F_GAS_LEG_M1",
-		"Icon": "textures/ui/frontend/icons/fish/product2.fish.clam.dds",
+		"Icon": "F_GAS_LEG_M1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product2.fish.clam.dds",
 		"Name": "Mother-of-quicksilver",
 		"Group": "Legendary Fish",
 		"Description": "\"Brilliantly ablaze, its surface a perfect liquid sun...\"",
@@ -4727,11 +5156,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_LEG_M1"
 	},
 	{
 		"Id": "F_GAS_LEG_L1",
-		"Icon": "textures/ui/frontend/icons/fish/product4.fish.clam.dds",
+		"Icon": "F_GAS_LEG_L1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product4.fish.clam.dds",
 		"Name": "Hyper-cockle",
 		"Group": "Legendary Fish",
 		"Description": "\"Both alive and not alive; at once a creature, a mineral, and a moment from another time...\"",
@@ -4749,11 +5180,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_LEG_L1"
 	},
 	{
 		"Id": "F_GAS_LEG_XL",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
+		"Icon": "F_GAS_LEG_XL.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.xl.1.dds",
 		"Name": "The Maw of Titan",
 		"Group": "Legendary Fish",
 		"Description": "\"So few things survive in waters such as these... so that which thrives should strike fear into the heart of any thinking being.\"",
@@ -4771,11 +5204,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_GAS_LEG_XL"
 	},
 	{
 		"Id": "F_TRASH_1",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.weed.1.dds",
+		"Icon": "F_TRASH_1.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.weed.1.dds",
 		"Name": "Kelp Strand",
 		"Group": "Collected Flotsam",
 		"Description": "A piece of flotsam, wrenched from its years of drifting in the water when it became entangled in a fishing lure.\n\nOf little use to anyone.",
@@ -4793,11 +5228,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TRASH_1"
 	},
 	{
 		"Id": "F_TRASH_2",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.weed.2.dds",
+		"Icon": "F_TRASH_2.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.weed.2.dds",
 		"Name": "Tangleweed",
 		"Group": "Collected Flotsam",
 		"Description": "A piece of flotsam, wrenched from its years of drifting in the water when it became entangled in a fishing lure.\n\nOf little use to anyone.",
@@ -4815,11 +5252,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TRASH_2"
 	},
 	{
 		"Id": "F_TRASH_3",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.weed.3.dds",
+		"Icon": "F_TRASH_3.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.weed.3.dds",
 		"Name": "Sea Sponge",
 		"Group": "Collected Flotsam",
 		"Description": "A piece of flotsam, wrenched from its years of drifting in the water when it became entangled in a fishing lure.\n\nOf little use to anyone.",
@@ -4837,11 +5276,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TRASH_3"
 	},
 	{
 		"Id": "F_TRASH_4",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.coral.1.dds",
+		"Icon": "F_TRASH_4.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.coral.1.dds",
 		"Name": "Bleached Coral",
 		"Group": "Collected Flotsam",
 		"Description": "A piece of flotsam, wrenched from its years of drifting in the water when it became entangled in a fishing lure.\n\nOf little use to anyone.",
@@ -4859,11 +5300,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TRASH_4"
 	},
 	{
 		"Id": "F_TRASH_5",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.coral.2.dds",
+		"Icon": "F_TRASH_5.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.coral.2.dds",
 		"Name": "Expired Braincoral",
 		"Group": "Collected Flotsam",
 		"Description": "A piece of flotsam, wrenched from its years of drifting in the water when it became entangled in a fishing lure.\n\nOf little use to anyone.",
@@ -4881,11 +5324,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TRASH_5"
 	},
 	{
 		"Id": "F_TRASH_6",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.coral.3.dds",
+		"Icon": "F_TRASH_6.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.coral.3.dds",
 		"Name": "Ossified Coral",
 		"Group": "Collected Flotsam",
 		"Description": "A piece of flotsam, wrenched from its years of drifting in the water when it became entangled in a fishing lure.\n\nOf little use to anyone.",
@@ -4903,11 +5348,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TRASH_6"
 	},
 	{
 		"Id": "F_TRASH_7",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.boot.dds",
+		"Icon": "F_TRASH_7.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.boot.dds",
 		"Name": "Old Boot",
 		"Group": "Collected Flotsam",
 		"Description": "A piece of flotsam, wrenched from its years of drifting in the water when it became entangled in a fishing lure.\n\nOf little use to anyone.",
@@ -4925,11 +5372,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TRASH_7"
 	},
 	{
 		"Id": "F_TRASH_8",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.metaljunk.dds",
+		"Icon": "F_TRASH_8.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.metaljunk.dds",
 		"Name": "Rusted Technology",
 		"Group": "Collected Flotsam",
 		"Description": "A technology upgrade that has been permanently damaged by prolonged exposure to water.\n\nUse FE_ALT1 to begin upgrade installation process.",
@@ -4947,11 +5396,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_TRASH_8"
 	},
 	{
 		"Id": "F_BOTTLE",
-		"Icon": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
+		"Icon": "F_BOTTLE.png",
+		"IconPath": "textures/ui/frontend/icons/fish/product.fish.bottle.dds",
 		"Name": "Message in a Bottle",
 		"Group": "Collected Flotsam",
 		"Description": "A sealed bottle, found floating in the water. There appears to be a message inside.\n\nUse FE_ALT1 to unseal the bottle and read the message within.",
@@ -4969,6 +5420,7 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "fish/F_BOTTLE"
 	}
 ]

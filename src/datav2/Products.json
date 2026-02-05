@@ -1,7 +1,8 @@
 [
 	{
 		"Id": "CASING",
-		"Icon": "textures/ui/frontend/icons/u4products/product.casing.dds",
+		"Icon": "CASING.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.casing.dds",
 		"Name": "Metal Plating",
 		"Group": "Crafted Technology Component",
 		"Description": "A lightweight metal product, heavily used in the manufacture of starship parts and deployable technology. A mainstay of the construction industries of all known primary species.\n\nCrafted from Ferrite Dust.",
@@ -31,11 +32,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/CASING"
 	},
 	{
 		"Id": "NANOTUBES",
-		"Icon": "textures/ui/frontend/icons/u4products/product.nanotubes.dds",
+		"Icon": "NANOTUBES.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.nanotubes.dds",
 		"Name": "Carbon Nanotubes",
 		"Group": "Crafted Technology Component",
 		"Description": "Metres and metres of high capacity carbon nanotubes.\n\nTheir high tensile strength and mild conductivity make these a key component in many advanced technologies.",
@@ -67,11 +70,13 @@
 		"Consumable": false,
 		"CookingIngredient": true,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/NANOTUBES"
 	},
 	{
 		"Id": "CARBON_SEAL",
-		"Icon": "textures/ui/frontend/icons/update3/tradeprod.commodity5.dds",
+		"Icon": "CARBON_SEAL.png",
+		"IconPath": "textures/ui/frontend/icons/update3/tradeprod.commodity5.dds",
 		"Name": "Hermetic Seal",
 		"Group": "Crafted Technology Component",
 		"Description": "A high-performance carbon seal, able to withstand both the harsh interstellar environment and the rigours of intensive, high-energy industrial use.\n\nUser is advised to regularly check seal integrity after installation.",
@@ -101,11 +106,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/CARBON_SEAL"
 	},
 	{
 		"Id": "MICROCHIP",
-		"Icon": "textures/ui/frontend/icons/u4products/product.microchip.dds",
+		"Icon": "MICROCHIP.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.microchip.dds",
 		"Name": "Microprocessor",
 		"Group": "Crafted Technology Component",
 		"Description": "A compact, low-heat microchip. Assembled from processed Chromatic Metal, created from one of several specialised terrain metals.\n\nUsed in the creation of a wide range of advanced technologies.",
@@ -139,11 +146,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/MICROCHIP"
 	},
 	{
 		"Id": "HYDRALIC",
-		"Icon": "textures/ui/frontend/icons/u4products/product.hydralic.dds",
+		"Icon": "HYDRALIC.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.hydralic.dds",
 		"Name": "Hydraulic Wiring",
 		"Group": "Crafted Technology Component",
 		"Description": "Specialist wiring and control threads, this flexible material allows the transmission of power and signals, as well as offering direct manipulation of remote components.\n\nUsed in the creation of a wide range of advanced technologies.",
@@ -181,11 +190,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/HYDRALIC"
 	},
 	{
 		"Id": "COMPUTER",
-		"Icon": "textures/ui/frontend/icons/u4products/product.computer.dds",
+		"Icon": "COMPUTER.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.computer.dds",
 		"Name": "Quantum Computer",
 		"Group": "Crafted Technology Component",
 		"Description": "An extremely fast advanced processing unit. Allows real-time solving of otherwise impossible calculations. However, protection against decoherence is not guaranteed.\n\nUsed in the creation of a wide range of advanced technologies.",
@@ -223,11 +234,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/COMPUTER"
 	},
 	{
 		"Id": "MAGNET",
-		"Icon": "textures/ui/frontend/icons/u4products/product.magnet.dds",
+		"Icon": "MAGNET.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.magnet.dds",
 		"Name": "Magnetic Resonator",
 		"Group": "Crafted Technology Component",
 		"Description": "An electromagnetic frequency oscillator, able to function in a wide-range of conditions thanks to both ferrous and non-ferrous magnetic properties.\n\nUsed in the creation of a wide range of advanced technologies.",
@@ -261,11 +274,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/MAGNET"
 	},
 	{
 		"Id": "MIRROR",
-		"Icon": "textures/ui/frontend/icons/u4products/product.mirror.dds",
+		"Icon": "MIRROR.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.mirror.dds",
 		"Name": "Solar Mirror",
 		"Group": "Crafted Technology Component",
 		"Description": "A specialist optical component. Employing an impossibly polished surface, this mirror is able to selectively filter different wavelengths of light, changing its reflective pattern based on nearby magnetic fields.\n\nUsed in the creation of a wide range of advanced technologies.",
@@ -303,11 +318,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/MIRROR"
 	},
 	{
 		"Id": "BIO",
-		"Icon": "textures/ui/frontend/icons/u4products/product.bio.dds",
+		"Icon": "BIO.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.bio.dds",
 		"Name": "Amino Chamber",
 		"Group": "Crafted Technology Component",
 		"Description": "A specialist biological catalysation device.\n\nThis unit takes advantage of naturally occurring enzymes in order to facilitate increased energy yields and faster processing in a wide range of advanced technologies.",
@@ -345,11 +362,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIO"
 	},
 	{
 		"Id": "TECH_COMP",
-		"Icon": "textures/ui/frontend/icons/u4products/product.techmodule.dds",
+		"Icon": "TECH_COMP.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.techmodule.dds",
 		"Name": "Wiring Loom",
 		"Group": "Universal Technology Platform",
 		"Description": "A prefabricated circuit board, designed for flexible use in a large range of technology components.\n\nThe module features an integrated nanite processor, allowing it to be quickly configured for a wide variety of uses.",
@@ -372,11 +391,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/TECH_COMP"
 	},
 	{
 		"Id": "REPAIRKIT",
-		"Icon": "textures/ui/frontend/icons/products/product.repairkit.dds",
+		"Icon": "REPAIRKIT.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.repairkit.dds",
 		"Name": "Repair Kit",
 		"Group": "Automatic Patching Unit",
 		"Description": "A highly useful piece of survival technology, the Repair Kit allows damaged equipment to be quickly and efficiently restored to working order.\n\nWhile repairing a piece of techology, the Repair Kit can be applied to any damaged subcomponent in place of the usual requirements.",
@@ -401,11 +422,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/REPAIRKIT"
 	},
 	{
 		"Id": "PRODFUEL2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.oxygengel.dds",
+		"Icon": "PRODFUEL2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.oxygengel.dds",
 		"Name": "Life Support Gel",
 		"Group": "Portable Life Support Power",
 		"Description": "Emergency life support fuel.\n\nSynthesised from rocket fuel crystals and carbon, this gel offers a temporary boost to life support systems. Long-term impact on user's lungs is currently unknown.",
@@ -440,11 +463,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/PRODFUEL2"
 	},
 	{
 		"Id": "POWERCELL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.powercell.dds",
+		"Icon": "POWERCELL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.powercell.dds",
 		"Name": "Ion Battery",
 		"Group": "Portable Energy Storage",
 		"Description": "Convenient and optimised power storage unit. Used in a wide variety of defensive and hazard protection systems.\n \nConstructed by fusing Ferrite Dust with underground Cobalt. Frequently found ready-made in cylindrical metal containers.",
@@ -478,11 +503,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/POWERCELL"
 	},
 	{
 		"Id": "SHIPCHARGE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.powercell2.dds",
+		"Icon": "SHIPCHARGE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.powercell2.dds",
 		"Name": "Starshield Battery",
 		"Group": "Portable Energy Storage",
 		"Description": "A power storage unit optimised for use in starship defensive systems.\n \nTritium-fuelled capacitors provide quick-release charge for the Deflector Shield, but would overload smaller-scale equipment.",
@@ -516,11 +543,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/SHIPCHARGE"
 	},
 	{
 		"Id": "JELLY",
-		"Icon": "textures/ui/frontend/icons/u4products/product.jelly.dds",
+		"Icon": "JELLY.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.jelly.dds",
 		"Name": "Di-hydrogen Jelly",
 		"Group": "Portable Life Support Power",
 		"Description": "A faintly-glowing jelly. Its gentle light and soft wobble belie the fact that this sticky gel is both highly toxic and highly flammable. Skin contact is to be avoided at all costs.\n\nSynthesised from Di-hydrogen.",
@@ -551,11 +580,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/JELLY"
 	},
 	{
 		"Id": "LAUNCHFUEL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.launchfuel.dds",
+		"Icon": "LAUNCHFUEL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.launchfuel.dds",
 		"Name": "Starship Launch Fuel",
 		"Group": "Stabilised Di-hydrogen Fuel",
 		"Description": "Highly reactive solid-state fuel, required to fuel Starship Launch Thrusters.\n\nCreated from crystallised Di-hydrogen, found in blue deposits on all worlds.",
@@ -590,11 +621,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/LAUNCHFUEL"
 	},
 	{
 		"Id": "SUBFUEL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.subfuel.dds",
+		"Icon": "SUBFUEL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.subfuel.dds",
 		"Name": "Hydrothermal Fuel Cell",
 		"Group": "Submarine Reactor Fuel",
 		"Description": "A high thermal energy fuel, contained within a standardised fuel cell. Used to fuel the Humboldt Drive that powers the Nautilon submarine.\n\nCreated with a mix of organic compounds (Carbon and cyto-phosphates) and localised mineral salts.",
@@ -633,11 +666,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/SUBFUEL"
 	},
 	{
 		"Id": "GRENFUEL1",
-		"Icon": "textures/ui/frontend/icons/products/product.plasma1.dds",
+		"Icon": "GRENFUEL1.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.plasma1.dds",
 		"Name": "Unstable Plasma",
 		"Group": "Plasma Launcher Recharge",
 		"Description": "Densely-packed fuel capsule for use in the Plasma Launcher.\n \nContained highly-pressurised electro-thermal energy for use in land disruption grenade technology.",
@@ -672,11 +707,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/GRENFUEL1"
 	},
 	{
 		"Id": "AMMO",
-		"Icon": "textures/ui/frontend/icons/u4products/product.ammo.dds",
+		"Icon": "AMMO.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.ammo.dds",
 		"Name": "Projectile Ammunition",
 		"Group": "Universal Ammo Module",
 		"Description": "Advanced munition fragments, constructed to fit Universal Multi-Tool Standard 07/FF1.\n\nEasily inserted into the Boltcaster, Pulse Spitter and Scatter Blaster via the Multi-Tool clip reloading system.",
@@ -706,11 +743,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/AMMO"
 	},
 	{
 		"Id": "AM_HOUSING",
-		"Icon": "textures/ui/frontend/icons/u4products/product.amhousing.dds",
+		"Icon": "AM_HOUSING.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.amhousing.dds",
 		"Name": "Antimatter Housing",
 		"Group": "Crafted Technology Component",
 		"Description": "Secure antimatter containment device, required before Antimatter can be safely secured as Warp Cells.\n\nRebound Oxygen forms a protective gas pocket, preventing the antimatter from reacting with the surrounding casing.",
@@ -744,11 +783,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/AM_HOUSING"
 	},
 	{
 		"Id": "ANTIMATTER",
-		"Icon": "textures/ui/frontend/icons/products/product.antimatter.dds",
+		"Icon": "ANTIMATTER.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.antimatter.dds",
 		"Name": "Antimatter",
 		"Group": "Crafted Technology Component",
 		"Description": "Contained negative matter and baryogenesis antiparticles.\n \nThe vast energy potential of antimatter makes it highly valuable. 95% of existing antimatter consumption is in the powering of starship hyperdrives.\n\nWARNING: uncontained usage is not recommended.",
@@ -783,11 +824,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ANTIMATTER"
 	},
 	{
 		"Id": "HYPERFUEL1",
-		"Icon": "textures/ui/frontend/icons/products/product.warpcell.dds",
+		"Icon": "HYPERFUEL1.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.warpcell.dds",
 		"Name": "Warp Cell",
 		"Group": "Hyperdrive Charging Unit",
 		"Description": "This antimatter-based fuel is one of the few power sources capable of meeting the incredible energy requirements of a starship hyperdrive.\n\nSecured within a robust housing, the cell is guaranteed paradox-free during FTL travel.",
@@ -821,11 +864,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/HYPERFUEL1"
 	},
 	{
 		"Id": "HYPERFUEL2",
-		"Icon": "textures/ui/frontend/icons/products/product.warpcell2.dds",
+		"Icon": "HYPERFUEL2.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.warpcell2.dds",
 		"Name": "Warp Hypercore",
 		"Group": "Hyperdrive Charging Unit",
 		"Description": "A high-capacity antimatter-based fuel, this cell harnesses an internal black hole generator to power starship hyperdrives across multiple warp jumps.\n\nCell walls are specially designed to reflect any reality paradoxes back towards the heart of the unit, where they generate additional power.",
@@ -859,11 +904,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/HYPERFUEL2"
 	},
 	{
 		"Id": "ALLOY1",
-		"Icon": "textures/ui/frontend/icons/products/product.metallic.1.dds",
+		"Icon": "ALLOY1.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.metallic.1.dds",
 		"Name": "Aronium",
 		"Group": "Alloy Metal",
 		"Description": "A lightweight and highly malleable alloy. Crafted from Paraffinium and Ionised Cobalt.\n\nIn high demand on the Galactic Trade Network due to its utility in the construction of planetside outposts and facilities.",
@@ -898,11 +945,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ALLOY1"
 	},
 	{
 		"Id": "ALLOY2",
-		"Icon": "textures/ui/frontend/icons/products/product.metallic.2.dds",
+		"Icon": "ALLOY2.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.metallic.2.dds",
 		"Name": "Dirty Bronze",
 		"Group": "Alloy Metal",
 		"Description": "A popular metal alloy with a wide variety of uses. 'Dirty Bronze' has shed its scientific name in favour of the popular term for its colour.\n\nCrafted from Pure Ferrite and Pyrite.",
@@ -937,11 +986,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ALLOY2"
 	},
 	{
 		"Id": "ALLOY3",
-		"Icon": "textures/ui/frontend/icons/products/product.metallic.3.dds",
+		"Icon": "ALLOY3.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.metallic.3.dds",
 		"Name": "Herox",
 		"Group": "Alloy Metal",
 		"Description": "Combined neutral alloy with uses that range from pharmacology all the way to heavy industry. Crafted from Ionised Cobalt and Ammonia.\n\nForms the backbone of galactic alloy trading.",
@@ -976,11 +1027,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ALLOY3"
 	},
 	{
 		"Id": "ALLOY4",
-		"Icon": "textures/ui/frontend/icons/products/product.metallic.4.dds",
+		"Icon": "ALLOY4.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.metallic.4.dds",
 		"Name": "Lemmium",
 		"Group": "Alloy Metal",
 		"Description": "Pure Ferrite alloy. Crafted from Pure Ferrite and Uranium.\n\nUsed extensively in starship freighter construction due to its sheer strength. A hardcore material popular on the Galactic Trade Network.",
@@ -1015,11 +1068,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ALLOY4"
 	},
 	{
 		"Id": "ALLOY5",
-		"Icon": "textures/ui/frontend/icons/products/product.metallic.5.dds",
+		"Icon": "ALLOY5.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.metallic.5.dds",
 		"Name": "Magno-gold",
 		"Group": "Alloy Metal",
 		"Description": "Highly prized and lustrous alloy. Popular with traders of all known primary galactic races. Crafted from Ionised Cobalt and Phosphorus.\n\nEasily recognisable by its bright red glow and strong magnetic field.",
@@ -1054,11 +1109,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ALLOY5"
 	},
 	{
 		"Id": "ALLOY6",
-		"Icon": "textures/ui/frontend/icons/products/product.metallic.6.dds",
+		"Icon": "ALLOY6.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.metallic.6.dds",
 		"Name": "Grantine",
 		"Group": "Alloy Metal",
 		"Description": "Soft workable alloy favoured by artisans throughout the known galaxy. Crafted from Ionised Cobalt and Dioxite.\n\nA popular trading good, with many galactic shipping paths devoted to its sale and transport.",
@@ -1093,11 +1150,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ALLOY6"
 	},
 	{
 		"Id": "ALLOY7",
-		"Icon": "textures/ui/frontend/icons/products/product.metallic.7.dds",
+		"Icon": "ALLOY7.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.metallic.7.dds",
 		"Name": "Geodesite",
 		"Group": "Enriched Alloy Metal",
 		"Description": "Advanced and durable alloy primarily used in starship hull construction and deep-space exploration drone technology.\n\nCrafted from Herox, Dirty Bronze and Lemmium.",
@@ -1137,11 +1196,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ALLOY7"
 	},
 	{
 		"Id": "ALLOY8",
-		"Icon": "textures/ui/frontend/icons/u4products/product.iridisite.dds",
+		"Icon": "ALLOY8.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.iridisite.dds",
 		"Name": "Iridesite",
 		"Group": "Enriched Alloy Metal",
 		"Description": "Advanced light metal alloy traded throughout the galactic Outer Edge. Often used in the interiors of trading shuttles to reduce weight as they ascend from planets with high gravitational fields.\n\nCrafted from Aronium, Magno-Gold and Grantine.",
@@ -1181,11 +1242,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/ALLOY8"
 	},
 	{
 		"Id": "CHART_HIVE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.hive.dds",
+		"Icon": "CHART_HIVE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.hive.dds",
 		"Name": "Sentinel Boundary Map",
 		"Group": "Anomalous Planetary Location Data",
 		"Description": "A strange, shifting map. Though hard to focus upon, this chart appears to show the location of a nearby Sentinel Pillar. Such Sentinel strongholds house many secrets...\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -1208,11 +1271,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/CHART_HIVE"
 	},
 	{
 		"Id": "FRIGATE_FUEL_1",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigfuel50.dds",
+		"Icon": "FRIGATE_FUEL_1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigfuel50.dds",
 		"Name": "Frigate Fuel (50 Tonnes)",
 		"Group": "Stabilised Di-hydrogen Fuel",
 		"Description": "A small barrel of frigate fuel.\n\nThis viscous gel is highly toxic to the touch. A refined fuel, it powers the interstellar engines of large trading ships.",
@@ -1246,11 +1311,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FRIGATE_FUEL_1"
 	},
 	{
 		"Id": "FRIGATE_FUEL_2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigfuel100.dds",
+		"Icon": "FRIGATE_FUEL_2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigfuel100.dds",
 		"Name": "Frigate Fuel (100 Tonnes)",
 		"Group": "Stabilised Di-hydrogen Fuel",
 		"Description": "A large barrel of frigate fuel.\n\nThis viscous gel is highly toxic to the touch. A refined fuel, it powers the interstellar engines of large trading ships.",
@@ -1284,11 +1351,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FRIGATE_FUEL_2"
 	},
 	{
 		"Id": "FRIGATE_FUEL_3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigfuel200.dds",
+		"Icon": "FRIGATE_FUEL_3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigfuel200.dds",
 		"Name": "Frigate Fuel (200 Tonnes)",
 		"Group": "Stabilised Di-hydrogen Fuel",
 		"Description": "A huge barrel of frigate fuel.\n\nThis viscous gel is highly toxic to the touch. A refined fuel, it powers the interstellar engines of large trading ships.",
@@ -1322,11 +1391,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FRIGATE_FUEL_3"
 	},
 	{
 		"Id": "FRIG_BOOST_TRA",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigboost.trade.dds",
+		"Icon": "FRIG_BOOST_TRA.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.trade.dds",
 		"Name": "Mind Control Device",
 		"Group": "Consumable Frigate Upgrade",
 		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThe mind control device plugs into the ship's trading and communications systems, allowing the Fleet Commander to gain the upper hand in any negotiation.",
@@ -1360,11 +1431,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FRIG_BOOST_TRA"
 	},
 	{
 		"Id": "FRIG_BOOST_EXP",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigboost.explore.dds",
+		"Icon": "FRIG_BOOST_EXP.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.explore.dds",
 		"Name": "Holographic Analyser",
 		"Group": "Consumable Frigate Upgrade",
 		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThis powerful analytic computer overclocks the existing fleet systems, allowing for faster-than-light calculations. Heat is a problem, and the chips do not last long.",
@@ -1398,11 +1471,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FRIG_BOOST_EXP"
 	},
 	{
 		"Id": "FRIG_BOOST_MIN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigboost.mining.dds",
+		"Icon": "FRIG_BOOST_MIN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.mining.dds",
 		"Name": "Mineral Compressor",
 		"Group": "Consumable Frigate Upgrade",
 		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThe mineral compressor allows fleet mining crews to liquidise the substances they extract, for both faster processing and easier transportation.",
@@ -1436,11 +1511,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FRIG_BOOST_MIN"
 	},
 	{
 		"Id": "FRIG_BOOST_COM",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigboost.combat.dds",
+		"Icon": "FRIG_BOOST_COM.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.combat.dds",
 		"Name": "Explosive Drones",
 		"Group": "Consumable Frigate Upgrade",
 		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThis pack of autonomous explosives have been programmed to launch from the fleet and pilot themselves directly towards hostile vessels. Extremely dangerous.",
@@ -1474,11 +1551,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FRIG_BOOST_COM"
 	},
 	{
 		"Id": "FRIG_BOOST_SPD",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigboost.speed.dds",
+		"Icon": "FRIG_BOOST_SPD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.speed.dds",
 		"Name": "Fuel Oxidiser",
 		"Group": "Consumable Frigate Upgrade",
 		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThis powerful fuel upgrade overloads frigate engines, allowing for faster-than-usual travel.",
@@ -1512,11 +1591,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FRIG_BOOST_SPD"
 	},
 	{
 		"Id": "FARMPROD1",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.1.dds",
+		"Icon": "FARMPROD1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.1.dds",
 		"Name": "Acid",
 		"Group": "Advanced Agricultural Product",
 		"Description": "Dilute acid for high current generation in diverse power cells.\n\nCrafted from Mordite and Fungal Mould.",
@@ -1551,11 +1632,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/FARMPROD1"
 	},
 	{
 		"Id": "FARMPROD2",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.2.dds",
+		"Icon": "FARMPROD2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.2.dds",
 		"Name": "Lubricant",
 		"Group": "Advanced Agricultural Product",
 		"Description": "A synthetic lubricant that reduces wear and prolongs the lifespan of technologies with moving parts.\n\nCrafted from Faecium and Gamma Root.",
@@ -1590,11 +1673,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/FARMPROD2"
 	},
 	{
 		"Id": "FARMPROD3",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.3.dds",
+		"Icon": "FARMPROD3.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.3.dds",
 		"Name": "Glass",
 		"Group": "Advanced Agricultural Product",
 		"Description": "Shatter-proof, scratch-resistant glass with a self-cleaning, UV-cured coating, for general construction use.\n\nRefined from Silicate powder. Extract silicate from the earth with a Terrain Manipulator.\n\nCan be crafted from Frost Crystals extracted from plants on frozen worlds.",
@@ -1624,11 +1709,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FARMPROD3"
 	},
 	{
 		"Id": "FARMPROD4",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.4.dds",
+		"Icon": "FARMPROD4.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.4.dds",
 		"Name": "Heat Capacitor",
 		"Group": "Advanced Agricultural Product",
 		"Description": "A thermal regulator produced from refined organic material. It is unique in its ability to produce, dissipate and distribute heat as required.\n\nCrafted from Solanium and Frost Crystals.",
@@ -1662,11 +1749,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FARMPROD4"
 	},
 	{
 		"Id": "FARMPROD5",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.5.dds",
+		"Icon": "FARMPROD5.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.5.dds",
 		"Name": "Poly Fibre",
 		"Group": "Advanced Agricultural Product",
 		"Description": "A connective fibre for electronics, made from an advanced synthetic polymer and capable of serving as a conduit for power and data.\n\nCrafted from Cactus Flesh and Star Bulbs.",
@@ -1700,11 +1789,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FARMPROD5"
 	},
 	{
 		"Id": "FARMPROD6",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.6.dds",
+		"Icon": "FARMPROD6.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.6.dds",
 		"Name": "Unstable Gel",
 		"Group": "Advanced Agricultural Product",
 		"Description": "A highly reactive gel, this substance is both energy-rich and dangerous to touch.\n\nCrafted from Cactus Flesh.",
@@ -1735,11 +1826,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/FARMPROD6"
 	},
 	{
 		"Id": "FARMPROD7",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.7.dds",
+		"Icon": "FARMPROD7.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.7.dds",
 		"Name": "Liquid Explosive",
 		"Group": "Advanced Agricultural Product",
 		"Description": "A general purpose high explosive, offered in liquid form for convenience of transport and deployment. Do not drink.\n\nCrafted from Acid and Unstable Gel.",
@@ -1774,11 +1867,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FARMPROD7"
 	},
 	{
 		"Id": "FARMPROD8",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.8.dds",
+		"Icon": "FARMPROD8.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.8.dds",
 		"Name": "Living Glass",
 		"Group": "Advanced Agricultural Product",
 		"Description": "An advanced building material, this glass has been imbued with organic compounds that allow it to react to the environment. Microbes within the glass filter harmful light of all wavelengths and balance the atmosphere as required.\n\nCrafted from Lubricant and Glass.",
@@ -1813,11 +1908,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FARMPROD8"
 	},
 	{
 		"Id": "FARMPROD9",
-		"Icon": "textures/ui/frontend/icons/update3/farmprod.9.dds",
+		"Icon": "FARMPROD9.png",
+		"IconPath": "textures/ui/frontend/icons/update3/farmprod.9.dds",
 		"Name": "Circuit Board",
 		"Group": "Advanced Agricultural Product",
 		"Description": "Stackable, semi-flexible circuit board made from a highly durable synthetic polymer.\n\nCrafted from Heat Capacitors and Poly Fibre.",
@@ -1852,11 +1949,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FARMPROD9"
 	},
 	{
 		"Id": "REACTION1",
-		"Icon": "textures/ui/frontend/icons/update3/reaction.1.dds",
+		"Icon": "REACTION1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/reaction.1.dds",
 		"Name": "Thermic Condensate",
 		"Group": "Enhanced Gas Product",
 		"Description": "A refined product, holding the energy potential of heated atmospheric gas in a stable state until required.\n\nCrafted from Sulphurine and Condensed Carbon.",
@@ -1892,11 +1991,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/REACTION1"
 	},
 	{
 		"Id": "REACTION2",
-		"Icon": "textures/ui/frontend/icons/update3/reaction.2.dds",
+		"Icon": "REACTION2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/reaction.2.dds",
 		"Name": "Enriched Carbon",
 		"Group": "Enhanced Gas Product",
 		"Description": "A refined product, taking ordinary carbon and boosting it with radioactive energy.\n\nCrafted from Radon and Condensed Carbon.",
@@ -1932,11 +2033,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/REACTION2"
 	},
 	{
 		"Id": "REACTION3",
-		"Icon": "textures/ui/frontend/icons/update3/reaction.3.dds",
+		"Icon": "REACTION3.png",
+		"IconPath": "textures/ui/frontend/icons/update3/reaction.3.dds",
 		"Name": "Nitrogen Salt",
 		"Group": "Enhanced Gas Product",
 		"Description": "A refined product, this is a powerful organic fertiliser in an easily distributed form.\n\nCrafted from Nitrogen and Condensed Carbon.",
@@ -1972,11 +2075,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/REACTION3"
 	},
 	{
 		"Id": "COMPOUND1",
-		"Icon": "textures/ui/frontend/icons/update3/compound.1.dds",
+		"Icon": "COMPOUND1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/compound.1.dds",
 		"Name": "Organic Catalyst",
 		"Group": "Manufactured Gas Product",
 		"Description": "A catalytic material used in the creation of many organic fertilisers.\n\nCrafted from Thermic Condensate and Enriched Carbon.",
@@ -2011,11 +2116,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/COMPOUND1"
 	},
 	{
 		"Id": "COMPOUND2",
-		"Icon": "textures/ui/frontend/icons/update3/compound.2.dds",
+		"Icon": "COMPOUND2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/compound.2.dds",
 		"Name": "Semiconductor",
 		"Group": "Manufactured Gas Product",
 		"Description": "An advanced material useful in many electronic devices, with its own in-built temperature regulator.\n\nCrafted from Thermic Condensate and Nitrogen Salt.",
@@ -2051,11 +2158,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/COMPOUND2"
 	},
 	{
 		"Id": "COMPOUND3",
-		"Icon": "textures/ui/frontend/icons/update3/compound.3.dds",
+		"Icon": "COMPOUND3.png",
+		"IconPath": "textures/ui/frontend/icons/update3/compound.3.dds",
 		"Name": "Hot Ice",
 		"Group": "Manufactured Gas Product",
 		"Description": "A paradoxical material, made less mysterious by its relative ease of manufacture.\n\nCrafted from Enriched Carbon and Nitrogen Salt.",
@@ -2091,11 +2200,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/COMPOUND3"
 	},
 	{
 		"Id": "COMPOUND4",
-		"Icon": "textures/ui/frontend/icons/u4products/product.fusionaccelerant.dds",
+		"Icon": "COMPOUND4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.fusionaccelerant.dds",
 		"Name": "Fusion Accelerant",
 		"Group": "Manufactured Gas Product",
 		"Description": "An advanced fuel source, made from a perfect blend of high potential energy organic materials.\n\nCrafted from Organic Catalyst and Nitrogen Salt.",
@@ -2131,11 +2242,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": true,
-		"EggModifierIngredient": true
+		"EggModifierIngredient": true,
+		"Slug": "products/COMPOUND4"
 	},
 	{
 		"Id": "COMPOUND5",
-		"Icon": "textures/ui/frontend/icons/update3/compound.5.dds",
+		"Icon": "COMPOUND5.png",
+		"IconPath": "textures/ui/frontend/icons/update3/compound.5.dds",
 		"Name": "Superconductor",
 		"Group": "Manufactured Gas Product",
 		"Description": "An advanced conductive material, the superconductor further enriches the field-warping power of the Semiconductor.\n\nCrafted from Enriched Carbon and Semiconductors.",
@@ -2169,11 +2282,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/COMPOUND5"
 	},
 	{
 		"Id": "COMPOUND6",
-		"Icon": "textures/ui/frontend/icons/update3/compound.6.dds",
+		"Icon": "COMPOUND6.png",
+		"IconPath": "textures/ui/frontend/icons/update3/compound.6.dds",
 		"Name": "Cryo-pump",
 		"Group": "Manufactured Gas Product",
 		"Description": "An advanced, self-regulating hybrid material, the Cryo-Pump distributes heat across itself with near perfect efficiency, making it vital in the creation of thermal regulators.\n\nCrafted from Hot Ice and Thermic Condensate",
@@ -2207,11 +2322,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/COMPOUND6"
 	},
 	{
 		"Id": "ULTRAPROD1",
-		"Icon": "textures/ui/frontend/icons/update3/ultraprod.1.dds",
+		"Icon": "ULTRAPROD1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/ultraprod.1.dds",
 		"Name": "Fusion Ignitor",
 		"Group": "Highly Refined Technology",
 		"Description": "A highly advanced piece of technology for use in the next generation of power plants. Producing a fusion core requires both intricate scientific skills and complex industrial processes.\n\nCrafted from Portable Reactor, Quantum Processors and Geodesite.",
@@ -2249,11 +2366,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/ULTRAPROD1"
 	},
 	{
 		"Id": "ULTRAPROD2",
-		"Icon": "textures/ui/frontend/icons/update3/ultraprod.2.dds",
+		"Icon": "ULTRAPROD2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/ultraprod.2.dds",
 		"Name": "Stasis Device",
 		"Group": "Highly Refined Technology",
 		"Description": "A device specifically crafted to keep lifeforms alive for thousands of years longer than their natural lifespan. Such a device requires great skill to manufacture, as not only is it technically complex, but the consequences for a user in the event of malfunction would be disastrous.\n\nCrafted from Quantum Processors, Cryogenic Chambers, and Iridesite.",
@@ -2291,11 +2410,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/ULTRAPROD2"
 	},
 	{
 		"Id": "BIOSHIP_STEM1",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.stem1.dds",
+		"Icon": "BIOSHIP_STEM1.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.stem1.dds",
 		"Name": "Fragile Neural Stem",
 		"Group": "Fragment of Life",
 		"Description": "A delicate web of living tissue, this is the spark that will ignite a new lifeform into existence.\n\nIt requires careful attendance while it matures.",
@@ -2318,11 +2439,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_STEM1"
 	},
 	{
 		"Id": "BIOSHIP_STEM2",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.stem2.dds",
+		"Icon": "BIOSHIP_STEM2.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.stem2.dds",
 		"Name": "Fragile Heart",
 		"Group": "Fragment of Life",
 		"Description": "Though nothing more than a cluster of cells, it is already possible to detect the soft beating of this proto-heart.\n\nIt requires careful attendance while it matures.",
@@ -2345,11 +2468,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_STEM2"
 	},
 	{
 		"Id": "BIOSHIP_STEM3",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.stem3.dds",
+		"Icon": "BIOSHIP_STEM3.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.stem3.dds",
 		"Name": "Fragile Shell",
 		"Group": "Fragment of Life",
 		"Description": "Translucent and impossibly thin, this shell is no more than the merest breath of glass. And yet the potential is clear, a relentless multiplicative hardening adding constantly to its strength.\n\nIt requires careful attendance while it matures.",
@@ -2372,11 +2497,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_STEM3"
 	},
 	{
 		"Id": "BIOSHIP_STEM4",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.stem4.dds",
+		"Icon": "BIOSHIP_STEM4.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.stem4.dds",
 		"Name": "Growing Singularity",
 		"Group": "Fragile Breath",
 		"Description": "A slow knitting together of flesh, neurons and antimatter. The way this mind experiences the universe is beyond any imagining.\n\nIt requires careful attendance while it matures.",
@@ -2399,11 +2526,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_STEM4"
 	},
 	{
 		"Id": "BIOSHIP_GROWTH1",
-		"Icon": "textures/ui/frontend/icons/technology/bio/biotech.brain.mod.dds",
+		"Icon": "BIOSHIP_GROWTH1.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/biotech.brain.mod.dds",
 		"Name": "Mature Neural Stem",
 		"Group": "Living Starship Organ",
 		"Description": "This web of living tissue has grown its own metallic filaments, a mesh of silver and flesh. It crackles with its own electric charge, a network in need of its nodes.\n\nIt awaits its host.",
@@ -2426,11 +2555,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_GROWTH1"
 	},
 	{
 		"Id": "BIOSHIP_GROWTH2",
-		"Icon": "textures/ui/frontend/icons/technology/bio/biotech.heart.mod.dds",
+		"Icon": "BIOSHIP_GROWTH2.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/biotech.heart.mod.dds",
 		"Name": "Mature Heart Node",
 		"Group": "Living Starship Organ",
 		"Description": "Powerful and muscular, this bionic pump sits within a network of synthetic tubes. It twitches when touched, its rhythms sensitive to the presence of other thinking entities.\n\nIt awaits its host.",
@@ -2453,11 +2584,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_GROWTH2"
 	},
 	{
 		"Id": "BIOSHIP_GROWTH3",
-		"Icon": "textures/ui/frontend/icons/technology/bio/biotech.scales.mod.dds",
+		"Icon": "BIOSHIP_GROWTH3.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/biotech.scales.mod.dds",
 		"Name": "Hardened Shell",
 		"Group": "Living Starship Organ",
 		"Description": "Translucent, reflective, iridescent, impossibly strong. This shell swiftly reconfigures itself upon damage, knitting itself back together stronger than ever before. The newly formed bonds create a memory in glass, reflecting back the light absorbed at the moment of damage.\n\nIt awaits its host.",
@@ -2480,11 +2613,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_GROWTH3"
 	},
 	{
 		"Id": "BIOSHIP_GROWTH4",
-		"Icon": "textures/ui/frontend/icons/technology/bio/biotech.eyecluster.mod.dds",
+		"Icon": "BIOSHIP_GROWTH4.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/biotech.eyecluster.mod.dds",
 		"Name": "Singularity Core",
 		"Group": "Living Starship Organ",
 		"Description": "A sensitive arrangement of neurons in a stable orbit around a miniature black hole. The mind at the heart of this bionic miracle is free from the constraints of linear time, its experience an impossible web of myriad collected lifeforms.\n\nIt awaits its host.",
@@ -2507,11 +2642,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_GROWTH4"
 	},
 	{
 		"Id": "BIOSHIP_COMP1",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp1.dds",
+		"Icon": "BIOSHIP_COMP1.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp1.dds",
 		"Name": "Consciousness Bridge",
 		"Group": "Reactivated Neural Ladder",
 		"Description": "A biomechanical construct, created to the design of an anonymous host.\n\nThis device appears to offer an interface between an individual entity and a greater shared consciousness. It appears derived from, but not attuned to, Korvax technology.",
@@ -2549,11 +2686,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_COMP1"
 	},
 	{
 		"Id": "BIOSHIP_COMP2",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
+		"Icon": "BIOSHIP_COMP2.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
 		"Name": "Pulsating Core",
 		"Group": "Superheated Life Fragment",
 		"Description": "A biomechanical construct, created to the design of an anonymous host.\n\nOrganic, but aglow with heat and possessing a highly-pressurised inner vessel. This 'device' is part pump, and part accelerated evolutionary chamber.",
@@ -2591,11 +2730,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_COMP2"
 	},
 	{
 		"Id": "BIOSHIP_COMP3",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp3.dds",
+		"Icon": "BIOSHIP_COMP3.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp3.dds",
 		"Name": "Impossible Membrane",
 		"Group": "Auto-Regenerating Lifeform",
 		"Description": "A biomechanical construct, created to the design of an anonymous host.\n\nA fine mesh of tightly woven fibre. Micro-organisms embedded within the weave allow it to regenerate endlessly, a perfect and infinite bionic skin.",
@@ -2633,11 +2774,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_COMP3"
 	},
 	{
 		"Id": "BIOSHIP_COMP4",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
+		"Icon": "BIOSHIP_COMP4.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
 		"Name": "Seeds of Glass",
 		"Group": "Frozen Archive",
 		"Description": "A biomechanical construct, created to the design of an anonymous host.\n\nCapsules of genetic material, encased in a film of living glass. Shared memories swim in the their reflective surfaces, waiting for their chance to shape the life within.",
@@ -2671,11 +2814,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_COMP4"
 	},
 	{
 		"Id": "BIOSHIP_COMP5",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp5.dds",
+		"Icon": "BIOSHIP_COMP5.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp5.dds",
 		"Name": "Archived Soul",
 		"Group": "Bionic Ark",
 		"Description": "A biomechanical construct, created to the design of an anonymous host.\n\nA fusion of complex circuitry and the ineffable glitch of the Traveller. Such a calculus might bind realities together, or tear them into mere simulated fragments.",
@@ -2700,11 +2845,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_COMP5"
 	},
 	{
 		"Id": "BIOSHIP_COMP5_0",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp5.dds",
+		"Icon": "BIOSHIP_COMP5_0.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp5.dds",
 		"Name": "SOUL CHAMBER (0%)",
 		"Group": "Bionic Ark",
 		"Description": "A biomechanical construct, created to the design of an anonymous host.\n\nA fusion of complex circuitry and the ineffable glitch of the Traveller. Such a calculus might bind realities together, or tear them into mere simulated fragments.",
@@ -2729,11 +2876,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_COMP5_0"
 	},
 	{
 		"Id": "BIOSHIP_COMP5_1",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp5.dds",
+		"Icon": "BIOSHIP_COMP5_1.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp5.dds",
 		"Name": "SOUL CHAMBER (33%)",
 		"Group": "Bionic Ark",
 		"Description": "A biomechanical construct, created to the design of an anonymous host.\n\nA fusion of complex circuitry and the ineffable glitch of the Traveller. Such a calculus might bind realities together, or tear them into mere simulated fragments.",
@@ -2758,11 +2907,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_COMP5_1"
 	},
 	{
 		"Id": "BIOSHIP_COMP5_2",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp5.dds",
+		"Icon": "BIOSHIP_COMP5_2.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp5.dds",
 		"Name": "SOUL CHAMBER (66%)",
 		"Group": "Bionic Ark",
 		"Description": "A biomechanical construct, created to the design of an anonymous host.\n\nA fusion of complex circuitry and the ineffable glitch of the Traveller. Such a calculus might bind realities together, or tear them into mere simulated fragments.",
@@ -2787,11 +2938,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BIOSHIP_COMP5_2"
 	},
 	{
 		"Id": "EXOTIC_BIOPROD",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.bioexotic.dds",
+		"Icon": "EXOTIC_BIOPROD.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.bioexotic.dds",
 		"Name": "Living Water",
 		"Group": "Glassy Indeterminance",
 		"Description": "Unusual surface interactions cause this liquid to quickly split into small, perfect, spheres. Light refracted through one such sphere splits into colours beyond description.\n\nOf unknown origin.",
@@ -2814,11 +2967,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/EXOTIC_BIOPROD"
 	},
 	{
 		"Id": "DRONE_BROKEN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.dronebroken.dds",
+		"Icon": "DRONE_BROKEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.dronebroken.dds",
 		"Name": "Undamaged Drone Shell",
 		"Group": "Sentinel Debris",
 		"Description": "The shell of a Sentinel drone, all that remains after its destruction in combat. While the exterior is physically intact, its internals have been severely burned.\n\nGiven the right tools and several exotic components, it may be possible to repair it.",
@@ -2841,11 +2996,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/DRONE_BROKEN"
 	},
 	{
 		"Id": "DRONE_PART_E2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.droneparte2.dds",
+		"Icon": "DRONE_PART_E2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.droneparte2.dds",
 		"Name": "Nanite Filament",
 		"Group": "Drone Component",
 		"Description": "A thin, shimmering thread, once owned by Iteration: Gemini. This impossible fibre, once a treasured keepsake, sings on the wavelength of the Space Anomaly.\n\nA valuable and exotic component, this would be of great use to Iteration: Tethys in repairing the shattered Drone.",
@@ -2868,11 +3025,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/DRONE_PART_E2"
 	},
 	{
 		"Id": "DRONE_PART_E3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.droneparte3.dds",
+		"Icon": "DRONE_PART_E3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.droneparte3.dds",
 		"Name": "Portal Phylactery",
 		"Group": "Drone Component",
 		"Description": "A vial of the portal's blue amber, given to you by Iteration: Mercury. The ether of the Atlas itself, this is primeval liquid from which it weaves the multiverse.\n\nA valuable and exotic component, this would be of great use to Iteration: Tethys in repairing the shattered Drone.",
@@ -2895,11 +3054,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/DRONE_PART_E3"
 	},
 	{
 		"Id": "DRONE_PART_P",
-		"Icon": "textures/ui/frontend/icons/u4products/product.dronepartpolo.dds",
+		"Icon": "DRONE_PART_P.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.dronepartpolo.dds",
 		"Name": "Beads of Glass",
 		"Group": "Drone Component",
 		"Description": "A handful of glassy orbs, once owned by Specialist Polo. Their pearlescent surface does not reflect the world around them, offering instead a mirror to different reality.\n\nA valuable and exotic component, this would be of great use to Iteration: Tethys in repairing the shattered Drone.",
@@ -2922,11 +3083,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/DRONE_PART_P"
 	},
 	{
 		"Id": "GAS_BRAIN_LOC",
-		"Icon": "textures/ui/frontend/icons/u4products/product.locator.gaspoi.dds",
+		"Icon": "GAS_BRAIN_LOC.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.gaspoi.dds",
 		"Name": "Deep-space Lure",
 		"Group": "Anomaly Attraction Device",
 		"Description": "A single-use device for locating a deep-space Gaseous Sentience. The lure generates an electromagnetic field of an intriguing nature to these highly advanced lifeforms.\n\nSelect the Lure and use Generate Field (FE_ALT1) to begin the location process.",
@@ -2964,11 +3127,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/GAS_BRAIN_LOC"
 	},
 	{
 		"Id": "U_CANNON2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.cannon.dds",
+		"Icon": "U_CANNON2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.cannon.dds",
 		"Name": "Neutron Cannon Module",
 		"Group": "Significant Neutron Cannon Upgrade",
 		"Description": "A significant upgrade for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
@@ -2991,11 +3156,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_CANNON2"
 	},
 	{
 		"Id": "U_CANNON3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.cannon.dds",
+		"Icon": "U_CANNON3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.cannon.dds",
 		"Name": "Neutron Cannon Module",
 		"Group": "Powerful Neutron Cannon Upgrade",
 		"Description": "An extremely powerful upgrade for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
@@ -3018,11 +3185,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_CANNON3"
 	},
 	{
 		"Id": "U_CANNON4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.cannon.dds",
+		"Icon": "U_CANNON4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.cannon.dds",
 		"Name": "Neutron Cannon Module",
 		"Group": "Supreme Neutron Cannon Upgrade",
 		"Description": "A supremely powerful upgrade for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
@@ -3045,11 +3214,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_CANNON4"
 	},
 	{
 		"Id": "U_CANNONX",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.x.cannon.dds",
+		"Icon": "U_CANNONX.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.x.cannon.dds",
 		"Name": "Suspicious Neutron Cannon Module",
 		"Group": "Banned Neutron Cannon Upgrade",
 		"Description": "A black-market modification for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
@@ -3072,11 +3243,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_CANNONX"
 	},
 	{
 		"Id": "U_FR_HYP1",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.c.hyperdrive.dds",
+		"Icon": "U_FR_HYP1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.hyperdrive.dds",
 		"Name": "Salvaged Hyperdrive Upgrade",
 		"Group": "C-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve its Hyperdrive.",
@@ -3099,11 +3272,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_HYP1"
 	},
 	{
 		"Id": "U_FR_HYP2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.hyperdrive.dds",
+		"Icon": "U_FR_HYP2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.hyperdrive.dds",
 		"Name": "Salvaged Hyperdrive Upgrade",
 		"Group": "B-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve its Hyperdrive.",
@@ -3126,11 +3301,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_HYP2"
 	},
 	{
 		"Id": "U_FR_HYP3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.hyperdrive.dds",
+		"Icon": "U_FR_HYP3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.hyperdrive.dds",
 		"Name": "Salvaged Hyperdrive Upgrade",
 		"Group": "A-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve its Hyperdrive.",
@@ -3153,11 +3330,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_HYP3"
 	},
 	{
 		"Id": "U_FR_HYP4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.hyperdrive.dds",
+		"Icon": "U_FR_HYP4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.hyperdrive.dds",
 		"Name": "Salvaged Hyperdrive Upgrade",
 		"Group": "S-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve its Hyperdrive.",
@@ -3180,11 +3359,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_HYP4"
 	},
 	{
 		"Id": "U_FR_SPE1",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.c.vehicleboost.dds",
+		"Icon": "U_FR_SPE1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.vehicleboost.dds",
 		"Name": "Salvaged Fleet Beacon",
 		"Group": "C-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the speed of your fleet.",
@@ -3207,11 +3388,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_SPE1"
 	},
 	{
 		"Id": "U_FR_SPE2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.vehicleboost.dds",
+		"Icon": "U_FR_SPE2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.vehicleboost.dds",
 		"Name": "Salvaged Fleet Beacon",
 		"Group": "B-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the speed of your fleet.",
@@ -3234,11 +3417,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_SPE2"
 	},
 	{
 		"Id": "U_FR_SPE3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.vehicleboost.dds",
+		"Icon": "U_FR_SPE3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.vehicleboost.dds",
 		"Name": "Salvaged Fleet Beacon",
 		"Group": "A-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the speed of your fleet.",
@@ -3261,11 +3446,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_SPE3"
 	},
 	{
 		"Id": "U_FR_SPE4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.vehicleboost.dds",
+		"Icon": "U_FR_SPE4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.vehicleboost.dds",
 		"Name": "Salvaged Fleet Beacon",
 		"Group": "S-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the speed of your fleet.",
@@ -3288,11 +3475,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_SPE4"
 	},
 	{
 		"Id": "U_FR_FUEL1",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.c.jetpack.dds",
+		"Icon": "U_FR_FUEL1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.jetpack.dds",
 		"Name": "Salvaged Fleet Fuel Unit",
 		"Group": "C-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the fuel efficiency of your fleet.",
@@ -3315,11 +3504,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_FUEL1"
 	},
 	{
 		"Id": "U_FR_FUEL2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.jetpack.dds",
+		"Icon": "U_FR_FUEL2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.jetpack.dds",
 		"Name": "Salvaged Fleet Fuel Unit",
 		"Group": "B-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the fuel efficiency of your fleet.",
@@ -3342,11 +3533,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_FUEL2"
 	},
 	{
 		"Id": "U_FR_FUEL3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.jetpack.dds",
+		"Icon": "U_FR_FUEL3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.jetpack.dds",
 		"Name": "Salvaged Fleet Fuel Unit",
 		"Group": "A-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the fuel efficiency of your fleet.",
@@ -3369,11 +3562,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_FUEL3"
 	},
 	{
 		"Id": "U_FR_FUEL4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.jetpack.dds",
+		"Icon": "U_FR_FUEL4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.jetpack.dds",
 		"Name": "Salvaged Fleet Fuel Unit",
 		"Group": "S-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the fuel efficiency of your fleet.",
@@ -3396,11 +3591,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_FUEL4"
 	},
 	{
 		"Id": "U_FR_COM1",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.c.shipgun.dds",
+		"Icon": "U_FR_COM1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.shipgun.dds",
 		"Name": "Salvaged Fleet Combat Unit",
 		"Group": "C-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the combat performance of your fleet.",
@@ -3423,11 +3620,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_COM1"
 	},
 	{
 		"Id": "U_FR_COM2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shipgun.dds",
+		"Icon": "U_FR_COM2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shipgun.dds",
 		"Name": "Salvaged Fleet Combat Unit",
 		"Group": "B-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the combat performance of your fleet.",
@@ -3450,11 +3649,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_COM2"
 	},
 	{
 		"Id": "U_FR_COM3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shipgun.dds",
+		"Icon": "U_FR_COM3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shipgun.dds",
 		"Name": "Salvaged Fleet Combat Unit",
 		"Group": "A-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the combat performance of your fleet.",
@@ -3477,11 +3678,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_COM3"
 	},
 	{
 		"Id": "U_FR_COM4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shipgun.dds",
+		"Icon": "U_FR_COM4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shipgun.dds",
 		"Name": "Salvaged Fleet Combat Unit",
 		"Group": "S-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the combat performance of your fleet.",
@@ -3504,11 +3707,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_COM4"
 	},
 	{
 		"Id": "U_FR_TRA1",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.c.railgun.dds",
+		"Icon": "U_FR_TRA1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.railgun.dds",
 		"Name": "Salvaged Fleet Trade Unit",
 		"Group": "C-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the trading abilities of your fleet.",
@@ -3531,11 +3736,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_TRA1"
 	},
 	{
 		"Id": "U_FR_TRA2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.railgun.dds",
+		"Icon": "U_FR_TRA2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.railgun.dds",
 		"Name": "Salvaged Fleet Trade Unit",
 		"Group": "B-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the trading abilities of your fleet.",
@@ -3558,11 +3765,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_TRA2"
 	},
 	{
 		"Id": "U_FR_TRA3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.railgun.dds",
+		"Icon": "U_FR_TRA3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.railgun.dds",
 		"Name": "Salvaged Fleet Trade Unit",
 		"Group": "A-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the trading abilities of your fleet.",
@@ -3585,11 +3794,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_TRA3"
 	},
 	{
 		"Id": "U_FR_TRA4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.railgun.dds",
+		"Icon": "U_FR_TRA4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.railgun.dds",
 		"Name": "Salvaged Fleet Trade Unit",
 		"Group": "S-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the trading abilities of your fleet.",
@@ -3612,11 +3823,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_TRA4"
 	},
 	{
 		"Id": "U_FR_EXP1",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.c.binocs.dds",
+		"Icon": "U_FR_EXP1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.binocs.dds",
 		"Name": "Salvaged Fleet Exploration Unit",
 		"Group": "C-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the exploration abilities of your fleet.",
@@ -3639,11 +3852,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_EXP1"
 	},
 	{
 		"Id": "U_FR_EXP2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.binocs.dds",
+		"Icon": "U_FR_EXP2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.binocs.dds",
 		"Name": "Salvaged Fleet Exploration Unit",
 		"Group": "B-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the exploration abilities of your fleet.",
@@ -3666,11 +3881,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_EXP2"
 	},
 	{
 		"Id": "U_FR_EXP3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.binocs.dds",
+		"Icon": "U_FR_EXP3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.binocs.dds",
 		"Name": "Salvaged Fleet Exploration Unit",
 		"Group": "A-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the exploration abilities of your fleet.",
@@ -3693,11 +3910,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_EXP3"
 	},
 	{
 		"Id": "U_FR_EXP4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.binocs.dds",
+		"Icon": "U_FR_EXP4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.binocs.dds",
 		"Name": "Salvaged Fleet Exploration Unit",
 		"Group": "S-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the exploration abilities of your fleet.",
@@ -3720,11 +3939,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_EXP4"
 	},
 	{
 		"Id": "U_FR_MINE1",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.c.laser.dds",
+		"Icon": "U_FR_MINE1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.laser.dds",
 		"Name": "Salvaged Fleet Mining Unit",
 		"Group": "C-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the mining capabilities of your fleet.",
@@ -3747,11 +3968,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_MINE1"
 	},
 	{
 		"Id": "U_FR_MINE2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.laser.dds",
+		"Icon": "U_FR_MINE2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.laser.dds",
 		"Name": "Salvaged Fleet Mining Unit",
 		"Group": "B-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the mining capabilities of your fleet.",
@@ -3774,11 +3997,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_MINE2"
 	},
 	{
 		"Id": "U_FR_MINE3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.laser.dds",
+		"Icon": "U_FR_MINE3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.laser.dds",
 		"Name": "Salvaged Fleet Mining Unit",
 		"Group": "A-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the mining capabilities of your fleet.",
@@ -3801,11 +4026,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_MINE3"
 	},
 	{
 		"Id": "U_FR_MINE4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.laser.dds",
+		"Icon": "U_FR_MINE4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.laser.dds",
 		"Name": "Salvaged Fleet Mining Unit",
 		"Group": "S-Class Deployable Salvage",
 		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve the mining capabilities of your fleet.",
@@ -3828,11 +4055,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_FR_MINE4"
 	},
 	{
 		"Id": "U_TECHBOX_CORE",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/techbox.laser.dds",
+		"Icon": "U_TECHBOX_CORE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/techbox.laser.dds",
 		"Name": "Pre-packaged %name% Unit",
 		"Group": "Installable Technology Package",
 		"Description": "A pre-built wiring package, designed to allow easy installation of core technology. Use FE_ALT1 to begin the installation process.\n\n%TECH_DESC%",
@@ -3855,11 +4084,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/U_TECHBOX_CORE"
 	},
 	{
 		"Id": "FUELPROD3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.fuelprod.dds",
+		"Icon": "FUELPROD3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.fuelprod.dds",
 		"Name": "Carbon Crystal",
 		"Group": "Concentrated Carbon Deposit",
 		"Description": "Hyper-compressed carbon, this substance's dense nanostructure makes it highly valuable as both an energy source and a technology component.\n\nSynthesised from Condensed Carbon.",
@@ -3882,11 +4113,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/FUELPROD3"
 	},
 	{
 		"Id": "LANDPROD3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.raremetalelement.dds",
+		"Icon": "LANDPROD3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.raremetalelement.dds",
 		"Name": "Rare Metal Element",
 		"Group": "Concentrated Metal Deposit",
 		"Description": "A highly-prized metal product, this rare element is used in the manufacture of several advanced technologies.\n\nMetal is highly reactive and quickly bonds to exposed skin. User is advised to handle with extreme caution.\n\nSynthesised from Magnetised Ferrite.",
@@ -3909,11 +4142,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/LANDPROD3"
 	},
 	{
 		"Id": "CAVEPROD3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.caveprod.dds",
+		"Icon": "CAVEPROD3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.caveprod.dds",
 		"Name": "Tetracobalt",
 		"Group": "Concentrated Cobalt Deposit",
 		"Description": "A novel molecular form of Cobalt, requiring very high energy levels to create. Natural occurrence is extremely rare.\n\nSynthesised from Ionised Cobalt.",
@@ -3936,11 +4171,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/CAVEPROD3"
 	},
 	{
 		"Id": "WATERPROD3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.waterprod.dds",
+		"Icon": "WATERPROD3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.waterprod.dds",
 		"Name": "Chloride Lattice",
 		"Group": "Concentrated Chlorine Deposit",
 		"Description": "A tightly-bonded form of Chlorine. Rigidly-packed molecules offer unrivalled conductivity. Not known to form spontaneously: creation requires highly-focused energy inputs.\n\nSynthesised from Chlorine.",
@@ -3963,11 +4200,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/WATERPROD3"
 	},
 	{
 		"Id": "CATAPROD3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.destabilisedsodium.dds",
+		"Icon": "CATAPROD3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.destabilisedsodium.dds",
 		"Name": "Destablised Sodium",
 		"Group": "Concentrated Sodium Deposit",
 		"Description": "Sodium is typically highly stable, but certain configurations retain the reactivity of its component ions. User is advised to wear Hazardous Material Gauntlets before handling.\n\nSynthesised from Sodium.",
@@ -3990,11 +4229,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/CATAPROD3"
 	},
 	{
 		"Id": "OXYPROD3",
-		"Icon": "textures/ui/frontend/icons/u4products/product.superoxide.dds",
+		"Icon": "OXYPROD3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.superoxide.dds",
 		"Name": "Superoxide Crystal",
 		"Group": "Concentrated Oxygen Deposit",
 		"Description": "A para-magnetic form of Oxygen, this rare substance has much to offer in the production of advanced technologies. Requires conversion prior to input into Life Support systems. Direct inhalation is NOT recommended.\n\nSynthesised from Oxygen.",
@@ -4017,11 +4258,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/OXYPROD3"
 	},
 	{
 		"Id": "OXY_CRAFT",
-		"Icon": "textures/ui/frontend/icons/u4products/product.oxycraft.dds",
+		"Icon": "OXY_CRAFT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.oxycraft.dds",
 		"Name": "Oxygen Filter",
 		"Group": "Crafted Technology Component",
 		"Description": "A specialist technology component.\n\nThis small device can rapidly change the gaseous environment within a device, handling conditions from total vacuum to pure oxygen atmospheres.",
@@ -4044,11 +4287,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/OXY_CRAFT"
 	},
 	{
 		"Id": "WATER_CRAFT",
-		"Icon": "textures/ui/frontend/icons/u4products/product.saltrefractor.dds",
+		"Icon": "WATER_CRAFT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.saltrefractor.dds",
 		"Name": "Salt Refractor",
 		"Group": "Crafted Technology Component",
 		"Description": "A specialist technology component, vital to the complex internals of modern laser systems. \n\nThis light-scattering device takes advantage of the unique optical properties of stabilised and polished salt, to both slow and refract passing photons.",
@@ -4071,11 +4316,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/WATER_CRAFT"
 	},
 	{
 		"Id": "CAVE_CRAFT",
-		"Icon": "textures/ui/frontend/icons/u4products/product.cobaltmirror.dds",
+		"Icon": "CAVE_CRAFT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.cobaltmirror.dds",
 		"Name": "Cobalt Mirror",
 		"Group": "Crafted Technology Component",
 		"Description": "A specialist optical component.\n\nEmploying a polished cobalt surface, this mirror is able to selectively filter different wavelengths of light, changing its reflective pattern based on nearby magnetic fields.",
@@ -4098,11 +4345,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/CAVE_CRAFT"
 	},
 	{
 		"Id": "CATA_CRAFT",
-		"Icon": "textures/ui/frontend/icons/u4products/product.catacraft.dds",
+		"Icon": "CATA_CRAFT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.catacraft.dds",
 		"Name": "Sodium Diode",
 		"Group": "Crafted Technology Component",
 		"Description": "An advanced circuit component.\n\nThe refined sodium electrode within its vacuum tube gives this diode specialist surge-protection capabilities.",
@@ -4125,11 +4374,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/CATA_CRAFT"
 	},
 	{
 		"Id": "PRODFUEL1",
-		"Icon": "textures/ui/frontend/icons/u4products/product.oxygengel.dds",
+		"Icon": "PRODFUEL1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.oxygengel.dds",
 		"Name": "Oxygen Capsule",
 		"Group": "Portable Life Support Power",
 		"Description": "Stablised and secure life support filtration gas.\n\nEasily assembled from Oxygen and Ferrite Dust. Offers an efficient method for long-term life support power.",
@@ -4152,11 +4403,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/PRODFUEL1"
 	},
 	{
 		"Id": "POWERCELL2",
-		"Icon": "textures/ui/frontend/icons/u4products/product.powercell2.dds",
+		"Icon": "POWERCELL2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.powercell2.dds",
 		"Name": "Advanced Ion Battery",
 		"Group": "Portable Energy Storage",
 		"Description": "Powerful energy storage unit. Used in a wide variety of defensive and hazard protection systems.\n\nConstructed from Ionised Cobalt and Pure Ferrite, and occasionally found in cylindrical metal containers.",
@@ -4179,11 +4432,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/POWERCELL2"
 	},
 	{
 		"Id": "GAS_BRAIN_LOC",
-		"Icon": "textures/ui/frontend/icons/u4products/product.locator.gaspoi.dds",
+		"Icon": "GAS_BRAIN_LOC.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.gaspoi.dds",
 		"Name": "Deep-space Lure",
 		"Group": "Anomaly Attraction Device",
 		"Description": "A single-use device for locating a deep-space Gaseous Sentience. The lure generates an electromagnetic field of an intriguing nature to these highly advanced lifeforms.\n\nSelect the Lure and use Generate Field (FE_ALT1) to begin the location process.",
@@ -4199,11 +4454,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "products/GAS_BRAIN_LOC"
 	},
 	{
 		"Id": "CHART_HIVE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.hive.dds",
+		"Icon": "CHART_HIVE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.hive.dds",
 		"Name": "Sentinel Boundary Map",
 		"Group": "Anomalous Planetary Location Data",
 		"Description": "A strange, shifting map. Though hard to focus upon, this chart appears to show the location of a nearby Sentinel Pillar. Such Sentinel strongholds house many secrets...\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -4219,11 +4476,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "products/CHART_HIVE"
 	},
 	{
 		"Id": "TOXICPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.toxicplant.dds",
+		"Icon": "TOXICPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.toxicplant.dds",
 		"Name": "Fungal Cluster",
 		"Group": "Plantable Seed",
 		"Description": "A spherical fungus with internal gills, found only in toxic biomes. Fungal Clusters can be transplanted for cultivation, yielding a bountiful harvest.\n\nSuitable for hydroponic indoor planting. Ensure Toxic climate before planting outdoors.\n\nApproximate growing time: 4 hours",
@@ -4257,11 +4516,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/TOXICPLANT"
 	},
 	{
 		"Id": "SNOWPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.snowplant.dds",
+		"Icon": "SNOWPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.snowplant.dds",
 		"Name": "Frostwort",
 		"Group": "Plantable Seed",
 		"Description": "A large crystal flower with radiant blue blooms, found only in snowy biomes. Frostwort can be farmed and makes a reliable crop, and its adaptation to harsh conditions results in highly frequent harvests.\n\nSuitable for hydroponic indoor planting. Ensure Frozen climate before planting outdoors.\n\nApproximate growing time: 1 hour",
@@ -4295,11 +4556,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/SNOWPLANT"
 	},
 	{
 		"Id": "RADIOPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.radioplant.dds",
+		"Icon": "RADIOPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.radioplant.dds",
 		"Name": "Gamma Weed",
 		"Group": "Plantable Seed",
 		"Description": "A luminous, leafy flowering plant that thrives in radioactive biomes and can be cultivated to yield a bountiful harvest.\n\nSuitable for hydroponic indoor planting. Ensure Radioactive climate before planting outdoors.\n\nApproximate growing time: 4 hours",
@@ -4333,11 +4596,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/RADIOPLANT"
 	},
 	{
 		"Id": "BARRENPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.barrenplant.dds",
+		"Icon": "BARRENPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.barrenplant.dds",
 		"Name": "Echinocactus",
 		"Group": "Plantable Seed",
 		"Description": "Native to barren biomes and capable of withstanding long periods of drought, Echinocactus is an edible succulent that responds well to cultivation, yielding a large but occasional harvest.\n\nSuitable for hydroponic indoor planting. Ensure Barren climate before planting outdoors.\n\nApproximate growing time: 16 hours",
@@ -4371,11 +4636,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/BARRENPLANT"
 	},
 	{
 		"Id": "LUSHPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.lushplant.dds",
+		"Icon": "LUSHPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.lushplant.dds",
 		"Name": "Star Bramble",
 		"Group": "Plantable Seed",
 		"Description": "A medium-sized, farmable plant that yields an occasional harvest of valuable Star Bulbs.\n\nSuitable for hydroponic indoor planting. Ensure Lush climate before planting outdoors.\n\nApproximate growing time: 4 hours",
@@ -4409,11 +4676,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/LUSHPLANT"
 	},
 	{
 		"Id": "SCORCHEDPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.scorchplant.dds",
+		"Icon": "SCORCHEDPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.scorchplant.dds",
 		"Name": "Solar Vine",
 		"Group": "Plantable Seed",
 		"Description": "This 'living rock' is adapted to live in the extreme heat of scorched biomes. However, it can be farmed in most environments and, once established, yields a moderate harvest.\n\nSuitable for hydroponic indoor planting. Ensure Hot climate before planting outdoors.\n\nApproximate growing time: 16 hours",
@@ -4447,11 +4716,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/SCORCHEDPLANT"
 	},
 	{
 		"Id": "CREATUREPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.creatureplant.dds",
+		"Icon": "CREATUREPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.creatureplant.dds",
 		"Name": "Mordite Root",
 		"Group": "Plantable Seed",
 		"Description": "An inedible tuber that produces a small yield of Mordite crystals.\n\nA peaceful alternative to the process of harvesting Mordite from the corpses of creatures. Mordite Root must be grown in a Hydroponics Tray.\n\nApproximate growing time: 8 hours",
@@ -4481,11 +4752,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/CREATUREPLANT"
 	},
 	{
 		"Id": "POOPPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.poopplant.dds",
+		"Icon": "POOPPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.poopplant.dds",
 		"Name": "Gutrot Flower",
 		"Group": "Plantable Seed",
 		"Description": "A foul-smelling, farmable flower that replicates the chemical structure of faecal matter. When planted inside, yields a harvest of Faecium.\n\nA good alternative to collecting Faecium by hand, which requires feeding creatures and then harvesting their droppings. Gutrot Flowers must be grown in a Hydroponics Tray.\n\nApproximate growing time: 4 hours",
@@ -4515,11 +4788,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/POOPPLANT"
 	},
 	{
 		"Id": "GRAVPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.gravplant.dds",
+		"Icon": "GRAVPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.gravplant.dds",
 		"Name": "Gravitino Host",
 		"Group": "Plantable Seed",
 		"Description": "A strange, potentially parasitic plant that yields an occasional harvest of the highly tradable commodity, Gravitino Balls.\n\nSuitable for hydroponic indoor planting. Cannot be planted outdoors.\n\nApproximate growing time: 2 hours",
@@ -4557,11 +4832,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/GRAVPLANT"
 	},
 	{
 		"Id": "SACVENOMPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.sacvenomplant.dds",
+		"Icon": "SACVENOMPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.sacvenomplant.dds",
 		"Name": "Venom Urchin",
 		"Group": "Plantable Seed",
 		"Description": "A small, innocuous looking plant whose leaves periodically secrete a small amount of potent Sac Venom, a valuable trading commodity.\n\nSuitable for hydroponic indoor planting. Cannot be planted outdoors.\n\nApproximate growing time: 3 hours 20 mins",
@@ -4595,11 +4872,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/SACVENOMPLANT"
 	},
 	{
 		"Id": "PEARLPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.pearlplant.dds",
+		"Icon": "PEARLPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.pearlplant.dds",
 		"Name": "Albumen Pearl Orb",
 		"Group": "Orb Plant",
 		"Description": "A medium-sized, farmable Crystal Orb that yields an occasional harvest of valuable Albumen Pearls.\n\nSuitable for hydroponic indoor planting. Cannot be planted outdoors.\n\nApproximate growing time: 80 mins",
@@ -4633,11 +4912,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/PEARLPLANT"
 	},
 	{
 		"Id": "NIPPLANT",
-		"Icon": "textures/ui/frontend/icons/update1/product.nipplant.dds",
+		"Icon": "NIPPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/update1/product.nipplant.dds",
 		"Name": "Nipnip",
 		"Group": "Plantable Seed",
 		"Description": "This medicinal herb is known for its pungent buds, which are harvested to produce Gek Nip. NipNip thrives in dank environments, and often grows as a weed.\n\nSuitable for hydroponic planting indoors. Needs a tropical or humid climate before planting outdoors.",
@@ -4671,6 +4952,7 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "products/NIPPLANT"
 	}
 ]

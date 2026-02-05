@@ -3,7 +3,7 @@
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets'
-import processor from '@data/NutrientProcessor.json';
+import processor from '@datav2/NutrientProcessor.json';
 import { getById, getSlug, sortTable, type Item } from '@utils/lookup.js';
 
 interface ItemDetails {
@@ -168,12 +168,12 @@ const sortedData = sortTable(data);
 			sortedData.map((item) => (
 				<div class="bg-black rounded-md overflow-hidden">
 					<a
-						href={getSlug(item.output.id) + item.output.id}
+						href={getSlug(item.output.id)}
 						class="flex flex-col items-center text-lg w-full p-2 transition-opacity hover:opacity-75"
 						style={'background: #' + item.output.colour}
 					>
 						<Image
-							src={'https://app.nmsassistant.com/assets/images/' + item.output.image}
+							src={'https://nomansskyrecipes.com/images/items/' + item.output.image}
 							alt={item.output.name}
 							sizes="50px"
 							width={50}
@@ -188,14 +188,14 @@ const sortedData = sortTable(data);
 						const input1 = item.input_1;
 						return (
 							<a
-								href={getSlug(input1.id) + input1.id}
+								href={getSlug(input1.id)}
 								class="flex p-2 transition-opacity hover:opacity-75"
 								style={'background: #' + input1.colour}
 							>
 								<div class="mr-4 flex-shrink-0 self-start">
 									<Image
 										src={
-											'https://app.nmsassistant.com/assets/images/' +
+											'https://nomansskyrecipes.com/images/items/' +
 											input1.image
 										}
 										alt={input1.name}
@@ -219,14 +219,14 @@ const sortedData = sortTable(data);
 						const input2 = item.input_2;
 						return (
 							<a
-								href={getSlug(input2.id) + input2.id}
+								href={getSlug(input2.id)}
 								class="flex p-2 transition-opacity hover:opacity-75"
 								style={'background: #' + input2.colour}
 							>
 								<div class="mr-4 flex-shrink-0 self-start">
 									<Image
 										src={
-											'https://app.nmsassistant.com/assets/images/' +
+											'https://nomansskyrecipes.com/images/items/' +
 											input2.image
 										}
 										alt={input2.name}
@@ -250,14 +250,14 @@ const sortedData = sortTable(data);
 						const input3 = item.input_3;
 						return (
 							<a
-								href={getSlug(input3.id) + input3.id}
+								href={getSlug(input3.id)}
 								class="flex p-2 transition-opacity hover:opacity-75"
 								style={'background: #' + input3.colour}
 							>
 								<div class="mr-4 flex-shrink-0 self-start">
 									<Image
 										src={
-											'https://app.nmsassistant.com/assets/images/' +
+											'https://nomansskyrecipes.com/images/items/' +
 											input3.image
 										}
 										alt={input3.name}

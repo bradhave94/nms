@@ -2,11 +2,10 @@
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import type { Item } from '@utils/lookup.js';
-import others from '@datav2/Others.json';
-import trade from '@datav2/Trade.json';
+import others from '@datav2/Corvette.json';
 
 export async function getStaticPaths() {
-	return [...others, ...trade].map((post) => ({
+	return others.map((post) => ({
 		params: { id: post.Id.toString() },
 		props: { item: post },
 	}));
@@ -18,7 +17,7 @@ const { item } = Astro.props;
 <Layout
 	title={`${item.Name} | No Man's Sky Recipes`}
 	description={`${item.Name} | ${item.Description}`}
-	slug="other"
+	slug="corvette"
 >
 <Page item={item as Item} />
 </Layout>

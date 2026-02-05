@@ -2,7 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import type { Item } from '@utils/lookup.js';
-import data from '@data/Curiosities.json';
+import data from '@datav2/Curiosities.json';
 
 export async function getStaticPaths() {
 	return data.map((post) => ({

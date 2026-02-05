@@ -1,7 +1,8 @@
 [
 	{
 		"Id": "NAV_DATA",
-		"Icon": "textures/ui/frontend/icons/u4products/product.navdata.dds",
+		"Icon": "NAV_DATA.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.navdata.dds",
 		"Name": "Navigation Data",
 		"Group": "Encrypted Navigation Data",
 		"Description": "Encoded navigation data. This highly portable data unit contains all relevant cartographical information for a planetary region.\n\nMay be traded with a Cartographer aboard a Space Station in exchange for usable star charts.",
@@ -24,11 +25,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/NAV_DATA"
 	},
 	{
 		"Id": "NAV_DATA_DROP",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.droppod.dds",
+		"Icon": "NAV_DATA_DROP.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.droppod.dds",
 		"Name": "Exosuit Upgrade Chart",
 		"Group": "Encrypted Navigation Data",
 		"Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a Drop Pod containing an Exosuit Inventory Upgrade.\n\nSelect the coordinates in the inventory and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -51,11 +54,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/NAV_DATA_DROP"
 	},
 	{
 		"Id": "LOG_KEY",
-		"Icon": "textures/ui/frontend/icons/u4products/product.logkey.dds",
+		"Icon": "LOG_KEY.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.logkey.dds",
 		"Name": "Log Encryption Key",
 		"Group": "Incomplete Data Sequence",
 		"Description": "A fragment of the encryption override sequence for a freighter's emergency log.\n\nSeveral parts of the sequence may be required to gain full access to recorded data.",
@@ -78,11 +83,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/LOG_KEY"
 	},
 	{
 		"Id": "ACCESS1",
-		"Icon": "textures/ui/frontend/icons/products/product.atlaspass.dds",
+		"Icon": "ACCESS1.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.atlaspass.dds",
 		"Name": "Atlaspass V1",
 		"Group": "Access Card",
 		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n\nProvides access to low level restricted areas and outpost systems.",
@@ -116,11 +123,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/ACCESS1"
 	},
 	{
 		"Id": "ACCESS2",
-		"Icon": "textures/ui/frontend/icons/products/product.atlaspass.dds",
+		"Icon": "ACCESS2.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.atlaspass.dds",
 		"Name": "Atlaspass V2",
 		"Group": "Access Card",
 		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to mid-tier restricted areas and outpost systems.",
@@ -154,11 +163,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/ACCESS2"
 	},
 	{
 		"Id": "ACCESS3",
-		"Icon": "textures/ui/frontend/icons/products/product.atlaspass.dds",
+		"Icon": "ACCESS3.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.atlaspass.dds",
 		"Name": "Atlaspass V3",
 		"Group": "Access Card",
 		"Description": "Security and permissions pass granted to specific travellers by many primary galactic species.\n \nProvides access to high level restricted areas and outpost systems.",
@@ -192,11 +203,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/ACCESS3"
 	},
 	{
 		"Id": "POLICE_TOKEN",
-		"Icon": "textures/ui/frontend/icons/update3/policetoken.dds",
+		"Icon": "POLICE_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/update3/policetoken.dds",
 		"Name": "Defence Chit",
 		"Group": "System Authority Payment Substitute",
 		"Description": "A token, entitling the bearer to support from the system authorities in dealing with pirate attacks.",
@@ -219,11 +232,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/POLICE_TOKEN"
 	},
 	{
 		"Id": "BP_SALVAGE",
-		"Icon": "textures/ui/frontend/icons/u4products/product.salvage.dds",
+		"Icon": "BP_SALVAGE.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.salvage.dds",
 		"Name": "Salvaged Data",
 		"Group": "Salvaged Technology",
 		"Description": "The salvageable heart of some ancient technology. Unreadable in its current form.\n\nThese databanks can be spent at a Construction Research Unit and used to research new Construction Blueprints.",
@@ -248,11 +263,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BP_SALVAGE"
 	},
 	{
 		"Id": "FACT_TOKEN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.researchtoken.dds",
+		"Icon": "FACT_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.researchtoken.dds",
 		"Name": "Factory Override Unit",
 		"Group": "Advanced Research Module",
 		"Description": "A portable data unit, compatible with most planetary fabricator facilities.\n\nOnce access has been gained to a central control terminal, the Override Unit can divert the facilities resources towards researching new product recipes.",
@@ -277,11 +294,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/FACT_TOKEN"
 	},
 	{
 		"Id": "FRIG_TOKEN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.frigatetoken.dds",
+		"Icon": "FRIG_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.frigatetoken.dds",
 		"Name": "Salvaged Frigate Module",
 		"Group": "Capital Ship Wiring Platform",
 		"Description": "A technology module harvested from the remains of a large interstellar starship. May be collected from freighter crashsites or salvaged during frigate expeditions.\n\nUseless in its current form, a Research Station aboard your freighter may be able to convert it into useable technology.",
@@ -306,11 +325,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/FRIG_TOKEN"
 	},
 	{
 		"Id": "SHIP_INV_TOKEN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.storagetoken.dds",
+		"Icon": "SHIP_INV_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.storagetoken.dds",
 		"Name": "Storage Augmentation",
 		"Group": "Starship Expansion Module",
 		"Description": "A technology module harvested from the remains of a salvaged starship. May also be collected from freighter crash sites or salvaged during frigate expeditions.\n\nCan be used to expand starship storage capacity at the Space Station's Starship Outfitter.",
@@ -335,11 +356,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/SHIP_INV_TOKEN"
 	},
 	{
 		"Id": "FREI_INV_TOKEN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.cargotoken.dds",
+		"Icon": "FREI_INV_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.cargotoken.dds",
 		"Name": "Cargo Bulkhead",
 		"Group": "Auto-Expanding Freighter Module",
 		"Description": "A technology module harvested from the remains of an abandoned freighter found floating in space. May also be salvaged during frigate expeditions.\n\nPre-packed nano-expanders fill out this portable unit and graft it to an existing freighter, increasing its inventory capacity. Apply at your freighter's Upgrade Terminal.",
@@ -364,11 +387,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/FREI_INV_TOKEN"
 	},
 	{
 		"Id": "WEAP_INV_TOKEN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.weapontoken.dds",
+		"Icon": "WEAP_INV_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.weapontoken.dds",
 		"Name": "Multi-tool Expansion Slot",
 		"Group": "Upgrade Unit",
 		"Description": "A flexible upgrade circuit, compatible with all person Multi-Tools.\n\nThis module can be wired into a Multi-Tool at a Space Station Multi-Tool Upgrade Rack, granting the user more space in the Multi-Tool's internal layout to add further upgrades or technology specialisations.",
@@ -393,11 +418,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/WEAP_INV_TOKEN"
 	},
 	{
 		"Id": "SUIT_INV_TOKEN",
-		"Icon": "textures/ui/frontend/icons/u4products/product.exosuittoken.dds",
+		"Icon": "SUIT_INV_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.exosuittoken.dds",
 		"Name": "Exosuit Expansion Unit",
 		"Group": "Upgrade Unit",
 		"Description": "An advanced survival technology module that allows expansion of a user's Exosuit Storage.\n\nPre-packed nano-expanders create stablised sub-warp voids within the Exosuit, increasing its inventory capacity. Apply this augmentation at the Exosuit upgrade terminal on board a Space Station.",
@@ -422,11 +449,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/SUIT_INV_TOKEN"
 	},
 	{
 		"Id": "ALIEN_INV_TOKEN",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
+		"Icon": "ALIEN_INV_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
 		"Name": "Spawning Sac",
 		"Group": "Sentient Vessel Storage Sac",
 		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse FE_ALT1 to trigger growth and begin the hatching process.",
@@ -451,11 +480,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/ALIEN_INV_TOKEN"
 	},
 	{
 		"Id": "ALIEN_TECHBOX",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
+		"Icon": "ALIEN_TECHBOX.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
 		"Name": "Psychonic Egg",
 		"Group": "Pulsating Yolk Sac",
 		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with FE_ALT1.",
@@ -480,11 +511,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/ALIEN_TECHBOX"
 	},
 	{
 		"Id": "TECHBOX",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/roguetech.general.dds",
+		"Icon": "TECHBOX.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/roguetech.general.dds",
 		"Name": "Memory Fragment",
 		"Group": "Technology Echo",
 		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with FE_ALT1.",
@@ -507,11 +540,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/TECHBOX"
 	},
 	{
 		"Id": "U_MECHLAS2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shiplaser.dds",
+		"Icon": "U_MECHLAS2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shiplaser.dds",
 		"Name": "Minotaur Laser Module",
 		"Group": "Significant Minotaur Weapon Upgrade",
 		"Description": "A significant upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
@@ -534,11 +569,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHLAS2"
 	},
 	{
 		"Id": "U_MECHLAS3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shiplaser.dds",
+		"Icon": "U_MECHLAS3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shiplaser.dds",
 		"Name": "Minotaur Laser Module",
 		"Group": "Powerful Minotaur Weapon Upgrade",
 		"Description": "An extremely powerful upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
@@ -561,11 +598,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHLAS3"
 	},
 	{
 		"Id": "U_MECHLAS4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shiplaser.dds",
+		"Icon": "U_MECHLAS4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shiplaser.dds",
 		"Name": "Minotaur Laser Module",
 		"Group": "Supreme Minotaur Weapon Upgrade",
 		"Description": "A supremely powerful upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
@@ -588,11 +627,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHLAS4"
 	},
 	{
 		"Id": "U_MECHFLAME2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.heat.dds",
+		"Icon": "U_MECHFLAME2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.heat.dds",
 		"Name": "Minotaur Flamethrower Module",
 		"Group": "Significant Minotaur Weapon Upgrade",
 		"Description": "A significant upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
@@ -615,11 +656,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHFLAME2"
 	},
 	{
 		"Id": "U_MECHFLAME3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.heat.dds",
+		"Icon": "U_MECHFLAME3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.heat.dds",
 		"Name": "Minotaur Flamethrower Module",
 		"Group": "Powerful Minotaur Weapon Upgrade",
 		"Description": "An extremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
@@ -642,11 +685,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHFLAME3"
 	},
 	{
 		"Id": "U_MECHFLAME4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.heat.dds",
+		"Icon": "U_MECHFLAME4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.heat.dds",
 		"Name": "Minotaur Flamethrower Module",
 		"Group": "Supreme Minotaur Weapon Upgrade",
 		"Description": "A supremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
@@ -669,11 +714,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHFLAME4"
 	},
 	{
 		"Id": "U_MECHGUN2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shipgun.dds",
+		"Icon": "U_MECHGUN2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shipgun.dds",
 		"Name": "Minotaur Cannon Module",
 		"Group": "Significant Minotaur Weapon Upgrade",
 		"Description": "A significant upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
@@ -696,11 +743,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHGUN2"
 	},
 	{
 		"Id": "U_MECHGUN3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shipgun.dds",
+		"Icon": "U_MECHGUN3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shipgun.dds",
 		"Name": "Minotaur Cannon Module",
 		"Group": "Powerful Minotaur Weapon Upgrade",
 		"Description": "An extremely powerful upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
@@ -723,11 +772,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHGUN3"
 	},
 	{
 		"Id": "U_MECHGUN4",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shipgun.dds",
+		"Icon": "U_MECHGUN4.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shipgun.dds",
 		"Name": "Minotaur Cannon Module",
 		"Group": "Supreme Minotaur Weapon Upgrade",
 		"Description": "A supremely powerful upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
@@ -750,11 +801,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MECHGUN4"
 	},
 	{
 		"Id": "SUMMON_SUIT",
-		"Icon": "textures/ui/frontend/icons/technology/technology.suitsummoner.dds",
+		"Icon": "SUMMON_SUIT.png",
+		"IconPath": "textures/ui/frontend/icons/technology/technology.suitsummoner.dds",
 		"Name": "Exocraft Summoning Unit",
 		"Group": "Vehicle Translocation Device",
 		"Description": "A high-powered matter teleportation device, this personal translocator allows any connected Exocraft to be instantly transported to your location, from anywhere in the galaxy.\n\nInterfaces with the Exosuit Quick Menu for ease of use.",
@@ -797,11 +850,13 @@
 		"Upgrade": false,
 		"Core": false,
 		"ParentTechId": null,
-		"RequiredTech": null
+		"RequiredTech": null,
+		"Slug": "technology/SUMMON_SUIT"
 	},
 	{
 		"Id": "MAINT_FISHTRAP",
-		"Icon": "textures/ui/frontend/icons/categories/hook.dds",
+		"Icon": "MAINT_FISHTRAP.png",
+		"IconPath": "textures/ui/frontend/icons/categories/hook.dds",
 		"Name": "AUTO-TRAP",
 		"Group": "Self-Sustaining Auto Creel",
 		"Description": "An autonomous fishing device, designed for long-term deployment in a wide-range of water conditions. Return later to collect trapped fish.\n\nTrap cycle: IN PROGRESS",
@@ -824,11 +879,13 @@
 		"Upgrade": false,
 		"Core": true,
 		"ParentTechId": null,
-		"RequiredTech": null
+		"RequiredTech": null,
+		"Slug": "technology/MAINT_FISHTRAP"
 	},
 	{
 		"Id": "ALIEN_TECHBOX",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
+		"Icon": "ALIEN_TECHBOX.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
 		"Name": "Psychonic Egg",
 		"Group": "Pulsating Yolk Sac",
 		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with FE_ALT1.",
@@ -844,11 +901,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "technology/ALIEN_TECHBOX"
 	},
 	{
 		"Id": "ALIEN_INV_TOKEN",
-		"Icon": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
+		"Icon": "ALIEN_INV_TOKEN.png",
+		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
 		"Name": "Spawning Sac",
 		"Group": "Sentient Vessel Storage Sac",
 		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse FE_ALT1 to trigger growth and begin the hatching process.",
@@ -864,11 +923,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "technology/ALIEN_INV_TOKEN"
 	},
 	{
 		"Id": "NAV_DATA_DROP",
-		"Icon": "textures/ui/frontend/icons/u4products/product.starchart.droppod.dds",
+		"Icon": "NAV_DATA_DROP.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.droppod.dds",
 		"Name": "Exosuit Upgrade Chart",
 		"Group": "Encrypted Navigation Data",
 		"Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a Drop Pod containing an Exosuit Inventory Upgrade.\n\nSelect the coordinates in the inventory and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
@@ -884,11 +945,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "technology/NAV_DATA_DROP"
 	},
 	{
 		"Id": "TECHBOX",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/roguetech.general.dds",
+		"Icon": "TECHBOX.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/roguetech.general.dds",
 		"Name": "Memory Fragment",
 		"Group": "Technology Echo",
 		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with FE_ALT1.",
@@ -904,11 +967,13 @@
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
-		"ConsumableRewardTexts": []
+		"ConsumableRewardTexts": [],
+		"Slug": "technology/TECHBOX"
 	},
 	{
 		"Id": "FRE_ROOM_TELEPO",
-		"Icon": "textures/ui/frontend/icons/buildable/freighterbase/freighterbase_room.telepo.dds",
+		"Icon": "FRE_ROOM_TELEPO.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/freighterbase/freighterbase_room.telepo.dds",
 		"Name": "Teleport Chamber",
 		"Group": "Long-Distance Matter Transfer Device",
 		"Description": "Vital integrated freighter equipment. This personal teleport device allows the user to move quickly between their freighter, planetary bases, as well as any Space Station Terminuses connected to their network. User is urged to verify network integrity before inserting any matter they cannot afford to become separated from.\n\nThis module is placed as an entire room and comes with its functional units pre-installed.\n",
@@ -946,11 +1011,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/FRE_ROOM_TELEPO"
 	},
 	{
 		"Id": "BASE_FLAG",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.basecoreflag.dds",
+		"Icon": "BASE_FLAG.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.basecoreflag.dds",
 		"Name": "Base Computer",
 		"Group": "Site Evaluation Device",
 		"Description": "Portable land registration service.\n\nWhen placed, contacts Universal Cartographic Archive to establish ownership of land. Successful registration allows the construction of base modules across any site of the user's choosing.",
@@ -980,11 +1047,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BASE_FLAG"
 	},
 	{
 		"Id": "BUILDTERMINAL",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.terminal.dds",
+		"Icon": "BUILDTERMINAL.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.terminal.dds",
 		"Name": "Galactic Trade Terminal",
 		"Group": "Trading terminal",
 		"Description": "A trading terminal that provides instant local access to the market for resources and commodities.",
@@ -1018,11 +1087,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILDTERMINAL"
 	},
 	{
 		"Id": "HEALTHSTATION",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.healthstation.dds",
+		"Icon": "HEALTHSTATION.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.healthstation.dds",
 		"Name": "Health Station",
 		"Group": "Health recharge module",
 		"Description": "A wall mounted module that can be used to recharge health.",
@@ -1060,11 +1131,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/HEALTHSTATION"
 	},
 	{
 		"Id": "SHIELDSTATION",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.shieldstation.dds",
+		"Icon": "SHIELDSTATION.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.shieldstation.dds",
 		"Name": "Hazard Protection Unit",
 		"Group": "Hazard Protection Charging System",
 		"Description": "A wall mounted module that can be used to recharge the user's Hazard Protection systems.\n\nThe Hazard Protection Unit must be kept charged with a source of fuel.",
@@ -1102,11 +1175,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/SHIELDSTATION"
 	},
 	{
 		"Id": "BUILDBEACON",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.beacon.dds",
+		"Icon": "BUILDBEACON.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.beacon.dds",
 		"Name": "Save Beacon",
 		"Group": "Portable waypoint marker",
 		"Description": "Once activated, beacons provide a permanent navigational waypoint, facilitating repeat visits to specific locations.\n\nAllows user to record their progress at any time.",
@@ -1140,11 +1215,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILDBEACON"
 	},
 	{
 		"Id": "BUILDSIGNAL",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.signal.dds",
+		"Icon": "BUILDSIGNAL.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.signal.dds",
 		"Name": "Signal Booster",
 		"Group": "Environmental scanner",
 		"Description": "A versatile scanner that detects nearby buildings. Can decrypt Navigation Data to pinpoint specific locations.\n\nThe Signal Booster can be dismantled and redeployed for easy transportation.",
@@ -1182,11 +1259,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILDSIGNAL"
 	},
 	{
 		"Id": "BUILDANTIMATTER",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.antimatter.dds",
+		"Icon": "BUILDANTIMATTER.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.antimatter.dds",
 		"Name": "Antimatter Reactor",
 		"Group": "Baryogenesis Unit",
 		"Description": "An autonomous baryogenesis reactor, this device can be left to harvest reality paradoxes and convert them into usable antimatter. User must monitor fuel levels to ensure continued operation.\n\nThe resulting antimatter is safely contained, ready for use in all standard hyperspace power units.",
@@ -1224,11 +1303,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILDANTIMATTER"
 	},
 	{
 		"Id": "TELEPORTER",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.teleporter.dds",
+		"Icon": "TELEPORTER.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.teleporter.dds",
 		"Name": "Base Teleport Module",
 		"Group": "Long-Distance Matter Transfer Device",
 		"Description": "A personal teleport device, allowing the user to move quickly between their constructed bases, as well as any Space Station Terminuses connected to their network.\n\nUser is urged to verify network integrity before inserting any matter they cannot afford to become separated from.",
@@ -1266,11 +1347,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/TELEPORTER"
 	},
 	{
 		"Id": "TELEPORTER_F",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.teleporter.dds",
+		"Icon": "TELEPORTER_F.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.teleporter.dds",
 		"Name": "Base Teleport Module",
 		"Group": "Long-Distance Matter Transfer Device",
 		"Description": "A personal teleport device, allowing the user to move quickly between their constructed bases, as well as any Space Station Terminuses connected to their network.\n\nUser is urged to verify network integrity before inserting any matter they cannot afford to become separated from.",
@@ -1308,11 +1391,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/TELEPORTER_F"
 	},
 	{
 		"Id": "BP_ANALYSER",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.blueprintan.dds",
+		"Icon": "BP_ANALYSER.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.blueprintan.dds",
 		"Name": "Construction Research Unit",
 		"Group": "Technology Recovery Device",
 		"Description": "Portable blueprint research device.\n\nThis field-deployable research module allows the user to convert old or damaged technology modules into advanced construction blueprints.",
@@ -1346,11 +1431,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BP_ANALYSER"
 	},
 	{
 		"Id": "BUILD_REFINER1",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.refiner1.dds",
+		"Icon": "BUILD_REFINER1.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.refiner1.dds",
 		"Name": "Portable Refiner",
 		"Group": "Automated Refinery Unit",
 		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Portable Refiner can be dismantled and redeployed for easy transportation. Note: the Portable Refiner requires fuel to operate.",
@@ -1384,11 +1471,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILD_REFINER1"
 	},
 	{
 		"Id": "BUILD_REFINER2",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.refiner2.dds",
+		"Icon": "BUILD_REFINER2.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.refiner2.dds",
 		"Name": "Medium Refiner",
 		"Group": "Automated Refinery Unit",
 		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Medium Refiner allows two different substances to be combined into one new material, or materials to be processed at better ratios. \n\nThe Medium Refiner must be installed in a Habitable Base, but does not require additional power sources.",
@@ -1422,11 +1511,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILD_REFINER2"
 	},
 	{
 		"Id": "BUILD_REFINER3",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.refiner3.dds",
+		"Icon": "BUILD_REFINER3.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.refiner3.dds",
 		"Name": "Large Refiner",
 		"Group": "Automated Refinery Unit",
 		"Description": "A vital piece of planetary equipment. The Refiner allows gathered substances to be processed into more powerful and more advanced materials.\n\nThe Large Refiner allows three different substances to be combined into one new material, or materials to be processed at better ratios. \n\nThe Large Refiner must be installed in a Habitable Base, but does not require additional power sources.",
@@ -1464,11 +1555,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILD_REFINER3"
 	},
 	{
 		"Id": "COOKER",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.cooker.dds",
+		"Icon": "COOKER.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.cooker.dds",
 		"Name": "Nutrient Processor",
 		"Group": "Portable Sustenance Unit",
 		"Description": "A portable nutrient extractor, able to process and refine gathered ingredients into edible food products.\n\nUser is advised that consumption of generated products is entirely at their own risk.",
@@ -1506,11 +1599,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/COOKER"
 	},
 	{
 		"Id": "CREATURE_FEED",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.creaturefeeder.dds",
+		"Icon": "CREATURE_FEED.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.creaturefeeder.dds",
 		"Name": "Automated Feeder",
 		"Group": "Agricultural Robot",
 		"Description": "A robotic farming unit, designed to automatically supply nearby creatures with food.\n\nWhen powered, will attract nearby animal life. Keep bait tanks full in order to supply lifeforms with desired food.",
@@ -1548,11 +1643,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CREATURE_FEED"
 	},
 	{
 		"Id": "CREATURE_FARM",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.creaturefarmer.dds",
+		"Icon": "CREATURE_FARM.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.creaturefarmer.dds",
 		"Name": "Livestock Unit",
 		"Group": "Automatic Harvesting Robot",
 		"Description": "A robotic farming unit, designed to automatically harvest substances from creatures. Requires power.\n\nCreatures that are ready to be harvested for milk, eggs or other specialist produce will approach the Livestock Unit and deposit their yields. The creatures are unharmed by the process.\n\nWill harvest produce from creatures fed by hand or via an Automated Feeder.",
@@ -1590,11 +1687,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CREATURE_FARM"
 	},
 	{
 		"Id": "MESSAGEMODULE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.messagemodule.dds",
+		"Icon": "MESSAGEMODULE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.messagemodule.dds",
 		"Name": "Message Module",
 		"Group": "Communications terminal",
 		"Description": "A small and accessible information container for leaving messages or viewing left messages and short strings of information.",
@@ -1628,11 +1727,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/MESSAGEMODULE"
 	},
 	{
 		"Id": "MESSAGE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.message.dds",
+		"Icon": "MESSAGE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.message.dds",
 		"Name": "Communications Station",
 		"Group": "Communications terminal",
 		"Description": "A terminal for the composition and transmission of messages to other travellers.",
@@ -1662,11 +1763,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/MESSAGE"
 	},
 	{
 		"Id": "GARAGE_SUB",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.vehiclegarageh.dds",
+		"Icon": "GARAGE_SUB.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.vehiclegarageh.dds",
 		"Name": "Nautilon Chamber",
 		"Group": "Submarine Docking Bay",
 		"Description": "An advanced, fully-airlocked docking station for the Nautilon submarine.",
@@ -1704,11 +1807,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/GARAGE_SUB"
 	},
 	{
 		"Id": "SUMMON_GARAGE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.vehiclesummoner.dds",
+		"Icon": "SUMMON_GARAGE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.vehiclesummoner.dds",
 		"Name": "Exocraft Summoning Station",
 		"Group": "Vehicle Translocation Device",
 		"Description": "Construction allows the user to summon any owned Exocraft from anywhere else in that system.\n\nInterfaces with the Exosuit Quick Command Menu for ease of use. Can be compressed and carried within the Exosuit with DECONSTRUCT for later redeployment.",
@@ -1746,11 +1851,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/SUMMON_GARAGE"
 	},
 	{
 		"Id": "GARAGE_MECH",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.vehiclegaragemech.dds",
+		"Icon": "GARAGE_MECH.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.vehiclegaragemech.dds",
 		"Name": "Minotaur Geobay",
 		"Group": "Heavy Loader Storage Bay",
 		"Description": "A secure parking, summoning and customisation facility for the Minotaur Heavy Exosuit Hybrid.\n\nDeploy the Minotaur from the Quick Menu. With the aid of an Orbital Exocraft Materialiser mounted inside a freighter, the Minotaur can be instantly deployed to any location within the same system as the mothership.",
@@ -1788,11 +1895,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/GARAGE_MECH"
 	},
 	{
 		"Id": "NPCSCIENCETERM",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcscience.dds",
+		"Icon": "NPCSCIENCETERM.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.npcscience.dds",
 		"Name": "Science Terminal",
 		"Group": "Specialist terminal",
 		"Description": "A research station tailored to the needs of Scientists, and equipped for research and development of scientific blueprints.",
@@ -1826,11 +1935,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/NPCSCIENCETERM"
 	},
 	{
 		"Id": "NPCWEAPONTERM",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcweapon.dds",
+		"Icon": "NPCWEAPONTERM.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.npcweapon.dds",
 		"Name": "Weapons Terminal",
 		"Group": "Specialist terminal",
 		"Description": "A research station tailored to the needs of Armourers, and equipped for the development of munitions and explosives as well as selected civilian tech.",
@@ -1864,11 +1975,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/NPCWEAPONTERM"
 	},
 	{
 		"Id": "NPCFARMTERM",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcfarm.dds",
+		"Icon": "NPCFARMTERM.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.npcfarm.dds",
 		"Name": "Agricultural Terminal",
 		"Group": "Specialist terminal",
 		"Description": "A research station tailored to the needs of Farmers, and equipped for the analysis and cultivation of farmable crops.",
@@ -1902,11 +2015,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/NPCFARMTERM"
 	},
 	{
 		"Id": "NPCVEHICLETERM",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcvehicle.dds",
+		"Icon": "NPCVEHICLETERM.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.npcvehicle.dds",
 		"Name": "Exocraft Terminal",
 		"Group": "Specialist terminal",
 		"Description": "A research station tailored to the needs of Technicians, and equipped with bespoke vehicular design software.",
@@ -1940,11 +2055,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/NPCVEHICLETERM"
 	},
 	{
 		"Id": "NPCBUILDERTERM",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.npcbuilder.dds",
+		"Icon": "NPCBUILDERTERM.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.npcbuilder.dds",
 		"Name": "Construction Terminal",
 		"Group": "Specialist terminal",
 		"Description": "A research station tailored to the needs of Construction Overseers, and equipped with architectural and engineering design software.",
@@ -1978,11 +2095,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/NPCBUILDERTERM"
 	},
 	{
 		"Id": "CONTAINER0",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.0.dds",
+		"Icon": "CONTAINER0.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.0.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2016,11 +2135,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER0"
 	},
 	{
 		"Id": "CONTAINER1",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.1.dds",
+		"Icon": "CONTAINER1.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.1.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2054,11 +2175,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER1"
 	},
 	{
 		"Id": "CONTAINER2",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.2.dds",
+		"Icon": "CONTAINER2.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.2.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2092,11 +2215,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER2"
 	},
 	{
 		"Id": "CONTAINER3",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.3.dds",
+		"Icon": "CONTAINER3.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.3.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2130,11 +2255,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER3"
 	},
 	{
 		"Id": "CONTAINER4",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.4.dds",
+		"Icon": "CONTAINER4.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.4.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2168,11 +2295,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER4"
 	},
 	{
 		"Id": "CONTAINER5",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.5.dds",
+		"Icon": "CONTAINER5.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.5.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2206,11 +2335,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER5"
 	},
 	{
 		"Id": "CONTAINER6",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.6.dds",
+		"Icon": "CONTAINER6.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.6.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2244,11 +2375,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER6"
 	},
 	{
 		"Id": "CONTAINER7",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.7.dds",
+		"Icon": "CONTAINER7.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.7.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2282,11 +2415,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER7"
 	},
 	{
 		"Id": "CONTAINER8",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.8.dds",
+		"Icon": "CONTAINER8.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.8.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2320,11 +2455,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER8"
 	},
 	{
 		"Id": "CONTAINER9",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.container.9.dds",
+		"Icon": "CONTAINER9.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.container.9.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2358,11 +2495,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CONTAINER9"
 	},
 	{
 		"Id": "CHEST",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.storage.dds",
+		"Icon": "CHEST.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.storage.dds",
 		"Name": "Storage Container",
 		"Group": "Storage unit",
 		"Description": "Spacious additional storage for inventory items.",
@@ -2396,11 +2535,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/CHEST"
 	},
 	{
 		"Id": "RACE_START",
-		"Icon": "textures/ui/frontend/icons/buildable/racestart.dds",
+		"Icon": "RACE_START.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/racestart.dds",
 		"Name": "Race Initiator",
 		"Group": "Race Part",
 		"Description": "This platform acts as the start and finish line for Exocraft field tests, allowing Travellers to practice manoeuvring and speed.",
@@ -2438,11 +2579,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/RACE_START"
 	},
 	{
 		"Id": "RACE_START_SHIP",
-		"Icon": "textures/ui/frontend/icons/buildable/raceshipstart.dds",
+		"Icon": "RACE_START_SHIP.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/raceshipstart.dds",
 		"Name": "Starship Race Initiator",
 		"Group": "Race Part",
 		"Description": "This platform acts as the start and finish line for Starship field tests, allowing Travellers to practice manoeuvring and speed.",
@@ -2480,11 +2623,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/RACE_START_SHIP"
 	},
 	{
 		"Id": "RACE_BOOSTER",
-		"Icon": "textures/ui/frontend/icons/buildable/racebooster.dds",
+		"Icon": "RACE_BOOSTER.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/racebooster.dds",
 		"Name": "Race Force Amplifier",
 		"Group": "Race Part",
 		"Description": "Provides a boost to your Exocraft during races.",
@@ -2518,11 +2663,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/RACE_BOOSTER"
 	},
 	{
 		"Id": "RACE_RAMP",
-		"Icon": "textures/ui/frontend/icons/buildable/raceramp.dds",
+		"Icon": "RACE_RAMP.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/raceramp.dds",
 		"Name": "Race Obstacle",
 		"Group": "Race Part",
 		"Description": "Provides extra challenge for Exocraft races.",
@@ -2552,11 +2699,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/RACE_RAMP"
 	},
 	{
 		"Id": "WATERBUBBLE",
-		"Icon": "textures/ui/frontend/icons/buildable/water.waterbubble.dds",
+		"Icon": "WATERBUBBLE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/water.waterbubble.dds",
 		"Name": "Marine Shelter",
 		"Group": "Deep Water Survival Module",
 		"Description": "An emergency survival module.\n\nCan be rapidly deployed on the seabed in the event of an oxygen or other Exosuit life support emergency. Provides temporary shelter from environmental hazards, predators and other hostiles forces found in the deep ocean.",
@@ -2594,11 +2743,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/WATERBUBBLE"
 	},
 	{
 		"Id": "SPAWNER_BALL",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.spawner_ball.dds",
+		"Icon": "SPAWNER_BALL.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.spawner_ball.dds",
 		"Name": "Sphere Creator",
 		"Group": "Experimental Fabricator",
 		"Description": "A highly-specific fabrication device, developed with the intention of finding the universe's most perfect sphere.\n\nRequires power to operate. Will create a large sphere, ready for whatever experiments are deemed necessary.",
@@ -2636,11 +2787,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/SPAWNER_BALL"
 	},
 	{
 		"Id": "NOISEBOX",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.noisebox.dds",
+		"Icon": "NOISEBOX.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.noisebox.dds",
 		"Name": "Noise Box",
 		"Group": "Audio Device",
 		"Description": "A special construction module designed to emit a high-frequency noise. Pitch may be adjusted to the user's requirements.\n\nRequires power to operate.",
@@ -2678,11 +2831,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/NOISEBOX"
 	},
 	{
 		"Id": "BYTEBEAT",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.bytebeat.dds",
+		"Icon": "BYTEBEAT.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.bytebeat.dds",
 		"Name": "Bytebeat Device",
 		"Group": "Audio Synthesiser",
 		"Description": "An advanced audio generator, allowing the user to synthesise complex musical arrangements.\n\nMultiple devices may be placed in sequence or connected to lights to generate spectacular displays.",
@@ -2720,11 +2875,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BYTEBEAT"
 	},
 	{
 		"Id": "AM_SUITTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_sciencetree.dds",
+		"Icon": "AM_SUITTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_sciencetree.dds",
 		"Name": "Exosuit Research Station",
 		"Group": "Portable Exosuit Research Station",
 		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
@@ -2758,11 +2915,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/AM_SUITTREE"
 	},
 	{
 		"Id": "AM_WEAPONTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_weapontree.dds",
+		"Icon": "AM_WEAPONTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_weapontree.dds",
 		"Name": "Multi-tool Research Station",
 		"Group": "Portable Multi-Tool Research Station",
 		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
@@ -2796,11 +2955,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/AM_WEAPONTREE"
 	},
 	{
 		"Id": "AM_EXOCRAFTTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_exocrafttree.dds",
+		"Icon": "AM_EXOCRAFTTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_exocrafttree.dds",
 		"Name": "Exocraft Research Station",
 		"Group": "Portable Exocraft Research Station",
 		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
@@ -2834,11 +2995,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/AM_EXOCRAFTTREE"
 	},
 	{
 		"Id": "AM_SHIPTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_shiptree.dds",
+		"Icon": "AM_SHIPTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_shiptree.dds",
 		"Name": "Ship Research Station",
 		"Group": "Portable Starship Research Station",
 		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
@@ -2872,11 +3035,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/AM_SHIPTREE"
 	},
 	{
 		"Id": "S9_SUITTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_sciencetree.dds",
+		"Icon": "S9_SUITTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_sciencetree.dds",
 		"Name": "Utopia Exosuit Station",
 		"Group": "Portable Exosuit Research Station",
 		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exosuit Station today!",
@@ -2910,11 +3075,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/S9_SUITTREE"
 	},
 	{
 		"Id": "S9_WEAPONTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_weapontree.dds",
+		"Icon": "S9_WEAPONTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_weapontree.dds",
 		"Name": "Utopia Multi-tool Station",
 		"Group": "Portable Multi-Tool Research Station",
 		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Multi-Tool Station today!",
@@ -2948,11 +3115,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/S9_WEAPONTREE"
 	},
 	{
 		"Id": "S9_EXOCRAFTTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_exocrafttree.dds",
+		"Icon": "S9_EXOCRAFTTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_exocrafttree.dds",
 		"Name": "Utopia Exocraft Station",
 		"Group": "Portable Exocraft Research Station",
 		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exocraft Station today!",
@@ -2986,11 +3155,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/S9_EXOCRAFTTREE"
 	},
 	{
 		"Id": "S9_SHIPTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_shiptree.dds",
+		"Icon": "S9_SHIPTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_shiptree.dds",
 		"Name": "Utopia Ship Station",
 		"Group": "Portable Starship Research Station",
 		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Starship Station today!",
@@ -3024,11 +3195,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/S9_SHIPTREE"
 	},
 	{
 		"Id": "S9_BUILDERTREE",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.s9_buildtree.dds",
+		"Icon": "S9_BUILDERTREE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_buildtree.dds",
 		"Name": "Utopia Build Station",
 		"Group": "Portal Construction Blueprint Terminal",
 		"Description": "The Utopia Overseers wish for their brave settlers to be sheltered and happy! Together, we will make Bakkin beautiful!\n\nThis officially-licensed portable research station allows access to a generous range of construction blueprints, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Build Station today!",
@@ -3062,11 +3235,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/S9_BUILDERTREE"
 	},
 	{
 		"Id": "HOLO_DISCO_0",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.holodisco0.dds",
+		"Icon": "HOLO_DISCO_0.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.holodisco0.dds",
 		"Name": "Wonder Projector",
 		"Group": "Discovery Display Hologram",
 		"Description": "A buildable holographic display, designed to visualise any discovery currently listed in your Personal Records.\n\nUse the projector to manage these records directly, or view them from the Wonders section of the Catalogue.",
@@ -3104,11 +3279,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/HOLO_DISCO_0"
 	},
 	{
 		"Id": "O2_HARVESTER",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.o2harvester.dds",
+		"Icon": "O2_HARVESTER.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.o2harvester.dds",
 		"Name": "Oxygen Harvester",
 		"Group": "Atmosphere Processing Device",
 		"Description": "An autonomous atmosphere extractor, this device can be left to collect and purify oxygen from the air. User must monitor fuel levels to ensure continued operation.\n\nThe resulting gas is compressed and processed, ready for use in all standard life support systems.",
@@ -3146,11 +3323,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/O2_HARVESTER"
 	},
 	{
 		"Id": "BUILDHARVESTER",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.harvester.dds",
+		"Icon": "BUILDHARVESTER.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.harvester.dds",
 		"Name": "Autonomous Mining Unit",
 		"Group": "Portable mining device",
 		"Description": "An automated harvester for the mining of resources. Once activated, the AMU extracts minerals without the need for supervision, providing a regular yield until the site is exhausted.",
@@ -3188,11 +3367,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILDHARVESTER"
 	},
 	{
 		"Id": "BUILDGASHARVEST",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.gasharvester.dds",
+		"Icon": "BUILDGASHARVEST.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.gasharvester.dds",
 		"Name": "Atmosphere Harvester",
 		"Group": "Autonomous Gas Compressor",
 		"Description": "An automated siphon unit for the collection of valuable gases. Once activated, the harvester condenses and compresses substances from the air over time. Compressed gas is then stored safely until collected.",
@@ -3230,11 +3411,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILDGASHARVEST"
 	},
 	{
 		"Id": "BUILDSEAHARVEST",
-		"Icon": "textures/ui/frontend/icons/buildable/buildable.seaharvester.dds",
+		"Icon": "BUILDSEAHARVEST.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/buildable.seaharvester.dds",
 		"Name": "Automated Trap",
 		"Group": "Self-Sustaining Auto Creel",
 		"Description": "An autonomous fishing device, designed for long-term deployment in a wide-range of water conditions.\n\nOnce activated, the system will lure and trap any nearby aquatic creatures and store them for later retrieval.",
@@ -3272,11 +3455,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BUILDSEAHARVEST"
 	},
 	{
 		"Id": "U_EXTRACTOR_S",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.extractor_small.dds",
+		"Icon": "U_EXTRACTOR_S.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.extractor_small.dds",
 		"Name": "Mineral Extractor",
 		"Group": "Substance Distribution Module",
 		"Description": "An automated mineral harvester. Determine a site with the Surveying upgrade for the Analysis Visor. Mineral extraction rates and produced minerals will vary from site to site.\n\nRequires power to function. Connect to Silos with Pipelines to allow collection from more convenient sites.",
@@ -3310,11 +3495,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_EXTRACTOR_S"
 	},
 	{
 		"Id": "U_GASEXTRACTOR",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.gasextractor.dds",
+		"Icon": "U_GASEXTRACTOR.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.gasextractor.dds",
 		"Name": "Gas Extractor",
 		"Group": "Substance Distribution Module",
 		"Description": "An automated gas harvester. Determine a site with the Surveying upgrade for the Analysis Visor. Gas extraction rates and produced gases will vary from site to site.\n\nRequires power to function. Connect to Silos with Pipelines to allow collection from more convenient sites.",
@@ -3348,11 +3535,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_GASEXTRACTOR"
 	},
 	{
 		"Id": "U_SILO_S",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.silo_small.dds",
+		"Icon": "U_SILO_S.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.silo_small.dds",
 		"Name": "Supply Depot",
 		"Group": "Substance Distribution Module",
 		"Description": "Automated storage unit. Connect to a Supply Grid using Pipelines.\n\nAutomatically stores the output of various Mineral and Gas Extractors, allowing for increased capacity and more efficient siting. Can be located a long distances from the extraction site.",
@@ -3382,11 +3571,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_SILO_S"
 	},
 	{
 		"Id": "U_SOLAR_S",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.solarpanel_small.dds",
+		"Icon": "U_SOLAR_S.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.solarpanel_small.dds",
 		"Name": "Solar Panel",
 		"Group": "Power Distribution Module",
 		"Description": "An efficient power generator, this solar array will turn sunlight into the electrical energy required to power many base structures.\n\nGenerates no power at night. Partner with Batteries to store energy for the hours of darkness.",
@@ -3424,11 +3615,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_SOLAR_S"
 	},
 	{
 		"Id": "U_GENERATOR_S",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.generator_small.dds",
+		"Icon": "U_GENERATOR_S.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.generator_small.dds",
 		"Name": "Electromagnetic Generator",
 		"Group": "Power Distribution Module",
 		"Description": "When suitably placed in an area of high field strength, efficient electromagnetic dynamos are used to generate near limitless power.\n\nLocate appropriate sites with the Surveying upgrade for the Analysis Visor. Power output will vary from site to site.",
@@ -3466,11 +3659,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_GENERATOR_S"
 	},
 	{
 		"Id": "U_BIOGENERATOR",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.biogenerator.dds",
+		"Icon": "U_BIOGENERATOR.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.biogenerator.dds",
 		"Name": "Biofuel Reactor",
 		"Group": "Power Distribution Module",
 		"Description": "A small power generator. Burns carbon-based fuel placed in its furnace tank and converts it into usable power.\n\nConnect power generators to base structures and technologies with electrical wiring. Many parts require power to function.",
@@ -3504,11 +3699,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_BIOGENERATOR"
 	},
 	{
 		"Id": "U_POWERLINE",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.powerline.dds",
+		"Icon": "U_POWERLINE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.powerline.dds",
 		"Name": "Electrical Wiring",
 		"Group": "Power Distribution Module",
 		"Description": "High-capacity electrical wiring. Use wiring to connect Power Generators to your base. Most technology, as well as structures with embedded lighting systems, require a power source to operate.\n\nWiring can be connected to various switches to facilitate selective power flow.",
@@ -3533,11 +3730,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_POWERLINE"
 	},
 	{
 		"Id": "U_PORTALLINE",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.portalline.dds",
+		"Icon": "U_PORTALLINE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.portalline.dds",
 		"Name": "Teleport Cable",
 		"Group": "Power Distribution Module",
 		"Description": "Advanced fibre-optic cabling, designed to link one or more Short-Range Teleporters.",
@@ -3562,11 +3761,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_PORTALLINE"
 	},
 	{
 		"Id": "U_BYTEBEATLINE",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.bytebeatline.dds",
+		"Icon": "U_BYTEBEATLINE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.bytebeatline.dds",
 		"Name": "Bytebeat Cable",
 		"Group": "ByteBeat Extension",
 		"Description": "Advanced cabling, designed to link one or more Bytebeat Generators or to connect a Bytebeat Switch to the network.\n\nThe signal will synchronize connected lights and device to the generated waveform.",
@@ -3591,11 +3792,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_BYTEBEATLINE"
 	},
 	{
 		"Id": "U_SWITCHWALL",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.switchwall.dds",
+		"Icon": "U_SWITCHWALL.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.switchwall.dds",
 		"Name": "WALL SWITCH",
 		"Group": "Power Distribution Module",
 		"Description": "A power management device, the switch will toggle the flow of power when pulled.\n\nSwitches require both power and signal wires to control a device.",
@@ -3629,11 +3832,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_SWITCHWALL"
 	},
 	{
 		"Id": "U_SWITCHPRESS",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.switchpress.dds",
+		"Icon": "U_SWITCHPRESS.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.switchpress.dds",
 		"Name": "Floor Switch",
 		"Group": "Power Distribution Module",
 		"Description": "A power management device, the switch will toggle the flow of power when stood upon or otherwise activated.\n\nSwitches require both power and signal wires to control a device.",
@@ -3667,11 +3872,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_SWITCHPRESS"
 	},
 	{
 		"Id": "U_BATTERY_S",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.battery_small.dds",
+		"Icon": "U_BATTERY_S.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.battery_small.dds",
 		"Name": "Battery",
 		"Group": "Power Distribution Module",
 		"Description": "Highly-efficient energy storage units. Connect to a power grid, and onboard power management circuits will automatically draw down spare capacity to charge its cells.\n\nWhen the grid attempts to draw more power than is currently supplied, the battery will automatically deploy power to make up the shortfall.",
@@ -3705,11 +3912,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_BATTERY_S"
 	},
 	{
 		"Id": "U_SWITCHBUTTON",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_button.dds",
+		"Icon": "U_SWITCHBUTTON.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.switch_button.dds",
 		"Name": "Button",
 		"Group": "Power Distribution Module",
 		"Description": "A power management device, the switch will toggle the flow of power when used.\n\nSwitches require both power and signal wires to control a device.",
@@ -3739,11 +3948,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_SWITCHBUTTON"
 	},
 	{
 		"Id": "U_SWITCHPROX",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_prox.dds",
+		"Icon": "U_SWITCHPROX.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.switch_prox.dds",
 		"Name": "Proximity Switch",
 		"Group": "Power Distribution Module",
 		"Description": "A power management device, the switch will toggle the flow of power when an entity is detected nearby.\n\nSwitches require both power and signal wires to control a device.",
@@ -3773,11 +3984,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_SWITCHPROX"
 	},
 	{
 		"Id": "U_PIPELINE",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.pipeline.dds",
+		"Icon": "U_PIPELINE.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.pipeline.dds",
 		"Name": "Supply Pipe",
 		"Group": "Substance Distribution Module",
 		"Description": "Flexible, high-strength piping. Able to withstand a highly-pressurised internal environment.\n\nUsed for connecting various Mineral and Gas Extractors to Silos",
@@ -3811,11 +4024,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_PIPELINE"
 	},
 	{
 		"Id": "U_TRANSISTOR1",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_inverter.dds",
+		"Icon": "U_TRANSISTOR1.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.switch_inverter.dds",
 		"Name": "Power Inverter",
 		"Group": "Power Distribution Module",
 		"Description": "A power management device, the switch will toggle the flow of power when used.\n\nSwitches require both power and signal wires to control a device.",
@@ -3849,11 +4064,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_TRANSISTOR1"
 	},
 	{
 		"Id": "U_TRANSISTOR2",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_auto.dds",
+		"Icon": "U_TRANSISTOR2.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.switch_auto.dds",
 		"Name": "Auto Switch",
 		"Group": "Power Distribution Module",
 		"Description": "A power management device, this switch will toggle the flow of power when signaled by an incoming signal.\n\nSwitches require both power and signal wires to control a device.",
@@ -3887,11 +4104,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_TRANSISTOR2"
 	},
 	{
 		"Id": "U_MINIPORTAL",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.miniportal.dds",
+		"Icon": "U_MINIPORTAL.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.miniportal.dds",
 		"Name": "Short-range Teleporter",
 		"Group": "Instantaneous Transport Network",
 		"Description": "A low-powered teleporter, construction for instantaneous travel across short distances.\n\nWhen wired to both a power source and another short-range teleporter, allows near-instant travel between nearby locations.",
@@ -3929,11 +4148,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MINIPORTAL"
 	},
 	{
 		"Id": "U_MINIPORTAL_CV",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.miniportal.dds",
+		"Icon": "U_MINIPORTAL_CV.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.miniportal.dds",
 		"Name": "Short-range Teleporter",
 		"Group": "Instantaneous Transport Network",
 		"Description": "A low-powered teleporter, construction for instantaneous travel across short distances.\n\nWhen wired to both a power source and another short-range teleporter, allows near-instant travel between nearby locations.",
@@ -3971,11 +4192,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_MINIPORTAL_CV"
 	},
 	{
 		"Id": "BYTEBEATSWITCH",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.switch_bytebeat.dds",
+		"Icon": "BYTEBEATSWITCH.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.switch_bytebeat.dds",
 		"Name": "Bytebeat Switch",
 		"Group": "ByteBeat Extension",
 		"Description": "A musical switching device, designed to interpret waveform signals generated by a Bytebeat Generator and output electrical impulses to connected lights and other devices.",
@@ -4009,11 +4232,13 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/BYTEBEATSWITCH"
 	},
 	{
 		"Id": "POWERLINE_HIDER",
-		"Icon": "textures/ui/frontend/icons/buildable/utility.powerline_hider.dds",
+		"Icon": "POWERLINE_HIDER.png",
+		"IconPath": "textures/ui/frontend/icons/buildable/utility.powerline_hider.dds",
 		"Name": "Electrical Cloaking Unit",
 		"Group": "Power Distribution Module",
 		"Description": "Device to enable a wireless aesthetic in habitable bases.\n\nConstructing the Electrical Cloaking Unit within a powered base will reduce the visual prominence of all local Electrical Wiring. Hidden wires will continue to supply electricity, provided they are sufficiently powered.",
@@ -4051,6 +4276,7 @@
 		"Consumable": false,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/POWERLINE_HIDER"
 	}
 ]

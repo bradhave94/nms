@@ -5,7 +5,6 @@ import { getSlug } from '@utils/lookup.js';
 
 interface NestedItem {
   Id: string;
-  fishId?: string;
   Name: string;
   Icon: string;
   Quantity?: number;
@@ -24,11 +23,11 @@ const { items } = Astro.props;
   return item.RequiredItems?.length ? (
     <Accordion>
       <div data-index={index} class="flex" slot="title">
-        <div class="m-3">
-          <a class="flex hover:underline" href={`${getSlug(item.Id)}${item.fishId || item.Id}`}>
+        <div class="m-1">
+          <a class="flex hover:underline" href={getSlug(item.Id)}>
             <div class="mr-4 flex-shrink-0 self-start">
               <Image
-                src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+                src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
                 alt={item.Name}
                 sizes="50px"
                 width={50}
@@ -49,10 +48,10 @@ const { items } = Astro.props;
     </Accordion>
   ) : (
     <div data-index={index} class="m-3">
-      <a class="flex hover:underline" href={`${getSlug(item.Id)}${item.fishId || item.Id}`}>
+      <a class="flex hover:underline" href={getSlug(item.Id)}>
         <div class="mr-4 flex-shrink-0 self-start">
           <Image
-            src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+            src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
             alt={item.Name}
             sizes="50px"
             width={50}

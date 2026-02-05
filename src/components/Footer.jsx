@@ -24,15 +24,16 @@ export default function Footer() {
           ))}
         </nav>
         <p className="mt-8 text-center text-xs leading-5 text-gray-500">
-          No Man's Sky Recipes | Updated to{' '}
+          No Man's Sky Recipes | Updated to &nbsp;
           <a
             className="hover:text-blue-500 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
             href={SITE.version_link}
           >
-            {SITE.version_name} {SITE.version}
+            {SITE.version_name} ({SITE.version})
           </a>
+          &nbsp; on {SITE.version_date}
         </p>
         <div className="disclaimer">
           <p>This is a fan-made website. No Man's Sky™ and all related assets are trademarks

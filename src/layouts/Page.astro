@@ -25,7 +25,6 @@ type ProcessedItem = {
 
 type RawItem = {
   Id: string;
-  fishId: string | undefined;
   Name: string;
   Icon: string;
   Colour?: string;
@@ -59,7 +58,6 @@ const createArray = (
       } else {
         rawItemsMap.set(key, {
           Id: item.Id,
-          fishId: item.fishId,
           Name: item.Name,
           Icon: item.Icon,
           Colour: item.Colour,
@@ -97,7 +95,6 @@ const createArray = (
 
     array.push({
       Id: itemData.Id,
-      fishId: itemData.fishId,
       Name: itemData.Name,
       Icon: itemData.Icon,
       Colour: itemData.Colour,
@@ -119,7 +116,6 @@ type RecipeOutput = { Inputs?: IOItem[] };
 type RecipeInput = { Output?: IOItem; Inputs?: IOItem[] };
 type UsedInItem = {
   Id: string;
-  fishId?: string;
   Icon: string;
   Name: string;
   Quantity: number;
@@ -135,7 +131,6 @@ const getOutputs = (item: RecipeOutput): UsedInItem | undefined => {
     if (!i) continue;
     RequiredItems.push({
       Id: i.Id,
-      fishId: i.fishId,
       Icon: i.Icon,
       Name: i.Name,
       Group: i.Group,
@@ -145,7 +140,6 @@ const getOutputs = (item: RecipeOutput): UsedInItem | undefined => {
 
   return {
     Id: Astro.props.item.Id,
-    fishId: Astro.props.item.fishId,
     Icon: Astro.props.item.Icon,
     Name: Astro.props.item.Name,
     Quantity: 1,
@@ -166,7 +160,6 @@ const getInputs = (item: RecipeInput[]): UsedInItem[] => {
       if (!inputItem) continue;
       requiredItems.push({
         Id: inputItem.Id,
-        fishId: inputItem.fishId,
         Icon: inputItem.Icon,
         Name: inputItem.Name,
         Group: inputItem.Group,
@@ -176,7 +169,6 @@ const getInputs = (item: RecipeInput[]): UsedInItem[] => {
 
     results.push({
       Id: recipe.Output.Id,
-      fishId: outputItem.fishId,
       Icon: outputItem.Icon,
       Name: outputItem.Name,
       Quantity: recipe.Output.Quantity,
@@ -209,12 +201,12 @@ const input = getInputs(inputData);
 const showQuantityInput = data.length + output.length > 0;
 ---
 
-<div class="mx-auto max-w-6xl lg:mt-24 bg-gray-800 p-3 lg:p-8">
+<div class="mx-auto max-w-6xl lg:pt-12 bg-gray-800 p-3 lg:p-8">
   <!-- Item details section -->
   <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
     <div class="flex flex-col-reverse items-center">
       <Image
-        src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+        src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
         alt={item.Name}
         sizes="256px"
         width={256}
@@ -268,7 +260,7 @@ const showQuantityInput = data.length + output.length > 0;
             <Accordion open={data.length + output.length === 1}>
               <div class="flex" slot="title">
                 <Image
-                  src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+                  src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
                   alt={item.Name}
                   sizes="50px"
                   width={50}
@@ -297,7 +289,7 @@ const showQuantityInput = data.length + output.length > 0;
                           style={`background: #${rawItem.Colour}`}
                         >
                           <Image
-                            src={`https://app.nmsassistant.com/assets/images/${rawItem.Icon}`}
+                            src={`https://nomansskyrecipes.com/images/items/${rawItem.Icon}`}
                             alt={rawItem.Name}
                             sizes="50px"
                             width={50}
@@ -343,7 +335,7 @@ const showQuantityInput = data.length + output.length > 0;
             <Accordion>
               <div class="flex" slot="title">
                 <Image
-                  src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+                  src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
                   alt={item.Name}
                   sizes="50px"
                   width={50}
@@ -371,7 +363,7 @@ const showQuantityInput = data.length + output.length > 0;
     <div id="usedin">
       <h2 class="relative mt-8 mb-4 text-center">
         <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
-          {item.fishId ? 'Cooks into' : 'Used in'}
+          {(item.Slug && item.Slug.startsWith('fish/')) ? 'Catches Yield' : 'Used in'}
         </span>
       </h2>
       <div class={`grid gap-4 items-start justify-center ${
@@ -382,7 +374,7 @@ const showQuantityInput = data.length + output.length > 0;
             <Accordion>
               <div class="flex" slot="title">
                 <Image
-                  src={`https://app.nmsassistant.com/assets/images/${item.Icon}`}
+                  src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
                   alt={item.Name}
                   sizes="50px"
                   width={50}

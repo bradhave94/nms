@@ -1,17 +1,17 @@
 // Importing data files
-import raw from '../data/RawMaterials.json';
-import products from '../data/Products.json';
-import cooking from '../data/Cooking.json';
-import curiosities from '../data/Curiosities.json';
-import fish from '../data/Fish.json';
-import conTech from '../data/ConstructedTechnology.json';
-import tech from '../data/Technology.json';
-import tMod from '../data/TechnologyModule.json';
-import other from '../data/Others.json';
-import refiner from '../data/Refinery.json';
-import nut from '../data/NutrientProcessor.json';
-import build from '../data/Buildings.json';
-import trade from '../data/Trade.json';
+import raw from '../datav2/RawMaterials.json';
+import products from '../datav2/Products.json';
+import cooking from '../datav2/Cooking.json';
+import curiosities from '../datav2/Curiosities.json';
+import fish from '../datav2/Fish.json';
+import conTech from '../datav2/ConstructedTechnology.json';
+import tech from '../datav2/Technology.json';
+import tMod from '../datav2/TechnologyModule.json';
+import other from '../datav2/Others.json';
+import refiner from '../datav2/Refinery.json';
+import nut from '../datav2/NutrientProcessor.json';
+import build from '../datav2/Buildings.json';
+import trade from '../datav2/Trade.json';
 
 export type RequiredItem = {
 	Id: string;
@@ -21,11 +21,12 @@ export type RequiredItem = {
 // Defining the interface for an Item
 export type Item = {
 	Id: string;
-	fishId?: string;
 	Name: string;
 	Description: string;
 	Group: string;
 	Icon: string;
+	IconPath?: string;
+	Slug?: string;
 	Colour: string;
 	BaseValueUnits: number;
 	RequiredItems?: RequiredItem[];
@@ -77,19 +78,19 @@ const dataSources = {
 
 // Mapping the prefixes of item id to the corresponding slugs
 const slugs = {
-	raw: '/raw/',
-	prod: '/products/',
-	cook: '/cooking/',
-	cur: '/curiosities/',
-	fish: '/fish/',
-	conTech: '/technology/',
-	tech: '/technology/',
-	tMod: '/technology/',
-	other: '/other/',
-	ref: '/refinery/',
-	nut: '/nutrient-processor/',
-	build: '/buildings/',
-	trade: '/other/',
+	raw: 'raw/',
+	prod: 'products/',
+	cook: 'cooking/',
+	cur: 'curiosities/',
+	fish: 'fish/',
+	conTech: 'technology/',
+	tech: 'technology/',
+	tMod: 'technology/',
+	other: 'other/',
+	ref: 'refinery/',
+	nut: 'nutrient-processor/',
+	build: 'buildings/',
+	trade: 'other/',
 };
 
 const labels = {
@@ -108,24 +109,62 @@ const labels = {
 	trade: 'Other',
 };
 
-const getSlug = (id: string): string => {
-    // Extract the prefix of the item id by splitting the id by its numeric part
-    const prefix = id.split(/\d/)[0] as keyof typeof slugs;
+const buildSlugFromId = (id: string): string => {
+	const item = getById(id);
+	if (item?.Slug) {
+		return `/${item.Slug}`.replace(/\/+/g, '/');
+	}
 
-    // Special handling for 'cur' prefix
-    if (prefix === 'cur') {
-        const item = getById(id);
-        if (item && 'fishId' in item) {
-            return slugs['fish'];
-        }
-    }
-
-    // Return the slug corresponding to the prefix or "item" if prefix not found
-    return slugs[prefix] || 'item';
+	// Extract the prefix of the item id by splitting the id by its numeric part
+	const prefix = id.split(/\d/)[0] as keyof typeof slugs;
+	const prefixSlug = slugs[prefix] || 'item/';
+	return `/${prefixSlug}${id}`.replace(/\/+/g, '/');
 };
 
-// Returns the label corresponding to the item id
-const getLabel = (id: string): string => {
+type SlugItem = { Id: string; Slug?: string };
+
+const getSlug = (itemOrId: SlugItem | string): string => {
+	if (typeof itemOrId !== 'string') {
+		if (itemOrId.Slug) {
+			return `/${itemOrId.Slug}`.replace(/\/+/g, '/');
+		}
+		if (itemOrId.Id) {
+			return buildSlugFromId(itemOrId.Id);
+		}
+		return '/item';
+	}
+
+	return buildSlugFromId(itemOrId);
+};
+
+type LabelItem = { Id: string; Slug?: string };
+
+const slugLabels: Record<string, string> = {
+	raw: 'Raw Materials',
+	products: 'Products',
+	cooking: 'Cooking',
+	curiosities: 'Curiosities',
+	fish: 'Fish',
+	technology: 'Technology',
+	other: 'Other',
+	refinery: 'Refinery',
+	'nutrient-processor': 'Nutrient Processor',
+	buildings: 'Buildings',
+};
+
+// Returns the label corresponding to an item or id
+const getLabel = (itemOrId: LabelItem | string): string => {
+	const slug =
+		typeof itemOrId === 'string'
+			? (itemOrId.includes('/') ? itemOrId : undefined)
+			: itemOrId.Slug;
+
+	if (slug) {
+		const slugPrefix = slug.split('/')[0];
+		return slugLabels[slugPrefix] || 'item';
+	}
+
+	const id = typeof itemOrId === 'string' ? itemOrId : itemOrId.Id;
 	// Extract the prefix of the item id by splitting the id by its numeric part
 	const prefix = id.split(/\d/)[0] as keyof typeof labels;
 	// Return the slug corresponding to the prefix or "item" if prefix not found
@@ -169,24 +208,28 @@ const getById = (id: string): Item | undefined => {
 	// Get the data source corresponding to the prefix
 	const source = dataSources[prefix];
 
-	// If source not found, return undefined
-	if (!source) {
-		if (typeof window !== 'undefined' && import.meta.env.DEV) {
-			console.error(`No data source found for prefix: ${id} : ${prefix}`);
+	if (source) {
+		// Find the item from the source
+		const item = source.find((item) => item.Id === id);
+		if (item) {
+			// Return the found item (cast to Item since JSON structure doesn't match exactly)
+			return item as Item;
 		}
-		return undefined;
 	}
-	// Find the item from the source
-	const item = source.find((item) => item.Id === id);
+
+	// Fallback: datav2 IDs don't always use prefixes, so scan all sources.
+	for (const fallbackSource of Object.values(dataSources)) {
+		const item = fallbackSource.find((item) => item.Id === id);
+		if (item) {
+			return item as Item;
+		}
+	}
+
 	// If item not found, return undefined
-	if (!item) {
-		if (typeof window !== 'undefined' && import.meta.env.DEV) {
-			console.warn(`Item not found: ${id}`);
-		}
-		return undefined;
+	if (typeof window !== 'undefined' && import.meta.env.DEV) {
+		console.warn(`Item not found: ${id}`);
 	}
-	// Return the found item (cast to Item since JSON structure doesn't match exactly)
-	return item as Item;
+	return undefined;
 };
 
 const getLength = (list: keyof typeof dataSources): number => {

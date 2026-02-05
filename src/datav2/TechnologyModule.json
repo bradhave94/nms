@@ -1,7 +1,8 @@
 [
 	{
 		"Id": "U_SENTGUN",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.sentinel.gun.dds",
+		"Icon": "U_SENTGUN.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.sentinel.gun.dds",
 		"Name": "Sentinel Weapons Shard",
 		"Group": "Forbidden Multi-Tool Module",
 		"Description": "An anomalous upgrade for the Multi-Tool's Weapon Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThis eerie, glassy shard has been extracted from Sentinel debris. Its exact effect upon the Multi-Tool will not be known until after installation is complete.",
@@ -24,11 +25,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_SENTGUN"
 	},
 	{
 		"Id": "U_UNW1",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.b.water.dds",
+		"Icon": "U_UNW1.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.water.dds",
 		"Name": "Underwater Protection Module",
 		"Group": "Underwater Oxygen Upgrade",
 		"Description": "A significant upgrade for the Exosuit Aeration Membrane. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves survival times underwater.",
@@ -51,11 +54,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_UNW1"
 	},
 	{
 		"Id": "U_UNW2",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.a.water.dds",
+		"Icon": "U_UNW2.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.water.dds",
 		"Name": "Underwater Protection Module",
 		"Group": "Significant Underwater Oxygen Upgrade",
 		"Description": "An extremely powerful upgrade for the Exosuit Aeration Membrane. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times underwater.",
@@ -78,11 +83,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_UNW2"
 	},
 	{
 		"Id": "U_UNW3",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.s.water.dds",
+		"Icon": "U_UNW3.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.water.dds",
 		"Name": "Underwater Protection Module",
 		"Group": "Powerful Underwater Oxygen Upgrade",
 		"Description": "A supremely powerful upgrade for the Exosuit Aeration Membrane. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times underwater.",
@@ -105,11 +112,13 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_UNW3"
 	},
 	{
 		"Id": "U_SENTSUIT",
-		"Icon": "textures/ui/frontend/icons/u4products/proctech/proctech.sentinel.suit.dds",
+		"Icon": "U_SENTSUIT.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.sentinel.suit.dds",
 		"Name": "Sentinel Exosuit Fragment",
 		"Group": "Forbidden Exosuit Module",
 		"Description": "An anomalous upgrade for Exosuit. Use FE_ALT1 to begin upgrade installation process.\n\nThis strange fragment of debris has been extracted from Sentinel technology. Its exact effect upon suit performance is impossible to predict before the nantite foam has fully spread within the Exosuit's systems.",
@@ -132,1210 +141,1383 @@
 		"Consumable": true,
 		"CookingIngredient": false,
 		"GoodForSelling": false,
-		"EggModifierIngredient": false
+		"EggModifierIngredient": false,
+		"Slug": "technology/U_SENTSUIT"
 	},
 	{
 		"Id": "UP_LASER1",
 		"Name": "Up Laser",
 		"Group": "C-Class Mining Beam Upgrade",
 		"Description": "A moderate upgrade for the Mining Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: power output, heat toleration and fuel efficiency.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_LASER1"
 	},
 	{
 		"Id": "UP_LASER2",
 		"Name": "Up Laser",
 		"Group": "B-Class Mining Beam Upgrade",
 		"Description": "A significant upgrade for the Mining Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: power output, heat toleration and fuel efficiency.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_LASER2"
 	},
 	{
 		"Id": "UP_LASER3",
 		"Name": "Up Laser",
 		"Group": "A-Class Mining Beam Upgrade",
 		"Description": "An extremely powerful upgrade for the Mining Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: power output, heat toleration and fuel efficiency.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_LASER3"
 	},
 	{
 		"Id": "UP_LASER4",
 		"Name": "Up Laser",
 		"Group": "S-Class Mining Beam Upgrade",
 		"Description": "A supremely powerful upgrade for the Mining Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: power output, heat toleration and fuel efficiency.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_LASER4"
 	},
 	{
 		"Id": "UP_LASERX",
 		"Name": "Up Laser",
 		"Group": "Illegal Mining Beam Upgrade",
 		"Description": "Up Laserx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_LASERX"
 	},
 	{
 		"Id": "UP_SCAN1",
 		"Name": "Up Scanner",
 		"Group": "C-Class Analysis Visor Upgrade",
 		"Description": "A moderate upgrade for the Multi-Tool Scanning Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: scan radius and/or significantly increasing the value of discovery data.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SCAN1"
 	},
 	{
 		"Id": "UP_SCAN2",
 		"Name": "Up Scanner",
 		"Group": "B-Class Analysis Visor Upgrade",
 		"Description": "A significant upgrade for the Multi-Tool Scanning Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: scan radius and/or significantly increasing the value of discovery data.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SCAN2"
 	},
 	{
 		"Id": "UP_SCAN3",
 		"Name": "Up Scanner",
 		"Group": "A-Class Analysis Visor Upgrade",
 		"Description": "An extremely powerful upgrade for the Multi-Tool Scanning Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: scan radius and/or significantly increasing the value of discovery data.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SCAN3"
 	},
 	{
 		"Id": "UP_SCAN4",
 		"Name": "Up Scanner",
 		"Group": "S-Class Analysis Visor Upgrade",
 		"Description": "A supremely powerful upgrade for the Multi-Tool Scanning Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: scan radius and/or significantly increasing the value of discovery data.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SCAN4"
 	},
 	{
 		"Id": "UP_SCANX",
 		"Name": "Up Scanner",
 		"Group": "Illegal Analysis Visor Upgrade",
 		"Description": "Up Scannerx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SCANX"
 	},
 	{
 		"Id": "UP_BOLT1",
 		"Name": "Up Bolt",
 		"Group": "C-Class Boltcaster Upgrade",
 		"Description": "A moderate upgrade for the Boltcaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_BOLT1"
 	},
 	{
 		"Id": "UP_BOLT2",
 		"Name": "Up Bolt",
 		"Group": "B-Class Boltcaster Upgrade",
 		"Description": "A significant upgrade for the Boltcaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_BOLT2"
 	},
 	{
 		"Id": "UP_BOLT3",
 		"Name": "Up Bolt",
 		"Group": "A-Class Boltcaster Upgrade",
 		"Description": "An extremely powerful upgrade for the Boltcaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_BOLT3"
 	},
 	{
 		"Id": "UP_BOLT4",
 		"Name": "Up Bolt",
 		"Group": "S-Class Boltcaster Upgrade",
 		"Description": "A supremely powerful upgrade for the Boltcaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_BOLT4"
 	},
 	{
 		"Id": "UP_BOLTX",
 		"Name": "Up Bolt",
 		"Group": "Illegal Boltcaster Upgrade",
 		"Description": "Up Boltx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_BOLTX"
 	},
 	{
 		"Id": "UP_GREN1",
 		"Name": "Up Gren",
 		"Group": "C-Class Plasma Launcher Upgrade",
 		"Description": "A moderate upgrade for the Plasma Launcher. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nOffers improvements to explosion damage and radius, as well as increasing the maximum number of pre-explosion bounces.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_GREN1"
 	},
 	{
 		"Id": "UP_GREN2",
 		"Name": "Up Gren",
 		"Group": "B-Class Plasma Launcher Upgrade",
 		"Description": "A significant upgrade for the Plasma Launcher. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: Explosion damage and radius, as well as increasing the maximum number of pre-explosion bounces.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_GREN2"
 	},
 	{
 		"Id": "UP_GREN3",
 		"Name": "Up Gren",
 		"Group": "A-Class Plasma Launcher Upgrade",
 		"Description": "An extremely powerful upgrade for the Plasma Launcher. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: Explosion damage and radius, as well as increasing the maximum number of pre-explosion bounces.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_GREN3"
 	},
 	{
 		"Id": "UP_GREN4",
 		"Name": "Up Gren",
 		"Group": "S-Class Plasma Launcher Upgrade",
 		"Description": "A supremely powerful upgrade for the Plasma Launcher. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: Explosion damage and radius, as well as increasing the maximum number of pre-explosion bounces.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_GREN4"
 	},
 	{
 		"Id": "UP_GRENX",
 		"Name": "Up Gren",
 		"Group": "Illegal Plasma Launcher Upgrade",
 		"Description": "Up Grenadex",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_GRENX"
 	},
 	{
 		"Id": "UP_TGREN1",
 		"Name": "Up T Gren",
 		"Group": "C-Class Geology Cannon Upgrade",
 		"Description": "A moderate upgrade for the Geology Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotentially increases explosion damage or crater radius.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_TGREN1"
 	},
 	{
 		"Id": "UP_TGREN2",
 		"Name": "Up T Gren",
 		"Group": "B-Class Geology Cannon Upgrade",
 		"Description": "A significant upgrade for the Geology Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotentially increases both explosion damage and crater radius.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_TGREN2"
 	},
 	{
 		"Id": "UP_TGREN3",
 		"Name": "Up T Gren",
 		"Group": "A-Class Geology Cannon Upgrade",
 		"Description": "An extremely powerful upgrade for the Geology Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nIncreases both explosion damage and crater radius.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_TGREN3"
 	},
 	{
 		"Id": "UP_TGREN4",
 		"Name": "Up T Gren",
 		"Group": "S-Class Geology Cannon Upgrade",
 		"Description": "A supremely powerful upgrade for the Geology Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nIncreases both explosion damage and crater radius.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_TGREN4"
 	},
 	{
 		"Id": "UP_TGRENX",
 		"Name": "Up T Gren",
 		"Group": "Illegal Geology Cannon Upgrade",
 		"Description": "Up Tgrenadex",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_TGRENX"
 	},
 	{
 		"Id": "UP_RAIL1",
 		"Name": "Up Rail",
 		"Group": "C-Class Blaze Javelin Upgrade",
 		"Description": "A moderate upgrade for the Blaze Javelin. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: laser damage and recharge time.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_RAIL1"
 	},
 	{
 		"Id": "UP_RAIL2",
 		"Name": "Up Rail",
 		"Group": "B-Class Blaze Javelin Upgrade",
 		"Description": "A significant upgrade for the Blaze Javelin. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: laser damage and recharge time.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_RAIL2"
 	},
 	{
 		"Id": "UP_RAIL3",
 		"Name": "Up Rail",
 		"Group": "A-Class Blaze Javelin Upgrade",
 		"Description": "An extremely powerful upgrade for the Blaze Javelin. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: laser damage and recharge time.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_RAIL3"
 	},
 	{
 		"Id": "UP_RAIL4",
 		"Name": "Up Rail",
 		"Group": "S-Class Blaze Javelin Upgrade",
 		"Description": "A supremely powerful upgrade for the Blaze Javelin. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: laser damage and recharge time.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_RAIL4"
 	},
 	{
 		"Id": "UP_RAILX",
 		"Name": "Up Rail",
 		"Group": "Illegal Blaze Javelin Upgrade",
 		"Description": "Up Railx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_RAILX"
 	},
 	{
 		"Id": "UP_SHOT1",
 		"Name": "Up Shot",
 		"Group": "C-Class Scatter Blaster Upgrade",
 		"Description": "A moderate upgrade for the Scatter Blaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SHOT1"
 	},
 	{
 		"Id": "UP_SHOT2",
 		"Name": "Up Shot",
 		"Group": "B-Class Scatter Blaster Upgrade",
 		"Description": "A significant upgrade for the Scatter Blaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SHOT2"
 	},
 	{
 		"Id": "UP_SHOT3",
 		"Name": "Up Shot",
 		"Group": "A-Class Scatter Blaster Upgrade",
 		"Description": "An extremely powerful upgrade for the Scatter Blaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SHOT3"
 	},
 	{
 		"Id": "UP_SHOT4",
 		"Name": "Up Shot",
 		"Group": "S-Class Scatter Blaster Upgrade",
 		"Description": "A supremely powerful upgrade for the Scatter Blaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SHOT4"
 	},
 	{
 		"Id": "UP_SHOTX",
 		"Name": "Up Shot",
 		"Group": "Illegal Scatter Blaster Upgrade",
 		"Description": "Up Shotgunx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SHOTX"
 	},
 	{
 		"Id": "UP_SMG1",
 		"Name": "Up Smg",
 		"Group": "C-Class Pulse Spitter Upgrade",
 		"Description": "A moderate upgrade for the Pulse Spitter. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SMG1"
 	},
 	{
 		"Id": "UP_SMG2",
 		"Name": "Up Smg",
 		"Group": "B-Class Pulse Spitter Upgrade",
 		"Description": "A significant upgrade for the Pulse Spitter. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SMG2"
 	},
 	{
 		"Id": "UP_SMG3",
 		"Name": "Up Smg",
 		"Group": "A-Class Pulse Spitter Upgrade",
 		"Description": "An extremely powerful upgrade for the Pulse Spitter. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SMG3"
 	},
 	{
 		"Id": "UP_SMG4",
 		"Name": "Up Smg",
 		"Group": "S-Class Pulse Spitter Upgrade",
 		"Description": "A supremely powerful upgrade for the Pulse Spitter. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SMG4"
 	},
 	{
 		"Id": "UP_SMGX",
 		"Name": "Up Smg",
 		"Group": "Illegal Pulse Spitter Upgrade",
 		"Description": "Up Smgx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SMGX"
 	},
 	{
 		"Id": "UP_ENGY1",
 		"Name": "Up Lifeboost",
 		"Group": "B-Class Life Support Upgrade",
 		"Description": "A significant upgrade for the Life Support System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nIncreases life support power.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_ENGY1"
 	},
 	{
 		"Id": "UP_ENGY2",
 		"Name": "Up Lifeboost",
 		"Group": "A-Class Life Support Upgrade",
 		"Description": "An extremely powerful upgrade for the Life Support System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotentially increases life support power and may offer limited solar-energy power-offsetting, decreasing power use during daylight.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_ENGY2"
 	},
 	{
 		"Id": "UP_ENGY3",
 		"Name": "Up Lifeboost",
 		"Group": "S-Class Life Support Upgrade",
 		"Description": "A supremely powerful upgrade for the Life Support System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotentially increases life support power and may offer limited solar-energy power-offsetting, decreasing power use during daylight.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_ENGY3"
 	},
 	{
 		"Id": "UP_ENGYX",
 		"Name": "Up Lifeboost",
 		"Group": "Illegal Life Support Upgrade",
 		"Description": "Up Energyx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_ENGYX"
 	},
 	{
 		"Id": "UP_HAZX",
 		"Name": "Up Hazprot",
 		"Group": "Illegal Hazard Protection Upgrade",
 		"Description": "Up Energyx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_HAZX"
 	},
 	{
 		"Id": "UP_JET1",
 		"Name": "Up Jetboost",
 		"Group": "C-Class Movement System Upgrade",
 		"Description": "A moderate upgrade for the Exosuit Movement Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: jetpack tank capacity, jetpack fuel efficiency and Exosuit speed boost duration.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_JET1"
 	},
 	{
 		"Id": "UP_JET2",
 		"Name": "Up Jetboost",
 		"Group": "B-Class Movement System Upgrade",
 		"Description": "A significant upgrade for the Exosuit Movement Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: jetpack tank capacity, jetpack fuel efficiency and Exosuit speed boost duration.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_JET2"
 	},
 	{
 		"Id": "UP_JET3",
 		"Name": "Up Jetboost",
 		"Group": "A-Class Movement System Upgrade",
 		"Description": "An extremely powerful upgrade for the Exosuit Movement Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: jetpack tank capacity, jetpack fuel efficiency and Exosuit speed boost duration.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_JET3"
 	},
 	{
 		"Id": "UP_JET4",
 		"Name": "Up Jetboost",
 		"Group": "S-Class Movement System Upgrade",
 		"Description": "A supremely powerful upgrade for the Exosuit Movement Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: jetpack tank capacity, jetpack fuel efficiency and Exosuit speed boost duration.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_JET4"
 	},
 	{
 		"Id": "UP_JETX",
 		"Name": "Up Jetboost",
 		"Group": "Illegal Movement System Upgrade",
 		"Description": "Up Jetboostx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_JETX"
 	},
 	{
 		"Id": "UP_SHLD1",
 		"Name": "Up Shieldboost",
 		"Group": "C-Class Defence Systems Upgrade",
 		"Description": "A moderate upgrade for the Exosuit Defensive Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nIncreases Exosuit shield strength.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SHLD1"
 	},
 	{
 		"Id": "UP_SHLD2",
 		"Name": "Up Shieldboost",
 		"Group": "B-Class Defence Systems Upgrade",
 		"Description": "A significant upgrade for the Exosuit Defensive Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: Exosuit shield strength and core health.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SHLD2"
 	},
 	{
 		"Id": "UP_SHLD3",
 		"Name": "Up Shieldboost",
 		"Group": "A-Class Defence Systems Upgrade",
 		"Description": "An extremely powerful upgrade for the Exosuit Defensive Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: Exosuit shield strength and core health.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SHLD3"
 	},
 	{
 		"Id": "UP_SHLD4",
 		"Name": "Up Shieldboost",
 		"Group": "S-Class Defence Systems Upgrade",
 		"Description": "A supremely powerful upgrade for the Exosuit Defensive Systems. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: Exosuit shield strength and core health.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SHLD4"
 	},
 	{
 		"Id": "UP_SHLDX",
 		"Name": "Up Shieldboost",
 		"Group": "Illegal Defence Systems Upgrade",
 		"Description": "Up Shieldboostx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SHLDX"
 	},
 	{
 		"Id": "UP_RAD1",
 		"Name": "Up Rad",
 		"Group": "B-Class Radiation Protection Upgrade",
 		"Description": "A significant upgrade for the Exosuit Radiation Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves survival times in radioactive environments.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_RAD1"
 	},
 	{
 		"Id": "UP_RAD2",
 		"Name": "Up Rad",
 		"Group": "A-Class Radiation Protection Upgrade",
 		"Description": "An extremely powerful upgrade for the Exosuit Radiation Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times in radioactive environments.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_RAD2"
 	},
 	{
 		"Id": "UP_RAD3",
 		"Name": "Up Rad",
 		"Group": "S-Class Radiation Protection Upgrade",
 		"Description": "A supremely powerful upgrade for the Exosuit Radiation Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times in radioactive environments.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_RAD3"
 	},
 	{
 		"Id": "UP_TOX1",
 		"Name": "Up Tox",
 		"Group": "B-Class Toxic Protection Upgrade",
 		"Description": "A significant upgrade for the Exosuit Toxin Filtering System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves survival times in toxic environments.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_TOX1"
 	},
 	{
 		"Id": "UP_TOX2",
 		"Name": "Up Tox",
 		"Group": "A-Class Toxic Protection Upgrade",
 		"Description": "An extremely powerful upgrade for the Exosuit Toxin Filtering System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times in toxic environments.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_TOX2"
 	},
 	{
 		"Id": "UP_TOX3",
 		"Name": "Up Tox",
 		"Group": "S-Class Toxic Protection Upgrade",
 		"Description": "A supremely powerful upgrade for the Exosuit Toxin Filtering System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times in toxic environments.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_TOX3"
 	},
 	{
 		"Id": "UP_COLD1",
 		"Name": "Up Coldprot",
 		"Group": "B-Class Thermal Protection Upgrade",
 		"Description": "A significant upgrade for the Exosuit Thermal Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves survival times in sub-zero environments.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_COLD1"
 	},
 	{
 		"Id": "UP_COLD2",
 		"Name": "Up Coldprot",
 		"Group": "A-Class Thermal Protection Upgrade",
 		"Description": "An extremely powerful upgrade for the Exosuit Thermal Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times in sub-zero environments.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_COLD2"
 	},
 	{
 		"Id": "UP_COLD3",
 		"Name": "Up Coldprot",
 		"Group": "S-Class Thermal Protection Upgrade",
 		"Description": "A supremely powerful upgrade for the Exosuit Thermal Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times in sub-zero environments.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_COLD3"
 	},
 	{
 		"Id": "UP_HOT1",
 		"Name": "Up Hotprot",
 		"Group": "B-Class Thermal Protection Upgrade",
 		"Description": "A significant upgrade for the Exosuit Thermal Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves survival times in high-temperature environments.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_HOT1"
 	},
 	{
 		"Id": "UP_HOT2",
 		"Name": "Up Hotprot",
 		"Group": "A-Class Thermal Protection Upgrade",
 		"Description": "An extremely powerful upgrade for the Exosuit Thermal Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times in high-temperature environments.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_HOT2"
 	},
 	{
 		"Id": "UP_HOT3",
 		"Name": "Up Hotprot",
 		"Group": "S-Class Thermal Protection Upgrade",
 		"Description": "A supremely powerful upgrade for the Exosuit Thermal Protection System. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDrastically improves survival times in high-temperature environments.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_HOT3"
 	},
 	{
 		"Id": "UP_PULSE1",
 		"Name": "Up Pulsedrive",
 		"Group": "C-Class Pulse Engine Upgrade",
 		"Description": "A moderate upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_PULSE1"
 	},
 	{
 		"Id": "UP_PULSE2",
 		"Name": "Up Pulsedrive",
 		"Group": "B-Class Pulse Engine Upgrade",
 		"Description": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_PULSE2"
 	},
 	{
 		"Id": "UP_PULSE3",
 		"Name": "Up Pulsedrive",
 		"Group": "A-Class Pulse Engine Upgrade",
 		"Description": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_PULSE3"
 	},
 	{
 		"Id": "UP_PULSE4",
 		"Name": "Up Pulsedrive",
 		"Group": "S-Class Pulse Engine Upgrade",
 		"Description": "A supremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_PULSE4"
 	},
 	{
 		"Id": "UP_PULSEX",
 		"Name": "Up Pulsedrive",
 		"Group": "Illegal Pulse Engine Upgrade",
 		"Description": "Up Pulsex",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_PULSEX"
 	},
 	{
 		"Id": "UP_LAUN1",
 		"Name": "Up Launcher",
 		"Group": "C-Class Launch Thruster Upgrade",
 		"Description": "A moderate upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_LAUN1"
 	},
 	{
 		"Id": "UP_LAUN2",
 		"Name": "Up Launcher",
 		"Group": "B-Class Launch Thruster Upgrade",
 		"Description": "A significant upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_LAUN2"
 	},
 	{
 		"Id": "UP_LAUN3",
 		"Name": "Up Launcher",
 		"Group": "A-Class Launch Thruster Upgrade",
 		"Description": "An extremely powerful upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_LAUN3"
 	},
 	{
 		"Id": "UP_LAUN4",
 		"Name": "Up Launcher",
 		"Group": "S-Class Launch Thruster Upgrade",
 		"Description": "A supremely powerful upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_LAUN4"
 	},
 	{
 		"Id": "UP_LAUNX",
 		"Name": "Up Launcher",
 		"Group": "Illegal Launch Thruster Upgrade",
 		"Description": "Up Launchx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_LAUNX"
 	},
 	{
 		"Id": "UP_HYP1",
 		"Name": "Up Hyperdrive",
 		"Group": "C-Class Hyperdrive Upgrade",
 		"Description": "A moderate upgrade for the Hyperdrive. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_HYP1"
 	},
 	{
 		"Id": "UP_HYP2",
 		"Name": "Up Hyperdrive",
 		"Group": "B-Class Hyperdrive Upgrade",
 		"Description": "A significant upgrade for the Hyperdrive. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_HYP2"
 	},
 	{
 		"Id": "UP_HYP3",
 		"Name": "Up Hyperdrive",
 		"Group": "A-Class Hyperdrive Upgrade",
 		"Description": "An extremely powerful upgrade for the Hyperdrive. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_HYP3"
 	},
 	{
 		"Id": "UP_HYP4",
 		"Name": "Up Hyperdrive",
 		"Group": "S-Class Hyperdrive Upgrade",
 		"Description": "A supremely powerful upgrade for the Hyperdrive. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_HYP4"
 	},
 	{
 		"Id": "UP_HYPX",
 		"Name": "Up Hyperdrive",
 		"Group": "Illegal Hyperdrive Upgrade",
 		"Description": "Up Hyperx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_HYPX"
 	},
 	{
 		"Id": "UP_S_SHL1",
 		"Name": "Up Shipshield",
 		"Group": "C-Class Deflector Shield Upgrade",
 		"Description": "A moderate upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nImproves ship strength for increased combat endurance.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_S_SHL1"
 	},
 	{
 		"Id": "UP_S_SHL2",
 		"Name": "Up Shipshield",
 		"Group": "B-Class Deflector Shield Upgrade",
 		"Description": "A significant upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_S_SHL2"
 	},
 	{
 		"Id": "UP_S_SHL3",
 		"Name": "Up Shipshield",
 		"Group": "A-Class Deflector Shield Upgrade",
 		"Description": "An extremely powerful upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDramatically improves ship strength for increased combat endurance.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_S_SHL3"
 	},
 	{
 		"Id": "UP_S_SHL4",
 		"Name": "Up Shipshield",
 		"Group": "S-Class Deflector Shield Upgrade",
 		"Description": "A supremely powerful upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nDramatically improves ship strength for increased combat endurance.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_S_SHL4"
 	},
 	{
 		"Id": "UP_S_SHLX",
 		"Name": "Up Shipshield",
 		"Group": "Illegal Deflector Shield Upgrade",
 		"Description": "Up Shipshieldx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_S_SHLX"
 	},
 	{
 		"Id": "UP_SGUN1",
 		"Name": "Up Shipgun",
 		"Group": "C-Class Photon Cannon Upgrade",
 		"Description": "A moderate upgrade for the Starship Photon Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SGUN1"
 	},
 	{
 		"Id": "UP_SGUN2",
 		"Name": "Up Shipgun",
 		"Group": "B-Class Photon Cannon Upgrade",
 		"Description": "A significant upgrade for the Starship Photon Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SGUN2"
 	},
 	{
 		"Id": "UP_SGUN3",
 		"Name": "Up Shipgun",
 		"Group": "A-Class Photon Cannon Upgrade",
 		"Description": "An extremely powerful upgrade for the Starship Photon Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SGUN3"
 	},
 	{
 		"Id": "UP_SGUN4",
 		"Name": "Up Shipgun",
 		"Group": "S-Class Photon Cannon Upgrade",
 		"Description": "A supremely powerful upgrade for the Starship Photon Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SGUN4"
 	},
 	{
 		"Id": "UP_SGUNX",
 		"Name": "Up Shipgun",
 		"Group": "Illegal Photon Cannon Upgrade",
 		"Description": "Up Shipgunx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SGUNX"
 	},
 	{
 		"Id": "UP_SLASR1",
 		"Name": "Up Shiplas",
 		"Group": "C-Class Phase Beam Upgrade",
 		"Description": "A moderate upgrade for the Starship Phase Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SLASR1"
 	},
 	{
 		"Id": "UP_SLASR2",
 		"Name": "Up Shiplas",
 		"Group": "B-Class Phase Beam Upgrade",
 		"Description": "A significant upgrade for the Starship Phase Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SLASR2"
 	},
 	{
 		"Id": "UP_SLASR3",
 		"Name": "Up Shiplas",
 		"Group": "A-Class Phase Beam Upgrade",
 		"Description": "An extremely powerful upgrade for the Starship Phase Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SLASR3"
 	},
 	{
 		"Id": "UP_SLASR4",
 		"Name": "Up Shiplas",
 		"Group": "S-Class Phase Beam Upgrade",
 		"Description": "A supremely powerful upgrade for the Starship Phase Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SLASR4"
 	},
 	{
 		"Id": "UP_SLASRX",
 		"Name": "Up Shiplas",
 		"Group": "Illegal Phase Beam Upgrade",
 		"Description": "Up Shiplasx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SLASRX"
 	},
 	{
 		"Id": "UP_SSHOT1",
 		"Name": "Up Shipshot",
 		"Group": "C-Class Positron Ejector Upgrade",
 		"Description": "A moderate upgrade for the Positron Ejector. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SSHOT1"
 	},
 	{
 		"Id": "UP_SSHOT2",
 		"Name": "Up Shipshot",
 		"Group": "B-Class Positron Ejector Upgrade",
 		"Description": "A significant upgrade for the Positron Ejector. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SSHOT2"
 	},
 	{
 		"Id": "UP_SSHOT3",
 		"Name": "Up Shipshot",
 		"Group": "A-Class Positron Ejector Upgrade",
 		"Description": "An extremely powerful upgrade for the Positron Ejector. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SSHOT3"
 	},
 	{
 		"Id": "UP_SSHOT4",
 		"Name": "Up Shipshot",
 		"Group": "S-Class Positron Ejector Upgrade",
 		"Description": "A supremely powerful upgrade for the Positron Ejector. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SSHOT4"
 	},
 	{
 		"Id": "UP_SSHOTX",
 		"Name": "Up Shipshot",
 		"Group": "Illegal Positron Ejector Upgrade",
 		"Description": "Up Shipshotx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SSHOTX"
 	},
 	{
 		"Id": "UP_SMINI1",
 		"Name": "Up Shipmini",
 		"Group": "C-Class Infra-Knife Accelerator Upgrade",
 		"Description": "A moderate upgrade for the Infra-Knife Accelerator. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SMINI1"
 	},
 	{
 		"Id": "UP_SMINI2",
 		"Name": "Up Shipmini",
 		"Group": "B-Class Infra-Knife Accelerator Upgrade",
 		"Description": "A significant upgrade for the Infra-Knife Accelerator. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SMINI2"
 	},
 	{
 		"Id": "UP_SMINI3",
 		"Name": "Up Shipmini",
 		"Group": "A-Class Infra-Knife Accelerator Upgrade",
 		"Description": "An extremely powerful upgrade for the Infra-Knife Accelerator. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SMINI3"
 	},
 	{
 		"Id": "UP_SMINI4",
 		"Name": "Up Shipmini",
 		"Group": "S-Class Infra-Knife Accelerator Upgrade",
 		"Description": "A supremely powerful upgrade for the Infra-Knife Accelerator. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SMINI4"
 	},
 	{
 		"Id": "UP_SMINIX",
 		"Name": "Up Shipmini",
 		"Group": "Illegal Infra-Knife Accelerator Upgrade",
 		"Description": "Up Shipminix",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SMINIX"
 	},
 	{
 		"Id": "UP_SBLOB1",
 		"Name": "Up Shipblob",
 		"Group": "C-Class Cyclotron Ballista Upgrade",
 		"Description": "A moderate upgrade for the Cyclotron Ballista. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SBLOB1"
 	},
 	{
 		"Id": "UP_SBLOB2",
 		"Name": "Up Shipblob",
 		"Group": "B-Class Cyclotron Ballista Upgrade",
 		"Description": "A significant upgrade for the Cyclotron Ballista. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SBLOB2"
 	},
 	{
 		"Id": "UP_SBLOB3",
 		"Name": "Up Shipblob",
 		"Group": "A-Class Cyclotron Ballista Upgrade",
 		"Description": "An extremely powerful upgrade for the Cyclotron Ballista. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SBLOB3"
 	},
 	{
 		"Id": "UP_SBLOB4",
 		"Name": "Up Shipblob",
 		"Group": "S-Class Cyclotron Ballista Upgrade",
 		"Description": "A supremely powerful upgrade for the Cyclotron Ballista. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SBLOB4"
 	},
 	{
 		"Id": "UP_SBLOBX",
 		"Name": "Up Shipblob",
 		"Group": "Illegal Cyclotron Ballista Upgrade",
 		"Description": "Up Shipblobx",
-		"Quality": "Illegal"
+		"Quality": "Illegal",
+		"Slug": "technology/UP_SBLOBX"
 	},
 	{
 		"Id": "UP_EXGUN1",
 		"Name": "Up Exgun",
 		"Group": "C-Class Mounted Cannon Upgrade",
 		"Description": "Up Exgun1",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_EXGUN1"
 	},
 	{
 		"Id": "UP_EXGUN2",
 		"Name": "Up Exgun",
 		"Group": "B-Class Mounted Cannon Upgrade",
 		"Description": "Up Exgun2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_EXGUN2"
 	},
 	{
 		"Id": "UP_EXGUN3",
 		"Name": "Up Exgun",
 		"Group": "A-Class Mounted Cannon Upgrade",
 		"Description": "Up Exgun3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_EXGUN3"
 	},
 	{
 		"Id": "UP_EXGUN4",
 		"Name": "Up Exgun",
 		"Group": "S-Class Mounted Cannon Upgrade",
 		"Description": "Up Exgun4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_EXGUN4"
 	},
 	{
 		"Id": "UP_EXLAS1",
 		"Name": "Up Exlas",
 		"Group": "C-Class Exocraft Mining Laser Upgrade",
 		"Description": "Up Exlas1",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_EXLAS1"
 	},
 	{
 		"Id": "UP_EXLAS2",
 		"Name": "Up Exlas",
 		"Group": "B-Class Exocraft Mining Laser Upgrade",
 		"Description": "Up Exlas2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_EXLAS2"
 	},
 	{
 		"Id": "UP_EXLAS3",
 		"Name": "Up Exlas",
 		"Group": "A-Class Exocraft Mining Laser Upgrade",
 		"Description": "Up Exlas3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_EXLAS3"
 	},
 	{
 		"Id": "UP_EXLAS4",
 		"Name": "Up Exlas",
 		"Group": "S-Class Exocraft Mining Laser Upgrade",
 		"Description": "Up Exlas4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_EXLAS4"
 	},
 	{
 		"Id": "UP_BOOST1",
 		"Name": "Up Boost",
 		"Group": "C-Class Exocraft Boosters Upgrade",
 		"Description": "Up Boost1",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_BOOST1"
 	},
 	{
 		"Id": "UP_BOOST2",
 		"Name": "Up Boost",
 		"Group": "B-Class Exocraft Boosters Upgrade",
 		"Description": "Up Boost2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_BOOST2"
 	},
 	{
 		"Id": "UP_BOOST3",
 		"Name": "Up Boost",
 		"Group": "A-Class Exocraft Boosters Upgrade",
 		"Description": "Up Boost3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_BOOST3"
 	},
 	{
 		"Id": "UP_BOOST4",
 		"Name": "Up Boost",
 		"Group": "S-Class Exocraft Boosters Upgrade",
 		"Description": "Up Boost4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_BOOST4"
 	},
 	{
 		"Id": "UP_EXENG1",
 		"Name": "Up Exeng",
 		"Group": "C-Class Fusion Engine Upgrade",
 		"Description": "Up Exeng1",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_EXENG1"
 	},
 	{
 		"Id": "UP_EXENG2",
 		"Name": "Up Exeng",
 		"Group": "B-Class Fusion Engine Upgrade",
 		"Description": "Up Exeng2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_EXENG2"
 	},
 	{
 		"Id": "UP_EXENG3",
 		"Name": "Up Exeng",
 		"Group": "A-Class Fusion Engine Upgrade",
 		"Description": "Up Exeng3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_EXENG3"
 	},
 	{
 		"Id": "UP_EXENG4",
 		"Name": "Up Exeng",
 		"Group": "S-Class Fusion Engine Upgrade",
 		"Description": "Up Exeng4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_EXENG4"
 	},
 	{
 		"Id": "UP_EXSUB1",
 		"Name": "Up Exosub",
 		"Group": "C-Class Humboldt Drive Upgrade",
 		"Description": "Up Exo Sub1",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_EXSUB1"
 	},
 	{
 		"Id": "UP_EXSUB2",
 		"Name": "Up Exosub",
 		"Group": "B-Class Humboldt Drive Upgrade",
 		"Description": "Up Exo Sub2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_EXSUB2"
 	},
 	{
 		"Id": "UP_EXSUB3",
 		"Name": "Up Exosub",
 		"Group": "A-Class Humboldt Drive Upgrade",
 		"Description": "Up Exo Sub3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_EXSUB3"
 	},
 	{
 		"Id": "UP_EXSUB4",
 		"Name": "Up Exosub",
 		"Group": "S-Class Humboldt Drive Upgrade",
 		"Description": "Up Exo Sub4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_EXSUB4"
 	},
 	{
 		"Id": "UP_SUGUN1",
 		"Name": "Up Exosubgun",
 		"Group": "C-Class Nautilon Cannon Upgrade",
 		"Description": "Up Exo Subgun1",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UP_SUGUN1"
 	},
 	{
 		"Id": "UP_SUGUN2",
 		"Name": "Up Exosubgun",
 		"Group": "B-Class Nautilon Cannon Upgrade",
 		"Description": "Up Exo Subgun2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_SUGUN2"
 	},
 	{
 		"Id": "UP_SUGUN3",
 		"Name": "Up Exosubgun",
 		"Group": "A-Class Nautilon Cannon Upgrade",
 		"Description": "Up Exo Subgun3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_SUGUN3"
 	},
 	{
 		"Id": "UP_SUGUN4",
 		"Name": "Up Exosubgun",
 		"Group": "S-Class Nautilon Cannon Upgrade",
 		"Description": "Up Exo Subgun4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_SUGUN4"
 	},
 	{
 		"Id": "UP_MCLAS2",
 		"Name": "Up Mclas",
 		"Group": "B-Class Minotaur Laser Upgrade",
 		"Description": "Up Mclas2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_MCLAS2"
 	},
 	{
 		"Id": "UP_MCLAS3",
 		"Name": "Up Mclas",
 		"Group": "A-Class Minotaur Laser Upgrade",
 		"Description": "Up Mclas3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_MCLAS3"
 	},
 	{
 		"Id": "UP_MCLAS4",
 		"Name": "Up Mclas",
 		"Group": "S-Class Minotaur Laser Upgrade",
 		"Description": "Up Mclas4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_MCLAS4"
 	},
 	{
 		"Id": "UP_MFIRE2",
 		"Name": "Up Mfire",
 		"Group": "B-Class Minotaur Flamethrower Upgrade",
 		"Description": "A significant upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_MFIRE2"
 	},
 	{
 		"Id": "UP_MFIRE3",
 		"Name": "Up Mfire",
 		"Group": "A-Class Minotaur Flamethrower Upgrade",
 		"Description": "A significant upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_MFIRE3"
 	},
 	{
 		"Id": "UP_MFIRE4",
 		"Name": "Up Mfire",
 		"Group": "S-Class Minotaur Flamethrower Upgrade",
 		"Description": "A significant upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_MFIRE4"
 	},
 	{
 		"Id": "UP_MCGUN2",
 		"Name": "Up Mcgun",
 		"Group": "B-Class Minotaur Cannon Upgrade",
 		"Description": "Up Mcgun2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_MCGUN2"
 	},
 	{
 		"Id": "UP_MCGUN3",
 		"Name": "Up Mcgun",
 		"Group": "A-Class Minotaur Cannon Upgrade",
 		"Description": "Up Mcgun3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_MCGUN3"
 	},
 	{
 		"Id": "UP_MCGUN4",
 		"Name": "Up Mcgun",
 		"Group": "S-Class Minotaur Cannon Upgrade",
 		"Description": "Up Mcgun4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_MCGUN4"
 	},
 	{
 		"Id": "UP_MCENG2",
 		"Name": "Up Mceng",
 		"Group": "B-Class Daedalus Engine Upgrade",
 		"Description": "Up Mceng2",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UP_MCENG2"
 	},
 	{
 		"Id": "UP_MCENG3",
 		"Name": "Up Mceng",
 		"Group": "A-Class Daedalus Engine Upgrade",
 		"Description": "Up Mceng3",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UP_MCENG3"
 	},
 	{
 		"Id": "UP_MCENG4",
 		"Name": "Up Mceng",
 		"Group": "S-Class Daedalus Engine Upgrade",
 		"Description": "Up Mceng4",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UP_MCENG4"
 	},
 	{
 		"Id": "UA_PULSE1",
 		"Name": "Ap Pulsedrive",
 		"Group": "C-Class Pulsing Heart Node",
 		"Description": "A moderate upgrade for the Pulsing Heart. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: manoeuvrability and speed.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UA_PULSE1"
 	},
 	{
 		"Id": "UA_PULSE2",
 		"Name": "Ap Pulsedrive",
 		"Group": "B-Class Pulsing Heart Node",
 		"Description": "A significant upgrade for the Pulsing Heart. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: manoeuvrability and speed.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UA_PULSE2"
 	},
 	{
 		"Id": "UA_PULSE3",
 		"Name": "Ap Pulsedrive",
 		"Group": "A-Class Pulsing Heart Node",
 		"Description": "An extremely powerful upgrade for the Pulsing Heart. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: manoeuvrability and speed.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UA_PULSE3"
 	},
 	{
 		"Id": "UA_PULSE4",
 		"Name": "Ap Pulsedrive",
 		"Group": "S-Class Pulsing Heart Node",
 		"Description": "A supremely powerful upgrade for the Pulsing Heart. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: manoeuvrability and speed.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UA_PULSE4"
 	},
 	{
 		"Id": "UA_LAUN1",
 		"Name": "Ap Launcher",
 		"Group": "C-Class Neural Assembly Node",
 		"Description": "A moderate upgrade for the Neural Assembly. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nImproves take-off efficiency.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UA_LAUN1"
 	},
 	{
 		"Id": "UA_LAUN2",
 		"Name": "Ap Launcher",
 		"Group": "B-Class Neural Assembly Node",
 		"Description": "A significant upgrade for the Neural Assembly. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nImproves take-off efficiency.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UA_LAUN2"
 	},
 	{
 		"Id": "UA_LAUN3",
 		"Name": "Ap Launcher",
 		"Group": "A-Class Neural Assembly Node",
 		"Description": "An extremely powerful upgrade for the Neural Assembly. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nImproves take-off efficiency.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UA_LAUN3"
 	},
 	{
 		"Id": "UA_LAUN4",
 		"Name": "Ap Launcher",
 		"Group": "S-Class Neural Assembly Node",
 		"Description": "A supremely powerful upgrade for the Neural Assembly. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nImproves take-off efficiency and enables auto-recharging.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UA_LAUN4"
 	},
 	{
 		"Id": "UA_HYP1",
 		"Name": "Ap Hyperdrive",
 		"Group": "C-Class Singularity Cortex Node",
 		"Description": "A moderate upgrade for the Singularity Cortex. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UA_HYP1"
 	},
 	{
 		"Id": "UA_HYP2",
 		"Name": "Ap Hyperdrive",
 		"Group": "B-Class Singularity Cortex Node",
 		"Description": "A significant upgrade for the Singularity Cortex. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UA_HYP2"
 	},
 	{
 		"Id": "UA_HYP3",
 		"Name": "Ap Hyperdrive",
 		"Group": "A-Class Singularity Cortex Node",
 		"Description": "An extremely powerful upgrade for the Singularity Cortex. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UA_HYP3"
 	},
 	{
 		"Id": "UA_HYP4",
 		"Name": "Ap Hyperdrive",
 		"Group": "S-Class Singularity Cortex Node",
 		"Description": "A supremely powerful upgrade for the Singularity Cortex. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UA_HYP4"
 	},
 	{
 		"Id": "UA_S_SHL1",
 		"Name": "Ap Shipshield",
 		"Group": "C-Class Scream Suppressor Node",
 		"Description": "A moderate upgrade for the vessel's pain suppression systems. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves living ship strength for increased combat endurance.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UA_S_SHL1"
 	},
 	{
 		"Id": "UA_S_SHL2",
 		"Name": "Ap Shipshield",
 		"Group": "B-Class Scream Suppressor Node",
 		"Description": "A significant upgrade for the vessel's pain suppression systems. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves living ship strength for increased combat endurance.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UA_S_SHL2"
 	},
 	{
 		"Id": "UA_S_SHL3",
 		"Name": "Ap Shipshield",
 		"Group": "A-Class Scream Suppressor Node",
 		"Description": "An extremely powerful upgrade for the vessel's pain suppression systems. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nDramatically improves living ship strength for increased combat endurance.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UA_S_SHL3"
 	},
 	{
 		"Id": "UA_S_SHL4",
 		"Name": "Ap Shipshield",
 		"Group": "S-Class Scream Suppressor Node",
 		"Description": "A supremely powerful upgrade for the vessel's pain suppression systems. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nDramatically improves living ship strength for increased combat endurance.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UA_S_SHL4"
 	},
 	{
 		"Id": "UA_SGUN1",
 		"Name": "Ap Shipgun",
 		"Group": "C-Class Spewing Vents Node",
 		"Description": "A moderate upgrade for the Spewing Vents. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UA_SGUN1"
 	},
 	{
 		"Id": "UA_SGUN2",
 		"Name": "Ap Shipgun",
 		"Group": "B-Class Spewing Vents Node",
 		"Description": "A significant upgrade for the Spewing Vents. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UA_SGUN2"
 	},
 	{
 		"Id": "UA_SGUN3",
 		"Name": "Ap Shipgun",
 		"Group": "A-Class Spewing Vents Node",
 		"Description": "An extremely powerful upgrade for the Spewing Vents. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UA_SGUN3"
 	},
 	{
 		"Id": "UA_SGUN4",
 		"Name": "Ap Shipgun",
 		"Group": "S-Class Spewing Vents Node",
 		"Description": "A supremely powerful upgrade for the Spewing Vents. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UA_SGUN4"
 	},
 	{
 		"Id": "UA_SLASR1",
 		"Name": "Ap Shiplas",
 		"Group": "C-Class Grafted Eyes Node",
 		"Description": "A moderate upgrade for the Grafted Eyes. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance.",
-		"Quality": "Normal"
+		"Quality": "Normal",
+		"Slug": "technology/UA_SLASR1"
 	},
 	{
 		"Id": "UA_SLASR2",
 		"Name": "Ap Shiplas",
 		"Group": "B-Class Grafted Eyes Node",
 		"Description": "A significant upgrade for the Grafted Eyes. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance.",
-		"Quality": "Rare"
+		"Quality": "Rare",
+		"Slug": "technology/UA_SLASR2"
 	},
 	{
 		"Id": "UA_SLASR3",
 		"Name": "Ap Shiplas",
 		"Group": "A-Class Grafted Eyes Node",
 		"Description": "An extremely powerful upgrade for the Grafted Eyes. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance.",
-		"Quality": "Epic"
+		"Quality": "Epic",
+		"Slug": "technology/UA_SLASR3"
 	},
 	{
 		"Id": "UA_SLASR4",
 		"Name": "Ap Shiplas",
 		"Group": "S-Class Grafted Eyes Node",
 		"Description": "A supremely powerful upgrade for the Grafted Eyes. Use FE_ALT1 to trigger node growth and begin the grafting process.\n\nEach node is genetically unique, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance.",
-		"Quality": "Legendary"
+		"Quality": "Legendary",
+		"Slug": "technology/UA_SLASR4"
 	}
 ]

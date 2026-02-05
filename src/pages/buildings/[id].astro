@@ -3,7 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
-import buildings from '@data/Buildings.json';
+import buildings from '@datav2/Buildings.json';
 
 export function getStaticPaths() {
 	return buildings.map((building) => ({

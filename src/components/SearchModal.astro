@@ -25,12 +25,17 @@ const filters = [
 		id: 'curiosities',
 		name: 'Curiosities',
 	},
-
+	{
+		id: 'corvette',
+		name: 'Corvette',
+	},
 	{
 		id: 'other',
 		name: 'Other',
 	},
 ];
+
+const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filter.name]));
 ---
 
 <div class="relative z-10 hidden" id="site-search" role="dialog" aria-modal="true">
@@ -50,7 +55,7 @@ const filters = [
 						filters.map((filter) => {
 							return (
 								<div class="inline-flex">
-									<input type="checkbox" class="peer hidden" name="type-filter" id={filter.id} value={filter.name} tabindex="-1" />
+									<input type="checkbox" class="peer hidden" name="type-filter" id={filter.id} value={filter.id} tabindex="-1" />
 									<label for={filter.id} class="select-none cursor-pointer rounded-lg border-2 border-blue-500 py-0 px-1.5 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:bg-blue-500 peer-checked:text-black">
 										{filter.name}
 									</label>
@@ -65,35 +70,31 @@ const filters = [
 				Loading...
 			</div>
 
-			<div class="max-h-72 scroll-py-2 overflow-y-auto p-8 text-sm text-white" id="results" aria-live="polite"></div>
+			<div
+				class="max-h-72 scroll-py-2 overflow-y-auto p-8 text-sm text-white"
+				id="results"
+				data-filter-labels={JSON.stringify(filterLabels)}
+				aria-live="polite"
+			></div>
 		</div>
 	</div>
 </div>
 
 <script>
-	interface SearchResult {
-		name: string;
-		type: string;
-		url: string;
-	}
+	const searchInput = document.getElementById('search-input');
+	const typeCheckboxes = Array.from(document.querySelectorAll('input[name=type-filter]'));
+	const resultsList = document.getElementById('results');
+	const filterLabelMap = resultsList?.dataset.filterLabels
+		? JSON.parse(resultsList.dataset.filterLabels)
+		: {};
+	const loadingIndicator = document.getElementById('loading-indicator');
 
-	interface SearchResponse {
-		body: SearchResult[];
-	}
-
-	type GroupedResults = Record<string, SearchResult[]>;
-
-	const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
-	const typeCheckboxes = Array.from(document.querySelectorAll<HTMLInputElement>('input[name=type-filter]'));
-	const resultsList = document.getElementById('results') as HTMLElement | null;
-	const loadingIndicator = document.getElementById('loading-indicator') as HTMLElement | null;
-
-	const searchCache = new Map<string, GroupedResults>();
+	const searchCache = new Map();
 	const MAX_CACHE_SIZE = 50; // Limit cache to prevent memory issues
-	let debounceTimer: ReturnType<typeof setTimeout> | undefined;
+	let debounceTimer;
 
-	function groupBy(arr: SearchResult[], key: keyof SearchResult): GroupedResults {
-		return arr.reduce((acc: GroupedResults, obj: SearchResult) => {
+	function groupBy(arr, key) {
+		return arr.reduce((acc, obj) => {
 			const group = String(obj[key]);
 			acc[group] = acc[group] || [];
 			acc[group].push(obj);
@@ -101,7 +102,7 @@ const filters = [
 		}, {});
 	}
 
-	async function performSearch(searchTerm: string, selectedTypes: string[]): Promise<void> {
+	async function performSearch(searchTerm, selectedTypes) {
 		if (!loadingIndicator || !resultsList) return;
 
 		// Check cache first before fetching
@@ -117,7 +118,7 @@ const filters = [
 
 		try {
 			const response = await fetch('/search.json');
-			const results: SearchResponse = await response.json();
+			const results = await response.json();
 			const filteredResults = results.body.filter((result) => {
 				if (!result || typeof result.name !== 'string') {
 					return false;
@@ -149,7 +150,7 @@ const filters = [
 		}
 	}
 
-	function handleSearchInput(): void {
+	function handleSearchInput() {
 		if (!searchInput) return;
 
 		const searchTerm = searchInput.value.trim().toLowerCase();
@@ -163,7 +164,7 @@ const filters = [
 		debounceTimer = setTimeout(() => performSearch(searchTerm, selectedTypes), 300);
 	}
 
-	function handleCheckboxChange(): void {
+	function handleCheckboxChange() {
 		handleSearchInput();
 	}
 
@@ -175,7 +176,7 @@ const filters = [
 		checkbox.addEventListener('change', handleCheckboxChange);
 	});
 
-	function displayResults(groupedResults: GroupedResults, selectedTypes: string[]): void {
+	function displayResults(groupedResults, selectedTypes) {
 		if (!resultsList) return;
 
 		// Use DOM methods instead of innerHTML for better security
@@ -185,29 +186,29 @@ const filters = [
 			const filteredGroupResults = selectedTypes.length
 				? groupedResults[group].filter((result) => selectedTypes.includes(result.type))
 				: groupedResults[group];
-			
+
 			if (filteredGroupResults.length > 0) {
 				const h3 = document.createElement('h3');
 				h3.className = 'text-2xl';
-				h3.textContent = group;
+				h3.textContent = filterLabelMap[group] || group;
 				resultsList.appendChild(h3);
 
 				const ul = document.createElement('ul');
 				ul.setAttribute('role', 'listbox');
-				
+
 				filteredGroupResults.forEach((result, index) => {
 					const li = document.createElement('li');
 					li.setAttribute('role', 'option');
 					li.setAttribute('tabindex', '0');
 					li.setAttribute('data-index', String(index));
-					
+
 					const a = document.createElement('a');
 					a.href = result.url.replace(/\/+/g, '/');
 					a.textContent = result.name;
 					li.appendChild(a);
 					ul.appendChild(li);
 				});
-				
+
 				resultsList.appendChild(ul);
 			}
 		});
@@ -215,12 +216,12 @@ const filters = [
 		setupKeyboardNavigation();
 	}
 
-	function setupKeyboardNavigation(): void {
+	function setupKeyboardNavigation() {
 		if (!searchInput || !resultsList) return;
 
-		const resultItems = Array.from(resultsList.querySelectorAll<HTMLElement>('li[role="option"]'));
+		const resultItems = Array.from(resultsList.querySelectorAll('li[role="option"]'));
 		resultItems.forEach((item, index) => {
-			item.addEventListener('keydown', (e: KeyboardEvent) => {
+			item.addEventListener('keydown', (e) => {
 				switch (e.key) {
 					case 'ArrowDown':
 						e.preventDefault();
@@ -238,7 +239,7 @@ const filters = [
 						break;
 					case 'Enter': {
 						e.preventDefault();
-						const link = item.querySelector<HTMLAnchorElement>('a');
+						const link = item.querySelector('a');
 						if (link) {
 							link.click();
 						}

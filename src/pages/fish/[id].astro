@@ -2,11 +2,11 @@
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import type { Item } from '@utils/lookup.js';
-import data from '@data/Fish.json';
+import data from '@datav2/Fish.json';
 
 export async function getStaticPaths() {
 	return data.map((post) => ({
-		params: { id: post.fishId.toString() },
+		params: { id: post.Id.toString() },
 		props: { item: post },
 	}));
 }

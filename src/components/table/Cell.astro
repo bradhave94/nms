@@ -52,7 +52,7 @@ const { cell } = Astro.props;
     ) : cell && 'id' in cell ? (
         <>
             <span class="d-none sort">{cell.name}</span>
-            <a href={`${getSlug(cell.id)}${cell.id}`} class="cell-link">
+            <a href={getSlug(cell.id)} class="cell-link">
                 <div class="cell-content" style={`background: #${cell.colour}`}>
                     <span class="cell-text">
                         {cell.name}
@@ -60,7 +60,7 @@ const { cell } = Astro.props;
                     </span>
                     {cell.image && (
                         <Image
-                            src={`https://app.nmsassistant.com/assets/images/${cell.image}`}
+                            src={`https://nomansskyrecipes.com/images/items/${cell.image}`}
                             alt={cell.name}
                             sizes="50px"
                             width={50}

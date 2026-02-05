@@ -5,15 +5,15 @@ const { open = false, id } = Astro.props;
   <h3>
     <button
       id={`accordion-header-${id}`}
-      class="accordion flex items-center justify-between w-full p-3 group hover:bg-black transition-colors"
+      class="accordion flex items-center justify-between w-full p-1 group hover:bg-black transition-colors"
       aria-expanded={open}
       aria-controls={`accordion-panel-${id}`}
     >
       <slot name="title" />
-      <svg class="w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <svg class="w-5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
       </svg>
-      <svg class="w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <svg class="w-5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
       </svg>
     </button>
@@ -22,7 +22,7 @@ const { open = false, id } = Astro.props;
     id={`accordion-panel-${id}`}
     role="region"
     aria-labelledby={`accordion-header-${id}`}
-    class="overflow-hidden m-2 lg:pl-6 border-l"
+    class="overflow-hidden m-2 lg:pl-2 border-l border-white/10"
   >
     <slot name="content" />
   </div>
@@ -65,7 +65,7 @@ const { open = false, id } = Astro.props;
 
     updateState(): void {
       if (!this.button || !this.panel) return;
-      
+
       this.button.setAttribute('aria-expanded', String(this.open));
       this.panel.hidden = !this.open;
       this.button.classList.toggle('active', this.open);

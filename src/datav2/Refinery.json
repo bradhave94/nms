@@ -14,7 +14,8 @@
 			"Quantity": 15
 		},
 		"Time": "320.0",
-		"Operation": "Nanite Extraction"
+		"Operation": "Nanite Extraction",
+		"Slug": "refinery/REFINERECIPE_1"
 	},
 	{
 		"Id": "REFINERECIPE_2",
@@ -31,7 +32,8 @@
 			"Quantity": 100
 		},
 		"Time": "60.0",
-		"Operation": "Calcite Transmutation"
+		"Operation": "Calcite Transmutation",
+		"Slug": "refinery/REFINERECIPE_2"
 	},
 	{
 		"Id": "REFINERECIPE_3",
@@ -48,7 +50,8 @@
 			"Quantity": 50
 		},
 		"Time": "60.0",
-		"Operation": "Biological Purge"
+		"Operation": "Biological Purge",
+		"Slug": "refinery/REFINERECIPE_3"
 	},
 	{
 		"Id": "REFINERECIPE_4",
@@ -65,7 +68,8 @@
 			"Quantity": 50
 		},
 		"Time": "60.0",
-		"Operation": "Doom Cycling"
+		"Operation": "Doom Cycling",
+		"Slug": "refinery/REFINERECIPE_4"
 	},
 	{
 		"Id": "REFINERECIPE_5",
@@ -82,7 +86,8 @@
 			"Quantity": 50
 		},
 		"Time": "60.0",
-		"Operation": "Sulphur Release"
+		"Operation": "Sulphur Release",
+		"Slug": "refinery/REFINERECIPE_5"
 	},
 	{
 		"Id": "REFINERECIPE_6",
@@ -99,7 +104,8 @@
 			"Quantity": 50
 		},
 		"Time": "60.0",
-		"Operation": "NOT RECOMMENDED"
+		"Operation": "NOT RECOMMENDED",
+		"Slug": "refinery/REFINERECIPE_6"
 	},
 	{
 		"Id": "REFINERECIPE_7",
@@ -116,7 +122,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Algal Processing"
+		"Operation": "Algal Processing",
+		"Slug": "refinery/REFINERECIPE_7"
 	},
 	{
 		"Id": "REFINERECIPE_8",
@@ -133,7 +140,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Alchemical Construction"
+		"Operation": "Alchemical Construction",
+		"Slug": "refinery/REFINERECIPE_8"
 	},
 	{
 		"Id": "REFINERECIPE_9",
@@ -150,7 +158,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Polish Crystals"
+		"Operation": "Polish Crystals",
+		"Slug": "refinery/REFINERECIPE_9"
 	},
 	{
 		"Id": "REFINERECIPE_10",
@@ -167,7 +176,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Metal Restructuring"
+		"Operation": "Metal Restructuring",
+		"Slug": "refinery/REFINERECIPE_10"
 	},
 	{
 		"Id": "REFINERECIPE_11",
@@ -184,7 +194,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Reality Warping"
+		"Operation": "Reality Warping",
+		"Slug": "refinery/REFINERECIPE_11"
 	},
 	{
 		"Id": "REFINERECIPE_12",
@@ -201,7 +212,8 @@
 			"Quantity": 1
 		},
 		"Time": "30.0",
-		"Operation": "Reality Filtering"
+		"Operation": "Reality Filtering",
+		"Slug": "refinery/REFINERECIPE_12"
 	},
 	{
 		"Id": "REFINERECIPE_13",
@@ -218,7 +230,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Assisted Decomposition"
+		"Operation": "Assisted Decomposition",
+		"Slug": "refinery/REFINERECIPE_13"
 	},
 	{
 		"Id": "REFINERECIPE_14",
@@ -235,7 +248,8 @@
 			"Quantity": 1
 		},
 		"Time": "20.0",
-		"Operation": "Inefficient Burn"
+		"Operation": "Inefficient Burn",
+		"Slug": "refinery/REFINERECIPE_14"
 	},
 	{
 		"Id": "REFINERECIPE_15",
@@ -252,7 +266,8 @@
 			"Quantity": 1
 		},
 		"Time": "120.0",
-		"Operation": "Condense Di-hydrogen"
+		"Operation": "Condense Di-hydrogen",
+		"Slug": "refinery/REFINERECIPE_15"
 	},
 	{
 		"Id": "REFINERECIPE_22",
@@ -269,7 +284,8 @@
 			"Quantity": 40
 		},
 		"Time": "1000.0",
-		"Operation": "Di-hydrogen Cycling"
+		"Operation": "Di-hydrogen Cycling",
+		"Slug": "refinery/REFINERECIPE_22"
 	},
 	{
 		"Id": "REFINERECIPE_23",
@@ -286,7 +302,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ionise Mineral"
+		"Operation": "Ionise Mineral",
+		"Slug": "refinery/REFINERECIPE_23"
 	},
 	{
 		"Id": "REFINERECIPE_24",
@@ -303,7 +320,8 @@
 			"Quantity": 2
 		},
 		"Time": "30.0",
-		"Operation": "Deionise Mineral"
+		"Operation": "Deionise Mineral",
+		"Slug": "refinery/REFINERECIPE_24"
 	},
 	{
 		"Id": "REFINERECIPE_25",
@@ -320,7 +338,8 @@
 			"Quantity": 2
 		},
 		"Time": "30.0",
-		"Operation": "Release Carbon"
+		"Operation": "Release Carbon",
+		"Slug": "refinery/REFINERECIPE_25"
 	},
 	{
 		"Id": "REFINERECIPE_26",
@@ -337,7 +356,8 @@
 			"Quantity": 1
 		},
 		"Time": "45.0",
-		"Operation": "Condense Carbon"
+		"Operation": "Condense Carbon",
+		"Slug": "refinery/REFINERECIPE_26"
 	},
 	{
 		"Id": "REFINERECIPE_27",
@@ -354,7 +374,8 @@
 			"Quantity": 1
 		},
 		"Time": "100.0",
-		"Operation": "Process Sodium"
+		"Operation": "Process Sodium",
+		"Slug": "refinery/REFINERECIPE_27"
 	},
 	{
 		"Id": "REFINERECIPE_28",
@@ -371,7 +392,8 @@
 			"Quantity": 2
 		},
 		"Time": "60.0",
-		"Operation": "Free Sodium"
+		"Operation": "Free Sodium",
+		"Slug": "refinery/REFINERECIPE_28"
 	},
 	{
 		"Id": "REFINERECIPE_29",
@@ -388,7 +410,8 @@
 			"Quantity": 1
 		},
 		"Time": "30.0",
-		"Operation": "Extract Metallic Elements"
+		"Operation": "Extract Metallic Elements",
+		"Slug": "refinery/REFINERECIPE_29"
 	},
 	{
 		"Id": "REFINERECIPE_30",
@@ -405,7 +428,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Magnetise Metal"
+		"Operation": "Magnetise Metal",
+		"Slug": "refinery/REFINERECIPE_30"
 	},
 	{
 		"Id": "REFINERECIPE_31",
@@ -422,7 +446,8 @@
 			"Quantity": 2
 		},
 		"Time": "40.0",
-		"Operation": "Demagnetise Metal"
+		"Operation": "Demagnetise Metal",
+		"Slug": "refinery/REFINERECIPE_31"
 	},
 	{
 		"Id": "REFINERECIPE_32",
@@ -439,7 +464,8 @@
 			"Quantity": 1
 		},
 		"Time": "70.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_32"
 	},
 	{
 		"Id": "REFINERECIPE_33",
@@ -456,7 +482,8 @@
 			"Quantity": 4
 		},
 		"Time": "25.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_33"
 	},
 	{
 		"Id": "REFINERECIPE_34",
@@ -473,7 +500,8 @@
 			"Quantity": 3
 		},
 		"Time": "40.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_34"
 	},
 	{
 		"Id": "REFINERECIPE_35",
@@ -490,7 +518,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_35"
 	},
 	{
 		"Id": "REFINERECIPE_36",
@@ -507,7 +536,8 @@
 			"Quantity": 2
 		},
 		"Time": "50.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_36"
 	},
 	{
 		"Id": "REFINERECIPE_37",
@@ -524,7 +554,8 @@
 			"Quantity": 4
 		},
 		"Time": "30.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_37"
 	},
 	{
 		"Id": "REFINERECIPE_38",
@@ -541,7 +572,8 @@
 			"Quantity": 3
 		},
 		"Time": "40.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_38"
 	},
 	{
 		"Id": "REFINERECIPE_39",
@@ -558,7 +590,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_39"
 	},
 	{
 		"Id": "REFINERECIPE_40",
@@ -575,7 +608,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ferrite Dust Extraction"
+		"Operation": "Ferrite Dust Extraction",
+		"Slug": "refinery/REFINERECIPE_40"
 	},
 	{
 		"Id": "REFINERECIPE_41",
@@ -592,7 +626,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ferrite Dust Extraction"
+		"Operation": "Ferrite Dust Extraction",
+		"Slug": "refinery/REFINERECIPE_41"
 	},
 	{
 		"Id": "REFINERECIPE_42",
@@ -609,7 +644,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ferrite Dust Extraction"
+		"Operation": "Ferrite Dust Extraction",
+		"Slug": "refinery/REFINERECIPE_42"
 	},
 	{
 		"Id": "REFINERECIPE_43",
@@ -626,7 +662,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ferrite Dust Extraction"
+		"Operation": "Ferrite Dust Extraction",
+		"Slug": "refinery/REFINERECIPE_43"
 	},
 	{
 		"Id": "REFINERECIPE_44",
@@ -643,7 +680,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ferrite Dust Extraction"
+		"Operation": "Ferrite Dust Extraction",
+		"Slug": "refinery/REFINERECIPE_44"
 	},
 	{
 		"Id": "REFINERECIPE_45",
@@ -660,7 +698,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ferrite Dust Extraction"
+		"Operation": "Ferrite Dust Extraction",
+		"Slug": "refinery/REFINERECIPE_45"
 	},
 	{
 		"Id": "REFINERECIPE_46",
@@ -677,7 +716,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Concentrate Salt"
+		"Operation": "Concentrate Salt",
+		"Slug": "refinery/REFINERECIPE_46"
 	},
 	{
 		"Id": "REFINERECIPE_47",
@@ -694,7 +734,8 @@
 			"Quantity": 2
 		},
 		"Time": "60.0",
-		"Operation": "Salt Production"
+		"Operation": "Salt Production",
+		"Slug": "refinery/REFINERECIPE_47"
 	},
 	{
 		"Id": "REFINERECIPE_48",
@@ -711,7 +752,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Transfer"
+		"Operation": "Gas Transfer",
+		"Slug": "refinery/REFINERECIPE_48"
 	},
 	{
 		"Id": "REFINERECIPE_49",
@@ -728,7 +770,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Transfer"
+		"Operation": "Gas Transfer",
+		"Slug": "refinery/REFINERECIPE_49"
 	},
 	{
 		"Id": "REFINERECIPE_50",
@@ -745,7 +788,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Transfer"
+		"Operation": "Gas Transfer",
+		"Slug": "refinery/REFINERECIPE_50"
 	},
 	{
 		"Id": "REFINERECIPE_51",
@@ -762,7 +806,8 @@
 			"Quantity": 1
 		},
 		"Time": "150.0",
-		"Operation": "Recycle Waste Materials"
+		"Operation": "Recycle Waste Materials",
+		"Slug": "refinery/REFINERECIPE_51"
 	},
 	{
 		"Id": "REFINERECIPE_52",
@@ -779,7 +824,8 @@
 			"Quantity": 1
 		},
 		"Time": "150.0",
-		"Operation": "Recycle Waste Materials"
+		"Operation": "Recycle Waste Materials",
+		"Slug": "refinery/REFINERECIPE_52"
 	},
 	{
 		"Id": "REFINERECIPE_53",
@@ -796,7 +842,8 @@
 			"Quantity": 2
 		},
 		"Time": "160.0",
-		"Operation": "Recycle Waste Materials"
+		"Operation": "Recycle Waste Materials",
+		"Slug": "refinery/REFINERECIPE_53"
 	},
 	{
 		"Id": "REFINERECIPE_54",
@@ -813,7 +860,8 @@
 			"Quantity": 1
 		},
 		"Time": "150.0",
-		"Operation": "Recycle Waste Materials"
+		"Operation": "Recycle Waste Materials",
+		"Slug": "refinery/REFINERECIPE_54"
 	},
 	{
 		"Id": "REFINERECIPE_55",
@@ -830,7 +878,8 @@
 			"Quantity": 1
 		},
 		"Time": "150.0",
-		"Operation": "Recycle Waste Materials"
+		"Operation": "Recycle Waste Materials",
+		"Slug": "refinery/REFINERECIPE_55"
 	},
 	{
 		"Id": "REFINERECIPE_56",
@@ -847,7 +896,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Tritium Cycling"
+		"Operation": "Tritium Cycling",
+		"Slug": "refinery/REFINERECIPE_56"
 	},
 	{
 		"Id": "REFINERECIPE_58",
@@ -864,7 +914,8 @@
 			"Quantity": 2
 		},
 		"Time": "30.0",
-		"Operation": "Burn Plantlife"
+		"Operation": "Burn Plantlife",
+		"Slug": "refinery/REFINERECIPE_58"
 	},
 	{
 		"Id": "REFINERECIPE_60",
@@ -881,7 +932,8 @@
 			"Quantity": 2
 		},
 		"Time": "30.0",
-		"Operation": "Burn Plantlife"
+		"Operation": "Burn Plantlife",
+		"Slug": "refinery/REFINERECIPE_60"
 	},
 	{
 		"Id": "REFINERECIPE_61",
@@ -898,7 +950,8 @@
 			"Quantity": 2
 		},
 		"Time": "30.0",
-		"Operation": "Burn Plantlife"
+		"Operation": "Burn Plantlife",
+		"Slug": "refinery/REFINERECIPE_61"
 	},
 	{
 		"Id": "REFINERECIPE_62",
@@ -915,7 +968,8 @@
 			"Quantity": 2
 		},
 		"Time": "30.0",
-		"Operation": "Burn Plantlife"
+		"Operation": "Burn Plantlife",
+		"Slug": "refinery/REFINERECIPE_62"
 	},
 	{
 		"Id": "REFINERECIPE_63",
@@ -932,7 +986,8 @@
 			"Quantity": 2
 		},
 		"Time": "30.0",
-		"Operation": "Burn Plantlife"
+		"Operation": "Burn Plantlife",
+		"Slug": "refinery/REFINERECIPE_63"
 	},
 	{
 		"Id": "REFINERECIPE_64",
@@ -949,7 +1004,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Extract Organic Sodium"
+		"Operation": "Extract Organic Sodium",
+		"Slug": "refinery/REFINERECIPE_64"
 	},
 	{
 		"Id": "REFINERECIPE_65",
@@ -966,7 +1022,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Extract Micro-Bubbles"
+		"Operation": "Extract Micro-Bubbles",
+		"Slug": "refinery/REFINERECIPE_65"
 	},
 	{
 		"Id": "REFINERECIPE_66",
@@ -983,7 +1040,8 @@
 			"Quantity": 2
 		},
 		"Time": "180.0",
-		"Operation": "Organic Reassembly"
+		"Operation": "Organic Reassembly",
+		"Slug": "refinery/REFINERECIPE_66"
 	},
 	{
 		"Id": "REFINERECIPE_67",
@@ -1000,7 +1058,8 @@
 			"Quantity": 250
 		},
 		"Time": "300.0",
-		"Operation": "Extreme Alloy Separation"
+		"Operation": "Extreme Alloy Separation",
+		"Slug": "refinery/REFINERECIPE_67"
 	},
 	{
 		"Id": "REFINERECIPE_68",
@@ -1017,7 +1076,8 @@
 			"Quantity": 250
 		},
 		"Time": "300.0",
-		"Operation": "Extreme Alloy Separation"
+		"Operation": "Extreme Alloy Separation",
+		"Slug": "refinery/REFINERECIPE_68"
 	},
 	{
 		"Id": "REFINERECIPE_69",
@@ -1034,7 +1094,8 @@
 			"Quantity": 250
 		},
 		"Time": "250.0",
-		"Operation": "Extreme Alloy Separation"
+		"Operation": "Extreme Alloy Separation",
+		"Slug": "refinery/REFINERECIPE_69"
 	},
 	{
 		"Id": "REFINERECIPE_70",
@@ -1051,7 +1112,8 @@
 			"Quantity": 125
 		},
 		"Time": "300.0",
-		"Operation": "Extreme Alloy Separation"
+		"Operation": "Extreme Alloy Separation",
+		"Slug": "refinery/REFINERECIPE_70"
 	},
 	{
 		"Id": "REFINERECIPE_71",
@@ -1068,7 +1130,8 @@
 			"Quantity": 125
 		},
 		"Time": "300.0",
-		"Operation": "Extreme Alloy Separation"
+		"Operation": "Extreme Alloy Separation",
+		"Slug": "refinery/REFINERECIPE_71"
 	},
 	{
 		"Id": "REFINERECIPE_72",
@@ -1085,7 +1148,8 @@
 			"Quantity": 125
 		},
 		"Time": "300.0",
-		"Operation": "Extreme Alloy Separation"
+		"Operation": "Extreme Alloy Separation",
+		"Slug": "refinery/REFINERECIPE_72"
 	},
 	{
 		"Id": "REFINERECIPE_73",
@@ -1102,7 +1166,8 @@
 			"Quantity": 250
 		},
 		"Time": "300.0",
-		"Operation": "Extreme Alloy Separation"
+		"Operation": "Extreme Alloy Separation",
+		"Slug": "refinery/REFINERECIPE_73"
 	},
 	{
 		"Id": "REFINERECIPE_74",
@@ -1119,7 +1184,8 @@
 			"Quantity": 250
 		},
 		"Time": "300.0",
-		"Operation": "Extreme Alloy Separation"
+		"Operation": "Extreme Alloy Separation",
+		"Slug": "refinery/REFINERECIPE_74"
 	},
 	{
 		"Id": "REFINERECIPE_76",
@@ -1141,7 +1207,8 @@
 			"Quantity": 1
 		},
 		"Time": "20.0",
-		"Operation": "Salt Crystal Polishing"
+		"Operation": "Salt Crystal Polishing",
+		"Slug": "refinery/REFINERECIPE_76"
 	},
 	{
 		"Id": "REFINERECIPE_78",
@@ -1163,7 +1230,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Alchemical Construction"
+		"Operation": "Alchemical Construction",
+		"Slug": "refinery/REFINERECIPE_78"
 	},
 	{
 		"Id": "REFINERECIPE_79",
@@ -1185,7 +1253,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Alchemical Construction"
+		"Operation": "Alchemical Construction",
+		"Slug": "refinery/REFINERECIPE_79"
 	},
 	{
 		"Id": "REFINERECIPE_80",
@@ -1207,7 +1276,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Transmutation"
+		"Operation": "Transmutation",
+		"Slug": "refinery/REFINERECIPE_80"
 	},
 	{
 		"Id": "REFINERECIPE_81",
@@ -1229,7 +1299,8 @@
 			"Quantity": 2
 		},
 		"Time": "10.0",
-		"Operation": "Harness Energy"
+		"Operation": "Harness Energy",
+		"Slug": "refinery/REFINERECIPE_81"
 	},
 	{
 		"Id": "REFINERECIPE_82",
@@ -1251,7 +1322,8 @@
 			"Quantity": 1
 		},
 		"Time": "40.0",
-		"Operation": "Sulphur Injection"
+		"Operation": "Sulphur Injection",
+		"Slug": "refinery/REFINERECIPE_82"
 	},
 	{
 		"Id": "REFINERECIPE_83",
@@ -1273,7 +1345,8 @@
 			"Quantity": 1
 		},
 		"Time": "40.0",
-		"Operation": "Catalyse Radiation"
+		"Operation": "Catalyse Radiation",
+		"Slug": "refinery/REFINERECIPE_83"
 	},
 	{
 		"Id": "REFINERECIPE_84",
@@ -1295,7 +1368,8 @@
 			"Quantity": 1
 		},
 		"Time": "40.0",
-		"Operation": "Organic Fusion"
+		"Operation": "Organic Fusion",
+		"Slug": "refinery/REFINERECIPE_84"
 	},
 	{
 		"Id": "REFINERECIPE_85",
@@ -1317,7 +1391,8 @@
 			"Quantity": 1
 		},
 		"Time": "20.0",
-		"Operation": "Rapid Formation / Evaporation"
+		"Operation": "Rapid Formation / Evaporation",
+		"Slug": "refinery/REFINERECIPE_85"
 	},
 	{
 		"Id": "REFINERECIPE_86",
@@ -1339,7 +1414,8 @@
 			"Quantity": 1
 		},
 		"Time": "20.0",
-		"Operation": "Assisted Decomposition"
+		"Operation": "Assisted Decomposition",
+		"Slug": "refinery/REFINERECIPE_86"
 	},
 	{
 		"Id": "REFINERECIPE_87",
@@ -1361,7 +1437,8 @@
 			"Quantity": 1
 		},
 		"Time": "20.0",
-		"Operation": "Organic Reassembly"
+		"Operation": "Organic Reassembly",
+		"Slug": "refinery/REFINERECIPE_87"
 	},
 	{
 		"Id": "REFINERECIPE_88",
@@ -1383,7 +1460,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Carbonise Metal"
+		"Operation": "Carbonise Metal",
+		"Slug": "refinery/REFINERECIPE_88"
 	},
 	{
 		"Id": "REFINERECIPE_89",
@@ -1405,7 +1483,8 @@
 			"Quantity": 2
 		},
 		"Time": "60.0",
-		"Operation": "Carbonise Metal"
+		"Operation": "Carbonise Metal",
+		"Slug": "refinery/REFINERECIPE_89"
 	},
 	{
 		"Id": "REFINERECIPE_90",
@@ -1427,7 +1506,8 @@
 			"Quantity": 2
 		},
 		"Time": "60.0",
-		"Operation": "Carbonise Metal"
+		"Operation": "Carbonise Metal",
+		"Slug": "refinery/REFINERECIPE_90"
 	},
 	{
 		"Id": "REFINERECIPE_91",
@@ -1449,7 +1529,8 @@
 			"Quantity": 3
 		},
 		"Time": "60.0",
-		"Operation": "Carbonise Metal"
+		"Operation": "Carbonise Metal",
+		"Slug": "refinery/REFINERECIPE_91"
 	},
 	{
 		"Id": "REFINERECIPE_92",
@@ -1471,7 +1552,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Di-hydrogen Cycling"
+		"Operation": "Di-hydrogen Cycling",
+		"Slug": "refinery/REFINERECIPE_92"
 	},
 	{
 		"Id": "REFINERECIPE_93",
@@ -1493,7 +1575,8 @@
 			"Quantity": 2
 		},
 		"Time": "100.0",
-		"Operation": "Oxidise Metal"
+		"Operation": "Oxidise Metal",
+		"Slug": "refinery/REFINERECIPE_93"
 	},
 	{
 		"Id": "REFINERECIPE_94",
@@ -1515,7 +1598,8 @@
 			"Quantity": 1
 		},
 		"Time": "100.0",
-		"Operation": "Oxidise Metal"
+		"Operation": "Oxidise Metal",
+		"Slug": "refinery/REFINERECIPE_94"
 	},
 	{
 		"Id": "REFINERECIPE_95",
@@ -1537,7 +1621,8 @@
 			"Quantity": 5
 		},
 		"Time": "90.0",
-		"Operation": "Oxygenate Carbon"
+		"Operation": "Oxygenate Carbon",
+		"Slug": "refinery/REFINERECIPE_95"
 	},
 	{
 		"Id": "REFINERECIPE_96",
@@ -1559,7 +1644,8 @@
 			"Quantity": 6
 		},
 		"Time": "90.0",
-		"Operation": "Oxygenate Carbon"
+		"Operation": "Oxygenate Carbon",
+		"Slug": "refinery/REFINERECIPE_96"
 	},
 	{
 		"Id": "REFINERECIPE_97",
@@ -1581,7 +1667,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Oxygenate Sodium"
+		"Operation": "Oxygenate Sodium",
+		"Slug": "refinery/REFINERECIPE_97"
 	},
 	{
 		"Id": "REFINERECIPE_98",
@@ -1603,7 +1690,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Oxygenate Sodium"
+		"Operation": "Oxygenate Sodium",
+		"Slug": "refinery/REFINERECIPE_98"
 	},
 	{
 		"Id": "REFINERECIPE_99",
@@ -1625,7 +1713,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Catalyse Carbon"
+		"Operation": "Catalyse Carbon",
+		"Slug": "refinery/REFINERECIPE_99"
 	},
 	{
 		"Id": "REFINERECIPE_100",
@@ -1647,7 +1736,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Catalyse Carbon"
+		"Operation": "Catalyse Carbon",
+		"Slug": "refinery/REFINERECIPE_100"
 	},
 	{
 		"Id": "REFINERECIPE_101",
@@ -1669,7 +1759,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Advanced Carbon Processing"
+		"Operation": "Advanced Carbon Processing",
+		"Slug": "refinery/REFINERECIPE_101"
 	},
 	{
 		"Id": "REFINERECIPE_102",
@@ -1691,7 +1782,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Advanced Carbon Processing"
+		"Operation": "Advanced Carbon Processing",
+		"Slug": "refinery/REFINERECIPE_102"
 	},
 	{
 		"Id": "REFINERECIPE_103",
@@ -1713,7 +1805,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Anomaly / Organic Hybridisation"
+		"Operation": "Anomaly / Organic Hybridisation",
+		"Slug": "refinery/REFINERECIPE_103"
 	},
 	{
 		"Id": "REFINERECIPE_104",
@@ -1735,7 +1828,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Anomaly / Organic Hybridisation"
+		"Operation": "Anomaly / Organic Hybridisation",
+		"Slug": "refinery/REFINERECIPE_104"
 	},
 	{
 		"Id": "REFINERECIPE_105",
@@ -1757,7 +1851,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Sentinel Catalysation"
+		"Operation": "Sentinel Catalysation",
+		"Slug": "refinery/REFINERECIPE_105"
 	},
 	{
 		"Id": "REFINERECIPE_106",
@@ -1779,7 +1874,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Sentinel Catalysation"
+		"Operation": "Sentinel Catalysation",
+		"Slug": "refinery/REFINERECIPE_106"
 	},
 	{
 		"Id": "REFINERECIPE_107",
@@ -1801,7 +1897,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Runaway Decomposition"
+		"Operation": "Runaway Decomposition",
+		"Slug": "refinery/REFINERECIPE_107"
 	},
 	{
 		"Id": "REFINERECIPE_108",
@@ -1823,7 +1920,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Runaway Decomposition"
+		"Operation": "Runaway Decomposition",
+		"Slug": "refinery/REFINERECIPE_108"
 	},
 	{
 		"Id": "REFINERECIPE_109",
@@ -1845,7 +1943,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Fertiliser Synthesis"
+		"Operation": "Fertiliser Synthesis",
+		"Slug": "refinery/REFINERECIPE_109"
 	},
 	{
 		"Id": "REFINERECIPE_110",
@@ -1867,7 +1966,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Fertiliser Synthesis"
+		"Operation": "Fertiliser Synthesis",
+		"Slug": "refinery/REFINERECIPE_110"
 	},
 	{
 		"Id": "REFINERECIPE_111",
@@ -1889,7 +1989,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Matter Expansion"
+		"Operation": "Matter Expansion",
+		"Slug": "refinery/REFINERECIPE_111"
 	},
 	{
 		"Id": "REFINERECIPE_112",
@@ -1911,7 +2012,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Matter Expansion"
+		"Operation": "Matter Expansion",
+		"Slug": "refinery/REFINERECIPE_112"
 	},
 	{
 		"Id": "REFINERECIPE_113",
@@ -1933,7 +2035,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Matter Expansion"
+		"Operation": "Matter Expansion",
+		"Slug": "refinery/REFINERECIPE_113"
 	},
 	{
 		"Id": "REFINERECIPE_114",
@@ -1955,7 +2058,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Expansion"
+		"Operation": "Chromatic Expansion",
+		"Slug": "refinery/REFINERECIPE_114"
 	},
 	{
 		"Id": "REFINERECIPE_115",
@@ -1977,7 +2081,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Expansion"
+		"Operation": "Chromatic Expansion",
+		"Slug": "refinery/REFINERECIPE_115"
 	},
 	{
 		"Id": "REFINERECIPE_116",
@@ -1999,7 +2104,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Expansion"
+		"Operation": "Chromatic Expansion",
+		"Slug": "refinery/REFINERECIPE_116"
 	},
 	{
 		"Id": "REFINERECIPE_117",
@@ -2021,7 +2127,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Expansion"
+		"Operation": "Chromatic Expansion",
+		"Slug": "refinery/REFINERECIPE_117"
 	},
 	{
 		"Id": "REFINERECIPE_118",
@@ -2043,7 +2150,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_118"
 	},
 	{
 		"Id": "REFINERECIPE_119",
@@ -2065,7 +2173,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_119"
 	},
 	{
 		"Id": "REFINERECIPE_120",
@@ -2087,7 +2196,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_120"
 	},
 	{
 		"Id": "REFINERECIPE_121",
@@ -2109,7 +2219,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_121"
 	},
 	{
 		"Id": "REFINERECIPE_122",
@@ -2131,7 +2242,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_122"
 	},
 	{
 		"Id": "REFINERECIPE_123",
@@ -2153,7 +2265,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_123"
 	},
 	{
 		"Id": "REFINERECIPE_124",
@@ -2175,7 +2288,8 @@
 			"Quantity": 5
 		},
 		"Time": "90.0",
-		"Operation": "Efficient Salt Evaporation"
+		"Operation": "Efficient Salt Evaporation",
+		"Slug": "refinery/REFINERECIPE_124"
 	},
 	{
 		"Id": "REFINERECIPE_125",
@@ -2197,7 +2311,8 @@
 			"Quantity": 6
 		},
 		"Time": "90.0",
-		"Operation": "Chlorine Expansion"
+		"Operation": "Chlorine Expansion",
+		"Slug": "refinery/REFINERECIPE_125"
 	},
 	{
 		"Id": "REFINERECIPE_126",
@@ -2219,7 +2334,8 @@
 			"Quantity": 5
 		},
 		"Time": "90.0",
-		"Operation": "Efficient Cobalt Ionisation"
+		"Operation": "Efficient Cobalt Ionisation",
+		"Slug": "refinery/REFINERECIPE_126"
 	},
 	{
 		"Id": "REFINERECIPE_127",
@@ -2241,7 +2357,8 @@
 			"Quantity": 6
 		},
 		"Time": "90.0",
-		"Operation": "Efficient Cobalt Ionisation"
+		"Operation": "Efficient Cobalt Ionisation",
+		"Slug": "refinery/REFINERECIPE_127"
 	},
 	{
 		"Id": "REFINERECIPE_128",
@@ -2263,7 +2380,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic / Anomaly Synthesis"
+		"Operation": "Organic / Anomaly Synthesis",
+		"Slug": "refinery/REFINERECIPE_128"
 	},
 	{
 		"Id": "REFINERECIPE_129",
@@ -2285,7 +2403,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Mineral Alchemy"
+		"Operation": "Mineral Alchemy",
+		"Slug": "refinery/REFINERECIPE_129"
 	},
 	{
 		"Id": "REFINERECIPE_130",
@@ -2307,7 +2426,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Mineral Alchemy"
+		"Operation": "Mineral Alchemy",
+		"Slug": "refinery/REFINERECIPE_130"
 	},
 	{
 		"Id": "REFINERECIPE_131",
@@ -2329,7 +2449,8 @@
 			"Quantity": 10
 		},
 		"Time": "90.0",
-		"Operation": "Mineral Alchemy"
+		"Operation": "Mineral Alchemy",
+		"Slug": "refinery/REFINERECIPE_131"
 	},
 	{
 		"Id": "REFINERECIPE_132",
@@ -2351,7 +2472,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Transfer"
+		"Operation": "Gas Transfer",
+		"Slug": "refinery/REFINERECIPE_132"
 	},
 	{
 		"Id": "REFINERECIPE_133",
@@ -2373,7 +2495,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Transfer"
+		"Operation": "Gas Transfer",
+		"Slug": "refinery/REFINERECIPE_133"
 	},
 	{
 		"Id": "REFINERECIPE_134",
@@ -2395,7 +2518,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Transfer"
+		"Operation": "Gas Transfer",
+		"Slug": "refinery/REFINERECIPE_134"
 	},
 	{
 		"Id": "REFINERECIPE_135",
@@ -2417,7 +2541,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_135"
 	},
 	{
 		"Id": "REFINERECIPE_136",
@@ -2439,7 +2564,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_136"
 	},
 	{
 		"Id": "REFINERECIPE_137",
@@ -2461,7 +2587,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_137"
 	},
 	{
 		"Id": "REFINERECIPE_138",
@@ -2483,7 +2610,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_138"
 	},
 	{
 		"Id": "REFINERECIPE_139",
@@ -2505,7 +2633,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_139"
 	},
 	{
 		"Id": "REFINERECIPE_140",
@@ -2527,7 +2656,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Bonded Cobalt Extraction"
+		"Operation": "Bonded Cobalt Extraction",
+		"Slug": "refinery/REFINERECIPE_140"
 	},
 	{
 		"Id": "REFINERECIPE_141",
@@ -2549,7 +2679,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Bonded Chlorine Extraction"
+		"Operation": "Bonded Chlorine Extraction",
+		"Slug": "refinery/REFINERECIPE_141"
 	},
 	{
 		"Id": "REFINERECIPE_142",
@@ -2571,7 +2702,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Oxygenate Microbes"
+		"Operation": "Oxygenate Microbes",
+		"Slug": "refinery/REFINERECIPE_142"
 	},
 	{
 		"Id": "REFINERECIPE_143",
@@ -2593,7 +2725,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Pugneum Washing"
+		"Operation": "Pugneum Washing",
+		"Slug": "refinery/REFINERECIPE_143"
 	},
 	{
 		"Id": "REFINERECIPE_144",
@@ -2615,7 +2748,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Pugneum Washing"
+		"Operation": "Pugneum Washing",
+		"Slug": "refinery/REFINERECIPE_144"
 	},
 	{
 		"Id": "REFINERECIPE_145",
@@ -2637,7 +2771,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Extract Organic Sodium"
+		"Operation": "Extract Organic Sodium",
+		"Slug": "refinery/REFINERECIPE_145"
 	},
 	{
 		"Id": "REFINERECIPE_146",
@@ -2659,7 +2794,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Release Captured Oxygen"
+		"Operation": "Release Captured Oxygen",
+		"Slug": "refinery/REFINERECIPE_146"
 	},
 	{
 		"Id": "REFINERECIPE_147",
@@ -2681,7 +2817,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Feed Microbes"
+		"Operation": "Feed Microbes",
+		"Slug": "refinery/REFINERECIPE_147"
 	},
 	{
 		"Id": "REFINERECIPE_148",
@@ -2703,7 +2840,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Harness Organic Nitrogren"
+		"Operation": "Harness Organic Nitrogren",
+		"Slug": "refinery/REFINERECIPE_148"
 	},
 	{
 		"Id": "REFINERECIPE_149",
@@ -2725,7 +2863,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Harness Organic Nitrogren"
+		"Operation": "Harness Organic Nitrogren",
+		"Slug": "refinery/REFINERECIPE_149"
 	},
 	{
 		"Id": "REFINERECIPE_150",
@@ -2747,7 +2886,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Feed Microbes"
+		"Operation": "Feed Microbes",
+		"Slug": "refinery/REFINERECIPE_150"
 	},
 	{
 		"Id": "REFINERECIPE_151",
@@ -2769,7 +2909,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Extract Organic Sodium"
+		"Operation": "Extract Organic Sodium",
+		"Slug": "refinery/REFINERECIPE_151"
 	},
 	{
 		"Id": "REFINERECIPE_152",
@@ -2791,7 +2932,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Release Captured Oxygen"
+		"Operation": "Release Captured Oxygen",
+		"Slug": "refinery/REFINERECIPE_152"
 	},
 	{
 		"Id": "REFINERECIPE_153",
@@ -2813,7 +2955,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Feed Microbes"
+		"Operation": "Feed Microbes",
+		"Slug": "refinery/REFINERECIPE_153"
 	},
 	{
 		"Id": "REFINERECIPE_154",
@@ -2835,7 +2978,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Harness Organic Nitrogren"
+		"Operation": "Harness Organic Nitrogren",
+		"Slug": "refinery/REFINERECIPE_154"
 	},
 	{
 		"Id": "REFINERECIPE_155",
@@ -2857,7 +3001,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Harness Organic Nitrogren"
+		"Operation": "Harness Organic Nitrogren",
+		"Slug": "refinery/REFINERECIPE_155"
 	},
 	{
 		"Id": "REFINERECIPE_156",
@@ -2879,7 +3024,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Feed Microbes"
+		"Operation": "Feed Microbes",
+		"Slug": "refinery/REFINERECIPE_156"
 	},
 	{
 		"Id": "REFINERECIPE_157",
@@ -2901,7 +3047,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Ionise Bulbs"
+		"Operation": "Ionise Bulbs",
+		"Slug": "refinery/REFINERECIPE_157"
 	},
 	{
 		"Id": "REFINERECIPE_158",
@@ -2923,7 +3070,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Dissolve Natural Salts"
+		"Operation": "Dissolve Natural Salts",
+		"Slug": "refinery/REFINERECIPE_158"
 	},
 	{
 		"Id": "REFINERECIPE_159",
@@ -2945,7 +3093,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Ionise Bulbs"
+		"Operation": "Ionise Bulbs",
+		"Slug": "refinery/REFINERECIPE_159"
 	},
 	{
 		"Id": "REFINERECIPE_160",
@@ -2967,7 +3116,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Dissolve Natural Salts"
+		"Operation": "Dissolve Natural Salts",
+		"Slug": "refinery/REFINERECIPE_160"
 	},
 	{
 		"Id": "REFINERECIPE_161",
@@ -2989,7 +3139,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Pugneum Alchemy"
+		"Operation": "Pugneum Alchemy",
+		"Slug": "refinery/REFINERECIPE_161"
 	},
 	{
 		"Id": "REFINERECIPE_162",
@@ -3011,7 +3162,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Feed Microbes"
+		"Operation": "Feed Microbes",
+		"Slug": "refinery/REFINERECIPE_162"
 	},
 	{
 		"Id": "REFINERECIPE_163",
@@ -3033,7 +3185,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_163"
 	},
 	{
 		"Id": "REFINERECIPE_164",
@@ -3055,7 +3208,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_164"
 	},
 	{
 		"Id": "REFINERECIPE_165",
@@ -3077,7 +3231,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_165"
 	},
 	{
 		"Id": "REFINERECIPE_166",
@@ -3099,7 +3254,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_166"
 	},
 	{
 		"Id": "REFINERECIPE_167",
@@ -3121,7 +3277,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_167"
 	},
 	{
 		"Id": "REFINERECIPE_168",
@@ -3143,7 +3300,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_168"
 	},
 	{
 		"Id": "REFINERECIPE_169",
@@ -3165,7 +3323,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_169"
 	},
 	{
 		"Id": "REFINERECIPE_170",
@@ -3187,7 +3346,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_170"
 	},
 	{
 		"Id": "REFINERECIPE_171",
@@ -3209,7 +3369,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_171"
 	},
 	{
 		"Id": "REFINERECIPE_172",
@@ -3231,7 +3392,8 @@
 			"Quantity": 8
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_172"
 	},
 	{
 		"Id": "REFINERECIPE_173",
@@ -3253,7 +3415,8 @@
 			"Quantity": 6
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_173"
 	},
 	{
 		"Id": "REFINERECIPE_174",
@@ -3275,7 +3438,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_174"
 	},
 	{
 		"Id": "REFINERECIPE_175",
@@ -3297,7 +3461,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_175"
 	},
 	{
 		"Id": "REFINERECIPE_176",
@@ -3319,7 +3484,8 @@
 			"Quantity": 8
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_176"
 	},
 	{
 		"Id": "REFINERECIPE_177",
@@ -3341,7 +3507,8 @@
 			"Quantity": 6
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_177"
 	},
 	{
 		"Id": "REFINERECIPE_178",
@@ -3363,7 +3530,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_178"
 	},
 	{
 		"Id": "REFINERECIPE_179",
@@ -3385,7 +3553,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_179"
 	},
 	{
 		"Id": "REFINERECIPE_180",
@@ -3407,7 +3576,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_180"
 	},
 	{
 		"Id": "REFINERECIPE_181",
@@ -3429,7 +3599,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_181"
 	},
 	{
 		"Id": "REFINERECIPE_182",
@@ -3451,7 +3622,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_182"
 	},
 	{
 		"Id": "REFINERECIPE_183",
@@ -3473,7 +3645,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_183"
 	},
 	{
 		"Id": "REFINERECIPE_184",
@@ -3495,7 +3668,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_184"
 	},
 	{
 		"Id": "REFINERECIPE_185",
@@ -3517,7 +3691,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_185"
 	},
 	{
 		"Id": "REFINERECIPE_186",
@@ -3539,7 +3714,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_186"
 	},
 	{
 		"Id": "REFINERECIPE_187",
@@ -3561,7 +3737,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_187"
 	},
 	{
 		"Id": "REFINERECIPE_188",
@@ -3583,7 +3760,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_188"
 	},
 	{
 		"Id": "REFINERECIPE_189",
@@ -3605,7 +3783,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_189"
 	},
 	{
 		"Id": "REFINERECIPE_190",
@@ -3627,7 +3806,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_190"
 	},
 	{
 		"Id": "REFINERECIPE_191",
@@ -3649,7 +3829,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_191"
 	},
 	{
 		"Id": "REFINERECIPE_192",
@@ -3671,7 +3852,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_192"
 	},
 	{
 		"Id": "REFINERECIPE_193",
@@ -3693,7 +3875,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_193"
 	},
 	{
 		"Id": "REFINERECIPE_194",
@@ -3715,7 +3898,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_194"
 	},
 	{
 		"Id": "REFINERECIPE_195",
@@ -3737,7 +3921,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_195"
 	},
 	{
 		"Id": "REFINERECIPE_196",
@@ -3759,7 +3944,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_196"
 	},
 	{
 		"Id": "REFINERECIPE_197",
@@ -3781,7 +3967,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Floral Titration"
+		"Operation": "Floral Titration",
+		"Slug": "refinery/REFINERECIPE_197"
 	},
 	{
 		"Id": "REFINERECIPE_198",
@@ -3803,7 +3990,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Floral Titration"
+		"Operation": "Floral Titration",
+		"Slug": "refinery/REFINERECIPE_198"
 	},
 	{
 		"Id": "REFINERECIPE_199",
@@ -3825,7 +4013,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Floral Titration"
+		"Operation": "Floral Titration",
+		"Slug": "refinery/REFINERECIPE_199"
 	},
 	{
 		"Id": "REFINERECIPE_200",
@@ -3847,7 +4036,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Floral Titration"
+		"Operation": "Floral Titration",
+		"Slug": "refinery/REFINERECIPE_200"
 	},
 	{
 		"Id": "REFINERECIPE_201",
@@ -3869,7 +4059,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Floral Titration"
+		"Operation": "Floral Titration",
+		"Slug": "refinery/REFINERECIPE_201"
 	},
 	{
 		"Id": "REFINERECIPE_202",
@@ -3891,7 +4082,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Floral Titration"
+		"Operation": "Floral Titration",
+		"Slug": "refinery/REFINERECIPE_202"
 	},
 	{
 		"Id": "REFINERECIPE_209",
@@ -3913,7 +4105,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_209"
 	},
 	{
 		"Id": "REFINERECIPE_210",
@@ -3935,7 +4128,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Metal Enrichment"
+		"Operation": "Metal Enrichment",
+		"Slug": "refinery/REFINERECIPE_210"
 	},
 	{
 		"Id": "REFINERECIPE_211",
@@ -3957,7 +4151,8 @@
 			"Quantity": 1
 		},
 		"Time": "120.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_211"
 	},
 	{
 		"Id": "REFINERECIPE_212",
@@ -3979,7 +4174,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_212"
 	},
 	{
 		"Id": "REFINERECIPE_213",
@@ -4001,7 +4197,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Metal Enrichment"
+		"Operation": "Metal Enrichment",
+		"Slug": "refinery/REFINERECIPE_213"
 	},
 	{
 		"Id": "REFINERECIPE_214",
@@ -4023,7 +4220,8 @@
 			"Quantity": 2
 		},
 		"Time": "120.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_214"
 	},
 	{
 		"Id": "REFINERECIPE_215",
@@ -4045,7 +4243,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_215"
 	},
 	{
 		"Id": "REFINERECIPE_216",
@@ -4067,7 +4266,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Metal Enrichment"
+		"Operation": "Metal Enrichment",
+		"Slug": "refinery/REFINERECIPE_216"
 	},
 	{
 		"Id": "REFINERECIPE_217",
@@ -4089,7 +4289,8 @@
 			"Quantity": 3
 		},
 		"Time": "120.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_217"
 	},
 	{
 		"Id": "REFINERECIPE_218",
@@ -4111,7 +4312,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_218"
 	},
 	{
 		"Id": "REFINERECIPE_219",
@@ -4133,7 +4335,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_219"
 	},
 	{
 		"Id": "REFINERECIPE_220",
@@ -4155,7 +4358,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_220"
 	},
 	{
 		"Id": "REFINERECIPE_221",
@@ -4177,7 +4381,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_221"
 	},
 	{
 		"Id": "REFINERECIPE_222",
@@ -4199,7 +4404,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_222"
 	},
 	{
 		"Id": "REFINERECIPE_223",
@@ -4221,7 +4427,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_223"
 	},
 	{
 		"Id": "REFINERECIPE_224",
@@ -4243,7 +4450,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_224"
 	},
 	{
 		"Id": "REFINERECIPE_225",
@@ -4265,7 +4473,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_225"
 	},
 	{
 		"Id": "REFINERECIPE_226",
@@ -4287,7 +4496,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Encourage Growth"
+		"Operation": "Encourage Growth",
+		"Slug": "refinery/REFINERECIPE_226"
 	},
 	{
 		"Id": "REFINERECIPE_228",
@@ -4314,7 +4524,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Transmutation"
+		"Operation": "Transmutation",
+		"Slug": "refinery/REFINERECIPE_228"
 	},
 	{
 		"Id": "REFINERECIPE_229",
@@ -4341,7 +4552,8 @@
 			"Quantity": 5
 		},
 		"Time": "120.0",
-		"Operation": "Deep Metal Compression"
+		"Operation": "Deep Metal Compression",
+		"Slug": "refinery/REFINERECIPE_229"
 	},
 	{
 		"Id": "REFINERECIPE_230",
@@ -4368,7 +4580,8 @@
 			"Quantity": 8
 		},
 		"Time": "120.0",
-		"Operation": "Deep Metal Compression"
+		"Operation": "Deep Metal Compression",
+		"Slug": "refinery/REFINERECIPE_230"
 	},
 	{
 		"Id": "REFINERECIPE_231",
@@ -4395,7 +4608,8 @@
 			"Quantity": 12
 		},
 		"Time": "120.0",
-		"Operation": "R 3input Land3 3"
+		"Operation": "R 3input Land3 3",
+		"Slug": "refinery/REFINERECIPE_231"
 	},
 	{
 		"Id": "REFINERECIPE_238",
@@ -4422,7 +4636,8 @@
 			"Quantity": 10
 		},
 		"Time": "900.0",
-		"Operation": "Artificial Photosynthesis"
+		"Operation": "Artificial Photosynthesis",
+		"Slug": "refinery/REFINERECIPE_238"
 	},
 	{
 		"Id": "REFINERECIPE_239",
@@ -4449,7 +4664,8 @@
 			"Quantity": 10
 		},
 		"Time": "900.0",
-		"Operation": "Artificial Photosynthesis"
+		"Operation": "Artificial Photosynthesis",
+		"Slug": "refinery/REFINERECIPE_239"
 	},
 	{
 		"Id": "REFINERECIPE_240",
@@ -4476,7 +4692,8 @@
 			"Quantity": 10
 		},
 		"Time": "900.0",
-		"Operation": "Artificial Photosynthesis"
+		"Operation": "Artificial Photosynthesis",
+		"Slug": "refinery/REFINERECIPE_240"
 	},
 	{
 		"Id": "REFINERECIPE_241",
@@ -4503,7 +4720,8 @@
 			"Quantity": 10
 		},
 		"Time": "900.0",
-		"Operation": "Artificial Photosynthesis"
+		"Operation": "Artificial Photosynthesis",
+		"Slug": "refinery/REFINERECIPE_241"
 	},
 	{
 		"Id": "REFINERECIPE_242",
@@ -4530,7 +4748,8 @@
 			"Quantity": 10
 		},
 		"Time": "900.0",
-		"Operation": "Artificial Photosynthesis"
+		"Operation": "Artificial Photosynthesis",
+		"Slug": "refinery/REFINERECIPE_242"
 	},
 	{
 		"Id": "REFINERECIPE_243",
@@ -4557,7 +4776,8 @@
 			"Quantity": 10
 		},
 		"Time": "900.0",
-		"Operation": "Artificial Photosynthesis"
+		"Operation": "Artificial Photosynthesis",
+		"Slug": "refinery/REFINERECIPE_243"
 	},
 	{
 		"Id": "REFINERECIPE_244",
@@ -4584,7 +4804,8 @@
 			"Quantity": 5
 		},
 		"Time": "1200.0",
-		"Operation": "Chromatic Stellar Fusion"
+		"Operation": "Chromatic Stellar Fusion",
+		"Slug": "refinery/REFINERECIPE_244"
 	},
 	{
 		"Id": "REFINERECIPE_245",
@@ -4611,7 +4832,8 @@
 			"Quantity": 10
 		},
 		"Time": "1200.0",
-		"Operation": "Chromatic Stellar Fusion"
+		"Operation": "Chromatic Stellar Fusion",
+		"Slug": "refinery/REFINERECIPE_245"
 	},
 	{
 		"Id": "REFINERECIPE_246",
@@ -4638,7 +4860,8 @@
 			"Quantity": 20
 		},
 		"Time": "1200.0",
-		"Operation": "Chromatic Stellar Fusion"
+		"Operation": "Chromatic Stellar Fusion",
+		"Slug": "refinery/REFINERECIPE_246"
 	},
 	{
 		"Id": "REFINERECIPE_247",
@@ -4665,7 +4888,8 @@
 			"Quantity": 30
 		},
 		"Time": "1200.0",
-		"Operation": "Chromatic Stellar Fusion"
+		"Operation": "Chromatic Stellar Fusion",
+		"Slug": "refinery/REFINERECIPE_247"
 	},
 	{
 		"Id": "REFINERECIPE_248",
@@ -4692,7 +4916,8 @@
 			"Quantity": 10
 		},
 		"Time": "1200.0",
-		"Operation": "Chromatic Alchemy"
+		"Operation": "Chromatic Alchemy",
+		"Slug": "refinery/REFINERECIPE_248"
 	},
 	{
 		"Id": "REFINERECIPE_249",
@@ -4719,7 +4944,8 @@
 			"Quantity": 10
 		},
 		"Time": "1200.0",
-		"Operation": "Chromatic Alchemy"
+		"Operation": "Chromatic Alchemy",
+		"Slug": "refinery/REFINERECIPE_249"
 	},
 	{
 		"Id": "REFINERECIPE_250",
@@ -4746,7 +4972,8 @@
 			"Quantity": 1
 		},
 		"Time": "600.0",
-		"Operation": "Antimatter Bypass"
+		"Operation": "Antimatter Bypass",
+		"Slug": "refinery/REFINERECIPE_250"
 	},
 	{
 		"Id": "REFINERECIPE_251",
@@ -4773,7 +5000,8 @@
 			"Quantity": 1
 		},
 		"Time": "600.0",
-		"Operation": "Antimatter Bypass"
+		"Operation": "Antimatter Bypass",
+		"Slug": "refinery/REFINERECIPE_251"
 	},
 	{
 		"Id": "REFINERECIPE_252",
@@ -4800,7 +5028,8 @@
 			"Quantity": 1
 		},
 		"Time": "600.0",
-		"Operation": "Antimatter Bypass"
+		"Operation": "Antimatter Bypass",
+		"Slug": "refinery/REFINERECIPE_252"
 	},
 	{
 		"Id": "REFINERECIPE_253",
@@ -4827,7 +5056,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Plasma Pressurisation"
+		"Operation": "Plasma Pressurisation",
+		"Slug": "refinery/REFINERECIPE_253"
 	},
 	{
 		"Id": "REFINERECIPE_254",
@@ -4854,7 +5084,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Plasma Pressurisation"
+		"Operation": "Plasma Pressurisation",
+		"Slug": "refinery/REFINERECIPE_254"
 	},
 	{
 		"Id": "REFINERECIPE_255",
@@ -4881,7 +5112,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Plasma Pressurisation"
+		"Operation": "Plasma Pressurisation",
+		"Slug": "refinery/REFINERECIPE_255"
 	},
 	{
 		"Id": "REFINERECIPE_256",
@@ -4908,7 +5140,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Plasma Pressurisation"
+		"Operation": "Plasma Pressurisation",
+		"Slug": "refinery/REFINERECIPE_256"
 	},
 	{
 		"Id": "REFINERECIPE_257",
@@ -4935,7 +5168,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Advanced Oxygen Capture"
+		"Operation": "Advanced Oxygen Capture",
+		"Slug": "refinery/REFINERECIPE_257"
 	},
 	{
 		"Id": "REFINERECIPE_258",
@@ -4962,7 +5196,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Di-hydrogen Capture"
+		"Operation": "Di-hydrogen Capture",
+		"Slug": "refinery/REFINERECIPE_258"
 	},
 	{
 		"Id": "REFINERECIPE_259",
@@ -4989,7 +5224,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Di-hydrogen Capture"
+		"Operation": "Di-hydrogen Capture",
+		"Slug": "refinery/REFINERECIPE_259"
 	},
 	{
 		"Id": "REFINERECIPE_260",
@@ -5016,7 +5252,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Di-hydrogen Capture"
+		"Operation": "Di-hydrogen Capture",
+		"Slug": "refinery/REFINERECIPE_260"
 	},
 	{
 		"Id": "REFINERECIPE_261",
@@ -5043,7 +5280,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ion Capture"
+		"Operation": "Ion Capture",
+		"Slug": "refinery/REFINERECIPE_261"
 	},
 	{
 		"Id": "REFINERECIPE_263",
@@ -5070,7 +5308,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_263"
 	},
 	{
 		"Id": "REFINERECIPE_264",
@@ -5097,7 +5336,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_264"
 	},
 	{
 		"Id": "REFINERECIPE_265",
@@ -5124,7 +5364,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_265"
 	},
 	{
 		"Id": "REFINERECIPE_266",
@@ -5151,7 +5392,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_266"
 	},
 	{
 		"Id": "REFINERECIPE_267",
@@ -5178,7 +5420,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_267"
 	},
 	{
 		"Id": "REFINERECIPE_268",
@@ -5205,7 +5448,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_268"
 	},
 	{
 		"Id": "REFINERECIPE_269",
@@ -5232,7 +5476,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_269"
 	},
 	{
 		"Id": "REFINERECIPE_270",
@@ -5259,7 +5504,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_270"
 	},
 	{
 		"Id": "REFINERECIPE_271",
@@ -5286,7 +5532,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_271"
 	},
 	{
 		"Id": "REFINERECIPE_272",
@@ -5313,7 +5560,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_272"
 	},
 	{
 		"Id": "REFINERECIPE_273",
@@ -5340,7 +5588,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_273"
 	},
 	{
 		"Id": "REFINERECIPE_274",
@@ -5367,7 +5616,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_274"
 	},
 	{
 		"Id": "REFINERECIPE_275",
@@ -5394,7 +5644,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_275"
 	},
 	{
 		"Id": "REFINERECIPE_276",
@@ -5421,7 +5672,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_276"
 	},
 	{
 		"Id": "REFINERECIPE_277",
@@ -5448,7 +5700,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_277"
 	},
 	{
 		"Id": "REFINERECIPE_278",
@@ -5475,7 +5728,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_278"
 	},
 	{
 		"Id": "REFINERECIPE_279",
@@ -5502,7 +5756,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_279"
 	},
 	{
 		"Id": "REFINERECIPE_280",
@@ -5529,7 +5784,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_280"
 	},
 	{
 		"Id": "REFINERECIPE_281",
@@ -5556,7 +5812,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_281"
 	},
 	{
 		"Id": "REFINERECIPE_282",
@@ -5583,7 +5840,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_282"
 	},
 	{
 		"Id": "REFINERECIPE_283",
@@ -5610,7 +5868,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_283"
 	},
 	{
 		"Id": "REFINERECIPE_284",
@@ -5637,7 +5896,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_284"
 	},
 	{
 		"Id": "REFINERECIPE_285",
@@ -5664,7 +5924,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_285"
 	},
 	{
 		"Id": "REFINERECIPE_286",
@@ -5691,7 +5952,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_286"
 	},
 	{
 		"Id": "REFINERECIPE_287",
@@ -5718,7 +5980,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_287"
 	},
 	{
 		"Id": "REFINERECIPE_288",
@@ -5745,7 +6008,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_288"
 	},
 	{
 		"Id": "REFINERECIPE_289",
@@ -5772,7 +6036,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_289"
 	},
 	{
 		"Id": "REFINERECIPE_290",
@@ -5799,7 +6064,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_290"
 	},
 	{
 		"Id": "REFINERECIPE_291",
@@ -5826,7 +6092,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_291"
 	},
 	{
 		"Id": "REFINERECIPE_292",
@@ -5853,7 +6120,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_292"
 	},
 	{
 		"Id": "REFINERECIPE_293",
@@ -5880,7 +6148,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_293"
 	},
 	{
 		"Id": "REFINERECIPE_294",
@@ -5907,7 +6176,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_294"
 	},
 	{
 		"Id": "REFINERECIPE_295",
@@ -5934,7 +6204,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_295"
 	},
 	{
 		"Id": "REFINERECIPE_296",
@@ -5961,7 +6232,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_296"
 	},
 	{
 		"Id": "REFINERECIPE_297",
@@ -5988,7 +6260,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_297"
 	},
 	{
 		"Id": "REFINERECIPE_298",
@@ -6015,7 +6288,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_298"
 	},
 	{
 		"Id": "REFINERECIPE_299",
@@ -6042,7 +6316,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_299"
 	},
 	{
 		"Id": "REFINERECIPE_300",
@@ -6069,7 +6344,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_300"
 	},
 	{
 		"Id": "REFINERECIPE_301",
@@ -6096,7 +6372,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_301"
 	},
 	{
 		"Id": "REFINERECIPE_302",
@@ -6123,7 +6400,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_302"
 	},
 	{
 		"Id": "REFINERECIPE_303",
@@ -6150,7 +6428,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_303"
 	},
 	{
 		"Id": "REFINERECIPE_304",
@@ -6177,7 +6456,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_304"
 	},
 	{
 		"Id": "REFINERECIPE_305",
@@ -6204,7 +6484,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_305"
 	},
 	{
 		"Id": "REFINERECIPE_306",
@@ -6231,7 +6512,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_306"
 	},
 	{
 		"Id": "REFINERECIPE_307",
@@ -6258,7 +6540,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_307"
 	},
 	{
 		"Id": "REFINERECIPE_308",
@@ -6285,7 +6568,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_308"
 	},
 	{
 		"Id": "REFINERECIPE_309",
@@ -6312,7 +6596,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_309"
 	},
 	{
 		"Id": "REFINERECIPE_310",
@@ -6339,7 +6624,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Alloy Latticing"
+		"Operation": "Alloy Latticing",
+		"Slug": "refinery/REFINERECIPE_310"
 	},
 	{
 		"Id": "REFINERECIPE_311",
@@ -6366,7 +6652,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_311"
 	},
 	{
 		"Id": "REFINERECIPE_312",
@@ -6393,7 +6680,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_312"
 	},
 	{
 		"Id": "REFINERECIPE_313",
@@ -6420,7 +6708,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_313"
 	},
 	{
 		"Id": "REFINERECIPE_314",
@@ -6447,7 +6736,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_314"
 	},
 	{
 		"Id": "REFINERECIPE_315",
@@ -6474,7 +6764,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_315"
 	},
 	{
 		"Id": "REFINERECIPE_316",
@@ -6501,7 +6792,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_316"
 	},
 	{
 		"Id": "REFINERECIPE_317",
@@ -6528,7 +6820,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_317"
 	},
 	{
 		"Id": "REFINERECIPE_318",
@@ -6555,7 +6848,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_318"
 	},
 	{
 		"Id": "REFINERECIPE_319",
@@ -6582,7 +6876,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_319"
 	},
 	{
 		"Id": "REFINERECIPE_320",
@@ -6609,7 +6904,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_320"
 	},
 	{
 		"Id": "REFINERECIPE_321",
@@ -6636,7 +6932,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_321"
 	},
 	{
 		"Id": "REFINERECIPE_322",
@@ -6663,7 +6960,8 @@
 			"Quantity": 1
 		},
 		"Time": "20.0",
-		"Operation": "High-Speed Sublimation"
+		"Operation": "High-Speed Sublimation",
+		"Slug": "refinery/REFINERECIPE_322"
 	},
 	{
 		"Id": "REFINERECIPE_323",
@@ -6680,7 +6978,8 @@
 			"Quantity": 1
 		},
 		"Time": "10.0",
-		"Operation": "Silicate Forging"
+		"Operation": "Silicate Forging",
+		"Slug": "refinery/REFINERECIPE_323"
 	},
 	{
 		"Id": "REFINERECIPE_324",
@@ -6697,7 +6996,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Doom Cycling"
+		"Operation": "Doom Cycling",
+		"Slug": "refinery/REFINERECIPE_324"
 	},
 	{
 		"Id": "REFINERECIPE_325",
@@ -6714,7 +7014,8 @@
 			"Quantity": 1
 		},
 		"Time": "10.0",
-		"Operation": "Doom Cycling"
+		"Operation": "Doom Cycling",
+		"Slug": "refinery/REFINERECIPE_325"
 	},
 	{
 		"Id": "REFINERECIPE_326",
@@ -6731,7 +7032,8 @@
 			"Quantity": 50
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_326"
 	},
 	{
 		"Id": "REFINERECIPE_327",
@@ -6748,7 +7050,8 @@
 			"Quantity": 50
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_327"
 	},
 	{
 		"Id": "REFINERECIPE_328",
@@ -6765,7 +7068,8 @@
 			"Quantity": 50
 		},
 		"Time": "1800.0",
-		"Operation": "Subjugation of Glass"
+		"Operation": "Subjugation of Glass",
+		"Slug": "refinery/REFINERECIPE_328"
 	},
 	{
 		"Id": "REFINERECIPE_329",
@@ -6782,7 +7086,8 @@
 			"Quantity": 95
 		},
 		"Time": "2200.0",
-		"Operation": "Purge Corruption"
+		"Operation": "Purge Corruption",
+		"Slug": "refinery/REFINERECIPE_329"
 	},
 	{
 		"Id": "REFINERECIPE_330",
@@ -6799,7 +7104,8 @@
 			"Quantity": 230
 		},
 		"Time": "3200.0",
-		"Operation": "Sentience Extraction"
+		"Operation": "Sentience Extraction",
+		"Slug": "refinery/REFINERECIPE_330"
 	},
 	{
 		"Id": "REFINERECIPE_331",
@@ -6816,7 +7122,8 @@
 			"Quantity": 2
 		},
 		"Time": "30.0",
-		"Operation": "Restore Harmony"
+		"Operation": "Restore Harmony",
+		"Slug": "refinery/REFINERECIPE_331"
 	},
 	{
 		"Id": "REFINERECIPE_332",
@@ -6838,7 +7145,8 @@
 			"Quantity": 3
 		},
 		"Time": "60.0",
-		"Operation": "Reality Pollution"
+		"Operation": "Reality Pollution",
+		"Slug": "refinery/REFINERECIPE_332"
 	},
 	{
 		"Id": "REFINERECIPE_333",
@@ -6860,7 +7168,8 @@
 			"Quantity": 1
 		},
 		"Time": "3600.0",
-		"Operation": "Slime/Echo Infusion"
+		"Operation": "Slime/Echo Infusion",
+		"Slug": "refinery/REFINERECIPE_333"
 	},
 	{
 		"Id": "REFINERECIPE_334",
@@ -6882,7 +7191,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Volcanic Transmutation"
+		"Operation": "Volcanic Transmutation",
+		"Slug": "refinery/REFINERECIPE_334"
 	},
 	{
 		"Id": "REFINERECIPE_335",
@@ -6904,7 +7214,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Volcanic Transmutation"
+		"Operation": "Volcanic Transmutation",
+		"Slug": "refinery/REFINERECIPE_335"
 	},
 	{
 		"Id": "REFINERECIPE_336",
@@ -6926,7 +7237,8 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Di-hydrogen Cycling"
+		"Operation": "Di-hydrogen Cycling",
+		"Slug": "refinery/REFINERECIPE_336"
 	},
 	{
 		"Id": "REFINERECIPE_337",
@@ -6943,7 +7255,8 @@
 			"Quantity": 4
 		},
 		"Time": "30.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_337"
 	},
 	{
 		"Id": "REFINERECIPE_338",
@@ -6965,7 +7278,8 @@
 			"Quantity": 8
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_338"
 	},
 	{
 		"Id": "REFINERECIPE_339",
@@ -6987,7 +7301,8 @@
 			"Quantity": 8
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_339"
 	},
 	{
 		"Id": "REFINERECIPE_340",
@@ -7004,7 +7319,8 @@
 			"Quantity": 4
 		},
 		"Time": "25.0",
-		"Operation": "Extract Chromatic Material"
+		"Operation": "Extract Chromatic Material",
+		"Slug": "refinery/REFINERECIPE_340"
 	},
 	{
 		"Id": "REFINERECIPE_341",
@@ -7026,7 +7342,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Expansion"
+		"Operation": "Chromatic Expansion",
+		"Slug": "refinery/REFINERECIPE_341"
 	},
 	{
 		"Id": "REFINERECIPE_342",
@@ -7048,7 +7365,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_342"
 	},
 	{
 		"Id": "REFINERECIPE_343",
@@ -7070,7 +7388,8 @@
 			"Quantity": 4
 		},
 		"Time": "90.0",
-		"Operation": "Chromatic Metal Fusion"
+		"Operation": "Chromatic Metal Fusion",
+		"Slug": "refinery/REFINERECIPE_343"
 	},
 	{
 		"Id": "REFINERECIPE_344",
@@ -7097,7 +7416,8 @@
 			"Quantity": 30
 		},
 		"Time": "1200.0",
-		"Operation": "Chromatic Stellar Fusion"
+		"Operation": "Chromatic Stellar Fusion",
+		"Slug": "refinery/REFINERECIPE_344"
 	},
 	{
 		"Id": "REFINERECIPE_345",
@@ -7114,7 +7434,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ferrite Dust Extraction"
+		"Operation": "Ferrite Dust Extraction",
+		"Slug": "refinery/REFINERECIPE_345"
 	},
 	{
 		"Id": "REFINERECIPE_346",
@@ -7136,7 +7457,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_346"
 	},
 	{
 		"Id": "REFINERECIPE_349",
@@ -7158,7 +7480,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_349"
 	},
 	{
 		"Id": "REFINERECIPE_352",
@@ -7180,7 +7503,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_352"
 	},
 	{
 		"Id": "REFINERECIPE_353",
@@ -7202,7 +7526,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_353"
 	},
 	{
 		"Id": "REFINERECIPE_354",
@@ -7224,7 +7549,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_354"
 	},
 	{
 		"Id": "REFINERECIPE_357",
@@ -7251,7 +7577,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_357"
 	},
 	{
 		"Id": "REFINERECIPE_358",
@@ -7278,7 +7605,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_358"
 	},
 	{
 		"Id": "REFINERECIPE_361",
@@ -7295,7 +7623,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Ferrite Dust Extraction"
+		"Operation": "Ferrite Dust Extraction",
+		"Slug": "refinery/REFINERECIPE_361"
 	},
 	{
 		"Id": "REFINERECIPE_362",
@@ -7317,7 +7646,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_362"
 	},
 	{
 		"Id": "REFINERECIPE_365",
@@ -7339,7 +7669,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Environmental Element Transfer"
+		"Operation": "Environmental Element Transfer",
+		"Slug": "refinery/REFINERECIPE_365"
 	},
 	{
 		"Id": "REFINERECIPE_368",
@@ -7361,7 +7692,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_368"
 	},
 	{
 		"Id": "REFINERECIPE_369",
@@ -7383,7 +7715,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_369"
 	},
 	{
 		"Id": "REFINERECIPE_370",
@@ -7405,7 +7738,8 @@
 			"Quantity": 3
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_370"
 	},
 	{
 		"Id": "REFINERECIPE_371",
@@ -7432,7 +7766,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_371"
 	},
 	{
 		"Id": "REFINERECIPE_374",
@@ -7459,7 +7794,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Loosen Bonds"
+		"Operation": "Loosen Bonds",
+		"Slug": "refinery/REFINERECIPE_374"
 	},
 	{
 		"Id": "REFINERECIPE_378",
@@ -7476,7 +7812,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Transfer"
+		"Operation": "Gas Transfer",
+		"Slug": "refinery/REFINERECIPE_378"
 	},
 	{
 		"Id": "REFINERECIPE_379",
@@ -7498,7 +7835,8 @@
 			"Quantity": 1
 		},
 		"Time": "40.0",
-		"Operation": "Organic Fusion"
+		"Operation": "Organic Fusion",
+		"Slug": "refinery/REFINERECIPE_379"
 	},
 	{
 		"Id": "REFINERECIPE_380",
@@ -7520,7 +7858,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Transfer"
+		"Operation": "Gas Transfer",
+		"Slug": "refinery/REFINERECIPE_380"
 	},
 	{
 		"Id": "REFINERECIPE_381",
@@ -7542,7 +7881,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_381"
 	},
 	{
 		"Id": "REFINERECIPE_382",
@@ -7564,7 +7904,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_382"
 	},
 	{
 		"Id": "REFINERECIPE_383",
@@ -7586,7 +7927,8 @@
 			"Quantity": 2
 		},
 		"Time": "90.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_383"
 	},
 	{
 		"Id": "REFINERECIPE_384",
@@ -7608,7 +7950,8 @@
 			"Quantity": 1
 		},
 		"Time": "120.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_384"
 	},
 	{
 		"Id": "REFINERECIPE_385",
@@ -7630,7 +7973,8 @@
 			"Quantity": 2
 		},
 		"Time": "120.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_385"
 	},
 	{
 		"Id": "REFINERECIPE_386",
@@ -7652,7 +7996,8 @@
 			"Quantity": 3
 		},
 		"Time": "120.0",
-		"Operation": "Gas Catalysation"
+		"Operation": "Gas Catalysation",
+		"Slug": "refinery/REFINERECIPE_386"
 	},
 	{
 		"Id": "REFINERECIPE_387",
@@ -7679,7 +8024,8 @@
 			"Quantity": 1
 		},
 		"Time": "40.0",
-		"Operation": "Organic Fusion"
+		"Operation": "Organic Fusion",
+		"Slug": "refinery/REFINERECIPE_387"
 	},
 	{
 		"Id": "REFINERECIPE_388",
@@ -7701,7 +8047,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_388"
 	},
 	{
 		"Id": "REFINERECIPE_389",
@@ -7723,7 +8070,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_389"
 	},
 	{
 		"Id": "REFINERECIPE_390",
@@ -7745,7 +8093,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_390"
 	},
 	{
 		"Id": "REFINERECIPE_391",
@@ -7767,7 +8116,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_391"
 	},
 	{
 		"Id": "REFINERECIPE_392",
@@ -7789,7 +8139,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_392"
 	},
 	{
 		"Id": "REFINERECIPE_393",
@@ -7811,7 +8162,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_393"
 	},
 	{
 		"Id": "REFINERECIPE_394",
@@ -7833,7 +8185,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_394"
 	},
 	{
 		"Id": "REFINERECIPE_395",
@@ -7855,7 +8208,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_395"
 	},
 	{
 		"Id": "REFINERECIPE_396",
@@ -7877,7 +8231,8 @@
 			"Quantity": 1
 		},
 		"Time": "90.0",
-		"Operation": "Organic Expansion"
+		"Operation": "Organic Expansion",
+		"Slug": "refinery/REFINERECIPE_396"
 	},
 	{
 		"Id": "REFINERECIPE_397",
@@ -7894,7 +8249,8 @@
 			"Quantity": 2
 		},
 		"Time": "60.0",
-		"Operation": "Recycle Stone"
+		"Operation": "Recycle Stone",
+		"Slug": "refinery/REFINERECIPE_397"
 	},
 	{
 		"Id": "REFINERECIPE_398",
@@ -7916,6 +8272,7 @@
 			"Quantity": 1
 		},
 		"Time": "60.0",
-		"Operation": "Chromatic Alchemy"
+		"Operation": "Chromatic Alchemy",
+		"Slug": "refinery/REFINERECIPE_398"
 	}
 ]

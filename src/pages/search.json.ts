@@ -1,28 +1,37 @@
 import type { APIRoute } from 'astro';
-import { getLabel, getSlug, sort } from '@utils/lookup.js';
+import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
-import * as dataSources from '@data/index';
+import * as dataSources from '@datav2/index.js';
 
-// Combine and sort all data
-const allData = Object.values(dataSources).flatMap(source => source as Item[]);
+const getTypeFromSlug = (slug?: string): string => {
+  if (!slug) return 'item';
+  const [prefix] = slug.split('/');
+  return prefix || 'item';
+};
+
+// Combine and sort all data (each datav2 export is an array of items)
+const allData = Object.values(dataSources).flatMap((source) => source as Item[]);
 const data = sort(allData as Item[]);
 
-// Create search data
-const search = data.map((item: Item) => ({
-	id: item.fishId || item.Id,
-	name: item.Name,
-	type: getLabel(item.Id),
-	url: `/${getSlug(item.Id)}/${item.fishId || item.Id}`.replace(/\/+/g, '/'),
-}));
+// Build search index: only include items with a valid name so search and client filtering work
+const search = data
+	.filter((item: Item) => item?.Name != null && String(item.Name).trim() !== '')
+	.map((item: Item) => ({
+		id: item.Id,
+		name: item.Name,
+		type: getTypeFromSlug(item.Slug),
+		url: getSlug(item),
+	}));
 
 export const GET: APIRoute = ({ request }) => {
   const url = new URL(request.url);
   const query = url.searchParams.get('q')?.toLowerCase();
 
   const results = query
-    ? search.filter(item =>
-        item.name.toLowerCase().includes(query) ||
-        item.type.toLowerCase().includes(query)
+    ? search.filter(
+        (item) =>
+          (typeof item.name === 'string' && item.name.toLowerCase().includes(query)) ||
+          (typeof item.type === 'string' && item.type.toLowerCase().includes(query))
       )
     : search;
 
@@ -31,7 +40,7 @@ export const GET: APIRoute = ({ request }) => {
     {
       headers: {
         'Content-Type': 'application/json',
-        'Cache-Control': 'public, max-age=3600', // Cache for 1 hour
+        'Cache-Control': 'public, max-age=300', // 5 min so data updates (e.g. new items) show up sooner
       },
     }
   );

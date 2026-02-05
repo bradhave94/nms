@@ -17,6 +17,7 @@ import {
   ArchiveBoxIcon,
   PaperClipIcon,
   ScaleIcon,
+  PaperAirplaneIcon,
 } from '@heroicons/react/24/solid';
 import type { ComponentType, SVGProps } from 'react';
 import { classNames } from '../utils/classNames';
@@ -41,6 +42,7 @@ const navigation: NavigationItem[] = [
   { name: 'Products', href: '/products/1', icon: ArchiveBoxIcon },
   { name: 'Technology', href: '/technology/1', icon: CogIcon },
   { name: 'Buildings', href: '/buildings/1', icon: HomeModernIcon },
+  { name: 'Corvette Modules', href: '/corvette/1', icon: PaperAirplaneIcon },
   { name: 'Fish', href: '/fish/1', icon: ScaleIcon },
   { name: 'Curiosities', href: '/curiosities/1', icon: QuestionMarkCircleIcon },
   { name: 'Other', href: '/other/1', icon: PaperClipIcon },
@@ -134,7 +136,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
                   <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
                     <div className="flex flex-shrink-0 items-center px-4">
                       <img
-                        className="h-[31px] w-auto"
+                        className="w-auto"
                         src="/images/logo-nms.webp"
                         alt="No Man's Sky Recipes"
                       />
@@ -151,12 +153,12 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-80 lg:flex-col">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-60 lg:flex-col">
           <div className="flex min-h-0 flex-1 flex-col bg-black">
             <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
               <div className="flex flex-shrink-0 items-center mb-2 px-4">
                 <img
-                  className="h-[31px] w-auto"
+                  className=" w-auto"
                   src="/images/logo-nms.webp"
                   alt="No Man's Sky Recipes"
                 />
@@ -165,7 +167,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 flex-col lg:pl-80">
+        <div className="flex flex-1 flex-col lg:pl-60">
           <div className="sticky top-0 z-10 bg-black p-3 text-right lg:hidden">
             <button
               type="button"
@@ -177,7 +179,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
             </button>
           </div>
           <main className="flex-1">
-            <div className="nms-bg mx-auto p-2 sm:px-6 lg:px-8 sm:py-6">
+            <div className="nms-bg mx-auto">
               {layout}
             </div>
           </main>

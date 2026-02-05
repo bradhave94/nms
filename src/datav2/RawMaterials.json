@@ -1,7 +1,8 @@
 [
 	{
 		"Id": "FUEL1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.fuel.1.dds",
+		"Icon": "FUEL1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.fuel.1.dds",
 		"Name": "Carbon",
 		"Group": "Unrefined Organic Element",
 		"Description": "The building block of all organic life. Of critical importance to space travellers, as Carbon is used to recharge mining equipment.\n \nThe Mining Laser will harvest Carbon from trees, plants, and all other forms of vegetable.",
@@ -19,11 +20,13 @@
 		"Category": "Fuel",
 		"Rarity": "Common",
 		"CookingIngredient": true,
-		"Symbol": "C"
+		"Symbol": "C",
+		"Slug": "raw/FUEL1"
 	},
 	{
 		"Id": "FUEL2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.fuel.2.dds",
+		"Icon": "FUEL2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.fuel.2.dds",
 		"Name": "Condensed Carbon",
 		"Group": "Refined Organic Element",
 		"Description": "Advanced material, processed from regular carbon in a Refiner.\n\nThe increased molecule density offers a substantially improved energy-per-gram ratio.\n\nOccasionally found in crystalline form. Harvesting large crystals may require a Advanced Mining Laser.",
@@ -41,11 +44,13 @@
 		"Category": "Fuel",
 		"Rarity": "Uncommon",
 		"CookingIngredient": true,
-		"Symbol": "C+"
+		"Symbol": "C+",
+		"Slug": "raw/FUEL2"
 	},
 	{
 		"Id": "OXYGEN",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.air.1.dds",
+		"Icon": "OXYGEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.air.1.dds",
 		"Name": "Oxygen",
 		"Group": "Concentrated Liquid Fuel",
 		"Description": "Integral to the atmospheric filtering technology at the heart of the exosuit life support system.\n\nExosuit material processing allows oxygen to be harvested directly from appropriate planetary flora.\n\nOther plantlife may be scanned with the Analysis Visor to reveal alternative oxygen supplies.",
@@ -63,11 +68,13 @@
 		"Category": "Fuel",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "O2"
+		"Symbol": "O2",
+		"Slug": "raw/OXYGEN"
 	},
 	{
 		"Id": "LAUNCHSUB",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.launchsub.1.dds",
+		"Icon": "LAUNCHSUB.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.launchsub.1.dds",
 		"Name": "Di-hydrogen",
 		"Group": "High Energy Substance",
 		"Description": "A stable, crystalline form of hydrogen remarkable both for its extreme energy density and its stability at atmospheric pressures.\n\nCommon to all worlds, Di-hydrogen is found in the form of large blue crystals. It is a key component of Starship Launch Fuel.",
@@ -85,11 +92,13 @@
 		"Category": "Earth",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "H"
+		"Symbol": "H",
+		"Slug": "raw/LAUNCHSUB"
 	},
 	{
 		"Id": "LAUNCHSUB2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.launchsub.2.dds",
+		"Icon": "LAUNCHSUB2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.launchsub.2.dds",
 		"Name": "Deuterium",
 		"Group": "High Energy Substance",
 		"Description": "A stable hydrogen isotope used heavily in both small-scale fusion reactors and neutron-scattering shield technology.\n\nDeuterium very rarely occurs naturally. Most of the galaxy's supply comes from the processing of Di-hydrogen and Tritium in Refiners.",
@@ -107,11 +116,13 @@
 		"Category": "Earth",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "D"
+		"Symbol": "D",
+		"Slug": "raw/LAUNCHSUB2"
 	},
 	{
 		"Id": "ROCKETSUB",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.rocketsub.dds",
+		"Icon": "ROCKETSUB.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.rocketsub.dds",
 		"Name": "Tritium",
 		"Group": "Neutron-Rich Fuel Element",
 		"Description": "Radioactive isotope commonly used to fuel the fusion reactor at the heart of starship Pulse Engines.\n\nAbundant in interstellar asteroid fields, Tritium can be mined from asteroids using starship weaponry. Scan (SCAN) to search for tritium-rich asteroids.",
@@ -129,11 +140,13 @@
 		"Category": "Exotic",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "H3"
+		"Symbol": "H3",
+		"Slug": "raw/ROCKETSUB"
 	},
 	{
 		"Id": "LAND1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.land.1.dds",
+		"Icon": "LAND1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.land.1.dds",
 		"Name": "Ferrite Dust",
 		"Group": "Metallic Mineral Extract",
 		"Description": "An abundant mineral element, found in rock formations and other areas of geological interest. Easily extracted using a Mining Laser.\n\nTypically requires processing in a Refiner before use in construction or technology manufacture.",
@@ -151,11 +164,13 @@
 		"Category": "Metal",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Fe"
+		"Symbol": "Fe",
+		"Slug": "raw/LAND1"
 	},
 	{
 		"Id": "LAND2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.land.2.dds",
+		"Icon": "LAND2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.land.2.dds",
 		"Name": "Pure Ferrite",
 		"Group": "Processed Metallic Minerals",
 		"Description": "Processed metal, free of dust and pebbles. Used to construct a wide variety of structures and technologies.\n\nTypically purified from Ferrite dust using a Refiner, but can occasionally be found in large deposits. Collection may require an Advanced Mining Laser.",
@@ -173,11 +188,13 @@
 		"Category": "Metal",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Fe+"
+		"Symbol": "Fe+",
+		"Slug": "raw/LAND2"
 	},
 	{
 		"Id": "LAND3",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.land.3.dds",
+		"Icon": "LAND3.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.land.3.dds",
 		"Name": "Magnetised Ferrite",
 		"Group": "Charged Metallic Element",
 		"Description": "Highly processed metal, requiring several stages of processing in a Refiner.\n\nUsed in the creation of advanced structures and technologies. Avoid ingestion.",
@@ -195,11 +212,13 @@
 		"Category": "Metal",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Fe++"
+		"Symbol": "Fe++",
+		"Slug": "raw/LAND3"
 	},
 	{
 		"Id": "SAND1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.sand.1.dds",
+		"Icon": "SAND1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.sand.1.dds",
 		"Name": "Silicate Powder",
 		"Group": "Abundant Mineral",
 		"Description": "An abundant mineral element, found within the geological strata of all rocky worlds. Easily extracted using a Terrain Manipulator. Create a tunnel anywhere to begin extraction.\n\nProcess in a Refiner to create Glass.",
@@ -217,11 +236,13 @@
 		"Category": "Metal",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Si"
+		"Symbol": "Si",
+		"Slug": "raw/SAND1"
 	},
 	{
 		"Id": "CATALYST1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.catalyst.1.dds",
+		"Icon": "CATALYST1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.catalyst.1.dds",
 		"Name": "Sodium",
 		"Group": "Unrefined Catalytic Element",
 		"Description": "A powerful catalyst, useful for charging defensive technologies such as shields or hazard protection.\n \nExosuit material handling technology allows automatic harvesting from appropriate sodium-rich flora.\n\nA vital ingredient in the creation of many advanced devices, products and components.",
@@ -239,11 +260,13 @@
 		"Category": "Catalyst",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Na"
+		"Symbol": "Na",
+		"Slug": "raw/CATALYST1"
 	},
 	{
 		"Id": "CATALYST2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.catalyst.2.dds",
+		"Icon": "CATALYST2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.catalyst.2.dds",
 		"Name": "Sodium Nitrate",
 		"Group": "Refined Catalytic Element",
 		"Description": "An advanced catalyst, useful for charging defensive technologies such as shields or hazard protection.\n \nCreated in a Refiner, or occasionally found in crystalline form on a planet's surface.\n\nOffers a substantially improved energy-per-gram ratio over regular Sodium.",
@@ -261,11 +284,13 @@
 		"Category": "Catalyst",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Na+"
+		"Symbol": "Na+",
+		"Slug": "raw/CATALYST2"
 	},
 	{
 		"Id": "CAVE1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.cave.1.dds",
+		"Icon": "CAVE1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.cave.1.dds",
 		"Name": "Cobalt",
 		"Group": "Subterranean Mineral",
 		"Description": "Mined from underground minerals, cobalt is found in plentiful supply in caves and caverns. Useful in the manufacture of Ion Batteries.\n\nIt is used in the creation of several technologies and structures, and can be processed in a Refiner to make the most of its inherent charge.",
@@ -283,11 +308,13 @@
 		"Category": "Earth",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Co"
+		"Symbol": "Co",
+		"Slug": "raw/CAVE1"
 	},
 	{
 		"Id": "CAVE2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.cave.2.dds",
+		"Icon": "CAVE2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.cave.2.dds",
 		"Name": "Ionised Cobalt",
 		"Group": "Processed Subterranean Mineral",
 		"Description": "A highly energised form of Cobalt, this processed metal can be used to create Advanced Ion Batteries, a conveniently portable source of energy for the Exosuit.\n\nIn widespread use as a key component in the creation of advanced technologies and structures.",
@@ -305,11 +332,13 @@
 		"Category": "Earth",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Co+"
+		"Symbol": "Co+",
+		"Slug": "raw/CAVE2"
 	},
 	{
 		"Id": "WATER1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.water.1.dds",
+		"Icon": "WATER1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.water.1.dds",
 		"Name": "Salt",
 		"Group": "Aquatic Mineral Extract",
 		"Description": "A naturally occuring salt, found in abundance in underwater minerals.\n\nCan be processed in a Refiner to create Chlorine. This refined form is used in the manufacture of advanced products and technologies.",
@@ -327,11 +356,13 @@
 		"Category": "Earth",
 		"Rarity": "Common",
 		"CookingIngredient": true,
-		"Symbol": "NaCl"
+		"Symbol": "NaCl",
+		"Slug": "raw/WATER1"
 	},
 	{
 		"Id": "WATER2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.water.2.dds",
+		"Icon": "WATER2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.water.2.dds",
 		"Name": "Chlorine",
 		"Group": "Processed Aquatic Mineral",
 		"Description": "A reactive element most easily harvested by processing the salt-infused minerals found in oceans.\n\nUsed in the manufacture of advanced technologies.",
@@ -349,11 +380,13 @@
 		"Category": "Earth",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Cl"
+		"Symbol": "Cl",
+		"Slug": "raw/WATER2"
 	},
 	{
 		"Id": "WATERPLANT",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.water.plant.dds",
+		"Icon": "WATERPLANT.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.water.plant.dds",
 		"Name": "Cyto-phosphate",
 		"Group": "Organic Compound",
 		"Description": "A blue-green organic compound produced during the metabolic cycle of deep-sea plantlife. Rich in soluble energy, cyto-phosphates are crucial in many submarine technologies.\n \nThe Mining Laser will harvest cyto-phosphate compounds from underwater flora.",
@@ -371,11 +404,13 @@
 		"Category": "Earth",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Cy"
+		"Symbol": "Cy",
+		"Slug": "raw/WATERPLANT"
 	},
 	{
 		"Id": "YELLOW2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.yellow.2.dds",
+		"Icon": "YELLOW2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.yellow.2.dds",
 		"Name": "Copper",
 		"Group": "Refined Stellar Metal: Yellow",
 		"Description": "A chromatic metal, generated by fusion in the heart of a star. Such stellar material ends up forming deposits in the crust of local planets.\n\nCopper is found on planets orbiting yellow stars, and can be placed in a Refiner to create purified Chromatic Metal for use in the manufacture of advanced technologies.",
@@ -393,11 +428,13 @@
 		"Category": "Stellar",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Cu"
+		"Symbol": "Cu",
+		"Slug": "raw/YELLOW2"
 	},
 	{
 		"Id": "RED2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.red.2.dds",
+		"Icon": "RED2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.red.2.dds",
 		"Name": "Cadmium",
 		"Group": "Refined Stellar Metal: Red",
 		"Description": "A chromatic metal, generated by fusion in the heart of a star. Such stellar material ends up forming deposits in the crust of local planets.\n\nCadmium is found on planets orbiting red stars, and can be placed in a Refiner to create purified Chromatic Metal for use in the manufacture of advanced technologies.",
@@ -415,11 +452,13 @@
 		"Category": "Stellar",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Cd"
+		"Symbol": "Cd",
+		"Slug": "raw/RED2"
 	},
 	{
 		"Id": "GREEN2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.green.2.dds",
+		"Icon": "GREEN2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.green.2.dds",
 		"Name": "Emeril",
 		"Group": "Refined Stellar Metal: Green",
 		"Description": "A chromatic metal, generated by fusion in the heart of a star.\n\nEmeril is found on planets orbiting green stars, and can be placed in a Refiner to create purified Chromatic Metal for use in the manufacture of advanced technologies.",
@@ -437,11 +476,13 @@
 		"Category": "Stellar",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Em"
+		"Symbol": "Em",
+		"Slug": "raw/GREEN2"
 	},
 	{
 		"Id": "BLUE2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.blue.2.dds",
+		"Icon": "BLUE2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.blue.2.dds",
 		"Name": "Indium",
 		"Group": "Refined Stellar Metal: Blue",
 		"Description": "A chromatic metal, generated by fusion in the heart of a star. Such stellar material ends up forming deposits in the crust of local planets.\n\nIndium is found on planets orbiting blue stars, and can be placed in a Refiner to create purified Chromatic Metal for use in the manufacture of advanced technologies.",
@@ -459,11 +500,13 @@
 		"Category": "Stellar",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "In"
+		"Symbol": "In",
+		"Slug": "raw/BLUE2"
 	},
 	{
 		"Id": "PURPLE2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.purple.2.dds",
+		"Icon": "PURPLE2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.purple.2.dds",
 		"Name": "Quartzite",
 		"Group": "Refined Stellar Metal: Purple",
 		"Description": "A chromatic mineral, generated by fusion in the heart of a star. Such stellar material ends up forming deposits in the crust of local planets.\n\nQuartzite is found on planets orbiting purple stars, and can be placed in a Refiner to create purified Chromatic Metal for use in the manufacture of advanced technologies.",
@@ -481,11 +524,13 @@
 		"Category": "Stellar",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Qu"
+		"Symbol": "Qu",
+		"Slug": "raw/PURPLE2"
 	},
 	{
 		"Id": "STELLAR2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.stellar.2.dds",
+		"Icon": "STELLAR2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.stellar.2.dds",
 		"Name": "Chromatic Metal",
 		"Group": "Highly Refined Stellar Metal",
 		"Description": "A processed metal alloy, created in a Refiner from the stellar metals: Copper, Cadmium, Emeril and Indium.\n\nThe rarer the stellar metal, the more Chromatic Metal it will produce.\n\nThis valuable metal is used in the creation of many advanced technologies.",
@@ -503,11 +548,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": true,
-		"Symbol": "Ch"
+		"Symbol": "Ch",
+		"Slug": "raw/STELLAR2"
 	},
 	{
 		"Id": "TECHFRAG",
-		"Icon": "textures/ui/frontend/icons/substances/nanite.dds",
+		"Icon": "TECHFRAG.png",
+		"IconPath": "textures/ui/frontend/icons/substances/nanite.dds",
 		"Name": "Nanite Cluster",
 		"Group": "Technological Currency",
 		"Description": "A dense miasma of Nanites, undulating in its potentiality. These clusters are stable, but unrestricted nanite foam can produce undesirable runaway reactions in the presence of organic matter.\n\nUsed in the construction of advanced technologies. Highly valuable to specialist traders.",
@@ -525,11 +572,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "∞"
+		"Symbol": "∞",
+		"Slug": "raw/TECHFRAG"
 	},
 	{
 		"Id": "LUSH1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.lush.dds",
+		"Icon": "LUSH1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.lush.dds",
 		"Name": "Paraffinium",
 		"Group": "Localised Earth Element",
 		"Description": "Local mineral extract, typically found in large deposits or extracted from common minerals after inspection with an Analysis Visor.\n\nTypically found on planets with a tropical environment.",
@@ -547,11 +596,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Pf"
+		"Symbol": "Pf",
+		"Slug": "raw/LUSH1"
 	},
 	{
 		"Id": "DUSTY1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.dusty.dds",
+		"Icon": "DUSTY1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.dusty.dds",
 		"Name": "Pyrite",
 		"Group": "Localised Earth Element",
 		"Description": "Local mineral extract, typically found in large deposits or extracted from common minerals after inspection with an Analysis Visor.\n\nTypically found on planets with a desert environment.",
@@ -569,11 +620,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Py"
+		"Symbol": "Py",
+		"Slug": "raw/DUSTY1"
 	},
 	{
 		"Id": "TOXIC1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.toxic.dds",
+		"Icon": "TOXIC1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.toxic.dds",
 		"Name": "Ammonia",
 		"Group": "Localised Earth Element",
 		"Description": "Local mineral extract, typically found in large deposits or extracted from common minerals after inspection with an Analysis Visor.\n\nTypically found on planets with a toxic environment.",
@@ -591,11 +644,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "NH3"
+		"Symbol": "NH3",
+		"Slug": "raw/TOXIC1"
 	},
 	{
 		"Id": "RADIO1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.radio.dds",
+		"Icon": "RADIO1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.radio.dds",
 		"Name": "Uranium",
 		"Group": "Localised Earth Element",
 		"Description": "Local mineral extract, typically found in large deposits or extracted from common minerals after inspection with an Analysis Visor.\n\nTypically found on planets with a radioactive environment.",
@@ -613,11 +668,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "U"
+		"Symbol": "U",
+		"Slug": "raw/RADIO1"
 	},
 	{
 		"Id": "COLD1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.cold.dds",
+		"Icon": "COLD1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.cold.dds",
 		"Name": "Dioxite",
 		"Group": "Localised Earth Element",
 		"Description": "Local mineral extract, typically found in large deposits or extracted from common minerals after inspection with an Analysis Visor.\n\nTypically found on planets with a frozen environment.",
@@ -635,11 +692,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "CO2"
+		"Symbol": "CO2",
+		"Slug": "raw/COLD1"
 	},
 	{
 		"Id": "HOT1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.hot.dds",
+		"Icon": "HOT1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.hot.dds",
 		"Name": "Phosphorus",
 		"Group": "Localised Earth Element",
 		"Description": "Local mineral extract, typically found in large deposits or extracted from common minerals after inspection with an Analysis Visor.\n\nTypically found on planets with a scorched environment.",
@@ -657,11 +716,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "P"
+		"Symbol": "P",
+		"Slug": "raw/HOT1"
 	},
 	{
 		"Id": "LAVA1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.lava.dds",
+		"Icon": "LAVA1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.lava.dds",
 		"Name": "Basalt",
 		"Group": "Localised Earth Element",
 		"Description": "Local mineral extract, typically found in large deposits or extracted from common minerals after inspection with an Analysis Visor.\n\nTypically found on planets with a volcanic environment.",
@@ -679,11 +740,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "B"
+		"Symbol": "B",
+		"Slug": "raw/LAVA1"
 	},
 	{
 		"Id": "RUINSUB",
-		"Icon": "textures/ui/frontend/icons/products/product.metallic.4.dds",
+		"Icon": "RUINSUB.png",
+		"IconPath": "textures/ui/frontend/icons/products/product.metallic.4.dds",
 		"Name": "Polished Stone",
 		"Group": "Recycled Minerals",
 		"Description": "The powdery remains of a highly polished mineral surface. It glitters as it catches the light, like fiery grains of sand.\n\nAcquired by applying the Mining Laser to the structral remnants located on ruined worlds.",
@@ -701,11 +764,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "R"
+		"Symbol": "R",
+		"Slug": "raw/RUINSUB"
 	},
 	{
 		"Id": "WATERWORLD1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.waterworld.dds",
+		"Icon": "WATERWORLD1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.waterworld.dds",
 		"Name": "Lithium",
 		"Group": "Localised Earth Element",
 		"Description": "Local metallic extract, typically found in large deposits or harvested from common mineral formations after inspection with an Analysis Visor.\n\nTypically found on ocean planets.",
@@ -723,11 +788,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Li"
+		"Symbol": "Li",
+		"Slug": "raw/WATERWORLD1"
 	},
 	{
 		"Id": "GASGIANT1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.biome.gasgiant.dds",
+		"Icon": "GASGIANT1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.biome.gasgiant.dds",
 		"Name": "Crystallised Helium",
 		"Group": "Localised Earth Element",
 		"Description": "A supercooled chemical extract, typically found in large deposits or extracted from smaller mineral formations after inspection with an Analysis Visor.\n\nExtracted from deposits formed in the hostile conditions of gas giants.",
@@ -745,11 +812,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "He"
+		"Symbol": "He",
+		"Slug": "raw/GASGIANT1"
 	},
 	{
 		"Id": "CREATURE1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.creature.1.dds",
+		"Icon": "CREATURE1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.creature.1.dds",
 		"Name": "Mordite",
 		"Group": "Harvested Substance",
 		"Description": "Despite much study, little is known about this haunting, crystalline compound.\n\nIt is released from the cadavers of dying creatures, but can also be specifically cultivated and harvested from the Mordite Root plant.",
@@ -767,11 +836,13 @@
 		"Category": "Earth",
 		"Rarity": "Common",
 		"CookingIngredient": true,
-		"Symbol": "Mo"
+		"Symbol": "Mo",
+		"Slug": "raw/CREATURE1"
 	},
 	{
 		"Id": "ROBOT1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.robot.1.dds",
+		"Icon": "ROBOT1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.robot.1.dds",
 		"Name": "Pugneum",
 		"Group": "Anomalous Material",
 		"Description": "This oily, unsettling liquid leaks from the circuitry of Sentinels.\n\nPrized by the Vy'keen, Pugneum is thought to share some essential properties with Nanites. It hums in a sinister fashion upon contact with organic matter.",
@@ -789,11 +860,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Pg"
+		"Symbol": "Pg",
+		"Slug": "raw/ROBOT1"
 	},
 	{
 		"Id": "ROBOT2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.robot.2.dds",
+		"Icon": "ROBOT2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.robot.2.dds",
 		"Name": "Atlantideum",
 		"Group": "Disharmonic Metal",
 		"Description": "This ethereal substance spills from the bodies of corrupted Sentinels as they fall, a shower of prismatic grains seeking out their next host. It evades all attempts to contain it, as if it had a will of its own, a strong desire for its own freedom.\n\nIt possesses a crystalline beauty that cannot be reconciled with the corruption from whence it flows.",
@@ -811,11 +884,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "∞"
+		"Symbol": "∞",
+		"Slug": "raw/ROBOT2"
 	},
 	{
 		"Id": "ASTEROID1",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.asteroid.1.dds",
+		"Icon": "ASTEROID1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.asteroid.1.dds",
 		"Name": "Silver",
 		"Group": "Valuable Asteroid Mineral",
 		"Description": "Valuable interstellar trading mineral, typically mined from asteroids. Occasionally found in underground planetary deposits.\n\nPrized by people in all systems for its lustre and shine.",
@@ -833,11 +908,13 @@
 		"Category": "Exotic",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Ag"
+		"Symbol": "Ag",
+		"Slug": "raw/ASTEROID1"
 	},
 	{
 		"Id": "ASTEROID2",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.asteroid.2.dds",
+		"Icon": "ASTEROID2.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.asteroid.2.dds",
 		"Name": "Gold",
 		"Group": "Valuable Asteroid Mineral",
 		"Description": "Highly valuable interstellar trading mineral, typically mined from asteroids. Occasionally found in underground planetary deposits.\n\nUniversally prized for its beauty and versatility.",
@@ -855,11 +932,13 @@
 		"Category": "Exotic",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Au"
+		"Symbol": "Au",
+		"Slug": "raw/ASTEROID2"
 	},
 	{
 		"Id": "ASTEROID3",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.asteroid.3.dds",
+		"Icon": "ASTEROID3.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.asteroid.3.dds",
 		"Name": "Platinum",
 		"Group": "Valuable Asteroid Mineral",
 		"Description": "Extremely valuable interstellar trading mineral, typically mined from asteroids. Occasionally found in underground planetary deposits.\n\nUniversally prized for its hardiness and versatility.",
@@ -877,11 +956,13 @@
 		"Category": "Exotic",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Pt"
+		"Symbol": "Pt",
+		"Slug": "raw/ASTEROID3"
 	},
 	{
 		"Id": "GAS1",
-		"Icon": "textures/ui/frontend/icons/update3/gas.3.dds",
+		"Icon": "GAS1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/gas.3.dds",
 		"Name": "Sulphurine",
 		"Group": "Compressed Atmospheric Gas",
 		"Description": "A pungent atmospheric gas. High concentrations are extremely hazardous to organic life.\n\nWith the aid of specialised machinery, can be extracted from the atmospheres of Scorched and Desert planets.",
@@ -899,11 +980,13 @@
 		"Category": "Earth",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Su"
+		"Symbol": "Su",
+		"Slug": "raw/GAS1"
 	},
 	{
 		"Id": "GAS2",
-		"Icon": "textures/ui/frontend/icons/update3/gas.2.dds",
+		"Icon": "GAS2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/gas.2.dds",
 		"Name": "Radon",
 		"Group": "Compressed Atmospheric Gas",
 		"Description": "A colourless, odourless gas with a relatively short half-life. \n\nFound in both Radioactive and Frozen atmospheres, this gas is produced by the decay of other high-energy elements.",
@@ -921,11 +1004,13 @@
 		"Category": "Earth",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Rn"
+		"Symbol": "Rn",
+		"Slug": "raw/GAS2"
 	},
 	{
 		"Id": "GAS3",
-		"Icon": "textures/ui/frontend/icons/update3/gas.1.dds",
+		"Icon": "GAS3.png",
+		"IconPath": "textures/ui/frontend/icons/update3/gas.1.dds",
 		"Name": "Nitrogen",
 		"Group": "Compressed Atmospheric Gas",
 		"Description": "A reactive atmospheric gas found wherever there is organic life.\n\nNitrogen is readily harvested from the atmospheres of Lush and Toxic planets.",
@@ -943,11 +1028,13 @@
 		"Category": "Earth",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "N"
+		"Symbol": "N",
+		"Slug": "raw/GAS3"
 	},
 	{
 		"Id": "GAS4",
-		"Icon": "textures/ui/frontend/icons/update3/gas.4.dds",
+		"Icon": "GAS4.png",
+		"IconPath": "textures/ui/frontend/icons/update3/gas.4.dds",
 		"Name": "Methane",
 		"Group": "Compressed Atmospheric Gas",
 		"Description": "An atmospheric gas found in the hostile conditions of gas giants.\n\nMethane is readily harvested from equipment deployed on gas worlds.",
@@ -965,11 +1052,13 @@
 		"Category": "Earth",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "CH4"
+		"Symbol": "CH4",
+		"Slug": "raw/GAS4"
 	},
 	{
 		"Id": "EX_YELLOW",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.exyellow.2.dds",
+		"Icon": "EX_YELLOW.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.exyellow.2.dds",
 		"Name": "Activated Copper",
 		"Group": "Refined Stellar Metal: Yellow",
 		"Description": "A chromatic metal, generated by fusion in the heart of a star.\n\nThis Copper has been activated by the extreme conditions in which it was formed, and is highly valuable.\n\nCopper is found on planets orbiting yellow stars, and can be placed in a Refiner to create purified Chromatic Metal.",
@@ -987,11 +1076,13 @@
 		"Category": "Stellar",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Cu"
+		"Symbol": "Cu",
+		"Slug": "raw/EX_YELLOW"
 	},
 	{
 		"Id": "EX_RED",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.exred.2.dds",
+		"Icon": "EX_RED.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.exred.2.dds",
 		"Name": "Activated Cadmium",
 		"Group": "Refined Stellar Metal: Red",
 		"Description": "A chromatic metal, generated by fusion in the heart of a star.\n\nThis Cadmium has been activated by the extreme conditions in which it was formed, and is highly valuable.\n\nCadmium is found on planets orbiting red stars, and can be placed in a Refiner to create purified Chromatic Metal.",
@@ -1009,11 +1100,13 @@
 		"Category": "Stellar",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Cd"
+		"Symbol": "Cd",
+		"Slug": "raw/EX_RED"
 	},
 	{
 		"Id": "EX_GREEN",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.exgreen.2.dds",
+		"Icon": "EX_GREEN.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.exgreen.2.dds",
 		"Name": "Activated Emeril",
 		"Group": "Refined Stellar Metal: Green",
 		"Description": "A chromatic metal, generated by fusion in the heart of a star.\n\nThis Emeril has been activated by the extreme conditions in which it was formed, and is highly valuable.\n\nEmeril is found on planets orbiting green stars, and can be placed in a Refiner to create purified Chromatic Metal.",
@@ -1031,11 +1124,13 @@
 		"Category": "Stellar",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Em"
+		"Symbol": "Em",
+		"Slug": "raw/EX_GREEN"
 	},
 	{
 		"Id": "EX_BLUE",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.exblue.2.dds",
+		"Icon": "EX_BLUE.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.exblue.2.dds",
 		"Name": "Activated Indium",
 		"Group": "Refined Stellar Metal: Blue",
 		"Description": "A chromatic metal, generated by fusion in the heart of a star.\n\nIndium is found on planets orbiting blue stars, and can be placed in a Refiner to create purified Chromatic Metal.\n\nThis Indium has been activated by the extreme conditions in which it was formed, and is highly valuable.",
@@ -1053,11 +1148,13 @@
 		"Category": "Stellar",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "In"
+		"Symbol": "In",
+		"Slug": "raw/EX_BLUE"
 	},
 	{
 		"Id": "EX_PURPLE",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.expurple.2.dds",
+		"Icon": "EX_PURPLE.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.expurple.2.dds",
 		"Name": "Activated Quartzite",
 		"Group": "Refined Stellar Metal: Purple",
 		"Description": "A chromatic mineral, generated by fusion in the heart of a star.\n\nQuartzite is found on planets orbiting purple stars, and can be placed in a Refiner to create purified Chromatic Metal.\n\nThis quartzite has been activated by the extreme conditions in which it was formed, and is highly valuable.",
@@ -1075,11 +1172,13 @@
 		"Category": "Stellar",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Qu"
+		"Symbol": "Qu",
+		"Slug": "raw/EX_PURPLE"
 	},
 	{
 		"Id": "PLANT_TOXIC",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.toxic.dds",
+		"Icon": "PLANT_TOXIC.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.toxic.dds",
 		"Name": "Fungal Mould",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "An oddly-glowing substance, harvested from the gills of Fungal Clusters.\n\nThe host plant requires a toxic climate to thrive in the wild, but can be farmed in all environments with the aid of a Hydroponics Tray.",
@@ -1097,11 +1196,13 @@
 		"Category": "Flora",
 		"Rarity": "Rare",
 		"CookingIngredient": true,
-		"Symbol": "Ml"
+		"Symbol": "Ml",
+		"Slug": "raw/PLANT_TOXIC"
 	},
 	{
 		"Id": "PLANT_SNOW",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.snow.dds",
+		"Icon": "PLANT_SNOW.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.snow.dds",
 		"Name": "Frost Crystal",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "A beautiful blue crystal, this organic compound possesses both great hardiness and a shimmering translucence. It is harvested from the leaves of Frostwort.\n\nFrostwort requires frozen conditions to thrive in the wild, but can be farmed in all environments with the aid of a Hydroponics Tray.",
@@ -1119,11 +1220,13 @@
 		"Category": "Flora",
 		"Rarity": "Rare",
 		"CookingIngredient": true,
-		"Symbol": "Fc"
+		"Symbol": "Fc",
+		"Slug": "raw/PLANT_SNOW"
 	},
 	{
 		"Id": "PLANT_RADIO",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.radio.dds",
+		"Icon": "PLANT_RADIO.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.radio.dds",
 		"Name": "Gamma Root",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "A strange substance that seems to slowly shift the air around it. It is found in the roots of the Gamma Weed plant.\n\nGamma Weed requires high background radiation to thrive in the wild, but can be farmed in all environments with the aid of a Hydroponics Tray.",
@@ -1141,11 +1244,13 @@
 		"Category": "Flora",
 		"Rarity": "Rare",
 		"CookingIngredient": true,
-		"Symbol": "Gr"
+		"Symbol": "Gr",
+		"Slug": "raw/PLANT_RADIO"
 	},
 	{
 		"Id": "PLANT_DUST",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.dusty.dds",
+		"Icon": "PLANT_DUST.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.dusty.dds",
 		"Name": "Cactus Flesh",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "Succulent, edible cactus flesh from the Echinocactus plant. As well as being juicy on the tongue, the flesh has many industrial uses.\n\nThe Echinocactus thrives only on desert planets, but can be farmed in all environments with the aid of a Hydroponics Tray..",
@@ -1163,11 +1268,13 @@
 		"Category": "Flora",
 		"Rarity": "Rare",
 		"CookingIngredient": true,
-		"Symbol": "Cc"
+		"Symbol": "Cc",
+		"Slug": "raw/PLANT_DUST"
 	},
 	{
 		"Id": "PLANT_HOT",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.hot.dds",
+		"Icon": "PLANT_HOT.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.hot.dds",
 		"Name": "Solanium",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "A powerful chemical that has resisted attempts at synthesis. It can be harvested from the bark of the Solar Vine.\n\nThe vine requires a hot climate to thrive in the wild, but can be farmed in all environments with the aid of a Hydroponics Tray.",
@@ -1185,11 +1292,13 @@
 		"Category": "Flora",
 		"Rarity": "Rare",
 		"CookingIngredient": true,
-		"Symbol": "So"
+		"Symbol": "So",
+		"Slug": "raw/PLANT_HOT"
 	},
 	{
 		"Id": "PLANT_LUSH",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.lush.dds",
+		"Icon": "PLANT_LUSH.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.lush.dds",
 		"Name": "Star Bulb",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "A beautiful gemstone, this prized product is the engorged, luminescent berry of the Star Bramble.\n\nThe host plant requires lush conditions to thrive in the wild, but can be farmed in all environments with the aid of a Hydroponics Tray.",
@@ -1207,11 +1316,13 @@
 		"Category": "Flora",
 		"Rarity": "Rare",
 		"CookingIngredient": true,
-		"Symbol": "Sb"
+		"Symbol": "Sb",
+		"Slug": "raw/PLANT_LUSH"
 	},
 	{
 		"Id": "PLANT_CAVE",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.cave.dds",
+		"Icon": "PLANT_CAVE.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.cave.dds",
 		"Name": "Marrow Bulb",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "A glowing organic bulb, harvested from the Cave Marrow plant found growing underground.\n\nThe Cave Marrow has proved resistant to domestication, and no farmable cultivars are known to exist. As such, marrow bulbs must be harvested by hand in the wild.",
@@ -1229,11 +1340,13 @@
 		"Category": "Flora",
 		"Rarity": "Uncommon",
 		"CookingIngredient": true,
-		"Symbol": "Bu"
+		"Symbol": "Bu",
+		"Slug": "raw/PLANT_CAVE"
 	},
 	{
 		"Id": "PLANT_WATER",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.water.dds",
+		"Icon": "PLANT_WATER.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.water.dds",
 		"Name": "Kelp Sac",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "A rubbery, luminescent sac harvested from underwater Candle Kelp plants.\n\nAgricultural science has not yet tamed the Candle Kelp. As such, these sacs cannot be farmed.",
@@ -1251,11 +1364,13 @@
 		"Category": "Flora",
 		"Rarity": "Uncommon",
 		"CookingIngredient": true,
-		"Symbol": "Ke"
+		"Symbol": "Ke",
+		"Slug": "raw/PLANT_WATER"
 	},
 	{
 		"Id": "PLANT_POOP",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.plant.poop.dds",
+		"Icon": "PLANT_POOP.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.plant.poop.dds",
 		"Name": "Faecium",
 		"Group": "Harvested Agricultural Substance",
 		"Description": "A foul-smelling compound that can be harvested from the Gutrot Flower, or less desirably from the faecal matter of some species.\n\nCreatures can be fed to encourage the formation and deposition of faecium crystals.",
@@ -1273,11 +1388,13 @@
 		"Category": "Flora",
 		"Rarity": "Common",
 		"CookingIngredient": true,
-		"Symbol": "Fa"
+		"Symbol": "Fa",
+		"Slug": "raw/PLANT_POOP"
 	},
 	{
 		"Id": "SPACEGUNK1",
-		"Icon": "textures/ui/frontend/icons/update3/spacegunk.1.dds",
+		"Icon": "SPACEGUNK1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/spacegunk.1.dds",
 		"Name": "Residual Goop",
 		"Group": "Junk",
 		"Description": "A pulsating, foul smelling goop that builds up in poorly-maintained machinery.\n\nSkin contact is not advised.",
@@ -1295,11 +1412,13 @@
 		"Category": "Special",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Jn"
+		"Symbol": "Jn",
+		"Slug": "raw/SPACEGUNK1"
 	},
 	{
 		"Id": "SPACEGUNK2",
-		"Icon": "textures/ui/frontend/icons/update3/spacegunk.2.dds",
+		"Icon": "SPACEGUNK2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/spacegunk.2.dds",
 		"Name": "Runaway Mould",
 		"Group": "Junk",
 		"Description": "An out of control mould growth that builds up in poorly-maintained machinery.\n\nLikely to be several different species of mould, merged together into one super-colony.",
@@ -1317,11 +1436,13 @@
 		"Category": "Special",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Jn"
+		"Symbol": "Jn",
+		"Slug": "raw/SPACEGUNK2"
 	},
 	{
 		"Id": "SPACEGUNK3",
-		"Icon": "textures/ui/frontend/icons/update3/spacegunk.3.dds",
+		"Icon": "SPACEGUNK3.png",
+		"IconPath": "textures/ui/frontend/icons/update3/spacegunk.3.dds",
 		"Name": "Rusted Metal",
 		"Group": "Junk",
 		"Description": "Handfuls of corroded metal, distorted by years of exposure to the harsh environment.\n\nHandle with care.",
@@ -1339,11 +1460,13 @@
 		"Category": "Special",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Jn"
+		"Symbol": "Jn",
+		"Slug": "raw/SPACEGUNK3"
 	},
 	{
 		"Id": "SPACEGUNK4",
-		"Icon": "textures/ui/frontend/icons/update3/spacegunk.4.dds",
+		"Icon": "SPACEGUNK4.png",
+		"IconPath": "textures/ui/frontend/icons/update3/spacegunk.4.dds",
 		"Name": "Living Slime",
 		"Group": "Junk",
 		"Description": "A heavy, oozing slime. It is moving gently, as if it has a heartbeat of its own.\n\nNutrient source: unknown.",
@@ -1361,11 +1484,13 @@
 		"Category": "Special",
 		"Rarity": "Uncommon",
 		"CookingIngredient": false,
-		"Symbol": "Jn"
+		"Symbol": "Jn",
+		"Slug": "raw/SPACEGUNK4"
 	},
 	{
 		"Id": "SPACEGUNK5",
-		"Icon": "textures/ui/frontend/icons/update3/spacegunk.5.dds",
+		"Icon": "SPACEGUNK5.png",
+		"IconPath": "textures/ui/frontend/icons/update3/spacegunk.5.dds",
 		"Name": "Viscous Fluids",
 		"Group": "Junk",
 		"Description": "An unnaturally thick liquid of dubious colour. Its origins are impossible to fathom.\n\nAppears to have some mild magnetic properties.",
@@ -1383,11 +1508,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "Jn"
+		"Symbol": "Jn",
+		"Slug": "raw/SPACEGUNK5"
 	},
 	{
 		"Id": "AF_METAL",
-		"Icon": "textures/ui/frontend/icons/u4products/product.taintedmetal.dds",
+		"Icon": "AF_METAL.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.taintedmetal.dds",
 		"Name": "Tainted Metal",
 		"Group": "Salvaged Scrap",
 		"Description": "Shredded fragments of a soft, grey metal. Its surface is porous, and when touched it oozes ever-so-slightly.\n\nFound in the creaking wreck of a derelict freighter. The space station Scrap Dealer may find this interesting...",
@@ -1405,11 +1532,13 @@
 		"Category": "Special",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "Un"
+		"Symbol": "Un",
+		"Slug": "raw/AF_METAL"
 	},
 	{
 		"Id": "BUI_SCRAP",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.buiscrap.dds",
+		"Icon": "BUI_SCRAP.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.buiscrap.dds",
 		"Name": "Void Mote",
 		"Group": "Essence of Atlantid",
 		"Description": "A purified drop of Atlantideum, refined to its very essence. This precious material is acquired by earning favour with and assisting the Autophage.\n\nVisit the Autophage Synthesis Terminal found at all Autophage camps to exchange Void Motes for unique customisation options.",
@@ -1427,11 +1556,13 @@
 		"Category": "Special",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "V"
+		"Symbol": "V",
+		"Slug": "raw/BUI_SCRAP"
 	},
 	{
 		"Id": "SPECIAL_POOP",
-		"Icon": "textures/ui/frontend/icons/u4products/product.hexcore.dds",
+		"Icon": "SPECIAL_POOP.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.hexcore.dds",
 		"Name": "Hexite",
 		"Group": "Unrefined Organic Element",
 		"Description": "An odourless, mineral-rich substance with a hexagonal crystalline structure, harvested from the faecal matter of a creature.",
@@ -1449,11 +1580,13 @@
 		"Category": "Special",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "X"
+		"Symbol": "X",
+		"Slug": "raw/SPECIAL_POOP"
 	},
 	{
 		"Id": "TECHFRAG_R",
-		"Icon": "textures/ui/frontend/icons/substances/currency.nanites.dds",
+		"Icon": "TECHFRAG_R.png",
+		"IconPath": "textures/ui/frontend/icons/substances/currency.nanites.dds",
 		"Name": "Nanites",
 		"Group": "Technological Currency",
 		"Description": "A dense miasma of Nanites, undulating in its potentiality. These clusters are stable, but unrestricted nanite foam can produce undesirable runaway reactions in the presence of organic matter.\n\nUsed in the construction of advanced technologies. Highly valuable to specialist traders.",
@@ -1471,11 +1604,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "∞"
+		"Symbol": "∞",
+		"Slug": "raw/TECHFRAG_R"
 	},
 	{
 		"Id": "QUICKSILVER",
-		"Icon": "textures/ui/frontend/icons/substances/currency.quicksilver.dds",
+		"Icon": "QUICKSILVER.png",
+		"IconPath": "textures/ui/frontend/icons/substances/currency.quicksilver.dds",
 		"Name": "Quicksilver",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1493,11 +1628,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/QUICKSILVER"
 	},
 	{
 		"Id": "UNITS",
-		"Icon": "textures/ui/frontend/icons/substances/currency.units.dds",
+		"Icon": "UNITS.png",
+		"IconPath": "textures/ui/frontend/icons/substances/currency.units.dds",
 		"Name": "Units",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1515,11 +1652,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/UNITS"
 	},
 	{
 		"Id": "TRA_STANDING_UP",
-		"Icon": "textures/ui/frontend/missions/missionfaction.gek.dds",
+		"Icon": "TRA_STANDING_UP.png",
+		"IconPath": "textures/ui/frontend/missions/missionfaction.gek.dds",
 		"Name": "GEK",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1537,11 +1676,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/TRA_STANDING_UP"
 	},
 	{
 		"Id": "TRA_STANDING_DN",
-		"Icon": "textures/ui/frontend/missions/missionfaction.gek.dds",
+		"Icon": "TRA_STANDING_DN.png",
+		"IconPath": "textures/ui/frontend/missions/missionfaction.gek.dds",
 		"Name": "GEK",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1559,11 +1700,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/TRA_STANDING_DN"
 	},
 	{
 		"Id": "EXP_STANDING_UP",
-		"Icon": "textures/ui/frontend/missions/missionfaction.korvax.dds",
+		"Icon": "EXP_STANDING_UP.png",
+		"IconPath": "textures/ui/frontend/missions/missionfaction.korvax.dds",
 		"Name": "KORVAX",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1581,11 +1724,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/EXP_STANDING_UP"
 	},
 	{
 		"Id": "EXP_STANDING_DN",
-		"Icon": "textures/ui/frontend/missions/missionfaction.korvax.dds",
+		"Icon": "EXP_STANDING_DN.png",
+		"IconPath": "textures/ui/frontend/missions/missionfaction.korvax.dds",
 		"Name": "KORVAX",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1603,11 +1748,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/EXP_STANDING_DN"
 	},
 	{
 		"Id": "WAR_STANDING_UP",
-		"Icon": "textures/ui/frontend/missions/missionfaction.vykeen.dds",
+		"Icon": "WAR_STANDING_UP.png",
+		"IconPath": "textures/ui/frontend/missions/missionfaction.vykeen.dds",
 		"Name": "VY'KEEN",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1625,11 +1772,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/WAR_STANDING_UP"
 	},
 	{
 		"Id": "WAR_STANDING_DN",
-		"Icon": "textures/ui/frontend/missions/missionfaction.vykeen.dds",
+		"Icon": "WAR_STANDING_DN.png",
+		"IconPath": "textures/ui/frontend/missions/missionfaction.vykeen.dds",
 		"Name": "VY'KEEN",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1647,11 +1796,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/WAR_STANDING_DN"
 	},
 	{
 		"Id": "BUI_STANDING_UP",
-		"Icon": "textures/ui/frontend/missions/missionfaction.builder.dds",
+		"Icon": "BUI_STANDING_UP.png",
+		"IconPath": "textures/ui/frontend/missions/missionfaction.builder.dds",
 		"Name": "AUTOPHAGE",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1669,11 +1820,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/BUI_STANDING_UP"
 	},
 	{
 		"Id": "BUI_STANDING_DN",
-		"Icon": "textures/ui/frontend/missions/missionfaction.builder.dds",
+		"Icon": "BUI_STANDING_DN.png",
+		"IconPath": "textures/ui/frontend/missions/missionfaction.builder.dds",
 		"Name": "AUTOPHAGE",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1691,11 +1844,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/BUI_STANDING_DN"
 	},
 	{
 		"Id": "TGUILD_STAND_UP",
-		"Icon": "textures/ui/frontend/icons/rank/factions.tradeguild.on.dds",
+		"Icon": "TGUILD_STAND_UP.png",
+		"IconPath": "textures/ui/frontend/icons/rank/factions.tradeguild.on.dds",
 		"Name": "MERCHANTS",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1713,11 +1868,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/TGUILD_STAND_UP"
 	},
 	{
 		"Id": "TGUILD_STAND_DN",
-		"Icon": "textures/ui/frontend/icons/rank/factions.tradeguild.on.dds",
+		"Icon": "TGUILD_STAND_DN.png",
+		"IconPath": "textures/ui/frontend/icons/rank/factions.tradeguild.on.dds",
 		"Name": "MERCHANTS",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1735,11 +1892,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/TGUILD_STAND_DN"
 	},
 	{
 		"Id": "EGUILD_STAND_UP",
-		"Icon": "textures/ui/frontend/icons/rank/factions.explorerguild.on.dds",
+		"Icon": "EGUILD_STAND_UP.png",
+		"IconPath": "textures/ui/frontend/icons/rank/factions.explorerguild.on.dds",
 		"Name": "EXPLORERS",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1757,11 +1916,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/EGUILD_STAND_UP"
 	},
 	{
 		"Id": "EGUILD_STAND_DN",
-		"Icon": "textures/ui/frontend/icons/rank/factions.explorerguild.on.dds",
+		"Icon": "EGUILD_STAND_DN.png",
+		"IconPath": "textures/ui/frontend/icons/rank/factions.explorerguild.on.dds",
 		"Name": "EXPLORERS",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1779,11 +1940,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/EGUILD_STAND_DN"
 	},
 	{
 		"Id": "WGUILD_STAND_UP",
-		"Icon": "textures/ui/frontend/icons/rank/factions.warriorguild.on.dds",
+		"Icon": "WGUILD_STAND_UP.png",
+		"IconPath": "textures/ui/frontend/icons/rank/factions.warriorguild.on.dds",
 		"Name": "MERCENARIES",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1801,11 +1964,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/WGUILD_STAND_UP"
 	},
 	{
 		"Id": "WGUILD_STAND_DN",
-		"Icon": "textures/ui/frontend/icons/rank/factions.warriorguild.on.dds",
+		"Icon": "WGUILD_STAND_DN.png",
+		"IconPath": "textures/ui/frontend/icons/rank/factions.warriorguild.on.dds",
 		"Name": "MERCENARIES",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1823,11 +1988,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/WGUILD_STAND_DN"
 	},
 	{
 		"Id": "PIR_STAND_UP",
-		"Icon": "textures/ui/frontend/icons/rank/factions.pirate.on.dds",
+		"Icon": "PIR_STAND_UP.png",
+		"IconPath": "textures/ui/frontend/icons/rank/factions.pirate.on.dds",
 		"Name": "Outlaws",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1845,11 +2012,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/PIR_STAND_UP"
 	},
 	{
 		"Id": "PIR_STAND_DN",
-		"Icon": "textures/ui/frontend/icons/rank/factions.pirate.on.dds",
+		"Icon": "PIR_STAND_DN.png",
+		"IconPath": "textures/ui/frontend/icons/rank/factions.pirate.on.dds",
 		"Name": "Outlaws",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1867,11 +2036,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/PIR_STAND_DN"
 	},
 	{
 		"Id": "NEW_PERK",
-		"Icon": "textures/ui/hud/icons/buildings/building.settlement.dds",
+		"Icon": "NEW_PERK.png",
+		"IconPath": "textures/ui/hud/icons/buildings/building.settlement.dds",
 		"Name": "Feature",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1889,11 +2060,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/NEW_PERK"
 	},
 	{
 		"Id": "SET_POP_POS",
-		"Icon": "textures/ui/frontend/icons/settlement/positivepopulation.dds",
+		"Icon": "SET_POP_POS.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/positivepopulation.dds",
 		"Name": "Population",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1911,11 +2084,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_POP_POS"
 	},
 	{
 		"Id": "SET_POP_NEG",
-		"Icon": "textures/ui/frontend/icons/settlement/negativepopulation.dds",
+		"Icon": "SET_POP_NEG.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/negativepopulation.dds",
 		"Name": "Population",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1933,11 +2108,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_POP_NEG"
 	},
 	{
 		"Id": "SET_PROD_POS",
-		"Icon": "textures/ui/frontend/icons/settlement/positiveproduction.dds",
+		"Icon": "SET_PROD_POS.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/positiveproduction.dds",
 		"Name": "Productivity",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1955,11 +2132,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_PROD_POS"
 	},
 	{
 		"Id": "SET_PROD_NEG",
-		"Icon": "textures/ui/frontend/icons/settlement/negativeproduction.dds",
+		"Icon": "SET_PROD_NEG.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/negativeproduction.dds",
 		"Name": "Productivity",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1977,11 +2156,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_PROD_NEG"
 	},
 	{
 		"Id": "SET_MOOD_POS",
-		"Icon": "textures/ui/frontend/icons/settlement/positivehappiness.dds",
+		"Icon": "SET_MOOD_POS.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/positivehappiness.dds",
 		"Name": "Happiness",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -1999,11 +2180,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_MOOD_POS"
 	},
 	{
 		"Id": "SET_MOOD_NEG",
-		"Icon": "textures/ui/frontend/icons/settlement/negativehappiness.dds",
+		"Icon": "SET_MOOD_NEG.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/negativehappiness.dds",
 		"Name": "Happiness",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -2021,11 +2204,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_MOOD_NEG"
 	},
 	{
 		"Id": "SET_COST_POS",
-		"Icon": "textures/ui/frontend/icons/settlement/positivemaintenance.dds",
+		"Icon": "SET_COST_POS.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/positivemaintenance.dds",
 		"Name": "Maintenance Cost",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -2043,11 +2228,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_COST_POS"
 	},
 	{
 		"Id": "SET_COST_NEG",
-		"Icon": "textures/ui/frontend/icons/settlement/negativemaintenance.dds",
+		"Icon": "SET_COST_NEG.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/negativemaintenance.dds",
 		"Name": "Maintenance Cost",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -2065,11 +2252,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_COST_NEG"
 	},
 	{
 		"Id": "SET_SENT_POS",
-		"Icon": "textures/ui/frontend/icons/settlement/positivealert.dds",
+		"Icon": "SET_SENT_POS.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/positivealert.dds",
 		"Name": "Sentinel Alert Level",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -2087,11 +2276,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_SENT_POS"
 	},
 	{
 		"Id": "SET_SENT_NEG",
-		"Icon": "textures/ui/frontend/icons/settlement/negativealert.dds",
+		"Icon": "SET_SENT_NEG.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/negativealert.dds",
 		"Name": "Sentinel Alert Level",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -2109,11 +2300,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_SENT_NEG"
 	},
 	{
 		"Id": "SET_DEBT_POS",
-		"Icon": "textures/ui/frontend/icons/settlement/positiveproduction.dds",
+		"Icon": "SET_DEBT_POS.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/positiveproduction.dds",
 		"Name": "Debt",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -2131,11 +2324,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_DEBT_POS"
 	},
 	{
 		"Id": "SET_DEBT_NEG",
-		"Icon": "textures/ui/frontend/icons/settlement/negativeproduction.dds",
+		"Icon": "SET_DEBT_NEG.png",
+		"IconPath": "textures/ui/frontend/icons/settlement/negativeproduction.dds",
 		"Name": "Debt",
 		"Group": "Reward Item",
 		"Description": "Currency or faction standing, given as a reward.",
@@ -2153,11 +2348,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "-"
+		"Symbol": "-",
+		"Slug": "raw/SET_DEBT_NEG"
 	},
 	{
 		"Id": "SUNGOLD",
-		"Icon": "textures/ui/frontend/icons/u4products/sub.sungold.dds",
+		"Icon": "SUNGOLD.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/sub.sungold.dds",
 		"Name": "Liquid Sun",
 		"Group": "Transmuted Metal",
 		"Description": "Conventional planetary metal, superheated and then held in a stabilised plasmatic form.\n\nExtracted from metallic terrain deposits using a Solar Ray. Enormously energetic.",
@@ -2175,11 +2372,13 @@
 		"Category": "Special",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "?"
+		"Symbol": "?",
+		"Slug": "raw/SUNGOLD"
 	},
 	{
 		"Id": "SOULFRAG",
-		"Icon": "textures/ui/frontend/icons/u4products/sub.soulfrag.dds",
+		"Icon": "SOULFRAG.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/sub.soulfrag.dds",
 		"Name": "Fragmented Qualia",
 		"Group": "Soul Fragment",
 		"Description": "A pattern, no more than a mere waveform, etched into the surface of a tiny metallic shard. This fragment of data represents a recording of the electrical impulses running across a neural network. Many fragments would be required to recreate any sensible experience.\n\nGenerated by the interaction of the Animus Beam with a living target.",
@@ -2197,11 +2396,13 @@
 		"Category": "Special",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "?"
+		"Symbol": "?",
+		"Slug": "raw/SOULFRAG"
 	},
 	{
 		"Id": "SQUIDFRAG",
-		"Icon": "textures/ui/frontend/icons/u4products/sub.soulfrag.dds",
+		"Icon": "SQUIDFRAG.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/sub.soulfrag.dds",
 		"Name": "Shattered Qualia",
 		"Group": "Soul Fragment",
 		"Description": "A pattern, no more than a mere waveform, etched into an ethereal shard of glass. This fragment of data represents a trace of the electrical impulses running across a neural network. Many fragments would be required to recreate any sensible experience.\n\nReleased upon the destruction of a boundary horror.",
@@ -2219,11 +2420,13 @@
 		"Category": "Special",
 		"Rarity": "Common",
 		"CookingIngredient": false,
-		"Symbol": "?"
+		"Symbol": "?",
+		"Slug": "raw/SQUIDFRAG"
 	},
 	{
 		"Id": "WORMDUST",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.wormdust.dds",
+		"Icon": "WORMDUST.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.wormdust.dds",
 		"Name": "Cursed Dust",
 		"Group": "Ashes of Despair",
 		"Description": "A powdery desert soil, slick with the gland expressions of a colossal sandworm. Historically, some have regarded this dust as the divine parent of such worms. It smells curiously sweet.\n\nCursed Dust gathers in the terrain deposits of planets blighted by titan worm activity.",
@@ -2241,11 +2444,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "?"
+		"Symbol": "?",
+		"Slug": "raw/WORMDUST"
 	},
 	{
 		"Id": "TIMEDUST",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.timedust.dds",
+		"Icon": "TIMEDUST.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.timedust.dds",
 		"Name": "Somnal Dust",
 		"Group": "Decayed Spacetime Remnant",
 		"Description": "Grey, dead, sparkling with life and colour, singing as it shimmers. This impossibly fine dust is the accumulated decay of time and memories.\n\nCollected from the fine layers it forms around hotspots in the loop. Of great value to Specialist Polo as they research the loop.",
@@ -2263,11 +2468,13 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "?"
+		"Symbol": "?",
+		"Slug": "raw/TIMEDUST"
 	},
 	{
 		"Id": "TIMEMILK",
-		"Icon": "textures/ui/frontend/icons/u4substances/substance.timemilk.dds",
+		"Icon": "TIMEMILK.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.timemilk.dds",
 		"Name": "Ancestral Memories",
 		"Group": "Recessive Creature Genes",
 		"Description": "The echo of a genetic possibility, forgotten by evolution. It twitches with a wild energy.\n\nExtracted from a creature caught within a repeating circuit of time. Of great value to Specialist Polo as they research the loop.",
@@ -2285,6 +2492,7 @@
 		"Category": "Special",
 		"Rarity": "Rare",
 		"CookingIngredient": false,
-		"Symbol": "?"
+		"Symbol": "?",
+		"Slug": "raw/TIMEMILK"
 	}
 ]

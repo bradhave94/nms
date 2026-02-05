@@ -2,7 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import type { Item } from '@utils/lookup.js';
-import data from '@data/Products.json';
+import data from '@datav2/Products.json';
 
 export async function getStaticPaths() {
 	return data.map((product) => ({

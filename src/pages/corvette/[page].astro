@@ -4,12 +4,12 @@ import Card from '@components/Card.astro';
 import Pagination from '@components/Pagination.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
-import data from '@datav2/Buildings.json';
+import none from '@datav2/Corvette.json';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	return paginate(sort(data as Item[]), { pageSize: 24 });
+	return paginate(sort(none as Item[]), { pageSize: 24 });
 }
-// All paginated data is passed on the "page" prop
+
 interface PageProps {
 	page: {
 		data: Item[];
@@ -25,24 +25,23 @@ const { page } = Astro.props as PageProps;
 ---
 
 <Layout
-	title="Building Parts | No Man's Sky Recipes"
-	description="A list of building parts for No Man's Sky. Our guide has everything you need to take your game to the next level."
-	slug="buildings"
+	title="Corvette Items | No Man's Sky Recipes"
+	description="A list of corvette items for No Man's Sky. Our guide has everything you need to take your game to the next level."
+	slug="corvette"
 >
-	<h1 class="text-center text-4xl sm:text-6xl mt-2 mb-8">Building Parts</h1>
+	<h1 class="text-center text-4xl sm:text-6xl mt-2 mb-8">Corvette Items</h1>
 	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
 		{
-			page.data.map((item, index) => (
+			page.data.map((item) => (
 				<Card
 					card={{
 						name: item.Name,
 						description: item.Description,
 						button: 'View Item',
-						image: 'https://nomansskyrecipes.com/images/items/' + item.Icon,
+						image: `https://nomansskyrecipes.com/images/items/${item.Icon}`,
 						link: getSlug(item),
 						value: item.BaseValueUnits,
 					}}
-					index={index}
 				/>
 			))
 		}
