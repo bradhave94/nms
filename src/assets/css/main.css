@@ -140,3 +140,29 @@
   line-height: 1.2
 }
 
+/* Prevent Auto Ads from occupying card slots inside item grids. */
+#items > .google-auto-placed,
+#items > .adsbygoogle,
+#items > .adsbygoogle-noablate,
+#items > ins.adsbygoogle,
+#items > [id^="aswift_"],
+#items > [id^="google_ads_iframe"],
+#items > iframe[id^="aswift_"],
+#items > iframe[id^="google_ads_iframe"],
+#items > iframe[src*="googlesyndication.com"],
+#items > iframe[src*="doubleclick.net"],
+#items > :has(ins.adsbygoogle),
+#items > :has(.adsbygoogle-noablate),
+#items > :has(iframe[id^="aswift_"]),
+#items > :has(iframe[id^="google_ads_iframe"]),
+#items > :has(iframe[src*="googlesyndication.com"]),
+#items > :has(iframe[src*="doubleclick.net"]) {
+  display: none !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+}
+
