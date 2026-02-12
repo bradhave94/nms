@@ -24,7 +24,7 @@ export default function Footer() {
           ))}
         </nav>
         <p className="mt-8 text-center text-xs leading-5 text-gray-500">
-          No Man's Sky Recipes | Updated to &nbsp;
+          No Man's Sky Recipes | Updated to&nbsp;
           <a
             className="hover:text-blue-500 transition-colors"
             target="_blank"
