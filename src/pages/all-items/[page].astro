@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
+import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
@@ -10,6 +10,8 @@ import cooking from '@datav2/Cooking.json';
 import curiosities from '@datav2/Curiosities.json';
 import conTech from '@datav2/ConstructedTechnology.json';
 import tech from '@datav2/Technology.json';
+import upgrades from '@datav2/Upgrades.json';
+import exocraft from '@datav2/Exocraft.json';
 import buildings from '@datav2/Buildings.json';
 import other from '@datav2/Others.json';
 import trade from '@datav2/Trade.json';
@@ -23,11 +25,13 @@ export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], op
 			...curiosities,
 			...conTech,
 			...tech,
+			...upgrades,
+			...exocraft,
 			...buildings,
 			...other,
 			...trade,
 		] as Item[]),
-		{ pageSize: 48 }
+		{ pageSize: 206 }
 	);
 }
 // All paginated data is passed on the "page" prop
@@ -52,17 +56,14 @@ const { page } = Astro.props as PageProps;
 >
 	<h3 class="text-center text-4xl sm:text-6xl mt-2 mb-8">All Items</h3>
 
-	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
 			page.data.map((item, index) => (
-				<Card
+				<CompactCard
 					card={{
 						name: item.Name,
-						description: item.Description,
-						button: 'View Item',
 						image: 'https://nomansskyrecipes.com/images/items/' + item.Icon,
 						link: getSlug(item),
-						value: item.BaseValueUnits,
 					}}
 					index={index}
 				/>

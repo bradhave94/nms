@@ -12,6 +12,8 @@ import refiner from '../datav2/Refinery.json';
 import nut from '../datav2/NutrientProcessor.json';
 import build from '../datav2/Buildings.json';
 import trade from '../datav2/Trade.json';
+import upgrades from '../datav2/Upgrades.json';
+import exocraft from '../datav2/Exocraft.json';
 
 export type RequiredItem = {
 	Id: string;
@@ -74,6 +76,8 @@ const dataSources = {
 	nut: nut,
 	build,
 	trade,
+	upgrades,
+	exocraft,
 };
 
 // Mapping the prefixes of item id to the corresponding slugs
@@ -91,6 +95,8 @@ const slugs = {
 	nut: 'nutrient-processor/',
 	build: 'buildings/',
 	trade: 'other/',
+	upgrades: 'upgrades/',
+	exocraft: 'exocraft/',
 };
 
 const labels = {
@@ -107,6 +113,8 @@ const labels = {
 	nut: 'Nutrient Processor',
 	build: 'Buildings',
 	trade: 'Other',
+	upgrades: 'Upgrades',
+	exocraft: 'Exocraft',
 };
 
 const buildSlugFromId = (id: string): string => {
@@ -150,6 +158,8 @@ const slugLabels: Record<string, string> = {
 	refinery: 'Refinery',
 	'nutrient-processor': 'Nutrient Processor',
 	buildings: 'Buildings',
+	upgrades: 'Upgrades',
+	exocraft: 'Exocraft',
 };
 
 // Returns the label corresponding to an item or id

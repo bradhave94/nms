@@ -161,7 +161,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 								width={15}
 								height={15}
 							/>
-							{item.output.value}
+							{item.output.value.toLocaleString()}
 						</p>
 					</a>
 					{item.input_1 && (() => {

@@ -29,6 +29,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "cooking/ANY_MILK"
 	},
 	{
@@ -67,6 +68,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_BASIC"
 	},
 	{
@@ -99,6 +101,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_MEAT_1"
 	},
 	{
@@ -131,6 +134,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_MEAT_2"
 	},
 	{
@@ -163,6 +167,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_MEAT_3"
 	},
 	{
@@ -195,6 +200,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_MEAT_4"
 	},
 	{
@@ -227,6 +233,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_VEG_1"
 	},
 	{
@@ -259,6 +266,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_VEG_2"
 	},
 	{
@@ -291,6 +299,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_VEG_3"
 	},
 	{
@@ -323,6 +332,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/BAIT_VEG_4"
 	},
 	{
@@ -355,6 +365,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_BLOB"
 	},
 	{
@@ -387,6 +398,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_GEK"
 	},
 	{
@@ -419,6 +431,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_DIPLO"
 	},
 	{
@@ -451,6 +464,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_REX"
 	},
 	{
@@ -483,6 +497,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_CAT"
 	},
 	{
@@ -515,6 +530,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_STRIDER"
 	},
 	{
@@ -547,6 +563,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_COW"
 	},
 	{
@@ -579,6 +596,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_CRAB"
 	},
 	{
@@ -611,6 +629,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_BONE"
 	},
 	{
@@ -643,6 +662,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_MOLE"
 	},
 	{
@@ -675,6 +695,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_ROBOT"
 	},
 	{
@@ -707,6 +728,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_FLYER"
 	},
 	{
@@ -739,6 +761,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_EGG"
 	},
 	{
@@ -771,6 +794,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_MILK"
 	},
 	{
@@ -803,6 +827,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_BUG"
 	},
 	{
@@ -835,6 +860,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_V_PCAT"
 	},
 	{
@@ -867,6 +893,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_FISH"
 	},
 	{
@@ -899,6 +926,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_FLYER"
 	},
 	{
@@ -931,6 +959,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_FIEND"
 	},
 	{
@@ -963,6 +992,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_HORROR"
 	},
 	{
@@ -995,6 +1025,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_GRUB"
 	},
 	{
@@ -1027,6 +1058,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_BLOB"
 	},
 	{
@@ -1059,6 +1091,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_GEK"
 	},
 	{
@@ -1091,6 +1124,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_DIPLO"
 	},
 	{
@@ -1123,6 +1157,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_REX"
 	},
 	{
@@ -1155,6 +1190,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_CAT"
 	},
 	{
@@ -1187,6 +1223,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_STRIDER"
 	},
 	{
@@ -1219,6 +1256,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_COW"
 	},
 	{
@@ -1251,6 +1289,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_CRAB"
 	},
 	{
@@ -1283,6 +1322,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_MOLE"
 	},
 	{
@@ -1315,6 +1355,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_BONE"
 	},
 	{
@@ -1347,6 +1388,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_DRILL"
 	},
 	{
@@ -1379,6 +1421,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_BEETLE"
 	},
 	{
@@ -1411,6 +1454,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_BALL"
 	},
 	{
@@ -1443,6 +1487,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_DIGGER"
 	},
 	{
@@ -1475,6 +1520,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_BUG"
 	},
 	{
@@ -1507,6 +1553,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_M_MEAT"
 	},
 	{
@@ -1539,6 +1586,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_LUSHWILD"
 	},
 	{
@@ -1571,6 +1619,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_LUSHFARM"
 	},
 	{
@@ -1603,6 +1652,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_HOTWILD"
 	},
 	{
@@ -1635,6 +1685,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_HOTFARM"
 	},
 	{
@@ -1667,6 +1718,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_COLDWILD"
 	},
 	{
@@ -1699,6 +1751,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_COLDFARM"
 	},
 	{
@@ -1731,6 +1784,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_TOXWILD"
 	},
 	{
@@ -1763,6 +1817,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_TOXFARM"
 	},
 	{
@@ -1795,6 +1850,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_RADWILD"
 	},
 	{
@@ -1827,6 +1883,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_RADFARM"
 	},
 	{
@@ -1859,6 +1916,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_DUSTWILD"
 	},
 	{
@@ -1891,6 +1949,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_DUSTFARM"
 	},
 	{
@@ -1923,6 +1982,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_GLITCH"
 	},
 	{
@@ -1955,6 +2015,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_ALL1"
 	},
 	{
@@ -1987,6 +2048,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_ALL2"
 	},
 	{
@@ -2019,6 +2081,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_ALL3"
 	},
 	{
@@ -2051,6 +2114,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_CAVE"
 	},
 	{
@@ -2083,6 +2147,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_WATER"
 	},
 	{
@@ -2115,6 +2180,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_POOP"
 	},
 	{
@@ -2147,6 +2213,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_DEATH"
 	},
 	{
@@ -2179,6 +2246,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_P_STELLAR"
 	},
 	{
@@ -2211,6 +2279,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_EGGS"
 	},
 	{
@@ -2243,6 +2312,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_FLOUR"
 	},
 	{
@@ -2275,6 +2345,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_SUGAR"
 	},
 	{
@@ -2307,6 +2378,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_HONEY"
 	},
 	{
@@ -2339,6 +2411,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_VEG"
 	},
 	{
@@ -2371,6 +2444,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_MEAT"
 	},
 	{
@@ -2403,6 +2477,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_HORROR"
 	},
 	{
@@ -2435,6 +2510,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_SMOKED"
 	},
 	{
@@ -2467,6 +2543,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BUTTER"
 	},
 	{
@@ -2499,6 +2576,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_GBUTTER"
 	},
 	{
@@ -2531,6 +2609,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_CREAM"
 	},
 	{
@@ -2563,6 +2642,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_GCREAM"
 	},
 	{
@@ -2595,6 +2675,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_CARAMEL"
 	},
 	{
@@ -2627,6 +2708,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_OIL"
 	},
 	{
@@ -2659,6 +2741,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_GOIL"
 	},
 	{
@@ -2691,6 +2774,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_PASTRY"
 	},
 	{
@@ -2723,6 +2807,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BREAD"
 	},
 	{
@@ -2755,6 +2840,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BONEMILK"
 	},
 	{
@@ -2787,6 +2873,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BBUTTER"
 	},
 	{
@@ -2819,6 +2906,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BCHEESE"
 	},
 	{
@@ -2851,6 +2939,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BCUSTARD"
 	},
 	{
@@ -2883,6 +2972,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BCREAM"
 	},
 	{
@@ -2915,6 +3005,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_CUSTARD"
 	},
 	{
@@ -2947,6 +3038,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_FCUSTARD"
 	},
 	{
@@ -2979,6 +3071,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_MCUSTARD"
 	},
 	{
@@ -3011,6 +3104,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_SCUSTARD"
 	},
 	{
@@ -3043,6 +3137,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_MERINGUE"
 	},
 	{
@@ -3075,6 +3170,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_DONUT"
 	},
 	{
@@ -3107,6 +3203,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_GONUT"
 	},
 	{
@@ -3139,6 +3236,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_CHOC"
 	},
 	{
@@ -3171,6 +3269,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_SWEETBUT"
 	},
 	{
@@ -3203,6 +3302,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_SWEETGEK"
 	},
 	{
@@ -3235,6 +3335,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_HONEYBUT"
 	},
 	{
@@ -3267,6 +3368,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_HONEYGEK"
 	},
 	{
@@ -3299,6 +3401,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BLOBGEK"
 	},
 	{
@@ -3331,6 +3434,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_PCATBUT"
 	},
 	{
@@ -3363,6 +3467,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_PCATGEK"
 	},
 	{
@@ -3395,6 +3500,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BLOBBUT"
 	},
 	{
@@ -3427,6 +3533,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_CHEESE"
 	},
 	{
@@ -3459,6 +3566,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_GCHEESE"
 	},
 	{
@@ -3491,6 +3599,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_DOUGH"
 	},
 	{
@@ -3523,6 +3632,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_JAM_GLITCH"
 	},
 	{
@@ -3555,6 +3665,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_JAM_HOT"
 	},
 	{
@@ -3587,6 +3698,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_JAM_RAD"
 	},
 	{
@@ -3619,6 +3731,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_JAM_DUST"
 	},
 	{
@@ -3651,6 +3764,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_JAM_CAT"
 	},
 	{
@@ -3683,6 +3797,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_JAM_CRAB"
 	},
 	{
@@ -3715,6 +3830,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_JAM_BUG"
 	},
 	{
@@ -3747,6 +3863,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_CUST"
 	},
 	{
@@ -3779,6 +3896,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_FCUST"
 	},
 	{
@@ -3811,6 +3929,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_MCUST"
 	},
 	{
@@ -3843,6 +3962,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_SCUST"
 	},
 	{
@@ -3875,6 +3995,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_HON"
 	},
 	{
@@ -3907,6 +4028,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_HONB"
 	},
 	{
@@ -3939,6 +4061,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_BLOB"
 	},
 	{
@@ -3971,6 +4094,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_PCAT"
 	},
 	{
@@ -4003,6 +4127,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_CARM"
 	},
 	{
@@ -4035,6 +4160,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_CHOC"
 	},
 	{
@@ -4067,6 +4193,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_MEAT"
 	},
 	{
@@ -4099,6 +4226,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_JAM"
 	},
 	{
@@ -4131,6 +4259,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_CJAM"
 	},
 	{
@@ -4163,6 +4292,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_AJAM"
 	},
 	{
@@ -4195,6 +4325,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_DNUT_BJAM"
 	},
 	{
@@ -4227,6 +4358,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_PIECASE"
 	},
 	{
@@ -4259,6 +4391,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_MEAT"
 	},
 	{
@@ -4291,6 +4424,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_SMEAT"
 	},
 	{
@@ -4323,6 +4457,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_VEG"
 	},
 	{
@@ -4355,6 +4490,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_FISH"
 	},
 	{
@@ -4387,6 +4523,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_FIEND"
 	},
 	{
@@ -4419,6 +4556,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_ORGAN"
 	},
 	{
@@ -4451,6 +4589,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_GEK"
 	},
 	{
@@ -4483,6 +4622,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CRAB"
 	},
 	{
@@ -4515,6 +4655,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_BERRY"
 	},
 	{
@@ -4547,6 +4688,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_GLOW"
 	},
 	{
@@ -4579,6 +4721,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_MUSH"
 	},
 	{
@@ -4611,6 +4754,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_JAM"
 	},
 	{
@@ -4643,6 +4787,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_WEIRD"
 	},
 	{
@@ -4675,6 +4820,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CACTUS"
 	},
 	{
@@ -4707,6 +4853,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_HONEY"
 	},
 	{
@@ -4739,6 +4886,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_ROOTS"
 	},
 	{
@@ -4771,6 +4919,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_GREASE"
 	},
 	{
@@ -4803,6 +4952,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CAT"
 	},
 	{
@@ -4835,6 +4985,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CRABJ"
 	},
 	{
@@ -4867,6 +5018,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CHOC"
 	},
 	{
@@ -4899,6 +5051,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CARM"
 	},
 	{
@@ -4931,6 +5084,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CREAM"
 	},
 	{
@@ -4963,6 +5117,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CUST"
 	},
 	{
@@ -4995,6 +5150,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_MCUST"
 	},
 	{
@@ -5027,6 +5183,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_SCUST"
 	},
 	{
@@ -5059,6 +5216,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_CHEESE"
 	},
 	{
@@ -5091,6 +5249,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_VCHEE"
 	},
 	{
@@ -5123,6 +5282,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_BONE"
 	},
 	{
@@ -5155,6 +5315,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_DRILL"
 	},
 	{
@@ -5187,6 +5348,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_BEET"
 	},
 	{
@@ -5219,6 +5381,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_DIG"
 	},
 	{
@@ -5251,6 +5414,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_BALL"
 	},
 	{
@@ -5283,6 +5447,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_MOLE"
 	},
 	{
@@ -5315,6 +5480,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_BUGJAM"
 	},
 	{
@@ -5347,6 +5513,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_PIE_BMEAT"
 	},
 	{
@@ -5379,6 +5546,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MEAT_STEW"
 	},
 	{
@@ -5411,6 +5579,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_VEG_STEW"
 	},
 	{
@@ -5443,6 +5612,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ORGAN_STEW"
 	},
 	{
@@ -5475,6 +5645,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_BONE"
 	},
 	{
@@ -5507,6 +5678,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_DRILL"
 	},
 	{
@@ -5539,6 +5711,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_BEET"
 	},
 	{
@@ -5571,6 +5744,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_DIG"
 	},
 	{
@@ -5603,6 +5777,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_BALL"
 	},
 	{
@@ -5635,6 +5810,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_BUG"
 	},
 	{
@@ -5667,6 +5843,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_EVIL"
 	},
 	{
@@ -5699,6 +5876,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_EGGPIE"
 	},
 	{
@@ -5731,6 +5909,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_EGGPIE_M"
 	},
 	{
@@ -5763,6 +5942,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_EGGPIE_G"
 	},
 	{
@@ -5795,6 +5975,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_EGGPIE_GM"
 	},
 	{
@@ -5827,6 +6008,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_EGGPIE_B"
 	},
 	{
@@ -5859,6 +6041,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_EGGPIE_MU"
 	},
 	{
@@ -5891,6 +6074,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_EGGPIE_BUG"
 	},
 	{
@@ -5923,6 +6107,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_J_ALL3"
 	},
 	{
@@ -5955,6 +6140,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_J_LUSH"
 	},
 	{
@@ -5987,6 +6173,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_J_HOT"
 	},
 	{
@@ -6019,6 +6206,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_J_DUST"
 	},
 	{
@@ -6051,6 +6239,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_J_SALT"
 	},
 	{
@@ -6083,6 +6272,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_S_VEG"
 	},
 	{
@@ -6115,6 +6305,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_S_HOT"
 	},
 	{
@@ -6147,6 +6338,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_S_CREAM"
 	},
 	{
@@ -6179,6 +6371,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_S_CHEESE"
 	},
 	{
@@ -6211,6 +6404,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_O_CH"
 	},
 	{
@@ -6243,6 +6437,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_V_CH"
 	},
 	{
@@ -6275,6 +6470,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_M_CH"
 	},
 	{
@@ -6307,6 +6503,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_O_CR"
 	},
 	{
@@ -6339,6 +6536,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_V_CR"
 	},
 	{
@@ -6371,6 +6569,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_M_CR"
 	},
 	{
@@ -6403,6 +6602,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_O_HOT"
 	},
 	{
@@ -6435,6 +6635,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_V_HOT"
 	},
 	{
@@ -6467,6 +6668,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_M_HOT"
 	},
 	{
@@ -6499,6 +6701,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_O_VEG"
 	},
 	{
@@ -6531,6 +6734,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_V_VEG"
 	},
 	{
@@ -6563,6 +6767,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_M_VEG"
 	},
 	{
@@ -6595,6 +6800,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_CAKEMIX"
 	},
 	{
@@ -6627,6 +6833,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_GCAKEMIX"
 	},
 	{
@@ -6659,6 +6866,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_BCAKEMIX"
 	},
 	{
@@ -6691,6 +6899,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_PCAKEMIX"
 	},
 	{
@@ -6723,6 +6932,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_MCAKEMIX"
 	},
 	{
@@ -6755,6 +6965,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_MERMIX"
 	},
 	{
@@ -6787,6 +6998,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_MMERMIX"
 	},
 	{
@@ -6819,6 +7031,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_HONEY"
 	},
 	{
@@ -6851,6 +7064,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_CREAM"
 	},
 	{
@@ -6883,6 +7097,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_BLOBBUT"
 	},
 	{
@@ -6915,6 +7130,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_PCATBUT"
 	},
 	{
@@ -6947,6 +7163,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_CHOC"
 	},
 	{
@@ -6979,6 +7196,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_CARM"
 	},
 	{
@@ -7011,6 +7229,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_APPLE"
 	},
 	{
@@ -7043,6 +7262,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_CACTUS"
 	},
 	{
@@ -7075,6 +7295,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_JAM"
 	},
 	{
@@ -7107,6 +7328,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_BUGJAM"
 	},
 	{
@@ -7139,6 +7361,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_JHOT"
 	},
 	{
@@ -7171,6 +7394,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_JGLITCH"
 	},
 	{
@@ -7203,6 +7427,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_CUST"
 	},
 	{
@@ -7235,6 +7460,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_FCUST"
 	},
 	{
@@ -7267,6 +7493,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_MCUST"
 	},
 	{
@@ -7299,6 +7526,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CK_SCUST"
 	},
 	{
@@ -7331,6 +7559,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_EYEBALLS"
 	},
 	{
@@ -7363,6 +7592,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_EYESTEW"
 	},
 	{
@@ -7395,6 +7625,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_EYEICE"
 	},
 	{
@@ -7427,6 +7658,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE"
 	},
 	{
@@ -7459,6 +7691,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_FISH"
 	},
 	{
@@ -7491,6 +7724,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_FIEND"
 	},
 	{
@@ -7523,6 +7757,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_STAR"
 	},
 	{
@@ -7555,6 +7790,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_CHOC"
 	},
 	{
@@ -7587,6 +7823,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_CARM"
 	},
 	{
@@ -7619,6 +7856,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_FRUIT"
 	},
 	{
@@ -7651,6 +7889,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_APPLE"
 	},
 	{
@@ -7683,6 +7922,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_HONEY"
 	},
 	{
@@ -7715,6 +7955,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_GLITCH"
 	},
 	{
@@ -7747,6 +7988,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_GRAH"
 	},
 	{
@@ -7779,6 +8021,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_BONE"
 	},
 	{
@@ -7811,6 +8054,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_HOT"
 	},
 	{
@@ -7843,6 +8087,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_ICE_BUG"
 	},
 	{
@@ -7875,6 +8120,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_BLOB"
 	},
 	{
@@ -7907,6 +8153,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_PCAT"
 	},
 	{
@@ -7939,6 +8186,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_CREAM"
 	},
 	{
@@ -7971,6 +8219,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_CHOC"
 	},
 	{
@@ -8003,6 +8252,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_CARM"
 	},
 	{
@@ -8035,6 +8285,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_APPLE"
 	},
 	{
@@ -8067,6 +8318,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_CACTUS"
 	},
 	{
@@ -8099,6 +8351,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_JAM"
 	},
 	{
@@ -8131,6 +8384,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_BUGJAM"
 	},
 	{
@@ -8163,6 +8417,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_JHOT"
 	},
 	{
@@ -8195,6 +8450,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_JGLITCH"
 	},
 	{
@@ -8227,6 +8483,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_CUST"
 	},
 	{
@@ -8259,6 +8516,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_FCUST"
 	},
 	{
@@ -8291,6 +8549,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_SCUST"
 	},
 	{
@@ -8323,6 +8582,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_HONEY"
 	},
 	{
@@ -8355,6 +8615,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_CREAM"
 	},
 	{
@@ -8387,6 +8648,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_CHOC"
 	},
 	{
@@ -8419,6 +8681,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_CARM"
 	},
 	{
@@ -8451,6 +8714,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_APPLE"
 	},
 	{
@@ -8483,6 +8747,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_CACTUS"
 	},
 	{
@@ -8515,6 +8780,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_JAM"
 	},
 	{
@@ -8547,6 +8813,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_BUGJAM"
 	},
 	{
@@ -8579,6 +8846,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_JHOT"
 	},
 	{
@@ -8611,6 +8879,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_JGLITCH"
 	},
 	{
@@ -8643,6 +8912,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_CUST"
 	},
 	{
@@ -8675,6 +8945,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_FCUST"
 	},
 	{
@@ -8707,6 +8978,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CB_SCUST"
 	},
 	{
@@ -8739,6 +9011,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_HONEY"
 	},
 	{
@@ -8771,6 +9044,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_CREAM"
 	},
 	{
@@ -8803,6 +9077,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_CHOC"
 	},
 	{
@@ -8835,6 +9110,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_CARM"
 	},
 	{
@@ -8867,6 +9143,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_APPLE"
 	},
 	{
@@ -8899,6 +9176,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_CACTUS"
 	},
 	{
@@ -8931,6 +9209,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_JAM"
 	},
 	{
@@ -8963,6 +9242,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_BUGJAM"
 	},
 	{
@@ -8995,6 +9275,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_JHOT"
 	},
 	{
@@ -9027,6 +9308,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_JGLITCH"
 	},
 	{
@@ -9059,6 +9341,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_CUST"
 	},
 	{
@@ -9091,6 +9374,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_FCUST"
 	},
 	{
@@ -9123,6 +9407,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CP_SCUST"
 	},
 	{
@@ -9155,6 +9440,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_CREAM"
 	},
 	{
@@ -9187,6 +9473,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_CHOC"
 	},
 	{
@@ -9219,6 +9506,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_CARM"
 	},
 	{
@@ -9251,6 +9539,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_APPLE"
 	},
 	{
@@ -9283,6 +9572,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_CACTUS"
 	},
 	{
@@ -9315,6 +9605,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_JAM"
 	},
 	{
@@ -9347,6 +9638,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_BUGJAM"
 	},
 	{
@@ -9379,6 +9671,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_JHOT"
 	},
 	{
@@ -9411,6 +9704,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_JGLITCH"
 	},
 	{
@@ -9443,6 +9737,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_HONEY"
 	},
 	{
@@ -9475,6 +9770,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_BLOB"
 	},
 	{
@@ -9507,6 +9803,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_CREAM"
 	},
 	{
@@ -9539,6 +9836,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_CHOC"
 	},
 	{
@@ -9571,6 +9869,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_CARM"
 	},
 	{
@@ -9603,6 +9902,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_APPLE"
 	},
 	{
@@ -9635,6 +9935,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_CACTUS"
 	},
 	{
@@ -9667,6 +9968,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_JAM"
 	},
 	{
@@ -9699,6 +10001,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_BUGJAM"
 	},
 	{
@@ -9731,6 +10034,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_JHOT"
 	},
 	{
@@ -9763,6 +10067,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_JGLITCH"
 	},
 	{
@@ -9795,6 +10100,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_CUST"
 	},
 	{
@@ -9827,6 +10133,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MC_PCAT"
 	},
 	{
@@ -9859,6 +10166,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_HONEY"
 	},
 	{
@@ -9891,6 +10199,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_BLOB"
 	},
 	{
@@ -9923,6 +10232,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_CREAM"
 	},
 	{
@@ -9955,6 +10265,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_CHOC"
 	},
 	{
@@ -9987,6 +10298,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_CARM"
 	},
 	{
@@ -10019,6 +10331,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_APPLE"
 	},
 	{
@@ -10051,6 +10364,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_CACTUS"
 	},
 	{
@@ -10083,6 +10397,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_JAM"
 	},
 	{
@@ -10115,6 +10430,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_BUGJAM"
 	},
 	{
@@ -10147,6 +10463,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_JHOT"
 	},
 	{
@@ -10179,6 +10496,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_JGLITCH"
 	},
 	{
@@ -10211,6 +10529,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_CUST"
 	},
 	{
@@ -10243,6 +10562,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_MM_PCAT"
 	},
 	{
@@ -10275,6 +10595,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_BLOBBUT"
 	},
 	{
@@ -10307,6 +10628,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_HONEY"
 	},
 	{
@@ -10339,6 +10661,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CM_PCATBUT"
 	},
 	{
@@ -10371,6 +10694,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_CG_HONEY"
 	},
 	{
@@ -10403,6 +10727,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_W_CASE"
 	},
 	{
@@ -10435,6 +10760,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_W_MEAT"
 	},
 	{
@@ -10467,6 +10793,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_W_SWEETM"
 	},
 	{
@@ -10499,6 +10826,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_DOUGH"
 	},
 	{
@@ -10531,6 +10859,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_PLAIN"
 	},
 	{
@@ -10563,6 +10892,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_SALT"
 	},
 	{
@@ -10595,6 +10925,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_JAM"
 	},
 	{
@@ -10627,6 +10958,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_CAT"
 	},
 	{
@@ -10659,6 +10991,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_HOT"
 	},
 	{
@@ -10691,6 +11024,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_HERB"
 	},
 	{
@@ -10723,6 +11057,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_FLOWER"
 	},
 	{
@@ -10755,6 +11090,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_MEAT"
 	},
 	{
@@ -10787,6 +11123,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_HONEY"
 	},
 	{
@@ -10819,6 +11156,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_APPLE"
 	},
 	{
@@ -10851,6 +11189,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_MILK"
 	},
 	{
@@ -10883,6 +11222,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_CREAM"
 	},
 	{
@@ -10915,6 +11255,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_CARAMEL"
 	},
 	{
@@ -10947,6 +11288,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_CHOCO"
 	},
 	{
@@ -10979,6 +11321,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_VEG"
 	},
 	{
@@ -11011,6 +11354,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_MUSHROOM"
 	},
 	{
@@ -11043,6 +11387,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_FIEND"
 	},
 	{
@@ -11075,6 +11420,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_CACTUS"
 	},
 	{
@@ -11107,6 +11453,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_FISH"
 	},
 	{
@@ -11139,6 +11486,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_WORM"
 	},
 	{
@@ -11171,6 +11519,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_WEIRD"
 	},
 	{
@@ -11203,6 +11552,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_CHEESE"
 	},
 	{
@@ -11235,6 +11585,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_BURN"
 	},
 	{
@@ -11267,6 +11618,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_B_BUG"
 	},
 	{
@@ -11299,6 +11651,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_EGGS"
 	},
 	{
@@ -11331,6 +11684,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_SMALL1"
 	},
 	{
@@ -11363,6 +11717,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_SMALL2"
 	},
 	{
@@ -11395,6 +11750,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_SMALL3"
 	},
 	{
@@ -11427,6 +11783,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_MED1"
 	},
 	{
@@ -11459,6 +11816,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_MED2"
 	},
 	{
@@ -11491,6 +11849,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_MED3"
 	},
 	{
@@ -11523,6 +11882,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_LARGE1"
 	},
 	{
@@ -11555,6 +11915,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_LARGE2"
 	},
 	{
@@ -11587,6 +11948,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_LARGE3"
 	},
 	{
@@ -11619,6 +11981,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_XL1"
 	},
 	{
@@ -11651,6 +12014,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_XL2"
 	},
 	{
@@ -11683,6 +12047,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_XL3"
 	},
 	{
@@ -11715,6 +12080,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_MIX"
 	},
 	{
@@ -11747,6 +12113,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_CLAM"
 	},
 	{
@@ -11779,6 +12146,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_JELLY"
 	},
 	{
@@ -11811,6 +12179,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_TURTLE"
 	},
 	{
@@ -11843,6 +12212,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_WORM"
 	},
 	{
@@ -11875,6 +12245,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_PRAWN"
 	},
 	{
@@ -11907,6 +12278,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_SQUID"
 	},
 	{
@@ -11939,6 +12311,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_OCTOPUS"
 	},
 	{
@@ -11971,6 +12344,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_STARFISH"
 	},
 	{
@@ -12003,6 +12377,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_EEL"
 	},
 	{
@@ -12035,6 +12410,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_CRAB"
 	},
 	{
@@ -12067,6 +12443,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_SNAIL"
 	},
 	{
@@ -12099,6 +12476,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_STEW"
 	},
 	{
@@ -12131,6 +12509,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_STEW2"
 	},
 	{
@@ -12163,6 +12542,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_PIE"
 	},
 	{
@@ -12195,6 +12575,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_RICE"
 	},
 	{
@@ -12227,6 +12608,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_CHIPS"
 	},
 	{
@@ -12259,6 +12641,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_JEELS"
 	},
 	{
@@ -12291,6 +12674,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_F_S15"
 	},
 	{
@@ -12323,6 +12707,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_R_FOSSIL"
 	},
 	{
@@ -12355,6 +12740,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "cooking/FOOD_STEW_FOSS"
 	},
 	{

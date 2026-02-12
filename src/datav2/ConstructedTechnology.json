@@ -26,36 +26,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/NAV_DATA"
-	},
-	{
-		"Id": "NAV_DATA_DROP",
-		"Icon": "NAV_DATA_DROP.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.droppod.dds",
-		"Name": "Exosuit Upgrade Chart",
-		"Group": "Encrypted Navigation Data",
-		"Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a Drop Pod containing an Exosuit Inventory Upgrade.\n\nSelect the coordinates in the inventory and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
-		"BaseValueUnits": 85000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 4,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 3,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Tech",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/NAV_DATA_DROP"
 	},
 	{
 		"Id": "LOG_KEY",
@@ -84,6 +56,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/LOG_KEY"
 	},
 	{
@@ -124,6 +97,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/ACCESS1"
 	},
 	{
@@ -164,6 +138,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/ACCESS2"
 	},
 	{
@@ -204,6 +179,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/ACCESS3"
 	},
 	{
@@ -233,6 +209,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/POLICE_TOKEN"
 	},
 	{
@@ -264,6 +241,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BP_SALVAGE"
 	},
 	{
@@ -295,6 +273,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/FACT_TOKEN"
 	},
 	{
@@ -326,6 +305,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/FRIG_TOKEN"
 	},
 	{
@@ -357,6 +337,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/SHIP_INV_TOKEN"
 	},
 	{
@@ -388,69 +369,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/FREI_INV_TOKEN"
-	},
-	{
-		"Id": "WEAP_INV_TOKEN",
-		"Icon": "WEAP_INV_TOKEN.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.weapontoken.dds",
-		"Name": "Multi-tool Expansion Slot",
-		"Group": "Upgrade Unit",
-		"Description": "A flexible upgrade circuit, compatible with all person Multi-Tools.\n\nThis module can be wired into a Multi-Tool at a Space Station Multi-Tool Upgrade Rack, granting the user more space in the Multi-Tool's internal layout to add further upgrades or technology specialisations.",
-		"BaseValueUnits": 85000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 3,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Tech",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/WEAP_INV_TOKEN"
-	},
-	{
-		"Id": "SUIT_INV_TOKEN",
-		"Icon": "SUIT_INV_TOKEN.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.exosuittoken.dds",
-		"Name": "Exosuit Expansion Unit",
-		"Group": "Upgrade Unit",
-		"Description": "An advanced survival technology module that allows expansion of a user's Exosuit Storage.\n\nPre-packed nano-expanders create stablised sub-warp voids within the Exosuit, increasing its inventory capacity. Apply this augmentation at the Exosuit upgrade terminal on board a Space Station.",
-		"BaseValueUnits": 155000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 3,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Tech",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/SUIT_INV_TOKEN"
 	},
 	{
 		"Id": "ALIEN_INV_TOKEN",
@@ -458,7 +378,7 @@
 		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
 		"Name": "Spawning Sac",
 		"Group": "Sentient Vessel Storage Sac",
-		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse FE_ALT1 to trigger growth and begin the hatching process.",
+		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse [E] to trigger growth and begin the hatching process.",
 		"BaseValueUnits": 125000,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 3,
@@ -481,6 +401,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/ALIEN_INV_TOKEN"
 	},
 	{
@@ -489,7 +410,7 @@
 		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
 		"Name": "Psychonic Egg",
 		"Group": "Pulsating Yolk Sac",
-		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with FE_ALT1.",
+		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with [E].",
 		"BaseValueUnits": 126000,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 3,
@@ -512,6 +433,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/ALIEN_TECHBOX"
 	},
 	{
@@ -520,7 +442,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/proctech/roguetech.general.dds",
 		"Name": "Memory Fragment",
 		"Group": "Technology Echo",
-		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with FE_ALT1.",
+		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with [E].",
 		"BaseValueUnits": 16,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 3,
@@ -541,317 +463,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/TECHBOX"
-	},
-	{
-		"Id": "U_MECHLAS2",
-		"Icon": "U_MECHLAS2.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shiplaser.dds",
-		"Name": "Minotaur Laser Module",
-		"Group": "Significant Minotaur Weapon Upgrade",
-		"Description": "A significant upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
-		"BaseValueUnits": 140,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHLAS2"
-	},
-	{
-		"Id": "U_MECHLAS3",
-		"Icon": "U_MECHLAS3.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shiplaser.dds",
-		"Name": "Minotaur Laser Module",
-		"Group": "Powerful Minotaur Weapon Upgrade",
-		"Description": "An extremely powerful upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
-		"BaseValueUnits": 300,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHLAS3"
-	},
-	{
-		"Id": "U_MECHLAS4",
-		"Icon": "U_MECHLAS4.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shiplaser.dds",
-		"Name": "Minotaur Laser Module",
-		"Group": "Supreme Minotaur Weapon Upgrade",
-		"Description": "A supremely powerful upgrade for the Minotaur Mining Laser. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: mining power and/or heat dispersion.",
-		"BaseValueUnits": 480,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHLAS4"
-	},
-	{
-		"Id": "U_MECHFLAME2",
-		"Icon": "U_MECHFLAME2.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.heat.dds",
-		"Name": "Minotaur Flamethrower Module",
-		"Group": "Significant Minotaur Weapon Upgrade",
-		"Description": "A significant upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-		"BaseValueUnits": 140,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHFLAME2"
-	},
-	{
-		"Id": "U_MECHFLAME3",
-		"Icon": "U_MECHFLAME3.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.heat.dds",
-		"Name": "Minotaur Flamethrower Module",
-		"Group": "Powerful Minotaur Weapon Upgrade",
-		"Description": "An extremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-		"BaseValueUnits": 300,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHFLAME3"
-	},
-	{
-		"Id": "U_MECHFLAME4",
-		"Icon": "U_MECHFLAME4.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.heat.dds",
-		"Name": "Minotaur Flamethrower Module",
-		"Group": "Supreme Minotaur Weapon Upgrade",
-		"Description": "A supremely powerful upgrade for all Minotaur Flamethrower Units. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, burn time and fuel efficiency.",
-		"BaseValueUnits": 480,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHFLAME4"
-	},
-	{
-		"Id": "U_MECHGUN2",
-		"Icon": "U_MECHGUN2.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.shipgun.dds",
-		"Name": "Minotaur Cannon Module",
-		"Group": "Significant Minotaur Weapon Upgrade",
-		"Description": "A significant upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
-		"BaseValueUnits": 140,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHGUN2"
-	},
-	{
-		"Id": "U_MECHGUN3",
-		"Icon": "U_MECHGUN3.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.shipgun.dds",
-		"Name": "Minotaur Cannon Module",
-		"Group": "Powerful Minotaur Weapon Upgrade",
-		"Description": "An extremely powerful upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
-		"BaseValueUnits": 300,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHGUN3"
-	},
-	{
-		"Id": "U_MECHGUN4",
-		"Icon": "U_MECHGUN4.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.shipgun.dds",
-		"Name": "Minotaur Cannon Module",
-		"Group": "Supreme Minotaur Weapon Upgrade",
-		"Description": "A supremely powerful upgrade for the Minotaur Mounted Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and heat dispersion.",
-		"BaseValueUnits": 480,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_MECHGUN4"
-	},
-	{
-		"Id": "SUMMON_SUIT",
-		"Icon": "SUMMON_SUIT.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.suitsummoner.dds",
-		"Name": "Exocraft Summoning Unit",
-		"Group": "Vehicle Translocation Device",
-		"Description": "A high-powered matter teleportation device, this personal translocator allows any connected Exocraft to be instantly transported to your location, from anywhere in the galaxy.\n\nInterfaces with the Exosuit Quick Menu for ease of use.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "EX_PURPLE",
-				"Quantity": 140
-			},
-			{
-				"Id": "COMPUTER",
-				"Quantity": 3
-			},
-			{
-				"Id": "GASGIANT1",
-				"Quantity": 90
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Summon",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "summon",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/SUMMON_SUIT"
 	},
 	{
 		"Id": "MAINT_FISHTRAP",
@@ -888,7 +501,7 @@
 		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp2.dds",
 		"Name": "Psychonic Egg",
 		"Group": "Pulsating Yolk Sac",
-		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with FE_ALT1.",
+		"Description": "A writhing sac of genetic fluid, designed to foster the creation of new bio-infused technology for a sentient starship.\n\nThe embryo will grow into bio-technology upgrade. Begin biogenesis with [E].",
 		"BaseValueUnits": 126000,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 3,
@@ -910,7 +523,7 @@
 		"IconPath": "textures/ui/frontend/icons/technology/bio/product.biocomp4.dds",
 		"Name": "Spawning Sac",
 		"Group": "Sentient Vessel Storage Sac",
-		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse FE_ALT1 to trigger growth and begin the hatching process.",
+		"Description": "An additional storage nodule for Sentient starships. Upon hatching, the parasite inside this sac is grafted upon the vessel, exchanging the use of its cavernous innards for vital nutrients from the host.\n\nUse [E] to trigger growth and begin the hatching process.",
 		"BaseValueUnits": 125000,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 3,
@@ -927,34 +540,12 @@
 		"Slug": "technology/ALIEN_INV_TOKEN"
 	},
 	{
-		"Id": "NAV_DATA_DROP",
-		"Icon": "NAV_DATA_DROP.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.droppod.dds",
-		"Name": "Exosuit Upgrade Chart",
-		"Group": "Encrypted Navigation Data",
-		"Description": "Encoded navigation data which, when properly decrypted, will reveal the location of a Drop Pod containing an Exosuit Inventory Upgrade.\n\nSelect the coordinates in the inventory and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
-		"BaseValueUnits": 85000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 4,
-		"Colour": "1A2733",
-		"CookingValue": 0.0,
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Slug": "technology/NAV_DATA_DROP"
-	},
-	{
 		"Id": "TECHBOX",
 		"Icon": "TECHBOX.png",
 		"IconPath": "textures/ui/frontend/icons/u4products/proctech/roguetech.general.dds",
 		"Name": "Memory Fragment",
 		"Group": "Technology Echo",
-		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with FE_ALT1.",
+		"Description": "The shattered remnants of an expired traveller. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an important technology upgrade to aid you on your travels. Absorb this memory with [E].",
 		"BaseValueUnits": 16,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 3,
@@ -1012,6 +603,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/FRE_ROOM_TELEPO"
 	},
 	{
@@ -1048,6 +640,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BASE_FLAG"
 	},
 	{
@@ -1088,6 +681,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILDTERMINAL"
 	},
 	{
@@ -1132,6 +726,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/HEALTHSTATION"
 	},
 	{
@@ -1176,6 +771,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/SHIELDSTATION"
 	},
 	{
@@ -1216,6 +812,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILDBEACON"
 	},
 	{
@@ -1260,6 +857,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILDSIGNAL"
 	},
 	{
@@ -1304,6 +902,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILDANTIMATTER"
 	},
 	{
@@ -1348,6 +947,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/TELEPORTER"
 	},
 	{
@@ -1392,6 +992,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/TELEPORTER_F"
 	},
 	{
@@ -1432,6 +1033,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BP_ANALYSER"
 	},
 	{
@@ -1472,6 +1074,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILD_REFINER1"
 	},
 	{
@@ -1512,6 +1115,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILD_REFINER2"
 	},
 	{
@@ -1556,6 +1160,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILD_REFINER3"
 	},
 	{
@@ -1600,6 +1205,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/COOKER"
 	},
 	{
@@ -1644,6 +1250,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CREATURE_FEED"
 	},
 	{
@@ -1688,6 +1295,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CREATURE_FARM"
 	},
 	{
@@ -1728,6 +1336,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/MESSAGEMODULE"
 	},
 	{
@@ -1764,95 +1373,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/MESSAGE"
-	},
-	{
-		"Id": "GARAGE_SUB",
-		"Icon": "GARAGE_SUB.png",
-		"IconPath": "textures/ui/frontend/icons/buildable/buildable.vehiclegarageh.dds",
-		"Name": "Nautilon Chamber",
-		"Group": "Submarine Docking Bay",
-		"Description": "An advanced, fully-airlocked docking station for the Nautilon submarine.",
-		"BaseValueUnits": 10,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 0,
-		"Colour": "2C7C9F",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 10,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "CASING",
-				"Quantity": 5
-			},
-			{
-				"Id": "VENTGEM",
-				"Quantity": 4
-			},
-			{
-				"Id": "WATER1",
-				"Quantity": 100
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Common",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Tech",
-		"Consumable": false,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/GARAGE_SUB"
-	},
-	{
-		"Id": "SUMMON_GARAGE",
-		"Icon": "SUMMON_GARAGE.png",
-		"IconPath": "textures/ui/frontend/icons/buildable/buildable.vehiclesummoner.dds",
-		"Name": "Exocraft Summoning Station",
-		"Group": "Vehicle Translocation Device",
-		"Description": "Construction allows the user to summon any owned Exocraft from anywhere else in that system.\n\nInterfaces with the Exosuit Quick Command Menu for ease of use. Can be compressed and carried within the Exosuit with DECONSTRUCT for later redeployment.",
-		"BaseValueUnits": 10,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 0,
-		"Colour": "2C7C9F",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 12,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "RADIO1",
-				"Quantity": 80
-			},
-			{
-				"Id": "ROCKETSUB",
-				"Quantity": 60
-			},
-			{
-				"Id": "GRENFUEL1",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Common",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Tech",
-		"Consumable": false,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/SUMMON_GARAGE"
 	},
 	{
 		"Id": "GARAGE_MECH",
@@ -1860,7 +1382,7 @@
 		"IconPath": "textures/ui/frontend/icons/buildable/buildable.vehiclegaragemech.dds",
 		"Name": "Minotaur Geobay",
 		"Group": "Heavy Loader Storage Bay",
-		"Description": "A secure parking, summoning and customisation facility for the Minotaur Heavy Exosuit Hybrid.\n\nDeploy the Minotaur from the Quick Menu. With the aid of an Orbital Exocraft Materialiser mounted inside a freighter, the Minotaur can be instantly deployed to any location within the same system as the mothership.",
+		"Description": "A secure parking, summoning and customisation facility for the Minotaur Heavy Exosuit Hybrid.\n\nThe Minotaur Geobay can be constructed anywhere on a planet's surface.\n\nDeploy the Minotaur from the Quick Menu. With the aid of an Orbital Exocraft Materialiser mounted inside a freighter, the Minotaur can be instantly deployed to any location within the same system as the mothership.",
 		"BaseValueUnits": 10,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -1896,6 +1418,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/GARAGE_MECH"
 	},
 	{
@@ -1936,6 +1459,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/NPCSCIENCETERM"
 	},
 	{
@@ -1976,6 +1500,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/NPCWEAPONTERM"
 	},
 	{
@@ -2016,47 +1541,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/NPCFARMTERM"
-	},
-	{
-		"Id": "NPCVEHICLETERM",
-		"Icon": "NPCVEHICLETERM.png",
-		"IconPath": "textures/ui/frontend/icons/buildable/buildable.npcvehicle.dds",
-		"Name": "Exocraft Terminal",
-		"Group": "Specialist terminal",
-		"Description": "A research station tailored to the needs of Technicians, and equipped with bespoke vehicular design software.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 0,
-		"Colour": "2C7C9F",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 40
-			},
-			{
-				"Id": "LAUNCHSUB",
-				"Quantity": 25
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Common",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Tech",
-		"Consumable": false,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/NPCVEHICLETERM"
 	},
 	{
 		"Id": "NPCBUILDERTERM",
@@ -2096,6 +1582,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/NPCBUILDERTERM"
 	},
 	{
@@ -2136,6 +1623,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER0"
 	},
 	{
@@ -2176,6 +1664,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER1"
 	},
 	{
@@ -2216,6 +1705,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER2"
 	},
 	{
@@ -2256,6 +1746,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER3"
 	},
 	{
@@ -2296,6 +1787,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER4"
 	},
 	{
@@ -2336,6 +1828,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER5"
 	},
 	{
@@ -2376,6 +1869,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER6"
 	},
 	{
@@ -2416,6 +1910,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER7"
 	},
 	{
@@ -2456,6 +1951,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER8"
 	},
 	{
@@ -2496,6 +1992,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CONTAINER9"
 	},
 	{
@@ -2536,6 +2033,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/CHEST"
 	},
 	{
@@ -2580,6 +2078,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/RACE_START"
 	},
 	{
@@ -2624,6 +2123,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/RACE_START_SHIP"
 	},
 	{
@@ -2664,6 +2164,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/RACE_BOOSTER"
 	},
 	{
@@ -2700,6 +2201,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/RACE_RAMP"
 	},
 	{
@@ -2744,6 +2246,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/WATERBUBBLE"
 	},
 	{
@@ -2788,6 +2291,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/SPAWNER_BALL"
 	},
 	{
@@ -2832,6 +2336,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/NOISEBOX"
 	},
 	{
@@ -2876,6 +2381,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BYTEBEAT"
 	},
 	{
@@ -2916,6 +2422,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/AM_SUITTREE"
 	},
 	{
@@ -2956,47 +2463,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/AM_WEAPONTREE"
-	},
-	{
-		"Id": "AM_EXOCRAFTTREE",
-		"Icon": "AM_EXOCRAFTTREE.png",
-		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_exocrafttree.dds",
-		"Name": "Exocraft Research Station",
-		"Group": "Portable Exocraft Research Station",
-		"Description": "This self-sufficient portable research station allows access to a range of technology upgrades.\n\nDeploy this station within a base to begin upgrade selection process.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 0,
-		"Colour": "2C7C9F",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 15,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 40
-			},
-			{
-				"Id": "LAUNCHSUB",
-				"Quantity": 25
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Common",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Tech",
-		"Consumable": false,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/AM_EXOCRAFTTREE"
 	},
 	{
 		"Id": "AM_SHIPTREE",
@@ -3036,6 +2504,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/AM_SHIPTREE"
 	},
 	{
@@ -3076,6 +2545,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/S9_SUITTREE"
 	},
 	{
@@ -3116,47 +2586,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/S9_WEAPONTREE"
-	},
-	{
-		"Id": "S9_EXOCRAFTTREE",
-		"Icon": "S9_EXOCRAFTTREE.png",
-		"IconPath": "textures/ui/frontend/icons/buildable/buildable.s9_exocrafttree.dds",
-		"Name": "Utopia Exocraft Station",
-		"Group": "Portable Exocraft Research Station",
-		"Description": "The Utopia Overseers wish for their brave settlers to be strong and well-equipped!\n\nThis officially-licensed portable research station allows access to a generous range of technology upgrades, easily purchased with the appropriate currency!\n\nConstruct and visit your own Utopia Exocraft Station today!",
-		"BaseValueUnits": 1,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 0,
-		"Colour": "2C7C9F",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 15,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 40
-			},
-			{
-				"Id": "LAUNCHSUB",
-				"Quantity": 25
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Common",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Tech",
-		"Consumable": false,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/S9_EXOCRAFTTREE"
 	},
 	{
 		"Id": "S9_SHIPTREE",
@@ -3196,6 +2627,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/S9_SHIPTREE"
 	},
 	{
@@ -3236,6 +2668,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/S9_BUILDERTREE"
 	},
 	{
@@ -3280,6 +2713,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/HOLO_DISCO_0"
 	},
 	{
@@ -3324,6 +2758,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/O2_HARVESTER"
 	},
 	{
@@ -3368,6 +2803,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILDHARVESTER"
 	},
 	{
@@ -3412,6 +2848,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILDGASHARVEST"
 	},
 	{
@@ -3456,6 +2893,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BUILDSEAHARVEST"
 	},
 	{
@@ -3496,6 +2934,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_EXTRACTOR_S"
 	},
 	{
@@ -3536,6 +2975,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_GASEXTRACTOR"
 	},
 	{
@@ -3572,6 +3012,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_SILO_S"
 	},
 	{
@@ -3616,6 +3057,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_SOLAR_S"
 	},
 	{
@@ -3660,6 +3102,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_GENERATOR_S"
 	},
 	{
@@ -3700,6 +3143,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_BIOGENERATOR"
 	},
 	{
@@ -3731,6 +3175,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_POWERLINE"
 	},
 	{
@@ -3762,6 +3207,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_PORTALLINE"
 	},
 	{
@@ -3793,6 +3239,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_BYTEBEATLINE"
 	},
 	{
@@ -3833,6 +3280,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_SWITCHWALL"
 	},
 	{
@@ -3873,6 +3321,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_SWITCHPRESS"
 	},
 	{
@@ -3913,6 +3362,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_BATTERY_S"
 	},
 	{
@@ -3949,6 +3399,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_SWITCHBUTTON"
 	},
 	{
@@ -3985,6 +3436,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_SWITCHPROX"
 	},
 	{
@@ -4025,6 +3477,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_PIPELINE"
 	},
 	{
@@ -4065,6 +3518,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_TRANSISTOR1"
 	},
 	{
@@ -4105,6 +3559,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_TRANSISTOR2"
 	},
 	{
@@ -4149,6 +3604,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_MINIPORTAL"
 	},
 	{
@@ -4193,6 +3649,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/U_MINIPORTAL_CV"
 	},
 	{
@@ -4233,6 +3690,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/BYTEBEATSWITCH"
 	},
 	{
@@ -4277,6 +3735,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/POWERLINE_HIDER"
 	}
 ]

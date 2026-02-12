@@ -18,6 +18,8 @@ import {
   PaperClipIcon,
   ScaleIcon,
   PaperAirplaneIcon,
+  WrenchIcon,
+  RocketLaunchIcon,
 } from '@heroicons/react/24/solid';
 import type { ComponentType, SVGProps } from 'react';
 import { classNames } from '../utils/classNames';
@@ -41,8 +43,10 @@ const navigation: NavigationItem[] = [
   { name: 'Calculator', href: '/calculator/1', icon: CalculatorIcon },
   { name: 'Products', href: '/products/1', icon: ArchiveBoxIcon },
   { name: 'Technology', href: '/technology/1', icon: CogIcon },
+  { name: 'Upgrades', href: '/upgrades/1', icon: WrenchIcon },
+  { name: 'Exocraft', href: '/exocraft/1', icon: RocketLaunchIcon },
   { name: 'Buildings', href: '/buildings/1', icon: HomeModernIcon },
-  { name: 'Corvette Modules', href: '/corvette/1', icon: PaperAirplaneIcon },
+  { name: 'Corvette', href: '/corvette/1', icon: PaperAirplaneIcon },
   { name: 'Fish', href: '/fish/1', icon: ScaleIcon },
   { name: 'Curiosities', href: '/curiosities/1', icon: QuestionMarkCircleIcon },
   { name: 'Other', href: '/other/1', icon: PaperClipIcon },
@@ -55,7 +59,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const renderNavItems = (mobile = false) => (
-    <nav className={`mt-5 ${mobile ? 'space-y-1 px-2' : 'flex-1 space-y-1 bg-black px-2'}`}>
+    <nav className={`mt-3 ${mobile ? 'space-y-1 px-2' : 'flex-1 space-y-1 bg-black px-2'}`}>
       {navigation.map((item) => {
         const Icon = item.icon;
         return (
@@ -66,7 +70,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
               slug && item.href.includes(slug)
                 ? 'bg-blue-500 text-black'
                 : 'text-white hover:bg-blue-500 hover:text-black',
-              'group flex items-center px-2 py-1 text-lg font-medium rounded-md transition-colors'
+              'group flex items-center px-2 py-1 text-base leading-tight font-medium rounded-md transition-colors'
             )}
           >
             <Icon
@@ -74,7 +78,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
                 slug && item.href.includes(slug)
                   ? 'text-black'
                   : 'text-gray-400 group-hover:text-black',
-                'mr-3 flex-shrink-0 h-6 w-6 transition-colors'
+                'mr-2.5 flex-shrink-0 h-5 w-5 transition-colors'
               )}
               aria-hidden="true"
             />
@@ -153,10 +157,10 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-60 lg:flex-col">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-56 lg:flex-col">
           <div className="flex min-h-0 flex-1 flex-col bg-black">
-            <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
-              <div className="flex flex-shrink-0 items-center mb-2 px-4">
+            <div className="flex flex-1 flex-col overflow-y-auto pt-3 pb-3">
+              <div className="flex flex-shrink-0 items-center mb-1 px-3">
                 <img
                   className=" w-auto"
                   src="/images/logo-nms.webp"
@@ -167,7 +171,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 flex-col lg:pl-60">
+        <div className="flex flex-1 flex-col lg:pl-56">
           <div className="sticky top-0 z-10 bg-black p-3 text-right lg:hidden">
             <button
               type="button"

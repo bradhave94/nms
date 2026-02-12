@@ -33,6 +33,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/CASING"
 	},
 	{
@@ -71,6 +72,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/NANOTUBES"
 	},
 	{
@@ -107,6 +109,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/CARBON_SEAL"
 	},
 	{
@@ -147,6 +150,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/MICROCHIP"
 	},
 	{
@@ -191,6 +195,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/HYDRALIC"
 	},
 	{
@@ -235,6 +240,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/COMPUTER"
 	},
 	{
@@ -275,6 +281,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/MAGNET"
 	},
 	{
@@ -319,6 +326,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/MIRROR"
 	},
 	{
@@ -363,6 +371,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIO"
 	},
 	{
@@ -392,6 +401,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/TECH_COMP"
 	},
 	{
@@ -423,6 +433,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/REPAIRKIT"
 	},
 	{
@@ -464,6 +475,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/PRODFUEL2"
 	},
 	{
@@ -504,6 +516,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/POWERCELL"
 	},
 	{
@@ -544,6 +557,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/SHIPCHARGE"
 	},
 	{
@@ -581,6 +595,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/JELLY"
 	},
 	{
@@ -622,52 +637,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/LAUNCHFUEL"
-	},
-	{
-		"Id": "SUBFUEL",
-		"Icon": "SUBFUEL.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.subfuel.dds",
-		"Name": "Hydrothermal Fuel Cell",
-		"Group": "Submarine Reactor Fuel",
-		"Description": "A high thermal energy fuel, contained within a standardised fuel cell. Used to fuel the Humboldt Drive that powers the Nautilon submarine.\n\nCreated with a mix of organic compounds (Carbon and cyto-phosphates) and localised mineral salts.",
-		"BaseValueUnits": 7200,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 4,
-		"Colour": "C01746",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft",
-			"IsEggIngredient"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "WATER1",
-				"Quantity": 40
-			},
-			{
-				"Id": "WATERPLANT",
-				"Quantity": 40
-			},
-			{
-				"Id": "FUEL1",
-				"Quantity": 40
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Uncommon",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Crafting",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": true,
-		"Slug": "products/SUBFUEL"
 	},
 	{
 		"Id": "GRENFUEL1",
@@ -708,6 +679,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/GRENFUEL1"
 	},
 	{
@@ -744,6 +716,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/AMMO"
 	},
 	{
@@ -784,6 +757,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/AM_HOUSING"
 	},
 	{
@@ -825,6 +799,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ANTIMATTER"
 	},
 	{
@@ -865,6 +840,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/HYPERFUEL1"
 	},
 	{
@@ -905,6 +881,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/HYPERFUEL2"
 	},
 	{
@@ -946,6 +923,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ALLOY1"
 	},
 	{
@@ -987,6 +965,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ALLOY2"
 	},
 	{
@@ -1028,6 +1007,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ALLOY3"
 	},
 	{
@@ -1069,6 +1049,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ALLOY4"
 	},
 	{
@@ -1110,6 +1091,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ALLOY5"
 	},
 	{
@@ -1151,6 +1133,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ALLOY6"
 	},
 	{
@@ -1197,6 +1180,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ALLOY7"
 	},
 	{
@@ -1243,6 +1227,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/ALLOY8"
 	},
 	{
@@ -1251,7 +1236,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.hive.dds",
 		"Name": "Sentinel Boundary Map",
 		"Group": "Anomalous Planetary Location Data",
-		"Description": "A strange, shifting map. Though hard to focus upon, this chart appears to show the location of a nearby Sentinel Pillar. Such Sentinel strongholds house many secrets...\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A strange, shifting map. Though hard to focus upon, this chart appears to show the location of a nearby Sentinel Pillar. Such Sentinel strongholds house many secrets...\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 4,
@@ -1272,6 +1257,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/CHART_HIVE"
 	},
 	{
@@ -1312,6 +1298,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FRIGATE_FUEL_1"
 	},
 	{
@@ -1352,6 +1339,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FRIGATE_FUEL_2"
 	},
 	{
@@ -1392,207 +1380,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FRIGATE_FUEL_3"
-	},
-	{
-		"Id": "FRIG_BOOST_TRA",
-		"Icon": "FRIG_BOOST_TRA.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.trade.dds",
-		"Name": "Mind Control Device",
-		"Group": "Consumable Frigate Upgrade",
-		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThe mind control device plugs into the ship's trading and communications systems, allowing the Fleet Commander to gain the upper hand in any negotiation.",
-		"BaseValueUnits": 75000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "0063B7",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MIRROR",
-				"Quantity": 1
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Crafting",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/FRIG_BOOST_TRA"
-	},
-	{
-		"Id": "FRIG_BOOST_EXP",
-		"Icon": "FRIG_BOOST_EXP.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.explore.dds",
-		"Name": "Holographic Analyser",
-		"Group": "Consumable Frigate Upgrade",
-		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThis powerful analytic computer overclocks the existing fleet systems, allowing for faster-than-light calculations. Heat is a problem, and the chips do not last long.",
-		"BaseValueUnits": 75000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "0063B7",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "COMPUTER",
-				"Quantity": 1
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Crafting",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/FRIG_BOOST_EXP"
-	},
-	{
-		"Id": "FRIG_BOOST_MIN",
-		"Icon": "FRIG_BOOST_MIN.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.mining.dds",
-		"Name": "Mineral Compressor",
-		"Group": "Consumable Frigate Upgrade",
-		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThe mineral compressor allows fleet mining crews to liquidise the substances they extract, for both faster processing and easier transportation.",
-		"BaseValueUnits": 75000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "0063B7",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HYDRALIC",
-				"Quantity": 1
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Crafting",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/FRIG_BOOST_MIN"
-	},
-	{
-		"Id": "FRIG_BOOST_COM",
-		"Icon": "FRIG_BOOST_COM.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.combat.dds",
-		"Name": "Explosive Drones",
-		"Group": "Consumable Frigate Upgrade",
-		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThis pack of autonomous explosives have been programmed to launch from the fleet and pilot themselves directly towards hostile vessels. Extremely dangerous.",
-		"BaseValueUnits": 75000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "0063B7",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "WALKER_PROD",
-				"Quantity": 1
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Crafting",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/FRIG_BOOST_COM"
-	},
-	{
-		"Id": "FRIG_BOOST_SPD",
-		"Icon": "FRIG_BOOST_SPD.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.frigboost.speed.dds",
-		"Name": "Fuel Oxidiser",
-		"Group": "Consumable Frigate Upgrade",
-		"Description": "A temporary frigate upgrade that lasts for one expedition.\n\nThis powerful fuel upgrade overloads frigate engines, allowing for faster-than-usual travel.",
-		"BaseValueUnits": 75000,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "0063B7",
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "QUAD_PROD",
-				"Quantity": 2
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "Crafting",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/FRIG_BOOST_SPD"
 	},
 	{
 		"Id": "FARMPROD1",
@@ -1633,6 +1422,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD1"
 	},
 	{
@@ -1674,6 +1464,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD2"
 	},
 	{
@@ -1710,6 +1501,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD3"
 	},
 	{
@@ -1750,6 +1542,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD4"
 	},
 	{
@@ -1790,6 +1583,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD5"
 	},
 	{
@@ -1827,6 +1621,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD6"
 	},
 	{
@@ -1868,6 +1663,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD7"
 	},
 	{
@@ -1909,6 +1705,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD8"
 	},
 	{
@@ -1950,6 +1747,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FARMPROD9"
 	},
 	{
@@ -1992,6 +1790,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/REACTION1"
 	},
 	{
@@ -2034,6 +1833,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/REACTION2"
 	},
 	{
@@ -2076,6 +1876,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/REACTION3"
 	},
 	{
@@ -2117,6 +1918,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/COMPOUND1"
 	},
 	{
@@ -2159,6 +1961,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/COMPOUND2"
 	},
 	{
@@ -2201,6 +2004,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/COMPOUND3"
 	},
 	{
@@ -2243,6 +2047,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "products/COMPOUND4"
 	},
 	{
@@ -2283,6 +2088,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/COMPOUND5"
 	},
 	{
@@ -2323,6 +2129,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/COMPOUND6"
 	},
 	{
@@ -2367,6 +2174,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/ULTRAPROD1"
 	},
 	{
@@ -2411,6 +2219,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/ULTRAPROD2"
 	},
 	{
@@ -2440,6 +2249,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_STEM1"
 	},
 	{
@@ -2469,6 +2279,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_STEM2"
 	},
 	{
@@ -2498,6 +2309,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_STEM3"
 	},
 	{
@@ -2527,6 +2339,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_STEM4"
 	},
 	{
@@ -2556,6 +2369,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_GROWTH1"
 	},
 	{
@@ -2585,6 +2399,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_GROWTH2"
 	},
 	{
@@ -2614,6 +2429,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_GROWTH3"
 	},
 	{
@@ -2643,6 +2459,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_GROWTH4"
 	},
 	{
@@ -2687,6 +2504,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_COMP1"
 	},
 	{
@@ -2731,6 +2549,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_COMP2"
 	},
 	{
@@ -2775,6 +2594,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_COMP3"
 	},
 	{
@@ -2815,6 +2635,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_COMP4"
 	},
 	{
@@ -2846,6 +2667,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_COMP5"
 	},
 	{
@@ -2877,6 +2699,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_COMP5_0"
 	},
 	{
@@ -2908,6 +2731,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_COMP5_1"
 	},
 	{
@@ -2939,6 +2763,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BIOSHIP_COMP5_2"
 	},
 	{
@@ -2968,6 +2793,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/EXOTIC_BIOPROD"
 	},
 	{
@@ -2997,6 +2823,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/DRONE_BROKEN"
 	},
 	{
@@ -3026,6 +2853,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/DRONE_PART_E2"
 	},
 	{
@@ -3055,6 +2883,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/DRONE_PART_E3"
 	},
 	{
@@ -3084,6 +2913,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/DRONE_PART_P"
 	},
 	{
@@ -3092,7 +2922,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.gaspoi.dds",
 		"Name": "Deep-space Lure",
 		"Group": "Anomaly Attraction Device",
-		"Description": "A single-use device for locating a deep-space Gaseous Sentience. The lure generates an electromagnetic field of an intriguing nature to these highly advanced lifeforms.\n\nSelect the Lure and use Generate Field (FE_ALT1) to begin the location process.",
+		"Description": "A single-use device for locating a deep-space Gaseous Sentience. The lure generates an electromagnetic field of an intriguing nature to these highly advanced lifeforms.\n\nSelect the Lure and use Generate Field ([E]) to begin the location process.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3128,239 +2958,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/GAS_BRAIN_LOC"
-	},
-	{
-		"Id": "U_CANNON2",
-		"Icon": "U_CANNON2.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.cannon.dds",
-		"Name": "Neutron Cannon Module",
-		"Group": "Significant Neutron Cannon Upgrade",
-		"Description": "A significant upgrade for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
-		"BaseValueUnits": 140,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/U_CANNON2"
-	},
-	{
-		"Id": "U_CANNON3",
-		"Icon": "U_CANNON3.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.cannon.dds",
-		"Name": "Neutron Cannon Module",
-		"Group": "Powerful Neutron Cannon Upgrade",
-		"Description": "An extremely powerful upgrade for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
-		"BaseValueUnits": 300,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/U_CANNON3"
-	},
-	{
-		"Id": "U_CANNON4",
-		"Icon": "U_CANNON4.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.cannon.dds",
-		"Name": "Neutron Cannon Module",
-		"Group": "Supreme Neutron Cannon Upgrade",
-		"Description": "A supremely powerful upgrade for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
-		"BaseValueUnits": 480,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/U_CANNON4"
-	},
-	{
-		"Id": "U_CANNONX",
-		"Icon": "U_CANNONX.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.x.cannon.dds",
-		"Name": "Suspicious Neutron Cannon Module",
-		"Group": "Banned Neutron Cannon Upgrade",
-		"Description": "A black-market modification for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
-		"BaseValueUnits": 320,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/U_CANNONX"
-	},
-	{
-		"Id": "U_FR_HYP1",
-		"Icon": "U_FR_HYP1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.hyperdrive.dds",
-		"Name": "Salvaged Hyperdrive Upgrade",
-		"Group": "C-Class Deployable Salvage",
-		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve its Hyperdrive.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/U_FR_HYP1"
-	},
-	{
-		"Id": "U_FR_HYP2",
-		"Icon": "U_FR_HYP2.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.b.hyperdrive.dds",
-		"Name": "Salvaged Hyperdrive Upgrade",
-		"Group": "B-Class Deployable Salvage",
-		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve its Hyperdrive.",
-		"BaseValueUnits": 140,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/U_FR_HYP2"
-	},
-	{
-		"Id": "U_FR_HYP3",
-		"Icon": "U_FR_HYP3.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.a.hyperdrive.dds",
-		"Name": "Salvaged Hyperdrive Upgrade",
-		"Group": "A-Class Deployable Salvage",
-		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve its Hyperdrive.",
-		"BaseValueUnits": 300,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/U_FR_HYP3"
-	},
-	{
-		"Id": "U_FR_HYP4",
-		"Icon": "U_FR_HYP4.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.s.hyperdrive.dds",
-		"Name": "Salvaged Hyperdrive Upgrade",
-		"Group": "S-Class Deployable Salvage",
-		"Description": "A deployable freighter upgrade, salvaged from %NAME%.\n\nCan be re-deployed into your own capital ship to improve its Hyperdrive.",
-		"BaseValueUnits": 480,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "products/U_FR_HYP4"
 	},
 	{
 		"Id": "U_FR_SPE1",
@@ -3389,6 +2988,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRSPE1",
 		"Slug": "products/U_FR_SPE1"
 	},
 	{
@@ -3418,6 +3018,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRSPE2",
 		"Slug": "products/U_FR_SPE2"
 	},
 	{
@@ -3447,6 +3048,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRSPE3",
 		"Slug": "products/U_FR_SPE3"
 	},
 	{
@@ -3476,6 +3078,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRSPE4",
 		"Slug": "products/U_FR_SPE4"
 	},
 	{
@@ -3505,6 +3108,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRFUE1",
 		"Slug": "products/U_FR_FUEL1"
 	},
 	{
@@ -3534,6 +3138,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRFUE2",
 		"Slug": "products/U_FR_FUEL2"
 	},
 	{
@@ -3563,6 +3168,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRFUE3",
 		"Slug": "products/U_FR_FUEL3"
 	},
 	{
@@ -3592,6 +3198,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRFUE4",
 		"Slug": "products/U_FR_FUEL4"
 	},
 	{
@@ -3621,6 +3228,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRCOM1",
 		"Slug": "products/U_FR_COM1"
 	},
 	{
@@ -3650,6 +3258,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRCOM2",
 		"Slug": "products/U_FR_COM2"
 	},
 	{
@@ -3679,6 +3288,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRCOM3",
 		"Slug": "products/U_FR_COM3"
 	},
 	{
@@ -3708,6 +3318,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRCOM4",
 		"Slug": "products/U_FR_COM4"
 	},
 	{
@@ -3737,6 +3348,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRTRA1",
 		"Slug": "products/U_FR_TRA1"
 	},
 	{
@@ -3766,6 +3378,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRTRA2",
 		"Slug": "products/U_FR_TRA2"
 	},
 	{
@@ -3795,6 +3408,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRTRA3",
 		"Slug": "products/U_FR_TRA3"
 	},
 	{
@@ -3824,6 +3438,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRTRA4",
 		"Slug": "products/U_FR_TRA4"
 	},
 	{
@@ -3853,6 +3468,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FREXP1",
 		"Slug": "products/U_FR_EXP1"
 	},
 	{
@@ -3882,6 +3498,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FREXP2",
 		"Slug": "products/U_FR_EXP2"
 	},
 	{
@@ -3911,6 +3528,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FREXP3",
 		"Slug": "products/U_FR_EXP3"
 	},
 	{
@@ -3940,6 +3558,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FREXP4",
 		"Slug": "products/U_FR_EXP4"
 	},
 	{
@@ -3969,6 +3588,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRMIN1",
 		"Slug": "products/U_FR_MINE1"
 	},
 	{
@@ -3998,6 +3618,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRMIN2",
 		"Slug": "products/U_FR_MINE2"
 	},
 	{
@@ -4027,6 +3648,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRMIN3",
 		"Slug": "products/U_FR_MINE3"
 	},
 	{
@@ -4056,6 +3678,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "UP_FRMIN4",
 		"Slug": "products/U_FR_MINE4"
 	},
 	{
@@ -4064,7 +3687,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/proctech/techbox.laser.dds",
 		"Name": "Pre-packaged %name% Unit",
 		"Group": "Installable Technology Package",
-		"Description": "A pre-built wiring package, designed to allow easy installation of core technology. Use FE_ALT1 to begin the installation process.\n\n%TECH_DESC%",
+		"Description": "A pre-built wiring package, designed to allow easy installation of core technology. Use [E] to begin the installation process.\n\n%TECH_DESC%",
 		"BaseValueUnits": 480,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 1,
@@ -4085,6 +3708,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": "STRONGLASER",
 		"Slug": "products/U_TECHBOX_CORE"
 	},
 	{
@@ -4114,6 +3738,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/FUELPROD3"
 	},
 	{
@@ -4143,6 +3768,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/LANDPROD3"
 	},
 	{
@@ -4172,6 +3798,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/CAVEPROD3"
 	},
 	{
@@ -4201,6 +3828,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/WATERPROD3"
 	},
 	{
@@ -4230,6 +3858,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/CATAPROD3"
 	},
 	{
@@ -4259,6 +3888,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/OXYPROD3"
 	},
 	{
@@ -4288,6 +3918,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/OXY_CRAFT"
 	},
 	{
@@ -4317,6 +3948,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/WATER_CRAFT"
 	},
 	{
@@ -4346,6 +3978,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/CAVE_CRAFT"
 	},
 	{
@@ -4375,6 +4008,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/CATA_CRAFT"
 	},
 	{
@@ -4404,6 +4038,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/PRODFUEL1"
 	},
 	{
@@ -4433,6 +4068,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/POWERCELL2"
 	},
 	{
@@ -4441,7 +4077,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.gaspoi.dds",
 		"Name": "Deep-space Lure",
 		"Group": "Anomaly Attraction Device",
-		"Description": "A single-use device for locating a deep-space Gaseous Sentience. The lure generates an electromagnetic field of an intriguing nature to these highly advanced lifeforms.\n\nSelect the Lure and use Generate Field (FE_ALT1) to begin the location process.",
+		"Description": "A single-use device for locating a deep-space Gaseous Sentience. The lure generates an electromagnetic field of an intriguing nature to these highly advanced lifeforms.\n\nSelect the Lure and use Generate Field ([E]) to begin the location process.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4463,7 +4099,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.hive.dds",
 		"Name": "Sentinel Boundary Map",
 		"Group": "Anomalous Planetary Location Data",
-		"Description": "A strange, shifting map. Though hard to focus upon, this chart appears to show the location of a nearby Sentinel Pillar. Such Sentinel strongholds house many secrets...\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A strange, shifting map. Though hard to focus upon, this chart appears to show the location of a nearby Sentinel Pillar. Such Sentinel strongholds house many secrets...\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 4,
@@ -4517,6 +4153,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/TOXICPLANT"
 	},
 	{
@@ -4557,6 +4194,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/SNOWPLANT"
 	},
 	{
@@ -4597,6 +4235,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/RADIOPLANT"
 	},
 	{
@@ -4637,6 +4276,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/BARRENPLANT"
 	},
 	{
@@ -4677,6 +4317,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/LUSHPLANT"
 	},
 	{
@@ -4717,6 +4358,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/SCORCHEDPLANT"
 	},
 	{
@@ -4753,6 +4395,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/CREATUREPLANT"
 	},
 	{
@@ -4789,6 +4432,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/POOPPLANT"
 	},
 	{
@@ -4833,6 +4477,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/GRAVPLANT"
 	},
 	{
@@ -4873,6 +4518,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/SACVENOMPLANT"
 	},
 	{
@@ -4913,6 +4559,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/PEARLPLANT"
 	},
 	{
@@ -4953,6 +4600,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "products/NIPPLANT"
 	}
 ]

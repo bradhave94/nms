@@ -1,13 +1,13 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
+import CompactCard from '@components/CompactCard.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Fish.json';
 import Pagination from '@components/Pagination.astro';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	return paginate(sort(data as Item[]), { pageSize: 24 });
+	return paginate(sort(data as Item[]), { pageSize: 78 });
 }
 // All paginated data is passed on the "page" prop
 interface PageProps {
@@ -30,17 +30,14 @@ const { page } = Astro.props as PageProps;
 	slug="fish"
 >
 	<h1 class="text-center text-4xl sm:text-6xl mt-2 mb-8">Fish</h1>
-	<div id="items" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
 			page.data.map((item, index) => (
-				<Card
+				<CompactCard
 					card={{
 						name: item.Name,
-						description: item.Description,
-						button: 'View Item',
 						image: 'https://nomansskyrecipes.com/images/items/' + item.Icon,
 						link: getSlug(item),
-						value: item.BaseValueUnits,
 					}}
 					index={index}
 				/>

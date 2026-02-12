@@ -1,0 +1,22 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Page from '@layouts/Page.astro';
+import type { Item } from '@utils/lookup.js';
+import data from '@datav2/Upgrades.json';
+
+export async function getStaticPaths() {
+	return data.map((upgrade) => ({
+		params: { id: upgrade.Id.toString() },
+		props: { item: upgrade },
+	}));
+}
+
+const { item } = Astro.props;
+
+const title = `${item.Name} | No Man's Sky Recipes`;
+const description = `${item.Name} | ${item.Description}`;
+---
+
+<Layout {title} {description} slug="upgrades">
+	<Page item={item as Item} />
+</Layout>

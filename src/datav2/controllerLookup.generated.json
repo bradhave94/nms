@@ -1,0 +1,82 @@
+{
+  "Win": [
+    {
+      "Key": "FE_ALT1",
+      "Icon": "KEYBOARD/INTERACT.E.png",
+      "ActionPath": "/actions/FRONTEND/in/menu_transfer",
+      "Label": "Quick Transfer"
+    },
+    {
+      "Key": "FE_BACK",
+      "Icon": "",
+      "ActionPath": "/actions/FRONTEND/in/back",
+      "Label": "Back"
+    },
+    {
+      "Key": "FE_SELECT",
+      "Icon": "MOUSE/KEY.MOUSELEFT.png",
+      "ActionPath": "/actions/FRONTEND/in/select",
+      "Label": "Confirm (Menus)"
+    }
+  ],
+  "Psn": [
+    {
+      "Key": "FE_ALT1",
+      "Icon": "DS4/PS.WHITE.SQUARE.png",
+      "ActionPath": "/actions/FRONTEND/in/menu_transfer",
+      "Label": "Quick Transfer"
+    },
+    {
+      "Key": "FE_BACK",
+      "Icon": "",
+      "ActionPath": "/actions/FRONTEND/in/back",
+      "Label": "Back"
+    },
+    {
+      "Key": "FE_SELECT",
+      "Icon": "DS4/PS.WHITE.CROSS.png",
+      "ActionPath": "/actions/FRONTEND/in/select",
+      "Label": "Confirm (Menus)"
+    }
+  ],
+  "Xbx": [
+    {
+      "Key": "FE_ALT1",
+      "Icon": "XBOX/XBOX.WHITE.X.png",
+      "ActionPath": "/actions/FRONTEND/in/menu_transfer",
+      "Label": "Quick Transfer"
+    },
+    {
+      "Key": "FE_BACK",
+      "Icon": "",
+      "ActionPath": "/actions/FRONTEND/in/back",
+      "Label": "Back"
+    },
+    {
+      "Key": "FE_SELECT",
+      "Icon": "XBOX/XBOX.WHITE.A.png",
+      "ActionPath": "/actions/FRONTEND/in/select",
+      "Label": "Confirm (Menus)"
+    }
+  ],
+  "Nsw": [
+    {
+      "Key": "FE_ALT1",
+      "Icon": "SWITCH/SWITCH.WHITE.X.png",
+      "ActionPath": "/actions/FRONTEND/in/menu_transfer",
+      "Label": "Quick Transfer"
+    },
+    {
+      "Key": "FE_BACK",
+      "Icon": "",
+      "ActionPath": "/actions/FRONTEND/in/back",
+      "Label": "Back"
+    },
+    {
+      "Key": "FE_SELECT",
+      "Icon": "SWITCH/SWITCH.WHITE.A.png",
+      "ActionPath": "/actions/FRONTEND/in/select",
+      "Label": "Confirm (Menus)"
+    }
+  ]
+}

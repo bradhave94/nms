@@ -1,10 +1,10 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import CompactCard from '@components/CompactCard.astro';
+import Pagination from '@components/Pagination.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
-import data from '@datav2/Curiosities.json';
-import Pagination from '@components/Pagination.astro';
+import data from '@datav2/Exocraft.json';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
 	return paginate(sort(data as Item[]), { pageSize: 78 });
@@ -25,11 +25,11 @@ const { page } = Astro.props as PageProps;
 ---
 
 <Layout
-	title="Curiosities | No Man's Sky Recipes"
-	description="A list of curiosities for No Man's Sky. Our guide has everything you need to take your game to the next level."
-	slug="curiosities"
+	title="Exocraft | No Man's Sky Recipes"
+	description="A list of exocraft items for No Man's Sky. Our guide has everything you need to take your game to the next level."
+	slug="exocraft"
 >
-	<h1 class="text-center text-4xl sm:text-6xl mt-2 mb-8">Curiosities</h1>
+	<h1 class="text-center text-4xl sm:text-6xl mt-2 mb-8">Exocraft</h1>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
 			page.data.map((item, index) => (
@@ -44,6 +44,5 @@ const { page } = Astro.props as PageProps;
 			))
 		}
 	</div>
-
 	<Pagination page={page} />
 </Layout>

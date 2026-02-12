@@ -5,7 +5,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.sentinelloot.dds",
 		"Name": "Salvaged Glass",
 		"Group": "Recovered Sentinel Components",
-		"Description": "A sinister shard of purple glass, salvaged from the destroyed remains of Sentinel machinery. Its walls are thin, and it may be broken down to access valuable Sentinel components.\n\nSelect in the Inventory (INVENTORY) and shatter with FE_ALT1.",
+		"Description": "A sinister shard of purple glass, salvaged from the destroyed remains of Sentinel machinery. Its walls are thin, and it may be broken down to access valuable Sentinel components.\n\nSelect in the Inventory (INVENTORY) and shatter with [E].",
 		"BaseValueUnits": 3000,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 1,
@@ -26,6 +26,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/SENTINEL_LOOT"
 	},
 	{
@@ -55,6 +56,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/QUAD_PROD"
 	},
 	{
@@ -86,6 +88,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/SPIDER_PROD"
 	},
 	{
@@ -117,6 +120,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/MECH_PROD"
 	},
 	{
@@ -148,6 +152,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/WALKER_PROD"
 	},
 	{
@@ -179,6 +184,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/QUEEN_PROD"
 	},
 	{
@@ -208,6 +214,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/PIRATE_PROD"
 	},
 	{
@@ -237,6 +244,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/DEEPSEA_PROD"
 	},
 	{
@@ -268,6 +276,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/SHIPBRAIN"
 	},
 	{
@@ -276,7 +285,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.freightercore.dds",
 		"Name": "Carrier Ai Fragment",
 		"Group": "Battleship Core Remnant",
-		"Description": "A single splinter of the colossal mainframe at the heart of a Sentinel capital ship. It blinks, its solitary living eye trained upon the one piece of data it retains - the last known location of one of its fleet of Interceptors.\n\nSelect the AI Fragment and use Search Archive (FE_ALT1) to translate information about Interceptor's crash site to your starship's navigation systems.",
+		"Description": "A single splinter of the colossal mainframe at the heart of a Sentinel capital ship. It blinks, its solitary living eye trained upon the one piece of data it retains - the last known location of one of its fleet of Interceptors.\n\nSelect the AI Fragment and use Search Archive ([E]) to translate information about Interceptor's crash site to your starship's navigation systems.",
 		"BaseValueUnits": 35000,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 1,
@@ -299,6 +308,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/SENTFREI_PROD"
 	},
 	{
@@ -330,6 +340,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/DRONE_SALVAGE"
 	},
 	{
@@ -361,6 +372,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/DRONE_SHARD"
 	},
 	{
@@ -369,7 +381,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.dds",
 		"Name": "Geode",
 		"Group": "Valuable Mineral Deposit",
-		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -392,6 +404,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/GEODE_LAND"
 	},
 	{
@@ -400,7 +413,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.dds",
 		"Name": "Geode",
 		"Group": "Valuable Mineral Deposit",
-		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -423,6 +436,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/GEODE_CAVE"
 	},
 	{
@@ -431,7 +445,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.crystal.dds",
 		"Name": "Crystal Fragment",
 		"Group": "Concentrated Element Shard",
-		"Description": "A crystalline shard with an unusually dense structure. Potentially highly valuable.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "A crystalline shard with an unusually dense structure. Potentially highly valuable.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -454,6 +468,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/GEODE_CRYSTAL"
 	},
 	{
@@ -462,7 +477,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.space.dds",
 		"Name": "Tritium Hypercluster",
 		"Group": "Energetic Fragment",
-		"Description": "A shard of pure crystalised Tritium.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "A shard of pure crystalised Tritium.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -485,6 +500,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/GEODE_SPACE"
 	},
 	{
@@ -493,7 +509,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.asteroid.dds",
 		"Name": "Gold Nugget",
 		"Group": "Valuable Ore",
-		"Description": "A highly valuable ore chunk, ready to be processed into Gold.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "A highly valuable ore chunk, ready to be processed into Gold.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -516,6 +532,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/GEODE_ASTEROID"
 	},
 	{
@@ -524,7 +541,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.waterprod.dds",
 		"Name": "Glowing Mineral",
 		"Group": "Valuable Rock Sample",
-		"Description": "Though its surface is dirtied and dull, polishing this rock reveals a deep inner glow, a glitter beneath a subtly iridescent surface.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "Though its surface is dirtied and dull, polishing this rock reveals a deep inner glow, a glitter beneath a subtly iridescent surface.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -547,6 +564,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/GEODE_RARE"
 	},
 	{
@@ -555,7 +573,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.goods.dds",
 		"Name": "Suspicious Packet (goods)",
 		"Group": "Contraband",
-		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of technology.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
+		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of technology.\n\nSelect in the Inventory (INVENTORY) and use [E] to examine the contents. No refunds.",
 		"BaseValueUnits": 150,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -576,6 +594,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/SCRAP_GOODS"
 	},
 	{
@@ -584,7 +603,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.tech.dds",
 		"Name": "Suspicious Packet (tech)",
 		"Group": "Contraband",
-		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of high-value or interesting item.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
+		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of high-value or interesting item.\n\nSelect in the Inventory (INVENTORY) and use [E] to examine the contents. No refunds.",
 		"BaseValueUnits": 200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -605,6 +624,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/SCRAP_TECH"
 	},
 	{
@@ -613,7 +633,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.weapon.dds",
 		"Name": "Suspicious Packet (arms)",
 		"Group": "Contraband",
-		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of weapon-based technology.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
+		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of weapon-based technology.\n\nSelect in the Inventory (INVENTORY) and use [E] to examine the contents. No refunds.",
 		"BaseValueUnits": 350,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -634,6 +654,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/SCRAP_WEAP"
 	},
 	{
@@ -642,7 +663,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.poi.dds",
 		"Name": "Anomaly Detector",
 		"Group": "Anomalous Homing Device",
-		"Description": "A single-use geometric beacon that probes the surrounding area for near-space anomalies. Such objects are highly unpredictable.\n\nSelect the Detector and use Begin Scan (FE_ALT1) to begin the location process.",
+		"Description": "A single-use geometric beacon that probes the surrounding area for near-space anomalies. Such objects are highly unpredictable.\n\nSelect the Detector and use Begin Scan ([E]) to begin the location process.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -663,6 +684,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/POI_LOCATOR"
 	},
 	{
@@ -671,7 +693,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
 		"Name": "Emergency Signal Scanner",
 		"Group": "Coordinate Data",
-		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal (FE_ALT1) to begin the location process.",
+		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal ([E]) to begin the location process.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -692,6 +714,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ABAND_LOCATOR"
 	},
 	{
@@ -700,7 +723,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
 		"Name": "Emergency Signal Scanner (active)",
 		"Group": "Coordinate Data",
-		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal (FE_ALT1) to begin the location process.",
+		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal ([E]) to begin the location process.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -721,6 +744,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ABAND_LOCATOR_X"
 	},
 	{
@@ -752,6 +776,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/STONE_EYE_PROD"
 	},
 	{
@@ -784,6 +809,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/SACVENOM"
 	},
 	{
@@ -816,6 +842,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/GRAVBALL"
 	},
 	{
@@ -848,6 +875,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/ALBUMENPEARL"
 	},
 	{
@@ -879,6 +907,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/CAVECUBE"
 	},
 	{
@@ -912,6 +941,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/FIENDCORE"
 	},
 	{
@@ -944,6 +974,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/STORM_CRYSTAL"
 	},
 	{
@@ -975,6 +1006,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/CLAMPEARL"
 	},
 	{
@@ -1007,6 +1039,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/VENTGEM"
 	},
 	{
@@ -1040,6 +1073,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/FISHCORE"
 	},
 	{
@@ -1072,6 +1106,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/EYEBALL"
 	},
 	{
@@ -1080,7 +1115,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.robotcamp.dds",
 		"Name": "Echo Locator",
 		"Group": "Harmonic Location Tracker",
-		"Description": "A curious mesh of old and new technology, a hybrid between two entirely separate methods of creation. Nonetheless, this location tracing device appears fully functional.\n\nSelect this device and use Resonate (FE_ALT1) to trace its harmonic origin.",
+		"Description": "A curious mesh of old and new technology, a hybrid between two entirely separate methods of creation. Nonetheless, this location tracing device appears fully functional.\n\nSelect this device and use Resonate ([E]) to trace its harmonic origin.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 4,
@@ -1101,6 +1136,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/CHART_ROBOT"
 	},
 	{
@@ -1109,7 +1145,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.settlementbuilders.dds",
 		"Name": "Autophage Settlement Chart",
 		"Group": "Harmonic Planetary Chart",
-		"Description": "A map showing the location of a nearby Autophage planetary settlement, acquired from an Autophage Synthesis Terminal.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map showing the location of a nearby Autophage planetary settlement, acquired from an Autophage Synthesis Terminal.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 1499,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 4,
@@ -1130,6 +1166,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/CHART_BUI_SETTL"
 	},
 	{
@@ -1159,6 +1196,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ARTIFACT_KEY"
 	},
 	{
@@ -1188,6 +1226,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/TRIDENT_KEY"
 	},
 	{
@@ -1217,6 +1256,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/WAR_CURIO3"
 	},
 	{
@@ -1246,6 +1286,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/EXP_CURIO3"
 	},
 	{
@@ -1275,6 +1316,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/STATION_KEY"
 	},
 	{
@@ -1304,6 +1346,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/REP_TOKEN"
 	},
 	{
@@ -1348,6 +1391,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MIND_ARC"
 	},
 	{
@@ -1392,6 +1436,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/SOUL_ENGINE"
 	},
 	{
@@ -1421,6 +1466,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/TRA_CURIO1"
 	},
 	{
@@ -1453,6 +1499,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/TRA_CURIO2"
 	},
 	{
@@ -1485,6 +1532,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/NIPNIPBUDS"
 	},
 	{
@@ -1514,6 +1562,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/WAR_CURIO1"
 	},
 	{
@@ -1543,6 +1592,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/WAR_CURIO2"
 	},
 	{
@@ -1572,6 +1622,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/EXP_CURIO1"
 	},
 	{
@@ -1601,6 +1652,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/EXP_CURIO2"
 	},
 	{
@@ -1641,6 +1693,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MEGAPROD1"
 	},
 	{
@@ -1681,6 +1734,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MEGAPROD2"
 	},
 	{
@@ -1721,6 +1775,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MEGAPROD3"
 	},
 	{
@@ -1750,6 +1805,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_STONE"
 	},
 	{
@@ -1786,6 +1842,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_1"
 	},
 	{
@@ -1826,6 +1883,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_2"
 	},
 	{
@@ -1866,6 +1924,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_3"
 	},
 	{
@@ -1906,6 +1965,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_4"
 	},
 	{
@@ -1946,6 +2006,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_5"
 	},
 	{
@@ -1986,6 +2047,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_6"
 	},
 	{
@@ -2026,6 +2088,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_7"
 	},
 	{
@@ -2066,6 +2129,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_8"
 	},
 	{
@@ -2106,6 +2170,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_9"
 	},
 	{
@@ -2146,6 +2211,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/ATLAS_SEED_10"
 	},
 	{
@@ -2177,6 +2243,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/HEXCORE"
 	},
 	{
@@ -2185,7 +2252,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.1.dds",
 		"Name": "Mealworms",
 		"Group": "Fishing Bait",
-		"Description": "A piece of specialist bait, designed to improve the size and rarity of your catch.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
+		"Description": "A piece of specialist bait, designed to improve the size and rarity of your catch.\n\nLocate your Fishing Rig and begin bait application with [E].",
 		"BaseValueUnits": 16,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 50,
@@ -2214,6 +2281,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/FISHBAIT_1"
 	},
 	{
@@ -2222,7 +2290,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.2.dds",
 		"Name": "Spicy Chum",
 		"Group": "Fishing Bait",
-		"Description": "A piece of specialist bait, designed to greatly improve the size and rarity of your catch.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
+		"Description": "A piece of specialist bait, designed to greatly improve the size and rarity of your catch.\n\nLocate your Fishing Rig and begin bait application with [E].",
 		"BaseValueUnits": 160,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 50,
@@ -2259,6 +2327,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/FISHBAIT_2"
 	},
 	{
@@ -2267,7 +2336,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.3.dds",
 		"Name": "Bionic Lure",
 		"Group": "Fishing Bait",
-		"Description": "A specialist lure, designed to vastly improve the size and rarity of your catch. Of particular interest to anglers seeking legendary fish.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
+		"Description": "A specialist lure, designed to vastly improve the size and rarity of your catch. Of particular interest to anglers seeking legendary fish.\n\nLocate your Fishing Rig and begin bait application with [E].",
 		"BaseValueUnits": 450,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 50,
@@ -2304,6 +2373,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/FISHBAIT_3"
 	},
 	{
@@ -2312,7 +2382,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.day.dds",
 		"Name": "Dangling Orb",
 		"Group": "Fishing Bait",
-		"Description": "A specialist lure, designed to attract diurnal fish.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
+		"Description": "A specialist lure, designed to attract diurnal fish.\n\nLocate your Fishing Rig and begin bait application with [E].",
 		"BaseValueUnits": 550,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 50,
@@ -2349,6 +2419,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/FISHBAIT_DAY"
 	},
 	{
@@ -2357,7 +2428,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.night.dds",
 		"Name": "Shadow Lure",
 		"Group": "Fishing Bait",
-		"Description": "A specialist lure, designed to attract nocturnal fish.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
+		"Description": "A specialist lure, designed to attract nocturnal fish.\n\nLocate your Fishing Rig and begin bait application with [E].",
 		"BaseValueUnits": 550,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 50,
@@ -2394,6 +2465,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/FISHBAIT_NIGHT"
 	},
 	{
@@ -2402,7 +2474,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/product.fishbait.storm.dds",
 		"Name": "Magpulse Lure",
 		"Group": "Fishing Bait",
-		"Description": "A specialist lure, designed to attract fish that are only active during storms.\n\nLocate your Fishing Rig and begin bait application with FE_ALT1.",
+		"Description": "A specialist lure, designed to attract fish that are only active during storms.\n\nLocate your Fishing Rig and begin bait application with [E].",
 		"BaseValueUnits": 550,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 50,
@@ -2439,6 +2511,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/FISHBAIT_STORM"
 	},
 	{
@@ -2468,6 +2541,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/BONE_TEMP"
 	},
 	{
@@ -2497,6 +2571,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/WORMBOOK"
 	},
 	{
@@ -2530,6 +2605,7 @@
 		"CookingIngredient": true,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/WORMCORE"
 	},
 	{
@@ -2559,6 +2635,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/WORMPROD"
 	},
 	{
@@ -2603,6 +2680,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/PIRATE_MAPWHOLE"
 	},
 	{
@@ -2643,7 +2721,53 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/WHALE_BEACON"
+	},
+	{
+		"Id": "S8_BEACON",
+		"Icon": "S8_BEACON.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.roguefinder.dds",
+		"Name": "Homeworld Repeater",
+		"Group": "A Last Link Home",
+		"Description": "A makeshift device, cobbled from salvaged electronic components kept in deep storage for many years. This jumble of wires will attempt to make contact with the last-known remnants of the freighter's homeworld.\n\nSelect the device and select Broadcast ([E]) to begin the location process.",
+		"BaseValueUnits": 16,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "311A49",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "HYDRALIC",
+				"Quantity": 1
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 20
+			},
+			{
+				"Id": "LAND3",
+				"Quantity": 60
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"Slug": "curiosities/S8_BEACON"
 	},
 	{
 		"Id": "BIOSHIP_EGG1",
@@ -2672,6 +2796,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/BIOSHIP_EGG1"
 	},
 	{
@@ -2701,6 +2826,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/BIOSHIP_EGG2"
 	},
 	{
@@ -2730,6 +2856,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/BIOSHIP_EGG3"
 	},
 	{
@@ -2759,6 +2886,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/BIOSHIP_EGG4"
 	},
 	{
@@ -2788,6 +2916,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/BIOSHIP_EGG5"
 	},
 	{
@@ -2817,6 +2946,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART1"
 	},
 	{
@@ -2846,6 +2976,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART1B"
 	},
 	{
@@ -2875,6 +3006,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART1C"
 	},
 	{
@@ -2904,6 +3036,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART2"
 	},
 	{
@@ -2933,6 +3066,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART2B"
 	},
 	{
@@ -2962,6 +3096,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART2C"
 	},
 	{
@@ -2991,6 +3126,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART3"
 	},
 	{
@@ -3020,6 +3156,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART3B"
 	},
 	{
@@ -3049,6 +3186,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/MP_REP_PART3C"
 	},
 	{
@@ -3057,7 +3195,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.dronefriend.dds",
 		"Name": "Sentinel Flare (off)",
 		"Group": "Sentinel Communicator",
-		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Activate Flare (FE_ALT1) to signal [The Drone].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
+		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Activate Flare ([E]) to signal [The Drone].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
 		"BaseValueUnits": 16,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3078,6 +3216,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/DRONE_FRIEND"
 	},
 	{
@@ -3086,7 +3225,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.dronefriendx.dds",
 		"Name": "Sentinel Flare",
 		"Group": "Sentinel Communicator",
-		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Deactivate Broadcast (FE_ALT1) to stop signalling [ The Sentry ].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
+		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Deactivate Broadcast ([E]) to stop signalling [ The Sentry ].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
 		"BaseValueUnits": 16,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3107,6 +3246,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/DRONE_FRIEND_X"
 	},
 	{
@@ -3138,6 +3278,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/WALKER_PROD_2"
 	},
 	{
@@ -3169,6 +3310,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/WALKER_PROD_3"
 	},
 	{
@@ -3200,6 +3342,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/WALKER_PROD_4"
 	},
 	{
@@ -3208,7 +3351,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Beta",
 		"Group": "Utopia Foundation Supply Cache",
-		"Description": "To support the workers bravely terraforming the lava-filled wastes of planet Pehaelump, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
+		"Description": "To support the workers bravely terraforming the lava-filled wastes of planet Pehaelump, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package ([E]) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3229,6 +3372,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_PACK1"
 	},
 	{
@@ -3237,7 +3381,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Gamma",
 		"Group": "Utopia Foundation Supply Cache",
-		"Description": "To support the workers valiantly toiling on the steep, exposed mountains of planet New Sesto, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
+		"Description": "To support the workers valiantly toiling on the steep, exposed mountains of planet New Sesto, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package ([E]) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3258,6 +3402,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_PACK2"
 	},
 	{
@@ -3266,7 +3411,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Delta",
 		"Group": "Utopia Foundation Supply Cache",
-		"Description": "To support the surviving workers who now confront the [ REDACTED ] of planet Idalth XIV, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
+		"Description": "To support the surviving workers who now confront the [ REDACTED ] of planet Idalth XIV, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package ([E]) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3287,6 +3432,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_PACK3"
 	},
 	{
@@ -3295,7 +3441,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Epsilon",
 		"Group": "Utopia Foundation Supply Cache",
-		"Description": "To support the workers who so nobly rebuild in the sucking quagmires of planet Endil A8, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
+		"Description": "To support the workers who so nobly rebuild in the sucking quagmires of planet Endil A8, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package ([E]) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3316,6 +3462,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_PACK4"
 	},
 	{
@@ -3324,7 +3471,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Beta",
 		"Group": "Utopia Foundation Settlement Chart",
-		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3345,6 +3492,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_MAP1"
 	},
 	{
@@ -3353,7 +3501,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Gamma",
 		"Group": "Utopia Foundation Settlement Chart",
-		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3374,6 +3522,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_MAP2"
 	},
 	{
@@ -3382,7 +3531,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Delta",
 		"Group": "Utopia Foundation Settlement Chart",
-		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3403,6 +3552,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_MAP3"
 	},
 	{
@@ -3411,7 +3561,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Epsilon",
 		"Group": "Utopia Foundation Settlement Chart",
-		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3432,6 +3582,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_MAP4"
 	},
 	{
@@ -3461,6 +3612,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/S9_MYSTERY_ITEM"
 	},
 	{
@@ -3490,6 +3642,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_PAINT"
 	},
 	{
@@ -3519,6 +3672,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_RED"
 	},
 	{
@@ -3548,6 +3702,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_ORANGE"
 	},
 	{
@@ -3577,6 +3732,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_YELLOW"
 	},
 	{
@@ -3606,6 +3762,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_GREEN"
 	},
 	{
@@ -3635,6 +3792,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_CYAN"
 	},
 	{
@@ -3664,6 +3822,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_BLUE"
 	},
 	{
@@ -3693,6 +3852,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_PURPLE"
 	},
 	{
@@ -3722,6 +3882,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_PINK"
 	},
 	{
@@ -3751,6 +3912,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_WHITE"
 	},
 	{
@@ -3780,6 +3942,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/FREIGHT_BLACK"
 	},
 	{
@@ -3809,6 +3972,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "curiosities/EXPD_BIOFRIG"
 	},
 	{
@@ -3841,6 +4005,7 @@
 		"CookingIngredient": false,
 		"GoodForSelling": true,
 		"EggModifierIngredient": true,
+		"DeploysInto": null,
 		"Slug": "curiosities/F_JELLYCHILD"
 	},
 	{
@@ -3871,7 +4036,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.freightercore.dds",
 		"Name": "Carrier Ai Fragment",
 		"Group": "Battleship Core Remnant",
-		"Description": "A single splinter of the colossal mainframe at the heart of a Sentinel capital ship. It blinks, its solitary living eye trained upon the one piece of data it retains - the last known location of one of its fleet of Interceptors.\n\nSelect the AI Fragment and use Search Archive (FE_ALT1) to translate information about Interceptor's crash site to your starship's navigation systems.",
+		"Description": "A single splinter of the colossal mainframe at the heart of a Sentinel capital ship. It blinks, its solitary living eye trained upon the one piece of data it retains - the last known location of one of its fleet of Interceptors.\n\nSelect the AI Fragment and use Search Archive ([E]) to translate information about Interceptor's crash site to your starship's navigation systems.",
 		"BaseValueUnits": 35000,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 1,
@@ -3893,7 +4058,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.robotcamp.dds",
 		"Name": "Echo Locator",
 		"Group": "Harmonic Location Tracker",
-		"Description": "A curious mesh of old and new technology, a hybrid between two entirely separate methods of creation. Nonetheless, this location tracing device appears fully functional.\n\nSelect this device and use Resonate (FE_ALT1) to trace its harmonic origin.",
+		"Description": "A curious mesh of old and new technology, a hybrid between two entirely separate methods of creation. Nonetheless, this location tracing device appears fully functional.\n\nSelect this device and use Resonate ([E]) to trace its harmonic origin.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 4,
@@ -3937,7 +4102,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Beta",
 		"Group": "Utopia Foundation Settlement Chart",
-		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3959,7 +4124,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Gamma",
 		"Group": "Utopia Foundation Settlement Chart",
-		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -3981,7 +4146,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Delta",
 		"Group": "Utopia Foundation Settlement Chart",
-		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4003,7 +4168,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.season9.dds",
 		"Name": "Settlement Coordinates Epsilon",
 		"Group": "Utopia Foundation Settlement Chart",
-		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map from the Utopia Foundation, showing personalised coordinates for your target construction site.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4025,7 +4190,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Beta",
 		"Group": "Utopia Foundation Supply Cache",
-		"Description": "To support the workers bravely terraforming the lava-filled wastes of planet Pehaelump, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
+		"Description": "To support the workers bravely terraforming the lava-filled wastes of planet Pehaelump, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package ([E]) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4047,7 +4212,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Gamma",
 		"Group": "Utopia Foundation Supply Cache",
-		"Description": "To support the workers valiantly toiling on the steep, exposed mountains of planet New Sesto, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
+		"Description": "To support the workers valiantly toiling on the steep, exposed mountains of planet New Sesto, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package ([E]) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4069,7 +4234,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Delta",
 		"Group": "Utopia Foundation Supply Cache",
-		"Description": "To support the surviving workers who now confront the [ REDACTED ] of planet Idalth XIV, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
+		"Description": "To support the surviving workers who now confront the [ REDACTED ] of planet Idalth XIV, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package ([E]) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4091,7 +4256,7 @@
 		"IconPath": "textures/ui/frontend/icons/products/holocomdevice.dds",
 		"Name": "Utopia Supply Drop Epsilon",
 		"Group": "Utopia Foundation Supply Cache",
-		"Description": "To support the workers who so nobly rebuild in the sucking quagmires of planet Endil A8, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package (FE_ALT1) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
+		"Description": "To support the workers who so nobly rebuild in the sucking quagmires of planet Endil A8, the Utopia Overseers are glad to supply this cache of vital goods.\n\nSelect the supply pack and use Open Package ([E]) to collect your Utopia Foundation supplies, as well as details of your next assignment.",
 		"BaseValueUnits": 2613,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4106,6 +4271,28 @@
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
 		"Slug": "curiosities/S9_PACK4"
+	},
+	{
+		"Id": "S8_BEACON",
+		"Icon": "S8_BEACON.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.roguefinder.dds",
+		"Name": "Homeworld Repeater",
+		"Group": "A Last Link Home",
+		"Description": "A makeshift device, cobbled from salvaged electronic components kept in deep storage for many years. This jumble of wires will attempt to make contact with the last-known remnants of the freighter's homeworld.\n\nSelect the device and select Broadcast ([E]) to begin the location process.",
+		"BaseValueUnits": 16,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "311A49",
+		"CookingValue": 0.0,
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Slug": "curiosities/S8_BEACON"
 	},
 	{
 		"Id": "PIRATE_MAPWHOLE",
@@ -4135,7 +4322,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.dronefriendx.dds",
 		"Name": "Sentinel Flare",
 		"Group": "Sentinel Communicator",
-		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Deactivate Broadcast (FE_ALT1) to stop signalling [ The Sentry ].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
+		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Deactivate Broadcast ([E]) to stop signalling [ The Sentry ].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
 		"BaseValueUnits": 16,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4157,7 +4344,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.dronefriend.dds",
 		"Name": "Sentinel Flare (off)",
 		"Group": "Sentinel Communicator",
-		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Activate Flare (FE_ALT1) to signal [The Drone].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
+		"Description": "A specialist device, created by Iteration Tethys. Its primary function is to hail your reconstructed Sentinel drone.\n\nSelect the device and use Activate Flare ([E]) to signal [The Drone].\n\nWhile this flare is active in your Exosuit inventory, the drone will stay by your side while planetside.",
 		"BaseValueUnits": 16,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 0,
@@ -4179,7 +4366,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.sentinelloot.dds",
 		"Name": "Salvaged Glass",
 		"Group": "Recovered Sentinel Components",
-		"Description": "A sinister shard of purple glass, salvaged from the destroyed remains of Sentinel machinery. Its walls are thin, and it may be broken down to access valuable Sentinel components.\n\nSelect in the Inventory (INVENTORY) and shatter with FE_ALT1.",
+		"Description": "A sinister shard of purple glass, salvaged from the destroyed remains of Sentinel machinery. Its walls are thin, and it may be broken down to access valuable Sentinel components.\n\nSelect in the Inventory (INVENTORY) and shatter with [E].",
 		"BaseValueUnits": 3000,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 1,
@@ -4201,7 +4388,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.goods.dds",
 		"Name": "Suspicious Packet (goods)",
 		"Group": "Contraband",
-		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of technology.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
+		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of technology.\n\nSelect in the Inventory (INVENTORY) and use [E] to examine the contents. No refunds.",
 		"BaseValueUnits": 150,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4223,7 +4410,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.tech.dds",
 		"Name": "Suspicious Packet (tech)",
 		"Group": "Contraband",
-		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of high-value or interesting item.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
+		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of high-value or interesting item.\n\nSelect in the Inventory (INVENTORY) and use [E] to examine the contents. No refunds.",
 		"BaseValueUnits": 200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4245,7 +4432,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.scrap.weapon.dds",
 		"Name": "Suspicious Packet (arms)",
 		"Group": "Contraband",
-		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of weapon-based technology.\n\nSelect in the Inventory (INVENTORY) and use FE_ALT1 to examine the contents. No refunds.",
+		"Description": "A suspicious looking parcel, acquired via an unusual transaction. The seller indicated it contained some sort of weapon-based technology.\n\nSelect in the Inventory (INVENTORY) and use [E] to examine the contents. No refunds.",
 		"BaseValueUnits": 350,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4333,7 +4520,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.asteroid.dds",
 		"Name": "Gold Nugget",
 		"Group": "Valuable Ore",
-		"Description": "A highly valuable ore chunk, ready to be processed into Gold.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "A highly valuable ore chunk, ready to be processed into Gold.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4355,7 +4542,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.crystal.dds",
 		"Name": "Crystal Fragment",
 		"Group": "Concentrated Element Shard",
-		"Description": "A crystalline shard with an unusually dense structure. Potentially highly valuable.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "A crystalline shard with an unusually dense structure. Potentially highly valuable.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4377,7 +4564,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.dds",
 		"Name": "Geode",
 		"Group": "Valuable Mineral Deposit",
-		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4399,7 +4586,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.dds",
 		"Name": "Geode",
 		"Group": "Valuable Mineral Deposit",
-		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "An unusually vibrant and potentially valuable lump of rock.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4421,7 +4608,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.geode.space.dds",
 		"Name": "Tritium Hypercluster",
 		"Group": "Energetic Fragment",
-		"Description": "A shard of pure crystalised Tritium.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "A shard of pure crystalised Tritium.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4443,7 +4630,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.waterprod.dds",
 		"Name": "Glowing Mineral",
 		"Group": "Valuable Rock Sample",
-		"Description": "Though its surface is dirtied and dull, polishing this rock reveals a deep inner glow, a glitter beneath a subtly iridescent surface.\n\nSelect in the Inventory (INVENTORY) and crack open with FE_ALT1.",
+		"Description": "Though its surface is dirtied and dull, polishing this rock reveals a deep inner glow, a glitter beneath a subtly iridescent surface.\n\nSelect in the Inventory (INVENTORY) and crack open with [E].",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4465,7 +4652,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.settlementbuilders.dds",
 		"Name": "Autophage Settlement Chart",
 		"Group": "Harmonic Planetary Chart",
-		"Description": "A map showing the location of a nearby Autophage planetary settlement, acquired from an Autophage Synthesis Terminal.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map showing the location of a nearby Autophage planetary settlement, acquired from an Autophage Synthesis Terminal.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"BaseValueUnits": 1499,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 4,
@@ -4487,7 +4674,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.poi.dds",
 		"Name": "Anomaly Detector",
 		"Group": "Anomalous Homing Device",
-		"Description": "A single-use geometric beacon that probes the surrounding area for near-space anomalies. Such objects are highly unpredictable.\n\nSelect the Detector and use Begin Scan (FE_ALT1) to begin the location process.",
+		"Description": "A single-use geometric beacon that probes the surrounding area for near-space anomalies. Such objects are highly unpredictable.\n\nSelect the Detector and use Begin Scan ([E]) to begin the location process.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4509,7 +4696,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.aband.dds",
 		"Name": "Emergency Signal Scanner",
 		"Group": "Coordinate Data",
-		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal (FE_ALT1) to begin the location process.",
+		"Description": "A single-use receiver that scans for distress signals on freighter frequencies. Derelict or abandoned freighters often contain high-value salvage.\n\nSelect the Receiver and use Tune Signal ([E]) to begin the location process.",
 		"BaseValueUnits": 3200,
 		"CurrencyType": "Credits",
 		"MaxStackSize": 5,
@@ -4524,5 +4711,1435 @@
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
 		"Slug": "curiosities/ABAND_LOCATOR"
+	},
+	{
+		"Id": "FOS_HEAD_AN",
+		"Name": "Predator Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_AN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.an.dds",
+		"Slug": "curiosities/FOS_HEAD_AN"
+	},
+	{
+		"Id": "FOS_HEAD_AA",
+		"Name": "Mono-horn Predator Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_AA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.aa.dds",
+		"Slug": "curiosities/FOS_HEAD_AA"
+	},
+	{
+		"Id": "FOS_HEAD_AB",
+		"Name": "Horned Predator Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_AB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ab.dds",
+		"Slug": "curiosities/FOS_HEAD_AB"
+	},
+	{
+		"Id": "FOS_HEAD_AC",
+		"Name": "Diabolic Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_AC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ac.dds",
+		"Slug": "curiosities/FOS_HEAD_AC"
+	},
+	{
+		"Id": "FOS_HEAD_AD",
+		"Name": "Vicious Predator Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_AD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ad.dds",
+		"Slug": "curiosities/FOS_HEAD_AD"
+	},
+	{
+		"Id": "FOS_HEAD_BN",
+		"Name": "Herbivore Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bn.dds",
+		"Slug": "curiosities/FOS_HEAD_BN"
+	},
+	{
+		"Id": "FOS_HEAD_BA",
+		"Name": "Forest Warrior Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ba.dds",
+		"Slug": "curiosities/FOS_HEAD_BA"
+	},
+	{
+		"Id": "FOS_HEAD_BB",
+		"Name": "Skull of the Cursed Doe",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bb.dds",
+		"Slug": "curiosities/FOS_HEAD_BB"
+	},
+	{
+		"Id": "FOS_HEAD_BC",
+		"Name": "Pachyovine Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bc.dds",
+		"Slug": "curiosities/FOS_HEAD_BC"
+	},
+	{
+		"Id": "FOS_HEAD_BD",
+		"Name": "Armoured Ovine Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bd.dds",
+		"Slug": "curiosities/FOS_HEAD_BD"
+	},
+	{
+		"Id": "FOS_HEAD_BE",
+		"Name": "Ovine Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.be.dds",
+		"Slug": "curiosities/FOS_HEAD_BE"
+	},
+	{
+		"Id": "FOS_HEAD_BF",
+		"Name": "Skull of the Golden Hart",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bf.dds",
+		"Slug": "curiosities/FOS_HEAD_BF"
+	},
+	{
+		"Id": "FOS_HEAD_BG",
+		"Name": "Crown of Bones",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bg.dds",
+		"Slug": "curiosities/FOS_HEAD_BG"
+	},
+	{
+		"Id": "FOS_HEAD_BH",
+		"Name": "Longhorn Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BH.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bh.dds",
+		"Slug": "curiosities/FOS_HEAD_BH"
+	},
+	{
+		"Id": "FOS_HEAD_BI",
+		"Name": "Grazer Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BI.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bi.dds",
+		"Slug": "curiosities/FOS_HEAD_BI"
+	},
+	{
+		"Id": "FOS_HEAD_BJ",
+		"Name": "Skull of the Watcher",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_BJ.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.bj.dds",
+		"Slug": "curiosities/FOS_HEAD_BJ"
+	},
+	{
+		"Id": "FOS_HEAD_CN",
+		"Name": "Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.cn.dds",
+		"Slug": "curiosities/FOS_HEAD_CN"
+	},
+	{
+		"Id": "FOS_HEAD_CA",
+		"Name": "Spiked Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ca.dds",
+		"Slug": "curiosities/FOS_HEAD_CA"
+	},
+	{
+		"Id": "FOS_HEAD_CB",
+		"Name": "Gnarled Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.cb.dds",
+		"Slug": "curiosities/FOS_HEAD_CB"
+	},
+	{
+		"Id": "FOS_HEAD_CC",
+		"Name": "Flared Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.cc.dds",
+		"Slug": "curiosities/FOS_HEAD_CC"
+	},
+	{
+		"Id": "FOS_HEAD_CD",
+		"Name": "Armoured Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.cd.dds",
+		"Slug": "curiosities/FOS_HEAD_CD"
+	},
+	{
+		"Id": "FOS_HEAD_CE",
+		"Name": "Magnificent Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ce.dds",
+		"Slug": "curiosities/FOS_HEAD_CE"
+	},
+	{
+		"Id": "FOS_HEAD_CF",
+		"Name": "Statuesque Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.cf.dds",
+		"Slug": "curiosities/FOS_HEAD_CF"
+	},
+	{
+		"Id": "FOS_HEAD_CG",
+		"Name": "Midnight Nibbler Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.cg.dds",
+		"Slug": "curiosities/FOS_HEAD_CG"
+	},
+	{
+		"Id": "FOS_HEAD_CH",
+		"Name": "Skull of the Forest King",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CH.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ch.dds",
+		"Slug": "curiosities/FOS_HEAD_CH"
+	},
+	{
+		"Id": "FOS_HEAD_CI",
+		"Name": "Longhorn Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CI.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ci.dds",
+		"Slug": "curiosities/FOS_HEAD_CI"
+	},
+	{
+		"Id": "FOS_HEAD_CJ",
+		"Name": "Glorious Rodent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_CJ.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.cj.dds",
+		"Slug": "curiosities/FOS_HEAD_CJ"
+	},
+	{
+		"Id": "FOS_HEAD_DN",
+		"Name": "Boar Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.dn.dds",
+		"Slug": "curiosities/FOS_HEAD_DN"
+	},
+	{
+		"Id": "FOS_HEAD_DA",
+		"Name": "Wattlehog Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.da.dds",
+		"Slug": "curiosities/FOS_HEAD_DA"
+	},
+	{
+		"Id": "FOS_HEAD_DB",
+		"Name": "Saddleback Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.db.dds",
+		"Slug": "curiosities/FOS_HEAD_DB"
+	},
+	{
+		"Id": "FOS_HEAD_DC",
+		"Name": "Bullhog Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.dc.dds",
+		"Slug": "curiosities/FOS_HEAD_DC"
+	},
+	{
+		"Id": "FOS_HEAD_DD",
+		"Name": "Warthog Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.dd.dds",
+		"Slug": "curiosities/FOS_HEAD_DD"
+	},
+	{
+		"Id": "FOS_HEAD_DE",
+		"Name": "Swinehorn Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.de.dds",
+		"Slug": "curiosities/FOS_HEAD_DE"
+	},
+	{
+		"Id": "FOS_HEAD_DF",
+		"Name": "Hornboare Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.df.dds",
+		"Slug": "curiosities/FOS_HEAD_DF"
+	},
+	{
+		"Id": "FOS_HEAD_DG",
+		"Name": "Hammerhead Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.dg.dds",
+		"Slug": "curiosities/FOS_HEAD_DG"
+	},
+	{
+		"Id": "FOS_HEAD_DH",
+		"Name": "Charger Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DH.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.dh.dds",
+		"Slug": "curiosities/FOS_HEAD_DH"
+	},
+	{
+		"Id": "FOS_HEAD_DI",
+		"Name": "Flathead Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DI.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.di.dds",
+		"Slug": "curiosities/FOS_HEAD_DI"
+	},
+	{
+		"Id": "FOS_HEAD_DJ",
+		"Name": "Moustachioed Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_DJ.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.dj.dds",
+		"Slug": "curiosities/FOS_HEAD_DJ"
+	},
+	{
+		"Id": "FOS_HEAD_EN",
+		"Name": "Canine Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.en.dds",
+		"Slug": "curiosities/FOS_HEAD_EN"
+	},
+	{
+		"Id": "FOS_HEAD_EA",
+		"Name": "Warhound Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ea.dds",
+		"Slug": "curiosities/FOS_HEAD_EA"
+	},
+	{
+		"Id": "FOS_HEAD_EB",
+		"Name": "Fearsome Canine Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.eb.dds",
+		"Slug": "curiosities/FOS_HEAD_EB"
+	},
+	{
+		"Id": "FOS_HEAD_EC",
+		"Name": "Armoured Canine Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ec.dds",
+		"Slug": "curiosities/FOS_HEAD_EC"
+	},
+	{
+		"Id": "FOS_HEAD_ED",
+		"Name": "Scavenger Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_ED.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ed.dds",
+		"Slug": "curiosities/FOS_HEAD_ED"
+	},
+	{
+		"Id": "FOS_HEAD_EE",
+		"Name": "Skull of the Bone Thief",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ee.dds",
+		"Slug": "curiosities/FOS_HEAD_EE"
+	},
+	{
+		"Id": "FOS_HEAD_EF",
+		"Name": "Carbuncle Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ef.dds",
+		"Slug": "curiosities/FOS_HEAD_EF"
+	},
+	{
+		"Id": "FOS_HEAD_EG",
+		"Name": "Infernal Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.eg.dds",
+		"Slug": "curiosities/FOS_HEAD_EG"
+	},
+	{
+		"Id": "FOS_HEAD_EH",
+		"Name": "Malevolent Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EH.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.eh.dds",
+		"Slug": "curiosities/FOS_HEAD_EH"
+	},
+	{
+		"Id": "FOS_HEAD_EI",
+		"Name": "Skull of the Wild Hunter",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EI.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ei.dds",
+		"Slug": "curiosities/FOS_HEAD_EI"
+	},
+	{
+		"Id": "FOS_HEAD_EJ",
+		"Name": "Haunted Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_EJ.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ej.dds",
+		"Slug": "curiosities/FOS_HEAD_EJ"
+	},
+	{
+		"Id": "FOS_HEAD_FN",
+		"Name": "Megafauna Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fn.dds",
+		"Slug": "curiosities/FOS_HEAD_FN"
+	},
+	{
+		"Id": "FOS_HEAD_FA",
+		"Name": "Skull of the Goring Wall",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fa.dds",
+		"Slug": "curiosities/FOS_HEAD_FA"
+	},
+	{
+		"Id": "FOS_HEAD_FB",
+		"Name": "Colossal Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fb.dds",
+		"Slug": "curiosities/FOS_HEAD_FB"
+	},
+	{
+		"Id": "FOS_HEAD_FC",
+		"Name": "Mammoth Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fc.dds",
+		"Slug": "curiosities/FOS_HEAD_FC"
+	},
+	{
+		"Id": "FOS_HEAD_FD",
+		"Name": "Behemoth Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fd.dds",
+		"Slug": "curiosities/FOS_HEAD_FD"
+	},
+	{
+		"Id": "FOS_HEAD_FE",
+		"Name": "Styrax Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fe.dds",
+		"Slug": "curiosities/FOS_HEAD_FE"
+	},
+	{
+		"Id": "FOS_HEAD_FF",
+		"Name": "\"dragon\" Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ff.dds",
+		"Slug": "curiosities/FOS_HEAD_FF"
+	},
+	{
+		"Id": "FOS_HEAD_FG",
+		"Name": "Monstrous Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fg.dds",
+		"Slug": "curiosities/FOS_HEAD_FG"
+	},
+	{
+		"Id": "FOS_HEAD_FH",
+		"Name": "Oceanid Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FH.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fh.dds",
+		"Slug": "curiosities/FOS_HEAD_FH"
+	},
+	{
+		"Id": "FOS_HEAD_FI",
+		"Name": "Vy'keen Spirit Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FI.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fi.dds",
+		"Slug": "curiosities/FOS_HEAD_FI"
+	},
+	{
+		"Id": "FOS_HEAD_FJ",
+		"Name": "Giganto-skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FJ.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fj.dds",
+		"Slug": "curiosities/FOS_HEAD_FJ"
+	},
+	{
+		"Id": "FOS_HEAD_FK",
+		"Name": "Elephantine Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FK.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fk.dds",
+		"Slug": "curiosities/FOS_HEAD_FK"
+	},
+	{
+		"Id": "FOS_HEAD_FL",
+		"Name": "Cyclopean Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FL.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fl.dds",
+		"Slug": "curiosities/FOS_HEAD_FL"
+	},
+	{
+		"Id": "FOS_HEAD_FM",
+		"Name": "Gargantuan Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_FM.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.fm.dds",
+		"Slug": "curiosities/FOS_HEAD_FM"
+	},
+	{
+		"Id": "FOS_HEAD_GN",
+		"Name": "Protoform Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_GN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.gn.dds",
+		"Slug": "curiosities/FOS_HEAD_GN"
+	},
+	{
+		"Id": "FOS_HEAD_GA",
+		"Name": "Masked Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_GA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ga.dds",
+		"Slug": "curiosities/FOS_HEAD_GA"
+	},
+	{
+		"Id": "FOS_HEAD_GB",
+		"Name": "Warrior Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_GB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.gb.dds",
+		"Slug": "curiosities/FOS_HEAD_GB"
+	},
+	{
+		"Id": "FOS_HEAD_GC",
+		"Name": "Bonehair Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_GC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.gc.dds",
+		"Slug": "curiosities/FOS_HEAD_GC"
+	},
+	{
+		"Id": "FOS_HEAD_GD",
+		"Name": "Unnameable Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_GD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.gd.dds",
+		"Slug": "curiosities/FOS_HEAD_GD"
+	},
+	{
+		"Id": "FOS_HEAD_GE",
+		"Name": "Nightmare Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_GE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ge.dds",
+		"Slug": "curiosities/FOS_HEAD_GE"
+	},
+	{
+		"Id": "FOS_HEAD_GF",
+		"Name": "Skull of the Midnight Visitor",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_GF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.gf.dds",
+		"Slug": "curiosities/FOS_HEAD_GF"
+	},
+	{
+		"Id": "FOS_HEAD_HN",
+		"Name": "Skull of the Ocean King",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_HN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.hn.dds",
+		"Slug": "curiosities/FOS_HEAD_HN"
+	},
+	{
+		"Id": "FOS_HEAD_HA",
+		"Name": "Leviathan Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_HA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ha.dds",
+		"Slug": "curiosities/FOS_HEAD_HA"
+	},
+	{
+		"Id": "FOS_HEAD_HB",
+		"Name": "Worm Lord Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_HB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.hb.dds",
+		"Slug": "curiosities/FOS_HEAD_HB"
+	},
+	{
+		"Id": "FOS_HEAD_HC",
+		"Name": "Titanworm Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_HC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.hc.dds",
+		"Slug": "curiosities/FOS_HEAD_HC"
+	},
+	{
+		"Id": "FOS_HEAD_HD",
+		"Name": "Skull of the Consumer",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_HD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.hd.dds",
+		"Slug": "curiosities/FOS_HEAD_HD"
+	},
+	{
+		"Id": "FOS_HEAD_HE",
+		"Name": "Feasting Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_HE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.he.dds",
+		"Slug": "curiosities/FOS_HEAD_HE"
+	},
+	{
+		"Id": "FOS_HEAD_HF",
+		"Name": "Cetenid Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_HF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.hf.dds",
+		"Slug": "curiosities/FOS_HEAD_HF"
+	},
+	{
+		"Id": "FOS_HEAD_HG",
+		"Name": "Skull of the Master",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_HG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.hg.dds",
+		"Slug": "curiosities/FOS_HEAD_HG"
+	},
+	{
+		"Id": "FOS_HEAD_IN",
+		"Name": "Blunted Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_IN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.in.dds",
+		"Slug": "curiosities/FOS_HEAD_IN"
+	},
+	{
+		"Id": "FOS_HEAD_IA",
+		"Name": "Fleshripper Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_IA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ia.dds",
+		"Slug": "curiosities/FOS_HEAD_IA"
+	},
+	{
+		"Id": "FOS_HEAD_IB",
+		"Name": "Avian Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_IB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ib.dds",
+		"Slug": "curiosities/FOS_HEAD_IB"
+	},
+	{
+		"Id": "FOS_HEAD_IC",
+		"Name": "Divewing Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_IC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ic.dds",
+		"Slug": "curiosities/FOS_HEAD_IC"
+	},
+	{
+		"Id": "FOS_HEAD_ID",
+		"Name": "Pterosaur Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_ID.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.id.dds",
+		"Slug": "curiosities/FOS_HEAD_ID"
+	},
+	{
+		"Id": "FOS_HEAD_IE",
+		"Name": "Hookbeak Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_IE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ie.dds",
+		"Slug": "curiosities/FOS_HEAD_IE"
+	},
+	{
+		"Id": "FOS_HEAD_IF",
+		"Name": "Proto-parrot Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_IF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.if.dds",
+		"Slug": "curiosities/FOS_HEAD_IF"
+	},
+	{
+		"Id": "FOS_HEAD_IG",
+		"Name": "Snapbeak Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_IG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ig.dds",
+		"Slug": "curiosities/FOS_HEAD_IG"
+	},
+	{
+		"Id": "FOS_HEAD_JN",
+		"Name": "Crocodilian Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.jn.dds",
+		"Slug": "curiosities/FOS_HEAD_JN"
+	},
+	{
+		"Id": "FOS_HEAD_JA",
+		"Name": "Swamp Dweller Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ja.dds",
+		"Slug": "curiosities/FOS_HEAD_JA"
+	},
+	{
+		"Id": "FOS_HEAD_JB",
+		"Name": "Mega-newt Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.jb.dds",
+		"Slug": "curiosities/FOS_HEAD_JB"
+	},
+	{
+		"Id": "FOS_HEAD_JC",
+		"Name": "Pond Beast Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.jc.dds",
+		"Slug": "curiosities/FOS_HEAD_JC"
+	},
+	{
+		"Id": "FOS_HEAD_JD",
+		"Name": "Bogsnapper Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.jd.dds",
+		"Slug": "curiosities/FOS_HEAD_JD"
+	},
+	{
+		"Id": "FOS_HEAD_JE",
+		"Name": "Marshdipper Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.je.dds",
+		"Slug": "curiosities/FOS_HEAD_JE"
+	},
+	{
+		"Id": "FOS_HEAD_JF",
+		"Name": "Mudskipper Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.jf.dds",
+		"Slug": "curiosities/FOS_HEAD_JF"
+	},
+	{
+		"Id": "FOS_HEAD_JG",
+		"Name": "Sarco-skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.jg.dds",
+		"Slug": "curiosities/FOS_HEAD_JG"
+	},
+	{
+		"Id": "FOS_HEAD_JH",
+		"Name": "Sawtooth Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JH.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.jh.dds",
+		"Slug": "curiosities/FOS_HEAD_JH"
+	},
+	{
+		"Id": "FOS_HEAD_JI",
+		"Name": "Reptile Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JI.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ji.dds",
+		"Slug": "curiosities/FOS_HEAD_JI"
+	},
+	{
+		"Id": "FOS_HEAD_JJ",
+		"Name": "Skull of the Legsnapper",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_JJ.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.jj.dds",
+		"Slug": "curiosities/FOS_HEAD_JJ"
+	},
+	{
+		"Id": "FOS_HEAD_KN",
+		"Name": "Equuleus Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kn.dds",
+		"Slug": "curiosities/FOS_HEAD_KN"
+	},
+	{
+		"Id": "FOS_HEAD_KA",
+		"Name": "Pincer Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ka.dds",
+		"Slug": "curiosities/FOS_HEAD_KA"
+	},
+	{
+		"Id": "FOS_HEAD_KB",
+		"Name": "Monoceros Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kb.dds",
+		"Slug": "curiosities/FOS_HEAD_KB"
+	},
+	{
+		"Id": "FOS_HEAD_KC",
+		"Name": "Direhorn Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kc.dds",
+		"Slug": "curiosities/FOS_HEAD_KC"
+	},
+	{
+		"Id": "FOS_HEAD_KD",
+		"Name": "Broadbore Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kd.dds",
+		"Slug": "curiosities/FOS_HEAD_KD"
+	},
+	{
+		"Id": "FOS_HEAD_KE",
+		"Name": "Skull of the Plains Menace",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ke.dds",
+		"Slug": "curiosities/FOS_HEAD_KE"
+	},
+	{
+		"Id": "FOS_HEAD_KF",
+		"Name": "Skull of the Untameable",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KF.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kf.dds",
+		"Slug": "curiosities/FOS_HEAD_KF"
+	},
+	{
+		"Id": "FOS_HEAD_KG",
+		"Name": "Skull of the Unbroken",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KG.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kg.dds",
+		"Slug": "curiosities/FOS_HEAD_KG"
+	},
+	{
+		"Id": "FOS_HEAD_KH",
+		"Name": "Gnawing Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KH.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kh.dds",
+		"Slug": "curiosities/FOS_HEAD_KH"
+	},
+	{
+		"Id": "FOS_HEAD_KI",
+		"Name": "Pegasus Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KI.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.ki.dds",
+		"Slug": "curiosities/FOS_HEAD_KI"
+	},
+	{
+		"Id": "FOS_HEAD_KJ",
+		"Name": "Longtooth Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KJ.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kj.dds",
+		"Slug": "curiosities/FOS_HEAD_KJ"
+	},
+	{
+		"Id": "FOS_HEAD_KK",
+		"Name": "Horned Bounder Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KK.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kk.dds",
+		"Slug": "curiosities/FOS_HEAD_KK"
+	},
+	{
+		"Id": "FOS_HEAD_KL",
+		"Name": "Drayflare Skull",
+		"Group": "Living Ship Component",
+		"Description": "The skull of some ancient beast, in remarkable condition given its apparent age.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_HEAD_KL.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.head.kl.dds",
+		"Slug": "curiosities/FOS_HEAD_KL"
+	},
+	{
+		"Id": "FOS_LIMBS_A",
+		"Name": "Hunter's Forearms",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_A.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.a.dds",
+		"Slug": "curiosities/FOS_LIMBS_A"
+	},
+	{
+		"Id": "FOS_LIMBS_B",
+		"Name": "Ungulate Fossil",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_B.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.b.dds",
+		"Slug": "curiosities/FOS_LIMBS_B"
+	},
+	{
+		"Id": "FOS_LIMBS_C",
+		"Name": "Dangling Forearms",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_C.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.c.dds",
+		"Slug": "curiosities/FOS_LIMBS_C"
+	},
+	{
+		"Id": "FOS_LIMBS_D",
+		"Name": "Grasping Forearms",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_D.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.d.dds",
+		"Slug": "curiosities/FOS_LIMBS_D"
+	},
+	{
+		"Id": "FOS_LIMBS_E",
+		"Name": "Stalking Leg Bones",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_E.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.e.dds",
+		"Slug": "curiosities/FOS_LIMBS_E"
+	},
+	{
+		"Id": "FOS_LIMBS_F",
+		"Name": "Fossilised Biped Legs",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_F.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.f.dds",
+		"Slug": "curiosities/FOS_LIMBS_F"
+	},
+	{
+		"Id": "FOS_LIMBS_G",
+		"Name": "Swift Leg Bones",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_G.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.g.dds",
+		"Slug": "curiosities/FOS_LIMBS_G"
+	},
+	{
+		"Id": "FOS_LIMBS_H",
+		"Name": "Fossilised Flippers",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_H.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.h.dds",
+		"Slug": "curiosities/FOS_LIMBS_H"
+	},
+	{
+		"Id": "FOS_LIMBS_I",
+		"Name": "Fossilised Fins",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_I.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.i.dds",
+		"Slug": "curiosities/FOS_LIMBS_I"
+	},
+	{
+		"Id": "FOS_LIMBS_J",
+		"Name": "Fossilised Wing Stubs",
+		"Group": "Living Ship Component",
+		"Description": "This ancient fossil has been rendered ambiguous by the passage of time. It is clearly the limb of an ancient beast, but it is difficult to be any more precise.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_LIMBS_J.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.limbs.j.dds",
+		"Slug": "curiosities/FOS_LIMBS_J"
+	},
+	{
+		"Id": "FOS_BI_BODY_AN",
+		"Name": "Lengthy Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_AN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.an.dds",
+		"Slug": "curiosities/FOS_BI_BODY_AN"
+	},
+	{
+		"Id": "FOS_BI_BODY_AA",
+		"Name": "Lengthy Plated Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_AA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.aa.dds",
+		"Slug": "curiosities/FOS_BI_BODY_AA"
+	},
+	{
+		"Id": "FOS_BI_BODY_AB",
+		"Name": "Gargantuan Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_AB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.ab.dds",
+		"Slug": "curiosities/FOS_BI_BODY_AB"
+	},
+	{
+		"Id": "FOS_BI_BODY_AC",
+		"Name": "Mighty Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_AC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.ac.dds",
+		"Slug": "curiosities/FOS_BI_BODY_AC"
+	},
+	{
+		"Id": "FOS_BI_BODY_AD",
+		"Name": "Lengthy Flared Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_AD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.ad.dds",
+		"Slug": "curiosities/FOS_BI_BODY_AD"
+	},
+	{
+		"Id": "FOS_BI_BODY_AE",
+		"Name": "Lengthy Finned Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_AE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.ae.dds",
+		"Slug": "curiosities/FOS_BI_BODY_AE"
+	},
+	{
+		"Id": "FOS_BI_BODY_BN",
+		"Name": "Ancient Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_BN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.bn.dds",
+		"Slug": "curiosities/FOS_BI_BODY_BN"
+	},
+	{
+		"Id": "FOS_BI_BODY_BA",
+		"Name": "Plated Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_BA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.ba.dds",
+		"Slug": "curiosities/FOS_BI_BODY_BA"
+	},
+	{
+		"Id": "FOS_BI_BODY_BB",
+		"Name": "Spiked Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_BB.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.bb.dds",
+		"Slug": "curiosities/FOS_BI_BODY_BB"
+	},
+	{
+		"Id": "FOS_BI_BODY_BC",
+		"Name": "Armoured Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_BC.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.bc.dds",
+		"Slug": "curiosities/FOS_BI_BODY_BC"
+	},
+	{
+		"Id": "FOS_BI_BODY_BD",
+		"Name": "Flared Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_BD.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.bd.dds",
+		"Slug": "curiosities/FOS_BI_BODY_BD"
+	},
+	{
+		"Id": "FOS_BI_BODY_BE",
+		"Name": "Finned Ribcage",
+		"Group": "Living Ship Component",
+		"Description": "These stained and pitted bones once formed the torso of some ancient organism.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_BODY_BE.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.body.be.dds",
+		"Slug": "curiosities/FOS_BI_BODY_BE"
+	},
+	{
+		"Id": "FOS_BI_TAIL_AN",
+		"Name": "Ancient Tailbone",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_AN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.an.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_AN"
+	},
+	{
+		"Id": "FOS_BI_TAIL_AA",
+		"Name": "Fearsome Lashbone",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_AA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.aa.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_AA"
+	},
+	{
+		"Id": "FOS_BI_TAIL_BN",
+		"Name": "Mace-like Tailbone",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_BN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.bn.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_BN"
+	},
+	{
+		"Id": "FOS_BI_TAIL_BA",
+		"Name": "Flailing Tailbone",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_BA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.ba.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_BA"
+	},
+	{
+		"Id": "FOS_BI_TAIL_CN",
+		"Name": "Lengthy Tailbone",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_CN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.cn.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_CN"
+	},
+	{
+		"Id": "FOS_BI_TAIL_CA",
+		"Name": "Plated Tailbone",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_CA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.ca.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_CA"
+	},
+	{
+		"Id": "FOS_BI_TAIL_DN",
+		"Name": "Coiled Tailbone",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_DN.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.dn.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_DN"
+	},
+	{
+		"Id": "FOS_BI_TAIL_DA",
+		"Name": "Slashing Springtail",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_DA.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.da.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_DA"
+	},
+	{
+		"Id": "FOS_BI_TAIL_E",
+		"Name": "Upturned Tailfan",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_E.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.e.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_E"
+	},
+	{
+		"Id": "FOS_BI_TAIL_F",
+		"Name": "Downturned Tailfan",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_F.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.f.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_F"
+	},
+	{
+		"Id": "FOS_BI_TAIL_G",
+		"Name": "Stubtail",
+		"Group": "Living Ship Component",
+		"Description": "Bleached by the years, it is nonetheless evident that this was once the tail-bone of a long-extinct creature.\n\nConstruct a fossil display case within your base to display this find. Add additional bone samples to recreate the entire creature.",
+		"BaseValue": 72000,
+		"Icon": "FOS_BI_TAIL_G.png",
+		"IconPath": "textures/ui/frontend/icons/fossilbones/fossil.biped.tail.g.dds",
+		"Slug": "curiosities/FOS_BI_TAIL_G"
 	}
 ]

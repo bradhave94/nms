@@ -1,5 +1,50 @@
 [
 	{
+		"Id": "BIGGS_POI_LOC",
+		"Icon": "BIGGS_POI_LOC.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.biggspoi.dds",
+		"Name": "Debris Rangefinder",
+		"Group": "Deep-Space Salvage Locator",
+		"Description": "A single-use device for locating the wreckage of starships in deep space.\n\nSelect the Rangefinder and Scan for Debris ([E]) to begin the location process.",
+		"BaseValueUnits": 3200,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "1A2733",
+		"CdnUrl": "",
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "MIRROR",
+				"Quantity": 1
+			},
+			{
+				"Id": "COMPUTER",
+				"Quantity": 1
+			},
+			{
+				"Id": "CASING",
+				"Quantity": 1
+			}
+		],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"Slug": "technology/BIGGS_POI_LOC"
+	},
+	{
 		"Id": "EXPD_S15_LASER",
 		"Icon": "EXPD_S15_LASER.png",
 		"IconPath": "textures/ui/frontend/icons/specialshop/special1.expedition.s15fishlaser.dds",
@@ -26,239 +71,8 @@
 		"CookingIngredient": false,
 		"GoodForSelling": false,
 		"EggModifierIngredient": false,
+		"DeploysInto": null,
 		"Slug": "technology/EXPD_S15_LASER"
-	},
-	{
-		"Id": "U_LASER1",
-		"Icon": "U_LASER1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.laser.dds",
-		"Name": "Mining Beam Module",
-		"Group": "Mining Beam Upgrade",
-		"Description": "A moderate upgrade for the Mining Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: power output, heat toleration and fuel efficiency.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_LASER1"
-	},
-	{
-		"Id": "U_BOLT1",
-		"Icon": "U_BOLT1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.projectiile.dds",
-		"Name": "Boltcaster Module",
-		"Group": "Boltcaster Upgrade",
-		"Description": "A moderate upgrade for the Boltcaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_BOLT1"
-	},
-	{
-		"Id": "U_RAIL1",
-		"Icon": "U_RAIL1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.railgun.dds",
-		"Name": "Blaze Javelin Module",
-		"Group": "Blaze Javelin Upgrade",
-		"Description": "A moderate upgrade for the Blaze Javelin. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: laser damage and recharge time.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_RAIL1"
-	},
-	{
-		"Id": "U_SHOTGUN1",
-		"Icon": "U_SHOTGUN1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.shotgun.dds",
-		"Name": "Scatter Blaster Module",
-		"Group": "Scatter Blaster Upgrade",
-		"Description": "A moderate upgrade for the Scatter Blaster. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_SHOTGUN1"
-	},
-	{
-		"Id": "U_SMG1",
-		"Icon": "U_SMG1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.smg.dds",
-		"Name": "Pulse Spitter Module",
-		"Group": "Pulse Spitter Upgrade",
-		"Description": "A moderate upgrade for the Pulse Spitter. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: damage output, reload times, clip size and firing rate.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_SMG1"
-	},
-	{
-		"Id": "U_CANNON1",
-		"Icon": "U_CANNON1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.cannon.dds",
-		"Name": "Neutron Cannon Module",
-		"Group": "Neutron Cannon Upgrade",
-		"Description": "A moderate upgrade for the Neutron Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential upgrades include: projectile speed, charge time, weapon damage and number of projectiles.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_CANNON1"
-	},
-	{
-		"Id": "U_SHIPSHIELD1",
-		"Icon": "U_SHIPSHIELD1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.shield.dds",
-		"Name": "Starship Shield Module",
-		"Group": "Starship Shield Upgrade",
-		"Description": "A moderate upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nImproves ship strength for increased combat endurance.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_SHIPSHIELD1"
-	},
-	{
-		"Id": "U_EXO_ENG1",
-		"Icon": "U_EXO_ENG1.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/proctech/proctech.c.vehicleboost.dds",
-		"Name": "Exocraft Engine Module",
-		"Group": "Exocraft Engine Upgrade",
-		"Description": "A moderate upgrade for the Exocraft Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: fuel efficiency and/or top speed.",
-		"BaseValueUnits": 60,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 1,
-		"Colour": "1A2733",
-		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"Slug": "technology/U_EXO_ENG1"
 	},
 	{
 		"Id": "PROTECT",
@@ -291,25 +105,25 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Damagereduce Radiation",
+				"Name": "Damage Reduce Radiation",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "radiation",
 				"Value": "1"
 			},
 			{
-				"Name": "Damagereduce Toxic",
+				"Name": "Damage Reduce Toxic",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "toxic",
 				"Value": "1"
 			},
 			{
-				"Name": "Damagereduce Cold",
+				"Name": "Damage Reduce Cold",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cold",
 				"Value": "1"
 			},
 			{
-				"Name": "Damagereduce Heat",
+				"Name": "Damage Reduce Heat",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heat",
 				"Value": "1"
@@ -341,51 +155,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/PROTECT"
-	},
-	{
-		"Id": "UT_PROTECT",
-		"Icon": "UT_PROTECT.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.protectgenericmod.dds",
-		"Name": "Shield Lattice",
-		"Group": "Hazard Protection Upgrade",
-		"Description": "Increases the base capacity of the Hazard Protection system, allowing the user to spend longer in hazardous environments without recharging their Exosuit.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "CATALYST2",
-				"Quantity": 60
-			},
-			{
-				"Id": "ANTIMATTER",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Protection",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "protection",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/UT_PROTECT"
 	},
 	{
 		"Id": "ENERGY",
@@ -438,47 +207,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/ENERGY"
-	},
-	{
-		"Id": "UT_ENERGY",
-		"Icon": "UT_ENERGY.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.cellmod.dds",
-		"Name": "Oxygen Recycler",
-		"Group": "Life Support Upgrade",
-		"Description": "Increases the base capacity of the Life Support system, allowing the user to go longer between charges.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "OXYGEN",
-				"Quantity": 60
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Energy",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "energy",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/UT_ENERGY"
 	},
 	{
 		"Id": "JET1",
@@ -546,114 +274,6 @@
 		"Slug": "technology/JET1"
 	},
 	{
-		"Id": "UT_JET",
-		"Icon": "UT_JET.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.jetpackmod.dds",
-		"Name": "Neural Stimulator",
-		"Group": "Exosuit Movement Upgrade",
-		"Description": "Increases the capacity of the Exosuit's Jetpack Tanks and Adrenal Pump Reserves, allowing the user to both fly and sprint longer.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 100
-			},
-			{
-				"Id": "FUEL2",
-				"Quantity": 100
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Jetpack Tank",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "tank",
-				"Value": "0"
-			},
-			{
-				"Name": "Jetpack Refill",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "refill",
-				"Value": "1"
-			},
-			{
-				"Name": "Stamina Strength",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "strength",
-				"Value": "0"
-			},
-			{
-				"Name": "Stamina Recovery",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "recovery",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/UT_JET"
-	},
-	{
-		"Id": "UT_JUMP",
-		"Icon": "UT_JUMP.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.jetpackmod.dds",
-		"Name": "Rocket Boots",
-		"Group": "Exosuit Upgrade",
-		"Description": "Equips the Exosuit jetpack with advanced jump capabilities, allowing the user to take huge leaps with ease.\n\nActivate jump systems by rapidly pressing JUMP.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "ROCKETSUB",
-				"Quantity": 100
-			},
-			{
-				"Id": "HYDRALIC",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Jetpack Doublejump",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "doublejump",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/UT_JUMP"
-	},
-	{
 		"Id": "UT_MIDAIR",
 		"Icon": "UT_MIDAIR.png",
 		"IconPath": "textures/ui/frontend/icons/technology/render.jetpackmod.dds",
@@ -685,7 +305,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Jetpack Midairrefill",
+				"Name": "Jetpack Midair Refill",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "midairrefill",
 				"Value": "1"
@@ -734,7 +354,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Protection Heatdrain",
+				"Name": "Protection Heat Drain",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heatdrain",
 				"Value": "1"
@@ -783,7 +403,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Protection Colddrain",
+				"Name": "Protection Cold Drain",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "colddrain",
 				"Value": "1"
@@ -832,7 +452,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Protection Toxdrain",
+				"Name": "Protection Tox Drain",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "toxdrain",
 				"Value": "1"
@@ -881,7 +501,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Protection Raddrain",
+				"Name": "Protection Rad Drain",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "raddrain",
 				"Value": "1"
@@ -930,7 +550,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Protection Waterdrain",
+				"Name": "Protection Water Drain",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "waterdrain",
 				"Value": "1"
@@ -1329,55 +949,6 @@
 		"Slug": "technology/OBSOLETE"
 	},
 	{
-		"Id": "UT_WATERJET",
-		"Icon": "UT_WATERJET.png",
-		"IconPath": "textures/ui/frontend/icons/u4tech/render.jetpackwatermod.dds",
-		"Name": "Efficient Water Jets",
-		"Group": "Jetpack Upgrade Unit",
-		"Description": "Improves the fuel efficiency of the jetpack's marine jets, reducing the drain on Exosuit life support systems.\n\nAqueous compressor units are installed into the jetpack's turbines, bypassing the large energy requirements of underwater ignition.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 100
-			},
-			{
-				"Id": "OXYGEN",
-				"Quantity": 100
-			},
-			{
-				"Id": "CLAMPEARL",
-				"Quantity": 6
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Jetpack Waterefficiency",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "waterefficiency",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/UT_WATERJET"
-	},
-	{
 		"Id": "UT_WATERENERGY",
 		"Icon": "UT_WATERENERGY.png",
 		"IconPath": "textures/ui/frontend/icons/technology/render.cellmod.dds",
@@ -1409,7 +980,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Underwaterlifesupport",
+				"Name": "Underwater Life Support",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "underwaterlifesupport",
 				"Value": "1"
@@ -1450,7 +1021,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Autotranslator",
+				"Name": "Auto Translator",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autotranslator",
 				"Value": "1"
@@ -1499,7 +1070,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Autotranslator",
+				"Name": "Auto Translator",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autotranslator",
 				"Value": "2"
@@ -1548,7 +1119,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Autotranslator",
+				"Name": "Auto Translator",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autotranslator",
 				"Value": "3"
@@ -1593,7 +1164,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Autotranslator",
+				"Name": "Auto Translator",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autotranslator",
 				"Value": "1"
@@ -1741,7 +1312,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Rocketlocker",
+				"Name": "Rocket Locker",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "rocketlocker",
 				"Value": "1"
@@ -1792,7 +1363,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Fishplatform",
+				"Name": "Fish Platform",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "fishplatform",
 				"Value": "1"
@@ -1841,7 +1412,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Foodunit",
+				"Name": "Food Unit",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "foodunit",
 				"Value": "1"
@@ -1889,25 +1460,25 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Damagereduce Radiation",
+				"Name": "Damage Reduce Radiation",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "radiation",
 				"Value": "1"
 			},
 			{
-				"Name": "Damagereduce Toxic",
+				"Name": "Damage Reduce Toxic",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "toxic",
 				"Value": "1"
 			},
 			{
-				"Name": "Damagereduce Cold",
+				"Name": "Damage Reduce Cold",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cold",
 				"Value": "1"
 			},
 			{
-				"Name": "Damagereduce Heat",
+				"Name": "Damage Reduce Heat",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heat",
 				"Value": "1"
@@ -1961,13 +1532,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Pulsedrive",
+				"Name": "Ship Pulse Drive",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "pulsedrive",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Pulsedrive Minijumpfuelspending",
+				"Name": "Ship Pulse Drive Mini Jump Fuel Spending",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpfuelspending",
 				"Value": "1"
@@ -1985,7 +1556,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Pulsedrive Minijumpspeed",
+				"Name": "Ship Pulse Drive Mini Jump Speed",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpspeed",
 				"Value": "1"
@@ -2043,7 +1614,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Pulsedrive Minijumpfuelspending",
+				"Name": "Ship Pulse Drive Mini Jump Fuel Spending",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpfuelspending",
 				"Value": "0"
@@ -2092,7 +1663,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Pulsedrive Minijumpspeed",
+				"Name": "Ship Pulse Drive Mini Jump Speed",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpspeed",
 				"Value": "1"
@@ -2147,7 +1718,7 @@
 				"Value": "0"
 			},
 			{
-				"Name": "Ship Boostmaneuverability",
+				"Name": "Ship Boost Maneuverability",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "boostmaneuverability",
 				"Value": "1"
@@ -2198,7 +1769,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Pulsedrive Minijumpfuelspending",
+				"Name": "Ship Pulse Drive Mini Jump Fuel Spending",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpfuelspending",
 				"Value": "0"
@@ -2210,7 +1781,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Boostmaneuverability",
+				"Name": "Ship Boost Maneuverability",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "boostmaneuverability",
 				"Value": "1"
@@ -2268,7 +1839,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Launcher Takeoffcost",
+				"Name": "Ship Launcher Take Off Cost",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "takeoffcost",
 				"Value": "50"
@@ -2287,104 +1858,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/LAUNCHER"
-	},
-	{
-		"Id": "UT_LAUNCHER",
-		"Icon": "UT_LAUNCHER.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.landinggearmod.dds",
-		"Name": "Efficient Thrusters",
-		"Group": "Starship Launch System Upgrade",
-		"Description": "Upgrades the starship launch systems, decreasing the fuel cost of takeoff.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "JELLY",
-				"Quantity": 1
-			},
-			{
-				"Id": "ROCKETSUB",
-				"Quantity": 100
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Launcher Takeoffcost",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "takeoffcost",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Normal",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "LAUNCHER",
-		"Slug": "technology/UT_LAUNCHER"
-	},
-	{
-		"Id": "UT_LAUNCHCHARGE",
-		"Icon": "UT_LAUNCHCHARGE.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.landinggearmod.dds",
-		"Name": "Launch Auto-charger",
-		"Group": "Starship Launch System Upgrade",
-		"Description": "Photovoltaic panels fitted to the starship Launch Thrusters allow for a slow trickle charge while the ship is not in operation.\n\nHarvested light is used to fuse di-hydrogen from the atmosphere and over time will refuel the Launch Thrusters automatically.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "ANTIMATTER",
-				"Quantity": 5
-			},
-			{
-				"Id": "MIRROR",
-				"Quantity": 2
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Launcher Autocharge",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "autocharge",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "VeryRare",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "LAUNCHER",
-		"Slug": "technology/UT_LAUNCHCHARGE"
 	},
 	{
 		"Id": "WATER_LANDER",
@@ -2418,7 +1891,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Waterlandingjet",
+				"Name": "Ship Water Landing Jet",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "waterlandingjet",
 				"Value": "1"
@@ -2515,13 +1988,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Hyperdrive Jumpdistance",
+				"Name": "Ship Hyperdrive Jump Distance",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpdistance",
 				"Value": "100"
 			},
 			{
-				"Name": "Ship Hyperdrive Jumpspercell",
+				"Name": "Ship Hyperdrive Jumps Per Cell",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpspercell",
 				"Value": "1"
@@ -2540,190 +2013,6 @@
 		"ParentTechId": null,
 		"RequiredTech": "HYPERDRIVE",
 		"Slug": "technology/HYPERDRIVE"
-	},
-	{
-		"Id": "HDRIVEBOOST1",
-		"Icon": "HDRIVEBOOST1.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.cadmiumdrive.dds",
-		"Name": "Cadmium Drive",
-		"Group": "Hyperdrive Upgrade: Red Systems",
-		"Description": "Upgrades the hyperdrive's core bounding magnets, preventing rapid disassembly when attempting to reach rare-class red stellar bodies.\n\nUser is advised to access Hyperdrive systems via the Galactic Map.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 250
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 3
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Hyperdrive",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "hyperdrive",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "VeryRare",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "HYPERDRIVE",
-		"Slug": "technology/HDRIVEBOOST1"
-	},
-	{
-		"Id": "HDRIVEBOOST2",
-		"Icon": "HDRIVEBOOST2.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.emerildrive.dds",
-		"Name": "Emeril Drive",
-		"Group": "Hyperdrive Upgrade: Green Systems",
-		"Description": "Upgrades the hyperdrive's shield integrity, preventing reality glitches when attempting to reach rare-class green stellar bodies.\n\nUser is advised to access Hyperdrive systems via the Galactic Map.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "RED2",
-				"Quantity": 250
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 4
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Hyperdrive",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "hyperdrive",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "VeryRare",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "HYPERDRIVE",
-		"Slug": "technology/HDRIVEBOOST2"
-	},
-	{
-		"Id": "HDRIVEBOOST3",
-		"Icon": "HDRIVEBOOST3.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.indiumdrive.dds",
-		"Name": "Indium Drive",
-		"Group": "Hyperdrive Upgrade: Blue Systems",
-		"Description": "Upgrades the hyperdrive's computational matrix,  preventing temporal anomalies when attempting to reach rare-class blue stellar bodies.\n\nUser is advised to access Hyperdrive systems via the Galactic Map.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "GREEN2",
-				"Quantity": 250
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 5
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Hyperdrive",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "hyperdrive",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "HYPERDRIVE",
-		"Slug": "technology/HDRIVEBOOST3"
-	},
-	{
-		"Id": "HDRIVEBOOST4",
-		"Icon": "HDRIVEBOOST4.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.purpledrive.dds",
-		"Name": "Atlantid Drive",
-		"Group": "Hyperdrive Upgrade: Purple Systems",
-		"Description": "Sideloads a resonant memory packet into your warp computer,  allowing the ship to pass through the dissonant space surrounding purple stellar bodies.\n\nUser is advised to access Hyperdrive systems via the Galactic Map.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "BLUE2",
-				"Quantity": 250
-			},
-			{
-				"Id": "ROBOT2",
-				"Quantity": 200
-			},
-			{
-				"Id": "FARMPROD8",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Hyperdrive",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "hyperdrive",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShips",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "HYPERDRIVE",
-		"Slug": "technology/HDRIVEBOOST4"
 	},
 	{
 		"Id": "UT_QUICKWARP",
@@ -2757,7 +2046,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Hyperdrive Quickwarp",
+				"Name": "Ship Hyperdrive Quick Warp",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "quickwarp",
 				"Value": "1"
@@ -2806,7 +2095,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Cargoshield",
+				"Name": "Ship Cargo Shield",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cargoshield",
 				"Value": "1"
@@ -2880,55 +2169,6 @@
 		"Slug": "technology/SHIPSHIELD"
 	},
 	{
-		"Id": "UT_SHIPSHIELD",
-		"Icon": "UT_SHIPSHIELD.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.shieldmod.dds",
-		"Name": "Ablative Armour",
-		"Group": "Starship Shield Upgrade",
-		"Description": "Adds a layer of superheated shielding to the starship's defense array, vaporising incoming fire.\n\nSignificantly increases starship shield performance.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 100
-			},
-			{
-				"Id": "CATALYST2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Armour Shield Strength",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "strength",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Rare",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SHIPSHIELD",
-		"Slug": "technology/UT_SHIPSHIELD"
-	},
-	{
 		"Id": "SHIPROCKETS",
 		"Icon": "SHIPROCKETS.png",
 		"IconPath": "textures/ui/frontend/icons/technology/render.rocket.dds",
@@ -2968,13 +2208,13 @@
 				"Value": "0"
 			},
 			{
-				"Name": "Ship Weapons Guns Bulletspershot",
+				"Name": "Ship Weapons Guns Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Weapons Guns Heattime",
+				"Name": "Ship Weapons Guns Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "0"
@@ -2998,7 +2238,7 @@
 				"Value": "2"
 			},
 			{
-				"Name": "Ship Weapons Guns Cooltime",
+				"Name": "Ship Weapons Guns Cool Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cooltime",
 				"Value": "10"
@@ -3020,51 +2260,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/SHIPROCKETS"
-	},
-	{
-		"Id": "UT_ROCKETS",
-		"Icon": "UT_ROCKETS.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.rocketmod.dds",
-		"Name": "Large Rocket Tubes",
-		"Group": "Starship Rockets Upgrade",
-		"Description": "Expands the loading chamber of the starship Rocket Launcher, improving exhaust performance and allowing for significantly faster heat recovery.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			},
-			{
-				"Id": "GRENFUEL1",
-				"Quantity": 4
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Weapons Guns Cooltime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "cooltime",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Rare",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SHIPROCKETS",
-		"Slug": "technology/UT_ROCKETS"
 	},
 	{
 		"Id": "SHIPGUN1",
@@ -3106,13 +2301,13 @@
 				"Value": "0"
 			},
 			{
-				"Name": "Ship Weapons Guns Bulletspershot",
+				"Name": "Ship Weapons Guns Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Weapons Guns Heattime",
+				"Name": "Ship Weapons Guns Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "7"
@@ -3136,7 +2331,7 @@
 				"Value": "6"
 			},
 			{
-				"Name": "Ship Weapons Guns Cooltime",
+				"Name": "Ship Weapons Guns Cool Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cooltime",
 				"Value": "1"
@@ -3160,61 +2355,12 @@
 		"Slug": "technology/SHIPGUN1"
 	},
 	{
-		"Id": "UT_SHIPGUN",
-		"Icon": "UT_SHIPGUN.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.shipprojectile1mod.dds",
-		"Name": "Nonlinear Optics",
-		"Group": "Photon Cannon Upgrade",
-		"Description": "Replaces the conventional Photon Cannon optics with an experimental glass array, boosting combat performance.\n\nSignificantly improves heat sink capacity.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "CARBON_SEAL",
-				"Quantity": 2
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			},
-			{
-				"Id": "ROCKETSUB",
-				"Quantity": 100
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Weapons Guns Heattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "heattime",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Rare",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SHIPGUN1",
-		"Slug": "technology/UT_SHIPGUN"
-	},
-	{
 		"Id": "SHIPSCAN_ECON",
 		"Icon": "SHIPSCAN_ECON.png",
 		"IconPath": "textures/ui/frontend/icons/technology/render.shipscan_econ.dds",
 		"Name": "Economy Scanner",
 		"Group": "Long-range Sensor Technology",
-		"Description": "An upgrade to the starship's galactic-scale sensors. This device allows the user to access detailed economic data about a system without having to visit. See collected data automatically on the Galaxy Map.\n\nActive the scanner's internal Trade Computer with FE_ALT1 to search for highly-profitable trading surge events.",
+		"Description": "An upgrade to the starship's galactic-scale sensors. This device allows the user to access detailed economic data about a system without having to visit. See collected data automatically on the Galaxy Map.\n\nActive the scanner's internal Trade Computer with [E] to search for highly-profitable trading surge events.",
 		"BaseValueUnits": 1,
 		"CurrencyType": "None",
 		"Colour": "095C77",
@@ -3236,7 +2382,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Scan Economyfilter",
+				"Name": "Ship Scan Economy Filter",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "economyfilter",
 				"Value": "1"
@@ -3281,7 +2427,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Scan Conflictfilter",
+				"Name": "Ship Scan Conflict Filter",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "conflictfilter",
 				"Value": "1"
@@ -3332,7 +2478,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Weapons Lasers Heattime",
+				"Name": "Ship Weapons Lasers Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "2"
@@ -3344,7 +2490,7 @@
 				"Value": "250"
 			},
 			{
-				"Name": "Ship Weapons Shieldleech",
+				"Name": "Ship Weapons Shield Leech",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "shieldleech",
 				"Value": "0"
@@ -3360,57 +2506,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/SHIPLAS1"
-	},
-	{
-		"Id": "UT_SHIPLAS",
-		"Icon": "UT_SHIPLAS.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.phasebeammod.dds",
-		"Name": "Fourier De-limiter",
-		"Group": "Phase Beam Upgrade",
-		"Description": "Rewires the Phase Beam with nanite-based circuitry, bypassing conventional reality limits on laser power.\n\nSignificantly improves heat performance.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MIRROR",
-				"Quantity": 1
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Weapons Lasers Heattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "heattime",
-				"Value": "1"
-			},
-			{
-				"Name": "Ship Weapons Shieldleech",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "shieldleech",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Normal",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SHIPLAS1",
-		"Slug": "technology/UT_SHIPLAS"
 	},
 	{
 		"Id": "SHIPSHOTGUN",
@@ -3452,13 +2547,13 @@
 				"Value": "10"
 			},
 			{
-				"Name": "Ship Weapons Guns Bulletspershot",
+				"Name": "Ship Weapons Guns Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "14"
 			},
 			{
-				"Name": "Ship Weapons Guns Heattime",
+				"Name": "Ship Weapons Guns Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "1"
@@ -3482,7 +2577,7 @@
 				"Value": "100"
 			},
 			{
-				"Name": "Ship Weapons Guns Cooltime",
+				"Name": "Ship Weapons Guns Cool Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cooltime",
 				"Value": "1"
@@ -3504,57 +2599,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/SHIPSHOTGUN"
-	},
-	{
-		"Id": "UT_SHIPSHOT",
-		"Icon": "UT_SHIPSHOT.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.photonblastmod.dds",
-		"Name": "Fragment Supercharger",
-		"Group": "Starship Positron Ejector Upgrade",
-		"Description": "Overhauls the firing mechanism of the Positron Ejector, resulting in faster, more accurate particles.\n\nImproves range and accuracy.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MAGNET",
-				"Quantity": 3
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Weapons Guns Dispersion",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "dispersion",
-				"Value": "0"
-			},
-			{
-				"Name": "Ship Weapons Guns Range",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "range",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Normal",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SHIPSHOTGUN",
-		"Slug": "technology/UT_SHIPSHOT"
 	},
 	{
 		"Id": "SHIPMINIGUN",
@@ -3596,13 +2640,13 @@
 				"Value": "0"
 			},
 			{
-				"Name": "Ship Weapons Guns Bulletspershot",
+				"Name": "Ship Weapons Guns Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Weapons Guns Heattime",
+				"Name": "Ship Weapons Guns Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "3"
@@ -3626,7 +2670,7 @@
 				"Value": "6"
 			},
 			{
-				"Name": "Ship Weapons Guns Cooltime",
+				"Name": "Ship Weapons Guns Cool Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cooltime",
 				"Value": "1"
@@ -3648,55 +2692,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/SHIPMINIGUN"
-	},
-	{
-		"Id": "UT_SHIPMINI",
-		"Icon": "UT_SHIPMINI.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.photonaccelmod.dds",
-		"Name": "Q-resonator",
-		"Group": "Starship Infra-Knife Upgrade",
-		"Description": "Upgrades the Infra-Knife Accelerator, compressing internal waveforms to allow an extra shot to be weaved in to the conventional fire patterns.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HYDRALIC",
-				"Quantity": 3
-			},
-			{
-				"Id": "COMPUTER",
-				"Quantity": 1
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Weapons Guns Bulletspershot",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "bulletspershot",
-				"Value": "3"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Normal",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SHIPMINIGUN",
-		"Slug": "technology/UT_SHIPMINI"
 	},
 	{
 		"Id": "SHIPPLASMA",
@@ -3738,13 +2733,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Weapons Guns Bulletspershot",
+				"Name": "Ship Weapons Guns Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "2"
 			},
 			{
-				"Name": "Ship Weapons Guns Heattime",
+				"Name": "Ship Weapons Guns Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "2"
@@ -3768,7 +2763,7 @@
 				"Value": "3"
 			},
 			{
-				"Name": "Ship Weapons Guns Cooltime",
+				"Name": "Ship Weapons Guns Cool Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cooltime",
 				"Value": "1"
@@ -3790,51 +2785,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/SHIPPLASMA"
-	},
-	{
-		"Id": "UT_SHIPBLOB",
-		"Icon": "UT_SHIPBLOB.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.ionblastmod.dds",
-		"Name": "Dyson Pump",
-		"Group": "Starship Cyclotron Upgrade",
-		"Description": "Replaces the heat sink of the Cyclotron Ballista by encompassing the entire unit with a heat-absorbing megastructure. Heat output is recycled to boost combat efficiency.\n\nSignificantly improves heat performance.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "BIO",
-				"Quantity": 3
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Ship Weapons Guns Heattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "heattime",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "AllShipsExceptAlien",
-		"Rarity": "Normal",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SHIPPLASMA",
-		"Slug": "technology/UT_SHIPBLOB"
 	},
 	{
 		"Id": "F_HYPERDRIVE",
@@ -3875,13 +2825,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Freighter Hyperdrive Jumpdistance",
+				"Name": "Freighter Hyperdrive Jump Distance",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpdistance",
 				"Value": "100"
 			},
 			{
-				"Name": "Freighter Hyperdrive Jumpspercell",
+				"Name": "Freighter Hyperdrive Jumps Per Cell",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpspercell",
 				"Value": "1"
@@ -3939,7 +2889,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Freighter Hyperdrive Jumpdistance",
+				"Name": "Freighter Hyperdrive Jump Distance",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpdistance",
 				"Value": "200"
@@ -3988,7 +2938,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Freighter Hyperdrive Jumpdistance",
+				"Name": "Freighter Hyperdrive Jump Distance",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpdistance",
 				"Value": "300"
@@ -4037,7 +2987,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Freighter Hyperdrive Jumpdistance",
+				"Name": "Freighter Hyperdrive Jump Distance",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpdistance",
 				"Value": "800"
@@ -4053,202 +3003,6 @@
 		"ParentTechId": null,
 		"RequiredTech": "F_HYPERDRIVE",
 		"Slug": "technology/F_HDRIVEBOOST3"
-	},
-	{
-		"Id": "F_HACCESS1",
-		"Icon": "F_HACCESS1.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.freightersigma.dds",
-		"Name": "Amplified Warp Shielding",
-		"Group": "Hyperdrive Upgrade: Red Systems",
-		"Description": "Upgrades the hyperdrive's core bounding magnets, preventing rapid disassembly when attempting to reach rare-class red stellar bodies.\n\nUser is advised to access Hyperdrive systems via the Galactic Map.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HYPERFUEL2",
-				"Quantity": 1
-			},
-			{
-				"Id": "COMPUTER",
-				"Quantity": 2
-			},
-			{
-				"Id": "RED2",
-				"Quantity": 250
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Freighter Hyperdrive Jumpdistance",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "jumpdistance",
-				"Value": "50"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Freighter",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "F_HYPERDRIVE",
-		"Slug": "technology/F_HACCESS1"
-	},
-	{
-		"Id": "F_HACCESS2",
-		"Icon": "F_HACCESS2.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.freightertau.dds",
-		"Name": "Chromatic Warp Shielding",
-		"Group": "Hyperdrive Upgrade: Green Systems",
-		"Description": "Upgrades the hyperdrive's shield integrity, preventing reality glitches when attempting to reach rare-class green stellar bodies.\n\nUser is advised to access Hyperdrive systems via the Galactic Map.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HYPERFUEL2",
-				"Quantity": 1
-			},
-			{
-				"Id": "MIRROR",
-				"Quantity": 2
-			},
-			{
-				"Id": "GREEN2",
-				"Quantity": 250
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Freighter Hyperdrive Jumpdistance",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "jumpdistance",
-				"Value": "50"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Freighter",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "F_HYPERDRIVE",
-		"Slug": "technology/F_HACCESS2"
-	},
-	{
-		"Id": "F_HACCESS3",
-		"Icon": "F_HACCESS3.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.freightertheta.dds",
-		"Name": "Temporal Warp Computer",
-		"Group": "Hyperdrive Upgrade: Blue Systems",
-		"Description": "Upgrades the hyperdrive's computational matrix,  preventing temporal anomalies when attempting to reach rare-class blue stellar bodies.\n\nUser is advised to access Hyperdrive systems via the Galactic Map.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HYPERFUEL2",
-				"Quantity": 1
-			},
-			{
-				"Id": "MAGNET",
-				"Quantity": 2
-			},
-			{
-				"Id": "BLUE2",
-				"Quantity": 250
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Freighter Hyperdrive Jumpdistance",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "jumpdistance",
-				"Value": "50"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Freighter",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "F_HYPERDRIVE",
-		"Slug": "technology/F_HACCESS3"
-	},
-	{
-		"Id": "F_HACCESS4",
-		"Icon": "F_HACCESS4.png",
-		"IconPath": "textures/ui/frontend/icons/technology/technology.freighterpurple.dds",
-		"Name": "Resonance Matrix",
-		"Group": "Hyperdrive Upgrade: Purple Systems",
-		"Description": "Sideloads a resonant memory packet into your warp computer,  allowing the ship to pass through the dissonant space surrounding purple stellar bodies.\n\nUser is advised to access Hyperdrive systems via the Galactic Map.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "SPIDER_PROD",
-				"Quantity": 1
-			},
-			{
-				"Id": "ROBOT2",
-				"Quantity": 160
-			},
-			{
-				"Id": "PURPLE2",
-				"Quantity": 250
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Freighter Hyperdrive Jumpdistance",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "jumpdistance",
-				"Value": "50"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Freighter",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "F_HYPERDRIVE",
-		"Slug": "technology/F_HACCESS4"
 	},
 	{
 		"Id": "F_TELEPORT",
@@ -4331,13 +3085,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Scan Conflictfilter",
+				"Name": "Ship Scan Conflict Filter",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "conflictfilter",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Scan Economyfilter",
+				"Name": "Ship Scan Economy Filter",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "economyfilter",
 				"Value": "1"
@@ -4387,7 +3141,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Freighter Megawarp",
+				"Name": "Freighter Mega Warp",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "megawarp",
 				"Value": "1"
@@ -5074,13 +3828,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Pulsedrive",
+				"Name": "Ship Pulse Drive",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "pulsedrive",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Pulsedrive Minijumpfuelspending",
+				"Name": "Ship Pulse Drive Mini Jump Fuel Spending",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpfuelspending",
 				"Value": "0"
@@ -5098,7 +3852,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Pulsedrive Minijumpspeed",
+				"Name": "Ship Pulse Drive Mini Jump Speed",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpspeed",
 				"Value": "1"
@@ -5154,7 +3908,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Launcher Takeoffcost",
+				"Name": "Ship Launcher Take Off Cost",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "takeoffcost",
 				"Value": "50"
@@ -5210,13 +3964,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Hyperdrive Jumpdistance",
+				"Name": "Ship Hyperdrive Jump Distance",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpdistance",
 				"Value": "100"
 			},
 			{
-				"Name": "Ship Hyperdrive Jumpspercell",
+				"Name": "Ship Hyperdrive Jumps Per Cell",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpspercell",
 				"Value": "1"
@@ -5333,13 +4087,13 @@
 				"Value": "0"
 			},
 			{
-				"Name": "Ship Weapons Guns Bulletspershot",
+				"Name": "Ship Weapons Guns Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Weapons Guns Heattime",
+				"Name": "Ship Weapons Guns Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "10"
@@ -5363,7 +4117,7 @@
 				"Value": "6"
 			},
 			{
-				"Name": "Ship Weapons Guns Cooltime",
+				"Name": "Ship Weapons Guns Cool Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cooltime",
 				"Value": "1"
@@ -5420,7 +4174,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Weapons Lasers Heattime",
+				"Name": "Ship Weapons Lasers Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "3"
@@ -5432,7 +4186,7 @@
 				"Value": "280"
 			},
 			{
-				"Name": "Ship Weapons Shieldleech",
+				"Name": "Ship Weapons Shield Leech",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "shieldleech",
 				"Value": "0"
@@ -5477,7 +4231,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Cargoshield",
+				"Name": "Ship Cargo Shield",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cargoshield",
 				"Value": "1"
@@ -5522,7 +4276,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Launcher Autocharge",
+				"Name": "Ship Launcher Auto Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autocharge",
 				"Value": "1"
@@ -5567,13 +4321,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Scan Economyfilter",
+				"Name": "Ship Scan Economy Filter",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "economyfilter",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Scan Conflictfilter",
+				"Name": "Ship Scan Conflict Filter",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "conflictfilter",
 				"Value": "1"
@@ -5618,7 +4372,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Waterlandingjet",
+				"Name": "Ship Water Landing Jet",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "waterlandingjet",
 				"Value": "1"
@@ -5715,7 +4469,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Launcher Takeoffcost",
+				"Name": "Ship Launcher Take Off Cost",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "takeoffcost",
 				"Value": "25"
@@ -5764,13 +4518,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Pulsedrive",
+				"Name": "Ship Pulse Drive",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "pulsedrive",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Pulsedrive Minijumpfuelspending",
+				"Name": "Ship Pulse Drive Mini Jump Fuel Spending",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpfuelspending",
 				"Value": "1"
@@ -5788,13 +4542,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Pulsedrive Minijumpspeed",
+				"Name": "Ship Pulse Drive Mini Jump Speed",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpspeed",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Boostmaneuverability",
+				"Name": "Ship Boost Maneuverability",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "boostmaneuverability",
 				"Value": "1"
@@ -5859,13 +4613,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Hyperdrive Jumpdistance",
+				"Name": "Ship Hyperdrive Jump Distance",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpdistance",
 				"Value": "600"
 			},
 			{
-				"Name": "Ship Hyperdrive Jumpspercell",
+				"Name": "Ship Hyperdrive Jumps Per Cell",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpspercell",
 				"Value": "2"
@@ -5914,7 +4668,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Lifesupport",
+				"Name": "Ship Life Support",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "lifesupport",
 				"Value": "1"
@@ -5962,13 +4716,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Pulsedrive Minijumpfuelspending",
+				"Name": "Ship Pulse Drive Mini Jump Fuel Spending",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpfuelspending",
 				"Value": "0"
 			},
 			{
-				"Name": "Ship Launcher Autocharge",
+				"Name": "Ship Launcher Auto Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autocharge",
 				"Value": "1"
@@ -5980,7 +4734,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Boostmaneuverability",
+				"Name": "Ship Boost Maneuverability",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "boostmaneuverability",
 				"Value": "1"
@@ -6065,13 +4819,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Launcher Takeoffcost",
+				"Name": "Ship Launcher Take Off Cost",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "takeoffcost",
 				"Value": "25"
 			},
 			{
-				"Name": "Ship Launcher Autocharge",
+				"Name": "Ship Launcher Auto Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autocharge",
 				"Value": "1"
@@ -6124,13 +4878,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Pulsedrive",
+				"Name": "Ship Pulse Drive",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "pulsedrive",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Pulsedrive Minijumpfuelspending",
+				"Name": "Ship Pulse Drive Mini Jump Fuel Spending",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpfuelspending",
 				"Value": "1"
@@ -6148,13 +4902,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Pulsedrive Minijumpspeed",
+				"Name": "Ship Pulse Drive Mini Jump Speed",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minijumpspeed",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Boostmaneuverability",
+				"Name": "Ship Boost Maneuverability",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "boostmaneuverability",
 				"Value": "1"
@@ -6209,13 +4963,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Hyperdrive Jumpdistance",
+				"Name": "Ship Hyperdrive Jump Distance",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpdistance",
 				"Value": "600"
 			},
 			{
-				"Name": "Ship Hyperdrive Jumpspercell",
+				"Name": "Ship Hyperdrive Jumps Per Cell",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "jumpspercell",
 				"Value": "2"
@@ -6332,13 +5086,13 @@
 				"Value": "0"
 			},
 			{
-				"Name": "Ship Weapons Guns Bulletspershot",
+				"Name": "Ship Weapons Guns Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "1"
 			},
 			{
-				"Name": "Ship Weapons Guns Heattime",
+				"Name": "Ship Weapons Guns Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "12"
@@ -6362,7 +5116,7 @@
 				"Value": "6"
 			},
 			{
-				"Name": "Ship Weapons Guns Cooltime",
+				"Name": "Ship Weapons Guns Cool Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cooltime",
 				"Value": "1"
@@ -6417,7 +5171,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Ship Lifesupport",
+				"Name": "Ship Life Support",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "lifesupport",
 				"Value": "1"
@@ -6571,167 +5325,12 @@
 		"Slug": "technology/SCAN1"
 	},
 	{
-		"Id": "UT_SCAN",
-		"Icon": "UT_SCAN.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.scanmod.dds",
-		"Name": "Waveform Recycler",
-		"Group": "Multi-Tool Upgrade",
-		"Description": "A powerful lateral processor inserted into the Multi-Tool Scanning System allows the device to recharge at a significantly improved rate.\n\nIncreases potential scan frequency.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 100
-			},
-			{
-				"Id": "POWERCELL",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Scan Recharge Time",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "time",
-				"Value": "0"
-			},
-			{
-				"Name": "Weapon Scan Radius",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "radius",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/UT_SCAN"
-	},
-	{
-		"Id": "UT_SURVEY",
-		"Icon": "UT_SURVEY.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.binocsmod.dds",
-		"Name": "Survey Device",
-		"Group": "Analysis Visor Upgrade",
-		"Description": "A self-contained circuitry upgrade for the Analysis Visor, adding real-time terrain analysis to the scanning array.\n\nToggle between Visor modes with SURVEYFILTERL/SURVEYFILTERR. Use Surveying Mode to detect hidden terrain resources.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MAGNET",
-				"Quantity": 3
-			},
-			{
-				"Id": "COMPUTER",
-				"Quantity": 1
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Scan Surveying",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "surveying",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/UT_SURVEY"
-	},
-	{
-		"Id": "UT_BUI_SCAN",
-		"Icon": "UT_BUI_SCAN.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.buildersscanmod.dds",
-		"Name": "Scan Harmoniser",
-		"Group": "Multi-Tool Upgrade",
-		"Description": "An attachment for the Multi-Tool Scanner that allows the device to detect and decode the cloaking signal of nearby Autophage units.\n\nUse SCAN to activate the Scanner. As its detector waveform passes over the local area, it will automatically reveal any nearby Autophage entities.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "DRONE_SHARD",
-				"Quantity": 1
-			},
-			{
-				"Id": "MICROCHIP",
-				"Quantity": 1
-			},
-			{
-				"Id": "SPACEGUNK2",
-				"Quantity": 100
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Scan Builderreveal",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "builderreveal",
-				"Value": "1"
-			},
-			{
-				"Name": "Weapon Scan Radius",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "radius",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/UT_BUI_SCAN"
-	},
-	{
 		"Id": "UT_BUI_SCAN2",
 		"Icon": "UT_BUI_SCAN2.png",
 		"IconPath": "textures/ui/frontend/icons/technology/stafftech.dds",
 		"Name": "Polyphonic Core",
 		"Group": "Autophage Resonance Key",
-		"Description": "An attachment for the Multi-Tool Scanner that allows the device to detect and decode the cloaking signal of nearby Autophage units.\n\nUse SCAN to activate the Scanner. As its detector waveform passes over the local area, it will automatically reveal any nearby Autophage entities.\n\nIn addition, this device can be used to locate Autophage gatherings. Use Locate Autophage Camp (FE_SELECT) to pinpoint a planetary gathering of Autophage.",
+		"Description": "An attachment for the Multi-Tool Scanner that allows the device to detect and decode the cloaking signal of nearby Autophage units.\n\nUse SCAN to activate the Scanner. As its detector waveform passes over the local area, it will automatically reveal any nearby Autophage entities.\n\nIn addition, this device can be used to locate Autophage gatherings. Use Locate Autophage Camp ([LMB]) to pinpoint a planetary gathering of Autophage.",
 		"BaseValueUnits": 1,
 		"CurrencyType": "None",
 		"Colour": "2177C8",
@@ -6758,7 +5357,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Scan Builderreveal",
+				"Name": "Weapon Scan Builder Reveal",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "builderreveal",
 				"Value": "1"
@@ -6815,7 +5414,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Scan Builderreveal",
+				"Name": "Weapon Scan Builder Reveal",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "builderreveal",
 				"Value": "1"
@@ -6867,7 +5466,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Terrainedit",
+				"Name": "Weapon Terrain Edit",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "terrainedit",
 				"Value": "0"
@@ -6912,7 +5511,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Frontshield",
+				"Name": "Weapon Front Shield",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "frontshield",
 				"Value": "1"
@@ -7054,7 +5653,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Laser Heattime",
+				"Name": "Weapon Laser Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "8"
@@ -7066,7 +5665,7 @@
 				"Value": "20"
 			},
 			{
-				"Name": "Weapon Laser Reloadtime",
+				"Name": "Weapon Laser Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "0"
@@ -7078,7 +5677,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Laser Miningbonus",
+				"Name": "Weapon Laser Mining Bonus",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "miningbonus",
 				"Value": "1"
@@ -7131,7 +5730,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Laser Stronglaser",
+				"Name": "Weapon Laser Strong Laser",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "stronglaser",
 				"Value": "1"
@@ -7186,7 +5785,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Laser Miningbonus",
+				"Name": "Weapon Laser Mining Bonus",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "miningbonus",
 				"Value": "1"
@@ -7302,6 +5901,56 @@
 		"Slug": "technology/S15_FISHLASER"
 	},
 	{
+		"Id": "GRAVITYGUN",
+		"Icon": "GRAVITYGUN.png",
+		"IconPath": "textures/ui/frontend/icons/technology/render.gravitygun.dds",
+		"Name": "Gravitino Coil",
+		"Group": "Industrial Waste Manipulation Device",
+		"Description": "This remarkable technology transforms the Multi-Tool into a powerful kinetic manipulator, capable of attracting and repelling industrial waste via a localised magnetic field.\n\nAccess the Gravitino Coil by pressing CYCLEWEAPON, and attract industrial waste with ALTATTACK. Magnetised objects can be launched from the Coil with ATTACK, or gently released with ALTATTACK.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasChargedBy",
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [
+			{
+				"Id": "MAGNET",
+				"Quantity": 3
+			},
+			{
+				"Id": "GRAVBALL",
+				"Quantity": 1
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 50
+			}
+		],
+		"StatBonuses": [
+			{
+				"Name": "Weapon Gravity",
+				"LocaleKeyTemplate": "enabled",
+				"Image": "gravity",
+				"Value": "0"
+			}
+		],
+		"ConsumableRewardTexts": [],
+		"Category": "Weapon",
+		"Rarity": "Common",
+		"Chargeable": true,
+		"ChargeBy": [],
+		"Upgrade": false,
+		"Core": false,
+		"ParentTechId": null,
+		"RequiredTech": null,
+		"Slug": "technology/GRAVITYGUN"
+	},
+	{
 		"Id": "BOLT",
 		"Icon": "BOLT.png",
 		"IconPath": "textures/ui/frontend/icons/technology/render.projectile1.dds",
@@ -7353,7 +6002,7 @@
 				"Value": "7"
 			},
 			{
-				"Name": "Weapon Projectile Clipsize",
+				"Name": "Weapon Projectile Clip Size",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "clipsize",
 				"Value": "64"
@@ -7365,7 +6014,7 @@
 				"Value": "200"
 			},
 			{
-				"Name": "Weapon Projectile Reloadtime",
+				"Name": "Weapon Projectile Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "0"
@@ -7377,19 +6026,19 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Projectile Burstcap",
+				"Name": "Weapon Projectile Burst Cap",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcap",
 				"Value": "6"
 			},
 			{
-				"Name": "Weapon Projectile Burstcooldown",
+				"Name": "Weapon Projectile Burst Cooldown",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcooldown",
 				"Value": "0"
 			},
 			{
-				"Name": "Weapon Projectile Maximumcharge",
+				"Name": "Weapon Projectile Maximum Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "maximumcharge",
 				"Value": "200"
@@ -7409,108 +6058,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/BOLT"
-	},
-	{
-		"Id": "UT_BOLT",
-		"Icon": "UT_BOLT.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.projectile1mod.dds",
-		"Name": "Barrel Ioniser",
-		"Group": "Boltcaster Upgrade",
-		"Description": "Inserts a powerful field ionisation device into the barrel of the Boltcaster, increasing projectile stability through the air.\n\nImproves device accuracy and allows the user to fire for longer periods without degrading combat performance.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "FARMPROD3",
-				"Quantity": 4
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Projectile Recoil",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "recoil",
-				"Value": "0"
-			},
-			{
-				"Name": "Weapon Projectile Burstcap",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "burstcap",
-				"Value": "1"
-			},
-			{
-				"Name": "Weapon Projectile Burstcooldown",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "burstcooldown",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "BOLT",
-		"Slug": "technology/UT_BOLT"
-	},
-	{
-		"Id": "UT_BOLTBOUNCE",
-		"Icon": "UT_BOLTBOUNCE.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.projectile1mod.dds",
-		"Name": "Boltcaster Ricochet Module",
-		"Group": "Boltcaster Upgrade",
-		"Description": "Creates an antimatter field around the shots of the Boltcaster, causing them to be repelled by non-damaged surfaces.\n\nEnables ricochet, causing projectiles to bounce if they hit a target they do not damage.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "FARMPROD3",
-				"Quantity": 4
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Projectile Bounce",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "bounce",
-				"Value": "2"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "BOLT",
-		"Slug": "technology/UT_BOLTBOUNCE"
 	},
 	{
 		"Id": "BOLT_SM",
@@ -7548,7 +6095,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Projectile Clipsize",
+				"Name": "Weapon Projectile Clip Size",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "clipsize",
 				"Value": "8"
@@ -7564,53 +6111,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/BOLT_SM"
-	},
-	{
-		"Id": "LASER_XO",
-		"Icon": "LASER_XO.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.laser1mod.dds",
-		"Name": "Plasma Resonator",
-		"Group": "Mining Beam Upgrade",
-		"Description": "A significant upgrade for the Mining Beam.\n\nUpgrades the Mining Laser's primary crystal chamber, boosting core beam energy while decreasing unwanted heat spill.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Laser Mining Speed",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "speed",
-				"Value": "0"
-			},
-			{
-				"Name": "Weapon Laser Heattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "heattime",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/LASER_XO"
 	},
 	{
 		"Id": "GRENADE",
@@ -7663,19 +6163,19 @@
 				"Value": "2"
 			},
 			{
-				"Name": "Weapon Firedot",
+				"Name": "Weapon Fire Dot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "firedot",
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Firedot Duration",
+				"Name": "Weapon Fire Dot Duration",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "duration",
 				"Value": "5"
 			},
 			{
-				"Name": "Weapon Firedot Dps",
+				"Name": "Weapon Fire Dot Dps",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "dps",
 				"Value": "50"
@@ -7851,7 +6351,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Laser Heattime",
+				"Name": "Weapon Laser Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "0"
@@ -7863,13 +6363,13 @@
 				"Value": "1500"
 			},
 			{
-				"Name": "Weapon Laser Reloadtime",
+				"Name": "Weapon Laser Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "2"
 			},
 			{
-				"Name": "Weapon Laser Chargetime",
+				"Name": "Weapon Laser Charge Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "chargetime",
 				"Value": "3"
@@ -7900,106 +6400,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/RAILGUN"
-	},
-	{
-		"Id": "UT_RAIL",
-		"Icon": "UT_RAIL.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.blazejavelinmod.dds",
-		"Name": "Mass Accelerator",
-		"Group": "Blaze Javelin Upgrade",
-		"Description": "Extends the firing chamber of the Blaze Javelin, allowing the internal particle accelerators to reach both greater mass and speed.\n\nSignificantly improves weapon damage.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MIRROR",
-				"Quantity": 1
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Laser Damage",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "damage",
-				"Value": "200"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "RAILGUN",
-		"Slug": "technology/UT_RAIL"
-	},
-	{
-		"Id": "UT_RAIL_STUN",
-		"Icon": "UT_RAIL_STUN.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.blazejavelinmod.dds",
-		"Name": "Waveform Oscillator",
-		"Group": "Blaze Javelin Upgrade",
-		"Description": "Overloads the energy beam generated by the Blaze Javelin, causing it to deliver a power electrical charge at its point of impact.\n\nWill briefly stun any organic and inorganic entities that intersect the Blaze Javelin's beam.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 125
-			},
-			{
-				"Id": "CAVE2",
-				"Quantity": 75
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Stun",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "stun",
-				"Value": "1"
-			},
-			{
-				"Name": "Weapon Stun Duration",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "duration",
-				"Value": "5"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "RAILGUN",
-		"Slug": "technology/UT_RAIL_STUN"
 	},
 	{
 		"Id": "SHOTGUN",
@@ -8035,13 +6435,13 @@
 				"Value": "55"
 			},
 			{
-				"Name": "Weapon Projectile Clipsize",
+				"Name": "Weapon Projectile Clip Size",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "clipsize",
 				"Value": "96"
 			},
 			{
-				"Name": "Weapon Projectile Bulletspershot",
+				"Name": "Weapon Projectile Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "8"
@@ -8071,25 +6471,25 @@
 				"Value": "1000"
 			},
 			{
-				"Name": "Weapon Projectile Reloadtime",
+				"Name": "Weapon Projectile Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Projectile Burstcap",
+				"Name": "Weapon Projectile Burst Cap",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcap",
 				"Value": "2"
 			},
 			{
-				"Name": "Weapon Projectile Burstcooldown",
+				"Name": "Weapon Projectile Burst Cooldown",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcooldown",
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Projectile Maximumcharge",
+				"Name": "Weapon Projectile Maximum Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "maximumcharge",
 				"Value": "100"
@@ -8109,51 +6509,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/SHOTGUN"
-	},
-	{
-		"Id": "UT_SHOT",
-		"Icon": "UT_SHOT.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.scatterblastermod.dds",
-		"Name": "Shell Greaser",
-		"Group": "Scatter Blaster Upgrade",
-		"Description": "Advanced self-lubricating components decrease friction within the Scatter Blaster, offering significant improvements to reload times.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MAGNET",
-				"Quantity": 1
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Projectile Reloadtime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "reloadtime",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SHOTGUN",
-		"Slug": "technology/UT_SHOT"
 	},
 	{
 		"Id": "SMG",
@@ -8183,7 +6538,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Projectile Clipsize",
+				"Name": "Weapon Projectile Clip Size",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "clipsize",
 				"Value": "80"
@@ -8207,7 +6562,7 @@
 				"Value": "6"
 			},
 			{
-				"Name": "Weapon Projectile Reloadtime",
+				"Name": "Weapon Projectile Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "1"
@@ -8219,7 +6574,7 @@
 				"Value": "300"
 			},
 			{
-				"Name": "Weapon Projectile Bulletspershot",
+				"Name": "Weapon Projectile Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "2"
@@ -8231,19 +6586,19 @@
 				"Value": "80"
 			},
 			{
-				"Name": "Weapon Projectile Burstcap",
+				"Name": "Weapon Projectile Burst Cap",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcap",
 				"Value": "0"
 			},
 			{
-				"Name": "Weapon Projectile Burstcooldown",
+				"Name": "Weapon Projectile Burst Cooldown",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcooldown",
 				"Value": "0"
 			},
 			{
-				"Name": "Weapon Projectile Maximumcharge",
+				"Name": "Weapon Projectile Maximum Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "maximumcharge",
 				"Value": "200"
@@ -8263,161 +6618,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/SMG"
-	},
-	{
-		"Id": "UT_SMG",
-		"Icon": "UT_SMG.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.pulsespittermod.dds",
-		"Name": "Amplified Cartridges",
-		"Group": "Pulse Spitter Upgrade",
-		"Description": "Specialist harmonic resonators allow the Pulse Spitter to split inserted ammunition, effective manufacturing more shots from fewer materials.\n\nIncreases weapon clip size.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MIRROR",
-				"Quantity": 1
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Projectile Clipsize",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "clipsize",
-				"Value": "20"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SMG",
-		"Slug": "technology/UT_SMG"
-	},
-	{
-		"Id": "UT_SMGBOUNCE",
-		"Icon": "UT_SMGBOUNCE.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.pulsespittermod.dds",
-		"Name": "Pulse Spitter Ricochet Module",
-		"Group": "Pulse Spitter Upgrade",
-		"Description": "Creates an antimatter field around the shots of the Pulse Spitter, causing them to be repelled by non-damaged surfaces.\n\nEnables ricochet, causing projectiles to bounce if they hit a target they do not damage.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MIRROR",
-				"Quantity": 1
-			},
-			{
-				"Id": "COMPUTER",
-				"Quantity": 1
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Projectile Bounce",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "bounce",
-				"Value": "2"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SMG",
-		"Slug": "technology/UT_SMGBOUNCE"
-	},
-	{
-		"Id": "UT_SMG_DOT",
-		"Icon": "UT_SMG_DOT.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.pulsespittermod.dds",
-		"Name": "Impact Igniter",
-		"Group": "Pulse Spitter Upgrade",
-		"Description": "A powerful combat upgrade for the Pulse Spitter. This module installs series of delicately calibrated fuel-injection nozzles within the firing chamber, which are used to initiate a controlled burn within its plasma projectiles.\n\nCauses targets hit by the Pulse Spitter to burn for a short while, causing additional damage.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HOT1",
-				"Quantity": 200
-			},
-			{
-				"Id": "CARBON_SEAL",
-				"Quantity": 4
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Firedot",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "firedot",
-				"Value": "1"
-			},
-			{
-				"Name": "Weapon Firedot Duration",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "duration",
-				"Value": "3"
-			},
-			{
-				"Name": "Weapon Firedot Dps",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "dps",
-				"Value": "80"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Common",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "SMG",
-		"Slug": "technology/UT_SMG_DOT"
 	},
 	{
 		"Id": "FLAME",
@@ -8447,7 +6647,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Projectile Clipsize",
+				"Name": "Weapon Projectile Clip Size",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "clipsize",
 				"Value": "800"
@@ -8471,7 +6671,7 @@
 				"Value": "6"
 			},
 			{
-				"Name": "Weapon Projectile Reloadtime",
+				"Name": "Weapon Projectile Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "1"
@@ -8483,7 +6683,7 @@
 				"Value": "12"
 			},
 			{
-				"Name": "Weapon Projectile Bulletspershot",
+				"Name": "Weapon Projectile Bullets Per Shot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "bulletspershot",
 				"Value": "2"
@@ -8495,19 +6695,19 @@
 				"Value": "200"
 			},
 			{
-				"Name": "Weapon Projectile Burstcap",
+				"Name": "Weapon Projectile Burst Cap",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcap",
 				"Value": "0"
 			},
 			{
-				"Name": "Weapon Projectile Burstcooldown",
+				"Name": "Weapon Projectile Burst Cooldown",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcooldown",
 				"Value": "0"
 			},
 			{
-				"Name": "Weapon Projectile Maximumcharge",
+				"Name": "Weapon Projectile Maximum Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "maximumcharge",
 				"Value": "200"
@@ -8585,31 +6785,31 @@
 				"Value": "2"
 			},
 			{
-				"Name": "Weapon Projectile Minimumcharge",
+				"Name": "Weapon Projectile Minimum Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "minimumcharge",
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Projectile Maximumcharge",
+				"Name": "Weapon Projectile Maximum Charge",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "maximumcharge",
 				"Value": "6"
 			},
 			{
-				"Name": "Weapon Chargedprojectile Chargetime",
+				"Name": "Weapon Charged Projectile Charge Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "chargetime",
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Chargedprojectile Cooldownduration",
+				"Name": "Weapon Charged Projectile Cooldown Duration",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "cooldownduration",
 				"Value": "0"
 			},
 			{
-				"Name": "Weapon Chargedprojectile Extraspeed",
+				"Name": "Weapon Charged Projectile Extra Speed",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "extraspeed",
 				"Value": "180"
@@ -8621,7 +6821,7 @@
 				"Value": "2"
 			},
 			{
-				"Name": "Weapon Projectile Burstcooldown",
+				"Name": "Weapon Projectile Burst Cooldown",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "burstcooldown",
 				"Value": "0"
@@ -8640,67 +6840,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/CANNON"
-	},
-	{
-		"Id": "UT_CANNON",
-		"Icon": "UT_CANNON.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.cannonmod.dds",
-		"Name": "P-field Compressor",
-		"Group": "Neutron Cannon Upgrade",
-		"Description": "A powerful upgrade to the Neutron Cannon. Additional resonance compressors allow significantly more energy to be routed through the cannon's central core, dramatically increasing operating power.\n\nInstallation will allow a fully-charged Neutron Cannon to launch additional projectiles at higher speeds.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 120
-			},
-			{
-				"Id": "MICROCHIP",
-				"Quantity": 3
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Weapon Projectile Maximumcharge",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "maximumcharge",
-				"Value": "2"
-			},
-			{
-				"Name": "Weapon Chargedprojectile Extraspeed",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "extraspeed",
-				"Value": "50"
-			},
-			{
-				"Name": "Weapon Chargedprojectile Chargetime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "chargetime",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Weapon",
-		"Rarity": "Rare",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": "CANNON",
-		"Slug": "technology/UT_CANNON"
 	},
 	{
 		"Id": "UT_STUNDMG",
@@ -9524,7 +7663,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Weapon Sunlaser",
+				"Name": "Weapon Sun Laser",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "sunlaser",
 				"Value": "1"
@@ -9576,7 +7715,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Laser Heattime",
+				"Name": "Weapon Laser Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "8"
@@ -9588,7 +7727,7 @@
 				"Value": "40"
 			},
 			{
-				"Name": "Weapon Laser Reloadtime",
+				"Name": "Weapon Laser Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "0"
@@ -9600,7 +7739,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Laser Miningbonus",
+				"Name": "Weapon Laser Mining Bonus",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "miningbonus",
 				"Value": "0"
@@ -9651,7 +7790,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Laser Heattime",
+				"Name": "Weapon Laser Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "8"
@@ -9663,7 +7802,7 @@
 				"Value": "20"
 			},
 			{
-				"Name": "Weapon Laser Reloadtime",
+				"Name": "Weapon Laser Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "0"
@@ -9675,7 +7814,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Laser Miningbonus",
+				"Name": "Weapon Laser Mining Bonus",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "miningbonus",
 				"Value": "1"
@@ -9727,7 +7866,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Laser Heattime",
+				"Name": "Weapon Laser Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "heattime",
 				"Value": "12"
@@ -9739,7 +7878,7 @@
 				"Value": "20"
 			},
 			{
-				"Name": "Weapon Laser Reloadtime",
+				"Name": "Weapon Laser Reload Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "reloadtime",
 				"Value": "0"
@@ -9751,7 +7890,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Weapon Laser Miningbonus",
+				"Name": "Weapon Laser Mining Bonus",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "miningbonus",
 				"Value": "1"
@@ -9777,437 +7916,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/ATLAS_LASER"
-	},
-	{
-		"Id": "VEHICLE_ENGINE",
-		"Icon": "VEHICLE_ENGINE.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.engine.dds",
-		"Name": "Fusion Engine",
-		"Group": "Exocraft Power System",
-		"Description": "A compact fusion core common to all Exocraft.\n\nRequires fuel to function.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 25
-			},
-			{
-				"Id": "PRODFUEL2",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Engine",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "engine",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Enginefueluse",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "enginefueluse",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Enginetopspeed",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "enginetopspeed",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Grip",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "grip",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Skidgrip",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "skidgrip",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Always",
-		"Chargeable": true,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": true,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_ENGINE"
-	},
-	{
-		"Id": "VEHICLE_GRIP1",
-		"Icon": "VEHICLE_GRIP1.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.traction.dds",
-		"Name": "Drift Suspension",
-		"Group": "Exocraft Handling Modification",
-		"Description": "Overhauls Exocraft handling values through a combination of software tweaks, pressure adjustments and the insertion of microgravity wells into key suspension components.\n\nSpecifically tuned to increase the ability of the Exocraft to drift.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 50
-			},
-			{
-				"Id": "LUSH1",
-				"Quantity": 50
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Grip",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "grip",
-				"Value": "3"
-			},
-			{
-				"Name": "Vehicle Skidgrip",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "skidgrip",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_GRIP1"
-	},
-	{
-		"Id": "VEHICLE_GRIP2",
-		"Icon": "VEHICLE_GRIP2.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.traction.dds",
-		"Name": "Grip Boost Suspension",
-		"Group": "Exocraft Handling Modification",
-		"Description": "Overhauls Exocraft handling values through a combination of software tweaks, pressure adjustments and the insertion of microgravity wells into key suspension components.\n\nSpecifically tuned to increase the ability of the Exocraft to turn sharply.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 50
-			},
-			{
-				"Id": "ROCKETSUB",
-				"Quantity": 50
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Grip",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "grip",
-				"Value": "0"
-			},
-			{
-				"Name": "Vehicle Skidgrip",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "skidgrip",
-				"Value": "2"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_GRIP2"
-	},
-	{
-		"Id": "VEHICLE_GRIP3",
-		"Icon": "VEHICLE_GRIP3.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.traction.dds",
-		"Name": "Hi-slide Suspension",
-		"Group": "Exocraft Handling Modification",
-		"Description": "Overhauls Exocraft handling values through a combination of software tweaks, pressure adjustments and the insertion of microgravity wells into key suspension components.\n\nSpecifically tuned to increase the ability of the Exocraft to slide.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 50
-			},
-			{
-				"Id": "COLD1",
-				"Quantity": 50
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Grip",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "grip",
-				"Value": "0"
-			},
-			{
-				"Name": "Vehicle Skidgrip",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "skidgrip",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_GRIP3"
-	},
-	{
-		"Id": "EXO_PROT_HOT",
-		"Icon": "EXO_PROT_HOT.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.protectheat.dds",
-		"Name": "Thermal Buffer",
-		"Group": "Exocraft Hazard Protection Unit",
-		"Description": "Sublimation cooling vents and high-thermal mass buffers are installed in all structural panels, keeping the Exocraft pilot at non-lethal temperatures even in the most overwhelming of firestorms.\n\nEntirely prevents all damage or energy drain while inside an Exocraft in scorched environments.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "COLD1",
-				"Quantity": 80
-			},
-			{
-				"Id": "CARBON_SEAL",
-				"Quantity": 2
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Protection Heat",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "heat",
-				"Value": "3"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Always",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/EXO_PROT_HOT"
-	},
-	{
-		"Id": "EXO_PROT_COLD",
-		"Icon": "EXO_PROT_COLD.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.protectcold.dds",
-		"Name": "Megawatt Heater",
-		"Group": "Exocraft Hazard Protection Unit",
-		"Description": "Installs a powerful heater into the Exocraft, keeping the cabin a habitable temperature even in the most freezing of conditions.\n\nEntirely prevents all damage or energy drain while inside an Exocraft in freezing environments.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HOT1",
-				"Quantity": 80
-			},
-			{
-				"Id": "RADIO1",
-				"Quantity": 50
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Protection Cold",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "cold",
-				"Value": "3"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Always",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/EXO_PROT_COLD"
-	},
-	{
-		"Id": "EXO_PROT_TOX",
-		"Icon": "EXO_PROT_TOX.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.protecttoxic.dds",
-		"Name": "Air Filtration Unit",
-		"Group": "Exocraft Hazard Protection Unit",
-		"Description": "Double-vacuumed air filtration systems allow no trace of the planetary atmosphere into the Exocraft cabin without being thoroughly scrubbed.\n\nEntirely prevents all damage or energy drain while inside an Exocraft in toxic environments.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "YELLOW2",
-				"Quantity": 160
-			},
-			{
-				"Id": "NANOTUBES",
-				"Quantity": 5
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Protection Toxic",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "toxic",
-				"Value": "3"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Always",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/EXO_PROT_TOX"
-	},
-	{
-		"Id": "EXO_PROT_RAD",
-		"Icon": "EXO_PROT_RAD.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.protectrads.dds",
-		"Name": "Neutron Shielding",
-		"Group": "Exocraft Hazard Protection Unit",
-		"Description": "Highly-efficient control materials are inserted into the frame of the Exocraft, neutralising dangerous incoming energy waves.\n\nEntirely prevents all damage or energy drain while inside an Exocraft in radioactive environments.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "CAVE2",
-				"Quantity": 50
-			},
-			{
-				"Id": "LAUNCHSUB2",
-				"Quantity": 95
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Protection Radiation",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "radiation",
-				"Value": "3"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Always",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/EXO_PROT_RAD"
 	},
 	{
 		"Id": "EXO_RECHARGE",
@@ -10241,7 +7949,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Vehicle Fuelregen",
+				"Name": "Vehicle Fuel Regen",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "fuelregen",
 				"Value": "4"
@@ -10308,799 +8016,6 @@
 		"Slug": "technology/EXO_REFINER"
 	},
 	{
-		"Id": "VEHICLE_SCAN",
-		"Icon": "VEHICLE_SCAN.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.scan.dds",
-		"Name": "Exocraft Radar",
-		"Group": "Exocraft Scan Equipment",
-		"Description": "A large and complex field-based subspace radar.\n\nDue to their large power consumption and inherent subatomic instability, they are found only installed on Exocraft.\n\nPress QUICK_MENU to activate the Signal Booster.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 50
-			},
-			{
-				"Id": "MICROCHIP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Scan",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "scan",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_SCAN"
-	},
-	{
-		"Id": "VEHICLE_SCAN1",
-		"Icon": "VEHICLE_SCAN1.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.scanu1.dds",
-		"Name": "Radar Amplifier",
-		"Group": "Exocraft Signal Detection Upgrade",
-		"Description": "Allows for additional building types to be acquired by the Exocraft Radar.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 100
-			},
-			{
-				"Id": "POWERCELL",
-				"Quantity": 2
-			},
-			{
-				"Id": "MICROCHIP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Scan",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "scan",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_SCAN1"
-	},
-	{
-		"Id": "VEHICLE_SCAN2",
-		"Icon": "VEHICLE_SCAN2.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.scanu1.dds",
-		"Name": "Radar Power Resonator",
-		"Group": "Exocraft Signal Detection Upgrade",
-		"Description": "Allows for additional building types to be acquired by the Exocraft Radar.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 150
-			},
-			{
-				"Id": "POWERCELL",
-				"Quantity": 2
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Scan",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "scan",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_SCAN2"
-	},
-	{
-		"Id": "VEHICLE_BOOST",
-		"Icon": "VEHICLE_BOOST.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.boost.dds",
-		"Name": "Exocraft Boost Module",
-		"Group": "Exocraft Engine Upgrade",
-		"Description": "An efficient plasma injector coupled to the engine that allows short bursts of speed.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 15
-			},
-			{
-				"Id": "STELLAR2",
-				"Quantity": 50
-			},
-			{
-				"Id": "NANOTUBES",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Boost",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "boost",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Boostspeed",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "boostspeed",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Boosttanks",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "boosttanks",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_BOOST"
-	},
-	{
-		"Id": "VEHICLE_LASER",
-		"Icon": "VEHICLE_LASER.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.vehicle_laser.dds",
-		"Name": "Exocraft Mining Laser",
-		"Group": "Exocraft Mining Attachment",
-		"Description": "A mining laser too cumbersome for handheld operation, they are found only installed on Exocraft.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 25
-			},
-			{
-				"Id": "STELLAR2",
-				"Quantity": 100
-			},
-			{
-				"Id": "PRODFUEL2",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Laserdamage",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "laserdamage",
-				"Value": "80"
-			},
-			{
-				"Name": "Vehicle Laserheattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "laserheattime",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": true,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_LASER"
-	},
-	{
-		"Id": "VEHICLE_LASER1",
-		"Icon": "VEHICLE_LASER1.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.vehicle_laseru1.dds",
-		"Name": "Advanced Exocraft Laser",
-		"Group": "Exocraft Mining Upgrade",
-		"Description": "Increases power of the Exocraft Mining Laser.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "ROBOT1",
-				"Quantity": 50
-			},
-			{
-				"Id": "STELLAR2",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Laserdamage",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "laserdamage",
-				"Value": "50"
-			},
-			{
-				"Name": "Vehicle Laserstronglaser",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "laserstronglaser",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_LASER1"
-	},
-	{
-		"Id": "VEHICLE_GUN",
-		"Icon": "VEHICLE_GUN.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.vehicle_gun.dds",
-		"Name": "Mounted Cannon",
-		"Group": "Exocraft Weapon Attachment",
-		"Description": "Due to the energy requirements of this powerful weapon, they can only be fired from an Exocraft mount.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "ROBOT1",
-				"Quantity": 50
-			},
-			{
-				"Id": "YELLOW2",
-				"Quantity": 100
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Gundamage",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gundamage",
-				"Value": "320"
-			},
-			{
-				"Name": "Vehicle Gunheattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gunheattime",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Gunrate",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gunrate",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": true,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_GUN"
-	},
-	{
-		"Id": "VEHICLE_FLAME",
-		"Icon": "VEHICLE_FLAME.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.vehicle_gunmod.dds",
-		"Name": "Mounted Flamethrower",
-		"Group": "Exocraft Ignition Weapon",
-		"Description": "A mounted flamethrower specifically designed for the Exocraft. Causes extreme damage at close range.\n\nUse CYCLEWEAPON to cycle available weapon modes.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "HOT1",
-				"Quantity": 50
-			},
-			{
-				"Id": "LAVA1",
-				"Quantity": 50
-			},
-			{
-				"Id": "GAS4",
-				"Quantity": 90
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Gundamage",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gundamage",
-				"Value": "3"
-			},
-			{
-				"Name": "Vehicle Gunheattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gunheattime",
-				"Value": "0"
-			},
-			{
-				"Name": "Vehicle Gunrate",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gunrate",
-				"Value": "0"
-			},
-			{
-				"Name": "Weapon Firedot",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "firedot",
-				"Value": "1"
-			},
-			{
-				"Name": "Weapon Firedot Duration",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "duration",
-				"Value": "3"
-			},
-			{
-				"Name": "Weapon Firedot Dps",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "dps",
-				"Value": "25"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Exocraft",
-		"Rarity": "Impossible",
-		"Chargeable": true,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/VEHICLE_FLAME"
-	},
-	{
-		"Id": "SUB_ENGINE",
-		"Icon": "SUB_ENGINE.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.submarineengine.dds",
-		"Name": "Humboldt Drive",
-		"Group": "Exocraft Power System",
-		"Description": "A thermally-efficient, inversion-proof reactor engine capable of powering the Nautilon even at extreme depths.\n\nPowered by Hydrothermal Fuel Cells.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 25
-			},
-			{
-				"Id": "PRODFUEL2",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Engine",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "engine",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Enginefueluse",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "enginefueluse",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Enginetopspeed",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "enginetopspeed",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Subboostspeed",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "subboostspeed",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Boosttanks",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "boosttanks",
-				"Value": "4"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Submarine",
-		"Rarity": "Always",
-		"Chargeable": true,
-		"ChargeBy": [
-			"SUBFUEL"
-		],
-		"Upgrade": false,
-		"Core": true,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/SUB_ENGINE"
-	},
-	{
-		"Id": "SUB_GUN",
-		"Icon": "SUB_GUN.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.submarinecannon.dds",
-		"Name": "Nautilon Cannon",
-		"Group": "Submarine Weapon",
-		"Description": "A mounted cannon specifically designed for the Nautilon Submarine.\n\nA high-energy weapon system, it superheats a small body of water before launching it rapidly towards the intended target.\n\nDesigned primarily for damage against biological entities and inefficient when deployed as a mining device.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "WATER2",
-				"Quantity": 100
-			},
-			{
-				"Id": "VENTGEM",
-				"Quantity": 6
-			},
-			{
-				"Id": "CLAMPEARL",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Gundamage",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gundamage",
-				"Value": "220"
-			},
-			{
-				"Name": "Vehicle Gunheattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gunheattime",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Gunrate",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "gunrate",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Submarine",
-		"Rarity": "Impossible",
-		"Chargeable": true,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/SUB_GUN"
-	},
-	{
-		"Id": "SUB_LASER",
-		"Icon": "SUB_LASER.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.vehicle_laser.dds",
-		"Name": "Tethys Beam",
-		"Group": "Submarine Mining Laser",
-		"Description": "A mounted laser system specifically designed for the Nautilon Submarine.\n\nFires a concentrated plasma beam towards the intended target, which is then ignited. Such a trigger mechanism allows the use of high-energy optical mining systems in a liquid medium.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 50
-			},
-			{
-				"Id": "WATER2",
-				"Quantity": 100
-			},
-			{
-				"Id": "CLAMPEARL",
-				"Quantity": 10
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Laserdamage",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "laserdamage",
-				"Value": "240"
-			},
-			{
-				"Name": "Vehicle Laserheattime",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "laserheattime",
-				"Value": "1"
-			},
-			{
-				"Name": "Vehicle Laserstronglaser",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "laserstronglaser",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Submarine",
-		"Rarity": "Impossible",
-		"Chargeable": true,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/SUB_LASER"
-	},
-	{
-		"Id": "SUB_MINER",
-		"Icon": "SUB_MINER.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.submarinecannonmod.dds",
-		"Name": "Dredging Laser",
-		"Group": "Nautilon Terrain Manipulator",
-		"Description": "Adds Terrain Manipulation capability to the laser systems of the Nautilon Submarine.\n\nCooled by specially designed water intakes, it is specifically calibrated to carve through the complex geology of the sea floor.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 80
-			},
-			{
-				"Id": "WATERWORLD1",
-				"Quantity": 90
-			},
-			{
-				"Id": "VENTGEM",
-				"Quantity": 4
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Terrainedit",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "terrainedit",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Submarine",
-		"Rarity": "Impossible",
-		"Chargeable": true,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/SUB_MINER"
-	},
-	{
-		"Id": "SUB_BINOCS",
-		"Icon": "SUB_BINOCS.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.subscan.dds",
-		"Name": "High-power Sonar",
-		"Group": "Submarine Analysis Device",
-		"Description": "A high-detail sonar device, capable of upgrading the scanner technology aboard a Nautilon-class submarine to Analysis Visor levels, pinning to the HUD all information typically revealed by the Analysis Visor.\n\nPress SCAN to activate the High-Power Sonar.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MIRROR",
-				"Quantity": 1
-			},
-			{
-				"Id": "VENTGEM",
-				"Quantity": 3
-			},
-			{
-				"Id": "LAND1",
-				"Quantity": 50
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Scan",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "scan",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Submarine",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/SUB_BINOCS"
-	},
-	{
-		"Id": "SUB_RECHARGE",
-		"Icon": "SUB_RECHARGE.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.submarineenginemod.dds",
-		"Name": "Osmotic Generator",
-		"Group": "Humboldt Drive Upgrade",
-		"Description": "Installed into the drive system aboard the Nautilon Submarine.\n\nCaptures energy by exploiting the saline gradient in deep water environments, allowing a slow recharge of the Humboldt Drive in the event of fuel emergencies.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STELLAR2",
-				"Quantity": 150
-			},
-			{
-				"Id": "CLAMPEARL",
-				"Quantity": 6
-			},
-			{
-				"Id": "MIRROR",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Enginefueluse",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "enginefueluse",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Submarine",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/SUB_RECHARGE"
-	},
-	{
 		"Id": "MECH_ENGINE",
 		"Icon": "MECH_ENGINE.png",
 		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.engine.dds",
@@ -11139,13 +8054,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Vehicle Enginefueluse",
+				"Name": "Vehicle Engine Fuel Use",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "enginefueluse",
 				"Value": "0"
 			},
 			{
-				"Name": "Vehicle Enginetopspeed",
+				"Name": "Vehicle Engine Top Speed",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "enginetopspeed",
 				"Value": "1"
@@ -11157,7 +8072,7 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Vehicle Skidgrip",
+				"Name": "Vehicle Skid Grip",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "skidgrip",
 				"Value": "1"
@@ -11173,55 +8088,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/MECH_ENGINE"
-	},
-	{
-		"Id": "MECH_FUEL",
-		"Icon": "MECH_FUEL.png",
-		"IconPath": "textures/ui/frontend/icons/technology/vehicle/render.engine.dds",
-		"Name": "Self-greasing Servos",
-		"Group": "Motor Efficiency Upgrade",
-		"Description": "An automatically-regulated lubricant dispenser fitted to the leg joints of the Minotaur reduce friction and encourage fuel-efficient motion.\n\nSignificantly reduces fuel burn in the Minotaur's Daedalus Engine.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "LAND3",
-				"Quantity": 40
-			},
-			{
-				"Id": "FARMPROD1",
-				"Quantity": 1
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Vehicle Enginefueluse",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "enginefueluse",
-				"Value": "0"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Mech",
-		"Rarity": "Impossible",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": true,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/MECH_FUEL"
 	},
 	{
 		"Id": "MECH_SCAN",
@@ -11310,13 +8176,13 @@
 				"Value": "1"
 			},
 			{
-				"Name": "Vehicle Boostspeed",
+				"Name": "Vehicle Boost Speed",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "boostspeed",
 				"Value": "1"
 			},
 			{
-				"Name": "Vehicle Boosttanks",
+				"Name": "Vehicle Boost Tanks",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "boosttanks",
 				"Value": "1"
@@ -11366,13 +8232,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Vehicle Laserdamage",
+				"Name": "Vehicle Laser Damage",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "laserdamage",
 				"Value": "100"
 			},
 			{
-				"Name": "Vehicle Laserheattime",
+				"Name": "Vehicle Laser Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "laserheattime",
 				"Value": "1"
@@ -11417,13 +8283,13 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Vehicle Laserdamage",
+				"Name": "Vehicle Laser Damage",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "laserdamage",
 				"Value": "50"
 			},
 			{
-				"Name": "Vehicle Laserstronglaser",
+				"Name": "Vehicle Laser Strong Laser",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "laserstronglaser",
 				"Value": "1"
@@ -11473,19 +8339,19 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Vehicle Gundamage",
+				"Name": "Vehicle Gun Damage",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "gundamage",
 				"Value": "420"
 			},
 			{
-				"Name": "Vehicle Gunheattime",
+				"Name": "Vehicle Gun Heat Time",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "gunheattime",
 				"Value": "1"
 			},
 			{
-				"Name": "Vehicle Gunrate",
+				"Name": "Vehicle Gun Rate",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "gunrate",
 				"Value": "0"
@@ -11535,7 +8401,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Vehicle Terrainedit",
+				"Name": "Vehicle Terrain Edit",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "terrainedit",
 				"Value": "1"
@@ -11551,73 +8417,6 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/MECH_MINER"
-	},
-	{
-		"Id": "MECH_PROT",
-		"Icon": "MECH_PROT.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.protectgeneric.dds",
-		"Name": "Environment Control Unit",
-		"Group": "Exocraft Hazard Protection Unit",
-		"Description": "This powerful environmental neutralising system is plugged directly into the pilot as they enter the cockpit. The system is powered via the Minotaur's main engine and requires no additional input. Some minor pain may be noticed around the insertion site.\n\nRenders the Minotaur pilot impervious to all environmental hazards.",
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Colour": "095C77",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "STORM_CRYSTAL",
-				"Quantity": 3
-			},
-			{
-				"Id": "MICROCHIP",
-				"Quantity": 2
-			},
-			{
-				"Id": "TECH_COMP",
-				"Quantity": 2
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Protection Heat",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "heat",
-				"Value": "1"
-			},
-			{
-				"Name": "Protection Cold",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "cold",
-				"Value": "1"
-			},
-			{
-				"Name": "Protection Radiation",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "radiation",
-				"Value": "1"
-			},
-			{
-				"Name": "Protection Toxic",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "toxic",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Mech",
-		"Rarity": "Always",
-		"Chargeable": false,
-		"ChargeBy": [],
-		"Upgrade": false,
-		"Core": false,
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"Slug": "technology/MECH_PROT"
 	},
 	{
 		"Id": "MECH_PILOT",
@@ -11651,7 +8450,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Vehicle Autopilot",
+				"Name": "Vehicle Auto Pilot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autopilot",
 				"Value": "1"
@@ -11700,7 +8499,7 @@
 		],
 		"StatBonuses": [
 			{
-				"Name": "Vehicle Autopilot",
+				"Name": "Vehicle Auto Pilot",
 				"LocaleKeyTemplate": "enabled",
 				"Image": "autopilot",
 				"Value": "1"
@@ -11716,6 +8515,162 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/MECH_SENT_HEAD"
+	},
+	{
+		"Id": "MAINT_FUEL1",
+		"Icon": "MAINT_FUEL1.png",
+		"IconPath": "textures/ui/frontend/icons/update3/mainttech.fuel1.dds",
+		"Name": "Fuel Inverter",
+		"Group": "Chargeable Power Unit",
+		"Description": "A piece of rechargeable power technology. The fuel inverter ensures an even flow of power to autonomous machines.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasChargedBy",
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Category": "Maintenance",
+		"Rarity": "Impossible",
+		"Chargeable": true,
+		"ChargeBy": [
+			"FUEL1",
+			"FUEL2"
+		],
+		"Upgrade": false,
+		"Core": true,
+		"ParentTechId": null,
+		"RequiredTech": null,
+		"Slug": "technology/MAINT_FUEL1"
+	},
+	{
+		"Id": "MAINT_FUEL2",
+		"Icon": "MAINT_FUEL2.png",
+		"IconPath": "textures/ui/frontend/icons/update3/mainttech.fuel2.dds",
+		"Name": "Membrane Battery",
+		"Group": "Chargeable Power Unit",
+		"Description": "The membrane battery is an almost maintenance-free piece of rechargeable power technology. Nestled among in the machine's circuits, it supplies power safely and directly.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasChargedBy",
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Category": "Maintenance",
+		"Rarity": "Impossible",
+		"Chargeable": true,
+		"ChargeBy": [],
+		"Upgrade": false,
+		"Core": true,
+		"ParentTechId": null,
+		"RequiredTech": null,
+		"Slug": "technology/MAINT_FUEL2"
+	},
+	{
+		"Id": "MAINT_FUEL3",
+		"Icon": "MAINT_FUEL3.png",
+		"IconPath": "textures/ui/frontend/icons/update3/mainttech.fuel3.dds",
+		"Name": "Power Condenser",
+		"Group": "Chargeable Power Unit",
+		"Description": "A piece of rechargeable power technology. The power condenser harvests any heat energy wasted during the machine's operation, and uses it to generate extra power.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasChargedBy",
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Category": "Maintenance",
+		"Rarity": "Impossible",
+		"Chargeable": true,
+		"ChargeBy": [],
+		"Upgrade": false,
+		"Core": true,
+		"ParentTechId": null,
+		"RequiredTech": null,
+		"Slug": "technology/MAINT_FUEL3"
+	},
+	{
+		"Id": "MAINT_FUEL4",
+		"Icon": "MAINT_FUEL4.png",
+		"IconPath": "textures/ui/frontend/icons/update3/mainttech.fuel4.dds",
+		"Name": "Generator Coupling",
+		"Group": "Chargeable Power Unit",
+		"Description": "The generator coupling is an important piece of the machine's rechargeable power systems. Without it, the generator would fruitlessly spin, pumping power out into the void.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasChargedBy",
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Category": "Maintenance",
+		"Rarity": "Impossible",
+		"Chargeable": true,
+		"ChargeBy": [
+			"FUEL1",
+			"FUEL2"
+		],
+		"Upgrade": false,
+		"Core": true,
+		"ParentTechId": null,
+		"RequiredTech": null,
+		"Slug": "technology/MAINT_FUEL4"
+	},
+	{
+		"Id": "MAINT_FUEL5",
+		"Icon": "MAINT_FUEL5.png",
+		"IconPath": "textures/ui/frontend/icons/update3/mainttech.fuel5.dds",
+		"Name": "Kinetic Dynamo",
+		"Group": "Chargeable Power Unit",
+		"Description": "The kinetic dynamo takes a small initial charge and uses it to run power-harvesting systems that tap into the orbit of the planet. This frees autonomous machinery from frequent fuel inspections, allowing them to endure extremely long maintenance cycles.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasChargedBy",
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Category": "Maintenance",
+		"Rarity": "Impossible",
+		"Chargeable": true,
+		"ChargeBy": [],
+		"Upgrade": false,
+		"Core": true,
+		"ParentTechId": null,
+		"RequiredTech": null,
+		"Slug": "technology/MAINT_FUEL5"
 	},
 	{
 		"Id": "MAINT_TECH1",
@@ -13275,6 +10230,36 @@
 		"Slug": "technology/MAINT_COOKER"
 	},
 	{
+		"Id": "MAINT_BURNER",
+		"Icon": "MAINT_BURNER.png",
+		"IconPath": "textures/ui/frontend/icons/update3/mainttech.fuel1.dds",
+		"Name": "Furnace Tank",
+		"Group": "Fuel Incineration Device",
+		"Description": "High-temperature burn unit, designed to consume a wide range of biological material. Insert materials to initiate burn.\n\nWhen active, drives an internal turbine to generate power.",
+		"BaseValueUnits": 1,
+		"CurrencyType": "None",
+		"Colour": "095C77",
+		"Usages": [
+			"HasChargedBy",
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
+		"BlueprintCostType": "Nanites",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Category": "Maintenance",
+		"Rarity": "Impossible",
+		"Chargeable": true,
+		"ChargeBy": [],
+		"Upgrade": false,
+		"Core": true,
+		"ParentTechId": null,
+		"RequiredTech": null,
+		"Slug": "technology/MAINT_BURNER"
+	},
+	{
 		"Id": "MAINT_ARTIFACT",
 		"Icon": "MAINT_ARTIFACT.png",
 		"IconPath": "textures/ui/frontend/icons/products/product.vortexcube.dds",
@@ -14269,5 +11254,27 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/MAINT_ROBO10"
+	},
+	{
+		"Id": "BIGGS_POI_LOC",
+		"Icon": "BIGGS_POI_LOC.png",
+		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.biggspoi.dds",
+		"Name": "Debris Rangefinder",
+		"Group": "Deep-Space Salvage Locator",
+		"Description": "A single-use device for locating the wreckage of starships in deep space.\n\nSelect the Rangefinder and Scan for Debris ([E]) to begin the location process.",
+		"BaseValueUnits": 3200,
+		"CurrencyType": "Credits",
+		"MaxStackSize": 0,
+		"Colour": "1A2733",
+		"CookingValue": 0.0,
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Slug": "technology/BIGGS_POI_LOC"
 	}
 ]

@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets';
+
+const { card, index, loading, adsEnabled = true, adSlots = [24, 68] } = Astro.props;
+const showAd = adsEnabled && Array.isArray(adSlots) && adSlots.includes(index);
+---
+
+<article data-index={index} class="group relative">
+	<a
+		href={card.link}
+		class="group block h-full overflow-hidden rounded-sm border border-sky-900 bg-sky-800/80 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-700/90"
+	>
+		<div class="aspect-square bg-[#0b3550]">
+			<Image
+				class="h-full w-full object-contain object-center"
+				src={card.image}
+				alt={card.name}
+				sizes="(min-width: 1280px) 12vw, (min-width: 1024px) 16vw, (min-width: 768px) 24vw, 45vw"
+				width={160}
+				height={160}
+				loading={loading}
+			/>
+		</div>
+		<div class="border-t border-sky-900 px-2 py-1.5">
+			<p class="truncate text-base font-semibold text-white/95" title={card.name}>{card.name}</p>
+		</div>
+	</a>
+	<div
+		class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-max max-w-72 -translate-x-1/2 rounded-md border border-sky-400 bg-[#06283d] px-3 py-2 text-sm font-semibold text-white opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
+		role="tooltip"
+	>
+		{card.name}
+	</div>
+</article>
+
+{
+	showAd ? (
+		<div class="rounded-sm border border-sky-900 bg-black/70 overflow-hidden text-center">
+			<ins
+				class="adsbygoogle"
+				style="display:block"
+				data-ad-format="fluid"
+				data-ad-layout-key="-dh-68+xg-dr-1ye"
+				data-ad-client="ca-pub-8524094599848175"
+				data-ad-slot="3379583016"
+				data-ad-status="init"
+			/>
+			<script>
+				const win = window as { adsbygoogle?: unknown[] };
+				const ads = win.adsbygoogle ?? [];
+				ads.push({});
+				win.adsbygoogle = ads;
+			</script>
+		</div>
+	) : null
+}
+
+<script>
+	type AdsByGoogle = { loaded?: boolean };
+	const adsbygoogle = (window as { adsbygoogle?: AdsByGoogle }).adsbygoogle;
+
+	if (typeof adsbygoogle === 'undefined') {
+		const elements = document.querySelectorAll('[data-ad-status]');
+		elements.forEach((element) => {
+			element.parentElement?.classList.add('hidden');
+		});
+	} else if (!adsbygoogle.loaded) {
+		const elements = document.querySelectorAll('[data-ad-status]');
+		elements.forEach((element) => {
+			element.parentElement?.classList.add('hidden');
+		});
+	}
+</script>

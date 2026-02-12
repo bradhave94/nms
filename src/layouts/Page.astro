@@ -13,6 +13,55 @@ interface Props {
 
 const { item } = Astro.props;
 
+type UpgradeStatLevel = {
+  StatType?: string;
+  Name?: string;
+  ValueMin?: number;
+  ValueMax?: number;
+  Image?: string;
+  Value?: string | number;
+};
+
+type UpgradeLikeItem = Item & {
+  NumStatsMin?: number;
+  NumStatsMax?: number;
+  StatLevels?: UpgradeStatLevel[];
+  StatBonuses?: UpgradeStatLevel[];
+};
+
+type CorvetteLikeItem = Item & {
+  CorvettePartCategory?: string;
+  BuildableShipTechID?: string;
+  IsCraftable?: boolean;
+  MaxStackSize?: number;
+  CanSendToOtherPlayers?: boolean;
+  Rarity?: string;
+};
+
+type FishLikeItem = Item & {
+  FishingTime?: string;
+  NeedsStorm?: boolean;
+  FishSize?: string;
+  Quality?: string;
+  Biomes?: string[];
+  RequiresMissionActive?: string | null;
+  MissionCatchChanceOverride?: number;
+};
+
+type BlueprintLikeItem = Item & {
+  BlueprintCost?: number;
+  BlueprintCostType?: string;
+};
+
+type ExocraftLikeItem = Item & {
+  ProductCategory?: string;
+  SubstanceCategory?: string;
+  TradeCategory?: string;
+  IsCraftable?: boolean;
+  PinObjective?: string | null;
+  EconomyInfluenceMultiplier?: number;
+};
+
 type ProcessedItem = {
   Id: string;
   fishId?: string;
@@ -199,6 +248,142 @@ for (const entry of findOutput(item.Id) as unknown as RecipeOutput[]) {
 const inputData = findInput(item.Id) as unknown as RecipeInput[];
 const input = getInputs(inputData);
 const showQuantityInput = data.length + output.length > 0;
+const formattedBaseValueUnits = Number(item.BaseValueUnits ?? 0).toLocaleString();
+const blueprintItem = item as BlueprintLikeItem;
+const blueprintCost = blueprintItem.BlueprintCost ?? 0;
+const blueprintCostType = blueprintItem.BlueprintCostType;
+const blueprintIconByType: Record<string, string> = {
+  nanites: 'https://nomansskyrecipes.com/images/items/TECHFRAG_R.png',
+  factoryoverride: 'https://nomansskyrecipes.com/images/items/FACT_TOKEN.png',
+};
+const blueprintIcon = blueprintCostType ? blueprintIconByType[blueprintCostType.toLowerCase()] : undefined;
+const showBlueprintCost = blueprintCost > 0 && Boolean(blueprintIcon);
+const exocraftItem = item as ExocraftLikeItem;
+const isExocraftPage = Boolean(item.Slug?.startsWith('exocraft/'));
+
+const upgradeItem = item as UpgradeLikeItem;
+const isUpgradePage = Boolean(item.Slug?.startsWith('upgrades/'));
+const upgradeStatsMin = upgradeItem.NumStatsMin;
+const upgradeStatsMax = upgradeItem.NumStatsMax;
+const corvetteItem = item as CorvetteLikeItem;
+const isCorvettePage = Boolean(item.Slug?.startsWith('corvette/'));
+const fishItem = item as FishLikeItem;
+const isFishPage = Boolean(item.Slug?.startsWith('fish/'));
+const fishingTime = (fishItem.FishingTime ?? '').toLowerCase();
+const showSunIcon = fishingTime === 'both' || fishingTime === 'day';
+const showMoonIcon = fishingTime === 'both' || fishingTime === 'night';
+const fishingTimeLabel =
+  fishingTime === 'both'
+    ? 'Any Time'
+    : fishingTime === 'day'
+      ? 'Day'
+      : fishingTime === 'night'
+        ? 'Night'
+        : fishItem.FishingTime;
+const biomes = Array.isArray(fishItem.Biomes) ? fishItem.Biomes.filter(Boolean) : [];
+const biomeLabel = biomes.length > 0 ? biomes.join(', ') : undefined;
+const missionLabel =
+  fishItem.RequiresMissionActive && fishItem.RequiresMissionActive !== 'NONE'
+    ? fishItem.RequiresMissionActive
+    : undefined;
+const catchChancePercent =
+  typeof fishItem.MissionCatchChanceOverride === 'number' && fishItem.MissionCatchChanceOverride > 0
+    ? `${(fishItem.MissionCatchChanceOverride * 100).toLocaleString()}%`
+    : undefined;
+
+const formatSignedPercent = (value: number): string => `${value >= 0 ? '+' : ''}${(value * 100).toLocaleString()}%`;
+const pinObjectiveLabel =
+  exocraftItem.PinObjective === 'UI_FIND_BUY_OBJ'
+    ? 'Find and Buy'
+    : exocraftItem.PinObjective && exocraftItem.PinObjective !== 'None'
+      ? exocraftItem.PinObjective
+      : undefined;
+
+const exocraftPills = [
+  { label: 'Category', value: exocraftItem.ProductCategory },
+  { label: 'Type', value: exocraftItem.SubstanceCategory },
+  {
+    label: 'Trade',
+    value: exocraftItem.TradeCategory && exocraftItem.TradeCategory !== 'None' ? exocraftItem.TradeCategory : undefined,
+  },
+  {
+    label: 'Craftable',
+    value: typeof exocraftItem.IsCraftable === 'boolean' ? (exocraftItem.IsCraftable ? 'Yes' : 'No') : undefined,
+  },
+  { label: 'How to Obtain', value: pinObjectiveLabel },
+  {
+    label: 'Economy Influence',
+    value:
+      typeof exocraftItem.EconomyInfluenceMultiplier === 'number' && exocraftItem.EconomyInfluenceMultiplier !== 0
+        ? formatSignedPercent(exocraftItem.EconomyInfluenceMultiplier)
+        : undefined,
+  },
+].filter((pill): pill is { label: string; value: string } => Boolean(pill.value));
+
+const statLevels = (upgradeItem.StatLevels ?? []).map((stat) => ({
+  name: stat.Name ?? 'Unknown Stat',
+  image: stat.Image ?? 'stat',
+  min: typeof stat.ValueMin === 'number' ? stat.ValueMin : undefined,
+  max: typeof stat.ValueMax === 'number' ? stat.ValueMax : undefined,
+}));
+
+const statBonuses = (upgradeItem.StatBonuses ?? []).map((stat) => {
+  const parsed = typeof stat.Value === 'string' ? Number(stat.Value) : stat.Value;
+  const numericValue = typeof parsed === 'number' && Number.isFinite(parsed) ? parsed : undefined;
+  return {
+    name: stat.Name ?? 'Unknown Bonus',
+    image: stat.Image ?? 'stat',
+    min: numericValue,
+    max: numericValue,
+  };
+});
+
+const upgradeStats = statLevels.length > 0 ? statLevels : statBonuses;
+
+const formatStatName = (name: string): string =>
+  name
+    .replace(/^Weapon /, '')
+    .replace(/^Suit /, '')
+    .replace(/^Ship /, '')
+    .replace(/^Vehicle /, '')
+    .replace(/^Jetpack /, '')
+    .replace(/\bDiscovery\b/g, 'Analysis')
+    .replace(/\bCreature\b/g, 'Fauna')
+    .replace(/\bFlora\b/g, 'Flora')
+    .replace(/\bMineral\b/g, 'Mineral');
+
+const formatStatRange = (name: string, min?: number, max?: number): string => {
+  if (typeof min !== 'number' && typeof max !== 'number') return 'Varies';
+  const safeMin = min ?? max ?? 0;
+  const safeMax = max ?? min ?? 0;
+  const lowerName = name.toLowerCase();
+  const isDiscoveryLike =
+    lowerName.includes('discovery') ||
+    lowerName.includes('analysis rewards') ||
+    lowerName.includes('analysis reward');
+  const isMultiplierLike = safeMax > 3;
+  const usePercent = isDiscoveryLike || isMultiplierLike || safeMax <= 3;
+
+  if (!usePercent) {
+    return `${safeMin} => ${safeMax}`;
+  }
+
+  const toPercent = (value: number): number => {
+    if (isDiscoveryLike || value > 3) return value * 100;
+    return (value - 1) * 100;
+  };
+
+  return `${toPercent(safeMin).toLocaleString()}% => ${toPercent(safeMax).toLocaleString()}%`;
+};
+
+const corvetteAttributes = [
+  { label: 'Category', value: corvetteItem.CorvettePartCategory },
+  { label: 'Rarity', value: corvetteItem.Rarity },
+  {
+    label: 'Craftable',
+    value: typeof corvetteItem.IsCraftable === 'boolean' ? (corvetteItem.IsCraftable ? 'Yes' : 'No') : undefined,
+  },
+].filter((attribute): attribute is { label: string; value: string } => Boolean(attribute.value));
 ---
 
 <div class="mx-auto max-w-6xl lg:pt-12 bg-gray-800 p-3 lg:p-8">
@@ -214,18 +399,143 @@ const showQuantityInput = data.length + output.length > 0;
       />
     </div>
     <div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-      <h1 class="text-4xl inline-block">{item.Name}</h1>
-      <p class="flex items-center gap-2 py-2 pb-4">
-        {item.BaseValueUnits}
-        <Image
-          src={credit}
-          alt="Credits"
-          sizes="25px"
-          width={25}
-          height={25}
-        />
-      </p>
-      <p class="lg:text-lg">{item.Description}</p>
+      <h1 class="text-4xl">{item.Name}</h1>
+      {item.Group && (
+        <p class="mt-2 block w-fit rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          {item.Group}
+        </p>
+      )}
+      {item.BaseValueUnits > 1 && (
+        <p class="flex items-center gap-2 pt-2">
+          {formattedBaseValueUnits}
+          <Image
+            src={credit}
+            alt="Credits"
+            sizes="25px"
+            width={25}
+            height={25}
+          />
+        </p>
+      )}
+
+      <p class="lg:text-lg pt-4">{item.Description}</p>
+
+      {showBlueprintCost && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          <p class="inline-flex items-center gap-2 rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <img
+              src={blueprintIcon}
+              alt="Blueprint Cost"
+              class="h-4 w-4"
+              loading="lazy"
+            />
+            <span>
+              Blueprint Cost: {blueprintCost.toLocaleString()}
+              {blueprintCostType && blueprintCostType !== 'None' ? ` ${blueprintCostType}` : ''}
+            </span>
+          </p>
+        </div>
+      )}
+
+      {isCorvettePage && corvetteAttributes.length > 0 && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {corvetteAttributes.map((attribute) => (
+            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              {attribute.label}: {attribute.value}
+            </p>
+          ))}
+        </div>
+      )}
+
+      {isExocraftPage && exocraftPills.length > 0 && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {exocraftPills.map((pill) => (
+            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              {pill.label}: {pill.value}
+            </p>
+          ))}
+        </div>
+      )}
+
+      {isFishPage && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {fishItem.FishingTime && (
+            <p class="inline-flex items-center gap-2 rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              {showSunIcon && (
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
+                  <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+                  <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+              )}
+              {showMoonIcon && (
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
+                  <path d="M20.5 14.8A8.5 8.5 0 1 1 9.2 3.5a7 7 0 1 0 11.3 11.3z" fill="currentColor"></path>
+                </svg>
+              )}
+              <span>Time: {fishingTimeLabel}</span>
+            </p>
+          )}
+
+          {fishItem.FishSize && (
+            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              Size: {fishItem.FishSize}
+            </p>
+          )}
+
+          {fishItem.Quality && (
+            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              Quality: {fishItem.Quality}
+            </p>
+          )}
+
+          {biomeLabel && (
+            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              Biomes: {biomeLabel}
+            </p>
+          )}
+
+          {fishItem.NeedsStorm && (
+            <p class="inline-flex items-center gap-2 rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
+                <path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 6.2 8.5 3.5 3.5 0 0 0 7 18z" fill="currentColor"></path>
+                <path d="M12 12l-2 4h2l-1 4 4-6h-2l1-2z" fill="#0b0b0b"></path>
+              </svg>
+              <span>Storm Required</span>
+            </p>
+          )}
+
+          {missionLabel && (
+            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              Mission: {missionLabel}
+            </p>
+          )}
+
+          {catchChancePercent && (
+            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              Catch Chance: {catchChancePercent}
+            </p>
+          )}
+        </div>
+      )}
+
+      {isUpgradePage && upgradeStats.length > 0 && (
+        <div class="mt-6">
+          <h2 class="mb-3 text-center text-2xl text-gray-200">
+            Stats
+            {(typeof upgradeStatsMin === 'number' && typeof upgradeStatsMax === 'number') && (
+              <span class="ml-2 text-lg text-gray-300">(Min: {upgradeStatsMin}, Max: {upgradeStatsMax})</span>
+            )}
+          </h2>
+          <div class="grid gap-3 md:grid-cols-2">
+            {upgradeStats.map((stat) => (
+              <div class="rounded bg-slate-500/40 px-4 py-3">
+                <p class="text-lg text-gray-100">{formatStatName(stat.name)}</p>
+                <p class="text-sm text-cyan-200">{formatStatRange(stat.name, stat.min, stat.max)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {showQuantityInput && (
         <div class="sm:flex items-center mb-4 gap-4 mt-4">

@@ -47,8 +47,13 @@ const { cell } = Astro.props;
 </style>
 
 <td>
-    {typeof cell === 'string' || typeof cell === 'number' ? (
+    {typeof cell === 'string' ? (
         cell
+    ) : typeof cell === 'number' ? (
+        <>
+            <span class="d-none sort">{cell}</span>
+            {cell.toLocaleString()}
+        </>
     ) : cell && 'id' in cell ? (
         <>
             <span class="d-none sort">{cell.name}</span>
