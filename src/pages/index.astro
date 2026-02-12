@@ -116,7 +116,6 @@ const cards = [
 		link: '/raw/1',
 	},
 ];
-const homeAdIndex = Math.max(0, Math.floor(cards.length / 2) + 4);
 ---
 <Layout title="No Man's Sky Recipes, Crafting Guide and Cooking Guide" slug="home">
     <header class="text-center py-10 bg-gradient-to-r from-purple-900/20 to-slate-900/50">
@@ -133,7 +132,6 @@ const homeAdIndex = Math.max(0, Math.floor(cards.length / 2) + 4);
                     card={card}
                     index={index}
                     loading={index < 4 ? "eager" : "lazy"}
-                    showHomeAd={index === homeAdIndex}
                 />
             ))}
         </div>

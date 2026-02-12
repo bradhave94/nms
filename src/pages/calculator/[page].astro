@@ -7,7 +7,7 @@ import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Products.json';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	return paginate((data as Item[]).sort((a: Item, b: Item) => b.BaseValueUnits - a.BaseValueUnits), { pageSize: 84 });
+	return paginate((data as Item[]).sort((a: Item, b: Item) => b.BaseValueUnits - a.BaseValueUnits), { pageSize: 80 });
 }
 // All paginated data is passed on the "page" prop
 interface PageProps {

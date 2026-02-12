@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets'
 
 import credit from '../assets/img/credits.png';
-const { card, index, loading, showHomeAd = false } = Astro.props;
+const { card, index, loading } = Astro.props;
 ---
 
 <article data-index={index}>
@@ -59,72 +59,3 @@ const { card, index, loading, showHomeAd = false } = Astro.props;
 		</div>
 	</a>
 </article>
-
-{
-	showHomeAd ? (
-		<div class="sm:col-span-2 xl:col-span-2 rounded-md border border-sky-900 bg-black overflow-hidden text-center min-h-[140px]">
-			<ins
-				class="adsbygoogle"
-				style="display:block"
-				data-ad-format="fluid"
-				data-ad-layout-key="-dh-68+xg-dr-1ye"
-				data-ad-client="ca-pub-8524094599848175"
-				data-ad-slot="3379583016"
-				data-home-ad="true"
-			/>
-		</div>
-	) : null
-}
-
-<script>
-	type AdInsElement = HTMLModElement & { dataset: DOMStringMap };
-	type AdsWindow = Window & { adsbygoogle?: unknown[] };
-
-	const adElements = Array.from(
-		document.querySelectorAll<AdInsElement>('ins.adsbygoogle[data-home-ad="true"]')
-	);
-
-	const pushWhenReady = (element: AdInsElement): void => {
-		if (element.dataset.adsInitialized === 'true') return;
-
-		const containerWidth = element.parentElement?.getBoundingClientRect().width ?? 0;
-		if (containerWidth < 250) return;
-
-		const adsWindow = window as AdsWindow;
-		const queue = adsWindow.adsbygoogle ?? [];
-		adsWindow.adsbygoogle = queue;
-
-		try {
-			queue.push({});
-			element.dataset.adsInitialized = 'true';
-		} catch {
-			// Retry on next resize/intersection when AdSense is ready.
-		}
-	};
-
-	for (const element of adElements) {
-		pushWhenReady(element);
-	}
-
-	const resizeObserver = new ResizeObserver((entries) => {
-		for (const entry of entries) {
-			const element = entry.target.querySelector<AdInsElement>('ins.adsbygoogle[data-home-ad="true"]');
-			if (element) pushWhenReady(element);
-		}
-	});
-
-	const intersectionObserver = new IntersectionObserver((entries) => {
-		for (const entry of entries) {
-			if (!entry.isIntersecting) continue;
-			const element = entry.target.querySelector<AdInsElement>('ins.adsbygoogle[data-home-ad="true"]');
-			if (element) pushWhenReady(element);
-		}
-	});
-
-	for (const element of adElements) {
-		const container = element.parentElement;
-		if (!container) continue;
-		resizeObserver.observe(container);
-		intersectionObserver.observe(container);
-	}
-</script>

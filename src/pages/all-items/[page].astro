@@ -31,7 +31,7 @@ export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], op
 			...other,
 			...trade,
 		] as Item[]),
-		{ pageSize: 206 }
+		{ pageSize: 80 }
 	);
 }
 // All paginated data is passed on the "page" prop
