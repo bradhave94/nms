@@ -3,9 +3,10 @@ import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import * as dataSources from '@datav2/index.js';
 
-const getTypeFromSlug = (slug?: string): string => {
-  if (!slug) return 'item';
-  const [prefix] = slug.split('/');
+const getTypeFromUrl = (url?: string): string => {
+  if (!url) return 'item';
+  const cleanUrl = url.replace(/^\/+/, '');
+  const [prefix] = cleanUrl.split('/');
   return prefix || 'item';
 };
 
@@ -16,12 +17,15 @@ const data = sort(allData as Item[]);
 // Build search index: only include items with a valid name so search and client filtering work
 const search = data
 	.filter((item: Item) => item?.Name != null && String(item.Name).trim() !== '')
-	.map((item: Item) => ({
-		id: item.Id,
-		name: item.Name,
-		type: getTypeFromSlug(item.Slug),
-		url: getSlug(item),
-	}));
+	.map((item: Item) => {
+		const url = getSlug(item);
+		return {
+			id: item.Id,
+			name: item.Name,
+			type: getTypeFromUrl(url),
+			url,
+		};
+	});
 
 export const GET: APIRoute = ({ request }) => {
   const url = new URL(request.url);

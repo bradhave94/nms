@@ -1,6 +1,6 @@
 export { default as Buildings } from './Buildings.json';
 export { default as ConstructedTechnology } from './ConstructedTechnology.json';
-export { default as Cooking } from './Cooking.json';
+export { default as Cooking } from './Food.json';
 export { default as Curiosities } from './Curiosities.json';
 export { default as NutrientProcessor } from './NutrientProcessor.json';
 export { default as Others } from './Others.json';

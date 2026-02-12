@@ -21643,13 +21643,32 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 30
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S19_STATION",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S19_TP"
 	},
 	{
@@ -21665,13 +21684,28 @@
 		"Colour": "8A7F72",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"IsEggIngredient",
+			"HasDevProperties"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Curio",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": true,
+		"EggModifierIngredient": true,
+		"DeploysInto": null,
+		"RewardID": "R_BOTTLEMESSAGE",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/F_BOTTLE"
 	},
 	{
@@ -21687,13 +21721,27 @@
 		"Colour": "8A7F72",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S15_MESSAGE1",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S15_BOT_1"
 	},
 	{
@@ -21709,13 +21757,27 @@
 		"Colour": "8A7F72",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S15_MESSAGE2",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S15_BOT_2"
 	},
 	{
@@ -21731,13 +21793,27 @@
 		"Colour": "8A7F72",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S15_MESSAGE3",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S15_BOT_3"
 	},
 	{
@@ -21753,13 +21829,27 @@
 		"Colour": "8A7F72",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S15_MESSAGE4",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S15_BOT_4"
 	},
 	{
@@ -21775,13 +21865,40 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "SAND1",
+				"Quantity": 99
+			},
+			{
+				"Id": "ROCKETSUB",
+				"Quantity": 66
+			},
+			{
+				"Id": "WATER1",
+				"Quantity": 33
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S12_POI_SEED1",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S12_POI_SEED1"
 	},
 	{
@@ -21797,13 +21914,40 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 99
+			},
+			{
+				"Id": "LAND3",
+				"Quantity": 66
+			},
+			{
+				"Id": "CATALYST2",
+				"Quantity": 33
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S12_POI_SEED2",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S12_POI_SEED2"
 	},
 	{
@@ -21819,13 +21963,40 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "RED2",
+				"Quantity": 99
+			},
+			{
+				"Id": "LAUNCHSUB",
+				"Quantity": 66
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 33
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S12_POI_SEED3",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S12_POI_SEED3"
 	},
 	{
@@ -21841,13 +22012,40 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "ROBOT1",
+				"Quantity": 99
+			},
+			{
+				"Id": "FUEL2",
+				"Quantity": 66
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 33
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S12_POI_SEED4",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S12_POI_SEED4"
 	},
 	{
@@ -21863,13 +22061,36 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "LAUNCHSUB",
+				"Quantity": 30
+			},
+			{
+				"Id": "SQUIDFRAG",
+				"Quantity": 10
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "RS_S16_SPOOKJCE",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/SPOOK_JUICE"
 	},
 	{
@@ -21885,13 +22106,40 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "ASTEROID1",
+				"Quantity": 40
+			},
+			{
+				"Id": "LAND2",
+				"Quantity": 33
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "RS_S16_PRTLJCE",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/PORTAL_JUICE"
 	},
 	{
@@ -21907,13 +22155,40 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "CREATURE1",
+				"Quantity": 15
+			},
+			{
+				"Id": "ROBOT1",
+				"Quantity": 15
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 20
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "RS_S16_MSGJCE",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/MESSAGE_JUICE"
 	},
 	{
@@ -21929,13 +22204,40 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "CREATURE1",
+				"Quantity": 15
+			},
+			{
+				"Id": "STORM_CRYSTAL",
+				"Quantity": 1
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 20
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "RS_S16_MSGJCE1",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/MESSAGE_JUICE1"
 	},
 	{
@@ -21951,13 +22253,40 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "CREATURE1",
+				"Quantity": 15
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 15
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 20
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "RS_S16_MSGJCE1",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/MESSAGE_JUICE2"
 	},
 	{
@@ -21973,13 +22302,40 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "CREATURE1",
+				"Quantity": 15
+			},
+			{
+				"Id": "ROBOT2",
+				"Quantity": 15
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 20
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "RS_S16_MSGJCE1",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/MESSAGE_JUICE3"
 	},
 	{
@@ -21995,13 +22351,40 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "CREATURE1",
+				"Quantity": 15
+			},
+			{
+				"Id": "SQUIDFRAG",
+				"Quantity": 25
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 20
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "RS_S16_MSGJCE1",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/MESSAGE_JUICE4"
 	},
 	{
@@ -22017,13 +22400,32 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "ROBOT2",
+				"Quantity": 144
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Common",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S16_BOSSJUICE",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/BOSS_JUICE"
 	},
 	{
@@ -22039,13 +22441,32 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "STELLAR2",
+				"Quantity": 100
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S10_A_STING",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S10_ATLAS_SEED1"
 	},
 	{
@@ -22061,13 +22482,36 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "S10_ATLAS_SEED1",
+				"Quantity": 1
+			},
+			{
+				"Id": "LAND2",
+				"Quantity": 100
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S10_A_STING",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S10_ATLAS_SEED2"
 	},
 	{
@@ -22083,13 +22527,36 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "S10_ATLAS_SEED2",
+				"Quantity": 1
+			},
+			{
+				"Id": "CAVE2",
+				"Quantity": 100
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S10_A_STING",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S10_ATLAS_SEED3"
 	},
 	{
@@ -22105,13 +22572,36 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "S10_ATLAS_SEED3",
+				"Quantity": 1
+			},
+			{
+				"Id": "LAND3",
+				"Quantity": 5
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S10_A_STING",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S10_ATLAS_SEED4"
 	},
 	{
@@ -22127,13 +22617,36 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "S10_ATLAS_SEED4",
+				"Quantity": 1
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 25
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_S10_A_STING",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/S10_ATLAS_SEED5"
 	},
 	{
@@ -22149,13 +22662,40 @@
 		"Colour": "311A49",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "TIMEMILK",
+				"Quantity": 16
+			},
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 40
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 30
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_GRAVEFINDER",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_FINDER"
 	},
 	{
@@ -22171,13 +22711,27 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_FAKE_SCAN",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/PIRATE_INVITE"
 	},
 	{
@@ -22193,13 +22747,27 @@
 		"Colour": "4D2957",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_FAKE_SCAN",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/PIRATE_BEACON"
 	},
 	{
@@ -22222,6 +22790,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH1",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG1"
 	},
 	{
@@ -22244,6 +22824,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH2",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG2"
 	},
 	{
@@ -22266,6 +22858,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH3",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG3"
 	},
 	{
@@ -22288,6 +22892,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH4",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG4"
 	},
 	{
@@ -22310,6 +22926,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH5",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG5"
 	},
 	{
@@ -22332,6 +22960,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH6",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG6"
 	},
 	{
@@ -22354,6 +22994,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH7",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG7"
 	},
 	{
@@ -22376,6 +23028,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH8",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG8"
 	},
 	{
@@ -22398,6 +23062,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH9",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG9"
 	},
 	{
@@ -22420,6 +23096,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH10",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG10"
 	},
 	{
@@ -22442,6 +23130,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH11",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG11"
 	},
 	{
@@ -22464,6 +23164,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH12",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG12"
 	},
 	{
@@ -22486,6 +23198,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH13",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG13"
 	},
 	{
@@ -22508,6 +23232,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH14",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG14"
 	},
 	{
@@ -22530,6 +23266,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH15",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG15"
 	},
 	{
@@ -22552,6 +23300,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH16",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG16"
 	},
 	{
@@ -22574,6 +23334,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH17",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG17"
 	},
 	{
@@ -22596,6 +23368,18 @@
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": false,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_EGG_HATCH18",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/EGG18"
 	},
 	{
@@ -22612,12 +23396,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_STARCHART_A",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/STARCHART_A"
 	},
 	{
@@ -22634,12 +23430,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_STARCHART_B",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/STARCHART_B"
 	},
 	{
@@ -22656,12 +23464,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "Curio",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_STARCHART_C",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/STARCHART_C"
 	},
 	{
@@ -22678,12 +23498,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_STARCHART_D",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/STARCHART_D"
 	},
 	{
@@ -22700,12 +23532,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 3,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_CHRT_TREASURE",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/CHART_TREASURE"
 	},
 	{
@@ -22722,12 +23566,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "TUT_CRASH_SCAN",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/TUT_STARMAP"
 	},
 	{
@@ -22744,12 +23600,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_A1S6_MAP",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/A1S6_STARMAP"
 	},
 	{
@@ -22766,12 +23634,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_TECH",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_TECHBOX"
 	},
 	{
@@ -22787,13 +23667,40 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "TECH_COMP",
+				"Quantity": 2
+			},
+			{
+				"Id": "ASTEROID1",
+				"Quantity": 50
+			},
+			{
+				"Id": "ROBOT1",
+				"Quantity": 100
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_TECH",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_CRAFTBOX"
 	},
 	{
@@ -22810,12 +23717,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_INV",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_INVBOX"
 	},
 	{
@@ -22832,12 +23751,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_CLASS",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_CLASSBOX"
 	},
 	{
@@ -22854,12 +23785,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_GUN",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_GUNBOX"
 	},
 	{
@@ -22876,12 +23819,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_SGUN",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_SGUNBOX"
 	},
 	{
@@ -22898,12 +23853,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_SMART",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_SMARTBOX"
 	},
 	{
@@ -22920,12 +23887,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_HAZ",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_HAZBOX"
 	},
 	{
@@ -22942,12 +23921,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_STARTBO",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_STARTBOX"
 	},
 	{
@@ -22963,13 +23954,40 @@
 		"Colour": "311A49",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "SUNGOLD",
+				"Quantity": 32
+			},
+			{
+				"Id": "TIMEMILK",
+				"Quantity": 32
+			},
+			{
+				"Id": "TIMEDUST",
+				"Quantity": 32
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_ROGUE_BEACON",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/ROGUE_BEACON"
 	},
 	{
@@ -22986,12 +24004,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_INVBOX",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "other/INVBOX"
 	},
 	{

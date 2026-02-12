@@ -269,6 +269,7 @@ const corvetteItem = item as CorvetteLikeItem;
 const isCorvettePage = Boolean(item.Slug?.startsWith('corvette/'));
 const fishItem = item as FishLikeItem;
 const isFishPage = Boolean(item.Slug?.startsWith('fish/'));
+const isFoodItem = Boolean(item.Slug?.startsWith('food/') || item.Slug?.startsWith('cooking/'));
 const fishingTime = (fishItem.FishingTime ?? '').toLowerCase();
 const showSunIcon = fishingTime === 'both' || fishingTime === 'day';
 const showMoonIcon = fishingTime === 'both' || fishingTime === 'night';
@@ -629,7 +630,7 @@ const corvetteAttributes = [
     <div id="refining">
       <h2 class="relative mt-8 mb-4 text-center">
         <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
-          {item.Id.includes('cook') ? 'Cooking' : 'Refining'}
+          {isFoodItem ? 'Cooking' : 'Refining'}
         </span>
       </h2>
 

@@ -3364,13 +3364,40 @@
 		"Colour": "1A2733",
 		"CookingValue": 0.0,
 		"CdnUrl": "",
-		"Usages": [],
-		"BlueprintCost": 0,
+		"Usages": [
+			"HasUsedToCraft"
+		],
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
-		"RequiredItems": [],
+		"RequiredItems": [
+			{
+				"Id": "ASTEROID2",
+				"Quantity": 40
+			},
+			{
+				"Id": "ASTEROID1",
+				"Quantity": 40
+			},
+			{
+				"Id": "STELLAR2",
+				"Quantity": 40
+			}
+		],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_GAS_POI",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "products/GAS_BRAIN_LOC"
 	},
 	{
@@ -3387,12 +3414,24 @@
 		"CookingValue": 0.0,
 		"CdnUrl": "",
 		"Usages": [],
-		"BlueprintCost": 0,
+		"BlueprintCost": 1,
 		"BlueprintCostType": "None",
 		"BlueprintSource": 0,
 		"RequiredItems": [],
 		"StatBonuses": [],
 		"ConsumableRewardTexts": [],
+		"Rarity": "Rare",
+		"Legality": "Legal",
+		"TradeCategory": "None",
+		"WikiCategory": "NotEnabled",
+		"Consumable": true,
+		"CookingIngredient": false,
+		"GoodForSelling": false,
+		"EggModifierIngredient": false,
+		"DeploysInto": null,
+		"RewardID": "R_SHOW_HIVEONLY",
+		"EffectCategory": "Unknown",
+		"RewardEffectStats": null,
 		"Slug": "products/CHART_HIVE"
 	},
 	{

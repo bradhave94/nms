@@ -6,7 +6,7 @@ import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import products from '@datav2/Products.json';
 import raw from '@datav2/RawMaterials.json';
-import cooking from '@datav2/Cooking.json';
+import cooking from '@datav2/Food.json';
 import curiosities from '@datav2/Curiosities.json';
 import conTech from '@datav2/ConstructedTechnology.json';
 import tech from '@datav2/Technology.json';
@@ -54,7 +54,7 @@ const { page } = Astro.props as PageProps;
 	description="A list of all items for No Man's Sky. Our guide has everything you need to take your game to the next level."
 	slug="all-items"
 >
-	<h3 class="text-center text-4xl sm:text-6xl mt-2 mb-8">All Items</h3>
+	<h3 class="text-center text-4xl sm:text-6xl my-12">All Items</h3>
 
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{

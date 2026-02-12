@@ -2,7 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import type { Item } from '@utils/lookup.js';
-import data from '@datav2/Cooking.json';
+import data from '@datav2/Food.json';
 
 export async function getStaticPaths() {
 	return data.map((post) => ({
@@ -17,6 +17,6 @@ const title = `${item.Name} | No Man's Sky Recipes`;
 const description = `${item.Name} | ${item.Description}`;
 ---
 
-<Layout {title} {description} slug="cooking">
+<Layout {title} {description} slug="food">
 	<Page item={item as Item} />
 </Layout>

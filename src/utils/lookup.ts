@@ -1,7 +1,7 @@
 // Importing data files
 import raw from '../datav2/RawMaterials.json';
 import products from '../datav2/Products.json';
-import cooking from '../datav2/Cooking.json';
+import cooking from '../datav2/Food.json';
 import curiosities from '../datav2/Curiosities.json';
 import fish from '../datav2/Fish.json';
 import conTech from '../datav2/ConstructedTechnology.json';
@@ -84,7 +84,7 @@ const dataSources = {
 const slugs = {
 	raw: 'raw/',
 	prod: 'products/',
-	cook: 'cooking/',
+	cook: 'food/',
 	cur: 'curiosities/',
 	fish: 'fish/',
 	conTech: 'technology/',
@@ -102,7 +102,7 @@ const slugs = {
 const labels = {
 	raw: 'Raw Materials',
 	prod: 'Products',
-	cook: 'Cooking',
+	cook: 'Food',
 	cur: 'Curiosities',
 	fish: 'Fish',
 	conTech: 'Technology',
@@ -120,7 +120,8 @@ const labels = {
 const buildSlugFromId = (id: string): string => {
 	const item = getById(id);
 	if (item?.Slug) {
-		return `/${item.Slug}`.replace(/\/+/g, '/');
+		const normalizedItemSlug = item.Slug.replace(/^\/?cooking\//, 'food/');
+		return `/${normalizedItemSlug}`.replace(/\/+/g, '/');
 	}
 
 	// Extract the prefix of the item id by splitting the id by its numeric part
@@ -134,7 +135,8 @@ type SlugItem = { Id: string; Slug?: string };
 const getSlug = (itemOrId: SlugItem | string): string => {
 	if (typeof itemOrId !== 'string') {
 		if (itemOrId.Slug) {
-			return `/${itemOrId.Slug}`.replace(/\/+/g, '/');
+			const normalizedItemSlug = itemOrId.Slug.replace(/^\/?cooking\//, 'food/');
+			return `/${normalizedItemSlug}`.replace(/\/+/g, '/');
 		}
 		if (itemOrId.Id) {
 			return buildSlugFromId(itemOrId.Id);
@@ -150,7 +152,8 @@ type LabelItem = { Id: string; Slug?: string };
 const slugLabels: Record<string, string> = {
 	raw: 'Raw Materials',
 	products: 'Products',
-	cooking: 'Cooking',
+	food: 'Food',
+	cooking: 'Food',
 	curiosities: 'Curiosities',
 	fish: 'Fish',
 	technology: 'Technology',
