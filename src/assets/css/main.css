@@ -139,3 +139,12 @@
   padding: 1rem;
   line-height: 1.2
 }
+
+/* Keep AdSense enabled globally, but never inject ads into card grids. */
+#items .google-auto-placed,
+#items ins.adsbygoogle,
+#items .adsbygoogle {
+    display: none !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+}
