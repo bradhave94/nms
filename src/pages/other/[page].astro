@@ -8,7 +8,7 @@ import others from '@datav2/Others.json';
 import trade from '@datav2/Trade.json';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	return paginate(sort([...others, ...trade] as Item[]), { pageSize: 78 });
+	return paginate(sort([...others, ...trade] as Item[]), { pageSize: 84 });
 }
 
 interface PageProps {
