@@ -12,6 +12,7 @@ import conTech from '@datav2/ConstructedTechnology.json';
 import tech from '@datav2/Technology.json';
 import upgrades from '@datav2/Upgrades.json';
 import exocraft from '@datav2/Exocraft.json';
+import starships from '@datav2/Starships.json';
 import buildings from '@datav2/Buildings.json';
 import other from '@datav2/Others.json';
 import trade from '@datav2/Trade.json';
@@ -27,6 +28,7 @@ export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], op
 			...tech,
 			...upgrades,
 			...exocraft,
+			...starships,
 			...buildings,
 			...other,
 			...trade,

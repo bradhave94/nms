@@ -46,6 +46,7 @@ const navigation: NavigationItem[] = [
   { name: 'Technology', href: '/technology/1', icon: CogIcon },
   { name: 'Upgrades', href: '/upgrades/1', icon: WrenchIcon },
   { name: 'Exocraft', href: '/exocraft/1', icon: RocketLaunchIcon },
+  { name: 'Starships', href: '/starships/1', icon: PaperAirplaneIcon },
   { name: 'Buildings', href: '/buildings/1', icon: HomeModernIcon },
   { name: 'Corvette', href: '/corvette/1', icon: PaperAirplaneIcon },
   { name: 'Fish', href: '/fish/1', icon: ScaleIcon },

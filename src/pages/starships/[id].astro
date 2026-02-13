@@ -1,0 +1,22 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Page from '@layouts/Page.astro';
+import type { Item } from '@utils/lookup.js';
+import data from '@datav2/Starships.json';
+
+export async function getStaticPaths() {
+	return data.map((starship) => ({
+		params: { id: starship.Id.toString() },
+		props: { item: starship },
+	}));
+}
+
+const { item } = Astro.props;
+
+const title = `${item.Name} | No Man's Sky Recipes`;
+const description = `${item.Name} | ${item.Description}`;
+---
+
+<Layout {title} {description} slug="starships">
+	<Page item={item as Item} />
+</Layout>

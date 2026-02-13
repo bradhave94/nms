@@ -14,3 +14,5 @@ export { default as Trade } from './Trade.json';
 export { default as Fish } from './Fish.json';
 export { default as Upgrades } from './Upgrades.json';
 export { default as Exocraft } from './Exocraft.json';
+export { default as Starships } from './Starships.json';
+

@@ -14,6 +14,7 @@ import build from '../datav2/Buildings.json';
 import trade from '../datav2/Trade.json';
 import upgrades from '../datav2/Upgrades.json';
 import exocraft from '../datav2/Exocraft.json';
+import starships from '../datav2/Starships.json';
 
 export type RequiredItem = {
 	Id: string;
@@ -78,6 +79,7 @@ const dataSources = {
 	trade,
 	upgrades,
 	exocraft,
+	starships,
 };
 
 // Mapping the prefixes of item id to the corresponding slugs
@@ -115,6 +117,7 @@ const labels = {
 	trade: 'Other',
 	upgrades: 'Upgrades',
 	exocraft: 'Exocraft',
+	starships: 'Starships',
 };
 
 const buildSlugFromId = (id: string): string => {
@@ -163,6 +166,7 @@ const slugLabels: Record<string, string> = {
 	buildings: 'Buildings',
 	upgrades: 'Upgrades',
 	exocraft: 'Exocraft',
+	starships: 'Starships',
 };
 
 // Returns the label corresponding to an item or id
