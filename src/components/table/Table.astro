@@ -127,6 +127,35 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
 <script>
   import { TabulatorFull as Tabulator } from 'tabulator-tables';
   type ColumnData = { title: string; field: string };
+  type SortValue = string | number | null | undefined;
+
+  const parseSortNumber = (value: SortValue): number => {
+    if (typeof value === 'number' && !Number.isNaN(value)) {
+      return value;
+    }
+
+    if (typeof value !== 'string') {
+      return Number.NEGATIVE_INFINITY;
+    }
+
+    // Prefer explicit hidden sort value when present in the HTML cell.
+    const hiddenSortMatch = value.match(
+      /<span[^>]*class=["'][^"']*sort[^"']*["'][^>]*>(-?\d+(?:\.\d+)?)<\/span>/i,
+    );
+    if (hiddenSortMatch?.[1]) {
+      return Number(hiddenSortMatch[1]);
+    }
+
+    // Fallback to text extraction to support non-HTML/edge-case values.
+    const textOnly = value.replace(/<[^>]*>/g, '').replace(/,/g, '').trim();
+    const parsed = Number(textOnly);
+    if (!Number.isNaN(parsed)) {
+      return parsed;
+    }
+
+    const firstNumber = textOnly.match(/-?\d+(?:\.\d+)?/);
+    return firstNumber?.[0] ? Number(firstNumber[0]) : Number.NEGATIVE_INFINITY;
+  };
 
   // Use requestAnimationFrame to defer execution until after React hydration
   requestAnimationFrame(() => {
@@ -143,7 +172,10 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
         alignEmptyValues: 'bottom',
       },
       formatter: 'html',
-      sorter: sort === element.field && sort === 'value' ? 'number' : undefined,
+      sorter:
+        sort === element.field && sort === 'value'
+          ? (a: SortValue, b: SortValue) => parseSortNumber(a) - parseSortNumber(b)
+          : undefined,
     }));
     } catch (error) {
       console.error('Failed to parse table columns:', error);

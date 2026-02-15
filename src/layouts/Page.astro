@@ -161,7 +161,7 @@ const createArray = (
 };
 
 type IOItem = { Id: string; Quantity: number };
-type RecipeOutput = { Inputs?: IOItem[] };
+type RecipeOutput = { Output?: IOItem; Inputs?: IOItem[] };
 type RecipeInput = { Output?: IOItem; Inputs?: IOItem[] };
 type UsedInItem = {
   Id: string;
@@ -172,10 +172,10 @@ type UsedInItem = {
 };
 
 // Function to get output items
-const getOutputs = (item: RecipeOutput): UsedInItem | undefined => {
-  if (!item.Inputs?.length) return undefined;
+const getOutputs = (recipe: RecipeOutput): UsedInItem | undefined => {
+  if (!recipe.Inputs?.length) return undefined;
   const RequiredItems: RawItem[] = [];
-  for (const element of item.Inputs) {
+  for (const element of recipe.Inputs) {
     const i = getById(element.Id);
     if (!i) continue;
     RequiredItems.push({
@@ -188,10 +188,10 @@ const getOutputs = (item: RecipeOutput): UsedInItem | undefined => {
   }
 
   return {
-    Id: Astro.props.item.Id,
-    Icon: Astro.props.item.Icon,
-    Name: Astro.props.item.Name,
-    Quantity: 1,
+    Id: item.Id,
+    Icon: item.Icon,
+    Name: item.Name,
+    Quantity: recipe.Output?.Quantity ?? 1,
     RequiredItems: RequiredItems,
   };
 };
@@ -362,15 +362,15 @@ const formatStatRange = (name: string, min?: number, max?: number): string => {
     lowerName.includes('discovery') ||
     lowerName.includes('analysis rewards') ||
     lowerName.includes('analysis reward');
-  const isMultiplierLike = safeMax > 3;
-  const usePercent = isDiscoveryLike || isMultiplierLike || safeMax <= 3;
+  const isMultiplierLike = safeMin >= 0 && safeMin <= 3 && safeMax >= 0 && safeMax <= 3;
+  const usePercent = isDiscoveryLike || isMultiplierLike;
 
   if (!usePercent) {
-    return `${safeMin} => ${safeMax}`;
+    return `${safeMin.toLocaleString()} => ${safeMax.toLocaleString()}`;
   }
 
   const toPercent = (value: number): number => {
-    if (isDiscoveryLike || value > 3) return value * 100;
+    if (isDiscoveryLike) return value * 100;
     return (value - 1) * 100;
   };
 
@@ -720,11 +720,12 @@ const corvetteAttributes = [
 
         if (quantityInput.value !== '') {
         // Validate and parse quantity
-        let quantity = parseFloat(quantityInput.value);
+        let quantity = Number.parseInt(quantityInput.value, 10);
 
-        // Ensure quantity is a positive number
-        if (isNaN(quantity) || quantity < 0) {
-          quantity = 0;
+        // Ensure quantity is a positive whole number
+        if (!Number.isFinite(quantity) || quantity < 1) {
+          quantity = 1;
+          quantityInput.value = '1';
         }
 
         // Limit to reasonable maximum to prevent UI issues
@@ -736,7 +737,8 @@ const corvetteAttributes = [
         // Update all quantity elements
         elements.forEach((element) => {
           const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
-          element.textContent = (baseValue * quantity).toString();
+          const total = baseValue * quantity;
+          element.textContent = Number.isFinite(total) ? total.toString() : '0';
         });
         }
 

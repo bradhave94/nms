@@ -116,7 +116,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: #051413s;
+    background: #051413;
     position: absolute;
     top: 0;
     opacity: 0.7;
@@ -165,4 +165,3 @@
   border: 0 !important;
   overflow: hidden !important;
 }
-
