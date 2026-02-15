@@ -17,6 +17,7 @@ type CollectionStructuredDataOptions = {
 	collectionName: string;
 	collectionDescription: string;
 	collectionPath: string;
+	firstPagePath?: string;
 	currentPage: number;
 	items: CollectionItem[];
 };
@@ -59,12 +60,15 @@ export const buildCollectionStructuredData = ({
 	collectionName,
 	collectionDescription,
 	collectionPath,
+	firstPagePath: firstPagePathOverride,
 	currentPage,
 	items,
 }: CollectionStructuredDataOptions): JsonLdObject[] => {
 	const safeOrigin = normalizeOrigin(siteOrigin);
 	const safePath = normalizePath(collectionPath);
-	const firstPagePath = toFirstPagePath(safePath);
+	const firstPagePath = firstPagePathOverride
+		? normalizePath(firstPagePathOverride).replace(/\/+$/, '') || '/'
+		: toFirstPagePath(safePath);
 	const collectionUrl = `${safeOrigin}${firstPagePath}`;
 	const breadcrumbEntries: BreadcrumbEntry[] = [
 		{ name: 'Home', url: `${safeOrigin}/` },

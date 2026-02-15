@@ -20,6 +20,12 @@ const toFirstPagePath = (path: string): string => {
 	return `${trimmedPath}/1`;
 };
 
+const normalizePath = (path: string): string => {
+	const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+	const trimmedPath = normalizedPath.replace(/\/+$/, '');
+	return trimmedPath === '' ? '/' : trimmedPath;
+};
+
 export const buildItemMeta = (
 	item: Pick<Item, 'Id' | 'Name' | 'Description'>,
 	categoryLabel: string
@@ -37,13 +43,16 @@ export const buildItemMeta = (
 export const buildCategoryBreadcrumbs = (
 	categoryName: string,
 	categoryPath: string,
-	currentPage: number
+	currentPage: number,
+	firstPagePath?: string
 ): BreadcrumbItem[] => {
-	const firstPagePath = toFirstPagePath(categoryPath);
+	const resolvedFirstPagePath = firstPagePath
+		? normalizePath(firstPagePath)
+		: toFirstPagePath(categoryPath);
 	if (currentPage > 1) {
 		return [
 			{ name: 'Home', href: '/' },
-			{ name: categoryName, href: firstPagePath },
+			{ name: categoryName, href: resolvedFirstPagePath },
 			{ name: `Page ${currentPage}` },
 		];
 	}

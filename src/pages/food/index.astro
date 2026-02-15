@@ -9,30 +9,25 @@ import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Food.json';
 
-export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	const pages = paginate(sort(data as Item[]), { pageSize: 80 });
-	return pages.slice(1);
-}
+const pageSize = 80;
+const sortedFood = sort(data as Item[]);
+const pageData = sortedFood.slice(0, pageSize);
+const lastPage = Math.max(1, Math.ceil(sortedFood.length / pageSize));
+const page = {
+	data: pageData,
+	currentPage: 1,
+	lastPage,
+	url: {
+		next: lastPage > 1 ? '/food/2' : undefined,
+	},
+};
 
-interface PageProps {
-	page: {
-		data: Item[];
-		currentPage: number;
-		lastPage: number;
-		url: {
-			prev?: string;
-			next?: string;
-		};
-	};
-}
-
-const { page } = Astro.props as PageProps;
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const canonicalUrl = new URL('/food', siteOrigin).toString();
 const itemListElements = page.data.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,
-	position: (page.currentPage - 1) * 80 + index + 1,
+	position: index + 1,
 }));
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,
@@ -45,13 +40,6 @@ const structuredData = buildCollectionStructuredData({
 	items: itemListElements,
 });
 const breadcrumbs = buildCategoryBreadcrumbs('Food', '/food', page.currentPage, '/food');
-const paginationPage = {
-	...page,
-	url: {
-		prev: page.url.prev === '/food/1' ? '/food' : page.url.prev,
-		next: page.url.next,
-	},
-};
 const intro = buildCategoryIntro(
 	'Food items power cooking recipes, consumables, and nutrient processing chains in No Man\'s Sky.',
 	page.currentPage,
@@ -84,5 +72,5 @@ const { title, description } = buildPaginatedMeta('Food', baseDescription, page.
 			))
 		}
 	</div>
-	<Pagination page={paginationPage} />
+	<Pagination page={page} />
 </Layout>

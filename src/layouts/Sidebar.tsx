@@ -52,7 +52,7 @@ const navigation: NavigationItem[] = [
   { name: 'Fish', href: '/fish/1', icon: ScaleIcon },
   { name: 'Curiosities', href: '/curiosities/1', icon: QuestionMarkCircleIcon },
   { name: 'Other', href: '/other/1', icon: PaperClipIcon },
-  { name: 'Food', href: '/food/1', icon: CakeIcon },
+  { name: 'Food', href: '/food', icon: CakeIcon },
   { name: 'Raw Materials', href: '/raw/1', icon: BoltIcon },
   { name: 'All Items', href: '/items', icon: Squares2X2Icon },
   { name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
