@@ -103,13 +103,13 @@ const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
 	function getGroupsForType(type) {
 		if (!type) return allGroups;
 		const t = type.toLowerCase();
-		return [...new Set(allItemsData.filter((i) => getItemType(i) === t).map((i) => i.group).filter(Boolean))].sort();
+		return [...new Set(allItemsData.filter((i) => getItemType(i).toLowerCase().includes(t)).map((i) => i.group).filter(Boolean))].sort();
 	}
 
 	function getTypesForGroup(group) {
 		if (!group) return allTypes;
-		const g = group.trim();
-		return [...new Set(allItemsData.filter((i) => i.group && String(i.group).trim() === g).map((i) => getItemType(i)))].sort().map((t) => t.charAt(0).toUpperCase() + t.slice(1));
+		const g = group.trim().toLowerCase();
+		return [...new Set(allItemsData.filter((i) => i.group && String(i.group).toLowerCase().includes(g)).map((i) => getItemType(i)))].sort().map((t) => t.charAt(0).toUpperCase() + t.slice(1));
 	}
 
 	function getParams() {
@@ -218,14 +218,14 @@ const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
 	function filterItems(items, group, type, q) {
 		let filtered = items;
 		if (group) {
-			const g = group.trim();
-			filtered = filtered.filter((item) => item.group && String(item.group).trim() === g);
+			const g = group.trim().toLowerCase();
+			filtered = filtered.filter((item) => item.group && String(item.group).toLowerCase().includes(g));
 		}
 		if (type) {
 			const t = type.toLowerCase().trim();
 			filtered = filtered.filter((item) => {
 				const itemType = (item.url || '').split('/')[1] || '';
-				return itemType === t;
+				return itemType.toLowerCase().includes(t);
 			});
 		}
 		if (q) {
@@ -314,6 +314,20 @@ const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
 	searchInput?.addEventListener('keydown', (e) => {
 		if (e.key === 'Enter') {
 			e.preventDefault();
+			loadItems();
+		}
+	});
+	groupInput?.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter') {
+			e.preventDefault();
+			groupDropdown?.classList.add('hidden');
+			loadItems();
+		}
+	});
+	typeInput?.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter') {
+			e.preventDefault();
+			typeDropdown?.classList.add('hidden');
 			loadItems();
 		}
 	});
