@@ -9837,5 +9837,29 @@
 		"NeverPinnable": false,
 		"CanSendToOtherPlayers": true,
 		"Slug": "curiosities/FOS_BI_TAIL_G"
+	},
+	{
+		"Id": "ROBOT1",
+		"Icon": "ROBOT1.png",
+		"IconPath": "textures/ui/frontend/icons/u4substances/substance.robot.1.dds",
+		"Name": "Pugneum",
+		"Group": "Anomalous Material",
+		"Description": "This oily, unsettling liquid leaks from the circuitry of Sentinels.\n\nPrized by the Vy'keen, Pugneum is thought to share some essential properties with Nanites. It hums in a sinister fashion upon contact with organic matter.",
+		"BaseValueUnits": 138,
+		"CurrencyType": "Credits",
+		"Colour": "4D2957",
+		"CdnUrl": "",
+		"Usages": [],
+		"BlueprintCost": 0,
+		"BlueprintCostType": "None",
+		"BlueprintSource": 0,
+		"RequiredItems": [],
+		"StatBonuses": [],
+		"ConsumableRewardTexts": [],
+		"Category": "Special",
+		"Rarity": "Rare",
+		"CookingIngredient": false,
+		"Symbol": "Pg",
+		"Slug": "curiosities/ROBOT1"
 	}
 ]

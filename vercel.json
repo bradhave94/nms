@@ -5,7 +5,7 @@
 		{ "source": "/large-refiner", "destination": "/refining", "permanent": true },
 		{ "source": "/all", "destination": "/refining", "permanent": true },
 		{ "source": "/buildings", "destination": "/buildings/1", "permanent": true },
-		{ "source": "/all-items", "destination": "/all-items/1", "permanent": true },
+		{ "source": "/all-items", "destination": "/items", "permanent": true },
 		{ "source": "/raw", "destination": "/raw/1", "permanent": true },
 		{ "source": "/none", "destination": "/none/1", "permanent": true },
 		{ "source": "/corvette", "destination": "/corvette/1", "permanent": true },

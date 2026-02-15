@@ -4,6 +4,7 @@ import {
   Bars3Icon,
   CalculatorIcon,
   FunnelIcon,
+  Squares2X2Icon,
   WrenchScrewdriverIcon,
   CakeIcon,
   BeakerIcon,
@@ -14,7 +15,6 @@ import {
   CogIcon,
   EnvelopeIcon,
   BoltIcon,
-  ListBulletIcon,
   ArchiveBoxIcon,
   PaperClipIcon,
   ScaleIcon,
@@ -54,7 +54,7 @@ const navigation: NavigationItem[] = [
   { name: 'Other', href: '/other/1', icon: PaperClipIcon },
   { name: 'Food', href: '/food/1', icon: CakeIcon },
   { name: 'Raw Materials', href: '/raw/1', icon: BoltIcon },
-  { name: 'All Items', href: '/all-items/1', icon: ListBulletIcon },
+  { name: 'All Items', href: '/items', icon: Squares2X2Icon },
   { name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 
@@ -141,13 +141,13 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
                     </div>
                   </Transition.Child>
                   <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
-                    <div className="flex flex-shrink-0 items-center px-4">
+                    <a href="/" className="flex flex-shrink-0 items-center px-4">
                       <img
                         className="w-auto"
                         src="/images/logo-nms.webp"
                         alt="No Man's Sky Recipes"
                       />
-                    </div>
+                    </a>
                     {renderNavItems(true)}
                   </div>
                 </Dialog.Panel>
@@ -163,13 +163,13 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
         <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-56 lg:flex-col">
           <div className="flex min-h-0 flex-1 flex-col bg-black">
             <div className="flex flex-1 flex-col overflow-y-auto pt-3 pb-3">
-              <div className="flex flex-shrink-0 items-center mb-1 px-3">
+              <a href="/" className="flex flex-shrink-0 items-center mb-1 px-3">
                 <img
-                  className=" w-auto"
+                  className="w-auto"
                   src="/images/logo-nms.webp"
                   alt="No Man's Sky Recipes"
                 />
-              </div>
+              </a>
               {renderNavItems()}
             </div>
           </div>

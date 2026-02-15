@@ -59,9 +59,13 @@ const { cell } = Astro.props;
             <span class="d-none sort">{cell.name}</span>
             <a href={getSlug(cell.id)} class="cell-link">
                 <div class="cell-content" style={`background: #${cell.colour}`}>
-                    <span class="cell-text">
+                    <span class="cell-text flex items-center gap-2 flex-wrap">
                         {cell.name}
-                        {cell.amount && <span class="amount"> x{cell.amount}</span>}
+                        {cell.amount && (
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums amount">
+                                {cell.amount.toLocaleString()}
+                            </span>
+                        )}
                     </span>
                     {cell.image && (
                         <Image

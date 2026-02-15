@@ -20,6 +20,7 @@ const { open = false, id } = Astro.props;
     role="region"
     aria-labelledby={`accordion-header-${id}`}
     class="overflow-hidden px-3 pb-3 pt-1"
+    hidden={!open}
   >
     <slot name="content" />
   </div>
@@ -80,7 +81,9 @@ const { open = false, id } = Astro.props;
     }
   }
 
-  customElements.define('accordion-component', Accordion);
+  if (!customElements.get('accordion-component')) {
+    customElements.define('accordion-component', Accordion);
+  }
 </script>
 
 <style>

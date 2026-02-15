@@ -136,10 +136,10 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 	<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 lg:items-start gap-8" id="items">
 		{
 			sortedData.map((item) => (
-				<div class="bg-black rounded-md overflow-hidden">
+				<div class="recipe-card bg-[#0b3550] rounded-md overflow-hidden text-left">
 					<a
 						href={getSlug(item.output.id)}
-						class="flex flex-col items-center text-lg w-full p-2 transition-opacity hover:opacity-75"
+						class="flex items-center gap-3 text-lg w-full p-2 transition-opacity hover:opacity-75"
 						style={'background: #' + item.output.colour}
 					>
 						<Image
@@ -148,31 +148,37 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 							sizes="50px"
 							width={50}
 							height={50}
+							class="flex-shrink-0"
 						/>
-
-						<h4 class="lg:text-lg">
-							<span class="output">{item.output.name}</span>
-						</h4>
-						<p class="flex text-sm items-center gap-2 py-2 pb-4">
-							<Image
-								src={credit}
-								alt="Credits"
-								sizes="15px"
-								width={15}
-								height={15}
-							/>
-							{item.output.value.toLocaleString()}
-						</p>
+						<div class="min-w-0 flex-1">
+							<h4 class="lg:text-lg truncate">
+								<span class="output">{item.output.name}</span>
+							</h4>
+							<p class="flex text-sm items-center gap-2 pt-1">
+								<Image
+									src={credit}
+									alt="Credits"
+									sizes="15px"
+									width={15}
+									height={15}
+								/>
+								{item.output.value.toLocaleString()}
+							</p>
+						</div>
 					</a>
+					<div class="w-full bg-[#0b3550] py-2 text-center text-xs font-medium text-gray-400 uppercase tracking-wide">
+						Inputs
+					</div>
+					<div class="flex flex-col">
 					{item.input_1 && (() => {
 						const input1 = item.input_1;
 						return (
 							<a
 								href={getSlug(input1.id)}
-								class="flex p-2 transition-opacity hover:opacity-75"
+								class="flex pt-4 p-2 transition-opacity hover:opacity-75 items-center gap-3"
 								style={'background: #' + input1.colour}
 							>
-								<div class="mr-4 flex-shrink-0 self-start">
+								<div class="w-[50px] flex-shrink-0 flex justify-center">
 									<Image
 										src={
 											'https://nomansskyrecipes.com/images/items/' +
@@ -184,12 +190,10 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 										height={50}
 									/>
 								</div>
-								<div class="flex items-center">
-									<h4 class="lg:text-lg">
-										{input1.name} x
-										<span data-quantity={input1.amount}>
-											{input1.amount}
-										</span>
+								<div class="flex items-center gap-2 min-w-0 flex-1">
+									<h4 class="lg:text-lg flex items-center gap-2 truncate">
+										{input1.name}
+										{input1.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input1.amount}>{input1.amount.toLocaleString()}</span>}
 									</h4>
 								</div>
 							</a>
@@ -200,10 +204,10 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 						return (
 							<a
 								href={getSlug(input2.id)}
-								class="flex p-2 transition-opacity hover:opacity-75"
+								class="flex p-2 transition-opacity hover:opacity-75 items-center gap-3"
 								style={'background: #' + input2.colour}
 							>
-								<div class="mr-4 flex-shrink-0 self-start">
+								<div class="w-[50px] flex-shrink-0 flex justify-center">
 									<Image
 										src={
 											'https://nomansskyrecipes.com/images/items/' +
@@ -215,12 +219,10 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 										height={50}
 									/>
 								</div>
-								<div class="flex items-center">
-									<h4 class="lg:text-lg">
-										{input2.name} x
-										<span data-quantity={input2.amount}>
-											{input2.amount}
-										</span>
+								<div class="flex items-center gap-2 min-w-0 flex-1">
+									<h4 class="lg:text-lg flex items-center gap-2 truncate">
+										{input2.name}
+										{input2.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input2.amount}>{input2.amount.toLocaleString()}</span>}
 									</h4>
 								</div>
 							</a>
@@ -231,10 +233,10 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 						return (
 							<a
 								href={getSlug(input3.id)}
-								class="flex p-2 transition-opacity hover:opacity-75"
+								class="flex p-2 transition-opacity hover:opacity-75 items-center gap-3"
 								style={'background: #' + input3.colour}
 							>
-								<div class="mr-4 flex-shrink-0 self-start">
+								<div class="w-[50px] flex-shrink-0 flex justify-center">
 									<Image
 										src={
 											'https://nomansskyrecipes.com/images/items/' +
@@ -246,17 +248,16 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 										height={50}
 									/>
 								</div>
-								<div class="flex items-center">
-									<h4 class="lg:text-lg">
-										{input3.name} x
-										<span data-quantity={input3.amount}>
-											{input3.amount}
-										</span>
+								<div class="flex items-center gap-2 min-w-0 flex-1">
+									<h4 class="lg:text-lg flex items-center gap-2 truncate">
+										{input3.name}
+										{input3.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input3.amount}>{input3.amount.toLocaleString()}</span>}
 									</h4>
 								</div>
 							</a>
 						);
 					})()}
+					</div>
 				</div>
 			))
 		}
@@ -268,7 +269,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 		if (!search || !items) {
 			console.error('Search elements not found');
 		} else {
-			const divs = items.querySelectorAll('div.bg-black');
+			const divs = items.querySelectorAll('div.recipe-card');
 			let debounceTimer: ReturnType<typeof setTimeout> | undefined;
 
 			function handleSearch(): void {

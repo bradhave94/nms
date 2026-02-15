@@ -424,9 +424,12 @@ const corvetteAttributes = [
     <div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
       <h1 class="text-4xl">{item.Name}</h1>
       {item.Group && (
-        <p class="mt-2 block w-fit rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+        <a
+          href={`/items?group=${encodeURIComponent(item.Group)}`}
+          class="mt-2 block w-fit rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200 hover:bg-gray-600 hover:text-cyan-100 transition-colors"
+        >
           {item.Group}
-        </p>
+        </a>
       )}
       {item.BaseValueUnits > 1 && (
         <p class="flex items-center gap-2 pt-2">
@@ -579,9 +582,9 @@ const corvetteAttributes = [
 
   <!-- Crafting section -->
   {data.length > 0 && (
-    <div id="crafting">
+    <div id="crafting" class="mb-[7.5rem]">
       <h2 class="relative mt-8 mb-4 text-center">
-        <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
+        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
           Craft using
         </span>
       </h2>
@@ -600,8 +603,9 @@ const corvetteAttributes = [
                   height={48}
                   class="flex-shrink-0"
                 />
-                <h4 class="text-lg font-medium text-white">
-                  {craftItem.Name} x<span data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
+                <h4 class="text-lg font-medium text-white flex items-center gap-2">
+                  {craftItem.Name}
+                  <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
                 </h4>
               </div>
               <div slot="content">
@@ -635,7 +639,7 @@ const corvetteAttributes = [
                       class="flex-shrink-0"
                     />
                     <span class="text-white font-medium">{rawItem.Name}</span>
-                    <span class="text-gray-400">x<span data-quantity={rawItem.Quantity}>{rawItem.Quantity.toLocaleString()}</span></span>
+                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums" data-quantity={rawItem.Quantity}>{rawItem.Quantity.toLocaleString()}</span>
                   </a>
                 ))}
             </div>
@@ -649,7 +653,7 @@ const corvetteAttributes = [
   {output.length > 0 && (
     <div id="refining">
       <h2 class="relative mt-6 mb-3 text-center">
-        <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
+        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
           {isFoodItem ? 'Cook using' : 'Refined from'}
         </span>
       </h2>
@@ -667,8 +671,9 @@ const corvetteAttributes = [
                     height={40}
                     class="flex-shrink-0"
                   />
-                  <span class="text-white font-medium truncate">
-                    {outputItem.Name} x<span data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
+                  <span class="text-white font-medium truncate flex items-center gap-2">
+                    {outputItem.Name}
+                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
                   </span>
                 </div>
                 <div slot="content">
@@ -685,7 +690,7 @@ const corvetteAttributes = [
   {groupedInputRefined.length > 0 && (
     <div id="refined-to-create">
       <h2 class="relative mt-6 mb-3 text-center">
-        <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
+        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
           Refined to create
         </span>
         <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputRefined.length})</span>
@@ -737,7 +742,7 @@ const corvetteAttributes = [
                                   class="flex-shrink-0"
                                 />
                                 <span class="text-white">{ing.Name}</span>
-                                <span class="text-gray-400">x<span data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span></span>
+                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
                               </a>
                             ))}
                           </div>
@@ -756,7 +761,7 @@ const corvetteAttributes = [
                               class="flex-shrink-0"
                             />
                             <span>{usedInItem.Name}</span>
-                            <span class="text-gray-400">x<span data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span></span>
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
                           </a>
                         </td>
                       </tr>
@@ -775,7 +780,7 @@ const corvetteAttributes = [
   {groupedInputCrafting.length > 0 && (
     <div id="used-to-create">
       <h2 class="relative mt-6 mb-3 text-center">
-        <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
+        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
           {(item.Slug && item.Slug.startsWith('fish/'))
             ? 'What this fish yields'
             : 'Used to create'}
@@ -783,7 +788,7 @@ const corvetteAttributes = [
         <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCrafting.length})</span>
       </h2>
       <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        {groupedInputCrafting.map((usedInItem) => (
+        {groupedInputCrafting.slice(0, 30).map((usedInItem) => (
           <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
             <Accordion>
               <div class="flex items-center gap-3" slot="title">
@@ -829,7 +834,7 @@ const corvetteAttributes = [
                                   class="flex-shrink-0"
                                 />
                                 <span class="text-white">{ing.Name}</span>
-                                <span class="text-gray-400">x<span data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span></span>
+                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
                               </a>
                             ))}
                           </div>
@@ -848,7 +853,83 @@ const corvetteAttributes = [
                               class="flex-shrink-0"
                             />
                             <span>{usedInItem.Name}</span>
-                            <span class="text-gray-400">x<span data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span></span>
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Accordion>
+          </div>
+        ))}
+        {groupedInputCrafting.slice(30).map((usedInItem) => (
+          <div class="used-in-hidden rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden hidden">
+            <Accordion>
+              <div class="flex items-center gap-3" slot="title">
+                <Image
+                  src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                  alt={usedInItem.Name}
+                  sizes="40px"
+                  width={40}
+                  height={40}
+                  class="flex-shrink-0"
+                />
+                <div class="flex-1 min-w-0">
+                  <span class="text-white font-medium">{usedInItem.Name}</span>
+                  {usedInItem.recipes.length > 1 && (
+                    <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
+                  )}
+                </div>
+              </div>
+              <div slot="content" class="pt-2 overflow-x-auto">
+                <table class="w-full text-sm table-fixed">
+                  <thead>
+                    <tr class="border-b border-gray-600/50">
+                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
+                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {usedInItem.recipes.map((recipe) => (
+                      <tr class="border-b border-gray-600/30 last:border-b-0">
+                        <td class="py-2 px-2 align-top">
+                          <div class="flex flex-col gap-1">
+                            {recipe.inputs.map((ing) => (
+                              <a
+                                href={getSlug(ing.Id)}
+                                class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit"
+                              >
+                                <Image
+                                  src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
+                                  alt={ing.Name}
+                                  sizes="20px"
+                                  width={20}
+                                  height={20}
+                                  class="flex-shrink-0"
+                                />
+                                <span class="text-white">{ing.Name}</span>
+                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
+                              </a>
+                            ))}
+                          </div>
+                        </td>
+                        <td class="py-2 px-2 align-top">
+                          <a
+                            href={getSlug(usedInItem.Id)}
+                            class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
+                          >
+                            <Image
+                              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                              alt={usedInItem.Name}
+                              sizes="20px"
+                              width={20}
+                              height={20}
+                              class="flex-shrink-0"
+                            />
+                            <span>{usedInItem.Name}</span>
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
                           </a>
                         </td>
                       </tr>
@@ -860,6 +941,25 @@ const corvetteAttributes = [
           </div>
         ))}
       </div>
+      {groupedInputCrafting.length > 30 && (
+        <>
+          <div class="mt-4 text-center">
+            <button
+              type="button"
+              id="used-in-load-more"
+              class="px-6 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-medium transition-colors"
+            >
+              Load more ({groupedInputCrafting.length - 30} more)
+            </button>
+          </div>
+          <script>
+            document.getElementById('used-in-load-more')?.addEventListener('click', () => {
+              document.querySelectorAll('.used-in-hidden').forEach((el) => el.classList.remove('hidden'));
+              document.getElementById('used-in-load-more')?.closest('div.mt-4')?.remove();
+            });
+          </script>
+        </>
+      )}
     </div>
   )}
 </div>

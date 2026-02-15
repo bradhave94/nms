@@ -4,7 +4,18 @@ const navigation = [
   { name: 'Refining', href: '/refining' },
   { name: 'Cooking', href: '/cooking' },
   { name: 'Crafting', href: '/crafting-guide' },
-  { name: 'Calculator', href: '/calculator' },
+  { name: 'Calculator', href: '/calculator/1' },
+  { name: 'Products', href: '/products/1' },
+  { name: 'Technology', href: '/technology/1' },
+  { name: 'Upgrades', href: '/upgrades/1' },
+  { name: 'Exocraft', href: '/exocraft/1' },
+  { name: 'Starships', href: '/starships/1' },
+  { name: 'Buildings', href: '/buildings/1' },
+  { name: 'Fish', href: '/fish/1' },
+  { name: 'Curiosities', href: '/curiosities/1' },
+  { name: 'Food', href: '/food/1' },
+  { name: 'Raw Materials', href: '/raw/1' },
+  { name: 'All Items', href: '/items' },
   { name: 'Feedback', href: '/feedback' },
 ];
 
@@ -12,7 +23,7 @@ export default function Footer() {
   return (
     <footer className="bg-black flex flex-1 flex-col lg:pl-80">
       <div className="p-6 py-12 max-w-4xl mx-auto">
-        <nav className="grid grid-cols-2 sm:flex sm:justify-center sm:space-x-12 gap-6" aria-label="Footer">
+        <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 sm:gap-x-12" aria-label="Footer">
           {navigation.map((item) => (
             <a
               key={item.name}
@@ -33,7 +44,7 @@ export default function Footer() {
           >
             {SITE.version_name} ({SITE.version})
           </a>
-          &nbsp; on {SITE.version_date}
+          &nbsp;on {SITE.version_date}
         </p>
         <div className="disclaimer">
           <p>This is a fan-made website. No Man's Sky™ and all related assets are trademarks
