@@ -6,12 +6,12 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://nms.vercel.app/",
-  integrations: [ 
+  site: "https://nomansskyrecipes.com",
+  integrations: [
     react({
       experimentalReactChildren: true
-    }), 
-    sitemap(), 
+    }),
+    sitemap(),
     tailwind({
       config: {
         applyBaseStyles: false

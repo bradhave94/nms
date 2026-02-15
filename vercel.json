@@ -1,22 +1,23 @@
 {
-	"redirects": [
-		{ "source": "/portable-refiner", "destination": "/refining", "permanent": true },
-		{ "source": "/medium-refiner", "destination": "/refining", "permanent": true },
-		{ "source": "/large-refiner", "destination": "/refining", "permanent": true },
-		{ "source": "/all", "destination": "/refining", "permanent": true },
-		{ "source": "/buildings", "destination": "/buildings/1", "permanent": true },
-		{ "source": "/all-items", "destination": "/items", "permanent": true },
-		{ "source": "/raw", "destination": "/raw/1", "permanent": true },
-		{ "source": "/none", "destination": "/none/1", "permanent": true },
-		{ "source": "/corvette", "destination": "/corvette/1", "permanent": true },
-		{ "source": "/upgrades", "destination": "/upgrades/1", "permanent": true },
-		{ "source": "/exocraft", "destination": "/exocraft/1", "permanent": true },
-		{ "source": "/other", "destination": "/other/1", "permanent": true },
-		{ "source": "/curiosities", "destination": "/curiosities/1", "permanent": true },
-		{ "source": "/fish", "destination": "/fish/1", "permanent": true },
-		{ "source": "/technology", "destination": "/technology/1", "permanent": true },
-		{ "source": "/products", "destination": "/products/1", "permanent": true },
-		{ "source": "/calculator", "destination": "/calculator/1", "permanent": true },
-		{ "source": "/sitemap", "destination": "/sitemap-0.xml", "permanent": true }
-	]
+  "redirects": [
+    { "source": "/portable-refiner", "destination": "/refining", "permanent": true },
+    { "source": "/medium-refiner", "destination": "/refining", "permanent": true },
+    { "source": "/large-refiner", "destination": "/refining", "permanent": true },
+    { "source": "/all", "destination": "/refining", "permanent": true },
+    { "source": "/buildings", "destination": "/buildings/1", "permanent": true },
+    { "source": "/all-items", "destination": "/items", "permanent": true },
+    { "source": "/raw", "destination": "/raw/1", "permanent": true },
+    { "source": "/none", "destination": "/none/1", "permanent": true },
+    { "source": "/corvette", "destination": "/corvette/1", "permanent": true },
+    { "source": "/upgrades", "destination": "/upgrades/1", "permanent": true },
+    { "source": "/exocraft", "destination": "/exocraft/1", "permanent": true },
+    { "source": "/other", "destination": "/other/1", "permanent": true },
+    { "source": "/curiosities", "destination": "/curiosities/1", "permanent": true },
+    { "source": "/fish", "destination": "/fish/1", "permanent": true },
+    { "source": "/technology", "destination": "/technology/1", "permanent": true },
+    { "source": "/products", "destination": "/products/1", "permanent": true },
+    { "source": "/calculator", "destination": "/calculator/1", "permanent": true },
+    { "source": "/sitemap", "destination": "/sitemap-0.xml", "permanent": true },
+    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true }
+  ]
 }
