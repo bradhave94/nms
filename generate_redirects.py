@@ -534,6 +534,10 @@ def generate_redirects(
     matched.update(resolved_from_buckets)
 
     for entry in still_ambiguous:
+        candidate_ids = sorted({candidate.item_id for candidate in entry.candidates})
+        candidate_destinations = sorted(
+            {build_destination_url(candidate) for candidate in entry.candidates}
+        )
         unmatched_entries.append(
             {
                 "source": entry.old.source_url,
@@ -542,10 +546,9 @@ def generate_redirects(
                 "name": entry.old.item.get("Name"),
                 "operation": entry.old.item.get("Operation"),
                 "reason": "ambiguous",
-                "candidateIds": sorted({candidate.item_id for candidate in entry.candidates}),
-                "candidateDestinations": sorted(
-                    {build_destination_url(candidate) for candidate in entry.candidates}
-                ),
+                "candidateCount": len(candidate_ids),
+                "candidateIdsSample": candidate_ids[:25],
+                "candidateDestinationsSample": candidate_destinations[:25],
             }
         )
 
