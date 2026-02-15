@@ -1,8 +1,55 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import CompactCard from '@components/CompactCard.astro';
+import { getSlug, sort } from '@utils/lookup.js';
 import { getSiteOrigin } from '@utils/structuredData.js';
+import type { Item } from '@utils/lookup.js';
+import * as dataSources from '@datav2/index.js';
 
 const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+
+const getTypeFromSlug = (slug: string): string => {
+	const prefix = slug.split('/')[1]?.split('/')[0] || '';
+	const typeMap: Record<string, string> = {
+		raw: 'raw',
+		products: 'products',
+		food: 'food',
+		curiosities: 'curiosities',
+		fish: 'fish',
+		technology: 'technology',
+		other: 'other',
+		refinery: 'refinery',
+		'nutrient-processor': 'food',
+		buildings: 'buildings',
+		upgrades: 'upgrades',
+		exocraft: 'exocraft',
+		starships: 'starships',
+		corvette: 'corvette',
+	};
+	return typeMap[prefix] || prefix;
+};
+
+const allData = sort(Object.values(dataSources).flatMap((source) => source as Item[])).filter(
+	(item) => item?.Name != null && String(item.Name).trim() !== ''
+);
+
+const itemCards = allData.map((item) => {
+	const url = getSlug(item);
+	return {
+		id: item.Id,
+		name: item.Name,
+		icon: item.Icon,
+		url,
+		group: item.Group ?? '',
+		type: getTypeFromSlug(url),
+	};
+});
+
+const groups = [...new Set(itemCards.map((item) => item.group).filter(Boolean))].sort((a, b) =>
+	a.localeCompare(b)
+);
+const types = [...new Set(itemCards.map((item) => item.type).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 const breadcrumbSchema = {
@@ -19,14 +66,14 @@ const datasetSchema = {
 	'@type': 'Dataset',
 	'@id': `${siteOrigin}/items.json#dataset`,
 	name: "No Man's Sky Items Dataset",
-	description: 'Structured list of item names, groups, icons, and URLs used by No Man\'s Sky Recipes.',
+	description: "Structured list of item names, groups, icons, and URLs used by No Man's Sky Recipes.",
 	url: `${siteOrigin}/items.json`,
 	isAccessibleForFree: true,
 	inLanguage: 'en',
 	creator: { '@id': `${siteOrigin}#organization` },
 	distribution: {
 		'@type': 'DataDownload',
-		name: 'No Man\'s Sky Items JSON Feed',
+		name: "No Man's Sky Items JSON Feed",
 		contentUrl: `${siteOrigin}/items.json`,
 		encodingFormat: 'application/json',
 	},
@@ -37,7 +84,7 @@ const collectionSchema = {
 	'@id': `${canonicalUrl}#collection`,
 	url: canonicalUrl,
 	name: 'Items',
-	description: 'Browse items by group, type, or search. Filter No Man\'s Sky items dynamically.',
+	description: "Browse items by group, type, or search. Filter No Man's Sky items dynamically.",
 	isPartOf: { '@id': `${siteOrigin}#website` },
 	breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
 	mainEntity: { '@id': `${siteOrigin}/items.json#dataset` },
@@ -52,38 +99,34 @@ const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 	structuredData={structuredData}
 >
 	<h1 class="text-center text-4xl sm:text-6xl my-12">Items</h1>
+	<p class="mx-auto mb-8 max-w-3xl text-center text-sky-200/90">
+		Browse every item in No Man's Sky. Use the filters to narrow by group, type, or search term.
+	</p>
 
-	<form
-		class="mx-auto max-w-4xl mb-8 flex flex-wrap gap-4 justify-center items-center"
-		onsubmit="event.preventDefault(); return false;"
-	>
-		<div class="relative" id="group-combobox-wrapper">
-			<label for="group-input" class="sr-only">Group</label>
-			<input
-				id="group-input"
-				type="text"
-				autocomplete="off"
-				placeholder="All groups"
-				class="h-10 w-48 rounded border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
-			/>
-			<div
-				id="group-dropdown"
-				class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded border border-sky-700 bg-sky-900 shadow-lg hidden"
-			></div>
+	<form class="mx-auto mb-8 flex max-w-4xl flex-wrap items-center justify-center gap-4" onsubmit="event.preventDefault();">
+		<div>
+			<label for="group-select" class="sr-only">Group</label>
+			<select
+				id="group-select"
+				class="h-10 w-56 rounded border border-sky-700 bg-sky-900/50 px-3 text-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
+			>
+				<option value="">All groups</option>
+				{groups.map((group) => (
+					<option value={group}>{group}</option>
+				))}
+			</select>
 		</div>
-		<div class="relative" id="type-combobox-wrapper">
-			<label for="type-input" class="sr-only">Type</label>
-			<input
-				id="type-input"
-				type="text"
-				autocomplete="off"
-				placeholder="All types"
-				class="h-10 w-36 rounded border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
-			/>
-			<div
-				id="type-dropdown"
-				class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded border border-sky-700 bg-sky-900 shadow-lg hidden"
-			></div>
+		<div>
+			<label for="type-select" class="sr-only">Type</label>
+			<select
+				id="type-select"
+				class="h-10 w-44 rounded border border-sky-700 bg-sky-900/50 px-3 text-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
+			>
+				<option value="">All types</option>
+				{types.map((type) => (
+					<option value={type}>{type.charAt(0).toUpperCase() + type.slice(1)}</option>
+				))}
+			</select>
 		</div>
 		<div>
 			<label for="items-search-input" class="sr-only">Search</label>
@@ -98,281 +141,138 @@ const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 			<button
 				id="apply-filters"
 				type="button"
-				class="h-10 rounded bg-sky-600 px-4 font-semibold text-white hover:bg-sky-500 transition-colors"
+				class="h-10 rounded bg-sky-600 px-4 font-semibold text-white transition-colors hover:bg-sky-500"
 			>
 				Apply
 			</button>
 			<button
 				id="reset-filters"
 				type="button"
-				class="h-10 rounded border border-sky-600 px-4 font-semibold text-sky-400 hover:bg-sky-900/50 hover:text-white transition-colors"
+				class="h-10 rounded border border-sky-600 px-4 font-semibold text-sky-400 transition-colors hover:bg-sky-900/50 hover:text-white"
 			>
 				Reset
 			</button>
 		</div>
 	</form>
 
-	<div id="loading" class="text-center py-12 text-sky-400">Loading...</div>
-	<div id="empty" class="hidden text-center py-12 text-sky-400">
+	<div id="empty" class="hidden py-12 text-center text-sky-400">
 		No items found. Try adjusting your filters.
 	</div>
-	<div
-		id="items"
-		class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 hidden"
-	></div>
+
+	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+		{
+			itemCards.map((item, index) => (
+				<div
+					class="item-filter-entry"
+					data-name={item.name.toLowerCase()}
+					data-group={item.group.toLowerCase()}
+					data-type={item.type.toLowerCase()}
+				>
+					<CompactCard
+						card={{
+							name: item.name,
+							image: `${IMAGE_BASE}${item.icon}`,
+							link: item.url,
+						}}
+						index={index}
+						loading="lazy"
+					/>
+				</div>
+			))
+		}
+	</div>
 </Layout>
 
-<script define:vars={{ IMAGE_BASE }}>
-	const groupInput = document.getElementById('group-input');
-	const typeInput = document.getElementById('type-input');
-	const groupDropdown = document.getElementById('group-dropdown');
-	const typeDropdown = document.getElementById('type-dropdown');
-	const searchInput = document.getElementById('items-search-input');
+<script>
+	const groupSelect = document.getElementById('group-select') as HTMLSelectElement | null;
+	const typeSelect = document.getElementById('type-select') as HTMLSelectElement | null;
+	const searchInput = document.getElementById('items-search-input') as HTMLInputElement | null;
 	const applyBtn = document.getElementById('apply-filters');
 	const resetBtn = document.getElementById('reset-filters');
-	const loadingEl = document.getElementById('loading');
 	const emptyEl = document.getElementById('empty');
-	const itemsEl = document.getElementById('items');
+	const itemEls = Array.from(document.querySelectorAll('.item-filter-entry')) as HTMLElement[];
 
-	let allItemsData = [];
-	let allGroups = [];
-	let allTypes = [];
-
-	function getItemType(item) {
-		return (item.url || '').split('/')[1] || '';
-	}
-
-	function getGroupsForType(type) {
-		if (!type) return allGroups;
-		const t = type.toLowerCase();
-		return [...new Set(allItemsData.filter((i) => getItemType(i).toLowerCase().includes(t)).map((i) => i.group).filter(Boolean))].sort();
-	}
-
-	function getTypesForGroup(group) {
-		if (!group) return allTypes;
-		const g = group.trim().toLowerCase();
-		return [...new Set(allItemsData.filter((i) => i.group && String(i.group).toLowerCase().includes(g)).map((i) => getItemType(i)))].sort().map((t) => t.charAt(0).toUpperCase() + t.slice(1));
-	}
-
-	function getParams() {
+	const getParams = () => {
 		const params = new URLSearchParams(window.location.search);
 		return {
 			group: params.get('group') || '',
 			type: params.get('type') || '',
 			q: params.get('q') || '',
 		};
-	}
+	};
 
-	function syncInputsFromUrl() {
-		const { group, type, q } = getParams();
-		if (groupInput) groupInput.value = group;
-		if (typeInput) typeInput.value = type ? type.charAt(0).toUpperCase() + type.slice(1) : '';
-		if (searchInput) searchInput.value = q;
-	}
-
-	function updateUrl() {
-		const group = groupInput?.value?.trim() || '';
-		const type = (typeInput?.value?.trim() || '').toLowerCase();
-		const q = searchInput?.value?.trim() || '';
+	const updateUrl = (group: string, type: string, q: string) => {
 		const params = new URLSearchParams();
 		if (group) params.set('group', group);
 		if (type) params.set('type', type);
 		if (q) params.set('q', q);
 		const query = params.toString();
-		const newUrl = `/items${query ? '?' + query : ''}`;
+		const newUrl = `/items${query ? `?${query}` : ''}`;
 		window.history.replaceState({}, '', newUrl);
-	}
+	};
 
-	function renderDropdown(list, filter) {
-		const q = (filter || '').toLowerCase().trim();
-		const filtered = list.filter((item) => item.toLowerCase().includes(q));
-		const items = filtered.map(
-			(item) =>
-				`<button type="button" class="block w-full px-3 py-2 text-left text-sm text-white hover:bg-sky-700/80" data-value="${item.replace(/"/g, '&quot;')}">${item}</button>`
-		);
-		const clearBtn = '<button type="button" class="block w-full px-3 py-2 text-left text-sm text-sky-400 hover:bg-sky-700/80" data-value="">(All)</button>';
-		return clearBtn + items.join('');
-	}
+	const applyFilters = () => {
+		const groupRaw = groupSelect?.value?.trim() || '';
+		const typeRaw = typeSelect?.value?.trim() || '';
+		const qRaw = searchInput?.value?.trim() || '';
+		const group = groupRaw.toLowerCase();
+		const type = typeRaw.toLowerCase();
+		const q = qRaw.toLowerCase();
 
-	function setupCombobox(inputEl, dropdownEl, getOptions, onSelect) {
-		if (!inputEl || !dropdownEl) return;
-		function show() {
-			const options = getOptions();
-			dropdownEl.innerHTML = renderDropdown(options, inputEl.value);
-			dropdownEl.classList.remove('hidden');
-			dropdownEl.querySelectorAll('button').forEach((btn) => {
-				btn.addEventListener('mousedown', (e) => e.preventDefault());
-				btn.addEventListener('click', () => {
-					inputEl.value = btn.dataset.value || '';
-					dropdownEl.classList.add('hidden');
-					onSelect();
-				});
-			});
-		}
-		function hide() {
-			dropdownEl.classList.add('hidden');
-		}
-		inputEl.addEventListener('focus', show);
-		inputEl.addEventListener('input', show);
-		inputEl.addEventListener('blur', () => setTimeout(hide, 150));
-		dropdownEl.addEventListener('mousedown', (e) => e.preventDefault());
-	}
+		let visibleCount = 0;
+		itemEls.forEach((el) => {
+			const name = el.dataset.name || '';
+			const itemGroup = el.dataset.group || '';
+			const itemType = el.dataset.type || '';
 
-	function resetFilters() {
-		if (groupInput) groupInput.value = '';
-		if (typeInput) typeInput.value = '';
-		if (searchInput) searchInput.value = '';
-		groupDropdown?.classList.add('hidden');
-		typeDropdown?.classList.add('hidden');
-		loadItems();
-	}
+			const matchesGroup = !group || itemGroup === group;
+			const matchesType = !type || itemType === type;
+			const matchesSearch = !q || name.includes(q) || itemGroup.includes(q);
 
-	function renderCard(item) {
-		const article = document.createElement('article');
-		article.className = 'group relative';
-		article.innerHTML = `
-			<a
-				href="${item.url}"
-				class="group block h-full overflow-hidden rounded-sm border border-sky-900 bg-sky-800/80 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-700/90"
-			>
-				<div class="aspect-square bg-[#0b3550]">
-					<img
-						class="h-full w-full object-contain object-center"
-						src="${IMAGE_BASE}${item.icon}"
-						alt="${item.name}"
-						loading="lazy"
-					/>
-				</div>
-				<div class="border-t border-sky-900 px-2 py-1.5">
-					<p class="truncate text-base font-semibold text-white/95" title="${item.name}">${item.name}</p>
-				</div>
-			</a>
-			<div
-				class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-max max-w-72 -translate-x-1/2 rounded-md border border-sky-400 bg-[#06283d] px-3 py-2 text-sm font-semibold text-white opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
-				role="tooltip"
-			>
-				${item.name}
-			</div>
-		`;
-		return article;
-	}
-
-	function filterItems(items, group, type, q) {
-		let filtered = items;
-		if (group) {
-			const g = group.trim().toLowerCase();
-			filtered = filtered.filter((item) => item.group && String(item.group).toLowerCase().includes(g));
-		}
-		if (type) {
-			const t = type.toLowerCase().trim();
-			filtered = filtered.filter((item) => {
-				const itemType = (item.url || '').split('/')[1] || '';
-				return itemType.toLowerCase().includes(t);
-			});
-		}
-		if (q) {
-			const search = q.toLowerCase().trim();
-			filtered = filtered.filter(
-				(item) =>
-					(item.name && String(item.name).toLowerCase().includes(search)) ||
-					(item.group && String(item.group).toLowerCase().includes(search))
-			);
-		}
-		return filtered;
-	}
-
-	async function loadItems() {
-		if (!loadingEl || !emptyEl || !itemsEl) return;
-
-		loadingEl.classList.remove('hidden');
-		emptyEl.classList.add('hidden');
-		itemsEl.classList.add('hidden');
-		itemsEl.innerHTML = '';
-
-		const q = searchInput?.value?.trim() || '';
-
-		try {
-			// Fetch full list (static build serves one response; client filters)
-			const res = await fetch('/items.json?v=2');
-			const json = await res.json();
-			const allItems = json?.body ?? [];
-			let groups = json?.groups ?? [];
-			let types = json?.types ?? [];
-
-			// Fallback: derive from items if API didn't include them (e.g. cached response)
-			if (!groups.length && allItems.length) {
-				groups = [...new Set(allItems.map((i) => i.group).filter(Boolean))].sort();
+			if (matchesGroup && matchesType && matchesSearch) {
+				el.classList.remove('hidden');
+				visibleCount += 1;
+			} else {
+				el.classList.add('hidden');
 			}
-			if (!types.length && allItems.length) {
-				types = [...new Set(allItems.map((i) => (i.url || '').split('/')[1]).filter(Boolean))].sort();
-			}
+		});
 
-			allItemsData = allItems;
-			allGroups = groups;
-			allTypes = types.map((t) => t.charAt(0).toUpperCase() + t.slice(1));
-
-			// Setup comboboxes on first load only
-			const didSetup = !groupDropdown?.dataset.ready;
-			if (didSetup && groups.length && types.length) {
-				groupDropdown.dataset.ready = '1';
-				typeDropdown.dataset.ready = '1';
-				setupCombobox(groupInput, groupDropdown, () => getGroupsForType(typeInput?.value?.trim()), loadItems);
-				setupCombobox(typeInput, typeDropdown, () => getTypesForGroup(groupInput?.value?.trim()), loadItems);
-			}
-			if (didSetup) syncInputsFromUrl();
-
-			const groupVal = groupInput?.value?.trim() || '';
-			const typeVal = typeInput?.value?.trim()?.toLowerCase() || '';
-			const items = filterItems(allItems, groupVal, typeVal, q);
-
-			loadingEl.classList.add('hidden');
-
-			if (items.length === 0) {
+		if (emptyEl) {
+			if (visibleCount === 0) {
 				emptyEl.classList.remove('hidden');
 			} else {
-				items.forEach((item) => itemsEl.appendChild(renderCard(item)));
-				itemsEl.classList.remove('hidden');
+				emptyEl.classList.add('hidden');
 			}
-
-			updateUrl();
-		} catch (err) {
-			loadingEl.classList.add('hidden');
-			emptyEl.textContent = 'Failed to load items. Please try again.';
-			emptyEl.classList.remove('hidden');
 		}
-	}
 
-	syncInputsFromUrl();
+		updateUrl(groupRaw, type, qRaw);
+	};
 
-	applyBtn?.addEventListener('click', (e) => {
-		e.preventDefault();
-		loadItems();
-	});
-	resetBtn?.addEventListener('click', (e) => {
-		e.preventDefault();
-		resetFilters();
-	});
+	const syncFromUrl = () => {
+		const { group, type, q } = getParams();
+		if (groupSelect) groupSelect.value = group;
+		if (typeSelect) typeSelect.value = type;
+		if (searchInput) searchInput.value = q;
+	};
 
-	searchInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'Enter') {
-			e.preventDefault();
-			loadItems();
-		}
-	});
-	groupInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'Enter') {
-			e.preventDefault();
-			groupDropdown?.classList.add('hidden');
-			loadItems();
-		}
-	});
-	typeInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'Enter') {
-			e.preventDefault();
-			typeDropdown?.classList.add('hidden');
-			loadItems();
+	const resetFilters = () => {
+		if (groupSelect) groupSelect.value = '';
+		if (typeSelect) typeSelect.value = '';
+		if (searchInput) searchInput.value = '';
+		applyFilters();
+	};
+
+	applyBtn?.addEventListener('click', applyFilters);
+	resetBtn?.addEventListener('click', resetFilters);
+	groupSelect?.addEventListener('change', applyFilters);
+	typeSelect?.addEventListener('change', applyFilters);
+	searchInput?.addEventListener('keydown', (event) => {
+		if (event.key === 'Enter') {
+			event.preventDefault();
+			applyFilters();
 		}
 	});
 
-	loadItems();
+	syncFromUrl();
+	applyFilters();
 </script>
