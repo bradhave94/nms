@@ -12,6 +12,14 @@ const truncate = (value: string, maxLength: number): string => {
 	return `${value.slice(0, maxLength - 1).trimEnd()}…`;
 };
 
+const toFirstPagePath = (path: string): string => {
+	const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+	const trimmedPath = normalizedPath.replace(/\/+$/, '');
+	if (trimmedPath === '') return '/1';
+	if (/\/\d+$/.test(trimmedPath)) return trimmedPath;
+	return `${trimmedPath}/1`;
+};
+
 export const buildItemMeta = (
 	item: Pick<Item, 'Id' | 'Name' | 'Description'>,
 	categoryLabel: string
@@ -31,11 +39,11 @@ export const buildCategoryBreadcrumbs = (
 	categoryPath: string,
 	currentPage: number
 ): BreadcrumbItem[] => {
-	const normalizedPath = categoryPath.startsWith('/') ? categoryPath : `/${categoryPath}`;
+	const firstPagePath = toFirstPagePath(categoryPath);
 	if (currentPage > 1) {
 		return [
 			{ name: 'Home', href: '/' },
-			{ name: categoryName, href: normalizedPath },
+			{ name: categoryName, href: firstPagePath },
 			{ name: `Page ${currentPage}` },
 		];
 	}

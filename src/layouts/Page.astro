@@ -32,8 +32,23 @@ const categoryNameMap: Record<string, string> = {
   starships: 'Starships',
   corvette: 'Corvette',
 };
+const categoryFirstPagePathMap: Record<string, string> = {
+  raw: '/raw/1',
+  products: '/products/1',
+  food: '/food/1',
+  curiosities: '/curiosities/1',
+  fish: '/fish/1',
+  technology: '/technology/1',
+  other: '/other/1',
+  buildings: '/buildings/1',
+  upgrades: '/upgrades/1',
+  exocraft: '/exocraft/1',
+  starships: '/starships/1',
+  corvette: '/corvette/1',
+};
 const categoryName = categoryNameMap[categorySlug] ?? 'Items';
-const categoryUrl = `${siteOrigin}/${categorySlug}`;
+const categoryPath = categoryFirstPagePathMap[categorySlug] ?? '/items';
+const categoryUrl = `${siteOrigin}${categoryPath}`;
 const itemImageUrl = `${siteOrigin}/images/items/${item.Icon}`;
 
 type UpgradeStatLevel = {
@@ -623,7 +638,7 @@ const corvetteAttributes = [
     className="mb-4"
     items={[
       { name: 'Home', href: '/' },
-      { name: categoryName, href: `/${categorySlug}` },
+      { name: categoryName, href: categoryPath },
       { name: item.Name },
     ]}
   />
