@@ -171,32 +171,6 @@ type UsedInItem = {
   Quantity: number;
   RequiredItems: RawItem[];
 };
-type UsedInOverviewItem = {
-  Id: string;
-  Name: string;
-  Icon: string;
-  recipeCount: number;
-};
-type LinkedIngredient = {
-  Id: string;
-  Name: string;
-  Quantity: number;
-  href: string;
-};
-type ObtainedFromEntry =
-  | {
-      type: 'recipe';
-      key: string;
-      action: 'Refine' | 'Cook';
-      tool: string;
-      outputQuantity: number;
-      ingredients: LinkedIngredient[];
-    }
-  | {
-      type: 'text';
-      key: string;
-      text: string;
-    };
 type HowToIngredient = {
   Id: string;
   Name: string;
@@ -301,24 +275,6 @@ const groupByOutput = (inputData: RecipeInput[]) => {
 
 const groupedInputRefined = groupByOutput(findInputFromRefiner(item.Id) as unknown as RecipeInput[]);
 const groupedInputCrafting = groupByOutput(findInputFromCrafting(item.Id) as unknown as RecipeInput[]);
-
-const usedInMap = new Map<string, UsedInOverviewItem>();
-for (const usedInItem of [...groupedInputRefined, ...groupedInputCrafting]) {
-  const existing = usedInMap.get(usedInItem.Id);
-  if (existing) {
-    existing.recipeCount += usedInItem.recipes.length;
-    continue;
-  }
-
-  usedInMap.set(usedInItem.Id, {
-    Id: usedInItem.Id,
-    Name: usedInItem.Name,
-    Icon: usedInItem.Icon,
-    recipeCount: usedInItem.recipes.length,
-  });
-}
-
-const usedInOverview = Array.from(usedInMap.values()).sort((a, b) => a.Name.localeCompare(b.Name));
 const showQuantityInput = data.length + output.length > 0;
 const formattedBaseValueUnits = Number(item.BaseValueUnits ?? 0).toLocaleString();
 const blueprintItem = item as BlueprintLikeItem;
@@ -363,77 +319,6 @@ const catchChancePercent =
   typeof fishItem.MissionCatchChanceOverride === 'number' && fishItem.MissionCatchChanceOverride > 0
     ? `${(fishItem.MissionCatchChanceOverride * 100).toLocaleString()}%`
     : undefined;
-
-const pinObjective = exocraftItem.PinObjective;
-const tradeCategory = exocraftItem.TradeCategory;
-
-const obtainedRecipeEntries: Extract<ObtainedFromEntry, { type: 'recipe' }>[] = [];
-const seenObtainedRecipeEntries = new Set<string>();
-for (const recipe of outputRecipes) {
-  if (!recipe.Output || !recipe.Inputs?.length) continue;
-
-  const ingredients = recipe.Inputs.reduce<LinkedIngredient[]>((acc, input) => {
-    const ingredient = getById(input.Id);
-    if (!ingredient) return acc;
-    acc.push({
-      Id: input.Id,
-      Name: ingredient.Name,
-      Quantity: input.Quantity,
-      href: getSlug(input.Id),
-    });
-    return acc;
-  }, []);
-  if (ingredients.length === 0) continue;
-
-  const isCookingRecipe = recipe.Slug?.startsWith('nutrient-processor/');
-  const action: 'Refine' | 'Cook' = isCookingRecipe ? 'Cook' : 'Refine';
-  const key = `${action}:${ingredients.map((ing) => `${ing.Id}:${ing.Quantity}`).join('|')}:${recipe.Output.Quantity ?? 1}`;
-  if (seenObtainedRecipeEntries.has(key)) continue;
-  seenObtainedRecipeEntries.add(key);
-
-  obtainedRecipeEntries.push({
-    type: 'recipe',
-    key,
-    action,
-    tool: isCookingRecipe ? 'Nutrient Processor' : 'Refiner',
-    outputQuantity: recipe.Output.Quantity ?? 1,
-    ingredients,
-  });
-}
-
-const obtainedTextSet = new Set<string>();
-const addObtainedText = (text?: string) => {
-  if (!text) return;
-  const cleaned = text.trim();
-  if (!cleaned) return;
-  obtainedTextSet.add(cleaned);
-};
-
-if (pinObjective === 'UI_FIND_BUY_OBJ') {
-  addObtainedText('Find in the world or purchase from Trade Terminals and specialist merchants.');
-} else if (pinObjective === 'UI_FIND_OBJ') {
-  addObtainedText('Found through exploration, missions, or rewards.');
-}
-
-if (tradeCategory && tradeCategory !== 'None') {
-  addObtainedText('Purchase from Trade Terminals and trade outposts.');
-}
-
-const descriptionSentence = item.Description
-  ?.replace(/\s+/g, ' ')
-  .split(/(?<=[.!?])\s+/)
-  .map((sentence) => sentence.trim())
-  .find((sentence) => /(harvest|mine|mined|mining|extract|found|purchase|buy|trade|asteroid|deposit|flora|refiner)/i.test(sentence));
-addObtainedText(descriptionSentence);
-
-const obtainedFromEntries: ObtainedFromEntry[] = [
-  ...obtainedRecipeEntries,
-  ...Array.from(obtainedTextSet.values()).map((text, index) => ({
-    type: 'text' as const,
-    key: `info-${index}`,
-    text,
-  })),
-];
 
 const toHowToIngredients = (inputs: IOItem[]): HowToIngredient[] =>
   inputs.reduce<HowToIngredient[]>((acc, input) => {
@@ -860,77 +745,6 @@ const corvetteAttributes = [
       </div>
     </div>
   )}
-
-  <div id="used-in" class="mt-8">
-    <h2 class="relative mb-4 text-center">
-      <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-        Used In
-      </span>
-      {usedInOverview.length > 0 && (
-        <span class="ml-2 text-sm font-normal text-gray-400">({usedInOverview.length})</span>
-      )}
-    </h2>
-    {usedInOverview.length > 0 ? (
-      <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-        {usedInOverview.map((usedInItem) => (
-          <a
-            href={getSlug(usedInItem.Id)}
-            class="flex items-center gap-3 rounded border border-gray-700 bg-gray-900/80 p-3 hover:border-cyan-500/60 hover:bg-gray-900 transition-colors"
-          >
-            <Image
-              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
-              alt={usedInItem.Name}
-              sizes="32px"
-              width={32}
-              height={32}
-              class="flex-shrink-0"
-            />
-            <span class="text-cyan-300 font-medium">{usedInItem.Name}</span>
-          </a>
-        ))}
-      </div>
-    ) : (
-      <p class="text-center text-gray-400">This item is not used in any recipes.</p>
-    )}
-  </div>
-
-  <div id="obtained-from" class="mt-8">
-    <h2 class="relative mb-4 text-center">
-      <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-        Obtained From
-      </span>
-    </h2>
-    {obtainedFromEntries.length > 0 ? (
-      <ul class="space-y-2">
-        {obtainedFromEntries.map((entry) => (
-          <li class="rounded border border-gray-700/70 bg-gray-900/70 px-4 py-3 text-sm text-gray-200">
-            {entry.type === 'recipe' ? (
-              <p>
-                <span class="text-cyan-300">{entry.action}</span>{' '}
-                {entry.ingredients.map((ingredient, ingredientIndex) => (
-                  <>
-                    {ingredientIndex > 0 && <span class="text-gray-500"> + </span>}
-                    <a href={ingredient.href} class="text-cyan-300 hover:text-cyan-200 hover:underline underline-offset-2">
-                      {ingredient.Name}
-                    </a>
-                    <span class="text-gray-400"> x{ingredient.Quantity.toLocaleString()}</span>
-                  </>
-                ))}{' '}
-                using the {entry.tool}
-                {entry.outputQuantity > 1 && (
-                  <span class="text-gray-400"> to produce {item.Name} x{entry.outputQuantity.toLocaleString()}</span>
-                )}
-              </p>
-            ) : (
-              <p>{entry.text}</p>
-            )}
-          </li>
-        ))}
-      </ul>
-    ) : (
-      <p class="text-center text-gray-400">No non-crafting acquisition methods are currently listed for this item.</p>
-    )}
-  </div>
 
   <!-- Refined to create (refining only) -->
   {groupedInputRefined.length > 0 && (
