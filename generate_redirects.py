@@ -128,6 +128,9 @@ SOURCE_SEGMENT_TO_DEST_PREFERENCE: dict[str, list[str]] = {
     "nutrient-processor": ["nutrient-processor"],
 }
 
+# These old sections never had item detail pages; skip redirect generation.
+SKIPPED_SOURCE_SEGMENTS: set[str] = {"refinery", "nutrient-processor"}
+
 
 @dataclass(frozen=True)
 class NewRecord:
@@ -457,6 +460,9 @@ def generate_redirects(
     unmatched_entries: list[dict[str, Any]] = []
 
     for old in old_records:
+        if old.source_segment in SKIPPED_SOURCE_SEGMENTS:
+            continue
+
         recipe_match = try_internal_recipe_id_match(old, indexes)
         if recipe_match:
             matched[old.source_url] = recipe_match
