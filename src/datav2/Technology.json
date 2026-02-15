@@ -10662,54 +10662,5 @@
 		"ParentTechId": null,
 		"RequiredTech": null,
 		"Slug": "technology/MAINT_ROBO10"
-	},
-	{
-		"Id": "BIGGS_POI_LOC",
-		"Icon": "BIGGS_POI_LOC.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.biggspoi.dds",
-		"Name": "Debris Rangefinder",
-		"Group": "Deep-Space Salvage Locator",
-		"Description": "A single-use device for locating the wreckage of starships in deep space.\n\nSelect the Rangefinder and Scan for Debris ([E]) to begin the location process.",
-		"BaseValueUnits": 3200,
-		"CurrencyType": "Credits",
-		"MaxStackSize": 0,
-		"Colour": "1A2733",
-		"CookingValue": 0.0,
-		"CdnUrl": "",
-		"Usages": [
-			"HasUsedToCraft"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "None",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "MIRROR",
-				"Quantity": 1
-			},
-			{
-				"Id": "COMPUTER",
-				"Quantity": 1
-			},
-			{
-				"Id": "CASING",
-				"Quantity": 1
-			}
-		],
-		"StatBonuses": [],
-		"ConsumableRewardTexts": [],
-		"Rarity": "Rare",
-		"Legality": "Legal",
-		"TradeCategory": "None",
-		"WikiCategory": "NotEnabled",
-		"Consumable": true,
-		"CookingIngredient": false,
-		"GoodForSelling": false,
-		"EggModifierIngredient": false,
-		"DeploysInto": null,
-		"RewardID": "R_BIGGS_POI",
-		"EffectCategory": "Unknown",
-		"RewardEffectStats": null,
-		"Slug": "technology/BIGGS_POI_LOC"
 	}
 ]

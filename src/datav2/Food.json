@@ -366,14 +366,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_BLOB",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_BLOB"
+		}
 	},
 	{
 		"Id": "FOOD_V_GEK",
@@ -406,14 +406,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_GEK",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_GEK"
+		}
 	},
 	{
 		"Id": "FOOD_V_DIPLO",
@@ -446,14 +446,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_DIPLO",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_DIPLO"
+		}
 	},
 	{
 		"Id": "FOOD_V_REX",
@@ -486,14 +486,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_REX",
 		"CookingValue": 0.1,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_REX"
+		}
 	},
 	{
 		"Id": "FOOD_V_CAT",
@@ -526,14 +526,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_CAT",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_CAT"
+		}
 	},
 	{
 		"Id": "FOOD_V_STRIDER",
@@ -566,14 +566,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_STRIDER",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_STRIDER"
+		}
 	},
 	{
 		"Id": "FOOD_V_COW",
@@ -606,14 +606,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_COW",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_COW"
+		}
 	},
 	{
 		"Id": "FOOD_V_CRAB",
@@ -646,14 +646,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_CRAB",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_CRAB"
+		}
 	},
 	{
 		"Id": "FOOD_V_BONE",
@@ -686,14 +686,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_BONE",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_BONE"
+		}
 	},
 	{
 		"Id": "FOOD_V_MOLE",
@@ -726,14 +726,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_MOLE",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_MOLE"
+		}
 	},
 	{
 		"Id": "FOOD_V_ROBOT",
@@ -766,6 +766,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_ROBOT",
 		"CookingValue": 0.2,
 		"RewardID": "TECHFRAG_VS",
 		"EffectCategory": "Unknown",
@@ -773,8 +774,7 @@
 			"PercentageChance": 100.0,
 			"GcRewardMoney.AmountMin": 5,
 			"GcRewardMoney.AmountMax": 10
-		},
-		"Slug": "food/FOOD_V_ROBOT"
+		}
 	},
 	{
 		"Id": "FOOD_V_FLYER",
@@ -807,14 +807,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_FLYER",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_FLYER"
+		}
 	},
 	{
 		"Id": "FOOD_V_EGG",
@@ -847,14 +847,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_EGG",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_EGG"
+		}
 	},
 	{
 		"Id": "FOOD_V_MILK",
@@ -887,14 +887,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_MILK",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_MILK"
+		}
 	},
 	{
 		"Id": "FOOD_V_BUG",
@@ -927,14 +927,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_BUG",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_V_BUG"
+		}
 	},
 	{
 		"Id": "FOOD_V_PCAT",
@@ -967,14 +967,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_V_PCAT",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_V_PCAT"
+		}
 	},
 	{
 		"Id": "FOOD_M_FISH",
@@ -1007,6 +1007,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_FISH",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1015,8 +1016,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_FISH"
+		}
 	},
 	{
 		"Id": "FOOD_M_FLYER",
@@ -1049,6 +1049,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_FLYER",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1057,8 +1058,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_FLYER"
+		}
 	},
 	{
 		"Id": "FOOD_M_FIEND",
@@ -1091,6 +1091,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_FIEND",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1099,8 +1100,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_FIEND"
+		}
 	},
 	{
 		"Id": "FOOD_M_HORROR",
@@ -1133,6 +1133,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_HORROR",
 		"CookingValue": 0.1,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1141,8 +1142,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_HORROR"
+		}
 	},
 	{
 		"Id": "FOOD_M_GRUB",
@@ -1175,11 +1175,11 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_GRUB",
 		"CookingValue": 0.15,
 		"RewardID": "R_BUGQUEEN",
 		"EffectCategory": "Unknown",
-		"RewardEffectStats": null,
-		"Slug": "food/FOOD_M_GRUB"
+		"RewardEffectStats": null
 	},
 	{
 		"Id": "FOOD_M_BLOB",
@@ -1212,6 +1212,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_BLOB",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1220,8 +1221,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_BLOB"
+		}
 	},
 	{
 		"Id": "FOOD_M_GEK",
@@ -1254,6 +1254,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_GEK",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1262,8 +1263,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_GEK"
+		}
 	},
 	{
 		"Id": "FOOD_M_DIPLO",
@@ -1296,6 +1296,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_DIPLO",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1304,8 +1305,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_DIPLO"
+		}
 	},
 	{
 		"Id": "FOOD_M_REX",
@@ -1338,6 +1338,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_REX",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1346,8 +1347,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_REX"
+		}
 	},
 	{
 		"Id": "FOOD_M_CAT",
@@ -1380,6 +1380,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_CAT",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1388,8 +1389,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_CAT"
+		}
 	},
 	{
 		"Id": "FOOD_M_STRIDER",
@@ -1422,6 +1422,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_STRIDER",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1430,8 +1431,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_STRIDER"
+		}
 	},
 	{
 		"Id": "FOOD_M_COW",
@@ -1464,6 +1464,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_COW",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1472,8 +1473,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_COW"
+		}
 	},
 	{
 		"Id": "FOOD_M_CRAB",
@@ -1506,6 +1506,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_CRAB",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1514,8 +1515,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_CRAB"
+		}
 	},
 	{
 		"Id": "FOOD_M_MOLE",
@@ -1548,6 +1548,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_MOLE",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1556,8 +1557,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_MOLE"
+		}
 	},
 	{
 		"Id": "FOOD_M_BONE",
@@ -1590,6 +1590,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_BONE",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1598,8 +1599,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_BONE"
+		}
 	},
 	{
 		"Id": "FOOD_M_DRILL",
@@ -1632,6 +1632,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_DRILL",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1640,8 +1641,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_DRILL"
+		}
 	},
 	{
 		"Id": "FOOD_M_BEETLE",
@@ -1674,6 +1674,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_BEETLE",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1682,8 +1683,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_BEETLE"
+		}
 	},
 	{
 		"Id": "FOOD_M_BALL",
@@ -1716,6 +1716,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_BALL",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1724,8 +1725,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_BALL"
+		}
 	},
 	{
 		"Id": "FOOD_M_DIGGER",
@@ -1758,6 +1758,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_DIGGER",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1766,8 +1767,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_DIGGER"
+		}
 	},
 	{
 		"Id": "FOOD_M_BUG",
@@ -1800,6 +1800,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_BUG",
 		"CookingValue": 0.15,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1808,8 +1809,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_BUG"
+		}
 	},
 	{
 		"Id": "FOOD_M_MEAT",
@@ -1842,6 +1842,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_M_MEAT",
 		"CookingValue": 0.1,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -1850,8 +1851,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_M_MEAT"
+		}
 	},
 	{
 		"Id": "FOOD_P_LUSHWILD",
@@ -1884,14 +1884,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_LUSHWILD",
 		"CookingValue": 0.25,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_LUSHWILD"
+		}
 	},
 	{
 		"Id": "FOOD_P_LUSHFARM",
@@ -1924,14 +1924,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_LUSHFARM",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_LUSHFARM"
+		}
 	},
 	{
 		"Id": "FOOD_P_HOTWILD",
@@ -1964,14 +1964,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_HOTWILD",
 		"CookingValue": 0.25,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_HOTWILD"
+		}
 	},
 	{
 		"Id": "FOOD_P_HOTFARM",
@@ -2004,14 +2004,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_HOTFARM",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_HOTFARM"
+		}
 	},
 	{
 		"Id": "FOOD_P_COLDWILD",
@@ -2044,14 +2044,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_COLDWILD",
 		"CookingValue": 0.25,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_COLDWILD"
+		}
 	},
 	{
 		"Id": "FOOD_P_COLDFARM",
@@ -2084,14 +2084,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_COLDFARM",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_COLDFARM"
+		}
 	},
 	{
 		"Id": "FOOD_P_TOXWILD",
@@ -2124,14 +2124,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_TOXWILD",
 		"CookingValue": 0.25,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_TOXWILD"
+		}
 	},
 	{
 		"Id": "FOOD_P_TOXFARM",
@@ -2164,14 +2164,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_TOXFARM",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_TOXFARM"
+		}
 	},
 	{
 		"Id": "FOOD_P_RADWILD",
@@ -2204,14 +2204,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_RADWILD",
 		"CookingValue": 0.25,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_RADWILD"
+		}
 	},
 	{
 		"Id": "FOOD_P_RADFARM",
@@ -2244,14 +2244,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_RADFARM",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_RADFARM"
+		}
 	},
 	{
 		"Id": "FOOD_P_DUSTWILD",
@@ -2284,14 +2284,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_DUSTWILD",
 		"CookingValue": 0.25,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_DUSTWILD"
+		}
 	},
 	{
 		"Id": "FOOD_P_DUSTFARM",
@@ -2324,14 +2324,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_DUSTFARM",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_DUSTFARM"
+		}
 	},
 	{
 		"Id": "FOOD_P_GLITCH",
@@ -2364,14 +2364,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_GLITCH",
 		"CookingValue": 0.35,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_GLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_P_ALL1",
@@ -2404,14 +2404,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_ALL1",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_HAZ1",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -10.0
-		},
-		"Slug": "food/FOOD_P_ALL1"
+		}
 	},
 	{
 		"Id": "FOOD_P_ALL2",
@@ -2444,14 +2444,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_ALL2",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_HAZ1",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -10.0
-		},
-		"Slug": "food/FOOD_P_ALL2"
+		}
 	},
 	{
 		"Id": "FOOD_P_ALL3",
@@ -2484,14 +2484,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_ALL3",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_HAZ1",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -10.0
-		},
-		"Slug": "food/FOOD_P_ALL3"
+		}
 	},
 	{
 		"Id": "FOOD_P_CAVE",
@@ -2524,14 +2524,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_CAVE",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_HAZ1",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -10.0
-		},
-		"Slug": "food/FOOD_P_CAVE"
+		}
 	},
 	{
 		"Id": "FOOD_P_WATER",
@@ -2564,14 +2564,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_WATER",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_HAZ1",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -10.0
-		},
-		"Slug": "food/FOOD_P_WATER"
+		}
 	},
 	{
 		"Id": "FOOD_P_POOP",
@@ -2604,14 +2604,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_POOP",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_POOP"
+		}
 	},
 	{
 		"Id": "FOOD_P_DEATH",
@@ -2644,14 +2644,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_DEATH",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_DEATH"
+		}
 	},
 	{
 		"Id": "FOOD_P_STELLAR",
@@ -2684,14 +2684,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_P_STELLAR",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_P_STELLAR"
+		}
 	},
 	{
 		"Id": "FOOD_R_EGGS",
@@ -2724,14 +2724,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_EGGS",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_EGGS"
+		}
 	},
 	{
 		"Id": "FOOD_R_FLOUR",
@@ -2764,14 +2764,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_FLOUR",
 		"CookingValue": 1.8,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_FLOUR"
+		}
 	},
 	{
 		"Id": "FOOD_R_SUGAR",
@@ -2804,14 +2804,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_SUGAR",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_SUGAR"
+		}
 	},
 	{
 		"Id": "FOOD_R_HONEY",
@@ -2844,14 +2844,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_HONEY",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_R_VEG",
@@ -2884,14 +2884,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_VEG",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_VEG"
+		}
 	},
 	{
 		"Id": "FOOD_R_MEAT",
@@ -2924,14 +2924,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_MEAT",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_MEAT"
+		}
 	},
 	{
 		"Id": "FOOD_R_HORROR",
@@ -2964,6 +2964,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_HORROR",
 		"CookingValue": 0.75,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -2972,8 +2973,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_R_HORROR"
+		}
 	},
 	{
 		"Id": "FOOD_R_SMOKED",
@@ -3006,14 +3006,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_SMOKED",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_SMOKED"
+		}
 	},
 	{
 		"Id": "FOOD_R_BUTTER",
@@ -3046,14 +3046,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BUTTER",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_BUTTER"
+		}
 	},
 	{
 		"Id": "FOOD_R_GBUTTER",
@@ -3086,14 +3086,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_GBUTTER",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_GBUTTER"
+		}
 	},
 	{
 		"Id": "FOOD_R_CREAM",
@@ -3126,14 +3126,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_CREAM",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_R_GCREAM",
@@ -3166,14 +3166,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_GCREAM",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_GCREAM"
+		}
 	},
 	{
 		"Id": "FOOD_R_CARAMEL",
@@ -3206,14 +3206,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_CARAMEL",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_CARAMEL"
+		}
 	},
 	{
 		"Id": "FOOD_R_OIL",
@@ -3246,14 +3246,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_OIL",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_OIL"
+		}
 	},
 	{
 		"Id": "FOOD_R_GOIL",
@@ -3286,14 +3286,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_GOIL",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_GOIL"
+		}
 	},
 	{
 		"Id": "FOOD_R_PASTRY",
@@ -3326,14 +3326,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_PASTRY",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_PASTRY"
+		}
 	},
 	{
 		"Id": "FOOD_R_BREAD",
@@ -3366,14 +3366,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BREAD",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_R_BREAD"
+		}
 	},
 	{
 		"Id": "FOOD_R_BONEMILK",
@@ -3406,14 +3406,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BONEMILK",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_BONEMILK"
+		}
 	},
 	{
 		"Id": "FOOD_R_BBUTTER",
@@ -3446,14 +3446,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BBUTTER",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_BBUTTER"
+		}
 	},
 	{
 		"Id": "FOOD_R_BCHEESE",
@@ -3486,14 +3486,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BCHEESE",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_BCHEESE"
+		}
 	},
 	{
 		"Id": "FOOD_R_BCUSTARD",
@@ -3526,14 +3526,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BCUSTARD",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_BCUSTARD"
+		}
 	},
 	{
 		"Id": "FOOD_R_BCREAM",
@@ -3566,14 +3566,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BCREAM",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_BCREAM"
+		}
 	},
 	{
 		"Id": "FOOD_R_CUSTARD",
@@ -3606,14 +3606,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_CUSTARD",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_CUSTARD"
+		}
 	},
 	{
 		"Id": "FOOD_R_FCUSTARD",
@@ -3646,14 +3646,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_FCUSTARD",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_R_FCUSTARD"
+		}
 	},
 	{
 		"Id": "FOOD_R_MCUSTARD",
@@ -3686,14 +3686,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_MCUSTARD",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_R_MCUSTARD"
+		}
 	},
 	{
 		"Id": "FOOD_R_SCUSTARD",
@@ -3726,14 +3726,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_SCUSTARD",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_R_SCUSTARD"
+		}
 	},
 	{
 		"Id": "FOOD_R_MERINGUE",
@@ -3766,14 +3766,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_MERINGUE",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_MERINGUE"
+		}
 	},
 	{
 		"Id": "FOOD_R_DONUT",
@@ -3806,14 +3806,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_DONUT",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_R_DONUT"
+		}
 	},
 	{
 		"Id": "FOOD_R_GONUT",
@@ -3846,14 +3846,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_GONUT",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_R_GONUT"
+		}
 	},
 	{
 		"Id": "FOOD_R_CHOC",
@@ -3886,14 +3886,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_CHOC",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_R_SWEETBUT",
@@ -3926,14 +3926,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_SWEETBUT",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_R_SWEETBUT"
+		}
 	},
 	{
 		"Id": "FOOD_R_SWEETGEK",
@@ -3966,14 +3966,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_SWEETGEK",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_R_SWEETGEK"
+		}
 	},
 	{
 		"Id": "FOOD_R_HONEYBUT",
@@ -4006,14 +4006,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_HONEYBUT",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_R_HONEYBUT"
+		}
 	},
 	{
 		"Id": "FOOD_R_HONEYGEK",
@@ -4046,14 +4046,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_HONEYGEK",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_R_HONEYGEK"
+		}
 	},
 	{
 		"Id": "FOOD_R_BLOBGEK",
@@ -4086,14 +4086,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BLOBGEK",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_R_BLOBGEK"
+		}
 	},
 	{
 		"Id": "FOOD_R_PCATBUT",
@@ -4126,14 +4126,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_PCATBUT",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_R_PCATBUT"
+		}
 	},
 	{
 		"Id": "FOOD_R_PCATGEK",
@@ -4166,14 +4166,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_PCATGEK",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_R_PCATGEK"
+		}
 	},
 	{
 		"Id": "FOOD_R_BLOBBUT",
@@ -4206,14 +4206,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BLOBBUT",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_R_BLOBBUT"
+		}
 	},
 	{
 		"Id": "FOOD_R_CHEESE",
@@ -4246,14 +4246,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_CHEESE",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_CHEESE"
+		}
 	},
 	{
 		"Id": "FOOD_R_GCHEESE",
@@ -4286,14 +4286,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_GCHEESE",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_GCHEESE"
+		}
 	},
 	{
 		"Id": "FOOD_R_DOUGH",
@@ -4326,14 +4326,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_DOUGH",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_DOUGH"
+		}
 	},
 	{
 		"Id": "FOOD_JAM_GLITCH",
@@ -4366,14 +4366,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_JAM_GLITCH",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_JAM_GLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_JAM_HOT",
@@ -4406,14 +4406,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_JAM_HOT",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_JAM_HOT"
+		}
 	},
 	{
 		"Id": "FOOD_JAM_RAD",
@@ -4446,14 +4446,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_JAM_RAD",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_JAM_RAD"
+		}
 	},
 	{
 		"Id": "FOOD_JAM_DUST",
@@ -4486,14 +4486,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_JAM_DUST",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_JAM_DUST"
+		}
 	},
 	{
 		"Id": "FOOD_JAM_CAT",
@@ -4526,14 +4526,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_JAM_CAT",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_JAM_CAT"
+		}
 	},
 	{
 		"Id": "FOOD_JAM_CRAB",
@@ -4566,14 +4566,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_JAM_CRAB",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_JAM_CRAB"
+		}
 	},
 	{
 		"Id": "FOOD_JAM_BUG",
@@ -4606,14 +4606,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_JAM_BUG",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_JAM_BUG"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_CUST",
@@ -4646,14 +4646,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_CUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_CUST"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_FCUST",
@@ -4686,14 +4686,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_FCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_FCUST"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_MCUST",
@@ -4726,14 +4726,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_MCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_MCUST"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_SCUST",
@@ -4766,14 +4766,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_SCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_SCUST"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_HON",
@@ -4806,14 +4806,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_HON",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_HON"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_HONB",
@@ -4846,14 +4846,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_HONB",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_HONB"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_BLOB",
@@ -4886,14 +4886,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_BLOB",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_BLOB"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_PCAT",
@@ -4926,14 +4926,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_PCAT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_DNUT_PCAT"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_CARM",
@@ -4966,14 +4966,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_CHOC",
@@ -5006,14 +5006,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_MEAT",
@@ -5046,14 +5046,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_MEAT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_MEAT"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_JAM",
@@ -5086,14 +5086,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_CJAM",
@@ -5126,14 +5126,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_CJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_CJAM"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_AJAM",
@@ -5166,14 +5166,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_AJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_AJAM"
+		}
 	},
 	{
 		"Id": "FOOD_DNUT_BJAM",
@@ -5206,14 +5206,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_DNUT_BJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_DNUT_BJAM"
+		}
 	},
 	{
 		"Id": "FOOD_R_PIECASE",
@@ -5246,14 +5246,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_PIECASE",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_R_PIECASE"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_MEAT",
@@ -5286,14 +5286,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_MEAT",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_MEAT"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_SMEAT",
@@ -5326,14 +5326,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_SMEAT",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_SMEAT"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_VEG",
@@ -5366,14 +5366,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_VEG",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_VEG"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_FISH",
@@ -5406,14 +5406,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_FISH",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_FISH"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_FIEND",
@@ -5446,14 +5446,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_FIEND",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_FIEND"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_ORGAN",
@@ -5486,14 +5486,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_ORGAN",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_ORGAN"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_GEK",
@@ -5526,14 +5526,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_GEK",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_GEK"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CRAB",
@@ -5566,14 +5566,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CRAB",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CRAB"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_BERRY",
@@ -5606,14 +5606,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_BERRY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_BERRY"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_GLOW",
@@ -5646,14 +5646,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_GLOW",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_GLOW"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_MUSH",
@@ -5686,14 +5686,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_MUSH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_MUSH"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_JAM",
@@ -5726,14 +5726,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_WEIRD",
@@ -5766,14 +5766,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_WEIRD",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_WEIRD"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CACTUS",
@@ -5806,14 +5806,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CACTUS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_HONEY",
@@ -5846,14 +5846,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_ROOTS",
@@ -5886,14 +5886,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_ROOTS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_ROOTS"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_GREASE",
@@ -5926,14 +5926,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_GREASE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_GREASE"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CAT",
@@ -5966,14 +5966,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CAT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CAT"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CRABJ",
@@ -6006,14 +6006,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CRABJ",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CRABJ"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CHOC",
@@ -6046,14 +6046,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CARM",
@@ -6086,14 +6086,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CREAM",
@@ -6126,14 +6126,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CREAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CUST",
@@ -6166,14 +6166,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CUST"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_MCUST",
@@ -6206,14 +6206,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_MCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_MCUST"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_SCUST",
@@ -6246,14 +6246,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_SCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_SCUST"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_CHEESE",
@@ -6286,14 +6286,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_CHEESE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_CHEESE"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_VCHEE",
@@ -6326,14 +6326,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_VCHEE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_VCHEE"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_BONE",
@@ -6366,14 +6366,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_BONE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_BONE"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_DRILL",
@@ -6406,14 +6406,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_DRILL",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_DRILL"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_BEET",
@@ -6446,14 +6446,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_BEET",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_BEET"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_DIG",
@@ -6486,14 +6486,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_DIG",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_DIG"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_BALL",
@@ -6526,14 +6526,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_BALL",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_BALL"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_MOLE",
@@ -6566,14 +6566,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_MOLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_MOLE"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_BUGJAM",
@@ -6606,14 +6606,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_BUGJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_BUGJAM"
+		}
 	},
 	{
 		"Id": "FOOD_PIE_BMEAT",
@@ -6646,14 +6646,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_PIE_BMEAT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_PIE_BMEAT"
+		}
 	},
 	{
 		"Id": "FOOD_MEAT_STEW",
@@ -6686,14 +6686,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MEAT_STEW",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_MEAT_STEW"
+		}
 	},
 	{
 		"Id": "FOOD_VEG_STEW",
@@ -6726,14 +6726,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_VEG_STEW",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_VEG_STEW"
+		}
 	},
 	{
 		"Id": "FOOD_ORGAN_STEW",
@@ -6766,14 +6766,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ORGAN_STEW",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_ORGAN_STEW"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_BONE",
@@ -6806,14 +6806,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_BONE",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_BONE"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_DRILL",
@@ -6846,14 +6846,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_DRILL",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_DRILL"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_BEET",
@@ -6886,14 +6886,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_BEET",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_BEET"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_DIG",
@@ -6926,14 +6926,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_DIG",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_DIG"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_BALL",
@@ -6966,14 +6966,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_BALL",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_BALL"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_BUG",
@@ -7006,14 +7006,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_BUG",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_BUG"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_EVIL",
@@ -7046,14 +7046,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_EVIL",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_STEW_EVIL"
+		}
 	},
 	{
 		"Id": "FOOD_EGGPIE",
@@ -7086,14 +7086,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_EGGPIE",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_EGGPIE"
+		}
 	},
 	{
 		"Id": "FOOD_EGGPIE_M",
@@ -7126,14 +7126,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_EGGPIE_M",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_EGGPIE_M"
+		}
 	},
 	{
 		"Id": "FOOD_EGGPIE_G",
@@ -7166,14 +7166,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_EGGPIE_G",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_EGGPIE_G"
+		}
 	},
 	{
 		"Id": "FOOD_EGGPIE_GM",
@@ -7206,14 +7206,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_EGGPIE_GM",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_EGGPIE_GM"
+		}
 	},
 	{
 		"Id": "FOOD_EGGPIE_B",
@@ -7246,14 +7246,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_EGGPIE_B",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_EGGPIE_B"
+		}
 	},
 	{
 		"Id": "FOOD_EGGPIE_MU",
@@ -7286,14 +7286,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_EGGPIE_MU",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_EGGPIE_MU"
+		}
 	},
 	{
 		"Id": "FOOD_EGGPIE_BUG",
@@ -7326,14 +7326,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_EGGPIE_BUG",
 		"CookingValue": 0.65,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_EGGPIE_BUG"
+		}
 	},
 	{
 		"Id": "FOOD_J_ALL3",
@@ -7366,14 +7366,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_J_ALL3",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_J_ALL3"
+		}
 	},
 	{
 		"Id": "FOOD_J_LUSH",
@@ -7406,14 +7406,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_J_LUSH",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_J_LUSH"
+		}
 	},
 	{
 		"Id": "FOOD_J_HOT",
@@ -7446,14 +7446,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_J_HOT",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_J_HOT"
+		}
 	},
 	{
 		"Id": "FOOD_J_DUST",
@@ -7486,14 +7486,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_J_DUST",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_J_DUST"
+		}
 	},
 	{
 		"Id": "FOOD_J_SALT",
@@ -7526,14 +7526,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_J_SALT",
 		"CookingValue": 0.9,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_J_SALT"
+		}
 	},
 	{
 		"Id": "FOOD_S_VEG",
@@ -7566,14 +7566,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_S_VEG",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_S_VEG"
+		}
 	},
 	{
 		"Id": "FOOD_S_HOT",
@@ -7606,14 +7606,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_S_HOT",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_S_HOT"
+		}
 	},
 	{
 		"Id": "FOOD_S_CREAM",
@@ -7646,14 +7646,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_S_CREAM",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_S_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_S_CHEESE",
@@ -7686,14 +7686,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_S_CHEESE",
 		"CookingValue": 0.7,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_S_CHEESE"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_O_CH",
@@ -7726,14 +7726,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_O_CH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_O_CH"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_V_CH",
@@ -7766,14 +7766,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_V_CH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_V_CH"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_M_CH",
@@ -7806,14 +7806,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_M_CH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_M_CH"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_O_CR",
@@ -7846,14 +7846,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_O_CR",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_O_CR"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_V_CR",
@@ -7886,14 +7886,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_V_CR",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_V_CR"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_M_CR",
@@ -7926,14 +7926,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_M_CR",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_M_CR"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_O_HOT",
@@ -7966,14 +7966,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_O_HOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_O_HOT"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_V_HOT",
@@ -8006,14 +8006,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_V_HOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_V_HOT"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_M_HOT",
@@ -8046,14 +8046,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_M_HOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_M_HOT"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_O_VEG",
@@ -8086,14 +8086,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_O_VEG",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_O_VEG"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_V_VEG",
@@ -8126,14 +8126,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_V_VEG",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_V_VEG"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_M_VEG",
@@ -8166,14 +8166,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_M_VEG",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_STEW_M_VEG"
+		}
 	},
 	{
 		"Id": "FOOD_R_CAKEMIX",
@@ -8206,14 +8206,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_CAKEMIX",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_CAKEMIX"
+		}
 	},
 	{
 		"Id": "FOOD_R_GCAKEMIX",
@@ -8246,14 +8246,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_GCAKEMIX",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_GCAKEMIX"
+		}
 	},
 	{
 		"Id": "FOOD_R_BCAKEMIX",
@@ -8286,14 +8286,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_BCAKEMIX",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_BCAKEMIX"
+		}
 	},
 	{
 		"Id": "FOOD_R_PCAKEMIX",
@@ -8326,14 +8326,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_PCAKEMIX",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_R_PCAKEMIX"
+		}
 	},
 	{
 		"Id": "FOOD_R_MCAKEMIX",
@@ -8366,14 +8366,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_MCAKEMIX",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_MCAKEMIX"
+		}
 	},
 	{
 		"Id": "FOOD_R_MERMIX",
@@ -8406,14 +8406,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_MERMIX",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_MERMIX"
+		}
 	},
 	{
 		"Id": "FOOD_R_MMERMIX",
@@ -8446,14 +8446,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_MMERMIX",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_R_MMERMIX"
+		}
 	},
 	{
 		"Id": "FOOD_CK_HONEY",
@@ -8486,14 +8486,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_CK_CREAM",
@@ -8526,14 +8526,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_CREAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_CK_BLOBBUT",
@@ -8566,14 +8566,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_BLOBBUT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_BLOBBUT"
+		}
 	},
 	{
 		"Id": "FOOD_CK_PCATBUT",
@@ -8606,6 +8606,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_PCATBUT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -8614,8 +8615,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_CK_PCATBUT"
+		}
 	},
 	{
 		"Id": "FOOD_CK_CHOC",
@@ -8648,14 +8648,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_CK_CARM",
@@ -8688,14 +8688,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_CK_APPLE",
@@ -8728,14 +8728,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_APPLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_CK_CACTUS",
@@ -8768,14 +8768,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_CACTUS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_CK_JAM",
@@ -8808,14 +8808,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_CK_BUGJAM",
@@ -8848,6 +8848,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_BUGJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -8856,8 +8857,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_CK_BUGJAM"
+		}
 	},
 	{
 		"Id": "FOOD_CK_JHOT",
@@ -8890,14 +8890,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_JHOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_JHOT"
+		}
 	},
 	{
 		"Id": "FOOD_CK_JGLITCH",
@@ -8930,14 +8930,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_JGLITCH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_JGLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_CK_CUST",
@@ -8970,14 +8970,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_CUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_CUST"
+		}
 	},
 	{
 		"Id": "FOOD_CK_FCUST",
@@ -9010,14 +9010,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_FCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_FCUST"
+		}
 	},
 	{
 		"Id": "FOOD_CK_MCUST",
@@ -9050,14 +9050,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_MCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_MCUST"
+		}
 	},
 	{
 		"Id": "FOOD_CK_SCUST",
@@ -9090,14 +9090,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CK_SCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CK_SCUST"
+		}
 	},
 	{
 		"Id": "FOOD_R_EYEBALLS",
@@ -9130,14 +9130,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_EYEBALLS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_EYEBALLS"
+		}
 	},
 	{
 		"Id": "FOOD_R_EYESTEW",
@@ -9170,14 +9170,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_EYESTEW",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_EYESTEW"
+		}
 	},
 	{
 		"Id": "FOOD_R_EYEICE",
@@ -9210,14 +9210,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_EYEICE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_R_EYEICE"
+		}
 	},
 	{
 		"Id": "FOOD_ICE",
@@ -9250,14 +9250,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_FISH",
@@ -9290,14 +9290,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_FISH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_FISH"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_FIEND",
@@ -9330,14 +9330,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_FIEND",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_FIEND"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_STAR",
@@ -9370,14 +9370,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_STAR",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_STAR"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_CHOC",
@@ -9410,14 +9410,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_CARM",
@@ -9450,14 +9450,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_FRUIT",
@@ -9490,14 +9490,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_FRUIT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_FRUIT"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_APPLE",
@@ -9530,14 +9530,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_APPLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_HONEY",
@@ -9570,14 +9570,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_GLITCH",
@@ -9610,14 +9610,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_GLITCH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_GLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_GRAH",
@@ -9650,14 +9650,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_GRAH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_GRAH"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_BONE",
@@ -9690,14 +9690,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_BONE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_ICE_BONE"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_HOT",
@@ -9730,14 +9730,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_HOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_HOT"
+		}
 	},
 	{
 		"Id": "FOOD_ICE_BUG",
@@ -9770,14 +9770,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_ICE_BUG",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_ICE_BUG"
+		}
 	},
 	{
 		"Id": "FOOD_CG_BLOB",
@@ -9810,14 +9810,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_BLOB",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_BLOB"
+		}
 	},
 	{
 		"Id": "FOOD_CG_PCAT",
@@ -9850,6 +9850,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_PCAT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -9858,8 +9859,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_CG_PCAT"
+		}
 	},
 	{
 		"Id": "FOOD_CG_CREAM",
@@ -9892,14 +9892,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_CREAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_CG_CHOC",
@@ -9932,14 +9932,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_CG_CARM",
@@ -9972,14 +9972,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_CG_APPLE",
@@ -10012,14 +10012,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_APPLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_CG_CACTUS",
@@ -10052,14 +10052,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_CACTUS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_CG_JAM",
@@ -10092,14 +10092,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_CG_BUGJAM",
@@ -10132,6 +10132,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_BUGJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -10140,8 +10141,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_CG_BUGJAM"
+		}
 	},
 	{
 		"Id": "FOOD_CG_JHOT",
@@ -10174,14 +10174,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_JHOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_JHOT"
+		}
 	},
 	{
 		"Id": "FOOD_CG_JGLITCH",
@@ -10214,14 +10214,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_JGLITCH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_JGLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_CG_CUST",
@@ -10254,14 +10254,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_CUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_CUST"
+		}
 	},
 	{
 		"Id": "FOOD_CG_FCUST",
@@ -10294,14 +10294,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_FCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_FCUST"
+		}
 	},
 	{
 		"Id": "FOOD_CG_SCUST",
@@ -10334,14 +10334,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_SCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CG_SCUST"
+		}
 	},
 	{
 		"Id": "FOOD_CB_HONEY",
@@ -10374,14 +10374,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_CB_CREAM",
@@ -10414,14 +10414,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_CREAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_CB_CHOC",
@@ -10454,14 +10454,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_CB_CARM",
@@ -10494,14 +10494,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_CB_APPLE",
@@ -10534,14 +10534,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_APPLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_CB_CACTUS",
@@ -10574,14 +10574,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_CACTUS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_CB_JAM",
@@ -10614,14 +10614,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_CB_BUGJAM",
@@ -10654,6 +10654,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_BUGJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -10662,8 +10663,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_CB_BUGJAM"
+		}
 	},
 	{
 		"Id": "FOOD_CB_JHOT",
@@ -10696,14 +10696,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_JHOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_JHOT"
+		}
 	},
 	{
 		"Id": "FOOD_CB_JGLITCH",
@@ -10736,14 +10736,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_JGLITCH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_JGLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_CB_CUST",
@@ -10776,14 +10776,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_CUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_CUST"
+		}
 	},
 	{
 		"Id": "FOOD_CB_FCUST",
@@ -10816,14 +10816,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_FCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_FCUST"
+		}
 	},
 	{
 		"Id": "FOOD_CB_SCUST",
@@ -10856,14 +10856,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CB_SCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_CB_SCUST"
+		}
 	},
 	{
 		"Id": "FOOD_CP_HONEY",
@@ -10896,14 +10896,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_CP_CREAM",
@@ -10936,14 +10936,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_CREAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_CP_CHOC",
@@ -10976,14 +10976,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_CP_CARM",
@@ -11016,14 +11016,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_CP_APPLE",
@@ -11056,14 +11056,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_APPLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_CP_CACTUS",
@@ -11096,14 +11096,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_CACTUS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_CP_JAM",
@@ -11136,14 +11136,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_CP_BUGJAM",
@@ -11176,14 +11176,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_BUGJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_BUGJAM"
+		}
 	},
 	{
 		"Id": "FOOD_CP_JHOT",
@@ -11216,14 +11216,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_JHOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_JHOT"
+		}
 	},
 	{
 		"Id": "FOOD_CP_JGLITCH",
@@ -11256,14 +11256,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_JGLITCH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_JGLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_CP_CUST",
@@ -11296,14 +11296,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_CUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_CUST"
+		}
 	},
 	{
 		"Id": "FOOD_CP_FCUST",
@@ -11336,14 +11336,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_FCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_FCUST"
+		}
 	},
 	{
 		"Id": "FOOD_CP_SCUST",
@@ -11376,14 +11376,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CP_SCUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_CP_SCUST"
+		}
 	},
 	{
 		"Id": "FOOD_CM_CREAM",
@@ -11416,14 +11416,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_CREAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_CM_CHOC",
@@ -11456,14 +11456,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_CM_CARM",
@@ -11496,14 +11496,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_CM_APPLE",
@@ -11536,14 +11536,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_APPLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_CM_CACTUS",
@@ -11576,14 +11576,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_CACTUS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_CM_JAM",
@@ -11616,14 +11616,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_CM_BUGJAM",
@@ -11656,6 +11656,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_BUGJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -11664,8 +11665,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_CM_BUGJAM"
+		}
 	},
 	{
 		"Id": "FOOD_CM_JHOT",
@@ -11698,14 +11698,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_JHOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_JHOT"
+		}
 	},
 	{
 		"Id": "FOOD_CM_JGLITCH",
@@ -11738,14 +11738,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_JGLITCH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_JGLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_MC_HONEY",
@@ -11778,14 +11778,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_MC_BLOB",
@@ -11818,14 +11818,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_BLOB",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_BLOB"
+		}
 	},
 	{
 		"Id": "FOOD_MC_CREAM",
@@ -11858,14 +11858,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_CREAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_MC_CHOC",
@@ -11898,14 +11898,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_MC_CARM",
@@ -11938,14 +11938,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_MC_APPLE",
@@ -11978,14 +11978,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_APPLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_MC_CACTUS",
@@ -12018,14 +12018,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_CACTUS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_MC_JAM",
@@ -12058,14 +12058,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_MC_BUGJAM",
@@ -12098,6 +12098,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_BUGJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -12106,8 +12107,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_MC_BUGJAM"
+		}
 	},
 	{
 		"Id": "FOOD_MC_JHOT",
@@ -12140,14 +12140,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_JHOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_JHOT"
+		}
 	},
 	{
 		"Id": "FOOD_MC_JGLITCH",
@@ -12180,14 +12180,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_JGLITCH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_JGLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_MC_CUST",
@@ -12220,14 +12220,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_CUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MC_CUST"
+		}
 	},
 	{
 		"Id": "FOOD_MC_PCAT",
@@ -12260,14 +12260,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MC_PCAT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_MC_PCAT"
+		}
 	},
 	{
 		"Id": "FOOD_MM_HONEY",
@@ -12300,14 +12300,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_MM_BLOB",
@@ -12340,14 +12340,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_BLOB",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_BLOB"
+		}
 	},
 	{
 		"Id": "FOOD_MM_CREAM",
@@ -12380,14 +12380,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_CREAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_MM_CHOC",
@@ -12420,14 +12420,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_CHOC",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_CHOC"
+		}
 	},
 	{
 		"Id": "FOOD_MM_CARM",
@@ -12460,14 +12460,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_CARM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_CARM"
+		}
 	},
 	{
 		"Id": "FOOD_MM_APPLE",
@@ -12500,14 +12500,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_APPLE",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_MM_CACTUS",
@@ -12540,14 +12540,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_CACTUS",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_MM_JAM",
@@ -12580,14 +12580,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_JAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_MM_BUGJAM",
@@ -12620,6 +12620,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_BUGJAM",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -12628,8 +12629,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_MM_BUGJAM"
+		}
 	},
 	{
 		"Id": "FOOD_MM_JHOT",
@@ -12662,14 +12662,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_JHOT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_JHOT"
+		}
 	},
 	{
 		"Id": "FOOD_MM_JGLITCH",
@@ -12702,14 +12702,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_JGLITCH",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_JGLITCH"
+		}
 	},
 	{
 		"Id": "FOOD_MM_CUST",
@@ -12742,14 +12742,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_CUST",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_CUST"
+		}
 	},
 	{
 		"Id": "FOOD_MM_PCAT",
@@ -12782,14 +12782,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_MM_PCAT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_MM_PCAT"
+		}
 	},
 	{
 		"Id": "FOOD_CM_BLOBBUT",
@@ -12822,14 +12822,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_BLOBBUT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_BLOBBUT"
+		}
 	},
 	{
 		"Id": "FOOD_CM_HONEY",
@@ -12862,14 +12862,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CM_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_CM_PCATBUT",
@@ -12902,6 +12902,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CM_PCATBUT",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -12910,8 +12911,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_CM_PCATBUT"
+		}
 	},
 	{
 		"Id": "FOOD_CG_HONEY",
@@ -12944,14 +12944,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_CG_HONEY",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_CG_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_W_CASE",
@@ -13083,14 +13083,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_DOUGH",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_B_DOUGH"
+		}
 	},
 	{
 		"Id": "FOOD_B_PLAIN",
@@ -13123,14 +13123,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_PLAIN",
 		"CookingValue": 0.4,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_B_PLAIN"
+		}
 	},
 	{
 		"Id": "FOOD_B_SALT",
@@ -13163,14 +13163,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_SALT",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_SALT"
+		}
 	},
 	{
 		"Id": "FOOD_B_JAM",
@@ -13203,14 +13203,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_JAM",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_JAM"
+		}
 	},
 	{
 		"Id": "FOOD_B_CAT",
@@ -13243,14 +13243,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_CAT",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_CAT"
+		}
 	},
 	{
 		"Id": "FOOD_B_HOT",
@@ -13283,14 +13283,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_HOT",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_HOT"
+		}
 	},
 	{
 		"Id": "FOOD_B_HERB",
@@ -13323,14 +13323,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_HERB",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY1",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 5
-		},
-		"Slug": "food/FOOD_B_HERB"
+		}
 	},
 	{
 		"Id": "FOOD_B_FLOWER",
@@ -13363,14 +13363,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_FLOWER",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_FLOWER"
+		}
 	},
 	{
 		"Id": "FOOD_B_MEAT",
@@ -13403,14 +13403,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_MEAT",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_MEAT"
+		}
 	},
 	{
 		"Id": "FOOD_B_HONEY",
@@ -13443,14 +13443,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_HONEY",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_HONEY"
+		}
 	},
 	{
 		"Id": "FOOD_B_APPLE",
@@ -13483,14 +13483,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_APPLE",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_APPLE"
+		}
 	},
 	{
 		"Id": "FOOD_B_MILK",
@@ -13523,14 +13523,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_MILK",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_MILK"
+		}
 	},
 	{
 		"Id": "FOOD_B_CREAM",
@@ -13563,14 +13563,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_CREAM",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_CREAM"
+		}
 	},
 	{
 		"Id": "FOOD_B_CARAMEL",
@@ -13603,14 +13603,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_CARAMEL",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_CARAMEL"
+		}
 	},
 	{
 		"Id": "FOOD_B_CHOCO",
@@ -13643,14 +13643,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_CHOCO",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_CHOCO"
+		}
 	},
 	{
 		"Id": "FOOD_B_VEG",
@@ -13683,14 +13683,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_VEG",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_VEG"
+		}
 	},
 	{
 		"Id": "FOOD_B_MUSHROOM",
@@ -13723,14 +13723,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_MUSHROOM",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_MUSHROOM"
+		}
 	},
 	{
 		"Id": "FOOD_B_FIEND",
@@ -13763,14 +13763,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_FIEND",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_B_FIEND"
+		}
 	},
 	{
 		"Id": "FOOD_B_CACTUS",
@@ -13803,14 +13803,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_CACTUS",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_CACTUS"
+		}
 	},
 	{
 		"Id": "FOOD_B_FISH",
@@ -13843,14 +13843,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_FISH",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_FISH"
+		}
 	},
 	{
 		"Id": "FOOD_B_WORM",
@@ -13883,14 +13883,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_WORM",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_B_WORM"
+		}
 	},
 	{
 		"Id": "FOOD_B_WEIRD",
@@ -13923,14 +13923,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_WEIRD",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_WEIRD"
+		}
 	},
 	{
 		"Id": "FOOD_B_CHEESE",
@@ -13963,14 +13963,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_CHEESE",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_B_CHEESE"
+		}
 	},
 	{
 		"Id": "FOOD_B_BURN",
@@ -14003,14 +14003,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_BURN",
 		"CookingValue": 0.2,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_B_BURN"
+		}
 	},
 	{
 		"Id": "FOOD_B_BUG",
@@ -14043,14 +14043,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_B_BUG",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_B_BUG"
+		}
 	},
 	{
 		"Id": "FOOD_F_EGGS",
@@ -14083,14 +14083,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_EGGS",
 		"CookingValue": 0.75,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_F_EGGS"
+		}
 	},
 	{
 		"Id": "FOOD_F_SMALL1",
@@ -14123,6 +14123,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_SMALL1",
 		"CookingValue": 0.45,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -14131,8 +14132,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_F_SMALL1"
+		}
 	},
 	{
 		"Id": "FOOD_F_SMALL2",
@@ -14165,6 +14165,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_SMALL2",
 		"CookingValue": 0.45,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -14173,8 +14174,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_F_SMALL2"
+		}
 	},
 	{
 		"Id": "FOOD_F_SMALL3",
@@ -14207,6 +14207,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_SMALL3",
 		"CookingValue": 0.45,
 		"RewardID": "DE_FOOD_HEALTH",
 		"EffectCategory": "Health",
@@ -14215,8 +14216,7 @@
 			"GcRewardHealth.AmountMin": 1,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_F_SMALL3"
+		}
 	},
 	{
 		"Id": "FOOD_F_MED1",
@@ -14249,6 +14249,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_MED1",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -14257,8 +14258,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_F_MED1"
+		}
 	},
 	{
 		"Id": "FOOD_F_MED2",
@@ -14291,6 +14291,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_MED2",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -14299,8 +14300,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_F_MED2"
+		}
 	},
 	{
 		"Id": "FOOD_F_MED3",
@@ -14333,6 +14333,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_MED3",
 		"CookingValue": 0.5,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -14341,8 +14342,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_F_MED3"
+		}
 	},
 	{
 		"Id": "FOOD_F_LARGE1",
@@ -14375,14 +14375,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_LARGE1",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_LARGE1"
+		}
 	},
 	{
 		"Id": "FOOD_F_LARGE2",
@@ -14415,14 +14415,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_LARGE2",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_LARGE2"
+		}
 	},
 	{
 		"Id": "FOOD_F_LARGE3",
@@ -14455,14 +14455,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_LARGE3",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_LARGE3"
+		}
 	},
 	{
 		"Id": "FOOD_F_XL1",
@@ -14495,14 +14495,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_XL1",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_F_XL1"
+		}
 	},
 	{
 		"Id": "FOOD_F_XL2",
@@ -14535,14 +14535,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_XL2",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_XL2"
+		}
 	},
 	{
 		"Id": "FOOD_F_XL3",
@@ -14575,14 +14575,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_XL3",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_XL3"
+		}
 	},
 	{
 		"Id": "FOOD_F_MIX",
@@ -14615,14 +14615,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_MIX",
 		"CookingValue": 0.85,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_MIX"
+		}
 	},
 	{
 		"Id": "FOOD_F_CLAM",
@@ -14655,14 +14655,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_CLAM",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_CLAM"
+		}
 	},
 	{
 		"Id": "FOOD_F_JELLY",
@@ -14695,14 +14695,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_JELLY",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_JELLY"
+		}
 	},
 	{
 		"Id": "FOOD_F_TURTLE",
@@ -14735,14 +14735,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_TURTLE",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_TURTLE"
+		}
 	},
 	{
 		"Id": "FOOD_F_WORM",
@@ -14775,6 +14775,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_WORM",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -14783,8 +14784,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_F_WORM"
+		}
 	},
 	{
 		"Id": "FOOD_F_PRAWN",
@@ -14817,14 +14817,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_PRAWN",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_PRAWN"
+		}
 	},
 	{
 		"Id": "FOOD_F_SQUID",
@@ -14857,6 +14857,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_SQUID",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -14865,8 +14866,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_F_SQUID"
+		}
 	},
 	{
 		"Id": "FOOD_F_OCTOPUS",
@@ -14899,14 +14899,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_OCTOPUS",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_OCTOPUS"
+		}
 	},
 	{
 		"Id": "FOOD_F_STARFISH",
@@ -14939,14 +14939,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_STARFISH",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_F_STARFISH"
+		}
 	},
 	{
 		"Id": "FOOD_F_EEL",
@@ -14979,14 +14979,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_EEL",
 		"CookingValue": 0.55,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_F_EEL"
+		}
 	},
 	{
 		"Id": "FOOD_F_CRAB",
@@ -15019,14 +15019,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_CRAB",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_CRAB"
+		}
 	},
 	{
 		"Id": "FOOD_F_SNAIL",
@@ -15059,14 +15059,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_SNAIL",
 		"CookingValue": 0.6,
 		"RewardID": "DE_FOOD_ENERGY2",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 20
-		},
-		"Slug": "food/FOOD_F_SNAIL"
+		}
 	},
 	{
 		"Id": "FOOD_F_STEW",
@@ -15099,14 +15099,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_STEW",
 		"CookingValue": 0.8,
 		"RewardID": "DE_FOOD_HAZ2",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -25.0
-		},
-		"Slug": "food/FOOD_F_STEW"
+		}
 	},
 	{
 		"Id": "FOOD_F_STEW2",
@@ -15139,14 +15139,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_STEW2",
 		"CookingValue": 1.0,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_F_STEW2"
+		}
 	},
 	{
 		"Id": "FOOD_F_PIE",
@@ -15179,14 +15179,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_PIE",
 		"CookingValue": 0.85,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_F_PIE"
+		}
 	},
 	{
 		"Id": "FOOD_F_RICE",
@@ -15219,14 +15219,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_RICE",
 		"CookingValue": 0.75,
 		"RewardID": "DE_FOOD_ENERGY3",
 		"EffectCategory": "Life Support",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"LifeSupportRechargeAmount": 40
-		},
-		"Slug": "food/FOOD_F_RICE"
+		}
 	},
 	{
 		"Id": "FOOD_F_CHIPS",
@@ -15259,14 +15259,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_CHIPS",
 		"CookingValue": 0.75,
 		"RewardID": "DE_FOOD_STAMINA",
 		"EffectCategory": "Stamina",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardFreeStamina.Duration": 15.0
-		},
-		"Slug": "food/FOOD_F_CHIPS"
+		}
 	},
 	{
 		"Id": "FOOD_F_JEELS",
@@ -15299,14 +15299,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_JEELS",
 		"CookingValue": 0.75,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_F_JEELS"
+		}
 	},
 	{
 		"Id": "FOOD_F_S15",
@@ -15339,14 +15339,14 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_F_S15",
 		"CookingValue": 0.75,
 		"RewardID": "DE_FOOD_JETPACK",
 		"EffectCategory": "Jetpack",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"GcRewardJetpackBoost.Duration": 8.0
-		},
-		"Slug": "food/FOOD_F_S15"
+		}
 	},
 	{
 		"Id": "FOOD_R_FOSSIL",
@@ -15379,6 +15379,7 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_R_FOSSIL",
 		"CookingValue": 0.3,
 		"RewardID": "DE_FOOD_HEALTH2",
 		"EffectCategory": "Health",
@@ -15387,8 +15388,7 @@
 			"GcRewardHealth.AmountMin": 3,
 			"GcRewardHealth.AmountMax": 3,
 			"GcRewardHealth.SilentUnlessShieldAtMax": false
-		},
-		"Slug": "food/FOOD_R_FOSSIL"
+		}
 	},
 	{
 		"Id": "FOOD_STEW_FOSS",
@@ -15421,13 +15421,13 @@
 		"GoodForSelling": false,
 		"EggModifierIngredient": true,
 		"DeploysInto": null,
+		"Slug": "food/FOOD_STEW_FOSS",
 		"CookingValue": 0.66,
 		"RewardID": "DE_FOOD_HAZ3",
 		"EffectCategory": "Hazard Protection",
 		"RewardEffectStats": {
 			"PercentageChance": 100.0,
 			"HazardProtectionRechargeAmount": -50.0
-		},
-		"Slug": "food/FOOD_STEW_FOSS"
+		}
 	}
 ]
