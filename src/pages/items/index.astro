@@ -1,13 +1,55 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import { getSiteOrigin } from '@utils/structuredData.js';
 
 const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	'@id': `${canonicalUrl}#breadcrumb`,
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+		{ '@type': 'ListItem', position: 2, name: 'Items', item: canonicalUrl },
+	],
+};
+const datasetSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Dataset',
+	'@id': `${siteOrigin}/items.json#dataset`,
+	name: "No Man's Sky Items Dataset",
+	description: 'Structured list of item names, groups, icons, and URLs used by No Man\'s Sky Recipes.',
+	url: `${siteOrigin}/items.json`,
+	isAccessibleForFree: true,
+	inLanguage: 'en',
+	creator: { '@id': `${siteOrigin}#organization` },
+	distribution: {
+		'@type': 'DataDownload',
+		name: 'No Man\'s Sky Items JSON Feed',
+		contentUrl: `${siteOrigin}/items.json`,
+		encodingFormat: 'application/json',
+	},
+};
+const collectionSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	'@id': `${canonicalUrl}#collection`,
+	url: canonicalUrl,
+	name: 'Items',
+	description: 'Browse items by group, type, or search. Filter No Man\'s Sky items dynamically.',
+	isPartOf: { '@id': `${siteOrigin}#website` },
+	breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+	mainEntity: { '@id': `${siteOrigin}/items.json#dataset` },
+};
+const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 ---
 
 <Layout
 	title="Items | No Man's Sky Recipes"
 	description="Browse items by group, type, or search. Filter No Man's Sky items dynamically."
 	slug="items"
+	structuredData={structuredData}
 >
 	<h1 class="text-center text-4xl sm:text-6xl my-12">Items</h1>
 

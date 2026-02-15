@@ -2,6 +2,7 @@
 import '../assets/css/main.css';
 import { SITE } from '@config';
 import { inject } from '@vercel/analytics';
+import type { JsonLdObject } from '@utils/structuredData.js';
 
 import Sidebar from '@layouts/Sidebar.tsx';
 import Search from '@components/Search.astro';
@@ -14,11 +15,40 @@ export interface Props {
 	description?: string;
 	ogImage?: string;
 	slug?: string;
+	structuredData?: JsonLdObject | JsonLdObject[];
 }
 
-const { title = SITE.title, author = SITE.author, description = SITE.desc, slug } = Astro.props;
+const { title = SITE.title, author = SITE.author, description = SITE.desc, slug, structuredData } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteOrigin = SITE.website.replace(/\/$/, '');
+const organizationSchema: JsonLdObject = {
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	'@id': `${siteOrigin}#organization`,
+	name: SITE.title,
+	url: `${siteOrigin}/`,
+	logo: `${siteOrigin}/images/icon.png`,
+};
+const webSiteSchema: JsonLdObject = {
+	'@context': 'https://schema.org',
+	'@type': 'WebSite',
+	'@id': `${siteOrigin}#website`,
+	url: `${siteOrigin}/`,
+	name: SITE.title,
+	description: SITE.desc,
+	publisher: { '@id': `${siteOrigin}#organization` },
+	potentialAction: {
+		'@type': 'SearchAction',
+		target: `${siteOrigin}/items?q={search_term_string}`,
+		'query-input': 'required name=search_term_string',
+	},
+};
+const extraStructuredData = structuredData
+	? (Array.isArray(structuredData) ? structuredData : [structuredData])
+	: [];
+const mergedStructuredData: JsonLdObject[] = [organizationSchema, webSiteSchema, ...extraStructuredData];
+const mergedStructuredDataJson = JSON.stringify(mergedStructuredData).replace(/</g, '\\u003c');
 
 inject();
 ---
@@ -82,6 +112,7 @@ inject();
 
 		<meta name="robots" content="max-image-preview:large" />
 		<meta name="google-adsense-account" content="ca-pub-8524094599848175" />
+		<script type="application/ld+json" set:html={mergedStructuredDataJson}></script>
 	</head>
 	<body class={` h-full ${slug === '/' ? 'home' : ''}`}>
 		<Sidebar client:load slug={slug}>

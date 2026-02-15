@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
 import { getSlug, sort } from '@utils/lookup.js';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import type { Item } from '@utils/lookup.js';
 import others from '@datav2/Others.json';
 import trade from '@datav2/Trade.json';
@@ -23,12 +24,29 @@ interface PageProps {
 	};
 }
 const { page } = Astro.props as PageProps;
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const itemListElements = page.data.map((item, index) => ({
+	name: item.Name,
+	url: `${siteOrigin}${getSlug(item)}`,
+	position: (page.currentPage - 1) * 80 + index + 1,
+}));
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: 'Other Items',
+	collectionDescription: "A list of other items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+	collectionPath: '/other',
+	currentPage: page.currentPage,
+	items: itemListElements,
+});
 ---
 
 <Layout
 	title="Other Items | No Man's Sky Recipes"
 	description="A list of other items for No Man's Sky. Our guide has everything you need to take your game to the next level."
 	slug="other"
+	structuredData={structuredData}
 >
 	<h1 class="text-center text-4xl sm:text-6xl my-12">Other Items</h1>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">

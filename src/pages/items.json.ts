@@ -31,6 +31,7 @@ const getTypeFromSlug = (slug: string): string => {
 
 export const GET: APIRoute = ({ request }) => {
 	const url = new URL(request.url);
+	const siteOrigin = `${url.protocol}//${url.host}`;
 	const group = url.searchParams.get('group');
 	const type = url.searchParams.get('type');
 	const q = url.searchParams.get('q')?.toLowerCase();
@@ -81,9 +82,34 @@ export const GET: APIRoute = ({ request }) => {
 				.filter(Boolean)
 		),
 	].sort();
+	const datasetJsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Dataset',
+		'@id': `${siteOrigin}/items.json#dataset`,
+		name: "No Man's Sky Items Dataset",
+		description: 'Structured list of item names, groups, icons, and URLs used by No Man\'s Sky Recipes.',
+		url: `${siteOrigin}/items.json`,
+		isAccessibleForFree: true,
+		inLanguage: 'en',
+		creator: {
+			'@type': 'Organization',
+			name: "No Man's Sky Recipes",
+			url: `${siteOrigin}/`,
+		},
+		distribution: {
+			'@type': 'DataDownload',
+			contentUrl: `${siteOrigin}/items.json`,
+			encodingFormat: 'application/json',
+		},
+	};
 
 	return new Response(
-		JSON.stringify({ body, groups, types }),
+		JSON.stringify({
+			...datasetJsonLd,
+			body,
+			groups,
+			types,
+		}),
 		{
 		headers: {
 			'Content-Type': 'application/json',

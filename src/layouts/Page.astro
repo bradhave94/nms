@@ -12,6 +12,28 @@ interface Props {
 }
 
 const { item } = Astro.props;
+const siteOrigin = (Astro.site ? new URL('/', Astro.site) : new URL('/', Astro.url)).toString().replace(/\/$/, '');
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '').replace(/^cooking\//, 'food/');
+const categorySlug = normalizedSlug.split('/')[0] || 'items';
+const categoryNameMap: Record<string, string> = {
+  raw: 'Raw Materials',
+  products: 'Products',
+  food: 'Food',
+  curiosities: 'Curiosities',
+  fish: 'Fish',
+  technology: 'Technology',
+  other: 'Other',
+  refinery: 'Refinery',
+  buildings: 'Buildings',
+  upgrades: 'Upgrades',
+  exocraft: 'Exocraft',
+  starships: 'Starships',
+  corvette: 'Corvette',
+};
+const categoryName = categoryNameMap[categorySlug] ?? 'Items';
+const categoryUrl = `${siteOrigin}/${categorySlug}`;
+const itemImageUrl = `${siteOrigin}/images/items/${item.Icon}`;
 
 type UpgradeStatLevel = {
   StatType?: string;
@@ -176,6 +198,7 @@ type HowToIngredient = {
   Name: string;
   Quantity: number;
 };
+type JsonLdObject = Record<string, unknown>;
 type HowToMethodAction = 'craft' | 'refine' | 'cook';
 type HowToMethod = {
   action: HowToMethodAction;
@@ -418,7 +441,64 @@ const howToSchema =
     : howToEntries.length === 1
       ? howToEntries[0]
       : howToEntries;
-const howToSchemaJson = howToSchema ? JSON.stringify(howToSchema).replace(/</g, '\\u003c') : undefined;
+const breadcrumbSchema: JsonLdObject = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${canonicalUrl}#breadcrumb`,
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `${siteOrigin}/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: categoryName,
+      item: categoryUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: item.Name,
+      item: canonicalUrl,
+    },
+  ],
+};
+const itemPageSchema: JsonLdObject = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemPage',
+  '@id': `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: `${item.Name} | No Man's Sky Recipes`,
+  description: item.Description,
+  isPartOf: { '@id': `${siteOrigin}#website` },
+  breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: itemImageUrl,
+  },
+  mainEntity: {
+    '@type': 'Thing',
+    '@id': `${canonicalUrl}#item`,
+    identifier: item.Id,
+    name: item.Name,
+    description: item.Description,
+    image: itemImageUrl,
+    url: canonicalUrl,
+    ...(item.Group ? { category: item.Group } : {}),
+  },
+};
+const itemPageStructuredData: JsonLdObject[] = [breadcrumbSchema, itemPageSchema];
+if (howToSchema) {
+  if (Array.isArray(howToSchema)) {
+    itemPageStructuredData.push(...howToSchema);
+  } else {
+    itemPageStructuredData.push(howToSchema);
+  }
+}
+const itemPageStructuredDataJson = JSON.stringify(itemPageStructuredData).replace(/</g, '\\u003c');
 
 const formatSignedPercent = (value: number): string => `${value >= 0 ? '+' : ''}${(value * 100).toLocaleString()}%`;
 const pinObjectiveLabel =
@@ -1070,9 +1150,7 @@ const corvetteAttributes = [
   )}
 </div>
 
-{howToSchemaJson && (
-  <script type="application/ld+json" set:html={howToSchemaJson}></script>
-)}
+<script type="application/ld+json" set:html={itemPageStructuredDataJson}></script>
 
 <!-- Quantity input script -->
 {showQuantityInput && (
