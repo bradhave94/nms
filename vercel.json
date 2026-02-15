@@ -19,5 +19,18 @@
     { "source": "/calculator", "destination": "/calculator/1", "permanent": true },
     { "source": "/sitemap", "destination": "/sitemap-0.xml", "permanent": true },
     { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/buildings/:id(build\\d+)", "destination": "/api/legacy-redirect?segment=buildings&id=:id" },
+    { "source": "/cooking/:id(cook\\d+)", "destination": "/api/legacy-redirect?segment=cooking&id=:id" },
+    { "source": "/curiosities/:id(cur\\d+)", "destination": "/api/legacy-redirect?segment=curiosities&id=:id" },
+    { "source": "/fish/:id(cur\\d+)", "destination": "/api/legacy-redirect?segment=fish&id=:id" },
+    { "source": "/other/:id(other\\d+)", "destination": "/api/legacy-redirect?segment=other&id=:id" },
+    { "source": "/other/:id(trade\\d+)", "destination": "/api/legacy-redirect?segment=other&id=:id" },
+    { "source": "/products/:id(prod\\d+)", "destination": "/api/legacy-redirect?segment=products&id=:id" },
+    { "source": "/raw/:id(raw\\d+)", "destination": "/api/legacy-redirect?segment=raw&id=:id" },
+    { "source": "/technology/:id(conTech\\d+)", "destination": "/api/legacy-redirect?segment=technology&id=:id" },
+    { "source": "/technology/:id(tech\\d+)", "destination": "/api/legacy-redirect?segment=technology&id=:id" },
+    { "source": "/technology/:id(tMod\\d+)", "destination": "/api/legacy-redirect?segment=technology&id=:id" }
   ]
 }
