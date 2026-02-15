@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
+import { buildItemMeta } from '@utils/seo.js';
 import buildings from '@datav2/Buildings.json';
 
 export function getStaticPaths() {
@@ -18,13 +19,13 @@ if (!item) {
 	return Astro.redirect('/404');
 }
 
-const { Name, Description } = item;
+const { title, description } = buildItemMeta(item as Item, 'Building Part');
 ---
 
 <Layout
-	title={`${Name} | No Man's Sky Recipes`}
-	description={`${Name} | ${Description}`}
-	slug="building"
+	{title}
+	{description}
+	slug="buildings"
 >
 	<Page item={item as Item} />
 </Layout>

@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import { sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
+import { buildItemMeta } from '@utils/seo.js';
 import * as dataSources from '@datav2/index';
 
 export async function getStaticPaths() {
@@ -29,11 +30,12 @@ const { item } = Astro.props;
 if (!item) {
   return Astro.redirect('/404');
 }
+const { title, description } = buildItemMeta(item, 'Technology Item');
 ---
 
 <Layout
-  title={`${item.Name} | No Man's Sky Recipes`}
-  description={`${item.Name} | ${item.Description}`}
+  {title}
+  {description}
   slug="technology"
 >
   <Page item={item} />

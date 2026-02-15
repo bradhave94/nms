@@ -2,8 +2,10 @@
 import Layout from '@layouts/Layout.astro';
 import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getSlug } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Products.json';
 
@@ -40,15 +42,25 @@ const structuredData = buildCollectionStructuredData({
 	currentPage: page.currentPage,
 	items: itemListElements,
 });
+const breadcrumbs = buildCategoryBreadcrumbs('Crafting Calculator', '/calculator', page.currentPage);
+const intro = buildCategoryIntro(
+	'Use the crafting calculator to estimate ingredients and optimize farming routes for complex builds.',
+	page.currentPage,
+	page.lastPage
+);
+const baseDescription = 'A calculator to help your farming efforts by calculating exactly what you need to craft any item.';
+const { title, description } = buildPaginatedMeta('Crafting Calculator', baseDescription, page.currentPage, page.lastPage);
 ---
 
 <Layout
-	title="Crafting Calculator | No Man's Sky Recipes, Crafting Guide and Cooking Guide"
-	description="A calculator to help your farming efforts by calculating exactly what you need to craft any item."
+	{title}
+	{description}
 	slug="calculator"
 	structuredData={structuredData}
 >
+	<Breadcrumbs items={breadcrumbs} className="pt-2 mb-6" />
 	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>
+	<p class="mx-auto mb-4 mt-3 max-w-3xl text-center text-sky-200/90">{intro}</p>
 	<p class="text-xl text-center mt-3 mb-8">Choose an item below to start</p>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{

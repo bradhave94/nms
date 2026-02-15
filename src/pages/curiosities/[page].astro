@@ -1,8 +1,10 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import CompactCard from '@components/CompactCard.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Curiosities.json';
 import Pagination from '@components/Pagination.astro';
@@ -39,15 +41,25 @@ const structuredData = buildCollectionStructuredData({
 	currentPage: page.currentPage,
 	items: itemListElements,
 });
+const breadcrumbs = buildCategoryBreadcrumbs('Curiosities', '/curiosities', page.currentPage);
+const intro = buildCategoryIntro(
+	'Curiosities are unusual finds, relics, and special-use items gathered across planets and systems.',
+	page.currentPage,
+	page.lastPage
+);
+const baseDescription = "A list of curiosities for No Man's Sky. Our guide has everything you need to take your game to the next level.";
+const { title, description } = buildPaginatedMeta('Curiosities', baseDescription, page.currentPage, page.lastPage);
 ---
 
 <Layout
-	title="Curiosities | No Man's Sky Recipes"
-	description="A list of curiosities for No Man's Sky. Our guide has everything you need to take your game to the next level."
+	{title}
+	{description}
 	slug="curiosities"
 	structuredData={structuredData}
 >
+	<Breadcrumbs items={breadcrumbs} className="pt-2 mb-6" />
 	<h1 class="text-center text-4xl sm:text-6xl my-12">Curiosities</h1>
+	<p class="mx-auto mb-8 max-w-3xl text-center text-sky-200/90">{intro}</p>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
 			page.data.map((item, index) => (

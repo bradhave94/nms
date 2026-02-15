@@ -2,8 +2,10 @@
 import Layout from '@layouts/Layout.astro';
 import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Food.json';
 
@@ -40,15 +42,25 @@ const structuredData = buildCollectionStructuredData({
 	currentPage: page.currentPage,
 	items: itemListElements,
 });
+const breadcrumbs = buildCategoryBreadcrumbs('Food', '/food', page.currentPage);
+const intro = buildCategoryIntro(
+	'Food items power cooking recipes, consumables, and nutrient processing chains in No Man\'s Sky.',
+	page.currentPage,
+	page.lastPage
+);
+const baseDescription = "A list of food items for No Man's Sky. Browse all edible products and ingredients.";
+const { title, description } = buildPaginatedMeta('Food', baseDescription, page.currentPage, page.lastPage);
 ---
 
 <Layout
-	title="Food | No Man's Sky Recipes"
-	description="A list of food items for No Man's Sky. Browse all edible products and ingredients."
+	{title}
+	{description}
 	slug="food"
 	structuredData={structuredData}
 >
+	<Breadcrumbs items={breadcrumbs} className="pt-2 mb-6" />
 	<h1 class="text-center text-4xl sm:text-6xl my-12">Food</h1>
+	<p class="mx-auto mb-8 max-w-3xl text-center text-sky-200/90">{intro}</p>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
 			page.data.map((item, index) => (

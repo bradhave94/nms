@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
 import type { Item } from '@utils/lookup.js';
+import { buildItemMeta } from '@utils/seo.js';
 import others from '@datav2/Others.json';
 import trade from '@datav2/Trade.json';
 
@@ -13,11 +14,12 @@ export async function getStaticPaths() {
 }
 
 const { item } = Astro.props;
+const { title, description } = buildItemMeta(item as Item, 'No Man\'s Sky Item');
 ---
 
 <Layout
-	title={`${item.Name} | No Man's Sky Recipes`}
-	description={`${item.Name} | ${item.Description}`}
+	{title}
+	{description}
 	slug="other"
 >
 <Page item={item as Item} />

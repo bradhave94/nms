@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getById, findOutput, findInputFromRefiner, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import credit from '../assets/img/credits.png';
@@ -618,6 +619,14 @@ const corvetteAttributes = [
 ---
 
 <div class="mx-auto max-w-6xl lg:pt-12 bg-gray-800 p-3 lg:p-8">
+  <Breadcrumbs
+    className="mb-4"
+    items={[
+      { name: 'Home', href: '/' },
+      { name: categoryName, href: `/${categorySlug}` },
+      { name: item.Name },
+    ]}
+  />
   <!-- Item details section -->
   <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
     <div class="flex flex-col-reverse items-center">
