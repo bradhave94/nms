@@ -71,7 +71,9 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 
 	const searchCache = new Map();
 	const MAX_CACHE_SIZE = 50; // Limit cache to prevent memory issues
+	const MAX_RESULTS = 200;
 	let debounceTimer;
+	let searchDatasetPromise = null;
 
 	function groupBy(arr, key) {
 		return arr.reduce((acc, obj) => {
@@ -82,8 +84,31 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 		}, {});
 	}
 
+	async function loadSearchDataset() {
+		if (!searchDatasetPromise) {
+			searchDatasetPromise = fetch('/search.json', { cache: 'force-cache' })
+				.then((response) => response.json())
+				.then((results) => {
+					if (!results || !Array.isArray(results.body)) {
+						return [];
+					}
+					return results.body.filter((result) => result && typeof result.name === 'string');
+				})
+				.catch((error) => {
+					// Allow retry if the network request failed.
+					searchDatasetPromise = null;
+					throw error;
+				});
+		}
+		return searchDatasetPromise;
+	}
+
 	async function performSearch(searchTerm, selectedTypes) {
 		if (!loadingIndicator || !resultsList) return;
+		if (!searchTerm) {
+			resultsList.textContent = '';
+			return;
+		}
 
 		// Check cache first before fetching
 		if (searchCache.has(searchTerm)) {
@@ -97,14 +122,10 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 		loadingIndicator.classList.remove('hidden');
 
 		try {
-			const response = await fetch('/search.json');
-			const results = await response.json();
-			const filteredResults = results.body.filter((result) => {
-				if (!result || typeof result.name !== 'string') {
-					return false;
-				}
-				return result.name.toLowerCase().includes(searchTerm);
-			});
+			const searchDataset = await loadSearchDataset();
+			const filteredResults = searchDataset
+				.filter((result) => result.name.toLowerCase().includes(searchTerm))
+				.slice(0, MAX_RESULTS);
 			const groupedResults = groupBy(filteredResults, 'type');
 
 			// Limit cache size to prevent memory issues
@@ -149,6 +170,15 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 	}
 
 	if (searchInput) {
+		searchInput.addEventListener(
+			'focus',
+			() => {
+				loadSearchDataset().catch(() => {
+					// Ignore prefetch errors; performSearch handles errors for user feedback.
+				});
+			},
+			{ once: true }
+		);
 		searchInput.addEventListener('input', handleSearchInput);
 	}
 
@@ -161,6 +191,7 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 
 		// Use DOM methods instead of innerHTML for better security
 		resultsList.textContent = ''; // Clear existing content
+		let hasResults = false;
 
 		Object.keys(groupedResults).forEach((group) => {
 			const filteredGroupResults = selectedTypes.length
@@ -168,6 +199,7 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 				: groupedResults[group];
 
 			if (filteredGroupResults.length > 0) {
+				hasResults = true;
 				const h3 = document.createElement('h3');
 				h3.className = 'text-2xl';
 				h3.textContent = filterLabelMap[group] || group;
@@ -192,6 +224,13 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 				resultsList.appendChild(ul);
 			}
 		});
+
+		if (!hasResults) {
+			const emptyState = document.createElement('p');
+			emptyState.className = 'text-gray-300';
+			emptyState.textContent = 'No matching items found.';
+			resultsList.appendChild(emptyState);
+		}
 
 		setupKeyboardNavigation();
 	}
