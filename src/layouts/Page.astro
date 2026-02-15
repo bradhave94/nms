@@ -487,7 +487,6 @@ const itemPageSchema: JsonLdObject = {
     description: item.Description,
     image: itemImageUrl,
     url: canonicalUrl,
-    ...(item.Group ? { category: item.Group } : {}),
   },
 };
 const itemPageStructuredData: JsonLdObject[] = [breadcrumbSchema, itemPageSchema];
