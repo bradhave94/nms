@@ -1,50 +1,18 @@
 ---
-const filters = [
-	{
-		id: 'raw',
-		name: 'Raw Materials',
-	},
 
-	{
-		id: 'products',
-		name: 'Products',
-	},
-	{
-		id: 'cooking',
-		name: 'Cooking',
-	},
-	{
-		id: 'technology',
-		name: 'Technology',
-	},
-	{
-		id: 'upgrades',
-		name: 'Upgrades',
-	},
-	{
-		id: 'exocraft',
-		name: 'Exocraft',
-	},
-	{
-		id: 'starships',
-		name: 'Starships',
-	},
-	{
-		id: 'buildings',
-		name: 'Buildings',
-	},
-	{
-		id: 'curiosities',
-		name: 'Curiosities',
-	},
-	{
-		id: 'corvette',
-		name: 'Corvette',
-	},
-	{
-		id: 'other',
-		name: 'Other',
-	},
+const filters = [
+	{ id: 'products', name: 'Products' },
+	{ id: 'technology', name: 'Technology' },
+	{ id: 'upgrades', name: 'Upgrades' },
+	{ id: 'exocraft', name: 'Exocraft' },
+	{ id: 'starships', name: 'Starships' },
+	{ id: 'buildings', name: 'Buildings' },
+	{ id: 'corvette', name: 'Corvette' },
+	{ id: 'fish', name: 'Fish' },
+	{ id: 'curiosities', name: 'Curiosities' },
+	{ id: 'other', name: 'Other' },
+	{ id: 'food', name: 'Food' },
+	{ id: 'raw', name: 'Raw Materials' },
 ];
 
 const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filter.name]));

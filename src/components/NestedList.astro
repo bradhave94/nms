@@ -13,57 +13,54 @@ interface NestedItem {
 
 interface Props {
   items: NestedItem;
+  depth?: number;
 }
 
-const { items } = Astro.props;
+const { items, depth = 0 } = Astro.props;
 ---
 
 {items.RequiredItems?.map((item, index) => {
   const quantity = (item.Quantity ?? 1) * (items.Quantity ?? 1);
   return item.RequiredItems?.length ? (
-    <Accordion>
-      <div data-index={index} class="flex" slot="title">
-        <div class="m-1">
-          <a class="flex hover:underline" href={getSlug(item.Id)}>
-            <div class="mr-4 flex-shrink-0 self-start">
-              <Image
-                src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
-                alt={item.Name}
-                sizes="50px"
-                width={50}
-                height={50}
-              />
-            </div>
-            <div>
-              <h4 class="lg:text-lg mt-1">
-                {item.Name} x<span data-quantity={quantity}>{quantity}</span>
-              </h4>
-            </div>
+    <div class="crafting-tree-node border-l border-gray-600/50 pl-4 ml-2">
+      <Accordion>
+        <div data-index={index} class="flex items-center gap-3 py-1.5" slot="title">
+          <a class="flex items-center gap-3 hover:opacity-90 transition-opacity min-w-0 flex-1" href={getSlug(item.Id)}>
+            <Image
+              src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
+              alt={item.Name}
+              sizes="40px"
+              width={40}
+              height={40}
+              class="flex-shrink-0"
+            />
+            <span class="text-white font-medium truncate">
+              {item.Name} x<span data-quantity={quantity}>{quantity.toLocaleString()}</span>
+            </span>
           </a>
         </div>
-      </div>
-      <div slot="content">
-        <Astro.self items={{ ...item, Quantity: quantity }} />
-      </div>
-    </Accordion>
-  ) : (
-    <div data-index={index} class="m-3">
-      <a class="flex hover:underline" href={getSlug(item.Id)}>
-        <div class="mr-4 flex-shrink-0 self-start">
-          <Image
-            src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
-            alt={item.Name}
-            sizes="50px"
-            width={50}
-            height={50}
-          />
+        <div slot="content">
+          <Astro.self items={{ ...item, Quantity: quantity }} depth={depth + 1} />
         </div>
-        <div>
-          <h4 class="lg:text-lg mt-1">
-            {item.Name} x<span data-quantity={quantity}>{quantity}</span>
-          </h4>
-        </div>
-      </a>
+      </Accordion>
     </div>
+  ) : (
+    <a
+      href={getSlug(item.Id)}
+      class="crafting-tree-leaf flex items-center gap-3 py-1.5 pl-4 ml-2 border-l-2 border-cyan-500/40 hover:bg-cyan-500/10 transition-colors rounded-r"
+      data-index={index}
+    >
+      <Image
+        src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
+        alt={item.Name}
+        sizes="36px"
+        width={36}
+        height={36}
+        class="flex-shrink-0"
+      />
+      <span class="text-cyan-200 font-medium">
+        {item.Name} x<span data-quantity={quantity}>{quantity.toLocaleString()}</span>
+      </span>
+    </a>
   );
 })}

@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
-import { getById, findOutput, findInput } from '@utils/lookup.js';
+import { getById, findOutput, findInputFromRefiner, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import credit from '../assets/img/credits.png';
 
@@ -110,6 +110,7 @@ const createArray = (
           Name: item.Name,
           Icon: item.Icon,
           Colour: item.Colour,
+          Group: item.Group,
           Quantity: multiplier,
         });
       }
@@ -229,6 +230,7 @@ const getInputs = (item: RecipeInput[]): UsedInItem[] => {
 
 // Prepare data for rendering
 const { array: requiredItems, rawItems } = createArray(item);
+
 const data = item.RequiredItems?.length
   ? [{
       Id: item.Id,
@@ -245,8 +247,28 @@ for (const entry of findOutput(item.Id) as unknown as RecipeOutput[]) {
   const mapped = getOutputs(entry);
   if (mapped) output.push(mapped);
 }
-const inputData = findInput(item.Id) as unknown as RecipeInput[];
-const input = getInputs(inputData);
+// Group by output item - all recipes for same output under one heading
+type RecipeRow = { inputs: RawItem[]; outputQuantity: number };
+type GroupedUsedIn = UsedInItem & { recipes: RecipeRow[] };
+
+const groupByOutput = (inputData: RecipeInput[]) => {
+  const inputRaw = getInputs(inputData);
+  return Object.values(
+    inputRaw.reduce<Record<string, GroupedUsedIn>>((acc, usedIn) => {
+      const key = usedIn.Id;
+      if (!acc[key]) {
+        acc[key] = { ...usedIn, recipes: [] };
+      }
+      if (usedIn.RequiredItems.length > 0) {
+        acc[key].recipes.push({ inputs: usedIn.RequiredItems, outputQuantity: usedIn.Quantity });
+      }
+      return acc;
+    }, {})
+  ).filter((g) => g.recipes.length > 0);
+};
+
+const groupedInputRefined = groupByOutput(findInputFromRefiner(item.Id) as unknown as RecipeInput[]);
+const groupedInputCrafting = groupByOutput(findInputFromCrafting(item.Id) as unknown as RecipeInput[]);
 const showQuantityInput = data.length + output.length > 0;
 const formattedBaseValueUnits = Number(item.BaseValueUnits ?? 0).toLocaleString();
 const blueprintItem = item as BlueprintLikeItem;
@@ -539,7 +561,7 @@ const corvetteAttributes = [
       )}
 
       {showQuantityInput && (
-        <div class="sm:flex items-center mb-4 gap-4 mt-4">
+        <div class="sm:flex items-center mb-4 gap-4 mt-4 lg:sticky lg:top-4 lg:z-10 lg:py-2 lg:-mx-2 lg:px-2 lg:bg-gray-800/95 lg:rounded">
           <label for="quantity">Quantity</label>
           <input
             id="quantity"
@@ -560,68 +582,65 @@ const corvetteAttributes = [
     <div id="crafting">
       <h2 class="relative mt-8 mb-4 text-center">
         <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
-          Crafting
+          How to craft this
         </span>
       </h2>
 
-      <div class={`grid gap-4 items-start justify-center ${
-        data.length === 1 ? 'grid-cols-1' : 'md:grid-cols-2 grid-cols-1'
-      }`}>
-        {data.map((item) => (
-          <div class="bg-gray-900">
+      <div class="max-w-2xl mx-auto">
+        {/* Crafting tree - full width, single column */}
+        <div class="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
+          {data.map((craftItem) => (
             <Accordion open={data.length + output.length === 1}>
-              <div class="flex" slot="title">
+              <div class="flex items-center gap-3" slot="title">
                 <Image
-                  src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
-                  alt={item.Name}
-                  sizes="50px"
-                  width={50}
-                  height={50}
-                  class="mr-4 flex-shrink-0 self-start"
+                  src={`https://nomansskyrecipes.com/images/items/${craftItem.Icon}`}
+                  alt={craftItem.Name}
+                  sizes="48px"
+                  width={48}
+                  height={48}
+                  class="flex-shrink-0"
                 />
-                <div class="flex items-center">
-                  <h4 class="lg:text-lg">
-                    {item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-                  </h4>
-                </div>
+                <h4 class="text-lg font-medium text-white">
+                  {craftItem.Name} x<span data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
+                </h4>
               </div>
               <div slot="content">
-                {item.RequiredItems?.length > 0 && <NestedList items={item} />}
-                {item.rawItems.length > 0 && (
-                  <div class="mb-4">
-                    <h3 class="relative mt-8 mb-4 text-center">
-                      <span class="bg-gray-900 px-3 lg:text-lg font-medium text-white">
-                        Raw Items
-                      </span>
-                    </h3>
-                    <div class="lg:grid lg:grid-cols-2 lg:items-start">
-                      {item.rawItems.map((rawItem) => (
-                        <div
-                          class="flex p-2"
-                          style={`background: #${rawItem.Colour}`}
-                        >
-                          <Image
-                            src={`https://nomansskyrecipes.com/images/items/${rawItem.Icon}`}
-                            alt={rawItem.Name}
-                            sizes="50px"
-                            width={50}
-                            height={50}
-                            class="mr-4 flex-shrink-0 self-start"
-                          />
-                          <div class="flex items-center">
-                            <h4 class="text-sm">
-                              {rawItem.Name} x<span data-quantity={rawItem.Quantity}>{rawItem.Quantity}</span>
-                            </h4>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                {craftItem.RequiredItems?.length > 0 && <NestedList items={craftItem} depth={0} />}
               </div>
             </Accordion>
+          ))}
+        </div>
+
+        {/* Raw materials - compact list below tree */}
+        {rawItems.length > 0 && (
+          <div class="mt-6">
+            <h3 class="mb-3 text-sm font-medium text-gray-400 uppercase tracking-wide">
+              Raw materials · {rawItems.length} items · <span id="raw-total" data-base-total={rawItems.reduce((sum, r) => sum + r.Quantity, 0)}>{rawItems.reduce((sum, r) => sum + r.Quantity, 0).toLocaleString()}</span> total
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {rawItems
+                .sort((a, b) => b.Quantity - a.Quantity)
+                .map((rawItem) => (
+                  <a
+                    href={getSlug(rawItem.Id)}
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-opacity hover:opacity-90"
+                    style={`background: #${rawItem.Colour || '666'}33; border: 1px solid #${rawItem.Colour || '666'}55`}
+                  >
+                    <Image
+                      src={`https://nomansskyrecipes.com/images/items/${rawItem.Icon}`}
+                      alt={rawItem.Name}
+                      sizes="24px"
+                      width={24}
+                      height={24}
+                      class="flex-shrink-0"
+                    />
+                    <span class="text-white font-medium">{rawItem.Name}</span>
+                    <span class="text-gray-400">x<span data-quantity={rawItem.Quantity}>{rawItem.Quantity.toLocaleString()}</span></span>
+                  </a>
+                ))}
+            </div>
           </div>
-        ))}
+        )}
       </div>
     </div>
   )}
@@ -629,39 +648,121 @@ const corvetteAttributes = [
   <!-- Refining/Cooking section -->
   {output.length > 0 && (
     <div id="refining">
-      <h2 class="relative mt-8 mb-4 text-center">
+      <h2 class="relative mt-6 mb-3 text-center">
         <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
-          {isFoodItem ? 'Cooking' : 'Refining'}
+          {isFoodItem ? 'Cook using' : 'Refined from'}
         </span>
       </h2>
 
-      <div class={`grid gap-4 items-start justify-center ${
-        output.length >= 3
-          ? 'xl:grid-cols-3 lg:grid-cols-2 grid-cols-1'
-          : output.length === 1
-            ? 'grid-cols-1'
-            : 'md:grid-cols-2 grid-cols-1'
-      }`}>
-        {output.map((item) => (
-          <div class="bg-gray-900">
+      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+        {output.map((outputItem) => (
+          <div class="min-w-0 rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
+              <Accordion>
+                <div class="flex items-center gap-3" slot="title">
+                  <Image
+                    src={`https://nomansskyrecipes.com/images/items/${outputItem.Icon}`}
+                    alt={outputItem.Name}
+                    sizes="40px"
+                    width={40}
+                    height={40}
+                    class="flex-shrink-0"
+                  />
+                  <span class="text-white font-medium truncate">
+                    {outputItem.Name} x<span data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
+                  </span>
+                </div>
+                <div slot="content">
+                  {outputItem.RequiredItems?.length > 0 && <NestedList items={outputItem} />}
+                </div>
+              </Accordion>
+            </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Refined to create (refining only) -->
+  {groupedInputRefined.length > 0 && (
+    <div id="refined-to-create">
+      <h2 class="relative mt-6 mb-3 text-center">
+        <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
+          Refined to create
+        </span>
+        <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputRefined.length})</span>
+      </h2>
+      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+        {groupedInputRefined.map((usedInItem) => (
+          <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
             <Accordion>
-              <div class="flex" slot="title">
+              <div class="flex items-center gap-3" slot="title">
                 <Image
-                  src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
-                  alt={item.Name}
-                  sizes="50px"
-                  width={50}
-                  height={50}
-                  class="mr-4 flex-shrink-0 self-start"
+                  src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                  alt={usedInItem.Name}
+                  sizes="40px"
+                  width={40}
+                  height={40}
+                  class="flex-shrink-0"
                 />
-                <div class="flex items-center">
-                  <h4 class="lg:text-lg">
-                    {item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-                  </h4>
+                <div class="flex-1 min-w-0">
+                  <span class="text-white font-medium">{usedInItem.Name}</span>
+                  {usedInItem.recipes.length > 1 && (
+                    <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
+                  )}
                 </div>
               </div>
-              <div slot="content">
-                {item.RequiredItems?.length > 0 && <NestedList items={item} />}
+              <div slot="content" class="pt-2 overflow-x-auto">
+                <table class="w-full text-sm table-fixed">
+                  <thead>
+                    <tr class="border-b border-gray-600/50">
+                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
+                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {usedInItem.recipes.map((recipe) => (
+                      <tr class="border-b border-gray-600/30 last:border-b-0">
+                        <td class="py-2 px-2 align-top">
+                          <div class="flex flex-col gap-1">
+                            {recipe.inputs.map((ing) => (
+                              <a
+                                href={getSlug(ing.Id)}
+                                class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit"
+                              >
+                                <Image
+                                  src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
+                                  alt={ing.Name}
+                                  sizes="20px"
+                                  width={20}
+                                  height={20}
+                                  class="flex-shrink-0"
+                                />
+                                <span class="text-white">{ing.Name}</span>
+                                <span class="text-gray-400">x<span data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span></span>
+                              </a>
+                            ))}
+                          </div>
+                        </td>
+                        <td class="py-2 px-2 align-top">
+                          <a
+                            href={getSlug(usedInItem.Id)}
+                            class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
+                          >
+                            <Image
+                              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                              alt={usedInItem.Name}
+                              sizes="20px"
+                              width={20}
+                              height={20}
+                              class="flex-shrink-0"
+                            />
+                            <span>{usedInItem.Name}</span>
+                            <span class="text-gray-400">x<span data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span></span>
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </Accordion>
           </div>
@@ -670,37 +771,90 @@ const corvetteAttributes = [
     </div>
   )}
 
-  <!-- Used in -->
-  {input.length > 0 && (
-    <div id="usedin">
-      <h2 class="relative mt-8 mb-4 text-center">
+  <!-- Used to create (crafting: products, upgrades, exocraft, cooking, etc.) -->
+  {groupedInputCrafting.length > 0 && (
+    <div id="used-to-create">
+      <h2 class="relative mt-6 mb-3 text-center">
         <span class="bg-gray-800 px-3 lg:text-lg font-medium text-white">
-          {(item.Slug && item.Slug.startsWith('fish/')) ? 'Catches Yield' : 'Used in'}
+          {(item.Slug && item.Slug.startsWith('fish/'))
+            ? 'What this fish yields'
+            : 'Used to create'}
         </span>
+        <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCrafting.length})</span>
       </h2>
-      <div class={`grid gap-4 items-start justify-center ${
-        input.length >= 3 ? 'xl:grid-cols-3 lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'
-      }`}>
-        {input.map((item) => (
-          <div class="bg-gray-900">
+      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+        {groupedInputCrafting.map((usedInItem) => (
+          <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
             <Accordion>
-              <div class="flex" slot="title">
+              <div class="flex items-center gap-3" slot="title">
                 <Image
-                  src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
-                  alt={item.Name}
-                  sizes="50px"
-                  width={50}
-                  height={50}
-                  class="mr-4 flex-shrink-0 self-start"
+                  src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                  alt={usedInItem.Name}
+                  sizes="40px"
+                  width={40}
+                  height={40}
+                  class="flex-shrink-0"
                 />
-                <div class="flex items-center">
-                  <h4 class="lg:text-lg">
-                    {item.Name} x<span data-quantity={item.Quantity}>{item.Quantity}</span>
-                  </h4>
+                <div class="flex-1 min-w-0">
+                  <span class="text-white font-medium">{usedInItem.Name}</span>
+                  {usedInItem.recipes.length > 1 && (
+                    <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
+                  )}
                 </div>
               </div>
-              <div slot="content">
-                {item.RequiredItems?.length > 0 && <NestedList items={item} />}
+              <div slot="content" class="pt-2 overflow-x-auto">
+                <table class="w-full text-sm table-fixed">
+                  <thead>
+                    <tr class="border-b border-gray-600/50">
+                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
+                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {usedInItem.recipes.map((recipe) => (
+                      <tr class="border-b border-gray-600/30 last:border-b-0">
+                        <td class="py-2 px-2 align-top">
+                          <div class="flex flex-col gap-1">
+                            {recipe.inputs.map((ing) => (
+                              <a
+                                href={getSlug(ing.Id)}
+                                class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit"
+                              >
+                                <Image
+                                  src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
+                                  alt={ing.Name}
+                                  sizes="20px"
+                                  width={20}
+                                  height={20}
+                                  class="flex-shrink-0"
+                                />
+                                <span class="text-white">{ing.Name}</span>
+                                <span class="text-gray-400">x<span data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span></span>
+                              </a>
+                            ))}
+                          </div>
+                        </td>
+                        <td class="py-2 px-2 align-top">
+                          <a
+                            href={getSlug(usedInItem.Id)}
+                            class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
+                          >
+                            <Image
+                              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                              alt={usedInItem.Name}
+                              sizes="20px"
+                              width={20}
+                              height={20}
+                              class="flex-shrink-0"
+                            />
+                            <span>{usedInItem.Name}</span>
+                            <span class="text-gray-400">x<span data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span></span>
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </Accordion>
           </div>
@@ -739,8 +893,15 @@ const corvetteAttributes = [
         elements.forEach((element) => {
           const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
           const total = baseValue * quantity;
-          element.textContent = Number.isFinite(total) ? total.toString() : '0';
+          element.textContent = Number.isFinite(total) ? total.toLocaleString() : '0';
         });
+
+        // Update raw materials total if present
+        const rawTotalEl = document.getElementById('raw-total');
+        if (rawTotalEl) {
+          const baseTotal = parseFloat(rawTotalEl.getAttribute('data-base-total') || '0');
+          rawTotalEl.textContent = Number.isFinite(baseTotal * quantity) ? (baseTotal * quantity).toLocaleString() : '0';
+        }
         }
 
       });

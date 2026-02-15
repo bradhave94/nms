@@ -218,6 +218,60 @@ const findInput = (id: string): ItemWithInputs[] => {
     return results;
 };
 
+/** Recipes where this item is an ingredient - Refinery only (refining) */
+const findInputFromRefiner = (id: string): ItemWithInputs[] => {
+    const results: ItemWithInputs[] = [];
+    for (const item of refiner) {
+        if ('Inputs' in item && Array.isArray(item.Inputs)) {
+            for (const input of item.Inputs) {
+                if (input.Id === id) {
+                    results.push(item as unknown as ItemWithInputs);
+                    break;
+                }
+            }
+        }
+    }
+    return results;
+};
+
+type ItemWithRequiredItems = { Id: string; RequiredItems?: RequiredItem[]; Name?: string; Icon?: string };
+
+/** Recipes where this item is an ingredient - Products, Upgrades, Exocraft, Cooking, etc. (crafting, not refining) */
+const findInputFromCrafting = (id: string): ItemWithInputs[] => {
+    const results: ItemWithInputs[] = [];
+    // NutrientProcessor has Inputs (cooking recipes)
+    for (const item of nut) {
+        if ('Inputs' in item && Array.isArray(item.Inputs)) {
+            for (const input of item.Inputs) {
+                if (input.Id === id) {
+                    results.push(item as unknown as ItemWithInputs);
+                    break;
+                }
+            }
+        }
+    }
+    // Products, Upgrades, Exocraft, etc. have RequiredItems
+    const craftingSources = [products, cooking, curiosities, fish, conTech, tech, tMod, other, build, trade, upgrades, exocraft, starships];
+    for (const source of craftingSources) {
+        for (const it of source) {
+            const item = it as ItemWithRequiredItems;
+            if (item.RequiredItems?.length) {
+                for (const ri of item.RequiredItems) {
+                    if (ri.Id === id) {
+                        results.push({
+                            Id: item.Id,
+                            Inputs: item.RequiredItems.map((r) => ({ Id: r.Id, Quantity: r.Quantity })),
+                            Output: { Id: item.Id, Quantity: 1 },
+                        } as unknown as ItemWithInputs);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    return results;
+};
+
 // Returns the item corresponding to the id from the appropriate data source
 const getById = (id: string): Item | undefined => {
 	// Extract the prefix of the item id by splitting the id by its numeric part
@@ -277,6 +331,6 @@ const sortTable = <T extends TableItem>(data: T[]): T[] => {
 };
 
 // Add findInput to the export statement
-export { getSlug, getLabel, getById, findOutput, findInput, getLength, sort, sortTable };
+export { getSlug, getLabel, getById, findOutput, findInput, findInputFromRefiner, findInputFromCrafting, getLength, sort, sortTable };
 
 // <(.*?)> - Match any character between < and >, and capture it
