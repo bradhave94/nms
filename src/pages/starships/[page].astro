@@ -10,7 +10,8 @@ import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Starships.json';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	return paginate(sort(data as Item[]), { pageSize: 80 });
+	const pages = paginate(sort(data as Item[]), { pageSize: 80 });
+	return pages.slice(1);
 }
 // All paginated data is passed on the "page" prop
 interface PageProps {

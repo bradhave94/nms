@@ -45,13 +45,6 @@ const structuredData = buildCollectionStructuredData({
 	items: itemListElements,
 });
 const breadcrumbs = buildCategoryBreadcrumbs('Food', '/food', page.currentPage, '/food');
-const paginationPage = {
-	...page,
-	url: {
-		prev: page.url.prev === '/food/1' ? '/food' : page.url.prev,
-		next: page.url.next,
-	},
-};
 const intro = buildCategoryIntro(
 	'Food items power cooking recipes, consumables, and nutrient processing chains in No Man\'s Sky.',
 	page.currentPage,
@@ -84,5 +77,5 @@ const { title, description } = buildPaginatedMeta('Food', baseDescription, page.
 			))
 		}
 	</div>
-	<Pagination page={paginationPage} />
+	<Pagination page={page} />
 </Layout>

@@ -9,30 +9,26 @@ import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Products.json';
 
-export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	const pages = paginate((data as Item[]).sort((a: Item, b: Item) => b.BaseValueUnits - a.BaseValueUnits), { pageSize: 80 });
-	return pages.slice(1);
-}
-// All paginated data is passed on the "page" prop
-interface PageProps {
-	page: {
-		data: Item[];
-		currentPage: number;
-		lastPage: number;
-		url: {
-			prev?: string;
-			next?: string;
-		};
-	};
-}
-const { page } = Astro.props as PageProps;
+const pageSize = 80;
+const sortedItems = (data as Item[]).sort((a: Item, b: Item) => b.BaseValueUnits - a.BaseValueUnits);
+const pageData = sortedItems.slice(0, pageSize);
+const lastPage = Math.max(1, Math.ceil(sortedItems.length / pageSize));
+const page = {
+	data: pageData,
+	currentPage: 1,
+	lastPage,
+	url: {
+		next: lastPage > 1 ? '/calculator/2' : undefined,
+	},
+};
+
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const canonicalUrl = new URL('/calculator', siteOrigin).toString();
 const calculatorItems = page.data.filter((item) => ('RequiredItems' in item && item.RequiredItems && item.RequiredItems.length > 0));
 const itemListElements = calculatorItems.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,
-	position: (page.currentPage - 1) * 80 + index + 1,
+	position: index + 1,
 }));
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,

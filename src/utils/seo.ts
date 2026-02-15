@@ -12,14 +12,6 @@ const truncate = (value: string, maxLength: number): string => {
 	return `${value.slice(0, maxLength - 1).trimEnd()}…`;
 };
 
-const toFirstPagePath = (path: string): string => {
-	const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-	const trimmedPath = normalizedPath.replace(/\/+$/, '');
-	if (trimmedPath === '') return '/1';
-	if (/\/\d+$/.test(trimmedPath)) return trimmedPath;
-	return `${trimmedPath}/1`;
-};
-
 const normalizePath = (path: string): string => {
 	const normalizedPath = path.startsWith('/') ? path : `/${path}`;
 	const trimmedPath = normalizedPath.replace(/\/+$/, '');
@@ -48,7 +40,7 @@ export const buildCategoryBreadcrumbs = (
 ): BreadcrumbItem[] => {
 	const resolvedFirstPagePath = firstPagePath
 		? normalizePath(firstPagePath)
-		: toFirstPagePath(categoryPath);
+		: normalizePath(categoryPath);
 	if (currentPage > 1) {
 		return [
 			{ name: 'Home', href: '/' },

@@ -1,9 +1,15 @@
 ---
 const { page } = Astro.props;
+const normalizePrevHref = (href?: string): string | undefined => {
+	if (!href) return href;
+	const normalized = href.replace(/\/1\/?$/, '');
+	return normalized === '' ? '/' : normalized;
+};
+const prevHref = normalizePrevHref(page?.url?.prev);
 ---
 
 <div class="flex gap-4 justify-center items-center my-8">
-	{page.url.prev && <a class="btn" href={page.url.prev}>Previous</a>}
+	{prevHref && <a class="btn" href={prevHref}>Previous</a>}
 	<span>Page: {page.currentPage} of {page.lastPage}</span>
 	{page.url.next && <a class="btn" href={page.url.next}>Next</a>}
 </div>

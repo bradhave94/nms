@@ -29,14 +29,6 @@ const normalizePath = (path: string): string => {
 	return path.startsWith('/') ? path : `/${path}`;
 };
 
-const toFirstPagePath = (path: string): string => {
-	const normalizedPath = normalizePath(path);
-	const trimmedPath = normalizedPath.replace(/\/+$/, '');
-	if (trimmedPath === '') return '/1';
-	if (/\/\d+$/.test(trimmedPath)) return trimmedPath;
-	return `${trimmedPath}/1`;
-};
-
 const buildBreadcrumbList = (canonicalUrl: string, entries: BreadcrumbEntry[]): JsonLdObject => ({
 	'@context': 'https://schema.org',
 	'@type': 'BreadcrumbList',
@@ -68,7 +60,7 @@ export const buildCollectionStructuredData = ({
 	const safePath = normalizePath(collectionPath);
 	const firstPagePath = firstPagePathOverride
 		? normalizePath(firstPagePathOverride).replace(/\/+$/, '') || '/'
-		: toFirstPagePath(safePath);
+		: safePath.replace(/\/+$/, '') || '/';
 	const collectionUrl = `${safeOrigin}${firstPagePath}`;
 	const breadcrumbEntries: BreadcrumbEntry[] = [
 		{ name: 'Home', url: `${safeOrigin}/` },

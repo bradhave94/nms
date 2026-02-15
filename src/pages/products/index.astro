@@ -7,59 +7,55 @@ import { getSlug, sort } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
-import data from '@datav2/Buildings.json';
+import data from '@datav2/Products.json';
 
-export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	const pages = paginate(sort(data as Item[]), { pageSize: 80 });
-	return pages.slice(1);
-}
-// All paginated data is passed on the "page" prop
-interface PageProps {
-	page: {
-		data: Item[];
-		currentPage: number;
-		lastPage: number;
-		url: {
-			prev?: string;
-			next?: string;
-		};
-	};
-}
-const { page } = Astro.props as PageProps;
+const pageSize = 80;
+const sortedItems = sort(data as Item[]);
+const pageData = sortedItems.slice(0, pageSize);
+const lastPage = Math.max(1, Math.ceil(sortedItems.length / pageSize));
+const page = {
+	data: pageData,
+	currentPage: 1,
+	lastPage,
+	url: {
+		next: lastPage > 1 ? '/products/2' : undefined,
+	},
+};
+
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const canonicalUrl = new URL('/products', siteOrigin).toString();
 const itemListElements = page.data.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,
-	position: (page.currentPage - 1) * 80 + index + 1,
+	position: index + 1,
 }));
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,
-	collectionName: 'Building Parts',
-	collectionDescription: "A list of building parts for No Man's Sky. Our guide has everything you need to take your game to the next level.",
-	collectionPath: '/buildings',
+	collectionName: 'Products',
+	collectionDescription: "A list of products for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+	collectionPath: '/products',
 	currentPage: page.currentPage,
 	items: itemListElements,
 });
-const breadcrumbs = buildCategoryBreadcrumbs('Building Parts', '/buildings', page.currentPage);
+const breadcrumbs = buildCategoryBreadcrumbs('Products', '/products', page.currentPage);
 const intro = buildCategoryIntro(
-	'Building parts let you design and expand bases, decorations, and functional structures across the galaxy.',
+	'Products include crafted components, trade goods, and advanced materials used throughout your journey.',
 	page.currentPage,
 	page.lastPage
 );
-const baseDescription = "A list of building parts for No Man's Sky. Our guide has everything you need to take your game to the next level.";
-const { title, description } = buildPaginatedMeta('Building Parts', baseDescription, page.currentPage, page.lastPage);
+const baseDescription = "A list of products for No Man's Sky. Our guide has everything you need to take your game to the next level.";
+const { title, description } = buildPaginatedMeta('Products', baseDescription, page.currentPage, page.lastPage);
 ---
 
 <Layout
 	{title}
 	{description}
-	slug="buildings"
+	slug="products"
 	structuredData={structuredData}
 >
 	<Breadcrumbs items={breadcrumbs} className="pt-2 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl my-12">Building Parts</h1>
+	<h1 class="text-center text-4xl sm:text-6xl my-12">Products</h1>
 	<p class="mx-auto mb-8 max-w-3xl text-center text-sky-200/90">{intro}</p>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
