@@ -286,6 +286,9 @@ for (const entry of outputRecipes) {
 // Group by output item - all recipes for same output under one heading
 type RecipeRow = { inputs: RawItem[]; outputQuantity: number };
 type GroupedUsedIn = UsedInItem & { recipes: RecipeRow[] };
+type DeferredUsedInInput = { href: string; icon: string; name: string; quantity: number };
+type DeferredUsedInRecipe = { outputQuantity: number; inputs: DeferredUsedInInput[] };
+type DeferredUsedInItem = { href: string; icon: string; name: string; ways: number; recipes: DeferredUsedInRecipe[] };
 
 const groupByOutput = (inputData: RecipeInput[]) => {
   const inputRaw = getInputs(inputData);
@@ -305,6 +308,26 @@ const groupByOutput = (inputData: RecipeInput[]) => {
 
 const groupedInputRefined = groupByOutput(findInputFromRefiner(item.Id) as unknown as RecipeInput[]);
 const groupedInputCrafting = groupByOutput(findInputFromCrafting(item.Id) as unknown as RecipeInput[]);
+const initialUsedInCrafting = groupedInputCrafting.slice(0, 30);
+const deferredUsedInCrafting: DeferredUsedInItem[] = groupedInputCrafting.slice(30).map((usedInItem) => ({
+  href: getSlug(usedInItem.Id),
+  icon: usedInItem.Icon,
+  name: usedInItem.Name,
+  ways: usedInItem.recipes.length,
+  recipes: usedInItem.recipes.map((recipe) => ({
+    outputQuantity: recipe.outputQuantity,
+    inputs: recipe.inputs.map((ing) => ({
+      href: getSlug(ing.Id),
+      icon: ing.Icon,
+      name: ing.Name,
+      quantity: ing.Quantity,
+    })),
+  })),
+}));
+const deferredUsedInCraftingJson =
+  deferredUsedInCrafting.length > 0
+    ? JSON.stringify(deferredUsedInCrafting).replace(/</g, '\\u003c')
+    : undefined;
 const showQuantityInput = data.length + output.length > 0;
 const formattedBaseValueUnits = Number(item.BaseValueUnits ?? 0).toLocaleString();
 const blueprintItem = item as BlueprintLikeItem;
@@ -972,8 +995,11 @@ const corvetteAttributes = [
         </span>
         <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCrafting.length})</span>
       </h2>
-      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        {groupedInputCrafting.slice(0, 30).map((usedInItem) => (
+      <div
+        id="used-to-create-grid"
+        class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
+      >
+        {initialUsedInCrafting.map((usedInItem) => (
           <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
             <Accordion>
               <div class="flex items-center gap-3" slot="title">
@@ -1049,99 +1075,143 @@ const corvetteAttributes = [
             </Accordion>
           </div>
         ))}
-        {groupedInputCrafting.slice(30).map((usedInItem) => (
-          <div class="used-in-hidden rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden hidden">
-            <Accordion>
-              <div class="flex items-center gap-3" slot="title">
-                <Image
-                  src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
-                  alt={usedInItem.Name}
-                  sizes="40px"
-                  width={40}
-                  height={40}
-                  class="flex-shrink-0"
-                />
-                <div class="flex-1 min-w-0">
-                  <span class="text-white font-medium">{usedInItem.Name}</span>
-                  {usedInItem.recipes.length > 1 && (
-                    <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
-                  )}
-                </div>
-              </div>
-              <div slot="content" class="pt-2 overflow-x-auto">
-                <table class="w-full text-sm table-fixed">
-                  <thead>
-                    <tr class="border-b border-gray-600/50">
-                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
-                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {usedInItem.recipes.map((recipe) => (
-                      <tr class="border-b border-gray-600/30 last:border-b-0">
-                        <td class="py-2 px-2 align-top">
-                          <div class="flex flex-col gap-1">
-                            {recipe.inputs.map((ing) => (
-                              <a
-                                href={getSlug(ing.Id)}
-                                class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit"
-                              >
-                                <Image
-                                  src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
-                                  alt={ing.Name}
-                                  sizes="20px"
-                                  width={20}
-                                  height={20}
-                                  class="flex-shrink-0"
-                                />
-                                <span class="text-white">{ing.Name}</span>
-                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
-                              </a>
-                            ))}
-                          </div>
-                        </td>
-                        <td class="py-2 px-2 align-top">
-                          <a
-                            href={getSlug(usedInItem.Id)}
-                            class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
-                          >
-                            <Image
-                              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
-                              alt={usedInItem.Name}
-                              sizes="20px"
-                              width={20}
-                              height={20}
-                              class="flex-shrink-0"
-                            />
-                            <span>{usedInItem.Name}</span>
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
-                          </a>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </Accordion>
-          </div>
-        ))}
       </div>
-      {groupedInputCrafting.length > 30 && (
+      {deferredUsedInCraftingJson && (
         <>
+          <script type="application/json" id="used-in-hidden-data" set:html={deferredUsedInCraftingJson}></script>
           <div class="mt-4 text-center">
             <button
               type="button"
               id="used-in-load-more"
               class="px-6 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-medium transition-colors"
             >
-              Load more ({groupedInputCrafting.length - 30} more)
+              Load more ({deferredUsedInCrafting.length} more)
             </button>
           </div>
-          <script>
-            document.getElementById('used-in-load-more')?.addEventListener('click', () => {
-              document.querySelectorAll('.used-in-hidden').forEach((el) => el.classList.remove('hidden'));
-              document.getElementById('used-in-load-more')?.closest('div.mt-4')?.remove();
-            });
+          <script is:inline>
+            (() => {
+              const dataEl = document.getElementById('used-in-hidden-data');
+              const loadMoreBtn = document.getElementById('used-in-load-more');
+              const grid = document.getElementById('used-to-create-grid');
+              if (!dataEl || !loadMoreBtn || !grid) return;
+
+              let remainingItems = [];
+              try {
+                remainingItems = JSON.parse(dataEl.textContent || '[]');
+              } catch {
+                remainingItems = [];
+              }
+
+              if (!Array.isArray(remainingItems) || remainingItems.length === 0) {
+                loadMoreBtn.closest('div.mt-4')?.remove();
+                dataEl.remove();
+                return;
+              }
+
+              const imageBase = 'https://nomansskyrecipes.com/images/items/';
+              const numberFormatter = new Intl.NumberFormat();
+              const batchSize = 12;
+              const escapeHtml = (value) =>
+                String(value)
+                  .replace(/&/g, '&amp;')
+                  .replace(/</g, '&lt;')
+                  .replace(/>/g, '&gt;')
+                  .replace(/"/g, '&quot;')
+                  .replace(/'/g, '&#39;');
+              let offset = 0;
+
+              const applyQuantityMultiplier = () => {
+                const quantityInput = document.querySelector('input.quantity');
+                if (!(quantityInput instanceof HTMLInputElement)) return;
+                const quantity = Number.parseInt(quantityInput.value || '1', 10);
+                if (!Number.isFinite(quantity) || quantity <= 1) return;
+                document.querySelectorAll('[data-quantity]').forEach((element) => {
+                  const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
+                  const total = baseValue * quantity;
+                  element.textContent = Number.isFinite(total) ? total.toLocaleString() : '0';
+                });
+                const rawTotalEl = document.getElementById('raw-total');
+                if (rawTotalEl) {
+                  const baseTotal = parseFloat(rawTotalEl.getAttribute('data-base-total') || '0');
+                  rawTotalEl.textContent = Number.isFinite(baseTotal * quantity) ? (baseTotal * quantity).toLocaleString() : '0';
+                }
+              };
+
+              const renderBatch = () => {
+                const batch = remainingItems.slice(offset, offset + batchSize);
+                if (batch.length === 0) return;
+
+                for (const usedInItem of batch) {
+                  const recipesHtml = (usedInItem.recipes || [])
+                    .map(
+                      (recipe) => `
+                        <tr class="border-b border-gray-600/30 last:border-b-0">
+                          <td class="py-2 px-2 align-top">
+                            <div class="flex flex-col gap-1">
+                              ${(recipe.inputs || [])
+                                .map(
+                                  (ing) => `
+                                    <a href="${escapeHtml(ing.href)}" class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit">
+                                      <img src="${escapeHtml(`${imageBase}${ing.icon}`)}" alt="${escapeHtml(ing.name)}" class="h-5 w-5 flex-shrink-0" loading="lazy" />
+                                      <span class="text-white">${escapeHtml(ing.name)}</span>
+                                      <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity="${Number(ing.quantity)}">${numberFormatter.format(Number(ing.quantity))}</span>
+                                    </a>
+                                  `
+                                )
+                                .join('')}
+                            </div>
+                          </td>
+                          <td class="py-2 px-2 align-top">
+                            <a href="${escapeHtml(usedInItem.href)}" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300">
+                              <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-5 w-5 flex-shrink-0" loading="lazy" />
+                              <span>${escapeHtml(usedInItem.name)}</span>
+                              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity="${Number(recipe.outputQuantity)}">${numberFormatter.format(Number(recipe.outputQuantity))}</span>
+                            </a>
+                          </td>
+                        </tr>
+                      `
+                    )
+                    .join('');
+
+                  const card = document.createElement('details');
+                  card.className = 'rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden group';
+                  card.innerHTML = `
+                    <summary class="list-none cursor-pointer p-3 flex items-center gap-3">
+                      <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-10 w-10 flex-shrink-0" loading="lazy" />
+                      <div class="flex-1 min-w-0">
+                        <span class="text-white font-medium">${escapeHtml(usedInItem.name)}</span>
+                        ${usedInItem.ways > 1 ? `<span class="ml-1 text-xs text-gray-500">(${Number(usedInItem.ways)} ways)</span>` : ''}
+                      </div>
+                    </summary>
+                    <div class="pt-2 overflow-x-auto">
+                      <table class="w-full text-sm table-fixed">
+                        <thead>
+                          <tr class="border-b border-gray-600/50">
+                            <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
+                            <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
+                          </tr>
+                        </thead>
+                        <tbody>${recipesHtml}</tbody>
+                      </table>
+                    </div>
+                  `;
+                  grid.appendChild(card);
+                }
+
+                offset += batch.length;
+                const remaining = remainingItems.length - offset;
+                if (remaining <= 0) {
+                  loadMoreBtn.closest('div.mt-4')?.remove();
+                  dataEl.remove();
+                } else {
+                  loadMoreBtn.textContent = `Load more (${remaining} more)`;
+                }
+
+                applyQuantityMultiplier();
+              };
+
+              loadMoreBtn.addEventListener('click', renderBatch);
+            })();
           </script>
         </>
       )}
@@ -1155,7 +1225,6 @@ const corvetteAttributes = [
 {showQuantityInput && (
   <script>
     const quantityInput = document.querySelector('input.quantity') as HTMLInputElement | null;
-    const elements = document.querySelectorAll('[data-quantity]');
 
     if (quantityInput) {
       quantityInput.addEventListener('input', () => {
@@ -1177,7 +1246,7 @@ const corvetteAttributes = [
         }
 
         // Update all quantity elements
-        elements.forEach((element) => {
+        document.querySelectorAll('[data-quantity]').forEach((element) => {
           const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
           const total = baseValue * quantity;
           element.textContent = Number.isFinite(total) ? total.toLocaleString() : '0';
