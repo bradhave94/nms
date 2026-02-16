@@ -163,6 +163,55 @@ const breadcrumbs = buildCategoryBreadcrumbs('Items', '/items', 1);
 		No items found. Try adjusting your filters.
 	</div>
 
+	<script is:inline>
+		(() => {
+			const params = new URLSearchParams(window.location.search);
+			const groupRaw = params.get('group') || '';
+			const typeRaw = params.get('type') || '';
+			const qRaw = params.get('q') || '';
+
+			const group = groupRaw.trim().toLowerCase();
+			const type = typeRaw.trim().toLowerCase();
+			const q = qRaw.trim().toLowerCase();
+
+			const groupSelect = document.getElementById('group-select');
+			const typeSelect = document.getElementById('type-select');
+			const searchInput = document.getElementById('items-search-input');
+
+			if (groupSelect && groupRaw) groupSelect.value = groupRaw;
+			if (typeSelect && typeRaw) typeSelect.value = typeRaw;
+			if (searchInput && qRaw) searchInput.value = qRaw;
+
+			if (!group && !type && !q) return;
+
+			const cssEscape =
+				typeof CSS !== 'undefined' && typeof CSS.escape === 'function'
+					? CSS.escape.bind(CSS)
+					: (value) => value.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+
+			const hideSelectors = [];
+			if (group) {
+				hideSelectors.push(`.item-filter-entry:not([data-group="${cssEscape(group)}"])`);
+			}
+			if (type) {
+				hideSelectors.push(`.item-filter-entry:not([data-type="${cssEscape(type)}"])`);
+			}
+			if (q) {
+				const escapedQuery = cssEscape(q);
+				hideSelectors.push(
+					`.item-filter-entry:not([data-name*="${escapedQuery}"]):not([data-group*="${escapedQuery}"])`
+				);
+			}
+
+			if (!hideSelectors.length) return;
+
+			const style = document.createElement('style');
+			style.id = 'items-initial-filter-style';
+			style.textContent = `${hideSelectors.join(',')} { display: none !important; }`;
+			document.head.appendChild(style);
+		})();
+	</script>
+
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
 			itemCards.map((item, index) => (
@@ -194,6 +243,7 @@ const breadcrumbs = buildCategoryBreadcrumbs('Items', '/items', 1);
 	const applyBtn = document.getElementById('apply-filters');
 	const resetBtn = document.getElementById('reset-filters');
 	const emptyEl = document.getElementById('empty');
+	const initialFilterStyle = document.getElementById('items-initial-filter-style');
 	const itemEls = Array.from(document.querySelectorAll('.item-filter-entry')) as HTMLElement[];
 
 	const getParams = () => {
@@ -216,6 +266,10 @@ const breadcrumbs = buildCategoryBreadcrumbs('Items', '/items', 1);
 	};
 
 	const applyFilters = () => {
+		if (initialFilterStyle?.parentNode) {
+			initialFilterStyle.parentNode.removeChild(initialFilterStyle);
+		}
+
 		const groupRaw = groupSelect?.value?.trim() || '';
 		const typeRaw = typeSelect?.value?.trim() || '';
 		const qRaw = searchInput?.value?.trim() || '';
