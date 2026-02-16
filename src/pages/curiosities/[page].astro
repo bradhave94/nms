@@ -58,9 +58,9 @@ const { title, description } = buildPaginatedMeta('Curiosities', baseDescription
 	slug="curiosities"
 	structuredData={structuredData}
 >
-	<Breadcrumbs items={breadcrumbs} className="pt-3 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl my-12">Curiosities</h1>
-	<p class="mx-auto mb-8 max-w-3xl text-center text-sky-200/90">{intro}</p>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Curiosities</h1>
+	<p class="mx-auto mb-12 max-w-3xl text-center text-sky-200/90">{intro}</p>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
 			page.data.map((item, index) => (
