@@ -3,6 +3,22 @@ import type { APIRoute } from 'astro';
 const getRobotsTxt = (sitemapURL: URL, imageSitemapURL: URL) => `User-agent: *
 Allow: /
 
+# AI crawlers - allow for AEO (Answer Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: ${sitemapURL.href}
 Sitemap: ${imageSitemapURL.href}
 `;

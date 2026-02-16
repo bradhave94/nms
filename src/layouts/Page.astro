@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { SITE } from '@config';
 import { getById, findOutput, findInputFromRefiner, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import credit from '../assets/img/credits.png';
@@ -47,6 +48,22 @@ const categoryFirstPagePathMap: Record<string, string> = {
   corvette: '/corvette',
 };
 const categoryName = categoryNameMap[categorySlug] ?? 'Items';
+const categorySingularMap: Record<string, string> = {
+  raw: 'raw material',
+  products: 'product',
+  food: 'food item',
+  curiosities: 'curiosity',
+  fish: 'fish',
+  technology: 'technology item',
+  other: 'item',
+  buildings: 'building part',
+  upgrades: 'upgrade',
+  exocraft: 'exocraft item',
+  starships: 'starship item',
+  corvette: 'corvette item',
+  refinery: 'refined item',
+};
+const categorySingular = categorySingularMap[categorySlug] ?? 'item';
 const categoryPath = categoryFirstPagePathMap[categorySlug] ?? '/items';
 const categoryUrl = `${siteOrigin}${categoryPath}`;
 const itemImageUrl = `${siteOrigin}/images/items/${item.Icon}`;
@@ -518,6 +535,10 @@ const itemPageSchema: JsonLdObject = {
     '@type': 'ImageObject',
     url: itemImageUrl,
   },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.item-summary'],
+  },
   mainEntity: {
     '@type': 'Thing',
     '@id': `${canonicalUrl}#item`,
@@ -528,13 +549,87 @@ const itemPageSchema: JsonLdObject = {
     url: canonicalUrl,
   },
 };
-const itemPageStructuredData: JsonLdObject[] = [breadcrumbSchema, itemPageSchema];
+
+// AEO: Answer-first summary, FAQ schema, Recipe schema
+const primaryMethod = uniqueHowToMethods[0];
+const ingredientList =
+  primaryMethod?.ingredients.map((i) => `${i.Name} x${i.Quantity}`).join(', ') ??
+  rawItems.map((r) => `${r.Name} x${r.Quantity}`).join(', ');
+const toolName = primaryMethod?.tool ?? (isFoodItem ? 'Nutrient Processor' : 'Refiner');
+const answerSummary =
+  data.length > 0 || output.length > 0
+    ? item.Description
+      ? `${item.Name} is a ${categorySingular} in No Man's Sky. ${(item.Description as string).trim()} To craft it, combine ${ingredientList} in a ${toolName}.`
+      : `${item.Name} is a ${categorySingular} in No Man's Sky. To craft it, combine ${ingredientList} in a ${toolName}.`
+    : item.Description
+      ? `${item.Name} is a ${categorySingular} in No Man's Sky. ${item.Description}`
+      : `${item.Name} is a ${categorySingular} in No Man's Sky.`;
+
+const faqQuestions: { question: string; answer: string }[] = [];
+if (data.length > 0 || output.length > 0) {
+  faqQuestions.push({
+    question: `How do I craft ${item.Name} in No Man's Sky?`,
+    answer: `To craft ${item.Name}, you need ${ingredientList}. Use the ${toolName} to combine them.`,
+  });
+  faqQuestions.push({
+    question: `What ingredients do I need for ${item.Name}?`,
+    answer: `You need: ${ingredientList}.`,
+  });
+} else {
+  faqQuestions.push({
+    question: `What is ${item.Name} in No Man's Sky?`,
+    answer: item.Description ? `${item.Description}` : `${item.Name} is a ${categoryName.toLowerCase()} item in No Man's Sky.`,
+  });
+}
+const faqSchema: JsonLdObject = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqQuestions.map((q) => ({
+    '@type': 'Question',
+    name: q.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: q.answer,
+    },
+  })),
+};
+
+let recipeSchema: JsonLdObject | undefined;
+const recipeIngredients = craftingHowToIngredients.length > 0
+  ? craftingHowToIngredients
+  : uniqueHowToMethods.find((m) => m.action === 'cook')?.ingredients ?? [];
+if (isFoodItem && recipeIngredients.length > 0) {
+  recipeSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name: item.Name,
+    description: item.Description ?? `How to cook ${item.Name} in No Man's Sky`,
+    image: itemImageUrl,
+    recipeIngredient: recipeIngredients.map((i) => `${i.Name} x${i.Quantity}`),
+    recipeInstructions: [
+      {
+        '@type': 'HowToStep',
+        text: `Gather ${recipeIngredients.map((i) => `${i.Name} (x${i.Quantity})`).join(', ')}.`,
+      },
+      {
+        '@type': 'HowToStep',
+        text: `Combine the ingredients in a Nutrient Processor to cook ${item.Name}.`,
+      },
+    ],
+    recipeYield: '1',
+  };
+}
+
+const itemPageStructuredData: JsonLdObject[] = [breadcrumbSchema, itemPageSchema, faqSchema];
 if (howToSchema) {
   if (Array.isArray(howToSchema)) {
     itemPageStructuredData.push(...howToSchema);
   } else {
     itemPageStructuredData.push(howToSchema);
   }
+}
+if (recipeSchema) {
+  itemPageStructuredData.push(recipeSchema);
 }
 const itemPageStructuredDataJson = JSON.stringify(itemPageStructuredData).replace(/</g, '\\u003c');
 
@@ -676,7 +771,13 @@ const corvetteAttributes = [
         </p>
       )}
 
-      <p class="lg:text-lg pt-4">{item.Description}</p>
+      <p class="item-summary lg:text-lg pt-4 text-gray-300" role="doc-abstract">
+        {answerSummary}
+      </p>
+
+      <p class="mt-2 text-sm text-gray-500">
+        Last updated: {SITE.version_date}
+      </p>
 
       {showBlueprintCost && (
         <div class="mt-4 flex flex-wrap gap-2">
@@ -817,7 +918,7 @@ const corvetteAttributes = [
     <div id="crafting" class="mb-[7.5rem]">
       <h2 class="relative mt-8 mb-4 text-center">
         <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          Craft using
+          {isFoodItem ? `How to cook ${item.Name}` : `How to craft ${item.Name}`}
         </span>
       </h2>
 
@@ -883,10 +984,10 @@ const corvetteAttributes = [
 
   <!-- Refining/Cooking section -->
   {output.length > 0 && (
-    <div id="refining">
-      <h2 class="relative mt-6 mb-3 text-center">
+    <div id="refining" class="border-t border-gray-600/60 py-6">
+      <h2 class="relative mb-3 text-center">
         <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          {isFoodItem ? 'Cook using' : 'Refined from'}
+          {isFoodItem ? `How to cook ${item.Name} in Nutrient Processor` : `How to refine ${item.Name}`}
         </span>
       </h2>
 
@@ -920,10 +1021,10 @@ const corvetteAttributes = [
 
   <!-- Refined to create (refining only) -->
   {groupedInputRefined.length > 0 && (
-    <div id="refined-to-create">
-      <h2 class="relative mt-6 mb-3 text-center">
+    <div id="refined-to-create" class="mt-6 border-t border-gray-600/60 py-6">
+      <h2 class="relative mb-3 text-center">
         <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          Refined to create
+          What can you refine from {item.Name}?
         </span>
         <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputRefined.length})</span>
       </h2>
@@ -1010,12 +1111,14 @@ const corvetteAttributes = [
 
   <!-- Used to create (crafting: products, upgrades, exocraft, cooking, etc.) -->
   {groupedInputCrafting.length > 0 && (
-    <div id="used-to-create">
-      <h2 class="relative mt-6 mb-3 text-center">
+    <div id="used-to-create" class="mt-6 border-t border-gray-600/60 py-6">
+      <h2 class="relative mb-3 text-center">
         <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
           {(item.Slug && item.Slug.startsWith('fish/'))
-            ? 'What this fish yields'
-            : 'Used to create'}
+            ? 'What does this fish yield?'
+            : isFoodItem
+              ? `What can you cook with ${item.Name}?`
+              : `What can you craft with ${item.Name}?`}
         </span>
         <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCrafting.length})</span>
       </h2>

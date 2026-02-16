@@ -23,8 +23,8 @@ export const buildItemMeta = (
 	categoryLabel: string
 ): { title: string; description: string } => {
 	const normalizedDescription = normalizeWhitespace(item.Description ?? '');
-	const title = `${item.Name} (${item.Id}) | ${categoryLabel} | No Man's Sky Recipes`;
-	const baseDescription = `Learn how to craft, refine, and use ${item.Name} (${item.Id}), a ${categoryLabel.toLowerCase()} in No Man's Sky.`;
+	const title = `${item.Name} | ${categoryLabel} | No Man's Sky Recipes`;
+	const baseDescription = `Learn how to craft, refine, and use ${item.Name}, a ${categoryLabel.toLowerCase()} in No Man's Sky.`;
 	const description = truncate(
 		normalizeWhitespace(`${baseDescription} ${normalizedDescription}`),
 		175

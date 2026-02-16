@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
+import { SITE } from '@config';
 import { sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import { buildItemMeta } from '@utils/seo.js';
@@ -31,12 +32,14 @@ if (!item) {
   return Astro.redirect('/404');
 }
 const { title, description } = buildItemMeta(item, 'Technology Item');
+const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
 ---
 
 <Layout
   {title}
   {description}
   slug="technology"
+  {ogImage}
 >
   <Page item={item} />
 </Layout>

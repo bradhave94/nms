@@ -18,10 +18,11 @@ export interface Props {
 	structuredData?: JsonLdObject | JsonLdObject[];
 }
 
-const { title = SITE.title, author = SITE.author, description = SITE.desc, slug, structuredData } = Astro.props;
-
+const { title = SITE.title, author = SITE.author, description = SITE.desc, slug, structuredData, ogImage } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const siteOrigin = SITE.website.replace(/\/$/, '');
+const defaultOgImage = `${siteOrigin}/images/icon.png`;
+const imageUrl = ogImage ?? defaultOgImage;
 const organizationSchema: JsonLdObject = {
 	'@context': 'https://schema.org',
 	'@type': 'Organization',
@@ -72,6 +73,9 @@ inject();
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalURL} />
+
+		<meta property="og:image" content={imageUrl} />
+		<meta property="twitter:image" content={imageUrl} />
 
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={canonicalURL} />

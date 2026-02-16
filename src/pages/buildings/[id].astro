@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
+import { SITE } from '@config';
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import { buildItemMeta } from '@utils/seo.js';
@@ -20,12 +21,14 @@ if (!item) {
 }
 
 const { title, description } = buildItemMeta(item as Item, 'Building Part');
+const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
 ---
 
 <Layout
 	{title}
 	{description}
 	slug="buildings"
+	{ogImage}
 >
 	<Page item={item as Item} />
 </Layout>

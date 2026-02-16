@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import { SITE } from '@config';
 import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
@@ -54,6 +55,7 @@ const { title, description } = buildPaginatedMeta('Crafting Calculator', baseDes
 	{description}
 	slug="calculator"
 	structuredData={structuredData}
+	ogImage={`${SITE.website}/images/calculator.webp`}
 >
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
 	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>

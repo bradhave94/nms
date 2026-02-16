@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
+import { SITE } from '@config';
 import type { Item } from '@utils/lookup.js';
 import { buildItemMeta } from '@utils/seo.js';
 import data from '@datav2/Starships.json';
@@ -15,8 +16,9 @@ export async function getStaticPaths() {
 const { item } = Astro.props;
 
 const { title, description } = buildItemMeta(item as Item, 'Starship Item');
+const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
 ---
 
-<Layout {title} {description} slug="starships">
+<Layout {title} {description} slug="starships" {ogImage}>
 	<Page item={item as Item} />
 </Layout>

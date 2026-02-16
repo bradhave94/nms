@@ -1,6 +1,7 @@
 ---
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
+import { SITE } from '@config';
 import Table from '@components/table/Table.astro';
 import refinery from '@datav2/Refinery.json';
 import { getById } from '@utils/lookup.js';
@@ -90,6 +91,7 @@ const data = refinery.map(createArray).filter((item): item is TableItem => item 
 	title={"Refiner recipes | No Man's Sky Recipes"}
 	description="A table of refiner recipes items for No Man's Sky. Our guide has everything you need to take your game to the next level."
 	slug="refining"
+	ogImage={`${SITE.website}/images/refiner.webp`}
 >
 	<Table
 		title="Refining"

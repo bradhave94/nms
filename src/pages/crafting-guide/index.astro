@@ -1,6 +1,7 @@
 ---
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
+import { SITE } from '@config';
 import Table from '@components/table/Table.astro';
 import products from '@datav2/Products.json';
 import { getById } from '@utils/lookup.js';
@@ -65,6 +66,7 @@ const data = products.map(createArray).filter((item): item is TableRow => item !
 	title="Crafting Guide | No Man's Sky Recipes"
 	description="Unlock new possibilities in No Man's Sky with our comprehensive Crafting Guide. Our guide has everything you need to take your game to the next level."
 	slug="crafting-guide"
+	ogImage={`${SITE.website}/images/crafting.webp`}
 >
 		<Table
 			title="Crafting"

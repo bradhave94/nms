@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import { SITE } from '@config';
 
 const cards = [
 	{
@@ -23,7 +24,7 @@ const cards = [
 	{
 		name: 'Crafting',
 		description:
-			'The player can craft technology upgrades for themseleves using blueprints found throughout the universe.',
+			'The player can craft technology upgrades for themselves using blueprints found throughout the universe.',
 		button: 'View Recipes',
 		image: '/images/crafting.webp',
 		link: '/crafting-guide',
@@ -133,7 +134,7 @@ const cards = [
 	},
 ];
 ---
-<Layout title="No Man's Sky Recipes, Crafting Guide and Cooking Guide" slug="home">
+<Layout title="No Man's Sky Recipes, Crafting Guide and Cooking Guide" slug="home" ogImage={`${SITE.website}/images/refiner.webp`}>
     <header class="text-center py-10 bg-gradient-to-r from-purple-900/20 to-slate-900/50">
         <h1 class="text-4xl sm:text-6xl text-white font-bold mb-4">No Man's Sky Recipes</h1>
         <p class="text-xl sm:text-3xl text-gray-300 tracking-widest">
