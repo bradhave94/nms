@@ -14,13 +14,17 @@ interface NestedItem {
 interface Props {
   items: NestedItem;
   depth?: number;
+  /** When false, don't multiply input quantities by parent quantity (e.g. refiner recipes where output 30 doesn't mean 30x inputs) */
+  multiplyByParent?: boolean;
 }
 
-const { items, depth = 0 } = Astro.props;
+const { items, depth = 0, multiplyByParent = true } = Astro.props;
 ---
 
 {items.RequiredItems?.map((item, index) => {
-  const quantity = (item.Quantity ?? 1) * (items.Quantity ?? 1);
+  const quantity = multiplyByParent
+    ? (item.Quantity ?? 1) * (items.Quantity ?? 1)
+    : (item.Quantity ?? 1);
   return item.RequiredItems?.length ? (
     <div class="crafting-tree-node border-l border-gray-600/50 pl-4 ml-2">
       <Accordion>

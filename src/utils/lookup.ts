@@ -218,6 +218,22 @@ const findInput = (id: string): ItemWithInputs[] => {
     return results;
 };
 
+/** Recipes where this item is an ingredient - Nutrient Processor only (cooking) */
+const findInputFromCooking = (id: string): ItemWithInputs[] => {
+    const results: ItemWithInputs[] = [];
+    for (const item of nut) {
+        if ('Inputs' in item && Array.isArray(item.Inputs)) {
+            for (const input of item.Inputs) {
+                if (input.Id === id) {
+                    results.push(item as unknown as ItemWithInputs);
+                    break;
+                }
+            }
+        }
+    }
+    return results;
+};
+
 /** Recipes where this item is an ingredient - Refinery only (refining) */
 const findInputFromRefiner = (id: string): ItemWithInputs[] => {
     const results: ItemWithInputs[] = [];
@@ -236,20 +252,9 @@ const findInputFromRefiner = (id: string): ItemWithInputs[] => {
 
 type ItemWithRequiredItems = { Id: string; RequiredItems?: RequiredItem[]; Name?: string; Icon?: string };
 
-/** Recipes where this item is an ingredient - Products, Upgrades, Exocraft, Cooking, etc. (crafting, not refining) */
+/** Recipes where this item is an ingredient - Products, Upgrades, Exocraft, etc. (crafting, not refining or cooking) */
 const findInputFromCrafting = (id: string): ItemWithInputs[] => {
     const results: ItemWithInputs[] = [];
-    // NutrientProcessor has Inputs (cooking recipes)
-    for (const item of nut) {
-        if ('Inputs' in item && Array.isArray(item.Inputs)) {
-            for (const input of item.Inputs) {
-                if (input.Id === id) {
-                    results.push(item as unknown as ItemWithInputs);
-                    break;
-                }
-            }
-        }
-    }
     // Products, Upgrades, Exocraft, etc. have RequiredItems
     const craftingSources = [products, cooking, curiosities, fish, conTech, tech, tMod, other, build, trade, upgrades, exocraft, starships];
     for (const source of craftingSources) {
@@ -331,6 +336,6 @@ const sortTable = <T extends TableItem>(data: T[]): T[] => {
 };
 
 // Add findInput to the export statement
-export { getSlug, getLabel, getById, findOutput, findInput, findInputFromRefiner, findInputFromCrafting, getLength, sort, sortTable };
+export { getSlug, getLabel, getById, findOutput, findInput, findInputFromRefiner, findInputFromCooking, findInputFromCrafting, getLength, sort, sortTable };
 
 // <(.*?)> - Match any character between < and >, and capture it

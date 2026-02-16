@@ -4,7 +4,7 @@ import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { SITE } from '@config';
-import { getById, findOutput, findInputFromRefiner, findInputFromCrafting, getSlug } from '@utils/lookup.js';
+import { getById, findOutput, findInputFromRefiner, findInputFromCooking, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import credit from '../assets/img/credits.png';
 
@@ -311,11 +311,20 @@ const data = item.RequiredItems?.length
   : [];
 
 const outputRecipes = findOutput(item.Id) as unknown as RecipeOutput[];
-const output: UsedInItem[] = [];
+const outputRefined: UsedInItem[] = [];
+const outputCooked: UsedInItem[] = [];
 for (const entry of outputRecipes) {
   const mapped = getOutputs(entry);
-  if (mapped) output.push(mapped);
+  if (!mapped) continue;
+  const isCooking = entry.Slug?.startsWith('nutrient-processor/');
+  if (isCooking) {
+    outputCooked.push(mapped);
+  } else {
+    outputRefined.push(mapped);
+  }
 }
+outputRefined.sort((a, b) => (b.Quantity ?? 0) - (a.Quantity ?? 0));
+outputCooked.sort((a, b) => (b.Quantity ?? 0) - (a.Quantity ?? 0));
 // Group by output item - all recipes for same output under one heading
 type RecipeRow = { inputs: RawItem[]; outputQuantity: number };
 type GroupedUsedIn = UsedInItem & { recipes: RecipeRow[] };
@@ -340,7 +349,11 @@ const groupByOutput = (inputData: RecipeInput[]) => {
 };
 
 const groupedInputRefined = groupByOutput(findInputFromRefiner(item.Id) as unknown as RecipeInput[]);
+groupedInputRefined.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
+const groupedInputCooked = groupByOutput(findInputFromCooking(item.Id) as unknown as RecipeInput[]);
+groupedInputCooked.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
 const groupedInputCrafting = groupByOutput(findInputFromCrafting(item.Id) as unknown as RecipeInput[]);
+groupedInputCrafting.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
 const initialUsedInCrafting = groupedInputCrafting.slice(0, 30);
 const deferredUsedInCrafting: DeferredUsedInItem[] = groupedInputCrafting.slice(30).map((usedInItem) => ({
   href: getSlug(usedInItem.Id),
@@ -361,7 +374,7 @@ const deferredUsedInCraftingJson =
   deferredUsedInCrafting.length > 0
     ? JSON.stringify(deferredUsedInCrafting).replace(/</g, '\\u003c')
     : undefined;
-const showQuantityInput = data.length + output.length > 0;
+const showQuantityInput = data.length + outputRefined.length + outputCooked.length > 0;
 const formattedBaseValueUnits = Number(item.BaseValueUnits ?? 0).toLocaleString();
 const blueprintItem = item as BlueprintLikeItem;
 const blueprintCost = blueprintItem.BlueprintCost ?? 0;
@@ -557,7 +570,7 @@ const ingredientList =
   rawItems.map((r) => `${r.Name} x${r.Quantity}`).join(', ');
 const toolName = primaryMethod?.tool ?? (isFoodItem ? 'Nutrient Processor' : 'Refiner');
 const answerSummary =
-  data.length > 0 || output.length > 0
+  data.length > 0 || outputRefined.length > 0 || outputCooked.length > 0
     ? item.Description
       ? `${item.Name} is a ${categorySingular} in No Man's Sky. ${(item.Description as string).trim()} To craft it, combine ${ingredientList} in a ${toolName}.`
       : `${item.Name} is a ${categorySingular} in No Man's Sky. To craft it, combine ${ingredientList} in a ${toolName}.`
@@ -566,7 +579,7 @@ const answerSummary =
       : `${item.Name} is a ${categorySingular} in No Man's Sky.`;
 
 const faqQuestions: { question: string; answer: string }[] = [];
-if (data.length > 0 || output.length > 0) {
+if (data.length > 0 || outputRefined.length > 0 || outputCooked.length > 0) {
   faqQuestions.push({
     question: `How do I craft ${item.Name} in No Man's Sky?`,
     answer: `To craft ${item.Name}, you need ${ingredientList}. Use the ${toolName} to combine them.`,
@@ -926,7 +939,7 @@ const corvetteAttributes = [
         {/* Crafting tree - full width, single column */}
         <div class="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
           {data.map((craftItem) => (
-            <Accordion open={data.length + output.length === 1}>
+            <Accordion open={data.length + outputRefined.length + outputCooked.length === 1}>
               <div class="flex items-center gap-3" slot="title">
                 <Image
                   src={`https://nomansskyrecipes.com/images/items/${craftItem.Icon}`}
@@ -982,17 +995,17 @@ const corvetteAttributes = [
     </div>
   )}
 
-  <!-- Refining/Cooking section -->
-  {output.length > 0 && (
+  <!-- Refining section -->
+  {outputRefined.length > 0 && (
     <div id="refining" class="border-t border-gray-600/60 py-6">
       <h2 class="relative mb-3 text-center">
         <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          {isFoodItem ? `How to cook ${item.Name} in Nutrient Processor` : `How to refine ${item.Name}`}
+          How to refine {item.Name}
         </span>
       </h2>
 
       <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        {output.map((outputItem) => (
+        {outputRefined.map((outputItem) => (
           <div class="min-w-0 rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
               <Accordion>
                 <div class="flex items-center gap-3" slot="title">
@@ -1010,7 +1023,44 @@ const corvetteAttributes = [
                   </span>
                 </div>
                 <div slot="content">
-                  {outputItem.RequiredItems?.length > 0 && <NestedList items={outputItem} />}
+                  {outputItem.RequiredItems?.length > 0 && <NestedList items={outputItem} multiplyByParent={false} />}
+                </div>
+              </Accordion>
+            </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Cooking section -->
+  {outputCooked.length > 0 && (
+    <div id="cooking" class="border-t border-gray-600/60 py-6">
+      <h2 class="relative mb-3 text-center">
+        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
+          How to cook {item.Name} in Nutrient Processor
+        </span>
+      </h2>
+
+      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+        {outputCooked.map((outputItem) => (
+          <div class="min-w-0 rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
+              <Accordion>
+                <div class="flex items-center gap-3" slot="title">
+                  <Image
+                    src={`https://nomansskyrecipes.com/images/items/${outputItem.Icon}`}
+                    alt={outputItem.Name}
+                    sizes="40px"
+                    width={40}
+                    height={40}
+                    class="flex-shrink-0"
+                  />
+                  <span class="text-white font-medium truncate flex items-center gap-2">
+                    {outputItem.Name}
+                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
+                  </span>
+                </div>
+                <div slot="content">
+                  {outputItem.RequiredItems?.length > 0 && <NestedList items={outputItem} multiplyByParent={false} />}
                 </div>
               </Accordion>
             </div>
@@ -1109,16 +1159,104 @@ const corvetteAttributes = [
     </div>
   )}
 
-  <!-- Used to create (crafting: products, upgrades, exocraft, cooking, etc.) -->
+  <!-- Cooked to create (cooking only) -->
+  {groupedInputCooked.length > 0 && (
+    <div id="cooked-to-create" class="mt-6 border-t border-gray-600/60 py-6">
+      <h2 class="relative mb-3 text-center">
+        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
+          What can you cook from {item.Name}?
+        </span>
+        <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCooked.length})</span>
+      </h2>
+      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+        {groupedInputCooked.map((usedInItem) => (
+          <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
+            <Accordion>
+              <div class="flex items-center gap-3" slot="title">
+                <Image
+                  src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                  alt={usedInItem.Name}
+                  sizes="40px"
+                  width={40}
+                  height={40}
+                  class="flex-shrink-0"
+                />
+                <div class="flex-1 min-w-0">
+                  <span class="text-white font-medium">{usedInItem.Name}</span>
+                  {usedInItem.recipes.length > 1 && (
+                    <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
+                  )}
+                </div>
+              </div>
+              <div slot="content" class="pt-2 overflow-x-auto">
+                <table class="w-full text-sm table-fixed">
+                  <thead>
+                    <tr class="border-b border-gray-600/50">
+                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
+                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {usedInItem.recipes.map((recipe) => (
+                      <tr class="border-b border-gray-600/30 last:border-b-0">
+                        <td class="py-2 px-2 align-top">
+                          <div class="flex flex-col gap-1">
+                            {recipe.inputs.map((ing) => (
+                              <a
+                                href={getSlug(ing.Id)}
+                                class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit"
+                              >
+                                <Image
+                                  src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
+                                  alt={ing.Name}
+                                  sizes="20px"
+                                  width={20}
+                                  height={20}
+                                  class="flex-shrink-0"
+                                />
+                                <span class="text-white">{ing.Name}</span>
+                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
+                              </a>
+                            ))}
+                          </div>
+                        </td>
+                        <td class="py-2 px-2 align-top">
+                          <a
+                            href={getSlug(usedInItem.Id)}
+                            class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
+                          >
+                            <Image
+                              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                              alt={usedInItem.Name}
+                              sizes="20px"
+                              width={20}
+                              height={20}
+                              class="flex-shrink-0"
+                            />
+                            <span>{usedInItem.Name}</span>
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Accordion>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Used to create (crafting: products, upgrades, exocraft, etc.) -->
   {groupedInputCrafting.length > 0 && (
     <div id="used-to-create" class="mt-6 border-t border-gray-600/60 py-6">
       <h2 class="relative mb-3 text-center">
         <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
           {(item.Slug && item.Slug.startsWith('fish/'))
             ? 'What does this fish yield?'
-            : isFoodItem
-              ? `What can you cook with ${item.Name}?`
-              : `What can you craft with ${item.Name}?`}
+            : `What can you craft with ${item.Name}?`}
         </span>
         <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCrafting.length})</span>
       </h2>
