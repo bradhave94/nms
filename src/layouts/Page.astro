@@ -633,9 +633,9 @@ const corvetteAttributes = [
 ].filter((attribute): attribute is { label: string; value: string } => Boolean(attribute.value));
 ---
 
-<div class="mx-auto max-w-6xl lg:pt-12 bg-gray-800 p-3 lg:p-8">
+<div class="mx-auto bg-gray-800 p-4 ">
   <Breadcrumbs
-    className="mb-4"
+    className="px-0"
     items={[
       { name: 'Home', href: '/' },
       { name: categoryName, href: categoryPath },
@@ -643,7 +643,7 @@ const corvetteAttributes = [
     ]}
   />
   <!-- Item details section -->
-  <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8">
+  <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8 lg:pt-12 lg:py-8 max-w-4xl mx-auto">
     <div class="flex flex-col-reverse items-center">
       <Image
         src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
@@ -821,7 +821,7 @@ const corvetteAttributes = [
         </span>
       </h2>
 
-      <div class="max-w-2xl mx-auto">
+      <div class="max-w-4xl mx-auto">
         {/* Crafting tree - full width, single column */}
         <div class="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
           {data.map((craftItem) => (

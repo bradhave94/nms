@@ -9,7 +9,7 @@ interface Props {
 const { items, className = '' } = Astro.props as Props;
 ---
 
-<nav aria-label="Breadcrumb" class={`mx-auto max-w-6xl px-4 sm:px-0 ${className}`}>
+<nav aria-label="Breadcrumb" class={`mx-auto px-4 ${className}`}>
 	<ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-300">
 		{
 			items.map((item, index) => (
