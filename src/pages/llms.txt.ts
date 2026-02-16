@@ -1,10 +1,11 @@
 import type { APIRoute } from 'astro';
+import { SITE } from '@config';
 
 const getLlmsTxt = (base: string) => `# No Man's Sky Recipes
 
 > Comprehensive guide to items, refining, crafting, and cooking in No Man's Sky. Find recipes, ingredients, and how to obtain any in-game item.
 
-Data is current as of the Remnant update. Item pages include crafting trees, refiner recipes, and where each item is used.
+Data is current as of ${SITE.version_name} (${SITE.version_date}). Item pages include crafting trees, refiner recipes, and where each item is used.
 
 ## Guides
 
