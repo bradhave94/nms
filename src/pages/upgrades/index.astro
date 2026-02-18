@@ -62,7 +62,7 @@ const { title, description } = buildPaginatedMeta('Upgrades', baseDescription, p
 			page.data.map((item, index) => (
 				<CompactCard
 					card={{
-						name: item.Group || item.Name,
+						name: item.Name,
 						image: 'https://nomansskyrecipes.com/images/items/' + item.Icon,
 						link: getSlug(item),
 					}}

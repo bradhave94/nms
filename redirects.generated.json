@@ -1206,12 +1206,12 @@
   },
   {
     "source": "/buildings/build206",
-    "destination": "/other/CUBEROOF",
+    "destination": "/buildings/CUBEROOF",
     "permanent": true
   },
   {
     "source": "/buildings/build207",
-    "destination": "/other/DOOR2",
+    "destination": "/buildings/DOOR2",
     "permanent": true
   },
   {
@@ -3181,7 +3181,7 @@
   },
   {
     "source": "/buildings/build65",
-    "destination": "/other/MAINROOM",
+    "destination": "/buildings/MAINROOM",
     "permanent": true
   },
   {
@@ -3216,7 +3216,7 @@
   },
   {
     "source": "/buildings/build67",
-    "destination": "/other/CORRIDOR",
+    "destination": "/buildings/CORRIDOR",
     "permanent": true
   },
   {
@@ -3266,7 +3266,7 @@
   },
   {
     "source": "/buildings/build68",
-    "destination": "/other/CORRIDORL",
+    "destination": "/buildings/CORRIDORL",
     "permanent": true
   },
   {
@@ -3321,7 +3321,7 @@
   },
   {
     "source": "/buildings/build69",
-    "destination": "/other/CORRIDORT",
+    "destination": "/buildings/CORRIDORT",
     "permanent": true
   },
   {
@@ -3361,7 +3361,7 @@
   },
   {
     "source": "/buildings/build70",
-    "destination": "/other/CORRIDORX",
+    "destination": "/buildings/CORRIDORX",
     "permanent": true
   },
   {
@@ -3381,7 +3381,7 @@
   },
   {
     "source": "/buildings/build71",
-    "destination": "/other/CORRIDORC",
+    "destination": "/buildings/CORRIDORC",
     "permanent": true
   },
   {
@@ -3401,7 +3401,7 @@
   },
   {
     "source": "/buildings/build72",
-    "destination": "/other/GLASSCORRIDOR",
+    "destination": "/buildings/GLASSCORRIDOR",
     "permanent": true
   },
   {
@@ -3436,7 +3436,7 @@
   },
   {
     "source": "/buildings/build73",
-    "destination": "/other/VIEWSPHERE",
+    "destination": "/buildings/VIEWSPHERE",
     "permanent": true
   },
   {
@@ -3451,7 +3451,7 @@
   },
   {
     "source": "/buildings/build74",
-    "destination": "/other/BIOROOM",
+    "destination": "/buildings/BIOROOM",
     "permanent": true
   },
   {
@@ -3471,7 +3471,7 @@
   },
   {
     "source": "/buildings/build75",
-    "destination": "/other/CUBEROOM",
+    "destination": "/buildings/CUBEROOM",
     "permanent": true
   },
   {
@@ -3551,7 +3551,7 @@
   },
   {
     "source": "/buildings/build77",
-    "destination": "/other/CUBEGLASS",
+    "destination": "/buildings/CUBEGLASS",
     "permanent": true
   },
   {
@@ -3606,7 +3606,7 @@
   },
   {
     "source": "/buildings/build78",
-    "destination": "/other/CUBEROOMCURVED",
+    "destination": "/buildings/CUBEROOMCURVED",
     "permanent": true
   },
   {
@@ -3646,7 +3646,7 @@
   },
   {
     "source": "/buildings/build79",
-    "destination": "/other/CURVEDCUBEROOF",
+    "destination": "/buildings/CURVEDCUBEROOF",
     "permanent": true
   },
   {
@@ -3671,7 +3671,7 @@
   },
   {
     "source": "/buildings/build80",
-    "destination": "/other/CUBESTAIRS",
+    "destination": "/buildings/CUBESTAIRS",
     "permanent": true
   },
   {
@@ -3701,7 +3701,7 @@
   },
   {
     "source": "/buildings/build81",
-    "destination": "/other/CUBEINNERDOOR",
+    "destination": "/buildings/CUBEINNERDOOR",
     "permanent": true
   },
   {
@@ -3741,12 +3741,12 @@
   },
   {
     "source": "/buildings/build817",
-    "destination": "/other/MAINROOMCUBE",
+    "destination": "/buildings/MAINROOMCUBE",
     "permanent": true
   },
   {
     "source": "/buildings/build818",
-    "destination": "/other/MAINROOMCUBEF",
+    "destination": "/buildings/MAINROOMCUBEF",
     "permanent": true
   },
   {
@@ -3756,7 +3756,7 @@
   },
   {
     "source": "/buildings/build82",
-    "destination": "/other/CUBEWALL",
+    "destination": "/buildings/CUBEWALL",
     "permanent": true
   },
   {
@@ -4011,7 +4011,7 @@
   },
   {
     "source": "/buildings/build87",
-    "destination": "/other/WALLFLOORLADDER",
+    "destination": "/buildings/WALLFLOORLADDER",
     "permanent": true
   },
   {
@@ -4066,7 +4066,7 @@
   },
   {
     "source": "/buildings/build88",
-    "destination": "/other/FOUNDATION",
+    "destination": "/buildings/FOUNDATION",
     "permanent": true
   },
   {
@@ -4116,7 +4116,7 @@
   },
   {
     "source": "/buildings/build89",
-    "destination": "/other/MAINROOMFRAME",
+    "destination": "/buildings/MAINROOMFRAME",
     "permanent": true
   },
   {
@@ -4176,7 +4176,7 @@
   },
   {
     "source": "/buildings/build90",
-    "destination": "/other/CUBEFRAME",
+    "destination": "/buildings/CUBEFRAME",
     "permanent": true
   },
   {
@@ -8415,6 +8415,16 @@
     "permanent": true
   },
   {
+    "source": "/other/other143",
+    "destination": "/upgrades/UP_SENGUN",
+    "permanent": true
+  },
+  {
+    "source": "/other/other146",
+    "destination": "/upgrades/UP_SENGUN",
+    "permanent": true
+  },
+  {
     "source": "/other/other149",
     "destination": "/other/EXPD_TITLE02A",
     "permanent": true
@@ -9441,7 +9451,7 @@
   },
   {
     "source": "/other/other4",
-    "destination": "/other/BUILDTOWER",
+    "destination": "/buildings/BUILDTOWER",
     "permanent": true
   },
   {
@@ -9467,6 +9477,11 @@
   {
     "source": "/other/other403",
     "destination": "/other/TWITCH_FIREW07E",
+    "permanent": true
+  },
+  {
+    "source": "/other/other404",
+    "destination": "/upgrades/U_ROBOSUIT",
     "permanent": true
   },
   {
@@ -12380,6 +12395,11 @@
     "permanent": true
   },
   {
+    "source": "/products/prod12",
+    "destination": "/upgrades/FRIG_BOOST_SPD",
+    "permanent": true
+  },
+  {
     "source": "/products/prod120",
     "destination": "/upgrades/U_FR_HYP1",
     "permanent": true
@@ -12427,6 +12447,11 @@
   {
     "source": "/products/prod129",
     "destination": "/upgrades/U_FR_FUEL2",
+    "permanent": true
+  },
+  {
+    "source": "/products/prod13",
+    "destination": "/upgrades/FRIG_BOOST_COM",
     "permanent": true
   },
   {
@@ -12480,6 +12505,11 @@
     "permanent": true
   },
   {
+    "source": "/products/prod14",
+    "destination": "/upgrades/FRIG_BOOST_EXP",
+    "permanent": true
+  },
+  {
     "source": "/products/prod140",
     "destination": "/upgrades/U_FR_EXP1",
     "permanent": true
@@ -12520,6 +12550,11 @@
     "permanent": true
   },
   {
+    "source": "/products/prod15",
+    "destination": "/upgrades/FRIG_BOOST_TRA",
+    "permanent": true
+  },
+  {
     "source": "/products/prod150",
     "destination": "/products/CHART_HIVE",
     "permanent": true
@@ -12555,8 +12590,33 @@
     "permanent": true
   },
   {
+    "source": "/products/prod16",
+    "destination": "/upgrades/FRIG_BOOST_MIN",
+    "permanent": true
+  },
+  {
     "source": "/products/prod160",
     "destination": "/products/GAS_BRAIN_LOC",
+    "permanent": true
+  },
+  {
+    "source": "/products/prod161",
+    "destination": "/upgrades/U_CANNON1",
+    "permanent": true
+  },
+  {
+    "source": "/products/prod162",
+    "destination": "/upgrades/U_CANNON1",
+    "permanent": true
+  },
+  {
+    "source": "/products/prod163",
+    "destination": "/upgrades/U_CANNON1",
+    "permanent": true
+  },
+  {
+    "source": "/products/prod164",
+    "destination": "/upgrades/U_CANNON1",
     "permanent": true
   },
   {
@@ -13450,6 +13510,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/conTech108",
+    "destination": "/upgrades/SUIT_INV_TOKEN",
+    "permanent": true
+  },
+  {
     "source": "/technology/conTech109",
     "destination": "/technology/S9_SUITTREE",
     "permanent": true
@@ -13526,7 +13591,7 @@
   },
   {
     "source": "/technology/conTech2",
-    "destination": "/other/BUILDLANDINGPAD",
+    "destination": "/buildings/BUILDLANDINGPAD",
     "permanent": true
   },
   {
@@ -13541,22 +13606,22 @@
   },
   {
     "source": "/technology/conTech22",
-    "destination": "/other/GARAGE_S",
+    "destination": "/buildings/GARAGE_S",
     "permanent": true
   },
   {
     "source": "/technology/conTech23",
-    "destination": "/other/GARAGE_M",
+    "destination": "/buildings/GARAGE_M",
     "permanent": true
   },
   {
     "source": "/technology/conTech24",
-    "destination": "/other/GARAGE_L",
+    "destination": "/buildings/GARAGE_L",
     "permanent": true
   },
   {
     "source": "/technology/conTech25",
-    "destination": "/other/GARAGE_B",
+    "destination": "/buildings/GARAGE_B",
     "permanent": true
   },
   {
@@ -13750,6 +13815,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/conTech64",
+    "destination": "/upgrades/WEAP_INV_TOKEN",
+    "permanent": true
+  },
+  {
     "source": "/technology/conTech65",
     "destination": "/technology/CONTAINER0",
     "permanent": true
@@ -13776,7 +13846,7 @@
   },
   {
     "source": "/technology/conTech7",
-    "destination": "/other/BUILDSAVE",
+    "destination": "/buildings/BUILDSAVE",
     "permanent": true
   },
   {
@@ -14725,6 +14795,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech105",
+    "destination": "/upgrades/SUB_RECHARGE",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech106",
     "destination": "/technology/MAINT_TECH1",
     "permanent": true
@@ -14905,8 +14980,23 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech139",
+    "destination": "/upgrades/F_HACCESS1",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech14",
     "destination": "/technology/ATLASSUIT",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech140",
+    "destination": "/upgrades/F_HACCESS2",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech141",
+    "destination": "/upgrades/F_HACCESS3",
     "permanent": true
   },
   {
@@ -14932,6 +15022,11 @@
   {
     "source": "/technology/tech146",
     "destination": "/technology/UT_QUICKWARP",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech147",
+    "destination": "/upgrades/UT_SHIPMINI",
     "permanent": true
   },
   {
@@ -15055,6 +15150,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech17",
+    "destination": "/upgrades/UT_WATERJET",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech170",
     "destination": "/exocraft/EXO_PROT_COLD",
     "permanent": true
@@ -15075,8 +15175,18 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech174",
+    "destination": "/upgrades/VEHICLE_SCAN1",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech175",
     "destination": "/technology/MECH_ENGINE",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech176",
+    "destination": "/upgrades/MECH_FUEL",
     "permanent": true
   },
   {
@@ -15117,6 +15227,16 @@
   {
     "source": "/technology/tech183",
     "destination": "/exocraft/MECH_PROT",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech184",
+    "destination": "/upgrades/UT_BOLTBOUNCE",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech185",
+    "destination": "/upgrades/UT_SMGBOUNCE",
     "permanent": true
   },
   {
@@ -15195,6 +15315,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech2",
+    "destination": "/upgrades/UT_PROTECT",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech20",
     "destination": "/technology/UT_TRANSLATE2",
     "permanent": true
@@ -15230,8 +15355,23 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech206",
+    "destination": "/upgrades/UT_RAIL_STUN",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech207",
+    "destination": "/upgrades/UT_SMG_DOT",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech208",
     "destination": "/technology/CANNON",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech209",
+    "destination": "/upgrades/UT_CANNON",
     "permanent": true
   },
   {
@@ -15435,6 +15575,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech247",
+    "destination": "/upgrades/UT_BUI_SCAN",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech248",
     "destination": "/technology/UT_BUI_SCAN2",
     "permanent": true
@@ -15500,6 +15645,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech26",
+    "destination": "/upgrades/UT_LAUNCHER",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech260",
     "destination": "/technology/DENYSUIT",
     "permanent": true
@@ -15547,6 +15697,11 @@
   {
     "source": "/technology/tech269",
     "destination": "/technology/MAINT_S13",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech27",
+    "destination": "/upgrades/UT_LAUNCHCHARGE",
     "permanent": true
   },
   {
@@ -15635,6 +15790,16 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech286",
+    "destination": "/upgrades/HDRIVEBOOST4",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech287",
+    "destination": "/upgrades/F_HACCESS4",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech288",
     "destination": "/technology/EXO_REFINER",
     "permanent": true
@@ -15680,13 +15845,38 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech30",
+    "destination": "/upgrades/HDRIVEBOOST1",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech31",
+    "destination": "/upgrades/HDRIVEBOOST2",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech32",
+    "destination": "/upgrades/HDRIVEBOOST3",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech33",
     "destination": "/technology/SHIPSHIELD",
     "permanent": true
   },
   {
+    "source": "/technology/tech34",
+    "destination": "/upgrades/UT_SHIPSHIELD",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech35",
     "destination": "/technology/SHIPROCKETS",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech36",
+    "destination": "/upgrades/UT_ROCKETS",
     "permanent": true
   },
   {
@@ -15700,6 +15890,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech4",
+    "destination": "/upgrades/UT_ENERGY",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech40",
     "destination": "/technology/SHIPSCAN_COMBAT",
     "permanent": true
@@ -15710,8 +15905,18 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech42",
+    "destination": "/upgrades/UT_SHIPLAS",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech43",
     "destination": "/technology/SHIPSHOTGUN",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech44",
+    "destination": "/upgrades/UT_SHIPSHOT",
     "permanent": true
   },
   {
@@ -15720,8 +15925,18 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech46",
+    "destination": "/upgrades/UT_SHIPGUN",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech47",
     "destination": "/technology/SHIPPLASMA",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech48",
+    "destination": "/upgrades/UT_SHIPBLOB",
     "permanent": true
   },
   {
@@ -15755,6 +15970,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech6",
+    "destination": "/upgrades/UT_JET",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech60",
     "destination": "/other/SHIPSLOT_DMG5",
     "permanent": true
@@ -15772,6 +15992,16 @@
   {
     "source": "/technology/tech63",
     "destination": "/technology/SCAN1",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech64",
+    "destination": "/upgrades/UT_SCAN",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech65",
+    "destination": "/upgrades/UT_SURVEY",
     "permanent": true
   },
   {
@@ -15795,6 +16025,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech7",
+    "destination": "/upgrades/UT_JUMP",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech70",
     "destination": "/technology/STRONGLASER",
     "permanent": true
@@ -15810,8 +16045,18 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech73",
+    "destination": "/upgrades/UT_BOLT",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech74",
     "destination": "/technology/BOLT_SM",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech75",
+    "destination": "/upgrades/LASER_XO",
     "permanent": true
   },
   {
@@ -15830,6 +16075,11 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech79",
+    "destination": "/upgrades/UT_RAIL",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech8",
     "destination": "/technology/UT_HOT",
     "permanent": true
@@ -15840,8 +16090,18 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech81",
+    "destination": "/upgrades/UT_SHOT",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech82",
     "destination": "/technology/SMG",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech83",
+    "destination": "/upgrades/UT_SMG",
     "permanent": true
   },
   {
@@ -15905,8 +16165,18 @@
     "permanent": true
   },
   {
+    "source": "/technology/tech96",
+    "destination": "/upgrades/VEHICLE_SCAN2",
+    "permanent": true
+  },
+  {
     "source": "/technology/tech98",
     "destination": "/exocraft/VEHICLE_LASER",
+    "permanent": true
+  },
+  {
+    "source": "/technology/tech99",
+    "destination": "/upgrades/VEHICLE_LASER1",
     "permanent": true
   }
 ]
