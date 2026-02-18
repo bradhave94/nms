@@ -48,7 +48,12 @@ const webSiteSchema: JsonLdObject = {
 const extraStructuredData = structuredData
 	? (Array.isArray(structuredData) ? structuredData : [structuredData])
 	: [];
-const mergedStructuredData: JsonLdObject[] = [organizationSchema, webSiteSchema, ...extraStructuredData];
+const isHomePage = Astro.url.pathname === '/';
+const mergedStructuredData: JsonLdObject[] = [
+	...(isHomePage ? [organizationSchema] : []),
+	webSiteSchema,
+	...extraStructuredData,
+];
 const mergedStructuredDataJson = JSON.stringify(mergedStructuredData).replace(/</g, '\\u003c');
 
 inject();
