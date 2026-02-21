@@ -611,25 +611,66 @@ let recipeSchema: JsonLdObject | undefined;
 const recipeIngredients = craftingHowToIngredients.length > 0
   ? craftingHowToIngredients
   : uniqueHowToMethods.find((m) => m.action === 'cook')?.ingredients ?? [];
+const cookingRecipeMethod = uniqueHowToMethods.find((method) => method.action === 'cook');
+const recipeSourceMethod = cookingRecipeMethod ?? uniqueHowToMethods[0];
+const recipeOutputQuantity = recipeSourceMethod?.outputQuantity ?? 1;
+const recipeToolName = recipeSourceMethod?.tool ?? 'Nutrient Processor';
+const recipePrepMinutes = Math.max(1, Math.min(30, recipeIngredients.length * 2));
+const recipeCookMinutes = Math.max(1, Math.min(15, Math.ceil(recipeIngredients.length / 2)));
+const recipeKeywords = Array.from(
+  new Set(
+    [
+      "No Man's Sky",
+      "No Man's Sky recipes",
+      'Nutrient Processor',
+      item.Name,
+      item.Group,
+      categoryName,
+    ].filter((keyword): keyword is string => Boolean(keyword))
+  )
+).join(', ');
 if (isFoodItem && recipeIngredients.length > 0) {
+  const ingredientSentence = recipeIngredients.map((ingredient) => `${ingredient.Name} (x${ingredient.Quantity})`).join(', ');
   recipeSchema = {
     '@context': 'https://schema.org',
     '@type': 'Recipe',
     name: item.Name,
     description: item.Description ?? `How to cook ${item.Name} in No Man's Sky`,
+    url: canonicalUrl,
+    mainEntityOfPage: canonicalUrl,
     image: itemImageUrl,
+    author: {
+      '@type': 'Organization',
+      name: "No Man's Sky Recipes",
+    },
+    recipeCategory: item.Group || 'Food',
+    recipeCuisine: "No Man's Sky",
+    keywords: recipeKeywords,
+    prepTime: `PT${recipePrepMinutes}M`,
+    cookTime: `PT${recipeCookMinutes}M`,
+    totalTime: `PT${recipePrepMinutes + recipeCookMinutes}M`,
+    nutrition: {
+      '@type': 'NutritionInformation',
+      servingSize: `${recipeOutputQuantity} in-game item${recipeOutputQuantity > 1 ? 's' : ''}`,
+    },
     recipeIngredient: recipeIngredients.map((i) => `${i.Name} x${i.Quantity}`),
     recipeInstructions: [
       {
         '@type': 'HowToStep',
-        text: `Gather ${recipeIngredients.map((i) => `${i.Name} (x${i.Quantity})`).join(', ')}.`,
+        name: 'Gather ingredients',
+        text: `Gather ${ingredientSentence}.`,
+        url: `${canonicalUrl}#recipe-step-1`,
+        image: itemImageUrl,
       },
       {
         '@type': 'HowToStep',
-        text: `Combine the ingredients in a Nutrient Processor to cook ${item.Name}.`,
+        name: `Cook in ${recipeToolName}`,
+        text: `Combine the ingredients in ${recipeToolName} to cook ${item.Name}${recipeOutputQuantity > 1 ? ` (x${recipeOutputQuantity}).` : '.'}`,
+        url: `${canonicalUrl}#recipe-step-2`,
+        image: itemImageUrl,
       },
     ],
-    recipeYield: '1',
+    recipeYield: recipeOutputQuantity.toString(),
   };
 }
 
@@ -784,7 +825,7 @@ const corvetteAttributes = [
         </p>
       )}
 
-      <p class="item-summary lg:text-lg pt-4 text-gray-300" role={"doc-abstract" as "doc-abstract"}>
+      <p class="item-summary lg:text-lg pt-4 text-gray-300" role={"doc-abstract" as const}>
         {answerSummary}
       </p>
 
