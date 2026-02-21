@@ -217,7 +217,14 @@ const createArray = (
 };
 
 type IOItem = { Id: string; Quantity: number };
-type RecipeOutput = { Id?: string; Slug?: string; Operation?: string; Output?: IOItem; Inputs?: IOItem[] };
+type RecipeOutput = {
+  Id?: string;
+  Slug?: string;
+  Operation?: string;
+  Time?: string | number;
+  Output?: IOItem;
+  Inputs?: IOItem[];
+};
 type RecipeInput = { Output?: IOItem; Inputs?: IOItem[] };
 type UsedInItem = {
   Id: string;
@@ -427,6 +434,20 @@ const toHowToIngredients = (inputs: IOItem[]): HowToIngredient[] =>
     return acc;
   }, []);
 
+const secondsToIsoDuration = (seconds: number): string => {
+  const safeSeconds = Math.max(1, Math.round(seconds));
+  const hours = Math.floor(safeSeconds / 3600);
+  const minutes = Math.floor((safeSeconds % 3600) / 60);
+  const remainingSeconds = safeSeconds % 60;
+  let duration = 'PT';
+  if (hours > 0) duration += `${hours}H`;
+  if (minutes > 0) duration += `${minutes}M`;
+  if (remainingSeconds > 0 || (hours === 0 && minutes === 0)) {
+    duration += `${remainingSeconds}S`;
+  }
+  return duration;
+};
+
 const howToMethods: HowToMethod[] = [];
 const craftingHowToIngredients = toHowToIngredients(item.RequiredItems ?? []);
 if (craftingHowToIngredients.length > 0) {
@@ -608,28 +629,78 @@ const faqSchema: JsonLdObject = {
 };
 
 let recipeSchema: JsonLdObject | undefined;
-const recipeIngredients = craftingHowToIngredients.length > 0
-  ? craftingHowToIngredients
-  : uniqueHowToMethods.find((m) => m.action === 'cook')?.ingredients ?? [];
+const primaryCookMethod = uniqueHowToMethods.find((m) => m.action === 'cook');
+const recipeIngredients =
+  craftingHowToIngredients.length > 0
+    ? craftingHowToIngredients
+    : primaryCookMethod?.ingredients ?? [];
 if (isFoodItem && recipeIngredients.length > 0) {
+  const recipeIngredientSummary = recipeIngredients.map((i) => `${i.Name} (x${i.Quantity})`).join(', ');
+  const recipeKeywords = [
+    item.Name,
+    `${item.Name} recipe`,
+    'No Man\'s Sky',
+    'No Man\'s Sky cooking',
+    item.Group,
+    categoryName,
+  ].filter((keyword): keyword is string => Boolean(keyword && keyword.trim()));
+  const cookingRecipeTimes = outputRecipes.reduce<number[]>((times, recipe) => {
+    if (!recipe.Slug?.startsWith('nutrient-processor/')) return times;
+    const parsedTime =
+      typeof recipe.Time === 'number' ? recipe.Time : Number.parseFloat(String(recipe.Time ?? ''));
+    if (Number.isFinite(parsedTime) && parsedTime > 0) {
+      times.push(parsedTime);
+    }
+    return times;
+  }, []);
+  const cookTimeSeconds =
+    cookingRecipeTimes.length > 0
+      ? cookingRecipeTimes.reduce((sum, value) => sum + value, 0) / cookingRecipeTimes.length
+      : 5;
+  const prepTimeSeconds = Math.max(30, recipeIngredients.length * 15);
+  const totalTimeSeconds = prepTimeSeconds + cookTimeSeconds;
+  const recipeCategory = item.Group && item.Group !== 'None' ? item.Group : 'Food';
+  const nutritionCalories = Math.max(1, Math.round(Number(item.BaseValueUnits ?? 0)));
+
   recipeSchema = {
     '@context': 'https://schema.org',
     '@type': 'Recipe',
     name: item.Name,
+    url: canonicalUrl,
     description: item.Description ?? `How to cook ${item.Name} in No Man's Sky`,
     image: itemImageUrl,
+    author: {
+      '@type': 'Person',
+      name: SITE.author,
+    },
+    recipeCategory,
+    recipeCuisine: 'No Man\'s Sky',
+    keywords: recipeKeywords.join(', '),
+    prepTime: secondsToIsoDuration(prepTimeSeconds),
+    cookTime: secondsToIsoDuration(cookTimeSeconds),
+    totalTime: secondsToIsoDuration(totalTimeSeconds),
     recipeIngredient: recipeIngredients.map((i) => `${i.Name} x${i.Quantity}`),
     recipeInstructions: [
       {
         '@type': 'HowToStep',
-        text: `Gather ${recipeIngredients.map((i) => `${i.Name} (x${i.Quantity})`).join(', ')}.`,
+        name: 'Gather ingredients',
+        text: `Gather ${recipeIngredientSummary}.`,
+        url: canonicalUrl,
+        image: itemImageUrl,
       },
       {
         '@type': 'HowToStep',
+        name: `Cook ${item.Name}`,
         text: `Combine the ingredients in a Nutrient Processor to cook ${item.Name}.`,
+        url: canonicalUrl,
+        image: itemImageUrl,
       },
     ],
-    recipeYield: '1',
+    recipeYield: String(primaryCookMethod?.outputQuantity ?? 1),
+    nutrition: {
+      '@type': 'NutritionInformation',
+      calories: `${nutritionCalories.toLocaleString()} calories`,
+    },
   };
 }
 
