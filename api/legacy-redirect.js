@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const REDIRECTS_FILE = path.join(process.cwd(), "redirects.generated.json");
+const REDIRECTS_FILE = path.join(globalThis.process.cwd(), "redirects.generated.json");
 
 /** @type {Map<string, string> | null} */
 let redirectLookup = null;
