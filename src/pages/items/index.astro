@@ -23,7 +23,13 @@ const datasetSchema = {
 	url: `${siteOrigin}/items.json`,
 	isAccessibleForFree: true,
 	inLanguage: 'en',
-	creator: { '@id': `${siteOrigin}#organization` },
+	creator: {
+		'@type': 'Organization',
+		'@id': `${siteOrigin}#organization`,
+		name: "No Man's Sky Recipes",
+		url: `${siteOrigin}/`,
+	},
+	license: 'https://creativecommons.org/licenses/by-nc/4.0/',
 	distribution: {
 		'@type': 'DataDownload',
 		name: 'No Man\'s Sky Items JSON Feed',
