@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 import react from "@astrojs/react";
 
@@ -11,14 +11,10 @@ export default defineConfig({
     react({
       experimentalReactChildren: true
     }),
-    sitemap(),
-    tailwind({
-      config: {
-        applyBaseStyles: false
-      }
-    })
+    sitemap()
   ],
   vite: {
+    plugins: [tailwindcss()],
     build: {
       rollupOptions: {
         output: {

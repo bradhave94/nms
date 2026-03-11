@@ -807,7 +807,7 @@ const corvetteAttributes = [
       {item.Group && (
         <a
           href={`/items?group=${encodeURIComponent(item.Group)}`}
-          class="mt-2 block w-fit rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200 hover:bg-gray-600 hover:text-cyan-100 transition-colors"
+          class="mt-2 block w-fit rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200 hover:bg-gray-600 hover:text-cyan-100 transition-colors"
         >
           {item.Group}
         </a>
@@ -835,7 +835,7 @@ const corvetteAttributes = [
 
       {showBlueprintCost && (
         <div class="mt-4 flex flex-wrap gap-2">
-          <p class="inline-flex items-center gap-2 rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             <img
               src={blueprintIcon}
               alt="Blueprint Cost"
@@ -853,7 +853,7 @@ const corvetteAttributes = [
       {isCorvettePage && corvetteAttributes.length > 0 && (
         <div class="mt-4 flex flex-wrap gap-2">
           {corvetteAttributes.map((attribute) => (
-            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               {attribute.label}: {attribute.value}
             </p>
           ))}
@@ -863,7 +863,7 @@ const corvetteAttributes = [
       {isExocraftPage && exocraftPills.length > 0 && (
         <div class="mt-4 flex flex-wrap gap-2">
           {exocraftPills.map((pill) => (
-            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               {pill.label}: {pill.value}
             </p>
           ))}
@@ -873,7 +873,7 @@ const corvetteAttributes = [
       {isFishPage && (
         <div class="mt-4 flex flex-wrap gap-2">
           {fishItem.FishingTime && (
-            <p class="inline-flex items-center gap-2 rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               {showSunIcon && (
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
                   <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
@@ -890,25 +890,25 @@ const corvetteAttributes = [
           )}
 
           {fishItem.FishSize && (
-            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               Size: {fishItem.FishSize}
             </p>
           )}
 
           {fishItem.Quality && (
-            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               Quality: {fishItem.Quality}
             </p>
           )}
 
           {biomeLabel && (
-            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               Biomes: {biomeLabel}
             </p>
           )}
 
           {fishItem.NeedsStorm && (
-            <p class="inline-flex items-center gap-2 rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
                 <path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 6.2 8.5 3.5 3.5 0 0 0 7 18z" fill="currentColor"></path>
                 <path d="M12 12l-2 4h2l-1 4 4-6h-2l1-2z" fill="#0b0b0b"></path>
@@ -918,13 +918,13 @@ const corvetteAttributes = [
           )}
 
           {missionLabel && (
-            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               Mission: {missionLabel}
             </p>
           )}
 
           {catchChancePercent && (
-            <p class="rounded bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               Catch Chance: {catchChancePercent}
             </p>
           )}
@@ -941,7 +941,7 @@ const corvetteAttributes = [
           </h2>
           <div class="grid gap-3 md:grid-cols-2">
             {upgradeStats.map((stat) => (
-              <div class="rounded bg-slate-500/40 px-4 py-3">
+              <div class="rounded-sm bg-slate-500/40 px-4 py-3">
                 <p class="text-lg text-gray-100">{formatStatName(stat.name)}</p>
                 <p class="text-sm text-cyan-200">{formatStatRange(stat.name, stat.min, stat.max)}</p>
               </div>
@@ -951,7 +951,7 @@ const corvetteAttributes = [
       )}
 
       {showQuantityInput && (
-        <div class="sm:flex items-center mb-4 gap-4 mt-4 lg:sticky lg:top-4 lg:z-10 lg:py-2 lg:-mx-2 lg:px-2 lg:bg-gray-800/95 lg:rounded">
+        <div class="sm:flex items-center mb-4 gap-4 mt-4 lg:sticky lg:top-4 lg:z-10 lg:py-2 lg:-mx-2 lg:px-2 lg:bg-gray-800/95 lg:rounded-sm">
           <label for="quantity">Quantity</label>
           <input
             id="quantity"
@@ -988,11 +988,11 @@ const corvetteAttributes = [
                   sizes="48px"
                   width={48}
                   height={48}
-                  class="flex-shrink-0"
+                  class="shrink-0"
                 />
                 <h4 class="text-lg font-medium text-white flex items-center gap-2">
                   {craftItem.Name}
-                  <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
+                  <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
                 </h4>
               </div>
               <div slot="content">
@@ -1023,10 +1023,10 @@ const corvetteAttributes = [
                       sizes="24px"
                       width={24}
                       height={24}
-                      class="flex-shrink-0"
+                      class="shrink-0"
                     />
                     <span class="text-white font-medium">{rawItem.Name}</span>
-                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums" data-quantity={rawItem.Quantity}>{rawItem.Quantity.toLocaleString()}</span>
+                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums" data-quantity={rawItem.Quantity}>{rawItem.Quantity.toLocaleString()}</span>
                   </a>
                 ))}
             </div>
@@ -1056,11 +1056,11 @@ const corvetteAttributes = [
                     sizes="40px"
                     width={40}
                     height={40}
-                    class="flex-shrink-0"
+                    class="shrink-0"
                   />
                   <span class="text-white font-medium truncate flex items-center gap-2">
                     {outputItem.Name}
-                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
+                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
                   </span>
                 </div>
                 <div slot="content">
@@ -1093,11 +1093,11 @@ const corvetteAttributes = [
                     sizes="40px"
                     width={40}
                     height={40}
-                    class="flex-shrink-0"
+                    class="shrink-0"
                   />
                   <span class="text-white font-medium truncate flex items-center gap-2">
                     {outputItem.Name}
-                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
+                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
                   </span>
                 </div>
                 <div slot="content">
@@ -1130,7 +1130,7 @@ const corvetteAttributes = [
                   sizes="40px"
                   width={40}
                   height={40}
-                  class="flex-shrink-0"
+                  class="shrink-0"
                 />
                 <div class="flex-1 min-w-0">
                   <span class="text-white font-medium">{usedInItem.Name}</span>
@@ -1155,7 +1155,7 @@ const corvetteAttributes = [
                             {recipe.inputs.map((ing) => (
                               <a
                                 href={getSlug(ing.Id)}
-                                class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit"
+                                class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
                               >
                                 <Image
                                   src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
@@ -1163,10 +1163,10 @@ const corvetteAttributes = [
                                   sizes="20px"
                                   width={20}
                                   height={20}
-                                  class="flex-shrink-0"
+                                  class="shrink-0"
                                 />
                                 <span class="text-white">{ing.Name}</span>
-                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
+                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
                               </a>
                             ))}
                           </div>
@@ -1182,10 +1182,10 @@ const corvetteAttributes = [
                               sizes="20px"
                               width={20}
                               height={20}
-                              class="flex-shrink-0"
+                              class="shrink-0"
                             />
                             <span>{usedInItem.Name}</span>
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
                           </a>
                         </td>
                       </tr>
@@ -1220,7 +1220,7 @@ const corvetteAttributes = [
                   sizes="40px"
                   width={40}
                   height={40}
-                  class="flex-shrink-0"
+                  class="shrink-0"
                 />
                 <div class="flex-1 min-w-0">
                   <span class="text-white font-medium">{usedInItem.Name}</span>
@@ -1245,7 +1245,7 @@ const corvetteAttributes = [
                             {recipe.inputs.map((ing) => (
                               <a
                                 href={getSlug(ing.Id)}
-                                class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit"
+                                class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
                               >
                                 <Image
                                   src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
@@ -1253,10 +1253,10 @@ const corvetteAttributes = [
                                   sizes="20px"
                                   width={20}
                                   height={20}
-                                  class="flex-shrink-0"
+                                  class="shrink-0"
                                 />
                                 <span class="text-white">{ing.Name}</span>
-                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
+                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
                               </a>
                             ))}
                           </div>
@@ -1272,10 +1272,10 @@ const corvetteAttributes = [
                               sizes="20px"
                               width={20}
                               height={20}
-                              class="flex-shrink-0"
+                              class="shrink-0"
                             />
                             <span>{usedInItem.Name}</span>
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
                           </a>
                         </td>
                       </tr>
@@ -1315,7 +1315,7 @@ const corvetteAttributes = [
                   sizes="40px"
                   width={40}
                   height={40}
-                  class="flex-shrink-0"
+                  class="shrink-0"
                 />
                 <div class="flex-1 min-w-0">
                   <span class="text-white font-medium">{usedInItem.Name}</span>
@@ -1340,7 +1340,7 @@ const corvetteAttributes = [
                             {recipe.inputs.map((ing) => (
                               <a
                                 href={getSlug(ing.Id)}
-                                class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit"
+                                class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
                               >
                                 <Image
                                   src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
@@ -1348,10 +1348,10 @@ const corvetteAttributes = [
                                   sizes="20px"
                                   width={20}
                                   height={20}
-                                  class="flex-shrink-0"
+                                  class="shrink-0"
                                 />
                                 <span class="text-white">{ing.Name}</span>
-                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
+                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
                               </a>
                             ))}
                           </div>
@@ -1367,10 +1367,10 @@ const corvetteAttributes = [
                               sizes="20px"
                               width={20}
                               height={20}
-                              class="flex-shrink-0"
+                              class="shrink-0"
                             />
                             <span>{usedInItem.Name}</span>
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
                           </a>
                         </td>
                       </tr>
@@ -1457,10 +1457,10 @@ const corvetteAttributes = [
                               ${(recipe.inputs || [])
                                 .map(
                                   (ing) => `
-                                    <a href="${escapeHtml(ing.href)}" class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-gray-800/80 hover:bg-gray-700/80 transition-colors w-fit">
-                                      <img src="${escapeHtml(`${imageBase}${ing.icon}`)}" alt="${escapeHtml(ing.name)}" class="h-5 w-5 flex-shrink-0" loading="lazy" />
+                                    <a href="${escapeHtml(ing.href)}" class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit">
+                                      <img src="${escapeHtml(`${imageBase}${ing.icon}`)}" alt="${escapeHtml(ing.name)}" class="h-5 w-5 shrink-0" loading="lazy" />
                                       <span class="text-white">${escapeHtml(ing.name)}</span>
-                                      <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity="${Number(ing.quantity)}">${numberFormatter.format(Number(ing.quantity))}</span>
+                                      <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity="${Number(ing.quantity)}">${numberFormatter.format(Number(ing.quantity))}</span>
                                     </a>
                                   `
                                 )
@@ -1469,9 +1469,9 @@ const corvetteAttributes = [
                           </td>
                           <td class="py-2 px-2 align-top">
                             <a href="${escapeHtml(usedInItem.href)}" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300">
-                              <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-5 w-5 flex-shrink-0" loading="lazy" />
+                              <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-5 w-5 shrink-0" loading="lazy" />
                               <span>${escapeHtml(usedInItem.name)}</span>
-                              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity="${Number(recipe.outputQuantity)}">${numberFormatter.format(Number(recipe.outputQuantity))}</span>
+                              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity="${Number(recipe.outputQuantity)}">${numberFormatter.format(Number(recipe.outputQuantity))}</span>
                             </a>
                           </td>
                         </tr>
@@ -1483,7 +1483,7 @@ const corvetteAttributes = [
                   card.className = 'rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden group';
                   card.innerHTML = `
                     <summary class="list-none cursor-pointer p-3 flex items-center gap-3">
-                      <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-10 w-10 flex-shrink-0" loading="lazy" />
+                      <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-10 w-10 shrink-0" loading="lazy" />
                       <div class="flex-1 min-w-0">
                         <span class="text-white font-medium">${escapeHtml(usedInItem.name)}</span>
                         ${usedInItem.ways > 1 ? `<span class="ml-1 text-xs text-gray-500">(${Number(usedInItem.ways)} ways)</span>` : ''}

@@ -81,7 +81,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
                 slug && item.href.includes(slug)
                   ? 'text-black'
                   : 'text-gray-400 group-hover:text-black',
-                'mr-2.5 flex-shrink-0 h-5 w-5 transition-colors'
+                'mr-2.5 h-5 w-5 shrink-0 transition-colors'
               )}
               aria-hidden="true"
             />
@@ -132,7 +132,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
                     <div className="absolute top-0 right-0 -mr-12 pt-2">
                       <button
                         type="button"
-                        className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-white"
                         onClick={() => setSidebarOpen(false)}
                       >
                         <span className="sr-only">Close sidebar</span>
@@ -141,7 +141,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
                     </div>
                   </Transition.Child>
                   <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
-                    <a href="/" className="flex flex-shrink-0 items-center px-4">
+                    <a href="/" className="flex shrink-0 items-center px-4">
                       <img
                         className="w-auto"
                         src="/images/logo-nms.webp"
@@ -152,7 +152,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
-              <div className="w-14 flex-shrink-0">
+              <div className="w-14 shrink-0">
                 {/* Force sidebar to shrink to fit close icon */}
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
         <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-56 lg:flex-col">
           <div className="flex min-h-0 flex-1 flex-col bg-black">
             <div className="flex flex-1 flex-col overflow-y-auto pt-3 pb-3">
-              <a href="/" className="flex flex-shrink-0 items-center mb-1 px-3">
+              <a href="/" className="flex shrink-0 items-center mb-1 px-3">
                 <img
                   className="w-auto"
                   src="/images/logo-nms.webp"
@@ -178,7 +178,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
           <div className="sticky top-0 z-10 bg-black p-3 text-right lg:hidden">
             <button
               type="button"
-              className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center border rounded-md text-white hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md border text-white hover:text-gray-600 focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-blue-500"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
