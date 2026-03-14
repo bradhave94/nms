@@ -34,6 +34,18 @@
         text-decoration: inherit;
     }
 
+    button,
+    [type='button'],
+    [type='reset'],
+    [type='submit'] {
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        background-image: none;
+        color: inherit;
+        font: inherit;
+    }
+
     @font-face {
         font-family: 'FuturaProBook';
         src: url('/fonts/FuturaProBook.woff2') format('woff2'),
