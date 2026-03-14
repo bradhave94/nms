@@ -29,6 +29,11 @@
         border-color: var(--color-gray-200, currentcolor);
     }
 
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
     @font-face {
         font-family: 'FuturaProBook';
         src: url('/fonts/FuturaProBook.woff2') format('woff2'),

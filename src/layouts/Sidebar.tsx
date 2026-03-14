@@ -24,6 +24,7 @@ import {
 } from '@heroicons/react/24/solid';
 import type { ComponentType, SVGProps } from 'react';
 import { classNames } from '../utils/classNames';
+import logo from '@assets/img/logo.svg';
 
 interface NavigationItem {
   name: string;
@@ -144,7 +145,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
                     <a href="/" className="flex shrink-0 items-center px-4">
                       <img
                         className="w-auto"
-                        src="/images/logo-nms.webp"
+                        src={logo.src}
                         alt="No Man's Sky Recipes"
                       />
                     </a>
@@ -166,7 +167,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
               <a href="/" className="flex shrink-0 items-center mb-1 px-3">
                 <img
                   className="w-auto"
-                  src="/images/logo-nms.webp"
+                  src={logo.src}
                   alt="No Man's Sky Recipes"
                 />
               </a>
