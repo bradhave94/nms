@@ -2,24 +2,23 @@
 const { open = false, id } = Astro.props;
 ---
 <accordion-component class="accordion-container" data-open={String(open)}>
-  <h3>
-    <button
-      id={`accordion-header-${id}`}
-      class="accordion flex items-center justify-between w-full px-3 py-2.5 group hover:bg-gray-800/50 transition-colors rounded-t-lg"
-      aria-expanded={open}
-      aria-controls={`accordion-panel-${id}`}
-    >
-      <slot name="title" />
-      <svg class="accordion-chevron w-4 h-4 flex-shrink-0 text-gray-500 group-hover:text-gray-400 transition-all" aria-hidden="true" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-      </svg>
-    </button>
-  </h3>
+
+  <button
+    id={`accordion-header-${id}`}
+    class="accordion flex w-full items-center justify-between gap-3 px-3 py-3 text-left transition-colors hover:bg-gray-800/50"
+    aria-expanded={open}
+    aria-controls={`accordion-panel-${id}`}
+  >
+    <slot name="title" />
+    <svg class="accordion-chevron h-4 w-4 shrink-0 text-gray-500 transition-all group-hover:text-gray-400" aria-hidden="true" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+    </svg>
+  </button>
   <div
     id={`accordion-panel-${id}`}
     role="region"
     aria-labelledby={`accordion-header-${id}`}
-    class="overflow-hidden px-3 pb-3 pt-1"
+    class="overflow-hidden px-3 pb-4 pt-3"
     hidden={!open}
   >
     <slot name="content" />
@@ -87,10 +86,15 @@ const { open = false, id } = Astro.props;
 </script>
 
 <style>
+	.accordion-container button {
+		border-radius: 0.75rem;
+	}
 	.accordion-container button[aria-expanded="false"] .accordion-chevron {
 		transform: rotate(-90deg);
 	}
 	.accordion-container button[aria-expanded="true"] {
 		background: rgba(255, 255, 255, 0.05);
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
 	}
 </style>

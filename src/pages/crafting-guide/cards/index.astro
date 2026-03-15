@@ -148,7 +148,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 							sizes="50px"
 							width={50}
 							height={50}
-							class="flex-shrink-0"
+							class="shrink-0"
 						/>
 						<div class="min-w-0 flex-1">
 							<h4 class="lg:text-lg truncate">
@@ -178,7 +178,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 								class="flex pt-4 p-2 transition-opacity hover:opacity-75 items-center gap-3"
 								style={'background: #' + input1.colour}
 							>
-								<div class="w-[50px] flex-shrink-0 flex justify-center">
+								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
 											'https://nomansskyrecipes.com/images/items/' +
@@ -193,7 +193,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 								<div class="flex items-center gap-2 min-w-0 flex-1">
 									<h4 class="lg:text-lg flex items-center gap-2 truncate">
 										{input1.name}
-										{input1.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input1.amount}>{input1.amount.toLocaleString()}</span>}
+										{input1.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input1.amount}>{input1.amount.toLocaleString()}</span>}
 									</h4>
 								</div>
 							</a>
@@ -207,7 +207,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 								class="flex p-2 transition-opacity hover:opacity-75 items-center gap-3"
 								style={'background: #' + input2.colour}
 							>
-								<div class="w-[50px] flex-shrink-0 flex justify-center">
+								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
 											'https://nomansskyrecipes.com/images/items/' +
@@ -222,7 +222,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 								<div class="flex items-center gap-2 min-w-0 flex-1">
 									<h4 class="lg:text-lg flex items-center gap-2 truncate">
 										{input2.name}
-										{input2.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input2.amount}>{input2.amount.toLocaleString()}</span>}
+										{input2.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input2.amount}>{input2.amount.toLocaleString()}</span>}
 									</h4>
 								</div>
 							</a>
@@ -236,7 +236,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 								class="flex p-2 transition-opacity hover:opacity-75 items-center gap-3"
 								style={'background: #' + input3.colour}
 							>
-								<div class="w-[50px] flex-shrink-0 flex justify-center">
+								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
 											'https://nomansskyrecipes.com/images/items/' +
@@ -251,7 +251,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 								<div class="flex items-center gap-2 min-w-0 flex-1">
 									<h4 class="lg:text-lg flex items-center gap-2 truncate">
 										{input3.name}
-										{input3.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input3.amount}>{input3.amount.toLocaleString()}</span>}
+										{input3.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input3.amount}>{input3.amount.toLocaleString()}</span>}
 									</h4>
 								</div>
 							</a>

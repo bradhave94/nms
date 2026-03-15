@@ -3,6 +3,9 @@
 	"type": "module",
 	"version": "6.2.0",
 	"private": true,
+	"engines": {
+		"node": "^20.19.1 || >=22.12.0"
+	},
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -16,24 +19,23 @@
 		"check:all": "npm run type-check && npm run lint"
 	},
 	"dependencies": {
-		"@astrojs/react": "^4.3.0",
-		"@astrojs/sitemap": "^3.4.1",
-		"@astrojs/tailwind": "^6.0.2",
+		"@astrojs/react": "^5.0.0",
+		"@astrojs/sitemap": "^3.7.1",
 		"@headlessui/react": "^1.7.10",
 		"@heroicons/react": "^2.0.15",
+		"@tailwindcss/vite": "^4.2.1",
 		"@types/react": "^18.0.28",
 		"@types/react-dom": "^18.0.10",
 		"@vercel/analytics": "^0.1.10",
-		"astro": "^5.10.1",
+		"astro": "^6.0.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"tabulator-tables": "^5.4.3",
-		"tailwindcss": "^3.2.6"
+		"tailwindcss": "^4.2.1"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.39.2",
-		"@tailwindcss/aspect-ratio": "^0.4.2",
-		"@tailwindcss/forms": "^0.5.3",
+		"@tailwindcss/forms": "^0.5.11",
 		"@typescript-eslint/eslint-plugin": "^8.54.0",
 		"@typescript-eslint/parser": "^8.54.0",
 		"eslint": "^9.39.2",
