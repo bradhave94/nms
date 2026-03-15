@@ -803,7 +803,7 @@ const corvetteAttributes = [
       />
     </div>
     <div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-      <h1 class="text-4xl">{item.Name}</h1>
+      <h1 class="text-4xl m-0 ">{item.Name}</h1>
       {item.Group && (
         <a
           href={`/items?group=${encodeURIComponent(item.Group)}`}
@@ -825,7 +825,7 @@ const corvetteAttributes = [
         </p>
       )}
 
-      <p class="item-summary lg:text-lg pt-4 text-gray-300" role={"doc-abstract" as const}>
+      <p class="item-summary m-0 lg:text-lg pt-4 text-gray-300">
         {answerSummary}
       </p>
 
@@ -955,7 +955,7 @@ const corvetteAttributes = [
           <label for="quantity">Quantity</label>
           <input
             id="quantity"
-            class="quantity bg-black border-blue-500 max-w-full w-24"
+            class="quantity bg-black border-blue-500 max-w-full w-24 text-white"
             name="quantity"
             type="number"
             min="1"
@@ -990,10 +990,10 @@ const corvetteAttributes = [
                   height={48}
                   class="shrink-0"
                 />
-                <h4 class="text-lg font-medium text-white flex items-center gap-2">
+                <p class="m-0 text-lg font-medium text-white flex items-center gap-2">
                   {craftItem.Name}
-                  <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
-                </h4>
+                  <span class="inline-flex items-center justify-center min-w-7 rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
+                </p>
               </div>
               <div slot="content">
                 {craftItem.RequiredItems?.length > 0 && <NestedList items={craftItem} depth={0} />}

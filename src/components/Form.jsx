@@ -100,7 +100,7 @@ export default function Form() {
 						</defs>
 					</svg>
 				</div>
-				<h1 className="text-3xl font-medium text-white">Share your feedback</h1>
+				<h1 className="m-0 text-3xl font-medium text-white">Share your feedback</h1>
 				<p className="mt-6 max-w-3xl text-base text-blue-50">
 					Let us know if you have any ideas or suggestions on how to improve our site.
 				</p>

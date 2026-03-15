@@ -60,7 +60,7 @@ inject();
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-full overflow-x-hidden bg-black font-nms text-lg text-white">
+<html lang="en" class="h-full  bg-black font-nms text-lg text-white">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -116,7 +116,7 @@ inject();
 		<meta name="google-adsense-account" content="ca-pub-8524094599848175" />
 		<script type="application/ld+json" set:html={mergedStructuredDataJson}></script>
 	</head>
-	<body class={`h-full overflow-x-hidden ${slug === '/' ? 'home' : ''}`}>
+	<body class={`h-full overflow-x-hidden m-0 ${slug === '/' ? 'home' : ''}`}>
 		<Sidebar client:idle slug={slug}>
 			<slot slot="layout" />
 		</Sidebar>
