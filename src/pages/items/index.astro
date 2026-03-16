@@ -71,12 +71,12 @@ const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 				aria-expanded="false"
 				aria-controls="group-dropdown"
 				aria-autocomplete="list"
-				class="h-10 w-48 rounded border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
+				class="h-10 w-48 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
 			/>
 			<div
 				id="group-dropdown"
 				role="listbox"
-				class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded border border-sky-700 bg-sky-900 shadow-lg hidden"
+				class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-sm border border-sky-700 bg-sky-900 shadow-lg hidden"
 			></div>
 		</div>
 		<div class="relative" id="type-combobox-wrapper">
@@ -90,12 +90,12 @@ const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 				aria-expanded="false"
 				aria-controls="type-dropdown"
 				aria-autocomplete="list"
-				class="h-10 w-36 rounded border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
+				class="h-10 w-36 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
 			/>
 			<div
 				id="type-dropdown"
 				role="listbox"
-				class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded border border-sky-700 bg-sky-900 shadow-lg hidden"
+				class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-sm border border-sky-700 bg-sky-900 shadow-lg hidden"
 			></div>
 		</div>
 		<div>
@@ -104,21 +104,21 @@ const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 				id="items-search-input"
 				type="text"
 				placeholder="Search by name..."
-				class="h-10 w-48 rounded border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400"
+				class="h-10 w-48 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
 			/>
 		</div>
 		<div class="flex gap-2">
 			<button
 				id="apply-filters"
 				type="button"
-				class="h-10 rounded bg-sky-600 px-4 font-semibold text-white hover:bg-sky-500 transition-colors"
+				class="h-10 rounded-sm bg-sky-600 px-4 font-semibold text-white transition-colors hover:bg-sky-500"
 			>
 				Apply
 			</button>
 			<button
 				id="reset-filters"
 				type="button"
-				class="h-10 rounded border border-sky-600 px-4 font-semibold text-sky-400 hover:bg-sky-900/50 hover:text-white transition-colors"
+				class="h-10 rounded-sm border border-sky-600 px-4 font-semibold text-sky-400 transition-colors hover:bg-sky-900/50 hover:text-white"
 			>
 				Reset
 			</button>
@@ -134,7 +134,7 @@ const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 		<button
 			id="retry-btn"
 			type="button"
-			class="rounded bg-sky-600 px-4 py-2 font-semibold text-white hover:bg-sky-500 transition-colors"
+			class="rounded-sm bg-sky-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-sky-500"
 		>
 			Retry
 		</button>
@@ -340,7 +340,7 @@ const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 		article.innerHTML = `
 			<a
 				href="${url}"
-				class="group block h-full overflow-hidden rounded-sm border border-sky-900 bg-sky-800/80 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-700/90"
+				class="group block h-full overflow-hidden rounded-xs border border-sky-900 bg-sky-800/80 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-700/90"
 			>
 				<div class="aspect-square bg-[#0b3550]">
 					<img

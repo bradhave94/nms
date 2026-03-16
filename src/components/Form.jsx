@@ -2,7 +2,7 @@ export default function Form() {
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-3">
 			{/* Contact information */}
-			<div className="relative overflow-hidden bg-gradient-to-b from-blue-500 to-blue-600 py-10 px-6 sm:px-10 xl:p-12">
+			<div className="relative overflow-hidden bg-linear-to-b from-blue-500 to-blue-600 py-10 px-6 sm:px-10 xl:p-12">
 				{/* Decorative angle backgrounds */}
 				<div className="pointer-events-none absolute inset-0 sm:hidden" aria-hidden="true">
 					<svg
@@ -100,7 +100,7 @@ export default function Form() {
 						</defs>
 					</svg>
 				</div>
-				<h1 className="text-3xl font-medium text-white">Share your feedback</h1>
+				<h1 className="m-0 text-3xl font-medium text-white">Share your feedback</h1>
 				<p className="mt-6 max-w-3xl text-base text-blue-50">
 					Let us know if you have any ideas or suggestions on how to improve our site.
 				</p>
@@ -124,7 +124,7 @@ export default function Form() {
 								name="name"
 								id="name"
 								autoComplete="given-name"
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
+								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-xs focus:border-blue-500 focus:ring-blue-500"
 							/>
 						</div>
 					</div>
@@ -138,7 +138,7 @@ export default function Form() {
 								name="email"
 								type="email"
 								autoComplete="email"
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
+								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-xs focus:border-blue-500 focus:ring-blue-500"
 							/>
 						</div>
 					</div>
@@ -151,7 +151,7 @@ export default function Form() {
 								type="text"
 								name="subject"
 								id="subject"
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
+								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-xs focus:border-blue-500 focus:ring-blue-500"
 							/>
 						</div>
 					</div>
@@ -164,7 +164,7 @@ export default function Form() {
 								id="message"
 								name="message"
 								rows={4}
-								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-sm focus:border-blue-500 focus:ring-blue-500"
+								className="block w-full rounded-md border-warm-gray-300 py-3 px-4 text-black shadow-xs focus:border-blue-500 focus:ring-blue-500"
 								aria-describedby="message-max"
 								defaultValue={''}
 							/>
@@ -173,7 +173,7 @@ export default function Form() {
 					<div className="sm:col-span-2 sm:flex sm:justify-end">
 						<button
 							type="submit"
-							className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-500 px-6 py-3 text-base font-medium text-black shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto"
+							className="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-500 px-6 py-3 text-base font-medium text-black shadow-xs hover:bg-blue-600 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto"
 						>
 							Submit
 						</button>

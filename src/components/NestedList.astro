@@ -36,11 +36,11 @@ const { items, depth = 0, multiplyByParent = true } = Astro.props;
               sizes="40px"
               width={40}
               height={40}
-              class="flex-shrink-0"
+              class="shrink-0"
             />
             <span class="text-white font-medium truncate flex items-center gap-2">
               {item.Name}
-              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
+              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
                 {quantity.toLocaleString()}
               </span>
             </span>
@@ -63,11 +63,11 @@ const { items, depth = 0, multiplyByParent = true } = Astro.props;
         sizes="36px"
         width={36}
         height={36}
-        class="flex-shrink-0"
+        class="shrink-0"
       />
       <span class="text-cyan-200 font-medium flex items-center gap-2">
         {item.Name}
-        <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-200/90 tabular-nums" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
+        <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-200/90 tabular-nums" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
           {quantity.toLocaleString()}
         </span>
       </span>

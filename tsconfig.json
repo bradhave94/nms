@@ -1,9 +1,13 @@
 {
 	"extends": "astro/tsconfigs/base",
 	"compilerOptions": {
-	  "baseUrl": ".",
 	  "paths": {
-		"@*": ["./src/*"]
+		"@assets/*": ["./src/assets/*"],
+		"@components/*": ["./src/components/*"],
+		"@config": ["./src/config.ts"],
+		"@datav2/*": ["./src/datav2/*"],
+		"@layouts/*": ["./src/layouts/*"],
+		"@utils/*": ["./src/utils/*"]
 	  },
 	  "strict": true,
 	  "noUnusedLocals": true,
