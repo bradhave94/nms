@@ -21,7 +21,7 @@ Inside of the project, you'll see the following folders and files:
 │   │   └── 
 │   └── pages/
 │       └── 
-│   └── untils/
+│   └── utils/
 └── package.json
 ```
 
