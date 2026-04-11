@@ -5,7 +5,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.locator.biggspoi.dds",
 		"Name": "Debris Rangefinder",
 		"Group": "Deep-Space Salvage Locator",
-		"Description": "A single-use device for locating the wreckage of starships in deep space.\n\nSelect the Rangefinder and Scan for Debris ([E]) to begin the location process.",
+		"Description": "A single-use device for locating the wreckage of starships in deep space.\n\nSelect the Rangefinder and Scan for Debris (FE_ALT1) to begin the location process.",
 		"AltDescription": null,
 		"Hint": null,
 		"BaseValueUnits": 3200,
@@ -1065,89 +1065,6 @@
 		"Slug": "technology/PRESSURE_SUIT"
 	},
 	{
-		"Id": "SUIT_REFINER",
-		"Icon": "SUIT_REFINER.png",
-		"IconPath": "textures/ui/frontend/icons/technology/render.personalrefiner.dds",
-		"Name": "Personal Refiner",
-		"NameLower": "Personal Refiner",
-		"Group": "Self-Mounted Advanced Refiner",
-		"Description": "A compact extension to the Exosuit, installing a small Portable Refiner, accessible directly from the user's Exosuit interface.\n\nUnit requires fuel and is limited to refining one substance at a time.",
-		"HintStart": null,
-		"HintEnd": null,
-		"DamagedDescription": null,
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Level": 1,
-		"Value": 10.0,
-		"Colour": "2177C8",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "OXYGEN",
-				"Quantity": 150
-			},
-			{
-				"Id": "STELLAR2",
-				"Quantity": 100
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Refiner",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "refiner",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Common",
-		"Teach": "true",
-		"Chargeable": true,
-		"ChargeAmount": 100,
-		"ChargeType": "Fuel",
-		"ChargeBy": [],
-		"ChargeMultiplier": 1.0,
-		"BuildFullyCharged": true,
-		"UsesAmmo": false,
-		"AmmoId": null,
-		"PrimaryItem": "true",
-		"Upgrade": false,
-		"Core": false,
-		"RepairTech": false,
-		"Procedural": false,
-		"BrokenSlotTech": "false",
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"RequiredLevel": 0,
-		"FocusLocator": null,
-		"UpgradeColour": "FFFFFF",
-		"LinkColour": "CC99FF",
-		"RewardGroup": null,
-		"PriceModifiers": {
-			"SpaceStationMarkup": 0.0,
-			"LowPriceMod": 0.0,
-			"HighPriceMod": 0.0,
-			"BuyBaseMarkup": 0.0,
-			"BuyMarkupMod": 0.0
-		},
-		"RequiredRank": 3,
-		"DispensingRace": "Explorers",
-		"FragmentCost": 360,
-		"TechShopRarity": null,
-		"WikiEnabled": true,
-		"NeverPinnable": false,
-		"IsTemplate": false,
-		"ExclusivePrimaryStat": true,
-		"Slug": "technology/SUIT_REFINER"
-	},
-	{
 		"Id": "SUIT_REFINER2",
 		"Icon": "SUIT_REFINER2.png",
 		"IconPath": "textures/ui/frontend/icons/technology/render.personalrefiner2.dds",
@@ -1397,181 +1314,6 @@
 		"IsTemplate": false,
 		"ExclusivePrimaryStat": false,
 		"Slug": "technology/ATLASSUIT"
-	},
-	{
-		"Id": "STARSUIT",
-		"Icon": "STARSUIT.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.hexcore.dds",
-		"Name": "Star Seed",
-		"NameLower": "Star Seed",
-		"Group": "Cosmic Brand",
-		"Description": "The smallest of sparks, housed within a containment field of unknown origins.\n\nThe seed glows with life, desperate to escape and fulfill its potential.",
-		"HintStart": null,
-		"HintEnd": null,
-		"DamagedDescription": null,
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Level": 1,
-		"Value": 120.0,
-		"Colour": "2177C8",
-		"Usages": [
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "ASTEROID3",
-				"Quantity": 16
-			},
-			{
-				"Id": "ROCKETSUB",
-				"Quantity": 16
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 16
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Armour Health",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "health",
-				"Value": "20"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Impossible",
-		"Teach": "true",
-		"Chargeable": false,
-		"ChargeAmount": 100,
-		"ChargeType": "Catalyst",
-		"ChargeBy": [],
-		"ChargeMultiplier": 1.0,
-		"BuildFullyCharged": true,
-		"UsesAmmo": false,
-		"AmmoId": null,
-		"PrimaryItem": "false",
-		"Upgrade": false,
-		"Core": false,
-		"RepairTech": false,
-		"Procedural": false,
-		"BrokenSlotTech": "false",
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"RequiredLevel": 0,
-		"FocusLocator": null,
-		"UpgradeColour": "FFFFFF",
-		"LinkColour": "CC99FF",
-		"RewardGroup": null,
-		"PriceModifiers": {
-			"SpaceStationMarkup": 0.0,
-			"LowPriceMod": 0.0,
-			"HighPriceMod": 0.0,
-			"BuyBaseMarkup": 0.0,
-			"BuyMarkupMod": 0.0
-		},
-		"RequiredRank": 3,
-		"DispensingRace": "Explorers",
-		"FragmentCost": 1,
-		"TechShopRarity": null,
-		"WikiEnabled": true,
-		"NeverPinnable": false,
-		"IsTemplate": false,
-		"ExclusivePrimaryStat": false,
-		"Slug": "technology/STARSUIT"
-	},
-	{
-		"Id": "DENYSUIT",
-		"Icon": "DENYSUIT.png",
-		"IconPath": "textures/ui/frontend/icons/u4products/product.hereticcore.dds",
-		"Name": "Mark of the Denier",
-		"NameLower": "Mark of the Denier",
-		"Group": "Cosmic Brand",
-		"Description": "A tiny mote of stardust, no more than a speck. On closer examination, its surface is all crystalline shards and distorted crimson geometry.\n\nIt flickers with pent-up energy, demanding to be free.\n\nEmpower the mark as you discover systems, planets and objects across the universe.",
-		"HintStart": null,
-		"HintEnd": null,
-		"DamagedDescription": null,
-		"BaseValueUnits": 1,
-		"CurrencyType": "None",
-		"Level": 1,
-		"Value": 120.0,
-		"Colour": "2177C8",
-		"Usages": [
-			"HasChargedBy",
-			"HasDevProperties"
-		],
-		"BlueprintCost": 1,
-		"BlueprintCostType": "Nanites",
-		"BlueprintSource": 0,
-		"RequiredItems": [
-			{
-				"Id": "ASTEROID3",
-				"Quantity": 16
-			},
-			{
-				"Id": "ROCKETSUB",
-				"Quantity": 16
-			},
-			{
-				"Id": "ASTEROID2",
-				"Quantity": 16
-			}
-		],
-		"StatBonuses": [
-			{
-				"Name": "Denier",
-				"LocaleKeyTemplate": "enabled",
-				"Image": "denier",
-				"Value": "1"
-			}
-		],
-		"ConsumableRewardTexts": [],
-		"Category": "Suit",
-		"Rarity": "Impossible",
-		"Teach": "true",
-		"Chargeable": true,
-		"ChargeAmount": 100,
-		"ChargeType": "Earth",
-		"ChargeBy": [
-			"TECHFRAG"
-		],
-		"ChargeMultiplier": 1.0,
-		"BuildFullyCharged": false,
-		"UsesAmmo": false,
-		"AmmoId": null,
-		"PrimaryItem": "true",
-		"Upgrade": false,
-		"Core": false,
-		"RepairTech": false,
-		"Procedural": false,
-		"BrokenSlotTech": "false",
-		"ParentTechId": null,
-		"RequiredTech": null,
-		"RequiredLevel": 0,
-		"FocusLocator": null,
-		"UpgradeColour": "FFFFFF",
-		"LinkColour": "CC99FF",
-		"RewardGroup": null,
-		"PriceModifiers": {
-			"SpaceStationMarkup": 0.0,
-			"LowPriceMod": 0.0,
-			"HighPriceMod": 0.0,
-			"BuyBaseMarkup": 0.0,
-			"BuyMarkupMod": 0.0
-		},
-		"RequiredRank": 3,
-		"DispensingRace": "Explorers",
-		"FragmentCost": 1,
-		"TechShopRarity": null,
-		"WikiEnabled": true,
-		"NeverPinnable": false,
-		"IsTemplate": false,
-		"ExclusivePrimaryStat": false,
-		"Slug": "technology/DENYSUIT"
 	},
 	{
 		"Id": "OBSOLETE",
@@ -3993,7 +3735,7 @@
 		"Name": "Economy Scanner",
 		"NameLower": "Economy Scanner",
 		"Group": "Long-range Sensor Technology",
-		"Description": "An upgrade to the starship's galactic-scale sensors. This device allows the user to access detailed economic data about a system without having to visit. See collected data automatically on the Galaxy Map.\n\nActive the scanner's internal Trade Computer with [E] to search for highly-profitable trading surge events.",
+		"Description": "An upgrade to the starship's galactic-scale sensors. This device allows the user to access detailed economic data about a system without having to visit. See collected data automatically on the Galaxy Map.\n\nActive the scanner's internal Trade Computer with FE_ALT1 to search for highly-profitable trading surge events.",
 		"HintStart": null,
 		"HintEnd": null,
 		"DamagedDescription": null,
@@ -7814,7 +7556,7 @@
 		"Name": "Polyphonic Core",
 		"NameLower": "Polyphonic Core",
 		"Group": "Autophage Resonance Key",
-		"Description": "An attachment for the Multi-Tool Scanner that allows the device to detect and decode the cloaking signal of nearby Autophage units.\n\nUse SCAN to activate the Scanner. As its detector waveform passes over the local area, it will automatically reveal any nearby Autophage entities.\n\nIn addition, this device can be used to locate Autophage gatherings. Use Locate Autophage Camp ([LMB]) to pinpoint a planetary gathering of Autophage.",
+		"Description": "An attachment for the Multi-Tool Scanner that allows the device to detect and decode the cloaking signal of nearby Autophage units.\n\nUse SCAN to activate the Scanner. As its detector waveform passes over the local area, it will automatically reveal any nearby Autophage entities.\n\nIn addition, this device can be used to locate Autophage gatherings. Use Locate Autophage Camp (FE_SELECT) to pinpoint a planetary gathering of Autophage.",
 		"HintStart": null,
 		"HintEnd": null,
 		"DamagedDescription": null,

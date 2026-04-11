@@ -4697,7 +4697,7 @@
 		"IconPath": "textures/ui/frontend/icons/specialshop/twitch.ship58.dds",
 		"Name": "The Master of Sleep",
 		"Group": "Exclusive Spacecraft",
-		"Description": "Twit Ship Science",
+		"Description": "An exclusive Starship. This A-class explorer benefits from hyperdrive and launcher bonuses, and is pre-installed with a selection of technologies and upgrades.\n\nClaim this ship to add it to your collection, or Exchange it with your current ship. While on a planet, summon ships from the Quick Menu (QUICK_MENU).",
 		"AltDescription": null,
 		"Hint": null,
 		"BaseValueUnits": 3000,

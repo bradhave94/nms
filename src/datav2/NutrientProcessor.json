@@ -28841,29 +28841,6 @@
 		"Slug": "nutrient-processor/RECIPE_1293"
 	},
 	{
-		"Id": "RECIPE_1301",
-		"Inputs": [
-			{
-				"Id": "FOOD_F_JELLY",
-				"Name": "Jellymeat",
-				"Quantity": 1
-			},
-			{
-				"Id": "FOOD_F_EEL",
-				"Name": "Fleshy Cylinder",
-				"Quantity": 1
-			}
-		],
-		"Output": {
-			"Id": "FOOD_F_JEELS",
-			"Name": "Jellied Eel",
-			"Quantity": 1
-		},
-		"Time": "5.0",
-		"Operation": "Seafood Assembly",
-		"Slug": "nutrient-processor/RECIPE_1301"
-	},
-	{
 		"Id": "RECIPE_1294",
 		"Inputs": [
 			{
@@ -29056,6 +29033,29 @@
 		"Time": "5.0",
 		"Operation": "Roe Extraction",
 		"Slug": "nutrient-processor/RECIPE_1302"
+	},
+	{
+		"Id": "RECIPE_1301",
+		"Inputs": [
+			{
+				"Id": "FOOD_F_JELLY",
+				"Name": "Jellymeat",
+				"Quantity": 1
+			},
+			{
+				"Id": "FOOD_F_EEL",
+				"Name": "Fleshy Cylinder",
+				"Quantity": 1
+			}
+		],
+		"Output": {
+			"Id": "FOOD_F_JEELS",
+			"Name": "Jellied Eel",
+			"Quantity": 1
+		},
+		"Time": "5.0",
+		"Operation": "Seafood Assembly",
+		"Slug": "nutrient-processor/RECIPE_1301"
 	},
 	{
 		"Id": "RECIPE_1303",

@@ -1,0 +1,295 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import type { BreadcrumbItem } from '@utils/seo.js';
+import { getSiteOrigin } from '@utils/structuredData.js';
+import creaturesData from '@datav2/Creatures.json';
+
+type CreatureSpecies = (typeof creaturesData.Species)[number];
+type CreatureMove = (typeof creaturesData.BattleMoves)[number];
+type CreatureMoveSet = (typeof creaturesData.MoveSets)[number];
+
+const battleMoves = creaturesData.BattleMoves ?? [];
+const moveSets = creaturesData.MoveSets ?? [];
+
+const moveById = new Map<string, CreatureMove>(
+	battleMoves.map((move) => [move.Id, move] as const)
+);
+const moveSetById = new Map<string, CreatureMoveSet>(
+	moveSets.map((moveSet) => [moveSet.Id, moveSet] as const)
+);
+
+const DEFAULT_IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const imageBase = DEFAULT_IMAGE_BASE;
+
+type ResolvedMove = {
+	id: string;
+	name: string;
+	displayName: string;
+	description: string | null;
+	category: string | null;
+	affinity: string | null;
+	icon: string | null;
+	slug: string;
+	sourceTemplateId: string;
+};
+
+type ResolvedMoveSet = {
+	id: string;
+	name: string;
+	slotCount: number;
+	resolvedMoves: ResolvedMove[];
+};
+
+const toTitleCase = (value: string): string =>
+	value
+		.replace(/[_-]+/g, ' ')
+		.trim()
+		.split(/\s+/)
+		.map((word) => {
+			if (!word) return word;
+			const lower = word.toLowerCase();
+			if (lower === 'pvp') return 'PvP';
+			if (lower === 'pve') return 'PvE';
+			return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+		})
+		.join(' ');
+
+const formatAffinity = (value: string | null | undefined): string =>
+	value === 'UsePetAffinity'
+		? 'Matches Creature Affinity'
+		: value
+			? toTitleCase(value)
+			: 'General';
+
+const formatCategory = (value: string | null | undefined): string =>
+	value ? toTitleCase(value) : 'Uncategorized';
+
+const getPreferredMoveLabel = (move: CreatureMove, species: CreatureSpecies): string => {
+	const namesByAffinity = move.NamesByAffinity;
+	if (namesByAffinity && typeof namesByAffinity === 'object') {
+		const forcedAffinity = species.BattleForcedAffinity ?? '';
+		if (forcedAffinity && namesByAffinity[forcedAffinity as keyof typeof namesByAffinity]) {
+			return String(namesByAffinity[forcedAffinity as keyof typeof namesByAffinity]);
+		}
+		if (move.Affinity && namesByAffinity[move.Affinity as keyof typeof namesByAffinity]) {
+			return String(namesByAffinity[move.Affinity as keyof typeof namesByAffinity]);
+		}
+		if (namesByAffinity.Normal) return String(namesByAffinity.Normal);
+	}
+	return move.DefaultDisplayName ?? move.Name ?? move.NameStub ?? move.Id;
+};
+
+const toMoveAnchorHref = (moveId: string): string => `#move-${moveId}`;
+
+const resolveMovesForSpecies = (species: CreatureSpecies): ResolvedMoveSet[] => {
+	const setIds = species.MoveSets ?? [];
+	if (!Array.isArray(setIds) || setIds.length === 0) return [];
+
+	return setIds
+		.map((setId) => {
+			const moveSet = moveSetById.get(setId);
+			if (!moveSet) return null;
+
+			const seen = new Set<string>();
+			const resolvedMoves: ResolvedMove[] = [];
+
+			for (const slot of moveSet.Slots ?? []) {
+				for (const option of slot.Options ?? []) {
+					const templateId = option.Template;
+					if (!templateId || seen.has(templateId)) continue;
+					seen.add(templateId);
+					const move = moveById.get(templateId);
+					if (!move) continue;
+
+					resolvedMoves.push({
+						id: move.Id,
+						name: move.Name ?? move.NameStub ?? move.Id,
+						displayName: getPreferredMoveLabel(move, species),
+						description: move.Description ?? null,
+						category: move.Category ?? null,
+						affinity: move.Affinity ?? null,
+						icon: move.CategoryIcon ?? null,
+						slug: move.Slug ?? `creatures/moves/${move.Id}`,
+						sourceTemplateId: templateId,
+					});
+				}
+			}
+
+			return {
+				id: moveSet.Id,
+				name: moveSet.Name ?? toTitleCase(moveSet.Id),
+				slotCount: (moveSet.Slots ?? []).length,
+				resolvedMoves,
+			} satisfies ResolvedMoveSet;
+		})
+		.filter((entry): entry is ResolvedMoveSet => Boolean(entry));
+};
+
+export async function getStaticPaths() {
+	const speciesList = creaturesData.Species ?? [];
+	return speciesList.map((species) => ({
+		params: { id: species.Id.toString() },
+		props: {
+			species,
+		},
+	}));
+}
+
+interface Props {
+	species: CreatureSpecies;
+}
+
+const { species } = Astro.props as Props;
+const resolvedMoveSets = resolveMovesForSpecies(species);
+
+if (!species) {
+	return Astro.redirect('/creatures');
+}
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+
+const pageTitle = `${species.Name} | Creatures | No Man's Sky Recipes`;
+const shortDescription = species.SpeciesSubtitle
+	? `${species.Name} (${species.SpeciesSubtitle}) creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`
+	: `${species.Name} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`;
+const description = shortDescription.slice(0, 180);
+const ogImage = `${imageBase}${species.BattleAffinityIcon ?? species.BattleAffinityBinocsIcon ?? 'SPEC_PB_EGG01.png'}`;
+
+const breadcrumbs: BreadcrumbItem[] = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Creatures', href: '/creatures' },
+	{ name: species.Name },
+];
+
+const collectionSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'WebPage',
+	'@id': `${canonicalUrl}#page`,
+	url: canonicalUrl,
+	name: pageTitle,
+	description,
+	breadcrumb: {
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+			{ '@type': 'ListItem', position: 2, name: 'Creatures', item: `${siteOrigin}/creatures` },
+			{ '@type': 'ListItem', position: 3, name: species.Name, item: canonicalUrl },
+		],
+	},
+};
+
+const statPills = [
+	{ label: 'Battle Ready', value: species.CanBeUsedInBattle ? 'Yes' : 'No' },
+	{ label: 'Affinity', value: species.BattleForcedAffinity ? formatAffinity(species.BattleForcedAffinity) : 'None' },
+	{ label: 'Rarity', value: species.Rarity ? toTitleCase(species.Rarity) : 'Unknown' },
+	{ label: 'Type', value: species.CreatureType ? toTitleCase(species.CreatureType) : 'Unknown' },
+	{ label: 'Move Area', value: species.MoveArea ? toTitleCase(species.MoveArea) : 'Unknown' },
+	{ label: 'Scale', value: `${species.MinScale} - ${species.MaxScale}` },
+];
+
+---
+
+<Layout
+	title={pageTitle}
+	description={description}
+	slug="creatures"
+	structuredData={collectionSchema}
+	ogImage={ogImage}
+>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<section class="mx-auto max-w-6xl px-4 pb-10">
+		<div class="mb-8 rounded-sm border border-sky-900 bg-sky-900/30 p-5">
+			<div class="flex flex-wrap items-center justify-between gap-4">
+				<div>
+					<h1 class="m-0 text-4xl sm:text-5xl text-white">{species.Name}</h1>
+					{species.SpeciesSubtitle && (
+						<p class="mt-2 text-lg text-sky-200/90">{species.SpeciesSubtitle}</p>
+					)}
+					<p class="mt-2 text-sm text-sky-300/80">Creature ID: {species.Id}</p>
+				</div>
+				<div class="flex items-center gap-3">
+					{species.BattleAffinityIcon && (
+						<img
+							src={`${imageBase}${species.BattleAffinityIcon}`}
+							alt={`${species.Name} affinity icon`}
+							class="h-14 w-14 rounded-sm bg-black/30 p-1"
+							loading="lazy"
+						/>
+					)}
+					{species.BattleAffinityBinocsIcon && (
+						<img
+							src={`${imageBase}${species.BattleAffinityBinocsIcon}`}
+							alt={`${species.Name} affinity visor icon`}
+							class="h-14 w-14 rounded-sm bg-black/30 p-1"
+							loading="lazy"
+						/>
+					)}
+				</div>
+			</div>
+			<div class="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+				{
+					statPills.map((pill) => (
+						<p class="m-0 rounded-sm bg-black/35 px-3 py-2 text-sm text-sky-100">
+							<span class="font-semibold text-sky-300">{pill.label}:</span> {pill.value}
+						</p>
+					))
+				}
+			</div>
+		</div>
+
+		<section class="rounded-sm border border-sky-900 bg-sky-900/20 p-5">
+			<h2 class="mt-0 mb-4 text-2xl text-white">Move Set Archetypes</h2>
+			{
+				resolvedMoveSets.length === 0 ? (
+					<p class="m-0 text-sky-200/90">No direct move set mapping is available for this species yet.</p>
+				) : (
+					<div class="space-y-4">
+						{
+							resolvedMoveSets.map((moveSet) => (
+								<div class="rounded-sm border border-sky-800/70 bg-black/25 p-4">
+									<h3 class="mt-0 mb-1 text-xl text-sky-100">{moveSet.name}</h3>
+									<p class="mt-0 mb-3 text-xs uppercase tracking-wide text-sky-300/80">
+										{moveSet.id} • {moveSet.slotCount} slots • {moveSet.resolvedMoves.length} move templates
+									</p>
+									<div class="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+										{
+											moveSet.resolvedMoves.map((move) => (
+												<a
+													href={toMoveAnchorHref(move.id)}
+													class="rounded-sm border border-sky-800/70 bg-sky-950/60 px-3 py-2 text-sm text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-900/70"
+													id={`move-${move.id}`}
+												>
+													<div class="flex items-center gap-2">
+														{move.icon && (
+															<img
+																src={`${imageBase}${move.icon}`}
+																alt={`${move.displayName} icon`}
+																class="h-6 w-6 shrink-0"
+																loading="lazy"
+															/>
+														)}
+														<div class="min-w-0">
+															<p class="m-0 truncate font-semibold text-white">{move.displayName}</p>
+															<p class="m-0 truncate text-xs text-sky-300/90">
+																{formatCategory(move.category)} • {formatAffinity(move.affinity)}
+															</p>
+														</div>
+													</div>
+													{move.description && (
+														<p class="mt-2 mb-0 text-xs text-sky-200/85">{move.description}</p>
+													)}
+												</a>
+											))
+										}
+									</div>
+								</div>
+							))
+						}
+					</div>
+				)
+			}
+		</section>
+	</section>
+</Layout>

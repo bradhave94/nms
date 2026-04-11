@@ -91,7 +91,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/proctech/roguetech.exocraft.dds",
 		"Name": "Memory Fragment (exocraft)",
 		"Group": "Rogue Technology Echo",
-		"Description": "The shattered remnants of a previous existence. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an Exocraft upgrade to aid you in this iteration. Absorb this memory with [E].\n\nDEATH IS NOT THE END SLASH THE LOOP CONTINUES",
+		"Description": "The shattered remnants of a previous existence. It whispers, an unknowable name deep within its fibres.\n\nThe memory will manifest as an Exocraft upgrade to aid you in this iteration. Absorb this memory with FE_ALT1.\n\nDEATH IS NOT THE END SLASH THE LOOP CONTINUES",
 		"AltDescription": null,
 		"Hint": null,
 		"BaseValueUnits": 16,

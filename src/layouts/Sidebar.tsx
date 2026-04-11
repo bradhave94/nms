@@ -21,6 +21,7 @@ import {
   PaperAirplaneIcon,
   WrenchIcon,
   RocketLaunchIcon,
+  SparklesIcon,
 } from '@heroicons/react/24/solid';
 import type { ComponentType, SVGProps } from 'react';
 import { classNames } from '../utils/classNames';
@@ -50,6 +51,7 @@ const navigation: NavigationItem[] = [
   { name: 'Buildings', href: '/buildings', icon: HomeModernIcon },
   { name: 'Corvette', href: '/corvette', icon: PaperAirplaneIcon },
   { name: 'Fish', href: '/fish', icon: ScaleIcon },
+  { name: 'Creatures', href: '/creatures', icon: SparklesIcon },
   { name: 'Curiosities', href: '/curiosities', icon: QuestionMarkCircleIcon },
   { name: 'Other', href: '/other', icon: PaperClipIcon },
   { name: 'Food', href: '/food', icon: CakeIcon },

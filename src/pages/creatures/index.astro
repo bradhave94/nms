@@ -1,0 +1,98 @@
+---
+import Layout from '@layouts/Layout.astro';
+import CompactCard from '@components/CompactCard.astro';
+import Pagination from '@components/Pagination.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import creaturesData from '@datav2/Creatures.json';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
+
+type CreatureSpecies = {
+	Id: string;
+	Name: string;
+	SpeciesSubtitle?: string | null;
+	BattleForcedAffinity?: string | null;
+	CanBeUsedInBattle?: boolean;
+	BattleAffinityIcon?: string | null;
+	Slug?: string;
+};
+
+const pageSize = 80;
+const allSpecies = ((creaturesData as Record<string, unknown>).Species as CreatureSpecies[] | undefined) ?? [];
+const sortedSpecies = [...allSpecies].sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
+const pageData = sortedSpecies.slice(0, pageSize);
+const lastPage = Math.max(1, Math.ceil(sortedSpecies.length / pageSize));
+const page = {
+	data: pageData,
+	currentPage: 1,
+	lastPage,
+	url: {
+		next: lastPage > 1 ? '/creatures/2' : undefined,
+	},
+};
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/creatures', siteOrigin).toString();
+const itemListElements = page.data.map((item, index) => ({
+	name: item.Name,
+	url: `${siteOrigin}/creatures/${item.Id}`,
+	position: index + 1,
+}));
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: 'Creatures',
+	collectionDescription:
+		"Explore No Man's Sky creature battle species, affinities, and Xeno Arena move archetypes.",
+	collectionPath: '/creatures',
+	currentPage: page.currentPage,
+	items: itemListElements,
+});
+const breadcrumbs = buildCategoryBreadcrumbs('Creatures', '/creatures', page.currentPage);
+const intro = buildCategoryIntro(
+	'Discover battle-capable species, affinity types, and core Xeno Arena creature data in one place.',
+	page.currentPage,
+	page.lastPage
+);
+const baseDescription =
+	"Explore No Man's Sky creature battle species, affinities, and Xeno Arena move archetypes.";
+const { title, description } = buildPaginatedMeta(
+	'Creatures',
+	baseDescription,
+	page.currentPage,
+	page.lastPage
+);
+---
+
+<Layout
+	{title}
+	{description}
+	slug="creatures"
+	structuredData={structuredData}
+>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Creatures</h1>
+	<p class="mx-auto mb-12 max-w-3xl text-center text-sky-200/90">{intro}</p>
+	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+		{
+			page.data.map((item, index) => {
+				const cardImage =
+					item.BattleAffinityIcon != null && item.BattleAffinityIcon !== ''
+						? `https://nomansskyrecipes.com/images/items/${item.BattleAffinityIcon}`
+						: 'https://nomansskyrecipes.com/images/items/SPEC_PB_EGG01.png';
+
+				return (
+					<CompactCard
+						card={{
+							name: item.Name,
+							image: cardImage,
+							link: `/creatures/${item.Id}`,
+						}}
+						index={index}
+					/>
+				);
+			})
+		}
+	</div>
+	<Pagination page={page} />
+</Layout>

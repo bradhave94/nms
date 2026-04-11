@@ -2606,7 +2606,7 @@
 		"Id": "ILLEGAL_PROD2",
 		"Icon": "ILLEGAL_PROD2.png",
 		"IconPath": "textures/ui/frontend/icons/products/product.smuggling2.dds",
-		"Name": "Stolen Dna Samples",
+		"Name": "Stolen DNA Samples",
 		"NameLower": "Stolen DNA Samples",
 		"Group": "Smuggled Goods",
 		"Description": "Sealed vials of unregistered DNA samples, free of the standard biosecurity mechanisms that prevent unlawful genetic tampering.\n\nPurchase is illegal at nearly all galactic trade terminals. Regular supply is only available within outlaw systems.\n\nSelling banned goods into commercially-regulated space may be highly profitable.",
