@@ -19,6 +19,7 @@ type CreatureSpecies = {
 };
 
 const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
 const PAGE_SIZE = 80;
 
 export async function getStaticPaths() {
@@ -81,7 +82,7 @@ const structuredData = buildCollectionStructuredData({
 });
 const breadcrumbs = buildCategoryBreadcrumbs('Creatures', '/creatures', page.currentPage);
 const intro = buildCategoryIntro(
-	'Browse creature species used in the Xeno Arena update, including battle affinity indicators and companion metadata.',
+	'Browse creature species used in the Xeno Arena update, including affinity indicators and companion metadata.',
 	page.currentPage,
 	page.lastPage
 );
@@ -95,9 +96,8 @@ const { title, description } = buildPaginatedMeta(
 );
 
 const iconFor = (item: CreatureSpecies): string => {
-	if (item.Icon) return item.Icon;
 	if (item.BattleAffinityIcon) return item.BattleAffinityIcon;
-	return 'SPEC_PB_EGG01.png';
+	return NORMAL_AFFINITY_ICON;
 };
 
 const cardNameFor = (item: CreatureSpecies): string => {

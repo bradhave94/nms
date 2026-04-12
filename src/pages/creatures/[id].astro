@@ -8,9 +8,11 @@ import creaturesData from '@datav2/Creatures.json';
 type CreatureSpecies = (typeof creaturesData.Species)[number];
 type CreatureMove = (typeof creaturesData.BattleMoves)[number];
 type CreatureMoveSet = (typeof creaturesData.MoveSets)[number];
+type CreatureAffinity = (typeof creaturesData.Affinities)[number];
 
 const battleMoves = creaturesData.BattleMoves ?? [];
 const moveSets = creaturesData.MoveSets ?? [];
+const affinities = creaturesData.Affinities ?? [];
 
 const moveById = new Map<string, CreatureMove>(
 	battleMoves.map((move) => [move.Id, move] as const)
@@ -18,8 +20,14 @@ const moveById = new Map<string, CreatureMove>(
 const moveSetById = new Map<string, CreatureMoveSet>(
 	moveSets.map((moveSet) => [moveSet.Id, moveSet] as const)
 );
+const affinityIconById = new Map<string, string>(
+	affinities
+		.filter((affinity): affinity is CreatureAffinity => Boolean(affinity?.Id && affinity?.Icon))
+		.map((affinity) => [affinity.Id, affinity.Icon] as const)
+);
 
 const DEFAULT_IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
 const imageBase = DEFAULT_IMAGE_BASE;
 
 type ResolvedMove = {
@@ -32,6 +40,8 @@ type ResolvedMove = {
 	icon: string | null;
 	slug: string;
 	sourceTemplateId: string;
+	nameStub: string;
+	optionWeight: number;
 };
 
 type ResolvedMoveSet = {
@@ -102,6 +112,28 @@ const getPreferredMoveLabel = (move: CreatureMove, species: CreatureSpecies): st
 
 const toMoveAnchorHref = (moveId: string): string => `#move-${moveId}`;
 
+const iconForMove = (move: CreatureMove, speciesAffinity: string | null): string | null => {
+	if (move.Category !== 'Attack') {
+		return move.CategoryIcon;
+	}
+	if (move.Affinity && affinityIconById.has(move.Affinity)) {
+		return affinityIconById.get(move.Affinity) ?? null;
+	}
+	if (move.AffinityRaw === 'UsePetAffinity' && speciesAffinity && affinityIconById.has(speciesAffinity)) {
+		return affinityIconById.get(speciesAffinity) ?? null;
+	}
+	if (
+		speciesAffinity &&
+		affinityIconById.has(speciesAffinity) &&
+		move.NamesByAffinity &&
+		typeof move.NamesByAffinity === 'object' &&
+		move.NamesByAffinity[speciesAffinity as keyof typeof move.NamesByAffinity]
+	) {
+		return affinityIconById.get(speciesAffinity) ?? null;
+	}
+	return move.CategoryIcon ?? null;
+};
+
 const resolveSpeciesMoveSetIds = (species: CreatureSpecies): string[] => {
 	const explicitMoveSets = species.MoveSets;
 	if (Array.isArray(explicitMoveSets) && explicitMoveSets.length > 0) {
@@ -117,6 +149,15 @@ const resolveSpeciesMoveSetIds = (species: CreatureSpecies): string[] => {
 const resolveMovesForSpecies = (species: CreatureSpecies): ResolvedMoveSet[] => {
 	const setIds = resolveSpeciesMoveSetIds(species);
 	if (!Array.isArray(setIds) || setIds.length === 0) return [];
+	const speciesAffinity = species.BattleForcedAffinity ?? null;
+
+	const scoreMoveForSpecies = (move: CreatureMove): number => {
+		const moveAffinity = move.Affinity ?? null;
+		if (speciesAffinity && moveAffinity === speciesAffinity) return 4;
+		if (!moveAffinity && move.AffinityRaw === 'Normal') return 3;
+		if (!moveAffinity) return 2;
+		return 1;
+	};
 
 	return setIds
 		.map((setId) => {
@@ -124,7 +165,7 @@ const resolveMovesForSpecies = (species: CreatureSpecies): ResolvedMoveSet[] => 
 			if (!moveSet) return null;
 
 			const seen = new Set<string>();
-			const resolvedMoves: ResolvedMove[] = [];
+			const dedupedByTemplateGroup = new Map<string, ResolvedMove>();
 
 			for (const slot of moveSet.Slots ?? []) {
 				for (const option of slot.Options ?? []) {
@@ -134,19 +175,39 @@ const resolveMovesForSpecies = (species: CreatureSpecies): ResolvedMoveSet[] => 
 					const move = moveById.get(templateId);
 					if (!move) continue;
 
-					resolvedMoves.push({
+					const candidate: ResolvedMove = {
 						id: move.Id,
 						name: move.Name ?? move.NameStub ?? move.Id,
 						displayName: getPreferredMoveLabel(move, species),
 						description: move.Description ?? null,
 						category: move.Category ?? null,
 						affinity: move.Affinity ?? null,
-						icon: move.CategoryIcon ?? null,
+						icon: iconForMove(move, speciesAffinity),
 						slug: move.Slug ?? `creatures/moves/${move.Id}`,
 						sourceTemplateId: templateId,
-					});
+						nameStub: move.NameStub ?? move.Id,
+						optionWeight: option.Weighting ?? 0,
+					};
+					const groupKey = `${candidate.nameStub}::${candidate.category ?? ''}`;
+					const existing = dedupedByTemplateGroup.get(groupKey);
+					if (!existing) {
+						dedupedByTemplateGroup.set(groupKey, candidate);
+						continue;
+					}
+					const existingMove = moveById.get(existing.id);
+					const existingScore = existingMove ? scoreMoveForSpecies(existingMove) : 0;
+					const candidateScore = scoreMoveForSpecies(move);
+					if (
+						candidateScore > existingScore ||
+						(candidateScore === existingScore && candidate.optionWeight > existing.optionWeight)
+					) {
+						dedupedByTemplateGroup.set(groupKey, candidate);
+					}
 				}
 			}
+			const resolvedMoves = Array.from(dedupedByTemplateGroup.values()).sort((a, b) =>
+				a.displayName.localeCompare(b.displayName)
+			);
 
 			return {
 				id: moveSet.Id,
@@ -187,7 +248,7 @@ const shortDescription = species.SpeciesSubtitle
 	? `${species.Name} (${species.SpeciesSubtitle}) creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`
 	: `${species.Name} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`;
 const description = shortDescription.slice(0, 180);
-const speciesIcon = species.Icon ?? species.BattleAffinityIcon ?? 'SPEC_PB_EGG01.png';
+const speciesIcon = species.BattleAffinityIcon ?? NORMAL_AFFINITY_ICON;
 const ogImage = `${imageBase}${speciesIcon}`;
 
 const breadcrumbs: BreadcrumbItem[] = [

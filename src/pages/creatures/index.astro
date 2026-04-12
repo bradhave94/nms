@@ -19,9 +19,13 @@ type CreatureSpecies = {
 };
 
 const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
-const pageSize = 100;
+const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
+const pageSize = 80;
 const allSpecies = ((creaturesData as Record<string, unknown>).Species as CreatureSpecies[] | undefined) ?? [];
-const sortedSpecies = [...allSpecies].sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
+const sortedSpecies = allSpecies
+	.filter((item): item is CreatureSpecies => Boolean(item?.Id && item?.Name))
+	.slice()
+	.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
 const pageData = sortedSpecies.slice(0, pageSize);
 const lastPage = Math.max(1, Math.ceil(sortedSpecies.length / pageSize));
 const page = {
@@ -34,9 +38,8 @@ const page = {
 };
 
 const iconFor = (item: CreatureSpecies): string => {
-	if (item.Icon) return item.Icon;
 	if (item.BattleAffinityIcon) return item.BattleAffinityIcon;
-	return 'SPEC_PB_EGG01.png';
+	return NORMAL_AFFINITY_ICON;
 };
 
 const cardNameFor = (item: CreatureSpecies): string => {
@@ -64,7 +67,7 @@ const structuredData = buildCollectionStructuredData({
 });
 const breadcrumbs = buildCategoryBreadcrumbs('Creatures', '/creatures', page.currentPage);
 const intro = buildCategoryIntro(
-	'Discover battle-capable species, affinity types, and core Xeno Arena creature data in one place.',
+	'Discover species, affinity types, and core Xeno Arena creature data in one place.',
 	page.currentPage,
 	page.lastPage
 );
