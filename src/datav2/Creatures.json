@@ -3151,6 +3151,72 @@
 			"Slug": "creatures/HORROR_PET"
 		}
 	],
+	"Affinities": [
+		{
+			"Id": "Lush",
+			"DisplayName": "Tropical",
+			"Icon": "biomes--stats.planet.lush.png",
+			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.lush.dds",
+			"BinocsIcon": "biomes--binocs.planet.lush.png",
+			"BinocsIconPath": "textures/ui/frontend/icons/pets/biomes/binocs.planet.lush.dds"
+		},
+		{
+			"Id": "Cold",
+			"DisplayName": "Frost",
+			"Icon": "biomes--stats.planet.cold.png",
+			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.cold.dds",
+			"BinocsIcon": "biomes--binocs.planet.cold.png",
+			"BinocsIconPath": "textures/ui/frontend/icons/pets/biomes/binocs.planet.cold.dds"
+		},
+		{
+			"Id": "Fire",
+			"DisplayName": "Fire",
+			"Icon": "biomes--stats.planet.fire.png",
+			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.fire.dds",
+			"BinocsIcon": "biomes--binocs.planet.fire.png",
+			"BinocsIconPath": "textures/ui/frontend/icons/pets/biomes/binocs.planet.fire.dds"
+		},
+		{
+			"Id": "Toxic",
+			"DisplayName": "Toxic",
+			"Icon": "biomes--stats.planet.toxic.png",
+			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.toxic.dds",
+			"BinocsIcon": "biomes--binocs.planet.toxic.png",
+			"BinocsIconPath": "textures/ui/frontend/icons/pets/biomes/binocs.planet.toxic.dds"
+		},
+		{
+			"Id": "Barren",
+			"DisplayName": "Desert",
+			"Icon": "biomes--stats.planet.barren.png",
+			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.barren.dds",
+			"BinocsIcon": "biomes--binocs.planet.barren.png",
+			"BinocsIconPath": "textures/ui/frontend/icons/pets/biomes/binocs.planet.barren.dds"
+		},
+		{
+			"Id": "Radioactive",
+			"DisplayName": "Radioactive",
+			"Icon": "biomes--stats.planet.radioactive.png",
+			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.radioactive.dds",
+			"BinocsIcon": "biomes--binocs.planet.radioactive.png",
+			"BinocsIconPath": "textures/ui/frontend/icons/pets/biomes/binocs.planet.radioactive.dds"
+		},
+		{
+			"Id": "Weird",
+			"DisplayName": "Anomalous",
+			"Icon": "biomes--stats.planet.weird.png",
+			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.weird.dds",
+			"BinocsIcon": "biomes--binocs.planet.weird.png",
+			"BinocsIconPath": "textures/ui/frontend/icons/pets/biomes/binocs.planet.weird.dds"
+		},
+		{
+			"Id": "Mech",
+			"DisplayName": "Mechanical",
+			"Icon": "biomes--stats.planet.mech.png",
+			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.mech.dds",
+			"BinocsIcon": "biomes--binocs.planet.mech.png",
+			"BinocsIconPath": "textures/ui/frontend/icons/pets/biomes/binocs.planet.mech.dds"
+		}
+	],
 	"BattleMoves": [
 		{
 			"Id": "ATTACK_NORM",
