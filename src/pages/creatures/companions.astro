@@ -111,7 +111,7 @@ const behaviours = (data.Behaviours as Behaviour[] | undefined) ?? [];
 const petAccessories = (data.PetAccessories as PetAccessory[] | undefined) ?? [];
 const eggOverrides = (data.EggOverrides as EggOverride[] | undefined) ?? [];
 const globals = data.CreatureGlobals as Record<string, unknown> ?? {};
-const eggConstants = (globals.EggSequencerConstants as EggSequencerConstants) ?? undefined;
+const eggConstants = globals.EggSequencerConstants as EggSequencerConstants | undefined;
 const battleStats = (globals.BattleStats as Record<string, { Header: string | null; Label: string | null }>) ?? {};
 const battleUI = (globals.BattleUI as Record<string, string>) ?? {};
 const arenaModes = ((creaturesData as Record<string, unknown>).ArenaModes as { Id: string; Name: string; Description: string | null; GameMode: string; Difficulty: string | null; ExperienceMultiplier: number }[] | undefined) ?? [];
@@ -123,6 +123,7 @@ const eggLabels = (globals.EggLabels as {
 	Requirements: Record<string, string>;
 }) ?? { TraitWords: {}, SizeWords: {}, TypeNames: {}, Requirements: {} };
 const moodStrings = (globals.MoodStrings as { Good: string[]; Hungry: string[]; Lonely: string[] }) ?? { Good: [], Hungry: [], Lonely: [] };
+const wonderRecords = (globals.WonderRecords as Array<{Name: string; Measurement?: string | null}>) ?? [];
 const goodMoods = [...new Set(moodStrings.Good)];
 const hungryMoods = [...new Set(moodStrings.Hungry)];
 const lonelyMoods = [...new Set(moodStrings.Lonely)];
@@ -747,6 +748,24 @@ const breadcrumbs = [
 				</div>
 			</div>
 		</section>
+
+		<hr class="my-12 border-sky-800/40" />
+		<section id="records">
+			<h2 class="mb-4 text-3xl sm:text-4xl text-white">Creature Records</h2>
+			<p class="mt-0 mb-6 text-sm text-sky-300/80">
+				Discoverable creature records tracked across the galaxy.
+			</p>
+			<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+				{wonderRecords.map((record) => (
+					<div class="rounded-sm border border-sky-800/60 bg-sky-950/35 px-4 py-3">
+						<p class="m-0 font-semibold text-sky-100">{record.Name}</p>
+						{record.Measurement && (
+							<p class="m-0 mt-1 text-xs text-sky-400/70">{record.Measurement}</p>
+						)}
+					</div>
+				))}
+			</div>
+		</section>
 		</div>
 
 		<nav class="hidden lg:block w-56 shrink-0">
@@ -758,6 +777,7 @@ const breadcrumbs = [
 					<li><a href="#egg-sequencer" class="toc-link text-sky-300/80 hover:text-white transition" data-section="egg-sequencer">Egg Sequencer</a></li>
 					<li><a href="#accessories" class="toc-link text-sky-300/80 hover:text-white transition" data-section="accessories">Accessories</a></li>
 					<li><a href="#moods" class="toc-link text-sky-300/80 hover:text-white transition" data-section="moods">Mood States</a></li>
+					<li><a href="#records" class="toc-link text-sky-300/80 hover:text-white transition" data-section="records">Records</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -766,7 +786,7 @@ const breadcrumbs = [
 </Layout>
 
 <script>
-const sections = ['leveling', 'behaviours', 'egg-sequencer', 'accessories', 'moods'];
+const sections = ['leveling', 'behaviours', 'egg-sequencer', 'accessories', 'moods', 'records'];
 const links = document.querySelectorAll('.toc-link');
 
 function updateActive() {

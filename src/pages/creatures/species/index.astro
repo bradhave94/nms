@@ -1,11 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Table from '@components/table/Table.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
+import TableHead from '@components/table/Head.astro';
+import TableCell from '@components/table/Cell.astro';
 import creaturesData from '@datav2/Creatures.json';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildPaginatedMeta } from '@utils/seo.js';
-import type { TableRow } from '@components/table/Table.astro';
+import '../../../assets/css/tabulator.css';
 
 type CreatureSpecies = {
 	Id: string;
@@ -19,6 +20,7 @@ type CreatureSpecies = {
 	Icon?: string | null;
 };
 
+const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
 const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
 
 const AFFINITY_COLOURS: Record<string, string> = {
@@ -30,6 +32,7 @@ const AFFINITY_COLOURS: Record<string, string> = {
 	'Radioactive': '5B2C6F',
 	'Mechanical': '2C3E50',
 	'Anomalous': '6C3483',
+	'Physical': '333333',
 	'None': '333333',
 };
 
@@ -74,49 +77,6 @@ const columns = [
 	{ title: 'Move Area', field: 'area' },
 ];
 
-const data: TableRow[] = species.map((s) => {
-	const affinity = s.BattleForcedAffinityDisplay ?? 'None';
-	const battle = s.CanBeUsedInBattle ? 'Yes' : 'No';
-	const rarity = s.Rarity ?? 'Unknown';
-	const moveArea = s.MoveArea ?? 'Unknown';
-	const subtitle = s.SpeciesSubtitle?.trim();
-	const displayName = subtitle ? `${s.Name} (${subtitle})` : s.Name;
-
-	return {
-		species: {
-			id: s.Id,
-			name: displayName,
-			colour: AFFINITY_COLOURS[affinity] ?? '333333',
-			image: iconFor(s),
-			href: `/creatures/${s.Id}`,
-		},
-		affinity: {
-			id: `aff-${s.Id}`,
-			name: affinity,
-			colour: AFFINITY_COLOURS[affinity] ?? '333333',
-			href: `/creatures/${s.Id}`,
-		},
-		battle: {
-			id: `bat-${s.Id}`,
-			name: battle,
-			colour: BATTLE_COLOURS[battle] ?? '333333',
-			href: `/creatures/${s.Id}`,
-		},
-		rarity: {
-			id: `rar-${s.Id}`,
-			name: rarity,
-			colour: RARITY_COLOURS[rarity] ?? '333333',
-			href: `/creatures/${s.Id}`,
-		},
-		area: {
-			id: `area-${s.Id}`,
-			name: moveArea,
-			colour: AREA_COLOURS[moveArea] ?? '333333',
-			href: `/creatures/${s.Id}`,
-		},
-	};
-});
-
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/creatures/species', siteOrigin).toString();
 const structuredData = buildCollectionStructuredData({
@@ -141,12 +101,24 @@ const baseDescription = "Browse No Man's Sky creature species from the Xeno Aren
 const { title, description } = buildPaginatedMeta('Creature Species', baseDescription, 1, 1);
 ---
 
+<style>
+	.table-wrapper {
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+	}
+	.d-hidden {
+		opacity: 0;
+		height: 500px;
+		overflow: hidden;
+	}
+</style>
+
 <style is:global>
 	#table .tabulator-row .tabulator-cell {
-		min-width: 80px !important;
+		min-width: 120px !important;
 	}
 	#table .tabulator-header .tabulator-col {
-		min-width: 80px !important;
+		min-width: 120px !important;
 	}
 	#table .tabulator-row .tabulator-cell picture {
 		min-width: 35px !important;
@@ -159,17 +131,162 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 		height: 35px !important;
 		object-fit: contain;
 	}
+	.table-scroll-wrapper {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	.table-scroll-wrapper #table {
+		min-width: 650px;
+	}
 </style>
 
 <Layout title={title} description={description} slug="creatures" structuredData={structuredData}>
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<Table
-		title="Species"
-		image="refining"
-		image_width={60}
-		image_height={60}
-		columns={columns}
-		sort="species"
-		data={data}
-	/>
+
+	<div class="table-wrapper d-hidden" data-layout="table" data-astro-transition-persist="table-wrapper">
+		<div class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-black">
+			<div class="flex items-center gap-3 z-10 relative">
+				<img
+					src={`${IMAGE_BASE}SPEC_PB_EGG01.png`}
+					alt="Species"
+					width="50"
+					height="50"
+					class="rounded"
+				/>
+				<h1 class="text-2xl m-0">Creature Species</h1>
+			</div>
+			<div class="flex items-center z-10">
+				<div class="tabulator-search relative">
+					<input
+						class="rounded-md w-full bg-black border-blue-500 focus:border-blue-500 focus:ring-blue-500 peer"
+						required
+						type="text"
+						id="search"
+						name="search"
+						placeholder=""
+					/>
+					<label
+						class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
+						for="search">Search</label
+					>
+				</div>
+			</div>
+		</div>
+
+		<div class="table-scroll-wrapper">
+			<table id="table" data-columns={JSON.stringify(columns)} data-sort="species">
+				<TableHead columns={columns} />
+				<tbody>
+					{species.map((s) => {
+						const affinity = s.BattleForcedAffinityDisplay ?? 'None';
+						const battle = s.CanBeUsedInBattle ? 'Yes' : 'No';
+						const rarity = s.Rarity ?? 'Unknown';
+						const moveArea = s.MoveArea ?? 'Unknown';
+						const subtitle = s.SpeciesSubtitle?.trim();
+						const displayName = subtitle ? `${s.Name} (${subtitle})` : s.Name;
+						return (
+							<tr>
+								<TableCell cell={{
+									id: s.Id,
+									name: displayName,
+									colour: AFFINITY_COLOURS[affinity] ?? '333333',
+									image: iconFor(s),
+									href: `/creatures/${s.Id}`,
+								}} />
+								<TableCell cell={{
+									id: `aff-${s.Id}`,
+									name: affinity,
+									colour: AFFINITY_COLOURS[affinity] ?? '333333',
+									href: `/creatures/${s.Id}`,
+								}} />
+								<TableCell cell={{
+									id: `bat-${s.Id}`,
+									name: battle,
+									colour: BATTLE_COLOURS[battle] ?? '333333',
+									href: `/creatures/${s.Id}`,
+								}} />
+								<TableCell cell={{
+									id: `rar-${s.Id}`,
+									name: rarity,
+									colour: RARITY_COLOURS[rarity] ?? '333333',
+									href: `/creatures/${s.Id}`,
+								}} />
+								<TableCell cell={{
+									id: `area-${s.Id}`,
+									name: moveArea,
+									colour: AREA_COLOURS[moveArea] ?? '333333',
+									href: `/creatures/${s.Id}`,
+								}} />
+							</tr>
+						);
+					})}
+				</tbody>
+			</table>
+		</div>
+	</div>
 </Layout>
+
+<script>
+	import { TabulatorFull as Tabulator } from 'tabulator-tables';
+	type ColumnData = { title: string; field: string };
+
+	requestAnimationFrame(() => {
+		const tableElement = document.getElementById('table') as HTMLTableElement;
+		if (!tableElement) return;
+
+		const sort = tableElement.dataset.sort;
+		let columns;
+		try {
+			columns = JSON.parse(tableElement.dataset.columns || '[]').map((element: ColumnData) => ({
+				title: element.title,
+				field: element.field,
+				sorterParams: { alignEmptyValues: 'bottom' },
+				formatter: 'html',
+			}));
+		} catch (error) {
+			console.error('Failed to parse table columns:', error);
+			return;
+		}
+
+		const table = new Tabulator('#table', {
+			columns,
+			initialSort: [{ column: sort, dir: 'asc' }],
+			layout: 'fitColumns',
+			pagination: true,
+			paginationSize: 25,
+			paginationSizeSelector: [10, 25, 50, 100, true],
+			paginationCounter: 'rows',
+			placeholder: 'No results found',
+			printAsHtml: true,
+		});
+
+		table.on('dataLoaded', function () {
+			if (table.element?.parentElement?.parentElement) {
+				table.element.parentElement.parentElement.classList.remove('d-hidden');
+			}
+		});
+
+		function matchAny(data: Record<string, unknown>, filterParams: { value: string }) {
+			const escapedValue = filterParams.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+			const regex = new RegExp(escapedValue, 'i');
+			return Object.values(data).some((value) => regex.test(String(value)));
+		}
+
+		const input = document.getElementById('search') as HTMLInputElement;
+		if (input) {
+			let debounceTimer: ReturnType<typeof setTimeout> | undefined;
+			input.addEventListener('keyup', function () {
+				if (debounceTimer) {
+					clearTimeout(debounceTimer);
+				}
+				debounceTimer = setTimeout(() => {
+					if (input.value.trim() === '') {
+						table.clearFilter();
+					} else {
+						table.setFilter(matchAny, { value: input.value });
+					}
+				}, 150);
+			});
+		}
+	});
+</script>

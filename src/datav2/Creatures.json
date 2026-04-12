@@ -9457,7 +9457,7 @@
 			{
 				"Id": "Predator",
 				"LocKey": "TEMPERAMENT_PREDATOR",
-				"DisplayName": "TEMPERAMENT_PREDATOR",
+				"DisplayName": "Predator",
 				"Descriptions": [
 					"Careful hunter",
 					"Patient hunter",
@@ -9479,7 +9479,7 @@
 			{
 				"Id": "PlayerPredator",
 				"LocKey": "TEMPERAMENT_PLAYERPREDATOR",
-				"DisplayName": "TEMPERAMENT_PLAYERPREDATOR",
+				"DisplayName": "Player Predator",
 				"Descriptions": [
 					"Dangerous",
 					"Wildly aggressive",
@@ -9496,7 +9496,7 @@
 			{
 				"Id": "Prey",
 				"LocKey": "TEMPERAMENT_PREY",
-				"DisplayName": "TEMPERAMENT_PREY",
+				"DisplayName": "Prey",
 				"Descriptions": [
 					"Watchful",
 					"Nervous",
@@ -9520,7 +9520,7 @@
 			{
 				"Id": "Passive",
 				"LocKey": "TEMPERAMENT_PASSIVE",
-				"DisplayName": "TEMPERAMENT_PASSIVE",
+				"DisplayName": "Passive",
 				"Descriptions": [
 					"Long-distance migration",
 					"Nomadic",
@@ -9544,7 +9544,7 @@
 			{
 				"Id": "Bird",
 				"LocKey": "TEMPERAMENT_BIRD",
-				"DisplayName": "TEMPERAMENT_BIRD",
+				"DisplayName": "Bird",
 				"Descriptions": [
 					"Flighty",
 					"Collects shiny objects",
@@ -9566,7 +9566,7 @@
 			{
 				"Id": "FishPrey",
 				"LocKey": "TEMPERAMENT_FISH",
-				"DisplayName": "TEMPERAMENT_FISH",
+				"DisplayName": "Fish Prey",
 				"Descriptions": [
 					"Instinctive",
 					"Desperate",
@@ -9598,44 +9598,44 @@
 			{
 				"Id": "FishPredator",
 				"LocKey": "TEMPERAMENT_FISHPREDATOR",
-				"DisplayName": "TEMPERAMENT_FISHPREDATOR"
+				"DisplayName": "Fish Predator"
 			},
 			{
 				"Id": "Butterfly",
 				"LocKey": "TEMPERAMENT_BUTTERFLY",
-				"DisplayName": "TEMPERAMENT_BUTTERFLY"
+				"DisplayName": "Butterfly"
 			},
 			{
 				"Id": "Robot",
 				"LocKey": "UI_TEMPERMENT_ROBOT",
-				"DisplayName": "UI_TEMPERMENT_ROBOT"
+				"DisplayName": "Robot"
 			},
 			{
 				"Id": "Pet",
 				"LocKey": "TEMPERAMENT_PET",
-				"DisplayName": "TEMPERAMENT_PET"
+				"DisplayName": "Pet"
 			}
 		],
 		"Diets": [
 			{
 				"Id": "Carnivore",
 				"LocKey": "CARNIVORE",
-				"DisplayName": "CARNIVORE"
+				"DisplayName": "Carnivore"
 			},
 			{
 				"Id": "Omnivore",
 				"LocKey": "OMNIVORE",
-				"DisplayName": "OMNIVORE"
+				"DisplayName": "Omnivore"
 			},
 			{
 				"Id": "Herbivore",
 				"LocKey": "HERBIVORE",
-				"DisplayName": "HERBIVORE"
+				"DisplayName": "Herbivore"
 			},
 			{
 				"Id": "Robot",
 				"LocKey": "ROBOT",
-				"DisplayName": "ROBOT"
+				"DisplayName": "Robot"
 			}
 		],
 		"PetEggTypes": [
@@ -10044,6 +10044,83 @@
 			"BACK": "BACK",
 			"LEFT": "LEFT FLANK",
 			"RIGHT": "RIGHT FLANK"
-		}
+		},
+		"WonderRecords": [
+			{
+				"Id": "WONDER_CREAT_HERB_MAX",
+				"Name": "Largest Herbivore",
+				"Measurement": null
+			},
+			{
+				"Id": "WONDER_CREAT_HERB_MIN",
+				"Name": "Smallest Herbivore",
+				"Measurement": null
+			},
+			{
+				"Id": "WONDER_CREAT_CARN_MAX",
+				"Name": "Largest Carnivore",
+				"Measurement": null
+			},
+			{
+				"Id": "WONDER_CREAT_CARN_MIN",
+				"Name": "Smallest Carnivore",
+				"Measurement": null
+			},
+			{
+				"Id": "WONDER_CREAT_INT",
+				"Name": "Most Intelligent Being",
+				"Measurement": null
+			},
+			{
+				"Id": "WONDER_CREAT_VIS",
+				"Name": "Most Vicious Hunter",
+				"Measurement": null
+			},
+			{
+				"Id": "WONDER_CREAT_COLD",
+				"Name": "Greatest Freeze Tolerance",
+				"Measurement": "Antifreeze protein concentration: %NUM%ppu"
+			},
+			{
+				"Id": "WONDER_CREAT_HOT",
+				"Name": "Highest Body Temperature",
+				"Measurement": "Internal Temperature: %NUM%"
+			},
+			{
+				"Id": "WONDER_CREAT_TOX",
+				"Name": "Most Corrosive Blood",
+				"Measurement": "Mean Body Fluid pH: %NUM%"
+			},
+			{
+				"Id": "WONDER_CREAT_RAD",
+				"Name": "Most Radiation Resistant",
+				"Measurement": "Ionisation Resistance Estimate: %NUM%uav"
+			},
+			{
+				"Id": "WONDER_CREAT_WEIRD",
+				"Name": "Strongest Psionic Field",
+				"Measurement": "Delta Wave Concentration: %NUM%hertz/u"
+			},
+			{
+				"Id": "WONDER_CREAT_WATER",
+				"Name": "Largest Aquatic Lifeform",
+				"Measurement": "Weight: %NUM%kg"
+			},
+			{
+				"Id": "WONDER_CREAT_ROBOT",
+				"Name": "Convergence Potential",
+				"Measurement": "Convergent Sentience Quotient: %NUM%ieq"
+			},
+			{
+				"Id": "WONDER_CREAT_CAVE",
+				"Name": "Most Pressure Resistant",
+				"Measurement": "Mean Internal Pressure: %NUM%bar"
+			},
+			{
+				"Id": "WONDER_CREAT_FLY",
+				"Name": "Heaviest Flying Lifeform",
+				"Measurement": "Weight: %NUM%kg"
+			}
+		]
 	}
 }

@@ -290,7 +290,7 @@ const breadcrumbs = [
 								const familyNamesMap = family.variants[0]?.namesByAffinity;
 								const hasAffinityNames = familyNamesMap && Object.keys(familyNamesMap).length > 1;
 								return (
-								<article class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
+								<article class="variant-card rounded-sm border border-sky-800/70 bg-sky-950/35 p-4" data-default-label={family.name} data-aff-labels={hasAffinityNames ? JSON.stringify(familyNamesMap) : undefined}>
 									<div class="mb-3 flex items-start justify-between gap-3">
 										<div class="flex min-w-0 items-center gap-2">
 											{family.categoryIcon && (
@@ -302,7 +302,7 @@ const breadcrumbs = [
 												/>
 											)}
 											<div class="min-w-0">
-												<h3 class="m-0 truncate text-xl text-white" data-move-name data-default-label={family.name} data-aff-labels={hasAffinityNames ? JSON.stringify(familyNamesMap) : undefined}>{family.name}</h3>
+												<h3 class="m-0 truncate text-xl text-white" data-move-name>{family.name}</h3>
 												<p class="m-0 text-xs uppercase tracking-wide text-sky-300/90">
 													{family.category} • {family.key} • {family.variants.length === 1 ? '1 variant' : `${family.variants.length} variants`}
 												</p>

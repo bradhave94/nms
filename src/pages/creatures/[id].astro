@@ -251,11 +251,12 @@ interface Props {
 }
 
 const { species } = Astro.props as Props;
-const resolvedMoveSets = resolveMovesForSpecies(species);
 
 if (!species) {
 	return Astro.redirect('/creatures');
 }
+
+const resolvedMoveSets = resolveMovesForSpecies(species);
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
@@ -293,8 +294,6 @@ const collectionSchema = {
 	},
 };
 
-type StatPill = { label: string; value: string };
-
 const statPills = [
 	{ label: 'Battle Ready', value: species.CanBeUsedInBattle ? 'Yes' : 'No' },
 	species.CanBeUsedInBattle
@@ -323,7 +322,7 @@ const statPills = [
 			}
 		: null,
 	species.SpecialTrait ? { label: 'Special Trait', value: species.SpecialTrait } : null,
-].filter((pill): pill is StatPill => pill != null);
+].filter(Boolean);
 
 const speciesMatchup =
 	species.BattleForcedAffinity && MATCHUPS[species.BattleForcedAffinity]
