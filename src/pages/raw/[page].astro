@@ -33,11 +33,13 @@ const itemListElements = page.data.map((item, index) => ({
 	url: `${siteOrigin}${getSlug(item)}`,
 	position: (page.currentPage - 1) * 80 + index + 1,
 }));
+const baseDescription =
+	"Browse No Man's Sky raw materials, base resources, and mining ingredients used in crafting, refining, cooking, and technology upgrades.";
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,
 	collectionName: 'Raw Materials',
-	collectionDescription: "A list of raw materials for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+	collectionDescription: baseDescription,
 	collectionPath: '/raw',
 	currentPage: page.currentPage,
 	items: itemListElements,
@@ -48,7 +50,6 @@ const intro = buildCategoryIntro(
 	page.currentPage,
 	page.lastPage
 );
-const baseDescription = "A list of raw materials for No Man's Sky. Our guide has everything you need to take your game to the next level.";
 const { title, description } = buildPaginatedMeta('Raw Materials', baseDescription, page.currentPage, page.lastPage);
 ---
 

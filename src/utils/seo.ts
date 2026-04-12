@@ -1,4 +1,5 @@
 import type { Item } from '@utils/lookup.js';
+import * as dataSources from '@datav2/index.js';
 
 export type BreadcrumbItem = {
 	name: string;
@@ -18,16 +19,112 @@ const normalizePath = (path: string): string => {
 	return trimmedPath === '' ? '/' : trimmedPath;
 };
 
+type ItemMetaInput = Pick<Item, 'Id' | 'Name' | 'Description' | 'Group' | 'Slug'>;
+
+const normalizeCategoryLabel = (value: string | undefined): string =>
+	normalizeWhitespace(value ?? '')
+		.toLowerCase()
+		.replace(/^no man's sky\s+/i, '')
+		.replace(/^no mans sky\s+/i, '');
+
+const resolveItemTypeLabel = (item: ItemMetaInput): string => {
+	const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '');
+	const category = normalizedSlug.split('/')[0] ?? '';
+	const categoryLabelMap: Record<string, string> = {
+		raw: 'Raw Material',
+		products: 'Product',
+		food: 'Food Recipe',
+		curiosities: 'Curiosity',
+		fish: 'Fish',
+		technology: 'Technology',
+		other: 'Item',
+		buildings: 'Building Part',
+		upgrades: 'Upgrade Module',
+		exocraft: 'Exocraft Upgrade',
+		starships: 'Starship Upgrade',
+		corvette: 'Corvette Part',
+	};
+
+	return categoryLabelMap[category] ?? item.Group ?? 'Item';
+};
+
+const buildSlugHint = (item: ItemMetaInput): string | undefined => {
+	const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '');
+	if (!normalizedSlug) return undefined;
+
+	const slugSegment = normalizedSlug.split('/').pop() ?? '';
+	if (!slugSegment) return undefined;
+	const readableSlug = slugSegment
+		.replace(/[-_]+/g, ' ')
+		.trim()
+		.replace(/\b([a-z])/g, (letter) => letter.toUpperCase());
+
+	if (!readableSlug) return undefined;
+	if (readableSlug.toLowerCase() === item.Id.toLowerCase()) return undefined;
+
+	return readableSlug;
+};
+
+const allItems = Object.values(dataSources).flatMap((source) =>
+	Array.isArray(source) ? (source as ItemMetaInput[]) : []
+);
+
+const itemNameCounts = allItems.reduce<Map<string, number>>((counts, item) => {
+	const normalizedName = normalizeWhitespace(item?.Name ?? '').toLowerCase();
+	if (!normalizedName) return counts;
+	counts.set(normalizedName, (counts.get(normalizedName) ?? 0) + 1);
+	return counts;
+}, new Map());
+
+const buildItemUniquenessHint = (item: ItemMetaInput, categoryLabel: string): string | undefined => {
+	const normalizedName = normalizeWhitespace(item.Name ?? '').toLowerCase();
+	const duplicateCount = itemNameCounts.get(normalizedName) ?? 0;
+	if (duplicateCount <= 1) {
+		return undefined;
+	}
+
+	const categoryHint = resolveItemTypeLabel(item);
+	const normalizedCategoryHint = normalizeCategoryLabel(categoryHint);
+	const normalizedCategoryLabelValue = normalizeCategoryLabel(categoryLabel);
+	if (normalizedCategoryHint && normalizedCategoryHint !== normalizedCategoryLabelValue) {
+		return categoryHint;
+	}
+
+	if (item.Group && normalizeWhitespace(item.Group).toLowerCase() !== normalizedName) {
+		return item.Group;
+	}
+
+	return buildSlugHint(item) ?? `ID ${item.Id}`;
+};
+
+const buildItemTitle = (item: ItemMetaInput, categoryLabel: string): string => {
+	const titleSegments = [item.Name];
+	const uniquenessHint = buildItemUniquenessHint(item, categoryLabel);
+
+	if (uniquenessHint) {
+		titleSegments.push(uniquenessHint);
+	}
+
+	titleSegments.push(categoryLabel, "No Man's Sky Recipes");
+	return titleSegments.join(' | ');
+};
+
 export const buildItemMeta = (
-	item: Pick<Item, 'Id' | 'Name' | 'Description'>,
+	item: ItemMetaInput,
 	categoryLabel: string
 ): { title: string; description: string } => {
 	const normalizedDescription = normalizeWhitespace(item.Description ?? '');
-	const title = `${item.Name} | ${categoryLabel} | No Man's Sky Recipes`;
-	const baseDescription = `Learn how to craft, refine, and use ${item.Name}, a ${categoryLabel.toLowerCase()} in No Man's Sky.`;
+	const title = buildItemTitle(item, categoryLabel);
+	const itemTypeLabel = resolveItemTypeLabel(item);
+	const uniquenessHint = buildItemUniquenessHint(item, categoryLabel);
+	const descriptiveType =
+		uniquenessHint && uniquenessHint !== itemTypeLabel
+			? `${uniquenessHint.toLowerCase()} ${itemTypeLabel.toLowerCase()}`
+			: itemTypeLabel.toLowerCase();
+	const baseDescription = `Learn how to craft, refine, use, and unlock ${item.Name}, a ${descriptiveType} in No Man's Sky.`;
 	const description = truncate(
 		normalizeWhitespace(`${baseDescription} ${normalizedDescription}`),
-		175
+		155
 	);
 	return { title, description };
 };

@@ -142,7 +142,12 @@ const cards = [
 	},
 ];
 ---
-<Layout title="No Man's Sky Recipes, Crafting Guide and Cooking Guide" slug="home" ogImage={`${SITE.website}/images/refiner.webp`}>
+<Layout
+	title="No Man's Sky Recipes Guide, Refiner Recipes, Crafting & Cooking"
+	description="Find No Man's Sky recipes, refiner outputs, crafting chains, cooking guides, and item lookup tools for products, upgrades, food, and raw materials."
+	slug="home"
+	ogImage={`${SITE.website}/images/refiner.webp`}
+>
     <header class="bg-linear-to-r from-purple-900/20 to-slate-900/50 py-10 text-center">
         <h1 class="m-0 text-4xl sm:text-6xl text-white font-bold mb-4">No Man's Sky Recipes</h1>
         <p class="m-0 text-xl sm:text-3xl text-gray-300 tracking-widest">
@@ -151,6 +156,33 @@ const cards = [
     </header>
 
     <main class="container w-auto mx-auto px-4 py-8">
+        <section class="mx-auto mb-10 max-w-5xl text-center">
+            <p class="mx-auto max-w-4xl text-lg text-sky-100/90">
+                Use this No Man&apos;s Sky recipe guide to find refiner recipes, Nutrient Processor cooking combinations,
+                profitable crafting chains, and the raw materials needed for high-value items like Stasis Devices,
+                Fusion Ignitors, upgrade modules, and more.
+            </p>
+            <div class="mt-6 grid gap-4 text-left md:grid-cols-3">
+                <div class="rounded-md border border-sky-900/70 bg-sky-950/40 p-4">
+                    <h2 class="m-0 text-xl text-white">Refiner recipes</h2>
+                    <p class="mt-2 text-sm text-sky-200/80">
+                        Discover what each refiner input creates, compare outputs, and plan ingredient chains for resources and nanite farming.
+                    </p>
+                </div>
+                <div class="rounded-md border border-sky-900/70 bg-sky-950/40 p-4">
+                    <h2 class="m-0 text-xl text-white">Crafting and products</h2>
+                    <p class="mt-2 text-sm text-sky-200/80">
+                        Track the parts needed for products, technology, upgrades, and other crafted No Man&apos;s Sky items.
+                    </p>
+                </div>
+                <div class="rounded-md border border-sky-900/70 bg-sky-950/40 p-4">
+                    <h2 class="m-0 text-xl text-white">Cooking and food</h2>
+                    <p class="mt-2 text-sm text-sky-200/80">
+                        Browse Nutrient Processor recipes, ingredient uses, and food outputs for cooking, missions, and rewards.
+                    </p>
+                </div>
+            </div>
+        </section>
         <div id="items" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {cards.map((card, index) => (
                 <Card
