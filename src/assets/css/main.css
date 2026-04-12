@@ -80,11 +80,11 @@
 }
 
 #table .tabulator-cell > a {
-    @apply w-full h-full block
+    @apply w-full h-full flex
 }
 
 #table .tabulator-cell > a > div {
-    @apply flex flex-row-reverse items-center justify-end  h-full text-white text-base gap-2 px-2
+    @apply flex flex-row-reverse items-center justify-end flex-1 text-white text-base gap-2 px-2
 }
 
 :is(

@@ -1,0 +1,498 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import creaturesData from '@datav2/Creatures.json';
+
+type CreatureAffinity = {
+	Id: string;
+	DisplayName?: string | null;
+	Icon?: string | null;
+};
+
+type CreatureMove = {
+	Id: string;
+	Name?: string | null;
+	DefaultDisplayName?: string | null;
+	NamesByAffinity?: Record<string, string> | null;
+	NameStub?: string | null;
+	Description?: string | null;
+	EffectDescription?: string | null;
+	Target?: string | null;
+	AffinityRaw?: string | null;
+	Affinity?: string | null;
+	AffinityDisplay?: string | null;
+	Category?: string | null;
+	CategoryIcon?: string | null;
+};
+
+type MoveSetOption = {
+	Template?: string | null;
+	Weighting?: number | null;
+	CooldownMin?: number | null;
+	CooldownMax?: number | null;
+};
+
+type MoveSetSlot = {
+	Slot?: string | null;
+	Options?: MoveSetOption[] | null;
+};
+
+type CreatureMoveSet = {
+	Id: string;
+	Name?: string | null;
+	Slots?: MoveSetSlot[] | null;
+};
+
+type MoveFamilyVariant = {
+	id: string;
+	label: string;
+	affinityLabel: string;
+	affinityIcon: string | null;
+	targetLabel: string;
+	weightHint: string;
+	description: string | null;
+	namesByAffinity: Record<string, string> | null;
+};
+
+type MoveFamily = {
+	key: string;
+	name: string;
+	category: string;
+	categoryIcon: string | null;
+	description: string | null;
+	variants: MoveFamilyVariant[];
+	variantDescGroups: { desc: string; affinities: string[] }[];
+};
+
+const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const battleMoves =
+	((creaturesData as Record<string, unknown>).BattleMoves as CreatureMove[] | undefined) ?? [];
+const moveSets = ((creaturesData as Record<string, unknown>).MoveSets as CreatureMoveSet[] | undefined) ?? [];
+const affinities =
+	((creaturesData as Record<string, unknown>).Affinities as CreatureAffinity[] | undefined) ?? [];
+
+const affinityById = new Map<string, CreatureAffinity>(
+	affinities
+		.filter((affinity) => Boolean(affinity?.Id))
+		.map((affinity) => [affinity.Id, affinity] as const)
+);
+const moveById = new Map<string, CreatureMove>(
+	battleMoves.filter((move) => Boolean(move?.Id)).map((move) => [move.Id, move] as const)
+);
+
+const toTitleCase = (value: string): string =>
+	value
+		.replace(/[_-]+/g, ' ')
+		.trim()
+		.split(/\s+/)
+		.map((word) => {
+			const lower = word.toLowerCase();
+			if (!lower) return word;
+			if (lower === 'pvp') return 'PvP';
+			if (lower === 'pve') return 'PvE';
+			return lower.charAt(0).toUpperCase() + lower.slice(1);
+		})
+		.join(' ');
+
+const slugify = (value: string): string =>
+	value
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, '-')
+		.replace(/(^-|-$)/g, '');
+
+const affinityLabelFor = (affinityIdOrMode: string | null | undefined): string => {
+	if (!affinityIdOrMode || affinityIdOrMode === 'Normal') return 'None';
+	if (affinityIdOrMode === 'UsePetAffinity') return 'Matches Species Affinity';
+	return affinityById.get(affinityIdOrMode)?.DisplayName ?? toTitleCase(affinityIdOrMode);
+};
+
+const affinityIconFor = (affinityIdOrMode: string | null | undefined): string | null => {
+	if (!affinityIdOrMode || affinityIdOrMode === 'Normal' || affinityIdOrMode === 'UsePetAffinity') return null;
+	return affinityById.get(affinityIdOrMode)?.Icon ?? null;
+};
+
+const moveLabelFor = (move: CreatureMove): string => {
+	const namesByAffinity = move.NamesByAffinity;
+	if (namesByAffinity && typeof namesByAffinity === 'object') {
+		if (move.Affinity && namesByAffinity[move.Affinity]) return String(namesByAffinity[move.Affinity]);
+		if (namesByAffinity.Normal) return String(namesByAffinity.Normal);
+		const firstKnown = Object.values(namesByAffinity).find((entry) => Boolean(entry));
+		if (firstKnown) return String(firstKnown);
+	}
+	return move.DefaultDisplayName ?? move.Name ?? move.NameStub ?? move.Id;
+};
+
+const familyMap = new Map<string, MoveFamily>();
+
+for (const move of battleMoves) {
+	if (!move?.Id) continue;
+	const familyKey = move.NameStub ?? move.Id;
+	const category = move.Category ?? 'Uncategorized';
+	const familyName = move.DefaultDisplayName ?? move.Name ?? toTitleCase(familyKey);
+	const affinityMode = move.Affinity ?? move.AffinityRaw ?? 'Normal';
+	const variant: MoveFamilyVariant = {
+		id: move.Id,
+		label: moveLabelFor(move),
+		affinityLabel: affinityLabelFor(affinityMode),
+		affinityIcon: affinityIconFor(affinityMode),
+		targetLabel: move.Target === 'Self' ? 'Self' : 'Enemy',
+		weightHint: move.AffinityRaw === 'UsePetAffinity' ? 'Scales to species affinity' : 'Fixed template',
+		description: move.EffectDescription ?? move.Description ?? null,
+		namesByAffinity: move.NamesByAffinity && typeof move.NamesByAffinity === 'object' ? move.NamesByAffinity : null,
+	};
+	const existing = familyMap.get(familyKey);
+	if (!existing) {
+		familyMap.set(familyKey, {
+			key: familyKey,
+			name: familyName,
+			category,
+			categoryIcon: move.CategoryIcon ?? null,
+			description: move.EffectDescription ?? move.Description ?? null,
+			variants: [variant],
+			variantDescGroups: [],
+		});
+		continue;
+	}
+	if (!existing.description && (move.EffectDescription || move.Description)) {
+		existing.description = move.EffectDescription ?? move.Description!;
+	}
+	existing.variants.push(variant);
+}
+
+const familyList = Array.from(familyMap.values())
+	.map((family) => {
+		const sorted = family.variants
+			.slice()
+			.sort((a, b) => a.affinityLabel.localeCompare(b.affinityLabel) || a.label.localeCompare(b.label));
+		const groupMap = new Map<string, string[]>();
+		for (const v of sorted) {
+			const desc = v.description ?? 'No description';
+			if (!groupMap.has(desc)) groupMap.set(desc, []);
+			if (v.affinityLabel !== 'None') groupMap.get(desc)!.push(v.affinityLabel);
+		}
+		return {
+			...family,
+			variants: sorted,
+			variantDescGroups: [...groupMap.entries()].map(([desc, affs]) => ({ desc, affinities: affs })),
+		};
+	})
+	.sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name));
+
+const categoryList = Array.from(new Set(familyList.map((family) => family.category)));
+const familiesByCategory = new Map<string, MoveFamily[]>(
+	categoryList.map((category) => [
+		category,
+		familyList.filter((family) => family.category === category),
+	])
+);
+
+const moveSetCards = moveSets
+	.filter((moveSet) => Boolean(moveSet?.Id))
+	.map((moveSet) => {
+		const slots = (moveSet.Slots ?? []).map((slot, slotIdx) => {
+			const options = (slot.Options ?? [])
+				.filter((option) => Boolean(option?.Template))
+				.map((option) => {
+					const templateId = option.Template as string;
+					const move = moveById.get(templateId);
+					const label = move ? moveLabelFor(move) : toTitleCase(templateId);
+					const description = move?.EffectDescription ?? move?.Description ?? null;
+					const category = move?.Category ?? null;
+					const categoryIcon = move?.CategoryIcon ?? null;
+					const affinityRaw = move?.Affinity ?? move?.AffinityRaw ?? null;
+					const affinity = affinityRaw ? affinityLabelFor(affinityRaw) : null;
+					const affinityIcon = affinityRaw ? affinityIconFor(affinityRaw) : null;
+					const cooldownMin = option.CooldownMin ?? 0;
+					const cooldownMax = option.CooldownMax ?? 0;
+					const cooldownLabel =
+						cooldownMin === 0 && cooldownMax === 0 ? 'None' :
+						cooldownMin === cooldownMax ? `${cooldownMin} turn${cooldownMin === 1 ? '' : 's'}` :
+						`${cooldownMin}-${cooldownMax} turns`;
+					return {
+						templateId,
+						label,
+						description,
+						category,
+						categoryIcon,
+						affinity,
+						affinityIcon,
+						weighting: option.Weighting ?? 0,
+						cooldownLabel,
+					};
+				})
+				.sort((a, b) => b.weighting - a.weighting);
+			return {
+				slotName: `Slot ${slotIdx + 1}`,
+				options,
+			};
+		});
+		const templateCount = slots.reduce((sum, slot) => sum + slot.options.length, 0);
+		return {
+			id: moveSet.Id,
+			name: moveSet.Name ?? toTitleCase(moveSet.Id),
+			slotCount: slots.length,
+			templateCount,
+			slots,
+		};
+	})
+	.sort((a, b) => a.name.localeCompare(b.name));
+
+const title = "Creature Moves | No Man's Sky Recipes";
+const description =
+	"Explore Xeno Arena battle moves by move family, affinity variants, and move-set archetypes.";
+const breadcrumbs = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Creatures', href: '/creatures' },
+	{ name: 'Moves' },
+];
+---
+
+<Layout title={title} description={description} slug="creatures">
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<section class="mx-auto max-w-7xl px-4 pb-12">
+		<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Move Library</h1>
+		<p class="mx-auto mb-8 max-w-5xl text-center text-sky-200/90">
+			<b>Battle Moves</b> are individual templates (damage, heal, buffs, and affinity behavior). <b>Move
+			Sets</b> are slot-based pools that species pull from. Families below group near-identical templates so
+			affinity variants are easier to compare.
+		</p>
+
+		<div class="sticky top-0 z-10 mb-6 flex flex-wrap items-center justify-center gap-2 rounded-sm bg-[#0a1929]/95 py-3 backdrop-blur" id="affinity-filter">
+			<button data-filter="all" class="aff-btn active rounded-sm border border-sky-500 bg-sky-700/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition-colors hover:bg-sky-600/80">All</button>
+			{affinities.map((a) => (
+				<button data-filter={a.Id} class="aff-btn flex items-center gap-1 rounded-sm border border-sky-700 bg-sky-900/40 px-3 py-1 text-xs uppercase tracking-wide text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-800/60">
+					{a.Icon && <img src={`${IMAGE_BASE}${a.Icon}`} alt="" class="h-5 w-5" loading="lazy" />}
+					{a.DisplayName ?? a.Id}
+				</button>
+			))}
+		</div>
+
+		<div class="mb-8 flex flex-wrap items-center justify-center gap-2">
+			{
+				categoryList.map((category) => (
+					<a
+						href={`#category-${slugify(category)}`}
+						class="rounded-sm border border-sky-700 bg-sky-900/40 px-3 py-1 text-xs uppercase tracking-wide text-sky-100 hover:border-sky-400"
+					>
+						{toTitleCase(category)} ({familiesByCategory.get(category)?.length ?? 0})
+					</a>
+				))
+			}
+		</div>
+
+		<div class="space-y-8">
+			{
+				categoryList.map((category) => (
+					<section id={`category-${slugify(category)}`}>
+						<h2 class="mb-3 text-2xl text-white">{toTitleCase(category)} Families</h2>
+						<div class="grid gap-4 lg:grid-cols-2">
+							{(familiesByCategory.get(category) ?? []).map((family) => {
+								const familyNamesMap = family.variants[0]?.namesByAffinity;
+								const hasAffinityNames = familyNamesMap && Object.keys(familyNamesMap).length > 1;
+								return (
+								<article class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
+									<div class="mb-3 flex items-start justify-between gap-3">
+										<div class="flex min-w-0 items-center gap-2">
+											{family.categoryIcon && (
+												<img
+													src={`${IMAGE_BASE}${family.categoryIcon}`}
+													alt={`${family.name} icon`}
+													class="h-7 w-7 shrink-0"
+													loading="lazy"
+												/>
+											)}
+											<div class="min-w-0">
+												<h3 class="m-0 truncate text-xl text-white" data-move-name data-default-label={family.name} data-aff-labels={hasAffinityNames ? JSON.stringify(familyNamesMap) : undefined}>{family.name}</h3>
+												<p class="m-0 text-xs uppercase tracking-wide text-sky-300/90">
+													{family.category} • {family.key} • {family.variants.length === 1 ? '1 variant' : `${family.variants.length} variants`}
+												</p>
+											</div>
+										</div>
+									</div>
+									{family.description && (
+										<p class="mt-0 mb-3 text-sm text-sky-200/90">{family.description}</p>
+									)}
+									{hasAffinityNames && (
+										<div class="names-by-affinity mb-3" data-affinity-names>
+											<div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs sm:grid-cols-3" data-affinity-all>
+												{Object.entries(familyNamesMap!).map(([affId, affName]) => {
+													const aff = affinityById.get(affId);
+													return (
+														<span class="flex items-center gap-1 rounded bg-black/30 px-1.5 py-0.5 text-sky-100/80" data-aff={affId}>
+															{aff?.Icon && <img src={`${IMAGE_BASE}${aff.Icon}`} alt="" class="inline h-4 w-4 shrink-0" loading="lazy" />}
+															{!aff?.Icon && <span class="inline-block h-4 w-4 shrink-0 rounded-full bg-sky-700/50" />}
+															<span class="truncate">{String(affName)}</span>
+														</span>
+													);
+												})}
+											</div>
+											<p class="m-0 mt-1 hidden text-xs font-medium text-white" data-affinity-single />
+										</div>
+									)}
+									{family.variantDescGroups.length > 1 ? (
+										<div class="space-y-1">
+											{family.variantDescGroups.map((group) => (
+												<div class="rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-xs text-sky-200/90">
+													{group.desc}
+													{group.affinities.length > 1 && (
+														<span class="text-sky-400/70"> ({group.affinities.join(', ')})</span>
+													)}
+													{group.affinities.length === 1 && group.affinities[0] !== 'None' && (
+														<span class="text-sky-400/70"> ({group.affinities[0]})</span>
+													)}
+												</div>
+											))}
+											<p class="m-0 mt-1 text-xs text-sky-400/70">Target: {family.variants[0]?.targetLabel ?? 'Enemy'} • {family.variants.length} variants</p>
+										</div>
+									) : (
+										<p class="m-0 text-xs text-sky-300/90">
+											Target: {family.variants[0]?.targetLabel ?? 'Enemy'}
+											{family.variants.length > 1 && <span> • {family.variants.length} variants</span>}
+										</p>
+									)}
+								</article>
+								);
+							})}
+						</div>
+					</section>
+				))
+			}
+		</div>
+
+		<section class="mt-10">
+			<h2 class="mb-3 text-2xl text-white">Move Set Archetypes</h2>
+			<p class="mt-0 mb-4 text-sm text-sky-200/90">
+				Move sets define which moves a species can learn. Each slot represents a move the creature picks
+				from a weighted pool -- higher weight means the move is chosen more often.
+			</p>
+			<div class="space-y-3">
+				{
+					moveSetCards.map((moveSet) => (
+						<details class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
+							<summary class="cursor-pointer list-none text-white">
+								<span class="text-xl font-semibold">{moveSet.name}</span>
+								<span class="ml-2 text-xs uppercase tracking-wide text-sky-300/90">
+									{moveSet.slotCount} slots • {moveSet.templateCount} move options
+								</span>
+							</summary>
+							<div class="mt-3 grid gap-3 md:grid-cols-2">
+								{moveSet.slots.map((slot) => (
+									<div class="rounded-sm border border-sky-800/60 bg-black/20 p-3">
+										<p class="m-0 mb-2 text-sm font-semibold text-sky-200">{slot.slotName}</p>
+										<div class="space-y-2">
+											{slot.options.map((option) => (
+												<div class="rounded-sm border border-sky-900/80 px-2 py-1.5 text-xs">
+													<div class="flex items-center gap-1.5">
+														{option.categoryIcon && (
+															<img
+																src={`${IMAGE_BASE}${option.categoryIcon}`}
+																alt=""
+																class="h-4 w-4 shrink-0"
+																loading="lazy"
+															/>
+														)}
+														{option.affinityIcon && (
+															<img
+																src={`${IMAGE_BASE}${option.affinityIcon}`}
+																alt=""
+																class="h-4 w-4 shrink-0"
+																loading="lazy"
+															/>
+														)}
+														<p class="m-0 font-medium text-white">{option.label}</p>
+													</div>
+													{option.description && (
+														<p class="m-0 mt-0.5 text-sky-200/80">{option.description}</p>
+													)}
+													<p class="m-0 mt-0.5 text-sky-400/70">
+														{option.category && <span>{toTitleCase(option.category)}</span>}
+														{option.affinity && <span> • {option.affinity}</span>}
+														<span> • Cooldown: {option.cooldownLabel}</span>
+														<span> • Weight: {option.weighting}</span>
+													</p>
+												</div>
+											))}
+										</div>
+									</div>
+								))}
+							</div>
+						</details>
+					))
+				}
+			</div>
+		</section>
+	</section>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const filterBar = document.getElementById('affinity-filter');
+			if (!filterBar) return;
+
+			const buttons = filterBar.querySelectorAll<HTMLButtonElement>('.aff-btn');
+			const cards = document.querySelectorAll<HTMLElement>('.variant-card');
+			const ACTIVE = 'active border-sky-500 bg-sky-700/60 text-white font-semibold';
+			const INACTIVE = 'border-sky-700 bg-sky-900/40 text-sky-100';
+
+			function setActive(btn: HTMLButtonElement) {
+				buttons.forEach((b) => {
+					b.classList.remove(...ACTIVE.split(' '));
+					b.classList.add(...INACTIVE.split(' '));
+				});
+				btn.classList.remove(...INACTIVE.split(' '));
+				btn.classList.add(...ACTIVE.split(' '));
+			}
+
+			function applyFilter(affinity: string) {
+				cards.forEach((card) => {
+					const nameEl = card.querySelector<HTMLElement>('[data-move-name]');
+					const allGrid = card.querySelector<HTMLElement>('[data-affinity-all]');
+					const singleEl = card.querySelector<HTMLElement>('[data-affinity-single]');
+					const raw = card.dataset.affLabels;
+					if (!raw || !nameEl) return;
+
+					let labels: Record<string, string>;
+					try { labels = JSON.parse(raw); } catch { return; }
+
+					if (affinity === 'all') {
+						nameEl.textContent = card.dataset.defaultLabel ?? nameEl.textContent;
+						if (allGrid) allGrid.classList.remove('hidden');
+						if (singleEl) singleEl.classList.add('hidden');
+						card.querySelectorAll<HTMLElement>('[data-aff]').forEach((el) => el.classList.remove('hidden'));
+					} else {
+						const matched = labels[affinity];
+						if (matched) {
+							nameEl.textContent = matched;
+						} else {
+							nameEl.textContent = card.dataset.defaultLabel ?? nameEl.textContent;
+						}
+						if (allGrid) {
+							allGrid.classList.remove('hidden');
+							card.querySelectorAll<HTMLElement>('[data-aff]').forEach((el) => {
+								el.classList.toggle('hidden', el.dataset.aff !== affinity);
+							});
+							const anyVisible = card.querySelector<HTMLElement>(`[data-aff="${affinity}"]`);
+							if (!anyVisible && allGrid) allGrid.classList.add('hidden');
+						}
+						if (singleEl) {
+							if (matched) {
+								singleEl.textContent = matched;
+								singleEl.classList.remove('hidden');
+								if (allGrid) allGrid.classList.add('hidden');
+							} else {
+								singleEl.classList.add('hidden');
+							}
+						}
+					}
+				});
+			}
+
+			buttons.forEach((btn) => {
+				btn.addEventListener('click', () => {
+					const filter = btn.dataset.filter ?? 'all';
+					setActive(btn);
+					applyFilter(filter);
+				});
+			});
+		});
+	</script>
+</Layout>

@@ -1,0 +1,12 @@
+---
+import creaturesData from '@datav2/Creatures.json';
+
+export async function getStaticPaths() {
+	const species = (creaturesData.Species ?? []).filter((entry) => Boolean(entry?.Id));
+	return species.map((entry) => ({
+		params: { id: String(entry.Id) },
+	}));
+}
+
+return Astro.redirect(`/creatures/${Astro.params.id ?? ''}`);
+---

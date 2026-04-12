@@ -42,6 +42,7 @@ type ResolvedMove = {
 	sourceTemplateId: string;
 	nameStub: string;
 	optionWeight: number;
+	namesByAffinity: Record<string, string> | null;
 };
 
 type ResolvedMoveSet = {
@@ -74,7 +75,7 @@ const AFFINITY_LABELS: Record<string, string> = {
 	Radioactive: 'Radioactive',
 	Mech: 'Mechanical',
 	Weird: 'Anomalous',
-	None: 'None',
+	None: 'Physical',
 	UsePetAffinity: 'Matches Creature Affinity',
 };
 
@@ -110,7 +111,19 @@ const getPreferredMoveLabel = (move: CreatureMove, species: CreatureSpecies): st
 	return move.DefaultDisplayName ?? move.Name ?? move.NameStub ?? move.Id;
 };
 
-const toMoveAnchorHref = (moveId: string): string => `#move-${moveId}`;
+const MATCHUPS: Record<string, { strong: string; weak: string }> = {
+	Fire: { strong: 'Cold', weak: 'Radioactive' },
+	Cold: { strong: 'Barren', weak: 'Fire' },
+	Radioactive: { strong: 'Fire', weak: 'Toxic' },
+	Toxic: { strong: 'Lush', weak: 'Mech' },
+	Mech: { strong: 'Toxic', weak: 'Weird' },
+	Weird: { strong: 'Mech', weak: 'Barren' },
+	Barren: { strong: 'Radioactive', weak: 'Cold' },
+	Lush: { strong: 'Weird', weak: 'Toxic' },
+};
+
+const slugifyCategory = (value: string | null | undefined): string =>
+	(value ?? 'uncategorized').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 const iconForMove = (move: CreatureMove, speciesAffinity: string | null): string | null => {
 	if (move.Category !== 'Attack') {
@@ -179,7 +192,7 @@ const resolveMovesForSpecies = (species: CreatureSpecies): ResolvedMoveSet[] => 
 						id: move.Id,
 						name: move.Name ?? move.NameStub ?? move.Id,
 						displayName: getPreferredMoveLabel(move, species),
-						description: move.Description ?? null,
+						description: move.EffectDescription ?? move.Description ?? null,
 						category: move.Category ?? null,
 						affinity: move.Affinity ?? null,
 						icon: iconForMove(move, speciesAffinity),
@@ -187,6 +200,10 @@ const resolveMovesForSpecies = (species: CreatureSpecies): ResolvedMoveSet[] => 
 						sourceTemplateId: templateId,
 						nameStub: move.NameStub ?? move.Id,
 						optionWeight: option.Weighting ?? 0,
+						namesByAffinity:
+							move.NamesByAffinity && typeof move.NamesByAffinity === 'object'
+								? (move.NamesByAffinity as Record<string, string>)
+								: null,
 					};
 					const groupKey = `${candidate.nameStub}::${candidate.category ?? ''}`;
 					const existing = dedupedByTemplateGroup.get(groupKey);
@@ -254,6 +271,7 @@ const ogImage = `${imageBase}${speciesIcon}`;
 const breadcrumbs: BreadcrumbItem[] = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Creatures', href: '/creatures' },
+	{ name: 'Species', href: '/creatures/species' },
 	{ name: species.Name },
 ];
 
@@ -269,33 +287,48 @@ const collectionSchema = {
 		itemListElement: [
 			{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
 			{ '@type': 'ListItem', position: 2, name: 'Creatures', item: `${siteOrigin}/creatures` },
-			{ '@type': 'ListItem', position: 3, name: species.Name, item: canonicalUrl },
+			{ '@type': 'ListItem', position: 3, name: 'Species', item: `${siteOrigin}/creatures/species` },
+			{ '@type': 'ListItem', position: 4, name: species.Name, item: canonicalUrl },
 		],
 	},
 };
 
+type StatPill = { label: string; value: string };
+
 const statPills = [
 	{ label: 'Battle Ready', value: species.CanBeUsedInBattle ? 'Yes' : 'No' },
-	{
-		label: 'Affinity',
-		value:
-			species.BattleForcedAffinityDisplay ??
-			(species.BattleForcedAffinity ? formatAffinity(species.BattleForcedAffinity) : 'None'),
-	},
+	species.CanBeUsedInBattle
+		? {
+				label: 'Affinity',
+				value:
+					species.BattleForcedAffinityDisplay ??
+					formatAffinity(species.BattleForcedAffinity) ??
+					'None',
+			}
+		: null,
+	{ label: 'Creature Type', value: species.CreatureType ? toTitleCase(species.CreatureType) : 'Unknown' },
 	{ label: 'Rarity', value: species.Rarity ? toTitleCase(species.Rarity) : 'Unknown' },
-	{ label: 'Type', value: species.CreatureType ? toTitleCase(species.CreatureType) : 'Unknown' },
 	{ label: 'Move Area', value: species.MoveArea ? toTitleCase(species.MoveArea) : 'Unknown' },
 	{ label: 'Scale', value: `${species.MinScale} - ${species.MaxScale}` },
-	{
-		label: 'Move Set Source',
-		value:
-			species.MoveSetSource === 'Explicit'
-				? 'Direct Mapping'
-				: species.MoveSetSource === 'GlobalPool'
-					? 'Derived Global Pool'
-					: 'Unknown',
-	},
-];
+	{ label: 'Egg Type', value: species.EggType ? toTitleCase(species.EggType) : 'Unknown' },
+	species.CanBeUsedInBattle
+		? {
+				label: 'Move Set Source',
+				value:
+					species.MoveSetSource === 'Explicit'
+						? 'Direct Mapping'
+						: species.MoveSetSource === 'GlobalPool'
+							? 'Global Pool'
+							: 'Unknown',
+			}
+		: null,
+	species.SpecialTrait ? { label: 'Special Trait', value: species.SpecialTrait } : null,
+].filter((pill): pill is StatPill => pill != null);
+
+const speciesMatchup =
+	species.BattleForcedAffinity && MATCHUPS[species.BattleForcedAffinity]
+		? MATCHUPS[species.BattleForcedAffinity]
+		: null;
 
 ---
 
@@ -343,68 +376,100 @@ const statPills = [
 					))
 				}
 			</div>
+			{speciesMatchup && (
+				<div class="mt-4 flex flex-wrap items-center gap-4 rounded-sm bg-black/35 px-4 py-3">
+					<span class="text-sm text-sky-300">Matchups:</span>
+					<span class="flex items-center gap-1 text-sm text-lime-300">
+						{affinityIconById.get(speciesMatchup.strong) && (
+							<img
+								src={`${imageBase}${affinityIconById.get(speciesMatchup.strong)}`}
+								class="h-5 w-5"
+								alt=""
+								loading="lazy"
+							/>
+						)}
+						Strong vs {formatAffinity(speciesMatchup.strong)}
+					</span>
+					<span class="flex items-center gap-1 text-sm text-amber-300">
+						{affinityIconById.get(speciesMatchup.weak) && (
+							<img
+								src={`${imageBase}${affinityIconById.get(speciesMatchup.weak)}`}
+								class="h-5 w-5"
+								alt=""
+								loading="lazy"
+							/>
+						)}
+						Weak vs {formatAffinity(speciesMatchup.weak)}
+					</span>
+				</div>
+			)}
 		</div>
 
-		<section class="rounded-sm border border-sky-900 bg-sky-900/20 p-5">
-			<h2 class="mt-0 mb-4 text-2xl text-white">Move Set Archetypes</h2>
-			<p class="mt-0 mb-4 text-xs text-sky-300/90">
-				Affinity options: {ALL_BATTLE_AFFINITIES.join(' • ')}.
-			</p>
-			{species.MoveSetSource === 'GlobalPool' && (
-				<p class="mt-0 mb-4 text-sm text-sky-300/90">
-					This species has no explicit move-set assignment in the game table. Showing the full global
-					move-set pool used by pet battler archetypes.
+		{species.CanBeUsedInBattle ? (
+			<section class="rounded-sm border border-sky-900 bg-sky-900/20 p-5">
+				<h2 class="mt-0 mb-4 text-2xl text-white">Move Set Archetypes</h2>
+				<p class="mt-0 mb-4 text-xs text-sky-300/90">
+					Affinity options: {ALL_BATTLE_AFFINITIES.join(' • ')}.
 				</p>
-			)}
-			{
-				resolvedMoveSets.length === 0 ? (
-					<p class="m-0 text-sky-200/90">No direct move set mapping is available for this species yet.</p>
-				) : (
-					<div class="space-y-4">
-						{
-							resolvedMoveSets.map((moveSet) => (
-								<div class="rounded-sm border border-sky-800/70 bg-black/25 p-4">
-									<h3 class="mt-0 mb-1 text-xl text-sky-100">{moveSet.name}</h3>
-									<p class="mt-0 mb-3 text-xs uppercase tracking-wide text-sky-300/80">
-										{moveSet.id} • {moveSet.slotCount} slots • {moveSet.resolvedMoves.length} move templates
-									</p>
-									<div class="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
-										{
-											moveSet.resolvedMoves.map((move) => (
-												<a
-													href={toMoveAnchorHref(move.id)}
-													class="rounded-sm border border-sky-800/70 bg-sky-950/60 px-3 py-2 text-sm text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-900/70"
-													id={`move-${move.id}`}
-												>
-													<div class="flex items-center gap-2">
-														{move.icon && (
-															<img
-																src={`${imageBase}${move.icon}`}
-																alt={`${move.displayName} icon`}
-																class="h-6 w-6 shrink-0"
-																loading="lazy"
-															/>
-														)}
-														<div class="min-w-0">
-															<p class="m-0 truncate font-semibold text-white">{move.displayName}</p>
-															<p class="m-0 truncate text-xs text-sky-300/90">
-																{formatCategory(move.category)} • {formatAffinity(move.affinity)}
-															</p>
+				{species.MoveSetSource === 'GlobalPool' && (
+					<p class="mt-0 mb-4 text-sm text-sky-300/90">
+						This species has no explicit move-set assignment in the game table. Showing the full global
+						move-set pool used by pet battler archetypes.
+					</p>
+				)}
+				{
+					resolvedMoveSets.length === 0 ? (
+						<p class="m-0 text-sky-200/90">No direct move set mapping is available for this species yet.</p>
+					) : (
+						<div class="space-y-4">
+							{
+								resolvedMoveSets.map((moveSet) => (
+									<div class="rounded-sm border border-sky-800/70 bg-black/25 p-4">
+										<h3 class="mt-0 mb-1 text-xl text-sky-100">{moveSet.name}</h3>
+										<p class="mt-0 mb-3 text-xs uppercase tracking-wide text-sky-300/80">
+											{moveSet.id} • {moveSet.slotCount} slots • {moveSet.resolvedMoves.length} move templates
+										</p>
+										<div class="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+											{
+												moveSet.resolvedMoves.map((move) => (
+													<a
+														href={`/creatures/moves#category-${slugifyCategory(move.category)}`}
+														class="rounded-sm border border-sky-800/70 bg-sky-950/60 px-3 py-2 text-sm text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-900/70"
+													>
+														<div class="flex items-center gap-2">
+															{move.icon && (
+																<img
+																	src={`${imageBase}${move.icon}`}
+																	alt={`${move.displayName} icon`}
+																	class="h-6 w-6 shrink-0"
+																	loading="lazy"
+																/>
+															)}
+															<div class="min-w-0">
+																<p class="m-0 truncate font-semibold text-white">{move.displayName}</p>
+																<p class="m-0 truncate text-xs text-sky-300/90">
+																	{formatCategory(move.category)} • {formatAffinity(move.affinity)}
+																</p>
+															</div>
 														</div>
-													</div>
 													{move.description && (
 														<p class="mt-2 mb-0 text-xs text-sky-200/85">{move.description}</p>
 													)}
 												</a>
-											))
-										}
+												))
+											}
+										</div>
 									</div>
-								</div>
-							))
-						}
-					</div>
-				)
-			}
-		</section>
+								))
+							}
+						</div>
+					)
+				}
+			</section>
+		) : (
+			<p class="rounded-sm border border-sky-800/50 bg-sky-950/20 px-4 py-3 text-sm text-sky-300/90">
+				This species cannot be used in Xeno Arena battles.
+			</p>
+		)}
 	</section>
 </Layout>

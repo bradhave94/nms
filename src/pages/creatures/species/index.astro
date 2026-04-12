@@ -1,0 +1,175 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Table from '@components/table/Table.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import creaturesData from '@datav2/Creatures.json';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { buildPaginatedMeta } from '@utils/seo.js';
+import type { TableRow } from '@components/table/Table.astro';
+
+type CreatureSpecies = {
+	Id: string;
+	Name: string;
+	SpeciesSubtitle?: string | null;
+	MoveArea?: string | null;
+	Rarity?: string | null;
+	CanBeUsedInBattle?: boolean;
+	BattleForcedAffinityDisplay?: string | null;
+	BattleAffinityIcon?: string | null;
+	Icon?: string | null;
+};
+
+const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
+
+const AFFINITY_COLOURS: Record<string, string> = {
+	'Fire': '8B2500',
+	'Frost': '1A5276',
+	'Toxic': '4A5A00',
+	'Desert': '7D6608',
+	'Tropical': '1B6B2A',
+	'Radioactive': '5B2C6F',
+	'Mechanical': '2C3E50',
+	'Anomalous': '6C3483',
+	'None': '333333',
+};
+
+const RARITY_COLOURS: Record<string, string> = {
+	'Common': '2E4053',
+	'Uncommon': '1A5276',
+	'Rare': '6C3483',
+	'SuperRare': '922B21',
+	'Unknown': '333333',
+};
+
+const BATTLE_COLOURS: Record<string, string> = {
+	'Yes': '1B6B2A',
+	'No': '4A0E0E',
+};
+
+const AREA_COLOURS: Record<string, string> = {
+	'Ground': '5D4E37',
+	'Air': '2E5984',
+	'Water': '1A5276',
+	'Cave': '4A3728',
+	'Unknown': '333333',
+};
+
+const allSpecies = ((creaturesData as Record<string, unknown>).Species as CreatureSpecies[] | undefined) ?? [];
+const species = allSpecies
+	.filter((item): item is CreatureSpecies => Boolean(item?.Id && item?.Name))
+	.slice()
+	.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
+
+const iconFor = (s: CreatureSpecies): string => {
+	if (s.BattleAffinityIcon) return s.BattleAffinityIcon;
+	if (s.Icon) return s.Icon;
+	return NORMAL_AFFINITY_ICON;
+};
+
+const columns = [
+	{ title: 'Species', field: 'species' },
+	{ title: 'Affinity', field: 'affinity' },
+	{ title: 'Battle Ready', field: 'battle' },
+	{ title: 'Rarity', field: 'rarity' },
+	{ title: 'Move Area', field: 'area' },
+];
+
+const data: TableRow[] = species.map((s) => {
+	const affinity = s.BattleForcedAffinityDisplay ?? 'None';
+	const battle = s.CanBeUsedInBattle ? 'Yes' : 'No';
+	const rarity = s.Rarity ?? 'Unknown';
+	const moveArea = s.MoveArea ?? 'Unknown';
+	const subtitle = s.SpeciesSubtitle?.trim();
+	const displayName = subtitle ? `${s.Name} (${subtitle})` : s.Name;
+
+	return {
+		species: {
+			id: s.Id,
+			name: displayName,
+			colour: AFFINITY_COLOURS[affinity] ?? '333333',
+			image: iconFor(s),
+			href: `/creatures/${s.Id}`,
+		},
+		affinity: {
+			id: `aff-${s.Id}`,
+			name: affinity,
+			colour: AFFINITY_COLOURS[affinity] ?? '333333',
+			href: `/creatures/${s.Id}`,
+		},
+		battle: {
+			id: `bat-${s.Id}`,
+			name: battle,
+			colour: BATTLE_COLOURS[battle] ?? '333333',
+			href: `/creatures/${s.Id}`,
+		},
+		rarity: {
+			id: `rar-${s.Id}`,
+			name: rarity,
+			colour: RARITY_COLOURS[rarity] ?? '333333',
+			href: `/creatures/${s.Id}`,
+		},
+		area: {
+			id: `area-${s.Id}`,
+			name: moveArea,
+			colour: AREA_COLOURS[moveArea] ?? '333333',
+			href: `/creatures/${s.Id}`,
+		},
+	};
+});
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/creatures/species', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: 'Creature Species',
+	collectionDescription: "Browse No Man's Sky creature species from the Xeno Arena system.",
+	collectionPath: '/creatures/species',
+	currentPage: 1,
+	items: species.slice(0, 25).map((item, index) => ({
+		name: item.Name,
+		url: `${siteOrigin}/creatures/${item.Id}`,
+		position: index + 1,
+	})),
+});
+const breadcrumbs = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Creatures', href: '/creatures' },
+	{ name: 'Species' },
+];
+const baseDescription = "Browse No Man's Sky creature species from the Xeno Arena system.";
+const { title, description } = buildPaginatedMeta('Creature Species', baseDescription, 1, 1);
+---
+
+<style is:global>
+	#table .tabulator-row .tabulator-cell {
+		min-width: 80px !important;
+	}
+	#table .tabulator-header .tabulator-col {
+		min-width: 80px !important;
+	}
+	#table .tabulator-row .tabulator-cell picture {
+		min-width: 35px !important;
+		width: 35px !important;
+		height: 35px !important;
+		flex-shrink: 0;
+	}
+	#table .tabulator-row .tabulator-cell picture img {
+		width: 35px !important;
+		height: 35px !important;
+		object-fit: contain;
+	}
+</style>
+
+<Layout title={title} description={description} slug="creatures" structuredData={structuredData}>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<Table
+		title="Species"
+		image="refining"
+		image_width={60}
+		image_height={60}
+		columns={columns}
+		sort="species"
+		data={data}
+	/>
+</Layout>

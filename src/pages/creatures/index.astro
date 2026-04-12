@@ -1,110 +1,129 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import CompactCard from '@components/CompactCard.astro';
-import Pagination from '@components/Pagination.astro';
+import Card from '@components/Card.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import creaturesData from '@datav2/Creatures.json';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
-import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
-
-type CreatureSpecies = {
-	Id: string;
-	Name: string;
-	SpeciesSubtitle?: string | null;
-	BattleForcedAffinity?: string | null;
-	CanBeUsedInBattle?: boolean;
-	Icon?: string | null;
-	BattleAffinityIcon?: string | null;
-	Slug?: string;
-};
+import { buildCategoryBreadcrumbs } from '@utils/seo.js';
 
 const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
-const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
-const pageSize = 80;
-const allSpecies = ((creaturesData as Record<string, unknown>).Species as CreatureSpecies[] | undefined) ?? [];
-const sortedSpecies = allSpecies
-	.filter((item): item is CreatureSpecies => Boolean(item?.Id && item?.Name))
-	.slice()
-	.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
-const pageData = sortedSpecies.slice(0, pageSize);
-const lastPage = Math.max(1, Math.ceil(sortedSpecies.length / pageSize));
-const page = {
-	data: pageData,
-	currentPage: 1,
-	lastPage,
-	url: {
-		next: lastPage > 1 ? '/creatures/2' : undefined,
+const speciesCount = creaturesData.Species?.length ?? 0;
+const affinityCount = creaturesData.Affinities?.length ?? 0;
+const moveCount = creaturesData.BattleMoves?.length ?? 0;
+const modeCount = creaturesData.ArenaModes?.length ?? 0;
+const behaviourCount = creaturesData.Behaviours?.length ?? 0;
+
+const accessoryCount = creaturesData.PetAccessories?.length ?? 0;
+
+const hubCards = [
+	{
+		name: 'Species',
+		description: `Browse all ${speciesCount} creature species with sortable stats, affinities, and battle readiness.`,
+		button: 'View Species',
+		image: `${IMAGE_BASE}SPEC_PB_EGG01.png`,
+		link: '/creatures/species',
 	},
+	{
+		name: 'Affinities',
+		description: `Master the ${affinityCount} elemental affinities and their strength-versus-weakness matchup chart.`,
+		button: 'View Affinities',
+		image: `${IMAGE_BASE}biomes--stats.planet.fire.png`,
+		link: '/creatures/affinites',
+	},
+	{
+		name: 'Moves',
+		description: `Explore ${moveCount} battle moves with affinity-specific names, categories, and move set archetypes.`,
+		button: 'View Moves',
+		image: `${IMAGE_BASE}moves--move.pet.attack.png`,
+		link: '/creatures/moves',
+	},
+	{
+		name: 'Arena',
+		description: `${modeCount} arena modes with difficulty ratings, reward breakdowns, league progression, and pet shop eggs.`,
+		button: 'View Arena',
+		image: `${IMAGE_BASE}biomes--stats.planet.mech.png`,
+		link: '/creatures/arena',
+	},
+];
+
+const companionCard = {
+	name: 'Companions',
+	description: `${behaviourCount} companion behaviours, ${accessoryCount} pet accessories, leveling & genetics guide, egg sequencer, mood states, and trait modifiers. Everything you need to raise, customise, and battle-train your creatures.`,
+	button: 'View Companions',
+	image: `${IMAGE_BASE}biomes--stats.planet.lush.png`,
+	link: '/creatures/companions',
 };
 
-const iconFor = (item: CreatureSpecies): string => {
-	if (item.BattleAffinityIcon) return item.BattleAffinityIcon;
-	return NORMAL_AFFINITY_ICON;
-};
-
-const cardNameFor = (item: CreatureSpecies): string => {
-	const subtitle = item.SpeciesSubtitle?.trim();
-	if (subtitle) return `${item.Name} • ${subtitle}`;
-	return item.Name;
-};
-
+const title = "Creatures | No Man's Sky Recipes";
+const description =
+	"Explore No Man's Sky creature species, affinity relationships, and move families from the Xeno Arena system.";
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/creatures', siteOrigin).toString();
-const itemListElements = page.data.map((item, index) => ({
-	name: item.Name,
-	url: `${siteOrigin}/creatures/${item.Id}`,
-	position: index + 1,
-}));
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,
 	collectionName: 'Creatures',
-	collectionDescription:
-		"Explore No Man's Sky creature battle species, affinities, and Xeno Arena move archetypes.",
+	collectionDescription: description,
 	collectionPath: '/creatures',
-	currentPage: page.currentPage,
-	items: itemListElements,
+	currentPage: 1,
+	items: [...hubCards, companionCard].map((card, index) => ({
+		name: card.name,
+		url: `${siteOrigin}${card.link}`,
+		position: index + 1,
+	})),
 });
-const breadcrumbs = buildCategoryBreadcrumbs('Creatures', '/creatures', page.currentPage);
-const intro = buildCategoryIntro(
-	'Discover species, affinity types, and core Xeno Arena creature data in one place.',
-	page.currentPage,
-	page.lastPage
-);
-const baseDescription =
-	"Explore No Man's Sky creature battle species, affinities, and Xeno Arena move archetypes.";
-const { title, description } = buildPaginatedMeta(
-	'Creatures',
-	baseDescription,
-	page.currentPage,
-	page.lastPage
-);
+const breadcrumbs = buildCategoryBreadcrumbs('Creatures', '/creatures', 1);
 ---
 
-<Layout
-	{title}
-	{description}
-	slug="creatures"
-	structuredData={structuredData}
->
+<Layout title={title} description={description} slug="creatures" structuredData={structuredData}>
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Creatures</h1>
-	<p class="mx-auto mb-12 max-w-3xl text-center text-sky-200/90">{intro}</p>
-	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
-		{
-			page.data.map((item, index) => {
-				return (
-					<CompactCard
-						card={{
-							name: cardNameFor(item),
-							image: `${IMAGE_BASE}${iconFor(item)}`,
-							link: `/creatures/${item.Id}`,
-						}}
+	<header class="bg-linear-to-r from-purple-900/20 to-slate-900/50 py-10 text-center">
+		<h1 class="m-0 text-4xl sm:text-6xl text-white font-bold mb-4">Creatures</h1>
+		<p class="m-0 text-xl sm:text-3xl text-gray-300 tracking-widest">
+			Species | Affinities | Moves | Arena | Companions
+		</p>
+	</header>
+	<main class="container w-auto mx-auto px-4 py-8">
+		<div id="items" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+			{
+				hubCards.map((card, index) => (
+					<Card
+						card={card}
 						index={index}
+						loading={index < 3 ? "eager" : "lazy"}
 					/>
-				);
-			})
-		}
-	</div>
-	<Pagination page={page} />
+				))
+			}
+			<article class="sm:col-span-2 xl:col-span-2">
+				<a
+					href="/creatures/companions"
+					class="flex transition border border-black hover:border-blue-500 bg-black rounded-md overflow-hidden h-full"
+				>
+					<div class="flex flex-1 flex-col justify-between p-4 sm:p-6">
+						<div>
+							<h2 class="m-0 font-bold text-3xl tracking-wider text-white">
+								Companions
+							</h2>
+							<p class="mt-2 leading-relaxed xl:tracking-wider text-sm xl:text-base text-gray-200">
+								{companionCard.description}
+							</p>
+						</div>
+						<div class="sm:flex sm:items-end sm:justify-end mt-4">
+							<span class="block bg-blue-500 px-5 py-3 text-center text-xs font-bold tracking-wider text-gray-900 transition hover:bg-blue-700">
+								View Companions
+							</span>
+						</div>
+					</div>
+					<div class="hidden sm:flex items-center justify-center w-48 shrink-0">
+						<img
+							src={companionCard.image}
+							alt="Companions"
+							class="h-32 w-32 object-contain"
+							loading="lazy"
+						/>
+					</div>
+				</a>
+			</article>
+		</div>
+	</main>
 </Layout>

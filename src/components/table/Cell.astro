@@ -10,6 +10,7 @@ interface CellData {
     image?: string;
     description?: string;
     value?: number;
+    href?: string;
 }
 
 export interface Props {
@@ -57,7 +58,7 @@ const { cell } = Astro.props;
     ) : cell && 'id' in cell ? (
         <>
             <span class="d-none sort">{cell.name}</span>
-            <a href={getSlug(cell.id)} class="cell-link">
+            <a href={cell.href ?? getSlug(cell.id)} class="cell-link">
                 <div class="cell-content" style={`background: #${cell.colour}`}>
                     <span class="cell-text flex items-center gap-2 flex-wrap">
                         {cell.name}

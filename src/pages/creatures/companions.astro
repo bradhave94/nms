@@ -1,0 +1,795 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import creaturesData from '@datav2/Creatures.json';
+import eggModifiers from '@datav2/EggModifiers.json';
+
+type TraitModifier = {
+	Trait: string;
+	TraitMin: number;
+	TraitMax: number;
+	WeightModifierMin: number;
+	WeightModifierMax: number;
+	CooldownModifierMin: number;
+	CooldownModifierMax: number;
+};
+
+type MoodModifier = {
+	Mood: string;
+	MoodMin: number;
+	MoodMax: number;
+	WeightModifierMin: number;
+	WeightModifierMax: number;
+	CooldownModifierMin: number;
+	CooldownModifierMax: number;
+};
+
+type FollowUpBehaviour = {
+	Behaviour: string;
+	TraitBased: boolean;
+	Trait: string;
+	TraitMin: number;
+	TraitMax: number;
+	WeightMin: number;
+	WeightMax: number;
+};
+
+type Behaviour = {
+	Id: string;
+	Name: string;
+	Label: string | null;
+	UILabel: string | null;
+	ReactiveBehaviour: boolean;
+	UsefulBehaviour: boolean;
+	Weight: number;
+	MinPerformTime: number;
+	MaxPerformTime: number;
+	CooldownTime: number;
+	Validity: string;
+	TraitModifiers?: TraitModifier[];
+	MoodModifiers?: MoodModifier[];
+	FollowUpBehaviours?: FollowUpBehaviour[];
+	MoodOnComplete?: { Hungry: number; Lonely: number };
+	Slug?: string;
+};
+
+type PetAccessory = {
+	Id: string;
+	Name: string;
+	Descriptor: string;
+	Description: string | null;
+	Groups: string[];
+	Slug?: string;
+};
+
+type EggOverride = {
+	Id: string;
+	CreatureID: string;
+	CanChangeGrowth: boolean;
+	CanChangeAccessories: boolean;
+	CanChangeColour: boolean;
+	CanChangeTraits: boolean;
+	MinScaleOverride: number;
+	MaxScaleOverride: number;
+	Slug?: string;
+};
+
+type EggModifier = {
+	Id: string;
+	ItemId: string;
+	ItemType: string;
+	Name: string;
+	Group: string;
+	Trait: string;
+	IncreasesTrait: boolean;
+	Direction: string;
+	DirectionSymbol: string;
+	EffectShort: string;
+	BaseValueOverride: number;
+};
+
+type EggSequencerConstants = {
+	PetEggLayingInterval: number;
+	PetEggFirstEggDelay: number;
+	PetEggModificationTime: number;
+	PetEggModificationItemLimit: number;
+	PetEggSubstanceModifier: number;
+	PetEggScaleRangeModifier: number;
+	PetEggScaleRangeMax: number;
+	PetEggTraitRangeModifier: number;
+	PetEggTraitRangeMax: number;
+	PetEggOverdosageModifier: number;
+	PetEggMaxOverdosage: number;
+	PetEggMaxTopDescriptorChangeChance: number;
+	PetEggAccessoryChanceModifier: number;
+	PetEggMaxAccessoriesChangeChance: number;
+	PetEggMaxChangeProduct: string;
+};
+
+const data = creaturesData as Record<string, unknown>;
+const behaviours = (data.Behaviours as Behaviour[] | undefined) ?? [];
+const petAccessories = (data.PetAccessories as PetAccessory[] | undefined) ?? [];
+const eggOverrides = (data.EggOverrides as EggOverride[] | undefined) ?? [];
+const globals = data.CreatureGlobals as Record<string, unknown> ?? {};
+const eggConstants = (globals.EggSequencerConstants as EggSequencerConstants) ?? undefined;
+const battleStats = (globals.BattleStats as Record<string, { Header: string | null; Label: string | null }>) ?? {};
+const battleUI = (globals.BattleUI as Record<string, string>) ?? {};
+const arenaModes = ((creaturesData as Record<string, unknown>).ArenaModes as { Id: string; Name: string; Description: string | null; GameMode: string; Difficulty: string | null; ExperienceMultiplier: number }[] | undefined) ?? [];
+const slotLabels = (globals.AccessorySlotLabels as Record<string, string>) ?? {};
+const eggLabels = (globals.EggLabels as {
+	TraitWords: Record<string, string>;
+	SizeWords: Record<string, string>;
+	TypeNames: Record<string, string>;
+	Requirements: Record<string, string>;
+}) ?? { TraitWords: {}, SizeWords: {}, TypeNames: {}, Requirements: {} };
+const moodStrings = (globals.MoodStrings as { Good: string[]; Hungry: string[]; Lonely: string[] }) ?? { Good: [], Hungry: [], Lonely: [] };
+const goodMoods = [...new Set(moodStrings.Good)];
+const hungryMoods = [...new Set(moodStrings.Hungry)];
+const lonelyMoods = [...new Set(moodStrings.Lonely)];
+
+const sortedBehaviours = [...behaviours].sort((a, b) => {
+	if (a.UsefulBehaviour !== b.UsefulBehaviour) return a.UsefulBehaviour ? -1 : 1;
+	return b.Weight - a.Weight;
+});
+
+const modifiers = eggModifiers as EggModifier[];
+const traits = ['Helpfulness', 'Aggression', 'Independence'] as const;
+const modsByTrait = Object.fromEntries(
+	traits.map((trait) => [
+		trait,
+		{
+			increase: modifiers.filter((m) => m.Trait === trait && m.IncreasesTrait),
+			decrease: modifiers.filter((m) => m.Trait === trait && !m.IncreasesTrait),
+		},
+	])
+) as Record<string, { increase: EggModifier[]; decrease: EggModifier[] }>;
+
+const formatTime = (seconds: number): string => {
+	if (seconds < 60) return `${seconds}s`;
+	if (seconds < 3600) return `${(seconds / 60).toFixed(0)}m`;
+	const hrs = seconds / 3600;
+	return hrs === Math.floor(hrs) ? `${hrs}h` : `${hrs.toFixed(1)}h`;
+};
+
+const formatPerformTime = (min: number, max: number): string => {
+	if (min === max) return formatTime(min);
+	return `${formatTime(min)} – ${formatTime(max)}`;
+};
+
+const pillColors: Record<string, string> = {
+	BACK: 'bg-violet-600/60 text-violet-100 border-violet-500/50',
+	FRONT: 'bg-emerald-600/60 text-emerald-100 border-emerald-500/50',
+	LEFT: 'bg-amber-600/60 text-amber-100 border-amber-500/50',
+	RIGHT: 'bg-sky-600/60 text-sky-100 border-sky-500/50',
+};
+
+const traitColors: Record<string, string> = {
+	Helpfulness: 'text-emerald-300',
+	Aggression: 'text-red-300',
+	Independence: 'text-amber-300',
+};
+
+const title = "Companions | No Man's Sky Recipes";
+const description =
+	"Companion behaviours, egg sequencer modifiers, pet accessories, and egg overrides for No Man's Sky.";
+const breadcrumbs = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Creatures', href: '/creatures' },
+	{ name: 'Companions' },
+];
+---
+
+<Layout title={title} description={description} slug="creatures">
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<section class="mx-auto max-w-7xl px-4 pb-16">
+		<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Companions</h1>
+		<p class="mx-auto mb-12 max-w-4xl text-center text-sky-200/90">
+			Everything about companion management: pet behaviours, egg sequencer trait modifiers,
+			pet accessories, and special egg overrides.
+		</p>
+
+		<div class="flex gap-8">
+		<div class="flex-1 min-w-0">
+
+		<!-- Section: Leveling & Genetics -->
+		<section id="leveling" class="mb-16">
+			<h2 class="mb-1 text-3xl sm:text-4xl text-white">Leveling &amp; Genetics</h2>
+			<p class="mt-0 mb-6 text-sm text-sky-300/80">
+				How companions gain power through battle experience, mutation progress, and gene editing.
+			</p>
+
+			<!-- 1. How Mutation Works -->
+			<h3 class="mb-3 text-lg text-white">How Mutation Works</h3>
+			<div class="mb-8 grid gap-4 sm:grid-cols-3">
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-5">
+					<div class="mb-2 flex items-center gap-2">
+						<span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-sky-600/60 bg-sky-800/50 text-sm font-bold text-sky-100">1</span>
+						<span class="text-base font-semibold text-white">Battle</span>
+					</div>
+					<p class="m-0 text-sm text-sky-200/80">
+						Exposure to battles in the Holo-Arena will slowly mutate a companion.
+					</p>
+				</div>
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-5">
+					<div class="mb-2 flex items-center gap-2">
+						<span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-sky-600/60 bg-sky-800/50 text-sm font-bold text-sky-100">2</span>
+						<span class="text-base font-semibold text-white">Gene Edit</span>
+					</div>
+					<p class="m-0 text-sm text-sky-200/80">
+						Each level of mutation allows an individual gene to be edited, levelling up the companion's combat performance.
+					</p>
+				</div>
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-5">
+					<div class="mb-2 flex items-center gap-2">
+						<span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-sky-600/60 bg-sky-800/50 text-sm font-bold text-sky-100">3</span>
+						<span class="text-base font-semibold text-white">Max Potential</span>
+					</div>
+					<p class="m-0 text-sm text-sky-200/80">
+						Once a creature reaches its maximum genetic potential, further edits can be made to change the creature's available moves.
+					</p>
+				</div>
+			</div>
+
+			<!-- 2. The Three Editable Stats -->
+			<h3 class="mb-3 text-lg text-white">The Three Editable Genes</h3>
+			<div class="mb-8 grid gap-4 sm:grid-cols-3">
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-5">
+					<h4 class="m-0 mb-2 text-base font-bold uppercase tracking-wide text-emerald-300">Agility</h4>
+					<p class="m-0 mb-3 text-sm text-sky-200/80">
+						Editing this gene will improve this creature's agility, improving their chances to dodge incoming attacks. In a battle, the creature with the higher agility stat will move first.
+					</p>
+					<p class="m-0 text-xs italic text-sky-400/70">Smaller creatures have a higher inherent agility.</p>
+				</div>
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-5">
+					<h4 class="m-0 mb-2 text-base font-bold uppercase tracking-wide text-red-300">Health</h4>
+					<p class="m-0 mb-3 text-sm text-sky-200/80">
+						Editing this gene will improve this creature's health, improving their chances of survival in the Holo-Arena.
+					</p>
+					<p class="m-0 text-xs italic text-sky-400/70">Larger creatures have higher inherent health.</p>
+				</div>
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-5">
+					<h4 class="m-0 mb-2 text-base font-bold uppercase tracking-wide text-amber-300">Combat</h4>
+					<p class="m-0 text-sm text-sky-200/80">
+						Editing this gene will improve this creature's combat ability, increasing the power of their abilities. Improvements include damage, healing strength, buff duration, and more.
+					</p>
+				</div>
+			</div>
+
+			<!-- 3. Battle Stats Reference -->
+			<h3 class="mb-3 text-lg text-white">Battle Stats Reference</h3>
+			<div class="mb-8 overflow-x-auto rounded-sm border border-sky-800/70">
+				<table class="w-full border-collapse text-sm">
+					<thead>
+						<tr class="border-b border-sky-800/70 bg-sky-950/60 text-left text-xs uppercase tracking-wide text-sky-300/90">
+							<th class="px-3 py-2.5">Stat</th>
+							<th class="px-3 py-2.5">Header</th>
+							<th class="px-3 py-2.5">Label</th>
+						</tr>
+					</thead>
+					<tbody>
+						{Object.entries(battleStats).map(([key, stat]) => (
+							<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+								<td class="px-3 py-2 font-semibold text-white">{key}</td>
+								<td class="px-3 py-2 text-sky-200/80">{stat.Header ?? '—'}</td>
+								<td class="px-3 py-2 text-sky-300/80">{stat.Label ?? '—'}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+
+			<!-- 4. Size & Stats -->
+			<h3 class="mb-3 text-lg text-white">Size &amp; Stats</h3>
+			<div class="mb-8 grid gap-4 sm:grid-cols-2">
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-5">
+					<h4 class="m-0 mb-2 text-base font-semibold text-sky-100">Small Creatures</h4>
+					<p class="m-0 text-sm text-sky-200/80">
+						Boosted agility — will move first more often, better dodge chance.
+					</p>
+				</div>
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-5">
+					<h4 class="m-0 mb-2 text-base font-semibold text-sky-100">Large Creatures</h4>
+					<p class="m-0 text-sm text-sky-200/80">
+						Boosted health — higher survivability, can absorb more damage.
+					</p>
+				</div>
+			</div>
+
+			<!-- 5. Retroviral Pellet -->
+			<h3 class="mb-3 text-lg text-white">Retroviral Pellet</h3>
+			<div class="mb-8 rounded-sm border border-amber-700/60 bg-amber-950/25 p-5">
+				<div class="mb-1 flex items-center gap-3">
+					<span class="text-lg font-bold text-amber-200">Retroviral Pellet</span>
+					<span class="rounded-sm border border-amber-600/50 bg-amber-800/40 px-2 py-0.5 text-[10px] uppercase tracking-wide text-amber-200/90">Genetic Mutator</span>
+				</div>
+				<p class="m-0 text-sm text-sky-200/80">
+					A specialised treat laced with gene-manipulating retroviruses, capable of evolving the battle abilities of a companion. Feeding this to your tamed creatures will instantly unlock part of their genetic potential.
+				</p>
+			</div>
+
+			<!-- 6. Growth & Incubation Constants -->
+			{eggConstants && (
+				<div class="mb-8">
+					<h3 class="mb-3 text-lg text-white">Growth &amp; Incubation Constants</h3>
+					<div class="overflow-x-auto rounded-sm border border-sky-800/70">
+						<table class="w-full border-collapse text-sm">
+							<thead>
+								<tr class="border-b border-sky-800/70 bg-sky-950/60 text-left text-xs uppercase tracking-wide text-sky-300/90">
+									<th class="px-3 py-2.5">Parameter</th>
+									<th class="px-3 py-2.5 text-right">Value</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Egg Laying Interval</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{(eggConstants.PetEggLayingInterval / 3600).toFixed(0)} hours</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Egg Modification Item Limit</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggModificationItemLimit}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Egg Scale Range Modifier</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggScaleRangeModifier}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Egg Trait Range Modifier</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggTraitRangeModifier}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Max Overdosage</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggMaxOverdosage}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			)}
+
+			<!-- 7. XP Multipliers by Mode -->
+			{arenaModes.length > 0 && (
+				<div>
+					<h3 class="mb-3 text-lg text-white">XP Multipliers by Mode</h3>
+					<div class="overflow-x-auto rounded-sm border border-sky-800/70">
+						<table class="w-full border-collapse text-sm">
+							<thead>
+								<tr class="border-b border-sky-800/70 bg-sky-950/60 text-left text-xs uppercase tracking-wide text-sky-300/90">
+									<th class="px-3 py-2.5">Mode</th>
+									<th class="px-3 py-2.5">Game Type</th>
+									<th class="px-3 py-2.5">Difficulty</th>
+									<th class="px-3 py-2.5 text-right">XP Multiplier</th>
+								</tr>
+							</thead>
+							<tbody>
+								{arenaModes.map((mode) => (
+									<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+										<td class="px-3 py-2 font-semibold text-white">{mode.Name}</td>
+										<td class="px-3 py-2 text-sky-200/80">{mode.GameMode}</td>
+										<td class="px-3 py-2 text-sky-300/80">{mode.Difficulty ?? '—'}</td>
+										<td class="px-3 py-2 text-right tabular-nums text-white">{mode.ExperienceMultiplier}x</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			)}
+		</section>
+
+		<hr class="my-12 border-sky-800/40" />
+		<!-- Section 1: Companion Behaviours -->
+		<section id="behaviours" class="mb-16">
+			<h2 class="mb-4 text-3xl sm:text-4xl text-white">Companion Behaviours</h2>
+			<p class="mt-0 mb-4 text-sm text-sky-200/90">
+				Sorted by usefulness first, then by weight. Expand a row to see trait modifiers, mood effects,
+				mood-on-complete bonuses, and follow-up behaviour chains.
+			</p>
+			<div class="overflow-x-auto rounded-sm border border-sky-800/70">
+				<table class="w-full border-collapse text-sm">
+					<thead>
+						<tr class="border-b border-sky-800/70 bg-sky-950/60 text-left text-xs uppercase tracking-wide text-sky-300/90">
+							<th class="px-3 py-2.5">Name</th>
+							<th class="px-3 py-2.5 hidden sm:table-cell">Label</th>
+							<th class="px-3 py-2.5 text-center">Useful</th>
+							<th class="px-3 py-2.5">Validity</th>
+							<th class="px-3 py-2.5 text-right">Weight</th>
+							<th class="px-3 py-2.5 text-right">Cooldown</th>
+							<th class="px-3 py-2.5 text-right">Perform Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						{sortedBehaviours.map((b) => {
+							const hasDetails = (b.TraitModifiers && b.TraitModifiers.length > 0)
+								|| (b.MoodModifiers && b.MoodModifiers.length > 0)
+								|| b.MoodOnComplete
+								|| (b.FollowUpBehaviours && b.FollowUpBehaviours.length > 0);
+							return (
+								<>
+									<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+										<td class="px-3 py-2 font-semibold text-white">{b.Name}</td>
+										<td class="px-3 py-2 text-sky-300/80 hidden sm:table-cell">{b.UILabel ?? b.Label ?? '—'}</td>
+										<td class="px-3 py-2 text-center">
+											{b.UsefulBehaviour
+												? <span class="text-emerald-400">&#10003;</span>
+												: <span class="text-gray-500">&#10005;</span>}
+										</td>
+										<td class="px-3 py-2 text-sky-200/80">{b.Validity}</td>
+										<td class="px-3 py-2 text-right tabular-nums">{b.Weight}</td>
+										<td class="px-3 py-2 text-right tabular-nums">{formatTime(b.CooldownTime)}</td>
+										<td class="px-3 py-2 text-right tabular-nums">{formatPerformTime(b.MinPerformTime, b.MaxPerformTime)}</td>
+									</tr>
+									{hasDetails && (
+										<tr class="border-b border-sky-900/50 bg-sky-950/20">
+											<td colspan="7" class="px-4 py-2">
+												<div class="space-y-1 text-xs">
+													{b.TraitModifiers?.map((tm) => (
+														<p class="m-0">
+															<span class={`font-semibold ${traitColors[tm.Trait] ?? 'text-sky-200'}`}>Trait: {tm.Trait}</span>
+															{' '}scales weight {tm.WeightModifierMin}x – {tm.WeightModifierMax}x, cooldown {tm.CooldownModifierMin}x – {tm.CooldownModifierMax}x
+														</p>
+													))}
+													{b.MoodModifiers?.map((mm) => (
+														<p class="m-0 text-sky-300/80">
+															Mood: {mm.Mood} ({mm.MoodMin} – {mm.MoodMax}) scales weight {mm.WeightModifierMin}x – {mm.WeightModifierMax}x, cooldown {mm.CooldownModifierMin}x – {mm.CooldownModifierMax}x
+														</p>
+													))}
+													{b.MoodOnComplete && (
+														<p class="m-0 text-cyan-300">
+															Completes:
+															{b.MoodOnComplete.Hungry !== 0 && ` Hungry ${b.MoodOnComplete.Hungry > 0 ? '+' : ''}${b.MoodOnComplete.Hungry}`}
+															{b.MoodOnComplete.Lonely !== 0 && ` Lonely ${b.MoodOnComplete.Lonely > 0 ? '+' : ''}${b.MoodOnComplete.Lonely}`}
+															{b.MoodOnComplete.Hungry === 0 && b.MoodOnComplete.Lonely === 0 && ' (no mood change)'}
+														</p>
+													)}
+													{b.FollowUpBehaviours && b.FollowUpBehaviours.length > 0 && (
+														<p class="m-0 text-sky-200/80">
+															Chains to:{' '}
+															{b.FollowUpBehaviours.map((fu, i) => (
+																<>
+																	{i > 0 && ', '}
+																	<span class="text-white">{fu.Behaviour}</span>
+																	{fu.TraitBased && (
+																		<span class={`${traitColors[fu.Trait] ?? ''}`}>
+																			{' '}({fu.Trait} {fu.TraitMin} → {fu.TraitMax})
+																		</span>
+																	)}
+																</>
+															))}
+														</p>
+													)}
+												</div>
+											</td>
+										</tr>
+									)}
+								</>
+							);
+						})}
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<hr class="my-12 border-sky-800/40" />
+		<!-- Section 2: Egg Sequencer Guide -->
+		<section id="egg-sequencer" class="mb-16">
+			<h2 class="mb-4 text-3xl sm:text-4xl text-white">Egg Sequencer Guide</h2>
+			<p class="mt-0 mb-6 text-sm text-sky-200/90">
+				Use the Egg Sequencer to modify companion traits by adding substances or products during incubation.
+				Items are grouped by the trait they affect and whether they increase or decrease it.
+			</p>
+
+			<div class="space-y-6 mb-10">
+				{traits.map((trait) => (
+					<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
+						<h3 class={`m-0 mb-3 text-xl ${traitColors[trait]}`}>{trait}</h3>
+						<div class="grid gap-4 md:grid-cols-2">
+							<div>
+								<p class="m-0 mb-2 text-xs uppercase tracking-wide text-emerald-400/90">Increase (+)</p>
+								<div class="space-y-1.5">
+									{modsByTrait[trait].increase.map((m) => (
+										<div class="flex items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
+											<span class="shrink-0 rounded-sm border border-sky-700/50 bg-sky-900/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300/90">
+												{m.ItemType}
+											</span>
+											<span class="text-white">{m.Name}</span>
+											<span class="ml-auto text-xs text-sky-400/70">{m.Group}</span>
+										</div>
+									))}
+								</div>
+							</div>
+							<div>
+								<p class="m-0 mb-2 text-xs uppercase tracking-wide text-red-400/90">Decrease (-)</p>
+								<div class="space-y-1.5">
+									{modsByTrait[trait].decrease.map((m) => (
+										<div class="flex items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
+											<span class="shrink-0 rounded-sm border border-sky-700/50 bg-sky-900/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300/90">
+												{m.ItemType}
+											</span>
+											<span class="text-white">{m.Name}</span>
+											<span class="ml-auto text-xs text-sky-400/70">{m.Group}</span>
+										</div>
+									))}
+								</div>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+
+			{eggConstants && (
+				<div class="mb-10">
+					<h3 class="mb-3 text-xl text-white">Sequencer Constants</h3>
+					<div class="overflow-x-auto rounded-sm border border-sky-800/70">
+						<table class="w-full border-collapse text-sm">
+							<thead>
+								<tr class="border-b border-sky-800/70 bg-sky-950/60 text-left text-xs uppercase tracking-wide text-sky-300/90">
+									<th class="px-3 py-2.5">Parameter</th>
+									<th class="px-3 py-2.5 text-right">Value</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Egg Laying Interval</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{formatTime(eggConstants.PetEggLayingInterval)}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">First Egg Delay</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{formatTime(eggConstants.PetEggFirstEggDelay)}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Modification Time</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggModificationTime}s</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Modification Item Limit</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggModificationItemLimit}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Substance Modifier</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggSubstanceModifier}x</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Scale Range Modifier</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggScaleRangeModifier}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Scale Range Max</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggScaleRangeMax}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Trait Range Modifier</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggTraitRangeModifier}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Trait Range Max</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggTraitRangeMax}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Overdosage Modifier</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggOverdosageModifier}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Max Overdosage</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggMaxOverdosage}</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Top Descriptor Change Chance</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{(eggConstants.PetEggMaxTopDescriptorChangeChance * 100).toFixed(0)}%</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Accessory Chance Modifier</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{eggConstants.PetEggAccessoryChanceModifier}x</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Max Accessories Change Chance</td>
+									<td class="px-3 py-2 text-right tabular-nums text-white">{(eggConstants.PetEggMaxAccessoriesChangeChance * 100).toFixed(0)}%</td>
+								</tr>
+								<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+									<td class="px-3 py-2 text-sky-200/80">Max Change Product</td>
+									<td class="px-3 py-2 text-right text-white">{eggConstants.PetEggMaxChangeProduct}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			)}
+
+			<div class="mb-10 grid gap-6 md:grid-cols-2">
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
+					<h3 class="m-0 mb-3 text-xl text-white">Trait Words</h3>
+					<p class="m-0 mb-3 text-xs text-sky-200/90">
+						Words used to describe companion personality based on egg sequencer trait modifications.
+					</p>
+					<div class="grid grid-cols-2 gap-2">
+						{Object.entries(eggLabels.TraitWords).map(([key, word]) => (
+							<span class="flex items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
+								<span class="shrink-0 rounded-sm border border-sky-700/50 bg-sky-900/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300/90">{key}</span>
+								<span class="text-white">{word}</span>
+							</span>
+						))}
+					</div>
+				</div>
+				<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
+					<h3 class="m-0 mb-3 text-xl text-white">Size Words</h3>
+					<p class="m-0 mb-3 text-xs text-sky-200/90">
+						Words used to describe companion size resulting from egg sequencer modifications.
+					</p>
+					<div class="grid grid-cols-2 gap-2">
+						{Object.entries(eggLabels.SizeWords).map(([key, word]) => (
+							<span class="flex items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
+								<span class="shrink-0 rounded-sm border border-sky-700/50 bg-sky-900/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300/90">{key}</span>
+								<span class="text-white">{word}</span>
+							</span>
+						))}
+					</div>
+				</div>
+			</div>
+
+			{eggOverrides.length > 0 && (
+				<div>
+					<h3 class="mb-3 text-xl text-white">Egg Overrides</h3>
+					<p class="mt-0 mb-3 text-sm text-sky-200/90">
+						These species have special rules when processed in the Egg Sequencer.
+					</p>
+					<div class="overflow-x-auto rounded-sm border border-sky-800/70">
+						<table class="w-full border-collapse text-sm">
+							<thead>
+								<tr class="border-b border-sky-800/70 bg-sky-950/60 text-left text-xs uppercase tracking-wide text-sky-300/90">
+									<th class="px-3 py-2.5">Species</th>
+									<th class="px-3 py-2.5 text-center">Growth</th>
+									<th class="px-3 py-2.5 text-center">Accessories</th>
+									<th class="px-3 py-2.5 text-center">Colour</th>
+									<th class="px-3 py-2.5 text-center">Traits</th>
+									<th class="px-3 py-2.5 text-right">Scale Range</th>
+								</tr>
+							</thead>
+							<tbody>
+								{eggOverrides.map((eo) => (
+									<tr class="border-b border-sky-900/50 hover:bg-sky-950/30">
+										<td class="px-3 py-2">
+											<a href={`/creatures/${eo.CreatureID}`} class="text-cyan-300 hover:text-cyan-200 hover:underline underline-offset-2">
+												{eo.CreatureID}
+											</a>
+										</td>
+										<td class="px-3 py-2 text-center">
+											{eo.CanChangeGrowth
+												? <span class="text-emerald-400">&#10003;</span>
+												: <span class="text-gray-500">&#10005;</span>}
+										</td>
+										<td class="px-3 py-2 text-center">
+											{eo.CanChangeAccessories
+												? <span class="text-emerald-400">&#10003;</span>
+												: <span class="text-gray-500">&#10005;</span>}
+										</td>
+										<td class="px-3 py-2 text-center">
+											{eo.CanChangeColour
+												? <span class="text-emerald-400">&#10003;</span>
+												: <span class="text-gray-500">&#10005;</span>}
+										</td>
+										<td class="px-3 py-2 text-center">
+											{eo.CanChangeTraits
+												? <span class="text-emerald-400">&#10003;</span>
+												: <span class="text-gray-500">&#10005;</span>}
+										</td>
+										<td class="px-3 py-2 text-right tabular-nums text-white">
+											{eo.MinScaleOverride} – {eo.MaxScaleOverride}
+										</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			)}
+		</section>
+
+		<hr class="my-12 border-sky-800/40" />
+		<!-- Section 3: Pet Accessories -->
+		<section id="accessories">
+			<h2 class="mb-4 text-3xl sm:text-4xl text-white">Pet Accessories</h2>
+			<p class="mt-0 mb-4 text-sm text-sky-200/90">
+				Accessories that can be equipped on companions. Placement groups indicate where the
+				accessory attaches to the creature.
+			</p>
+			<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+				{petAccessories.map((acc) => (
+					<article class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
+						<h3 class="m-0 mb-1 text-base text-white">{acc.Name}</h3>
+						<p class="m-0 mb-2 text-xs text-sky-400/70">{acc.Id}</p>
+						{acc.Description && (
+							<p class="m-0 mt-1 mb-2 text-xs text-sky-300/80">{acc.Description}</p>
+						)}
+						<div class="flex flex-wrap gap-1.5">
+							{acc.Groups.map((group) => (
+								<span class={`rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${pillColors[group] ?? 'bg-sky-600/60 text-sky-100 border-sky-500/50'}`}>
+									{slotLabels[group] ?? group}
+								</span>
+							))}
+						</div>
+					</article>
+				))}
+			</div>
+		</section>
+
+		<hr class="my-12 border-sky-800/40" />
+		<!-- Section 4: Mood States -->
+		<section id="moods" class="mt-16">
+			<h2 class="mb-4 text-3xl sm:text-4xl text-white">Mood States</h2>
+			<p class="mt-0 mb-4 text-sm text-sky-200/90">
+				{goodMoods.length + hungryMoods.length + lonelyMoods.length} possible mood words across three mood categories.
+			</p>
+			<div class="rounded-sm border border-sky-800/70 bg-sky-950/35">
+				<div class="grid gap-4 p-4 sm:grid-cols-3">
+					<div>
+						<h4 class="m-0 mb-2 text-base text-emerald-300">Happy</h4>
+						<div class="space-y-1">
+							{goodMoods.map((m) => (
+								<span class="block rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1 text-sm text-white">{m}</span>
+							))}
+						</div>
+					</div>
+					<div>
+						<h4 class="m-0 mb-2 text-base text-amber-300">Hungry</h4>
+						<div class="space-y-1">
+							{hungryMoods.map((m) => (
+								<span class="block rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1 text-sm text-white">{m}</span>
+							))}
+						</div>
+					</div>
+					<div>
+						<h4 class="m-0 mb-2 text-base text-violet-300">Lonely</h4>
+						<div class="space-y-1">
+							{lonelyMoods.map((m) => (
+								<span class="block rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1 text-sm text-white">{m}</span>
+							))}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
+
+		<nav class="hidden lg:block w-56 shrink-0">
+			<div class="sticky top-4">
+				<p class="mb-3 text-xs font-bold uppercase tracking-widest text-sky-400">On this page</p>
+				<ul class="space-y-2 text-sm" id="toc-links">
+					<li><a href="#leveling" class="toc-link text-sky-300/80 hover:text-white transition" data-section="leveling">Leveling & Genetics</a></li>
+					<li><a href="#behaviours" class="toc-link text-sky-300/80 hover:text-white transition" data-section="behaviours">Behaviours</a></li>
+					<li><a href="#egg-sequencer" class="toc-link text-sky-300/80 hover:text-white transition" data-section="egg-sequencer">Egg Sequencer</a></li>
+					<li><a href="#accessories" class="toc-link text-sky-300/80 hover:text-white transition" data-section="accessories">Accessories</a></li>
+					<li><a href="#moods" class="toc-link text-sky-300/80 hover:text-white transition" data-section="moods">Mood States</a></li>
+				</ul>
+			</div>
+		</nav>
+		</div>
+	</section>
+</Layout>
+
+<script>
+const sections = ['leveling', 'behaviours', 'egg-sequencer', 'accessories', 'moods'];
+const links = document.querySelectorAll('.toc-link');
+
+function updateActive() {
+	let current = '';
+	for (const id of sections) {
+		const el = document.getElementById(id);
+		if (el) {
+			const rect = el.getBoundingClientRect();
+			if (rect.top <= 120) current = id;
+		}
+	}
+	links.forEach(link => {
+		const section = link.getAttribute('data-section');
+		if (section === current) {
+			link.classList.remove('text-sky-300/80');
+			link.classList.add('text-white', 'font-semibold', 'border-l-2', 'border-sky-400', 'pl-2');
+		} else {
+			link.classList.add('text-sky-300/80');
+			link.classList.remove('text-white', 'font-semibold', 'border-l-2', 'border-sky-400', 'pl-2');
+		}
+	});
+}
+
+window.addEventListener('scroll', updateActive, { passive: true });
+updateActive();
+</script>

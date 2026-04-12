@@ -2434,8 +2434,8 @@
 		},
 		{
 			"Id": "HOVER_PET",
-			"Name": "Hover Pet",
-			"SpeciesSubtitle": null,
+			"Name": "Hoverdroid",
+			"SpeciesSubtitle": "Mechanical Companion",
 			"CreatureType": "MiniRobo",
 			"RealType": "None",
 			"MoveArea": "Air",
@@ -2972,8 +2972,8 @@
 		},
 		{
 			"Id": "WALKER_CRAB",
-			"Name": "Walker Crab",
-			"SpeciesSubtitle": null,
+			"Name": "Aeron Crab",
+			"SpeciesSubtitle": "Shellseeker",
 			"CreatureType": "None",
 			"RealType": "Crab",
 			"MoveArea": "Ground",
@@ -3004,6 +3004,7 @@
 			"ModelScenePath": "MODELS/PLANETS/CREATURES/SPIDERRIG/QUADHEADHERMIT.SCENE.MBIN",
 			"ExtraModelScenePath": null,
 			"MoveSetSource": "Explicit",
+			"SpecialTrait": "sturdy",
 			"Slug": "creatures/WALKER_CRAB"
 		},
 		{
@@ -3040,6 +3041,7 @@
 			"ModelScenePath": "MODELS/COMMON/ROBOTS/WALKING_BUILDING_OCEANUS.SCENE.MBIN",
 			"ExtraModelScenePath": null,
 			"MoveSetSource": "Explicit",
+			"SpecialTrait": "time-lost",
 			"Slug": "creatures/FISHBOWL_PET3"
 		},
 		{
@@ -3076,6 +3078,7 @@
 			"ModelScenePath": "MODELS/PLANETS/CREATURES/SQUID/LANDSQUIDPET.SCENE.MBIN",
 			"ExtraModelScenePath": null,
 			"MoveSetSource": "Explicit",
+			"SpecialTrait": "between worlds",
 			"Slug": "creatures/LANDSQUID_PET"
 		},
 		{
@@ -3112,6 +3115,7 @@
 			"ModelScenePath": "MODELS/COMMON/ROBOTS/SPIDER_SMALLQUADBLUE.SCENE.MBIN",
 			"ExtraModelScenePath": null,
 			"MoveSetSource": "Explicit",
+			"SpecialTrait": "dissonant",
 			"Slug": "creatures/SPIDERQUAD_PET"
 		},
 		{
@@ -3217,10 +3221,11 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Basic non-typed attack",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -3271,10 +3276,11 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Uses Pet Affinity to deal direct damage",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -3325,6 +3331,7 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Deals direct damage of specific affinity",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Fire",
 			"Affinity": "Fire",
@@ -3379,6 +3386,7 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Deals direct damage of specific affinity",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Cold",
 			"Affinity": "Cold",
@@ -3433,6 +3441,7 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Deals direct damage of specific affinity",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Lush",
 			"Affinity": "Lush",
@@ -3487,6 +3496,7 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Deals direct damage of specific affinity",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Barren",
 			"Affinity": "Barren",
@@ -3541,6 +3551,7 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Deals direct damage of specific affinity",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Toxic",
 			"Affinity": "Toxic",
@@ -3595,6 +3606,7 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Deals direct damage of specific affinity",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Radioactive",
 			"Affinity": "Radioactive",
@@ -3649,6 +3661,7 @@
 			},
 			"NameStub": "ATTACK",
 			"Description": "Deals direct damage of specific affinity",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Weird",
 			"Affinity": "Weird",
@@ -3703,10 +3716,11 @@
 			},
 			"NameStub": "WILD",
 			"Description": "Inaccurate swing",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -3757,10 +3771,11 @@
 			},
 			"NameStub": "WILD",
 			"Description": "Inaccurate swing",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -3810,10 +3825,11 @@
 			},
 			"NameStub": "BARRAGE",
 			"Description": "Shoot 3 affinity attack projectiles",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -3903,10 +3919,11 @@
 			},
 			"NameStub": "MULTI",
 			"Description": "Affinity attack that gets stronger the move you use it",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -3967,10 +3984,11 @@
 			},
 			"NameStub": "BARRAGE",
 			"Description": "Affinity attack that gets stronger the more speed you have",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4020,10 +4038,11 @@
 			},
 			"NameStub": "BARRAGE",
 			"Description": "Affinity attack that gets stronger the more speed you have",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4073,10 +4092,11 @@
 			},
 			"NameStub": "MULTI",
 			"Description": "Multi-round affinity attack",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4166,10 +4186,11 @@
 			},
 			"NameStub": "CHARGEUP",
 			"Description": "Wait and then attack",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4233,10 +4254,11 @@
 			},
 			"NameStub": "CHARGEUP",
 			"Description": "Wait and then attack",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4313,10 +4335,11 @@
 			},
 			"NameStub": "DOT",
 			"Description": "Apply an affinity dot",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4366,10 +4389,11 @@
 			},
 			"NameStub": "BOMB",
 			"Description": "Uses Pet Affinity to deal after x turns",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4419,10 +4443,11 @@
 			},
 			"NameStub": "DOTBOMB",
 			"Description": "Apply a dot that explodes later",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4472,10 +4497,11 @@
 			},
 			"NameStub": "DONT_TOUCH",
 			"Description": "Apply a debuff that explodes if dispelled",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4532,10 +4558,11 @@
 			},
 			"NameStub": "ATTACKDOT",
 			"Description": "Do an attack, apply a DoT",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4596,10 +4623,11 @@
 			},
 			"NameStub": "ATTACKDOT",
 			"Description": "Do an attack, apply an affinity dot",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4659,10 +4687,11 @@
 			},
 			"NameStub": "HEAL",
 			"Description": "Simple heal on self",
+			"EffectDescription": "Heals by",
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4704,10 +4733,11 @@
 			},
 			"NameStub": "HOT",
 			"Description": "Simple HoT on self",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4749,10 +4779,11 @@
 			},
 			"NameStub": "DELAY_HEAL",
 			"Description": "Heal self after X turns",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Heal",
 			"CategoryIcon": "moves--move.health.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.health.dds",
@@ -4794,10 +4825,11 @@
 			},
 			"NameStub": "SHIELD",
 			"Description": "Simple shield on self",
+			"EffectDescription": "Block % of incoming damage for",
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4839,10 +4871,11 @@
 			},
 			"NameStub": "REFLECT",
 			"Description": "Reflect damage shield on self",
+			"EffectDescription": "Reflects % of incoming damage for",
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4884,10 +4917,11 @@
 			},
 			"NameStub": "ABSORB",
 			"Description": "Absorb damage shield on self",
+			"EffectDescription": "Absorbs % of incoming damage and uses it to heal for",
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4929,10 +4963,11 @@
 			},
 			"NameStub": "REFLECT",
 			"Description": "Damage-limited shield that fully reflects incoming damage",
+			"EffectDescription": "Reflects % of incoming damage for",
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -4974,10 +5009,11 @@
 			},
 			"NameStub": "SHIELD",
 			"Description": "Damage-limited shield that fully blocks incoming damage",
+			"EffectDescription": "Block % of incoming damage for",
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5019,10 +5055,11 @@
 			},
 			"NameStub": "ABSORB",
 			"Description": "Damage-limited shield that fully absorbs incoming damage",
+			"EffectDescription": "Absorbs % of incoming damage and uses it to heal for",
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5064,10 +5101,11 @@
 			},
 			"NameStub": "DISPEL",
 			"Description": "Remove debuffs from self",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Heal",
 			"CategoryIcon": "moves--move.health.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.health.dds",
@@ -5112,10 +5150,11 @@
 			},
 			"NameStub": "RESET_CD",
 			"Description": "Reset cooldowns",
+			"EffectDescription": "Resets all active move cooldowns",
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Cooldown",
 			"CategoryIcon": "moves--move.cooldown.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.cooldown.dds",
@@ -5157,10 +5196,11 @@
 			},
 			"NameStub": "PURGE",
 			"Description": "Remove buffs from enemy",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5209,10 +5249,11 @@
 			},
 			"NameStub": "PURGE",
 			"Description": "Remove debuffs from enemy",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5261,10 +5302,11 @@
 			},
 			"NameStub": "DEBUFF_DAM",
 			"Description": "Reduce enemy damage",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5310,10 +5352,11 @@
 			},
 			"NameStub": "DEBUFF_DAMHIT",
 			"Description": "Reduce enemy damage",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Power",
 			"CategoryIcon": "moves--move.power.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.power.dds",
@@ -5359,10 +5402,11 @@
 			},
 			"NameStub": "DEBUFF_HIT",
 			"Description": "Reduce enemy hit chance",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5408,10 +5452,11 @@
 			},
 			"NameStub": "DEBUFF_DAMHIT",
 			"Description": "Reduce enemy accuracy + damage",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5463,10 +5508,11 @@
 			},
 			"NameStub": "BUFF_DAM",
 			"Description": "Buff damage dealt",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5508,10 +5554,11 @@
 			},
 			"NameStub": "BUFF_HIT",
 			"Description": "Buff accuracy",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5553,10 +5600,11 @@
 			},
 			"NameStub": "BUFF_CRIT",
 			"Description": "Buff crit chance",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5598,10 +5646,11 @@
 			},
 			"NameStub": "BUFF_DODGE",
 			"Description": "Buff agility",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5643,10 +5692,11 @@
 			},
 			"NameStub": "BUFF_DODGE",
 			"Description": "Buff dodge chance",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5688,10 +5738,11 @@
 			},
 			"NameStub": "SELFDOT",
 			"Description": "Big impact attack, but dot self",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5752,10 +5803,11 @@
 			},
 			"NameStub": "ATTACKBOTH",
 			"Description": "Attack you and the enemy",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5816,10 +5868,11 @@
 			},
 			"NameStub": "ENRAGE",
 			"Description": "Big hit but buff their crit",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5875,10 +5928,11 @@
 			},
 			"NameStub": "ENRAGE",
 			"Description": "Big hit but buff their damage",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5934,10 +5988,11 @@
 			},
 			"NameStub": "ENRAGE",
 			"Description": "Big hit but leave a HoT",
+			"EffectDescription": "Deals damage",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -5993,10 +6048,11 @@
 			},
 			"NameStub": "BURROW",
 			"Description": "100% chance to dodge",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -6038,10 +6094,11 @@
 			},
 			"NameStub": "SPEEDUP",
 			"Description": "Super speed boost next round",
+			"EffectDescription": null,
 			"Target": "Self",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -6083,10 +6140,11 @@
 			},
 			"NameStub": "AFFINITY",
 			"Description": "Change the enemy pet affinity",
+			"EffectDescription": "Morphs into a creature for",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -6136,10 +6194,11 @@
 			},
 			"NameStub": "STUN",
 			"Description": "Stuns an enemy creature",
+			"EffectDescription": "Stuns for",
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Cooldown",
 			"CategoryIcon": "moves--move.cooldown.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.cooldown.dds",
@@ -6185,10 +6244,11 @@
 			},
 			"NameStub": "SACRIFICE",
 			"Description": "Blow yourself up but buff your team",
+			"EffectDescription": "Deals damage",
 			"Target": "Self",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -6241,10 +6301,11 @@
 			},
 			"NameStub": "SACRIFICE",
 			"Description": "Blow yourself up but protect your team",
+			"EffectDescription": "Deals damage",
 			"Target": "Self",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -6297,10 +6358,11 @@
 			},
 			"NameStub": "SACRIFICE",
 			"Description": "Revive someone on the bench",
+			"EffectDescription": "Deals damage",
 			"Target": "Self",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Heal",
 			"CategoryIcon": "moves--move.health.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.health.dds",
@@ -6353,10 +6415,11 @@
 			},
 			"NameStub": "DOT",
 			"Description": "Apply an affinity dot",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": "Normal",
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -6402,10 +6465,11 @@
 			},
 			"NameStub": "DEBUFF_HIT",
 			"Description": "Reduce enemy hit chance",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -6447,10 +6511,11 @@
 			},
 			"NameStub": "DEBUFF_DAM",
 			"Description": "Reduce enemy damage",
+			"EffectDescription": null,
 			"Target": "ActiveEnemy",
 			"AffinityRaw": null,
 			"Affinity": null,
-			"AffinityDisplay": "None",
+			"AffinityDisplay": "Physical",
 			"Category": "Attack",
 			"CategoryIcon": "moves--move.pet.attack.png",
 			"CategoryIconPath": "textures/ui/frontend/icons/pets/moves/move.pet.attack.dds",
@@ -7001,9 +7066,9 @@
 		{
 			"Id": "PVP_STANDARD",
 			"Name": "PvP Standard",
-			"SpawnDataId": "PB_SPAWN_PVP_STANDARD",
-			"GameConfigId": "PB_GAME_PVP_STANDARD",
-			"GameMode": "PetBattler",
+			"Description": "Challenge other players or alien lifeforms in simulated Creature Battles!",
+			"GameMode": "Creature Battle",
+			"Difficulty": null,
 			"RewardWin": "R_PB_PVP_STD_W",
 			"RewardLoss": "R_PB_PVP_STD_L",
 			"ExperienceMultiplier": 1.0,
@@ -7012,9 +7077,9 @@
 		{
 			"Id": "PETBATTLE_NEXUS_PVE",
 			"Name": "Petbattle Nexus PvE",
-			"SpawnDataId": "PB_SPAWN_PVE_NEXUS",
-			"GameConfigId": "PB_GAME_DAILY_NEXUS",
-			"GameMode": "PetBattler",
+			"Description": "Defeat Iteration: Oceanus on the Space Anomaly in battles to earn Challenger Invites. Oceanus is a formidable opponent, and each day, they offer an especially tough battle to all Travellers across the galaxies.",
+			"GameMode": "Creature Battle",
+			"Difficulty": "Hard",
 			"RewardWin": "R_PB_D_NEXUS_W",
 			"RewardLoss": "R_PB_D_NEXUS_L",
 			"ExperienceMultiplier": 1.0,
@@ -7023,9 +7088,9 @@
 		{
 			"Id": "PETBATTLE_PLANET_STANDARD",
 			"Name": "Petbattle Planet Standard",
-			"SpawnDataId": "PB_SPAWN_PVE_CHALLENGER",
-			"GameConfigId": "PB_GAME_PLANET_STANDARD",
-			"GameMode": "PetBattler",
+			"Description": "A nearby Arena League Challenger has invited you to battle",
+			"GameMode": "Creature Battle",
+			"Difficulty": "Medium",
 			"RewardWin": "R_PB_PVE_PLAC_W",
 			"RewardLoss": "R_PB_PVE_PLAC_L",
 			"ExperienceMultiplier": 1.0,
@@ -7034,9 +7099,9 @@
 		{
 			"Id": "PETBATTLE_SYSTEM_STANDARD",
 			"Name": "Petbattle System Standard",
-			"SpawnDataId": "PB_SPAWN_PVE_STANDARD",
-			"GameConfigId": "PB_GAME_SYSTEM_STANDARD",
-			"GameMode": "PetBattler",
+			"Description": "A nearby Arena League Challenger has invited you to battle",
+			"GameMode": "Creature Battle",
+			"Difficulty": "Easy",
 			"RewardWin": "R_PB_PVE_SYSS_W",
 			"RewardLoss": "R_PB_PVE_SYSS_L",
 			"ExperienceMultiplier": 1.0,
@@ -7045,9 +7110,9 @@
 		{
 			"Id": "PETBATTLE_SYSTEM_CHAMPION",
 			"Name": "Petbattle System Champion",
-			"SpawnDataId": "PB_SPAWN_PVE_CHAMP",
-			"GameConfigId": "PB_GAME_SYSTEM_CHAMPION",
-			"GameMode": "PetBattler",
+			"Description": "The local Arena League Champion has invited you to a Creature Battle.",
+			"GameMode": "Creature Battle",
+			"Difficulty": "Hard",
 			"RewardWin": "R_PB_PVE_SYSC_W",
 			"RewardLoss": "R_PB_PVE_SYSC_L",
 			"ExperienceMultiplier": 1.0,
@@ -7056,9 +7121,9 @@
 		{
 			"Id": "PETBATTLE_SETTLEMENT",
 			"Name": "Petbattle Settlement",
-			"SpawnDataId": "PB_SPAWN_PVE_STANDARD",
-			"GameConfigId": "PB_GAME_SETTLEMENT",
-			"GameMode": "PetBattler",
+			"Description": "Compete at Holo-Arenas on planets and Space Stations.",
+			"GameMode": "Creature Battle",
+			"Difficulty": "Medium",
 			"RewardWin": "R_PB_PVE_EZ_NI",
 			"RewardLoss": "R_PB_PVE_EASY_L",
 			"ExperienceMultiplier": 1.0,
@@ -7067,9 +7132,9 @@
 		{
 			"Id": "PETBATTLE_LARGEBUILDING",
 			"Name": "Petbattle Largebuilding",
-			"SpawnDataId": "PB_SPAWN_PVE_CHALLENGER",
-			"GameConfigId": "PB_GAME_LARGEBUILDING",
-			"GameMode": "PetBattler",
+			"Description": "A nearby Arena League Challenger has invited you to battle",
+			"GameMode": "Creature Battle",
+			"Difficulty": "Medium",
 			"RewardWin": "R_PB_PVE_HARD_W",
 			"RewardLoss": "R_PB_PVE_HARD_L",
 			"ExperienceMultiplier": 1.0,
@@ -7078,9 +7143,9 @@
 		{
 			"Id": "PETBATTLE_PIRATES",
 			"Name": "Petbattle Pirates",
-			"SpawnDataId": "PB_SPAWN_PVE_PIRATE",
-			"GameConfigId": "PB_GAME_PIRATESTATION",
-			"GameMode": "PetBattler",
+			"Description": "A nearby Arena League Challenger has invited you to battle",
+			"GameMode": "Creature Battle",
+			"Difficulty": "Medium",
 			"RewardWin": "R_PB_PVE_HARD_W",
 			"RewardLoss": "R_PB_PVE_HARD_L",
 			"ExperienceMultiplier": 1.0,
@@ -7089,9 +7154,9 @@
 		{
 			"Id": "DICEGAME_PVE_STANDARD",
 			"Name": "Dicegame PvE Standard",
-			"SpawnDataId": "DICE_SPAWN_PVE_STANDARD",
-			"GameConfigId": "DICE_GAME_PVE_STANDARD",
-			"GameMode": "DiceGame",
+			"Description": null,
+			"GameMode": "Dice Game",
+			"Difficulty": null,
 			"RewardWin": null,
 			"RewardLoss": null,
 			"ExperienceMultiplier": 1.0,
@@ -7160,6 +7225,9 @@
 					"Threshold": 60
 				}
 			],
+			"MedalName": "Champions Defeated",
+			"WikiName": "Milestone: System Champions Defeated",
+			"WikiDescription": "Defeat system champions",
 			"Slug": "creatures/league/PB_BOSS_WINS"
 		},
 		{
@@ -7223,6 +7291,10 @@
 					"Threshold": 220
 				}
 			],
+			"MedalName": "Holo-Arena Victories",
+			"MedalDescription": "Seek out Holo-Arenas on planets and Space Stations throughout the galaxy.",
+			"WikiName": "Milestone: Holo-arena Victories",
+			"WikiDescription": "Win Holo-Arena battles",
 			"Slug": "creatures/league/PB_WINS"
 		},
 		{
@@ -7286,6 +7358,8 @@
 					"Threshold": 20
 				}
 			],
+			"WikiName": "Milestone: Companions Fully Mutated",
+			"WikiDescription": "Maximise companion mutations",
 			"Slug": "creatures/league/PB_PETS_MAXED"
 		},
 		{
@@ -7349,7 +7423,682 @@
 					"Threshold": 30
 				}
 			],
+			"MedalName": "Iteration: Oceanus",
+			"MedalDescription": "Each day Iteration: Oceanus hosts a unique Holo-Arena battle. Their battle team for that day is consistent for all Travellers.",
+			"WikiName": "Milestone: Space Anomaly Victories",
+			"WikiDescription": "Defeat Iteration: Oceanus on the Space Anomaly",
 			"Slug": "creatures/league/PB_D_NEXUS"
+		}
+	],
+	"ArenaAIConfigs": [
+		{
+			"Id": "PB_AI_PVE_NEXUS",
+			"Difficulty": "Easy",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "NPCAndWins",
+			"Pets": [
+				{
+					"Pool": "All",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "All",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "All",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_PVE_NEXUS"
+		},
+		{
+			"Id": "PB_AI_TUTORIAL_NEXUS",
+			"Difficulty": "Easy",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "NPCAndWins",
+			"Pets": [
+				{
+					"Pool": "All",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "All",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "All",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_TUTORIAL_NEXUS"
+		},
+		{
+			"Id": "PB_AI_DAILY_NEXUS_1",
+			"Difficulty": "Hard",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "Mission",
+			"Pets": [
+				{
+					"Pool": "All",
+					"MinLevel": 30,
+					"MaxLevel": 30
+				},
+				{
+					"Pool": "All",
+					"MinLevel": 30,
+					"MaxLevel": 30
+				},
+				{
+					"Pool": "All",
+					"MinLevel": 30,
+					"MaxLevel": 30
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_DAILY_NEXUS_1"
+		},
+		{
+			"Id": "PB_AI_PLANET_STANDARD",
+			"Difficulty": "Medium",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "NPCAndWins",
+			"Pets": [
+				{
+					"Pool": "FromPlanet",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromPlanet",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_PLANET_STANDARD"
+		},
+		{
+			"Id": "PB_AI_SYSTEM_STANDARD",
+			"Difficulty": "Easy",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "NPCAndWins",
+			"Pets": [
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_SYSTEM_STANDARD"
+		},
+		{
+			"Id": "PB_AI_SYSTEM_CHAMPION",
+			"Difficulty": "Hard",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "NPCAndWins",
+			"Pets": [
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_SYSTEM_CHAMPION"
+		},
+		{
+			"Id": "PB_AI_PIRATESTATION",
+			"Difficulty": "Medium",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "NPCAndWins",
+			"Pets": [
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_PIRATESTATION"
+		},
+		{
+			"Id": "PB_AI_SETTLEMENT",
+			"Difficulty": "Medium",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "NPCAndWins",
+			"Pets": [
+				{
+					"Pool": "FromPlanet",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromPlanet",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_SETTLEMENT"
+		},
+		{
+			"Id": "DICE_AI_STANDARD",
+			"Difficulty": "Medium",
+			"GameType": "DiceGame",
+			"TeamSeedSource": null,
+			"Pets": null,
+			"Slug": "creatures/ai-configs/DICE_AI_STANDARD"
+		}
+	],
+	"ArenaRewards": [
+		{
+			"Id": "R_PB_PVP_STD_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVP_STD_W"
+		},
+		{
+			"Id": "R_PB_PVP_STD_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVP_STD_L"
+		},
+		{
+			"Id": "R_PB_PVE_STD_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 10,
+					"AmountMax": 20,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": "TREAT_FREELEVEL",
+					"Amount": 1,
+					"Chance": 3.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_STD_W"
+		},
+		{
+			"Id": "R_PB_PVE_STD_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_STD_L"
+		},
+		{
+			"Id": "R_PB_TUT_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 10,
+					"AmountMax": 20,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_TUT_W"
+		},
+		{
+			"Id": "R_PB_TUT_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_TUT_L"
+		},
+		{
+			"Id": "R_PB_PVE_SYSC_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 30,
+					"AmountMax": 50,
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": "CHART_PB_CHALNX",
+					"Amount": 1,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": "TREAT_FREELEVEL",
+					"Amount": 1,
+					"Chance": 60.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_SYSC_W"
+		},
+		{
+			"Id": "R_PB_PVE_SYSC_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_SYSC_L"
+		},
+		{
+			"Id": "R_PB_PVE_SYSS_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 15,
+					"AmountMax": 30,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": "TREAT_FREELEVEL",
+					"Amount": 1,
+					"Chance": 8.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_SYSS_W"
+		},
+		{
+			"Id": "R_PB_PVE_SYSS_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_SYSS_L"
+		},
+		{
+			"Id": "R_PB_PVE_PLAC_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 12,
+					"AmountMax": 20,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": "TREAT_FREELEVEL",
+					"Amount": 1,
+					"Chance": 3.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_PLAC_W"
+		},
+		{
+			"Id": "R_PB_PVE_PLAC_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_PLAC_L"
+		},
+		{
+			"Id": "R_PB_PVE_EASY_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 5,
+					"AmountMax": 10,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": null,
+					"Amount": 1,
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_EASY_W"
+		},
+		{
+			"Id": "R_PB_PVE_EZ_NI",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 5,
+					"AmountMax": 10,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_EZ_NI"
+		},
+		{
+			"Id": "R_PB_PVE_EASY_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_EASY_L"
+		},
+		{
+			"Id": "R_PB_PVE_HARD_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 10,
+					"AmountMax": 20,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": "TREAT_FREELEVEL",
+					"Amount": 1,
+					"Chance": 3.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_HARD_W"
+		},
+		{
+			"Id": "R_PB_PVE_HARD_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_HARD_L"
+		},
+		{
+			"Id": "R_PB_D_NEXUS_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 175,
+					"AmountMax": 250,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": "TREAT_FREELEVEL",
+					"Amount": 1,
+					"Chance": 75.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_D_NEXUS_W"
+		},
+		{
+			"Id": "R_PB_D_NEXUS_L",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_D_NEXUS_L"
+		},
+		{
+			"Id": "R_PB_INV_CHALL",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Mission",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_INV_CHALL"
+		},
+		{
+			"Id": "R_PB_INV_CHALNX",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Mission",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_INV_CHALNX"
+		},
+		{
+			"Id": "R_PB_INV_CHAMP",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Mission",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_INV_CHAMP"
+		},
+		{
+			"Id": "R_PB_MEDAL_EGG1",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "SpecificPetEgg",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_MEDAL_EGG1"
+		},
+		{
+			"Id": "R_PB_MEDAL_EGG2",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "SpecificPetEgg",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_MEDAL_EGG2"
+		},
+		{
+			"Id": "R_PB_MEDAL_EGG3",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "SpecificPetEgg",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_MEDAL_EGG3"
+		},
+		{
+			"Id": "R_PB_MEDAL_EGG4",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "SpecificPetEgg",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_MEDAL_EGG4"
+		},
+		{
+			"Id": "R_PB_MEDAL_EGG5",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "SpecificPetEgg",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_MEDAL_EGG5"
+		},
+		{
+			"Id": "R_PB_OPENSHOP",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "OpenPage",
+					"Chance": 100.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_OPENSHOP"
 		}
 	],
 	"PetShop": [
@@ -7429,6 +8178,7 @@
 			"Id": "CargoCylinder",
 			"Name": "Cargo Drum",
 			"Descriptor": "_ACC_CARGOCYLINDER",
+			"Description": "suit-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7441,6 +8191,7 @@
 			"Id": "Containers",
 			"Name": "Mini-Packs",
 			"Descriptor": "_ACC_CONTAINERS",
+			"Description": "suit-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7453,6 +8204,7 @@
 			"Id": "ShieldArmour",
 			"Name": "Armour",
 			"Descriptor": "_ACC_SHIELDARMOUR",
+			"Description": "suit-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7465,6 +8217,7 @@
 			"Id": "SolarBattery",
 			"Name": "Solar Battery",
 			"Descriptor": "_ACC_SOLARBATTERY",
+			"Description": "toy-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7477,6 +8230,7 @@
 			"Id": "Tank",
 			"Name": "Canteen",
 			"Descriptor": "_ACC_TANK",
+			"Description": "new toy-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7489,6 +8243,7 @@
 			"Id": "WingPanel",
 			"Name": "Square Plating",
 			"Descriptor": "_ACC_WINGPANEL",
+			"Description": "new play-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7501,6 +8256,7 @@
 			"Id": "TravelPack",
 			"Name": "Movement Tracker",
 			"Descriptor": "_ACC_TRAVELPACK",
+			"Description": "play-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7513,6 +8269,7 @@
 			"Id": "SpacePack",
 			"Name": "Atmosphere Sampler",
 			"Descriptor": "_ACC_SPACEPACK",
+			"Description": "new toy",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7525,6 +8282,7 @@
 			"Id": "CargoLong",
 			"Name": "Cargo Pack",
 			"Descriptor": "_ACC_CARGOLONG",
+			"Description": "new toy",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7537,6 +8295,7 @@
 			"Id": "Antennae",
 			"Name": "Satellite",
 			"Descriptor": "_ACC_ANTENNAE",
+			"Description": "new toy",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7549,6 +8308,7 @@
 			"Id": "Computer",
 			"Name": "Vitals Monitor",
 			"Descriptor": "_ACC_COMPUTER",
+			"Description": "wearing-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7561,6 +8321,7 @@
 			"Id": "Toolbelt",
 			"Name": "Phial",
 			"Descriptor": "_ACC_TOOLBELT",
+			"Description": "new suit-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7573,6 +8334,7 @@
 			"Id": "LeftCanisters",
 			"Name": "Bio Canisters",
 			"Descriptor": "_ACC_LCANISTERS",
+			"Description": "new suit-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7585,6 +8347,7 @@
 			"Id": "LeftEnergyCoil",
 			"Name": "Energy Coil",
 			"Descriptor": "_ACC_LENERGYCOIL",
+			"Description": "special toy",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7597,6 +8360,7 @@
 			"Id": "LeftFrigateTurret",
 			"Name": "Square Laser",
 			"Descriptor": "_ACC_LFRIGATETURRET",
+			"Description": "decoration",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7609,6 +8373,7 @@
 			"Id": "LeftHeadLights",
 			"Name": "Torch",
 			"Descriptor": "_ACC_LHEADLIGHTS",
+			"Description": "harness-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7621,6 +8386,7 @@
 			"Id": "LeftArmourPlate",
 			"Name": "Tapered Plating",
 			"Descriptor": "_ACC_LARMOURPLATE",
+			"Description": "special suit-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7633,6 +8399,7 @@
 			"Id": "LeftTurret",
 			"Name": "Rounded Laser",
 			"Descriptor": "_ACC_LTURRET",
+			"Description": "special toy-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7645,6 +8412,7 @@
 			"Id": "LeftSupportSystem",
 			"Name": "Support System",
 			"Descriptor": "_ACC_LSUPPORTSYSTEM",
+			"Description": "special new-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7657,6 +8425,7 @@
 			"Id": "RightCanisters",
 			"Name": "Bio Canisters",
 			"Descriptor": "_ACC_RCANISTERS",
+			"Description": "new suit-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7669,6 +8438,7 @@
 			"Id": "RightEnergyCoil",
 			"Name": "Energy Coil",
 			"Descriptor": "_ACC_RENERGYCOIL",
+			"Description": "special toy",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7681,6 +8451,7 @@
 			"Id": "RightFrigateTurret",
 			"Name": "Square Laser",
 			"Descriptor": "_ACC_RFRIGATETURRET",
+			"Description": "decoration",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7693,6 +8464,7 @@
 			"Id": "RightHeadLights",
 			"Name": "Torch",
 			"Descriptor": "_ACC_RHEADLIGHTS",
+			"Description": "harness-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7705,6 +8477,7 @@
 			"Id": "RightArmourPlate",
 			"Name": "Tapered Plating",
 			"Descriptor": "_ACC_RARMOURPLATE",
+			"Description": "special suit-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7717,6 +8490,7 @@
 			"Id": "RightTurret",
 			"Name": "Rounded Laser",
 			"Descriptor": "_ACC_RTURRET",
+			"Description": "special toy-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7729,6 +8503,7 @@
 			"Id": "RightSupportSystem",
 			"Name": "Support System",
 			"Descriptor": "_ACC_RSUPPORTSYSTEM",
+			"Description": "special new-thing",
 			"Groups": [
 				"BACK",
 				"FRONT",
@@ -7814,6 +8589,7 @@
 			"Id": "Idle",
 			"Name": "Idle",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": false,
 			"Weight": 0.1,
@@ -7827,6 +8603,7 @@
 			"Id": "Eat",
 			"Name": "Eat",
 			"Label": "Currently eating",
+			"UILabel": "Currently eating",
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 0.0,
@@ -7840,6 +8617,7 @@
 			"Id": "Poop",
 			"Name": "Poop",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": false,
 			"Weight": 0.2,
@@ -7847,12 +8625,24 @@
 			"MaxPerformTime": 20.0,
 			"CooldownTime": 3000.0,
 			"Validity": "OnPlanet",
+			"MoodModifiers": [
+				{
+					"Mood": "Hungry",
+					"MoodMin": 0.5,
+					"MoodMax": 0.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 1.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/Poop"
 		},
 		{
 			"Id": "LayEgg",
 			"Name": "Lay Egg",
 			"Label": "Laying Egg",
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -7860,12 +8650,17 @@
 			"MaxPerformTime": 10.0,
 			"CooldownTime": 0.0,
 			"Validity": "OnPlanet",
+			"MoodOnComplete": {
+				"Hungry": 0.6,
+				"Lonely": 0.0
+			},
 			"Slug": "creatures/behaviours/LayEgg"
 		},
 		{
 			"Id": "FollowPlayer",
 			"Name": "Follow Player",
 			"Label": null,
+			"UILabel": "Currently scouting ahead",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -7873,12 +8668,35 @@
 			"MaxPerformTime": 40.0,
 			"CooldownTime": 0.0,
 			"Validity": "Everywhere",
+			"TraitModifiers": [
+				{
+					"Trait": "Independence",
+					"TraitMin": 1.0,
+					"TraitMax": -1.0,
+					"WeightModifierMin": 2.0,
+					"WeightModifierMax": 1.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 1.0
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Lonely",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.5,
+					"WeightModifierMax": 1.0,
+					"CooldownModifierMin": 0.5,
+					"CooldownModifierMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/FollowPlayer"
 		},
 		{
 			"Id": "AdoptedFollowPlayer",
 			"Name": "Adopted Follow Player",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -7886,12 +8704,24 @@
 			"MaxPerformTime": 20.0,
 			"CooldownTime": 10.0,
 			"Validity": "Everywhere",
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "ScanForResource",
+					"TraitBased": false,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/AdoptedFollowPlayer"
 		},
 		{
 			"Id": "ScanForResource",
 			"Name": "Scan for Resource",
 			"Label": "Currently finding resources",
+			"UILabel": "Currently finding resources",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": true,
 			"Weight": 1.5,
@@ -7899,12 +8729,44 @@
 			"MaxPerformTime": 5.0,
 			"CooldownTime": 240.0,
 			"Validity": "OnPlanet",
+			"TraitModifiers": [
+				{
+					"Trait": "Helpfulness",
+					"TraitMin": -1.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.5,
+					"WeightModifierMax": 2.0,
+					"CooldownModifierMin": 3.0,
+					"CooldownModifierMax": 1.0
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Hungry",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 3.0
+				},
+				{
+					"Mood": "Lonely",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 3.0
+				}
+			],
 			"Slug": "creatures/behaviours/ScanForResource"
 		},
 		{
 			"Id": "FindResource",
 			"Name": "Find Resource",
 			"Label": "Currently finding resources",
+			"UILabel": "Currently finding resources",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": true,
 			"Weight": 1.5,
@@ -7912,12 +8774,44 @@
 			"MaxPerformTime": 30.0,
 			"CooldownTime": 240.0,
 			"Validity": "OnPlanet",
+			"TraitModifiers": [
+				{
+					"Trait": "Helpfulness",
+					"TraitMin": -1.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.5,
+					"WeightModifierMax": 2.0,
+					"CooldownModifierMin": 3.0,
+					"CooldownModifierMax": 1.0
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Hungry",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 3.0
+				},
+				{
+					"Mood": "Lonely",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 3.0
+				}
+			],
 			"Slug": "creatures/behaviours/FindResource"
 		},
 		{
 			"Id": "FindHazards",
 			"Name": "Find Hazards",
 			"Label": "Currently exploring",
+			"UILabel": "Currently exploring",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": true,
 			"Weight": 1.0,
@@ -7925,12 +8819,73 @@
 			"MaxPerformTime": 30.0,
 			"CooldownTime": 360.0,
 			"Validity": "OnPlanet",
+			"TraitModifiers": [
+				{
+					"Trait": "Helpfulness",
+					"TraitMin": -1.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 2.0,
+					"CooldownModifierMin": 3.0,
+					"CooldownModifierMax": 0.75
+				},
+				{
+					"Trait": "Aggression",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 2.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 0.75
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Hungry",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 3.0
+				},
+				{
+					"Mood": "Lonely",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 3.0
+				}
+			],
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "Idle",
+					"TraitBased": true,
+					"Trait": "Aggression",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 1.0,
+					"WeightMax": 0.0
+				},
+				{
+					"Behaviour": "AttackHazard",
+					"TraitBased": true,
+					"Trait": "Aggression",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/FindHazards"
 		},
 		{
 			"Id": "AttackHazard",
 			"Name": "Attack Hazard",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -7944,6 +8899,7 @@
 			"Id": "FindBuilding",
 			"Name": "Find Building",
 			"Label": "Currently tracking a lifeform",
+			"UILabel": "Currently tracking a lifeform",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": true,
 			"Weight": 1.0,
@@ -7951,12 +8907,24 @@
 			"MaxPerformTime": 50.0,
 			"CooldownTime": 360.0,
 			"Validity": "OnPlanet",
+			"TraitModifiers": [
+				{
+					"Trait": "Helpfulness",
+					"TraitMin": -1.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.2,
+					"WeightModifierMax": 2.0,
+					"CooldownModifierMin": 3.0,
+					"CooldownModifierMax": 0.75
+				}
+			],
 			"Slug": "creatures/behaviours/FindBuilding"
 		},
 		{
 			"Id": "Fetch",
 			"Name": "Fetch",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 0.0,
@@ -7970,6 +8938,7 @@
 			"Id": "Explore",
 			"Name": "Explore",
 			"Label": "Currently exploring",
+			"UILabel": "Currently exploring",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": true,
 			"Weight": 2.0,
@@ -7977,12 +8946,24 @@
 			"MaxPerformTime": 60.0,
 			"CooldownTime": 45.0,
 			"Validity": "OnPlanet",
+			"TraitModifiers": [
+				{
+					"Trait": "Independence",
+					"TraitMin": -1.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 2.0,
+					"CooldownModifierMin": 3.0,
+					"CooldownModifierMax": 0.75
+				}
+			],
 			"Slug": "creatures/behaviours/Explore"
 		},
 		{
 			"Id": "Emote",
 			"Name": "Emote",
 			"Label": "Currently wants attention",
+			"UILabel": "Currently wants attention",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -7990,12 +8971,53 @@
 			"MaxPerformTime": 40.0,
 			"CooldownTime": 240.0,
 			"Validity": "Everywhere",
+			"TraitModifiers": [
+				{
+					"Trait": "Helpfulness",
+					"TraitMin": 1.0,
+					"TraitMax": -1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 1.0,
+					"CooldownModifierMin": 3.0,
+					"CooldownModifierMax": 1.0
+				},
+				{
+					"Trait": "Independence",
+					"TraitMin": -1.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 1.5,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 0.75,
+					"CooldownModifierMax": 3.0
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Hungry",
+					"MoodMin": 0.75,
+					"MoodMax": 0.9,
+					"WeightModifierMin": 1.0,
+					"WeightModifierMax": 10.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 0.5
+				},
+				{
+					"Mood": "Lonely",
+					"MoodMin": 0.75,
+					"MoodMax": 0.9,
+					"WeightModifierMin": 1.0,
+					"WeightModifierMax": 10.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 0.5
+				}
+			],
 			"Slug": "creatures/behaviours/Emote"
 		},
 		{
 			"Id": "GestureReact",
 			"Name": "Gesture React",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 0.0,
@@ -8009,6 +9031,7 @@
 			"Id": "OrderedToPos",
 			"Name": "Ordered to Pos",
 			"Label": "Currently following orders",
+			"UILabel": "Currently following orders",
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 0.0,
@@ -8016,12 +9039,87 @@
 			"MaxPerformTime": 40.0,
 			"CooldownTime": 10.0,
 			"Validity": "Everywhere",
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "Poop",
+					"TraitBased": true,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": -1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				},
+				{
+					"Behaviour": "Emote",
+					"TraitBased": true,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": -1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				},
+				{
+					"Behaviour": "Mine",
+					"TraitBased": true,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				},
+				{
+					"Behaviour": "ScanForResource",
+					"TraitBased": true,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				},
+				{
+					"Behaviour": "Greet",
+					"TraitBased": true,
+					"Trait": "Aggression",
+					"TraitMin": 0.0,
+					"TraitMax": -1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				},
+				{
+					"Behaviour": "Attack",
+					"TraitBased": true,
+					"Trait": "Aggression",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				},
+				{
+					"Behaviour": "Explore",
+					"TraitBased": true,
+					"Trait": "Independence",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				},
+				{
+					"Behaviour": "FollowPlayer",
+					"TraitBased": true,
+					"Trait": "Independence",
+					"TraitMin": 0.0,
+					"TraitMax": -1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/OrderedToPos"
 		},
 		{
 			"Id": "ComeHere",
 			"Name": "Come Here",
 			"Label": "Currently following orders",
+			"UILabel": "Currently following orders",
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -8029,12 +9127,24 @@
 			"MaxPerformTime": 40.0,
 			"CooldownTime": 10.0,
 			"Validity": "Everywhere",
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "FollowPlayer",
+					"TraitBased": false,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/ComeHere"
 		},
 		{
 			"Id": "Mine",
 			"Name": "Mine",
 			"Label": "Currently digging up resources",
+			"UILabel": "Currently digging up resources",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": true,
 			"Weight": 2.0,
@@ -8042,12 +9152,44 @@
 			"MaxPerformTime": 30.0,
 			"CooldownTime": 240.0,
 			"Validity": "OnPlanet",
+			"TraitModifiers": [
+				{
+					"Trait": "Helpfulness",
+					"TraitMin": -1.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 1.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 0.5
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Hungry",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 3.0
+				},
+				{
+					"Mood": "Lonely",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 3.0
+				}
+			],
 			"Slug": "creatures/behaviours/Mine"
 		},
 		{
 			"Id": "Summoned",
 			"Name": "Summoned",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 0.0,
@@ -8055,12 +9197,24 @@
 			"MaxPerformTime": 15.0,
 			"CooldownTime": 10.0,
 			"Validity": "Everywhere",
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "FollowPlayer",
+					"TraitBased": false,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/Summoned"
 		},
 		{
 			"Id": "Adopted",
 			"Name": "Adopted",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -8068,12 +9222,24 @@
 			"MaxPerformTime": 15.0,
 			"CooldownTime": 10.0,
 			"Validity": "Everywhere",
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "AdoptedFollowPlayer",
+					"TraitBased": false,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/Adopted"
 		},
 		{
 			"Id": "Hatched",
 			"Name": "Hatched",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -8081,12 +9247,24 @@
 			"MaxPerformTime": 15.0,
 			"CooldownTime": 15.0,
 			"Validity": "Everywhere",
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "FollowPlayer",
+					"TraitBased": false,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/Hatched"
 		},
 		{
 			"Id": "PostInteract",
 			"Name": "Post Interact",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -8094,12 +9272,24 @@
 			"MaxPerformTime": 7.0,
 			"CooldownTime": 10.0,
 			"Validity": "Everywhere",
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "FollowPlayer",
+					"TraitBased": false,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/PostInteract"
 		},
 		{
 			"Id": "Rest",
 			"Name": "Rest",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -8107,12 +9297,35 @@
 			"MaxPerformTime": 30.0,
 			"CooldownTime": 1.0,
 			"Validity": "Everywhere",
+			"TraitModifiers": [
+				{
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 0.5,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 2.0
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Hungry",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 1.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/Rest"
 		},
 		{
 			"Id": "Attack",
 			"Name": "Attack",
 			"Label": "Currently hunting prey",
+			"UILabel": "Currently hunting prey",
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": false,
 			"Weight": 2.0,
@@ -8120,12 +9333,50 @@
 			"MaxPerformTime": 20.0,
 			"CooldownTime": 180.0,
 			"Validity": "OnPlanet",
+			"TraitModifiers": [
+				{
+					"Trait": "Aggression",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 2.0,
+					"CooldownModifierMin": 3.0,
+					"CooldownModifierMax": 1.0
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Hungry",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 1.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 1.0
+				}
+			],
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "Poop",
+					"TraitBased": false,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
+			"MoodOnComplete": {
+				"Hungry": -0.5,
+				"Lonely": 0.0
+			},
 			"Slug": "creatures/behaviours/Attack"
 		},
 		{
 			"Id": "Watch",
 			"Name": "Watch",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -8139,6 +9390,7 @@
 			"Id": "Greet",
 			"Name": "Greet",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": false,
 			"UsefulBehaviour": false,
 			"Weight": 2.0,
@@ -8146,12 +9398,39 @@
 			"MaxPerformTime": 20.0,
 			"CooldownTime": 120.0,
 			"Validity": "Everywhere",
+			"TraitModifiers": [
+				{
+					"Trait": "Aggression",
+					"TraitMin": -1.0,
+					"TraitMax": 1.0,
+					"WeightModifierMin": 2.0,
+					"WeightModifierMax": 0.1,
+					"CooldownModifierMin": 0.5,
+					"CooldownModifierMax": 1.0
+				}
+			],
+			"MoodModifiers": [
+				{
+					"Mood": "Lonely",
+					"MoodMin": 0.0,
+					"MoodMax": 1.0,
+					"WeightModifierMin": 0.0,
+					"WeightModifierMax": 3.0,
+					"CooldownModifierMin": 1.0,
+					"CooldownModifierMax": 1.0
+				}
+			],
+			"MoodOnComplete": {
+				"Hungry": 0.0,
+				"Lonely": -0.1
+			},
 			"Slug": "creatures/behaviours/Greet"
 		},
 		{
 			"Id": "TeleportToPlayer",
 			"Name": "Teleport to Player",
 			"Label": null,
+			"UILabel": null,
 			"ReactiveBehaviour": true,
 			"UsefulBehaviour": false,
 			"Weight": 1.0,
@@ -8159,7 +9438,612 @@
 			"MaxPerformTime": 10.0,
 			"CooldownTime": 10.0,
 			"Validity": "Everywhere",
+			"FollowUpBehaviours": [
+				{
+					"Behaviour": "FollowPlayer",
+					"TraitBased": false,
+					"Trait": "Helpfulness",
+					"TraitMin": 0.0,
+					"TraitMax": 1.0,
+					"WeightMin": 0.0,
+					"WeightMax": 1.0
+				}
+			],
 			"Slug": "creatures/behaviours/TeleportToPlayer"
 		}
-	]
+	],
+	"CreatureGlobals": {
+		"Temperaments": [
+			{
+				"Id": "Predator",
+				"LocKey": "TEMPERAMENT_PREDATOR",
+				"DisplayName": "TEMPERAMENT_PREDATOR",
+				"Descriptions": [
+					"Careful hunter",
+					"Patient hunter",
+					"Cautious",
+					"Impulsive",
+					"Reckless",
+					"Aggressive",
+					"Unafraid",
+					"Cold-blooded",
+					"Does not fear death",
+					"Intelligent",
+					"Calm",
+					"Enjoys the hunt",
+					"Bold",
+					"Stalks prey for days",
+					"Unpredictable"
+				]
+			},
+			{
+				"Id": "PlayerPredator",
+				"LocKey": "TEMPERAMENT_PLAYERPREDATOR",
+				"DisplayName": "TEMPERAMENT_PLAYERPREDATOR",
+				"Descriptions": [
+					"Dangerous",
+					"Wildly aggressive",
+					"Vicious",
+					"Cruel",
+					"Hyperviolent",
+					"Excited by violence",
+					"Angry",
+					"Easily enraged",
+					"Warlike",
+					"Apex predator"
+				]
+			},
+			{
+				"Id": "Prey",
+				"LocKey": "TEMPERAMENT_PREY",
+				"DisplayName": "TEMPERAMENT_PREY",
+				"Descriptions": [
+					"Watchful",
+					"Nervous",
+					"Skittish",
+					"Timid",
+					"Shy",
+					"Highly observant",
+					"Slow grazer",
+					"Tends plants",
+					"Seeks company",
+					"Wary",
+					"Easily startled",
+					"Vigilant",
+					"Inattentive",
+					"Constantly moving",
+					"Hasty",
+					"Fidgety",
+					"Anxious"
+				]
+			},
+			{
+				"Id": "Passive",
+				"LocKey": "TEMPERAMENT_PASSIVE",
+				"DisplayName": "TEMPERAMENT_PASSIVE",
+				"Descriptions": [
+					"Long-distance migration",
+					"Nomadic",
+					"Remembers faces",
+					"Submissive",
+					"Highly intelligent",
+					"Passive",
+					"Docile",
+					"Unafraid",
+					"Wise",
+					"Prudent",
+					"Far-sighted",
+					"Always foraging",
+					"Methodical",
+					"Friendly",
+					"Cheerful",
+					"Gentle",
+					"Peaceful"
+				]
+			},
+			{
+				"Id": "Bird",
+				"LocKey": "TEMPERAMENT_BIRD",
+				"DisplayName": "TEMPERAMENT_BIRD",
+				"Descriptions": [
+					"Flighty",
+					"Collects shiny objects",
+					"Builds large nests",
+					"Easily scared",
+					"Migratory",
+					"Highly observant",
+					"Easily startled",
+					"Very cautious",
+					"Sings at dusk",
+					"Wise",
+					"Long-sighted",
+					"Ever-moving",
+					"Cautious",
+					"Intelligent",
+					"Unpredictable"
+				]
+			},
+			{
+				"Id": "FishPrey",
+				"LocKey": "TEMPERAMENT_FISH",
+				"DisplayName": "TEMPERAMENT_FISH",
+				"Descriptions": [
+					"Instinctive",
+					"Desperate",
+					"Food-seeking",
+					"Mate-seeking",
+					"Ever-moving",
+					"Never sleeps",
+					"Melancholy",
+					"Lonely",
+					"Observant",
+					"Easily scared",
+					"Migratory",
+					"Drifts on currents",
+					"Deep-diving",
+					"Seeks cold",
+					"Seeks warmth",
+					"Bioelectric Defenses",
+					"Can inflate quickly",
+					"Lost",
+					"Haunted by unheard sound",
+					"Uses sonar",
+					"Effectively blind",
+					"Pressure sensitive",
+					"Photophobic",
+					"Only sees up",
+					"Chromatophoric"
+				]
+			},
+			{
+				"Id": "FishPredator",
+				"LocKey": "TEMPERAMENT_FISHPREDATOR",
+				"DisplayName": "TEMPERAMENT_FISHPREDATOR"
+			},
+			{
+				"Id": "Butterfly",
+				"LocKey": "TEMPERAMENT_BUTTERFLY",
+				"DisplayName": "TEMPERAMENT_BUTTERFLY"
+			},
+			{
+				"Id": "Robot",
+				"LocKey": "UI_TEMPERMENT_ROBOT",
+				"DisplayName": "UI_TEMPERMENT_ROBOT"
+			},
+			{
+				"Id": "Pet",
+				"LocKey": "TEMPERAMENT_PET",
+				"DisplayName": "TEMPERAMENT_PET"
+			}
+		],
+		"Diets": [
+			{
+				"Id": "Carnivore",
+				"LocKey": "CARNIVORE",
+				"DisplayName": "CARNIVORE"
+			},
+			{
+				"Id": "Omnivore",
+				"LocKey": "OMNIVORE",
+				"DisplayName": "OMNIVORE"
+			},
+			{
+				"Id": "Herbivore",
+				"LocKey": "HERBIVORE",
+				"DisplayName": "HERBIVORE"
+			},
+			{
+				"Id": "Robot",
+				"LocKey": "ROBOT",
+				"DisplayName": "ROBOT"
+			}
+		],
+		"PetEggTypes": [
+			{
+				"Id": "DEFAULT",
+				"Icon": "products--product.creatureegg.png",
+				"IconPath": "textures/ui/frontend/icons/products/product.creatureegg.dds",
+				"EggModel": "MODELS/PLANETS/BIOMES/COMMON/INTERACTIVE/PET_EGG.SCENE.MBIN",
+				"HatchScale": 2.5,
+				"HatchOffset": 0.2
+			},
+			{
+				"Id": "ROBO",
+				"Icon": "products--product.creaturerobotegg.png",
+				"IconPath": "textures/ui/frontend/icons/products/product.creaturerobotegg.dds",
+				"EggModel": "MODELS/PLANETS/BIOMES/COMMON/INTERACTIVE/PET_ROBOTEGG.SCENE.MBIN",
+				"HatchScale": 2.5,
+				"HatchOffset": 0.2
+			}
+		],
+		"EggSequencerConstants": {
+			"PetEggLayingInterval": 86400,
+			"PetEggFirstEggDelay": 86400,
+			"PetEggModificationTime": 5,
+			"PetEggModificationItemLimit": 999,
+			"PetEggSubstanceModifier": 2.5,
+			"PetEggScaleRangeModifier": 0.5,
+			"PetEggScaleRangeMax": 0.5,
+			"PetEggTraitRangeModifier": 0.1,
+			"PetEggTraitRangeMax": 0.2,
+			"PetEggOverdosageModifier": 0.1,
+			"PetEggMaxOverdosage": 0.5,
+			"PetEggMaxTopDescriptorChangeChance": 0.5,
+			"PetEggAccessoryChanceModifier": 4.0,
+			"PetEggMaxAccessoriesChangeChance": 1.0,
+			"PetEggMaxChangeProduct": "SACVENOM"
+		},
+		"AffinityLabels": {
+			"Normal": "Physical",
+			"Lush": "Tropical",
+			"Fire": "Fire",
+			"Cold": "Frost",
+			"Barren": "Desert",
+			"Radioactive": "Radioactive",
+			"Weird": "Anomalous",
+			"Mech": "Mechanical"
+		},
+		"BattleStats": {
+			"CombatEffectiveness": {
+				"Header": "Combat Effectiveness",
+				"Label": "combat effectiveness"
+			},
+			"Agility": {
+				"Header": "Agility",
+				"Label": "agility"
+			},
+			"Health": {
+				"Header": "Health",
+				"Label": null
+			},
+			"DodgeChance": {
+				"Header": null,
+				"Label": "dodge chance"
+			},
+			"CriticalHitChance": {
+				"Header": null,
+				"Label": "critical hit chance"
+			},
+			"Accuracy": {
+				"Header": null,
+				"Label": "accuracy"
+			},
+			"DefensiveStrength": {
+				"Header": null,
+				"Label": "defensive strength"
+			}
+		},
+		"ClimateLabels": {
+			"HOT": "Scorched",
+			"FROZEN": "Frozen",
+			"SWAMP": "Swamp",
+			"LAVA": "Volcanic",
+			"TOXIC": "Toxic",
+			"RADIO": "Radioactive",
+			"LUSH": "Verdant",
+			"DUST": "Barren",
+			"WEIRD": "Unusual",
+			"DEAD": "Airless",
+			"WATER": "Water-bound",
+			"GAS": "Gaseous"
+		},
+		"TraitClasses": {
+			"Aggression": {
+				"Rating": "Aggression",
+				"Classes": {
+					"S": "Ferocious",
+					"A": "Fierce",
+					"B": "Territorial",
+					"C": "Passionate"
+				}
+			},
+			"Helpfulness": {
+				"Rating": "Helpfulness",
+				"Classes": {
+					"S": "Dutiful",
+					"A": "Diligent",
+					"B": "Cooperative",
+					"C": "Compliant"
+				}
+			},
+			"Gentleness": {
+				"Rating": "Gentleness",
+				"Classes": {
+					"S": "Sweet Tempered",
+					"A": "Placid",
+					"B": "Patient",
+					"C": "Tolerant"
+				}
+			},
+			"Playfulness": {
+				"Rating": "Playfulness",
+				"Classes": {
+					"S": "Whimsical",
+					"A": "Frolicsome",
+					"B": "Mischievous",
+					"C": "Cheeky"
+				}
+			},
+			"Independence": {
+				"Rating": "Independence",
+				"Classes": {
+					"S": "Adventurous",
+					"A": "Autonomous",
+					"B": "Free Spirited",
+					"C": "Aloof"
+				}
+			},
+			"Devotion": {
+				"Rating": "Devotion",
+				"Classes": {
+					"S": "Loyal",
+					"A": "Protective",
+					"B": "Attentive",
+					"C": "Attached"
+				}
+			}
+		},
+		"FiendTraitClasses": {
+			"Aggression": {
+				"S": "Vicious",
+				"A": "Brutal",
+				"B": "Savage",
+				"C": "Bloodthirsty"
+			},
+			"Helpfulness": {
+				"S": "Industrious",
+				"A": "Methodical",
+				"B": "Purposeful",
+				"C": "Orderly"
+			},
+			"Gentleness": {
+				"S": "Docile",
+				"A": "Temperate",
+				"B": "Restrained",
+				"C": "Unpredictable"
+			},
+			"Playfulness": {
+				"S": "Chaotic",
+				"A": "Wayward",
+				"B": "Devilish",
+				"C": "Sly"
+			},
+			"Independence": {
+				"S": "Feral",
+				"A": "Wild",
+				"B": "Rebellious",
+				"C": "Wilful"
+			},
+			"Devotion": {
+				"S": "Attached",
+				"A": "Respectful",
+				"B": "Intrigued",
+				"C": "Interested"
+			}
+		},
+		"EggLabels": {
+			"TraitWords": {
+				"AGG": "aggressive",
+				"DEV": "devoted",
+				"GEN": "gentle",
+				"HEL": "industrious",
+				"IND": "independent-minded",
+				"PLA": "playful"
+			},
+			"SizeWords": {
+				"SMALL": "small",
+				"MED": "of average size",
+				"LARGE": "large",
+				"XL": "very large"
+			},
+			"TypeNames": {
+				"Default": "Companion Egg",
+				"Quad": "Metallic Hatching Unit",
+				"Fiend": "Whispering Companion Egg"
+			},
+			"Requirements": {
+				"AGE": "Too young to lay eggs",
+				"BIOME": "Not in native climate",
+				"HUNGRY": "Feeling hungry",
+				"LONELY": "Feeling sad",
+				"PENDING": "Another egg nearby",
+				"SLOTS": "Cannot carry more eggs",
+				"TIME": "Gestating...",
+				"TREAT": "Requires additional nutrition"
+			}
+		},
+		"MoodStrings": {
+			"Good": [
+				"Active",
+				"Affectionate",
+				"Alert",
+				"Amenable",
+				"Animated",
+				"Calm",
+				"Carefree",
+				"Cheerful",
+				"Chipper",
+				"Comfortable",
+				"Contemplative",
+				"Content",
+				"Curious",
+				"Eager",
+				"Effervescent",
+				"Energetic",
+				"Great",
+				"Happy",
+				"Hyper",
+				"Inquisitive",
+				"Inquisitive",
+				"Joyful",
+				"Jubilant",
+				"Lively",
+				"Loving",
+				"Peaceful",
+				"Peppy",
+				"Perky",
+				"Relaxed",
+				"Satisfied",
+				"Serene",
+				"Spirited",
+				"Sprightly",
+				"Tranquil",
+				"Upbeat",
+				"Wired",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good",
+				"Happy",
+				"Good"
+			],
+			"Hungry": [
+				"Empty",
+				"Famished",
+				"Hungry",
+				"Peckish",
+				"Ravenous",
+				"Starved",
+				"Starving",
+				"Uncomfortable",
+				"Unsatisfied",
+				"Voracious",
+				"Hungry",
+				"Hungry",
+				"Hungry",
+				"Hungry",
+				"Hungry",
+				"Hungry",
+				"Hungry",
+				"Hungry",
+				"Hungry",
+				"Hungry"
+			],
+			"Lonely": [
+				"Anxious",
+				"Bored",
+				"Cranky",
+				"Defiant",
+				"Dejected",
+				"Depressed",
+				"Discontented",
+				"Disgruntled",
+				"Disobedient",
+				"Downhearted",
+				"Exhausted",
+				"Frustrated",
+				"Gloomy",
+				"Glum",
+				"Grouchy",
+				"Grumpy",
+				"Lonely",
+				"Low",
+				"Melancholy",
+				"Morose",
+				"Neglected",
+				"Nervous",
+				"Rebellious",
+				"Rejected",
+				"Resentful",
+				"Restless",
+				"Sad",
+				"Stressed",
+				"Sullen",
+				"Tense",
+				"Twitchy",
+				"Unhappy",
+				"Worried",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad",
+				"Sad"
+			]
+		},
+		"ArenaGuild": {
+			"Name": "Arena League",
+			"Description": "United by an enthusiasm for all things zoological and sharing a keen competitive streak, members of the Arena League roam the galaxy seeking new life to tame, nurture and train.\n\nMembers can be found at Holo-Arenas on planets and Space Stations challenging one another to prove which of them has raised the most powerful, well-trained Companions in simulated battles between their creatures. They are always accepting of new challengers, though Travellers will have to prove themselves before they can expect to take on the toughest competitors."
+		},
+		"BattleUI": {
+			"MAIN_HEADER": "HOLO-ARENA",
+			"FINISH_WON": "YOU WIN!",
+			"FINISH_LOST": "YOU LOSE!",
+			"FINISH_ABANDONED": "BATTLE ABANDONED",
+			"FINISH": "LEAVE ARENA",
+			"MISS": "Missed",
+			"DODGE": "Dodged!",
+			"BLOCK": "Blocked!",
+			"CLEANSE": "Cleansed!",
+			"WEAK": "(Weak)",
+			"STRONG": "(Strong)",
+			"VS": "VS",
+			"REST_DESC": "Rest for one turn",
+			"SWITCH_DESC": "Switch your active creature",
+			"BEGIN_BUTTON": "BEGIN BATTLE",
+			"TURN_LABEL": "TURN",
+			"BATTLE_STAT": "Holo-Arena Victories",
+			"TRAITS_HEADER": "TRAITS",
+			"STATS_HEADER": "BATTLE ABILITIES",
+			"LEVEL_SUB": "LEVEL"
+		},
+		"SpecialCreatureNames": {
+			"WALKER_CRAB": {
+				"Name": "Aeron Crab",
+				"Species": "Shellseeker",
+				"Trait": "sturdy"
+			},
+			"FISHBOWL_PET3": {
+				"Name": "Wandering Shrimp Tank",
+				"Species": "Liquid-Suspended Consciousness",
+				"Trait": "time-lost"
+			},
+			"LANDSQUID_PET": {
+				"Name": "Boundary Horror",
+				"Species": "Spectral Anomaly",
+				"Trait": "between worlds"
+			},
+			"SPIDERQUAD_PET": {
+				"Name": "Corrupted Quadruped",
+				"Species": "Rewired Patrol Unit",
+				"Trait": "dissonant"
+			},
+			"HORROR_PET": {
+				"Name": "Geno-prawn",
+				"Species": "Abyssal Horror"
+			},
+			"HOVER_PET": {
+				"Name": "Hoverdroid",
+				"Species": "Mechanical Companion"
+			}
+		},
+		"AccessorySlotLabels": {
+			"FRONT": "CHEST",
+			"BACK": "BACK",
+			"LEFT": "LEFT FLANK",
+			"RIGHT": "RIGHT FLANK"
+		}
+	}
 }
