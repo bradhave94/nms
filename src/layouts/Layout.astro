@@ -16,10 +16,23 @@ export interface Props {
 	ogImage?: string;
 	slug?: string;
 	structuredData?: JsonLdObject | JsonLdObject[];
+	robots?: string;
+	canonical?: string;
 }
 
-const { title = SITE.title, author = SITE.author, description = SITE.desc, slug, structuredData, ogImage } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const {
+	title = SITE.title,
+	author = SITE.author,
+	description = SITE.desc,
+	slug,
+	structuredData,
+	ogImage,
+	robots = 'index,follow,max-image-preview:large',
+	canonical,
+} = Astro.props;
+const canonicalURL = canonical
+	? new URL(canonical, SITE.website)
+	: new URL(Astro.url.pathname, Astro.site ?? SITE.website);
 const siteOrigin = SITE.website.replace(/\/$/, '');
 const defaultOgImage = `${siteOrigin}/images/icon.png`;
 const imageUrl = ogImage ?? defaultOgImage;
@@ -112,7 +125,7 @@ inject();
 			gtag('config', 'G-9GEFK3YPV3');
 		</script>
 
-		<meta name="robots" content="max-image-preview:large" />
+		<meta name="robots" content={robots} />
 		<meta name="google-adsense-account" content="ca-pub-8524094599848175" />
 		<script type="application/ld+json" set:html={mergedStructuredDataJson}></script>
 	</head>

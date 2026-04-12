@@ -57,6 +57,7 @@ const navigation: NavigationItem[] = [
   { name: 'Food', href: '/food', icon: CakeIcon },
   { name: 'Raw Materials', href: '/raw', icon: BoltIcon },
   { name: 'All Items', href: '/items', icon: Squares2X2Icon },
+  { name: 'Guides', href: '/guides', icon: EnvelopeIcon },
   { name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 

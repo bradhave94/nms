@@ -4,6 +4,7 @@ const navigation = [
   { name: 'Refining', href: '/refining' },
   { name: 'Cooking', href: '/cooking' },
   { name: 'Crafting', href: '/crafting-guide' },
+  { name: 'Guides', href: '/guides' },
   { name: 'Calculator', href: '/calculator' },
   { name: 'Products', href: '/products' },
   { name: 'Technology', href: '/technology' },
@@ -16,7 +17,6 @@ const navigation = [
   { name: 'Food', href: '/food' },
   { name: 'Raw Materials', href: '/raw' },
   { name: 'All Items', href: '/items' },
-  { name: 'Feedback', href: '/feedback' },
 ];
 
 export default function Footer() {
@@ -50,7 +50,7 @@ export default function Footer() {
           <p>This is a fan-made website. No Man's Sky™ and all related assets are trademarks
           of Hello Games. This site is not affiliated with or endorsed by Hello Games.</p>
           <p className="mt-2">
-            <a href="/privacy" className="text-blue-500 hover:text-blue-400">Privacy Policy</a>
+            <a href="/privacy-policy" className="text-blue-500 hover:text-blue-400">Privacy Policy</a>
           </p>
         </div>
       </div>
