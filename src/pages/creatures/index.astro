@@ -97,9 +97,17 @@ const breadcrumbs = buildCategoryBreadcrumbs('Creatures', '/creatures', 1);
 			<article class="sm:col-span-2 xl:col-span-2">
 				<a
 					href="/creatures/companions"
-					class="flex transition border border-black hover:border-blue-500 bg-black rounded-md overflow-hidden h-full"
+					class="flex flex-col transition border border-black hover:border-blue-500 bg-black rounded-md overflow-hidden h-full"
 				>
-					<div class="flex flex-1 flex-col justify-between p-4 sm:p-6">
+					<div class="p-4 sm:p-6 pb-0 sm:pb-0">
+						<img
+							src={companionCard.image}
+							alt="Companions"
+							class="h-48 w-48 object-contain"
+							loading="lazy"
+						/>
+					</div>
+					<div class="flex flex-1 flex-col justify-between p-4 sm:p-6 pt-3 sm:pt-3">
 						<div>
 							<h2 class="m-0 font-bold text-3xl tracking-wider text-white">
 								Companions
@@ -113,14 +121,6 @@ const breadcrumbs = buildCategoryBreadcrumbs('Creatures', '/creatures', 1);
 								View Companions
 							</span>
 						</div>
-					</div>
-					<div class="hidden sm:flex items-center justify-center w-48 shrink-0">
-						<img
-							src={companionCard.image}
-							alt="Companions"
-							class="h-32 w-32 object-contain"
-							loading="lazy"
-						/>
 					</div>
 				</a>
 			</article>

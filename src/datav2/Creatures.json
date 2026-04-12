@@ -9673,6 +9673,37 @@
 			"PetEggMaxAccessoriesChangeChance": 1.0,
 			"PetEggMaxChangeProduct": "SACVENOM"
 		},
+		"TrustConstants": {
+			"PetTrustOnAdoption": 0.6,
+			"PetTrustOnHatch": 0.7,
+			"PetTrustIncreaseStep": 0.05,
+			"PetTrustDecreaseStep": 0.02,
+			"PetTrustIncreaseThreshold": 0.05,
+			"PetTrustDecreaseThreshold": 0.95,
+			"PetMinTrust": 0.2,
+			"PetTrustChangeInterval": 86400
+		},
+		"FeedingConstants": {
+			"FeedingTaskAmount": 2,
+			"FeedingFollowTime": 30.0,
+			"FeedingNoticeTime": 3.0,
+			"FeedingNoticeDistance": 30.0,
+			"PetInteractBaseRange": 8.0,
+			"PetTickleChatChance": 0.33,
+			"PetTreatChatChance": 1.0,
+			"PetChatCooldown": 5.0,
+			"PetChatUseTraitTemplateChance": 0.1
+		},
+		"MovementConstants": {
+			"PetAnimSpeedBoostSmallerThan": 1.2,
+			"PetAnimSpeedBoostStrength": 1.0,
+			"PetAnimSpeedMax": 1.5,
+			"PetAnimSpeedMin": 0.2,
+			"PetMinSummonDistance": 3.0,
+			"PetMaxSummonDistance": 20.0,
+			"PetFollowRunPlayerDistance": 4.0,
+			"PetPlayerSpeedSmoothTime": 0.5
+		},
 		"AffinityLabels": {
 			"Normal": "Physical",
 			"Lush": "Tropical",
@@ -10121,6 +10152,858 @@
 				"Name": "Heaviest Flying Lifeform",
 				"Measurement": "Weight: %NUM%kg"
 			}
-		]
+		],
+		"CompanionChat": {
+			"ACTIVITY": [
+				"adventure",
+				"chasing",
+				"digging",
+				"dirt-rolling",
+				"eating",
+				"exploring",
+				"fighting",
+				"fun",
+				"hide-seek",
+				"hunting",
+				"mining",
+				"playing",
+				"roaring",
+				"scanning",
+				"sleeping"
+			],
+			"ATTACK": [
+				"attack",
+				"get",
+				"get rid",
+				"make go away",
+				"remove"
+			],
+			"ATTACK_AGG": [
+				"KILL",
+				"ROAR at",
+				"ROOOARR at",
+				"attack",
+				"destroy",
+				"eat",
+				"kill",
+				"smash"
+			],
+			"BEAUTIFUL": [
+				"amazing",
+				"beautiful",
+				"good",
+				"happy-feeling",
+				"incredible",
+				"lovely",
+				"nice",
+				"very good",
+				"very nice",
+				"wow",
+				"wow-wow"
+			],
+			"BIOME_COLD": [
+				"brrr",
+				"cold",
+				"cool-cool",
+				"icy",
+				"shivery",
+				"very cool"
+			],
+			"BIOME_DEAD": [
+				"blank",
+				"creepy",
+				"empty",
+				"no-life",
+				"quiet",
+				"spooky"
+			],
+			"BIOME_DUST": [
+				"air-sneezy",
+				"dry",
+				"dusty",
+				"hot-cold",
+				"rocky",
+				"sandy"
+			],
+			"BIOME_HOT": [
+				"burny",
+				"hot",
+				"melty",
+				"sweaty",
+				"very warm",
+				"warm-warm"
+			],
+			"BIOME_LAVA": [
+				"burn-feet",
+				"fiery",
+				"fire-earth",
+				"melty",
+				"smoky",
+				"sooty"
+			],
+			"BIOME_LUSH": [
+				"damp",
+				"grassy",
+				"leafy",
+				"much-life",
+				"muddy",
+				"planty"
+			],
+			"BIOME_RAD": [
+				"burny-ray",
+				"glary",
+				"glowy",
+				"hot-rocks",
+				"radiant",
+				"rock-glowy"
+			],
+			"BIOME_SWAMP": [
+				"foot-sinky",
+				"mitey",
+				"squelch-foot",
+				"squishy",
+				"wet",
+				"wet-air"
+			],
+			"BIOME_TOX": [
+				"furry-air",
+				"mouldy",
+				"mushroomy",
+				"poison",
+				"stinky",
+				"throat-tickly"
+			],
+			"BIOME_WEIRD": [
+				"curious",
+				"head-tilty",
+				"interesting",
+				"odd-place",
+				"strange",
+				"weird"
+			],
+			"CUTE": [
+				"good"
+			],
+			"CUTE_AGG": [
+				"fierce",
+				"handsome",
+				"mighty",
+				"powerful",
+				"strong",
+				"tough"
+			],
+			"CUTE_DEV": [
+				"fancy",
+				"good",
+				"lovable",
+				"pleasing",
+				"pretty",
+				"sweet"
+			],
+			"CUTE_GEN": [
+				"cute",
+				"good",
+				"happy",
+				"lovely",
+				"nice",
+				"pretty"
+			],
+			"CUTE_HEL": [
+				"clever",
+				"good",
+				"helpful",
+				"lovely",
+				"nice",
+				"smart",
+				"well-prepared"
+			],
+			"CUTE_IND": [
+				"elegant",
+				"good",
+				"handsome",
+				"important",
+				"lovely",
+				"nice",
+				"proud",
+				"smart",
+				"unique"
+			],
+			"CUTE_PLA": [
+				"bright",
+				"colourful",
+				"cute",
+				"fun",
+				"good",
+				"lovely",
+				"nice",
+				"pretty"
+			],
+			"DISLIKE": [
+				"bad",
+				"dislike",
+				"do not like",
+				"is bad",
+				"no good",
+				"no like",
+				"not good",
+				"not like"
+			],
+			"DISLIKE_AGG": [
+				"angry with",
+				"annoyed by",
+				"dislike",
+				"do not like",
+				"grrr at",
+				"hate",
+				"no like",
+				"not like",
+				"roar at",
+				"very hate"
+			],
+			"DISLIKE_GEN": [
+				"am afraid of",
+				"am scared of",
+				"am worried by",
+				"dislike",
+				"do not like",
+				"fear",
+				"is scary",
+				"scared of"
+			],
+			"FRIEND": [
+				"friend",
+				"friend-creature",
+				"friend-entity",
+				"friend-thing",
+				"good-thing",
+				"nice-thing"
+			],
+			"FULL": [
+				"belly-happy",
+				"belly-warm",
+				"full",
+				"full-good",
+				"good",
+				"happy",
+				"happy-full"
+			],
+			"GOOD": [
+				"fantastic",
+				"good",
+				"good-good",
+				"great",
+				"happy-making",
+				"lovely",
+				"nice",
+				"nice-nice",
+				"pleasing",
+				"wonderful"
+			],
+			"GOOD_AGG": [
+				"good",
+				"good-good",
+				"great",
+				"great-great",
+				"inspiring",
+				"powerful-good",
+				"strong-good"
+			],
+			"GOOD_DEV": [
+				"glorious",
+				"good",
+				"good-good",
+				"great",
+				"happy-making",
+				"lovely",
+				"nice",
+				"nice-nice",
+				"pleasing",
+				"wonderful"
+			],
+			"GOOD_GEN": [
+				"glorious",
+				"good",
+				"good-good",
+				"great",
+				"happy-making",
+				"lovely",
+				"nice",
+				"nice-nice",
+				"pleasing",
+				"wonderful"
+			],
+			"GOOD_IND": [
+				"acceptable",
+				"adequate",
+				"good",
+				"nice",
+				"pleasing",
+				"tolerable"
+			],
+			"HAPPY": [
+				"delighted",
+				"excited",
+				"fuzzy",
+				"good-feeling",
+				"happy",
+				"happy-happy",
+				"joyful",
+				"thrilled",
+				"very pleased",
+				"warm"
+			],
+			"HAPPY_AGG": [
+				"excited",
+				"fierce-happy",
+				"joyful",
+				"power-happy",
+				"strong-happy",
+				"thrilled",
+				"very pleased"
+			],
+			"HAPPY_DEV": [
+				"delighted",
+				"excited",
+				"fuzzy",
+				"good-feeling",
+				"happy",
+				"happy-happy",
+				"joyful",
+				"lucky",
+				"thrilled",
+				"very pleased",
+				"warm"
+			],
+			"HAPPY_GEN": [
+				"delighted",
+				"excited",
+				"fuzzy",
+				"good-feeling",
+				"happy",
+				"happy-happy",
+				"joyful",
+				"peaceful",
+				"thankful",
+				"very pleased",
+				"warm"
+			],
+			"HAPPY_IND": [
+				"appeased",
+				"contented",
+				"good-feeling",
+				"happy",
+				"pleased",
+				"satisfied"
+			],
+			"HELPFUL": [
+				"best",
+				"best %NAME%",
+				"best creature",
+				"clever",
+				"clever %NAME%",
+				"good",
+				"good %NAME%",
+				"good creature",
+				"helpful",
+				"helpful %NAME%",
+				"impressive",
+				"nice",
+				"pleasing",
+				"smart",
+				"useful",
+				"useful %NAME%"
+			],
+			"HOSTILE": [
+				"nasty",
+				"ugly"
+			],
+			"HOSTILE_AGG": [
+				"annoying",
+				"dumb",
+				"nasty",
+				"no good",
+				"pathetic",
+				"silly",
+				"stupid",
+				"ugly",
+				"weak"
+			],
+			"HOSTILE_GEN": [
+				"angry",
+				"frightening",
+				"nasty",
+				"scary",
+				"terrifying"
+			],
+			"HUMAN": [
+				"suit-creature",
+				"suit-friend",
+				"suit-walker",
+				"traveller-thing"
+			],
+			"HUNGRY": [
+				"belly-cry",
+				"belly-empty",
+				"belly-growling",
+				"belly-sad",
+				"empty",
+				"food-sad",
+				"hungry",
+				"weak"
+			],
+			"HUNGRY_AGG": [
+				"HUNGRY",
+				"STARVED"
+			],
+			"LIKE": [
+				"like",
+				"like-like",
+				"love"
+			],
+			"LIKE_DEV": [
+				"ADORE",
+				"adore",
+				"best is",
+				"favourite is",
+				"like",
+				"like-like",
+				"love",
+				"love-love",
+				"treasure"
+			],
+			"LIKE_IND": [
+				"accept",
+				"allow",
+				"appreciate",
+				"approve of",
+				"humour",
+				"like",
+				"like-like",
+				"permit",
+				"tolerate"
+			],
+			"LONELY": [
+				"anxious",
+				"bored",
+				"lonely",
+				"sad",
+				"sad-feeling"
+			],
+			"LONELY_DEV": [
+				"anxious",
+				"bored",
+				"lonely",
+				"sad",
+				"sad-feeling"
+			],
+			"LONELY_IND": [
+				"annoyed",
+				"bored",
+				"disrespected",
+				"ignored",
+				"unappreciated"
+			],
+			"LOVED": [
+				"loved"
+			],
+			"LOVED_DEV": [
+				"close",
+				"cosy",
+				"loved",
+				"loving",
+				"snug",
+				"special"
+			],
+			"LOVED_IND": [
+				"appeased",
+				"appreciated",
+				"loved",
+				"pleased",
+				"satisfied"
+			],
+			"NOISE": [
+				"roar"
+			],
+			"NOISE_AGG": [
+				"ROAR",
+				"aaaaaaaarrgghh",
+				"arrgghh",
+				"arrghhhhghh",
+				"ggggggrrr",
+				"ggggggrrrrrhh",
+				"grahhhh",
+				"grrr",
+				"grrroah",
+				"grrrrrhh",
+				"grrrrrrrrr",
+				"grrrrrrrrrhhhh",
+				"raaaarr",
+				"roaaaaar",
+				"roaaaaarrr",
+				"roaaaaarrrrrr",
+				"roar",
+				"roarrrrrr",
+				"rrrrroar"
+			],
+			"NOISE_DEV": [
+				"arf-arf",
+				"arrrrruff",
+				"aruf",
+				"aruffff",
+				"gggggruff",
+				"grrgr",
+				"grrgrgr",
+				"grrgrgrgrgrgr",
+				"grrrufffff",
+				"gruoooff",
+				"peeeeep",
+				"peep",
+				"peepppp",
+				"pip-pip",
+				"pip-pip-pip",
+				"pipipip",
+				"whroff",
+				"whruff-uff",
+				"whruffff",
+				"whruuuuff",
+				"wruffff",
+				"wruuuuffff",
+				"yip",
+				"yip-yip-yip",
+				"yipyip"
+			],
+			"NOISE_GEN": [
+				"baa",
+				"baa-baaaaa",
+				"baaaaa",
+				"baaaaaa",
+				"baaaaah",
+				"baaah",
+				"blee",
+				"blee-bleeeee",
+				"bleeeee",
+				"bleeeeee",
+				"bleeeeet",
+				"bleeeh",
+				"caa",
+				"caaah",
+				"maa",
+				"maa-maaaaa",
+				"maaaaa",
+				"maaaaaa",
+				"maaaaah",
+				"maaah"
+			],
+			"NOISE_HEL": [
+				"bzzp",
+				"bzzzzzp",
+				"chht-chtttt",
+				"chrrrp",
+				"chrrrrt",
+				"chrrrtle",
+				"chrup",
+				"cht-cht",
+				"crrrp",
+				"crrrrck",
+				"gaaaawk",
+				"gawk",
+				"gawwwk",
+				"honnnk",
+				"hoooonkkk",
+				"makka-makka",
+				"nccck-nccck",
+				"njam-njam",
+				"ssshhhh",
+				"ssssssh",
+				"triiiill",
+				"trillll",
+				"trrrrill"
+			],
+			"NOISE_IND": [
+				"cawwww",
+				"grwwwwwl",
+				"hisssssss",
+				"meeeeewwww",
+				"mew",
+				"mew-mew",
+				"mewwwl",
+				"mewwww",
+				"mmmmew",
+				"prrr",
+				"prrrrr",
+				"prrrrrhhh",
+				"prrrrrrrr",
+				"prrrrrrrrrrh",
+				"prughhh",
+				"purr",
+				"purrpurr",
+				"purrr",
+				"purrrrrrh",
+				"scrrrrrch"
+			],
+			"NOISE_PLA": [
+				"bripbrip",
+				"brripbrrop",
+				"brroop",
+				"fidgi-fidgi",
+				"fidgi-gidgi",
+				"gidgi-gidgi",
+				"glom-pom",
+				"nom-glom",
+				"nom-pom",
+				"pribirbi",
+				"rhooooo",
+				"rhoorhoo",
+				"tic-tic",
+				"wheeee",
+				"wheeeeee",
+				"whooooo",
+				"whoop-hoop",
+				"woowoo",
+				"woowooooo"
+			],
+			"OWNERLOVE": [
+				"friend"
+			],
+			"OWNERLOVE_AGG": [
+				"alpha",
+				"alpha friend",
+				"best creature",
+				"leader",
+				"master",
+				"mighty-friend",
+				"mighty-suit",
+				"pack-leader",
+				"power-creature",
+				"roar master",
+				"strong creature",
+				"suit-leader"
+			],
+			"OWNERLOVE_DEV": [
+				"amazing friend",
+				"best creature",
+				"best friend",
+				"favourite",
+				"god-creature",
+				"master",
+				"perfect friend",
+				"protection-creature",
+				"supreme creature"
+			],
+			"OWNERLOVE_GEN": [
+				"best creature",
+				"best friend",
+				"favourite",
+				"kind creature",
+				"lovely friend",
+				"nice friend"
+			],
+			"OWNERLOVE_HEL": [
+				"best creature",
+				"best friend",
+				"clever creature",
+				"favourite",
+				"sensible creature",
+				"smart creature"
+			],
+			"OWNERLOVE_IND": [
+				"adventure companion",
+				"adventure friend",
+				"good companion",
+				"good friend",
+				"journey friend",
+				"peer-creature"
+			],
+			"OWNERLOVE_PLA": [
+				"best creature",
+				"best friend",
+				"best playmate",
+				"favourite",
+				"fun creature",
+				"funny creature",
+				"joy-creature"
+			],
+			"PLANET": [
+				"area",
+				"here",
+				"place",
+				"planet",
+				"spot",
+				"world"
+			],
+			"SUMMONED": [
+				"arrived",
+				"chosen",
+				"here",
+				"here here",
+				"selected",
+				"summoned"
+			],
+			"SUMMONED_AGG": [
+				"big roar",
+				"chasing eating",
+				"hunting now",
+				"mighty roar",
+				"roar",
+				"shouty time"
+			],
+			"SUMMONED_DEV": [
+				"friend time",
+				"good time",
+				"happy see you",
+				"happy time",
+				"love to be here",
+				"together",
+				"together time"
+			],
+			"SUMMONED_GEN": [
+				"good time",
+				"happy now",
+				"hug time",
+				"play time",
+				"yes"
+			],
+			"SUMMONED_HEL": [
+				"big help",
+				"good friends",
+				"jobs to do",
+				"time to work",
+				"work time"
+			],
+			"SUMMONED_IND": [
+				"big play",
+				"big work",
+				"explore time",
+				"greetings"
+			],
+			"SUMMONED_PLA": [
+				"big play",
+				"hip hip yay",
+				"hurray",
+				"yippee"
+			],
+			"SUMMONED_TRAIT": [
+				"happy"
+			],
+			"TICKLES": [
+				"cuddle",
+				"pat",
+				"patting",
+				"snuggle",
+				"stroke",
+				"stroking",
+				"tickle",
+				"touch"
+			],
+			"TICKLES_AGG": [
+				"patting",
+				"stroking",
+				"strong-hug",
+				"touching"
+			],
+			"YUMMY": [
+				"delicious",
+				"filling",
+				"fresh",
+				"good",
+				"nice",
+				"tasty",
+				"yum",
+				"yum-yum",
+				"yummy"
+			],
+			"YUMMY_AGG": [
+				"MEATY",
+				"TASTY",
+				"fresh",
+				"meaty",
+				"tasty"
+			]
+		},
+		"BiomeChat": {
+			"STATION": [
+				"metal"
+			],
+			"HOT": [
+				"hot",
+				"melty",
+				"burny",
+				"sweaty",
+				"very warm",
+				"warm-warm"
+			],
+			"COLD": [
+				"cold",
+				"brrr",
+				"shivery",
+				"icy",
+				"very cool",
+				"cool-cool"
+			],
+			"LUSH": [
+				"planty",
+				"grassy",
+				"damp",
+				"leafy",
+				"much-life",
+				"muddy"
+			],
+			"DUST": [
+				"dusty",
+				"sandy",
+				"hot-cold",
+				"rocky",
+				"air-sneezy",
+				"dry"
+			],
+			"DEAD": [
+				"empty",
+				"quiet",
+				"creepy",
+				"spooky",
+				"no-life",
+				"blank"
+			],
+			"TOX": [
+				"stinky",
+				"poison",
+				"mouldy",
+				"furry-air",
+				"throat-tickly",
+				"mushroomy"
+			],
+			"RAD": [
+				"glowy",
+				"burny-ray",
+				"hot-rocks",
+				"glary",
+				"radiant",
+				"rock-glowy"
+			],
+			"WEIRD": [
+				"weird",
+				"strange",
+				"odd-place",
+				"interesting",
+				"curious",
+				"head-tilty"
+			],
+			"SWAMP": [
+				"wet",
+				"squishy",
+				"mitey",
+				"foot-sinky",
+				"wet-air",
+				"squelch-foot"
+			],
+			"LAVA": [
+				"fiery",
+				"melty",
+				"smoky",
+				"sooty",
+				"fire-earth",
+				"burn-feet"
+			]
+		}
 	}
 }

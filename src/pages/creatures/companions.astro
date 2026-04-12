@@ -113,7 +113,6 @@ const eggOverrides = (data.EggOverrides as EggOverride[] | undefined) ?? [];
 const globals = data.CreatureGlobals as Record<string, unknown> ?? {};
 const eggConstants = globals.EggSequencerConstants as EggSequencerConstants | undefined;
 const battleStats = (globals.BattleStats as Record<string, { Header: string | null; Label: string | null }>) ?? {};
-const battleUI = (globals.BattleUI as Record<string, string>) ?? {};
 const arenaModes = ((creaturesData as Record<string, unknown>).ArenaModes as { Id: string; Name: string; Description: string | null; GameMode: string; Difficulty: string | null; ExperienceMultiplier: number }[] | undefined) ?? [];
 const slotLabels = (globals.AccessorySlotLabels as Record<string, string>) ?? {};
 const eggLabels = (globals.EggLabels as {
@@ -124,9 +123,34 @@ const eggLabels = (globals.EggLabels as {
 }) ?? { TraitWords: {}, SizeWords: {}, TypeNames: {}, Requirements: {} };
 const moodStrings = (globals.MoodStrings as { Good: string[]; Hungry: string[]; Lonely: string[] }) ?? { Good: [], Hungry: [], Lonely: [] };
 const wonderRecords = (globals.WonderRecords as Array<{Name: string; Measurement?: string | null}>) ?? [];
+const trustConstants = (globals.TrustConstants as Record<string, number>) ?? {};
+const feedingConstants = (globals.FeedingConstants as Record<string, number>) ?? {};
+const movementConstants = (globals.MovementConstants as Record<string, number>) ?? {};
+const companionChat = (globals.CompanionChat as Record<string, string[]>) ?? {};
+const biomeChat = (globals.BiomeChat as Record<string, string[]>) ?? {};
 const goodMoods = [...new Set(moodStrings.Good)];
 const hungryMoods = [...new Set(moodStrings.Hungry)];
 const lonelyMoods = [...new Set(moodStrings.Lonely)];
+
+const chatCategoryCount = Object.keys(companionChat).length;
+const chatMessageCount = Object.values(companionChat).reduce((sum, arr) => sum + arr.length, 0);
+const sortedChatCategories = Object.entries(companionChat)
+	.sort(([a], [b]) => a.localeCompare(b))
+	.map(([category, messages]) => {
+		const display = category
+			.replace(/_/g, ' ')
+			.split(' ')
+			.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+			.join(' ')
+			.replace(/Agg$/, '(Aggressive)')
+			.replace(/Dev$/, '(Devoted)')
+			.replace(/Gen$/, '(Gentle)')
+			.replace(/Hel$/, '(Helpful)')
+			.replace(/Ind$/, '(Independent)')
+			.replace(/Pla$/, '(Playful)');
+		return { category, display, messages };
+	});
+const sortedBiomeChat = Object.entries(biomeChat).sort(([a], [b]) => a.localeCompare(b));
 
 const sortedBehaviours = [...behaviours].sort((a, b) => {
 	if (a.UsefulBehaviour !== b.UsefulBehaviour) return a.UsefulBehaviour ? -1 : 1;
@@ -346,6 +370,87 @@ const breadcrumbs = [
 					</div>
 				</div>
 			)}
+
+			<h3 class="mt-8 mb-3 text-xl text-sky-100">Trust & Bonding</h3>
+			<p class="mt-0 mb-4 text-sm text-sky-200/80">
+				Companions build trust over time through feeding, interaction, and care.
+			</p>
+			<div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+				{Object.entries(trustConstants).map(([key, value]) => {
+					const labels = {
+						PetTrustOnAdoption: 'Trust on Adoption',
+						PetTrustOnHatch: 'Trust on Hatch',
+						PetTrustIncreaseStep: 'Trust Increase per Step',
+						PetTrustDecreaseStep: 'Trust Decrease per Step',
+						PetTrustIncreaseThreshold: 'Increase Threshold',
+						PetTrustDecreaseThreshold: 'Decrease Threshold',
+						PetMinTrust: 'Minimum Trust',
+						PetTrustChangeInterval: 'Change Interval',
+					};
+					const label = labels[key] ?? key;
+					const display = key === 'PetTrustChangeInterval' ? `${value}s` : String(value);
+					return (
+						<div class="rounded-sm border border-sky-800/60 bg-black/20 px-3 py-2">
+							<p class="m-0 text-xs text-sky-400/70">{label}</p>
+							<p class="m-0 text-sm font-medium text-sky-100">{display}</p>
+						</div>
+					);
+				})}
+			</div>
+
+			<h3 class="mt-8 mb-3 text-xl text-sky-100">Feeding & Interaction</h3>
+			<div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+				{Object.entries(feedingConstants).map(([key, value]) => {
+					const labels = {
+						FeedingTaskAmount: 'Feeding Task Amount',
+						FeedingFollowTime: 'Follow Time After Feeding',
+						FeedingNoticeTime: 'Notice Time',
+						FeedingNoticeDistance: 'Notice Distance',
+						PetInteractBaseRange: 'Interaction Range',
+						PetTickleChatChance: 'Tickle Chat Chance',
+						PetTreatChatChance: 'Treat Chat Chance',
+						PetChatCooldown: 'Chat Cooldown',
+						PetChatUseTraitTemplateChance: 'Trait Chat Chance',
+					};
+					const label = labels[key] ?? key;
+					const isTime = key.includes('Time') || key === 'PetChatCooldown';
+					const isDist = key.includes('Distance') || key.includes('Range');
+					const isChance = key.includes('Chance');
+					const display = isTime ? `${value}s` : isDist ? `${value}m` : isChance ? `${(value * 100).toFixed(0)}%` : String(value);
+					return (
+						<div class="rounded-sm border border-sky-800/60 bg-black/20 px-3 py-2">
+							<p class="m-0 text-xs text-sky-400/70">{label}</p>
+							<p class="m-0 text-sm font-medium text-sky-100">{display}</p>
+						</div>
+					);
+				})}
+			</div>
+
+			<h3 class="mt-8 mb-3 text-xl text-sky-100">Movement & Speed</h3>
+			<div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+				{Object.entries(movementConstants).map(([key, value]) => {
+					const labels = {
+						PetAnimSpeedBoostSmallerThan: 'Speed Boost Threshold (smaller than)',
+						PetAnimSpeedBoostStrength: 'Speed Boost Strength',
+						PetAnimSpeedMax: 'Max Animation Speed',
+						PetAnimSpeedMin: 'Min Animation Speed',
+						PetMinSummonDistance: 'Min Summon Distance',
+						PetMaxSummonDistance: 'Max Summon Distance',
+						PetFollowRunPlayerDistance: 'Run-to-Follow Distance',
+						PetPlayerSpeedSmoothTime: 'Speed Smooth Time',
+					};
+					const label = labels[key] ?? key;
+					const isDist = key.includes('Distance');
+					const isTime = key.includes('Time');
+					const display = isDist ? `${value}m` : isTime ? `${value}s` : String(value);
+					return (
+						<div class="rounded-sm border border-sky-800/60 bg-black/20 px-3 py-2">
+							<p class="m-0 text-xs text-sky-400/70">{label}</p>
+							<p class="m-0 text-sm font-medium text-sky-100">{display}</p>
+						</div>
+					);
+				})}
+			</div>
 
 			<!-- 7. XP Multipliers by Mode -->
 			{arenaModes.length > 0 && (
@@ -766,6 +871,48 @@ const breadcrumbs = [
 				))}
 			</div>
 		</section>
+
+		<hr class="my-12 border-sky-800/40" />
+		<section id="chat">
+			<h2 class="mb-4 text-3xl sm:text-4xl text-white">Companion Chat</h2>
+			<p class="mt-0 mb-6 text-sm text-sky-300/80">
+				What your companions say during different activities and moods, influenced by their personality traits.
+				{chatCategoryCount} categories, {chatMessageCount} messages.
+			</p>
+			<div class="space-y-3">
+				{sortedChatCategories.map(({ display, messages }) => (
+						<details class="rounded-sm border border-sky-800/70 bg-sky-950/35">
+							<summary class="cursor-pointer list-none px-4 py-2 text-sm text-sky-100">
+								<span class="font-medium">{display}</span>
+								<span class="ml-2 text-xs text-sky-400/70">{messages.length} messages</span>
+							</summary>
+							<div class="flex flex-wrap gap-1.5 px-4 py-3 border-t border-sky-800/40">
+								{messages.map(msg => (
+									<span class="rounded bg-black/30 px-2 py-0.5 text-xs text-sky-200/80">{msg}</span>
+								))}
+							</div>
+						</details>
+					))
+				}
+			</div>
+
+			{sortedBiomeChat.length > 0 && (
+				<>
+					<h3 class="mt-8 mb-3 text-xl text-sky-100">Biome-Specific Words</h3>
+					<p class="mt-0 mb-4 text-sm text-sky-300/80">
+						Words companions use when describing different planet types.
+					</p>
+					<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+						{sortedBiomeChat.map(([biome, words]) => (
+							<div class="rounded-sm border border-sky-800/60 bg-sky-950/35 px-3 py-2">
+								<p class="m-0 mb-1 text-xs font-semibold uppercase tracking-wide text-sky-400">{biome}</p>
+								<p class="m-0 text-sm text-sky-200/80">{words.join(', ')}</p>
+							</div>
+						))}
+					</div>
+				</>
+			)}
+		</section>
 		</div>
 
 		<nav class="hidden lg:block w-56 shrink-0">
@@ -778,6 +925,7 @@ const breadcrumbs = [
 					<li><a href="#accessories" class="toc-link text-sky-300/80 hover:text-white transition" data-section="accessories">Accessories</a></li>
 					<li><a href="#moods" class="toc-link text-sky-300/80 hover:text-white transition" data-section="moods">Mood States</a></li>
 					<li><a href="#records" class="toc-link text-sky-300/80 hover:text-white transition" data-section="records">Records</a></li>
+					<li><a href="#chat" class="toc-link text-sky-300/80 hover:text-white transition" data-section="chat">Companion Chat</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -786,7 +934,7 @@ const breadcrumbs = [
 </Layout>
 
 <script>
-const sections = ['leveling', 'behaviours', 'egg-sequencer', 'accessories', 'moods', 'records'];
+const sections = ['leveling', 'behaviours', 'egg-sequencer', 'accessories', 'moods', 'records', 'chat'];
 const links = document.querySelectorAll('.toc-link');
 
 function updateActive() {

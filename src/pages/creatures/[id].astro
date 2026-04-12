@@ -294,7 +294,9 @@ const collectionSchema = {
 	},
 };
 
-const statPills = [
+type StatPill = { label: string; value: string };
+
+const statPills: StatPill[] = [
 	{ label: 'Battle Ready', value: species.CanBeUsedInBattle ? 'Yes' : 'No' },
 	species.CanBeUsedInBattle
 		? {
@@ -322,7 +324,7 @@ const statPills = [
 			}
 		: null,
 	species.SpecialTrait ? { label: 'Special Trait', value: species.SpecialTrait } : null,
-].filter(Boolean);
+].filter((pill): pill is StatPill => pill != null);
 
 const speciesMatchup =
 	species.BattleForcedAffinity && MATCHUPS[species.BattleForcedAffinity]
