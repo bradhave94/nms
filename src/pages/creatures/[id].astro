@@ -55,12 +55,32 @@ const toTitleCase = (value: string): string =>
 		})
 		.join(' ');
 
+const AFFINITY_LABELS: Record<string, string> = {
+	Fire: 'Fire',
+	Cold: 'Frost',
+	Toxic: 'Toxic',
+	Barren: 'Desert',
+	Lush: 'Tropical',
+	Radioactive: 'Radioactive',
+	Mech: 'Mechanical',
+	Weird: 'Anomalous',
+	None: 'None',
+	UsePetAffinity: 'Matches Creature Affinity',
+};
+
+const ALL_BATTLE_AFFINITIES = [
+	'Fire',
+	'Frost',
+	'Toxic',
+	'Desert',
+	'Tropical',
+	'Radioactive',
+	'Mechanical',
+	'Anomalous',
+];
+
 const formatAffinity = (value: string | null | undefined): string =>
-	value === 'UsePetAffinity'
-		? 'Matches Creature Affinity'
-		: value
-			? toTitleCase(value)
-			: 'General';
+	value ? (AFFINITY_LABELS[value] ?? toTitleCase(value)) : 'None';
 
 const formatCategory = (value: string | null | undefined): string =>
 	value ? toTitleCase(value) : 'Uncategorized';
@@ -82,8 +102,20 @@ const getPreferredMoveLabel = (move: CreatureMove, species: CreatureSpecies): st
 
 const toMoveAnchorHref = (moveId: string): string => `#move-${moveId}`;
 
+const resolveSpeciesMoveSetIds = (species: CreatureSpecies): string[] => {
+	const explicitMoveSets = species.MoveSets;
+	if (Array.isArray(explicitMoveSets) && explicitMoveSets.length > 0) {
+		return explicitMoveSets;
+	}
+	const possibleMoveSets = species.PotentialMoveSets;
+	if (Array.isArray(possibleMoveSets) && possibleMoveSets.length > 0) {
+		return possibleMoveSets;
+	}
+	return [];
+};
+
 const resolveMovesForSpecies = (species: CreatureSpecies): ResolvedMoveSet[] => {
-	const setIds = species.MoveSets ?? [];
+	const setIds = resolveSpeciesMoveSetIds(species);
 	if (!Array.isArray(setIds) || setIds.length === 0) return [];
 
 	return setIds
@@ -155,7 +187,8 @@ const shortDescription = species.SpeciesSubtitle
 	? `${species.Name} (${species.SpeciesSubtitle}) creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`
 	: `${species.Name} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`;
 const description = shortDescription.slice(0, 180);
-const ogImage = `${imageBase}${species.BattleAffinityIcon ?? species.BattleAffinityBinocsIcon ?? 'SPEC_PB_EGG01.png'}`;
+const speciesIcon = species.Icon ?? species.BattleAffinityIcon ?? species.BattleAffinityBinocsIcon ?? 'SPEC_PB_EGG01.png';
+const ogImage = `${imageBase}${speciesIcon}`;
 
 const breadcrumbs: BreadcrumbItem[] = [
 	{ name: 'Home', href: '/' },
@@ -182,11 +215,25 @@ const collectionSchema = {
 
 const statPills = [
 	{ label: 'Battle Ready', value: species.CanBeUsedInBattle ? 'Yes' : 'No' },
-	{ label: 'Affinity', value: species.BattleForcedAffinity ? formatAffinity(species.BattleForcedAffinity) : 'None' },
+	{
+		label: 'Affinity',
+		value:
+			species.BattleForcedAffinityDisplay ??
+			(species.BattleForcedAffinity ? formatAffinity(species.BattleForcedAffinity) : 'None'),
+	},
 	{ label: 'Rarity', value: species.Rarity ? toTitleCase(species.Rarity) : 'Unknown' },
 	{ label: 'Type', value: species.CreatureType ? toTitleCase(species.CreatureType) : 'Unknown' },
 	{ label: 'Move Area', value: species.MoveArea ? toTitleCase(species.MoveArea) : 'Unknown' },
 	{ label: 'Scale', value: `${species.MinScale} - ${species.MaxScale}` },
+	{
+		label: 'Move Set Source',
+		value:
+			species.MoveSetSource === 'Explicit'
+				? 'Direct Mapping'
+				: species.MoveSetSource === 'GlobalPool'
+					? 'Derived Global Pool'
+					: 'Unknown',
+	},
 ];
 
 ---
@@ -210,7 +257,13 @@ const statPills = [
 					<p class="mt-2 text-sm text-sky-300/80">Creature ID: {species.Id}</p>
 				</div>
 				<div class="flex items-center gap-3">
-					{species.BattleAffinityIcon && (
+					<img
+						src={`${imageBase}${speciesIcon}`}
+						alt={`${species.Name} icon`}
+						class="h-14 w-14 rounded-sm bg-black/30 p-1"
+						loading="lazy"
+					/>
+					{species.BattleAffinityIcon && species.BattleAffinityIcon !== speciesIcon && (
 						<img
 							src={`${imageBase}${species.BattleAffinityIcon}`}
 							alt={`${species.Name} affinity icon`}
@@ -218,7 +271,7 @@ const statPills = [
 							loading="lazy"
 						/>
 					)}
-					{species.BattleAffinityBinocsIcon && (
+					{species.BattleAffinityBinocsIcon && species.BattleAffinityBinocsIcon !== speciesIcon && (
 						<img
 							src={`${imageBase}${species.BattleAffinityBinocsIcon}`}
 							alt={`${species.Name} affinity visor icon`}
@@ -241,6 +294,15 @@ const statPills = [
 
 		<section class="rounded-sm border border-sky-900 bg-sky-900/20 p-5">
 			<h2 class="mt-0 mb-4 text-2xl text-white">Move Set Archetypes</h2>
+			<p class="mt-0 mb-4 text-xs text-sky-300/90">
+				Affinity options: {ALL_BATTLE_AFFINITIES.join(' • ')}.
+			</p>
+			{species.MoveSetSource === 'GlobalPool' && (
+				<p class="mt-0 mb-4 text-sm text-sky-300/90">
+					This species has no explicit move-set assignment in the game table. Showing the full global
+					move-set pool used by pet battler archetypes.
+				</p>
+			)}
 			{
 				resolvedMoveSets.length === 0 ? (
 					<p class="m-0 text-sky-200/90">No direct move set mapping is available for this species yet.</p>

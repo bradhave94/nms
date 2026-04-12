@@ -13,11 +13,13 @@ type CreatureSpecies = {
 	SpeciesSubtitle?: string | null;
 	BattleForcedAffinity?: string | null;
 	CanBeUsedInBattle?: boolean;
+	Icon?: string | null;
 	BattleAffinityIcon?: string | null;
 	Slug?: string;
 };
 
-const pageSize = 80;
+const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const pageSize = 100;
 const allSpecies = ((creaturesData as Record<string, unknown>).Species as CreatureSpecies[] | undefined) ?? [];
 const sortedSpecies = [...allSpecies].sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
 const pageData = sortedSpecies.slice(0, pageSize);
@@ -29,6 +31,18 @@ const page = {
 	url: {
 		next: lastPage > 1 ? '/creatures/2' : undefined,
 	},
+};
+
+const iconFor = (item: CreatureSpecies): string => {
+	if (item.Icon) return item.Icon;
+	if (item.BattleAffinityIcon) return item.BattleAffinityIcon;
+	return 'SPEC_PB_EGG01.png';
+};
+
+const cardNameFor = (item: CreatureSpecies): string => {
+	const subtitle = item.SpeciesSubtitle?.trim();
+	if (subtitle) return `${item.Name} • ${subtitle}`;
+	return item.Name;
 };
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
@@ -76,16 +90,11 @@ const { title, description } = buildPaginatedMeta(
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
 			page.data.map((item, index) => {
-				const cardImage =
-					item.BattleAffinityIcon != null && item.BattleAffinityIcon !== ''
-						? `https://nomansskyrecipes.com/images/items/${item.BattleAffinityIcon}`
-						: 'https://nomansskyrecipes.com/images/items/SPEC_PB_EGG01.png';
-
 				return (
 					<CompactCard
 						card={{
-							name: item.Name,
-							image: cardImage,
+							name: cardNameFor(item),
+							image: `${IMAGE_BASE}${iconFor(item)}`,
 							link: `/creatures/${item.Id}`,
 						}}
 						index={index}
