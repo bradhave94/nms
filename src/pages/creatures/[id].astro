@@ -187,7 +187,7 @@ const shortDescription = species.SpeciesSubtitle
 	? `${species.Name} (${species.SpeciesSubtitle}) creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`
 	: `${species.Name} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`;
 const description = shortDescription.slice(0, 180);
-const speciesIcon = species.Icon ?? species.BattleAffinityIcon ?? species.BattleAffinityBinocsIcon ?? 'SPEC_PB_EGG01.png';
+const speciesIcon = species.Icon ?? species.BattleAffinityIcon ?? 'SPEC_PB_EGG01.png';
 const ogImage = `${imageBase}${speciesIcon}`;
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -267,14 +267,6 @@ const statPills = [
 						<img
 							src={`${imageBase}${species.BattleAffinityIcon}`}
 							alt={`${species.Name} affinity icon`}
-							class="h-14 w-14 rounded-sm bg-black/30 p-1"
-							loading="lazy"
-						/>
-					)}
-					{species.BattleAffinityBinocsIcon && species.BattleAffinityBinocsIcon !== speciesIcon && (
-						<img
-							src={`${imageBase}${species.BattleAffinityBinocsIcon}`}
-							alt={`${species.Name} affinity visor icon`}
 							class="h-14 w-14 rounded-sm bg-black/30 p-1"
 							loading="lazy"
 						/>
