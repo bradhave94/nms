@@ -22,6 +22,7 @@ import {
   WrenchIcon,
   RocketLaunchIcon,
   BugAntIcon,
+  BookOpenIcon,
 } from '@heroicons/react/24/solid';
 import type { ComponentType, SVGProps } from 'react';
 import { classNames } from '../utils/classNames';
@@ -57,7 +58,7 @@ const navigation: NavigationItem[] = [
   { name: 'Food', href: '/food', icon: CakeIcon },
   { name: 'Raw Materials', href: '/raw', icon: BoltIcon },
   { name: 'All Items', href: '/items', icon: Squares2X2Icon },
-  { name: 'Guides', href: '/guides', icon: EnvelopeIcon },
+  { name: 'Guides', href: '/guides', icon: BookOpenIcon },
   { name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 
