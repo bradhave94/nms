@@ -99,6 +99,36 @@ const itemNameCounts = allItems.reduce<Map<string, number>>((counts, item) => {
 	return counts;
 }, new Map());
 
+const itemsByNormalizedName = allItems.reduce<Map<string, ItemMetaInput[]>>((groups, item) => {
+	const normalizedName = normalizeWhitespace(item?.Name ?? '').toLowerCase();
+	if (!normalizedName) return groups;
+	const items = groups.get(normalizedName) ?? [];
+	items.push(item);
+	groups.set(normalizedName, items);
+	return groups;
+}, new Map());
+
+const hasPlaceholderTokens = (value: string): boolean => /%[^%]+%/.test(value);
+
+const buildUniqueHintFromSiblings = (
+	item: ItemMetaInput,
+	siblings: ItemMetaInput[],
+	candidateBuilder: (candidate: ItemMetaInput) => string | undefined
+): string | undefined => {
+	const candidate = candidateBuilder(item);
+	if (!candidate) return undefined;
+
+	const normalizedCandidate = normalizeWhitespace(candidate).toLowerCase();
+	if (!normalizedCandidate) return undefined;
+
+	const candidateMatches = siblings.filter((sibling) => {
+		const siblingCandidate = candidateBuilder(sibling);
+		return normalizeWhitespace(siblingCandidate ?? '').toLowerCase() === normalizedCandidate;
+	});
+
+	return candidateMatches.length === 1 ? candidate : undefined;
+};
+
 const buildItemUniquenessHint = (item: ItemMetaInput, categoryLabel: string): string | undefined => {
 	const normalizedName = normalizeWhitespace(item.Name ?? '').toLowerCase();
 	const duplicateCount = itemNameCounts.get(normalizedName) ?? 0;
@@ -106,18 +136,40 @@ const buildItemUniquenessHint = (item: ItemMetaInput, categoryLabel: string): st
 		return undefined;
 	}
 
-	const categoryHint = resolveItemTypeLabel(item);
-	const normalizedCategoryHint = normalizeCategoryLabel(categoryHint);
+	const siblings = itemsByNormalizedName.get(normalizedName) ?? [item];
 	const normalizedCategoryLabelValue = normalizeCategoryLabel(categoryLabel);
-	if (normalizedCategoryHint && normalizedCategoryHint !== normalizedCategoryLabelValue) {
+
+	const categoryHint = buildUniqueHintFromSiblings(item, siblings, (candidate) => {
+		const resolvedLabel = resolveItemTypeLabel(candidate);
+		const normalizedResolvedLabel = normalizeCategoryLabel(resolvedLabel);
+		if (!normalizedResolvedLabel || normalizedResolvedLabel === normalizedCategoryLabelValue) {
+			return undefined;
+		}
+		return resolvedLabel;
+	});
+
+	if (categoryHint) {
 		return categoryHint;
 	}
 
-	if (item.Group && normalizeWhitespace(item.Group).toLowerCase() !== normalizedName) {
-		return item.Group;
+	const groupHint = buildUniqueHintFromSiblings(item, siblings, (candidate) => {
+		const group = normalizeWhitespace(candidate.Group ?? '');
+		if (!group) return undefined;
+		if (group.toLowerCase() === normalizedName) return undefined;
+		if (hasPlaceholderTokens(group)) return undefined;
+		return group;
+	});
+
+	if (groupHint) {
+		return groupHint;
 	}
 
-	return buildSlugHint(item) ?? `ID ${item.Id}`;
+	const slugHint = buildUniqueHintFromSiblings(item, siblings, (candidate) => buildSlugHint(candidate));
+	if (slugHint) {
+		return slugHint;
+	}
+
+	return `ID ${item.Id}`;
 };
 
 const buildItemTitle = (item: ItemMetaInput, categoryLabel: string, uniquenessHint?: string): string => {
