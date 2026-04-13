@@ -3,7 +3,7 @@ title: "Best No Man's Sky Refiner Recipes for Nanites, Units, and Fast Progress"
 description: "The best NMS refiner recipes for nanites, units, and chromatic metal — with exact quantities, ratios, and which refiner you actually need."
 pubDate: 2026-04-13
 updatedDate: 2026-04-13
-heroImage: "/images/refiner.webp"
+heroImage: "/images/blog/refiner-recipes.webp"
 category: "blog"
 tags:
   - refining

@@ -39,40 +39,56 @@ const breadcrumbs = [
 
 <Layout title={title} description={description} slug="blog" structuredData={structuredData}>
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<section class="mx-auto max-w-6xl px-4 pb-16">
-		<header class="mx-auto max-w-4xl text-center">
-			<h1 class="m-0 pt-8 text-4xl font-bold text-white sm:text-6xl">No Man&apos;s Sky Blog</h1>
-			<p class="mx-auto mt-4 max-w-3xl text-lg text-sky-200/90">
-				A small editorial blog for No Man&apos;s Sky strategy, crafting workflows, and SEO-friendly
-				walkthrough content.
+	<section class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
+		<div class="mx-auto max-w-2xl lg:max-w-none">
+			<h1 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mt-16">No Man&apos;s Sky  Recipes Blog</h1>
+			<p class="mt-2 text-lg/8 text-sky-200/80">
+				Strategy posts, refiner planning, crafting walkthroughs, and other search-friendly game guides.
 			</p>
-		</header>
-
-		<div class="mt-12 grid gap-6 md:grid-cols-2">
-			{
-				posts.map((post) => (
-					<article class="rounded-xl border border-sky-900/70 bg-sky-950/40 transition hover:border-sky-400/70 hover:bg-sky-900/40">
-						<a href={`/blog/${post.id}/`} class="block h-full p-6 text-inherit no-underline">
-							<h2 class="mt-3 text-2xl text-white hover:text-sky-200">
-								{post.data.title}
-							</h2>
-							<p class="mt-3 text-sky-100/85">{post.data.description}</p>
-							<div class="mt-4 flex flex-wrap gap-2">
-								{post.data.tags.map((tag: string) => (
-									<span class="rounded-full bg-sky-900/70 px-3 py-1 text-xs text-sky-200">{tag}</span>
-								))}
+			<div class="mt-8 grid gap-8 sm:grid-cols-3 lg:mt-20">
+				{
+					posts.map((post) => (
+						<article class="group relative isolate flex flex-col overflow-hidden rounded-2xl border border-sky-900/60 bg-sky-950/30 transition hover:border-sky-400/50 hover:bg-sky-900/30">
+							<div class="relative aspect-video w-full shrink-0 overflow-hidden">
+								<img
+									src={post.data.heroImage ?? '/images/refiner.webp'}
+									alt={post.data.title}
+									class="absolute inset-0 size-full bg-sky-950 object-cover transition-transform duration-300 group-hover:scale-105"
+								/>
+								<div class="absolute inset-0 ring-1 ring-inset ring-white/10"></div>
 							</div>
-							<p class="mt-5 text-sm text-sky-300">
-								Published {post.data.pubDate.toLocaleDateString('en-US', {
-									year: 'numeric',
-									month: 'long',
-									day: 'numeric',
-								})}
-							</p>
-						</a>
-					</article>
-				))
-			}
+							<div class="flex flex-1 flex-col p-5">
+								<div class="flex items-center gap-x-3 text-xs">
+									<time datetime={post.data.pubDate.toISOString().slice(0, 10)} class="text-sky-300/80">
+										{post.data.pubDate.toLocaleDateString('en-US', {
+											year: 'numeric',
+											month: 'short',
+											day: 'numeric',
+										})}
+									</time>
+									{post.data.tags.slice(0, 2).map((tag: string) => (
+										<span class="rounded-full bg-sky-900/60 px-2.5 py-1 font-medium text-sky-200">
+											{tag}
+										</span>
+									))}
+								</div>
+								<h2 class="mt-3 mb-0 text-2xl font-semibold text-white group-hover:text-sky-300">
+									<a href={`/blog/${post.id}/`}>
+										<span class="absolute inset-0"></span>
+										{post.data.title}
+									</a>
+								</h2>
+								<p class="mt-3 mb-0 line-clamp-3 text-base text-sky-100/70">{post.data.description}</p>
+							</div>
+						</article>
+					))
+				}
+			</div>
 		</div>
 	</section>
+	<div class="mx-auto max-w-7xl px-6 pb-8 lg:px-8 text-xs text-sky-400/70 ">
+	<p>
+		<strong>Disclaimer:</strong> Blog post hero images on this site are generated using AI and No Man's Sky game data. Images are stylized artwork and may not always match in-game visuals exactly.
+	</p>
+	</div>
 </Layout>

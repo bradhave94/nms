@@ -9,6 +9,7 @@ tags:
   - fusion ignitor
   - units
   - farming
+heroImage: "/images/blog/craft-fusion-ignitor.webp"
 featured: false
 relatedLinks:
   - label: "Browse craftable products"

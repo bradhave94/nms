@@ -12,15 +12,19 @@
     }
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "[astro]": {
+    "editor.codeActionsOnSave": {}
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.validate.enable": true,
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "typescript.suggest.autoImports": true,
-  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
-  "astro.typescript.check": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "astro.typescript.check": false,
   "files.associations": {
     "*.astro": "astro"
   },

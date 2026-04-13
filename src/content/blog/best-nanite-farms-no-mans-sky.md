@@ -9,6 +9,7 @@ tags:
   - farming
   - runaway mould
   - tainted metal
+heroImage: "/images/blog/nanite-farms.webp"
 featured: false
 relatedLinks:
   - label: "All refiner recipes"

@@ -48,32 +48,49 @@ const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[
 	ogImage={ogImage}
 	structuredData={structuredData}
 >
-	<article class="mx-auto max-w-7xl px-4 py-10">
-		<Breadcrumbs items={breadcrumbs} className="mb-6 px-0" />
-		<div class="flex justify-center gap-8 xl:items-start">
-			<div class="w-full max-w-[680px] min-w-0">
-				<header class="mb-8 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
-				<h1 class="m-0 text-4xl font-bold text-white sm:text-5xl">{guide.data.title}</h1>
-					<p class="mt-4 text-lg text-sky-100/90">{guide.data.description}</p>
-					<div class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-sky-300/85">
-						<p class="m-0">
+	{guide.data.heroImage ? (
+		<div class="relative isolate overflow-hidden">
+			<img
+				src={guide.data.heroImage}
+				alt=""
+				class="absolute inset-0 -z-10 size-full object-cover brightness-[0.3]"
+			/>
+			<div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#051413] via-[#051413]/60 to-transparent"></div>
+			<div class="mx-auto max-w-7xl px-4">
+				<Breadcrumbs items={breadcrumbs} className="pt-6 mb-0 px-0 relative z-10" />
+				<div class="mx-auto max-w-3xl py-20 sm:py-28 lg:py-32 text-center">
+					<div class="flex items-center justify-center gap-x-4 text-sm">
+						<time datetime={guide.data.pubDate.toISOString().slice(0, 10)} class="text-sky-300/90">
 							{guide.data.pubDate.toLocaleDateString('en-US', {
 								year: 'numeric',
 								month: 'long',
 								day: 'numeric',
 							})}
-						</p>
+						</time>
 					</div>
-				{tags.length > 0 && (
-					<div class="mt-5 flex flex-wrap gap-2">
-						{tags.map((keyword: string) => (
-								<span class="rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200">
+					<h1 class="mt-4 text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl">{guide.data.title}</h1>
+					<p class="mt-6 text-lg font-medium text-pretty text-sky-100/80 sm:text-xl/8">{guide.data.description}</p>
+					{tags.length > 0 && (
+						<div class="mt-8 flex flex-wrap justify-center gap-2">
+							{tags.map((keyword: string) => (
+								<span class="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200 backdrop-blur-sm">
 									{keyword}
 								</span>
 							))}
 						</div>
 					)}
-				</header>
+				</div>
+			</div>
+		</div>
+	) : (
+		<div class="mx-auto max-w-7xl px-4 pt-10">
+			<Breadcrumbs items={breadcrumbs} className="mb-6 px-0" />
+		</div>
+	)}
+
+	<article class="mx-auto max-w-7xl px-4 py-10">
+		<div class="flex justify-center gap-8 xl:items-start">
+			<div class="w-full max-w-[680px] min-w-0">
 
 				<div id="guide-content" class="prose prose-invert max-w-none prose-headings:text-white prose-a:text-cyan-300 prose-strong:text-white prose-li:text-sky-100/90 prose-p:text-sky-100/90">
 					<slot />

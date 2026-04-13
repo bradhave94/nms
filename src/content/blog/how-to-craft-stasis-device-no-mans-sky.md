@@ -9,6 +9,7 @@ tags:
   - stasis device
   - units
   - farming
+heroImage: "/images/blog/craft-stasis-device.webp"
 featured: false
 relatedLinks:
   - label: "Browse craftable products"

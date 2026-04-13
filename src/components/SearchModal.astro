@@ -201,12 +201,13 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 			if (filteredGroupResults.length > 0) {
 				hasResults = true;
 				const h3 = document.createElement('h3');
-				h3.className = 'text-2xl';
+				h3.className = 'text-2xl mb-0';
 				h3.textContent = filterLabelMap[group] || group;
 				resultsList.appendChild(h3);
 
 				const ul = document.createElement('ul');
 				ul.setAttribute('role', 'listbox');
+				ul.classList.add('flex', 'flex-col', 'gap-2', 'p-0', 'list-none');
 
 				filteredGroupResults.forEach((result, index) => {
 					const li = document.createElement('li');

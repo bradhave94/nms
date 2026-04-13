@@ -185,7 +185,7 @@
 }
 
 #results li a {
-    @apply select-none px-4 py-2 block hover:bg-blue-500 hover:text-black  focus:bg-blue-500 focus:text-black
+    @apply select-none block hover:bg-blue-500 hover:text-black  focus:bg-blue-500 focus:text-black
 }
 
 /* ── Blog prose tables ─────────────────────────────────────────────────── */

@@ -10,6 +10,7 @@ tags:
   - stasis device
   - units
   - farming
+heroImage: "/images/blog/fusion-vs-stasis.webp"
 featured: false
 relatedLinks:
   - label: "Browse craftable products"

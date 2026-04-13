@@ -10,6 +10,7 @@ tags:
   - credits
   - chlorine
   - activated indium
+heroImage: "/images/blog/make-units-fast.webp"
 featured: false
 relatedLinks:
   - label: "All refiner recipes"
