@@ -42,7 +42,7 @@ These are the best routes to Nanite Clusters depending on what materials you hav
 **1x Tainted Metal → 2x Nanite Clusters**  
 Works in any refiner. This is the most efficient straightforward nanite recipe in the game.
 
-Tainted Metal drops from Corrupted Sentinels — the purple-crystal variants you find on Dissonant planets. Kill them, loot Tainted Metal, refine it. At 2 nanites per metal, a good Sentinel farm can generate thousands of nanites per hour.
+Tainted Metal drops from Corrupted Sentinels (the purple-crystal variants you find on Dissonant planets). Kill them, loot Tainted Metal, refine it. At 2 nanites per metal, a good Sentinel farm can generate thousands of nanites per hour.
 
 ### Runaway Mould Chain (Best for Bulk Farming)
 
@@ -69,7 +69,7 @@ If you've been ignoring creature product drops, stop. These have some of the hig
 | 1x Inverted Mirror | 95x Nanite Clusters | Any |
 | 1x Hyaline Brain | 230x Nanite Clusters | Any |
 
-Larval Cores drop from destroyed Biological Horrors. Hyaline Brains and Inverted Mirrors come from corrupted planet creatures. The payoff is significant — a single Hyaline Brain gives you 230 nanites in one refiner cycle.
+Larval Cores drop from destroyed Biological Horrors. Hyaline Brains and Inverted Mirrors come from corrupted planet creatures. A single Hyaline Brain gives you 230 nanites in one refiner cycle. That adds up fast.
 
 ### Salvaged Data → Nanites
 
@@ -99,7 +99,7 @@ The same multiplication trick works on Ionised Cobalt:
 
 **1x Ionised Cobalt + 2x Oxygen → 6x Ionised Cobalt**
 
-Ionised Cobalt is worth less per unit than Chlorine, but it's easier to stockpile early on. Either loop works — pick whichever resource you have more of.
+Ionised Cobalt is worth less per unit than Chlorine, but it's easier to stockpile early on. Either loop works. Pick whichever resource you have more of.
 
 **Oxygen source tip:** Build Gas Extractors near Oxygen hotspots on a planet and let them run. Oxygen is the catalyst for both loops, so having a steady supply makes these farms essentially free to run.
 
@@ -107,7 +107,7 @@ Ionised Cobalt is worth less per unit than Chlorine, but it's easier to stockpil
 
 ## Chromatic Metal Recipes
 
-Chromatic Metal is used everywhere — [technology upgrades](/technology), base parts, [craftable products](/products), [exocraft](/exocraft). The best recipe depends on what stellar metals you have access to.
+Chromatic Metal is used everywhere: [technology upgrades](/technology), base parts, [craftable products](/products), [exocraft](/exocraft). The best recipe depends on what stellar metals you have access to.
 
 ### Basic Conversion (Any Refiner)
 
@@ -134,7 +134,7 @@ Activated metals give you more Chromatic Metal per unit. Mine Activated variants
 
 ### Best Recipe: Activated Metal + Pure Ferrite
 
-Adding Pure Ferrite to the mix dramatically increases output:
+Adding Pure Ferrite to the mix multiplies output:
 
 | Input | Output |
 |-------|--------|
@@ -156,7 +156,7 @@ For the truly absurd Chromatic Metal output, combine Silver, Gold, and a stellar
 | 1x Silver + 1x Gold + 1x Indium | 30x Chromatic Metal |
 | 1x Silver + 1x Gold + 1x Quartzite | 30x Chromatic Metal |
 
-30 Chromatic Metal from 3 inputs is exceptional. Gold and Silver are both farmable from asteroids or planetary deposits, so running this chain is practical if you have Indium on your main base planet.
+That's a 10:1 ratio on three inputs. Gold and Silver are both farmable from asteroids or planetary deposits, so running this chain is practical if you have Indium on your main base planet.
 
 ---
 
@@ -167,10 +167,10 @@ The basic recipe (2x Carbon → 1x Condensed Carbon) is fine in a pinch, but it'
 | Input | Output | Notes |
 |-------|--------|-------|
 | 2x Carbon | 1x Condensed Carbon | Baseline, ratio is poor |
-| 2x Carbon + 2x Oxygen | 5x Condensed Carbon | Much better — use this |
-| 1x Condensed Carbon + 2x Oxygen | 6x Condensed Carbon | Best — multiplies your stock |
+| 2x Carbon + 2x Oxygen | 5x Condensed Carbon | Much better. Use this. |
+| 1x Condensed Carbon + 2x Oxygen | 6x Condensed Carbon | Best. Multiplies your stock. |
 
-The third recipe — **1 Condensed Carbon + 2 Oxygen → 6 Condensed Carbon** — is effectively the Chlorine loop but for Carbon. Start with a small stack of Condensed Carbon, add Oxygen, and your supply multiplies every cycle. Condensed Carbon is better to carry than raw Carbon (it's more inventory-efficient and used in more recipes), so this is worth setting up early.
+The third recipe (**1 Condensed Carbon + 2 Oxygen → 6 Condensed Carbon**) is effectively the Chlorine loop but for Carbon. Start with a small stack of Condensed Carbon, add Oxygen, and your supply multiplies every cycle. Condensed Carbon is better to carry than raw Carbon (it's more inventory-efficient and used in more recipes), so this is worth setting up early.
 
 ---
 
@@ -211,7 +211,7 @@ Warp Cells from scratch without crafting Antimatter:
 
 ## Which Refiner Do You Actually Need?
 
-Most of these recipes work in any refiner — Portable, Medium, or Large. The only exceptions are the three-input recipes (stellar fusion Chromatic Metal, Warp Cells, and alloy recipes), which require a Large Refiner.
+Most of these recipes work in any refiner: Portable, Medium, or Large. The only exceptions are the three-input recipes (stellar fusion Chromatic Metal, Warp Cells, and alloy recipes), which require a Large Refiner.
 
 If you're just starting out, build a Medium Refiner as soon as possible. The Portable one caps out fast. The Large Refiner unlocks the three-input slots but doesn't speed up single/dual input recipes.
 
