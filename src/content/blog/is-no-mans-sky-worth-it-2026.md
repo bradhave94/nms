@@ -92,15 +92,15 @@ Be honest with yourself here:
 
 **You have a short attention span for slow progress.** The early game is deliberately slow. Getting to the point where you have a good ship, a solid base, and a real understanding of the systems takes time. Players who want to be powerful immediately get frustrated.
 
-## The "Wide as an Ocean" Problem
+## The "Wide as an Ocean" Criticism
 
-The most common honest criticism of No Man's Sky is "wide as an ocean, deep as a puddle." That was accurate in 2016. In 2026 it's less true but still partially fair.
+The most common criticism of No Man's Sky used to be "wide as an ocean, deep as a puddle." That was a fair shot in 2016 and 2017. In 2026 it's largely outdated.
 
-The game has a lot of systems. Most of those systems have real depth if you engage with them. The crafting chain for a [Stasis Device](/blog/how-to-craft-stasis-device-no-mans-sky), for example, involves a dozen intermediate components across multiple farm types. The [refining system](/refining) has hundreds of recipes with efficient and inefficient routes. The base building system is deep enough to build genuinely complex automated farms.
+The crafting chain for a [Stasis Device](/blog/how-to-craft-stasis-device-no-mans-sky) involves a dozen intermediate components across multiple farm types. The [refining system](/refining) has hundreds of recipes with efficient and inefficient routes. The base building system supports genuinely complex automated farms. The Xeno Arena adds a whole creature battling meta on top of everything else. The game has accumulated real depth across its systems.
 
-But the exploration loop (the thing most players think they're buying) remains procedurally generated and repetitive at its core. Every planet uses the same underlying systems. After a hundred hours you've seen most of what the terrain generation can produce. The game is good at making that feel fresh longer than most procedural games, but it doesn't escape the fundamental limit.
+Exploration holds up too. The Worlds Part I and II overhauls changed the visual quality significantly. Landing on a new planet and scanning the environment feels different from the 2016 version of that same action. Players routinely put in 500+ hours and still find new planet types and biome combinations they haven't seen before.
 
-If you go in expecting Minecraft in space, you'll probably get your money's worth. If you go in expecting Elite Dangerous or Starfield, you may be disappointed.
+The criticism still has a grain of truth for players who want a narrative-driven or tightly structured experience. No Man's Sky doesn't curate things for you. But if you're someone who finds the exploration genuinely fun — and most players do — the depth is there to back it up.
 
 ## The Price Question
 
