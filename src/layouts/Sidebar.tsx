@@ -166,7 +166,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-56 lg:flex-col">
           <div className="flex min-h-0 flex-1 flex-col bg-black">
-            <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden pt-3 pb-3">
+            <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden hide-scrollbar pt-3 pb-3">
               <a href="/" className="mb-3 block w-full px-3">
                 <img
                   className="block h-auto w-full max-w-[12.5rem]"

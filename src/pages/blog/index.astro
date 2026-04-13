@@ -2,10 +2,13 @@
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildPaginatedMeta } from '@utils/seo.js';
 
-const posts = (await getCollection('blog')).sort(
+type BlogEntry = CollectionEntry<'blog'>;
+const allPosts = await getCollection('blog');
+const posts: BlogEntry[] = [...allPosts].sort(
 	(a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
 );
 
@@ -55,7 +58,7 @@ const breadcrumbs = [
 							</h2>
 							<p class="mt-3 text-sky-100/85">{post.data.description}</p>
 							<div class="mt-4 flex flex-wrap gap-2">
-								{post.data.tags.map((tag) => (
+								{post.data.tags.map((tag: string) => (
 									<span class="rounded-full bg-sky-900/70 px-3 py-1 text-xs text-sky-200">{tag}</span>
 								))}
 							</div>

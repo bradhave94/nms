@@ -152,6 +152,14 @@
     @apply text-base p-4 bg-black border-blue-500 rounded-md
 }
 
+.hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 .nms-bg {
     background-size: cover;
     background-position: center;

@@ -31,9 +31,7 @@ const { item } = Astro.props;
 if (!item) {
   return Astro.redirect('/404');
 }
-const { title, description } = buildItemMeta(item, 'Technology Item', {
-	uniquenessHint: item.Id,
-});
+const { title, description } = buildItemMeta(item, 'Technology Item');
 const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
 ---
 
