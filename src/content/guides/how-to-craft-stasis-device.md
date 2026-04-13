@@ -13,7 +13,7 @@ tags:
 featured: true
 relatedLinks:
   - label: "Open the Stasis Device page"
-    href: "/products/STASISDEV"
+    href: "/products/ULTRAPROD2"
   - label: "Browse the Crafting Guide"
     href: "/crafting-guide"
   - label: "Scale ingredients in the calculator"
