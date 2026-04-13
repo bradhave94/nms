@@ -2,13 +2,13 @@
 title: "How to Craft a Stasis Device in No Man's Sky"
 description: "The Stasis Device sells for 15.6 million credits and is one of the most profitable crafts in NMS. Here's the complete recipe tree, raw materials list, and step-by-step guide."
 date: 2026-04-13
-author: "NMS Writer"
+author: "No Man's Sky Recipes"
 tags: ["crafting", "stasis device", "credits", "money making", "farming"]
 category: "Guides"
 targetKeyword: "no man's sky stasis device recipe"
 ---
 
-The Stasis Device sells for **15.6 million credits** and is the most profitable single craft in No Man's Sky. One device, crafted from scratch, is worth more than most players make in hours of grinding. If you're serious about building wealth, this is the craft to learn.
+The Stasis Device sells for **15.6 million credits** and is one of the two most profitable single crafts in No Man's Sky — tied with the [Fusion Igniter](https://nomansskyrecipes.com/products) at the same price. One device, crafted from scratch, is worth more than most players make in hours of grinding. If you're serious about building wealth, this is the craft to learn.
 
 The catch: it takes three major sub-components, each of which requires its own chain of materials. This guide breaks down every step — what you need, where to get it, and how to build toward a farm that makes Stasis Devices on repeat.
 
@@ -163,7 +163,7 @@ The Condensed Carbon, Ionised Cobalt, and planetary minerals (Paraffinium, Phosp
 
 ## Is the Stasis Device Worth Crafting?
 
-Yes — it's the best credit-per-slot item you can make. A single Stasis Device in one inventory slot is worth 15.6M credits. For comparison, most raw materials sell for under 1,000 credits per unit.
+Yes — it's tied with the Fusion Igniter as the best credit-per-slot item you can make. Both sell for 15.6M credits in one inventory slot. For comparison, most raw materials sell for under 1,000 credits per unit.
 
 The full farm setup takes time to build, but once it's running, you can craft one or two Stasis Devices per play session without leaving your base. That's 30M+ credits in a few hours of collection and crafting.
 
