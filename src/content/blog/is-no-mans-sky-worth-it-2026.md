@@ -64,7 +64,9 @@ The ones that transformed the game:
 
 **Remnant (Feb 2026):** The 10th anniversary update. Gravity gun (Gravitino Coil), industrial waste hauling, Colossus truck customization, scrap worlds.
 
-That's eight landmark updates from a list of over forty-five. Hello Games has shown no signs of stopping.
+**Xeno Arena (Apr 2026):** Pokémon-style turn-based creature battles. Capture creatures from across the universe, train and breed them, modify their genetics, and battle other players and NPCs in Holo-Arenas at space stations and the Anomaly.
+
+That's nine landmark updates from a list of over forty-five. Hello Games has shown no signs of stopping.
 
 ## What the Game Does Well
 
