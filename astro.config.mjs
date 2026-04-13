@@ -11,6 +11,7 @@ const SITEMAP_EXCLUDED_PATHS = new Set([
   '/cooking/cards',
   '/crafting-guide/cards',
   '/creatures/affinites',
+  '/guides',
 ]);
 
 const shouldIncludeInSitemap = (page) => {
@@ -22,6 +23,10 @@ const shouldIncludeInSitemap = (page) => {
   }
 
   if (pathname.startsWith('/creatures/species/')) {
+    return false;
+  }
+
+  if (pathname.startsWith('/guides/')) {
     return false;
   }
 
