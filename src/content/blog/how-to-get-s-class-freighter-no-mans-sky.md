@@ -178,4 +178,3 @@ Freighter technology blueprints are unlocked separately using Salvaged Frigate M
 - [NMS Wiki — Freighter](https://nomanssky.fandom.com/wiki/Freighter)
 - [NMS Wiki — Class spawn rates](https://nomanssky.fandom.com/wiki/Class)
 - [NMS Wiki — Freighter Types](https://nomanssky.fandom.com/wiki/Freighter_Types)
-- [Remnant Update Patch Notes](https://www.nomanssky.com/remnant-update/)
