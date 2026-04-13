@@ -172,22 +172,5 @@ const featuredBlogPost = {
                 />
             ))}
         </div>
-        <section class="mt-12">
-            <div class="mb-6 flex flex-col gap-3 text-center sm:text-left">
-                <p class="m-0 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Featured blog post</p>
-                <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                    <h2 class="m-0 text-3xl font-semibold text-white">Go beyond item lookups with blog content</h2>
-                    <a href="/blog" class="text-cyan-300 hover:text-cyan-200">Browse the blog →</a>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 gap-6">
-                <article class="rounded-xl border border-sky-900/70 bg-sky-950/40 p-5 transition hover:border-sky-400/70 hover:bg-sky-900/40">
-                    <h3 class="m-0 text-xl font-semibold text-white">
-                        <a href={featuredBlogPost.href} class="hover:text-sky-200">{featuredBlogPost.title}</a>
-                    </h3>
-                    <p class="mt-3 text-sm leading-6 text-sky-100/85">{featuredBlogPost.description}</p>
-                </article>
-            </div>
-        </section>
     </main>
 </Layout>

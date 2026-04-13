@@ -60,6 +60,7 @@ watermarks, no branding.
 | How to Craft Fusion Ignitor | `public/images/blog/craft-fusion-ignitor.webp` | `ULTRAPROD1.png` |
 | How to Craft Stasis Device | `public/images/blog/craft-stasis-device.webp` | `ULTRAPROD2.png` |
 | How to Make Units Fast | `public/images/blog/make-units-fast.webp` | `UNITS.png` |
+| Is NMS Worth It 2026 | `public/images/blog/is-nms-worth-it-2026.webp` | — |
 
 ## Frontmatter Integration
 

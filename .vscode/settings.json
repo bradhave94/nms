@@ -11,13 +11,7 @@
       "mode": "auto"
     }
   ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
-  "[astro]": {
-    "editor.codeActionsOnSave": {}
-  },
+  "editor.codeActionsOnSave": {},
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.validate.enable": true,

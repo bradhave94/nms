@@ -8,7 +8,8 @@ tags:
   - worth it
   - review
   - beginners
-  - 2026
+  - "2026"
+heroImage: "/images/blog/is-nms-worth-it-2026.webp"
 featured: false
 relatedLinks:
   - label: "All refiner recipes"

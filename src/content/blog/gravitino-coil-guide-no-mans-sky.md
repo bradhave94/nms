@@ -1,8 +1,8 @@
 ---
 title: "No Man's Sky Gravitino Coil Guide: How to Get It and Use It"
 description: "How to unlock the Gravitino Coil in No Man's Sky, craft it, and use it for waste hauling and combat. Crafting recipe included."
-pubDate: 2026-04-13
-updatedDate: 2026-04-13
+pubDate: 2026-03-20
+updatedDate: 2026-03-20
 heroImage: "/images/blog/gravitino-coil.webp"
 category: "blog"
 tags:

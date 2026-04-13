@@ -1,8 +1,8 @@
 ---
 title: "Best No Man's Sky Refiner Recipes for Nanites, Units, and Fast Progress"
 description: "The best NMS refiner recipes for nanites, units, and chromatic metal — with exact quantities, ratios, and which refiner you actually need."
-pubDate: 2026-04-13
-updatedDate: 2026-04-13
+pubDate: 2024-10-09
+updatedDate: 2024-10-09
 heroImage: "/images/blog/refiner-recipes.webp"
 category: "blog"
 tags:
@@ -39,7 +39,7 @@ These are the best routes to Nanite Clusters depending on what materials you hav
 
 ### Tainted Metal → Nanites (Best Single-Step Recipe)
 
-**1x Tainted Metal → 2x Nanite Clusters**  
+**1x Tainted Metal → 2x Nanite Clusters**
 Works in any refiner. This is the most efficient straightforward nanite recipe in the game.
 
 Tainted Metal drops from Corrupted Sentinels (the purple-crystal variants you find on Dissonant planets). Kill them, loot Tainted Metal, refine it. At 2 nanites per metal, a good Sentinel farm can generate thousands of nanites per hour.
