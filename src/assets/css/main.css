@@ -188,6 +188,77 @@
     @apply select-none px-4 py-2 block hover:bg-blue-500 hover:text-black  focus:bg-blue-500 focus:text-black
 }
 
+/* ── Blog prose tables ─────────────────────────────────────────────────── */
+.prose table {
+    @apply w-full border-collapse text-sm my-6 rounded-lg overflow-hidden;
+    /* Rounded corners need the overflow:hidden on a wrapping element;
+       the wrapper is applied below via the responsive container. */
+}
+
+.prose table thead {
+    @apply bg-sky-900/60;
+}
+
+.prose table thead th {
+    @apply px-4 py-3 text-left font-semibold text-cyan-200 border-b border-sky-700/80 whitespace-nowrap;
+}
+
+.prose table thead th:first-child {
+    @apply rounded-tl-lg;
+}
+
+.prose table thead th:last-child {
+    @apply rounded-tr-lg;
+}
+
+.prose table tbody tr {
+    @apply border-b border-sky-900/40 transition-colors duration-150;
+}
+
+.prose table tbody tr:nth-child(even) {
+    @apply bg-sky-950/40;
+}
+
+.prose table tbody tr:nth-child(odd) {
+    @apply bg-sky-950/20;
+}
+
+.prose table tbody tr:last-child {
+    @apply border-b-0;
+}
+
+.prose table tbody tr:last-child td:first-child {
+    @apply rounded-bl-lg;
+}
+
+.prose table tbody tr:last-child td:last-child {
+    @apply rounded-br-lg;
+}
+
+.prose table tbody tr:hover {
+    @apply bg-sky-800/30;
+}
+
+.prose table tbody td {
+    @apply px-4 py-3 text-sky-100/90 align-top;
+}
+
+/* First column as a label in comparison tables */
+.prose table tbody td:first-child {
+    @apply font-medium text-white/80;
+}
+
+/* Responsive wrapper injected around <table> in GuideLayout */
+.prose-table-scroll {
+    @apply w-full overflow-x-auto rounded-lg border border-sky-900/50 shadow-lg shadow-black/30 my-6;
+}
+
+.prose-table-scroll table {
+    @apply my-0;
+}
+
+/* ── end Blog prose tables ─────────────────────────────────────────────── */
+
 .disclaimer {
   font-size: 0.8rem;
   color: #fff;

@@ -75,9 +75,18 @@ const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[
 					)}
 				</header>
 
-				<div class="prose prose-invert max-w-none prose-headings:text-white prose-a:text-cyan-300 prose-strong:text-white prose-li:text-sky-100/90 prose-p:text-sky-100/90">
+				<div id="guide-content" class="prose prose-invert max-w-none prose-headings:text-white prose-a:text-cyan-300 prose-strong:text-white prose-li:text-sky-100/90 prose-p:text-sky-100/90">
 					<slot />
 				</div>
+				<script>
+					document.querySelectorAll('#guide-content table').forEach((table) => {
+						if (table.parentElement?.classList.contains('prose-table-scroll')) return;
+						const wrapper = document.createElement('div');
+						wrapper.className = 'prose-table-scroll';
+						table.parentNode?.insertBefore(wrapper, table);
+						wrapper.appendChild(table);
+					});
+				</script>
 
 			{relatedLinks.length > 0 && (
 				<section class="mt-10 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
