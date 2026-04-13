@@ -1,6 +1,6 @@
 ---
 title: "Fusion Ignitor vs Stasis Device: Which Is Easier to Craft in No Man's Sky?"
-description: "Both sell for 15.6M units. But Fusion Ignitor and Stasis Device have different recipe chains — one needs toxic planets, the other needs better farms. Here's the breakdown."
+description: "Fusion Ignitor vs Stasis Device: both sell for 15.6M units but have different crafting chains. Which is easier and why the Stasis Device wins."
 pubDate: 2025-07-15
 updatedDate: 2025-07-15
 category: "blog"
