@@ -33,7 +33,8 @@ const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,
 	collectionName: 'Products',
-	collectionDescription: "A list of products for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+	collectionDescription:
+		"Browse No Man's Sky products with crafting ingredients, trade value, and advanced manufacturing chains.",
 	collectionPath: '/products',
 	currentPage: page.currentPage,
 	items: itemListElements,
@@ -44,7 +45,8 @@ const intro = buildCategoryIntro(
 	page.currentPage,
 	page.lastPage
 );
-const baseDescription = "A list of products for No Man's Sky. Our guide has everything you need to take your game to the next level.";
+const baseDescription =
+	"Browse No Man's Sky products with crafting ingredients, trade value, and advanced manufacturing chains.";
 const { title, description } = buildPaginatedMeta('Products', baseDescription, page.currentPage, page.lastPage);
 ---
 

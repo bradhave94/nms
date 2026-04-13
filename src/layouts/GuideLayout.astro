@@ -1,0 +1,151 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildGuideStructuredData } from '@utils/guideStructuredData.js';
+import { getSiteOrigin } from '@utils/structuredData.js';
+import type { CollectionEntry } from 'astro:content';
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+	guide: CollectionEntry<'blog'>;
+	headings?: MarkdownHeading[];
+}
+
+const { guide, headings = [] } = Astro.props as Props;
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL(`/blog/${guide.id}/`, siteOrigin).toString();
+const ogImage = guide.data.heroImage
+	? new URL(guide.data.heroImage, siteOrigin).toString()
+	: `${siteOrigin}/images/refiner.webp`;
+const tocHeadings = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+const breadcrumbs = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Blog', href: '/blog' },
+	{ name: guide.data.title },
+];
+const structuredData = buildGuideStructuredData({
+	canonicalUrl,
+	title: guide.data.title,
+	description: guide.data.description,
+	publishedTime: guide.data.pubDate.toISOString(),
+	modifiedTime: (guide.data.updatedDate ?? guide.data.pubDate).toISOString(),
+	authorName: guide.data.author,
+	image: ogImage,
+	breadcrumbs: breadcrumbs.map((breadcrumb) => ({
+		name: breadcrumb.name,
+		url: breadcrumb.href ? `${siteOrigin}${breadcrumb.href}` : canonicalUrl,
+	})),
+	faqs: guide.data.faqs,
+});
+const tags = guide.data.tags as string[];
+const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[];
+---
+
+<Layout
+	title={`${guide.data.title} | No Man's Sky Recipes`}
+	description={guide.data.description}
+	slug="blog"
+	ogImage={ogImage}
+	structuredData={structuredData}
+>
+	<article class="mx-auto max-w-7xl px-4 py-10">
+		<Breadcrumbs items={breadcrumbs} className="mb-6 px-0" />
+		<div class="flex justify-center gap-8 xl:items-start">
+			<div class="w-full max-w-[680px] min-w-0">
+				<header class="mb-8 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
+				<h1 class="m-0 text-4xl font-bold text-white sm:text-5xl">{guide.data.title}</h1>
+					<p class="mt-4 text-lg text-sky-100/90">{guide.data.description}</p>
+					<div class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-sky-300/85">
+						<p class="m-0">
+							{guide.data.pubDate.toLocaleDateString('en-US', {
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric',
+							})}
+						</p>
+					</div>
+				{tags.length > 0 && (
+					<div class="mt-5 flex flex-wrap gap-2">
+						{tags.map((keyword: string) => (
+								<span class="rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200">
+									{keyword}
+								</span>
+							))}
+						</div>
+					)}
+				</header>
+
+				<div class="prose prose-invert max-w-none prose-headings:text-white prose-a:text-cyan-300 prose-strong:text-white prose-li:text-sky-100/90 prose-p:text-sky-100/90">
+					<slot />
+				</div>
+
+			{relatedLinks.length > 0 && (
+				<section class="mt-10 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
+					<h2 class="mt-0 text-2xl text-white">Related</h2>
+					<ul class="mb-0 mt-4 space-y-3 pl-5 text-sky-100/90">
+						{relatedLinks.map((link: { label: string; href: string }) => (
+							<li>
+								<a href={link.href} class="text-cyan-300 hover:text-cyan-200">
+									{link.label}
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				)}
+			</div>
+
+			{tocHeadings.length > 0 && (
+				<aside class="hidden xl:block w-60 shrink-0 self-start sticky top-4 h-fit">
+					<div class="rounded-lg border border-sky-900/70 bg-sky-950/30 p-4">
+						<h2 class="mt-0 mb-3 text-lg font-semibold text-white">On this page</h2>
+						<ul class="space-y-2 text-sm list-none p-0" id="blog-toc-links">
+							{tocHeadings.map((heading) => (
+								<li class={heading.depth === 3 ? 'pl-4' : ''}>
+									<a
+										href={`#${heading.slug}`}
+										class="blog-toc-link text-sky-300/80 hover:text-white transition"
+										data-section={heading.slug}
+									>
+										{heading.text}
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+				</aside>
+			)}
+		</div>
+	</article>
+</Layout>
+
+{tocHeadings.length > 0 && (
+	<script define:vars={{ tocHeadings }}>
+		const sections = tocHeadings.map((heading) => heading.slug);
+		const links = document.querySelectorAll('.blog-toc-link');
+
+		function updateActive() {
+			let current = '';
+			for (const id of sections) {
+				const el = document.getElementById(id);
+				if (el) {
+					const rect = el.getBoundingClientRect();
+					if (rect.top <= 120) current = id;
+				}
+			}
+			links.forEach((link) => {
+				const section = link.getAttribute('data-section');
+				if (section === current) {
+					link.classList.remove('text-sky-300/80');
+					link.classList.add('text-white', 'font-semibold', 'border-l-2', 'border-sky-400', 'pl-2');
+				} else {
+					link.classList.add('text-sky-300/80');
+					link.classList.remove('text-white', 'font-semibold', 'border-l-2', 'border-sky-400', 'pl-2');
+				}
+			});
+		}
+
+		window.addEventListener('scroll', updateActive, { passive: true });
+		updateActive();
+	</script>
+)}

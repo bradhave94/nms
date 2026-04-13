@@ -4,6 +4,35 @@ import tailwindcss from "@tailwindcss/vite";
 
 import react from "@astrojs/react";
 
+const SITEMAP_EXCLUDED_PATHS = new Set([
+  '/feedback',
+  '/privacy-policy',
+  '/refining/cards',
+  '/cooking/cards',
+  '/crafting-guide/cards',
+  '/creatures/affinites',
+  '/guides',
+]);
+
+const shouldIncludeInSitemap = (page) => {
+  const pageUrl = new URL(page);
+  const pathname = pageUrl.pathname.replace(/\/$/, '') || '/';
+
+  if (SITEMAP_EXCLUDED_PATHS.has(pathname)) {
+    return false;
+  }
+
+  if (pathname.startsWith('/creatures/species/')) {
+    return false;
+  }
+
+  if (pathname.startsWith('/guides/')) {
+    return false;
+  }
+
+  return true;
+};
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://nomansskyrecipes.com",
@@ -11,7 +40,9 @@ export default defineConfig({
     react({
       experimentalReactChildren: true
     }),
-    sitemap()
+    sitemap({
+      filter: shouldIncludeInSitemap,
+    })
   ],
   vite: {
     plugins: [tailwindcss()],

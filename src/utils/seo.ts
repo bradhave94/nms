@@ -1,4 +1,5 @@
 import type { Item } from '@utils/lookup.js';
+import * as dataSources from '@datav2/index.js';
 
 export type BreadcrumbItem = {
 	name: string;
@@ -18,16 +19,190 @@ const normalizePath = (path: string): string => {
 	return trimmedPath === '' ? '/' : trimmedPath;
 };
 
+type ItemMetaInput = Pick<Item, 'Id' | 'Name' | 'Description' | 'Group' | 'Slug'>;
+
+const normalizeCategoryLabel = (value: string | undefined): string =>
+	normalizeWhitespace(value ?? '')
+		.toLowerCase()
+		.replace(/^no man's sky\s+/i, '')
+		.replace(/^no mans sky\s+/i, '');
+
+const resolveItemTypeLabel = (item: ItemMetaInput): string => {
+	const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '');
+	const category = normalizedSlug.split('/')[0] ?? '';
+	const categoryLabelMap: Record<string, string> = {
+		raw: 'Raw Material',
+		products: 'Product',
+		food: 'Food Recipe',
+		curiosities: 'Curiosity',
+		fish: 'Fish',
+		technology: 'Technology',
+		other: 'Item',
+		buildings: 'Building Part',
+		upgrades: 'Upgrade Module',
+		exocraft: 'Exocraft Upgrade',
+		starships: 'Starship Upgrade',
+		corvette: 'Corvette Part',
+	};
+
+	return categoryLabelMap[category] ?? item.Group ?? 'Item';
+};
+
+const buildSlugHint = (item: ItemMetaInput): string | undefined => {
+	const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '');
+	if (!normalizedSlug) return undefined;
+
+	const slugSegment = normalizedSlug.split('/').pop() ?? '';
+	if (!slugSegment) return undefined;
+	const readableSlug = slugSegment
+		.replace(/[-_]+/g, ' ')
+		.trim()
+		.replace(/\b([a-z])/g, (letter) => letter.toUpperCase());
+
+	if (!readableSlug) return undefined;
+	if (readableSlug.toLowerCase() === item.Id.toLowerCase()) return undefined;
+
+	return readableSlug;
+};
+
+const normalizeDescriptionHint = (value: string | undefined): string | undefined => {
+	const normalized = normalizeWhitespace(value ?? '');
+	if (!normalized) return undefined;
+
+	const cleaned = normalized
+		.replace(/%[A-Z0-9_]+%/gi, ' ')
+		.replace(/\s+/g, ' ')
+		.trim();
+
+	if (!cleaned) return undefined;
+	return cleaned;
+};
+
+const buildDescriptionHint = (item: ItemMetaInput): string | undefined => {
+	const normalizedDescription = normalizeDescriptionHint(item.Description);
+	if (!normalizedDescription) return undefined;
+
+	const firstClause = normalizedDescription.split(/[.!?]/)[0]?.trim() ?? normalizedDescription;
+	if (!firstClause) return undefined;
+
+	return truncate(firstClause, 72);
+};
+
+const allItems = Object.values(dataSources).flatMap((source) =>
+	Array.isArray(source) ? (source as ItemMetaInput[]) : []
+);
+
+const itemNameCounts = allItems.reduce<Map<string, number>>((counts, item) => {
+	const normalizedName = normalizeWhitespace(item?.Name ?? '').toLowerCase();
+	if (!normalizedName) return counts;
+	counts.set(normalizedName, (counts.get(normalizedName) ?? 0) + 1);
+	return counts;
+}, new Map());
+
+const itemsByNormalizedName = allItems.reduce<Map<string, ItemMetaInput[]>>((groups, item) => {
+	const normalizedName = normalizeWhitespace(item?.Name ?? '').toLowerCase();
+	if (!normalizedName) return groups;
+	const items = groups.get(normalizedName) ?? [];
+	items.push(item);
+	groups.set(normalizedName, items);
+	return groups;
+}, new Map());
+
+const hasPlaceholderTokens = (value: string): boolean => /%[^%]+%/.test(value);
+
+const buildUniqueHintFromSiblings = (
+	item: ItemMetaInput,
+	siblings: ItemMetaInput[],
+	candidateBuilder: (candidate: ItemMetaInput) => string | undefined
+): string | undefined => {
+	const candidate = candidateBuilder(item);
+	if (!candidate) return undefined;
+
+	const normalizedCandidate = normalizeWhitespace(candidate).toLowerCase();
+	if (!normalizedCandidate) return undefined;
+
+	const candidateMatches = siblings.filter((sibling) => {
+		const siblingCandidate = candidateBuilder(sibling);
+		return normalizeWhitespace(siblingCandidate ?? '').toLowerCase() === normalizedCandidate;
+	});
+
+	return candidateMatches.length === 1 ? candidate : undefined;
+};
+
+const buildItemUniquenessHint = (item: ItemMetaInput, categoryLabel: string): string | undefined => {
+	const normalizedName = normalizeWhitespace(item.Name ?? '').toLowerCase();
+	const duplicateCount = itemNameCounts.get(normalizedName) ?? 0;
+	if (duplicateCount <= 1) {
+		return undefined;
+	}
+
+	const siblings = itemsByNormalizedName.get(normalizedName) ?? [item];
+	const normalizedCategoryLabelValue = normalizeCategoryLabel(categoryLabel);
+
+	const categoryHint = buildUniqueHintFromSiblings(item, siblings, (candidate) => {
+		const resolvedLabel = resolveItemTypeLabel(candidate);
+		const normalizedResolvedLabel = normalizeCategoryLabel(resolvedLabel);
+		if (!normalizedResolvedLabel || normalizedResolvedLabel === normalizedCategoryLabelValue) {
+			return undefined;
+		}
+		return resolvedLabel;
+	});
+
+	if (categoryHint) {
+		return categoryHint;
+	}
+
+	const groupHint = buildUniqueHintFromSiblings(item, siblings, (candidate) => {
+		const group = normalizeWhitespace(candidate.Group ?? '');
+		if (!group) return undefined;
+		if (group.toLowerCase() === normalizedName) return undefined;
+		if (hasPlaceholderTokens(group)) return undefined;
+		return group;
+	});
+
+	if (groupHint) {
+		return groupHint;
+	}
+
+	const slugHint = buildUniqueHintFromSiblings(item, siblings, (candidate) => buildSlugHint(candidate));
+	if (slugHint) {
+		return slugHint;
+	}
+
+	return `ID ${item.Id}`;
+};
+
+const buildItemTitle = (item: ItemMetaInput, categoryLabel: string, uniquenessHint?: string): string => {
+	const titleSegments = [item.Name];
+
+	if (uniquenessHint) {
+		titleSegments.push(uniquenessHint);
+	}
+
+	titleSegments.push(categoryLabel, "No Man's Sky Recipes");
+	return titleSegments.join(' | ');
+};
+
 export const buildItemMeta = (
-	item: Pick<Item, 'Id' | 'Name' | 'Description'>,
+	item: ItemMetaInput,
 	categoryLabel: string
 ): { title: string; description: string } => {
-	const normalizedDescription = normalizeWhitespace(item.Description ?? '');
-	const title = `${item.Name} | ${categoryLabel} | No Man's Sky Recipes`;
-	const baseDescription = `Learn how to craft, refine, and use ${item.Name}, a ${categoryLabel.toLowerCase()} in No Man's Sky.`;
+	const normalizedDescription = normalizeDescriptionHint(item.Description) ?? '';
+	const uniquenessHint = buildItemUniquenessHint(item, categoryLabel);
+	const title = buildItemTitle(item, categoryLabel, uniquenessHint);
+	const itemTypeLabel = resolveItemTypeLabel(item);
+	const descriptiveType =
+		uniquenessHint && uniquenessHint !== itemTypeLabel
+			? `${uniquenessHint.toLowerCase()} ${itemTypeLabel.toLowerCase()}`
+			: itemTypeLabel.toLowerCase();
+	const duplicateCount = itemNameCounts.get(normalizeWhitespace(item.Name ?? '').toLowerCase()) ?? 0;
+	const descriptionHint = duplicateCount > 1 ? buildDescriptionHint(item) : undefined;
+	const baseDescription = descriptionHint
+		? `Learn how to craft, refine, use, and unlock ${item.Name}, a ${descriptiveType} in No Man's Sky. ${descriptionHint}.`
+		: `Learn how to craft, refine, use, and unlock ${item.Name}, a ${descriptiveType} in No Man's Sky.`;
 	const description = truncate(
 		normalizeWhitespace(`${baseDescription} ${normalizedDescription}`),
-		175
+		155
 	);
 	return { title, description };
 };

@@ -22,6 +22,7 @@ import {
   WrenchIcon,
   RocketLaunchIcon,
   BugAntIcon,
+  BookOpenIcon,
 } from '@heroicons/react/24/solid';
 import type { ComponentType, SVGProps } from 'react';
 import { classNames } from '../utils/classNames';
@@ -38,7 +39,6 @@ interface SidebarProps {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '/', icon: HomeIcon },
   { name: 'Refining', href: '/refining', icon: FunnelIcon },
   { name: 'Cooking', href: '/cooking', icon: BeakerIcon },
   { name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
@@ -56,7 +56,7 @@ const navigation: NavigationItem[] = [
   { name: 'Other', href: '/other', icon: PaperClipIcon },
   { name: 'Food', href: '/food', icon: CakeIcon },
   { name: 'Raw Materials', href: '/raw', icon: BoltIcon },
-  { name: 'All Items', href: '/items', icon: Squares2X2Icon },
+  { name: 'Blog', href: '/blog', icon: BookOpenIcon },
   { name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
 
@@ -164,7 +164,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-56 lg:flex-col">
           <div className="flex min-h-0 flex-1 flex-col bg-black">
-            <div className="flex flex-1 flex-col overflow-y-auto pt-3 pb-3">
+            <div className="flex flex-1 flex-col overflow-y-auto overflow-x-hidden hide-scrollbar pt-3 pb-3">
               <a href="/" className="mb-3 block w-full px-3">
                 <img
                   className="block h-auto w-full max-w-[12.5rem]"

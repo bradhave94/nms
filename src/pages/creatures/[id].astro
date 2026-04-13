@@ -25,6 +25,16 @@ const affinityIconById = new Map<string, string>(
 		.filter((affinity): affinity is CreatureAffinity => Boolean(affinity?.Id && affinity?.Icon))
 		.map((affinity) => [affinity.Id, affinity.Icon] as const)
 );
+const speciesLabelCounts = ((creaturesData.Species ?? []) as CreatureSpecies[]).reduce<Map<string, number>>(
+	(counts, entry) => {
+		if (!entry?.Name) return counts;
+		const subtitle = entry.SpeciesSubtitle?.trim();
+		const label = subtitle ? `${entry.Name} (${subtitle})` : entry.Name;
+		counts.set(label, (counts.get(label) ?? 0) + 1);
+		return counts;
+	},
+	new Map()
+);
 
 const DEFAULT_IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
 const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
@@ -261,10 +271,14 @@ const resolvedMoveSets = resolveMovesForSpecies(species);
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 
-const pageTitle = `${species.Name} | Creatures | No Man's Sky Recipes`;
-const shortDescription = species.SpeciesSubtitle
-	? `${species.Name} (${species.SpeciesSubtitle}) creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`
-	: `${species.Name} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`;
+const speciesSubtitle = species.SpeciesSubtitle?.trim();
+const speciesLabel = speciesSubtitle ? `${species.Name} (${speciesSubtitle})` : species.Name;
+const hasDuplicateSpeciesLabel = (speciesLabelCounts.get(speciesLabel) ?? 0) > 1;
+const speciesSeoQualifier = hasDuplicateSpeciesLabel ? `${speciesLabel} | ${species.Id}` : speciesLabel;
+const pageTitle = `${speciesSeoQualifier} | Creatures | No Man's Sky Recipes`;
+const shortDescription = hasDuplicateSpeciesLabel
+	? `${speciesLabel} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena. Species ID ${species.Id}.`
+	: `${speciesLabel} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`;
 const description = shortDescription.slice(0, 180);
 const speciesIcon = species.BattleAffinityIcon ?? NORMAL_AFFINITY_ICON;
 const ogImage = `${imageBase}${speciesIcon}`;

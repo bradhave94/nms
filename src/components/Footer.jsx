@@ -4,6 +4,7 @@ const navigation = [
   { name: 'Refining', href: '/refining' },
   { name: 'Cooking', href: '/cooking' },
   { name: 'Crafting', href: '/crafting-guide' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Calculator', href: '/calculator' },
   { name: 'Products', href: '/products' },
   { name: 'Technology', href: '/technology' },
@@ -16,7 +17,6 @@ const navigation = [
   { name: 'Food', href: '/food' },
   { name: 'Raw Materials', href: '/raw' },
   { name: 'All Items', href: '/items' },
-  { name: 'Feedback', href: '/feedback' },
 ];
 
 export default function Footer() {
