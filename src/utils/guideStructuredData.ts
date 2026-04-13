@@ -27,7 +27,7 @@ export const buildGuideStructuredData = ({
 	description,
 	publishedTime,
 	modifiedTime,
-	authorName,
+	authorName = "No Man's Sky Recipes",
 	image,
 	breadcrumbs,
 	keywords,

@@ -79,11 +79,13 @@ const columns = [
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/creatures/species', siteOrigin).toString();
+const collectionDescription =
+	"Browse No Man's Sky creature species, battle readiness, rarity, move area, and affinity data from the Xeno Arena system.";
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,
 	collectionName: 'Creature Species',
-	collectionDescription: "Browse No Man's Sky creature species from the Xeno Arena system.",
+	collectionDescription,
 	collectionPath: '/creatures/species',
 	currentPage: 1,
 	items: species.slice(0, 25).map((item, index) => ({
@@ -97,7 +99,7 @@ const breadcrumbs = [
 	{ name: 'Creatures', href: '/creatures' },
 	{ name: 'Species' },
 ];
-const baseDescription = "Browse No Man's Sky creature species from the Xeno Arena system.";
+const baseDescription = collectionDescription;
 const { title, description } = buildPaginatedMeta('Creature Species', baseDescription, 1, 1);
 ---
 

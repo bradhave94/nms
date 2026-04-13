@@ -65,6 +65,29 @@ const buildSlugHint = (item: ItemMetaInput): string | undefined => {
 	return readableSlug;
 };
 
+const normalizeDescriptionHint = (value: string | undefined): string | undefined => {
+	const normalized = normalizeWhitespace(value ?? '');
+	if (!normalized) return undefined;
+
+	const cleaned = normalized
+		.replace(/%[A-Z0-9_]+%/gi, ' ')
+		.replace(/\s+/g, ' ')
+		.trim();
+
+	if (!cleaned) return undefined;
+	return cleaned;
+};
+
+const buildDescriptionHint = (item: ItemMetaInput): string | undefined => {
+	const normalizedDescription = normalizeDescriptionHint(item.Description);
+	if (!normalizedDescription) return undefined;
+
+	const firstClause = normalizedDescription.split(/[.!?]/)[0]?.trim() ?? normalizedDescription;
+	if (!firstClause) return undefined;
+
+	return truncate(firstClause, 72);
+};
+
 const allItems = Object.values(dataSources).flatMap((source) =>
 	Array.isArray(source) ? (source as ItemMetaInput[]) : []
 );
@@ -97,9 +120,8 @@ const buildItemUniquenessHint = (item: ItemMetaInput, categoryLabel: string): st
 	return buildSlugHint(item) ?? `ID ${item.Id}`;
 };
 
-const buildItemTitle = (item: ItemMetaInput, categoryLabel: string): string => {
+const buildItemTitle = (item: ItemMetaInput, categoryLabel: string, uniquenessHint?: string): string => {
 	const titleSegments = [item.Name];
-	const uniquenessHint = buildItemUniquenessHint(item, categoryLabel);
 
 	if (uniquenessHint) {
 		titleSegments.push(uniquenessHint);
@@ -113,15 +135,19 @@ export const buildItemMeta = (
 	item: ItemMetaInput,
 	categoryLabel: string
 ): { title: string; description: string } => {
-	const normalizedDescription = normalizeWhitespace(item.Description ?? '');
-	const title = buildItemTitle(item, categoryLabel);
-	const itemTypeLabel = resolveItemTypeLabel(item);
+	const normalizedDescription = normalizeDescriptionHint(item.Description) ?? '';
 	const uniquenessHint = buildItemUniquenessHint(item, categoryLabel);
+	const title = buildItemTitle(item, categoryLabel, uniquenessHint);
+	const itemTypeLabel = resolveItemTypeLabel(item);
 	const descriptiveType =
 		uniquenessHint && uniquenessHint !== itemTypeLabel
 			? `${uniquenessHint.toLowerCase()} ${itemTypeLabel.toLowerCase()}`
 			: itemTypeLabel.toLowerCase();
-	const baseDescription = `Learn how to craft, refine, use, and unlock ${item.Name}, a ${descriptiveType} in No Man's Sky.`;
+	const duplicateCount = itemNameCounts.get(normalizeWhitespace(item.Name ?? '').toLowerCase()) ?? 0;
+	const descriptionHint = duplicateCount > 1 ? buildDescriptionHint(item) : undefined;
+	const baseDescription = descriptionHint
+		? `Learn how to craft, refine, use, and unlock ${item.Name}, a ${descriptiveType} in No Man's Sky. ${descriptionHint}.`
+		: `Learn how to craft, refine, use, and unlock ${item.Name}, a ${descriptiveType} in No Man's Sky.`;
 	const description = truncate(
 		normalizeWhitespace(`${baseDescription} ${normalizedDescription}`),
 		155

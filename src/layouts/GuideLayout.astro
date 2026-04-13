@@ -26,6 +26,7 @@ const structuredData = buildGuideStructuredData({
 	description: guide.data.description,
 	publishedTime: guide.data.pubDate.toISOString(),
 	modifiedTime: (guide.data.updatedDate ?? guide.data.pubDate).toISOString(),
+	authorName: guide.data.author,
 	image: ogImage,
 	breadcrumbs: breadcrumbs.map((breadcrumb) => ({
 		name: breadcrumb.name,
