@@ -7,12 +7,13 @@ const getLlmsTxt = (base: string) => `# No Man's Sky Recipes
 
 Data is current as of ${SITE.version_name} (${SITE.version_date}). Item pages include crafting trees, refiner recipes, and where each item is used.
 
-## Guides
+## Blog
 
 - [Refining](${base}/refining): Refiner recipes table – combine ingredients to produce outputs
 - [Cooking](${base}/cooking): Nutrient Processor recipes – cook food from ingredients
 - [Crafting Guide](${base}/crafting-guide): Craft products from blueprints and materials
 - [Crafting Calculator](${base}/calculator): Calculate ingredients needed for any craftable item
+- [Blog](${base}/blog): Strategy posts and walkthrough content for No Man's Sky
 
 ## Categories
 

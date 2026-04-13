@@ -4,7 +4,7 @@ description: "Learn the best No Man's Sky refiner recipes for nanites, units, co
 pubDate: 2026-04-12
 updatedDate: 2026-04-12
 heroImage: "/images/refiner.webp"
-category: "refining"
+category: "blog"
 tags:
   - refining
   - nanites
@@ -34,7 +34,7 @@ The fastest way to think about refinement is to group recipes by outcome:
 3. **Crafting support materials** that help you build high-value items faster
 4. **Nanite-adjacent refinement chains** that reduce farming time
 
-If you want the complete table, use the main [Refining page](/refining). This guide focuses on the recipes that are most useful in actual play.
+If you want the complete table, use the main [Refining page](/refining). This sample post focuses on the recipes that are most useful in actual play.
 
 ## 1. Carbon and Condensed Carbon loops
 
@@ -55,7 +55,7 @@ Chromatic Metal is one of the most consistently useful refined outputs in the ga
 - crafted product chains
 - progression bottlenecks
 
-If you are moving beyond early-game upgrades, learning the Cadmium / Emeril / Indium → Chromatic Metal loop saves a lot of time. It also supports higher-tier item pages such as:
+If you are moving beyond early-game upgrades, learning the Cadmium / Emeril / Indium -> Chromatic Metal loop saves a lot of time. It also supports higher-tier item pages such as:
 
 - [Technology](/technology)
 - [Products](/products)
@@ -71,42 +71,6 @@ Refined Ferrite and Magnetised Ferrite are easy to overlook, but they unlock a s
 - technology dependencies
 
 If you spend a lot of time on settlement or freighter builds, it is worth bookmarking the [Buildings](/buildings) section alongside the [Raw Materials](/raw) category.
-
-## 4. Refiner support for high-value products
-
-The real long-tail value of refinement comes from reducing friction in major crafting chains. Many profitable products rely on several prerequisite materials that are easier to refine than to farm directly every single time.
-
-That matters most for players building toward:
-
-- [Fusion Ignitor chains](/products/FUSION)
-- [Stasis Device support materials](/products/STASISDEV)
-- advanced trade goods and late-game products
-
-Even when the final item is crafted in the crafting menu rather than in a refiner, the refiner often shortens the preparation step dramatically.
-
-## 5. Best refiner recipes for inventory efficiency
-
-The strongest recipes are not always the ones with the highest theoretical value. Often, the best recipes are the ones that:
-
-- collapse multiple raw materials into one stack
-- reduce travel time
-- turn common resources into bottleneck resources
-- support repeated crafting sessions
-
-This is especially true if you use the site to jump between:
-
-- [Refining](/refining)
-- [Crafting Guide](/crafting-guide)
-- [All Items](/items)
-
-## When to use the refiner versus direct farming
-
-Use refinement when it saves you time on a repeatable loop. If a material is abundant on your current planet, direct gathering can still be faster. But refinement wins when:
-
-- you already have excess inputs
-- the recipe is part of a larger chain
-- you want to standardise inventory before a crafting session
-- you are converting lower-tier materials into more useful intermediates
 
 ## Recommended next steps
 
