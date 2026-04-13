@@ -220,7 +220,7 @@ For the full recipe list, the [refining page](/refining) has every combination s
 ---
 
 ## Sources
-- [Refining - No Man's Sky Wiki](https://nomanssky.fandom.com/wiki/Refiner)
-- [Tainted Metal - No Man's Sky Wiki](https://nomanssky.fandom.com/wiki/Tainted_Metal)
-- [Runaway Mould - No Man's Sky Wiki](https://nomanssky.fandom.com/wiki/Runaway_Mould)
-- Game data: `/home/bradhave/repos/nms/src/datav2/Refinery.json` (357 recipes verified)
+- Extracted game data
+- [All refiner recipes](/refining)
+- [Tainted Metal](/raw/AF_METAL)
+- [Runaway Mould](/raw/SPACEGUNK2)
