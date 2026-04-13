@@ -1,7 +1,7 @@
 ---
 title: "How to Get an S-Class Freighter in No Man's Sky"
-description: "The only reliable way to get an S-class capital freighter in NMS is save scumming rescue events. Here's the exact two-stage method, spawn rates, and what to expect."
-pubDate: 2026-04-13
+description: "The only reliable way to get an S-class capital freighter in NMS is save scumming rescue events."
+pubDate: 2025-06-03
 heroImage: "/images/blog/s-class-freighter.webp"
 category: "blog"
 tags:
