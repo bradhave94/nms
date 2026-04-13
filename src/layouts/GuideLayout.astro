@@ -51,8 +51,7 @@ const structuredData = buildGuideStructuredData({
 		<div class="flex justify-center gap-8 xl:items-start">
 			<div class="w-full max-w-[680px] min-w-0">
 				<header class="mb-8 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
-					<p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">No Man's Sky Blog</p>
-					<h1 class="m-0 text-4xl font-bold text-white sm:text-5xl">{guide.data.title}</h1>
+				<h1 class="m-0 text-4xl font-bold text-white sm:text-5xl">{guide.data.title}</h1>
 					<p class="mt-4 text-lg text-sky-100/90">{guide.data.description}</p>
 					<div class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-sky-300/85">
 						<p class="m-0">
@@ -62,15 +61,6 @@ const structuredData = buildGuideStructuredData({
 								day: 'numeric',
 							})}
 						</p>
-						{guide.data.updatedDate && (
-							<p class="m-0">
-								Updated {guide.data.updatedDate.toLocaleDateString('en-US', {
-									year: 'numeric',
-									month: 'long',
-									day: 'numeric',
-								})}
-							</p>
-						)}
 					</div>
 					{guide.data.tags.length > 0 && (
 						<div class="mt-5 flex flex-wrap gap-2">
@@ -104,8 +94,8 @@ const structuredData = buildGuideStructuredData({
 			</div>
 
 			{tocHeadings.length > 0 && (
-				<aside class="hidden xl:block w-60 shrink-0 self-start">
-					<div class="sticky top-4 rounded-lg border border-sky-900/70 bg-sky-950/30 p-4">
+				<aside class="hidden xl:block w-60 shrink-0 self-start sticky top-4 h-fit">
+					<div class="rounded-lg border border-sky-900/70 bg-sky-950/30 p-4">
 						<h2 class="mt-0 mb-3 text-lg font-semibold text-white">On this page</h2>
 						<ul class="space-y-2 text-sm list-none p-0" id="blog-toc-links">
 							{tocHeadings.map((heading) => (
