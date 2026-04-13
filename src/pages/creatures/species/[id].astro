@@ -8,7 +8,5 @@ export async function getStaticPaths() {
 	}));
 }
 
-export const prerender = false;
-
 return Astro.redirect(`/creatures/${Astro.params.id ?? ''}`);
 ---

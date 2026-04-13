@@ -4,6 +4,7 @@ description: "Learn the best No Man's Sky refiner recipes for nanites, units, co
 pubDate: 2026-04-12
 updatedDate: 2026-04-12
 heroImage: "/images/refiner.webp"
+category: "refining"
 tags:
   - refining
   - nanites

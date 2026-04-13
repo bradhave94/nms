@@ -1,7 +1,8 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const guides = defineCollection({
-	type: 'content',
+	loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
 	schema: z.object({
 		title: z.string(),
 		description: z.string().max(160),
@@ -10,10 +11,16 @@ const guides = defineCollection({
 		heroImage: z.string().optional(),
 		category: z.string(),
 		tags: z.array(z.string()).default([]),
-		author: z.string().default("No Man's Sky Recipes"),
-		keywords: z.array(z.string()).default([]),
-		relatedPages: z.array(z.string()).default([]),
-		faq: z
+		featured: z.boolean().default(false),
+		relatedLinks: z
+			.array(
+				z.object({
+					label: z.string(),
+					href: z.string(),
+				})
+			)
+			.default([]),
+		faqs: z
 			.array(
 				z.object({
 					question: z.string(),

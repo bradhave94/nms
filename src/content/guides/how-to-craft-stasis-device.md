@@ -4,6 +4,7 @@ description: "Follow a step-by-step Stasis Device guide with the exact crafting 
 pubDate: 2026-04-12
 updatedDate: 2026-04-12
 heroImage: "/images/crafting.webp"
+category: "Crafting"
 tags:
   - stasis device
   - crafting chain

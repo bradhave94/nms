@@ -4,6 +4,7 @@ description: "Learn the best No Man's Sky cooking recipes to prioritise, includi
 pubDate: 2026-04-12
 updatedDate: 2026-04-12
 heroImage: "/images/cooker.webp"
+category: "Cooking"
 tags:
   - cooking
   - nutrient processor

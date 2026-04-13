@@ -4,6 +4,7 @@ description: "Learn how No Man's Sky creature affinities work, which matchups ar
 pubDate: 2026-04-12
 updatedDate: 2026-04-12
 heroImage: "/images/items/SPEC_PB_EGG01.png"
+category: "creatures"
 tags:
   - creatures
   - affinities

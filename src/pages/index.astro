@@ -141,6 +141,33 @@ const cards = [
 		link: '/items',
 	},
 ];
+
+const featuredGuides = [
+	{
+		title: "Best No Man's Sky refiner recipes",
+		description:
+			'Prioritise the refiner loops that matter most for nanites, Chromatic Metal, and faster crafting preparation.',
+		href: '/guides/best-no-mans-sky-refiner-recipes',
+	},
+	{
+		title: 'How to craft a Stasis Device',
+		description:
+			'Follow a step-by-step breakdown of the Stasis Device crafting chain and scale it with the calculator.',
+		href: '/guides/how-to-craft-stasis-device',
+	},
+	{
+		title: "Best No Man's Sky cooking recipes",
+		description:
+			'Focus on the Nutrient Processor chains worth using for Cronus nanites, bait prep, and efficient ingredient loops.',
+		href: '/guides/best-no-mans-sky-cooking-recipes',
+	},
+	{
+		title: "Creature affinities guide",
+		description:
+			'Learn the Xeno Arena matchup chart and build better counter teams with the creature affinity guide.',
+		href: '/guides/no-mans-sky-creature-affinities-guide',
+	},
+];
 ---
 <Layout
 	title="No Man's Sky Recipes Guide, Refiner Recipes, Crafting & Cooking"
@@ -192,5 +219,24 @@ const cards = [
                 />
             ))}
         </div>
+        <section class="mt-12">
+            <div class="mb-6 flex flex-col gap-3 text-center sm:text-left">
+                <p class="m-0 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Featured guides</p>
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <h2 class="m-0 text-3xl font-semibold text-white">Go beyond item lookups with strategy guides</h2>
+                    <a href="/guides" class="text-cyan-300 hover:text-cyan-200">Browse all guides →</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+                {featuredGuides.map((guide) => (
+                    <article class="rounded-xl border border-sky-900/70 bg-sky-950/40 p-5 transition hover:border-sky-400/70 hover:bg-sky-900/40">
+                        <h3 class="m-0 text-xl font-semibold text-white">
+                            <a href={guide.href} class="hover:text-sky-200">{guide.title}</a>
+                        </h3>
+                        <p class="mt-3 text-sm leading-6 text-sky-100/85">{guide.description}</p>
+                    </article>
+                ))}
+            </div>
+        </section>
     </main>
 </Layout>
