@@ -15,9 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { item } = Astro.props;
-const { title, description } = buildItemMeta(item as Item, 'No Man\'s Sky Item', {
-	uniquenessHint: (item as Item).Id,
-});
+const { title, description } = buildItemMeta(item as Item, 'No Man\'s Sky Item');
 const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
 ---
 

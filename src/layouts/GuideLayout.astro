@@ -37,6 +37,8 @@ const structuredData = buildGuideStructuredData({
 	})),
 	faqs: guide.data.faqs,
 });
+const tags = guide.data.tags as string[];
+const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[];
 ---
 
 <Layout
@@ -55,16 +57,16 @@ const structuredData = buildGuideStructuredData({
 					<p class="mt-4 text-lg text-sky-100/90">{guide.data.description}</p>
 					<div class="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-sky-300/85">
 						<p class="m-0">
-							Published {guide.data.pubDate.toLocaleDateString('en-US', {
+							{guide.data.pubDate.toLocaleDateString('en-US', {
 								year: 'numeric',
 								month: 'long',
 								day: 'numeric',
 							})}
 						</p>
 					</div>
-					{guide.data.tags.length > 0 && (
-						<div class="mt-5 flex flex-wrap gap-2">
-							{guide.data.tags.map((keyword: string) => (
+				{tags.length > 0 && (
+					<div class="mt-5 flex flex-wrap gap-2">
+						{tags.map((keyword: string) => (
 								<span class="rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200">
 									{keyword}
 								</span>
@@ -77,14 +79,14 @@ const structuredData = buildGuideStructuredData({
 					<slot />
 				</div>
 
-				{guide.data.relatedLinks.length > 0 && (
-					<section class="mt-10 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
-						<h2 class="mt-0 text-2xl text-white">Related tools and pages</h2>
-						<ul class="mb-0 mt-4 space-y-3 pl-5 text-sky-100/90">
-							{guide.data.relatedLinks.map((link) => (
-								<li>
-									<a href={link.href} class="text-cyan-300 hover:text-cyan-200">
-										{link.label}
+			{relatedLinks.length > 0 && (
+				<section class="mt-10 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
+					<h2 class="mt-0 text-2xl text-white">Related</h2>
+					<ul class="mb-0 mt-4 space-y-3 pl-5 text-sky-100/90">
+						{relatedLinks.map((link: { label: string; href: string }) => (
+							<li>
+								<a href={link.href} class="text-cyan-300 hover:text-cyan-200">
+									{link.label}
 									</a>
 								</li>
 							))}

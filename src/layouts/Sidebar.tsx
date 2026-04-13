@@ -39,7 +39,6 @@ interface SidebarProps {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '/', icon: HomeIcon },
   { name: 'Refining', href: '/refining', icon: FunnelIcon },
   { name: 'Cooking', href: '/cooking', icon: BeakerIcon },
   { name: 'Crafting', href: '/crafting-guide', icon: WrenchScrewdriverIcon },
@@ -57,7 +56,6 @@ const navigation: NavigationItem[] = [
   { name: 'Other', href: '/other', icon: PaperClipIcon },
   { name: 'Food', href: '/food', icon: CakeIcon },
   { name: 'Raw Materials', href: '/raw', icon: BoltIcon },
-  { name: 'All Items', href: '/items', icon: Squares2X2Icon },
   { name: 'Blog', href: '/blog', icon: BookOpenIcon },
   { name: 'Feedback', href: '/feedback', icon: EnvelopeIcon },
 ];
