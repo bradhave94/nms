@@ -1,8 +1,8 @@
 ---
 title: "No Man's Sky Fishing Guide: How to Fish, Best Bait, and What to Do With Your Catch"
 description: "How fishing works in No Man's Sky: getting the Fishing Rig, bait recipes, controlling fish size by depth, biomes, and what to cook or sell."
-pubDate: 2026-04-17
-updatedDate: 2026-04-17
+pubDate: 2024-12-20
+updatedDate: 2024-12-20
 heroImage: "/images/blog/fishing-guide.webp"
 category: "blog"
 tags:
