@@ -12,14 +12,18 @@ tags:
   - guide
 featured: false
 relatedLinks:
-  - label: "Corvette parts reference"
+  - label: "All corvette parts"
     href: "/corvette"
-  - label: "All technology upgrades"
-    href: "/technology"
+  - label: "Corvette cockpits"
+    href: "/items?group=Corvette+Cockpit"
+  - label: "Corvette reactors"
+    href: "/items?group=Corvette+Reactor+Module"
+  - label: "Corvette engines"
+    href: "/items?group=Corvette+Main+Engine"
+  - label: "Corvette weapon systems"
+    href: "/items?group=Corvette+Weapon+System"
   - label: "Nanite farming guide"
     href: "/blog/best-nanite-farms-no-mans-sky"
-  - label: "All starship components"
-    href: "/starships"
 faqs:
   - question: "How do I get a Corvette in No Man's Sky?"
     answer: "Go to any Space Station and take the blue teleport columns on the left side of the shop area to reach the Corvette Workshop console. Buy the basic modules you need, then select Create New Corvette to start building."
@@ -31,7 +35,7 @@ faqs:
     answer: "Set your Corvette as your primary ship, then visit the Starship Outfitting Terminal at any Space Station. Upgrading to S-class requires approximately 85,000 Nanites across multiple upgrade steps."
 ---
 
-Corvettes were added in the Voyagers update (version 6.0, August 2025). They're fully modular spaceships you assemble part by part at the Corvette Workshop in any Space Station. You can walk around inside them, decorate the interior, install a refiner, and scan planets from the cockpit without landing. A lot of players use them as a flying base.
+Corvettes were added in the Voyagers update (version 6.0, August 2025). They're fully modular spaceships you assemble part by part at the Corvette Workshop in any Space Station. You can walk around inside them, decorate the interior, install a refiner, and scan planets from the cockpit without landing. A lot of players use them as a flying base. Browse all available [corvette parts](/corvette) on the site.
 
 Here's how to build one and what to prioritize.
 
@@ -52,14 +56,14 @@ A Corvette needs these parts to be valid:
 
 | Part | Minimum needed | Workshop price |
 |---|---|---|
-| Landing Gear | 2 | ~420,000 units each |
-| Thruster | 2 | ~400,000 units each |
-| Cockpit | 1 | 1,600,000 units |
-| Access Module (Landing Bay) | 1 | 800,000 units |
-| Habitation Module | 1 | 680,000 units |
-| Reactor | 1 | 1,750,000 units |
-| Main Engine | 1 | 1,000,000 units |
-| Weapon System | 1 | 1,200,000 units |
+| [Landing Gear](/items?group=Corvette+Landing+Gear) | 2 | ~420,000 units each |
+| [Thruster](/items?group=Corvette+Light+Thruster) | 2 | ~400,000 units each |
+| [Cockpit](/items?group=Corvette+Cockpit) | 1 | 1,600,000 units |
+| [Access Module (Landing Bay)](/items?group=Corvette+Access+Module) | 1 | 800,000 units |
+| [Habitation Module](/items?group=Corvette+Habitation+Module) | 1 | 680,000 units |
+| [Reactor](/items?group=Corvette+Reactor+Module) | 1 | 1,750,000 units |
+| [Main Engine](/items?group=Corvette+Main+Engine) | 1 | 1,000,000 units |
+| [Weapon System](/items?group=Corvette+Weapon+System) | 1 | 1,200,000 units |
 
 Buying everything from the Workshop runs to roughly **7,630,000 Units** minimum. That sounds like a lot, but you don't have to buy everything. Salvaged parts from planets and derelict freighters work just as well and often include rarer modules you couldn't buy anyway.
 
@@ -85,11 +89,11 @@ When you're done, finalize the build. The Corvette gets added to your starship c
 
 ## Which Modules Are Worth Having
 
-**Cockpit.** There are three design styles: Titan, Ambassador, and Thunderbird. They differ in aesthetics and stat weighting. Titan gives the highest Boost percentage. Ambassador is better for Maneuverability. Both are 1,600,000 Units from the Workshop, so pick whichever design you prefer and upgrade later.
+**[Cockpit](/items?group=Corvette+Cockpit).** There are three design styles: Titan, Ambassador, and Thunderbird. They differ in aesthetics and stat weighting. Titan gives the highest Boost percentage. Ambassador is better for Maneuverability. Both are 1,600,000 Units from the Workshop, so pick whichever design you prefer and upgrade later.
 
-**Main Engine.** The best all-around engine is the Arcadia Heavy Booster. It gives the highest Maneuverability and Booster strength. It's not available to buy, so look for it through salvage or trading.
+**[Main Engine](/items?group=Corvette+Main+Engine).** The best all-around engine is the Arcadia Heavy Booster. It gives the highest Maneuverability and Booster strength. It's not available to buy, so look for it through salvage or trading.
 
-**Reactor.** Each reactor type trades off differently:
+**[Reactor](/items?group=Corvette+Reactor+Module).** Each reactor type trades off differently:
 
 | Reactor | Best for |
 |---|---|
@@ -100,11 +104,11 @@ When you're done, finalize the build. The Corvette gets added to your starship c
 
 Pick based on how you play. If you warp frequently, Zenith. If you spend a lot of time in combat or tight spaces, Ceto or Medusa.
 
-**Habitation Modules.** Every Hab gives +3 inventory slots. Walkways give +1 slot. Stack as many as you want up to the 160-part limit. More slots are always worth having.
+**[Habitation Modules](/items?group=Corvette+Habitation+Module).** Every Hab gives +3 inventory slots. Walkways give +1 slot. Stack as many as you want up to the 160-part limit. More slots are always worth having.
 
-**Cargo Hull Attachments.** The only hull attachments with meaningful gameplay impact are Cargo modules. Others are decoration.
+**[Cargo Hull Attachments](/items?group=Corvette+Hull+Attachment).** The only hull attachments with meaningful gameplay impact are Cargo modules. Others are decoration.
 
-**Weapon System.** The Photon Cannon Array is the basic buyable option. Phase Beam and Torpedo Launcher are alternatives depending on combat preference. The choice doesn't affect anything other than combat.
+**[Weapon System](/items?group=Corvette+Weapon+System).** The Photon Cannon Array is the basic buyable option. Phase Beam and Torpedo Launcher are alternatives depending on combat preference. The choice doesn't affect anything other than combat.
 
 ## Upgrading Your Corvette's Class Rating
 
