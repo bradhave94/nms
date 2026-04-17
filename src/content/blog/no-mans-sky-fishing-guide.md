@@ -14,12 +14,16 @@ featured: false
 relatedLinks:
   - label: "All fish items"
     href: "/fish"
+  - label: "Rare fish"
+    href: "/items?group=Rare+Fish"
+  - label: "Legendary fish"
+    href: "/items?group=Legendary+Fish"
   - label: "Cooking recipes"
     href: "/cooking"
   - label: "All food items"
     href: "/food"
-  - label: "Raw materials reference"
-    href: "/raw"
+  - label: "Collected Flotsam"
+    href: "/items?group=Collected+Flotsam"
 faqs:
   - question: "How do I start fishing in No Man's Sky?"
     answer: "Buy the Fishing Rig blueprint from Iteration Eos at the Space Anomaly for 1 Nanite, then craft it using 3 Carbon Nanotubes, 1 Di-hydrogen Jelly, and 60 Chromatic Metal. Install it in your Multi-Tool, find a body of water, and cast your line."
@@ -31,7 +35,7 @@ faqs:
     answer: "Cook them in the Nutrient Processor for stat-boosting food, use them as bait in the Bait Box, release them into water for Nanites, or sell them for units. Legendary fish sell for up to 200,000 units each."
 ---
 
-Fishing was added in the Aquarius update (version 5.10, September 2024) and it works better than you probably expect. There are over 200 fish to catch across seven biomes, four rarity tiers, and a depth system that lets you target the size of fish you want. Here's how to get started and how to actually get good at it.
+Fishing was added in the Aquarius update (version 5.10, September 2024) and it works better than you probably expect. There are over 200 [fish](/fish) to catch across seven biomes, four rarity tiers, and a depth system that lets you target the size of fish you want. Here's how to get started and how to actually get good at it.
 
 ## Getting the Fishing Rig
 
@@ -85,7 +89,7 @@ Six bait recipes unlock when you install your first Fishing Rig. You can also us
 
 One piece of bait equals one guaranteed catch, as long as you don't reel in too early. The diurnal, nocturnal, and storm lures are not particularly useful. You'll naturally catch those fish during the right conditions anyway. Save resources and skip them unless you're specifically chasing the last one or two condition-specific fish for your catalogue.
 
-**Bionic Lure is worth it eventually, but not right away.** The crafting cost is steep (Amino Chambers aren't trivial to source). You'll catch legendary fish with standard Mealworms and Spicy Chum. Save Bionic Lures for when you only need one or two remaining legendaries from a specific biome.
+**Bionic Lure is worth it eventually, but not right away.** The crafting cost is steep (Amino Chambers aren't trivial to source). You'll catch [legendary fish](/items?group=Legendary+Fish) with standard Mealworms and Spicy Chum. Save Bionic Lures for when you only need one or two remaining legendaries from a specific biome.
 
 ## Fish Biomes and Rarities
 
@@ -102,7 +106,7 @@ There are **8 fish categories** in total: 7 biome-specific groups plus a Univers
 | Barren | Dry, barren planets |
 | Mega-Exotic | Exotic or Mega Exotic planets |
 
-Each biome has 21 fish across four rarities (Common, Uncommon, Rare, Legendary), split across small, medium, large, and colossal sizes. The Universal group fills out the catalogue with fish you can catch without needing to hunt down specific planet types.
+Each biome has 21 fish across four rarities ([Common](/items?group=Common+Fish), [Uncommon](/items?group=Uncommon+Fish), [Rare](/items?group=Rare+Fish), [Legendary](/items?group=Legendary+Fish)), split across small, medium, large, and colossal sizes. The Universal group fills out the catalogue with fish you can catch without needing to hunt down specific planet types.
 
 Some fish only appear under specific conditions. The Thunderfin, for example, only spawns during storms. The Whispering Bonefish only appears at night. You don't need to use special bait to find them. Just fish during the right conditions and they'll show up.
 
@@ -112,14 +116,14 @@ Here's a quick look at fish values from the catalogue, going up the rarity chain
 
 | Fish | Rarity | Size | Biome | Sell price |
 |---|---|---|---|---|
-| Stonescale Shark | Common | Colossal | Universal | 5,000 units |
-| Giant Ray | Uncommon | Colossal | Universal | 20,000 units |
-| Thunderfin | Rare | Colossal | Storm / Universal | 50,000 units |
-| Singing Sea-Snail | Legendary | Small | Universal | 50,000 units |
-| Golden Jellyfish | Legendary | Medium | Universal | 100,000 units |
-| Dragonfish | Legendary | Large | Universal | 150,000 units |
-| The Lunker | Legendary | Colossal | Universal | 200,000 units |
-| Blind Titancore | Legendary | Colossal | Lush | 200,000 units |
+| Stonescale Shark | [Common](/items?group=Common+Fish) | Colossal | Universal | 5,000 units |
+| Giant Ray | [Uncommon](/items?group=Uncommon+Fish) | Colossal | Universal | 20,000 units |
+| Thunderfin | [Rare](/items?group=Rare+Fish) | Colossal | Storm / Universal | 50,000 units |
+| Singing Sea-Snail | [Legendary](/items?group=Legendary+Fish) | Small | Universal | 50,000 units |
+| Golden Jellyfish | [Legendary](/items?group=Legendary+Fish) | Medium | Universal | 100,000 units |
+| Dragonfish | [Legendary](/items?group=Legendary+Fish) | Large | Universal | 150,000 units |
+| The Lunker | [Legendary](/items?group=Legendary+Fish) | Colossal | Universal | 200,000 units |
+| Blind Titancore | [Legendary](/items?group=Legendary+Fish) | Colossal | Lush | 200,000 units |
 
 Legendary colossal fish are the top earners at 200,000 units each. For regular selling, rare and legendary universal fish are the most efficient since you can catch them anywhere without hunting a specific biome.
 
@@ -135,11 +139,11 @@ Fish have four uses:
 
 **Cook them.** The Nutrient Processor accepts fish as ingredients and produces seafood dishes. Browse the [cooking recipes](/cooking) page for the full list. Cooked fish provides better stat bonuses than raw fish and is worth more per unit of time.
 
-**Use them as bait.** Any fish can go in the Bait Box. Higher-rarity fish attract better catches when used as bait. This is a way to use duplicates productively.
+**Use them as bait.** Any [fish](/fish) can go in the Bait Box. Higher-rarity fish attract better catches when used as bait. This is a way to use duplicates productively.
 
 **Release them for Nanites.** Stand near water, open the fish in your inventory, and release it. You won't get much per fish, but it's a decent bonus on top of a fishing session.
 
-**Sell them.** Rare and legendary fish sell well. A few legendary colossal fish per session adds up quickly, especially from biome-specific planets where the rare locals have good values.
+**Sell them.** [Rare](/items?group=Rare+Fish) and [legendary fish](/items?group=Legendary+Fish) sell well. A few legendary colossal fish per session adds up quickly, especially from biome-specific planets where the rare locals have good values.
 
 ## A Few Practical Notes
 
@@ -147,7 +151,7 @@ If fish suddenly stop biting mid-session, try flying to a different star system.
 
 Fishing difficulty can be adjusted in custom difficulty settings. At the easiest setting, fish are automatically reeled in after casting.
 
-The Wonders Catalogue tracks your catch history under the Fishing Records tab, including the largest weight recorded for each species. It's the game's built-in checklist if you want to complete a full biome.
+The Wonders Catalogue tracks your catch history under the Fishing Records tab, including the largest weight recorded for each species. It's the game's built-in checklist if you want to complete a full biome. You can also browse the full [fish catalogue](/fish) and [collected flotsam](/items?group=Collected+Flotsam) on the site.
 
 ## Sources
 - [Official Aquarius update notes](https://www.nomanssky.com/2024/09/aquarius-update/)
