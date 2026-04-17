@@ -1,8 +1,8 @@
 ---
 title: "No Man's Sky Corvette Guide: How to Build, Get Parts, and Upgrade"
 description: "How to build a Corvette in No Man's Sky: where to find parts, what to buy first, minimum requirements, best modules, and how to upgrade your class rating."
-pubDate: 2026-04-17
-updatedDate: 2026-04-17
+pubDate: 2025-11-29
+updatedDate: 2025-11-29
 heroImage: "/images/blog/corvette-guide.webp"
 category: "blog"
 tags:
