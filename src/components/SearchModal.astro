@@ -1,6 +1,7 @@
 ---
 
 const filters = [
+	{ id: 'blog', name: 'Blog' },
 	{ id: 'products', name: 'Products' },
 	{ id: 'technology', name: 'Technology' },
 	{ id: 'upgrades', name: 'Upgrades' },
@@ -28,7 +29,7 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 					<path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
 				</svg>
 
-				<input id="search-input" type="text" class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." role="combobox" aria-expanded="false" aria-controls="options" aria-label="Search items" />
+				<input id="search-input" type="text" class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." role="combobox" aria-expanded="false" aria-controls="options" aria-label="Search items and blog posts" />
 				<p class="text-sm px-4">Select Categories</p>
 				<div class="flex flex-wrap gap-2 px-4 pb-4 pt-2">
 					{
@@ -124,7 +125,12 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 		try {
 			const searchDataset = await loadSearchDataset();
 			const filteredResults = searchDataset
-				.filter((result) => result.name.toLowerCase().includes(searchTerm))
+				.filter((result) => {
+					const nameMatch = result.name.toLowerCase().includes(searchTerm);
+					const extra =
+						typeof result.searchText === 'string' ? result.searchText.toLowerCase() : '';
+					return nameMatch || extra.includes(searchTerm);
+				})
 				.slice(0, MAX_RESULTS);
 			const groupedResults = groupBy(filteredResults, 'type');
 
@@ -229,7 +235,7 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 		if (!hasResults) {
 			const emptyState = document.createElement('p');
 			emptyState.className = 'text-gray-300';
-			emptyState.textContent = 'No matching items found.';
+			emptyState.textContent = 'No matching results found.';
 			resultsList.appendChild(emptyState);
 		}
 
