@@ -257,6 +257,12 @@
     @apply my-0;
 }
 
+/* Blog markdown links: global `a { color: inherit; text-decoration: inherit }`
+   would otherwise make body and table links indistinguishable from text. */
+#guide-content a {
+    @apply text-sky-400 underline decoration-sky-400/70 underline-offset-[3px] transition-colors hover:text-sky-300 hover:decoration-sky-300/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400;
+}
+
 /* ── end Blog prose tables ─────────────────────────────────────────────── */
 
 .disclaimer {
