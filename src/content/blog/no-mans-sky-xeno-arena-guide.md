@@ -162,6 +162,3 @@ Unlock companion slots early. Affinity coverage is the whole game, and you can't
 
 ## Sources
 - [Official Xeno Arena patch notes](https://www.nomanssky.com/xeno-arena-update/)
-- Extracted game data (Creatures.json, species affinities and battle eligibility)
-- [All creatures reference](/creatures)
-- [Nanite farming](/blog/best-nanite-farms-no-mans-sky)
