@@ -1,6 +1,6 @@
 ---
 title: "No Man's Sky Galaxies: The Complete Guide"
-description: "Everything to know about galaxies in No Man's Sky — how they work, what changes between them, how to reach the centre, how to travel back, and which ones are actually worth visiting."
+description: "Everything to know about No Man's Sky galaxies — how they work, how to reach the next one, how to travel back, and which ones are worth visiting."
 pubDate: 2026-05-03
 updatedDate: 2026-05-03
 heroImage: "/images/blog/galaxies-guide.webp"
