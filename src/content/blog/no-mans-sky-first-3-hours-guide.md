@@ -1,6 +1,6 @@
 ---
 title: "What to Do in Your First 3 Hours of No Man's Sky"
-description: "New to No Man's Sky and not sure what to do? This guide walks you through exactly what to focus on in your first three hours so you don't waste time or lose momentum."
+description: "New to No Man's Sky? This guide covers exactly what to focus on in your first three hours so you don't waste time or lose momentum."
 pubDate: 2026-05-03
 updatedDate: 2026-05-03
 heroImage: "/images/blog/first-3-hours-guide.webp"
