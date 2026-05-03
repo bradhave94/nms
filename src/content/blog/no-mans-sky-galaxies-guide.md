@@ -103,7 +103,7 @@ This is the most-asked question in galaxy travel and the most-misunderstood.
 
 Repair these with [Repair Kits](/products/REPAIRKIT) or by manually restoring each module's component. Bring more kits than you expect to need. There's nothing worse than landing on a hostile starter planet with a half-broken hazard protection.
 
-**Important nuance:** core technology (the [Hyperdrive](/technology/HYPERDRIVE) itself, [Launch Thruster](/technology), [Pulse Drive](/technology), [Hazard Protection](/technology/PROTECT)) is **not** considered an upgrade module and survives the transition intact. Only modules built into upgrade slots break.
+**Important nuance:** core technology (the [Hyperdrive](/technology/HYPERDRIVE) itself, [Launch Thruster](/technology/LAUNCHER), [Pulse Drive](/technology), [Hazard Protection](/technology/PROTECT)) is **not** considered an upgrade module and survives the transition intact. Only modules built into upgrade slots break.
 
 **Black holes do not damage anything anymore.** That changed with the Waypoint update. Older guides still say otherwise; ignore them. Every black hole jump is now a clean teleport that pushes you closer to the centre.
 
@@ -144,7 +144,7 @@ You arrive in the next galaxy with a forced crash landing on a random planet. Yo
 - Fully charged [Hyperdrive](/technology/HYPERDRIVE). Bring at least one extra [Warp Cell](/products/HYPERFUEL1) for the next galaxy.
 - Stack of [Repair Kits](/products/REPAIRKIT)
 - Spare [Carbon](/raw/FUEL1), [Di-hydrogen](/raw/LAUNCHSUB), [Ferrite Dust](/raw/LAND1) for storm-shelter and ship-repair busywork
-- A [Base Computer](/technology) dropped in your current galaxy if you ever want to teleport back
+- A [Base Computer](/technology/BASE_FLAG) dropped in your current galaxy if you ever want to teleport back
 - Optional: a junk shuttle to take the centre transition damage instead of your main ship
 
 ---
@@ -163,7 +163,7 @@ This skip can be repeated by replaying the Atlas storyline, but it is gated by a
 
 Most guides bury this. The teleporter network ignores galaxy boundaries.
 
-If you have a [Base Computer](/technology) placed in any previous galaxy, you can warp back to it from any base teleporter, anywhere. No centre run required, no tech damage, no repair cycle. The same applies to the Space Anomaly Nexus: any other player's recently visited base shows up in the destination list, regardless of which galaxy it's in.
+If you have a [Base Computer](/technology/BASE_FLAG) placed in any previous galaxy, you can warp back to it from any base teleporter, anywhere. No centre run required, no tech damage, no repair cycle. The same applies to the Space Anomaly Nexus: any other player's recently visited base shows up in the destination list, regardless of which galaxy it's in.
 
 The only requirement is the anchor. Drop a Base Computer in every new galaxy you enter, even if you never build anything else on it. It costs almost nothing, takes thirty seconds, and is the difference between "I can come back" and "I'm starting a centre run."
 
@@ -185,15 +185,19 @@ Norm-type, deep pink core. The first stop for anyone running the galaxy ladder. 
 
 ### Calypso (3)
 
-Norm-type, blue core. Often the third stop on a centre-only run. Also the destination for an early Harsh skip via New Beginnings.
+Harsh-type, medium orchid core. The first Harsh galaxy in the sequence and the destination when you pick Harsh at New Beginnings from Euclid. Expect more extreme biomes and higher Sentinel aggression than the early Norm galaxies.
 
 ### Eissentam (10)
 
 The most popular destination after Euclid. Lush-type, orange core, home to the **Galactic Hub Eissentam** civilization, which is the second-largest player community in No Man's Sky. If you've heard about Hub bases, traveller civilizations, or community projects outside Euclid, they almost all live here. Lush biome odds make it genuinely scenic. The fastest way in is the New Beginnings Lush skip from Euclid.
 
-### Hesperius Dimension (4), Hyades (5), Budullangr (7)
+### Hesperius Dimension (4), Hyades (5)
 
-Norm galaxies that get a fair amount of community traffic, mostly from explorers chasing the count. Empty-type galaxies (like Budullangr's neighbours) appeal to a specific niche of player who likes the quiet.
+Norm galaxies that get a fair amount of community traffic, mostly from explorers chasing the count.
+
+### Budullangr (7)
+
+Empty-type, green core. One of the quieter galaxies on the ladder. Sparse systems, dead-heavy planet rolls, almost no fauna. Appeals to a specific kind of player who likes the solitude. The New Beginnings Empty skip from Euclid (and several galaxies after it) lands here.
 
 ### Iousongola (255)
 
@@ -209,7 +213,7 @@ A few things that make the process less painful.
 
 **Always drop a Base Computer.** Thirty seconds, near-zero materials, full teleporter access forever. Skipping this is the single biggest galaxy-travel mistake.
 
-**Carry [Repair Kits](/products/REPAIRKIT).** Craft them from [Di-hydrogen Jelly](/products/JELLY) and [Metal Plating](/products) before you leave. Bring more than you think you need.
+**Carry [Repair Kits](/products/REPAIRKIT).** Craft them from [Di-hydrogen Jelly](/products/JELLY) and [Metal Plating](/products/CASING) before you leave. Bring more than you think you need.
 
 **Run a junk-ship for transitions.** Keep a cheap shuttle around specifically for centre jumps. Let it eat the upgrade-module damage. Repair it on arrival, switch back to your main ship at the next station.
 
