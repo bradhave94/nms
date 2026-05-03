@@ -259,10 +259,10 @@ Either way, now you know how the system actually works.
 
 ## Sources
 
-- [No Man's Sky Wiki — Galaxy](https://nomanssky.miraheze.org/wiki/Galaxy)
-- [No Man's Sky Wiki — Galaxy Centre](https://nomanssky.miraheze.org/wiki/Galaxy_Centre)
-- [No Man's Sky Wiki — Black Hole](https://nomanssky.miraheze.org/wiki/Black_hole)
-- [No Man's Sky Wiki — Eissentam](https://nomanssky.miraheze.org/wiki/Eissentam)
-- [No Man's Sky Wiki — Hilbert Dimension](https://nomanssky.miraheze.org/wiki/Hilbert_Dimension)
-- [No Man's Sky Wiki — Hyperdrive](https://nomanssky.miraheze.org/wiki/Hyperdrive)
+- [No Man's Sky Wiki — Galaxy](https://nomanssky.fandom.com/wiki/Galaxy)
+- [No Man's Sky Wiki — Galaxy Centre](https://nomanssky.fandom.com/wiki/Galaxy_Centre)
+- [No Man's Sky Wiki — Black Hole](https://nomanssky.fandom.com/wiki/Black_hole)
+- [No Man's Sky Wiki — Eissentam](https://nomanssky.fandom.com/wiki/Eissentam)
+- [No Man's Sky Wiki — Hilbert Dimension](https://nomanssky.fandom.com/wiki/Hilbert_Dimension)
+- [No Man's Sky Wiki — Hyperdrive](https://nomanssky.fandom.com/wiki/Hyperdrive)
 - [Hello Games — No Man's Sky Official Site](https://www.nomanssky.com/)
