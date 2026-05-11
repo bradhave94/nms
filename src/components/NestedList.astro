@@ -26,25 +26,23 @@ const { items, depth = 0, multiplyByParent = true } = Astro.props;
     ? (item.Quantity ?? 1) * (items.Quantity ?? 1)
     : (item.Quantity ?? 1);
   return item.RequiredItems?.length ? (
-    <div class="crafting-tree-node border-l border-gray-600/50 pl-4 ml-2">
+    <div class="crafting-tree-node border-l border-gray-600/50 pl-1 ml-0.5 sm:pl-2 sm:ml-1">
       <Accordion>
-        <div data-index={index} class="flex items-center gap-3 py-1.5" slot="title">
-          <a class="flex items-center gap-3 hover:opacity-90 transition-opacity min-w-0 flex-1" href={getSlug(item.Id)}>
-            <Image
-              src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
-              alt={item.Name}
-              sizes="40px"
-              width={40}
-              height={40}
-              class="shrink-0"
-            />
-            <span class="text-white font-medium truncate flex items-center gap-2">
-              {item.Name}
-              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
-                {quantity.toLocaleString()}
-              </span>
+        <div data-index={index} class="flex items-center gap-2 py-1.5 min-w-0" slot="title">
+          <Image
+            src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
+            alt={item.Name}
+            sizes="(min-width: 640px) 40px, 28px"
+            width={40}
+            height={40}
+            class="shrink-0 w-7 h-7 sm:w-10 sm:h-10"
+          />
+          <span class="min-w-0 flex-1 flex items-center gap-2">
+            <span class="text-white font-medium min-w-0 wrap-break-word sm:truncate">{item.Name}</span>
+            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
+              {quantity.toLocaleString()}
             </span>
-          </a>
+          </span>
         </div>
         <div slot="content">
           <Astro.self items={{ ...item, Quantity: quantity }} depth={depth + 1} />
@@ -54,20 +52,20 @@ const { items, depth = 0, multiplyByParent = true } = Astro.props;
   ) : (
     <a
       href={getSlug(item.Id)}
-      class="crafting-tree-leaf flex items-center gap-3 py-1.5 pl-4 ml-2 border-l-2 border-cyan-500/40 hover:bg-cyan-500/10 transition-colors rounded-r"
+      class="crafting-tree-leaf flex items-center gap-2 py-1.5 pl-1 ml-0.5 sm:pl-2 sm:ml-1 border-l-2 border-cyan-500/40 hover:bg-cyan-500/10 transition-colors rounded-r"
       data-index={index}
     >
       <Image
         src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
         alt={item.Name}
-        sizes="36px"
+        sizes="(min-width: 640px) 36px, 28px"
         width={36}
         height={36}
-        class="shrink-0"
+        class="shrink-0 w-7 h-7 sm:w-9 sm:h-9"
       />
-      <span class="text-cyan-200 font-medium flex items-center gap-2">
-        {item.Name}
-        <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-200/90 tabular-nums" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
+      <span class="min-w-0 flex-1 flex items-center gap-2">
+        <span class="text-cyan-200 font-medium min-w-0 wrap-break-word sm:truncate">{item.Name}</span>
+        <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-200/90 tabular-nums shrink-0" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
           {quantity.toLocaleString()}
         </span>
       </span>
