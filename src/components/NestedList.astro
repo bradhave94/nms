@@ -28,23 +28,21 @@ const { items, depth = 0, multiplyByParent = true } = Astro.props;
   return item.RequiredItems?.length ? (
     <div class="crafting-tree-node border-l border-gray-600/50 pl-4 ml-2">
       <Accordion>
-        <div data-index={index} class="flex items-center gap-3 py-1.5" slot="title">
-          <a class="flex items-center gap-3 hover:opacity-90 transition-opacity min-w-0 flex-1" href={getSlug(item.Id)}>
-            <Image
-              src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
-              alt={item.Name}
-              sizes="40px"
-              width={40}
-              height={40}
-              class="shrink-0"
-            />
-            <span class="text-white font-medium truncate flex items-center gap-2">
-              {item.Name}
-              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
-                {quantity.toLocaleString()}
-              </span>
+        <div data-index={index} class="flex items-center gap-3 py-1.5 min-w-0" slot="title">
+          <Image
+            src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
+            alt={item.Name}
+            sizes="40px"
+            width={40}
+            height={40}
+            class="shrink-0"
+          />
+          <span class="text-white font-medium truncate min-w-0 flex items-center gap-2">
+            {item.Name}
+            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" aria-label={`quantity ${quantity}`} data-quantity={quantity}>
+              {quantity.toLocaleString()}
             </span>
-          </a>
+          </span>
         </div>
         <div slot="content">
           <Astro.self items={{ ...item, Quantity: quantity }} depth={depth + 1} />
