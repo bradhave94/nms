@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
+import UpdateChangesPanel from '@components/UpdateChangesPanel.astro';
+import { getItemUpdateMeta } from '@utils/updateChanges';
 import { SITE } from '@config';
 import { getById, findOutput, findInputFromRefiner, findInputFromCooking, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
@@ -14,6 +16,7 @@ interface Props {
 }
 
 const { item } = Astro.props;
+const itemUpdateMeta = getItemUpdateMeta(item.Id);
 const siteOrigin = (Astro.site ? new URL('/', Astro.site) : new URL('/', Astro.url)).toString().replace(/\/$/, '');
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '').replace(/^cooking\//, 'food/');
@@ -791,6 +794,7 @@ const corvetteAttributes = [
       { name: item.Name },
     ]}
   />
+  {itemUpdateMeta && <UpdateChangesPanel meta={itemUpdateMeta} />}
   <!-- Item details section -->
   <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8 lg:pt-12 lg:py-8 max-w-4xl mx-auto">
     <div class="flex flex-col-reverse items-center">

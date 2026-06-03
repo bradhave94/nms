@@ -15,6 +15,8 @@ import trade from '../datav2/Trade.json';
 import upgrades from '../datav2/Upgrades.json';
 import exocraft from '../datav2/Exocraft.json';
 import starships from '../datav2/Starships.json';
+import corvette from '../datav2/Corvette.json';
+import creaturesData from '../datav2/Creatures.json';
 
 export type RequiredItem = {
 	Id: string;
@@ -120,34 +122,92 @@ const labels = {
 	starships: 'Starships',
 };
 
-const buildSlugFromId = (id: string): string => {
-	const item = getById(id);
-	if (item?.Slug) {
-		const normalizedItemSlug = item.Slug.replace(/^\/?cooking\//, 'food/');
-		return `/${normalizedItemSlug}`.replace(/\/+/g, '/');
-	}
-
-	// Extract the prefix of the item id by splitting the id by its numeric part
-	const prefix = id.split(/\d/)[0] as keyof typeof slugs;
-	const prefixSlug = slugs[prefix] || 'item/';
-	return `/${prefixSlug}${id}`.replace(/\/+/g, '/');
+/** Map extractor SourceFile names to site URL segments (for items without Slug on the payload). */
+const SOURCE_FILE_SEGMENTS: Record<string, string> = {
+	'Buildings.json': 'buildings',
+	'ConstructedTechnology.json': 'technology',
+	'Corvette.json': 'corvette',
+	'Curiosities.json': 'curiosities',
+	'Exocraft.json': 'exocraft',
+	'Fish.json': 'fish',
+	'Food.json': 'food',
+	'NutrientProcessor.json': 'nutrient-processor',
+	'Others.json': 'other',
+	'Products.json': 'products',
+	'RawMaterials.json': 'raw',
+	'Refinery.json': 'refinery',
+	'Starships.json': 'starships',
+	'Technology.json': 'technology',
+	'TechnologyModule.json': 'technology',
+	'Trade.json': 'other',
+	'Upgrades.json': 'upgrades',
 };
 
-type SlugItem = { Id: string; Slug?: string };
+const normalizeSlugPath = (slug: string): string => {
+	const trimmed = slug.replace(/^\/+/, '');
+	// Pet shop eggs use creatures/shop/* slugs in data but render on the arena page (one card per id).
+	if (trimmed.startsWith('creatures/shop/')) {
+		const eggId = trimmed.slice('creatures/shop/'.length);
+		return eggId ? `/creatures/arena#pet-shop-${eggId}` : '/creatures/arena';
+	}
+	const normalized = trimmed.startsWith('cooking/') ? trimmed.replace(/^cooking\//, 'food/') : trimmed;
+	return `/${normalized}`.replace(/\/+/g, '/');
+};
+
+const findNestedItemById = (id: string): Item | undefined => {
+	const creatures = creaturesData as Record<string, unknown>;
+	for (const value of Object.values(creatures)) {
+		if (!Array.isArray(value)) {
+			continue;
+		}
+		const item = value.find(
+			(entry): entry is Item =>
+				typeof entry === 'object' && entry !== null && (entry as Item).Id === id,
+		);
+		if (item) {
+			return item;
+		}
+	}
+	const corvetteItem = corvette.find((entry) => entry.Id === id);
+	return corvetteItem ? (corvetteItem as Item) : undefined;
+};
+
+const buildSlugFromId = (id: string): string | null => {
+	const item = getById(id);
+	if (item?.Slug) {
+		return normalizeSlugPath(item.Slug);
+	}
+
+	const prefix = id.split(/\d/)[0] as keyof typeof slugs;
+	if (prefix in slugs) {
+		return `/${slugs[prefix]}${id}`.replace(/\/+/g, '/');
+	}
+	return null;
+};
+
+type SlugItem = { Id: string; Slug?: string; SourceFile?: string };
 
 const getSlug = (itemOrId: SlugItem | string): string => {
 	if (typeof itemOrId !== 'string') {
 		if (itemOrId.Slug) {
-			const normalizedItemSlug = itemOrId.Slug.replace(/^\/?cooking\//, 'food/');
-			return `/${normalizedItemSlug}`.replace(/\/+/g, '/');
+			return normalizeSlugPath(itemOrId.Slug);
 		}
 		if (itemOrId.Id) {
-			return buildSlugFromId(itemOrId.Id);
+			const segment = itemOrId.SourceFile
+				? SOURCE_FILE_SEGMENTS[itemOrId.SourceFile]
+				: undefined;
+			if (segment) {
+				return `/${segment}/${itemOrId.Id}`;
+			}
+			const fromCatalog = buildSlugFromId(itemOrId.Id);
+			if (fromCatalog) {
+				return fromCatalog;
+			}
 		}
 		return '/item';
 	}
 
-	return buildSlugFromId(itemOrId);
+	return buildSlugFromId(itemOrId) ?? `/item/${itemOrId}`;
 };
 
 type LabelItem = { Id: string; Slug?: string };
@@ -167,6 +227,7 @@ const slugLabels: Record<string, string> = {
 	upgrades: 'Upgrades',
 	exocraft: 'Exocraft',
 	starships: 'Starships',
+	creatures: 'Creatures',
 };
 
 // Returns the label corresponding to an item or id
@@ -299,6 +360,11 @@ const getById = (id: string): Item | undefined => {
 		if (item) {
 			return item as Item;
 		}
+	}
+
+	const nested = findNestedItemById(id);
+	if (nested) {
+		return nested;
 	}
 
 	// If item not found, return undefined

@@ -282,7 +282,10 @@ const breadcrumbs = [
 					const league = leagueById.get(egg.RequiredStat);
 					const statLabel = league?.StatTitle ?? toTitleCase(egg.RequiredStat);
 					return (
-						<article class="flex flex-col rounded-sm border border-sky-800/70 bg-sky-950/40 p-4">
+						<article
+							id={`pet-shop-${egg.Id}`}
+							class="flex flex-col rounded-sm border border-sky-800/70 bg-sky-950/40 p-4 scroll-mt-24"
+						>
 							<div class="mb-3 flex items-start gap-3">
 								<img
 									src={`${IMAGE_BASE}${egg.Icon}`}

@@ -727,7 +727,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Launch Systems B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
 	},
 	{
 		"Id": "B_LND_B",
@@ -800,7 +800,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Launch Systems B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
 	},
 	{
 		"Id": "B_LND_C",
@@ -873,7 +873,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Launch Systems B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
 	},
 	{
 		"Id": "B_LAN_B",
@@ -946,7 +946,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Launch Systems B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
 	},
 	{
 		"Id": "B_WNG_A",
@@ -1019,7 +1019,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_A_R",
@@ -1092,7 +1092,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_B",
@@ -1165,7 +1165,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Launch Systems B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
 	},
 	{
 		"Id": "B_WNG_B_R",
@@ -1238,7 +1238,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Launch Systems B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Launch Thrusters. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: launch efficiency and speed."
 	},
 	{
 		"Id": "B_WNG_C",
@@ -1311,7 +1311,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_C_R",
@@ -1384,7 +1384,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_D",
@@ -1457,7 +1457,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_D_R",
@@ -1530,7 +1530,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_E",
@@ -1743,7 +1743,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_F_R",
@@ -1816,7 +1816,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_G",
@@ -2029,7 +2029,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_H_R",
@@ -2102,7 +2102,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_I",
@@ -2595,7 +2595,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_L_R",
@@ -2668,7 +2668,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_M",
@@ -2881,7 +2881,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_N_R",
@@ -2954,7 +2954,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_O_0",
@@ -3462,7 +3462,7 @@
 		"IsCraftable": true,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_P_R",
@@ -3550,7 +3550,7 @@
 		"IsCraftable": true,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_P_T",
@@ -3638,7 +3638,7 @@
 		"IsCraftable": true,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_P_B",
@@ -3726,7 +3726,7 @@
 		"IsCraftable": true,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_WNG_Q",
@@ -4309,7 +4309,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Photon Cannon array A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Photon Cannon. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Photon Cannon. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage, fire rate and overheat times."
 	},
 	{
 		"Id": "B_TUR_B",
@@ -4397,7 +4397,7 @@
 		"IsCraftable": true,
 		"BuildableShipTechName": "Positron Ejector array A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Positron Ejector. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Positron Ejector. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times."
 	},
 	{
 		"Id": "B_TUR_C",
@@ -4470,7 +4470,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Laser Defence Array A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Phase Beam. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Phase Beam. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, and overheat tolerance."
 	},
 	{
 		"Id": "B_TUR_D",
@@ -4543,7 +4543,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Cyclotron defence array A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Cyclotron Ballista. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Cyclotron Ballista. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times."
 	},
 	{
 		"Id": "B_TUR_E",
@@ -4616,7 +4616,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Infra-Knife Accelerator array A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Infra-Knife Accelerator. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Infra-Knife Accelerator. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times."
 	},
 	{
 		"Id": "B_TUR_F",
@@ -4689,7 +4689,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Infra-Knife Accelerator array A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Infra-Knife Accelerator. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Infra-Knife Accelerator. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: damage output, fire rate and overheat times."
 	},
 	{
 		"Id": "B_SHL_A",
@@ -4762,7 +4762,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Shielding System B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
 	},
 	{
 		"Id": "B_SHL_B",
@@ -4835,7 +4835,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Shielding System B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
 	},
 	{
 		"Id": "B_SHL_C",
@@ -4908,7 +4908,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Shielding System B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
 	},
 	{
 		"Id": "B_SHL_D",
@@ -4981,7 +4981,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Shielding System B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
 	},
 	{
 		"Id": "B_SHL_E",
@@ -5069,7 +5069,7 @@
 		"IsCraftable": true,
 		"BuildableShipTechName": "Shielding System B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Defensive Shielding. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nSignificantly improves ship strength for increased combat endurance."
 	},
 	{
 		"Id": "B_TRU_A",
@@ -5142,7 +5142,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_TRU_B",
@@ -5215,7 +5215,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_TRU_C",
@@ -5288,7 +5288,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_TRU_D",
@@ -5361,7 +5361,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_TRU_E",
@@ -5434,7 +5434,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_TRU_F",
@@ -5507,7 +5507,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_TRU_G",
@@ -5580,7 +5580,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_TRU_H",
@@ -5653,7 +5653,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Main Engines B-Class Upgrade",
 		"BuildableShipTechGroup": "B-Class Upgrade",
-		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
+		"BuildableShipTechDescription": "A significant upgrade for the Starship Pulse Engine. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: starship manoeuvrability and speed."
 	},
 	{
 		"Id": "B_ALK_A",
@@ -41760,7 +41760,7 @@
 		"IsCraftable": false,
 		"BuildableShipTechName": "Warp Core A-Class Upgrade",
 		"BuildableShipTechGroup": "A-Class Upgrade",
-		"BuildableShipTechDescription": "An extremely powerful upgrade for the Hyperdrive. Use FE_ALT1 to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance."
+		"BuildableShipTechDescription": "An extremely powerful upgrade for the Hyperdrive. Use [E] to begin upgrade installation process.\n\nThe module is flexible, and exact upgrade statistics are unknown until installation is complete.\n\nPotential improvements include: warp-drive efficiency and jump distance."
 	},
 	{
 		"Id": "B_GEN_1",

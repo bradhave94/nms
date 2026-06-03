@@ -1,0 +1,104 @@
+---
+import type { ItemUpdateMeta } from '@utils/updateChanges';
+import { getUpdateDiffRows } from '@utils/updateChanges';
+
+interface Props {
+	meta: ItemUpdateMeta;
+}
+
+const { meta } = Astro.props;
+const diffRows = getUpdateDiffRows(meta);
+const hasDiff = diffRows.length > 0;
+const versionLabel = meta.versionLabel;
+const previousLabel = meta.previousVersionLabel;
+---
+
+{
+	meta.kind === 'added' ? (
+		<div class="mb-6 mt-6 rounded-md border border-emerald-700/60 bg-emerald-950/40 px-4 py-3 text-sm text-emerald-100">
+			<p class="m-0 font-semibold">New in update {versionLabel}</p>
+			<p class="m-0 mt-1 text-emerald-200/80">
+				This item was added compared to {previousLabel}.
+			</p>
+		</div>
+	) : (
+		<div
+			id="update-changes-panel"
+			class="update-changes-panel mb-6 mt-6 rounded-md border border-amber-700/60 bg-amber-950/35 text-sm text-amber-50"
+			data-has-diff={hasDiff ? '1' : '0'}
+		>
+			<div class="px-4 py-3">
+				<p class="m-0 font-semibold">Updated in {versionLabel}</p>
+				<p class="m-0 mt-1 text-amber-100/80">
+					Changed since {previousLabel}.
+					{hasDiff ? (
+						<>
+							{' '}
+							<button
+								type="button"
+								class="update-changes-toggle ml-1 underline hover:text-white"
+							>
+								Show what changed
+							</button>
+						</>
+					) : (
+						<> Data was refreshed for this patch; no player-facing text fields changed.</>
+					)}
+				</p>
+			</div>
+			{hasDiff && (
+				<div class="update-changes-detail hidden border-t border-amber-800/60 px-4 py-3">
+					<table class="w-full border-collapse text-left text-xs sm:text-sm">
+						<thead>
+							<tr class="text-amber-200/90">
+								<th class="pb-2 pr-3 font-semibold">Field</th>
+								<th class="pb-2 pr-3 font-semibold">Before ({previousLabel})</th>
+								<th class="pb-2 font-semibold">After ({versionLabel})</th>
+							</tr>
+						</thead>
+						<tbody>
+							{diffRows.map((row) => (
+								<tr class="border-t border-amber-900/50 align-top">
+									<td class="py-2 pr-3 font-medium text-amber-100">{row.field}</td>
+									<td class="py-2 pr-3 text-amber-100/70 whitespace-pre-wrap">{row.before}</td>
+									<td class="py-2 text-white whitespace-pre-wrap">{row.after}</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+			)}
+		</div>
+	)
+}
+
+<script>
+	const panel = document.getElementById('update-changes-panel');
+	if (!panel) {
+		// Panel not rendered (added-item banner only).
+	} else {
+		const detail = panel.querySelector('.update-changes-detail');
+		const toggle = panel.querySelector('.update-changes-toggle');
+		const expand = () => detail?.classList.remove('hidden');
+		const collapse = () => detail?.classList.add('hidden');
+
+		if (new URLSearchParams(window.location.search).has('show_changes')) {
+			expand();
+		}
+
+		toggle?.addEventListener('click', () => {
+			if (detail?.classList.contains('hidden')) {
+				expand();
+			} else {
+				collapse();
+			}
+		});
+	}
+</script>
+
+<style>
+	.update-changes-panel:target .update-changes-detail,
+	.update-changes-panel[data-force-open='1'] .update-changes-detail {
+		display: block;
+	}
+</style>
