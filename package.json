@@ -27,7 +27,7 @@
 		"@types/react": "^19.2.16",
 		"@types/react-dom": "^19.2.3",
 		"@vercel/analytics": "^2.0.1",
-		"astro": "^6.4.2",
+		"astro": "^6.1.10",
 		"react": "^19.2.7",
 		"react-dom": "^19.2.7",
 		"tabulator-tables": "^6.4.0",
