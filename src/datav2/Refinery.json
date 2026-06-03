@@ -8274,5 +8274,23 @@
 		"Time": "60.0",
 		"Operation": "Chromatic Alchemy",
 		"Slug": "refinery/REFINERECIPE_398"
+	},
+	{
+		"Id": "REFINERECIPE_399",
+		"Inputs": [
+			{
+				"Id": "SWARMDUST",
+				"Name": "Corrupted Ichor",
+				"Quantity": 5
+			}
+		],
+		"Output": {
+			"Id": "TECHFRAG",
+			"Name": "Nanite Cluster",
+			"Quantity": 1
+		},
+		"Time": "90.0",
+		"Operation": "Devitrification",
+		"Slug": "refinery/REFINERECIPE_399"
 	}
 ]

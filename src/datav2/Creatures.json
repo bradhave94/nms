@@ -255,31 +255,22 @@
 			"PredatorModifier": "Normal",
 			"HerbivoreModifier": "Normal",
 			"EggType": "DEFAULT",
-			"CanBeUsedInBattle": true,
-			"BattleForcedAffinityRaw": "Normal",
+			"CanBeUsedInBattle": false,
+			"BattleForcedAffinityRaw": null,
 			"BattlePetTag": "None",
-			"BattleSwellOnAttack": false,
-			"BattleFlyerExtraOffset": 0.0,
+			"BattleSwellOnAttack": null,
+			"BattleFlyerExtraOffset": null,
 			"MoveSets": null,
-			"BattleForcedAffinity": "Cold",
-			"BattleForcedAffinityDisplay": "Frost",
-			"BattleAffinityIcon": "biomes--stats.planet.cold.png",
-			"BattleAffinityIconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.cold.dds",
-			"BattleAffinitySource": "ManualGuess",
-			"BattleAffinityReason": "Species-level heuristic guess for Normal affinity",
+			"BattleForcedAffinity": null,
+			"BattleForcedAffinityDisplay": null,
+			"BattleAffinityIcon": null,
+			"BattleAffinityIconPath": null,
+			"BattleAffinitySource": null,
+			"BattleAffinityReason": null,
 			"Icon": "SHARK.png",
-			"IconPath": "textures/ui/frontend/icons/pets/biomes/stats.planet.cold.dds",
+			"IconPath": "textures/ui/hud/icons/creatureinteraction.dds",
 			"ModelScenePath": "MODELS/PLANETS/CREATURES/SHARKRIG/SHARK.SCENE.MBIN",
 			"ExtraModelScenePath": null,
-			"PotentialMoveSets": [
-				"BASIC",
-				"DOT_BOMBER",
-				"OFF_HEALER",
-				"FAST_RAMPER",
-				"QUICK_STRIKER",
-				"TANKISH"
-			],
-			"MoveSetSource": "GlobalPool",
 			"Slug": "creatures/SHARK"
 		},
 		{
@@ -638,7 +629,7 @@
 			"MaxScale": 3.0,
 			"PredatorModifier": "Low",
 			"HerbivoreModifier": "Normal",
-			"EggType": "DEFAULT",
+			"EggType": "ROBO",
 			"CanBeUsedInBattle": true,
 			"BattleForcedAffinityRaw": "Mech",
 			"BattlePetTag": "5251072",
@@ -7743,7 +7734,7 @@
 				},
 				{
 					"Type": "Product",
-					"ProductId": "CHART_PB_CHALNX",
+					"ProductId": "CHART_PB_CHALL",
 					"Amount": 1,
 					"Chance": 100.0
 				},
@@ -7998,23 +7989,11 @@
 			"IncrementStat": null,
 			"Items": [
 				{
-					"Type": "Mission",
+					"Type": "MissionSeeded",
 					"Chance": 100.0
 				}
 			],
 			"Slug": "creatures/rewards/R_PB_INV_CHALL"
-		},
-		{
-			"Id": "R_PB_INV_CHALNX",
-			"RewardChoice": "GiveAll",
-			"IncrementStat": null,
-			"Items": [
-				{
-					"Type": "Mission",
-					"Chance": 100.0
-				}
-			],
-			"Slug": "creatures/rewards/R_PB_INV_CHALNX"
 		},
 		{
 			"Id": "R_PB_INV_CHAMP",
@@ -8022,7 +8001,7 @@
 			"IncrementStat": null,
 			"Items": [
 				{
-					"Type": "Mission",
+					"Type": "MissionSeeded",
 					"Chance": 100.0
 				}
 			],
@@ -8109,7 +8088,7 @@
 			"Name": "Aeron Crab Egg",
 			"Group": "Shellseeker Companion",
 			"Description": "A living, fertile egg, ready to hatch!\n\nLaid by a soft-skinned crustacean, this species has evolved a synergistic relationship with Travellers, occupying the discarded shells of slain Sentinel Quadrupeds.\n\nScans indicate the being within has the genetic potential to be shy and migratory.",
-			"IconPath": "textures/ui/frontend/icons/products/product.creatureegg.dds",
+			"IconPath": "textures/ui/frontend/icons/products/product.2026.hermitcrabpet.dds",
 			"LinkedRewardID": "R_PB_MEDAL_EGG1",
 			"RequiredStat": "PB_BOSS_WINS",
 			"RequiredStatTier": 10,
@@ -8123,9 +8102,9 @@
 			"Name": "Wandering Shrimp Tank Egg",
 			"Group": "Liquid-Suspended Consciousness",
 			"Description": "A metal 'egg' capsule, ready to hatch!\n\nPart robotic, part organic, part liquid. The primitive anatomy of this creature's conscious organ belies a deep, calculating intelligence.\n\nScans indicate the being within has the genetic potential to be focused and strategic.",
-			"IconPath": "textures/ui/frontend/icons/products/product.creaturerobotegg.dds",
+			"IconPath": "textures/ui/frontend/icons/products/product.2026.fishbowl3pet.dds",
 			"LinkedRewardID": "R_PB_MEDAL_EGG2",
-			"RequiredStat": "PB_WINS",
+			"RequiredStat": "PB_D_NEXUS",
 			"RequiredStatTier": 10,
 			"Price": 0,
 			"Slug": "creatures/shop/SPEC_PB_EGG02"
@@ -8137,7 +8116,7 @@
 			"Name": "Boundary Horror Egg",
 			"Group": "Spectral Anomaly",
 			"Description": "A living, fertile egg, ready to hatch!\n\nIt wails, sleepless.\n\nScans indicate the being within has the genetic potential to be haunting and adrift.",
-			"IconPath": "textures/ui/frontend/icons/products/product.creatureegg.dds",
+			"IconPath": "textures/ui/frontend/icons/products/product.2026.landsquidpet.dds",
 			"LinkedRewardID": "R_PB_MEDAL_EGG3",
 			"RequiredStat": "PB_PETS_MAXED",
 			"RequiredStatTier": 10,
@@ -8151,7 +8130,7 @@
 			"Name": "Corrupted Quad Egg",
 			"Group": "Sentinel Spawn Capsule",
 			"Description": "A metal 'egg' capsule, ready to hatch!\n\nThe shell crackles with an electronic energy; mutated by Atlantideum, neutralised by [ redacted ].\n\nScans indicate the being within is programmed to be tireless and gLaSs.",
-			"IconPath": "textures/ui/frontend/icons/products/product.creaturerobotegg.dds",
+			"IconPath": "textures/ui/frontend/icons/products/product.2026.spiderquadpet.dds",
 			"LinkedRewardID": "R_PB_MEDAL_EGG4",
 			"RequiredStat": "EGGS_HATCHED",
 			"RequiredStatTier": 10,
@@ -8165,9 +8144,9 @@
 			"Name": "Geno-prawn Egg",
 			"Group": "Abyssal Horror",
 			"Description": "A living, fertile egg, ready to hatch!\n\nThe serpentine foetus stares directly through the membrane of its egg. It watches. It waits.\n\nScans indicate the being within has the genetic potential to be unblinking and slithering.",
-			"IconPath": "textures/ui/frontend/icons/products/product.creatureegg.dds",
+			"IconPath": "textures/ui/frontend/icons/products/product.2026.horrorpet.dds",
 			"LinkedRewardID": "R_PB_MEDAL_EGG5",
-			"RequiredStat": "PB_D_NEXUS",
+			"RequiredStat": "PB_WINS",
 			"RequiredStatTier": 10,
 			"Price": 0,
 			"Slug": "creatures/shop/SPEC_PB_EGG05"
