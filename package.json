@@ -3,8 +3,9 @@
 	"type": "module",
 	"version": "6.2.0",
 	"private": true,
+	"packageManager": "pnpm@11.0.9",
 	"engines": {
-		"node": "^20.19.1 || >=22.12.0"
+		"node": ">=22.12.0"
 	},
 	"scripts": {
 		"dev": "astro dev",
@@ -15,11 +16,11 @@
 		"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --max-warnings 0",
 		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix",
 		"type-check": "tsc --noEmit",
-		"check": "npm run type-check",
-		"check:all": "npm run type-check && npm run lint"
+		"check": "pnpm run type-check",
+		"check:all": "pnpm run type-check && pnpm run lint"
 	},
 	"dependencies": {
-		"@astrojs/react": "^5.0.6",
+		"@astrojs/react": "^5.0.7",
 		"@astrojs/sitemap": "^3.7.3",
 		"@headlessui/react": "^2.2.10",
 		"@heroicons/react": "^2.2.0",
@@ -27,9 +28,10 @@
 		"@types/react": "^19.2.16",
 		"@types/react-dom": "^19.2.3",
 		"@vercel/analytics": "^2.0.1",
-		"astro": "^6.4.2",
+		"astro": "^6.4.3",
 		"react": "^19.2.7",
 		"react-dom": "^19.2.7",
+		"sharp": "^0.34.5",
 		"tabulator-tables": "^6.4.0",
 		"tailwindcss": "^4.3.0"
 	},

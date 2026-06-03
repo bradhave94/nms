@@ -4,7 +4,7 @@
     {
       "label": "TypeScript: Check All Files",
       "type": "shell",
-      "command": "npm run type-check",
+      "command": "pnpm run type-check",
       "problemMatcher": "$tsc",
       "group": {
         "kind": "build",
@@ -18,7 +18,7 @@
     {
       "label": "TypeScript: Watch Mode",
       "type": "shell",
-      "command": "npx tsc --noEmit --watch",
+      "command": "pnpm exec tsc --noEmit --watch",
       "problemMatcher": "$tsc-watch",
       "isBackground": true,
       "group": "build",
