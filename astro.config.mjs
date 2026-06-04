@@ -42,6 +42,9 @@ export default defineConfig({
     }),
     sitemap({
       filter: shouldIncludeInSitemap,
+      lastmod: new Date(),
+      changefreq: 'weekly',
+      priority: 0.7,
     })
   ],
   vite: {
