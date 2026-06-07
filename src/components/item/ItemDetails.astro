@@ -1,0 +1,365 @@
+---
+import { Image } from 'astro:assets';
+import { getSlug } from '@utils/lookup.js';
+import { formatStatName, formatStatRange } from '@utils/itemFormatters';
+import type { HowToIngredient } from '@utils/itemPageSchema';
+import credit from '../../assets/img/credits.png';
+import { SITE } from '@config';
+
+interface Props {
+  item: {
+    Name: string;
+    Icon: string;
+    Group?: string;
+    BaseValueUnits?: number;
+    Description?: string;
+  };
+  answerSummary: string;
+  formattedBaseValueUnits: string;
+  showBlueprintCost: boolean;
+  blueprintCost: number;
+  blueprintCostType?: string;
+  blueprintIcon?: string;
+  isCorvettePage: boolean;
+  corvetteAttributes: Array<{ label: string; value: string }>;
+  shipTechId?: string;
+  shipTechName?: string;
+  shipTechItemName?: string;
+  deploysIntoId?: string;
+  deploysIntoItemName?: string;
+  acquisitionPills: Array<{ label: string; value: string }>;
+  isFoodItem: boolean;
+  foodEffectCategory?: string;
+  foodEffectLines: string[];
+  foodChancePercent?: string;
+  isBuildingPage: boolean;
+  buildingPlacementPills: Array<{ label: string; value: string }>;
+  isExocraftPage: boolean;
+  exocraftPills: Array<{ label: string; value: string }>;
+  isFishPage: boolean;
+  fishingTimeLabel?: string;
+  showSunIcon: boolean;
+  showMoonIcon: boolean;
+  fishSize?: string;
+  fishQuality?: string;
+  biomeLabel?: string;
+  needsStorm?: boolean;
+  missionLabel?: string;
+  catchChancePercent?: string;
+  plantGrowTime?: string;
+  growTimeHeader: string;
+  showStatsSection: boolean;
+  upgradeStatsMin?: number;
+  upgradeStatsMax?: number;
+  upgradeStats: Array<{ name: string; image: string; min?: number; max?: number }>;
+  recipeIngredients: HowToIngredient[];
+  recipeToolName: string;
+  recipeOutputQuantity: number;
+  showQuantityInput: boolean;
+  imageBaseUrl: string;
+}
+
+const {
+  item,
+  answerSummary,
+  formattedBaseValueUnits,
+  showBlueprintCost,
+  blueprintCost,
+  blueprintCostType,
+  blueprintIcon,
+  isCorvettePage,
+  corvetteAttributes,
+  shipTechId,
+  shipTechName,
+  shipTechItemName,
+  deploysIntoId,
+  deploysIntoItemName,
+  acquisitionPills,
+  isFoodItem,
+  foodEffectCategory,
+  foodEffectLines,
+  foodChancePercent,
+  isBuildingPage,
+  buildingPlacementPills,
+  isExocraftPage,
+  exocraftPills,
+  isFishPage,
+  fishingTimeLabel,
+  showSunIcon,
+  showMoonIcon,
+  fishSize,
+  fishQuality,
+  biomeLabel,
+  needsStorm,
+  missionLabel,
+  catchChancePercent,
+  plantGrowTime,
+  growTimeHeader,
+  showStatsSection,
+  upgradeStatsMin,
+  upgradeStatsMax,
+  upgradeStats,
+  recipeIngredients,
+  recipeToolName,
+  recipeOutputQuantity,
+  showQuantityInput,
+  imageBaseUrl,
+} = Astro.props;
+---
+
+<!-- Item details section -->
+<div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8 lg:pt-12 lg:py-8 max-w-4xl mx-auto">
+  <div class="flex flex-col-reverse items-center">
+    <Image
+      src={`${imageBaseUrl}${item.Icon}`}
+      alt={item.Name}
+      sizes="256px"
+      width={256}
+      height={256}
+    />
+  </div>
+  <div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
+    <h1 class="text-4xl m-0 ">{item.Name}</h1>
+    {item.Group && (
+      <a
+        href={`/items?group=${encodeURIComponent(item.Group)}`}
+        class="mt-2 block w-fit rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200 hover:bg-gray-600 hover:text-cyan-100 transition-colors"
+      >
+        {item.Group}
+      </a>
+    )}
+    {item.BaseValueUnits > 1 && (
+      <p class="flex items-center gap-2 pt-2">
+        {formattedBaseValueUnits}
+        <Image
+          src={credit}
+          alt="Credits"
+          sizes="25px"
+          width={25}
+          height={25}
+        />
+      </p>
+    )}
+
+    <p class="item-summary m-0 lg:text-lg pt-4 text-gray-300">
+      {answerSummary}
+    </p>
+
+    <p class="mt-2 text-sm text-gray-500">
+      Last updated: {SITE.version_date}
+    </p>
+
+    {showBlueprintCost && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <img
+            src={blueprintIcon}
+            alt="Blueprint Cost"
+            class="h-4 w-4"
+            loading="lazy"
+          />
+          <span>
+            Blueprint Cost: {blueprintCost.toLocaleString()}
+            {blueprintCostType && blueprintCostType !== 'None' ? ` ${blueprintCostType}` : ''}
+          </span>
+        </p>
+      </div>
+    )}
+
+    {isCorvettePage && corvetteAttributes.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {corvetteAttributes.map((attribute) => (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            {attribute.label}: {attribute.value}
+          </p>
+        ))}
+      </div>
+    )}
+
+    {isCorvettePage && shipTechId && (
+      <div class="mt-4">
+        <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          Ship Tech:
+          <a href={getSlug(shipTechId)} class="text-cyan-300 hover:text-cyan-200">
+            {shipTechName ?? shipTechItemName ?? shipTechId}
+          </a>
+        </p>
+      </div>
+    )}
+
+    {deploysIntoId && (
+      <div class="mt-4">
+        <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          Installs as:
+          <a href={getSlug(deploysIntoId)} class="text-cyan-300 hover:text-cyan-200">
+            {deploysIntoItemName ?? deploysIntoId}
+          </a>
+        </p>
+      </div>
+    )}
+
+    {acquisitionPills.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {acquisitionPills.map((pill) => (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            {pill.label}: {pill.value}
+          </p>
+        ))}
+      </div>
+    )}
+
+    {isFoodItem && (foodEffectCategory || foodEffectLines.length > 0) && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {foodEffectCategory && (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            Effect: {foodEffectCategory}
+          </p>
+        )}
+        {foodEffectLines.map((effect) => (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{effect}</p>
+        ))}
+        {foodChancePercent && (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{foodChancePercent}</p>
+        )}
+      </div>
+    )}
+
+    {isBuildingPage && buildingPlacementPills.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {buildingPlacementPills.map((pill) => (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            {pill.label}: {pill.value}
+          </p>
+        ))}
+      </div>
+    )}
+
+    {isExocraftPage && exocraftPills.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {exocraftPills.map((pill) => (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            {pill.label}: {pill.value}
+          </p>
+        ))}
+      </div>
+    )}
+
+    {isFishPage && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {fishingTimeLabel && (
+          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            {showSunIcon && (
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
+                <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+                <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              </svg>
+            )}
+            {showMoonIcon && (
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
+                <path d="M20.5 14.8A8.5 8.5 0 1 1 9.2 3.5a7 7 0 1 0 11.3 11.3z" fill="currentColor"></path>
+              </svg>
+            )}
+            <span>Time: {fishingTimeLabel}</span>
+          </p>
+        )}
+
+        {fishSize && (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            Size: {fishSize}
+          </p>
+        )}
+
+        {fishQuality && (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            Quality: {fishQuality}
+          </p>
+        )}
+
+        {biomeLabel && (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            Biomes: {biomeLabel}
+          </p>
+        )}
+
+        {needsStorm && (
+          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
+              <path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 6.2 8.5 3.5 3.5 0 0 0 7 18z" fill="currentColor"></path>
+              <path d="M12 12l-2 4h2l-1 4 4-6h-2l1-2z" fill="#0b0b0b"></path>
+            </svg>
+            <span>Storm Required</span>
+          </p>
+        )}
+
+        {missionLabel && (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            Mission: {missionLabel}
+          </p>
+        )}
+
+        {catchChancePercent && (
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            Catch Chance: {catchChancePercent}
+          </p>
+        )}
+      </div>
+    )}
+
+    {plantGrowTime && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          {growTimeHeader}: {plantGrowTime}
+        </p>
+      </div>
+    )}
+
+    {showStatsSection && (
+      <div class="mt-6">
+        <h2 class="mb-3 text-center text-2xl text-gray-200">
+          Stats
+          {(typeof upgradeStatsMin === 'number' && typeof upgradeStatsMax === 'number') && (
+            <span class="ml-2 text-lg text-gray-300">(Min: {upgradeStatsMin}, Max: {upgradeStatsMax})</span>
+          )}
+        </h2>
+        <div class="grid gap-3 md:grid-cols-2">
+          {upgradeStats.map((stat) => (
+            <div class="rounded-sm bg-slate-500/40 px-4 py-3">
+              <p class="text-lg text-gray-100">{formatStatName(stat.name)}</p>
+              <p class="text-sm text-cyan-200">{formatStatRange(stat.name, stat.min, stat.max)}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {isFoodItem && recipeIngredients.length > 0 && (
+      <div class="mt-6 rounded-lg border border-gray-700/60 bg-gray-900/80 p-4">
+        <h2 class="mb-3 text-center text-xl text-gray-200">Recipe Steps</h2>
+        <ol class="m-0 list-decimal space-y-3 pl-5 text-gray-300">
+          <li id="recipe-step-1">
+            Gather {recipeIngredients.map((ingredient) => `${ingredient.Name} (x${ingredient.Quantity})`).join(', ')}.
+          </li>
+          <li id="recipe-step-2">
+            Combine the ingredients in {recipeToolName} to cook {item.Name}
+            {recipeOutputQuantity > 1 ? ` (x${recipeOutputQuantity})` : ''}.
+          </li>
+        </ol>
+      </div>
+    )}
+
+    {showQuantityInput && (
+      <div class="sm:flex items-center mb-4 gap-4 mt-4 lg:sticky lg:top-4 lg:z-10 lg:py-2 lg:-mx-2 lg:px-2 lg:bg-gray-800/95 lg:rounded-sm">
+        <label for="quantity">Quantity</label>
+        <input
+          id="quantity"
+          class="quantity bg-black border-blue-500 max-w-full w-24 text-white"
+          name="quantity"
+          type="number"
+          min="1"
+          max="999999"
+          value="1"
+        />
+      </div>
+    )}
+  </div>
+</div>

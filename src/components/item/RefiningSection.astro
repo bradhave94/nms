@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import Accordion from '@components/Accordion.astro';
+import NestedList from '@components/NestedList.astro';
+import { formatRefineryTime } from '@utils/itemFormatters';
+import type { UsedInItem } from '@utils/recipeTree';
+
+interface Props {
+  item: { Name: string };
+  outputRefined: UsedInItem[];
+  imageBaseUrl: string;
+}
+
+const { item, outputRefined, imageBaseUrl } = Astro.props;
+---
+
+<!-- Refining section -->
+{outputRefined.length > 0 && (
+  <div id="refining" class="border-t border-gray-600/60 py-6">
+    <h2 class="relative mb-3 text-center">
+      <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
+        How to refine {item.Name}
+      </span>
+    </h2>
+
+    <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+      {outputRefined.map((outputItem) => (
+        <div class="min-w-0 rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
+            <Accordion>
+              <div class="flex items-center gap-3" slot="title">
+                <Image
+                  src={`${imageBaseUrl}${outputItem.Icon}`}
+                  alt={outputItem.Name}
+                  sizes="40px"
+                  width={40}
+                  height={40}
+                  class="shrink-0"
+                />
+                <span class="text-white font-medium truncate flex items-center gap-2">
+                  {outputItem.Name}
+                  <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
+                </span>
+              </div>
+              <div slot="content">
+                {(outputItem.Operation || outputItem.Time) && (
+                  <div class="mb-3 flex flex-wrap gap-2 px-2">
+                    {outputItem.Operation && (
+                      <span class="rounded-sm bg-gray-700 px-2 py-1 text-xs text-cyan-200">
+                        {outputItem.Operation}
+                      </span>
+                    )}
+                    {outputItem.Time && (
+                      <span class="rounded-sm bg-gray-700 px-2 py-1 text-xs text-cyan-200">
+                        Time: {formatRefineryTime(outputItem.Time)}
+                      </span>
+                    )}
+                  </div>
+                )}
+                {outputItem.RequiredItems?.length > 0 && <NestedList items={outputItem} multiplyByParent={false} />}
+              </div>
+            </Accordion>
+          </div>
+      ))}
+    </div>
+  </div>
+)}

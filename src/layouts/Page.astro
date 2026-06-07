@@ -1,15 +1,29 @@
 ---
-import { Image } from 'astro:assets';
-import Accordion from '@components/Accordion.astro';
-import NestedList from '@components/NestedList.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import UpdateChangesPanel from '@components/UpdateChangesPanel.astro';
+import ItemDetails from '@components/item/ItemDetails.astro';
+import CraftingSection from '@components/item/CraftingSection.astro';
+import RefiningSection from '@components/item/RefiningSection.astro';
+import CookingSection from '@components/item/CookingSection.astro';
+import RefinedToCreate from '@components/item/RefinedToCreate.astro';
+import CookedToCreate from '@components/item/CookedToCreate.astro';
+import UsedToCreate from '@components/item/UsedToCreate.astro';
+import ItemFaq from '@components/item/ItemFaq.astro';
 import { getItemUpdateMeta } from '@utils/updateChanges';
 import { getById, findOutput, findInputFromRefiner, findInputFromCooking, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import { getGrowTimeHeader, getPlantGrowTime } from '@utils/plantGrowTime.js';
+import {
+  createArray,
+  getOutputs,
+  groupByOutput,
+  type RecipeOutput,
+  type RecipeInput,
+  type UsedInItem,
+} from '@utils/recipeTree';
+import { formatSignedPercent, formatFoodEffectStats } from '@utils/itemFormatters';
+import { buildItemPageSchema } from '@utils/itemPageSchema';
 import refinery from '@datav2/Refinery.json';
-import credit from '../assets/img/credits.png';
 import { SITE } from '@config';
 
 // Define the props interface
@@ -143,187 +157,6 @@ type ExocraftLikeItem = Item & {
   EconomyInfluenceMultiplier?: number;
 };
 
-type ProcessedItem = {
-  Id: string;
-  fishId?: string;
-  Name: string;
-  Icon: string;
-  Colour: string;
-  Quantity: number;
-  RequiredItems: ProcessedItem[];
-};
-
-type RawItem = {
-  Id: string;
-  Name: string;
-  Icon: string;
-  Colour?: string;
-  Group?: string;
-  Quantity: number;
-};
-
-// Function to create an array of required items
-const createArray = (
-  item: Item,
-  num = 1,
-  visited = new Set<string>()
-): { array: ProcessedItem[]; rawItems: RawItem[] } => {
-  // Prevent infinite recursion
-  if (visited.has(item.Id)) {
-    return { array: [], rawItems: [] };
-  }
-  visited.add(item.Id);
-
-  const array: ProcessedItem[] = [];
-  const rawItemsMap = new Map<string, RawItem>();
-
-  const collectRawItems = (item: Item, multiplier = 1, itemVisited = new Set<string>()) => {
-    if (!item.RequiredItems?.length) {
-      // This is a raw item - always count it, don't add to visited
-      const key = item.Id;
-      if (rawItemsMap.has(key)) {
-        const existingItem = rawItemsMap.get(key);
-        if (!existingItem) return;
-        existingItem.Quantity += multiplier;
-      } else {
-        rawItemsMap.set(key, {
-          Id: item.Id,
-          Name: item.Name,
-          Icon: item.Icon,
-          Colour: item.Colour,
-          Group: item.Group,
-          Quantity: multiplier,
-        });
-      }
-      return;
-    }
-
-    // For non-raw items, prevent infinite recursion
-    if (itemVisited.has(item.Id)) {
-      return;
-    }
-    itemVisited.add(item.Id);
-
-    // Recursively collect raw items from children
-    for (const reqItem of item.RequiredItems) {
-      const itemData = getById(reqItem.Id);
-      if (!itemData) continue;
-      collectRawItems(itemData, reqItem.Quantity * multiplier, itemVisited);
-    }
-  };
-
-  // First pass: collect raw items
-  for (const requiredItem of item.RequiredItems || []) {
-    const itemData = getById(requiredItem.Id);
-    if (!itemData) continue;
-    collectRawItems(itemData, requiredItem.Quantity * num);
-  }
-
-  // Second pass: build the tree structure
-  for (const requiredItem of item.RequiredItems || []) {
-    const itemData = getById(requiredItem.Id);
-    if (!itemData) continue;
-
-    array.push({
-      Id: itemData.Id,
-      Name: itemData.Name,
-      Icon: itemData.Icon,
-      Colour: itemData.Colour,
-      Quantity: requiredItem.Quantity,
-      RequiredItems: itemData.RequiredItems?.length
-        ? createArray(itemData, requiredItem.Quantity, new Set([...visited])).array.map(i => ({...i}))
-        : [],
-    });
-  }
-
-  return {
-    array,
-    rawItems: Array.from(rawItemsMap.values())
-  };
-};
-
-type IOItem = { Id: string; Quantity: number };
-type RecipeOutput = { Id?: string; Slug?: string; Operation?: string; Time?: string; Output?: IOItem; Inputs?: IOItem[] };
-type RecipeInput = { Output?: IOItem; Inputs?: IOItem[] };
-type UsedInItem = {
-  Id: string;
-  Icon: string;
-  Name: string;
-  Quantity: number;
-  RequiredItems: RawItem[];
-  Operation?: string;
-  Time?: string;
-};
-type HowToIngredient = {
-  Id: string;
-  Name: string;
-  Quantity: number;
-};
-type JsonLdObject = Record<string, unknown>;
-type HowToMethodAction = 'craft' | 'refine' | 'cook';
-type HowToMethod = {
-  action: HowToMethodAction;
-  tool: string;
-  outputQuantity: number;
-  ingredients: HowToIngredient[];
-};
-
-// Function to get output items
-const getOutputs = (recipe: RecipeOutput): UsedInItem | undefined => {
-  if (!recipe.Inputs?.length) return undefined;
-  const RequiredItems: RawItem[] = [];
-  for (const element of recipe.Inputs) {
-    const i = getById(element.Id);
-    if (!i) continue;
-    RequiredItems.push({
-      Id: i.Id,
-      Icon: i.Icon,
-      Name: i.Name,
-      Group: i.Group,
-      Quantity: element.Quantity,
-    });
-  }
-
-  return {
-    Id: item.Id,
-    Icon: item.Icon,
-    Name: item.Name,
-    Quantity: recipe.Output?.Quantity ?? 1,
-    RequiredItems: RequiredItems,
-  };
-};
-
-// Function to get input items
-const getInputs = (item: RecipeInput[]): UsedInItem[] => {
-  const results: UsedInItem[] = [];
-  for (const recipe of item) {
-    if (!recipe.Output || !recipe.Inputs) continue;
-    const outputItem = getById(recipe.Output.Id);
-    if (!outputItem) continue;
-    const requiredItems: RawItem[] = [];
-    for (const input of recipe.Inputs) {
-      const inputItem = getById(input.Id);
-      if (!inputItem) continue;
-      requiredItems.push({
-        Id: inputItem.Id,
-        Icon: inputItem.Icon,
-        Name: inputItem.Name,
-        Group: inputItem.Group,
-        Quantity: input.Quantity
-      });
-    }
-
-    results.push({
-      Id: recipe.Output.Id,
-      Icon: outputItem.Icon,
-      Name: outputItem.Name,
-      Quantity: recipe.Output.Quantity,
-      RequiredItems: requiredItems
-    });
-  }
-  return results;
-};
-
 // Prepare data for rendering
 const { array: requiredItems, rawItems } = createArray(item);
 
@@ -342,7 +175,7 @@ const outputRecipes = findOutput(item.Id) as unknown as RecipeOutput[];
 const outputRefined: UsedInItem[] = [];
 const outputCooked: UsedInItem[] = [];
 for (const entry of outputRecipes) {
-  const mapped = getOutputs(entry);
+  const mapped = getOutputs(item, entry);
   if (!mapped) continue;
   if (entry.Operation) mapped.Operation = entry.Operation;
   if (entry.Time) mapped.Time = entry.Time;
@@ -355,28 +188,10 @@ for (const entry of outputRecipes) {
 }
 outputRefined.sort((a, b) => (b.Quantity ?? 0) - (a.Quantity ?? 0));
 outputCooked.sort((a, b) => (b.Quantity ?? 0) - (a.Quantity ?? 0));
-// Group by output item - all recipes for same output under one heading
-type RecipeRow = { inputs: RawItem[]; outputQuantity: number };
-type GroupedUsedIn = UsedInItem & { recipes: RecipeRow[] };
+
 type DeferredUsedInInput = { href: string; icon: string; name: string; quantity: number };
 type DeferredUsedInRecipe = { outputQuantity: number; inputs: DeferredUsedInInput[] };
 type DeferredUsedInItem = { href: string; icon: string; name: string; ways: number; recipes: DeferredUsedInRecipe[] };
-
-const groupByOutput = (inputData: RecipeInput[]) => {
-  const inputRaw = getInputs(inputData);
-  return Object.values(
-    inputRaw.reduce<Record<string, GroupedUsedIn>>((acc, usedIn) => {
-      const key = usedIn.Id;
-      if (!acc[key]) {
-        acc[key] = { ...usedIn, recipes: [] };
-      }
-      if (usedIn.RequiredItems.length > 0) {
-        acc[key].recipes.push({ inputs: usedIn.RequiredItems, outputQuantity: usedIn.Quantity });
-      }
-      return acc;
-    }, {})
-  ).filter((g) => g.recipes.length > 0);
-};
 
 type RefineryEntry = {
   Id: string;
@@ -394,18 +209,6 @@ const getRefineryMetaForRecipe = (outputId: string): { operation?: string; time?
   );
   if (!recipe) return undefined;
   return { operation: recipe.Operation, time: recipe.Time };
-};
-
-const formatRefineryTime = (time?: string): string | undefined => {
-  if (!time) return undefined;
-  const seconds = Number.parseFloat(time);
-  if (!Number.isFinite(seconds) || seconds <= 0) return time;
-  if (seconds >= 60) {
-    const minutes = Math.floor(seconds / 60);
-    const remainder = Math.round(seconds % 60);
-    return remainder > 0 ? `${minutes}m ${remainder}s` : `${minutes}m`;
-  }
-  return `${Math.round(seconds)}s`;
 };
 
 const groupedInputRefined = groupByOutput(findInputFromRefiner(item.Id) as unknown as RecipeInput[]).map(
@@ -495,275 +298,29 @@ const catchChancePercent =
 const plantGrowTime = getPlantGrowTime(item.Id);
 const growTimeHeader = getGrowTimeHeader();
 
-const toHowToIngredients = (inputs: IOItem[]): HowToIngredient[] =>
-  inputs.reduce<HowToIngredient[]>((acc, input) => {
-    const ingredient = getById(input.Id);
-    if (!ingredient) return acc;
-    acc.push({ Id: input.Id, Name: ingredient.Name, Quantity: input.Quantity });
-    return acc;
-  }, []);
-
-const howToMethods: HowToMethod[] = [];
-const craftingHowToIngredients = toHowToIngredients(item.RequiredItems ?? []);
-if (craftingHowToIngredients.length > 0) {
-  howToMethods.push({
-    action: isFoodItem ? 'cook' : 'craft',
-    tool: isFoodItem ? 'Nutrient Processor' : 'Crafting Menu',
-    outputQuantity: 1,
-    ingredients: craftingHowToIngredients,
-  });
-}
-
-for (const recipe of outputRecipes) {
-  if (!recipe.Inputs?.length) continue;
-  const ingredients = toHowToIngredients(recipe.Inputs);
-  if (ingredients.length === 0) continue;
-  const isCookingRecipe = recipe.Slug?.startsWith('nutrient-processor/');
-  howToMethods.push({
-    action: isCookingRecipe ? 'cook' : 'refine',
-    tool: isCookingRecipe ? 'Nutrient Processor' : 'Refiner',
-    outputQuantity: recipe.Output?.Quantity ?? 1,
-    ingredients,
-  });
-}
-
-const seenHowToMethodKeys = new Set<string>();
-const uniqueHowToMethods = howToMethods.filter((method) => {
-  const ingredientSignature = method.ingredients
-    .map((ingredient) => `${ingredient.Id}:${ingredient.Quantity}`)
-    .join('|');
-  const methodKey = `${method.action}:${method.tool}:${method.outputQuantity}:${ingredientSignature}`;
-  if (seenHowToMethodKeys.has(methodKey)) return false;
-  seenHowToMethodKeys.add(methodKey);
-  return true;
+const {
+  faqQuestions,
+  answerSummary,
+  itemPageStructuredDataJson,
+  recipeIngredients,
+  recipeToolName,
+  recipeOutputQuantity,
+} = buildItemPageSchema({
+  item,
+  categoryName,
+  categorySingular,
+  categoryUrl,
+  siteOrigin,
+  canonicalUrl,
+  itemImageUrl,
+  isFoodItem,
+  outputRecipes,
+  rawItems,
+  dataLength: data.length,
+  outputRefinedLength: outputRefined.length,
+  outputCookedLength: outputCooked.length,
 });
 
-const limitedHowToMethods = uniqueHowToMethods.slice(0, 5);
-const seenHowToNames = new Set<string>();
-const howToEntries = limitedHowToMethods.map((method, methodIndex) => {
-  const ingredientText = method.ingredients.map((ingredient) => `${ingredient.Name} x${ingredient.Quantity}`).join(', ');
-  const mainIngredient = method.ingredients[0]?.Name ?? item.Name;
-  const actionLabel = method.action.charAt(0).toUpperCase() + method.action.slice(1);
-  let howToName = `How to ${method.action} ${item.Name} from ${mainIngredient}`;
-  if (seenHowToNames.has(howToName)) {
-    howToName = `${howToName} (Method ${methodIndex + 1})`;
-  }
-  seenHowToNames.add(howToName);
-
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: howToName,
-    description: `Learn how to ${method.action} ${item.Name} in No Man's Sky`,
-    step: [
-      {
-        '@type': 'HowToStep',
-        name: 'Gather materials',
-        text: `Collect ${ingredientText}.`,
-      },
-      {
-        '@type': 'HowToStep',
-        name: `${actionLabel} the item`,
-        text: `Use ${method.tool} to ${method.action} ${item.Name} from ${ingredientText}${method.outputQuantity > 1 ? ` to produce x${method.outputQuantity}.` : '.'}`,
-      },
-    ],
-    supply: method.ingredients.map((ingredient) => ({
-      '@type': 'HowToSupply',
-      name: ingredient.Name,
-    })),
-    tool: [
-      {
-        '@type': 'HowToTool',
-        name: method.tool,
-      },
-    ],
-  };
-});
-
-const howToSchema =
-  howToEntries.length === 0
-    ? undefined
-    : howToEntries.length === 1
-      ? howToEntries[0]
-      : howToEntries;
-const breadcrumbSchema: JsonLdObject = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  '@id': `${canonicalUrl}#breadcrumb`,
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: `${siteOrigin}/`,
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: categoryName,
-      item: categoryUrl,
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: item.Name,
-      item: canonicalUrl,
-    },
-  ],
-};
-const itemPageSchema: JsonLdObject = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemPage',
-  '@id': `${canonicalUrl}#webpage`,
-  url: canonicalUrl,
-  name: `${item.Name} | No Man's Sky Recipes`,
-  description: item.Description,
-  isPartOf: { '@id': `${siteOrigin}#website` },
-  breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
-  primaryImageOfPage: {
-    '@type': 'ImageObject',
-    url: itemImageUrl,
-  },
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    cssSelector: ['.item-summary'],
-  },
-  mainEntity: {
-    '@type': 'Thing',
-    '@id': `${canonicalUrl}#item`,
-    identifier: item.Id,
-    name: item.Name,
-    description: item.Description,
-    image: itemImageUrl,
-    url: canonicalUrl,
-  },
-};
-
-// AEO: Answer-first summary, FAQ schema, Recipe schema
-const primaryMethod = uniqueHowToMethods[0];
-const ingredientList =
-  primaryMethod?.ingredients.map((i) => `${i.Name} x${i.Quantity}`).join(', ') ??
-  rawItems.map((r) => `${r.Name} x${r.Quantity}`).join(', ');
-const toolName = primaryMethod?.tool ?? (isFoodItem ? 'Nutrient Processor' : 'Refiner');
-const answerSummary =
-  data.length > 0 || outputRefined.length > 0 || outputCooked.length > 0
-    ? item.Description
-      ? `${item.Name} is a ${categorySingular} in No Man's Sky. ${(item.Description as string).trim()} To craft it, combine ${ingredientList} in a ${toolName}.`
-      : `${item.Name} is a ${categorySingular} in No Man's Sky. To craft it, combine ${ingredientList} in a ${toolName}.`
-    : item.Description
-      ? `${item.Name} is a ${categorySingular} in No Man's Sky. ${item.Description}`
-      : `${item.Name} is a ${categorySingular} in No Man's Sky.`;
-
-const faqQuestions: { question: string; answer: string }[] = [];
-if (data.length > 0 || outputRefined.length > 0 || outputCooked.length > 0) {
-  faqQuestions.push({
-    question: `How do I craft ${item.Name} in No Man's Sky?`,
-    answer: `To craft ${item.Name}, you need ${ingredientList}. Use the ${toolName} to combine them.`,
-  });
-  faqQuestions.push({
-    question: `What ingredients do I need for ${item.Name}?`,
-    answer: `You need: ${ingredientList}.`,
-  });
-} else {
-  faqQuestions.push({
-    question: `What is ${item.Name} in No Man's Sky?`,
-    answer: item.Description ? `${item.Description}` : `${item.Name} is a ${categoryName.toLowerCase()} item in No Man's Sky.`,
-  });
-}
-const faqSchema: JsonLdObject = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqQuestions.map((q) => ({
-    '@type': 'Question',
-    name: q.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: q.answer,
-    },
-  })),
-};
-
-let recipeSchema: JsonLdObject | undefined;
-const recipeIngredients = craftingHowToIngredients.length > 0
-  ? craftingHowToIngredients
-  : uniqueHowToMethods.find((m) => m.action === 'cook')?.ingredients ?? [];
-const cookingRecipeMethod = uniqueHowToMethods.find((method) => method.action === 'cook');
-const recipeSourceMethod = cookingRecipeMethod ?? uniqueHowToMethods[0];
-const recipeOutputQuantity = recipeSourceMethod?.outputQuantity ?? 1;
-const recipeToolName = recipeSourceMethod?.tool ?? 'Nutrient Processor';
-const recipePrepMinutes = Math.max(1, Math.min(30, recipeIngredients.length * 2));
-const recipeCookMinutes = Math.max(1, Math.min(15, Math.ceil(recipeIngredients.length / 2)));
-const recipeKeywords = Array.from(
-  new Set(
-    [
-      "No Man's Sky",
-      "No Man's Sky recipes",
-      'Nutrient Processor',
-      item.Name,
-      item.Group,
-      categoryName,
-    ].filter((keyword): keyword is string => Boolean(keyword))
-  )
-).join(', ');
-if (isFoodItem && recipeIngredients.length > 0) {
-  const ingredientSentence = recipeIngredients.map((ingredient) => `${ingredient.Name} (x${ingredient.Quantity})`).join(', ');
-  recipeSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Recipe',
-    name: item.Name,
-    description: item.Description ?? `How to cook ${item.Name} in No Man's Sky`,
-    url: canonicalUrl,
-    mainEntityOfPage: canonicalUrl,
-    image: itemImageUrl,
-    author: {
-      '@type': 'Organization',
-      name: "No Man's Sky Recipes",
-    },
-    recipeCategory: item.Group || 'Food',
-    recipeCuisine: "No Man's Sky",
-    keywords: recipeKeywords,
-    prepTime: `PT${recipePrepMinutes}M`,
-    cookTime: `PT${recipeCookMinutes}M`,
-    totalTime: `PT${recipePrepMinutes + recipeCookMinutes}M`,
-    nutrition: {
-      '@type': 'NutritionInformation',
-      servingSize: `${recipeOutputQuantity} in-game item${recipeOutputQuantity > 1 ? 's' : ''}`,
-    },
-    recipeIngredient: recipeIngredients.map((i) => `${i.Name} x${i.Quantity}`),
-    recipeInstructions: [
-      {
-        '@type': 'HowToStep',
-        name: 'Gather ingredients',
-        text: `Gather ${ingredientSentence}.`,
-        url: `${canonicalUrl}#recipe-step-1`,
-        image: itemImageUrl,
-      },
-      {
-        '@type': 'HowToStep',
-        name: `Cook in ${recipeToolName}`,
-        text: `Combine the ingredients in ${recipeToolName} to cook ${item.Name}${recipeOutputQuantity > 1 ? ` (x${recipeOutputQuantity}).` : '.'}`,
-        url: `${canonicalUrl}#recipe-step-2`,
-        image: itemImageUrl,
-      },
-    ],
-    recipeYield: recipeOutputQuantity.toString(),
-  };
-}
-
-const itemPageStructuredData: JsonLdObject[] = [breadcrumbSchema, itemPageSchema, faqSchema];
-if (howToSchema) {
-  if (Array.isArray(howToSchema)) {
-    itemPageStructuredData.push(...howToSchema);
-  } else {
-    itemPageStructuredData.push(howToSchema);
-  }
-}
-if (recipeSchema) {
-  itemPageStructuredData.push(recipeSchema);
-}
-const itemPageStructuredDataJson = JSON.stringify(itemPageStructuredData).replace(/</g, '\\u003c');
-
-const formatSignedPercent = (value: number): string => `${value >= 0 ? '+' : ''}${(value * 100).toLocaleString()}%`;
 const pinObjectiveLabel =
   exocraftItem.PinObjective === 'UI_FIND_BUY_OBJ'
     ? 'Find and Buy'
@@ -812,42 +369,6 @@ const statBonuses = (upgradeItem.StatBonuses ?? []).map((stat) => {
 
 const upgradeStats = statLevels.length > 0 ? statLevels : statBonuses;
 
-const formatStatName = (name: string): string =>
-  name
-    .replace(/^Weapon /, '')
-    .replace(/^Suit /, '')
-    .replace(/^Ship /, '')
-    .replace(/^Vehicle /, '')
-    .replace(/^Jetpack /, '')
-    .replace(/\bDiscovery\b/g, 'Analysis')
-    .replace(/\bCreature\b/g, 'Fauna')
-    .replace(/\bFlora\b/g, 'Flora')
-    .replace(/\bMineral\b/g, 'Mineral');
-
-const formatStatRange = (name: string, min?: number, max?: number): string => {
-  if (typeof min !== 'number' && typeof max !== 'number') return 'Varies';
-  const safeMin = min ?? max ?? 0;
-  const safeMax = max ?? min ?? 0;
-  const lowerName = name.toLowerCase();
-  const isDiscoveryLike =
-    lowerName.includes('discovery') ||
-    lowerName.includes('analysis rewards') ||
-    lowerName.includes('analysis reward');
-  const isMultiplierLike = safeMin >= 0 && safeMin <= 3 && safeMax >= 0 && safeMax <= 3;
-  const usePercent = isDiscoveryLike || isMultiplierLike;
-
-  if (!usePercent) {
-    return `${safeMin.toLocaleString()} => ${safeMax.toLocaleString()}`;
-  }
-
-  const toPercent = (value: number): number => {
-    if (isDiscoveryLike) return value * 100;
-    return (value - 1) * 100;
-  };
-
-  return `${toPercent(safeMin).toLocaleString()}% => ${toPercent(safeMax).toLocaleString()}%`;
-};
-
 const corvetteAttributes = [
   { label: 'Category', value: corvetteItem.CorvettePartCategory },
   { label: 'Rarity', value: corvetteItem.Rarity },
@@ -867,40 +388,6 @@ const shipTechId =
     ? corvetteItem.BuildableShipTechID
     : undefined;
 const shipTechItem = shipTechId ? getById(shipTechId) : undefined;
-
-const formatFoodEffectStats = (
-  stats: Record<string, unknown> | null | undefined
-): string[] => {
-  if (!stats) return [];
-  const effects: string[] = [];
-  if (typeof stats.LifeSupportRechargeAmount === 'number') {
-    effects.push(`Life Support +${stats.LifeSupportRechargeAmount} recharge`);
-  }
-  if (typeof stats.HazardProtectionRechargeAmount === 'number') {
-    effects.push(`Hazard Protection +${stats.HazardProtectionRechargeAmount} recharge`);
-  }
-  const healthMin = stats['GcRewardHealth.AmountMin'];
-  const healthMax = stats['GcRewardHealth.AmountMax'];
-  if (typeof healthMin === 'number' || typeof healthMax === 'number') {
-    const min = typeof healthMin === 'number' ? healthMin : healthMax;
-    const max = typeof healthMax === 'number' ? healthMax : healthMin;
-    effects.push(min === max ? `Health +${min}` : `Health +${min}–${max}`);
-  }
-  const moneyMin = stats['GcRewardMoney.AmountMin'];
-  const moneyMax = stats['GcRewardMoney.AmountMax'];
-  if (typeof moneyMin === 'number' || typeof moneyMax === 'number') {
-    const min = typeof moneyMin === 'number' ? moneyMin : moneyMax;
-    const max = typeof moneyMax === 'number' ? moneyMax : moneyMin;
-    effects.push(min === max ? `Units +${min.toLocaleString()}` : `Units +${min.toLocaleString()}–${max.toLocaleString()}`);
-  }
-  if (typeof stats['GcRewardFreeStamina.Duration'] === 'number') {
-    effects.push(`Stamina boost ${stats['GcRewardFreeStamina.Duration']}s`);
-  }
-  if (typeof stats['GcRewardJetpackBoost.Duration'] === 'number') {
-    effects.push(`Jetpack boost ${stats['GcRewardJetpackBoost.Duration']}s`);
-  }
-  return effects;
-};
 
 const foodEffectLines = formatFoodEffectStats(foodItem.RewardEffectStats);
 const foodChancePercent =
@@ -975,865 +462,97 @@ const imageBaseUrl = SITE.imageBaseUrl;
       ))}
     </nav>
   )}
-  <!-- Item details section -->
-  <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8 lg:pt-12 lg:py-8 max-w-4xl mx-auto">
-    <div class="flex flex-col-reverse items-center">
-      <Image
-        src={`${imageBaseUrl}${item.Icon}`}
-        alt={item.Name}
-        sizes="256px"
-        width={256}
-        height={256}
-      />
-    </div>
-    <div class="mt-10 col-span-2 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-      <h1 class="text-4xl m-0 ">{item.Name}</h1>
-      {item.Group && (
-        <a
-          href={`/items?group=${encodeURIComponent(item.Group)}`}
-          class="mt-2 block w-fit rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200 hover:bg-gray-600 hover:text-cyan-100 transition-colors"
-        >
-          {item.Group}
-        </a>
-      )}
-      {item.BaseValueUnits > 1 && (
-        <p class="flex items-center gap-2 pt-2">
-          {formattedBaseValueUnits}
-          <Image
-            src={credit}
-            alt="Credits"
-            sizes="25px"
-            width={25}
-            height={25}
-          />
-        </p>
-      )}
+  <ItemDetails
+    item={item}
+    answerSummary={answerSummary}
+    formattedBaseValueUnits={formattedBaseValueUnits}
+    showBlueprintCost={showBlueprintCost}
+    blueprintCost={blueprintCost}
+    blueprintCostType={blueprintCostType}
+    blueprintIcon={blueprintIcon}
+    isCorvettePage={isCorvettePage}
+    corvetteAttributes={corvetteAttributes}
+    shipTechId={shipTechId}
+    shipTechName={corvetteItem.BuildableShipTechName}
+    shipTechItemName={shipTechItem?.Name}
+    deploysIntoId={deploysIntoId}
+    deploysIntoItemName={deploysIntoItem?.Name}
+    acquisitionPills={acquisitionPills}
+    isFoodItem={isFoodItem}
+    foodEffectCategory={foodItem.EffectCategory}
+    foodEffectLines={foodEffectLines}
+    foodChancePercent={foodChancePercent}
+    isBuildingPage={isBuildingPage}
+    buildingPlacementPills={buildingPlacementPills}
+    isExocraftPage={isExocraftPage}
+    exocraftPills={exocraftPills}
+    isFishPage={isFishPage}
+    fishingTimeLabel={fishItem.FishingTime ? fishingTimeLabel : undefined}
+    showSunIcon={showSunIcon}
+    showMoonIcon={showMoonIcon}
+    fishSize={fishItem.FishSize}
+    fishQuality={fishItem.Quality}
+    biomeLabel={biomeLabel}
+    needsStorm={fishItem.NeedsStorm}
+    missionLabel={missionLabel}
+    catchChancePercent={catchChancePercent}
+    plantGrowTime={plantGrowTime}
+    growTimeHeader={growTimeHeader}
+    showStatsSection={showStatsSection}
+    upgradeStatsMin={upgradeStatsMin}
+    upgradeStatsMax={upgradeStatsMax}
+    upgradeStats={upgradeStats}
+    recipeIngredients={recipeIngredients}
+    recipeToolName={recipeToolName}
+    recipeOutputQuantity={recipeOutputQuantity}
+    showQuantityInput={showQuantityInput}
+    imageBaseUrl={imageBaseUrl}
+  />
 
-      <p class="item-summary m-0 lg:text-lg pt-4 text-gray-300">
-        {answerSummary}
-      </p>
+  <CraftingSection
+    item={item}
+    data={data}
+    rawItems={rawItems}
+    isFoodItem={isFoodItem}
+    outputRefinedLength={outputRefined.length}
+    outputCookedLength={outputCooked.length}
+    imageBaseUrl={imageBaseUrl}
+  />
 
-      <p class="mt-2 text-sm text-gray-500">
-        Last updated: {SITE.version_date}
-      </p>
+  <RefiningSection
+    item={item}
+    outputRefined={outputRefined}
+    imageBaseUrl={imageBaseUrl}
+  />
 
-      {showBlueprintCost && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-            <img
-              src={blueprintIcon}
-              alt="Blueprint Cost"
-              class="h-4 w-4"
-              loading="lazy"
-            />
-            <span>
-              Blueprint Cost: {blueprintCost.toLocaleString()}
-              {blueprintCostType && blueprintCostType !== 'None' ? ` ${blueprintCostType}` : ''}
-            </span>
-          </p>
-        </div>
-      )}
+  <CookingSection
+    item={item}
+    outputCooked={outputCooked}
+    imageBaseUrl={imageBaseUrl}
+  />
 
-      {isCorvettePage && corvetteAttributes.length > 0 && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          {corvetteAttributes.map((attribute) => (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              {attribute.label}: {attribute.value}
-            </p>
-          ))}
-        </div>
-      )}
+  <RefinedToCreate
+    item={item}
+    groupedInputRefined={groupedInputRefined}
+    imageBaseUrl={imageBaseUrl}
+  />
 
-      {isCorvettePage && shipTechId && (
-        <div class="mt-4">
-          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-            Ship Tech:
-            <a href={getSlug(shipTechId)} class="text-cyan-300 hover:text-cyan-200">
-              {corvetteItem.BuildableShipTechName ?? shipTechItem?.Name ?? shipTechId}
-            </a>
-          </p>
-        </div>
-      )}
+  <CookedToCreate
+    item={item}
+    groupedInputCooked={groupedInputCooked}
+    imageBaseUrl={imageBaseUrl}
+  />
 
-      {deploysIntoId && (
-        <div class="mt-4">
-          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-            Installs as:
-            <a href={getSlug(deploysIntoId)} class="text-cyan-300 hover:text-cyan-200">
-              {deploysIntoItem?.Name ?? deploysIntoId}
-            </a>
-          </p>
-        </div>
-      )}
+  <UsedToCreate
+    item={item}
+    groupedInputCrafting={groupedInputCrafting}
+    initialUsedInCrafting={initialUsedInCrafting}
+    deferredUsedInCrafting={deferredUsedInCrafting}
+    deferredUsedInCraftingJson={deferredUsedInCraftingJson}
+    imageBaseUrl={imageBaseUrl}
+  />
 
-      {acquisitionPills.length > 0 && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          {acquisitionPills.map((pill) => (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              {pill.label}: {pill.value}
-            </p>
-          ))}
-        </div>
-      )}
-
-      {isFoodItem && (foodItem.EffectCategory || foodEffectLines.length > 0) && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          {foodItem.EffectCategory && (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              Effect: {foodItem.EffectCategory}
-            </p>
-          )}
-          {foodEffectLines.map((effect) => (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{effect}</p>
-          ))}
-          {foodChancePercent && (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{foodChancePercent}</p>
-          )}
-        </div>
-      )}
-
-      {isBuildingPage && buildingPlacementPills.length > 0 && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          {buildingPlacementPills.map((pill) => (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              {pill.label}: {pill.value}
-            </p>
-          ))}
-        </div>
-      )}
-
-      {isExocraftPage && exocraftPills.length > 0 && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          {exocraftPills.map((pill) => (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              {pill.label}: {pill.value}
-            </p>
-          ))}
-        </div>
-      )}
-
-      {isFishPage && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          {fishItem.FishingTime && (
-            <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              {showSunIcon && (
-                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
-                  <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
-                  <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-                </svg>
-              )}
-              {showMoonIcon && (
-                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
-                  <path d="M20.5 14.8A8.5 8.5 0 1 1 9.2 3.5a7 7 0 1 0 11.3 11.3z" fill="currentColor"></path>
-                </svg>
-              )}
-              <span>Time: {fishingTimeLabel}</span>
-            </p>
-          )}
-
-          {fishItem.FishSize && (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              Size: {fishItem.FishSize}
-            </p>
-          )}
-
-          {fishItem.Quality && (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              Quality: {fishItem.Quality}
-            </p>
-          )}
-
-          {biomeLabel && (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              Biomes: {biomeLabel}
-            </p>
-          )}
-
-          {fishItem.NeedsStorm && (
-            <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
-                <path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 6.2 8.5 3.5 3.5 0 0 0 7 18z" fill="currentColor"></path>
-                <path d="M12 12l-2 4h2l-1 4 4-6h-2l1-2z" fill="#0b0b0b"></path>
-              </svg>
-              <span>Storm Required</span>
-            </p>
-          )}
-
-          {missionLabel && (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              Mission: {missionLabel}
-            </p>
-          )}
-
-          {catchChancePercent && (
-            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-              Catch Chance: {catchChancePercent}
-            </p>
-          )}
-        </div>
-      )}
-
-      {plantGrowTime && (
-        <div class="mt-4 flex flex-wrap gap-2">
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
-            {growTimeHeader}: {plantGrowTime}
-          </p>
-        </div>
-      )}
-
-      {showStatsSection && (
-        <div class="mt-6">
-          <h2 class="mb-3 text-center text-2xl text-gray-200">
-            Stats
-            {(typeof upgradeStatsMin === 'number' && typeof upgradeStatsMax === 'number') && (
-              <span class="ml-2 text-lg text-gray-300">(Min: {upgradeStatsMin}, Max: {upgradeStatsMax})</span>
-            )}
-          </h2>
-          <div class="grid gap-3 md:grid-cols-2">
-            {upgradeStats.map((stat) => (
-              <div class="rounded-sm bg-slate-500/40 px-4 py-3">
-                <p class="text-lg text-gray-100">{formatStatName(stat.name)}</p>
-                <p class="text-sm text-cyan-200">{formatStatRange(stat.name, stat.min, stat.max)}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {isFoodItem && recipeIngredients.length > 0 && (
-        <div class="mt-6 rounded-lg border border-gray-700/60 bg-gray-900/80 p-4">
-          <h2 class="mb-3 text-center text-xl text-gray-200">Recipe Steps</h2>
-          <ol class="m-0 list-decimal space-y-3 pl-5 text-gray-300">
-            <li id="recipe-step-1">
-              Gather {recipeIngredients.map((ingredient) => `${ingredient.Name} (x${ingredient.Quantity})`).join(', ')}.
-            </li>
-            <li id="recipe-step-2">
-              Combine the ingredients in {recipeToolName} to cook {item.Name}
-              {recipeOutputQuantity > 1 ? ` (x${recipeOutputQuantity})` : ''}.
-            </li>
-          </ol>
-        </div>
-      )}
-
-      {showQuantityInput && (
-        <div class="sm:flex items-center mb-4 gap-4 mt-4 lg:sticky lg:top-4 lg:z-10 lg:py-2 lg:-mx-2 lg:px-2 lg:bg-gray-800/95 lg:rounded-sm">
-          <label for="quantity">Quantity</label>
-          <input
-            id="quantity"
-            class="quantity bg-black border-blue-500 max-w-full w-24 text-white"
-            name="quantity"
-            type="number"
-            min="1"
-            max="999999"
-            value="1"
-          />
-        </div>
-      )}
-    </div>
-  </div>
-
-  <!-- Crafting section -->
-  {data.length > 0 && (
-    <div id="crafting" class="mb-[7.5rem]">
-      <h2 class="relative mt-8 mb-4 text-center">
-        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          {isFoodItem ? `How to cook ${item.Name}` : `How to craft ${item.Name}`}
-        </span>
-      </h2>
-
-      <div class="max-w-4xl mx-auto">
-        {/* Crafting tree - full width, single column */}
-        <div class="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
-          {data.map((craftItem) => (
-            <Accordion open={data.length + outputRefined.length + outputCooked.length === 1}>
-              <div class="flex items-center gap-3" slot="title">
-                <Image
-                  src={`${imageBaseUrl}${craftItem.Icon}`}
-                  alt={craftItem.Name}
-                  sizes="48px"
-                  width={48}
-                  height={48}
-                  class="shrink-0"
-                />
-                <p class="m-0 text-lg font-medium text-white flex items-center gap-2">
-                  {craftItem.Name}
-                  <span class="inline-flex items-center justify-center min-w-7 rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
-                </p>
-              </div>
-              <div slot="content">
-                {craftItem.RequiredItems?.length > 0 && <NestedList items={craftItem} depth={0} />}
-              </div>
-            </Accordion>
-          ))}
-        </div>
-
-        {/* Raw materials - compact list below tree */}
-        {rawItems.length > 0 && (
-          <div class="mt-6">
-            <h3 class="mb-3 text-sm font-medium text-gray-400 uppercase tracking-wide">
-              Raw materials · {rawItems.length} items · <span id="raw-total" data-base-total={rawItems.reduce((sum, r) => sum + r.Quantity, 0)}>{rawItems.reduce((sum, r) => sum + r.Quantity, 0).toLocaleString()}</span> total
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              {rawItems
-                .sort((a, b) => b.Quantity - a.Quantity)
-                .map((rawItem) => (
-                  <a
-                    href={getSlug(rawItem.Id)}
-                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-opacity hover:opacity-90"
-                    style={`background: #${rawItem.Colour || '666'}33; border: 1px solid #${rawItem.Colour || '666'}55`}
-                  >
-                    <Image
-                      src={`${imageBaseUrl}${rawItem.Icon}`}
-                      alt={rawItem.Name}
-                      sizes="24px"
-                      width={24}
-                      height={24}
-                      class="shrink-0"
-                    />
-                    <span class="text-white font-medium">{rawItem.Name}</span>
-                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums" data-quantity={rawItem.Quantity}>{rawItem.Quantity.toLocaleString()}</span>
-                  </a>
-                ))}
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  )}
-
-  <!-- Refining section -->
-  {outputRefined.length > 0 && (
-    <div id="refining" class="border-t border-gray-600/60 py-6">
-      <h2 class="relative mb-3 text-center">
-        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          How to refine {item.Name}
-        </span>
-      </h2>
-
-      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        {outputRefined.map((outputItem) => (
-          <div class="min-w-0 rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
-              <Accordion>
-                <div class="flex items-center gap-3" slot="title">
-                  <Image
-                    src={`${imageBaseUrl}${outputItem.Icon}`}
-                    alt={outputItem.Name}
-                    sizes="40px"
-                    width={40}
-                    height={40}
-                    class="shrink-0"
-                  />
-                  <span class="text-white font-medium truncate flex items-center gap-2">
-                    {outputItem.Name}
-                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
-                  </span>
-                </div>
-                <div slot="content">
-                  {(outputItem.Operation || outputItem.Time) && (
-                    <div class="mb-3 flex flex-wrap gap-2 px-2">
-                      {outputItem.Operation && (
-                        <span class="rounded-sm bg-gray-700 px-2 py-1 text-xs text-cyan-200">
-                          {outputItem.Operation}
-                        </span>
-                      )}
-                      {outputItem.Time && (
-                        <span class="rounded-sm bg-gray-700 px-2 py-1 text-xs text-cyan-200">
-                          Time: {formatRefineryTime(outputItem.Time)}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                  {outputItem.RequiredItems?.length > 0 && <NestedList items={outputItem} multiplyByParent={false} />}
-                </div>
-              </Accordion>
-            </div>
-        ))}
-      </div>
-    </div>
-  )}
-
-  <!-- Cooking section -->
-  {outputCooked.length > 0 && (
-    <div id="cooking" class="border-t border-gray-600/60 py-6">
-      <h2 class="relative mb-3 text-center">
-        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          How to cook {item.Name} in Nutrient Processor
-        </span>
-      </h2>
-
-      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        {outputCooked.map((outputItem) => (
-          <div class="min-w-0 rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
-              <Accordion>
-                <div class="flex items-center gap-3" slot="title">
-                  <Image
-                    src={`${imageBaseUrl}${outputItem.Icon}`}
-                    alt={outputItem.Name}
-                    sizes="40px"
-                    width={40}
-                    height={40}
-                    class="shrink-0"
-                  />
-                  <span class="text-white font-medium truncate flex items-center gap-2">
-                    {outputItem.Name}
-                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums shrink-0" data-quantity={outputItem.Quantity}>{outputItem.Quantity.toLocaleString()}</span>
-                  </span>
-                </div>
-                <div slot="content">
-                  {outputItem.RequiredItems?.length > 0 && <NestedList items={outputItem} multiplyByParent={false} />}
-                </div>
-              </Accordion>
-            </div>
-        ))}
-      </div>
-    </div>
-  )}
-
-  <!-- Refined to create (refining only) -->
-  {groupedInputRefined.length > 0 && (
-    <div id="refined-to-create" class="mt-6 border-t border-gray-600/60 py-6">
-      <h2 class="relative mb-3 text-center">
-        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          What can you refine from {item.Name}?
-        </span>
-        <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputRefined.length})</span>
-      </h2>
-      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        {groupedInputRefined.map((usedInItem) => (
-          <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
-            <Accordion>
-              <div class="flex items-center gap-3" slot="title">
-                <Image
-                  src={`${imageBaseUrl}${usedInItem.Icon}`}
-                  alt={usedInItem.Name}
-                  sizes="40px"
-                  width={40}
-                  height={40}
-                  class="shrink-0"
-                />
-                <div class="flex-1 min-w-0">
-                  <span class="text-white font-medium">{usedInItem.Name}</span>
-                  {usedInItem.recipes.length > 1 && (
-                    <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
-                  )}
-                  {(usedInItem.Operation || usedInItem.Time) && (
-                    <div class="mt-1 flex flex-wrap gap-1">
-                      {usedInItem.Operation && (
-                        <span class="rounded-sm bg-gray-700 px-1.5 py-0.5 text-xs text-cyan-200">
-                          {usedInItem.Operation}
-                        </span>
-                      )}
-                      {usedInItem.Time && (
-                        <span class="rounded-sm bg-gray-700 px-1.5 py-0.5 text-xs text-cyan-200">
-                          {formatRefineryTime(usedInItem.Time)}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-              <div slot="content" class="pt-2 overflow-x-auto">
-                <table class="w-full text-sm table-fixed">
-                  <thead>
-                    <tr class="border-b border-gray-600/50">
-                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
-                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {usedInItem.recipes.map((recipe) => (
-                      <tr class="border-b border-gray-600/30 last:border-b-0">
-                        <td class="py-2 px-2 align-top">
-                          <div class="flex flex-col gap-1">
-                            {recipe.inputs.map((ing) => (
-                              <a
-                                href={getSlug(ing.Id)}
-                                class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
-                              >
-                                <Image
-                                  src={`${imageBaseUrl}${ing.Icon}`}
-                                  alt={ing.Name}
-                                  sizes="20px"
-                                  width={20}
-                                  height={20}
-                                  class="shrink-0"
-                                />
-                                <span class="text-white">{ing.Name}</span>
-                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
-                              </a>
-                            ))}
-                          </div>
-                        </td>
-                        <td class="py-2 px-2 align-top">
-                          <a
-                            href={getSlug(usedInItem.Id)}
-                            class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
-                          >
-                            <Image
-                              src={`${imageBaseUrl}${usedInItem.Icon}`}
-                              alt={usedInItem.Name}
-                              sizes="20px"
-                              width={20}
-                              height={20}
-                              class="shrink-0"
-                            />
-                            <span>{usedInItem.Name}</span>
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
-                          </a>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </Accordion>
-          </div>
-        ))}
-      </div>
-    </div>
-  )}
-
-  <!-- Cooked to create (cooking only) -->
-  {groupedInputCooked.length > 0 && (
-    <div id="cooked-to-create" class="mt-6 border-t border-gray-600/60 py-6">
-      <h2 class="relative mb-3 text-center">
-        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          What can you cook from {item.Name}?
-        </span>
-        <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCooked.length})</span>
-      </h2>
-      <div class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        {groupedInputCooked.map((usedInItem) => (
-          <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
-            <Accordion>
-              <div class="flex items-center gap-3" slot="title">
-                <Image
-                  src={`${imageBaseUrl}${usedInItem.Icon}`}
-                  alt={usedInItem.Name}
-                  sizes="40px"
-                  width={40}
-                  height={40}
-                  class="shrink-0"
-                />
-                <div class="flex-1 min-w-0">
-                  <span class="text-white font-medium">{usedInItem.Name}</span>
-                  {usedInItem.recipes.length > 1 && (
-                    <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
-                  )}
-                </div>
-              </div>
-              <div slot="content" class="pt-2 overflow-x-auto">
-                <table class="w-full text-sm table-fixed">
-                  <thead>
-                    <tr class="border-b border-gray-600/50">
-                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
-                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {usedInItem.recipes.map((recipe) => (
-                      <tr class="border-b border-gray-600/30 last:border-b-0">
-                        <td class="py-2 px-2 align-top">
-                          <div class="flex flex-col gap-1">
-                            {recipe.inputs.map((ing) => (
-                              <a
-                                href={getSlug(ing.Id)}
-                                class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
-                              >
-                                <Image
-                                  src={`${imageBaseUrl}${ing.Icon}`}
-                                  alt={ing.Name}
-                                  sizes="20px"
-                                  width={20}
-                                  height={20}
-                                  class="shrink-0"
-                                />
-                                <span class="text-white">{ing.Name}</span>
-                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
-                              </a>
-                            ))}
-                          </div>
-                        </td>
-                        <td class="py-2 px-2 align-top">
-                          <a
-                            href={getSlug(usedInItem.Id)}
-                            class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
-                          >
-                            <Image
-                              src={`${imageBaseUrl}${usedInItem.Icon}`}
-                              alt={usedInItem.Name}
-                              sizes="20px"
-                              width={20}
-                              height={20}
-                              class="shrink-0"
-                            />
-                            <span>{usedInItem.Name}</span>
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
-                          </a>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </Accordion>
-          </div>
-        ))}
-      </div>
-    </div>
-  )}
-
-  <!-- Used to create (crafting: products, upgrades, exocraft, etc.) -->
-  {groupedInputCrafting.length > 0 && (
-    <div id="used-to-create" class="mt-6 border-t border-gray-600/60 py-6">
-      <h2 class="relative mb-3 text-center">
-        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          {(item.Slug && item.Slug.startsWith('fish/'))
-            ? 'What does this fish yield?'
-            : `What can you craft with ${item.Name}?`}
-        </span>
-        <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCrafting.length})</span>
-      </h2>
-      <div
-        id="used-to-create-grid"
-        class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
-      >
-        {initialUsedInCrafting.map((usedInItem) => (
-          <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
-            <Accordion>
-              <div class="flex items-center gap-3" slot="title">
-                <Image
-                  src={`${imageBaseUrl}${usedInItem.Icon}`}
-                  alt={usedInItem.Name}
-                  sizes="40px"
-                  width={40}
-                  height={40}
-                  class="shrink-0"
-                />
-                <div class="flex-1 min-w-0">
-                  <span class="text-white font-medium">{usedInItem.Name}</span>
-                  {usedInItem.recipes.length > 1 && (
-                    <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
-                  )}
-                </div>
-              </div>
-              <div slot="content" class="pt-2 overflow-x-auto">
-                <table class="w-full text-sm table-fixed">
-                  <thead>
-                    <tr class="border-b border-gray-600/50">
-                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
-                      <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {usedInItem.recipes.map((recipe) => (
-                      <tr class="border-b border-gray-600/30 last:border-b-0">
-                        <td class="py-2 px-2 align-top">
-                          <div class="flex flex-col gap-1">
-                            {recipe.inputs.map((ing) => (
-                              <a
-                                href={getSlug(ing.Id)}
-                                class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
-                              >
-                                <Image
-                                  src={`${imageBaseUrl}${ing.Icon}`}
-                                  alt={ing.Name}
-                                  sizes="20px"
-                                  width={20}
-                                  height={20}
-                                  class="shrink-0"
-                                />
-                                <span class="text-white">{ing.Name}</span>
-                                <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
-                              </a>
-                            ))}
-                          </div>
-                        </td>
-                        <td class="py-2 px-2 align-top">
-                          <a
-                            href={getSlug(usedInItem.Id)}
-                            class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
-                          >
-                            <Image
-                              src={`${imageBaseUrl}${usedInItem.Icon}`}
-                              alt={usedInItem.Name}
-                              sizes="20px"
-                              width={20}
-                              height={20}
-                              class="shrink-0"
-                            />
-                            <span>{usedInItem.Name}</span>
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
-                          </a>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </Accordion>
-          </div>
-        ))}
-      </div>
-      {deferredUsedInCraftingJson && (
-        <>
-          <script type="application/json" id="used-in-hidden-data" set:html={deferredUsedInCraftingJson}></script>
-          <div class="mt-4 text-center">
-            <button
-              type="button"
-              id="used-in-load-more"
-              class="px-6 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-medium transition-colors"
-            >
-              Load more ({deferredUsedInCrafting.length} more)
-            </button>
-          </div>
-          <script is:inline define:vars={{ imageBaseUrl }}>
-            (() => {
-              const dataEl = document.getElementById('used-in-hidden-data');
-              const loadMoreBtn = document.getElementById('used-in-load-more');
-              const grid = document.getElementById('used-to-create-grid');
-              if (!dataEl || !loadMoreBtn || !grid) return;
-
-              let remainingItems = [];
-              try {
-                remainingItems = JSON.parse(dataEl.textContent || '[]');
-              } catch {
-                remainingItems = [];
-              }
-
-              if (!Array.isArray(remainingItems) || remainingItems.length === 0) {
-                loadMoreBtn.closest('div.mt-4')?.remove();
-                dataEl.remove();
-                return;
-              }
-
-              const imageBase = imageBaseUrl;
-              const numberFormatter = new Intl.NumberFormat();
-              const batchSize = 12;
-              const escapeHtml = (value) =>
-                String(value)
-                  .replace(/&/g, '&amp;')
-                  .replace(/</g, '&lt;')
-                  .replace(/>/g, '&gt;')
-                  .replace(/"/g, '&quot;')
-                  .replace(/'/g, '&#39;');
-              let offset = 0;
-
-              const applyQuantityMultiplier = () => {
-                const quantityInput = document.querySelector('input.quantity');
-                if (!(quantityInput instanceof HTMLInputElement)) return;
-                const quantity = Number.parseInt(quantityInput.value || '1', 10);
-                if (!Number.isFinite(quantity) || quantity <= 1) return;
-                document.querySelectorAll('[data-quantity]').forEach((element) => {
-                  const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
-                  const total = baseValue * quantity;
-                  element.textContent = Number.isFinite(total) ? total.toLocaleString() : '0';
-                });
-                const rawTotalEl = document.getElementById('raw-total');
-                if (rawTotalEl) {
-                  const baseTotal = parseFloat(rawTotalEl.getAttribute('data-base-total') || '0');
-                  rawTotalEl.textContent = Number.isFinite(baseTotal * quantity) ? (baseTotal * quantity).toLocaleString() : '0';
-                }
-              };
-
-              const renderBatch = () => {
-                const batch = remainingItems.slice(offset, offset + batchSize);
-                if (batch.length === 0) return;
-
-                for (const usedInItem of batch) {
-                  const recipesHtml = (usedInItem.recipes || [])
-                    .map(
-                      (recipe) => `
-                        <tr class="border-b border-gray-600/30 last:border-b-0">
-                          <td class="py-2 px-2 align-top">
-                            <div class="flex flex-col gap-1">
-                              ${(recipe.inputs || [])
-                                .map(
-                                  (ing) => `
-                                    <a href="${escapeHtml(ing.href)}" class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit">
-                                      <img src="${escapeHtml(`${imageBase}${ing.icon}`)}" alt="${escapeHtml(ing.name)}" class="h-5 w-5 shrink-0" loading="lazy" />
-                                      <span class="text-white">${escapeHtml(ing.name)}</span>
-                                      <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity="${Number(ing.quantity)}">${numberFormatter.format(Number(ing.quantity))}</span>
-                                    </a>
-                                  `
-                                )
-                                .join('')}
-                            </div>
-                          </td>
-                          <td class="py-2 px-2 align-top">
-                            <a href="${escapeHtml(usedInItem.href)}" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300">
-                              <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-5 w-5 shrink-0" loading="lazy" />
-                              <span>${escapeHtml(usedInItem.name)}</span>
-                              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity="${Number(recipe.outputQuantity)}">${numberFormatter.format(Number(recipe.outputQuantity))}</span>
-                            </a>
-                          </td>
-                        </tr>
-                      `
-                    )
-                    .join('');
-
-                  const card = document.createElement('details');
-                  card.className = 'rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden group';
-                  card.innerHTML = `
-                    <summary class="list-none cursor-pointer p-3 flex items-center gap-3">
-                      <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-10 w-10 shrink-0" loading="lazy" />
-                      <div class="flex-1 min-w-0">
-                        <span class="text-white font-medium">${escapeHtml(usedInItem.name)}</span>
-                        ${usedInItem.ways > 1 ? `<span class="ml-1 text-xs text-gray-500">(${Number(usedInItem.ways)} ways)</span>` : ''}
-                      </div>
-                    </summary>
-                    <div class="pt-2 overflow-x-auto">
-                      <table class="w-full text-sm table-fixed">
-                        <thead>
-                          <tr class="border-b border-gray-600/50">
-                            <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
-                            <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
-                          </tr>
-                        </thead>
-                        <tbody>${recipesHtml}</tbody>
-                      </table>
-                    </div>
-                  `;
-                  grid.appendChild(card);
-                }
-
-                offset += batch.length;
-                const remaining = remainingItems.length - offset;
-                if (remaining <= 0) {
-                  loadMoreBtn.closest('div.mt-4')?.remove();
-                  dataEl.remove();
-                } else {
-                  loadMoreBtn.textContent = `Load more (${remaining} more)`;
-                }
-
-                applyQuantityMultiplier();
-              };
-
-              loadMoreBtn.addEventListener('click', renderBatch);
-            })();
-          </script>
-        </>
-      )}
-    </div>
-  )}
-
-  {faqQuestions.length > 0 && (
-    <section id="faq" class="mt-6 border-t border-gray-600/60 py-6">
-      <h2 class="relative mb-4 text-center">
-        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-          Frequently Asked Questions
-        </span>
-      </h2>
-      <div class="mx-auto max-w-3xl space-y-2">
-        {faqQuestions.map((faq, index) => (
-          <Accordion id={`item-faq-${index + 1}`}>
-            <h3 class="m-0 text-lg text-white" slot="title">{faq.question}</h3>
-            <p class="m-0 text-gray-300" slot="content">{faq.answer}</p>
-          </Accordion>
-        ))}
-      </div>
-    </section>
-  )}
+  <ItemFaq faqQuestions={faqQuestions} />
 </div>
 
 <script type="application/ld+json" set:html={itemPageStructuredDataJson}></script>
