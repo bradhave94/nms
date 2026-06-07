@@ -1,0 +1,715 @@
+---
+import { classNames } from '../utils/classNames.js';
+
+interface Props {
+	slug?: string;
+}
+
+interface IconPath {
+	d: string;
+	fillRule?: 'evenodd';
+	clipRule?: 'evenodd';
+}
+
+interface NavItem {
+	name: string;
+	href: string;
+	icon: string;
+}
+
+const { slug } = Astro.props;
+
+const isNavItemActive = (href: string): boolean => {
+	if (!slug) return false;
+	const hrefSegment = href.replace(/^\/+|\/+$/g, '').split('/')[0] ?? '';
+	const slugSegment = slug.replace(/^\/+|\/+$/g, '').split('/')[0] ?? '';
+	return hrefSegment !== '' && hrefSegment === slugSegment;
+};
+
+const toolsNav: NavItem[] = [
+	{ name: 'Refining', href: '/refining', icon: 'funnel' },
+	{ name: 'Cooking', href: '/cooking', icon: 'beaker' },
+	{ name: 'Crafting', href: '/crafting-guide', icon: 'wrench-screwdriver' },
+	{ name: 'Calculator', href: '/calculator', icon: 'calculator' },
+	{ name: 'Farm Calculator', href: '/farm', icon: 'sun' },
+];
+
+const catalogsNav: NavItem[] = [
+	{ name: 'All Items', href: '/items', icon: 'squares-2x2' },
+	{ name: 'Buildings', href: '/buildings', icon: 'home-modern' },
+	{ name: 'Corvette', href: '/corvette', icon: 'globe-alt' },
+	{ name: 'Creatures', href: '/creatures', icon: 'bug-ant' },
+	{ name: 'Curiosities', href: '/curiosities', icon: 'question-mark-circle' },
+	{ name: 'Exocraft', href: '/exocraft', icon: 'rocket-launch' },
+	{ name: 'Fish', href: '/fish', icon: 'scale' },
+	{ name: 'Food', href: '/food', icon: 'cake' },
+	{ name: 'Other', href: '/other', icon: 'paper-clip' },
+	{ name: 'Products', href: '/products', icon: 'archive-box' },
+	{ name: 'Raw Materials', href: '/raw', icon: 'bolt' },
+	{ name: 'Starships', href: '/starships', icon: 'paper-airplane' },
+	{ name: 'Technology', href: '/technology', icon: 'cog' },
+	{ name: 'Upgrades', href: '/upgrades', icon: 'wrench' },
+];
+
+const moreNav: NavItem[] = [
+	{ name: 'New Items', href: '/new', icon: 'sparkles' },
+	{ name: 'Blog', href: '/blog', icon: 'book-open' },
+	{ name: 'Feedback', href: '/feedback', icon: 'envelope' },
+];
+
+const isCatalogActive = catalogsNav.some((item) => isNavItemActive(item.href));
+
+const icons: Record<string, IconPath[]> = {
+	funnel: [
+		{
+			d: 'M3.792 2.938A49.069 49.069 0 0 1 12 2.25c2.797 0 5.54.236 8.209.688a1.857 1.857 0 0 1 1.541 1.836v1.044a3 3 0 0 1-.879 2.121l-6.182 6.182a1.5 1.5 0 0 0-.439 1.061v2.927a3 3 0 0 1-1.658 2.684l-1.757.878A.75.75 0 0 1 9.75 21v-5.818a1.5 1.5 0 0 0-.44-1.06L3.13 7.938a3 3 0 0 1-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	beaker: [
+		{
+			d: 'M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	'wrench-screwdriver': [
+		{
+			d: 'M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+		{ d: 'm10.076 8.64-2.201-2.2V4.874a.75.75 0 0 0-.364-.643l-3.75-2.25a.75.75 0 0 0-.916.113l-.75.75a.75.75 0 0 0-.113.916l2.25 3.75a.75.75 0 0 0 .643.364h1.564l2.062 2.062 1.575-1.297Z' },
+		{
+			d: 'm12.556 17.329 4.183 4.182a3.375 3.375 0 0 0 4.773-4.773l-3.306-3.305a6.803 6.803 0 0 1-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 0 0-.167.063l-3.086 3.748Zm3.414-1.36a.75.75 0 0 1 1.06 0l1.875 1.876a.75.75 0 1 1-1.06 1.06L15.97 17.03a.75.75 0 0 1 0-1.06Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	calculator: [
+		{
+			d: 'M6.32 1.827a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V19.5a3 3 0 0 1-3 3H6.75a3 3 0 0 1-3-3V4.757c0-1.47 1.073-2.756 2.57-2.93ZM7.5 11.25a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H8.25a.75.75 0 0 1-.75-.75v-.008Zm.75 1.5a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H8.25Zm-.75 3a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H8.25a.75.75 0 0 1-.75-.75v-.008Zm.75 1.5a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V18a.75.75 0 0 0-.75-.75H8.25Zm1.748-6a.75.75 0 0 1 .75-.75h.007a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.007a.75.75 0 0 1-.75-.75v-.008Zm.75 1.5a.75.75 0 0 0-.75.75v.008c0 .414.335.75.75.75h.007a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75h-.007Zm-.75 3a.75.75 0 0 1 .75-.75h.007a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.007a.75.75 0 0 1-.75-.75v-.008Zm.75 1.5a.75.75 0 0 0-.75.75v.008c0 .414.335.75.75.75h.007a.75.75 0 0 0 .75-.75V18a.75.75 0 0 0-.75-.75h-.007Zm1.754-6a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Zm.75 1.5a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75h-.008Zm-.75 3a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Zm.75 1.5a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V18a.75.75 0 0 0-.75-.75h-.008Zm1.748-6a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Zm.75 1.5a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75h-.008Zm-8.25-6A.75.75 0 0 1 8.25 6h7.5a.75.75 0 0 1 .75.75v.75a.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75v-.75Zm9 9a.75.75 0 0 0-1.5 0V18a.75.75 0 0 0 1.5 0v-2.25Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	sun: [
+		{
+			d: 'M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z',
+		},
+	],
+	'archive-box': [
+		{ d: 'M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z' },
+		{
+			d: 'm3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.163 3.75A.75.75 0 0 1 10 12h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	cog: [
+		{
+			d: 'M17.004 10.407c.138.435-.216.842-.672.842h-3.465a.75.75 0 0 1-.65-.375l-1.732-3c-.229-.396-.053-.907.393-1.004a5.252 5.252 0 0 1 6.126 3.537ZM8.12 8.464c.307-.338.838-.235 1.066.16l1.732 3a.75.75 0 0 1 0 .75l-1.732 3c-.229.397-.76.5-1.067.161A5.23 5.23 0 0 1 6.75 12a5.23 5.23 0 0 1 1.37-3.536ZM10.878 17.13c-.447-.098-.623-.608-.394-1.004l1.733-3.002a.75.75 0 0 1 .65-.375h3.465c.457 0 .81.407.672.842a5.252 5.252 0 0 1-6.126 3.539Z',
+		},
+		{
+			d: 'M21 12.75a.75.75 0 1 0 0-1.5h-.783a8.22 8.22 0 0 0-.237-1.357l.734-.267a.75.75 0 1 0-.513-1.41l-.735.268a8.24 8.24 0 0 0-.689-1.192l.6-.503a.75.75 0 1 0-.964-1.149l-.6.504a8.3 8.3 0 0 0-1.054-.885l.391-.678a.75.75 0 1 0-1.299-.75l-.39.676a8.188 8.188 0 0 0-1.295-.47l.136-.77a.75.75 0 0 0-1.477-.26l-.136.77a8.36 8.36 0 0 0-1.377 0l-.136-.77a.75.75 0 1 0-1.477.26l.136.77c-.448.121-.88.28-1.294.47l-.39-.676a.75.75 0 0 0-1.3.75l.392.678a8.29 8.29 0 0 0-1.054.885l-.6-.504a.75.75 0 1 0-.965 1.149l.6.503a8.243 8.243 0 0 0-.689 1.192L3.8 8.216a.75.75 0 1 0-.513 1.41l.735.267a8.222 8.222 0 0 0-.238 1.356h-.783a.75.75 0 0 0 0 1.5h.783c.042.464.122.917.238 1.356l-.735.268a.75.75 0 0 0 .513 1.41l.735-.268c.197.417.428.816.69 1.191l-.6.504a.75.75 0 0 0 .963 1.15l.601-.505c.326.323.679.62 1.054.885l-.392.68a.75.75 0 0 0 1.3.75l.39-.679c.414.192.847.35 1.294.471l-.136.77a.75.75 0 0 0 1.477.261l.137-.772a8.332 8.332 0 0 0 1.376 0l.136.772a.75.75 0 1 0 1.477-.26l-.136-.771a8.19 8.19 0 0 0 1.294-.47l.391.677a.75.75 0 0 0 1.3-.75l-.393-.679a8.29 8.29 0 0 0 1.054-.885l.601.504a.75.75 0 0 0 .964-1.15l-.6-.503c.261-.375.492-.774.69-1.191l.735.267a.75.75 0 1 0 .512-1.41l-.734-.267c.115-.439.195-.892.237-1.356h.784Zm-2.657-3.06a6.744 6.744 0 0 0-1.19-2.053 6.784 6.784 0 0 0-1.82-1.51A6.705 6.705 0 0 0 12 5.25a6.8 6.8 0 0 0-1.225.11 6.7 6.7 0 0 0-2.15.793 6.784 6.784 0 0 0-2.952 3.489.76.76 0 0 1-.036.098A6.74 6.74 0 0 0 5.251 12a6.74 6.74 0 0 0 3.366 5.842l.009.005a6.704 6.704 0 0 0 2.18.798l.022.003a6.792 6.792 0 0 0 2.368-.004 6.704 6.704 0 0 0 2.205-.811 6.785 6.785 0 0 0 1.762-1.484l.009-.01.009-.01a6.743 6.743 0 0 0 1.18-2.066c.253-.707.39-1.469.39-2.263a6.74 6.74 0 0 0-.408-2.309Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	wrench: [
+		{
+			d: 'M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	'rocket-launch': [
+		{
+			d: 'M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+		{
+			d: 'M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z',
+		},
+	],
+	'paper-airplane': [
+		{
+			d: 'M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z',
+		},
+	],
+	'home-modern': [
+		{ d: 'M19.006 3.705a.75.75 0 1 0-.512-1.41L6 6.838V3a.75.75 0 0 0-.75-.75h-1.5A.75.75 0 0 0 3 3v4.93l-1.006.365a.75.75 0 0 0 .512 1.41l16.5-6Z' },
+		{
+			d: 'M3.019 11.114 18 5.667v3.421l4.006 1.457a.75.75 0 1 1-.512 1.41l-.494-.18v8.475h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3v-9.129l.019-.007ZM18 20.25v-9.566l1.5.546v9.02H18Zm-9-6a.75.75 0 0 0-.75.75v4.5c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75H9Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	'globe-alt': [
+		{
+			d: 'M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z',
+		},
+	],
+	'bug-ant': [
+		{
+			d: 'M8.478 1.6a.75.75 0 0 1 .273 1.026 3.72 3.72 0 0 0-.425 1.121c.058.058.118.114.18.168A4.491 4.491 0 0 1 12 2.25c1.413 0 2.673.651 3.497 1.668.06-.054.12-.11.178-.167a3.717 3.717 0 0 0-.426-1.125.75.75 0 1 1 1.298-.752 5.22 5.22 0 0 1 .671 2.046.75.75 0 0 1-.187.582c-.241.27-.505.52-.787.749a4.494 4.494 0 0 1 .216 2.1c-.106.792-.753 1.295-1.417 1.403-.182.03-.364.057-.547.081.152.227.273.476.359.742a23.122 23.122 0 0 0 3.832-.803 23.241 23.241 0 0 0-.345-2.634.75.75 0 0 1 1.474-.28c.21 1.115.348 2.256.404 3.418a.75.75 0 0 1-.516.75c-1.527.499-3.119.854-4.76 1.049-.074.38-.22.735-.423 1.05 2.066.209 4.058.672 5.943 1.358a.75.75 0 0 1 .492.75 24.665 24.665 0 0 1-1.189 6.25.75.75 0 0 1-1.425-.47 23.14 23.14 0 0 0 1.077-5.306c-.5-.169-1.009-.32-1.524-.455.068.234.104.484.104.746 0 3.956-2.521 7.5-6 7.5-3.478 0-6-3.544-6-7.5 0-.262.037-.511.104-.746-.514.135-1.022.286-1.522.455.154 1.838.52 3.616 1.077 5.307a.75.75 0 1 1-1.425.468 24.662 24.662 0 0 1-1.19-6.25.75.75 0 0 1 .493-.749 24.586 24.586 0 0 1 4.964-1.24h.01c.321-.046.644-.085.969-.118a2.983 2.983 0 0 1-.424-1.05 24.614 24.614 0 0 1-4.76-1.05.75.75 0 0 1-.516-.75c.057-1.16.194-2.302.405-3.417a.75.75 0 0 1 1.474.28c-.164.862-.28 1.74-.345 2.634 1.237.371 2.517.642 3.832.803.085-.266.207-.515.359-.742a18.698 18.698 0 0 1-.547-.08c-.664-.11-1.311-.612-1.417-1.404a4.535 4.535 0 0 1 .217-2.103 6.788 6.788 0 0 1-.788-.751.75.75 0 0 1-.187-.583 5.22 5.22 0 0 1 .67-2.04.75.75 0 0 1 1.026-.273Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	scale: [
+		{
+			d: 'M12 2.25a.75.75 0 0 1 .75.75v.756a49.106 49.106 0 0 1 9.152 1 .75.75 0 0 1-.152 1.485h-1.918l2.474 10.124a.75.75 0 0 1-.375.84A6.723 6.723 0 0 1 18.75 18a6.723 6.723 0 0 1-3.181-.795.75.75 0 0 1-.375-.84l2.474-10.124H12.75v13.28c1.293.076 2.534.343 3.697.776a.75.75 0 0 1-.262 1.453h-8.37a.75.75 0 0 1-.262-1.453c1.162-.433 2.404-.7 3.697-.775V6.24H6.332l2.474 10.124a.75.75 0 0 1-.375.84A6.723 6.723 0 0 1 5.25 18a6.723 6.723 0 0 1-3.181-.795.75.75 0 0 1-.375-.84L4.168 6.241H2.25a.75.75 0 0 1-.152-1.485 49.105 49.105 0 0 1 9.152-1V3a.75.75 0 0 1 .75-.75Zm4.878 13.543 1.872-7.662 1.872 7.662h-3.744Zm-9.756 0L5.25 8.131l-1.872 7.662h3.744Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	'question-mark-circle': [
+		{
+			d: 'M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	cake: [
+		{
+			d: 'm15 1.784-.796.795a1.125 1.125 0 1 0 1.591 0L15 1.784ZM12 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L12 1.784ZM9 1.784l-.796.795a1.125 1.125 0 1 0 1.591 0L9 1.784ZM9.75 7.547c.498-.021.998-.035 1.5-.042V6.75a.75.75 0 0 1 1.5 0v.755c.502.007 1.002.021 1.5.042V6.75a.75.75 0 0 1 1.5 0v.88l.307.022c1.55.117 2.693 1.427 2.693 2.946v1.018a62.182 62.182 0 0 0-13.5 0v-1.018c0-1.519 1.143-2.829 2.693-2.946l.307-.022v-.88a.75.75 0 0 1 1.5 0v.797ZM12 12.75c-2.472 0-4.9.184-7.274.54-1.454.217-2.476 1.482-2.476 2.916v.384a4.104 4.104 0 0 1 2.585.364 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 3.67 0 2.605 2.605 0 0 0 2.33 0 4.104 4.104 0 0 1 2.585-.364v-.384c0-1.434-1.022-2.7-2.476-2.917A49.138 49.138 0 0 0 12 12.75ZM21.75 18.131a2.604 2.604 0 0 0-1.915.165 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.605 2.605 0 0 0-2.33 0 4.104 4.104 0 0 1-3.67 0 2.604 2.604 0 0 0-1.915-.165v2.494c0 1.035.84 1.875 1.875 1.875h15.75c1.035 0 1.875-.84 1.875-1.875v-2.494Z',
+		},
+	],
+	bolt: [
+		{
+			d: 'M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	'paper-clip': [
+		{
+			d: 'M18.97 3.659a2.25 2.25 0 0 0-3.182 0l-10.94 10.94a3.75 3.75 0 1 0 5.304 5.303l7.693-7.693a.75.75 0 0 1 1.06 1.06l-7.693 7.693a5.25 5.25 0 1 1-7.424-7.424l10.939-10.94a3.75 3.75 0 1 1 5.303 5.304L9.097 18.835l-.008.008-.007.007-.002.002-.003.002A2.25 2.25 0 0 1 5.91 15.66l7.81-7.81a.75.75 0 0 1 1.061 1.06l-7.81 7.81a.75.75 0 0 0 1.054 1.068L18.97 6.84a2.25 2.25 0 0 0 0-3.182Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	'squares-2x2': [
+		{
+			d: 'M3 6a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3V6ZM3 15.75a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-2.25Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3v-2.25Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	sparkles: [
+		{
+			d: 'M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z',
+			fillRule: 'evenodd',
+			clipRule: 'evenodd',
+		},
+	],
+	'book-open': [
+		{
+			d: 'M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z',
+		},
+	],
+	envelope: [
+		{ d: 'M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z' },
+		{ d: 'M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z' },
+	],
+};
+
+const linkClasses = (active: boolean) =>
+	classNames(
+		active ? 'bg-blue-500 text-black' : 'text-white hover:bg-blue-500 hover:text-black',
+		'group flex items-center px-2 py-1 text-base leading-tight font-medium rounded-md transition-colors',
+	);
+
+const iconClasses = (active: boolean) =>
+	classNames(
+		active ? 'text-black' : 'text-gray-400 group-hover:text-black',
+		'mr-2.5 h-5 w-5 shrink-0 transition-colors',
+	);
+
+const sectionLabelClasses =
+	'px-2 pt-3 pb-1 text-xs font-medium uppercase tracking-wider text-gray-500';
+---
+
+<div>
+	<!-- Mobile drawer -->
+	<div
+		id="mobile-sidebar"
+		class="pointer-events-none fixed inset-0 z-40 lg:hidden"
+		aria-hidden="true"
+	>
+		<div
+			id="mobile-backdrop"
+			class="fixed inset-0 bg-black/75 opacity-0 transition-opacity duration-300 ease-linear"
+		>
+		</div>
+		<div class="fixed inset-0 z-40 flex">
+			<div
+				id="mobile-panel"
+				class="relative flex w-full max-w-xs flex-1 -translate-x-full flex-col bg-black transition-transform duration-300 ease-in-out"
+			>
+				<div class="absolute top-0 right-0 -mr-12 pt-2">
+					<button
+						id="sidebar-close"
+						type="button"
+						class="ml-1 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-black/80 text-white hover:bg-gray-900 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
+					>
+						<span class="sr-only">Close sidebar</span>
+						<svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+							<path
+								fill-rule="evenodd"
+								d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="h-0 flex-1 overflow-y-auto pt-5 pb-4">
+					<a href="/" class="mb-3 block w-full px-4">
+						<img
+							class="block h-auto w-full max-w-[12.5rem]"
+							src="/images/logo-nms.webp"
+							alt="No Man's Sky Recipes"
+						/>
+					</a>
+					<nav class="mt-3 space-y-1 px-2" aria-label="Site navigation">
+						<p id="nav-tools-label-mobile" class={sectionLabelClasses}>Tools</p>
+						{
+							toolsNav.map((item) => {
+								const active = isNavItemActive(item.href);
+								return (
+									<a href={item.href} class={linkClasses(active)}>
+										<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+											{icons[item.icon].map((path) => (
+												<path
+													d={path.d}
+													fill-rule={path.fillRule}
+													clip-rule={path.clipRule}
+												/>
+											))}
+										</svg>
+										{item.name}
+									</a>
+								);
+							})
+						}
+
+						<p id="nav-catalogs-label-mobile" class={sectionLabelClasses}>Catalogs</p>
+						<div>
+							<button
+								id="catalogs-accordion-btn"
+								type="button"
+								class={classNames(
+									linkClasses(isCatalogActive),
+									'w-full justify-between',
+								)}
+								aria-expanded={isCatalogActive ? 'true' : 'false'}
+								aria-controls="catalogs-accordion-panel"
+							>
+								<span class="flex items-center">
+									<svg
+										class={iconClasses(isCatalogActive)}
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										{icons['squares-2x2'].map((path) => (
+											<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+										))}
+									</svg>
+									Catalogs
+								</span>
+								<svg
+									class={classNames(
+										isCatalogActive ? 'text-black' : 'text-gray-400',
+										'h-4 w-4 shrink-0 transition-transform',
+										isCatalogActive ? 'rotate-180' : '',
+									)}
+									id="catalogs-accordion-chevron"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									aria-hidden="true"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+										clip-rule="evenodd"></path>
+								</svg>
+							</button>
+							<div
+								id="catalogs-accordion-panel"
+								class={classNames('mt-1 space-y-1 pl-2', isCatalogActive ? '' : 'hidden')}
+								role="region"
+								aria-labelledby="nav-catalogs-label-mobile"
+							>
+								{
+									catalogsNav.map((item) => {
+										const active = isNavItemActive(item.href);
+										return (
+											<a href={item.href} class={linkClasses(active)}>
+												<svg
+													class={iconClasses(active)}
+													viewBox="0 0 24 24"
+													fill="currentColor"
+													aria-hidden="true"
+												>
+													{icons[item.icon].map((path) => (
+														<path
+															d={path.d}
+															fill-rule={path.fillRule}
+															clip-rule={path.clipRule}
+														/>
+													))}
+												</svg>
+												{item.name}
+											</a>
+										);
+									})
+								}
+							</div>
+						</div>
+
+						<p id="nav-more-label-mobile" class={sectionLabelClasses}>More</p>
+						{
+							moreNav.map((item) => {
+								const active = isNavItemActive(item.href);
+								return (
+									<a href={item.href} class={linkClasses(active)}>
+										<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+											{icons[item.icon].map((path) => (
+												<path
+													d={path.d}
+													fill-rule={path.fillRule}
+													clip-rule={path.clipRule}
+												/>
+											))}
+										</svg>
+										{item.name}
+									</a>
+								);
+							})
+						}
+					</nav>
+				</div>
+			</div>
+			<div class="w-14 shrink-0"></div>
+		</div>
+	</div>
+
+	<!-- Desktop sidebar -->
+	<div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-56 lg:flex-col">
+		<div class="flex min-h-0 flex-1 flex-col bg-black">
+			<div class="flex flex-1 flex-col overflow-y-auto overflow-x-hidden hide-scrollbar pt-3 pb-3">
+				<a href="/" class="mb-3 block w-full px-3">
+					<img
+						class="block h-auto w-full max-w-[12.5rem]"
+						src="/images/logo-nms.webp"
+						alt="No Man's Sky Recipes"
+					/>
+				</a>
+				<nav class="mt-3 flex-1 space-y-1 bg-black px-2" aria-label="Site navigation">
+					<p id="nav-tools-label" class={sectionLabelClasses}>Tools</p>
+					{
+						toolsNav.map((item) => {
+							const active = isNavItemActive(item.href);
+							return (
+								<a href={item.href} class={linkClasses(active)}>
+									<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+										{icons[item.icon].map((path) => (
+											<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+										))}
+									</svg>
+									{item.name}
+								</a>
+							);
+						})
+					}
+
+					<p id="nav-catalogs-label" class={sectionLabelClasses}>Catalogs</p>
+					<button
+						id="catalogs-flyout-trigger"
+						type="button"
+						class={classNames(linkClasses(isCatalogActive), 'w-full justify-between')}
+						aria-expanded="false"
+						aria-haspopup="true"
+						aria-controls="catalogs-flyout"
+					>
+						<span class="flex items-center">
+							<svg
+								class={iconClasses(isCatalogActive)}
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								aria-hidden="true"
+							>
+								{icons['squares-2x2'].map((path) => (
+									<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+								))}
+							</svg>
+							Catalogs
+						</span>
+						<svg
+							class={classNames(
+								isCatalogActive ? 'text-black' : 'text-gray-400',
+								'h-4 w-4 shrink-0',
+							)}
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							aria-hidden="true"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+
+					<p id="nav-more-label" class={sectionLabelClasses}>More</p>
+					{
+						moreNav.map((item) => {
+							const active = isNavItemActive(item.href);
+							return (
+								<a href={item.href} class={linkClasses(active)}>
+									<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+										{icons[item.icon].map((path) => (
+											<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+										))}
+									</svg>
+									{item.name}
+								</a>
+							);
+						})
+					}
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!-- Desktop catalogs flyout (outside overflow container) -->
+	<div
+		id="catalogs-flyout"
+		class="fixed z-50 hidden pl-3"
+		role="menu"
+		aria-labelledby="catalogs-flyout-trigger"
+	>
+		<div
+			class="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-md border border-white/10 bg-black p-2 shadow-lg"
+		>
+			<div class="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
+				{
+					catalogsNav.map((item) => {
+						const active = isNavItemActive(item.href);
+						return (
+							<a
+								href={item.href}
+								role="menuitem"
+								class={linkClasses(active)}
+							>
+								<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									{icons[item.icon].map((path) => (
+										<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+									))}
+								</svg>
+								{item.name}
+							</a>
+						);
+					})
+				}
+			</div>
+		</div>
+	</div>
+
+	<div class="flex flex-1 flex-col lg:pl-56">
+		<div class="sticky top-0 z-10 bg-black p-3 text-right lg:hidden">
+			<button
+				id="sidebar-open"
+				type="button"
+				class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-black/80 text-white hover:bg-gray-900 hover:text-white focus:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500"
+			>
+				<span class="sr-only">Open sidebar</span>
+				<svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+					<path
+						fill-rule="evenodd"
+						d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+						clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</div>
+		<main class="flex-1">
+			<div class="nms-bg mx-auto p-4">
+				<slot name="layout" />
+			</div>
+		</main>
+	</div>
+</div>
+
+<script>
+	const OPEN_DELAY = 120;
+	const CLOSE_DELAY = 250;
+	const LG_QUERY = '(min-width: 1024px)';
+
+	// Mobile drawer
+	const mobileSidebar = document.getElementById('mobile-sidebar');
+	const mobileBackdrop = document.getElementById('mobile-backdrop');
+	const mobilePanel = document.getElementById('mobile-panel');
+	const sidebarOpenBtn = document.getElementById('sidebar-open');
+	const sidebarCloseBtn = document.getElementById('sidebar-close');
+
+	function openMobileDrawer(): void {
+		if (!mobileSidebar || !mobileBackdrop || !mobilePanel) return;
+		mobileSidebar.classList.remove('pointer-events-none');
+		mobileSidebar.setAttribute('aria-hidden', 'false');
+		mobileBackdrop.classList.remove('opacity-0');
+		mobileBackdrop.classList.add('opacity-100');
+		mobilePanel.classList.remove('-translate-x-full');
+		mobilePanel.classList.add('translate-x-0');
+		document.body.classList.add('overflow-hidden');
+	}
+
+	function closeMobileDrawer(): void {
+		if (!mobileSidebar || !mobileBackdrop || !mobilePanel) return;
+		mobileSidebar.classList.add('pointer-events-none');
+		mobileSidebar.setAttribute('aria-hidden', 'true');
+		mobileBackdrop.classList.remove('opacity-100');
+		mobileBackdrop.classList.add('opacity-0');
+		mobilePanel.classList.remove('translate-x-0');
+		mobilePanel.classList.add('-translate-x-full');
+		document.body.classList.remove('overflow-hidden');
+	}
+
+	sidebarOpenBtn?.addEventListener('click', openMobileDrawer);
+	sidebarCloseBtn?.addEventListener('click', closeMobileDrawer);
+	mobileBackdrop?.addEventListener('click', closeMobileDrawer);
+
+	// Mobile catalogs accordion
+	const accordionBtn = document.getElementById('catalogs-accordion-btn');
+	const accordionPanel = document.getElementById('catalogs-accordion-panel');
+	const accordionChevron = document.getElementById('catalogs-accordion-chevron');
+
+	accordionBtn?.addEventListener('click', () => {
+		const expanded = accordionBtn.getAttribute('aria-expanded') === 'true';
+		const nextExpanded = !expanded;
+		accordionBtn.setAttribute('aria-expanded', String(nextExpanded));
+		accordionPanel?.classList.toggle('hidden', !nextExpanded);
+		accordionChevron?.classList.toggle('rotate-180', nextExpanded);
+	});
+
+	// Desktop catalogs flyout
+	const flyoutTrigger = document.getElementById('catalogs-flyout-trigger');
+	const flyout = document.getElementById('catalogs-flyout');
+
+	let openTimer: ReturnType<typeof setTimeout> | null = null;
+	let closeTimer: ReturnType<typeof setTimeout> | null = null;
+	let flyoutOpen = false;
+	function isLargeScreen(): boolean {
+		return window.matchMedia(LG_QUERY).matches;
+	}
+
+	function positionFlyout(): void {
+		if (!flyoutTrigger || !flyout) return;
+		const rect = flyoutTrigger.getBoundingClientRect();
+		flyout.style.top = `${rect.top}px`;
+		flyout.style.left = '14rem';
+	}
+
+	function setFlyoutOpen(open: boolean, focusFirstLink = false): void {
+		if (!flyoutTrigger || !flyout) return;
+		flyoutOpen = open;
+		flyout.classList.toggle('hidden', !open);
+		flyoutTrigger.setAttribute('aria-expanded', String(open));
+		if (open) {
+			positionFlyout();
+			if (focusFirstLink) {
+				const firstLink = flyout.querySelector<HTMLAnchorElement>('a[role="menuitem"]');
+				firstLink?.focus();
+			}
+		}
+	}
+
+	function clearTimers(): void {
+		if (openTimer) {
+			clearTimeout(openTimer);
+			openTimer = null;
+		}
+		if (closeTimer) {
+			clearTimeout(closeTimer);
+			closeTimer = null;
+		}
+	}
+
+	function scheduleFlyoutOpen(): void {
+		if (!isLargeScreen()) return;
+		clearTimers();
+		closeTimer = null;
+		openTimer = setTimeout(() => setFlyoutOpen(true), OPEN_DELAY);
+	}
+
+	function scheduleFlyoutClose(): void {
+		if (!isLargeScreen()) return;
+		clearTimers();
+		openTimer = null;
+		closeTimer = setTimeout(() => setFlyoutOpen(false), CLOSE_DELAY);
+	}
+
+	function bindHoverZone(element: HTMLElement | null): void {
+		element?.addEventListener('mouseenter', scheduleFlyoutOpen);
+		element?.addEventListener('mouseleave', scheduleFlyoutClose);
+	}
+
+	bindHoverZone(flyoutTrigger);
+	bindHoverZone(flyout);
+
+	flyoutTrigger?.addEventListener('focus', () => {
+		if (isLargeScreen()) scheduleFlyoutOpen();
+	});
+
+	flyoutTrigger?.addEventListener('blur', (event) => {
+		if (!isLargeScreen()) return;
+		const related = event.relatedTarget as Node | null;
+		if (related && flyout?.contains(related)) return;
+		scheduleFlyoutClose();
+	});
+
+	flyout?.addEventListener('focusout', (event) => {
+		if (!isLargeScreen() || !flyoutOpen) return;
+		const related = event.relatedTarget as Node | null;
+		if (related && (flyout.contains(related) || flyoutTrigger?.contains(related))) return;
+		scheduleFlyoutClose();
+	});
+
+	flyoutTrigger?.addEventListener('click', (event) => {
+		if (!isLargeScreen()) return;
+		event.preventDefault();
+		clearTimers();
+		if (flyoutOpen) {
+			setFlyoutOpen(false);
+		} else {
+			const fromKeyboard = event.detail === 0;
+			setFlyoutOpen(true, fromKeyboard);
+		}
+	});
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape' && flyoutOpen && isLargeScreen()) {
+			event.preventDefault();
+			clearTimers();
+			setFlyoutOpen(false);
+			flyoutTrigger?.focus();
+		}
+		if (event.key === 'Escape' && mobileSidebar?.getAttribute('aria-hidden') === 'false') {
+			closeMobileDrawer();
+		}
+	});
+
+	window.addEventListener('resize', () => {
+		if (flyoutOpen) positionFlyout();
+		if (!isLargeScreen()) {
+			clearTimers();
+			setFlyoutOpen(false);
+		}
+	});
+
+	window.addEventListener('scroll', () => {
+		if (flyoutOpen) positionFlyout();
+	}, true);
+</script>
