@@ -3,6 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 import react from "@astrojs/react";
+import { SITE } from './src/config.ts';
 
 const SITEMAP_EXCLUDED_PATHS = new Set([
   '/feedback',
@@ -22,10 +23,6 @@ const shouldIncludeInSitemap = (page) => {
     return false;
   }
 
-  if (pathname.startsWith('/creatures/species/')) {
-    return false;
-  }
-
   if (pathname.startsWith('/guides/')) {
     return false;
   }
@@ -42,7 +39,7 @@ export default defineConfig({
     }),
     sitemap({
       filter: shouldIncludeInSitemap,
-      lastmod: new Date(),
+      lastmod: new Date(SITE.version_date),
       changefreq: 'weekly',
       priority: 0.7,
     })

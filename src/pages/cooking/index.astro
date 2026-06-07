@@ -4,9 +4,10 @@
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
 import processor from '@datav2/NutrientProcessor.json';
-import { getById } from '@utils/lookup.js';
+import { getById, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import type { TableRow } from '@components/table/Table.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
 // Interfaces for defining the shape of input and output objects
@@ -103,13 +104,36 @@ const columns = [
 
 // Map the data and create an array of filtered items
 const data = processor.map(createArray).filter((item): item is TableItem => item !== undefined);
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/cooking', siteOrigin).toString();
+const baseDescription =
+	"Browse No Man's Sky cooking recipes, ingredient combinations, and Nutrient Processor outputs to find the best food recipes and ingredient chains.";
+const itemListElements = data.slice(0, 25).map((row, index) => {
+	const outputItem = getById(row.output.id);
+	return {
+		name: row.output.name,
+		url: outputItem ? `${siteOrigin}${getSlug(outputItem)}` : canonicalUrl,
+		position: index + 1,
+	};
+});
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: 'Cooking Recipes',
+	collectionDescription: baseDescription,
+	collectionPath: '/cooking',
+	currentPage: 1,
+	items: itemListElements,
+});
 ---
 
 <Layout
 	title={"Cooking Recipes | No Man's Sky Recipes"}
-	description="Browse No Man's Sky cooking recipes, ingredient combinations, and Nutrient Processor outputs to find the best food recipes and ingredient chains."
+	description={baseDescription}
 	slug="cooking"
 	ogImage={`${SITE.website}/images/cooker.webp`}
+	structuredData={structuredData}
 >
 	<Table title="Cooking" image="cooking" image_width={60} image_height={60} columns={columns} data={data} />
 </Layout>

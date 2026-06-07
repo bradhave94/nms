@@ -23,6 +23,7 @@ import {
   BugAntIcon,
   BookOpenIcon,
   SparklesIcon,
+  SunIcon,
 } from '@heroicons/react/24/solid';
 import type { ComponentType, SVGProps } from 'react';
 import { classNames } from '../utils/classNames';
@@ -52,6 +53,7 @@ const navigation: NavigationItem[] = [
   { name: 'Blog', href: '/blog', icon: BookOpenIcon },
   { name: 'New Items', href: '/new', icon: SparklesIcon },
   { name: 'Calculator', href: '/calculator', icon: CalculatorIcon },
+  { name: 'Farm Calculator', href: '/farm', icon: SunIcon },
   { name: 'Products', href: '/products', icon: ArchiveBoxIcon },
   { name: 'Technology', href: '/technology', icon: CogIcon },
   { name: 'Upgrades', href: '/upgrades', icon: WrenchIcon },
