@@ -1,12 +1,12 @@
 ---
 // Importing required components and data
 import Layout from '@layouts/Layout.astro';
-import { SITE } from '@config';
 import Table from '@components/table/Table.astro';
 import refinery from '@datav2/Refinery.json';
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import type { TableRow } from '@components/table/Table.astro';
+import { SITE } from '@config';
 
 // Interfaces for defining the shape of input and output objects
 interface Input {
@@ -22,6 +22,8 @@ interface Output {
 interface Refinery {
 	Inputs: Input[];
 	Output: Output;
+	Operation?: string;
+	Time?: string;
 }
 
 interface ItemData {
@@ -39,6 +41,20 @@ type TableItem = TableRow & {
     input_2?: ItemData;
     input_3?: ItemData;
     output: ItemData;
+    operation?: string;
+    time?: string;
+};
+
+const formatRefineryTime = (time?: string): string | undefined => {
+    if (!time) return undefined;
+    const seconds = Number.parseFloat(time);
+    if (!Number.isFinite(seconds) || seconds <= 0) return time;
+    if (seconds >= 60) {
+        const minutes = Math.floor(seconds / 60);
+        const remainder = Math.round(seconds % 60);
+        return remainder > 0 ? `${minutes}m ${remainder}s` : `${minutes}m`;
+    }
+    return `${Math.round(seconds)}s`;
 };
 
 // Extract item data creation to a separate function
@@ -70,6 +86,8 @@ const createArray = (item: Refinery): TableItem | undefined => {
         input_2: inputs[1],
         input_3: inputs[2],
         output,
+        operation: item.Operation,
+        time: formatRefineryTime(item.Time),
         description: output.description,
         value: output.value,
     };
@@ -81,6 +99,8 @@ const columns = [
 	{ title: 'Input 2', field: 'input_2' },
 	{ title: 'Input 3', field: 'input_3' },
 	{ title: 'Output', field: 'output' },
+	{ title: 'Operation', field: 'operation' },
+	{ title: 'Time', field: 'time' },
 ];
 
 // Use type assertion for better type inference

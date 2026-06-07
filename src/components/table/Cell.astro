@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import { getSlug } from '@utils/lookup.js';
+import { SITE } from '@config';
 
 interface CellData {
     id: string;
@@ -70,7 +71,7 @@ const { cell } = Astro.props;
                     </span>
                     {cell.image && (
                         <Image
-                            src={`https://nomansskyrecipes.com/images/items/${cell.image}`}
+                            src={`${SITE.imageBaseUrl}${cell.image}`}
                             alt={cell.name}
                             sizes="50px"
                             width={50}

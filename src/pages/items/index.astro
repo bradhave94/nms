@@ -1,8 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import { getSiteOrigin } from '@utils/structuredData.js';
+import { SITE } from '@config';
 
-const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const IMAGE_BASE = SITE.imageBaseUrl;
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 const breadcrumbSchema = {

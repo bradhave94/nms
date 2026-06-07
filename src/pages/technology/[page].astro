@@ -10,6 +10,7 @@ import type { Item } from '@utils/lookup.js';
 import conTech from '@datav2/ConstructedTechnology.json';
 import techModule from '@datav2/TechnologyModule.json';
 import tech from '@datav2/Technology.json';
+import { SITE } from '@config';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
 	const pages = paginate(sort([...conTech, ...tech, ...techModule] as Item[]), { pageSize: 80 });
@@ -69,7 +70,7 @@ const { title, description } = buildPaginatedMeta('Technology Items', baseDescri
 				<CompactCard
 					card={{
 						name: item.Name,
-						image: 'https://nomansskyrecipes.com/images/items/' + item.Icon,
+						image: SITE.imageBaseUrl + item.Icon,
 						link: getSlug(item),
 					}}
 					index={index}

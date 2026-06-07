@@ -1,11 +1,11 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Page from '@layouts/Page.astro';
-import { SITE } from '@config';
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import { buildItemMeta } from '@utils/seo.js';
 import buildings from '@datav2/Buildings.json';
+import { SITE } from '@config';
 
 export function getStaticPaths() {
 	return buildings.map((building) => ({

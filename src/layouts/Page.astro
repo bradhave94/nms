@@ -5,11 +5,12 @@ import NestedList from '@components/NestedList.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import UpdateChangesPanel from '@components/UpdateChangesPanel.astro';
 import { getItemUpdateMeta } from '@utils/updateChanges';
-import { SITE } from '@config';
 import { getById, findOutput, findInputFromRefiner, findInputFromCooking, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import { getGrowTimeHeader, getPlantGrowTime } from '@utils/plantGrowTime.js';
+import refinery from '@datav2/Refinery.json';
 import credit from '../assets/img/credits.png';
+import { SITE } from '@config';
 
 // Define the props interface
 interface Props {
@@ -91,10 +92,31 @@ type UpgradeLikeItem = Item & {
 type CorvetteLikeItem = Item & {
   CorvettePartCategory?: string;
   BuildableShipTechID?: string;
+  BuildableShipTechName?: string;
   IsCraftable?: boolean;
   MaxStackSize?: number;
   CanSendToOtherPlayers?: boolean;
   Rarity?: string;
+};
+
+type FoodLikeItem = Item & {
+  EffectCategory?: string;
+  RewardEffectStats?: Record<string, unknown> | null;
+};
+
+type BuildingLikeItem = Item & {
+  BuildableOnPlanetBase?: boolean;
+  BuildableOnFreighter?: boolean;
+  BuildableOnSpaceBase?: boolean;
+  Groups?: Array<{ Group?: string; SubGroupName?: string }>;
+};
+
+type AcquisitionLikeItem = Item & {
+  MaxStackSize?: number;
+  Rarity?: string;
+  Legality?: string;
+  OnlyFoundInPurpleSystems?: boolean;
+  DeploysInto?: string | null;
 };
 
 type FishLikeItem = Item & {
@@ -221,7 +243,7 @@ const createArray = (
 };
 
 type IOItem = { Id: string; Quantity: number };
-type RecipeOutput = { Id?: string; Slug?: string; Operation?: string; Output?: IOItem; Inputs?: IOItem[] };
+type RecipeOutput = { Id?: string; Slug?: string; Operation?: string; Time?: string; Output?: IOItem; Inputs?: IOItem[] };
 type RecipeInput = { Output?: IOItem; Inputs?: IOItem[] };
 type UsedInItem = {
   Id: string;
@@ -229,6 +251,8 @@ type UsedInItem = {
   Name: string;
   Quantity: number;
   RequiredItems: RawItem[];
+  Operation?: string;
+  Time?: string;
 };
 type HowToIngredient = {
   Id: string;
@@ -320,6 +344,8 @@ const outputCooked: UsedInItem[] = [];
 for (const entry of outputRecipes) {
   const mapped = getOutputs(entry);
   if (!mapped) continue;
+  if (entry.Operation) mapped.Operation = entry.Operation;
+  if (entry.Time) mapped.Time = entry.Time;
   const isCooking = entry.Slug?.startsWith('nutrient-processor/');
   if (isCooking) {
     outputCooked.push(mapped);
@@ -352,7 +378,46 @@ const groupByOutput = (inputData: RecipeInput[]) => {
   ).filter((g) => g.recipes.length > 0);
 };
 
-const groupedInputRefined = groupByOutput(findInputFromRefiner(item.Id) as unknown as RecipeInput[]);
+type RefineryEntry = {
+  Id: string;
+  Operation?: string;
+  Time?: string;
+  Output?: { Id: string };
+  Inputs?: Array<{ Id: string }>;
+};
+
+const getRefineryMetaForRecipe = (outputId: string): { operation?: string; time?: string } | undefined => {
+  const recipe = (refinery as RefineryEntry[]).find(
+    (entry) =>
+      entry.Output?.Id === outputId &&
+      entry.Inputs?.some((input) => input.Id === item.Id)
+  );
+  if (!recipe) return undefined;
+  return { operation: recipe.Operation, time: recipe.Time };
+};
+
+const formatRefineryTime = (time?: string): string | undefined => {
+  if (!time) return undefined;
+  const seconds = Number.parseFloat(time);
+  if (!Number.isFinite(seconds) || seconds <= 0) return time;
+  if (seconds >= 60) {
+    const minutes = Math.floor(seconds / 60);
+    const remainder = Math.round(seconds % 60);
+    return remainder > 0 ? `${minutes}m ${remainder}s` : `${minutes}m`;
+  }
+  return `${Math.round(seconds)}s`;
+};
+
+const groupedInputRefined = groupByOutput(findInputFromRefiner(item.Id) as unknown as RecipeInput[]).map(
+  (group) => {
+    const meta = getRefineryMetaForRecipe(group.Id);
+    return {
+      ...group,
+      Operation: meta?.operation,
+      Time: meta?.time,
+    };
+  }
+);
 groupedInputRefined.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
 const groupedInputCooked = groupByOutput(findInputFromCooking(item.Id) as unknown as RecipeInput[]);
 groupedInputCooked.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
@@ -384,8 +449,8 @@ const blueprintItem = item as BlueprintLikeItem;
 const blueprintCost = blueprintItem.BlueprintCost ?? 0;
 const blueprintCostType = blueprintItem.BlueprintCostType;
 const blueprintIconByType: Record<string, string> = {
-  nanites: 'https://nomansskyrecipes.com/images/items/TECHFRAG_R.png',
-  factoryoverride: 'https://nomansskyrecipes.com/images/items/FACT_TOKEN.png',
+  nanites: `${SITE.imageBaseUrl}TECHFRAG_R.png`,
+  factoryoverride: `${SITE.imageBaseUrl}FACT_TOKEN.png`,
 };
 const blueprintIcon = blueprintCostType ? blueprintIconByType[blueprintCostType.toLowerCase()] : undefined;
 const showBlueprintCost = blueprintCost > 0 && Boolean(blueprintIcon);
@@ -394,9 +459,14 @@ const isExocraftPage = Boolean(item.Slug?.startsWith('exocraft/'));
 
 const upgradeItem = item as UpgradeLikeItem;
 const isUpgradePage = Boolean(item.Slug?.startsWith('upgrades/'));
+const isTechnologyPage = Boolean(item.Slug?.startsWith('technology/'));
+const isBuildingPage = Boolean(item.Slug?.startsWith('buildings/'));
 const upgradeStatsMin = upgradeItem.NumStatsMin;
 const upgradeStatsMax = upgradeItem.NumStatsMax;
 const corvetteItem = item as CorvetteLikeItem;
+const foodItem = item as FoodLikeItem;
+const buildingItem = item as BuildingLikeItem;
+const acquisitionItem = item as AcquisitionLikeItem;
 const isCorvettePage = Boolean(item.Slug?.startsWith('corvette/'));
 const fishItem = item as FishLikeItem;
 const isFishPage = Boolean(item.Slug?.startsWith('fish/'));
@@ -786,6 +856,101 @@ const corvetteAttributes = [
     value: typeof corvetteItem.IsCraftable === 'boolean' ? (corvetteItem.IsCraftable ? 'Yes' : 'No') : undefined,
   },
 ].filter((attribute): attribute is { label: string; value: string } => Boolean(attribute.value));
+
+const deploysIntoId =
+  acquisitionItem.DeploysInto && acquisitionItem.DeploysInto !== 'None'
+    ? acquisitionItem.DeploysInto
+    : undefined;
+const deploysIntoItem = deploysIntoId ? getById(deploysIntoId) : undefined;
+const shipTechId =
+  corvetteItem.BuildableShipTechID && corvetteItem.BuildableShipTechID !== 'None'
+    ? corvetteItem.BuildableShipTechID
+    : undefined;
+const shipTechItem = shipTechId ? getById(shipTechId) : undefined;
+
+const formatFoodEffectStats = (
+  stats: Record<string, unknown> | null | undefined
+): string[] => {
+  if (!stats) return [];
+  const effects: string[] = [];
+  if (typeof stats.LifeSupportRechargeAmount === 'number') {
+    effects.push(`Life Support +${stats.LifeSupportRechargeAmount} recharge`);
+  }
+  if (typeof stats.HazardProtectionRechargeAmount === 'number') {
+    effects.push(`Hazard Protection +${stats.HazardProtectionRechargeAmount} recharge`);
+  }
+  const healthMin = stats['GcRewardHealth.AmountMin'];
+  const healthMax = stats['GcRewardHealth.AmountMax'];
+  if (typeof healthMin === 'number' || typeof healthMax === 'number') {
+    const min = typeof healthMin === 'number' ? healthMin : healthMax;
+    const max = typeof healthMax === 'number' ? healthMax : healthMin;
+    effects.push(min === max ? `Health +${min}` : `Health +${min}–${max}`);
+  }
+  const moneyMin = stats['GcRewardMoney.AmountMin'];
+  const moneyMax = stats['GcRewardMoney.AmountMax'];
+  if (typeof moneyMin === 'number' || typeof moneyMax === 'number') {
+    const min = typeof moneyMin === 'number' ? moneyMin : moneyMax;
+    const max = typeof moneyMax === 'number' ? moneyMax : moneyMin;
+    effects.push(min === max ? `Units +${min.toLocaleString()}` : `Units +${min.toLocaleString()}–${max.toLocaleString()}`);
+  }
+  if (typeof stats['GcRewardFreeStamina.Duration'] === 'number') {
+    effects.push(`Stamina boost ${stats['GcRewardFreeStamina.Duration']}s`);
+  }
+  if (typeof stats['GcRewardJetpackBoost.Duration'] === 'number') {
+    effects.push(`Jetpack boost ${stats['GcRewardJetpackBoost.Duration']}s`);
+  }
+  return effects;
+};
+
+const foodEffectLines = formatFoodEffectStats(foodItem.RewardEffectStats);
+const foodChancePercent =
+  typeof foodItem.RewardEffectStats?.PercentageChance === 'number' &&
+  foodItem.RewardEffectStats.PercentageChance < 100
+    ? `${foodItem.RewardEffectStats.PercentageChance}% chance`
+    : undefined;
+
+const buildingPlacementPills = [
+  { label: 'Planet Base', value: buildingItem.BuildableOnPlanetBase === true ? 'Yes' : buildingItem.BuildableOnPlanetBase === false ? 'No' : undefined },
+  { label: 'Freighter', value: buildingItem.BuildableOnFreighter === true ? 'Yes' : buildingItem.BuildableOnFreighter === false ? 'No' : undefined },
+  { label: 'Space Base', value: buildingItem.BuildableOnSpaceBase === true ? 'Yes' : buildingItem.BuildableOnSpaceBase === false ? 'No' : undefined },
+  ...(Array.isArray(buildingItem.Groups)
+    ? buildingItem.Groups.flatMap((group) => {
+        const pills: { label: string; value: string }[] = [];
+        if (group.Group) pills.push({ label: 'Group', value: group.Group });
+        if (group.SubGroupName) pills.push({ label: 'Sub-group', value: group.SubGroupName });
+        return pills;
+      })
+    : []),
+].filter((pill): pill is { label: string; value: string } => Boolean(pill.value));
+
+const acquisitionPills = [
+  typeof acquisitionItem.MaxStackSize === 'number' && acquisitionItem.MaxStackSize > 0
+    ? { label: 'Max Stack', value: acquisitionItem.MaxStackSize.toLocaleString() }
+    : undefined,
+  acquisitionItem.Rarity && acquisitionItem.Rarity !== 'None'
+    ? { label: 'Rarity', value: acquisitionItem.Rarity }
+    : undefined,
+  acquisitionItem.Legality && acquisitionItem.Legality !== 'None'
+    ? { label: 'Legality', value: acquisitionItem.Legality }
+    : undefined,
+  acquisitionItem.OnlyFoundInPurpleSystems === true
+    ? { label: 'Source', value: 'Purple systems only' }
+    : undefined,
+].filter((pill): pill is { label: string; value: string } => Boolean(pill));
+
+const pageSections = [
+  data.length > 0 ? { id: 'crafting', label: isFoodItem ? 'Cooking' : 'Crafting' } : null,
+  outputRefined.length > 0 ? { id: 'refining', label: 'Refining' } : null,
+  outputCooked.length > 0 ? { id: 'cooking', label: 'Nutrient Processor' } : null,
+  groupedInputRefined.length > 0 ? { id: 'refined-to-create', label: 'Refined from' } : null,
+  groupedInputCooked.length > 0 ? { id: 'cooked-to-create', label: 'Cooked from' } : null,
+  groupedInputCrafting.length > 0 ? { id: 'used-to-create', label: 'Used to craft' } : null,
+  faqQuestions.length > 0 ? { id: 'faq', label: 'FAQ' } : null,
+].filter((section): section is { id: string; label: string } => section !== null);
+
+const showStatsSection =
+  (isUpgradePage || isTechnologyPage) && upgradeStats.length > 0;
+const imageBaseUrl = SITE.imageBaseUrl;
 ---
 
 <div class="mx-auto bg-gray-800 p-4 ">
@@ -798,11 +963,23 @@ const corvetteAttributes = [
     ]}
   />
   {itemUpdateMeta && <UpdateChangesPanel meta={itemUpdateMeta} />}
+  {pageSections.length > 1 && (
+    <nav aria-label="Page sections" class="mb-4 flex flex-wrap gap-2">
+      {pageSections.map((section) => (
+        <a
+          href={`#${section.id}`}
+          class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200 hover:bg-gray-600 hover:text-cyan-100 transition-colors"
+        >
+          {section.label}
+        </a>
+      ))}
+    </nav>
+  )}
   <!-- Item details section -->
   <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8 lg:pt-12 lg:py-8 max-w-4xl mx-auto">
     <div class="flex flex-col-reverse items-center">
       <Image
-        src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
+        src={`${imageBaseUrl}${item.Icon}`}
         alt={item.Name}
         sizes="256px"
         width={256}
@@ -862,6 +1039,64 @@ const corvetteAttributes = [
           {corvetteAttributes.map((attribute) => (
             <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
               {attribute.label}: {attribute.value}
+            </p>
+          ))}
+        </div>
+      )}
+
+      {isCorvettePage && shipTechId && (
+        <div class="mt-4">
+          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            Ship Tech:
+            <a href={getSlug(shipTechId)} class="text-cyan-300 hover:text-cyan-200">
+              {corvetteItem.BuildableShipTechName ?? shipTechItem?.Name ?? shipTechId}
+            </a>
+          </p>
+        </div>
+      )}
+
+      {deploysIntoId && (
+        <div class="mt-4">
+          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            Installs as:
+            <a href={getSlug(deploysIntoId)} class="text-cyan-300 hover:text-cyan-200">
+              {deploysIntoItem?.Name ?? deploysIntoId}
+            </a>
+          </p>
+        </div>
+      )}
+
+      {acquisitionPills.length > 0 && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {acquisitionPills.map((pill) => (
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              {pill.label}: {pill.value}
+            </p>
+          ))}
+        </div>
+      )}
+
+      {isFoodItem && (foodItem.EffectCategory || foodEffectLines.length > 0) && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {foodItem.EffectCategory && (
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              Effect: {foodItem.EffectCategory}
+            </p>
+          )}
+          {foodEffectLines.map((effect) => (
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{effect}</p>
+          ))}
+          {foodChancePercent && (
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{foodChancePercent}</p>
+          )}
+        </div>
+      )}
+
+      {isBuildingPage && buildingPlacementPills.length > 0 && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {buildingPlacementPills.map((pill) => (
+            <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+              {pill.label}: {pill.value}
             </p>
           ))}
         </div>
@@ -946,7 +1181,7 @@ const corvetteAttributes = [
         </div>
       )}
 
-      {isUpgradePage && upgradeStats.length > 0 && (
+      {showStatsSection && (
         <div class="mt-6">
           <h2 class="mb-3 text-center text-2xl text-gray-200">
             Stats
@@ -962,6 +1197,21 @@ const corvetteAttributes = [
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {isFoodItem && recipeIngredients.length > 0 && (
+        <div class="mt-6 rounded-lg border border-gray-700/60 bg-gray-900/80 p-4">
+          <h2 class="mb-3 text-center text-xl text-gray-200">Recipe Steps</h2>
+          <ol class="m-0 list-decimal space-y-3 pl-5 text-gray-300">
+            <li id="recipe-step-1">
+              Gather {recipeIngredients.map((ingredient) => `${ingredient.Name} (x${ingredient.Quantity})`).join(', ')}.
+            </li>
+            <li id="recipe-step-2">
+              Combine the ingredients in {recipeToolName} to cook {item.Name}
+              {recipeOutputQuantity > 1 ? ` (x${recipeOutputQuantity})` : ''}.
+            </li>
+          </ol>
         </div>
       )}
 
@@ -998,7 +1248,7 @@ const corvetteAttributes = [
             <Accordion open={data.length + outputRefined.length + outputCooked.length === 1}>
               <div class="flex items-center gap-3" slot="title">
                 <Image
-                  src={`https://nomansskyrecipes.com/images/items/${craftItem.Icon}`}
+                  src={`${imageBaseUrl}${craftItem.Icon}`}
                   alt={craftItem.Name}
                   sizes="48px"
                   width={48}
@@ -1033,7 +1283,7 @@ const corvetteAttributes = [
                     style={`background: #${rawItem.Colour || '666'}33; border: 1px solid #${rawItem.Colour || '666'}55`}
                   >
                     <Image
-                      src={`https://nomansskyrecipes.com/images/items/${rawItem.Icon}`}
+                      src={`${imageBaseUrl}${rawItem.Icon}`}
                       alt={rawItem.Name}
                       sizes="24px"
                       width={24}
@@ -1066,7 +1316,7 @@ const corvetteAttributes = [
               <Accordion>
                 <div class="flex items-center gap-3" slot="title">
                   <Image
-                    src={`https://nomansskyrecipes.com/images/items/${outputItem.Icon}`}
+                    src={`${imageBaseUrl}${outputItem.Icon}`}
                     alt={outputItem.Name}
                     sizes="40px"
                     width={40}
@@ -1079,6 +1329,20 @@ const corvetteAttributes = [
                   </span>
                 </div>
                 <div slot="content">
+                  {(outputItem.Operation || outputItem.Time) && (
+                    <div class="mb-3 flex flex-wrap gap-2 px-2">
+                      {outputItem.Operation && (
+                        <span class="rounded-sm bg-gray-700 px-2 py-1 text-xs text-cyan-200">
+                          {outputItem.Operation}
+                        </span>
+                      )}
+                      {outputItem.Time && (
+                        <span class="rounded-sm bg-gray-700 px-2 py-1 text-xs text-cyan-200">
+                          Time: {formatRefineryTime(outputItem.Time)}
+                        </span>
+                      )}
+                    </div>
+                  )}
                   {outputItem.RequiredItems?.length > 0 && <NestedList items={outputItem} multiplyByParent={false} />}
                 </div>
               </Accordion>
@@ -1103,7 +1367,7 @@ const corvetteAttributes = [
               <Accordion>
                 <div class="flex items-center gap-3" slot="title">
                   <Image
-                    src={`https://nomansskyrecipes.com/images/items/${outputItem.Icon}`}
+                    src={`${imageBaseUrl}${outputItem.Icon}`}
                     alt={outputItem.Name}
                     sizes="40px"
                     width={40}
@@ -1140,7 +1404,7 @@ const corvetteAttributes = [
             <Accordion>
               <div class="flex items-center gap-3" slot="title">
                 <Image
-                  src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                  src={`${imageBaseUrl}${usedInItem.Icon}`}
                   alt={usedInItem.Name}
                   sizes="40px"
                   width={40}
@@ -1151,6 +1415,20 @@ const corvetteAttributes = [
                   <span class="text-white font-medium">{usedInItem.Name}</span>
                   {usedInItem.recipes.length > 1 && (
                     <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
+                  )}
+                  {(usedInItem.Operation || usedInItem.Time) && (
+                    <div class="mt-1 flex flex-wrap gap-1">
+                      {usedInItem.Operation && (
+                        <span class="rounded-sm bg-gray-700 px-1.5 py-0.5 text-xs text-cyan-200">
+                          {usedInItem.Operation}
+                        </span>
+                      )}
+                      {usedInItem.Time && (
+                        <span class="rounded-sm bg-gray-700 px-1.5 py-0.5 text-xs text-cyan-200">
+                          {formatRefineryTime(usedInItem.Time)}
+                        </span>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>
@@ -1173,7 +1451,7 @@ const corvetteAttributes = [
                                 class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
                               >
                                 <Image
-                                  src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
+                                  src={`${imageBaseUrl}${ing.Icon}`}
                                   alt={ing.Name}
                                   sizes="20px"
                                   width={20}
@@ -1192,7 +1470,7 @@ const corvetteAttributes = [
                             class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
                           >
                             <Image
-                              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                              src={`${imageBaseUrl}${usedInItem.Icon}`}
                               alt={usedInItem.Name}
                               sizes="20px"
                               width={20}
@@ -1230,7 +1508,7 @@ const corvetteAttributes = [
             <Accordion>
               <div class="flex items-center gap-3" slot="title">
                 <Image
-                  src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                  src={`${imageBaseUrl}${usedInItem.Icon}`}
                   alt={usedInItem.Name}
                   sizes="40px"
                   width={40}
@@ -1263,7 +1541,7 @@ const corvetteAttributes = [
                                 class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
                               >
                                 <Image
-                                  src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
+                                  src={`${imageBaseUrl}${ing.Icon}`}
                                   alt={ing.Name}
                                   sizes="20px"
                                   width={20}
@@ -1282,7 +1560,7 @@ const corvetteAttributes = [
                             class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
                           >
                             <Image
-                              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                              src={`${imageBaseUrl}${usedInItem.Icon}`}
                               alt={usedInItem.Name}
                               sizes="20px"
                               width={20}
@@ -1325,7 +1603,7 @@ const corvetteAttributes = [
             <Accordion>
               <div class="flex items-center gap-3" slot="title">
                 <Image
-                  src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                  src={`${imageBaseUrl}${usedInItem.Icon}`}
                   alt={usedInItem.Name}
                   sizes="40px"
                   width={40}
@@ -1358,7 +1636,7 @@ const corvetteAttributes = [
                                 class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
                               >
                                 <Image
-                                  src={`https://nomansskyrecipes.com/images/items/${ing.Icon}`}
+                                  src={`${imageBaseUrl}${ing.Icon}`}
                                   alt={ing.Name}
                                   sizes="20px"
                                   width={20}
@@ -1377,7 +1655,7 @@ const corvetteAttributes = [
                             class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
                           >
                             <Image
-                              src={`https://nomansskyrecipes.com/images/items/${usedInItem.Icon}`}
+                              src={`${imageBaseUrl}${usedInItem.Icon}`}
                               alt={usedInItem.Name}
                               sizes="20px"
                               width={20}
@@ -1409,7 +1687,7 @@ const corvetteAttributes = [
               Load more ({deferredUsedInCrafting.length} more)
             </button>
           </div>
-          <script is:inline>
+          <script is:inline define:vars={{ imageBaseUrl }}>
             (() => {
               const dataEl = document.getElementById('used-in-hidden-data');
               const loadMoreBtn = document.getElementById('used-in-load-more');
@@ -1429,7 +1707,7 @@ const corvetteAttributes = [
                 return;
               }
 
-              const imageBase = 'https://nomansskyrecipes.com/images/items/';
+              const imageBase = imageBaseUrl;
               const numberFormatter = new Intl.NumberFormat();
               const batchSize = 12;
               const escapeHtml = (value) =>
@@ -1537,6 +1815,24 @@ const corvetteAttributes = [
         </>
       )}
     </div>
+  )}
+
+  {faqQuestions.length > 0 && (
+    <section id="faq" class="mt-6 border-t border-gray-600/60 py-6">
+      <h2 class="relative mb-4 text-center">
+        <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
+          Frequently Asked Questions
+        </span>
+      </h2>
+      <div class="mx-auto max-w-3xl space-y-2">
+        {faqQuestions.map((faq, index) => (
+          <Accordion id={`item-faq-${index + 1}`}>
+            <h3 class="m-0 text-lg text-white" slot="title">{faq.question}</h3>
+            <p class="m-0 text-gray-300" slot="content">{faq.answer}</p>
+          </Accordion>
+        ))}
+      </div>
+    </section>
   )}
 </div>
 

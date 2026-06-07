@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import creaturesData from '@datav2/Creatures.json';
+import { SITE } from '@config';
 
 type CreatureAffinity = {
 	Id: string;
@@ -64,7 +65,7 @@ type MoveFamily = {
 	variantDescGroups: { desc: string; affinities: string[] }[];
 };
 
-const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const IMAGE_BASE = SITE.imageBaseUrl;
 const battleMoves =
 	((creaturesData as Record<string, unknown>).BattleMoves as CreatureMove[] | undefined) ?? [];
 const moveSets = ((creaturesData as Record<string, unknown>).MoveSets as CreatureMoveSet[] | undefined) ?? [];

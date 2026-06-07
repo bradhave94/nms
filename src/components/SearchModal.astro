@@ -1,4 +1,5 @@
 ---
+import { SITE } from '@config';
 
 const filters = [
 	{ id: 'blog', name: 'Blog' },
@@ -17,6 +18,7 @@ const filters = [
 ];
 
 const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filter.name]));
+const imageBaseUrl = SITE.imageBaseUrl;
 ---
 
 <div class="relative z-10 hidden" id="site-search" role="dialog" aria-modal="true">
@@ -55,6 +57,7 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 				class="max-h-72 scroll-py-2 overflow-y-auto p-8 text-sm text-white"
 				id="results"
 				data-filter-labels={JSON.stringify(filterLabels)}
+				data-image-base={imageBaseUrl}
 				aria-live="polite"
 			></div>
 		</div>
@@ -68,6 +71,7 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 	const filterLabelMap = resultsList?.dataset.filterLabels
 		? JSON.parse(resultsList.dataset.filterLabels)
 		: {};
+	const imageBaseUrl = resultsList?.dataset.imageBase ?? '/images/items/';
 	const loadingIndicator = document.getElementById('loading-indicator');
 
 	const searchCache = new Map();
@@ -223,7 +227,27 @@ const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filt
 
 					const a = document.createElement('a');
 					a.href = result.url.replace(/\/+/g, '/');
-					a.textContent = result.name;
+					a.className = 'flex items-center gap-2 py-1 hover:text-cyan-300';
+
+					if (result.icon) {
+						const img = document.createElement('img');
+						img.src = `${imageBaseUrl}${result.icon}`;
+						img.alt = '';
+						img.className = 'h-6 w-6 shrink-0';
+						img.loading = 'lazy';
+						a.appendChild(img);
+					}
+
+					const nameSpan = document.createElement('span');
+					nameSpan.textContent = result.name;
+					a.appendChild(nameSpan);
+
+					const badge = document.createElement('span');
+					badge.className =
+						'ml-auto shrink-0 rounded-sm bg-gray-700 px-1.5 py-0.5 text-xs text-gray-300';
+					badge.textContent = filterLabelMap[result.type] || result.type;
+					a.appendChild(badge);
+
 					li.appendChild(a);
 					ul.appendChild(li);
 				});

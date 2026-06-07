@@ -1,6 +1,5 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import { SITE } from '@config';
 import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
@@ -9,6 +8,7 @@ import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredD
 import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Products.json';
+import { SITE } from '@config';
 
 const pageSize = 80;
 const sortedItems = (data as Item[]).sort((a: Item, b: Item) => b.BaseValueUnits - a.BaseValueUnits);
@@ -68,7 +68,7 @@ const { title, description } = buildPaginatedMeta('Crafting Calculator', baseDes
 					<CompactCard
 						card={{
 							name: item.Name,
-							image: 'https://nomansskyrecipes.com/images/items/' + item.Icon,
+							image: SITE.imageBaseUrl + item.Icon,
 							link: getSlug(item),
 						}}
 						index={index}

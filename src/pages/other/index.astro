@@ -9,6 +9,7 @@ import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from
 import type { Item } from '@utils/lookup.js';
 import others from '@datav2/Others.json';
 import trade from '@datav2/Trade.json';
+import { SITE } from '@config';
 
 const pageSize = 80;
 const sortedItems = sort([...others, ...trade] as Item[]);
@@ -64,7 +65,7 @@ const { title, description } = buildPaginatedMeta('Other Items', baseDescription
 				<CompactCard
 					card={{
 						name: item.Name,
-						image: `https://nomansskyrecipes.com/images/items/${item.Icon}`,
+						image: `${SITE.imageBaseUrl}${item.Icon}`,
 						link: getSlug(item),
 					}}
 					index={index}

@@ -3,9 +3,11 @@ import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import * as dataSources from '@datav2/index.js';
 
-// Combine and sort all data
-const allData = Object.values(dataSources).flatMap((source) => source as Item[]);
-const data = sort(allData as Item[]);
+// Combine and sort all data — only real item arrays (skip Creatures object, NewUpdate diff, etc.)
+const allData = Object.values(dataSources).flatMap((source) =>
+	Array.isArray(source) ? (source as Item[]) : []
+);
+const data = sort(allData);
 
 // Map slug prefix to type for filtering
 const getTypeFromSlug = (slug: string): string => {

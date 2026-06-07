@@ -82,6 +82,7 @@ const dataSources = {
 	upgrades,
 	exocraft,
 	starships,
+	corvette,
 };
 
 // Mapping the prefixes of item id to the corresponding slugs
@@ -101,6 +102,7 @@ const slugs = {
 	trade: 'other/',
 	upgrades: 'upgrades/',
 	exocraft: 'exocraft/',
+	corvette: 'corvette/',
 };
 
 const labels = {
@@ -120,6 +122,7 @@ const labels = {
 	upgrades: 'Upgrades',
 	exocraft: 'Exocraft',
 	starships: 'Starships',
+	corvette: 'Corvette',
 };
 
 /** Map extractor SourceFile names to site URL segments (for items without Slug on the payload). */
@@ -227,6 +230,7 @@ const slugLabels: Record<string, string> = {
 	upgrades: 'Upgrades',
 	exocraft: 'Exocraft',
 	starships: 'Starships',
+	corvette: 'Corvette',
 	creatures: 'Creatures',
 };
 
@@ -317,7 +321,7 @@ type ItemWithRequiredItems = { Id: string; RequiredItems?: RequiredItem[]; Name?
 const findInputFromCrafting = (id: string): ItemWithInputs[] => {
     const results: ItemWithInputs[] = [];
     // Products, Upgrades, Exocraft, etc. have RequiredItems
-    const craftingSources = [products, cooking, curiosities, fish, conTech, tech, tMod, other, build, trade, upgrades, exocraft, starships];
+    const craftingSources = [products, cooking, curiosities, fish, conTech, tech, tMod, other, build, trade, upgrades, exocraft, starships, corvette];
     for (const source of craftingSources) {
         for (const it of source) {
             const item = it as ItemWithRequiredItems;

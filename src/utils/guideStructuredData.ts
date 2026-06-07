@@ -21,6 +21,8 @@ type BuildGuideStructuredDataOptions = {
 	}>;
 };
 
+const isHowToGuide = (title: string): boolean => /\bhow to\b|\bguide\b/i.test(title);
+
 export const buildGuideStructuredData = ({
 	canonicalUrl,
 	title,
@@ -45,9 +47,9 @@ export const buildGuideStructuredData = ({
 		})),
 	};
 
-	const articleSchema: JsonLdObject = {
+	const blogPostingSchema: JsonLdObject = {
 		'@context': 'https://schema.org',
-		'@type': 'Article',
+		'@type': 'BlogPosting',
 		'@id': `${canonicalUrl}#article`,
 		mainEntityOfPage: canonicalUrl,
 		headline: title,
@@ -83,5 +85,35 @@ export const buildGuideStructuredData = ({
 				}
 			: undefined;
 
-	return faqSchema ? [breadcrumbSchema, articleSchema, faqSchema] : [breadcrumbSchema, articleSchema];
+	const howToSchema: JsonLdObject | undefined = isHowToGuide(title)
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'HowTo',
+				'@id': `${canonicalUrl}#howto`,
+				name: title,
+				description,
+				step:
+					faqs.length > 0
+						? faqs.map((faq, index) => ({
+								'@type': 'HowToStep',
+								position: index + 1,
+								name: faq.question,
+								text: faq.answer,
+								url: `${canonicalUrl}#faq-${index + 1}`,
+							}))
+						: [
+								{
+									'@type': 'HowToStep',
+									position: 1,
+									name: title,
+									text: description,
+								},
+							],
+			}
+		: undefined;
+
+	const schemas: JsonLdObject[] = [breadcrumbSchema, blogPostingSchema];
+	if (howToSchema) schemas.push(howToSchema);
+	if (faqSchema) schemas.push(faqSchema);
+	return schemas;
 };
