@@ -62,21 +62,6 @@ const { nextUrl } = buildPaginationUrls(siteOrigin, page);
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
 	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>
 	<p class="mx-auto mb-4 mt-3 max-w-3xl text-center text-sky-200/90">{intro}</p>
-	<p class="text-center mb-6 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center">
-		<a
-			href="/calculator/planner"
-			class="text-lg font-medium text-cyan-300 underline-offset-2 hover:text-cyan-200 hover:underline"
-		>
-			Try the multi-item Crafting Planner →
-		</a>
-		<span class="hidden text-sky-600 sm:inline" aria-hidden="true">·</span>
-		<a
-			href="/calculator/reverse"
-			class="text-lg font-medium text-cyan-300 underline-offset-2 hover:text-cyan-200 hover:underline"
-		>
-			What can I make with an item? Reverse Calculator →
-		</a>
-	</p>
 	<p class="text-xl text-center mt-3 mb-8">Choose an item below to start</p>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{

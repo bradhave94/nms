@@ -280,86 +280,56 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		haveLabel.textContent = `of ${selectedEntry.name}`;
 	}
 
-	function createInputChip(input: ReverseRecipeInput): HTMLSpanElement {
-		const chip = document.createElement('span');
-		chip.className = 'inline-flex items-center gap-1 text-sm text-sky-200/90';
-
-		if (input.icon) {
-			const img = document.createElement('img');
-			img.src = `${imageBaseUrl}${input.icon}`;
-			img.alt = '';
-			img.className = 'h-5 w-5 shrink-0 object-contain';
-			img.loading = 'lazy';
-			chip.appendChild(img);
-		}
-
-		const qtySpan = document.createElement('span');
-		qtySpan.className = 'tabular-nums text-sky-300';
-		qtySpan.textContent = String(input.quantity);
-		chip.appendChild(qtySpan);
-
-		const nameSpan = document.createElement('span');
-		nameSpan.textContent = input.name;
-		chip.appendChild(nameSpan);
-
-		return chip;
-	}
-
 	function createRecipeRow(recipe: ReverseRecipe, haveQty: number): HTMLLIElement {
 		const li = document.createElement('li');
-		li.className = 'flex flex-col gap-2 border-b border-sky-800/60 py-3 last:border-b-0 sm:flex-row sm:items-center sm:gap-4';
+		li.className = 'flex items-center gap-3 border-b border-sky-800/40 py-3 last:border-b-0';
 
-		const outputLink = document.createElement('a');
-		outputLink.href = recipe.outputUrl;
-		outputLink.className = 'flex min-w-0 flex-1 items-center gap-2 text-cyan-300 hover:text-cyan-200';
-
+		// Output icon
 		if (recipe.outputIcon) {
 			const img = document.createElement('img');
 			img.src = `${imageBaseUrl}${recipe.outputIcon}`;
 			img.alt = '';
-			img.className = 'h-7 w-7 shrink-0 object-contain';
+			img.className = 'h-9 w-9 shrink-0 object-contain';
 			img.loading = 'lazy';
-			outputLink.appendChild(img);
+			li.appendChild(img);
 		}
 
-		const outputName = document.createElement('span');
-		outputName.className = 'font-medium';
-		outputName.textContent = recipe.outputName;
-		outputLink.appendChild(outputName);
+		const body = document.createElement('div');
+		body.className = 'min-w-0 flex-1';
 
-		li.appendChild(outputLink);
+		// Headline: the yield is the answer
+		const headline = document.createElement('a');
+		headline.href = recipe.outputUrl;
+		headline.className = 'block text-lg font-bold leading-tight text-cyan-300 hover:text-cyan-200';
 
-		const inputsWrap = document.createElement('div');
-		inputsWrap.className = 'flex flex-wrap items-center gap-2 text-sm';
-		const inputsLabel = document.createElement('span');
-		inputsLabel.className = 'text-sky-400';
-		inputsLabel.textContent = 'Needs:';
-		inputsWrap.appendChild(inputsLabel);
-
-		for (const input of recipe.inputs) {
-			inputsWrap.appendChild(createInputChip(input));
-		}
-		li.appendChild(inputsWrap);
-
-		const outputQtyWrap = document.createElement('div');
-		outputQtyWrap.className = 'text-sm text-sky-200/90 shrink-0';
-
-		const outputQtyText = document.createElement('span');
-		outputQtyText.textContent = `→ ${recipe.outputQuantity} ${recipe.outputName}`;
-		outputQtyWrap.appendChild(outputQtyText);
-
-		if (selectedEntry) {
-			const selectedInput = recipe.inputs.find((input) => input.id === selectedEntry?.id);
-			if (selectedInput && selectedInput.quantity > 0) {
-				const maxYield = Math.floor(haveQty / selectedInput.quantity) * recipe.outputQuantity;
-				const yieldSpan = document.createElement('span');
-				yieldSpan.className = 'ml-2 text-cyan-300';
-				yieldSpan.textContent = `(up to ${maxYield.toLocaleString()} ${recipe.outputName})`;
-				outputQtyWrap.appendChild(yieldSpan);
+		let headlineQty = recipe.outputQuantity;
+		const selectedInput = selectedEntry
+			? recipe.inputs.find((input) => input.id === selectedEntry?.id)
+			: undefined;
+		if (selectedInput && selectedInput.quantity > 0) {
+			const maxYield = Math.floor(haveQty / selectedInput.quantity) * recipe.outputQuantity;
+			// Only override when you can make at least one batch; otherwise show the
+			// per-batch output so a row never reads "0".
+			if (maxYield >= 1) {
+				headlineQty = maxYield;
 			}
 		}
+		headline.textContent = `${headlineQty.toLocaleString()} ${recipe.outputName}`;
+		body.appendChild(headline);
 
-		li.appendChild(outputQtyWrap);
+		// Muted recipe line: from <inputs> · N per <method>
+		const recipeLine = document.createElement('p');
+		recipeLine.className = 'm-0 mt-0.5 text-xs leading-snug text-sky-300/80';
+		const inputsText = recipe.inputs
+			.map((input) => `${input.quantity} ${input.name}`)
+			.join(' + ');
+		const inputsStrong = document.createElement('span');
+		inputsStrong.className = 'text-sky-200';
+		inputsStrong.textContent = inputsText;
+		recipeLine.append('from ', inputsStrong, ` · ${recipe.outputQuantity} per ${recipe.method}`);
+		body.appendChild(recipeLine);
+
+		li.appendChild(body);
 
 		return li;
 	}
