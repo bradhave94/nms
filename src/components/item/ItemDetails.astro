@@ -151,7 +151,7 @@ const {
 
     {showBlueprintCost && (
       <div class="mt-2 flex flex-wrap gap-2">
-        <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+        <p class="inline-flex items-center gap-2 m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           <img
             src={blueprintIcon}
             alt="Blueprint Cost"
@@ -169,7 +169,7 @@ const {
     {isCorvettePage && corvetteAttributes.length > 0 && (
       <div class="mt-2 flex flex-wrap gap-2">
         {corvetteAttributes.map((attribute) => (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {attribute.label}: {attribute.value}
           </p>
         ))}
@@ -178,7 +178,7 @@ const {
 
     {isCorvettePage && shipTechId && (
       <div class="mt-2">
-        <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+        <p class="inline-flex items-center gap-2 m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           Ship Tech:
           <a href={getSlug(shipTechId)} class="text-cyan-300 hover:text-cyan-200">
             {shipTechName ?? shipTechItemName ?? shipTechId}
@@ -189,7 +189,7 @@ const {
 
     {deploysIntoId && (
       <div class="mt-2">
-        <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+        <p class="inline-flex items-center gap-2 m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           Installs as:
           <a href={getSlug(deploysIntoId)} class="text-cyan-300 hover:text-cyan-200">
             {deploysIntoItemName ?? deploysIntoId}
@@ -201,7 +201,7 @@ const {
     {acquisitionPills.length > 0 && (
       <div class="mt-2 flex flex-wrap gap-2">
         {acquisitionPills.map((pill) => (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {pill.label}: {pill.value}
           </p>
         ))}
@@ -211,15 +211,15 @@ const {
     {isFoodItem && (foodEffectCategory || foodEffectLines.length > 0) && (
       <div class="mt-2 flex flex-wrap gap-2">
         {foodEffectCategory && (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             Effect: {foodEffectCategory}
           </p>
         )}
         {foodEffectLines.map((effect) => (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{effect}</p>
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{effect}</p>
         ))}
         {foodChancePercent && (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{foodChancePercent}</p>
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">{foodChancePercent}</p>
         )}
       </div>
     )}
@@ -227,7 +227,7 @@ const {
     {isBuildingPage && buildingPlacementPills.length > 0 && (
       <div class="mt-2 flex flex-wrap gap-2">
         {buildingPlacementPills.map((pill) => (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {pill.label}: {pill.value}
           </p>
         ))}
@@ -237,7 +237,7 @@ const {
     {isExocraftPage && exocraftPills.length > 0 && (
       <div class="mt-2 flex flex-wrap gap-2">
         {exocraftPills.map((pill) => (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {pill.label}: {pill.value}
           </p>
         ))}
@@ -247,7 +247,7 @@ const {
     {isFishPage && (
       <div class="mt-2 flex flex-wrap gap-2">
         {fishingTimeLabel && (
-          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="inline-flex items-center gap-2 m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {showSunIcon && (
               <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
                 <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
@@ -264,25 +264,25 @@ const {
         )}
 
         {fishSize && (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             Size: {fishSize}
           </p>
         )}
 
         {fishQuality && (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             Quality: {fishQuality}
           </p>
         )}
 
         {biomeLabel && (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             Biomes: {biomeLabel}
           </p>
         )}
 
         {needsStorm && (
-          <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="inline-flex items-center gap-2 m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4">
               <path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 6.2 8.5 3.5 3.5 0 0 0 7 18z" fill="currentColor"></path>
               <path d="M12 12l-2 4h2l-1 4 4-6h-2l1-2z" fill="#0b0b0b"></path>
@@ -292,13 +292,13 @@ const {
         )}
 
         {missionLabel && (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             Mission: {missionLabel}
           </p>
         )}
 
         {catchChancePercent && (
-          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+          <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             Catch Chance: {catchChancePercent}
           </p>
         )}
@@ -307,7 +307,7 @@ const {
 
     {plantGrowTime && (
       <div class="mt-2 flex flex-wrap gap-2">
-        <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+        <p class="m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           {growTimeHeader}: {plantGrowTime}
         </p>
       </div>
