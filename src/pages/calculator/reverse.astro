@@ -1,0 +1,557 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { getSiteOrigin } from '@utils/structuredData.js';
+import { SITE } from '@config';
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/calculator/reverse', siteOrigin).toString();
+const title = "Reverse Calculator — What Can I Make? | No Man's Sky Recipes";
+const description =
+	'Pick a raw material or ingredient and see everything you can refine, cook, or craft with it.';
+const breadcrumbs = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Crafting Calculator', href: '/calculator' },
+	{ name: 'Reverse Calculator' },
+];
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	'@id': `${canonicalUrl}#breadcrumb`,
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+		{ '@type': 'ListItem', position: 2, name: 'Crafting Calculator', item: `${siteOrigin}/calculator` },
+		{ '@type': 'ListItem', position: 3, name: 'Reverse Calculator', item: canonicalUrl },
+	],
+};
+const imageBaseUrl = SITE.imageBaseUrl;
+---
+
+<Layout
+	{title}
+	{description}
+	slug="calculator"
+	structuredData={breadcrumbSchema}
+	ogImage={`${SITE.website}/images/calculator.webp`}
+>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<h1 class="text-center text-4xl sm:text-6xl mt-2">Reverse Calculator</h1>
+	<p class="mx-auto mb-8 mt-3 max-w-3xl text-center text-sky-200/90">
+		Pick an ingredient or raw material to see every recipe that uses it — refining, cooking, and crafting — with optional yield estimates when you have a set amount on hand.
+	</p>
+
+	<div
+		id="reverse-app"
+		class="mx-auto max-w-4xl px-4 pb-12"
+		data-image-base={imageBaseUrl}
+	>
+		<div class="mb-6">
+			<label for="item-search" class="sr-only">Search ingredients</label>
+			<input
+				id="item-search"
+				type="text"
+				autocomplete="off"
+				placeholder="Search ingredients (e.g. Ferrite Dust, Carbon)…"
+				class="h-12 w-full rounded-sm border border-sky-700 bg-sky-900/50 px-4 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+			/>
+			<div
+				id="item-results"
+				class="mt-2 max-h-64 overflow-y-auto rounded-sm border border-sky-800 bg-black/40 hidden"
+				role="listbox"
+				aria-label="Matching ingredients"
+			></div>
+		</div>
+
+		<div id="selected-item" class="mb-6 hidden"></div>
+
+		<div class="mb-6 flex flex-wrap items-center gap-4">
+			<label for="have-qty" class="text-sm text-sky-200">I have</label>
+			<input
+				id="have-qty"
+				type="number"
+				min="1"
+				value="1"
+				class="h-10 w-24 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+			/>
+			<span id="have-label" class="text-sm text-sky-200/80">of the selected item</span>
+		</div>
+
+		<div class="mb-4 flex flex-wrap gap-2">
+			<div class="inline-flex">
+				<input type="checkbox" class="peer hidden" name="method-filter" id="filter-refine" value="refine" checked tabindex="-1" />
+				<label for="filter-refine" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+					Refine
+				</label>
+			</div>
+			<div class="inline-flex">
+				<input type="checkbox" class="peer hidden" name="method-filter" id="filter-cook" value="cook" checked tabindex="-1" />
+				<label for="filter-cook" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+					Cook
+				</label>
+			</div>
+			<div class="inline-flex">
+				<input type="checkbox" class="peer hidden" name="method-filter" id="filter-craft" value="craft" checked tabindex="-1" />
+				<label for="filter-craft" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+					Craft
+				</label>
+			</div>
+		</div>
+
+		<section aria-labelledby="results-heading">
+			<h2 id="results-heading" class="sr-only">Recipe results</h2>
+			<div id="results-empty" class="text-sky-200/70 text-sm">
+				Search above and select an ingredient to see what you can make with it.
+			</div>
+			<div id="results-no-recipes" class="text-sky-200/70 text-sm hidden">
+				No recipes use this item.
+			</div>
+			<div id="results-list" class="hidden"></div>
+		</section>
+	</div>
+</Layout>
+
+<script>
+	type ReverseRecipeInput = {
+		id: string;
+		name: string;
+		icon: string;
+		quantity: number;
+	};
+
+	type ReverseRecipe = {
+		method: 'refine' | 'cook' | 'craft';
+		outputId: string;
+		outputName: string;
+		outputIcon: string;
+		outputUrl: string;
+		outputQuantity: number;
+		inputs: ReverseRecipeInput[];
+	};
+
+	type ReverseEntry = {
+		id: string;
+		name: string;
+		icon: string;
+		recipes: ReverseRecipe[];
+	};
+
+	const METHOD_LABELS: Record<ReverseRecipe['method'], string> = {
+		refine: 'Refine',
+		cook: 'Cook',
+		craft: 'Craft',
+	};
+
+	const reverseApp = document.getElementById('reverse-app');
+	const itemSearch = document.getElementById('item-search') as HTMLInputElement | null;
+	const itemResults = document.getElementById('item-results');
+	const selectedItemEl = document.getElementById('selected-item');
+	const haveQtyInput = document.getElementById('have-qty') as HTMLInputElement | null;
+	const haveLabel = document.getElementById('have-label');
+	const resultsEmpty = document.getElementById('results-empty');
+	const resultsNoRecipes = document.getElementById('results-no-recipes');
+	const resultsList = document.getElementById('results-list');
+	const methodCheckboxes = Array.from(
+		document.querySelectorAll<HTMLInputElement>('input[name="method-filter"]')
+	);
+
+	const imageBaseUrl = reverseApp?.dataset.imageBase ?? '/images/items/';
+
+	let entries: ReverseEntry[] = [];
+	const entriesById = new Map<string, ReverseEntry>();
+	let selectedEntry: ReverseEntry | null = null;
+	let searchDebounceTimer: ReturnType<typeof setTimeout> | undefined;
+	let urlDebounceTimer: ReturnType<typeof setTimeout> | undefined;
+	let datasetPromise: Promise<ReverseEntry[]> | null = null;
+
+	function loadReverseDataset(): Promise<ReverseEntry[]> {
+		if (!datasetPromise) {
+			datasetPromise = fetch('/calculator/reverse-data.json', { cache: 'force-cache' })
+				.then((response) => response.json())
+				.then((results) => {
+					if (!results || !Array.isArray(results.body)) {
+						return [];
+					}
+					return results.body.filter(
+						(entry: ReverseEntry) =>
+							entry &&
+							typeof entry.id === 'string' &&
+							typeof entry.name === 'string' &&
+							Array.isArray(entry.recipes)
+					);
+				})
+				.catch((error) => {
+					datasetPromise = null;
+					throw error;
+				});
+		}
+		return datasetPromise;
+	}
+
+	function getHaveQty(): number {
+		const parsed = Number.parseInt(haveQtyInput?.value ?? '1', 10);
+		return Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
+	}
+
+	function getSelectedMethods(): Set<ReverseRecipe['method']> {
+		const selected = methodCheckboxes
+			.filter((checkbox) => checkbox.checked)
+			.map((checkbox) => checkbox.value as ReverseRecipe['method']);
+		return new Set(selected);
+	}
+
+	function updateUrl() {
+		if (urlDebounceTimer) {
+			clearTimeout(urlDebounceTimer);
+		}
+		urlDebounceTimer = setTimeout(() => {
+			const params = new URLSearchParams();
+			if (selectedEntry) {
+				params.set('item', selectedEntry.id);
+				const haveQty = getHaveQty();
+				if (haveQty > 1) {
+					params.set('have', String(haveQty));
+				}
+			}
+			const query = params.toString();
+			const newUrl = `/calculator/reverse${query ? `?${query}` : ''}`;
+			window.history.replaceState({}, '', newUrl);
+		}, 200);
+	}
+
+	function parseUrlState(): { itemId: string | null; haveQty: number } {
+		const params = new URLSearchParams(window.location.search);
+		const itemId = params.get('item');
+		const haveParam = params.get('have');
+		let haveQty = 1;
+		if (haveParam) {
+			const parsed = Number.parseInt(haveParam, 10);
+			if (Number.isFinite(parsed) && parsed >= 1) {
+				haveQty = parsed;
+			}
+		}
+		return { itemId, haveQty };
+	}
+
+	function selectEntry(entry: ReverseEntry) {
+		selectedEntry = entry;
+		if (itemSearch) {
+			itemSearch.value = entry.name;
+		}
+		if (itemResults) {
+			itemResults.classList.add('hidden');
+			itemResults.textContent = '';
+		}
+		renderSelectedItem();
+		renderResults();
+		updateUrl();
+	}
+
+	function renderSelectedItem() {
+		if (!selectedItemEl || !haveLabel) return;
+
+		selectedItemEl.textContent = '';
+
+		if (!selectedEntry) {
+			selectedItemEl.classList.add('hidden');
+			haveLabel.textContent = 'of the selected item';
+			return;
+		}
+
+		selectedItemEl.classList.remove('hidden');
+
+		const row = document.createElement('div');
+		row.className = 'flex items-center gap-3 rounded-sm border border-sky-800 bg-sky-900/30 px-4 py-3';
+
+		if (selectedEntry.icon) {
+			const img = document.createElement('img');
+			img.src = `${imageBaseUrl}${selectedEntry.icon}`;
+			img.alt = '';
+			img.className = 'h-8 w-8 shrink-0 object-contain';
+			img.loading = 'lazy';
+			row.appendChild(img);
+		}
+
+		const nameSpan = document.createElement('span');
+		nameSpan.className = 'text-lg font-medium text-white';
+		nameSpan.textContent = selectedEntry.name;
+		row.appendChild(nameSpan);
+
+		selectedItemEl.appendChild(row);
+		haveLabel.textContent = `of ${selectedEntry.name}`;
+	}
+
+	function createInputChip(input: ReverseRecipeInput): HTMLSpanElement {
+		const chip = document.createElement('span');
+		chip.className = 'inline-flex items-center gap-1 text-sm text-sky-200/90';
+
+		if (input.icon) {
+			const img = document.createElement('img');
+			img.src = `${imageBaseUrl}${input.icon}`;
+			img.alt = '';
+			img.className = 'h-5 w-5 shrink-0 object-contain';
+			img.loading = 'lazy';
+			chip.appendChild(img);
+		}
+
+		const qtySpan = document.createElement('span');
+		qtySpan.className = 'tabular-nums text-sky-300';
+		qtySpan.textContent = String(input.quantity);
+		chip.appendChild(qtySpan);
+
+		const nameSpan = document.createElement('span');
+		nameSpan.textContent = input.name;
+		chip.appendChild(nameSpan);
+
+		return chip;
+	}
+
+	function createRecipeRow(recipe: ReverseRecipe, haveQty: number): HTMLLIElement {
+		const li = document.createElement('li');
+		li.className = 'flex flex-col gap-2 border-b border-sky-800/60 py-3 last:border-b-0 sm:flex-row sm:items-center sm:gap-4';
+
+		const outputLink = document.createElement('a');
+		outputLink.href = recipe.outputUrl;
+		outputLink.className = 'flex min-w-0 flex-1 items-center gap-2 text-cyan-300 hover:text-cyan-200';
+
+		if (recipe.outputIcon) {
+			const img = document.createElement('img');
+			img.src = `${imageBaseUrl}${recipe.outputIcon}`;
+			img.alt = '';
+			img.className = 'h-7 w-7 shrink-0 object-contain';
+			img.loading = 'lazy';
+			outputLink.appendChild(img);
+		}
+
+		const outputName = document.createElement('span');
+		outputName.className = 'font-medium';
+		outputName.textContent = recipe.outputName;
+		outputLink.appendChild(outputName);
+
+		li.appendChild(outputLink);
+
+		const inputsWrap = document.createElement('div');
+		inputsWrap.className = 'flex flex-wrap items-center gap-2 text-sm';
+		const inputsLabel = document.createElement('span');
+		inputsLabel.className = 'text-sky-400';
+		inputsLabel.textContent = 'Needs:';
+		inputsWrap.appendChild(inputsLabel);
+
+		for (const input of recipe.inputs) {
+			inputsWrap.appendChild(createInputChip(input));
+		}
+		li.appendChild(inputsWrap);
+
+		const outputQtyWrap = document.createElement('div');
+		outputQtyWrap.className = 'text-sm text-sky-200/90 shrink-0';
+
+		const outputQtyText = document.createElement('span');
+		outputQtyText.textContent = `→ ${recipe.outputQuantity} ${recipe.outputName}`;
+		outputQtyWrap.appendChild(outputQtyText);
+
+		if (selectedEntry) {
+			const selectedInput = recipe.inputs.find((input) => input.id === selectedEntry?.id);
+			if (selectedInput && selectedInput.quantity > 0) {
+				const maxYield = Math.floor(haveQty / selectedInput.quantity) * recipe.outputQuantity;
+				const yieldSpan = document.createElement('span');
+				yieldSpan.className = 'ml-2 text-cyan-300';
+				yieldSpan.textContent = `(up to ${maxYield.toLocaleString()} ${recipe.outputName})`;
+				outputQtyWrap.appendChild(yieldSpan);
+			}
+		}
+
+		li.appendChild(outputQtyWrap);
+
+		return li;
+	}
+
+	function renderResults() {
+		if (!resultsEmpty || !resultsNoRecipes || !resultsList) return;
+
+		resultsEmpty.classList.add('hidden');
+		resultsNoRecipes.classList.add('hidden');
+		resultsList.classList.add('hidden');
+		resultsList.textContent = '';
+
+		if (!selectedEntry) {
+			resultsEmpty.classList.remove('hidden');
+			return;
+		}
+
+		const selectedMethods = getSelectedMethods();
+		const haveQty = getHaveQty();
+		const grouped = new Map<ReverseRecipe['method'], ReverseRecipe[]>();
+
+		for (const recipe of selectedEntry.recipes) {
+			if (!selectedMethods.has(recipe.method)) continue;
+			const list = grouped.get(recipe.method) ?? [];
+			list.push(recipe);
+			grouped.set(recipe.method, list);
+		}
+
+		const methodOrder: ReverseRecipe['method'][] = ['refine', 'cook', 'craft'];
+		let hasAny = false;
+
+		for (const method of methodOrder) {
+			const recipes = grouped.get(method);
+			if (!recipes || recipes.length === 0) continue;
+
+			hasAny = true;
+			const section = document.createElement('section');
+			section.className = 'mb-8';
+			section.setAttribute('aria-labelledby', `method-${method}`);
+
+			const heading = document.createElement('h3');
+			heading.id = `method-${method}`;
+			heading.className = 'text-2xl mb-3 text-cyan-200';
+			heading.textContent = METHOD_LABELS[method];
+			section.appendChild(heading);
+
+			const ul = document.createElement('ul');
+			ul.className = 'm-0 list-none p-0';
+			for (const recipe of recipes) {
+				ul.appendChild(createRecipeRow(recipe, haveQty));
+			}
+			section.appendChild(ul);
+
+			resultsList.appendChild(section);
+		}
+
+		if (!hasAny) {
+			if (selectedEntry.recipes.length === 0) {
+				resultsNoRecipes.classList.remove('hidden');
+			} else {
+				resultsNoRecipes.textContent = 'No recipes match the selected methods.';
+				resultsNoRecipes.classList.remove('hidden');
+			}
+			return;
+		}
+
+		resultsList.classList.remove('hidden');
+	}
+
+	function renderItemSearch() {
+		if (!itemSearch || !itemResults) return;
+
+		const term = itemSearch.value.trim().toLowerCase();
+		itemResults.textContent = '';
+
+		if (!term) {
+			itemResults.classList.add('hidden');
+			return;
+		}
+
+		const matches = entries
+			.filter((entry) => entry.name.toLowerCase().includes(term))
+			.sort((a, b) => {
+				const aName = a.name.toLowerCase();
+				const bName = b.name.toLowerCase();
+				if (aName === term) return -1;
+				if (bName === term) return 1;
+				if (aName.startsWith(term) && !bName.startsWith(term)) return -1;
+				if (bName.startsWith(term) && !aName.startsWith(term)) return 1;
+				return a.name.localeCompare(b.name);
+			})
+			.slice(0, 50);
+
+		if (matches.length === 0) {
+			itemResults.classList.remove('hidden');
+			const empty = document.createElement('p');
+			empty.className = 'p-3 text-sm text-sky-200/70';
+			empty.textContent = 'No matching ingredients found.';
+			itemResults.appendChild(empty);
+			return;
+		}
+
+		itemResults.classList.remove('hidden');
+		const ul = document.createElement('ul');
+		ul.className = 'm-0 list-none p-0';
+
+		for (const entry of matches) {
+			const li = document.createElement('li');
+			li.setAttribute('role', 'option');
+
+			const btn = document.createElement('button');
+			btn.type = 'button';
+			btn.className =
+				'flex w-full items-center gap-2 px-3 py-2 text-left text-white hover:bg-sky-800/60';
+
+			if (entry.icon) {
+				const img = document.createElement('img');
+				img.src = `${imageBaseUrl}${entry.icon}`;
+				img.alt = '';
+				img.className = 'h-6 w-6 shrink-0 object-contain';
+				img.loading = 'lazy';
+				btn.appendChild(img);
+			}
+
+			const nameSpan = document.createElement('span');
+			nameSpan.textContent = entry.name;
+			btn.appendChild(nameSpan);
+
+			if (entry.recipes.length > 0) {
+				const countBadge = document.createElement('span');
+				countBadge.className = 'ml-auto text-xs text-sky-400';
+				countBadge.textContent = `${entry.recipes.length} recipe${entry.recipes.length === 1 ? '' : 's'}`;
+				btn.appendChild(countBadge);
+			}
+
+			btn.addEventListener('click', () => selectEntry(entry));
+
+			li.appendChild(btn);
+			ul.appendChild(li);
+		}
+
+		itemResults.appendChild(ul);
+	}
+
+	async function init() {
+		try {
+			entries = await loadReverseDataset();
+			entriesById.clear();
+			for (const entry of entries) {
+				entriesById.set(entry.id, entry);
+			}
+
+			const { itemId, haveQty } = parseUrlState();
+			if (haveQtyInput) {
+				haveQtyInput.value = String(haveQty);
+			}
+
+			if (itemId) {
+				const entry = entriesById.get(itemId);
+				if (entry) {
+					selectEntry(entry);
+				}
+			}
+		} catch (error) {
+			if (import.meta.env.DEV) {
+				console.error('Failed to load reverse calculator data:', error);
+			}
+			if (resultsEmpty) {
+				resultsEmpty.textContent = 'Unable to load recipe data. Please refresh the page.';
+			}
+		}
+	}
+
+	if (itemSearch) {
+		itemSearch.addEventListener('input', () => {
+			if (searchDebounceTimer) {
+				clearTimeout(searchDebounceTimer);
+			}
+			searchDebounceTimer = setTimeout(renderItemSearch, 200);
+		});
+	}
+
+	if (haveQtyInput) {
+		haveQtyInput.addEventListener('input', () => {
+			renderResults();
+			updateUrl();
+		});
+	}
+
+	methodCheckboxes.forEach((checkbox) => {
+		checkbox.addEventListener('change', renderResults);
+	});
+
+	init();
+</script>
