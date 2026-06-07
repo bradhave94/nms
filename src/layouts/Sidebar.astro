@@ -30,7 +30,12 @@ const toolsNav: NavItem[] = [
 	{ name: 'Refining', href: '/refining', icon: 'funnel' },
 	{ name: 'Cooking', href: '/cooking', icon: 'beaker' },
 	{ name: 'Crafting', href: '/crafting-guide', icon: 'wrench-screwdriver' },
+];
+
+const calculatorsNav: NavItem[] = [
 	{ name: 'Calculator', href: '/calculator', icon: 'calculator' },
+	{ name: 'Crafting Planner', href: '/calculator/planner', icon: 'archive-box' },
+	{ name: 'Reverse Calculator', href: '/calculator/reverse', icon: 'scale' },
 	{ name: 'Farm Calculator', href: '/farm', icon: 'sun' },
 ];
 
@@ -57,6 +62,7 @@ const moreNav: NavItem[] = [
 	{ name: 'Feedback', href: '/feedback', icon: 'envelope' },
 ];
 
+const isCalculatorsActive = calculatorsNav.some((item) => isNavItemActive(item.href));
 const isCatalogActive = catalogsNav.some((item) => isNavItemActive(item.href));
 
 const icons: Record<string, IconPath[]> = {
@@ -295,10 +301,86 @@ const sectionLabelClasses =
 							})
 						}
 
+						<p id="nav-calculators-label-mobile" class={sectionLabelClasses}>Calculators</p>
+						<div>
+							<button
+								data-accordion-btn="calculators"
+								type="button"
+								class={classNames(
+									linkClasses(isCalculatorsActive),
+									'w-full justify-between',
+								)}
+								aria-expanded={isCalculatorsActive ? 'true' : 'false'}
+								aria-controls="calculators-accordion-panel"
+							>
+								<span class="flex items-center">
+									<svg
+										class={iconClasses(isCalculatorsActive)}
+										viewBox="0 0 24 24"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										{icons.calculator.map((path) => (
+											<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+										))}
+									</svg>
+									Calculators
+								</span>
+								<svg
+									class={classNames(
+										isCalculatorsActive ? 'text-black' : 'text-gray-400',
+										'h-4 w-4 shrink-0 transition-transform',
+										isCalculatorsActive ? 'rotate-180' : '',
+									)}
+									data-accordion-chevron="calculators"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									aria-hidden="true"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+										clip-rule="evenodd"></path>
+								</svg>
+							</button>
+							<div
+								id="calculators-accordion-panel"
+								data-accordion-panel="calculators"
+								class={classNames('mt-1 space-y-1 pl-2', isCalculatorsActive ? '' : 'hidden')}
+								role="region"
+								aria-labelledby="nav-calculators-label-mobile"
+							>
+								{
+									calculatorsNav.map((item) => {
+										const active = isNavItemActive(item.href);
+										return (
+											<a href={item.href} class={linkClasses(active)}>
+												<svg
+													class={iconClasses(active)}
+													viewBox="0 0 24 24"
+													fill="currentColor"
+													aria-hidden="true"
+												>
+													{icons[item.icon].map((path) => (
+														<path
+															d={path.d}
+															fill-rule={path.fillRule}
+															clip-rule={path.clipRule}
+														/>
+													))}
+												</svg>
+												{item.name}
+											</a>
+										);
+									})
+								}
+							</div>
+						</div>
+
 						<p id="nav-catalogs-label-mobile" class={sectionLabelClasses}>Catalogs</p>
 						<div>
 							<button
-								id="catalogs-accordion-btn"
+								data-accordion-btn="catalogs"
 								type="button"
 								class={classNames(
 									linkClasses(isCatalogActive),
@@ -327,6 +409,7 @@ const sectionLabelClasses =
 										isCatalogActive ? 'rotate-180' : '',
 									)}
 									id="catalogs-accordion-chevron"
+									data-accordion-chevron="catalogs"
 									viewBox="0 0 24 24"
 									fill="currentColor"
 									aria-hidden="true"
@@ -339,6 +422,7 @@ const sectionLabelClasses =
 							</button>
 							<div
 								id="catalogs-accordion-panel"
+								data-accordion-panel="catalogs"
 								class={classNames('mt-1 space-y-1 pl-2', isCatalogActive ? '' : 'hidden')}
 								role="region"
 								aria-labelledby="nav-catalogs-label-mobile"
@@ -426,9 +510,47 @@ const sectionLabelClasses =
 						})
 					}
 
+					<p id="nav-calculators-label" class={sectionLabelClasses}>Calculators</p>
+					<button
+						data-flyout-trigger="calculators"
+						type="button"
+						class={classNames(linkClasses(isCalculatorsActive), 'w-full justify-between')}
+						aria-expanded="false"
+						aria-haspopup="true"
+						aria-controls="calculators-flyout"
+					>
+						<span class="flex items-center">
+							<svg
+								class={iconClasses(isCalculatorsActive)}
+								viewBox="0 0 24 24"
+								fill="currentColor"
+								aria-hidden="true"
+							>
+								{icons.calculator.map((path) => (
+									<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+								))}
+							</svg>
+							Calculators
+						</span>
+						<svg
+							class={classNames(
+								isCalculatorsActive ? 'text-black' : 'text-gray-400',
+								'h-4 w-4 shrink-0',
+							)}
+							viewBox="0 0 24 24"
+							fill="currentColor"
+							aria-hidden="true"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+								clip-rule="evenodd"></path>
+						</svg>
+					</button>
+
 					<p id="nav-catalogs-label" class={sectionLabelClasses}>Catalogs</p>
 					<button
-						id="catalogs-flyout-trigger"
+						data-flyout-trigger="catalogs"
 						type="button"
 						class={classNames(linkClasses(isCatalogActive), 'w-full justify-between')}
 						aria-expanded="false"
@@ -485,12 +607,48 @@ const sectionLabelClasses =
 		</div>
 	</div>
 
+	<!-- Desktop calculators flyout (outside overflow container) -->
+	<div
+		id="calculators-flyout"
+		data-flyout="calculators"
+		class="fixed z-50 hidden pl-3"
+		role="menu"
+		aria-labelledby="nav-calculators-label"
+	>
+		<div
+			class="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-md border border-white/10 bg-black p-2 shadow-lg"
+		>
+			<div class="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
+				{
+					calculatorsNav.map((item) => {
+						const active = isNavItemActive(item.href);
+						return (
+							<a
+								href={item.href}
+								role="menuitem"
+								class={linkClasses(active)}
+							>
+								<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									{icons[item.icon].map((path) => (
+										<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+									))}
+								</svg>
+								{item.name}
+							</a>
+						);
+					})
+				}
+			</div>
+		</div>
+	</div>
+
 	<!-- Desktop catalogs flyout (outside overflow container) -->
 	<div
 		id="catalogs-flyout"
+		data-flyout="catalogs"
 		class="fixed z-50 hidden pl-3"
 		role="menu"
-		aria-labelledby="catalogs-flyout-trigger"
+		aria-labelledby="nav-catalogs-label"
 	>
 		<div
 			class="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-md border border-white/10 bg-black p-2 shadow-lg"
@@ -581,120 +739,144 @@ const sectionLabelClasses =
 	sidebarCloseBtn?.addEventListener('click', closeMobileDrawer);
 	mobileBackdrop?.addEventListener('click', closeMobileDrawer);
 
-	// Mobile catalogs accordion
-	const accordionBtn = document.getElementById('catalogs-accordion-btn');
-	const accordionPanel = document.getElementById('catalogs-accordion-panel');
-	const accordionChevron = document.getElementById('catalogs-accordion-chevron');
+	// Mobile nav accordions
+	document.querySelectorAll<HTMLElement>('[data-accordion-btn]').forEach((accordionBtn) => {
+		const id = accordionBtn.getAttribute('data-accordion-btn');
+		if (!id) return;
+		const accordionPanel = document.querySelector<HTMLElement>(`[data-accordion-panel="${id}"]`);
+		const accordionChevron = document.querySelector<HTMLElement>(`[data-accordion-chevron="${id}"]`);
 
-	accordionBtn?.addEventListener('click', () => {
-		const expanded = accordionBtn.getAttribute('aria-expanded') === 'true';
-		const nextExpanded = !expanded;
-		accordionBtn.setAttribute('aria-expanded', String(nextExpanded));
-		accordionPanel?.classList.toggle('hidden', !nextExpanded);
-		accordionChevron?.classList.toggle('rotate-180', nextExpanded);
+		accordionBtn.addEventListener('click', () => {
+			const expanded = accordionBtn.getAttribute('aria-expanded') === 'true';
+			const nextExpanded = !expanded;
+			accordionBtn.setAttribute('aria-expanded', String(nextExpanded));
+			accordionPanel?.classList.toggle('hidden', !nextExpanded);
+			accordionChevron?.classList.toggle('rotate-180', nextExpanded);
+		});
 	});
 
-	// Desktop catalogs flyout
-	const flyoutTrigger = document.getElementById('catalogs-flyout-trigger');
-	const flyout = document.getElementById('catalogs-flyout');
+	// Desktop nav flyouts
+	type FlyoutGroup = {
+		trigger: HTMLElement;
+		flyout: HTMLElement;
+		openTimer: ReturnType<typeof setTimeout> | null;
+		closeTimer: ReturnType<typeof setTimeout> | null;
+		open: boolean;
+	};
 
-	let openTimer: ReturnType<typeof setTimeout> | null = null;
-	let closeTimer: ReturnType<typeof setTimeout> | null = null;
-	let flyoutOpen = false;
+	const flyoutGroups: FlyoutGroup[] = [];
+
 	function isLargeScreen(): boolean {
 		return window.matchMedia(LG_QUERY).matches;
 	}
 
-	function positionFlyout(): void {
-		if (!flyoutTrigger || !flyout) return;
-		const rect = flyoutTrigger.getBoundingClientRect();
-		flyout.style.top = `${rect.top}px`;
-		flyout.style.left = '14rem';
+	function clearFlyoutTimers(group: FlyoutGroup): void {
+		if (group.openTimer) {
+			clearTimeout(group.openTimer);
+			group.openTimer = null;
+		}
+		if (group.closeTimer) {
+			clearTimeout(group.closeTimer);
+			group.closeTimer = null;
+		}
 	}
 
-	function setFlyoutOpen(open: boolean, focusFirstLink = false): void {
-		if (!flyoutTrigger || !flyout) return;
-		flyoutOpen = open;
-		flyout.classList.toggle('hidden', !open);
-		flyoutTrigger.setAttribute('aria-expanded', String(open));
+	function positionFlyout(group: FlyoutGroup): void {
+		const rect = group.trigger.getBoundingClientRect();
+		group.flyout.style.top = `${rect.top}px`;
+		group.flyout.style.left = '14rem';
+	}
+
+	function setFlyoutOpen(group: FlyoutGroup, open: boolean, focusFirstLink = false): void {
+		group.open = open;
+		group.flyout.classList.toggle('hidden', !open);
+		group.trigger.setAttribute('aria-expanded', String(open));
 		if (open) {
-			positionFlyout();
+			positionFlyout(group);
 			if (focusFirstLink) {
-				const firstLink = flyout.querySelector<HTMLAnchorElement>('a[role="menuitem"]');
+				const firstLink = group.flyout.querySelector<HTMLAnchorElement>('a[role="menuitem"]');
 				firstLink?.focus();
 			}
 		}
 	}
 
-	function clearTimers(): void {
-		if (openTimer) {
-			clearTimeout(openTimer);
-			openTimer = null;
-		}
-		if (closeTimer) {
-			clearTimeout(closeTimer);
-			closeTimer = null;
-		}
+	function scheduleFlyoutOpen(group: FlyoutGroup): void {
+		if (!isLargeScreen()) return;
+		clearFlyoutTimers(group);
+		group.closeTimer = null;
+		group.openTimer = setTimeout(() => setFlyoutOpen(group, true), OPEN_DELAY);
 	}
 
-	function scheduleFlyoutOpen(): void {
+	function scheduleFlyoutClose(group: FlyoutGroup): void {
 		if (!isLargeScreen()) return;
-		clearTimers();
-		closeTimer = null;
-		openTimer = setTimeout(() => setFlyoutOpen(true), OPEN_DELAY);
+		clearFlyoutTimers(group);
+		group.openTimer = null;
+		group.closeTimer = setTimeout(() => setFlyoutOpen(group, false), CLOSE_DELAY);
 	}
 
-	function scheduleFlyoutClose(): void {
-		if (!isLargeScreen()) return;
-		clearTimers();
-		openTimer = null;
-		closeTimer = setTimeout(() => setFlyoutOpen(false), CLOSE_DELAY);
+	function bindHoverZone(group: FlyoutGroup, element: HTMLElement | null): void {
+		element?.addEventListener('mouseenter', () => scheduleFlyoutOpen(group));
+		element?.addEventListener('mouseleave', () => scheduleFlyoutClose(group));
 	}
 
-	function bindHoverZone(element: HTMLElement | null): void {
-		element?.addEventListener('mouseenter', scheduleFlyoutOpen);
-		element?.addEventListener('mouseleave', scheduleFlyoutClose);
-	}
+	document.querySelectorAll<HTMLElement>('[data-flyout-trigger]').forEach((trigger) => {
+		const id = trigger.getAttribute('data-flyout-trigger');
+		if (!id) return;
+		const flyout = document.querySelector<HTMLElement>(`[data-flyout="${id}"]`);
+		if (!flyout) return;
 
-	bindHoverZone(flyoutTrigger);
-	bindHoverZone(flyout);
+		const group: FlyoutGroup = {
+			trigger,
+			flyout,
+			openTimer: null,
+			closeTimer: null,
+			open: false,
+		};
+		flyoutGroups.push(group);
 
-	flyoutTrigger?.addEventListener('focus', () => {
-		if (isLargeScreen()) scheduleFlyoutOpen();
-	});
+		bindHoverZone(group, trigger);
+		bindHoverZone(group, flyout);
 
-	flyoutTrigger?.addEventListener('blur', (event) => {
-		if (!isLargeScreen()) return;
-		const related = event.relatedTarget as Node | null;
-		if (related && flyout?.contains(related)) return;
-		scheduleFlyoutClose();
-	});
+		trigger.addEventListener('focus', () => {
+			if (isLargeScreen()) scheduleFlyoutOpen(group);
+		});
 
-	flyout?.addEventListener('focusout', (event) => {
-		if (!isLargeScreen() || !flyoutOpen) return;
-		const related = event.relatedTarget as Node | null;
-		if (related && (flyout.contains(related) || flyoutTrigger?.contains(related))) return;
-		scheduleFlyoutClose();
-	});
+		trigger.addEventListener('blur', (event) => {
+			if (!isLargeScreen()) return;
+			const related = event.relatedTarget as Node | null;
+			if (related && flyout.contains(related)) return;
+			scheduleFlyoutClose(group);
+		});
 
-	flyoutTrigger?.addEventListener('click', (event) => {
-		if (!isLargeScreen()) return;
-		event.preventDefault();
-		clearTimers();
-		if (flyoutOpen) {
-			setFlyoutOpen(false);
-		} else {
-			const fromKeyboard = event.detail === 0;
-			setFlyoutOpen(true, fromKeyboard);
-		}
+		flyout.addEventListener('focusout', (event) => {
+			if (!isLargeScreen() || !group.open) return;
+			const related = event.relatedTarget as Node | null;
+			if (related && (flyout.contains(related) || trigger.contains(related))) return;
+			scheduleFlyoutClose(group);
+		});
+
+		trigger.addEventListener('click', (event) => {
+			if (!isLargeScreen()) return;
+			event.preventDefault();
+			clearFlyoutTimers(group);
+			if (group.open) {
+				setFlyoutOpen(group, false);
+			} else {
+				const fromKeyboard = event.detail === 0;
+				setFlyoutOpen(group, true, fromKeyboard);
+			}
+		});
 	});
 
 	document.addEventListener('keydown', (event) => {
-		if (event.key === 'Escape' && flyoutOpen && isLargeScreen()) {
-			event.preventDefault();
-			clearTimers();
-			setFlyoutOpen(false);
-			flyoutTrigger?.focus();
+		if (event.key === 'Escape' && isLargeScreen()) {
+			const openGroup = flyoutGroups.find((group) => group.open);
+			if (openGroup) {
+				event.preventDefault();
+				clearFlyoutTimers(openGroup);
+				setFlyoutOpen(openGroup, false);
+				openGroup.trigger.focus();
+			}
 		}
 		if (event.key === 'Escape' && mobileSidebar?.getAttribute('aria-hidden') === 'false') {
 			closeMobileDrawer();
@@ -702,14 +884,18 @@ const sectionLabelClasses =
 	});
 
 	window.addEventListener('resize', () => {
-		if (flyoutOpen) positionFlyout();
-		if (!isLargeScreen()) {
-			clearTimers();
-			setFlyoutOpen(false);
+		for (const group of flyoutGroups) {
+			if (group.open) positionFlyout(group);
+			if (!isLargeScreen()) {
+				clearFlyoutTimers(group);
+				setFlyoutOpen(group, false);
+			}
 		}
 	});
 
 	window.addEventListener('scroll', () => {
-		if (flyoutOpen) positionFlyout();
+		for (const group of flyoutGroups) {
+			if (group.open) positionFlyout(group);
+		}
 	}, true);
 </script>

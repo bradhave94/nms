@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { Products } from '@datav2/index.js';
+import * as dataSources from '@datav2/index.js';
 import { createArray } from '@utils/recipeTree.js';
 import { getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
@@ -19,8 +19,19 @@ type PlannerProduct = {
 	rawItems: PlannerRawItem[];
 };
 
-const body: PlannerProduct[] = (Products as Item[])
-	.filter((item) => item.RequiredItems && item.RequiredItems.length > 0)
+const allData = Object.values(dataSources).flatMap((source) =>
+	Array.isArray(source) ? (source as Item[]) : [],
+);
+
+const seenIds = new Set<string>();
+const craftableItems = allData.filter((item) => {
+	if (!item.RequiredItems || item.RequiredItems.length === 0) return false;
+	if (seenIds.has(item.Id)) return false;
+	seenIds.add(item.Id);
+	return true;
+});
+
+const body: PlannerProduct[] = craftableItems
 	.map((item) => {
 		const { rawItems } = createArray(item, 1);
 		return {
