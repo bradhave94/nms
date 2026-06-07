@@ -8,6 +8,7 @@ import { getItemUpdateMeta } from '@utils/updateChanges';
 import { SITE } from '@config';
 import { getById, findOutput, findInputFromRefiner, findInputFromCooking, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
+import { getGrowTimeHeader, getPlantGrowTime } from '@utils/plantGrowTime.js';
 import credit from '../assets/img/credits.png';
 
 // Define the props interface
@@ -421,6 +422,8 @@ const catchChancePercent =
   typeof fishItem.MissionCatchChanceOverride === 'number' && fishItem.MissionCatchChanceOverride > 0
     ? `${(fishItem.MissionCatchChanceOverride * 100).toLocaleString()}%`
     : undefined;
+const plantGrowTime = getPlantGrowTime(item.Id);
+const growTimeHeader = getGrowTimeHeader();
 
 const toHowToIngredients = (inputs: IOItem[]): HowToIngredient[] =>
   inputs.reduce<HowToIngredient[]>((acc, input) => {
@@ -932,6 +935,14 @@ const corvetteAttributes = [
               Catch Chance: {catchChancePercent}
             </p>
           )}
+        </div>
+      )}
+
+      {plantGrowTime && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
+            {growTimeHeader}: {plantGrowTime}
+          </p>
         </div>
       )}
 
