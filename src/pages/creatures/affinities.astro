@@ -26,6 +26,8 @@ const matchups = [
 const displayNameFor = (affinityId: string): string =>
 	affinityById.get(affinityId)?.DisplayName ?? affinityId;
 const iconFor = (affinityId: string): string | null => affinityById.get(affinityId)?.Icon ?? null;
+const speciesFilterUrl = (affinityId: string): string =>
+	`/creatures/species?affinity=${encodeURIComponent(displayNameFor(affinityId))}`;
 
 const title = "Creature Affinities | No Man's Sky Recipes";
 const description =
@@ -41,27 +43,39 @@ const breadcrumbs = [
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
 	<section class="mx-auto max-w-6xl px-4 pb-10">
 		<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Affinity System</h1>
-		<p class="mx-auto mb-10 max-w-4xl text-center text-sky-200/90">
+		<p class="mx-auto mb-6 max-w-4xl text-center text-sky-200/90">
 			Winning Arena battles depends on affinity matchups. Use this chart to plan favorable counters and
 			avoid weak pairings.
+		</p>
+		<p class="mx-auto mb-10 max-w-4xl text-center">
+			<a
+				href="/creatures/species"
+				class="text-sky-400 underline decoration-sky-600/50 underline-offset-2 hover:text-sky-300"
+			>
+				Browse all creature species
+			</a>
 		</p>
 
 		<div class="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
 			{
 				matchups.map((row) => {
 					const icon = iconFor(row.affinityId);
+					const displayName = displayNameFor(row.affinityId);
 					return (
-						<div class="rounded-sm border border-sky-800/70 bg-sky-950/40 px-3 py-4 text-center">
+						<a
+							href={speciesFilterUrl(row.affinityId)}
+							class="rounded-sm border border-sky-800/70 bg-sky-950/40 px-3 py-4 text-center transition hover:border-sky-500 hover:bg-sky-900/50"
+						>
 							{icon && (
 								<img
 									src={`${IMAGE_BASE}${icon}`}
-									alt={`${displayNameFor(row.affinityId)} icon`}
+									alt={`${displayName} icon`}
 									class="mx-auto mb-2 h-10 w-10"
 									loading="lazy"
 								/>
 							)}
-							<p class="m-0 text-sm font-semibold text-white">{displayNameFor(row.affinityId)}</p>
-						</div>
+							<p class="m-0 text-sm font-semibold text-white">{displayName}</p>
+						</a>
 					);
 				})
 			}
@@ -80,9 +94,30 @@ const breadcrumbs = [
 					{
 						matchups.map((row) => (
 							<tr class="border-t border-sky-800/60 text-sm">
-								<td class="px-4 py-3 text-sky-100">{displayNameFor(row.affinityId)}</td>
-								<td class="px-4 py-3 text-lime-300">{displayNameFor(row.strongAgainstId)}</td>
-								<td class="px-4 py-3 text-amber-300">{displayNameFor(row.weakAgainstId)}</td>
+								<td class="px-4 py-3 text-sky-100">
+									<a
+										href={speciesFilterUrl(row.affinityId)}
+										class="text-sky-300 underline decoration-sky-600/50 underline-offset-2 hover:text-white"
+									>
+										{displayNameFor(row.affinityId)}
+									</a>
+								</td>
+								<td class="px-4 py-3 text-lime-300">
+									<a
+										href={speciesFilterUrl(row.strongAgainstId)}
+										class="underline decoration-lime-600/50 underline-offset-2 hover:text-lime-200"
+									>
+										{displayNameFor(row.strongAgainstId)}
+									</a>
+								</td>
+								<td class="px-4 py-3 text-amber-300">
+									<a
+										href={speciesFilterUrl(row.weakAgainstId)}
+										class="underline decoration-amber-600/50 underline-offset-2 hover:text-amber-200"
+									>
+										{displayNameFor(row.weakAgainstId)}
+									</a>
+								</td>
 							</tr>
 						))
 					}

@@ -3,9 +3,10 @@
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
 import products from '@datav2/Products.json';
-import { getById } from '@utils/lookup.js';
+import { getById, getSlug } from '@utils/lookup.js';
 import type { Item, RequiredItem } from '@utils/lookup.js';
 import type { TableRow } from '@components/table/Table.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
 interface ItemDetails {
@@ -60,13 +61,35 @@ const columns = [
 // Map the data and create an array of filtered items with proper type guard
 const data = products.map(createArray).filter((item): item is TableRow => item !== undefined);
 
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/crafting-guide', siteOrigin).toString();
+const baseDescription =
+	"Browse the No Man's Sky crafting guide for product recipes, ingredient chains, unit values, and step-by-step crafting paths.";
+const itemListElements = data.slice(0, 25).map((row, index) => {
+	const outputItem = getById(row.output.id);
+	return {
+		name: row.output.name,
+		url: outputItem ? `${siteOrigin}${getSlug(outputItem)}` : canonicalUrl,
+		position: index + 1,
+	};
+});
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: 'Crafting Guide',
+	collectionDescription: baseDescription,
+	collectionPath: '/crafting-guide',
+	currentPage: 1,
+	items: itemListElements,
+});
 ---
 
 <Layout
 	title="Crafting Guide | No Man's Sky Recipes"
-	description="Browse the No Man's Sky crafting guide for product recipes, ingredient chains, unit values, and step-by-step crafting paths."
+	description={baseDescription}
 	slug="crafting-guide"
 	ogImage={`${SITE.website}/images/crafting.webp`}
+	structuredData={structuredData}
 >
 		<Table
 			title="Crafting"

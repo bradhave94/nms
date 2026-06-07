@@ -4,7 +4,7 @@ import CompactCard from '@components/CompactCard.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
-import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
+import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta, buildPaginationUrls } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Curiosities.json';
 import Pagination from '@components/Pagination.astro';
@@ -51,6 +51,7 @@ const intro = buildCategoryIntro(
 );
 const baseDescription = "A list of curiosities for No Man's Sky. Our guide has everything you need to take your game to the next level.";
 const { title, description } = buildPaginatedMeta('Curiosities', baseDescription, page.currentPage, page.lastPage);
+const { prevUrl, nextUrl } = buildPaginationUrls(siteOrigin, page);
 ---
 
 <Layout
@@ -58,6 +59,8 @@ const { title, description } = buildPaginatedMeta('Curiosities', baseDescription
 	{description}
 	slug="curiosities"
 	structuredData={structuredData}
+	prevUrl={prevUrl}
+	nextUrl={nextUrl}
 >
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
 	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Curiosities</h1>

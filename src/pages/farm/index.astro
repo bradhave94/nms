@@ -1,0 +1,233 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { getAllGrowablePlants } from '@utils/plantGrowTime.js';
+import { getSiteOrigin } from '@utils/structuredData.js';
+import { SITE } from '@config';
+
+const IMAGE_BASE = SITE.imageBaseUrl;
+const plants = getAllGrowablePlants();
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/farm', siteOrigin).toString();
+const breadcrumbs = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Farm Calculator' },
+];
+const title = "Farm Calculator | No Man's Sky Recipes";
+const description =
+	'Plan your No Man\'s Sky farm plots by grow time and harvest yield. Select plants, set plot counts, and see total real-time duration and output.';
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	'@id': `${canonicalUrl}#breadcrumb`,
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+		{ '@type': 'ListItem', position: 2, name: 'Farm Calculator', item: canonicalUrl },
+	],
+};
+const structuredData = [breadcrumbSchema];
+---
+
+<Layout {title} {description} slug="farm" structuredData={structuredData}>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Farm Calculator</h1>
+	<p class="mx-auto mb-8 max-w-3xl text-center text-sky-200/90">
+		Select growable plants and set plot counts to estimate harvest cycle time and total yield per crop.
+	</p>
+
+	<div class="mx-auto max-w-5xl px-4 mb-8">
+		<label for="plant-select" class="mb-2 block text-sm font-semibold text-sky-300">Add a plant</label>
+		<div class="flex flex-wrap gap-3">
+			<select
+				id="plant-select"
+				class="h-10 min-w-[16rem] flex-1 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+			>
+				<option value="">Choose a plant…</option>
+				{
+					plants.map((plant) => (
+						<option value={plant.harvestId}>
+							{plant.name} ({plant.growTime})
+						</option>
+					))
+				}
+			</select>
+			<button
+				id="add-plant-btn"
+				type="button"
+				class="h-10 rounded-sm bg-sky-600 px-4 font-semibold text-white transition-colors hover:bg-sky-500"
+			>
+				Add plant
+			</button>
+		</div>
+	</div>
+
+	<div id="empty-selection" class="mx-auto max-w-5xl px-4 py-8 text-center text-sky-400">
+		No plants selected yet. Add a crop above to start planning.
+	</div>
+
+	<div id="farm-results" class="mx-auto hidden max-w-5xl px-4 pb-12">
+		<div class="mb-6 grid gap-4 sm:grid-cols-2">
+			<div class="rounded-sm border border-sky-800/70 bg-sky-950/40 p-4">
+				<p class="m-0 text-sm uppercase tracking-wide text-sky-400">Full harvest cycle</p>
+				<p id="cycle-time" class="m-0 mt-1 text-2xl font-semibold text-white"></p>
+				<p class="m-0 mt-1 text-sm text-sky-300">Longest grow time among selected plants</p>
+			</div>
+			<div class="rounded-sm border border-sky-800/70 bg-sky-950/40 p-4">
+				<p class="m-0 text-sm uppercase tracking-wide text-sky-400">Total plots</p>
+				<p id="total-plots" class="m-0 mt-1 text-2xl font-semibold text-white"></p>
+				<p class="m-0 mt-1 text-sm text-sky-300">Combined plant count across all crops</p>
+			</div>
+		</div>
+
+		<div class="overflow-x-auto rounded-sm border border-sky-800/70 bg-sky-950/40">
+			<table class="min-w-full border-collapse text-sm">
+				<thead>
+					<tr class="bg-sky-600/90 text-left uppercase tracking-wide text-white">
+						<th class="px-4 py-3">Plant</th>
+						<th class="px-4 py-3">Grow time</th>
+						<th class="px-4 py-3">Plots</th>
+						<th class="px-4 py-3">Yield / harvest</th>
+						<th class="px-4 py-3">Total yield</th>
+						<th class="px-4 py-3"></th>
+					</tr>
+				</thead>
+				<tbody id="selected-plants-body"></tbody>
+			</table>
+		</div>
+	</div>
+</Layout>
+
+<script define:vars={{ IMAGE_BASE, plants }}>
+	const plantById = new Map(plants.map((plant) => [plant.harvestId, plant]));
+	const selected = new Map();
+
+	const plantSelect = document.getElementById('plant-select');
+	const addBtn = document.getElementById('add-plant-btn');
+	const emptyEl = document.getElementById('empty-selection');
+	const resultsEl = document.getElementById('farm-results');
+	const tbody = document.getElementById('selected-plants-body');
+	const cycleTimeEl = document.getElementById('cycle-time');
+	const totalPlotsEl = document.getElementById('total-plots');
+
+	function escapeHtml(str) {
+		if (str == null) return '';
+		const s = String(str);
+		return s
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#39;');
+	}
+
+	function formatMinutes(minutes) {
+		const hours = Math.floor(minutes / 60);
+		const mins = minutes % 60;
+		if (hours && mins) {
+			return `${hours} hour${hours !== 1 ? 's' : ''} ${mins} minute${mins !== 1 ? 's' : ''}`;
+		}
+		if (hours) {
+			return `${hours} hour${hours !== 1 ? 's' : ''}`;
+		}
+		return `${mins} minute${mins !== 1 ? 's' : ''}`;
+	}
+
+	function render() {
+		if (!tbody || !emptyEl || !resultsEl || !cycleTimeEl || !totalPlotsEl) return;
+
+		if (selected.size === 0) {
+			emptyEl.classList.remove('hidden');
+			resultsEl.classList.add('hidden');
+			tbody.innerHTML = '';
+			return;
+		}
+
+		emptyEl.classList.add('hidden');
+		resultsEl.classList.remove('hidden');
+
+		let maxMinutes = 0;
+		let totalPlots = 0;
+		const rows = [];
+
+		for (const [harvestId, count] of selected.entries()) {
+			const plant = plantById.get(harvestId);
+			if (!plant) continue;
+			maxMinutes = Math.max(maxMinutes, plant.growTimeMinutes);
+			totalPlots += count;
+			const totalYield = count * plant.harvestQuantity;
+			rows.push(`
+				<tr class="border-t border-sky-800/60" data-harvest-id="${escapeHtml(harvestId)}">
+					<td class="px-4 py-3">
+						<div class="flex items-center gap-3">
+							<img
+								src="${IMAGE_BASE}${escapeHtml(plant.icon)}"
+								alt="${escapeHtml(plant.name)}"
+								class="h-10 w-10 object-contain"
+								loading="lazy"
+								width="40"
+								height="40"
+							/>
+							<span class="font-semibold text-white">${escapeHtml(plant.name)}</span>
+						</div>
+					</td>
+					<td class="px-4 py-3 text-sky-200">${escapeHtml(plant.growTime)}</td>
+					<td class="px-4 py-3">
+						<input
+							type="number"
+							min="1"
+							value="${count}"
+							class="plot-count h-9 w-20 rounded-sm border border-sky-700 bg-sky-900/50 px-2 text-white"
+							aria-label="Plot count for ${escapeHtml(plant.name)}"
+						/>
+					</td>
+					<td class="px-4 py-3 text-sky-200">${plant.harvestQuantity.toLocaleString()}</td>
+					<td class="px-4 py-3 font-semibold text-lime-300">${totalYield.toLocaleString()}</td>
+					<td class="px-4 py-3">
+						<button
+							type="button"
+							class="remove-plant rounded-sm border border-sky-600 px-2 py-1 text-xs text-sky-400 hover:bg-sky-900/50 hover:text-white"
+						>
+							Remove
+						</button>
+					</td>
+				</tr>
+			`);
+		}
+
+		tbody.innerHTML = rows.join('');
+		cycleTimeEl.textContent = maxMinutes > 0 ? formatMinutes(maxMinutes) : '—';
+		totalPlotsEl.textContent = totalPlots.toLocaleString();
+
+		tbody.querySelectorAll('.plot-count').forEach((input) => {
+			input.addEventListener('change', (event) => {
+				const target = event.currentTarget;
+				const row = target.closest('tr');
+				const harvestId = row?.dataset.harvestId;
+				if (!harvestId) return;
+				const value = Math.max(1, Number.parseInt(target.value, 10) || 1);
+				target.value = String(value);
+				selected.set(harvestId, value);
+				render();
+			});
+		});
+
+		tbody.querySelectorAll('.remove-plant').forEach((button) => {
+			button.addEventListener('click', (event) => {
+				const row = event.currentTarget.closest('tr');
+				const harvestId = row?.dataset.harvestId;
+				if (!harvestId) return;
+				selected.delete(harvestId);
+				render();
+			});
+		});
+	}
+
+	addBtn?.addEventListener('click', () => {
+		const harvestId = plantSelect?.value;
+		if (!harvestId || !plantById.has(harvestId)) return;
+		if (!selected.has(harvestId)) {
+			selected.set(harvestId, 1);
+		}
+		render();
+	});
+</script>

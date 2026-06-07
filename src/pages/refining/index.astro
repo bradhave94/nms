@@ -3,9 +3,10 @@
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
 import refinery from '@datav2/Refinery.json';
-import { getById } from '@utils/lookup.js';
+import { getById, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import type { TableRow } from '@components/table/Table.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
 // Interfaces for defining the shape of input and output objects
@@ -105,13 +106,36 @@ const columns = [
 
 // Use type assertion for better type inference
 const data = refinery.map(createArray).filter((item): item is TableItem => item !== undefined);
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/refining', siteOrigin).toString();
+const baseDescription =
+	"Browse No Man's Sky refiner recipes, ingredient combinations, and outputs. Use this refiner guide to discover the best refining chains for units and crafting.";
+const itemListElements = data.slice(0, 25).map((row, index) => {
+	const outputItem = getById(row.output.id);
+	return {
+		name: row.output.name,
+		url: outputItem ? `${siteOrigin}${getSlug(outputItem)}` : canonicalUrl,
+		position: index + 1,
+	};
+});
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: 'Refiner recipes',
+	collectionDescription: baseDescription,
+	collectionPath: '/refining',
+	currentPage: 1,
+	items: itemListElements,
+});
 ---
 
 <Layout
 	title={"Refiner recipes | No Man's Sky Recipes"}
-	description="Browse No Man's Sky refiner recipes, ingredient combinations, and outputs. Use this refiner guide to discover the best refining chains for units and crafting."
+	description={baseDescription}
 	slug="refining"
 	ogImage={`${SITE.website}/images/refiner.webp`}
+	structuredData={structuredData}
 >
 	<Table
 		title="Refining"

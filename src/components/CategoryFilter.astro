@@ -1,0 +1,405 @@
+---
+import { SITE } from '@config';
+
+interface Props {
+	type: string;
+	basePath: string;
+}
+
+const { type, basePath } = Astro.props;
+const IMAGE_BASE = SITE.imageBaseUrl;
+const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
+---
+
+<form
+	class="mx-auto max-w-4xl mb-8 flex flex-wrap gap-4 justify-center items-center"
+	data-category-filter={type}
+>
+	<div class="relative" id={`${idPrefix}-group-combobox-wrapper`}>
+		<label for={`${idPrefix}-group-input`} class="sr-only">Group</label>
+		<input
+			id={`${idPrefix}-group-input`}
+			type="text"
+			autocomplete="off"
+			placeholder="All groups"
+			role="combobox"
+			aria-expanded="false"
+			aria-controls={`${idPrefix}-group-dropdown`}
+			aria-autocomplete="list"
+			class="h-10 w-48 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+		/>
+		<div
+			id={`${idPrefix}-group-dropdown`}
+			role="listbox"
+			class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-sm border border-sky-700 bg-sky-900 shadow-lg hidden"
+		></div>
+	</div>
+	<div>
+		<label for={`${idPrefix}-search-input`} class="sr-only">Search</label>
+		<input
+			id={`${idPrefix}-search-input`}
+			type="text"
+			placeholder="Search by name..."
+			class="h-10 w-48 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+		/>
+	</div>
+	<div class="flex gap-2">
+		<button
+			id={`${idPrefix}-apply-filters`}
+			type="button"
+			class="h-10 rounded-sm bg-sky-600 px-4 font-semibold text-white transition-colors hover:bg-sky-500"
+		>
+			Apply
+		</button>
+		<button
+			id={`${idPrefix}-reset-filters`}
+			type="button"
+			class="h-10 rounded-sm border border-sky-600 px-4 font-semibold text-sky-400 transition-colors hover:bg-sky-900/50 hover:text-white"
+		>
+			Reset
+		</button>
+	</div>
+</form>
+
+<div id={`${idPrefix}-loading`} class="text-center py-12 text-sky-400" aria-live="polite">Loading...</div>
+<div id={`${idPrefix}-empty`} class="hidden text-center py-12 text-sky-400" aria-live="polite">
+	No items found. Try adjusting your filters.
+</div>
+<div id={`${idPrefix}-error`} class="hidden text-center py-12" aria-live="assertive">
+	<p class="text-sky-400 mb-4">Failed to load items. Please try again.</p>
+	<button
+		id={`${idPrefix}-retry-btn`}
+		type="button"
+		class="rounded-sm bg-sky-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-sky-500"
+	>
+		Retry
+	</button>
+</div>
+<div id={`${idPrefix}-items-container`} class="hidden">
+	<div
+		id={`${idPrefix}-items`}
+		class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 px-2"
+	></div>
+	<div id={`${idPrefix}-load-more-sentinel`} class="h-1 w-full" aria-hidden="true"></div>
+</div>
+
+<script define:vars={{ IMAGE_BASE, type, basePath, idPrefix }}>
+	const PAGE_SIZE = 80;
+	const groupInput = document.getElementById(`${idPrefix}-group-input`);
+	const groupDropdown = document.getElementById(`${idPrefix}-group-dropdown`);
+	const searchInput = document.getElementById(`${idPrefix}-search-input`);
+	const applyBtn = document.getElementById(`${idPrefix}-apply-filters`);
+	const resetBtn = document.getElementById(`${idPrefix}-reset-filters`);
+	const loadingEl = document.getElementById(`${idPrefix}-loading`);
+	const emptyEl = document.getElementById(`${idPrefix}-empty`);
+	const errorEl = document.getElementById(`${idPrefix}-error`);
+	const retryBtn = document.getElementById(`${idPrefix}-retry-btn`);
+	const itemsContainer = document.getElementById(`${idPrefix}-items-container`);
+	const itemsEl = document.getElementById(`${idPrefix}-items`);
+	const loadMoreSentinel = document.getElementById(`${idPrefix}-load-more-sentinel`);
+
+	let allItemsData = [];
+	let allGroups = [];
+	let filteredItems = [];
+	let displayedCount = 0;
+	let scrollObserver = null;
+
+	function escapeHtml(str) {
+		if (str == null) return '';
+		const s = String(str);
+		return s
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#39;');
+	}
+
+	function getParams() {
+		const params = new URLSearchParams(window.location.search);
+		return {
+			group: params.get('group') || '',
+			q: params.get('q') || '',
+		};
+	}
+
+	function syncInputsFromUrl() {
+		const { group, q } = getParams();
+		if (groupInput) groupInput.value = group;
+		if (searchInput) searchInput.value = q;
+	}
+
+	function updateUrl() {
+		const group = groupInput?.value?.trim() || '';
+		const q = searchInput?.value?.trim() || '';
+		const params = new URLSearchParams();
+		if (group) params.set('group', group);
+		if (q) params.set('q', q);
+		const query = params.toString();
+		const newUrl = `${basePath}${query ? '?' + query : ''}`;
+		window.history.replaceState({}, '', newUrl);
+	}
+
+	function renderDropdown(list, filter, dropdownId) {
+		const q = (filter || '').toLowerCase().trim();
+		const filtered = list.filter((item) => item.toLowerCase().includes(q));
+		const items = filtered.map(
+			(item, i) =>
+				`<div role="option" id="${dropdownId}-opt-${i + 1}" tabindex="-1" class="block w-full px-3 py-2 text-left text-sm text-white hover:bg-sky-700/80 cursor-pointer" data-value="${escapeHtml(item)}">${escapeHtml(item)}</div>`
+		);
+		const clearBtn = `<div role="option" id="${dropdownId}-opt-0" tabindex="-1" class="block w-full px-3 py-2 text-left text-sm text-sky-400 hover:bg-sky-700/80 cursor-pointer" data-value="">(All)</div>`;
+		return clearBtn + items.join('');
+	}
+
+	function setupCombobox(inputEl, dropdownEl, getOptions, onSelect) {
+		if (!inputEl || !dropdownEl) return;
+		const dropdownId = dropdownEl.id;
+		let activeIndex = -1;
+
+		function getOptionEls() {
+			return dropdownEl.querySelectorAll('[role="option"]');
+		}
+
+		function setActiveOption(index) {
+			const options = getOptionEls();
+			options.forEach((opt) => opt.classList.remove('bg-sky-700/80'));
+			activeIndex = index;
+			if (index >= 0 && index < options.length) {
+				const opt = options[index];
+				opt.classList.add('bg-sky-700/80');
+				opt.scrollIntoView({ block: 'nearest' });
+				inputEl.setAttribute('aria-activedescendant', opt.id);
+			} else {
+				inputEl.removeAttribute('aria-activedescendant');
+			}
+		}
+
+		function selectOption(optionEl) {
+			inputEl.value = optionEl.dataset.value || '';
+			hide();
+			onSelect();
+		}
+
+		function show() {
+			const options = getOptions();
+			dropdownEl.innerHTML = renderDropdown(options, inputEl.value, dropdownId);
+			dropdownEl.classList.remove('hidden');
+			inputEl.setAttribute('aria-expanded', 'true');
+			activeIndex = -1;
+			inputEl.removeAttribute('aria-activedescendant');
+			dropdownEl.querySelectorAll('[role="option"]').forEach((opt) => {
+				opt.addEventListener('mousedown', (e) => e.preventDefault());
+				opt.addEventListener('click', () => selectOption(opt));
+			});
+		}
+
+		function hide() {
+			dropdownEl.classList.add('hidden');
+			inputEl.setAttribute('aria-expanded', 'false');
+			activeIndex = -1;
+			inputEl.removeAttribute('aria-activedescendant');
+		}
+
+		inputEl.addEventListener('focus', show);
+		inputEl.addEventListener('input', show);
+		inputEl.addEventListener('blur', hide);
+		dropdownEl.addEventListener('mousedown', (e) => e.preventDefault());
+
+		inputEl.addEventListener('keydown', (e) => {
+			const options = getOptionEls();
+			if (!options.length) return;
+			const isOpen = !dropdownEl.classList.contains('hidden');
+
+			if (e.key === 'ArrowDown') {
+				e.preventDefault();
+				if (!isOpen) {
+					show();
+					return;
+				}
+				setActiveOption(Math.min(activeIndex + 1, options.length - 1));
+			} else if (e.key === 'ArrowUp') {
+				e.preventDefault();
+				if (!isOpen) return;
+				setActiveOption(Math.max(activeIndex - 1, 0));
+			} else if (e.key === 'Escape') {
+				e.preventDefault();
+				hide();
+			} else if (e.key === 'Enter' && isOpen) {
+				e.preventDefault();
+				if (activeIndex >= 0) {
+					selectOption(options[activeIndex]);
+				} else {
+					hide();
+					onSelect();
+				}
+			}
+		});
+	}
+
+	function resetFilters() {
+		if (groupInput) groupInput.value = '';
+		if (searchInput) searchInput.value = '';
+		groupDropdown?.classList.add('hidden');
+		loadItems();
+	}
+
+	function renderCard(item) {
+		const name = escapeHtml(item.name);
+		const icon = escapeHtml(item.icon || '');
+		const rawUrl = item.url || '';
+		const url = escapeHtml(rawUrl.startsWith('/') && !rawUrl.includes('//') ? rawUrl : '#');
+		const article = document.createElement('article');
+		article.className = 'group relative';
+		article.innerHTML = `
+			<a
+				href="${url}"
+				class="group block h-full overflow-hidden rounded-xs border border-sky-900 bg-sky-800/80 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-700/90"
+			>
+				<div class="aspect-square bg-[#0b3550]">
+					<img
+						class="h-full w-full object-contain object-center"
+						src="${IMAGE_BASE}${icon}"
+						alt="${name}"
+						loading="lazy"
+						width="128"
+						height="128"
+					/>
+				</div>
+				<div class="border-t border-sky-900 px-2 py-1.5">
+					<p class="truncate text-base font-semibold text-white/95" title="${name}">${name}</p>
+				</div>
+			</a>
+		`;
+		return article;
+	}
+
+	function filterItems(items, group, q) {
+		let filtered = items.filter((item) => (item.url || '').split('/')[1] === type);
+		if (group) {
+			const g = group.trim().toLowerCase();
+			filtered = filtered.filter(
+				(item) => item.group && String(item.group).toLowerCase().includes(g)
+			);
+		}
+		if (q) {
+			const search = q.toLowerCase().trim();
+			filtered = filtered.filter(
+				(item) =>
+					(item.name && String(item.name).toLowerCase().includes(search)) ||
+					(item.group && String(item.group).toLowerCase().includes(search))
+			);
+		}
+		return filtered;
+	}
+
+	function renderNextBatch() {
+		const start = displayedCount;
+		const end = Math.min(displayedCount + PAGE_SIZE, filteredItems.length);
+		for (let i = start; i < end; i++) {
+			itemsEl?.appendChild(renderCard(filteredItems[i]));
+		}
+		displayedCount = end;
+		if (loadMoreSentinel) {
+			loadMoreSentinel.classList.toggle('hidden', displayedCount >= filteredItems.length);
+		}
+	}
+
+	function setupScrollObserver() {
+		if (!loadMoreSentinel || scrollObserver) return;
+		scrollObserver = new IntersectionObserver(
+			(entries) => {
+				const entry = entries[0];
+				if (!entry?.isIntersecting || displayedCount >= filteredItems.length) return;
+				renderNextBatch();
+			},
+			{ rootMargin: '600px', threshold: 0 }
+		);
+		scrollObserver.observe(loadMoreSentinel);
+	}
+
+	async function loadItems(forceFetch = false) {
+		if (!loadingEl || !emptyEl || !itemsEl || !itemsContainer) return;
+
+		loadingEl.classList.remove('hidden');
+		emptyEl.classList.add('hidden');
+		errorEl?.classList.add('hidden');
+		itemsContainer.classList.add('hidden');
+		itemsEl.innerHTML = '';
+
+		const q = searchInput?.value?.trim() || '';
+
+		try {
+			const needsFetch = forceFetch || allItemsData.length === 0;
+			if (needsFetch) {
+				const res = await fetch(`/items.json?type=${encodeURIComponent(type)}`);
+				const json = await res.json();
+				const allItems = json?.body ?? [];
+				const categoryItems = allItems.filter(
+					(item) => (item.url || '').split('/')[1] === type
+				);
+
+				allItemsData = categoryItems;
+				allGroups = [...new Set(categoryItems.map((i) => i.group).filter(Boolean))].sort();
+			}
+
+			const needsSetup = !groupDropdown?.dataset.ready;
+			if (needsSetup) {
+				groupDropdown.dataset.ready = '1';
+				setupCombobox(groupInput, groupDropdown, () => allGroups, () => loadItems());
+				syncInputsFromUrl();
+			}
+
+			const groupVal = groupInput?.value?.trim() || '';
+			const items = filterItems(allItemsData, groupVal, q);
+
+			loadingEl.classList.add('hidden');
+
+			if (items.length === 0) {
+				emptyEl.classList.remove('hidden');
+			} else {
+				filteredItems = items;
+				displayedCount = 0;
+				renderNextBatch();
+				itemsContainer.classList.remove('hidden');
+				if (filteredItems.length > PAGE_SIZE) {
+					setupScrollObserver();
+				} else if (scrollObserver) {
+					scrollObserver.disconnect();
+					scrollObserver = null;
+				}
+			}
+
+			updateUrl();
+		} catch (err) {
+			console.error('Failed to load items:', err);
+			loadingEl.classList.add('hidden');
+			errorEl?.classList.remove('hidden');
+		}
+	}
+
+	applyBtn?.addEventListener('click', (e) => {
+		e.preventDefault();
+		loadItems();
+	});
+	resetBtn?.addEventListener('click', (e) => {
+		e.preventDefault();
+		resetFilters();
+	});
+
+	searchInput?.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter') {
+			e.preventDefault();
+			loadItems();
+		}
+	});
+	groupInput?.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter' && groupDropdown?.classList.contains('hidden')) {
+			e.preventDefault();
+			loadItems();
+		}
+	});
+
+	retryBtn?.addEventListener('click', () => loadItems(true));
+
+	loadItems();
+</script>

@@ -255,3 +255,19 @@ export const buildPaginatedMeta = (
 			: baseDescription;
 	return { title, description };
 };
+
+const normalizePrevHref = (href?: string): string | undefined => {
+	if (!href) return href;
+	const normalized = href.replace(/\/1\/?$/, '');
+	return normalized === '' ? '/' : normalized;
+};
+
+export const buildPaginationUrls = (
+	siteOrigin: string,
+	page: { url: { prev?: string; next?: string } }
+): { prevUrl?: string; nextUrl?: string } => {
+	const prevHref = normalizePrevHref(page.url.prev);
+	const prevUrl = prevHref ? new URL(prevHref, siteOrigin).toString() : undefined;
+	const nextUrl = page.url.next ? new URL(page.url.next, siteOrigin).toString() : undefined;
+	return { prevUrl, nextUrl };
+};

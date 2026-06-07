@@ -145,6 +145,14 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 
 <Layout title={title} description={description} slug="creatures" structuredData={structuredData}>
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<p class="mx-auto mb-4 max-w-4xl px-4 text-center">
+		<a
+			href="/creatures/affinities"
+			class="text-sky-400 underline decoration-sky-600/50 underline-offset-2 hover:text-sky-300"
+		>
+			← Back to Affinity guide
+		</a>
+	</p>
 
 	<div class="table-wrapper d-hidden" data-layout="table" data-astro-transition-persist="table-wrapper">
 		<div class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-black">
@@ -158,7 +166,17 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 				/>
 				<h1 class="text-2xl m-0">Creature Species</h1>
 			</div>
-			<div class="flex items-center z-10">
+			<div class="flex flex-col sm:flex-row items-center gap-3 z-10">
+				<div id="affinity-filter-chip" class="hidden items-center gap-2 rounded-md border border-sky-700 bg-sky-950/60 px-3 py-1.5 text-sm text-sky-200">
+					<span>Filtered by affinity: <strong id="affinity-filter-label"></strong></span>
+					<button
+						id="affinity-filter-clear"
+						type="button"
+						class="rounded-sm border border-sky-600 px-2 py-0.5 text-xs text-sky-400 hover:bg-sky-900/50 hover:text-white"
+					>
+						Clear
+					</button>
+				</div>
 				<div class="tabulator-search relative">
 					<input
 						class="rounded-md w-full bg-black border-blue-500 focus:border-blue-500 focus:ring-blue-500 peer"
@@ -188,7 +206,7 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 						const subtitle = s.SpeciesSubtitle?.trim();
 						const displayName = subtitle ? `${s.Name} (${subtitle})` : s.Name;
 						return (
-							<tr>
+							<tr data-affinity={affinity}>
 								<TableCell cell={{
 									id: s.Id,
 									name: displayName,
@@ -269,10 +287,71 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 			}
 		});
 
-		function matchAny(data: Record<string, unknown>, filterParams: { value: string }) {
-			const escapedValue = filterParams.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+		function affinityFromCell(value: unknown): string {
+			const text = String(value ?? '')
+				.replace(/<[^>]*>/g, ' ')
+				.replace(/&amp;/g, '&')
+				.replace(/\s+/g, ' ')
+				.trim();
+			return (text.split(' ')[0] || '').toLowerCase();
+		}
+
+		function matchFilters(
+			data: Record<string, unknown>,
+			filterParams: { value: string; affinity: string }
+		) {
+			if (
+				filterParams.affinity &&
+				affinityFromCell(data.affinity) !== filterParams.affinity.toLowerCase()
+			) {
+				return false;
+			}
+			const search = filterParams.value.trim();
+			if (!search) return true;
+			const escapedValue = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 			const regex = new RegExp(escapedValue, 'i');
 			return Object.values(data).some((value) => regex.test(String(value)));
+		}
+
+		let activeAffinity = '';
+		const affinityChip = document.getElementById('affinity-filter-chip');
+		const affinityLabel = document.getElementById('affinity-filter-label');
+		const affinityClear = document.getElementById('affinity-filter-clear');
+
+		function applyTableFilter(searchValue: string) {
+			if (!searchValue.trim() && !activeAffinity) {
+				table.clearFilter();
+				return;
+			}
+			table.setFilter(matchFilters, { value: searchValue, affinity: activeAffinity });
+		}
+
+		function setAffinityFilter(affinity: string, updateUrl = true) {
+			activeAffinity = affinity;
+			if (affinityChip && affinityLabel) {
+				if (affinity) {
+					affinityLabel.textContent = affinity;
+					affinityChip.classList.remove('hidden');
+					affinityChip.classList.add('flex');
+				} else {
+					affinityChip.classList.add('hidden');
+					affinityChip.classList.remove('flex');
+					affinityLabel.textContent = '';
+				}
+			}
+			const input = document.getElementById('search') as HTMLInputElement | null;
+			applyTableFilter(input?.value ?? '');
+			if (updateUrl) {
+				const params = new URLSearchParams(window.location.search);
+				if (affinity) {
+					params.set('affinity', affinity);
+				} else {
+					params.delete('affinity');
+				}
+				const query = params.toString();
+				const newUrl = `/creatures/species${query ? '?' + query : ''}`;
+				window.history.replaceState({}, '', newUrl);
+			}
 		}
 
 		const input = document.getElementById('search') as HTMLInputElement;
@@ -283,13 +362,16 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 					clearTimeout(debounceTimer);
 				}
 				debounceTimer = setTimeout(() => {
-					if (input.value.trim() === '') {
-						table.clearFilter();
-					} else {
-						table.setFilter(matchAny, { value: input.value });
-					}
+					applyTableFilter(input.value);
 				}, 150);
 			});
+		}
+
+		affinityClear?.addEventListener('click', () => setAffinityFilter(''));
+
+		const initialAffinity = new URLSearchParams(window.location.search).get('affinity')?.trim() ?? '';
+		if (initialAffinity) {
+			setAffinityFilter(initialAffinity, false);
 		}
 	});
 </script>
