@@ -7,14 +7,21 @@ import { getSlug, sort } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta, buildPaginationUrls } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
-import data from '@datav2/Upgrades.json';
+import { CATEGORY_SLUGS, categories, type CategorySlug } from '../../config/categories.js';
+import { getCategoryDataset } from '../../config/categoryData.js';
 import { SITE } from '@config';
 
-export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	const pages = paginate(sort(data as Item[]), { pageSize: 80 });
-	return pages.slice(1);
+export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number; params?: Record<string, string> }) => unknown[] }) {
+	return CATEGORY_SLUGS.flatMap((slug) => {
+		const config = categories[slug];
+		const pages = paginate(sort(getCategoryDataset(config.datasets)), {
+			pageSize: 80,
+			params: { category: slug },
+		});
+		return pages.slice(1);
+	});
 }
-// All paginated data is passed on the "page" prop
+
 interface PageProps {
 	page: {
 		data: Item[];
@@ -26,7 +33,14 @@ interface PageProps {
 		};
 	};
 }
+
+const slug = Astro.params.category as CategorySlug;
+const config = categories[slug];
+const categoryPath = `/${config.slug}`;
 const { page } = Astro.props as PageProps;
+const baseDescription = config.pageDescription ?? config.description;
+const introText = config.pageIntro ?? config.intro;
+
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 const itemListElements = page.data.map((item, index) => ({
@@ -37,33 +51,36 @@ const itemListElements = page.data.map((item, index) => ({
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,
-	collectionName: 'Upgrades',
-	collectionDescription: "A list of upgrade items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
-	collectionPath: '/upgrades',
+	collectionName: config.h1,
+	collectionDescription: baseDescription,
+	collectionPath: categoryPath,
+	...(config.firstPagePath ? { firstPagePath: config.firstPagePath } : {}),
 	currentPage: page.currentPage,
 	items: itemListElements,
 });
-const breadcrumbs = buildCategoryBreadcrumbs('Upgrades', '/upgrades', page.currentPage);
-const intro = buildCategoryIntro(
-	'Upgrade modules boost stats for your equipment, vehicles, and freighter systems.',
+const breadcrumbs = config.firstPagePath
+	? buildCategoryBreadcrumbs(config.h1, categoryPath, page.currentPage, config.firstPagePath)
+	: buildCategoryBreadcrumbs(config.h1, categoryPath, page.currentPage);
+const intro = buildCategoryIntro(introText, page.currentPage, page.lastPage);
+const { title, description } = buildPaginatedMeta(
+	config.metaTitle,
+	baseDescription,
 	page.currentPage,
 	page.lastPage
 );
-const baseDescription = "A list of upgrade items for No Man's Sky. Our guide has everything you need to take your game to the next level.";
-const { title, description } = buildPaginatedMeta('Upgrades', baseDescription, page.currentPage, page.lastPage);
 const { prevUrl, nextUrl } = buildPaginationUrls(siteOrigin, page);
 ---
 
 <Layout
 	{title}
 	{description}
-	slug="upgrades"
+	slug={config.slug}
 	structuredData={structuredData}
 	prevUrl={prevUrl}
 	nextUrl={nextUrl}
 >
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Upgrades</h1>
+	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">{config.h1}</h1>
 	<p class="mx-auto mb-12 max-w-3xl text-center text-sky-200/90">{intro}</p>
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
 		{
