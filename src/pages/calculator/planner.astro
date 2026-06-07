@@ -232,25 +232,24 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 	function createRawItemRow(rawItem: MergedRawItem): HTMLLIElement {
 		const li = document.createElement('li');
-		li.className = 'flex items-center gap-3 py-1.5';
+		li.className = 'flex items-center gap-3 border-b border-sky-800/30 py-2 last:border-b-0';
 
 		if (rawItem.icon) {
 			const img = document.createElement('img');
 			img.src = `${imageBaseUrl}${rawItem.icon}`;
 			img.alt = '';
-			img.className = 'h-6 w-6 shrink-0 object-contain';
+			img.className = 'h-7 w-7 shrink-0 object-contain';
 			img.loading = 'lazy';
 			li.appendChild(img);
 		}
 
 		const nameSpan = document.createElement('span');
-		nameSpan.className = 'flex-1';
+		nameSpan.className = 'min-w-0 flex-1 truncate text-sky-100';
 		nameSpan.textContent = rawItem.name;
 		li.appendChild(nameSpan);
 
 		const qtySpan = document.createElement('span');
-		qtySpan.className =
-			'inline-flex min-w-[1.75rem] items-center justify-center rounded-sm bg-gray-700/80 px-1.5 py-0.5 text-xs font-medium tabular-nums text-gray-300';
+		qtySpan.className = 'shrink-0 text-base font-bold tabular-nums text-cyan-300';
 		qtySpan.textContent = rawItem.quantity.toLocaleString();
 		li.appendChild(qtySpan);
 
@@ -273,7 +272,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		const merged = mergeRawItems(plan);
 
 		const ul = document.createElement('ul');
-		ul.className = 'm-0 flex list-none flex-col gap-1 p-0';
+		ul.className = 'm-0 flex list-none flex-col p-0';
 		for (const rawItem of merged) {
 			ul.appendChild(createRawItemRow(rawItem));
 		}
@@ -291,7 +290,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 				breakdownSection.appendChild(heading);
 
 				const itemUl = document.createElement('ul');
-				itemUl.className = 'm-0 flex list-none flex-col gap-1 p-0 pl-2 border-l border-sky-800';
+				itemUl.className = 'm-0 flex list-none flex-col p-0 pl-2 border-l border-sky-800';
 				const scaled = product.rawItems
 					.map((rawItem) => ({
 						...rawItem,
