@@ -150,7 +150,7 @@ const {
     </p>
 
     {showBlueprintCost && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-2 flex flex-wrap gap-2">
         <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           <img
             src={blueprintIcon}
@@ -167,7 +167,7 @@ const {
     )}
 
     {isCorvettePage && corvetteAttributes.length > 0 && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-2 flex flex-wrap gap-2">
         {corvetteAttributes.map((attribute) => (
           <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {attribute.label}: {attribute.value}
@@ -177,7 +177,7 @@ const {
     )}
 
     {isCorvettePage && shipTechId && (
-      <div class="mt-4">
+      <div class="mt-2">
         <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           Ship Tech:
           <a href={getSlug(shipTechId)} class="text-cyan-300 hover:text-cyan-200">
@@ -188,7 +188,7 @@ const {
     )}
 
     {deploysIntoId && (
-      <div class="mt-4">
+      <div class="mt-2">
         <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           Installs as:
           <a href={getSlug(deploysIntoId)} class="text-cyan-300 hover:text-cyan-200">
@@ -199,7 +199,7 @@ const {
     )}
 
     {acquisitionPills.length > 0 && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-2 flex flex-wrap gap-2">
         {acquisitionPills.map((pill) => (
           <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {pill.label}: {pill.value}
@@ -209,7 +209,7 @@ const {
     )}
 
     {isFoodItem && (foodEffectCategory || foodEffectLines.length > 0) && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-2 flex flex-wrap gap-2">
         {foodEffectCategory && (
           <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             Effect: {foodEffectCategory}
@@ -225,7 +225,7 @@ const {
     )}
 
     {isBuildingPage && buildingPlacementPills.length > 0 && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-2 flex flex-wrap gap-2">
         {buildingPlacementPills.map((pill) => (
           <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {pill.label}: {pill.value}
@@ -235,7 +235,7 @@ const {
     )}
 
     {isExocraftPage && exocraftPills.length > 0 && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-2 flex flex-wrap gap-2">
         {exocraftPills.map((pill) => (
           <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {pill.label}: {pill.value}
@@ -245,7 +245,7 @@ const {
     )}
 
     {isFishPage && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-2 flex flex-wrap gap-2">
         {fishingTimeLabel && (
           <p class="inline-flex items-center gap-2 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
             {showSunIcon && (
@@ -306,7 +306,7 @@ const {
     )}
 
     {plantGrowTime && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="mt-2 flex flex-wrap gap-2">
         <p class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           {growTimeHeader}: {plantGrowTime}
         </p>
