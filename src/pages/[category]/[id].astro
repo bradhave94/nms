@@ -1,0 +1,59 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Page from '@layouts/Page.astro';
+import { getById, sort } from '@utils/lookup.js';
+import type { Item } from '@utils/lookup.js';
+import { buildItemMeta } from '@utils/seo.js';
+import { CATEGORY_SLUGS, categories, type CategorySlug } from '../../config/categories.js';
+import { getCategoryDataset } from '../../config/categoryData.js';
+import { SITE } from '@config';
+
+export async function getStaticPaths() {
+	return CATEGORY_SLUGS.flatMap((slug) => {
+		const config = categories[slug];
+
+		if (config.idStrategy === 'getById') {
+			return getCategoryDataset(config.datasets).map((item) => ({
+				params: { category: slug, id: item.Id.toString() },
+			}));
+		}
+
+		let items = getCategoryDataset(config.datasets);
+		if (config.idSort) {
+			items = sort(items);
+		}
+
+		return items.map((item) => ({
+			params: { category: slug, id: item.Id.toString() },
+			props: { item },
+		}));
+	});
+}
+
+interface Props {
+	item: Item;
+}
+
+const slug = Astro.params.category as CategorySlug;
+const config = categories[slug];
+
+let item: Item | undefined;
+if (config.idStrategy === 'getById') {
+	item = getById(Astro.params.id);
+	if (!item) {
+		return Astro.redirect('/404');
+	}
+} else {
+	item = (Astro.props as Props).item;
+	if (!item && config.redirectGuard) {
+		return Astro.redirect('/404');
+	}
+}
+
+const { title, description } = buildItemMeta(item, config.idLabel);
+const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
+---
+
+<Layout {title} {description} slug={config.slug} {ogImage}>
+	<Page item={item} />
+</Layout>
