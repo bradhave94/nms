@@ -2,10 +2,11 @@
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import creaturesData from '@datav2/Creatures.json';
+import { SITE } from '@config';
 
 type CreatureAffinity = (typeof creaturesData.Affinities)[number];
 
-const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const IMAGE_BASE = SITE.imageBaseUrl;
 const affinities = creaturesData.Affinities ?? [];
 const affinityById = new Map<string, CreatureAffinity>(
 	affinities.map((affinity) => [affinity.Id, affinity] as const)

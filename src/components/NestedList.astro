@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets'
 import Accordion from '@components/Accordion.astro';
 import { getSlug } from '@utils/lookup.js';
+import { SITE } from '@config';
 
 interface NestedItem {
   Id: string;
@@ -30,7 +31,7 @@ const { items, depth = 0, multiplyByParent = true } = Astro.props;
       <Accordion>
         <div data-index={index} class="flex items-center gap-2 py-1.5 min-w-0" slot="title">
           <Image
-            src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
+            src={`${SITE.imageBaseUrl}${item.Icon}`}
             alt={item.Name}
             sizes="(min-width: 640px) 40px, 28px"
             width={40}
@@ -56,7 +57,7 @@ const { items, depth = 0, multiplyByParent = true } = Astro.props;
       data-index={index}
     >
       <Image
-        src={`https://nomansskyrecipes.com/images/items/${item.Icon}`}
+        src={`${SITE.imageBaseUrl}${item.Icon}`}
         alt={item.Name}
         sizes="(min-width: 640px) 36px, 28px"
         width={36}

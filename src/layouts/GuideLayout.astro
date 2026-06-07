@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
+import Accordion from '@components/Accordion.astro';
 import { buildGuideStructuredData } from '@utils/guideStructuredData.js';
 import { getSiteOrigin } from '@utils/structuredData.js';
 import type { CollectionEntry } from 'astro:content';
@@ -39,6 +40,9 @@ const structuredData = buildGuideStructuredData({
 });
 const tags = guide.data.tags as string[];
 const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[];
+const guideFaqs = (guide.data.faqs ?? []) as Array<{ question: string; answer: string }>;
+const publishedTime = guide.data.pubDate.toISOString();
+const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString();
 ---
 
 <Layout
@@ -46,6 +50,9 @@ const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[
 	description={guide.data.description}
 	slug="blog"
 	ogImage={ogImage}
+	ogType="article"
+	articlePublishedTime={publishedTime}
+	articleModifiedTime={modifiedTime}
 	structuredData={structuredData}
 >
 	{guide.data.heroImage ? (
@@ -119,6 +126,20 @@ const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[
 						</ul>
 					</section>
 				)}
+
+			{guideFaqs.length > 0 && (
+				<section id="faq" class="mt-10 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
+					<h2 class="mt-0 text-2xl text-white">Frequently Asked Questions</h2>
+					<div class="mt-4 space-y-2">
+						{guideFaqs.map((faq, index) => (
+							<Accordion id={`faq-${index + 1}`}>
+								<h3 class="m-0 text-lg text-white" slot="title">{faq.question}</h3>
+								<p class="m-0 text-sky-100/90" slot="content">{faq.answer}</p>
+							</Accordion>
+						))}
+					</div>
+				</section>
+			)}
 			</div>
 
 			{tocHeadings.length > 0 && (

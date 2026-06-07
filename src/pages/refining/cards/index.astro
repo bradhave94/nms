@@ -5,6 +5,7 @@ import { Image } from 'astro:assets'
 
 import refinery from '@datav2/Refinery.json';
 import { getSlug, getById, type Item } from '@utils/lookup.js';
+import { SITE } from '@config';
 
 // Interfaces for defining the shape of input and output objects
 interface Input {
@@ -201,7 +202,7 @@ const data = refinery.map(createArray).filter((item): item is ProcessedItem => i
 						style={'background: #' + item.output.colour}
 					>
 						<Image
-							src={'https://nomansskyrecipes.com/images/items/' + item.output.image}
+							src={SITE.imageBaseUrl + item.output.image}
 							alt={item.output.name}
 							sizes="50px"
 							width={50}
@@ -228,7 +229,7 @@ const data = refinery.map(createArray).filter((item): item is ProcessedItem => i
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
-											'https://nomansskyrecipes.com/images/items/' +
+											SITE.imageBaseUrl +
 											input1.image
 										}
 										alt={input1.name}
@@ -257,7 +258,7 @@ const data = refinery.map(createArray).filter((item): item is ProcessedItem => i
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
-											'https://nomansskyrecipes.com/images/items/' +
+											SITE.imageBaseUrl +
 											input2.image
 										}
 										alt={input2.name}
@@ -286,7 +287,7 @@ const data = refinery.map(createArray).filter((item): item is ProcessedItem => i
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
-											'https://nomansskyrecipes.com/images/items/' +
+											SITE.imageBaseUrl +
 											input3.image
 										}
 										alt={input3.name}

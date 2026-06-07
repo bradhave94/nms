@@ -5,6 +5,7 @@ import Layout from '@layouts/Layout.astro';
 import { Image } from 'astro:assets'
 import processor from '@datav2/NutrientProcessor.json';
 import { getById, getSlug, sortTable, type Item } from '@utils/lookup.js';
+import { SITE } from '@config';
 
 interface ItemDetails {
 	id: string;
@@ -175,7 +176,7 @@ const sortedData = sortTable(data);
 						style={'background: #' + item.output.colour}
 					>
 						<Image
-							src={'https://nomansskyrecipes.com/images/items/' + item.output.image}
+							src={SITE.imageBaseUrl + item.output.image}
 							alt={item.output.name}
 							sizes="50px"
 							width={50}
@@ -202,7 +203,7 @@ const sortedData = sortTable(data);
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
-											'https://nomansskyrecipes.com/images/items/' +
+											SITE.imageBaseUrl +
 											input1.image
 										}
 										alt={input1.name}
@@ -231,7 +232,7 @@ const sortedData = sortTable(data);
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
-											'https://nomansskyrecipes.com/images/items/' +
+											SITE.imageBaseUrl +
 											input2.image
 										}
 										alt={input2.name}
@@ -260,7 +261,7 @@ const sortedData = sortTable(data);
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
 										src={
-											'https://nomansskyrecipes.com/images/items/' +
+											SITE.imageBaseUrl +
 											input3.image
 										}
 										alt={input3.name}

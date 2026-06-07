@@ -4,6 +4,7 @@ import Breadcrumbs from '@components/Breadcrumbs.astro';
 import type { BreadcrumbItem } from '@utils/seo.js';
 import { getSiteOrigin } from '@utils/structuredData.js';
 import creaturesData from '@datav2/Creatures.json';
+import { SITE } from '@config';
 
 type CreatureSpecies = (typeof creaturesData.Species)[number];
 type CreatureMove = (typeof creaturesData.BattleMoves)[number];
@@ -36,7 +37,7 @@ const speciesLabelCounts = ((creaturesData.Species ?? []) as CreatureSpecies[]).
 	new Map()
 );
 
-const DEFAULT_IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const DEFAULT_IMAGE_BASE = SITE.imageBaseUrl;
 const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
 const imageBase = DEFAULT_IMAGE_BASE;
 

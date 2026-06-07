@@ -2,6 +2,8 @@
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import creaturesData from '@datav2/Creatures.json';
+import { getById, getSlug } from '@utils/lookup.js';
+import { SITE } from '@config';
 
 type ArenaMode = {
 	Id: string;
@@ -62,7 +64,7 @@ type PetShopItem = {
 };
 
 const data = creaturesData as Record<string, unknown>;
-const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const IMAGE_BASE = SITE.imageBaseUrl;
 
 const globals = (data.CreatureGlobals as Record<string, unknown>) ?? {};
 const arenaGuild = globals.ArenaGuild as { Name?: string; Description?: string } | undefined;
@@ -108,17 +110,32 @@ const _PRODUCT_NAMES: Record<string, string> = {
 	TREAT_FREELEVEL: 'Retroviral Pellet',
 };
 
+function rewardItemParts(item: RewardItem): { label: string; href?: string; chanceSuffix?: string } {
+	const chanceSuffix = item.Chance < 100 ? ` (${item.Chance}%)` : '';
+	if (item.Type === 'Currency' && item.Id === 'Nanites') {
+		return {
+			label: `${item.AmountMin}–${item.AmountMax} Nanites`,
+			href: getSlug('TECHFRAG'),
+			chanceSuffix,
+		};
+	}
+	if (item.Type === 'Product' && item.ProductId) {
+		const product = getById(item.ProductId);
+		return {
+			label: product?.Name ?? toTitleCase(item.ProductId),
+			href: getSlug(item.ProductId),
+			chanceSuffix,
+		};
+	}
+	return { label: toTitleCase(item.Id ?? item.Type), chanceSuffix };
+}
+
 function summarizeReward(reward: ArenaReward | undefined): string {
 	if (!reward) return 'None';
 	const parts: string[] = [];
 	for (const item of reward.Items) {
-		if (item.Type === 'Currency' && item.Id === 'Nanites') {
-			parts.push(`${item.AmountMin}–${item.AmountMax} Nanites`);
-		} else if (item.Type === 'Product' && item.ProductId) {
-			const name = _PRODUCT_NAMES[item.ProductId] ?? toTitleCase(item.ProductId);
-			const chanceSuffix = item.Chance < 100 ? ` (${item.Chance}%)` : '';
-			parts.push(`${name}${chanceSuffix}`);
-		}
+		const part = rewardItemParts(item);
+		parts.push(`${part.label}${part.chanceSuffix ?? ''}`);
 	}
 	return parts.length > 0 ? parts.join(', ') : 'League stat progress';
 }
@@ -175,7 +192,26 @@ const breadcrumbs = [
 							<div class="mt-3 space-y-1 text-sm text-sky-200/90">
 								<p class="m-0">
 									<span class="font-semibold text-sky-100">Win:</span>{' '}
-									{summarizeReward(winReward)}
+									{winReward && winReward.Items.length > 0 ? (
+										winReward.Items.map((rewardItem, index) => {
+											const part = rewardItemParts(rewardItem);
+											return (
+												<>
+													{index > 0 && ', '}
+													{part.href ? (
+														<a href={part.href} class="text-cyan-300 hover:text-cyan-200">
+															{part.label}
+														</a>
+													) : (
+														part.label
+													)}
+													{part.chanceSuffix}
+												</>
+											);
+										})
+									) : (
+										summarizeReward(winReward)
+									)}
 								</p>
 								{mode.ExperienceMultiplier !== 1.0 && (
 									<p class="m-0">
@@ -211,7 +247,26 @@ const breadcrumbs = [
 									<div class="mt-3 space-y-1 text-sm text-sky-200/90">
 										<p class="m-0">
 											<span class="font-semibold text-sky-100">Win:</span>{' '}
-											{summarizeReward(winReward)}
+											{winReward && winReward.Items.length > 0 ? (
+												winReward.Items.map((rewardItem, index) => {
+													const part = rewardItemParts(rewardItem);
+													return (
+														<>
+															{index > 0 && ', '}
+															{part.href ? (
+																<a href={part.href} class="text-cyan-300 hover:text-cyan-200">
+																	{part.label}
+																</a>
+															) : (
+																part.label
+															)}
+															{part.chanceSuffix}
+														</>
+													);
+												})
+											) : (
+												summarizeReward(winReward)
+											)}
 										</p>
 										{mode.ExperienceMultiplier !== 1.0 && (
 											<p class="m-0">
@@ -294,7 +349,11 @@ const breadcrumbs = [
 									loading="lazy"
 								/>
 								<div class="min-w-0">
-									<h3 class="m-0 text-lg text-white">{egg.Name}</h3>
+									<h3 class="m-0 text-lg text-white">
+										<a href={getSlug(egg.ProductID)} class="text-white hover:text-cyan-200">
+											{egg.Name}
+										</a>
+									</h3>
 									<p class="m-0 text-xs uppercase tracking-wide text-sky-300/90">{egg.Group}</p>
 								</div>
 							</div>

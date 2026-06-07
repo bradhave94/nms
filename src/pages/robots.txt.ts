@@ -19,6 +19,8 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+# LLM / AI context file: ${new URL('llms.txt', sitemapURL).href}
+
 Sitemap: ${sitemapURL.href}
 Sitemap: ${imageSitemapURL.href}
 `;

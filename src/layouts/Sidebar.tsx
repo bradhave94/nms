@@ -38,6 +38,13 @@ interface SidebarProps {
   layout?: ReactNode;
 }
 
+const isNavItemActive = (slug: string | undefined, href: string): boolean => {
+  if (!slug) return false;
+  const hrefSegment = href.replace(/^\/+|\/+$/g, '').split('/')[0] ?? '';
+  const slugSegment = slug.replace(/^\/+|\/+$/g, '').split('/')[0] ?? '';
+  return hrefSegment !== '' && hrefSegment === slugSegment;
+};
+
 const navigation: NavigationItem[] = [
   { name: 'Refining', href: '/refining', icon: FunnelIcon },
   { name: 'Cooking', href: '/cooking', icon: BeakerIcon },
@@ -69,12 +76,13 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
     <nav className={`mt-3 ${mobile ? 'space-y-1 px-2' : 'flex-1 space-y-1 bg-black px-2'}`}>
       {navigation.map((item) => {
         const Icon = item.icon;
+        const isActive = isNavItemActive(slug, item.href);
         return (
           <a
             key={item.name}
             href={item.href}
             className={classNames(
-              slug && item.href.includes(slug)
+              isActive
                 ? 'bg-blue-500 text-black'
                 : 'text-white hover:bg-blue-500 hover:text-black',
               'group flex items-center px-2 py-1 text-base leading-tight font-medium rounded-md transition-colors'
@@ -82,7 +90,7 @@ export default function Sidebar({ slug, layout }: SidebarProps) {
           >
             <Icon
               className={classNames(
-                slug && item.href.includes(slug)
+                isActive
                   ? 'text-black'
                   : 'text-gray-400 group-hover:text-black',
                 'mr-2.5 h-5 w-5 shrink-0 transition-colors'

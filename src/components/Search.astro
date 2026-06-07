@@ -3,6 +3,7 @@
 	type="button"
 	class="fixed bottom-4 right-4 inline-flex items-center rounded-full border border-transparent bg-blue-600 p-3 text-black shadow-xs hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
 	aria-label="Open search"
+	title="Search ( / or Ctrl+K )"
 >
 	<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 		<path
@@ -17,17 +18,27 @@
 	const siteSearch = document.getElementById('site-search') as HTMLElement | null;
 	const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
 
-	function toggleSiteSearch(): void {
+	function isEditableTarget(target: EventTarget | null): boolean {
+		if (!(target instanceof HTMLElement)) return false;
+		const tag = target.tagName;
+		if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true;
+		return target.isContentEditable;
+	}
+
+	function toggleSiteSearch(forceOpen?: boolean): void {
 		if (!siteSearch) return;
 
-		siteSearch.classList.toggle('hidden');
-		if (!siteSearch.classList.contains('hidden') && searchInput) {
-			searchInput.focus();
+		const shouldOpen = forceOpen ?? siteSearch.classList.contains('hidden');
+		if (shouldOpen) {
+			siteSearch.classList.remove('hidden');
+			searchInput?.focus();
+		} else {
+			siteSearch.classList.add('hidden');
 		}
 	}
 
 	if (openSearch) {
-		openSearch.addEventListener('click', toggleSiteSearch);
+		openSearch.addEventListener('click', () => toggleSiteSearch(true));
 	}
 
 	document.addEventListener('click', (event: MouseEvent) => {
@@ -37,10 +48,20 @@
 		}
 	});
 
-	// Close search on Escape key press
 	document.addEventListener('keydown', (event: KeyboardEvent) => {
 		if (event.key === 'Escape' && siteSearch && !siteSearch.classList.contains('hidden')) {
 			siteSearch.classList.add('hidden');
+			return;
+		}
+
+		if (isEditableTarget(event.target)) return;
+
+		const isModifierK = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k';
+		const isSlash = event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey;
+
+		if (isModifierK || isSlash) {
+			event.preventDefault();
+			toggleSiteSearch(true);
 		}
 	});
 </script>

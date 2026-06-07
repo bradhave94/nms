@@ -7,6 +7,7 @@ import creaturesData from '@datav2/Creatures.json';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildPaginatedMeta } from '@utils/seo.js';
 import '../../../assets/css/tabulator.css';
+import { SITE } from '@config';
 
 type CreatureSpecies = {
 	Id: string;
@@ -20,7 +21,7 @@ type CreatureSpecies = {
 	Icon?: string | null;
 };
 
-const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const IMAGE_BASE = SITE.imageBaseUrl;
 const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
 
 const AFFINITY_COLOURS: Record<string, string> = {

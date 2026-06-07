@@ -9,6 +9,7 @@ type SearchIndexEntry = {
 	name: string;
 	type: string;
 	url: string;
+	icon?: string;
 	/** Extra text matched by search (not shown in the UI), e.g. blog meta description */
 	searchText?: string;
 };
@@ -28,9 +29,11 @@ const getTypeFromUrl = (url?: string): string => {
   return prefix || 'item';
 };
 
-// Combine and sort all data (each datav2 export is an array of items)
-const allData = Object.values(dataSources).flatMap((source) => source as Item[]);
-const data = sort(allData as Item[]);
+// Combine and sort all data — only real item arrays (skip Creatures object, NewUpdate diff, etc.)
+const allData = Object.values(dataSources).flatMap((source) =>
+	Array.isArray(source) ? (source as Item[]) : []
+);
+const data = sort(allData);
 
 // Build search index: only include items with a valid name so search and client filtering work
 const itemSearchEntries: SearchIndexEntry[] = data
@@ -42,6 +45,7 @@ const itemSearchEntries: SearchIndexEntry[] = data
 			name: item.Name,
 			type: getTypeFromUrl(url),
 			url,
+			icon: item.Icon,
 		};
 	});
 

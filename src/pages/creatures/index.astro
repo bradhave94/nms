@@ -5,8 +5,9 @@ import Breadcrumbs from '@components/Breadcrumbs.astro';
 import creaturesData from '@datav2/Creatures.json';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildCategoryBreadcrumbs } from '@utils/seo.js';
+import { SITE } from '@config';
 
-const IMAGE_BASE = 'https://nomansskyrecipes.com/images/items/';
+const IMAGE_BASE = SITE.imageBaseUrl;
 const speciesCount = creaturesData.Species?.length ?? 0;
 const affinityCount = creaturesData.Affinities?.length ?? 0;
 const moveCount = creaturesData.BattleMoves?.length ?? 0;

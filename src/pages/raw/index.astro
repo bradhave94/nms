@@ -8,6 +8,7 @@ import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredD
 import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/RawMaterials.json';
+import { SITE } from '@config';
 
 const pageSize = 80;
 const sortedItems = sort(data as Item[]);
@@ -63,7 +64,7 @@ const { title, description } = buildPaginatedMeta('Raw Materials', baseDescripti
 				<CompactCard
 					card={{
 						name: item.Name,
-						image: 'https://nomansskyrecipes.com/images/items/' + item.Icon,
+						image: SITE.imageBaseUrl + item.Icon,
 						link: getSlug(item),
 					}}
 					index={index}

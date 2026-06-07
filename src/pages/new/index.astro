@@ -12,6 +12,7 @@ import {
 } from '@utils/newUpdate';
 import { itemUrlWithShowChanges } from '@utils/updateChanges';
 import type { Item } from '@utils/lookup.js';
+import { SITE } from '@config';
 
 const update = getNewUpdatePayload();
 const hasDisplayName = (item: Item) => Boolean(item?.Name?.trim());
@@ -52,7 +53,7 @@ const toCard = (item: NewUpdateItem, index: number, kind: 'added' | 'changed') =
 	const link = kind === 'changed' ? itemUrlWithShowChanges(path) : path;
 	return {
 		name,
-		image: `https://nomansskyrecipes.com/images/items/${item.Icon}`,
+		image: `${SITE.imageBaseUrl}${item.Icon}`,
 		link,
 		index,
 	};
