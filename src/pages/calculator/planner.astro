@@ -1,0 +1,563 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { getSiteOrigin } from '@utils/structuredData.js';
+import { SITE } from '@config';
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/calculator/planner', siteOrigin).toString();
+const title = 'Crafting Planner | No Man\'s Sky Recipes';
+const description =
+	'Plan multiple crafted products at once. Add items and quantities to see total raw materials needed across your entire build list.';
+const breadcrumbs = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Crafting Calculator', href: '/calculator' },
+	{ name: 'Crafting Planner' },
+];
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	'@id': `${canonicalUrl}#breadcrumb`,
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+		{ '@type': 'ListItem', position: 2, name: 'Crafting Calculator', item: `${siteOrigin}/calculator` },
+		{ '@type': 'ListItem', position: 3, name: 'Crafting Planner', item: canonicalUrl },
+	],
+};
+const imageBaseUrl = SITE.imageBaseUrl;
+---
+
+<Layout
+	{title}
+	{description}
+	slug="calculator"
+	structuredData={breadcrumbSchema}
+	ogImage={`${SITE.website}/images/calculator.webp`}
+>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Planner</h1>
+	<p class="mx-auto mb-8 mt-3 max-w-3xl text-center text-sky-200/90">
+		Add multiple products with quantities to see the combined raw materials you need. Share your plan via URL.
+	</p>
+
+	<div
+		id="planner-app"
+		class="mx-auto max-w-4xl px-4 pb-12"
+		data-image-base={imageBaseUrl}
+	>
+		<div class="mb-6">
+			<label for="product-search" class="sr-only">Search products</label>
+			<input
+				id="product-search"
+				type="text"
+				autocomplete="off"
+				placeholder="Search products to add…"
+				class="box-border h-12 w-full max-w-full rounded-sm border border-sky-700 bg-sky-900/50 px-4 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+			/>
+			<div
+				id="product-results"
+				class="box-border mt-2 max-h-64 max-w-full overflow-y-auto rounded-sm border border-sky-800 bg-black/40 hidden"
+				role="listbox"
+				aria-label="Matching products"
+			></div>
+		</div>
+
+		<section aria-labelledby="plan-heading" class="mb-8">
+			<h2 id="plan-heading" class="text-2xl mb-4">Your plan</h2>
+			<div id="plan-rows" class="flex flex-col gap-2"></div>
+			<p id="plan-empty" class="text-sky-200/70 text-sm">
+				No items added yet. Search above to add products (e.g. Stasis Device, Living Glass).
+			</p>
+		</section>
+
+		<section aria-labelledby="totals-heading" class="mb-6">
+			<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+				<h2 id="totals-heading" class="text-2xl mb-0">Total raw materials</h2>
+				<div class="flex flex-wrap items-center gap-3">
+					<label class="inline-flex cursor-pointer items-center gap-2 text-sm text-sky-200">
+						<input
+							id="breakdown-toggle"
+							type="checkbox"
+							class="peer hidden"
+						/>
+						<span class="select-none rounded-lg border-2 border-sky-600 px-2 py-0.5 transition-colors duration-200 peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+							Show per-item breakdown
+						</span>
+					</label>
+					<button
+						id="copy-link-btn"
+						type="button"
+						class="rounded-sm border border-sky-600 bg-sky-900/50 px-3 py-1.5 text-sm text-cyan-300 hover:border-cyan-400 hover:text-cyan-200 disabled:cursor-not-allowed disabled:opacity-50"
+						disabled
+					>
+						Copy link
+					</button>
+				</div>
+			</div>
+			<div id="totals-list"></div>
+			<p id="totals-empty" class="text-sky-200/70 text-sm hidden">
+				Add products to your plan to see total raw materials.
+			</p>
+			<div id="breakdown-section" class="mt-6 hidden"></div>
+		</section>
+	</div>
+</Layout>
+
+<script>
+	type PlannerRawItem = {
+		id: string;
+		name: string;
+		icon: string;
+		quantity: number;
+	};
+
+	type PlannerProduct = {
+		id: string;
+		name: string;
+		icon: string;
+		url: string;
+		rawItems: PlannerRawItem[];
+	};
+
+	type PlanEntry = {
+		id: string;
+		qty: number;
+	};
+
+	type MergedRawItem = PlannerRawItem;
+
+	const plannerApp = document.getElementById('planner-app');
+	const productSearch = document.getElementById('product-search') as HTMLInputElement | null;
+	const productResults = document.getElementById('product-results');
+	const planRows = document.getElementById('plan-rows');
+	const planEmpty = document.getElementById('plan-empty');
+	const totalsList = document.getElementById('totals-list');
+	const totalsEmpty = document.getElementById('totals-empty');
+	const breakdownToggle = document.getElementById('breakdown-toggle') as HTMLInputElement | null;
+	const breakdownSection = document.getElementById('breakdown-section');
+	const copyLinkBtn = document.getElementById('copy-link-btn') as HTMLButtonElement | null;
+
+	const imageBaseUrl = plannerApp?.dataset.imageBase ?? '/images/items/';
+
+	let products: PlannerProduct[] = [];
+	const productsById = new Map<string, PlannerProduct>();
+	let plan: PlanEntry[] = [];
+	let searchDebounceTimer: ReturnType<typeof setTimeout> | undefined;
+	let urlDebounceTimer: ReturnType<typeof setTimeout> | undefined;
+	let datasetPromise: Promise<PlannerProduct[]> | null = null;
+
+	function loadPlannerDataset(): Promise<PlannerProduct[]> {
+		if (!datasetPromise) {
+			datasetPromise = fetch('/calculator/planner-data.json', { cache: 'force-cache' })
+				.then((response) => response.json())
+				.then((results) => {
+					if (!results || !Array.isArray(results.body)) {
+						return [];
+					}
+					return results.body.filter(
+						(entry: PlannerProduct) =>
+							entry &&
+							typeof entry.id === 'string' &&
+							typeof entry.name === 'string' &&
+							Array.isArray(entry.rawItems)
+					);
+				})
+				.catch((error) => {
+					datasetPromise = null;
+					throw error;
+				});
+		}
+		return datasetPromise;
+	}
+
+	function parsePlanFromUrl(): PlanEntry[] {
+		const itemsParam = new URLSearchParams(window.location.search).get('items');
+		if (!itemsParam) return [];
+
+		return itemsParam
+			.split(',')
+			.map((segment) => {
+				const [id, qtyStr] = segment.split(':');
+				if (!id) return null;
+				const qty = Number.parseInt(qtyStr ?? '1', 10);
+				if (!Number.isFinite(qty) || qty < 1) return null;
+				return { id, qty };
+			})
+			.filter((entry): entry is PlanEntry => entry !== null && productsById.has(entry.id));
+	}
+
+	function updateUrl() {
+		if (urlDebounceTimer) {
+			clearTimeout(urlDebounceTimer);
+		}
+		urlDebounceTimer = setTimeout(() => {
+			const params = new URLSearchParams();
+			if (plan.length > 0) {
+				params.set('items', plan.map((entry) => `${entry.id}:${entry.qty}`).join(','));
+			}
+			const query = params.toString();
+			const newUrl = `/calculator/planner${query ? `?${query}` : ''}`;
+			window.history.replaceState({}, '', newUrl);
+			if (copyLinkBtn) {
+				copyLinkBtn.disabled = plan.length === 0;
+			}
+		}, 200);
+	}
+
+	function mergeRawItems(entries: PlanEntry[]): MergedRawItem[] {
+		const merged = new Map<string, MergedRawItem>();
+
+		for (const entry of entries) {
+			const product = productsById.get(entry.id);
+			if (!product) continue;
+
+			for (const rawItem of product.rawItems) {
+				const totalQty = rawItem.quantity * entry.qty;
+				const existing = merged.get(rawItem.id);
+				if (existing) {
+					existing.quantity += totalQty;
+				} else {
+					merged.set(rawItem.id, {
+						id: rawItem.id,
+						name: rawItem.name,
+						icon: rawItem.icon,
+						quantity: totalQty,
+					});
+				}
+			}
+		}
+
+		return Array.from(merged.values()).sort((a, b) => b.quantity - a.quantity);
+	}
+
+	function createRawItemRow(rawItem: MergedRawItem): HTMLLIElement {
+		const li = document.createElement('li');
+		li.className = 'flex items-center gap-3 py-1.5';
+
+		if (rawItem.icon) {
+			const img = document.createElement('img');
+			img.src = `${imageBaseUrl}${rawItem.icon}`;
+			img.alt = '';
+			img.className = 'h-6 w-6 shrink-0 object-contain';
+			img.loading = 'lazy';
+			li.appendChild(img);
+		}
+
+		const nameSpan = document.createElement('span');
+		nameSpan.className = 'flex-1';
+		nameSpan.textContent = rawItem.name;
+		li.appendChild(nameSpan);
+
+		const qtySpan = document.createElement('span');
+		qtySpan.className =
+			'inline-flex min-w-[1.75rem] items-center justify-center rounded-sm bg-gray-700/80 px-1.5 py-0.5 text-xs font-medium tabular-nums text-gray-300';
+		qtySpan.textContent = rawItem.quantity.toLocaleString();
+		li.appendChild(qtySpan);
+
+		return li;
+	}
+
+	function renderTotals() {
+		if (!totalsList || !totalsEmpty || !breakdownSection) return;
+
+		totalsList.textContent = '';
+		breakdownSection.textContent = '';
+
+		if (plan.length === 0) {
+			totalsEmpty.classList.remove('hidden');
+			breakdownSection.classList.add('hidden');
+			return;
+		}
+
+		totalsEmpty.classList.add('hidden');
+		const merged = mergeRawItems(plan);
+
+		const ul = document.createElement('ul');
+		ul.className = 'm-0 flex list-none flex-col gap-1 p-0';
+		for (const rawItem of merged) {
+			ul.appendChild(createRawItemRow(rawItem));
+		}
+		totalsList.appendChild(ul);
+
+		if (breakdownToggle?.checked) {
+			breakdownSection.classList.remove('hidden');
+			for (const entry of plan) {
+				const product = productsById.get(entry.id);
+				if (!product) continue;
+
+				const heading = document.createElement('h3');
+				heading.className = 'text-lg mt-4 mb-2 text-cyan-200';
+				heading.textContent = `${product.name} × ${entry.qty.toLocaleString()}`;
+				breakdownSection.appendChild(heading);
+
+				const itemUl = document.createElement('ul');
+				itemUl.className = 'm-0 flex list-none flex-col gap-1 p-0 pl-2 border-l border-sky-800';
+				const scaled = product.rawItems
+					.map((rawItem) => ({
+						...rawItem,
+						quantity: rawItem.quantity * entry.qty,
+					}))
+					.sort((a, b) => b.quantity - a.quantity);
+
+				for (const rawItem of scaled) {
+					itemUl.appendChild(createRawItemRow(rawItem));
+				}
+				breakdownSection.appendChild(itemUl);
+			}
+		} else {
+			breakdownSection.classList.add('hidden');
+		}
+	}
+
+	function focusPlanQty(productId: string) {
+		const qtyInput = planRows?.querySelector(
+			`input[data-product-id="${productId}"]`
+		) as HTMLInputElement | null;
+		if (qtyInput) {
+			qtyInput.focus();
+			qtyInput.select();
+		}
+	}
+
+	function addToPlan(productId: string) {
+		const existing = plan.find((entry) => entry.id === productId);
+		if (existing) {
+			focusPlanQty(productId);
+			return;
+		}
+
+		plan.push({ id: productId, qty: 1 });
+		renderPlan();
+		updateUrl();
+	}
+
+	function removeFromPlan(productId: string) {
+		plan = plan.filter((entry) => entry.id !== productId);
+		renderPlan();
+		updateUrl();
+	}
+
+	function setPlanQty(productId: string, qty: number) {
+		const entry = plan.find((item) => item.id === productId);
+		if (!entry) return;
+		entry.qty = Math.max(1, qty);
+		renderTotals();
+		updateUrl();
+	}
+
+	function renderPlan() {
+		if (!planRows || !planEmpty) return;
+
+		planRows.textContent = '';
+
+		if (plan.length === 0) {
+			planEmpty.classList.remove('hidden');
+			renderTotals();
+			return;
+		}
+
+		planEmpty.classList.add('hidden');
+
+		for (const entry of plan) {
+			const product = productsById.get(entry.id);
+			if (!product) continue;
+
+			const row = document.createElement('div');
+			row.className =
+				'flex flex-wrap items-center gap-3 rounded-sm border border-sky-800 bg-sky-900/30 px-3 py-2';
+			row.dataset.productId = product.id;
+
+			if (product.icon) {
+				const img = document.createElement('img');
+				img.src = `${imageBaseUrl}${product.icon}`;
+				img.alt = '';
+				img.className = 'h-8 w-8 shrink-0 object-contain';
+				img.loading = 'lazy';
+				row.appendChild(img);
+			}
+
+			const nameLink = document.createElement('a');
+			nameLink.href = product.url;
+			nameLink.className = 'flex-1 min-w-0 truncate text-cyan-300 hover:text-cyan-200 hover:underline';
+			nameLink.textContent = product.name;
+			row.appendChild(nameLink);
+
+			const qtyInput = document.createElement('input');
+			qtyInput.type = 'number';
+			qtyInput.min = '1';
+			qtyInput.step = '1';
+			qtyInput.value = String(entry.qty);
+			qtyInput.id = `qty-${product.id}`;
+			qtyInput.dataset.productId = product.id;
+			qtyInput.className =
+				'h-9 w-20 rounded-sm border border-sky-700 bg-black/40 px-2 text-center text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400';
+			qtyInput.addEventListener('change', () => {
+				const parsed = Number.parseInt(qtyInput.value, 10);
+				setPlanQty(product.id, Number.isFinite(parsed) ? parsed : 1);
+			});
+			qtyInput.addEventListener('input', () => {
+				const parsed = Number.parseInt(qtyInput.value, 10);
+				if (Number.isFinite(parsed) && parsed >= 1) {
+					entry.qty = parsed;
+					renderTotals();
+				}
+			});
+
+			const qtyLabel = document.createElement('label');
+			qtyLabel.className = 'sr-only';
+			qtyLabel.textContent = `Quantity for ${product.name}`;
+			qtyLabel.htmlFor = qtyInput.id;
+
+			row.appendChild(qtyLabel);
+			row.appendChild(qtyInput);
+
+			const removeBtn = document.createElement('button');
+			removeBtn.type = 'button';
+			removeBtn.className =
+				'flex h-9 w-9 shrink-0 items-center justify-center rounded-sm text-xl text-sky-300 hover:bg-sky-800/60 hover:text-white';
+			removeBtn.setAttribute('aria-label', `Remove ${product.name}`);
+			removeBtn.textContent = '×';
+			removeBtn.addEventListener('click', () => removeFromPlan(product.id));
+			row.appendChild(removeBtn);
+
+			planRows.appendChild(row);
+		}
+
+		renderTotals();
+	}
+
+	function renderProductSearch() {
+		if (!productSearch || !productResults) return;
+
+		const term = productSearch.value.trim().toLowerCase();
+		productResults.textContent = '';
+
+		if (!term) {
+			productResults.classList.add('hidden');
+			return;
+		}
+
+		const matches = products
+			.filter((product) => product.name.toLowerCase().includes(term))
+			.sort((a, b) => {
+				const aName = a.name.toLowerCase();
+				const bName = b.name.toLowerCase();
+				if (aName === term) return -1;
+				if (bName === term) return 1;
+				if (aName.startsWith(term) && !bName.startsWith(term)) return -1;
+				if (bName.startsWith(term) && !aName.startsWith(term)) return 1;
+				return a.name.localeCompare(b.name);
+			})
+			.slice(0, 50);
+
+		if (matches.length === 0) {
+			productResults.classList.remove('hidden');
+			const empty = document.createElement('p');
+			empty.className = 'p-3 text-sm text-sky-200/70';
+			empty.textContent = 'No matching products found.';
+			productResults.appendChild(empty);
+			return;
+		}
+
+		productResults.classList.remove('hidden');
+		const ul = document.createElement('ul');
+		ul.className = 'm-0 list-none p-0';
+
+		for (const product of matches) {
+			const li = document.createElement('li');
+			li.setAttribute('role', 'option');
+
+			const btn = document.createElement('button');
+			btn.type = 'button';
+			btn.className =
+				'flex w-full items-center gap-2 px-3 py-2 text-left text-white hover:bg-sky-800/60';
+
+			if (product.icon) {
+				const img = document.createElement('img');
+				img.src = `${imageBaseUrl}${product.icon}`;
+				img.alt = '';
+				img.className = 'h-6 w-6 shrink-0 object-contain';
+				img.loading = 'lazy';
+				btn.appendChild(img);
+			}
+
+			const nameSpan = document.createElement('span');
+			nameSpan.textContent = product.name;
+			btn.appendChild(nameSpan);
+
+			const inPlan = plan.some((entry) => entry.id === product.id);
+			if (inPlan) {
+				const badge = document.createElement('span');
+				badge.className = 'ml-auto text-xs text-sky-400';
+				badge.textContent = 'In plan';
+				btn.appendChild(badge);
+			}
+
+			btn.addEventListener('click', () => {
+				addToPlan(product.id);
+				productSearch.value = '';
+				productResults.classList.add('hidden');
+				productResults.textContent = '';
+			});
+
+			li.appendChild(btn);
+			ul.appendChild(li);
+		}
+
+		productResults.appendChild(ul);
+	}
+
+	async function init() {
+		try {
+			products = await loadPlannerDataset();
+			productsById.clear();
+			for (const product of products) {
+				productsById.set(product.id, product);
+			}
+
+			plan = parsePlanFromUrl();
+			renderPlan();
+			updateUrl();
+		} catch (error) {
+			if (import.meta.env.DEV) {
+				console.error('Failed to load planner data:', error);
+			}
+			if (planEmpty) {
+				planEmpty.textContent = 'Unable to load product data. Please refresh the page.';
+			}
+		}
+	}
+
+	if (productSearch) {
+		productSearch.addEventListener('input', () => {
+			if (searchDebounceTimer) {
+				clearTimeout(searchDebounceTimer);
+			}
+			searchDebounceTimer = setTimeout(renderProductSearch, 200);
+		});
+	}
+
+	if (breakdownToggle) {
+		breakdownToggle.addEventListener('change', renderTotals);
+	}
+
+	if (copyLinkBtn) {
+		copyLinkBtn.addEventListener('click', async () => {
+			try {
+				await navigator.clipboard.writeText(window.location.href);
+				const originalText = copyLinkBtn.textContent;
+				copyLinkBtn.textContent = 'Copied!';
+				setTimeout(() => {
+					copyLinkBtn.textContent = originalText;
+				}, 2000);
+			} catch {
+				copyLinkBtn.textContent = 'Copy failed';
+				setTimeout(() => {
+					copyLinkBtn.textContent = 'Copy link';
+				}, 2000);
+			}
+		});
+	}
+
+	init();
+</script>
