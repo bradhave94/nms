@@ -425,16 +425,6 @@ const acquisitionPills = [
     : undefined,
 ].filter((pill): pill is { label: string; value: string } => Boolean(pill));
 
-const pageSections = [
-  data.length > 0 ? { id: 'crafting', label: isFoodItem ? 'Cooking' : 'Crafting' } : null,
-  outputRefined.length > 0 ? { id: 'refining', label: 'Refining' } : null,
-  outputCooked.length > 0 ? { id: 'cooking', label: 'Nutrient Processor' } : null,
-  groupedInputRefined.length > 0 ? { id: 'refined-to-create', label: 'Refined from' } : null,
-  groupedInputCooked.length > 0 ? { id: 'cooked-to-create', label: 'Cooked from' } : null,
-  groupedInputCrafting.length > 0 ? { id: 'used-to-create', label: 'Used to craft' } : null,
-  faqQuestions.length > 0 ? { id: 'faq', label: 'FAQ' } : null,
-].filter((section): section is { id: string; label: string } => section !== null);
-
 const showStatsSection =
   (isUpgradePage || isTechnologyPage) && upgradeStats.length > 0;
 const imageBaseUrl = SITE.imageBaseUrl;
@@ -450,18 +440,6 @@ const imageBaseUrl = SITE.imageBaseUrl;
     ]}
   />
   {itemUpdateMeta && <UpdateChangesPanel meta={itemUpdateMeta} />}
-  {pageSections.length > 1 && (
-    <nav aria-label="Page sections" class="mb-4 flex flex-wrap gap-2">
-      {pageSections.map((section) => (
-        <a
-          href={`#${section.id}`}
-          class="rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200 hover:bg-gray-600 hover:text-cyan-100 transition-colors"
-        >
-          {section.label}
-        </a>
-      ))}
-    </nav>
-  )}
   <ItemDetails
     item={item}
     answerSummary={answerSummary}
