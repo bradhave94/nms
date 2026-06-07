@@ -89,6 +89,16 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		}, {});
 	}
 
+	function getSearchRelevanceRank(name, searchText, searchTerm) {
+		const lowerName = name.toLowerCase();
+		if (lowerName === searchTerm) return 0;
+		if (lowerName.startsWith(searchTerm)) return 1;
+		if (lowerName.includes(searchTerm)) return 2;
+		const extra = typeof searchText === 'string' ? searchText.toLowerCase() : '';
+		if (extra.includes(searchTerm)) return 3;
+		return 4;
+	}
+
 	async function loadSearchDataset() {
 		if (!searchDatasetPromise) {
 			searchDatasetPromise = fetch('/search.json', { cache: 'force-cache' })
@@ -134,6 +144,12 @@ const imageBaseUrl = SITE.imageBaseUrl;
 					const extra =
 						typeof result.searchText === 'string' ? result.searchText.toLowerCase() : '';
 					return nameMatch || extra.includes(searchTerm);
+				})
+				.sort((a, b) => {
+					const rankA = getSearchRelevanceRank(a.name, a.searchText, searchTerm);
+					const rankB = getSearchRelevanceRank(b.name, b.searchText, searchTerm);
+					if (rankA !== rankB) return rankA - rankB;
+					return a.name.localeCompare(b.name);
 				})
 				.slice(0, MAX_RESULTS);
 			const groupedResults = groupBy(filteredResults, 'type');
@@ -233,7 +249,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 						const img = document.createElement('img');
 						img.src = `${imageBaseUrl}${result.icon}`;
 						img.alt = '';
-						img.className = 'h-6 w-6 shrink-0';
+						img.className = 'h-6 w-6 shrink-0 object-contain self-center';
 						img.loading = 'lazy';
 						a.appendChild(img);
 					}
@@ -241,12 +257,6 @@ const imageBaseUrl = SITE.imageBaseUrl;
 					const nameSpan = document.createElement('span');
 					nameSpan.textContent = result.name;
 					a.appendChild(nameSpan);
-
-					const badge = document.createElement('span');
-					badge.className =
-						'ml-auto shrink-0 rounded-sm bg-gray-700 px-1.5 py-0.5 text-xs text-gray-300';
-					badge.textContent = filterLabelMap[result.type] || result.type;
-					a.appendChild(badge);
 
 					li.appendChild(a);
 					ul.appendChild(li);
