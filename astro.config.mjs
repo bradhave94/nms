@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
-import react from "@astrojs/react";
 import { SITE } from './src/config.ts';
 
 const SITEMAP_EXCLUDED_PATHS = new Set([
@@ -34,9 +33,6 @@ const shouldIncludeInSitemap = (page) => {
 export default defineConfig({
   site: "https://nomansskyrecipes.com",
   integrations: [
-    react({
-      experimentalReactChildren: true
-    }),
     sitemap({
       filter: shouldIncludeInSitemap,
       lastmod: new Date(SITE.version_date),
