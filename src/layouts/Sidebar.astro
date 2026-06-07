@@ -17,13 +17,28 @@ interface NavItem {
 	icon: string;
 }
 
-const { slug } = Astro.props;
+const pathname = Astro.url.pathname;
 
-const isNavItemActive = (href: string): boolean => {
-	if (!slug) return false;
-	const hrefSegment = href.replace(/^\/+|\/+$/g, '').split('/')[0] ?? '';
-	const slugSegment = slug.replace(/^\/+|\/+$/g, '').split('/')[0] ?? '';
-	return hrefSegment !== '' && hrefSegment === slugSegment;
+const normalizePath = (path: string): string => path.replace(/\/+$/, '') || '/';
+
+const isPathMatch = (normalizedPathname: string, normalizedHref: string): boolean =>
+	normalizedPathname === normalizedHref || normalizedPathname.startsWith(`${normalizedHref}/`);
+
+const getBestMatchHref = (currentPathname: string, navHrefs: string[]): string | null => {
+	const normalizedPathname = normalizePath(currentPathname);
+	let bestMatch: string | null = null;
+	let bestLength = -1;
+
+	for (const href of navHrefs) {
+		const normalizedHref = normalizePath(href);
+		if (!isPathMatch(normalizedPathname, normalizedHref)) continue;
+		if (normalizedHref.length > bestLength) {
+			bestMatch = href;
+			bestLength = normalizedHref.length;
+		}
+	}
+
+	return bestMatch;
 };
 
 const toolsNav: NavItem[] = [
@@ -36,7 +51,7 @@ const calculatorsNav: NavItem[] = [
 	{ name: 'Calculator', href: '/calculator', icon: 'calculator' },
 	{ name: 'Crafting Planner', href: '/calculator/planner', icon: 'archive-box' },
 	{ name: 'Reverse Calculator', href: '/calculator/reverse', icon: 'scale' },
-	{ name: 'Farm Calculator', href: '/farm', icon: 'sun' },
+	{ name: 'Farm Calculator', href: '/calculator/farm', icon: 'sun' },
 ];
 
 const catalogsNav: NavItem[] = [
@@ -62,8 +77,13 @@ const moreNav: NavItem[] = [
 	{ name: 'Feedback', href: '/feedback', icon: 'envelope' },
 ];
 
-const isCalculatorsActive = calculatorsNav.some((item) => isNavItemActive(item.href));
-const isCatalogActive = catalogsNav.some((item) => isNavItemActive(item.href));
+const allNavHrefs = [...toolsNav, ...calculatorsNav, ...catalogsNav, ...moreNav].map((item) => item.href);
+const activeHref = getBestMatchHref(pathname, allNavHrefs);
+const isNavItemActive = (href: string): boolean => activeHref !== null && href === activeHref;
+const calculatorsHrefs = new Set(calculatorsNav.map((item) => item.href));
+const catalogsHrefs = new Set(catalogsNav.map((item) => item.href));
+const isCalculatorsActive = activeHref !== null && calculatorsHrefs.has(activeHref);
+const isCatalogActive = activeHref !== null && catalogsHrefs.has(activeHref);
 
 const icons: Record<string, IconPath[]> = {
 	funnel: [

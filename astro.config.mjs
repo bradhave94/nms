@@ -32,6 +32,9 @@ const shouldIncludeInSitemap = (page) => {
 // https://astro.build/config
 export default defineConfig({
   site: "https://nomansskyrecipes.com",
+  redirects: {
+    '/farm': '/calculator/farm',
+  },
   integrations: [
     sitemap({
       filter: shouldIncludeInSitemap,

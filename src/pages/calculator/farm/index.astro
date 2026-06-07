@@ -8,9 +8,10 @@ import { SITE } from '@config';
 const IMAGE_BASE = SITE.imageBaseUrl;
 const plants = getAllGrowablePlants();
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL('/farm', siteOrigin).toString();
+const canonicalUrl = new URL('/calculator/farm', siteOrigin).toString();
 const breadcrumbs = [
 	{ name: 'Home', href: '/' },
+	{ name: 'Crafting Calculator', href: '/calculator' },
 	{ name: 'Farm Calculator' },
 ];
 const title = "Farm Calculator | No Man's Sky Recipes";
@@ -22,13 +23,14 @@ const breadcrumbSchema = {
 	'@id': `${canonicalUrl}#breadcrumb`,
 	itemListElement: [
 		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
-		{ '@type': 'ListItem', position: 2, name: 'Farm Calculator', item: canonicalUrl },
+		{ '@type': 'ListItem', position: 2, name: 'Crafting Calculator', item: `${siteOrigin}/calculator` },
+		{ '@type': 'ListItem', position: 3, name: 'Farm Calculator', item: canonicalUrl },
 	],
 };
 const structuredData = [breadcrumbSchema];
 ---
 
-<Layout {title} {description} slug="farm" structuredData={structuredData}>
+<Layout {title} {description} slug="calculator" structuredData={structuredData}>
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
 	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Farm Calculator</h1>
 	<p class="mx-auto mb-8 max-w-3xl text-center text-sky-200/90">
