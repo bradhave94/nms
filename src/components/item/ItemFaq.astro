@@ -1,0 +1,28 @@
+---
+import Accordion from '@components/Accordion.astro';
+import type { FaqQuestion } from '@utils/itemPageSchema';
+
+interface Props {
+  faqQuestions: FaqQuestion[];
+}
+
+const { faqQuestions } = Astro.props;
+---
+
+{faqQuestions.length > 0 && (
+  <section id="faq" class="mt-6 border-t border-gray-600/60 py-6">
+    <h2 class="relative mb-4 text-center">
+      <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
+        Frequently Asked Questions
+      </span>
+    </h2>
+    <div class="mx-auto max-w-3xl space-y-2">
+      {faqQuestions.map((faq, index) => (
+        <Accordion id={`item-faq-${index + 1}`}>
+          <h3 class="m-0 text-lg text-white" slot="title">{faq.question}</h3>
+          <p class="m-0 text-gray-300" slot="content">{faq.answer}</p>
+        </Accordion>
+      ))}
+    </div>
+  </section>
+)}
