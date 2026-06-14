@@ -322,22 +322,24 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		return row;
 	}
 
-	function appendRecipeTree(container: HTMLElement, items: PlannerTreeItem[]) {
+	function appendRecipeTree(container: HTMLElement, items: PlannerTreeItem[], parentQuantity = 1) {
 		const list = document.createElement('ul');
 		list.className = 'm-0 list-none p-0';
 
 		for (const item of items) {
+			const displayQuantity = item.quantity * parentQuantity;
+			const displayItem = { ...item, quantity: displayQuantity };
 			const listItem = document.createElement('li');
 
 			if (item.children.length > 0) {
-				listItem.appendChild(createTreeNodeRow(item, false));
+				listItem.appendChild(createTreeNodeRow(displayItem, false));
 
 				const childContainer = document.createElement('div');
 				childContainer.className = 'ml-1 border-l border-sky-800/50 pl-2';
-				appendRecipeTree(childContainer, item.children);
+				appendRecipeTree(childContainer, item.children, displayQuantity);
 				listItem.appendChild(childContainer);
 			} else {
-				listItem.appendChild(createTreeNodeRow(item, true));
+				listItem.appendChild(createTreeNodeRow(displayItem, true));
 			}
 
 			list.appendChild(listItem);
