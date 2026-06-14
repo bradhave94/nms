@@ -4,7 +4,7 @@ import { createArray } from '@utils/recipeTree.js';
 import { getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 
-type PlannerRawItem = {
+type PlannerItem = {
 	id: string;
 	name: string;
 	icon: string;
@@ -16,7 +16,8 @@ type PlannerProduct = {
 	name: string;
 	icon: string;
 	url: string;
-	rawItems: PlannerRawItem[];
+	ingredients: PlannerItem[];
+	rawItems: PlannerItem[];
 };
 
 const allData = Object.values(dataSources).flatMap((source) =>
@@ -31,26 +32,30 @@ const craftableItems = allData.filter((item) => {
 	return true;
 });
 
+const mapPlannerItem = (entry: { Id: string; Name: string; Icon: string; Quantity: number }): PlannerItem => ({
+	id: entry.Id,
+	name: entry.Name,
+	icon: entry.Icon,
+	quantity: entry.Quantity,
+});
+
 const body: PlannerProduct[] = craftableItems
 	.map((item) => {
-		const { rawItems } = createArray(item, 1);
+		const { array, rawItems } = createArray(item, 1);
 		return {
 			item,
+			ingredients: array,
 			rawItems,
 		};
 	})
 	.filter(({ rawItems }) => rawItems.length > 0)
-	.map(({ item, rawItems }) => ({
+	.map(({ item, ingredients, rawItems }) => ({
 		id: item.Id,
 		name: item.Name,
 		icon: item.Icon,
 		url: getSlug(item),
-		rawItems: rawItems.map((rawItem) => ({
-			id: rawItem.Id,
-			name: rawItem.Name,
-			icon: rawItem.Icon,
-			quantity: rawItem.Quantity,
-		})),
+		ingredients: ingredients.map(mapPlannerItem),
+		rawItems: rawItems.map(mapPlannerItem),
 	}))
 	.sort((a, b) => a.name.localeCompare(b.name));
 

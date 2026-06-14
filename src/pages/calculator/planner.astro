@@ -104,7 +104,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 </Layout>
 
 <script>
-	type PlannerRawItem = {
+	type PlannerItem = {
 		id: string;
 		name: string;
 		icon: string;
@@ -116,7 +116,8 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		name: string;
 		icon: string;
 		url: string;
-		rawItems: PlannerRawItem[];
+		ingredients: PlannerItem[];
+		rawItems: PlannerItem[];
 	};
 
 	type PlanEntry = {
@@ -124,7 +125,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		qty: number;
 	};
 
-	type MergedRawItem = PlannerRawItem;
+	type MergedItem = PlannerItem;
 
 	const plannerApp = document.getElementById('planner-app');
 	const productSearch = document.getElementById('product-search') as HTMLInputElement | null;
@@ -159,6 +160,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 							entry &&
 							typeof entry.id === 'string' &&
 							typeof entry.name === 'string' &&
+							Array.isArray(entry.ingredients) &&
 							Array.isArray(entry.rawItems)
 					);
 				})
@@ -204,8 +206,8 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		}, 200);
 	}
 
-	function mergeRawItems(entries: PlanEntry[]): MergedRawItem[] {
-		const merged = new Map<string, MergedRawItem>();
+	function mergeRawItems(entries: PlanEntry[]): MergedItem[] {
+		const merged = new Map<string, MergedItem>();
 
 		for (const entry of entries) {
 			const product = productsById.get(entry.id);
@@ -230,13 +232,13 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		return Array.from(merged.values()).sort((a, b) => b.quantity - a.quantity);
 	}
 
-	function createRawItemRow(rawItem: MergedRawItem): HTMLLIElement {
+	function createItemRow(item: MergedItem): HTMLLIElement {
 		const li = document.createElement('li');
 		li.className = 'flex items-center gap-3 border-b border-sky-800/30 py-2 last:border-b-0';
 
-		if (rawItem.icon) {
+		if (item.icon) {
 			const img = document.createElement('img');
-			img.src = `${imageBaseUrl}${rawItem.icon}`;
+			img.src = `${imageBaseUrl}${item.icon}`;
 			img.alt = '';
 			img.className = 'h-7 w-7 shrink-0 object-contain';
 			img.loading = 'lazy';
@@ -245,12 +247,12 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 		const nameSpan = document.createElement('span');
 		nameSpan.className = 'min-w-0 flex-1 truncate text-sky-100';
-		nameSpan.textContent = rawItem.name;
+		nameSpan.textContent = item.name;
 		li.appendChild(nameSpan);
 
 		const qtySpan = document.createElement('span');
 		qtySpan.className = 'shrink-0 text-base font-bold tabular-nums text-cyan-300';
-		qtySpan.textContent = rawItem.quantity.toLocaleString();
+		qtySpan.textContent = item.quantity.toLocaleString();
 		li.appendChild(qtySpan);
 
 		return li;
@@ -274,7 +276,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		const ul = document.createElement('ul');
 		ul.className = 'm-0 flex list-none flex-col p-0';
 		for (const rawItem of merged) {
-			ul.appendChild(createRawItemRow(rawItem));
+			ul.appendChild(createItemRow(rawItem));
 		}
 		totalsList.appendChild(ul);
 
@@ -291,15 +293,15 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 				const itemUl = document.createElement('ul');
 				itemUl.className = 'm-0 flex list-none flex-col p-0 pl-2 border-l border-sky-800';
-				const scaled = product.rawItems
-					.map((rawItem) => ({
-						...rawItem,
-						quantity: rawItem.quantity * entry.qty,
+				const scaled = product.ingredients
+					.map((ingredient) => ({
+						...ingredient,
+						quantity: ingredient.quantity * entry.qty,
 					}))
 					.sort((a, b) => b.quantity - a.quantity);
 
-				for (const rawItem of scaled) {
-					itemUl.appendChild(createRawItemRow(rawItem));
+				for (const ingredient of scaled) {
+					itemUl.appendChild(createItemRow(ingredient));
 				}
 				breakdownSection.appendChild(itemUl);
 			}
