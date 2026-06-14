@@ -332,27 +332,10 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		return li;
 	}
 
-	function scaleRecipeTree(items: PlannerTreeItem[], multiplier: number): PlannerTreeItem[] {
-		return items.map((item) => ({
-			...item,
-			quantity: item.quantity * multiplier,
-			children: scaleRecipeTree(item.children, multiplier),
-		}));
-	}
-
-	function createTreeQuantityBadge(quantity: number): HTMLSpanElement {
-		const qtySpan = document.createElement('span');
-		qtySpan.className =
-			'inline-flex min-w-7 shrink-0 items-center justify-center rounded-sm bg-sky-800/80 px-1.5 py-0.5 text-xs font-medium tabular-nums text-sky-200';
-		qtySpan.textContent = quantity.toLocaleString();
-		qtySpan.setAttribute('aria-label', `quantity ${quantity}`);
-		return qtySpan;
-	}
-
 	function createTreeNodeRow(item: PlannerTreeItem, isLeaf: boolean): HTMLElement {
 		const row = document.createElement(isLeaf ? 'a' : 'div');
 		row.className = isLeaf
-			? 'flex items-center gap-2 rounded-r py-1.5 pl-1 transition-colors hover:bg-cyan-500/10 border-l-2 border-cyan-500/40'
+			? 'flex items-center gap-2 rounded-r py-1.5 pl-1 transition-colors hover:bg-cyan-500/10'
 			: 'flex items-center gap-2 py-1.5 pl-1';
 
 		if (isLeaf) {
@@ -376,6 +359,15 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		row.appendChild(createTreeQuantityBadge(item.quantity));
 
 		return row;
+	}
+
+	function createTreeQuantityBadge(quantity: number): HTMLSpanElement {
+		const qtySpan = document.createElement('span');
+		qtySpan.className =
+			'inline-flex min-w-7 shrink-0 items-center justify-center rounded-sm bg-sky-800/80 px-1.5 py-0.5 text-xs font-medium tabular-nums text-sky-200';
+		qtySpan.textContent = quantity.toLocaleString();
+		qtySpan.setAttribute('aria-label', `quantity ${quantity}`);
+		return qtySpan;
 	}
 
 	function appendRecipeTree(container: HTMLElement, items: PlannerTreeItem[], parentQuantity = 1) {
@@ -464,7 +456,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 				const treeContainer = document.createElement('div');
 				treeContainer.className = 'ml-1';
-				appendRecipeTree(treeContainer, scaleRecipeTree(product.recipeTree, entry.qty));
+				appendRecipeTree(treeContainer, product.recipeTree, entry.qty);
 				productBlock.appendChild(treeContainer);
 				breakdownSection.appendChild(productBlock);
 			}
