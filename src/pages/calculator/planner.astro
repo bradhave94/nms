@@ -136,6 +136,25 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		rawItems: PlannerItem[];
 	};
 
+	type PlannerApiTreeItem = {
+		id?: string;
+		name?: string;
+		icon?: string;
+		quantity?: number;
+		url?: string;
+		children?: PlannerApiTreeItem[];
+	};
+
+	type PlannerApiProduct = {
+		id?: string;
+		name?: string;
+		icon?: string;
+		url?: string;
+		recipeTree?: PlannerApiTreeItem[];
+		ingredients?: PlannerApiTreeItem[];
+		rawItems?: PlannerItem[];
+	};
+
 	type PlanEntry = {
 		id: string;
 		qty: number;
@@ -165,22 +184,59 @@ const imageBaseUrl = SITE.imageBaseUrl;
 	let urlDebounceTimer: ReturnType<typeof setTimeout> | undefined;
 	let datasetPromise: Promise<PlannerProduct[]> | null = null;
 
+	function normalizeTreeItem(item: PlannerApiTreeItem): PlannerTreeItem | null {
+		if (!item?.id || !item?.name) return null;
+
+		return {
+			id: item.id,
+			name: item.name,
+			icon: item.icon ?? '',
+			quantity: item.quantity ?? 1,
+			url: item.url ?? `/item/${item.id}`,
+			children: (item.children ?? [])
+				.map(normalizeTreeItem)
+				.filter((child): child is PlannerTreeItem => child !== null),
+		};
+	}
+
+	function normalizeProduct(entry: PlannerApiProduct): PlannerProduct | null {
+		if (!entry?.id || !entry?.name || !Array.isArray(entry.rawItems)) return null;
+
+		const treeSource = Array.isArray(entry.recipeTree)
+			? entry.recipeTree
+			: Array.isArray(entry.ingredients)
+				? entry.ingredients
+				: [];
+
+		return {
+			id: entry.id,
+			name: entry.name,
+			icon: entry.icon ?? '',
+			url: entry.url ?? `/item/${entry.id}`,
+			recipeTree: treeSource
+				.map(normalizeTreeItem)
+				.filter((item): item is PlannerTreeItem => item !== null),
+			rawItems: entry.rawItems.filter((item) => item?.id && item?.name),
+		};
+	}
+
 	function loadPlannerDataset(): Promise<PlannerProduct[]> {
 		if (!datasetPromise) {
-			datasetPromise = fetch('/calculator/planner-data.json', { cache: 'force-cache' })
-				.then((response) => response.json())
+			datasetPromise = fetch('/calculator/planner-data.json')
+				.then((response) => {
+					if (!response.ok) {
+						throw new Error(`Planner data request failed (${response.status})`);
+					}
+					return response.json();
+				})
 				.then((results) => {
 					if (!results || !Array.isArray(results.body)) {
 						return [];
 					}
-					return results.body.filter(
-						(entry: PlannerProduct) =>
-							entry &&
-							typeof entry.id === 'string' &&
-							typeof entry.name === 'string' &&
-							Array.isArray(entry.recipeTree) &&
-							Array.isArray(entry.rawItems)
-					);
+
+					return results.body
+						.map((entry: PlannerApiProduct) => normalizeProduct(entry))
+						.filter((entry): entry is PlannerProduct => entry !== null);
 				})
 				.catch((error) => {
 					datasetPromise = null;
@@ -624,6 +680,13 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			productsById.clear();
 			for (const product of products) {
 				productsById.set(product.id, product);
+			}
+
+			if (products.length === 0) {
+				if (planEmpty) {
+					planEmpty.textContent = 'Unable to load product data. Please refresh the page.';
+				}
+				return;
 			}
 
 			plan = parsePlanFromUrl();

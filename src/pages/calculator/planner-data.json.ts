@@ -78,6 +78,8 @@ const body: PlannerProduct[] = craftableItems
 	}))
 	.sort((a, b) => a.name.localeCompare(b.name));
 
+export const prerender = true;
+
 export const GET: APIRoute = () => {
 	return new Response(JSON.stringify({ body }), {
 		headers: {
