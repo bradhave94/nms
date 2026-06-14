@@ -63,42 +63,49 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		</div>
 
 		<section aria-labelledby="plan-heading" class="mb-8">
-			<h2 id="plan-heading" class="text-2xl mb-4">Your plan</h2>
+			<div class="mb-4 flex flex-wrap items-center justify-between gap-4">
+				<h2 id="plan-heading" class="mb-0 text-2xl">Your plan</h2>
+				<button
+					id="copy-link-btn"
+					type="button"
+					class="rounded-sm border border-sky-600 bg-sky-900/50 px-3 py-1.5 text-sm text-cyan-300 hover:border-cyan-400 hover:text-cyan-200 disabled:cursor-not-allowed disabled:opacity-50"
+					disabled
+				>
+					Copy link
+				</button>
+			</div>
 			<div id="plan-rows" class="flex flex-col gap-2"></div>
 			<p id="plan-empty" class="text-sky-200/70 text-sm">
 				No items added yet. Search above to add products (e.g. Stasis Device, Living Glass).
 			</p>
 		</section>
 
-		<section aria-labelledby="totals-heading" class="mb-6">
-			<div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-				<h2 id="totals-heading" class="text-2xl mb-0">Total raw materials</h2>
-				<div class="flex flex-wrap items-center gap-3">
-					<label class="inline-flex cursor-pointer items-center gap-2 text-sm text-sky-200">
-						<input
-							id="breakdown-toggle"
-							type="checkbox"
-							class="peer hidden"
-						/>
-						<span class="select-none rounded-lg border-2 border-sky-600 px-2 py-0.5 transition-colors duration-200 peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
-							Show per-item breakdown
-						</span>
-					</label>
-					<button
-						id="copy-link-btn"
-						type="button"
-						class="rounded-sm border border-sky-600 bg-sky-900/50 px-3 py-1.5 text-sm text-cyan-300 hover:border-cyan-400 hover:text-cyan-200 disabled:cursor-not-allowed disabled:opacity-50"
-						disabled
-					>
-						Copy link
-					</button>
-				</div>
-			</div>
+		<section aria-labelledby="totals-heading" class="mb-8">
+			<h2 id="totals-heading" class="mb-4 text-2xl">Total raw materials</h2>
 			<div id="totals-list"></div>
 			<p id="totals-empty" class="text-sky-200/70 text-sm hidden">
 				Add products to your plan to see total raw materials.
 			</p>
-			<div id="breakdown-section" class="mt-6 hidden"></div>
+		</section>
+
+		<section aria-labelledby="breakdown-heading" id="breakdown-panel" class="mb-6 hidden">
+			<div class="mb-4 flex flex-wrap items-center justify-between gap-4">
+				<h2 id="breakdown-heading" class="mb-0 text-2xl">Per-item breakdown</h2>
+				<label class="inline-flex cursor-pointer items-center gap-2 text-sm text-sky-200">
+					<input
+						id="breakdown-toggle"
+						type="checkbox"
+						class="peer hidden"
+					/>
+					<span class="select-none rounded-lg border-2 border-sky-600 px-2 py-0.5 transition-colors duration-200 peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+						Show crafting trees
+					</span>
+				</label>
+			</div>
+			<p id="breakdown-hint" class="text-sky-200/70 text-sm">
+				Expand to see the full crafting tree for each product in your plan, down to raw resources.
+			</p>
+			<div id="breakdown-section" class="hidden"></div>
 		</section>
 	</div>
 </Layout>
@@ -111,12 +118,21 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		quantity: number;
 	};
 
+	type PlannerTreeItem = {
+		id: string;
+		name: string;
+		icon: string;
+		quantity: number;
+		url: string;
+		children: PlannerTreeItem[];
+	};
+
 	type PlannerProduct = {
 		id: string;
 		name: string;
 		icon: string;
 		url: string;
-		ingredients: PlannerItem[];
+		recipeTree: PlannerTreeItem[];
 		rawItems: PlannerItem[];
 	};
 
@@ -135,6 +151,8 @@ const imageBaseUrl = SITE.imageBaseUrl;
 	const totalsList = document.getElementById('totals-list');
 	const totalsEmpty = document.getElementById('totals-empty');
 	const breakdownToggle = document.getElementById('breakdown-toggle') as HTMLInputElement | null;
+	const breakdownPanel = document.getElementById('breakdown-panel');
+	const breakdownHint = document.getElementById('breakdown-hint');
 	const breakdownSection = document.getElementById('breakdown-section');
 	const copyLinkBtn = document.getElementById('copy-link-btn') as HTMLButtonElement | null;
 
@@ -160,7 +178,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 							entry &&
 							typeof entry.id === 'string' &&
 							typeof entry.name === 'string' &&
-							Array.isArray(entry.ingredients) &&
+							Array.isArray(entry.recipeTree) &&
 							Array.isArray(entry.rawItems)
 					);
 				})
@@ -258,19 +276,94 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		return li;
 	}
 
+	function scaleRecipeTree(items: PlannerTreeItem[], multiplier: number): PlannerTreeItem[] {
+		return items.map((item) => ({
+			...item,
+			quantity: item.quantity * multiplier,
+			children: scaleRecipeTree(item.children, multiplier),
+		}));
+	}
+
+	function createTreeQuantityBadge(quantity: number): HTMLSpanElement {
+		const qtySpan = document.createElement('span');
+		qtySpan.className =
+			'inline-flex min-w-7 shrink-0 items-center justify-center rounded-sm bg-sky-800/80 px-1.5 py-0.5 text-xs font-medium tabular-nums text-sky-200';
+		qtySpan.textContent = quantity.toLocaleString();
+		qtySpan.setAttribute('aria-label', `quantity ${quantity}`);
+		return qtySpan;
+	}
+
+	function createTreeNodeRow(item: PlannerTreeItem, isLeaf: boolean): HTMLElement {
+		const row = document.createElement(isLeaf ? 'a' : 'div');
+		row.className = isLeaf
+			? 'flex items-center gap-2 rounded-r py-1.5 pl-1 transition-colors hover:bg-cyan-500/10 border-l-2 border-cyan-500/40'
+			: 'flex items-center gap-2 py-1.5 pl-1';
+
+		if (isLeaf) {
+			(row as HTMLAnchorElement).href = item.url;
+		}
+
+		if (item.icon) {
+			const img = document.createElement('img');
+			img.src = `${imageBaseUrl}${item.icon}`;
+			img.alt = '';
+			img.className = 'h-7 w-7 shrink-0 object-contain';
+			img.loading = 'lazy';
+			row.appendChild(img);
+		}
+
+		const nameSpan = document.createElement('span');
+		nameSpan.className = `min-w-0 flex-1 truncate font-medium ${isLeaf ? 'text-cyan-200' : 'text-sky-100'}`;
+		nameSpan.textContent = item.name;
+		row.appendChild(nameSpan);
+
+		row.appendChild(createTreeQuantityBadge(item.quantity));
+
+		return row;
+	}
+
+	function appendRecipeTree(container: HTMLElement, items: PlannerTreeItem[]) {
+		const list = document.createElement('ul');
+		list.className = 'm-0 list-none p-0';
+
+		for (const item of items) {
+			const listItem = document.createElement('li');
+
+			if (item.children.length > 0) {
+				listItem.appendChild(createTreeNodeRow(item, false));
+
+				const childContainer = document.createElement('div');
+				childContainer.className = 'ml-1 border-l border-sky-800/50 pl-2';
+				appendRecipeTree(childContainer, item.children);
+				listItem.appendChild(childContainer);
+			} else {
+				listItem.appendChild(createTreeNodeRow(item, true));
+			}
+
+			list.appendChild(listItem);
+		}
+
+		container.appendChild(list);
+	}
+
 	function renderTotals() {
-		if (!totalsList || !totalsEmpty || !breakdownSection) return;
+		if (!totalsList || !totalsEmpty || !breakdownSection || !breakdownPanel) return;
 
 		totalsList.textContent = '';
 		breakdownSection.textContent = '';
 
 		if (plan.length === 0) {
 			totalsEmpty.classList.remove('hidden');
+			breakdownPanel.classList.add('hidden');
 			breakdownSection.classList.add('hidden');
+			if (breakdownHint) {
+				breakdownHint.classList.remove('hidden');
+			}
 			return;
 		}
 
 		totalsEmpty.classList.add('hidden');
+		breakdownPanel.classList.remove('hidden');
 		const merged = mergeRawItems(plan);
 
 		const ul = document.createElement('ul');
@@ -282,31 +375,46 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 		if (breakdownToggle?.checked) {
 			breakdownSection.classList.remove('hidden');
+			if (breakdownHint) {
+				breakdownHint.classList.add('hidden');
+			}
+
 			for (const entry of plan) {
 				const product = productsById.get(entry.id);
 				if (!product) continue;
 
+				const productBlock = document.createElement('article');
+				productBlock.className =
+					'mt-4 rounded-sm border border-sky-800 bg-sky-900/20 p-3 first:mt-0';
+
 				const heading = document.createElement('h3');
-				heading.className = 'text-lg mt-4 mb-2 text-cyan-200';
-				heading.textContent = `${product.name} × ${entry.qty.toLocaleString()}`;
-				breakdownSection.appendChild(heading);
+				heading.className = 'mb-3 flex items-center gap-2 text-lg text-cyan-200';
 
-				const itemUl = document.createElement('ul');
-				itemUl.className = 'm-0 flex list-none flex-col p-0 pl-2 border-l border-sky-800';
-				const scaled = product.ingredients
-					.map((ingredient) => ({
-						...ingredient,
-						quantity: ingredient.quantity * entry.qty,
-					}))
-					.sort((a, b) => b.quantity - a.quantity);
-
-				for (const ingredient of scaled) {
-					itemUl.appendChild(createItemRow(ingredient));
+				if (product.icon) {
+					const img = document.createElement('img');
+					img.src = `${imageBaseUrl}${product.icon}`;
+					img.alt = '';
+					img.className = 'h-7 w-7 shrink-0 object-contain';
+					img.loading = 'lazy';
+					heading.appendChild(img);
 				}
-				breakdownSection.appendChild(itemUl);
+
+				const headingText = document.createElement('span');
+				headingText.textContent = `${product.name} × ${entry.qty.toLocaleString()}`;
+				heading.appendChild(headingText);
+				productBlock.appendChild(heading);
+
+				const treeContainer = document.createElement('div');
+				treeContainer.className = 'ml-1';
+				appendRecipeTree(treeContainer, scaleRecipeTree(product.recipeTree, entry.qty));
+				productBlock.appendChild(treeContainer);
+				breakdownSection.appendChild(productBlock);
 			}
 		} else {
 			breakdownSection.classList.add('hidden');
+			if (breakdownHint) {
+				breakdownHint.classList.remove('hidden');
+			}
 		}
 	}
 
