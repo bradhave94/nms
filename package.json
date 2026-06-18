@@ -15,6 +15,7 @@
 		"astro": "astro",
 		"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --max-warnings 0",
 		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix",
+		"test:legacy-redirects": "node scripts/check-legacy-redirects.mjs",
 		"type-check": "tsc --noEmit",
 		"check": "pnpm run type-check",
 		"check:all": "pnpm run type-check && pnpm run lint"
