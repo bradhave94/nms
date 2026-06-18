@@ -23,13 +23,12 @@ type LegacyRedirect = {
 	permanent: boolean;
 };
 
-const getPathParts = (pathname: string): { category: string; id: string } | undefined => {
-	const [category, id] = pathname.replace(/^\/+|\/+$/g, '').split('/');
-	if (!category || !id) return undefined;
-	return { category, id };
-};
-
 export async function getStaticPaths() {
+	const getPathParts = (pathname: string): { category: string; id: string } | undefined => {
+		const [category, id] = pathname.replace(/^\/+|\/+$/g, '').split('/');
+		if (!category || !id) return undefined;
+		return { category, id };
+	};
 	const currentPaths = CATEGORY_SLUGS.flatMap((slug) => {
 		const config = categories[slug];
 
