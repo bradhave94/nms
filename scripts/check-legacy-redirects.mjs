@@ -34,4 +34,4 @@ for (const source of samples) {
   }
 }
 
-console.log(`Verified ${samples.length} legacy redirect pages.`);
+console.warn(`Verified ${samples.length} legacy redirect pages.`);
