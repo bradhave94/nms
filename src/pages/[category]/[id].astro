@@ -7,9 +7,30 @@ import { buildItemMeta } from '@utils/seo.js';
 import { CATEGORY_SLUGS, categories, type CategorySlug } from '../../config/categories.js';
 import { getCategoryDataset } from '../../config/categoryData.js';
 import { SITE } from '@config';
+import legacyRedirects from '../../../redirects.generated.json';
+
+type StaticPath = {
+	params: {
+		category: string;
+		id: string;
+	};
+	props?: Props;
+};
+
+type LegacyRedirect = {
+	source: string;
+	destination: string;
+	permanent: boolean;
+};
+
+const getPathParts = (pathname: string): { category: string; id: string } | undefined => {
+	const [category, id] = pathname.replace(/^\/+|\/+$/g, '').split('/');
+	if (!category || !id) return undefined;
+	return { category, id };
+};
 
 export async function getStaticPaths() {
-	return CATEGORY_SLUGS.flatMap((slug) => {
+	const currentPaths = CATEGORY_SLUGS.flatMap((slug) => {
 		const config = categories[slug];
 
 		if (config.idStrategy === 'getById') {
@@ -27,15 +48,41 @@ export async function getStaticPaths() {
 			params: { category: slug, id: item.Id.toString() },
 			props: { item },
 		}));
-	});
+	}) satisfies StaticPath[];
+	const currentPathKeys = new Set(
+		currentPaths.map(({ params }) => `/${params.category}/${params.id}`.toLowerCase())
+	);
+	const legacyPaths = (legacyRedirects as LegacyRedirect[]).flatMap((redirect) => {
+		const source = getPathParts(redirect.source);
+		if (!source) return [];
+
+		const sourceKey = `/${source.category}/${source.id}`.toLowerCase();
+		if (currentPathKeys.has(sourceKey)) return [];
+
+		return [{
+			params: source,
+			props: { legacyDestination: redirect.destination },
+		}];
+	}) satisfies StaticPath[];
+
+	return [...currentPaths, ...legacyPaths];
 }
 
 interface Props {
-	item: Item;
+	item?: Item;
+	legacyDestination?: string;
+}
+
+const { legacyDestination } = Astro.props as Props;
+if (legacyDestination) {
+	return Astro.redirect(legacyDestination, 301);
 }
 
 const slug = Astro.params.category as CategorySlug;
 const config = categories[slug];
+if (!config) {
+	return Astro.redirect('/404');
+}
 
 let item: Item | undefined;
 if (config.idStrategy === 'getById') {
@@ -48,6 +95,10 @@ if (config.idStrategy === 'getById') {
 	if (!item && config.redirectGuard) {
 		return Astro.redirect('/404');
 	}
+}
+
+if (!item) {
+	return Astro.redirect('/404');
 }
 
 const { title, description } = buildItemMeta(item, config.idLabel);

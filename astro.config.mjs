@@ -1,8 +1,16 @@
 import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
+import { readFileSync } from 'node:fs';
 
 import { SITE } from './src/config.ts';
+
+const legacyRedirects = JSON.parse(
+  readFileSync(new URL('./redirects.generated.json', import.meta.url), 'utf8')
+);
+const LEGACY_REDIRECT_PATHS = new Set(
+  legacyRedirects.map(({ source }) => source.replace(/\/$/, ''))
+);
 
 const SITEMAP_EXCLUDED_PATHS = new Set([
   '/feedback',
@@ -19,6 +27,10 @@ const shouldIncludeInSitemap = (page) => {
   const pathname = pageUrl.pathname.replace(/\/$/, '') || '/';
 
   if (SITEMAP_EXCLUDED_PATHS.has(pathname)) {
+    return false;
+  }
+
+  if (LEGACY_REDIRECT_PATHS.has(pathname)) {
     return false;
   }
 
