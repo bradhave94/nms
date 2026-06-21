@@ -184,6 +184,10 @@
     @apply inline-flex items-center rounded-md border border-transparent bg-blue-500 px-3 py-2 text-sm font-medium leading-4 text-black shadow-xs hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
 }
 
+.tabulator-search input {
+    @apply text-white placeholder-gray-400;
+}
+
 #results li a {
     @apply select-none block hover:bg-blue-500 hover:text-black  focus:bg-blue-500 focus:text-black
 }
