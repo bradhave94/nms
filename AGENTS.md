@@ -25,5 +25,5 @@ This project uses **pnpm 11+** (`packageManager` in `package.json`). See `packag
 - The ESLint config uses flat config format (`eslint.config.mjs`) with ESLint 9. The `lint` script uses `--ext` flags which work with the current setup.
 - `pnpm-workspace.yaml` lists `allowBuilds` for `esbuild` and `sharp` (required for Astro image optimization under pnpm’s install-script policy).
 - `pnpm run build` generates ~4,800+ static pages and takes ~25 seconds. This is expected.
-- **Node.js:** Astro 6 requires `>=22.12.0`. Production (Vercel) uses **24.x**; `.nvmrc` is set to `24` for local parity.
+- **Node.js:** Astro 7 requires `>=22.12.0`. Production (Vercel) uses **24.x**; `.nvmrc` is set to `24` for local parity.
 - No environment variables or secrets are needed for development.
