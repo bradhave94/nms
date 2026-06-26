@@ -104,6 +104,6 @@ const { title, description } = buildItemMeta(item, config.idLabel);
 const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
 ---
 
-<Layout {title} {description} slug={config.slug} {ogImage}>
+<Layout {title} {description} slug={config.slug} {ogImage} suppressWebPage>
 	<Page item={item} />
 </Layout>

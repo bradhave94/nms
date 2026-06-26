@@ -121,6 +121,24 @@ export const serializeJsonLdGraph = (entities: JsonLdObject[]): string => {
 	}).replace(/</g, '\\u003c');
 };
 
+type PageSignalsOptions = {
+	siteOrigin: string;
+	dateModified?: string;
+};
+
+export const buildPageSignals = ({
+	siteOrigin,
+	dateModified = SITE.version_date,
+}: PageSignalsOptions): Pick<
+	JsonLdObject,
+	'isPartOf' | 'isAccessibleForFree' | 'inLanguage' | 'dateModified'
+> => ({
+	isPartOf: { '@id': `${normalizeOrigin(siteOrigin)}#website` },
+	isAccessibleForFree: true,
+	inLanguage: 'en',
+	dateModified,
+});
+
 const normalizePath = (path: string): string => {
 	if (!path) return '/';
 	return path.startsWith('/') ? path : `/${path}`;
@@ -179,8 +197,8 @@ export const buildCollectionStructuredData = ({
 		url: canonicalUrl,
 		name: currentPage > 1 ? `${collectionName} - Page ${currentPage}` : collectionName,
 		description: collectionDescription,
-		isPartOf: { '@id': `${safeOrigin}#website` },
 		breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+		...buildPageSignals({ siteOrigin: safeOrigin }),
 		mainEntity: {
 			'@type': 'ItemList',
 			itemListOrder: 'https://schema.org/ItemListOrderAscending',

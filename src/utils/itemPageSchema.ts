@@ -1,6 +1,8 @@
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import type { JsonLdObject } from '@utils/structuredData';
+import { buildPageSignals, serializeJsonLdGraph } from '@utils/structuredData';
+import { SITE } from '@config';
 import type { IOItem, RawItem, RecipeOutput } from '@utils/recipeTree';
 
 export type HowToIngredient = {
@@ -182,8 +184,8 @@ export const buildItemPageSchema = ({
     url: canonicalUrl,
     name: `${item.Name} | No Man's Sky Recipes`,
     description: item.Description,
-    isPartOf: { '@id': `${siteOrigin}#website` },
     breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+    ...buildPageSignals({ siteOrigin, dateModified: SITE.version_date }),
     primaryImageOfPage: {
       '@type': 'ImageObject',
       url: itemImageUrl,
@@ -280,8 +282,7 @@ export const buildItemPageSchema = ({
       mainEntityOfPage: canonicalUrl,
       image: itemImageUrl,
       author: {
-        '@type': 'Organization',
-        name: "No Man's Sky Recipes",
+        '@id': `${siteOrigin}#organization`,
       },
       recipeCategory: item.Group || 'Food',
       recipeCuisine: "No Man's Sky",
@@ -325,7 +326,7 @@ export const buildItemPageSchema = ({
   if (recipeSchema) {
     itemPageStructuredData.push(recipeSchema);
   }
-  const itemPageStructuredDataJson = JSON.stringify(itemPageStructuredData).replace(/</g, '\\u003c');
+  const itemPageStructuredDataJson = serializeJsonLdGraph(itemPageStructuredData);
 
   return {
     faqQuestions,

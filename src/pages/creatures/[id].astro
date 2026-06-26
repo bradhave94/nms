@@ -2,9 +2,9 @@
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import type { BreadcrumbItem } from '@utils/seo.js';
-import { getSiteOrigin } from '@utils/structuredData.js';
-import creaturesData from '@datav2/Creatures.json';
+import { getSiteOrigin, buildPageSignals } from '@utils/structuredData.js';
 import { SITE } from '@config';
+import creaturesData from '@datav2/Creatures.json';
 
 type CreatureSpecies = (typeof creaturesData.Species)[number];
 type CreatureMove = (typeof creaturesData.BattleMoves)[number];
@@ -298,6 +298,7 @@ const collectionSchema = {
 	url: canonicalUrl,
 	name: pageTitle,
 	description,
+	...buildPageSignals({ siteOrigin }),
 	breadcrumb: {
 		'@type': 'BreadcrumbList',
 		itemListElement: [

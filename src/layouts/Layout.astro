@@ -26,6 +26,7 @@ export interface Props {
 	articleModifiedTime?: string;
 	slug?: string;
 	structuredData?: JsonLdObject | JsonLdObject[];
+	suppressWebPage?: boolean;
 	robots?: string;
 	canonical?: string;
 	prevUrl?: string;
@@ -38,6 +39,7 @@ const {
 	description = SITE.desc,
 	slug,
 	structuredData,
+	suppressWebPage = false,
 	ogImage,
 	ogType = 'website',
 	articlePublishedTime,
@@ -58,19 +60,19 @@ const webSiteSchema = buildWebSiteSchema(siteOrigin);
 const extraStructuredData = structuredData
 	? (Array.isArray(structuredData) ? structuredData : [structuredData])
 	: [];
-const isHomePage = Astro.url.pathname === '/';
 const dateModified = (articleModifiedTime ?? SITE.version_date).slice(0, 10);
-const webPageSchema = hasPageEntity(extraStructuredData)
-	? undefined
-	: buildWebPageSchema({
-			siteOrigin,
-			canonicalUrl: canonicalURL.toString(),
-			title,
-			description,
-			dateModified,
-		});
+const webPageSchema =
+	!suppressWebPage && !hasPageEntity(extraStructuredData)
+		? buildWebPageSchema({
+				siteOrigin,
+				canonicalUrl: canonicalURL.toString(),
+				title,
+				description,
+				dateModified,
+			})
+		: undefined;
 const mergedStructuredData: JsonLdObject[] = [
-	...(isHomePage ? [organizationSchema] : []),
+	organizationSchema,
 	webSiteSchema,
 	...(webPageSchema ? [webPageSchema] : []),
 	...extraStructuredData,

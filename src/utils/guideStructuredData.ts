@@ -1,4 +1,5 @@
 import type { JsonLdObject } from '@utils/structuredData.js';
+import { buildPageSignals } from '@utils/structuredData.js';
 
 type BreadcrumbItemInput = {
 	name: string;
@@ -35,6 +36,7 @@ export const buildGuideStructuredData = ({
 	keywords,
 	faqs = [],
 }: BuildGuideStructuredDataOptions): JsonLdObject[] => {
+	const siteOrigin = new URL(canonicalUrl).origin;
 	const breadcrumbSchema: JsonLdObject = {
 		'@context': 'https://schema.org',
 		'@type': 'BreadcrumbList',
@@ -51,21 +53,18 @@ export const buildGuideStructuredData = ({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
 		'@id': `${canonicalUrl}#article`,
-		mainEntityOfPage: canonicalUrl,
+		mainEntityOfPage: { '@id': `${canonicalUrl}#article` },
 		headline: title,
 		description,
 		datePublished: publishedTime,
-		dateModified: modifiedTime,
 		author: {
 			'@type': 'Person',
 			name: authorName,
 		},
-		publisher: {
-			'@type': 'Organization',
-			name: "No Man's Sky Recipes",
-		},
+		publisher: { '@id': `${siteOrigin}#organization` },
 		breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
-		...(image ? { image } : {}),
+		...buildPageSignals({ siteOrigin, dateModified: modifiedTime.slice(0, 10) }),
+		...(image ? { image: { '@type': 'ImageObject', url: image } } : {}),
 		...(keywords && keywords.length > 0 ? { keywords: keywords.join(', ') } : {}),
 	};
 
