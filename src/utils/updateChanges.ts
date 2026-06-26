@@ -1,5 +1,6 @@
 import newUpdate from '../datav2/new.json';
 import { formatVersionLabel } from './newUpdate';
+import { SITE } from '@config';
 
 export type ItemUpdateMeta = {
 	kind: 'added' | 'changed';
@@ -67,6 +68,16 @@ function formatValue(value: unknown): string {
 
 const addedById = new Map(payload.Items.map((item) => [String(item.Id), item]));
 const changedById = new Map(payload.ChangedItems.map((item) => [String(item.Id), item]));
+
+type NewUpdatePayloadWithGeneratedAt = NewUpdatePayload & { GeneratedAt: string };
+
+/** ISO date (YYYY-MM-DD) for schema dateModified — patch date when item was added/changed, else site version date. */
+export function getItemDateModified(id: string): string {
+	if (getItemUpdateMeta(id)) {
+		return (payload as NewUpdatePayloadWithGeneratedAt).GeneratedAt.slice(0, 10);
+	}
+	return SITE.version_date;
+}
 
 export function getItemUpdateMeta(id: string): ItemUpdateMeta | null {
 	const changed = changedById.get(id);

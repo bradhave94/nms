@@ -26,7 +26,6 @@ export interface Props {
 	articleModifiedTime?: string;
 	slug?: string;
 	structuredData?: JsonLdObject | JsonLdObject[];
-	suppressWebPage?: boolean;
 	robots?: string;
 	canonical?: string;
 	prevUrl?: string;
@@ -39,7 +38,6 @@ const {
 	description = SITE.desc,
 	slug,
 	structuredData,
-	suppressWebPage = false,
 	ogImage,
 	ogType = 'website',
 	articlePublishedTime,
@@ -61,16 +59,15 @@ const extraStructuredData = structuredData
 	? (Array.isArray(structuredData) ? structuredData : [structuredData])
 	: [];
 const dateModified = (articleModifiedTime ?? SITE.version_date).slice(0, 10);
-const webPageSchema =
-	!suppressWebPage && !hasPageEntity(extraStructuredData)
-		? buildWebPageSchema({
+const webPageSchema = !hasPageEntity(extraStructuredData)
+	? buildWebPageSchema({
 				siteOrigin,
 				canonicalUrl: canonicalURL.toString(),
 				title,
 				description,
-				dateModified,
-			})
-		: undefined;
+			dateModified,
+		})
+	: undefined;
 const mergedStructuredData: JsonLdObject[] = [
 	organizationSchema,
 	webSiteSchema,

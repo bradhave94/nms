@@ -57,7 +57,6 @@ export const buildOrganizationSchema = (siteOrigin: string): JsonLdObject => {
 			width: SITE.logo.width,
 			height: SITE.logo.height,
 		},
-		sameAs: SITE.social,
 	};
 };
 

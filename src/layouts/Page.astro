@@ -22,19 +22,18 @@ import {
   type UsedInItem,
 } from '@utils/recipeTree';
 import { formatSignedPercent, formatFoodEffectStats } from '@utils/itemFormatters';
-import { buildItemPageSchema } from '@utils/itemPageSchema';
+import type { ItemPageSchemaResult } from '@utils/itemPageSchema';
 import refinery from '@datav2/Refinery.json';
 import { SITE } from '@config';
 
 // Define the props interface
 interface Props {
   item: Item;
+  schemaResult: ItemPageSchemaResult;
 }
 
-const { item } = Astro.props;
+const { item, schemaResult } = Astro.props;
 const itemUpdateMeta = getItemUpdateMeta(item.Id);
-const siteOrigin = (Astro.site ? new URL('/', Astro.site) : new URL('/', Astro.url)).toString().replace(/\/$/, '');
-const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '').replace(/^cooking\//, 'food/');
 const categorySlug = normalizedSlug.split('/')[0] || 'items';
 const categoryNameMap: Record<string, string> = {
@@ -67,25 +66,7 @@ const categoryFirstPagePathMap: Record<string, string> = {
   corvette: '/corvette',
 };
 const categoryName = categoryNameMap[categorySlug] ?? 'Items';
-const categorySingularMap: Record<string, string> = {
-  raw: 'raw material',
-  products: 'product',
-  food: 'food item',
-  curiosities: 'curiosity',
-  fish: 'fish',
-  technology: 'technology item',
-  other: 'item',
-  buildings: 'building part',
-  upgrades: 'upgrade',
-  exocraft: 'exocraft item',
-  starships: 'starship item',
-  corvette: 'corvette item',
-  refinery: 'refined item',
-};
-const categorySingular = categorySingularMap[categorySlug] ?? 'item';
 const categoryPath = categoryFirstPagePathMap[categorySlug] ?? '/items';
-const categoryUrl = `${siteOrigin}${categoryPath}`;
-const itemImageUrl = `${siteOrigin}/images/items/${item.Icon}`;
 
 type UpgradeStatLevel = {
   StatType?: string;
@@ -301,25 +282,10 @@ const growTimeHeader = getGrowTimeHeader();
 const {
   faqQuestions,
   answerSummary,
-  itemPageStructuredDataJson,
   recipeIngredients,
   recipeToolName,
   recipeOutputQuantity,
-} = buildItemPageSchema({
-  item,
-  categoryName,
-  categorySingular,
-  categoryUrl,
-  siteOrigin,
-  canonicalUrl,
-  itemImageUrl,
-  isFoodItem,
-  outputRecipes,
-  rawItems,
-  dataLength: data.length,
-  outputRefinedLength: outputRefined.length,
-  outputCookedLength: outputCooked.length,
-});
+} = schemaResult;
 
 const pinObjectiveLabel =
   exocraftItem.PinObjective === 'UI_FIND_BUY_OBJ'
@@ -532,8 +498,6 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
   <ItemFaq faqQuestions={faqQuestions} />
 </div>
-
-<script type="application/ld+json" set:html={itemPageStructuredDataJson}></script>
 
 <!-- Quantity input script -->
 {showQuantityInput && (

@@ -14,8 +14,4 @@ export const SITE = {
         width: 444,
         height: 441,
     },
-    social: [
-        'https://github.com/bradhave94/nms',
-        'https://steamcommunity.com/sharedfiles/filedetails/?id=2179757979',
-    ],
 };

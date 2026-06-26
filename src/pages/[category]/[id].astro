@@ -4,6 +4,10 @@ import Page from '@layouts/Page.astro';
 import { getById, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import { buildItemMeta } from '@utils/seo.js';
+import { getSiteOrigin } from '@utils/structuredData.js';
+import { prepareItemPageSchemaInput } from '@utils/itemPageContext';
+import { buildItemPageSchema } from '@utils/itemPageSchema';
+import { getItemDateModified } from '@utils/updateChanges';
 import { CATEGORY_SLUGS, categories, type CategorySlug } from '../../config/categories.js';
 import { getCategoryDataset } from '../../config/categoryData.js';
 import { SITE } from '@config';
@@ -102,8 +106,13 @@ if (!item) {
 
 const { title, description } = buildItemMeta(item, config.idLabel);
 const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const schemaResult = buildItemPageSchema({
+	...prepareItemPageSchemaInput(item, siteOrigin, Astro.url.pathname),
+	dateModified: getItemDateModified(item.Id),
+});
 ---
 
-<Layout {title} {description} slug={config.slug} {ogImage} suppressWebPage>
-	<Page item={item} />
+<Layout {title} {description} slug={config.slug} {ogImage} structuredData={schemaResult.structuredData}>
+	<Page item={item} schemaResult={schemaResult} />
 </Layout>
