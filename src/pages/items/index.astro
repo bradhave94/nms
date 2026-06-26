@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import { getSiteOrigin } from '@utils/structuredData.js';
+import { getSiteOrigin, buildPageSignals } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
 const IMAGE_BASE = SITE.imageBaseUrl;
@@ -45,8 +45,8 @@ const collectionSchema = {
 	url: canonicalUrl,
 	name: 'Items',
 	description: 'Browse items by group, type, or search. Filter No Man\'s Sky items dynamically.',
-	isPartOf: { '@id': `${siteOrigin}#website` },
 	breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+	...buildPageSignals({ siteOrigin }),
 	mainEntity: { '@id': `${siteOrigin}/items.json#dataset` },
 };
 const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];

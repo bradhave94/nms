@@ -9,4 +9,9 @@ export const SITE = {
     version_link: "https://www.nomanssky.com/swarm-update/",
     adsense_id: 'ca-pub-8524094599848175',
     imageBaseUrl: 'https://nomansskyrecipes.com/images/items/',
+    logo: {
+        url: '/images/icon.png',
+        width: 444,
+        height: 441,
+    },
 };

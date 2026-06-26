@@ -1,6 +1,7 @@
 import { getById } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import type { JsonLdObject } from '@utils/structuredData';
+import { buildPageSignals } from '@utils/structuredData';
 import type { IOItem, RawItem, RecipeOutput } from '@utils/recipeTree';
 
 export type HowToIngredient = {
@@ -33,12 +34,13 @@ export type ItemPageSchemaInput = {
   dataLength: number;
   outputRefinedLength: number;
   outputCookedLength: number;
+  dateModified: string;
 };
 
 export type ItemPageSchemaResult = {
   faqQuestions: FaqQuestion[];
   answerSummary: string;
-  itemPageStructuredDataJson: string;
+  structuredData: JsonLdObject[];
   recipeIngredients: HowToIngredient[];
   recipeToolName: string;
   recipeOutputQuantity: number;
@@ -66,6 +68,7 @@ export const buildItemPageSchema = ({
   dataLength,
   outputRefinedLength,
   outputCookedLength,
+  dateModified,
 }: ItemPageSchemaInput): ItemPageSchemaResult => {
   const howToMethods: HowToMethod[] = [];
   const craftingHowToIngredients = toHowToIngredients(item.RequiredItems ?? []);
@@ -182,8 +185,8 @@ export const buildItemPageSchema = ({
     url: canonicalUrl,
     name: `${item.Name} | No Man's Sky Recipes`,
     description: item.Description,
-    isPartOf: { '@id': `${siteOrigin}#website` },
     breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+    ...buildPageSignals({ siteOrigin, dateModified }),
     primaryImageOfPage: {
       '@type': 'ImageObject',
       url: itemImageUrl,
@@ -280,8 +283,7 @@ export const buildItemPageSchema = ({
       mainEntityOfPage: canonicalUrl,
       image: itemImageUrl,
       author: {
-        '@type': 'Organization',
-        name: "No Man's Sky Recipes",
+        '@id': `${siteOrigin}#organization`,
       },
       recipeCategory: item.Group || 'Food',
       recipeCuisine: "No Man's Sky",
@@ -325,12 +327,10 @@ export const buildItemPageSchema = ({
   if (recipeSchema) {
     itemPageStructuredData.push(recipeSchema);
   }
-  const itemPageStructuredDataJson = JSON.stringify(itemPageStructuredData).replace(/</g, '\\u003c');
-
   return {
     faqQuestions,
     answerSummary,
-    itemPageStructuredDataJson,
+    structuredData: itemPageStructuredData,
     recipeIngredients,
     recipeToolName,
     recipeOutputQuantity,
