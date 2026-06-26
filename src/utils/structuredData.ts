@@ -50,13 +50,19 @@ export const buildOrganizationSchema = (siteOrigin: string): JsonLdObject => {
 		'@type': 'Organization',
 		'@id': `${safeOrigin}#organization`,
 		name: SITE.title,
+		alternateName: SITE.alternateName,
 		url: `${safeOrigin}/`,
+		description: SITE.desc,
 		logo: {
 			'@type': 'ImageObject',
 			url: `${safeOrigin}${SITE.logo.url}`,
 			width: SITE.logo.width,
 			height: SITE.logo.height,
 		},
+		knowsAbout: SITE.knowsAbout.map((topic) => ({
+			'@type': 'Thing',
+			name: topic,
+		})),
 	};
 };
 
@@ -103,9 +109,14 @@ export const buildWebPageSchema = ({
 		name: title,
 		description,
 		isPartOf: { '@id': `${safeOrigin}#website` },
+		datePublished: SITE.founded_date,
 		dateModified,
 		isAccessibleForFree: true,
 		inLanguage: 'en',
+		about: {
+			'@type': 'Thing',
+			name: SITE.pageAbout,
+		},
 	};
 };
 
