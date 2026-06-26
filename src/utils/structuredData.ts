@@ -1,4 +1,18 @@
+import { SITE } from '@config';
+
 export type JsonLdObject = Record<string, unknown>;
+
+const PAGE_ENTITY_TYPES = new Set([
+	'WebPage',
+	'ItemPage',
+	'CollectionPage',
+	'BlogPosting',
+	'Article',
+	'NewsArticle',
+	'AboutPage',
+	'ContactPage',
+	'FAQPage',
+]);
 
 export type CollectionItem = {
 	name: string;
@@ -23,6 +37,89 @@ type CollectionStructuredDataOptions = {
 };
 
 const normalizeOrigin = (origin: string): string => origin.replace(/\/$/, '');
+
+export const hasPageEntity = (schemas: JsonLdObject[]): boolean =>
+	schemas.some(
+		(schema) => typeof schema['@type'] === 'string' && PAGE_ENTITY_TYPES.has(schema['@type']),
+	);
+
+export const buildOrganizationSchema = (siteOrigin: string): JsonLdObject => {
+	const safeOrigin = normalizeOrigin(siteOrigin);
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		'@id': `${safeOrigin}#organization`,
+		name: SITE.title,
+		url: `${safeOrigin}/`,
+		logo: {
+			'@type': 'ImageObject',
+			url: `${safeOrigin}${SITE.logo.url}`,
+			width: SITE.logo.width,
+			height: SITE.logo.height,
+		},
+		sameAs: SITE.social,
+	};
+};
+
+export const buildWebSiteSchema = (siteOrigin: string): JsonLdObject => {
+	const safeOrigin = normalizeOrigin(siteOrigin);
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		'@id': `${safeOrigin}#website`,
+		url: `${safeOrigin}/`,
+		name: SITE.title,
+		description: SITE.desc,
+		inLanguage: 'en',
+		publisher: { '@id': `${safeOrigin}#organization` },
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: `${safeOrigin}/items?q={search_term_string}`,
+			'query-input': 'required name=search_term_string',
+		},
+	};
+};
+
+type BuildWebPageSchemaOptions = {
+	siteOrigin: string;
+	canonicalUrl: string;
+	title: string;
+	description: string;
+	dateModified: string;
+};
+
+export const buildWebPageSchema = ({
+	siteOrigin,
+	canonicalUrl,
+	title,
+	description,
+	dateModified,
+}: BuildWebPageSchemaOptions): JsonLdObject => {
+	const safeOrigin = normalizeOrigin(siteOrigin);
+	return {
+		'@context': 'https://schema.org',
+		'@type': 'WebPage',
+		'@id': `${canonicalUrl}#webpage`,
+		url: canonicalUrl,
+		name: title,
+		description,
+		isPartOf: { '@id': `${safeOrigin}#website` },
+		dateModified,
+		isAccessibleForFree: true,
+		inLanguage: 'en',
+	};
+};
+
+export const serializeJsonLdGraph = (entities: JsonLdObject[]): string => {
+	const graph = entities.map((entity) => {
+		const { '@context': _context, ...rest } = entity;
+		return rest;
+	});
+	return JSON.stringify({
+		'@context': 'https://schema.org',
+		'@graph': graph,
+	}).replace(/</g, '\\u003c');
+};
 
 const normalizePath = (path: string): string => {
 	if (!path) return '/';

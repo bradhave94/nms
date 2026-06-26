@@ -2,6 +2,13 @@
 import '../assets/css/main.css';
 import { inject } from '@vercel/analytics';
 import type { JsonLdObject } from '@utils/structuredData.js';
+import {
+	buildOrganizationSchema,
+	buildWebPageSchema,
+	buildWebSiteSchema,
+	hasPageEntity,
+	serializeJsonLdGraph,
+} from '@utils/structuredData.js';
 
 import Sidebar from '@layouts/Sidebar.astro';
 import Search from '@components/Search.astro';
@@ -46,38 +53,29 @@ const canonicalURL = canonical
 const siteOrigin = SITE.website.replace(/\/$/, '');
 const defaultOgImage = `${siteOrigin}/images/icon.png`;
 const imageUrl = ogImage ?? defaultOgImage;
-const organizationSchema: JsonLdObject = {
-	'@context': 'https://schema.org',
-	'@type': 'Organization',
-	'@id': `${siteOrigin}#organization`,
-	name: SITE.title,
-	url: `${siteOrigin}/`,
-	logo: `${siteOrigin}/images/icon.png`,
-};
-const webSiteSchema: JsonLdObject = {
-	'@context': 'https://schema.org',
-	'@type': 'WebSite',
-	'@id': `${siteOrigin}#website`,
-	url: `${siteOrigin}/`,
-	name: SITE.title,
-	description: SITE.desc,
-	publisher: { '@id': `${siteOrigin}#organization` },
-	potentialAction: {
-		'@type': 'SearchAction',
-		target: `${siteOrigin}/items?q={search_term_string}`,
-		'query-input': 'required name=search_term_string',
-	},
-};
+const organizationSchema = buildOrganizationSchema(siteOrigin);
+const webSiteSchema = buildWebSiteSchema(siteOrigin);
 const extraStructuredData = structuredData
 	? (Array.isArray(structuredData) ? structuredData : [structuredData])
 	: [];
 const isHomePage = Astro.url.pathname === '/';
+const dateModified = (articleModifiedTime ?? SITE.version_date).slice(0, 10);
+const webPageSchema = hasPageEntity(extraStructuredData)
+	? undefined
+	: buildWebPageSchema({
+			siteOrigin,
+			canonicalUrl: canonicalURL.toString(),
+			title,
+			description,
+			dateModified,
+		});
 const mergedStructuredData: JsonLdObject[] = [
 	...(isHomePage ? [organizationSchema] : []),
 	webSiteSchema,
+	...(webPageSchema ? [webPageSchema] : []),
 	...extraStructuredData,
 ];
-const mergedStructuredDataJson = JSON.stringify(mergedStructuredData).replace(/</g, '\\u003c');
+const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 
 inject();
 ---
