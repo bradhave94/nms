@@ -1,0 +1,35 @@
+---
+/**
+ * Sitewide NitroPay formats that do not need a placeholder div.
+ * Floating video is available in the API (`format: "floating"`) but is not
+ * enabled for this site in the Placement Builder yet — add when Nitro unlocks it.
+ */
+---
+
+<script is:inline>
+	window.nitroAds.createAd('anchor-bottom', {
+		format: 'anchor-v2',
+		anchor: 'bottom',
+		anchorBgColor: 'rgb(0 0 0 / 80%)',
+		anchorClose: true,
+		anchorPersistClose: false,
+		anchorStickyOffset: 0,
+		report: {
+			enabled: true,
+			icon: true,
+			wording: 'Report Ad',
+			position: 'top-right',
+		},
+	});
+
+	window.nitroAds.createAd('interstitial', {
+		format: 'interstitial',
+		mediaQuery: '(min-width: 768px)',
+		report: {
+			enabled: true,
+			icon: true,
+			wording: 'Report Ad',
+			position: 'top-right',
+		},
+	});
+</script>
