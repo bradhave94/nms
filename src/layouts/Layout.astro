@@ -124,12 +124,6 @@ inject();
 			crossorigin="anonymous"
 		/>
 
-		<script
-			async
-			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8524094599848175"
-			crossorigin="anonymous"
-		></script>
-
 		<!-- NitroPay -->
 		<script is:inline data-cfasync="false">
 			/* eslint-disable prefer-rest-params -- NitroPay stock snippet queues the Arguments object. */
@@ -161,7 +155,6 @@ inject();
 		</script>
 
 		<meta name="robots" content={robots} />
-		<meta name="google-adsense-account" content="ca-pub-8524094599848175" />
 		<script type="application/ld+json" set:html={mergedStructuredDataJson}></script>
 	</head>
 	<body class={`h-full overflow-x-hidden m-0 ${slug === '/' ? 'home' : ''}`}>
