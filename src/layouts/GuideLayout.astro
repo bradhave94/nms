@@ -99,8 +99,6 @@ const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString(
 	<article class="mx-auto max-w-7xl px-4 py-10">
 		<div class="flex justify-center gap-8 xl:items-start">
 			<div class="w-full max-w-[680px] min-w-0">
-				<NitroAd id="guide-after-hero" class="mt-0 mb-8" />
-
 				<div id="guide-article">
 					<div id="guide-content" class="prose prose-invert max-w-none prose-headings:text-white prose-strong:text-white prose-li:text-sky-100/90 prose-p:text-sky-100/90">
 						<slot />
@@ -164,8 +162,13 @@ const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString(
 			)}
 			</div>
 
-			{tocHeadings.length > 0 && (
-				<aside class="hidden xl:block w-60 shrink-0 self-start sticky top-4 h-fit">
+			<aside class="hidden xl:block w-[300px] shrink-0 self-start sticky top-4 h-fit space-y-4">
+				<NitroAd
+					id="guide-sidebar"
+					class="my-0 max-w-[300px]"
+					sizes={[[300, 250]]}
+				/>
+				{tocHeadings.length > 0 && (
 					<div class="rounded-lg border border-sky-900/70 bg-sky-950/30 p-4">
 						<h2 class="mt-0 mb-3 text-lg font-semibold text-white">On this page</h2>
 						<ul class="space-y-2 text-sm list-none p-0" id="blog-toc-links">
@@ -182,8 +185,8 @@ const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString(
 							))}
 						</ul>
 					</div>
-				</aside>
-			)}
+				)}
+			</aside>
 		</div>
 	</article>
 </Layout>
