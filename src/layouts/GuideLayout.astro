@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Accordion from '@components/Accordion.astro';
+import NitroAd from '@components/ads/NitroAd.astro';
 import { buildGuideStructuredData } from '@utils/guideStructuredData.js';
 import { getSiteOrigin } from '@utils/structuredData.js';
 import type { CollectionEntry } from 'astro:content';
@@ -98,10 +99,31 @@ const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString(
 	<article class="mx-auto max-w-7xl px-4 py-10">
 		<div class="flex justify-center gap-8 xl:items-start">
 			<div class="w-full max-w-[680px] min-w-0">
+				<NitroAd id="guide-after-hero" class="mt-0 mb-8" />
 
-				<div id="guide-content" class="prose prose-invert max-w-none prose-headings:text-white prose-strong:text-white prose-li:text-sky-100/90 prose-p:text-sky-100/90">
-					<slot />
+				<div id="guide-article">
+					<div id="guide-content" class="prose prose-invert max-w-none prose-headings:text-white prose-strong:text-white prose-li:text-sky-100/90 prose-p:text-sky-100/90">
+						<slot />
+					</div>
 				</div>
+				<script is:inline>
+					window.nitroAds.createAd('guide-article', {
+						format: 'article',
+						pageInterval: 1,
+						sizes: [
+							[728, 90],
+							[300, 250],
+							[320, 50],
+							[320, 100],
+						],
+						report: {
+							enabled: true,
+							icon: true,
+							wording: 'Report Ad',
+							position: 'top-right',
+						},
+					});
+				</script>
 				<script>
 					document.querySelectorAll('#guide-content table').forEach((table) => {
 						if (table.parentElement?.classList.contains('prose-table-scroll')) return;

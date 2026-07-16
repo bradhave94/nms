@@ -1,0 +1,52 @@
+---
+interface Props {
+	/** Stable placement id — must match a unique element id on the page. */
+	id: string;
+	class?: string;
+	/** Optional format override. Default is standard display. */
+	format?: 'display' | 'article' | 'smart-flex';
+	/** Optional sizes; defaults cover common desktop + mobile IAB units. */
+	sizes?: [number, number][];
+}
+
+const {
+	id,
+	class: className = '',
+	format = 'display',
+	sizes = [
+		[728, 90],
+		[970, 90],
+		[300, 250],
+		[320, 50],
+		[320, 100],
+	],
+} = Astro.props;
+
+const options = {
+	...(format !== 'display' ? { format } : {}),
+	sizes,
+	refreshTime: 30,
+	renderVisibleOnly: true,
+	report: {
+		enabled: true,
+		icon: true,
+		wording: 'Report Ad',
+		position: 'top-right',
+	},
+	...(format === 'article' ? { pageInterval: 1 } : {}),
+	...(format === 'smart-flex' ? { height: 250, smartFlexStickyTop: 16 } : {}),
+};
+
+const scriptBody = `window.nitroAds.createAd(${JSON.stringify(id)}, ${JSON.stringify(options)});`;
+---
+
+<div
+	id={id}
+	class:list={[
+		'nitro-ad mx-auto my-8 flex w-full max-w-[970px] items-center justify-center',
+		format === 'smart-flex' ? 'min-h-[250px]' : 'min-h-[90px]',
+		className,
+	]}
+	aria-hidden="true"
+></div>
+<script is:inline set:html={scriptBody} />

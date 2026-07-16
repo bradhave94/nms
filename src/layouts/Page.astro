@@ -9,6 +9,7 @@ import RefinedToCreate from '@components/item/RefinedToCreate.astro';
 import CookedToCreate from '@components/item/CookedToCreate.astro';
 import UsedToCreate from '@components/item/UsedToCreate.astro';
 import ItemFaq from '@components/item/ItemFaq.astro';
+import NitroAd from '@components/ads/NitroAd.astro';
 import { getItemUpdateMeta } from '@utils/updateChanges';
 import { getById, findOutput, findInputFromRefiner, findInputFromCooking, findInputFromCrafting, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
@@ -452,6 +453,8 @@ const imageBaseUrl = SITE.imageBaseUrl;
     showQuantityInput={showQuantityInput}
     imageBaseUrl={imageBaseUrl}
   />
+
+  <NitroAd id="item-after-details" />
 
   <CraftingSection
     item={item}

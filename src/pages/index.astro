@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import NitroAd from '@components/ads/NitroAd.astro';
 import { SITE } from '@config';
 
 const cards = [
@@ -178,6 +179,8 @@ const cards = [
             Refiners | Crafting | Cooking | And more...
         </p>
     </header>
+
+    <NitroAd id="home-after-hero" class="px-4" />
 
     <main class="container w-auto mx-auto px-4 py-8">
         <div id="items" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">

@@ -10,6 +10,7 @@ export const SITE = {
     version_date: "2026-06-03",
     version_link: "https://www.nomanssky.com/swarm-update/",
     adsense_id: 'ca-pub-8524094599848175',
+    nitropay_site_id: '2507',
     imageBaseUrl: 'https://nomansskyrecipes.com/images/items/',
     logo: {
         url: '/images/icon.png',
