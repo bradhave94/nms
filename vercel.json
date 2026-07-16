@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/ads.txt", "destination": "https://api.nitropay.com/v1/ads-2507.txt", "permanent": true },
     { "source": "/portable-refiner", "destination": "/refining", "permanent": true },
     { "source": "/medium-refiner", "destination": "/refining", "permanent": true },
     { "source": "/large-refiner", "destination": "/refining", "permanent": true },
