@@ -48,8 +48,12 @@ const navigation = [
     <div class="disclaimer">
       <p>This is a fan-made website. No Man's Sky™ and all related assets are trademarks
       of Hello Games. This site is not affiliated with or endorsed by Hello Games.</p>
-      <p class="mt-2">
+      <p class="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <a href="/privacy" class="text-blue-500 hover:text-blue-400">Privacy Policy</a>
+        <!-- NitroPay CCPA: injects "Do Not Sell My Personal Information" for CA users -->
+        <span data-ccpa-link="1"></span>
+        <!-- NitroPay CMP: injects consent management for GDPR users -->
+        <div id="ncmp-consent-link"></div>
       </p>
     </div>
   </div>
