@@ -21,6 +21,62 @@ const normalizePath = (path: string): string => {
 
 type ItemMetaInput = Pick<Item, 'Id' | 'Name' | 'Description' | 'Group' | 'Slug'>;
 
+export type ItemRelatedLink = {
+	label: string;
+	href: string;
+};
+
+export type IntroSegment = {
+	text: string;
+	href?: string;
+};
+
+type ItemMetaOverride = {
+	title: string;
+	description: string;
+	relatedLinks?: ItemRelatedLink[];
+};
+
+const SITE_TITLE_SUFFIX = " | No Man's Sky Recipes";
+
+const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
+	GASGIANT1: {
+		title: 'Crystallized Helium NMS Recipe',
+		description:
+			'Crystallized Helium (Crystallised) NMS: how to get it on gas giants, refine Lithium plus Quartzite, and every recipe that uses the resource.',
+	},
+	STELLAR2: {
+		title: 'Chromatic Metal NMS Recipe & Ratios',
+		description:
+			'Chromatic Metal NMS recipe: convert Copper, Cadmium, Emeril, or Indium in a refiner. Best ratios plus Activated metal and Large Refiner tricks.',
+		relatedLinks: [
+			{ label: 'best refiner recipes', href: '/blog/best-no-mans-sky-refiner-recipes/' },
+		],
+	},
+};
+
+export const parseIntroLinks = (intro: string): IntroSegment[] => {
+	const segments: IntroSegment[] = [];
+	const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+	let lastIndex = 0;
+	let match: RegExpExecArray | null = linkPattern.exec(intro);
+
+	while (match) {
+		if (match.index > lastIndex) {
+			segments.push({ text: intro.slice(lastIndex, match.index) });
+		}
+		segments.push({ text: match[1], href: match[2] });
+		lastIndex = linkPattern.lastIndex;
+		match = linkPattern.exec(intro);
+	}
+
+	if (lastIndex < intro.length) {
+		segments.push({ text: intro.slice(lastIndex) });
+	}
+
+	return segments;
+};
+
 const normalizeCategoryLabel = (value: string | undefined): string =>
 	normalizeWhitespace(value ?? '')
 		.toLowerCase()
@@ -186,7 +242,16 @@ const buildItemTitle = (item: ItemMetaInput, categoryLabel: string, uniquenessHi
 export const buildItemMeta = (
 	item: ItemMetaInput,
 	categoryLabel: string
-): { title: string; description: string } => {
+): { title: string; description: string; relatedLinks?: ItemRelatedLink[] } => {
+	const override = ITEM_META_OVERRIDES[item.Id];
+	if (override) {
+		return {
+			title: `${override.title}${SITE_TITLE_SUFFIX}`,
+			description: override.description,
+			...(override.relatedLinks ? { relatedLinks: override.relatedLinks } : {}),
+		};
+	}
+
 	const normalizedDescription = normalizeDescriptionHint(item.Description) ?? '';
 	const uniquenessHint = buildItemUniquenessHint(item, categoryLabel);
 	const title = buildItemTitle(item, categoryLabel, uniquenessHint);

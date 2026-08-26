@@ -1,6 +1,6 @@
 ---
-title: "No Man's Sky Swarm Expedition Guide: Factions, Rewards, and How to Beat the Hive of Glass"
-description: "Complete guide to NMS Expedition 22: The Swarm. Join Royals, Sages, or Weavers, earn the Direwasp armor set, and take down the Hive of Glass."
+title: "NMS Swarm Expedition Guide & Rewards"
+description: "NMS Swarm expedition (Expedition 22) walkthrough: factions, rewards, phases, and Hive of Glass boss tips. Includes Corrupted Ichor and Direwasp loot."
 pubDate: 2026-06-04
 updatedDate: 2026-06-04
 heroImage: "/images/blog/nms-swarm-expedition-guide.webp"
@@ -14,6 +14,8 @@ tags:
   - update-6-4
 featured: false
 relatedLinks:
+  - label: "Returning player guide 2026"
+    href: "/blog/no-mans-sky-returning-player-guide-2026/"
   - label: "New items in update 6.4"
     href: "/new"
   - label: "Gravitino Coil guide"

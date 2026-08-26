@@ -1,6 +1,6 @@
 ---
-title: "Best No Man's Sky Refiner Recipes for Nanites, Units, and Fast Progress"
-description: "The best NMS refiner recipes for nanites, units, and chromatic metal — with exact quantities, ratios, and which refiner you actually need."
+title: "NMS Refiner Recipes: Nanites & Units"
+description: "NMS refiner recipes for nanites, units, and chromatic metal. Exact ratios, Chlorine and Oxygen loops, and which refiner size you actually need."
 pubDate: 2024-10-09
 updatedDate: 2024-10-09
 heroImage: "/images/blog/refiner-recipes.webp"
@@ -12,6 +12,8 @@ tags:
   - crafting
 featured: true
 relatedLinks:
+  - label: "Chromatic Metal recipes"
+    href: "/raw/STELLAR2/"
   - label: "Browse all refiner recipes"
     href: "/refining"
   - label: "Open the crafting calculator"

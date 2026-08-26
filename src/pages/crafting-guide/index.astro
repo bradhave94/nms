@@ -64,7 +64,7 @@ const data = products.map(createArray).filter((item): item is TableRow => item !
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/crafting-guide', siteOrigin).toString();
 const baseDescription =
-	"Browse the No Man's Sky crafting guide for product recipes, ingredient chains, unit values, and step-by-step crafting paths.";
+	"No Man's Sky crafting recipes, crafting tree, and ingredient chart. Browse product recipes, unit values, and step-by-step craft paths in one list.";
 const itemListElements = data.slice(0, 25).map((row, index) => {
 	const outputItem = getById(row.output.id);
 	return {
@@ -85,13 +85,16 @@ const structuredData = buildCollectionStructuredData({
 ---
 
 <Layout
-	title="Crafting Guide | No Man's Sky Recipes"
+	title="NMS Crafting Recipes, Tree & Chart | No Man's Sky Recipes"
 	description={baseDescription}
 	slug="crafting-guide"
 	ogImage={`${SITE.website}/images/crafting.webp`}
 	structuredData={structuredData}
 >
-		<Table
+		<p class="mx-auto mb-6 max-w-3xl text-center text-sky-200/90">
+			See the <a href="/calculator/" class="text-cyan-300 underline hover:text-cyan-200">crafting calculator</a> and <a href="/refining/" class="text-cyan-300 underline hover:text-cyan-200">refiner recipes</a>.
+		</p>
+		<Table>
 			title="Crafting"
 			image="crafting-guide"
 			image_width={100}

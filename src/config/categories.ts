@@ -80,12 +80,12 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	fish: {
 		slug: 'fish',
 		h1: 'Fish',
-		metaTitle: 'Fish',
+		metaTitle: 'NMS Fish Recipes & Bait List',
 		idLabel: 'Fish Item',
 		description:
-			"A list of fish for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"NMS fish recipes and bait list. Browse aquatic catches, chum and lure recipes, and what you can cook from each fish in No Man's Sky in 2026.",
 		intro:
-			'Fish items include aquatic catches, bait outcomes, and ocean-specific resources used in recipes.',
+			'Fish items include aquatic catches, bait outcomes, and ocean-specific resources used in recipes. See the [fishing guide](/blog/no-mans-sky-fishing-guide/) and [cooking recipes](/cooking/).',
 		datasets: ['Fish'],
 		idStrategy: 'props',
 	},
@@ -103,14 +103,14 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	raw: {
 		slug: 'raw',
 		h1: 'Raw Materials',
-		metaTitle: 'Raw Materials',
+		metaTitle: 'NMS Materials List & Raw Resources',
 		idLabel: 'Raw Material',
 		description:
-			"Browse No Man's Sky raw materials, foundational resources, and ingredient pages for crafting, refining, cooking, and upgrade chains.",
+			"No Man's Sky materials list: raw resources for crafting, refining, cooking, and upgrades. Open each material page for refine and craft recipes.",
 		pageDescription:
 			"Browse No Man's Sky raw materials, base resources, and mining ingredients used in crafting, refining, cooking, and technology upgrades.",
 		intro:
-			'Browse No Man\u2019s Sky raw materials used in crafting, refining, cooking, and upgrade chains. Track foundational resources, gather ingredients, and jump into the recipes they unlock.',
+			'Browse No Man\u2019s Sky raw materials used in crafting, refining, cooking, and upgrade chains. Track foundational resources, gather ingredients, and jump into the recipes they unlock. See [refiner recipes](/refining/) and the [crafting guide](/crafting-guide/).',
 		pageIntro:
 			"Raw materials are the foundation of crafting, refining, and upgrades in No Man's Sky.",
 		datasets: ['RawMaterials'],
@@ -119,11 +119,12 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	food: {
 		slug: 'food',
 		h1: 'Food',
-		metaTitle: 'Food',
+		metaTitle: 'NMS Food Recipes & Cooking Guide',
 		idLabel: 'Food Item',
-		description: "A list of food items for No Man's Sky. Browse all edible products and ingredients.",
+		description:
+			"No Man's Sky food recipes and cooking ingredients. Browse edible products, nutrient processor recipes, and cooking chains from bait to baked goods.",
 		intro:
-			"Food items power cooking recipes, consumables, and nutrient processing chains in No Man's Sky.",
+			"Food items power [cooking recipes](/cooking/), consumables, and nutrient processing chains in No Man's Sky.",
 		datasets: ['Food'],
 		idStrategy: 'props',
 		firstPagePath: '/food',
@@ -131,11 +132,12 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	exocraft: {
 		slug: 'exocraft',
 		h1: 'Exocraft',
-		metaTitle: 'Exocraft',
+		metaTitle: 'NMS Exocraft List & How to Get',
 		idLabel: 'Exocraft Item',
 		description:
-			"A list of exocraft items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
-		intro: 'Exocraft items support planetary vehicles with fuel, modules, and specialized components.',
+			'NMS Exocraft list: vehicles, fuel, radar, and modules. How to get each Exocraft item, what it crafts, and the recipes tied to planetary vehicles.',
+		intro:
+			'Exocraft items support planetary vehicles with fuel, modules, and specialized components. See [technology upgrades](/technology/).',
 		datasets: ['Exocraft'],
 		idStrategy: 'props',
 	},
@@ -190,12 +192,12 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	technology: {
 		slug: 'technology',
 		h1: 'Technology',
-		metaTitle: 'Technology Items',
+		metaTitle: 'NMS Technology List & Blueprints',
 		idLabel: 'Technology Item',
 		description:
-			"A list of technology items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			'NMS technology list: suit, ship, multi-tool, and base blueprints. Browse technology items, modules, and the recipes that unlock each upgrade.',
 		intro:
-			'Technology items power your suit, ship, multitool, and base systems with specialized upgrades and devices.',
+			'Technology items power your suit, ship, multitool, and base systems with specialized upgrades and devices. Browse [upgrade modules](/upgrades/) and the [crafting guide](/crafting-guide/).',
 		datasets: ['ConstructedTechnology', 'Technology', 'TechnologyModule'],
 		idStrategy: 'props',
 		idSort: true,

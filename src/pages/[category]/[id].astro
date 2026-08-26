@@ -104,7 +104,7 @@ if (!item) {
 	return Astro.redirect('/404');
 }
 
-const { title, description } = buildItemMeta(item, config.idLabel);
+const { title, description, relatedLinks } = buildItemMeta(item, config.idLabel);
 const ogImage = `${SITE.imageBaseUrl}${item.Icon}`;
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const schemaResult = buildItemPageSchema({
@@ -114,5 +114,5 @@ const schemaResult = buildItemPageSchema({
 ---
 
 <Layout {title} {description} slug={config.slug} {ogImage} structuredData={schemaResult.structuredData}>
-	<Page item={item} schemaResult={schemaResult} />
+	<Page item={item} schemaResult={schemaResult} relatedLinks={relatedLinks} />
 </Layout>

@@ -1,6 +1,6 @@
 ---
-title: "Is No Man's Sky Worth It in 2026?"
-description: "No Man's Sky in 2026 is barely recognizable from its 2016 launch. 45+ free updates later, here's who should buy it and who should skip it."
+title: "No Man's Sky Review 2026: Worth It?"
+description: "No Man's Sky review 2026: is it worth it after 45+ free updates? Who should buy, who should skip, and what the game actually is like in 2026."
 pubDate: 2026-04-13
 updatedDate: 2026-04-13
 category: "blog"
@@ -12,6 +12,8 @@ tags:
 heroImage: "/images/blog/is-nms-worth-it-2026.webp"
 featured: false
 relatedLinks:
+  - label: "Returning player guide 2026"
+    href: "/blog/no-mans-sky-returning-player-guide-2026/"
   - label: "All refiner recipes"
     href: "/refining"
   - label: "Crafting calculator"

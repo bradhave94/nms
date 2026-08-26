@@ -36,7 +36,7 @@ const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,
 	collectionName: 'Crafting Calculator',
-	collectionDescription: 'A calculator to help your farming efforts by calculating exactly what you need to craft any item.',
+	collectionDescription: 'NMS crafting calculator: pick a product and get exact ingredients, farm totals, and reverse-craft paths so you know what to gather first in NMS.',
 	collectionPath: '/calculator',
 	currentPage: page.currentPage,
 	items: itemListElements,
@@ -47,8 +47,8 @@ const intro = buildCategoryIntro(
 	page.currentPage,
 	page.lastPage
 );
-const baseDescription = 'A calculator to help your farming efforts by calculating exactly what you need to craft any item.';
-const { title, description } = buildPaginatedMeta('Crafting Calculator', baseDescription, page.currentPage, page.lastPage);
+const baseDescription = 'NMS crafting calculator: pick a product and get exact ingredients, farm totals, and reverse-craft paths so you know what to gather first in NMS.';
+const { title, description } = buildPaginatedMeta('NMS Crafting Calculator & Planner', baseDescription, page.currentPage, page.lastPage);
 const { nextUrl } = buildPaginationUrls(siteOrigin, page);
 ---
 
@@ -63,6 +63,9 @@ const { nextUrl } = buildPaginationUrls(siteOrigin, page);
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
 	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>
 	<p class="mx-auto mb-4 mt-3 max-w-3xl text-center text-sky-200/90">{intro}</p>
+	<p class="mx-auto mb-4 max-w-3xl text-center text-sky-200/90">
+		Open the <a href="/calculator/planner/" class="text-cyan-300 underline hover:text-cyan-200">recipe planner</a> or the <a href="/crafting-guide/" class="text-cyan-300 underline hover:text-cyan-200">crafting guide</a>.
+	</p>
 	<p class="text-xl text-center mt-3 mb-8">Choose an item below to start</p>
 	<NitroAd id="calculator-after-intro" />
 	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
