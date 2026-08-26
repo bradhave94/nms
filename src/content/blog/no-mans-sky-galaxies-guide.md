@@ -1,6 +1,6 @@
 ---
-title: "No Man's Sky Galaxies: The Complete Guide"
-description: "Everything to know about No Man's Sky galaxies. How they work, how to reach the next one, how to travel back, and which ones are worth visiting."
+title: "NMS Galaxy Types, List & Travel"
+description: "NMS galaxy types (Norm, Lush, Harsh, Empty), the 256-galaxy list, and how to travel: black holes, New Beginnings skip, and teleporting back."
 pubDate: 2026-05-03
 updatedDate: 2026-05-03
 heroImage: "/images/blog/galaxies-guide.webp"

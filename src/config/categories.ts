@@ -142,12 +142,12 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	starships: {
 		slug: 'starships',
 		h1: 'Starships',
-		metaTitle: 'Starships',
+		metaTitle: 'NMS Starship Parts List & Wings',
 		idLabel: 'Starship Item',
 		description:
-			"A list of starship items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			'NMS starship parts list: wings, components, and modules. Open each part page for craft costs and the recipes tied to starship management.',
 		intro:
-			'Starship items include components, modules, and parts tied to spaceflight and starship management.',
+			'Starship items include components, modules, and parts tied to spaceflight and starship management. See [technology upgrades](/technology/) and [corvette parts](/corvette/).',
 		datasets: ['Starships'],
 		idStrategy: 'props',
 	},

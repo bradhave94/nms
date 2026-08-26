@@ -21,6 +21,66 @@ const normalizePath = (path: string): string => {
 
 type ItemMetaInput = Pick<Item, 'Id' | 'Name' | 'Description' | 'Group' | 'Slug'>;
 
+export type ItemRelatedLink = {
+	label: string;
+	href: string;
+};
+
+export type IntroSegment = {
+	text: string;
+	href?: string;
+};
+
+type ItemMetaOverride = {
+	title: string;
+	description: string;
+	relatedLinks?: ItemRelatedLink[];
+};
+
+const SITE_TITLE_SUFFIX = " | No Man's Sky Recipes";
+
+const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
+	PLANT_TOXIC: {
+		title: 'Fungal Mold NMS Recipe (Mould)',
+		description:
+			'Fungal Mold (Fungal Mould) NMS: harvest from fungal clusters, refine and cook it, plus the Fusion Ignitor chain that spends 600x of this crop.',
+		relatedLinks: [
+			{
+				label: 'Fusion Ignitor vs Stasis Device',
+				href: '/blog/fusion-ignitor-vs-stasis-device-no-mans-sky/',
+			},
+		],
+	},
+	TRA_ALLOY5: {
+		title: 'Superconducting Fiber NMS (Fibre)',
+		description:
+			'Superconducting Fiber (Fibre) NMS: how to get this trade good, what it sells for, and every recipe or use tied to Superconducting Fibre.',
+		relatedLinks: [{ label: 'all products', href: '/products/' }],
+	},
+};
+
+export const parseIntroLinks = (intro: string): IntroSegment[] => {
+	const segments: IntroSegment[] = [];
+	const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+	let lastIndex = 0;
+	let match: RegExpExecArray | null = linkPattern.exec(intro);
+
+	while (match) {
+		if (match.index > lastIndex) {
+			segments.push({ text: intro.slice(lastIndex, match.index) });
+		}
+		segments.push({ text: match[1], href: match[2] });
+		lastIndex = linkPattern.lastIndex;
+		match = linkPattern.exec(intro);
+	}
+
+	if (lastIndex < intro.length) {
+		segments.push({ text: intro.slice(lastIndex) });
+	}
+
+	return segments;
+};
+
 const normalizeCategoryLabel = (value: string | undefined): string =>
 	normalizeWhitespace(value ?? '')
 		.toLowerCase()
@@ -186,7 +246,16 @@ const buildItemTitle = (item: ItemMetaInput, categoryLabel: string, uniquenessHi
 export const buildItemMeta = (
 	item: ItemMetaInput,
 	categoryLabel: string
-): { title: string; description: string } => {
+): { title: string; description: string; relatedLinks?: ItemRelatedLink[] } => {
+	const override = ITEM_META_OVERRIDES[item.Id];
+	if (override) {
+		return {
+			title: `${override.title}${SITE_TITLE_SUFFIX}`,
+			description: override.description,
+			...(override.relatedLinks ? { relatedLinks: override.relatedLinks } : {}),
+		};
+	}
+
 	const normalizedDescription = normalizeDescriptionHint(item.Description) ?? '';
 	const uniquenessHint = buildItemUniquenessHint(item, categoryLabel);
 	const title = buildItemTitle(item, categoryLabel, uniquenessHint);

@@ -31,9 +31,10 @@ import { SITE } from '@config';
 interface Props {
   item: Item;
   schemaResult: ItemPageSchemaResult;
+  relatedLinks?: Array<{ label: string; href: string }>;
 }
 
-const { item, schemaResult } = Astro.props;
+const { item, schemaResult, relatedLinks = [] } = Astro.props;
 const itemUpdateMeta = getItemUpdateMeta(item.Id);
 const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '').replace(/^cooking\//, 'food/');
 const categorySlug = normalizedSlug.split('/')[0] || 'items';
@@ -453,6 +454,17 @@ const imageBaseUrl = SITE.imageBaseUrl;
     showQuantityInput={showQuantityInput}
     imageBaseUrl={imageBaseUrl}
   />
+
+  {relatedLinks.length > 0 && (
+    <p class="mx-auto mb-4 max-w-4xl px-4 text-center text-sky-200/90">
+      {relatedLinks.map((link, index) => (
+        <>
+          {index > 0 ? ' · ' : ''}
+          <a href={link.href} class="text-cyan-300 underline hover:text-cyan-200">{link.label}</a>
+        </>
+      ))}
+    </p>
+  )}
 
   <NitroAd id="item-after-details" />
 
