@@ -1,8 +1,8 @@
 ---
 title: "How to Get Lithium in No Man's Sky"
 description: "How to get Lithium in No Man's Sky: purple systems, ocean worlds, harvest, and the Quartzite plus Crystallised Helium refine."
-pubDate: 2026-08-25
-updatedDate: 2026-08-25
+pubDate: 2026-07-15
+updatedDate: 2026-07-15
 heroImage: "/images/blog/how-to-get-lithium-no-mans-sky.webp"
 category: "blog"
 tags:
