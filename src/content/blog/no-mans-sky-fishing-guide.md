@@ -1,6 +1,6 @@
 ---
-title: "No Man's Sky Fishing Guide: How to Fish, Best Bait, and What to Do With Your Catch"
-description: "How fishing works in No Man's Sky: getting the Fishing Rig, bait recipes, controlling fish size by depth, biomes, and what to cook or sell."
+title: "NMS Fishing Guide: Bait & Uses"
+description: "NMS fishing guide: Fishing Rig, best bait, depth for size, and what to do with fish — cook, sell, bait, or release for nanites."
 pubDate: 2024-12-20
 updatedDate: 2024-12-20
 heroImage: "/images/blog/fishing-guide.webp"
@@ -12,6 +12,8 @@ tags:
   - guide
 featured: false
 relatedLinks:
+  - label: "Chromatic Metal recipes"
+    href: "/raw/STELLAR2/"
   - label: "All fish items"
     href: "/fish"
   - label: "Rare fish"

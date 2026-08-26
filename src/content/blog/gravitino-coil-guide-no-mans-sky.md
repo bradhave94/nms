@@ -1,6 +1,6 @@
 ---
-title: "No Man's Sky Gravitino Coil Guide: How to Get It and Use It"
-description: "How to unlock the Gravitino Coil in No Man's Sky, craft it, and use it for waste hauling and combat. Crafting recipe included."
+title: "NMS Gravitino Coil: Get & Use"
+description: "NMS Gravitino Coil: buy the blueprint from Eos, craft it with a Gravitino Ball plus Chromatic Metal, and use it for waste hauling and combat."
 pubDate: 2026-03-20
 updatedDate: 2026-03-20
 heroImage: "/images/blog/gravitino-coil.webp"
@@ -12,6 +12,10 @@ tags:
   - waste hauling
 featured: false
 relatedLinks:
+  - label: "Gravitino Ball"
+    href: "/curiosities/GRAVBALL/"
+  - label: "Chromatic Metal recipes"
+    href: "/raw/STELLAR2/"
   - label: "Exocraft upgrades"
     href: "/exocraft"
   - label: "Technology upgrades"
