@@ -1,0 +1,2 @@
+# Preserve the exact bytes covered by the extractor's integrity manifest.
+src/datav2/*.json -text
