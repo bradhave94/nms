@@ -257,6 +257,12 @@ const imageBaseUrl = SITE.imageBaseUrl;
 					const nameSpan = document.createElement('span');
 					nameSpan.textContent = result.name;
 					a.appendChild(nameSpan);
+					if (result.subtitle) {
+						const subtitle = document.createElement('small');
+						subtitle.className = 'block text-xs text-sky-200/70';
+						subtitle.textContent = result.subtitle;
+						nameSpan.appendChild(subtitle);
+					}
 
 					li.appendChild(a);
 					ul.appendChild(li);

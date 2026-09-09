@@ -16,10 +16,7 @@ const previousLabel = meta.previousVersionLabel;
 {
 	meta.kind === 'added' ? (
 		<div class="mb-6 mt-6 rounded-md border border-emerald-700/60 bg-emerald-950/40 px-4 py-3 text-sm text-emerald-100">
-			<p class="m-0 font-semibold">New in update {versionLabel}</p>
-			<p class="m-0 mt-1 text-emerald-200/80">
-				This item was added compared to {previousLabel}.
-			</p>
+			<p class="m-0 font-semibold">Added in update {versionLabel}</p>
 		</div>
 	) : (
 		<div
@@ -28,14 +25,15 @@ const previousLabel = meta.previousVersionLabel;
 			data-has-diff={hasDiff ? '1' : '0'}
 		>
 			<div class="px-4 py-3">
-				<p class="m-0 font-semibold">Updated in {versionLabel}</p>
+				<p class="m-0 font-semibold">Updated in update {versionLabel}</p>
 				<p class="m-0 mt-1 text-amber-100/80">
-					Changed since {previousLabel}.
 					{hasDiff ? (
 						<>
 							{' '}
 							<button
 								type="button"
+								aria-expanded="false"
+								aria-controls="update-changes-detail"
 								class="update-changes-toggle ml-1 underline hover:text-white"
 							>
 								Show what changed
@@ -47,25 +45,22 @@ const previousLabel = meta.previousVersionLabel;
 				</p>
 			</div>
 			{hasDiff && (
-				<div class="update-changes-detail hidden border-t border-amber-800/60 px-4 py-3">
-					<table class="w-full border-collapse text-left text-xs sm:text-sm">
-						<thead>
-							<tr class="text-amber-200/90">
-								<th class="pb-2 pr-3 font-semibold">Field</th>
-								<th class="pb-2 pr-3 font-semibold">Before ({previousLabel})</th>
-								<th class="pb-2 font-semibold">After ({versionLabel})</th>
-							</tr>
-						</thead>
-						<tbody>
-							{diffRows.map((row) => (
-								<tr class="border-t border-amber-900/50 align-top">
-									<td class="py-2 pr-3 font-medium text-amber-100">{row.field}</td>
-									<td class="py-2 pr-3 text-amber-100/70 whitespace-pre-wrap">{row.before}</td>
-									<td class="py-2 text-white whitespace-pre-wrap">{row.after}</td>
-								</tr>
-							))}
-						</tbody>
-					</table>
+				<div id="update-changes-detail" class="update-changes-detail hidden min-w-0 border-t border-amber-800/60 px-4 py-3">
+					{diffRows.map((row) => (
+						<section class="min-w-0 border-t border-amber-900/50 py-3 first:border-0">
+							<h3 class="m-0 mb-2 text-sm font-semibold text-amber-100">{row.field}</h3>
+							<dl class="m-0 grid min-w-0 gap-3 sm:grid-cols-2">
+								<div class="min-w-0">
+									<dt class="text-xs text-amber-200/90">Before ({previousLabel})</dt>
+									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-amber-100/70">{row.before}</dd>
+								</div>
+								<div class="min-w-0">
+									<dt class="text-xs text-amber-200/90">After ({versionLabel})</dt>
+									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-white">{row.after}</dd>
+								</div>
+							</dl>
+						</section>
+					))}
 				</div>
 			)}
 		</div>
@@ -79,8 +74,14 @@ const previousLabel = meta.previousVersionLabel;
 	} else {
 		const detail = panel.querySelector('.update-changes-detail');
 		const toggle = panel.querySelector('.update-changes-toggle');
-		const expand = () => detail?.classList.remove('hidden');
-		const collapse = () => detail?.classList.add('hidden');
+		const expand = () => {
+			detail?.classList.remove('hidden');
+			toggle?.setAttribute('aria-expanded', 'true');
+		};
+		const collapse = () => {
+			detail?.classList.add('hidden');
+			toggle?.setAttribute('aria-expanded', 'false');
+		};
 
 		if (new URLSearchParams(window.location.search).has('show_changes')) {
 			expand();

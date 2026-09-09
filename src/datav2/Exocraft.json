@@ -3290,7 +3290,10 @@
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
 		"Slug": "exocraft/STA_ROOM_NPCVEH",
-		"IsCraftable": true
+		"IsCraftable": true,
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_NPCVEH"
+		]
 	},
 	{
 		"Id": "GARAGE_SUB",

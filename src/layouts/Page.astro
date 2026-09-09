@@ -36,6 +36,8 @@ interface Props {
 
 const { item, schemaResult, relatedLinks = [] } = Astro.props;
 const itemUpdateMeta = getItemUpdateMeta(item.Id);
+const originalBuilding = item.SpaceBaseVariantOf?.map(getById).find(Boolean);
+const originalReward = item.RewardVariantOf ? getById(item.RewardVariantOf) : undefined;
 const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '').replace(/^cooking\//, 'food/');
 const categorySlug = normalizedSlug.split('/')[0] || 'items';
 const categoryNameMap: Record<string, string> = {
@@ -408,6 +410,18 @@ const imageBaseUrl = SITE.imageBaseUrl;
     ]}
   />
   {itemUpdateMeta && <UpdateChangesPanel meta={itemUpdateMeta} />}
+  {originalBuilding && (
+    <p class="my-6 rounded-md border border-sky-700/60 bg-sky-950/40 px-4 py-3 text-sm text-sky-100">
+      Orbital-base version of{' '}
+      <a class="underline" href={getSlug(originalBuilding)}>{originalBuilding.Name}</a>.
+    </p>
+  )}
+  {originalReward && (
+    <p class="my-6 rounded-md border border-sky-700/60 bg-sky-950/40 px-4 py-3 text-sm text-sky-100">
+      Reward version of{' '}
+      <a class="underline" href={getSlug(originalReward)}>{originalReward.Name}</a>.
+    </p>
+  )}
   <ItemDetails
     item={item}
     answerSummary={answerSummary}

@@ -49095,7 +49095,11 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_B"
+		"Slug": "buildings/STA_CORR_B",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_B",
+			"STATION_CORE"
+		]
 	},
 	{
 		"Id": "STA_CORR_B_STR",
@@ -49175,7 +49179,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_B_STR"
+		"Slug": "buildings/STA_CORR_B_STR",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_B_STR"
+		]
 	},
 	{
 		"Id": "STA_CORR_B_L",
@@ -49255,7 +49262,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_B_L"
+		"Slug": "buildings/STA_CORR_B_L",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_B_L"
+		]
 	},
 	{
 		"Id": "STA_CORR_B_T",
@@ -49335,7 +49345,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_B_T"
+		"Slug": "buildings/STA_CORR_B_T",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_B_T"
+		]
 	},
 	{
 		"Id": "STA_ROOM_B",
@@ -49415,7 +49428,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_B"
+		"Slug": "buildings/STA_ROOM_B",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_B"
+		]
 	},
 	{
 		"Id": "STA_CORR_A",
@@ -49495,7 +49511,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_A"
+		"Slug": "buildings/STA_CORR_A",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_A"
+		]
 	},
 	{
 		"Id": "STA_CORR_A_STR",
@@ -49575,7 +49594,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_A_STR"
+		"Slug": "buildings/STA_CORR_A_STR",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_A_STR"
+		]
 	},
 	{
 		"Id": "STA_CORR_A_L",
@@ -49655,7 +49677,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_A_L"
+		"Slug": "buildings/STA_CORR_A_L",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_A_L"
+		]
 	},
 	{
 		"Id": "STA_CORR_A_T",
@@ -49735,7 +49760,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_A_T"
+		"Slug": "buildings/STA_CORR_A_T",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_A_T"
+		]
 	},
 	{
 		"Id": "STA_CORR_A_GLAS",
@@ -49815,7 +49843,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_A_GLAS"
+		"Slug": "buildings/STA_CORR_A_GLAS",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_A_GLAS"
+		]
 	},
 	{
 		"Id": "STA_CORR_GLA_ST",
@@ -49895,7 +49926,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_GLA_ST"
+		"Slug": "buildings/STA_CORR_GLA_ST",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_GLA_ST"
+		]
 	},
 	{
 		"Id": "STA_CORR_GLA_L",
@@ -49975,7 +50009,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_GLA_L"
+		"Slug": "buildings/STA_CORR_GLA_L",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_GLA_L"
+		]
 	},
 	{
 		"Id": "STA_CORR_GLA_T",
@@ -50055,7 +50092,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_GLA_T"
+		"Slug": "buildings/STA_CORR_GLA_T",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_GLA_T"
+		]
 	},
 	{
 		"Id": "STA_ROOM_LADDER",
@@ -50131,7 +50171,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_LADDER"
+		"Slug": "buildings/STA_ROOM_LADDER",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_LADDER"
+		]
 	},
 	{
 		"Id": "STA_EXT_PLATFOR",
@@ -50207,7 +50250,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_EXT_PLATFOR"
+		"Slug": "buildings/STA_EXT_PLATFOR",
+		"SpaceBaseVariantOf": [
+			"FRE_EXT_PLATFOR"
+		]
 	},
 	{
 		"Id": "STA_EXT_WALKWAY",
@@ -50283,7 +50329,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_EXT_WALKWAY"
+		"Slug": "buildings/STA_EXT_WALKWAY",
+		"SpaceBaseVariantOf": [
+			"FRE_EXT_WALKWAY"
+		]
 	},
 	{
 		"Id": "STA_FACE_DOOR_A",
@@ -50359,7 +50408,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_FACE_DOOR_A"
+		"Slug": "buildings/STA_FACE_DOOR_A",
+		"SpaceBaseVariantOf": [
+			"FRE_FACE_DOOR_A"
+		]
 	},
 	{
 		"Id": "STA_FACE_WINDOW",
@@ -50439,7 +50491,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_FACE_WINDOW"
+		"Slug": "buildings/STA_FACE_WINDOW",
+		"SpaceBaseVariantOf": [
+			"FRE_FACE_WINDOW"
+		]
 	},
 	{
 		"Id": "STA_FACE_WALL",
@@ -50515,7 +50570,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_FACE_WALL"
+		"Slug": "buildings/STA_FACE_WALL",
+		"SpaceBaseVariantOf": [
+			"FRE_FACE_WALL"
+		]
 	},
 	{
 		"Id": "STA_ROOM_SHOP",
@@ -50599,7 +50657,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_SHOP"
+		"Slug": "buildings/STA_ROOM_SHOP",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_SHOP"
+		]
 	},
 	{
 		"Id": "STA_ROOM_TELEPO",
@@ -50683,7 +50744,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_TELEPO"
+		"Slug": "buildings/STA_ROOM_TELEPO",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_TELEPO"
+		]
 	},
 	{
 		"Id": "STA_ROOM_DRESS",
@@ -50767,7 +50831,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_DRESS"
+		"Slug": "buildings/STA_ROOM_DRESS",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_DRESS"
+		]
 	},
 	{
 		"Id": "STA_ROOM_TECH",
@@ -50847,7 +50914,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_TECH"
+		"Slug": "buildings/STA_ROOM_TECH",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_TECH"
+		]
 	},
 	{
 		"Id": "STA_ROOM_PLANT1",
@@ -50931,7 +51001,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_PLANT1"
+		"Slug": "buildings/STA_ROOM_PLANT1",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_PLANT1"
+		]
 	},
 	{
 		"Id": "STA_ROOM_PLANT0",
@@ -51015,7 +51088,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_PLANT0"
+		"Slug": "buildings/STA_ROOM_PLANT0",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_PLANT0"
+		]
 	},
 	{
 		"Id": "STA_ROOM_COOK",
@@ -51099,7 +51175,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_COOK"
+		"Slug": "buildings/STA_ROOM_COOK",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_COOK"
+		]
 	},
 	{
 		"Id": "STA_ROOM_BIO",
@@ -51179,7 +51258,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_BIO"
+		"Slug": "buildings/STA_ROOM_BIO",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_BIO"
+		]
 	},
 	{
 		"Id": "STA_ROOM_REFINE",
@@ -51263,7 +51345,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_REFINE"
+		"Slug": "buildings/STA_ROOM_REFINE",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_REFINE"
+		]
 	},
 	{
 		"Id": "STA_ROOM_EXTR",
@@ -51347,7 +51432,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_EXTR"
+		"Slug": "buildings/STA_ROOM_EXTR",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_EXTR"
+		]
 	},
 	{
 		"Id": "STA_ROOM_NPCSCI",
@@ -51431,7 +51519,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_NPCSCI"
+		"Slug": "buildings/STA_ROOM_NPCSCI",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_NPCSCI"
+		]
 	},
 	{
 		"Id": "STA_ROOM_NPCWEA",
@@ -51515,7 +51606,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_NPCWEA"
+		"Slug": "buildings/STA_ROOM_NPCWEA",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_NPCWEA"
+		]
 	},
 	{
 		"Id": "STA_ROOM_NPCFAR",
@@ -51599,7 +51693,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_NPCFAR"
+		"Slug": "buildings/STA_ROOM_NPCFAR",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_NPCFAR"
+		]
 	},
 	{
 		"Id": "STA_ROOM_NPCBUI",
@@ -51683,7 +51780,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_NPCBUI"
+		"Slug": "buildings/STA_ROOM_NPCBUI",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_NPCBUI"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE0",
@@ -51763,7 +51863,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE0"
+		"Slug": "buildings/STA_ROOM_STORE0",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE0"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE1",
@@ -51843,7 +51946,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE1"
+		"Slug": "buildings/STA_ROOM_STORE1",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE1"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE2",
@@ -51923,7 +52029,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE2"
+		"Slug": "buildings/STA_ROOM_STORE2",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE2"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE3",
@@ -52003,7 +52112,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE3"
+		"Slug": "buildings/STA_ROOM_STORE3",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE3"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE4",
@@ -52083,7 +52195,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE4"
+		"Slug": "buildings/STA_ROOM_STORE4",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE4"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE5",
@@ -52163,7 +52278,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE5"
+		"Slug": "buildings/STA_ROOM_STORE5",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE5"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE6",
@@ -52243,7 +52361,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE6"
+		"Slug": "buildings/STA_ROOM_STORE6",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE6"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE7",
@@ -52323,7 +52444,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE7"
+		"Slug": "buildings/STA_ROOM_STORE7",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE7"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE8",
@@ -52403,7 +52527,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE8"
+		"Slug": "buildings/STA_ROOM_STORE8",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE8"
+		]
 	},
 	{
 		"Id": "STA_ROOM_STORE9",
@@ -52483,7 +52610,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_STORE9"
+		"Slug": "buildings/STA_ROOM_STORE9",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_STORE9"
+		]
 	},
 	{
 		"Id": "STA_ROOM_IND",
@@ -52563,7 +52693,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_IND"
+		"Slug": "buildings/STA_ROOM_IND",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_IND"
+		]
 	},
 	{
 		"Id": "STA_ROOM_IND1",
@@ -52643,7 +52776,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_ROOM_IND1"
+		"Slug": "buildings/STA_ROOM_IND1",
+		"SpaceBaseVariantOf": [
+			"FRE_ROOM_IND1"
+		]
 	},
 	{
 		"Id": "STA_CORR_G_STA",
@@ -52723,7 +52859,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_G_STA"
+		"Slug": "buildings/STA_CORR_G_STA",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_G_STA"
+		]
 	},
 	{
 		"Id": "STA_CORR_STA",
@@ -52803,7 +52942,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_STA"
+		"Slug": "buildings/STA_CORR_STA",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_STA"
+		]
 	},
 	{
 		"Id": "STA_EXT_W_STA",
@@ -52879,7 +53021,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_EXT_W_STA"
+		"Slug": "buildings/STA_EXT_W_STA",
+		"SpaceBaseVariantOf": [
+			"FRE_EXT_W_STA"
+		]
 	},
 	{
 		"Id": "STA_CORR_STA_B",
@@ -52959,7 +53104,10 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "buildings/STA_CORR_STA_B"
+		"Slug": "buildings/STA_CORR_STA_B",
+		"SpaceBaseVariantOf": [
+			"FRE_CORR_STA_B"
+		]
 	},
 	{
 		"Id": "FOUNDATION",

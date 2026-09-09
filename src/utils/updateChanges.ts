@@ -45,6 +45,9 @@ const SKIP_DIFF_DISPLAY = new Set([
 	'Slug',
 	'CdnUrl',
 	'HeroIconPath',
+	'Groups',
+	'SpaceBaseVariantOf',
+	'RewardVariantOf',
 ]);
 
 function formatFieldLabel(field: string): string {

@@ -51,6 +51,7 @@ type SearchIndexEntry = {
 	type: string;
 	url: string;
 	icon?: string;
+	subtitle?: string;
 	/** Extra text matched by search (not shown in the UI), e.g. blog meta description */
 	searchText?: string;
 };
@@ -75,10 +76,33 @@ const allData = Object.values(dataSources).flatMap((source) =>
 	Array.isArray(source) ? (source as Item[]) : []
 );
 const data = sort(allData);
+const namedItems = new Map(data
+	.filter((item) => item?.Name?.trim())
+	.map((item) => [item.Id, item]));
+const variantIds = new Set<string>();
+const variantSearchTokens = new Map<string, string[]>();
+for (const item of namedItems.values()) {
+	const originalId = item.RewardVariantOf && namedItems.has(item.RewardVariantOf)
+		? item.RewardVariantOf
+		: item.SpaceBaseVariantOf?.find((id) => namedItems.has(id));
+	if (!originalId) continue;
+	variantIds.add(item.Id);
+	variantSearchTokens.set(originalId, [
+		...(variantSearchTokens.get(originalId) ?? []),
+		item.Id, item.Name, item.Group,
+	]);
+}
+const nameCounts = new Map<string, number>();
+for (const item of namedItems.values()) {
+	if (!variantIds.has(item.Id)) {
+		const name = item.Name.toLowerCase();
+		nameCounts.set(name, (nameCounts.get(name) ?? 0) + 1);
+	}
+}
 
 // Build search index: only include items with a valid name so search and client filtering work
-const itemSearchEntries: SearchIndexEntry[] = data
-	.filter((item: Item) => item?.Name != null && String(item.Name).trim() !== '')
+const itemSearchEntries: SearchIndexEntry[] = [...namedItems.values()]
+	.filter((item) => !variantIds.has(item.Id))
 	.map((item: Item) => {
 		const url = getSlug(item);
 		const entry: SearchIndexEntry = {
@@ -87,6 +111,8 @@ const itemSearchEntries: SearchIndexEntry[] = data
 			type: getTypeFromUrl(url),
 			url,
 			icon: item.Icon,
+			subtitle: (nameCounts.get(item.Name.toLowerCase()) ?? 0) > 1 ? item.Group : undefined,
+			searchText: variantSearchTokens.get(item.Id)?.join('\n'),
 		};
 
 		const recipeTokens = recipeSearchTokensByOutputId.get(item.Id);

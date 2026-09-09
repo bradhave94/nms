@@ -32,6 +32,8 @@ export type Item = {
 	Icon: string;
 	IconPath?: string;
 	Slug?: string;
+	SpaceBaseVariantOf?: string[];
+	RewardVariantOf?: string;
 	Colour: string;
 	BaseValueUnits: number;
 	RequiredItems?: RequiredItem[];

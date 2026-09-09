@@ -27580,7 +27580,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW01B"
+		"Slug": "other/TWITCH_FIREW01B",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW01C",
@@ -27649,7 +27650,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW01C"
+		"Slug": "other/TWITCH_FIREW01C",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW01D",
@@ -27718,7 +27720,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW01D"
+		"Slug": "other/TWITCH_FIREW01D",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW01E",
@@ -27787,7 +27790,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW01E"
+		"Slug": "other/TWITCH_FIREW01E",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW02A",
@@ -27856,7 +27860,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW02A"
+		"Slug": "other/TWITCH_FIREW02A",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW02B",
@@ -27925,7 +27930,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW02B"
+		"Slug": "other/TWITCH_FIREW02B",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW02C",
@@ -27994,7 +28000,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW02C"
+		"Slug": "other/TWITCH_FIREW02C",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW02D",
@@ -28063,7 +28070,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW02D"
+		"Slug": "other/TWITCH_FIREW02D",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW02E",
@@ -28132,7 +28140,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW02E"
+		"Slug": "other/TWITCH_FIREW02E",
+		"RewardVariantOf": "TWITCH_FIREW01A"
 	},
 	{
 		"Id": "TWITCH_FIREW03A",
@@ -28270,7 +28279,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW03B"
+		"Slug": "other/TWITCH_FIREW03B",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW03C",
@@ -28339,7 +28349,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW03C"
+		"Slug": "other/TWITCH_FIREW03C",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW03D",
@@ -28408,7 +28419,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW03D"
+		"Slug": "other/TWITCH_FIREW03D",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW03E",
@@ -28477,7 +28489,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW03E"
+		"Slug": "other/TWITCH_FIREW03E",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW04A",
@@ -28546,7 +28559,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW04A"
+		"Slug": "other/TWITCH_FIREW04A",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW04B",
@@ -28615,7 +28629,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW04B"
+		"Slug": "other/TWITCH_FIREW04B",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW04C",
@@ -28684,7 +28699,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW04C"
+		"Slug": "other/TWITCH_FIREW04C",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW04D",
@@ -28753,7 +28769,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW04D"
+		"Slug": "other/TWITCH_FIREW04D",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW04E",
@@ -28822,7 +28839,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW04E"
+		"Slug": "other/TWITCH_FIREW04E",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW05A",
@@ -28960,7 +28978,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW05B"
+		"Slug": "other/TWITCH_FIREW05B",
+		"RewardVariantOf": "TWITCH_FIREW05A"
 	},
 	{
 		"Id": "TWITCH_FIREW05C",
@@ -29029,7 +29048,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW05C"
+		"Slug": "other/TWITCH_FIREW05C",
+		"RewardVariantOf": "TWITCH_FIREW05A"
 	},
 	{
 		"Id": "TWITCH_FIREW05D",
@@ -29098,7 +29118,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW05D"
+		"Slug": "other/TWITCH_FIREW05D",
+		"RewardVariantOf": "TWITCH_FIREW05A"
 	},
 	{
 		"Id": "TWITCH_FIREW05E",
@@ -29167,7 +29188,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW05E"
+		"Slug": "other/TWITCH_FIREW05E",
+		"RewardVariantOf": "TWITCH_FIREW05A"
 	},
 	{
 		"Id": "TWITCH_FIREW06A",
@@ -29305,7 +29327,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW06B"
+		"Slug": "other/TWITCH_FIREW06B",
+		"RewardVariantOf": "TWITCH_FIREW06A"
 	},
 	{
 		"Id": "TWITCH_FIREW06C",
@@ -29374,7 +29397,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW06C"
+		"Slug": "other/TWITCH_FIREW06C",
+		"RewardVariantOf": "TWITCH_FIREW06A"
 	},
 	{
 		"Id": "TWITCH_FIREW06D",
@@ -29443,7 +29467,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW06D"
+		"Slug": "other/TWITCH_FIREW06D",
+		"RewardVariantOf": "TWITCH_FIREW06A"
 	},
 	{
 		"Id": "TWITCH_FIREW06E",
@@ -29512,7 +29537,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW06E"
+		"Slug": "other/TWITCH_FIREW06E",
+		"RewardVariantOf": "TWITCH_FIREW06A"
 	},
 	{
 		"Id": "TWITCH_FIREW07A",
@@ -29650,7 +29676,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW07B"
+		"Slug": "other/TWITCH_FIREW07B",
+		"RewardVariantOf": "TWITCH_FIREW07A"
 	},
 	{
 		"Id": "TWITCH_FIREW07C",
@@ -29719,7 +29746,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW07C"
+		"Slug": "other/TWITCH_FIREW07C",
+		"RewardVariantOf": "TWITCH_FIREW07A"
 	},
 	{
 		"Id": "TWITCH_FIREW07D",
@@ -29788,7 +29816,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW07D"
+		"Slug": "other/TWITCH_FIREW07D",
+		"RewardVariantOf": "TWITCH_FIREW07A"
 	},
 	{
 		"Id": "TWITCH_FIREW07E",
@@ -29857,7 +29886,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW07E"
+		"Slug": "other/TWITCH_FIREW07E",
+		"RewardVariantOf": "TWITCH_FIREW07A"
 	},
 	{
 		"Id": "TWITCH_FIREW08A",
@@ -29995,7 +30025,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW08B"
+		"Slug": "other/TWITCH_FIREW08B",
+		"RewardVariantOf": "TWITCH_FIREW08A"
 	},
 	{
 		"Id": "TWITCH_FIREW08C",
@@ -30064,7 +30095,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW08C"
+		"Slug": "other/TWITCH_FIREW08C",
+		"RewardVariantOf": "TWITCH_FIREW08A"
 	},
 	{
 		"Id": "TWITCH_FIREW08D",
@@ -30133,7 +30165,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW08D"
+		"Slug": "other/TWITCH_FIREW08D",
+		"RewardVariantOf": "TWITCH_FIREW08A"
 	},
 	{
 		"Id": "TWITCH_FIREW08E",
@@ -30202,7 +30235,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW08E"
+		"Slug": "other/TWITCH_FIREW08E",
+		"RewardVariantOf": "TWITCH_FIREW08A"
 	},
 	{
 		"Id": "TWITCH_FIREW09A",
@@ -30340,7 +30374,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW09B"
+		"Slug": "other/TWITCH_FIREW09B",
+		"RewardVariantOf": "TWITCH_FIREW09A"
 	},
 	{
 		"Id": "TWITCH_FIREW09C",
@@ -30409,7 +30444,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW09C"
+		"Slug": "other/TWITCH_FIREW09C",
+		"RewardVariantOf": "TWITCH_FIREW09A"
 	},
 	{
 		"Id": "TWITCH_FIREW09D",
@@ -30478,7 +30514,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW09D"
+		"Slug": "other/TWITCH_FIREW09D",
+		"RewardVariantOf": "TWITCH_FIREW09A"
 	},
 	{
 		"Id": "TWITCH_FIREW09E",
@@ -30547,7 +30584,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW09E"
+		"Slug": "other/TWITCH_FIREW09E",
+		"RewardVariantOf": "TWITCH_FIREW09A"
 	},
 	{
 		"Id": "TWITCH_FIREW10A",
@@ -30685,7 +30723,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW10B"
+		"Slug": "other/TWITCH_FIREW10B",
+		"RewardVariantOf": "TWITCH_FIREW10A"
 	},
 	{
 		"Id": "TWITCH_FIREW10C",
@@ -30754,7 +30793,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW10C"
+		"Slug": "other/TWITCH_FIREW10C",
+		"RewardVariantOf": "TWITCH_FIREW10A"
 	},
 	{
 		"Id": "TWITCH_FIREW10D",
@@ -30823,7 +30863,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW10D"
+		"Slug": "other/TWITCH_FIREW10D",
+		"RewardVariantOf": "TWITCH_FIREW10A"
 	},
 	{
 		"Id": "TWITCH_FIREW10E",
@@ -30892,7 +30933,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW10E"
+		"Slug": "other/TWITCH_FIREW10E",
+		"RewardVariantOf": "TWITCH_FIREW10A"
 	},
 	{
 		"Id": "TWITCH_FIREW11A",
@@ -30961,7 +31003,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW11A"
+		"Slug": "other/TWITCH_FIREW11A",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW11B",
@@ -31030,7 +31073,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW11B"
+		"Slug": "other/TWITCH_FIREW11B",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW11C",
@@ -31099,7 +31143,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW11C"
+		"Slug": "other/TWITCH_FIREW11C",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW11D",
@@ -31168,7 +31213,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW11D"
+		"Slug": "other/TWITCH_FIREW11D",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW11E",
@@ -31237,7 +31283,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW11E"
+		"Slug": "other/TWITCH_FIREW11E",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW12A",
@@ -31306,7 +31353,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW12A"
+		"Slug": "other/TWITCH_FIREW12A",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW12B",
@@ -31375,7 +31423,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW12B"
+		"Slug": "other/TWITCH_FIREW12B",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW12C",
@@ -31444,7 +31493,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW12C"
+		"Slug": "other/TWITCH_FIREW12C",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW12D",
@@ -31513,7 +31563,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW12D"
+		"Slug": "other/TWITCH_FIREW12D",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW12E",
@@ -31582,7 +31633,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW12E"
+		"Slug": "other/TWITCH_FIREW12E",
+		"RewardVariantOf": "TWITCH_FIREW03A"
 	},
 	{
 		"Id": "TWITCH_FIREW13A",
@@ -31651,7 +31703,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW13A"
+		"Slug": "other/TWITCH_FIREW13A",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW13B",
@@ -31720,7 +31773,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW13B"
+		"Slug": "other/TWITCH_FIREW13B",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW13C",
@@ -31789,7 +31843,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW13C"
+		"Slug": "other/TWITCH_FIREW13C",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW13D",
@@ -31858,7 +31913,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW13D"
+		"Slug": "other/TWITCH_FIREW13D",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "TWITCH_FIREW13E",
@@ -31927,7 +31983,8 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "other/TWITCH_FIREW13E"
+		"Slug": "other/TWITCH_FIREW13E",
+		"RewardVariantOf": "EXPD_FIREPACK01"
 	},
 	{
 		"Id": "SPEC_EMOTE01",
