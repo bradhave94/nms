@@ -1,5 +1,5 @@
 ---
-title: "No Man's Sky Cosmos Update: Stations, Hulks, and Deep-Space Salvage"
+title: "No Man's Sky Cosmos Update: Stations & Salvage"
 description: "What Cosmos 7.0 adds: station director, alliances, derelict hulks, and the deep-space salvage loop."
 pubDate: 2026-09-09
 updatedDate: 2026-09-09
@@ -38,7 +38,7 @@ faqs:
 
 Fandom's Update 7.00 stub dates the PC release to 9 September 2026. The official notes do not print that date.
 
-## What Cosmos is
+## What the Cosmos update is
 
 A new class of space play, sitting next to the planetary stuff you already have. The [Gravitino Coil](/technology/GRAVITYGUN/) still does the waste job from Remnant. Cosmos also uses it in open space. The [Corvette](/blog/no-mans-sky-corvette-guide/) gets a Tractor Beam so you can haul what the Coil pulls in.
 
