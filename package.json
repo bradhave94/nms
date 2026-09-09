@@ -17,6 +17,10 @@
 		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix",
 		"test:legacy-redirects": "node scripts/check-legacy-redirects.mjs",
 		"test:new-items": "node scripts/check-new-items.mjs",
+		"test:route-eligible": "node --experimental-strip-types scripts/check-route-eligible.mjs",
+		"test:data-import": "node scripts/check-import-safety.mjs",
+		"data:check": "node scripts/import-extractor-data.mjs --check",
+		"data:sync": "node scripts/import-extractor-data.mjs --sync",
 		"type-check": "tsc --noEmit",
 		"check": "pnpm run type-check",
 		"check:all": "pnpm run type-check && pnpm run lint"

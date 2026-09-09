@@ -59,6 +59,11 @@ for (const id of ['S23_BEACON', 'S23_ODD_EGG', 'S23_PRISMS_EGG']) {
 assert.equal((html.match(/Expedition 23 variant/g) ?? []).length, 3);
 
 const search = JSON.parse(await readFile('dist/search.json', 'utf8')).body;
+const diplo = search.find((item) => item.id === 'DIPLO_PET');
+assert(diplo, 'Nested species must be included in search');
+assert.equal(diplo.url, '/creatures/DIPLO_PET');
+assert((await readFile('dist/creatures/DIPLO_PET/index.html', 'utf8')).includes(diplo.icon),
+	'Creature detail pages must use the species icon fallback');
 const roomResults = search.filter((item) => item.name === 'Appearance Modifier Room');
 assert.equal(roomResults.length, 1, 'Search must collapse explicit aliases of the same building');
 assert.equal(roomResults[0].id, 'FRE_ROOM_DRESS');

@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { getSlug, sort } from '@utils/lookup.js';
+import { getRouteEligibleCatalog } from '@utils/routeCatalog.js';
 import type { Item } from '@utils/lookup.js';
 import * as dataSources from '@datav2/index.js';
 import { getNewUpdatePayload } from '@utils/newUpdate';
@@ -65,73 +65,57 @@ function entryMatchesQuery(entry: SearchIndexEntry, query: string): boolean {
 	return haystack.includes(query) || entry.type.toLowerCase().includes(query);
 }
 
-const getTypeFromUrl = (url?: string): string => {
-  if (!url) return 'item';
-  const cleanUrl = url.replace(/^\/+/, '');
-  const [prefix] = cleanUrl.split('/');
-  return prefix || 'item';
+const getTypeFromUrl = (url: string): string => {
+	const cleanUrl = url.replace(/^\/+/, '');
+	const [prefix] = cleanUrl.split('/');
+	return prefix || 'item';
 };
 
-// Combine and sort all data — only real item arrays (skip Creatures object, NewUpdate diff, etc.)
-const allData = Object.values(dataSources).flatMap((source) =>
-	Array.isArray(source) ? (source as Item[]) : []
-);
-const data = sort(allData);
-const namedItems = new Map(data
-	.filter((item) => item?.Name?.trim())
-	.map((item) => [item.Id, item]));
-const variantIds = new Set<string>();
-const variantSearchTokens = new Map<string, string[]>();
-for (const item of namedItems.values()) {
-	const originalId = item.RewardVariantOf && namedItems.has(item.RewardVariantOf)
-		? item.RewardVariantOf
-		: item.SpaceBaseVariantOf?.find((id) => namedItems.has(id));
-	if (!originalId) continue;
-	variantIds.add(item.Id);
-	variantSearchTokens.set(originalId, [
-		...(variantSearchTokens.get(originalId) ?? []),
-		item.Id, item.Name, item.Group,
-	]);
-}
+const catalogEntries = getRouteEligibleCatalog();
+const namedEntries = catalogEntries.map((entry) => ({
+	...entry,
+	item: entry.item as unknown as Item,
+}));
 const nameCounts = new Map<string, number>();
 const releaseVariants = new Map(getNewUpdatePayload().Items
 	.filter((item) => item.ReleaseVariant)
 	.map((item) => [item.Id, item.ReleaseVariant!]));
-for (const item of namedItems.values()) {
-	if (!variantIds.has(item.Id)) {
-		const name = item.Name.toLowerCase();
-		nameCounts.set(name, (nameCounts.get(name) ?? 0) + 1);
-	}
+for (const { item } of namedEntries) {
+	const name = item.Name.toLowerCase();
+	nameCounts.set(name, (nameCounts.get(name) ?? 0) + 1);
 }
 
-// Build search index: only include items with a valid name so search and client filtering work
-const itemSearchEntries: SearchIndexEntry[] = [...namedItems.values()]
-	.filter((item) => !variantIds.has(item.Id))
-	.map((item: Item) => {
-		const url = getSlug(item);
-		const entry: SearchIndexEntry = {
-			id: item.Id,
-			name: item.Name,
-			type: getTypeFromUrl(url),
-			url,
-			icon: item.Icon,
-			subtitle: releaseVariants.has(item.Id)
-				? `Expedition ${releaseVariants.get(item.Id)!.Expedition} variant`
-				: (nameCounts.get(item.Name.toLowerCase()) ?? 0) > 1 ? item.Group : undefined,
-			searchText: variantSearchTokens.get(item.Id)?.join('\n'),
-		};
+// Route eligibility removes recipe/creature metadata without pages or icons;
+// aliases are retained only as hidden search tokens on their canonical item.
+const itemSearchEntries: SearchIndexEntry[] = namedEntries.map(({ item, url, aliases }) => {
+	const aliasSearchTokens = aliases.flatMap((alias) =>
+		[alias.Id, alias.Name, alias.Group]
+			.map((value) => (typeof value === 'string' ? value.trim() : ''))
+			.filter(Boolean)
+	);
+	const entry: SearchIndexEntry = {
+		id: item.Id,
+		name: item.Name,
+		type: getTypeFromUrl(url),
+		url,
+		icon: item.Icon,
+		subtitle: releaseVariants.has(item.Id)
+			? `Expedition ${releaseVariants.get(item.Id)!.Expedition} variant`
+			: (nameCounts.get(item.Name.toLowerCase()) ?? 0) > 1 ? item.Group : undefined,
+		searchText: aliasSearchTokens.length > 0 ? aliasSearchTokens.join('\n') : undefined,
+	};
 
-		const recipeTokens = recipeSearchTokensByOutputId.get(item.Id);
-		if (recipeTokens && recipeTokens.size > 0) {
-			const parts = [
-				...(entry.searchText ? [entry.searchText] : []),
-				...recipeTokens,
-			];
-			entry.searchText = parts.join('\n');
-		}
+	const recipeTokens = recipeSearchTokensByOutputId.get(item.Id);
+	if (recipeTokens && recipeTokens.size > 0) {
+		const parts = [
+			...(entry.searchText ? [entry.searchText] : []),
+			...recipeTokens,
+		];
+		entry.searchText = parts.join('\n');
+	}
 
-		return entry;
-	});
+	return entry;
+});
 
 const blogPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 const blogSearchEntries: SearchIndexEntry[] = blogPosts

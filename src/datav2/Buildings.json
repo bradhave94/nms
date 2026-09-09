@@ -5,7 +5,7 @@
 		"IconPath": "textures/ui/frontend/icons/u4products/product.starchart.settlement.dds",
 		"Name": "Settlement Chart",
 		"Group": "Specialist Planetary Chart",
-		"Description": "A map showing the location of a nearby planetary settlement, acquired from the Space Station Cartographer.\n\nSelect the map and use Plot Route (FE_ALT1) to pin the location in your Exosuit display.",
+		"Description": "A map showing the location of a nearby planetary settlement, acquired from the Space Station Cartographer.\n\nSelect the map and use Plot Route ([E]) to pin the location in your Exosuit display.",
 		"AltDescription": null,
 		"Hint": null,
 		"BaseValueUnits": 3200,

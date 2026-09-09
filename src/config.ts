@@ -6,6 +6,8 @@ export const SITE = {
     alternateName: "NMS Recipes",
     founded_date: "2018-08-15",
     version: 7.0,
+    // Game release identity, not the MBIN compiler's patch version.
+    version_key: "7.00",
     version_name: "Cosmos",
     version_date: "2026-09-09",
     version_link: "https://www.nomanssky.com/cosmos-update/",

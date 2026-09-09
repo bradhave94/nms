@@ -1,13 +1,11 @@
 import type { APIRoute } from 'astro';
-import { getSlug, sort } from '@utils/lookup.js';
+import { sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
-import * as dataSources from '@datav2/index.js';
+import { getRouteEligibleCatalog } from '@utils/routeCatalog.js';
 
-// Combine and sort all data — only real item arrays (skip Creatures object, NewUpdate diff, etc.)
-const allData = Object.values(dataSources).flatMap((source) =>
-	Array.isArray(source) ? (source as Item[]) : []
-);
-const data = sort(allData);
+const routeEntries = getRouteEligibleCatalog();
+const routeEntryById = new Map(routeEntries.map((entry) => [String(entry.item.Id), entry]));
+const data = sort(routeEntries.map(({ item }) => item as unknown as Item));
 
 // Map slug prefix to type for filtering
 const getTypeFromSlug = (slug: string): string => {
@@ -27,6 +25,7 @@ const getTypeFromSlug = (slug: string): string => {
 		exocraft: 'exocraft',
 		starships: 'starships',
 		corvette: 'corvette',
+		creatures: 'creatures',
 	};
 	return typeMap[prefix] || prefix;
 };
@@ -52,7 +51,7 @@ export const GET: APIRoute = ({ request }) => {
 	if (type) {
 		const typeNorm = type.toLowerCase().trim();
 		results = results.filter((item) => {
-			const slug = getSlug(item);
+			const slug = routeEntryById.get(String(item.Id))?.url ?? '';
 			const itemType = getTypeFromSlug(slug);
 			return itemType === typeNorm;
 		});
@@ -70,7 +69,7 @@ export const GET: APIRoute = ({ request }) => {
 		id: item.Id,
 		name: item.Name,
 		icon: item.Icon,
-		url: getSlug(item),
+		url: routeEntryById.get(String(item.Id))!.url,
 		group: item.Group,
 	}));
 
@@ -80,7 +79,7 @@ export const GET: APIRoute = ({ request }) => {
 		...new Set(
 			data
 				.filter((i) => i?.Name)
-				.map((i) => getTypeFromSlug(getSlug(i)))
+				.map((i) => getTypeFromSlug(routeEntryById.get(String(i.Id))?.url ?? ''))
 				.filter(Boolean)
 		),
 	].sort();

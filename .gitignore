@@ -21,3 +21,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+.data-import-stage-*/
+.data-import-backups/
+.data-import.lock

@@ -281,7 +281,7 @@ const shortDescription = hasDuplicateSpeciesLabel
 	? `${speciesLabel} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena. Species ID ${species.Id}.`
 	: `${speciesLabel} creature battle profile, affinities, and move sets in No Man's Sky Xeno Arena.`;
 const description = shortDescription.slice(0, 180);
-const speciesIcon = species.BattleAffinityIcon ?? NORMAL_AFFINITY_ICON;
+const speciesIcon = species.BattleAffinityIcon ?? species.Icon ?? NORMAL_AFFINITY_ICON;
 const ogImage = `${imageBase}${speciesIcon}`;
 
 const breadcrumbs: BreadcrumbItem[] = [

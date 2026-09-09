@@ -1,5 +1,6 @@
 import newUpdate from '../datav2/new.json';
 import type { Item } from './lookup';
+import { SITE } from '@config';
 
 export type NewUpdateItem = Item & {
 	SourceFile?: string;
@@ -27,6 +28,28 @@ export type NewUpdatePayload = {
 };
 
 const payload = newUpdate as NewUpdatePayload;
+
+const comparableReleaseLabel = (versionKey: string | null | undefined): string => {
+	const match = versionKey?.match(/^(\d+)\.(\d+)/);
+	return match ? `${Number(match[1])}.${Number(match[2])}` : '';
+};
+
+/** Compare major/minor release numbers while tolerating compiler padding. */
+export function releaseKeysMatch(
+	siteVersionKey: string | null | undefined,
+	updateVersionKey: string | null | undefined,
+): boolean {
+	const siteLabel = comparableReleaseLabel(siteVersionKey);
+	const updateLabel = comparableReleaseLabel(updateVersionKey);
+	return Boolean(siteLabel && updateLabel && siteLabel === updateLabel);
+}
+
+if (!releaseKeysMatch(SITE.version_key, payload.VersionKey) ||
+	!releaseKeysMatch(SITE.version.toFixed(2), payload.VersionKey)) {
+	throw new Error(
+		`Site release metadata (${SITE.version_key}) does not match new.json (${payload.VersionKey}).`,
+	);
+}
 
 export function getNewUpdatePayload(): NewUpdatePayload {
 	return payload;

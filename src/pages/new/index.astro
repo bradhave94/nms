@@ -11,11 +11,13 @@ import {
 	type NewUpdateItem,
 } from '@utils/newUpdate';
 import type { Item } from '@utils/lookup.js';
+import { getRouteEligibleNewItems } from '@utils/routeCatalog.js';
 import { SITE } from '@config';
 
 const update = getNewUpdatePayload();
-const hasDisplayName = (item: Item) => Boolean(item?.Name?.trim());
-const addedItems = sort(update.Items.filter(hasDisplayName) as Item[]);
+const addedItems = sort(
+	getRouteEligibleNewItems(update.Items).map(({ item }) => item as unknown as Item),
+) as NewUpdateItem[];
 const versionLabel = formatVersionLabel(update.VersionKey);
 const previousLabel = formatVersionLabel(update.PreviousVersionKey);
 const generatedDate = new Date(update.GeneratedAt).toLocaleDateString('en-US', {

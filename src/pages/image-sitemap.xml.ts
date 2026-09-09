@@ -1,8 +1,6 @@
 import type { APIRoute } from 'astro';
 import { SITE } from '@config';
-import { getSlug, sort } from '@utils/lookup.js';
-import type { Item } from '@utils/lookup.js';
-import * as dataSources from '@datav2/index.js';
+import { getRouteEligibleCatalog } from '@utils/routeCatalog.js';
 
 const escapeXml = (value: string): string =>
 	value
@@ -16,24 +14,18 @@ export const prerender = true;
 
 export const GET: APIRoute = ({ site, url }) => {
 	const siteOrigin = (site ? new URL('/', site) : new URL('/', url)).toString().replace(/\/$/, '');
-	const allItems = sort(Object.values(dataSources).flatMap((source) => source as Item[])).filter(
-		(item) => Boolean(item?.Id && item?.Name && item?.Icon)
-	);
+	const imagesByPage = new Map<string, Array<{ imageLoc: string; title: string }>>();
+	for (const { item, url: itemRoute } of getRouteEligibleCatalog()) {
+		const loc = `${siteOrigin}${itemRoute.split('#', 1)[0]}`;
+		const images = imagesByPage.get(loc) ?? [];
+		const imageLoc = `${SITE.imageBaseUrl}${String(item.Icon)}`;
+		if (!images.some((image) => image.imageLoc === imageLoc)) {
+			images.push({ imageLoc, title: String(item.Name) });
+		}
+		imagesByPage.set(loc, images);
+	}
 
-	const seenUrls = new Set<string>();
-	const urlEntries = allItems
-		.map((item) => {
-			const itemUrl = `${siteOrigin}${getSlug(item)}`;
-			if (seenUrls.has(itemUrl)) return null;
-			seenUrls.add(itemUrl);
-			const imageUrl = `${SITE.imageBaseUrl}${item.Icon}`;
-			return {
-				loc: itemUrl,
-				imageLoc: imageUrl,
-				title: item.Name,
-			};
-		})
-		.filter((entry): entry is { loc: string; imageLoc: string; title: string } => Boolean(entry));
+	const urlEntries = [...imagesByPage.entries()].map(([loc, images]) => ({ loc, images }));
 
 	const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -41,11 +33,15 @@ ${urlEntries
 	.map(
 		(entry) => `  <url>
     <loc>${escapeXml(entry.loc)}</loc>
-    <image:image>
-      <image:loc>${escapeXml(entry.imageLoc)}</image:loc>
-      <image:title>${escapeXml(entry.title)}</image:title>
-      <image:caption>${escapeXml(entry.title)}</image:caption>
-    </image:image>
+${entry.images
+	.map(
+		(image) => `    <image:image>
+      <image:loc>${escapeXml(image.imageLoc)}</image:loc>
+      <image:title>${escapeXml(image.title)}</image:title>
+      <image:caption>${escapeXml(image.title)}</image:caption>
+    </image:image>`
+	)
+	.join('\n')}
   </url>`
 	)
 	.join('\n')}
