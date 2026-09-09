@@ -1,6 +1,7 @@
 import newUpdate from '../datav2/new.json';
 import { formatVersionLabel } from './newUpdate';
 import { SITE } from '@config';
+import type { NewUpdateItem } from './newUpdate';
 
 export type ItemUpdateMeta = {
 	kind: 'added' | 'changed';
@@ -9,6 +10,7 @@ export type ItemUpdateMeta = {
 	changedFields: string[];
 	previous?: Record<string, unknown>;
 	current?: Record<string, unknown>;
+	releaseVariant?: NewUpdateItem['ReleaseVariant'];
 };
 
 type NewUpdatePayload = {
@@ -102,6 +104,7 @@ export function getItemUpdateMeta(id: string): ItemUpdateMeta | null {
 			versionLabel: formatVersionLabel(payload.VersionKey),
 			previousVersionLabel: formatVersionLabel(payload.PreviousVersionKey),
 			changedFields: [],
+			releaseVariant: addedById.get(id)?.ReleaseVariant as NewUpdateItem['ReleaseVariant'],
 		};
 	}
 	return null;

@@ -1,7 +1,7 @@
 {
 	"VersionKey": "7.00.0.1",
 	"PreviousVersionKey": "6.40.0.1",
-	"GeneratedAt": "2026-09-09T16:24:32-04:00",
+	"GeneratedAt": "2026-09-09T16:30:42-04:00",
 	"Summary": {
 		"Added": 172,
 		"Changed": 1651,
@@ -1739,7 +1739,13 @@
 			"CanSendToOtherPlayers": true,
 			"Slug": "buildings/S23_BEACON",
 			"SourceFile": "Buildings.json",
-			"Change": "added"
+			"Change": "added",
+			"ReleaseVariant": {
+				"Kind": "expedition",
+				"Expedition": 23,
+				"BaseItemId": "MYSTERY_BEACON",
+				"BaseItemName": "Myth Beacon"
+			}
 		},
 		{
 			"Id": "SB_BEACON",
@@ -13595,7 +13601,13 @@
 			"CanSendToOtherPlayers": true,
 			"Slug": "other/S23_ODD_EGG",
 			"SourceFile": "Others.json",
-			"Change": "added"
+			"Change": "added",
+			"ReleaseVariant": {
+				"Kind": "expedition",
+				"Expedition": 23,
+				"BaseItemId": "ODD_EGG",
+				"BaseItemName": "Void Egg"
+			}
 		},
 		{
 			"Id": "S23_PRISMS_EGG",
@@ -13666,7 +13678,13 @@
 			"CanSendToOtherPlayers": true,
 			"Slug": "other/S23_PRISMS_EGG",
 			"SourceFile": "Others.json",
-			"Change": "added"
+			"Change": "added",
+			"ReleaseVariant": {
+				"Kind": "expedition",
+				"Expedition": 23,
+				"BaseItemId": "EGG1",
+				"BaseItemName": "Companion Egg"
+			}
 		},
 		{
 			"Id": "TWITCH_GUN31",

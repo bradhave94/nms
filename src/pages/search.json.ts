@@ -3,6 +3,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import { getSlug, sort } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 import * as dataSources from '@datav2/index.js';
+import { getNewUpdatePayload } from '@utils/newUpdate';
 
 type RecipeForSearch = {
 	Inputs?: { Name?: string | null }[];
@@ -93,6 +94,9 @@ for (const item of namedItems.values()) {
 	]);
 }
 const nameCounts = new Map<string, number>();
+const releaseVariants = new Map(getNewUpdatePayload().Items
+	.filter((item) => item.ReleaseVariant)
+	.map((item) => [item.Id, item.ReleaseVariant!]));
 for (const item of namedItems.values()) {
 	if (!variantIds.has(item.Id)) {
 		const name = item.Name.toLowerCase();
@@ -111,7 +115,9 @@ const itemSearchEntries: SearchIndexEntry[] = [...namedItems.values()]
 			type: getTypeFromUrl(url),
 			url,
 			icon: item.Icon,
-			subtitle: (nameCounts.get(item.Name.toLowerCase()) ?? 0) > 1 ? item.Group : undefined,
+			subtitle: releaseVariants.has(item.Id)
+				? `Expedition ${releaseVariants.get(item.Id)!.Expedition} variant`
+				: (nameCounts.get(item.Name.toLowerCase()) ?? 0) > 1 ? item.Group : undefined,
 			searchText: variantSearchTokens.get(item.Id)?.join('\n'),
 		};
 

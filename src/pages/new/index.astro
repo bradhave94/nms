@@ -49,6 +49,7 @@ const toCard = (item: NewUpdateItem, index: number) => {
 	const path = getSlug(item);
 	return {
 		name,
+		subtitle: item.ReleaseVariant ? `Expedition ${item.ReleaseVariant.Expedition} variant` : undefined,
 		image: `${SITE.imageBaseUrl}${item.Icon}`,
 		link: path,
 		index,

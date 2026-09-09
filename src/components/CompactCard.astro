@@ -22,6 +22,7 @@ const { card, index, loading } = Astro.props;
 		</div>
 		<div class="border-t border-sky-900 px-2 py-1.5">
 			<p class="truncate text-base font-semibold text-white/95" title={card.name}>{card.name}</p>
+			{card.subtitle && <p class="m-0 mt-1 text-xs text-amber-200">{card.subtitle}</p>}
 		</div>
 	</a>
 	<div

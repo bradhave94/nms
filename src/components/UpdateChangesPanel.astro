@@ -1,6 +1,7 @@
 ---
 import type { ItemUpdateMeta } from '@utils/updateChanges';
 import { getUpdateDiffRows } from '@utils/updateChanges';
+import { getById, getSlug } from '@utils/lookup';
 
 interface Props {
 	meta: ItemUpdateMeta;
@@ -11,12 +12,19 @@ const diffRows = getUpdateDiffRows(meta);
 const hasDiff = diffRows.length > 0;
 const versionLabel = meta.versionLabel;
 const previousLabel = meta.previousVersionLabel;
+const originalVariantItem = meta.releaseVariant ? getById(meta.releaseVariant.BaseItemId) : undefined;
 ---
 
 {
 	meta.kind === 'added' ? (
 		<div class="mb-6 mt-6 rounded-md border border-emerald-700/60 bg-emerald-950/40 px-4 py-3 text-sm text-emerald-100">
 			<p class="m-0 font-semibold">Added in update {versionLabel}</p>
+			{meta.releaseVariant && (
+				<p class="m-0 mt-1 text-emerald-200/80">
+					Expedition {meta.releaseVariant.Expedition} variant
+					{originalVariantItem && <> of <a class="underline" href={getSlug(originalVariantItem)}>{originalVariantItem.Name}</a></>}.
+				</p>
+			)}
 		</div>
 	) : (
 		<div

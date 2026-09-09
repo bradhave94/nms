@@ -49,6 +49,14 @@ assert(originalHtml.includes('Updated in update'));
 assert(originalHtml.includes('Can be built on a space base'));
 const figurineHtml = await readFile('dist/other/BOBBLE_ASTRO/index.html', 'utf8');
 assert(figurineHtml.includes('Added in update 7.00'));
+for (const id of ['S23_BEACON', 'S23_ODD_EGG', 'S23_PRISMS_EGG']) {
+	const variant = namedAdditions.find((item) => item.Id === id);
+	assert(variant, 'Expedition variants must remain in the new-items list');
+	assert.equal(variant.ReleaseVariant.Expedition, 23);
+	const detail = await readFile(`dist/${variant.Slug}/index.html`, 'utf8');
+	assert(detail.includes('Expedition 23 variant'));
+}
+assert.equal((html.match(/Expedition 23 variant/g) ?? []).length, 3);
 
 const search = JSON.parse(await readFile('dist/search.json', 'utf8')).body;
 const roomResults = search.filter((item) => item.name === 'Appearance Modifier Room');
@@ -57,6 +65,8 @@ assert.equal(roomResults[0].id, 'FRE_ROOM_DRESS');
 assert(roomResults[0].searchText.includes('STA_ROOM_DRESS'), 'The alias should still find the original building');
 assert(!search.some((item) => item.id === 'STA_ROOM_DRESS'));
 assert(!search.some((item) => item.id === 'STA_ROOM_NPCVEH'), 'Overrides in other categories must also be collapsed');
+assert.equal(search.find((item) => item.id === 'S23_BEACON').subtitle, 'Expedition 23 variant');
+assert(search.some((item) => item.id === 'MYSTERY_BEACON'));
 assert.equal(search.filter((item) => item.name === 'Atlas Firework Pack').length, 1);
 assert(!namedAdditions.some((item) => item.Id.startsWith('TWITCH_FIREW13')));
 assert(search.some((item) => item.id === 'U_FR_HYP1'));

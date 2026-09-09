@@ -4,6 +4,12 @@ import type { Item } from './lookup';
 export type NewUpdateItem = Item & {
 	SourceFile?: string;
 	Change?: string;
+	ReleaseVariant?: {
+		Kind: 'expedition';
+		Expedition: number;
+		BaseItemId: string;
+		BaseItemName: string;
+	};
 };
 
 export type NewUpdatePayload = {
