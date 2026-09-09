@@ -10,14 +10,12 @@ import {
 	getNewUpdatePayload,
 	type NewUpdateItem,
 } from '@utils/newUpdate';
-import { itemUrlWithShowChanges } from '@utils/updateChanges';
 import type { Item } from '@utils/lookup.js';
 import { SITE } from '@config';
 
 const update = getNewUpdatePayload();
 const hasDisplayName = (item: Item) => Boolean(item?.Name?.trim());
 const addedItems = sort(update.Items.filter(hasDisplayName) as Item[]);
-const changedItems = sort((update.ChangedItems ?? []).filter(hasDisplayName) as Item[]);
 const versionLabel = formatVersionLabel(update.VersionKey);
 const previousLabel = formatVersionLabel(update.PreviousVersionKey);
 const generatedDate = new Date(update.GeneratedAt).toLocaleDateString('en-US', {
@@ -28,8 +26,7 @@ const generatedDate = new Date(update.GeneratedAt).toLocaleDateString('en-US', {
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/new', siteOrigin).toString();
-const allListed = [...addedItems, ...changedItems];
-const itemListElements = allListed.map((item, index) => ({
+const itemListElements = addedItems.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,
 	position: index + 1,
@@ -38,23 +35,22 @@ const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,
 	collectionName: `New in ${versionLabel}`,
-	collectionDescription: `Items added or updated in No Man's Sky ${versionLabel} compared to ${previousLabel}.`,
+	collectionDescription: `Items introduced in No Man's Sky ${versionLabel} compared to ${previousLabel}.`,
 	collectionPath: '/new',
 	currentPage: 1,
 	items: itemListElements,
 });
 const breadcrumbs = buildCategoryBreadcrumbs(`New in ${versionLabel}`, '/new', 1);
 const title = `New Items — No Man's Sky ${versionLabel}`;
-const description = `${update.Summary.Added} new items and ${update.Summary.Changed} updates in NMS ${versionLabel} (since ${previousLabel}). Browse Cosmos station parts, deep-space salvage, expedition rewards, and more.`;
+const description = `${addedItems.length} new items introduced in NMS ${versionLabel} (since ${previousLabel}). Browse the latest additions to No Man's Sky.`;
 
-const toCard = (item: NewUpdateItem, index: number, kind: 'added' | 'changed') => {
+const toCard = (item: NewUpdateItem, index: number) => {
 	const name = item.Name?.trim() || item.Id;
 	const path = getSlug(item);
-	const link = kind === 'changed' ? itemUrlWithShowChanges(path) : path;
 	return {
 		name,
 		image: `${SITE.imageBaseUrl}${item.Icon}`,
-		link,
+		link: path,
 		index,
 	};
 };
@@ -68,8 +64,7 @@ const toCard = (item: NewUpdateItem, index: number, kind: 'added' | 'changed') =
 		<strong>{previousLabel}</strong>. Data refreshed {generatedDate}.
 	</p>
 	<p class="mx-auto mb-12 max-w-3xl text-center text-sky-300/80 text-sm">
-		{update.Summary.Added} new · {update.Summary.Changed} updated
-		{update.Summary.Removed > 0 ? ` · ${update.Summary.Removed} removed from game data` : ''}
+		{addedItems.length} new items. Changes to existing items appear on their individual pages.
 	</p>
 
 	{
@@ -81,41 +76,9 @@ const toCard = (item: NewUpdateItem, index: number, kind: 'added' | 'changed') =
 					class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8"
 				>
 					{addedItems.map((item, index) => (
-						<CompactCard card={toCard(item, index, 'added')} index={index} />
+						<CompactCard card={toCard(item, index)} index={index} />
 					))}
 				</div>
-			</section>
-		)
-	}
-
-	{
-		changedItems.length > 0 && (
-			<section class="mb-14">
-				<h2 class="mb-6 text-center text-2xl font-semibold text-white">Updated items</h2>
-				<div
-					id="items-changed"
-					class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8"
-				>
-					{changedItems.map((item, index) => (
-						<CompactCard card={toCard(item, index, 'changed')} index={index} />
-					))}
-				</div>
-			</section>
-		)
-	}
-
-	{
-		update.RemovedIds?.length > 0 && (
-			<section class="mx-auto mb-12 max-w-3xl rounded-md border border-sky-900/80 bg-sky-950/40 px-4 py-3 text-sm text-sky-200/80">
-				<h2 class="mb-2 font-semibold text-sky-100">Removed from data</h2>
-				<p class="mb-2">These IDs no longer appear in the current extract:</p>
-				<ul class="list-inside list-disc">
-					{update.RemovedIds.map((entry) => (
-						<li>
-							<code>{entry.Id}</code>
-						</li>
-					))}
-				</ul>
 			</section>
 		)
 	}

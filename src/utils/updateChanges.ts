@@ -34,6 +34,7 @@ const FIELD_LABELS: Record<string, string> = {
 	ProductCategory: 'Product category',
 	MaxStackSize: 'Stack size',
 	Consumable: 'Consumable',
+	BuildableOnSpaceBase: 'Can be built on a space base',
 };
 
 const SKIP_DIFF_DISPLAY = new Set([
