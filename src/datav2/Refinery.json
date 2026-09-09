@@ -8292,5 +8292,59 @@
 		"Time": "90.0",
 		"Operation": "Devitrification",
 		"Slug": "refinery/REFINERECIPE_399"
+	},
+	{
+		"Id": "REFINERECIPE_400",
+		"Inputs": [
+			{
+				"Id": "ASTBELT1",
+				"Name": "Comet Dust",
+				"Quantity": 5
+			}
+		],
+		"Output": {
+			"Id": "ASTEROID1",
+			"Name": "Silver",
+			"Quantity": 1
+		},
+		"Time": "90.0",
+		"Operation": "Crystal Processing",
+		"Slug": "refinery/REFINERECIPE_400"
+	},
+	{
+		"Id": "REFINERECIPE_401",
+		"Inputs": [
+			{
+				"Id": "HULK1",
+				"Name": "Contaminated Metal",
+				"Quantity": 5
+			}
+		],
+		"Output": {
+			"Id": "LAND3",
+			"Name": "Magnetised Ferrite",
+			"Quantity": 1
+		},
+		"Time": "90.0",
+		"Operation": "Metal Decontamination",
+		"Slug": "refinery/REFINERECIPE_401"
+	},
+	{
+		"Id": "REFINERECIPE_402",
+		"Inputs": [
+			{
+				"Id": "SLIMEPOST1",
+				"Name": "Gelatinous Fibres",
+				"Quantity": 5
+			}
+		],
+		"Output": {
+			"Id": "PLANT_POOP",
+			"Name": "Faecium",
+			"Quantity": 1
+		},
+		"Time": "90.0",
+		"Operation": "Toxin Extraction",
+		"Slug": "refinery/REFINERECIPE_402"
 	}
 ]

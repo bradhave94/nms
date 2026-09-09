@@ -45,7 +45,7 @@ const structuredData = buildCollectionStructuredData({
 });
 const breadcrumbs = buildCategoryBreadcrumbs(`New in ${versionLabel}`, '/new', 1);
 const title = `New Items — No Man's Sky ${versionLabel}`;
-const description = `${update.Summary.Added} new items and ${update.Summary.Changed} updates in NMS ${versionLabel} (since ${previousLabel}). Browse Swarm expedition rewards, cosmetics, materials, and more.`;
+const description = `${update.Summary.Added} new items and ${update.Summary.Changed} updates in NMS ${versionLabel} (since ${previousLabel}). Browse Cosmos station parts, deep-space salvage, expedition rewards, and more.`;
 
 const toCard = (item: NewUpdateItem, index: number, kind: 'added' | 'changed') => {
 	const name = item.Name?.trim() || item.Id;
