@@ -2,7 +2,7 @@
 title: "No Man's Sky Cosmos Update: Stations & Salvage"
 description: "What Cosmos 7.0 adds: station director, alliances, derelict hulks, and the deep-space salvage loop."
 pubDate: 2026-09-09
-updatedDate: 2026-09-09
+updatedDate: 2026-09-10
 heroImage: "/images/blog/nms-cosmos-update.webp"
 category: "blog"
 tags:
@@ -15,19 +15,21 @@ featured: false
 relatedLinks:
   - label: "Gravitino Coil"
     href: "/technology/GRAVITYGUN/"
-  - label: "Gravitino Coil guide"
-    href: "/blog/gravitino-coil-guide-no-mans-sky/"
+  - label: "Tractor Beam A-Class Upgrade"
+    href: "/upgrades/CV_TRACT1/"
+  - label: "Dream Aerial"
+    href: "/curiosities/WHALE_BEACON/"
+  - label: "Contaminated Metal"
+    href: "/raw/HULK1/"
   - label: "Corvette guide"
     href: "/blog/no-mans-sky-corvette-guide/"
-  - label: "Corvette parts"
-    href: "/corvette/"
 faqs:
   - question: "What is the Cosmos update in No Man's Sky?"
     answer: "Update 7.0. You can direct a space station, join an alliance, build in orbit, map the local system, and strip derelict hulks for salvage. Fandom dates the PC release to 9 September 2026."
   - question: "How do you become a space station director?"
     answer: "Official notes say you prove yourself to the local authorities. They do not list the exact steps. Once you are director, you can change the lobby, add rooms, and decorate the exterior."
   - question: "Are Cosmos derelict hulks the same as derelict freighters?"
-    answer: "No. Hulks are new deep-space wrecks you spacewalk. They lose structural integrity and can explode. The older derelict freighter loop, with an Emergency Signal Scanner and crew logs, is a different job."
+    answer: "No. Hulks are new deep-space wrecks you spacewalk. They lose structural integrity and can explode. The older derelict freighter loop, with an [Emergency Signal Scanner](/curiosities/ABAND_LOCATOR/) and crew logs, is a different job."
   - question: "How does the Cosmos salvage loop work?"
     answer: "Official notes point at a Gravitino Coil plus a Corvette Tractor Beam, bought at the Corvette Workshop. Haul the salvage to a deep-space outpost, process it, then sell it or keep it for station construction. Yields and recipes are not in the notes."
   - question: "What is the Our Journey Continues expedition?"
@@ -40,7 +42,7 @@ Fandom's Update 7.00 stub dates the PC release to 9 September 2026. The official
 
 ## What the Cosmos update is
 
-A new class of space play, sitting next to the planetary stuff you already have. The [Gravitino Coil](/technology/GRAVITYGUN/) still does the waste job from Remnant. Cosmos also uses it in open space. The [Corvette](/blog/no-mans-sky-corvette-guide/) gets a Tractor Beam so you can haul what the Coil pulls in.
+A new class of space play, sitting next to the planetary stuff you already have. The [Gravitino Coil](/technology/GRAVITYGUN/) still does the waste job from Remnant. Cosmos also uses it in open space. The [Corvette](/blog/no-mans-sky-corvette-guide/) gets a [Tractor Beam](/upgrades/CV_TRACT1/) so you can haul what the Coil pulls in.
 
 Points of interest show up on a new star system map once a save has reached the Space Anomaly. There is a short tutorial mission called Signals.
 
@@ -64,17 +66,17 @@ Open it from the Quick Menu. It shows planets, the station, and deep-space point
 
 Official points of interest: rocky and icy asteroid belts, inhabited and infested outposts, hulks, debris fields, asteroid platforms, and the star itself. The star is reachable. It is also lethal. Fly there if you want a story. Do not fly there if you want the ship back.
 
-Asteroid belts and ice fields attract miners, traders, and pirates. Infested outposts are wrapped in biological goop. Official notes name pathogen sacs and gelatinous fibres there. Other named salvage includes comet dust, contaminated metal, and stellar ice. Process those at an outpost. The notes do not give recipes or sell prices.
+Asteroid belts and ice fields attract miners, traders, and pirates. Infested outposts are wrapped in biological goop. Official notes name [Pathogen Sacs](/curiosities/SLIME_STAR/) and [Gelatinous Fibres](/raw/SLIMEPOST1/) there. Other named salvage includes [Comet Dust](/raw/ASTBELT1/), [Contaminated Metal](/raw/HULK1/), and [Condensed Stellar Ice](/curiosities/ASTEROID_CRYST/). Process those at an outpost. The notes do not give recipes or sell prices.
 
-Outposts have a quartermaster and a salvage and delivery terminal. Contracts are the standing loop. Dream Aerial is now a reusable product you can craft and burn more than once to find a living frigate. During Starbirth, the Living Ship patrols infested outposts. Neither of those has a site page yet, so no link.
+Outposts have a quartermaster and a salvage and delivery terminal. Contracts are the standing loop. The [Dream Aerial](/curiosities/WHALE_BEACON/) is now a reusable product you can craft and burn more than once to find a living frigate. During Starbirth, the Living Ship patrols infested outposts.
 
 ## Derelict hulks
 
 These are not derelict freighters.
 
-The old freighter job is still the Emergency Signal Scanner, the sealed airlock, the crew logs, and the engineering terminal. Cosmos hulks are a different wreck. Colossal, drifting, spacewalk only. Official notes: rusted chambers, narrow chokepoints, technologies and cargo in the skeleton. Structural integrity fails if you strip too much. The wreck can melt down and explode.
+The old freighter job is still the [Emergency Signal Scanner](/curiosities/ABAND_LOCATOR/), the sealed airlock, the crew logs, and the engineering terminal. Cosmos hulks are a different wreck. Colossal, drifting, spacewalk only. Official notes: rusted chambers, narrow chokepoints, technologies and cargo in the skeleton. Structural integrity fails if you strip too much. The wreck can melt down and explode.
 
-Loot the valuable stuff first. Then leave.
+Hulk cargo includes things like [Industrial Salvage](/curiosities/HULK_COMMON/). Loot the valuable stuff first. Then leave.
 
 ## The salvage loop
 
@@ -88,7 +90,7 @@ Haul the load to a deep-space outpost. Process it there into items you can sell 
 
 ## Orbital bases
 
-You can claim empty space, or start on a rock platform already floating out there. Official notes add a deep-space base computer and a set of new corridor parts for those builds. The rest of the existing base-part list is still the interior kit, including inside a station you direct.
+You can claim empty space, or start on a rock platform already floating out there. Official notes add a [Deep-space Base Computer](/buildings/SB_BEACON/) and a set of new corridor parts for those builds. The rest of the existing base-part list is still the interior kit, including inside a station you direct.
 
 ## Spacewalking
 
@@ -108,4 +110,4 @@ Twitch Drops run Thursday 10 September to Monday 14 September. Connect on the Tw
 
 - [Cosmos Update](https://www.nomanssky.com/cosmos-update/)
 - [Update 7.00 (Fandom)](https://nomanssky.fandom.com/wiki/Update_7.00)
-- Extracted item text: [Gravitino Coil](/technology/GRAVITYGUN/)
+- Extracted item text: [Gravitino Coil](/technology/GRAVITYGUN/), [Tractor Beam A-Class Upgrade](/upgrades/CV_TRACT1/), [Dream Aerial](/curiosities/WHALE_BEACON/), [Comet Dust](/raw/ASTBELT1/), [Contaminated Metal](/raw/HULK1/), [Gelatinous Fibres](/raw/SLIMEPOST1/), [Pathogen Sac](/curiosities/SLIME_STAR/), [Condensed Stellar Ice](/curiosities/ASTEROID_CRYST/), [Deep-space Base Computer](/buildings/SB_BEACON/), [Emergency Signal Scanner](/curiosities/ABAND_LOCATOR/), [Industrial Salvage](/curiosities/HULK_COMMON/)
