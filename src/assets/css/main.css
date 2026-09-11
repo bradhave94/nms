@@ -167,6 +167,29 @@
     isolation: isolate;
     min-height: 100vh;
 }
+
+/* Desktop sticky right rail (Nitro `rail-right`). Left nav is 224px; only
+   viewports >= 1536px have leftover width for a 160x600 without covering
+   content. 1800px+ reserves a 300x600 gutter. Search FAB shifts with it. */
+@media (min-width: 1536px) {
+    .nitro-rail-gutter {
+        padding-right: 176px;
+    }
+
+    #open-search {
+        right: 190px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .nitro-rail-gutter {
+        padding-right: 320px;
+    }
+
+    #open-search {
+        right: 334px;
+    }
+}
 .nms-bg::after {
     content: "";
     left: 0;
