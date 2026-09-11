@@ -1,8 +1,17 @@
 ---
 /**
  * Sitewide NitroPay formats that do not need a placeholder div.
+ *
  * Floating video is available in the API (`format: "floating"`) but is not
  * enabled for this site in the Placement Builder yet — add when Nitro unlocks it.
+ *
+ * Sticky side rail: only the right rail is mounted. The left 224px is the
+ * desktop nav (`#desktop-sidebar`), so a left rail would cover navigation.
+ * The right gutter is reserved in CSS (`.nitro-rail-gutter`) from 1536px up.
+ *
+ * If `rail-right` does not fill after deploy, confirm the rail format is
+ * unlocked in Nitro Placement Builder and debug collisions with
+ * `?nitroads_debug=1`.
  */
 ---
 
@@ -22,9 +31,51 @@
 		},
 	});
 
+	// Interstitial is a navigate/unhide vignette — fill is inherently lower
+	// than display. The previous `(min-width: 768px)` query skipped phones,
+	// where this site's Nitro Pixel CPM ($0.56) and fill (79.6%) beat desktop
+	// ($0.29 / 70%). Official trigger: show again when the tab is unhidden.
 	window.nitroAds.createAd('interstitial', {
 		format: 'interstitial',
-		mediaQuery: '(min-width: 768px)',
+		interstitial: {
+			triggers: {
+				unhideWindow: true,
+			},
+		},
+		report: {
+			enabled: true,
+			icon: true,
+			wording: 'Report Ad',
+			position: 'top-right',
+		},
+	});
+
+	window.nitroAds.createAd('rail-right', {
+		format: 'rail',
+		rail: 'right',
+		railDistance: 0,
+		railOffsetTop: 16,
+		railOffsetBottom: 120,
+		railSpacing: 10,
+		railVerticalAlign: 'center',
+		railCollisionWhitelist: [
+			'#desktop-sidebar',
+			'#mobile-sidebar',
+			'#calculators-flyout',
+			'#catalogs-flyout',
+			'#open-search',
+			'#site-search',
+			'#guide-sidebar',
+			'footer',
+		],
+		mediaQuery: '(min-width: 1536px)',
+		sizes: [
+			[160, 600],
+			[300, 600],
+			[320, 480],
+			[300, 250],
+		],
+		refreshTime: 30,
 		report: {
 			enabled: true,
 			icon: true,

@@ -480,7 +480,17 @@ const imageBaseUrl = SITE.imageBaseUrl;
     </p>
   )}
 
-  <NitroAd id="item-after-details" />
+  <NitroAd
+    id="item-after-details"
+    minHeight={280}
+    sizes={[
+      [300, 250],
+      [336, 280],
+      [728, 90],
+      [320, 100],
+      [320, 50],
+    ]}
+  />
 
   <CraftingSection
     item={item}

@@ -7,6 +7,8 @@ interface Props {
 	format?: 'display' | 'article' | 'smart-flex';
 	/** Optional sizes; defaults cover common desktop + mobile IAB units. */
 	sizes?: [number, number][];
+	/** Reserved slot height in px to limit CLS. Defaults by format. */
+	minHeight?: number;
 }
 
 const {
@@ -20,7 +22,10 @@ const {
 		[320, 50],
 		[320, 100],
 	],
+	minHeight,
 } = Astro.props;
+
+const reservedHeight = minHeight ?? (format === 'smart-flex' ? 250 : 90);
 
 const options = {
 	...(format !== 'display' ? { format } : {}),
@@ -40,13 +45,18 @@ const options = {
 const scriptBody = `window.nitroAds.createAd(${JSON.stringify(id)}, ${JSON.stringify(options)});`;
 ---
 
-<div
-	id={id}
-	class:list={[
-		'nitro-ad mx-auto my-8 flex w-full max-w-[970px] items-center justify-center',
-		format === 'smart-flex' ? 'min-h-[250px]' : 'min-h-[90px]',
-		className,
-	]}
-	aria-hidden="true"
-></div>
+<section
+	class:list={['nitro-ad-slot mx-auto my-8 w-full max-w-[970px]', className]}
+	aria-label="Advertisement"
+>
+	<p class="nitro-ad-label mb-1 text-center text-[10px] font-medium uppercase tracking-[0.2em] text-gray-400">
+		Advertisement
+	</p>
+	<div
+		id={id}
+		class="nitro-ad flex w-full items-center justify-center"
+		style={`min-height: ${reservedHeight}px`}
+	>
+	</div>
+</section>
 <script is:inline set:html={scriptBody} />
