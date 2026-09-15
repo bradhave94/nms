@@ -168,9 +168,10 @@
     min-height: 100vh;
 }
 
-/* Desktop sticky right rail (Nitro `rail-right`). Left nav is 224px; only
-   viewports >= 1536px have leftover width for a 160x600 without covering
-   content. 1800px+ reserves a 300x600 gutter. Search FAB shifts with it. */
+/* Desktop sticky right rail (Nitro `rail-right`). Left nav is 320px from
+   lg (`#desktop-sidebar` + in-flow `#nav-left` 300×250). Only viewports
+   >= 1536px have leftover width for a 160x600 without covering content.
+   1800px+ reserves a 300x600 gutter. Search FAB shifts with it. */
 @media (min-width: 1536px) {
     .nitro-rail-gutter {
         padding-right: 176px;

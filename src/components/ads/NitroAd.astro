@@ -9,6 +9,8 @@ interface Props {
 	sizes?: [number, number][];
 	/** Reserved slot height in px to limit CLS. Defaults by format. */
 	minHeight?: number;
+	/** Optional Nitro mediaQuery so the unit only bids at matching viewports. */
+	mediaQuery?: string;
 }
 
 const {
@@ -23,6 +25,7 @@ const {
 		[320, 100],
 	],
 	minHeight,
+	mediaQuery,
 } = Astro.props;
 
 const reservedHeight = minHeight ?? (format === 'smart-flex' ? 250 : 90);
@@ -40,6 +43,7 @@ const options = {
 	},
 	...(format === 'article' ? { pageInterval: 1 } : {}),
 	...(format === 'smart-flex' ? { height: 250, smartFlexStickyTop: 16 } : {}),
+	...(mediaQuery ? { mediaQuery } : {}),
 };
 
 const scriptBody = `window.nitroAds.createAd(${JSON.stringify(id)}, ${JSON.stringify(options)});`;
