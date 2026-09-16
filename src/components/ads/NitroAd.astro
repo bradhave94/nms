@@ -11,8 +11,6 @@ interface Props {
 	minHeight?: number;
 	/** Optional Nitro mediaQuery so the unit only bids at matching viewports. */
 	mediaQuery?: string;
-	/** Hide the visible “Advertisement” label. The slot keeps an aria-label. */
-	hideLabel?: boolean;
 }
 
 const {
@@ -28,10 +26,9 @@ const {
 	],
 	minHeight,
 	mediaQuery,
-	hideLabel = false,
 } = Astro.props;
 
-const reservedHeight = minHeight ?? (format === 'smart-flex' ? 250 : 90);
+const reservedHeight = minHeight ?? 250;
 const hasMaxWidthClass = /\bmax-w-/.test(className);
 
 const options = {
@@ -56,12 +53,8 @@ const scriptBody = `window.nitroAds.createAd(${JSON.stringify(id)}, ${JSON.strin
 <section
 	class:list={['nitro-ad-slot mx-auto my-8 w-full', !hasMaxWidthClass && 'max-w-[970px]', className]}
 	aria-label="Advertisement"
+	style={`min-height: ${reservedHeight}px`}
 >
-	{!hideLabel && (
-		<p class="nitro-ad-label mb-1 text-center text-[10px] font-medium uppercase tracking-[0.2em] text-gray-400">
-			Advertisement
-		</p>
-	)}
 	<div
 		id={id}
 		class="nitro-ad flex w-full items-center justify-center"
