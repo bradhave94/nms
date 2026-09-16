@@ -9,6 +9,8 @@ interface Props {
 	sizes?: [number, number][];
 	/** Reserved slot height in px to limit CLS. Defaults by format. */
 	minHeight?: number;
+	/** Optional Nitro mediaQuery so the unit only bids at matching viewports. */
+	mediaQuery?: string;
 }
 
 const {
@@ -23,9 +25,11 @@ const {
 		[320, 100],
 	],
 	minHeight,
+	mediaQuery,
 } = Astro.props;
 
 const reservedHeight = minHeight ?? (format === 'smart-flex' ? 250 : 90);
+const hasMaxWidthClass = /\bmax-w-/.test(className);
 
 const options = {
 	...(format !== 'display' ? { format } : {}),
@@ -40,13 +44,14 @@ const options = {
 	},
 	...(format === 'article' ? { pageInterval: 1 } : {}),
 	...(format === 'smart-flex' ? { height: 250, smartFlexStickyTop: 16 } : {}),
+	...(mediaQuery ? { mediaQuery } : {}),
 };
 
 const scriptBody = `window.nitroAds.createAd(${JSON.stringify(id)}, ${JSON.stringify(options)});`;
 ---
 
 <section
-	class:list={['nitro-ad-slot mx-auto my-8 w-full max-w-[970px]', className]}
+	class:list={['nitro-ad-slot mx-auto my-8 w-full', !hasMaxWidthClass && 'max-w-[970px]', className]}
 	aria-label="Advertisement"
 >
 	<p class="nitro-ad-label mb-1 text-center text-[10px] font-medium uppercase tracking-[0.2em] text-gray-400">
