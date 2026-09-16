@@ -502,8 +502,8 @@ const sectionLabelClasses =
 		</div>
 	</div>
 
-	<!-- Desktop sidebar — 320px from lg so a 300×250 fits under the menu -->
-	<div id="desktop-sidebar" class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-80 lg:flex-col">
+	<!-- Desktop sidebar stays 224px; leftover space under the menu holds a 160-wide unit -->
+	<div id="desktop-sidebar" class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-56 lg:flex-col">
 		<div class="flex min-h-0 flex-1 flex-col bg-black">
 			<div class="flex min-h-0 flex-1 flex-col overflow-x-hidden pt-3">
 				<div class="min-h-0 flex-1 overflow-y-auto overflow-x-hidden hide-scrollbar pb-3">
@@ -628,9 +628,12 @@ const sectionLabelClasses =
 				</div>
 				<NitroAd
 					id="nav-left"
-					class="nav-left-ad my-0 mt-auto max-w-[300px] shrink-0 pb-20"
-					minHeight={250}
-					sizes={[[300, 250]]}
+					class="nav-left-ad my-0 mt-auto max-w-[160px] shrink-0 px-0 pb-16"
+					minHeight={300}
+					sizes={[
+						[160, 600],
+						[160, 300],
+					]}
 					mediaQuery="(min-width: 1024px)"
 				/>
 			</div>
@@ -707,7 +710,7 @@ const sectionLabelClasses =
 		</div>
 	</div>
 
-	<div class="nitro-rail-gutter flex flex-1 flex-col lg:pl-80">
+	<div class="nitro-rail-gutter flex flex-1 flex-col lg:pl-56">
 		<div class="sticky top-0 z-10 bg-black p-3 text-right lg:hidden">
 			<button
 				id="sidebar-open"
@@ -814,7 +817,7 @@ const sectionLabelClasses =
 	function positionFlyout(group: FlyoutGroup): void {
 		const rect = group.trigger.getBoundingClientRect();
 		const sidebar = document.getElementById('desktop-sidebar');
-		const left = sidebar ? sidebar.getBoundingClientRect().right : 320;
+		const left = sidebar ? sidebar.getBoundingClientRect().right : 224;
 		group.flyout.style.top = `${rect.top}px`;
 		group.flyout.style.left = `${left}px`;
 	}
