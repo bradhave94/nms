@@ -29,6 +29,7 @@ const {
 } = Astro.props;
 
 const reservedHeight = minHeight ?? (format === 'smart-flex' ? 250 : 90);
+const hasMaxWidthClass = /\bmax-w-/.test(className);
 
 const options = {
 	...(format !== 'display' ? { format } : {}),
@@ -50,7 +51,7 @@ const scriptBody = `window.nitroAds.createAd(${JSON.stringify(id)}, ${JSON.strin
 ---
 
 <section
-	class:list={['nitro-ad-slot mx-auto my-8 w-full max-w-[970px]', className]}
+	class:list={['nitro-ad-slot mx-auto my-8 w-full', !hasMaxWidthClass && 'max-w-[970px]', className]}
 	aria-label="Advertisement"
 >
 	<p class="nitro-ad-label mb-1 text-center text-[10px] font-medium uppercase tracking-[0.2em] text-gray-400">
