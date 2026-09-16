@@ -6,10 +6,10 @@
  * enabled for this site in the Placement Builder yet — add when Nitro unlocks it.
  *
  * Sticky side rail: only the right rail is mounted. The left 224px is the
- * desktop nav (`#desktop-sidebar`) with an in-flow 160-wide unit (`#nav-left`)
- * under the menu — 160×600 / 160×300 fit without widening the column. A left
- * rail would cover navigation, so the left unit is a display slot inside
- * the column instead. The right gutter is reserved in CSS
+ * desktop nav (`#desktop-sidebar`) with an in-flow 160×300 (`#nav-left`)
+ * under the menu, capped at 300px so the nav does not scroll. A left rail
+ * would cover navigation, so the left unit is a display slot inside the
+ * column instead. The right gutter is reserved in CSS
  * (`.nitro-rail-gutter`) from 1536px up.
  *
  * If `rail-right` does not fill after deploy, confirm the rail format is
