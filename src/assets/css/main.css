@@ -170,33 +170,12 @@
 
 /* Desktop sticky right rail (Nitro `rail-right`). Left nav stays 224px
    (`#desktop-sidebar` + in-flow `#nav-left` 160×300, max-height 300px).
-   Only viewports >= 1536px have leftover width for a 160x600 without
-   covering content. 1800px+ reserves a 300x600 gutter. Search FAB
-   shifts with it. */
+   The rail overlays from 1536px up; do not reserve a content gutter. */
 
 .nav-left-ad,
 .nav-left-ad .nitro-ad,
 .nav-left-ad iframe {
     max-height: 300px;
-}
-@media (min-width: 1536px) {
-    .nitro-rail-gutter {
-        padding-right: 176px;
-    }
-
-    #open-search {
-        right: 226px;
-    }
-}
-
-@media (min-width: 1800px) {
-    .nitro-rail-gutter {
-        padding-right: 320px;
-    }
-
-    #open-search {
-        right: 370px;
-    }
 }
 .nms-bg::after {
     content: "";
