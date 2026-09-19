@@ -275,13 +275,22 @@ const sectionLabelClasses =
 		<div class="fixed inset-0 z-40 flex">
 			<div
 				id="mobile-panel"
-				class="relative flex w-full max-w-xs flex-1 -translate-x-full flex-col bg-black transition-transform duration-300 ease-in-out"
+				class="relative flex w-full max-w-xs flex-1 -translate-x-full flex-col overflow-hidden bg-black transition-transform duration-300 ease-in-out"
 			>
-				<div class="absolute top-0 right-0 -mr-12 pt-2">
+				<div class="flex shrink-0 items-center justify-between gap-2 px-4 pt-5 pb-2">
+					<a href="/" class="min-w-0 flex-1">
+						<img
+							class="block h-auto w-full max-w-[12.5rem]"
+							src="/images/logo-nms.webp"
+							width="600"
+							height="57"
+							alt="No Man's Sky Recipes"
+						/>
+					</a>
 					<button
 						id="sidebar-close"
 						type="button"
-						class="ml-1 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-black/80 text-white hover:bg-gray-900 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
+						class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-black/80 text-white hover:bg-gray-900 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
 					>
 						<span class="sr-only">Close sidebar</span>
 						<svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -292,14 +301,7 @@ const sectionLabelClasses =
 						</svg>
 					</button>
 				</div>
-				<div class="h-0 flex-1 overflow-y-auto pt-5 pb-4">
-					<a href="/" class="mb-3 block w-full px-4">
-						<img
-							class="block h-auto w-full max-w-[12.5rem]"
-							src="/images/logo-nms.webp"
-							alt="No Man's Sky Recipes"
-						/>
-					</a>
+				<div class="h-0 flex-1 overflow-y-auto pb-4">
 					<nav class="mt-3 space-y-1 px-2" aria-label="Site navigation">
 						<p id="nav-tools-label-mobile" class={sectionLabelClasses}>Tools</p>
 						{
@@ -706,11 +708,20 @@ const sectionLabelClasses =
 	</div>
 
 	<div class="flex flex-1 flex-col lg:pl-56">
-		<div class="sticky top-0 z-10 bg-black p-3 text-right lg:hidden">
+		<div class="sticky top-0 z-10 flex items-center justify-between gap-3 bg-black px-3 py-2 lg:hidden">
+			<a href="/" class="min-w-0">
+				<img
+					class="block h-4 w-auto object-contain object-left"
+					src="/images/logo-nms.webp"
+					width="600"
+					height="57"
+					alt="No Man's Sky Recipes"
+				/>
+			</a>
 			<button
 				id="sidebar-open"
 				type="button"
-				class="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-black/80 text-white hover:bg-gray-900 hover:text-white focus:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500"
+				class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-black/80 text-white hover:bg-gray-900 hover:text-white focus:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500"
 			>
 				<span class="sr-only">Open sidebar</span>
 				<svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
