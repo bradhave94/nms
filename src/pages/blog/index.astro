@@ -12,9 +12,9 @@ const posts: BlogEntry[] = [...allPosts].sort(
 	(a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
 );
 
-const titleBase = "No Man's Sky Blog";
+const titleBase = 'NMS Guides & Strategy Blog';
 const baseDescription =
-	"Read the No Man's Sky blog for strategy posts, refiner planning, crafting walkthroughs, and other search-friendly game posts.";
+	"No Man's Sky guides for expeditions, refiners, crafting, galaxies, and returning players. New posts for current updates and community events.";
 const { title, description } = buildPaginatedMeta(titleBase, baseDescription, 1, 1);
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/blog', siteOrigin).toString();
@@ -44,6 +44,8 @@ const breadcrumbs = [
 			<h1 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mt-16">No Man&apos;s Sky  Recipes Blog</h1>
 			<p class="mt-2 text-lg/8 text-sky-200/80">
 				Guides, crafting breakdowns, and tips to help you get the most out of No Man&apos;s Sky.
+				Start with the <a href="/blog/no-mans-sky-returning-player-guide-2026" class="text-cyan-300 underline hover:text-cyan-200">returning player guide</a>
+				or the <a href="/crafting-guide/" class="text-cyan-300 underline hover:text-cyan-200">crafting guide</a>.
 			</p>
 			<div class="mt-8 grid gap-8 sm:grid-cols-3 lg:mt-20">
 				{

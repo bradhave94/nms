@@ -1,6 +1,6 @@
 ---
-title: "No Man's Sky Swarm Expedition Guide: Factions, Rewards, and How to Beat the Hive of Glass"
-description: "Complete guide to NMS Expedition 22: The Swarm. Join Royals, Sages, or Weavers, earn the Direwasp armor set, and take down the Hive of Glass."
+title: "NMS Swarm Expedition Guide & Rewards"
+description: "NMS Swarm expedition (Expedition 22) walkthrough: factions, rewards, phases, and Hive of Glass boss tips. Includes Corrupted Ichor and Direwasp loot."
 pubDate: 2026-06-04
 updatedDate: 2026-06-04
 heroImage: "/images/blog/nms-swarm-expedition-guide.webp"
@@ -22,6 +22,10 @@ relatedLinks:
     href: "/raw/SWARMDUST"
   - label: "Browse all items"
     href: "/items"
+  - label: "Returning player guide 2026"
+    href: "/blog/no-mans-sky-returning-player-guide-2026"
+  - label: "Expedition 23 guide"
+    href: "/blog/nms-expedition-23-our-journey-continues"
 faqs:
   - question: "How do I start the Swarm expedition in No Man's Sky?"
     answer: "Complete the tutorial, then fly to the Space Anomaly. Find the Terminal Nexus near the entrance and select The Swarm expedition. After loading in, a short quiz assigns you to Royals, Sages, or Weavers. You also get a faction ship and uniform in your team colors."

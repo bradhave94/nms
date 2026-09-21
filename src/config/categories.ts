@@ -54,14 +54,14 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	products: {
 		slug: 'products',
 		h1: 'Products',
-		metaTitle: 'Products',
+		metaTitle: 'NMS Products & Crafting Components',
 		idLabel: 'Product',
 		description:
-			"Browse No Man's Sky products with crafting ingredients, trade value, and advanced manufacturing chains.",
+			"Browse No Man's Sky products and advanced crafting components. Open each page for ingredients, unit values, and manufacturing chains.",
 		pageDescription:
-			"Browse No Man's Sky products, advanced components, and profitable crafting outputs with materials, uses, and page-by-page item listings.",
+			"Browse No Man's Sky products and advanced crafting components. Open each page for ingredients, unit values, and manufacturing chains.",
 		intro:
-			'Products include crafted components, trade goods, and advanced materials used throughout your journey.',
+			'Products include crafted components, trade goods, and advanced materials used throughout your journey. See the [crafting guide](/crafting-guide/) and [crafting calculator](/calculator/).',
 		datasets: ['Products'],
 		idStrategy: 'props',
 	},
@@ -119,11 +119,12 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	food: {
 		slug: 'food',
 		h1: 'Food',
-		metaTitle: 'Food',
+		metaTitle: 'NMS Food Recipes & Cooking Guide',
 		idLabel: 'Food Item',
-		description: "A list of food items for No Man's Sky. Browse all edible products and ingredients.",
+		description:
+			"No Man's Sky food recipes and cooking ingredients. Browse edible products, nutrient processor recipes, and cooking chains from bait to baked goods.",
 		intro:
-			"Food items power cooking recipes, consumables, and nutrient processing chains in No Man's Sky.",
+			"Food items power [cooking recipes](/cooking/), consumables, and nutrient processing chains in No Man's Sky.",
 		datasets: ['Food'],
 		idStrategy: 'props',
 		firstPagePath: '/food',
