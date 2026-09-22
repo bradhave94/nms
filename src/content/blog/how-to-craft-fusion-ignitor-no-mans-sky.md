@@ -29,11 +29,11 @@ faqs:
     answer: "Geodesite requires 1x Dirty Bronze (50 Pyrite + 100 Pure Ferrite), 1x Herox (50 Ammonia + 50 Ionised Cobalt), and 1x Lemmium (50 Uranium + 100 Pure Ferrite)."
 ---
 
-The Fusion Ignitor sells for 15,600,000 units and is one of the highest-value craftable items in No Man's Sky. The recipe chain is long but manageable once you know what farms to build. Here's every ingredient, broken down to base materials.
+The Fusion Ignitor sells for 15,600,000 units, which puts it near the top of the craftable items in No Man's Sky. The recipe chain is long. It gets a lot less scary once you know which farms to build, so below is every ingredient broken down to base materials.
 
-## The Full Recipe Tree
+## The full recipe tree
 
-**Fusion Ignitor** requires:
+A Fusion Ignitor requires:
 - 1x Portable Reactor
 - 1x Quantum Processor
 - 1x Geodesite
@@ -47,9 +47,9 @@ Each of those requires its own sub-components.
 | Liquid Explosive | 1x Acid + 1x Unstable Gel |
 | Fusion Accelerant | 1x Organic Catalyst + 1x Nitrogen Salt |
 
-**Breaking that down further:**
+Breaking that down further:
 
-| Component | Base Ingredients |
+| Component | Base ingredients |
 |---|---|
 | Acid | 25x Mordite + 600x Fungal Mould |
 | Unstable Gel | 200x Cactus Flesh |
@@ -65,9 +65,9 @@ Each of those requires its own sub-components.
 | Circuit Board | 1x Heat Capacitor + 1x Poly Fibre |
 | Superconductor | 1x Semiconductor + 1x Enriched Carbon |
 
-**Breaking that down:**
+Breaking that down:
 
-| Component | Base Ingredients |
+| Component | Base ingredients |
 |---|---|
 | Heat Capacitor | 100x Frost Crystal + 200x Solanium |
 | Poly Fibre | 100x Cactus Flesh + 200x Star Bulb |
@@ -76,18 +76,18 @@ Each of those requires its own sub-components.
 
 ### Geodesite
 
-| Alloy | Base Ingredients |
+| Alloy | Base ingredients |
 |---|---|
 | Dirty Bronze | 50x Pyrite + 100x Pure Ferrite |
 | Herox | 50x Ammonia + 50x Ionised Cobalt |
 | Lemmium | 50x Uranium + 100x Pure Ferrite |
 
-## What You Actually Need to Farm
+## What you actually need to farm
 
 Here's the full list of base materials for one Fusion Ignitor, grouped by source type:
 
-### Gas Extractor Farm
-| Gas | Approximate Total Needed |
+### Gas extractor farm
+| Gas | Approximate total needed |
 |---|---|
 | Sulphurine | 500x+ |
 | Radon | 500x+ |
@@ -96,8 +96,8 @@ Here's the full list of base materials for one Fusion Ignitor, grouped by source
 
 Run Gas Extractors on planets that produce Sulphurine (hot/volcanic), Radon (radioactive), and Nitrogen (frozen). You'll need all three. Power with Electromagnetic Generators to avoid fuel upkeep.
 
-### Plant Farm (Biodomes or Hydroponics)
-| Plant | Total Needed | Native Planet |
+### Plant farm (Biodomes or Hydroponics)
+| Plant | Total needed | Native planet |
 |---|---|---|
 | Fungal Mould | 600x | Swamp/toxic |
 | Cactus Flesh | 300x | Desert |
@@ -106,9 +106,9 @@ Run Gas Extractors on planets that produce Sulphurine (hot/volcanic), Radon (rad
 | Frost Crystal | 100x | Frozen |
 | Mordite | 25x | Any planet (drops from creatures too) |
 
-Fungal Mould at 600x is the biggest bottleneck. It grows in swamp and toxic planet biomes, or in Biodomes with the right climate. If you don't have a swamp planet in your home system, Biodomes are the practical route.
+Fungal Mould at 600x is the biggest bottleneck. It grows in swamp and toxic planet biomes, or in Biodomes with the right climate. If you don't have a swamp planet in your home system, go with Biodomes.
 
-### Planet Mining
+### Planet mining
 | Material | Source |
 |---|---|
 | Pyrite | Desert/cave deposits |
@@ -119,16 +119,16 @@ Fungal Mould at 600x is the biggest bottleneck. It grows in swamp and toxic plan
 
 Pyrite, Ammonia, and Uranium each appear on specific planet types. If your home system doesn't have all three biomes, you'll need to grab bulk stacks when visiting those systems during normal play.
 
-## Where to Get the Blueprint
+## Where to get the blueprint
 
 Two options:
 
-1. **Synthesis Lab on the Space Anomaly** — buy the Fusion Ignitor blueprint and all sub-component blueprints here for Nanites. This is the reliable route.
-2. **Planetary Manufacturing Facilities** — raid them until the blueprint drops. Faster if you get lucky, slow if you don't.
+1. The Synthesis Lab on the Space Anomaly sells the Fusion Ignitor blueprint and all the sub-component blueprints for Nanites. This is the reliable route.
+2. Planetary Manufacturing Facilities. Raid them until the blueprint drops. Faster if you get lucky, slow if you don't.
 
 You'll also need blueprints for the intermediates: Portable Reactor, Quantum Processor, Liquid Explosive, Fusion Accelerant, Geodesite, and the three alloys (Dirty Bronze, Herox, Lemmium). Get them all at the Synthesis Lab before you start.
 
-## Crafting Order
+## Crafting order
 
 Work from the bottom up:
 
@@ -142,7 +142,7 @@ Work from the bottom up:
 8. Combine into Portable Reactor and Quantum Processor
 9. Assemble Fusion Ignitor
 
-It looks like a lot of steps, but most of the work is just waiting for farms. Once gas extractors and plant farms are running, one collection cycle gives you enough to craft several Ignitors.
+Nine steps looks like a lot, but most of it is waiting on farms. Once gas extractors and plant farms are running, one collection cycle gives you enough to craft several Ignitors.
 
 ## Sources
 - Extracted game data

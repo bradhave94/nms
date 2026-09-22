@@ -25,66 +25,66 @@ relatedLinks:
     href: "/refining"
 faqs:
   - question: "Where do you find Lithium in No Man's Sky?"
-    answer: "In purple-class star systems, typically on ocean planets. Extracted text marks Lithium as purple systems only. Official Worlds Part II notes give waterworlds their own terrain deposit materials."
+    answer: "In purple-class star systems, usually on ocean planets. The in-game description says purple systems only. Worlds Part II gave waterworlds their own terrain deposit materials, and Lithium is one of them."
   - question: "How do you get to purple systems?"
-    answer: "Install an Atlantid Drive on your starship. Official Worlds Part II added purple-class stars as new systems, not a regen of old ones. The In Stellar Multitudes story is the official path to recover those systems."
+    answer: "Install an Atlantid Drive on your starship. Worlds Part II added purple-class stars as brand new systems rather than regenerating old ones. The In Stellar Multitudes story is the official way to unlock them."
   - question: "Can you refine Lithium without landing on a waterworld?"
-    answer: "Yes. Extracted recipe: 1 Quartzite plus 1 Crystallised Helium in a Refiner. Quartzite is on every planet in a purple system. Crystallised Helium is the gas-giant pair."
+    answer: "Yes. Refine 1 Quartzite plus 1 Crystallised Helium. Every planet in a purple system has Quartzite, and Crystallised Helium comes from gas giants."
   - question: "Do you need Aqua-jets to get Lithium?"
-    answer: "For a true waterworld, official notes say specialist aquatic landing technology is required. Aqua-jets are that landing upgrade. If you can already reach a purple system, you can also refine Lithium from Quartzite and Crystallised Helium."
+    answer: "To land on a true waterworld, yes. Aqua-jets are the aquatic landing upgrade. If you can already reach a purple system, you can skip the waterworld and refine Lithium from Quartzite and Crystallised Helium."
   - question: "What is Lithium used for?"
-    answer: "Extracted crafts: the Nautilon Dredging Laser and a water Reality Anchor. Official Worlds Part II added the Dredging Laser so the Nautilon can excavate underwater terrain."
+    answer: "It goes into the Nautilon's Dredging Laser (which Worlds Part II added for digging underwater terrain) and the water Reality Anchor."
 ---
 
-[Lithium](/raw/WATERWORLD1/) is a Worlds Part II metal. You find it in purple-class systems, usually on ocean planets. This is the find guide. Stats and the full refine list stay on the item page. It is not a farm post.
+[Lithium](/raw/WATERWORLD1/) is a metal added in Worlds Part II. You find it in purple-class systems, usually on ocean planets. This post is about finding it. For stats and every refiner recipe, see the item page.
 
 ## What lithium is
 
-Extracted text calls it a local metallic extract. Uncommon. Purple systems only. Typically found on ocean planets. Scan mineral formations with the Analysis Visor, or hit the large deposits.
+The in-game description calls it an uncommon local metallic extract, found only in purple systems and typically on ocean planets. You scan mineral formations with the Analysis Visor or mine the large deposits.
 
-Official [Worlds Part II](https://www.nomanssky.com/worlds-part-ii-update/) notes say gas giants and waterworlds each got their own terrain deposit materials. [Crystallised Helium](/raw/GASGIANT1/) is the gas-giant one. Lithium is the ocean-side pair. Fandom's Waterworld page says Lithium is always and only on Waterworlds. Extracted copy is softer (typically ocean). If those disagree in-game, trust the extracted id plus the official waterworld deposit line.
+According to the [Worlds Part II](https://www.nomanssky.com/worlds-part-ii-update/) patch notes, gas giants and waterworlds each got their own terrain deposit material. [Crystallised Helium](/raw/GASGIANT1/) is the gas giant one and Lithium is the ocean one. The Fandom wiki's Waterworld page says Lithium only ever appears on waterworlds, while the in-game text just says "typically" ocean planets. I'd trust the game text here, but waterworlds are the safest place to start either way.
 
 ## How to reach a purple system
 
-Purple-class stars are new systems. Official notes: they were added without regenerating existing planets. You do not get them by warping into an old red, green, or blue system and hoping.
+Purple-class stars are new systems. Hello Games added them without regenerating existing planets, so warping around old red, green, and blue systems won't turn one up.
 
-The drive is the [Atlantid Drive](/upgrades/HDRIVEBOOST4/). Extracted text: it lets the ship pass through the dissonant space around purple stellar bodies. Craft list is on that page (Indium, Atlantideum, Living Glass). Official story path is In Stellar Multitudes. The Autophage plot is a different post.
+You need the [Atlantid Drive](/upgrades/HDRIVEBOOST4/), which lets your ship pass through the dissonant space around purple stars. It's crafted from Indium, Atlantideum, and Living Glass. The story path to it is In Stellar Multitudes.
 
-Once you are in a purple system, every planet has [Quartzite](/raw/PURPLE2/). That is official. You will need it if you refine instead of dive.
+Every planet in a purple system has [Quartzite](/raw/PURPLE2/), which you'll want if you plan to refine Lithium instead of diving for it.
 
-## How to find an ocean / water world
+## How to find an ocean world
 
-Official notes describe two useful planet types in purple systems:
+Purple systems have two kinds of planet worth checking.
 
-Waterworlds are all ocean. Specialist aquatic landing technology is required. That upgrade is [Aqua-jets](/technology/WATER_LANDER/).
+Waterworlds are entirely ocean. You can't land on one without [Aqua-jets](/technology/WATER_LANDER/), the aquatic landing upgrade.
 
-Non-waterworld planets in those systems can still have extremely deep water next to normal land. Extracted Lithium text says typically ocean planets, so start with the waterworlds and the heavy-ocean worlds.
+The other planets in those systems can still have very deep water right next to normal land. Start with the waterworlds, then try the planets with the most ocean.
 
-If you cannot land yet, skip to the refine section. You can still make Lithium in a [Refiner](/refining).
+If you can't land on a waterworld yet, skip to the refining section. You can still make Lithium in a [Refiner](/refining).
 
 ## How to harvest lithium
 
-On the planet, use the Analysis Visor. Extracted text: large deposits, or common mineral formations after you inspect them. Official Worlds II also put large resource deposits underwater on all planets, and ultra-rich seams in the deepest water.
+Once you're on the planet, use the Analysis Visor to spot large deposits and mineral formations. Worlds Part II also put large resource deposits underwater on every planet, with extra-rich seams in the deepest water.
 
-The Multi-Tool [Terrain Manipulator](/technology/TERRAINEDITOR/) is the usual dig tool for those deposits. Underwater, official Worlds II added a [Dredging Laser](/exocraft/SUB_MINER/) for the Nautilon. Extracted data lists Lithium as one of its ingredients.
+The Multi-Tool's [Terrain Manipulator](/technology/TERRAINEDITOR/) handles most deposits. Underwater, the Nautilon's [Dredging Laser](/exocraft/SUB_MINER/) does the job, which is a little funny since Lithium is one of its ingredients.
 
-Bring oxygen and a [Pressure Membrane](/technology/PRESSURE_SUIT/) if you are going deep. Official notes: deep water eats oxygen and life support faster.
+If you're going deep, bring spare oxygen and a [Pressure Membrane](/technology/PRESSURE_SUIT/). Deep water drains oxygen and life support faster.
 
 ## How to refine lithium without diving
 
-Extracted recipe: 1 Quartzite + 1 Crystallised Helium.
+The recipe is 1 Quartzite + 1 Crystallised Helium.
 
-Quartzite is everywhere in purple systems. Crystallised Helium is the gas-giant deposit. If you can warp to purple stars but you do not have Aqua-jets yet, this is the loop. Helium on the giant, Quartzite on any local rock, then a Refiner.
+Quartzite is everywhere in purple systems and Crystallised Helium comes from gas giants. If you can warp to purple stars but don't have Aqua-jets yet, this is the way to go: grab Helium on the gas giant, Quartzite from any rock, and run it through a Refiner.
 
-The item page also lists a reverse transfer (Lithium plus Quartzite or Activated Quartzite back into Helium). Use that page for the full tree. This post is how to get Lithium, not a second recipe dump.
+The item page also lists recipes that turn Lithium back into Helium, along with the rest of the refining tree.
 
 ## What lithium is used for
 
-Official Worlds II added a Dredging Laser so the Nautilon can excavate underwater terrain. Extracted data lists Lithium as a Dredging Laser ingredient.
+The Nautilon's Dredging Laser, added in Worlds Part II for excavating underwater terrain, needs Lithium.
 
-The water [Reality Anchor](/other/PURPM_WATER_KEY/) crafts from 200 Lithium and 160 Quartzite. That is the extracted water-key recipe. Other Reality Anchors use different locals. Do not mix them up.
+The water [Reality Anchor](/other/PURPM_WATER_KEY/) takes 200 Lithium and 160 Quartzite. The other Reality Anchors use different local materials, so don't mix them up.
 
-Lithium also refines into Helium, Activated Quartzite, and a few other products. Full list is on the [Lithium](/raw/WATERWORLD1/) page.
+Lithium also refines into Helium, Activated Quartzite, and a few other products. The full list is on the [Lithium](/raw/WATERWORLD1/) page.
 
 ## Sources
 

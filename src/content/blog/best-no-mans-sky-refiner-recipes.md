@@ -1,6 +1,6 @@
 ---
 title: "Best No Man's Sky Refiner Recipes for Nanites, Units, and Fast Progress"
-description: "The best NMS refiner recipes for nanites, units, and chromatic metal — with exact quantities, ratios, and which refiner you actually need."
+description: "The best NMS refiner recipes for nanites, units, and chromatic metal, with exact quantities, ratios, and which refiner you actually need."
 pubDate: 2024-10-09
 updatedDate: 2024-10-09
 heroImage: "/images/blog/refiner-recipes.webp"
@@ -22,7 +22,7 @@ relatedLinks:
     href: "/technology"
 faqs:
   - question: "What is the fastest way to get nanites in No Man's Sky?"
-    answer: "Tainted Metal is the most efficient single-step nanite recipe: 1 Tainted Metal refines into 2 Nanite Clusters in any refiner. For bulk farming, build a Runaway Mould setup — farm Curious Deposits, then refine 5 Runaway Mould into 1 Nanite Cluster at scale."
+    answer: "Tainted Metal is the most efficient single-step nanite recipe: 1 Tainted Metal refines into 2 Nanite Clusters in any refiner. For bulk farming, build a Runaway Mould setup: farm Curious Deposits, then refine 5 Runaway Mould into 1 Nanite Cluster at scale."
   - question: "What is the best refiner recipe for making units?"
     answer: "The Chlorine expansion loop: 1 Chlorine + 2 Oxygen → 6 Chlorine. Feed the output back as input and your stack multiplies every cycle. A full stack of Chlorine sells for millions of units at any Galactic Trade Terminal."
   - question: "What refiner do I need for Chromatic Metal?"
@@ -31,22 +31,22 @@ faqs:
     answer: "Don't just refine 2 Carbon into 1 Condensed Carbon. Use the Oxygenate Carbon recipe instead: 1 Condensed Carbon + 2 Oxygen → 6 Condensed Carbon. It multiplies your stock every cycle."
 ---
 
-The refiner has hundreds of recipes, but most of them don't matter. The ones that do matter can multiply your resources, print nanites, or turn a small stack of materials into millions of units. Here are the recipes worth knowing, with exact quantities from the game data.
+The refiner has hundreds of recipes and most of them don't matter. A handful are worth memorizing, because they multiply your resources or print nanites, and one of them turns a small stack of Chlorine into millions of units. Quantities below come straight from the game data.
 
-## Nanite Farming Recipes
+## Nanite farming recipes
 
-These are the best routes to Nanite Clusters depending on what materials you have access to.
+Which route is best depends on what you already have access to.
 
-### Tainted Metal → Nanites (Best Single-Step Recipe)
+### Tainted Metal → nanites (best single-step recipe)
 
 **1x Tainted Metal → 2x Nanite Clusters**
-Works in any refiner. This is the most efficient straightforward nanite recipe in the game.
+Works in any refiner. No other one-step recipe gets you nanites this efficiently.
 
 Tainted Metal drops from Corrupted Sentinels (the purple-crystal variants you find on Dissonant planets). Kill them, loot Tainted Metal, refine it. At 2 nanites per metal, a good Sentinel farm can generate thousands of nanites per hour.
 
-### Runaway Mould Chain (Best for Bulk Farming)
+### Runaway Mould chain (best for bulk farming)
 
-The classic setup. Runaway Mould refines into nanites at a 5:1 ratio, which sounds bad until you realize Runaway Mould itself multiplies.
+This is the classic setup. Runaway Mould refines into nanites at a 5:1 ratio, which sounds bad until you realize Runaway Mould itself multiplies.
 
 | Step | Input | Output | Notes |
 |------|-------|--------|-------|
@@ -56,7 +56,7 @@ The classic setup. Runaway Mould refines into nanites at a 5:1 ratio, which soun
 
 Find Curious Deposits on planets (they look like pulsing yellow nodes), extract Runaway Mould, and refine it. Build your refining operation next to a cluster of deposits and you have a passive nanite farm.
 
-### Creature Products (Best Nanite Rate Per Item)
+### Creature products (best nanite rate per item)
 
 If you've been ignoring creature product drops, stop. These have some of the highest nanite conversion rates in the game.
 
@@ -69,23 +69,23 @@ If you've been ignoring creature product drops, stop. These have some of the hig
 | 1x Inverted Mirror | 95x Nanite Clusters | Any |
 | 1x Hyaline Brain | 230x Nanite Clusters | Any |
 
-Larval Cores drop from destroyed Biological Horrors. Hyaline Brains and Inverted Mirrors come from corrupted planet creatures. A single Hyaline Brain gives you 230 nanites in one refiner cycle. That adds up fast.
+Larval Cores drop from destroyed Biological Horrors. Hyaline Brains and Inverted Mirrors come from corrupted planet creatures. A single Hyaline Brain gives you 230 nanites in one refiner cycle.
 
-### Salvaged Data → Nanites
+### Salvaged Data → nanites
 
 **1x Salvaged Data → 15x Nanite Clusters**
 
-Not the most efficient use of Salvaged Data (it unlocks base building blueprints), but if you have more than you need, refining it is a solid fallback. 15 nanites per data point adds up fast when you're sitting on 100+ of them.
+Not the most efficient use of Salvaged Data (it unlocks base building blueprints), but if you have more than you need, refining it is a solid fallback. Sitting on 100+ of them? That's 1,500 nanites you weren't using.
 
 ---
 
-## Unit Farming: The Chlorine Expansion Loop
+## Unit farming: the Chlorine expansion loop
 
-This is the best unit-farming recipe in the game and it hasn't changed in years. The ratio alone tells you why:
+This is the best unit-farming recipe in the game and it hasn't changed in years. Look at the ratio:
 
 **1x Chlorine + 2x Oxygen → 6x Chlorine**
 
-Every cycle multiplies your Chlorine by 6 (net +5 after replacing your input). Run it again with the output, and again, and again. A stack of 9,999 Chlorine sells for a few million units at any Galactic Trade Terminal.
+Every cycle multiplies your Chlorine by 6 (net +5 after replacing your input). Feed the output back in and keep going. A stack of 9,999 Chlorine sells for a few million units at any Galactic Trade Terminal.
 
 To start the loop you just need a small amount of Chlorine. You can buy it from pilots at space stations or refine it from Salt:
 
@@ -101,15 +101,15 @@ The same multiplication trick works on Ionised Cobalt:
 
 Ionised Cobalt is worth less per unit than Chlorine, but it's easier to stockpile early on. Either loop works. Pick whichever resource you have more of.
 
-**Oxygen source tip:** Build Gas Extractors near Oxygen hotspots on a planet and let them run. Oxygen is the catalyst for both loops, so having a steady supply makes these farms essentially free to run.
+Both loops eat Oxygen, so build Gas Extractors on an Oxygen hotspot and let them run. Once that's going, the farms cost you nothing.
 
 ---
 
-## Chromatic Metal Recipes
+## Chromatic Metal recipes
 
-Chromatic Metal is used everywhere: [technology upgrades](/technology), base parts, [craftable products](/products), [exocraft](/exocraft). The best recipe depends on what stellar metals you have access to.
+Chromatic Metal goes into [technology upgrades](/technology), base parts, [craftable products](/products), [exocraft](/exocraft). The best recipe depends on what stellar metals you have access to.
 
-### Basic Conversion (Any Refiner)
+### Basic conversion (any refiner)
 
 | Input | Output | Ratio |
 |-------|--------|-------|
@@ -121,9 +121,9 @@ Chromatic Metal is used everywhere: [technology upgrades](/technology), base par
 
 Indium and Quartzite are the most efficient basic conversions. If you're using Copper, you're leaving Chromatic Metal on the table.
 
-### Activated Metal Conversion (Better Ratios)
+### Activated metal conversion (better ratios)
 
-Activated metals give you more Chromatic Metal per unit. Mine Activated variants when you can — they're the same mineral from different planet types.
+Activated metals give you more Chromatic Metal per unit. Mine Activated variants when you can. They're the same mineral, found on different planet types.
 
 | Input | Output |
 |-------|--------|
@@ -132,7 +132,7 @@ Activated metals give you more Chromatic Metal per unit. Mine Activated variants
 | 1x Activated Emeril | 3x Chromatic Metal |
 | 1x Activated Indium | 4x Chromatic Metal |
 
-### Best Recipe: Activated Metal + Pure Ferrite
+### Best recipe: Activated metal + Pure Ferrite
 
 Adding Pure Ferrite to the mix multiplies output:
 
@@ -144,9 +144,9 @@ Adding Pure Ferrite to the mix multiplies output:
 
 **1 Activated Indium + 1 Pure Ferrite → 8 Chromatic Metal** is the most efficient recipe without a Large Refiner. If you have Indium access, use this.
 
-### Large Refiner: Stellar Fusion
+### Large Refiner: stellar fusion
 
-For the truly absurd Chromatic Metal output, combine Silver, Gold, and a stellar metal in a Large Refiner:
+For silly amounts of Chromatic Metal, combine Silver, Gold, and a stellar metal in a Large Refiner:
 
 | Input | Output |
 |-------|--------|
@@ -162,7 +162,7 @@ That's a 10:1 ratio on three inputs. Gold and Silver are both farmable from aste
 
 ## Carbon and Condensed Carbon
 
-The basic recipe (2x Carbon → 1x Condensed Carbon) is fine in a pinch, but it's not the one you should be using. Oxygen changes everything.
+The basic recipe (2x Carbon → 1x Condensed Carbon) works in a pinch, but add Oxygen and the numbers get much better.
 
 | Input | Output | Notes |
 |-------|--------|-------|
@@ -174,7 +174,7 @@ The third recipe (**1 Condensed Carbon + 2 Oxygen → 6 Condensed Carbon**) is e
 
 ---
 
-## Ferrite Upgrades
+## Ferrite upgrades
 
 Ferrite Dust is everywhere, but some base parts and repairs need Pure Ferrite or Magnetised Ferrite. The upgrade chain is simple:
 
@@ -196,7 +196,7 @@ Note: Magnetised Ferrite also refines back down to 2x Pure Ferrite if you need t
 
 ---
 
-## Bonus: Warp Cell Recipe (Large Refiner)
+## Bonus: Warp Cell recipe (Large Refiner)
 
 Warp Cells from scratch without crafting Antimatter:
 
@@ -209,7 +209,7 @@ Warp Cells from scratch without crafting Antimatter:
 
 ---
 
-## Which Refiner Do You Actually Need?
+## Which refiner do you actually need?
 
 Most of these recipes work in any refiner: Portable, Medium, or Large. The only exceptions are the three-input recipes (stellar fusion Chromatic Metal, Warp Cells, and alloy recipes), which require a Large Refiner.
 

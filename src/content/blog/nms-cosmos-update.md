@@ -25,86 +25,86 @@ relatedLinks:
     href: "/blog/no-mans-sky-corvette-guide/"
 faqs:
   - question: "What is the Cosmos update in No Man's Sky?"
-    answer: "Update 7.0. You can direct a space station, join an alliance, build in orbit, map the local system, and strip derelict hulks for salvage. Fandom dates the PC release to 9 September 2026."
+    answer: "Update 7.0. You can direct a space station, join an alliance, build in orbit, map the local system, and strip derelict hulks for salvage. It came out on PC on 9 September 2026."
   - question: "How do you become a space station director?"
-    answer: "Official notes say you prove yourself to the local authorities. They do not list the exact steps. Once you are director, you can change the lobby, add rooms, and decorate the exterior."
+    answer: "The patch notes say you have to prove yourself to the local authorities, but they don't list the exact steps. Once you're director, you can change the lobby, add rooms, and decorate the exterior."
   - question: "Are Cosmos derelict hulks the same as derelict freighters?"
-    answer: "No. Hulks are new deep-space wrecks you spacewalk. They lose structural integrity and can explode. The older derelict freighter loop, with an [Emergency Signal Scanner](/curiosities/ABAND_LOCATOR/) and crew logs, is a different job."
+    answer: "No. Hulks are new deep-space wrecks you explore on a spacewalk. They lose structural integrity as you strip them and can explode. The older derelict freighter missions, with the [Emergency Signal Scanner](/curiosities/ABAND_LOCATOR/) and crew logs, are a separate thing."
   - question: "How does the Cosmos salvage loop work?"
-    answer: "Official notes point at a Gravitino Coil plus a Corvette Tractor Beam, bought at the Corvette Workshop. Haul the salvage to a deep-space outpost, process it, then sell it or keep it for station construction. Yields and recipes are not in the notes."
+    answer: "You need a Gravitino Coil and a Corvette Tractor Beam (bought at the Corvette Workshop). Haul the salvage to a deep-space outpost, process it, then sell it or keep it for station construction. Hello Games hasn't published yields or recipes."
   - question: "What is the Our Journey Continues expedition?"
-    answer: "Expedition 23. Official notes say it runs about six weeks and walks through ten years of No Man's Sky. Each milestone has developer commentary from Sean Murray, filed in Collected Knowledge."
+    answer: "Expedition 23. It runs about six weeks and walks through ten years of No Man's Sky, with developer commentary from Sean Murray at each milestone. The commentary gets saved to Collected Knowledge."
 ---
 
-[Cosmos](https://www.nomanssky.com/cosmos-update/) is update 7.0. You direct a space station, join an alliance, build in orbit, and strip wrecks that can blow up on you. This is the loop, not a patch-note dump. Rendering, DLSS, and bugfixes stay on the official page.
+[Cosmos](https://www.nomanssky.com/cosmos-update/) is update 7.0. You can run a space station, join an alliance, build in orbit, and strip wrecks that might blow up on you. I'm focusing on the gameplay here. Rendering, DLSS, and bug fixes are on the official patch notes page.
 
-Fandom's Update 7.00 stub dates the PC release to 9 September 2026. The official notes do not print that date.
+It came out on PC on 9 September 2026, according to the Fandom wiki. The official notes don't give a date.
 
 ## What the Cosmos update is
 
-A new class of space play, sitting next to the planetary stuff you already have. The [Gravitino Coil](/technology/GRAVITYGUN/) still does the waste job from Remnant. Cosmos also uses it in open space. The [Corvette](/blog/no-mans-sky-corvette-guide/) gets a [Tractor Beam](/upgrades/CV_TRACT1/) so you can haul what the Coil pulls in.
+It's a whole new layer of space gameplay alongside the planetary stuff. The [Gravitino Coil](/technology/GRAVITYGUN/) from Remnant still hauls waste on planets, and now it works in open space too. The [Corvette](/blog/no-mans-sky-corvette-guide/) gets a [Tractor Beam](/upgrades/CV_TRACT1/) to catch whatever the Coil throws at it.
 
-Points of interest show up on a new star system map once a save has reached the Space Anomaly. There is a short tutorial mission called Signals.
+Points of interest show up on a new star system map once your save has reached the Space Anomaly. A short tutorial mission called Signals introduces it all.
 
 ## Become a space station director
 
-Official notes: prove yourself to the local authorities, then you can direct a station.
+According to the patch notes, you prove yourself to the local authorities and then you get to run the station.
 
-They do not say what that proof is. No quest name, no standing number, no item. Until that is in the extracted data, do not treat a Station Override or any old curiosity as the key. Those are different objects.
+What "proving yourself" means isn't spelled out. There's no quest name, reputation threshold, or item listed. I'd be wary of anyone claiming a Station Override or some old curiosity is the key, since those are unrelated items.
 
-Once you are director, the job is decoration and layout. Restyle the central lobby. Move existing furnishings. Add new interior parts. Expand the hangar with extra rooms, then furnish those. Outside, place colossal decoration modules, or strip the ones already bolted on. Unlock most of those modules at the Construction Research Terminal on the Space Anomaly. Rare pieces can also drop from deep-space anomalies.
+Being director is mostly about decorating. You can restyle the central lobby, move the existing furniture, add new interior parts, and expand the hangar with extra rooms to furnish. Outside, you can bolt on huge decoration modules or remove the ones already there. Most of those modules unlock at the Construction Research Terminal on the Space Anomaly, and some rare ones drop from deep-space anomalies.
 
 ## Alliances
 
-A director can found an alliance, pick a name, and set a banner. Everyone else joins by visiting a station that alliance already owns. You can belong to three at once.
+A director can found an alliance and give it a name and a banner. Other players join by visiting a station the alliance already owns. You can be in up to three at once.
 
-The teleporter lists allied systems. Rankings sit at the station core. Official notes grade alliances by member activity: population, activity, and how much space they cover. No reward table is published.
+The teleporter lists allied systems, and rankings are shown at the station core. Alliances are ranked on population, activity, and how much space they cover. There's no published reward table yet.
 
 ## The star system map
 
-Open it from the Quick Menu. It shows planets, the station, and deep-space points of interest in the current system. Mark one and the ship will help you fly there.
+Open it from the Quick Menu. It shows the planets, the station, and deep-space points of interest in your current system. Mark one and your ship will help you fly there.
 
-Official points of interest: rocky and icy asteroid belts, inhabited and infested outposts, hulks, debris fields, asteroid platforms, and the star itself. The star is reachable. It is also lethal. Fly there if you want a story. Do not fly there if you want the ship back.
+Points of interest include rocky and icy asteroid belts, inhabited and infested outposts, hulks, debris fields, asteroid platforms, and the star itself. Yes, you can fly to the star. It will kill you. Do it once for the screenshot.
 
-Asteroid belts and ice fields attract miners, traders, and pirates. Infested outposts are wrapped in biological goop. Official notes name [Pathogen Sacs](/curiosities/SLIME_STAR/) and [Gelatinous Fibres](/raw/SLIMEPOST1/) there. Other named salvage includes [Comet Dust](/raw/ASTBELT1/), [Contaminated Metal](/raw/HULK1/), and [Condensed Stellar Ice](/curiosities/ASTEROID_CRYST/). Process those at an outpost. The notes do not give recipes or sell prices.
+Asteroid belts and ice fields attract miners, traders, and pirates. Infested outposts are covered in biological goop, and that's where you'll find [Pathogen Sacs](/curiosities/SLIME_STAR/) and [Gelatinous Fibres](/raw/SLIMEPOST1/). Other salvage includes [Comet Dust](/raw/ASTBELT1/), [Contaminated Metal](/raw/HULK1/), and [Condensed Stellar Ice](/curiosities/ASTEROID_CRYST/). You process all of it at an outpost, though the notes don't say what it turns into or what it sells for.
 
-Outposts have a quartermaster and a salvage and delivery terminal. Contracts are the standing loop. The [Dream Aerial](/curiosities/WHALE_BEACON/) is now a reusable product you can craft and burn more than once to find a living frigate. During Starbirth, the Living Ship patrols infested outposts.
+Outposts have a quartermaster and a salvage and delivery terminal, and their contracts are the repeatable content here. The [Dream Aerial](/curiosities/WHALE_BEACON/) is now a reusable item you can craft and use more than once to find a living frigate. During Starbirth, the Living Ship patrols infested outposts.
 
 ## Derelict hulks
 
-These are not derelict freighters.
+These aren't the derelict freighters you already know.
 
-The old freighter job is still the [Emergency Signal Scanner](/curiosities/ABAND_LOCATOR/), the sealed airlock, the crew logs, and the engineering terminal. Cosmos hulks are a different wreck. Colossal, drifting, spacewalk only. Official notes: rusted chambers, narrow chokepoints, technologies and cargo in the skeleton. Structural integrity fails if you strip too much. The wreck can melt down and explode.
+Derelict freighters still work the old way: [Emergency Signal Scanner](/curiosities/ABAND_LOCATOR/), sealed airlock, crew logs, engineering terminal. Hulks are huge drifting wrecks you explore on a spacewalk, full of rusted chambers and narrow chokepoints, with tech and cargo stuck in the frame. Strip too much and the structure fails. The whole thing can melt down and explode.
 
-Hulk cargo includes things like [Industrial Salvage](/curiosities/HULK_COMMON/). Loot the valuable stuff first. Then leave.
+Hulk cargo includes items like [Industrial Salvage](/curiosities/HULK_COMMON/). Grab the valuable stuff first, then get out.
 
 ## The salvage loop
 
-This is the recipes-site part.
+This is the part I care about most, since this site is all about recipes.
 
-Official notes: a [Gravitino Coil](/technology/GRAVITYGUN/) and a Corvette with a Tractor Beam. The beam is a new Corvette utility part, bought with the other Corvette parts at the station workshop. Coil handling got a pass, and you can now equip the Coil inside a space station. How to craft the Coil is on that item page, and the planetary waste use is in the [Coil guide](/blog/gravitino-coil-guide-no-mans-sky/).
+You need a [Gravitino Coil](/technology/GRAVITYGUN/) and a Corvette with a Tractor Beam. The beam is a new Corvette utility part, sold with the other Corvette parts at the station workshop. The Coil handles better than it did, and you can now equip it inside a space station. The crafting recipe is on the Coil's item page, and the planetary waste loop is in the [Coil guide](/blog/gravitino-coil-guide-no-mans-sky/).
 
-In space, launch salvage at the beam. It lands in the Corvette hold. Objects that are too big get processed down so they fit. The beam can also vent the whole hold in a few seconds. Official note, and a good one: do not vent that on sentient objects.
+In space, fling salvage at the beam and it lands in your Corvette's hold. Anything too big gets broken down to fit. The beam can also empty the whole hold in a few seconds. The patch notes helpfully add that you shouldn't vent it on sentient objects.
 
-Haul the load to a deep-space outpost. Process it there into items you can sell on the Galactic Trade Network, or keep for station construction. That is the whole published loop. No unit rate, no refine table, no "best" material. If those show up in extracted data later, they belong on item pages, not guessed here.
+Haul everything to a deep-space outpost and process it there. You can sell the results on the Galactic Trade Network or keep them for station construction. That's all Hello Games has published. There's no unit rate, no refining table, no word on which material is best. When that shows up in the game data, it'll go on the item pages. I'm not going to guess.
 
 ## Orbital bases
 
-You can claim empty space, or start on a rock platform already floating out there. Official notes add a [Deep-space Base Computer](/buildings/SB_BEACON/) and a set of new corridor parts for those builds. The rest of the existing base-part list is still the interior kit, including inside a station you direct.
+You can claim empty space, or start from a rock platform already floating out there. Cosmos adds a [Deep-space Base Computer](/buildings/SB_BEACON/) and new corridor parts for these builds. All the existing base parts still work for interiors, including inside a station you direct.
 
 ## Spacewalking
 
-Any ship can dump you into space now, not only a Corvette. Quick Menu, eject. Spacewalking has roll, so it is actual six-degree movement, not a swim in a straight line. Explosions knock you back. Open space drains cold protection unless you are next to some other hazard, like a star.
+You can now eject from any ship, not just a Corvette. Quick Menu, then eject. Spacewalking has roll, so you get full six-degree movement instead of swimming in a straight line. Explosions knock you back. Open space drains your cold protection unless something else is hurting you first, like a nearby star.
 
-Landing on and taking off from objects that have gravity in space is cleaner. That is the official line. No new jetpack upgrade is named.
+Landing on and taking off from objects with gravity in space is smoother now. No new jetpack upgrade was mentioned.
 
 ## Our Journey Continues
 
-Expedition 23. Official notes: about six weeks, one milestone per era of the game since launch. Each one has developer commentary read by Sean Murray. Once unlocked, those notes stay in Collected Knowledge.
+This is Expedition 23. It runs about six weeks, with one milestone for each era of the game since launch. Each milestone has developer commentary read by Sean Murray, and once you unlock it, it stays in Collected Knowledge.
 
-Rewards they list: framed book-cover art, decals and titles, a golden Rasamama S36, an astronaut cockpit figurine, the Starbound v0.27 Multi-Tool, a vintage Sentinel Interceptor, and a diplodocus companion pulled from pre-release footage. This post is not the expedition walkthrough. The milestones are not published as a checklist here.
+The listed rewards are framed book-cover art, decals and titles, a golden Rasamama S36, an astronaut cockpit figurine, the Starbound v0.27 Multi-Tool, a vintage Sentinel Interceptor, and a diplodocus companion pulled from pre-release footage. That diplodocus is my favourite thing in the whole update. I'm not covering the milestones step by step here.
 
-Twitch Drops run Thursday 10 September to Monday 14 September. Connect on the Twitch Drops page if you want them. Watching is not required to do the salvage loop.
+Twitch Drops run from Thursday 10 September to Monday 14 September. Link your account on the Twitch Drops page if you want them. You don't need them for anything in the salvage loop.
 
 ## Sources
 

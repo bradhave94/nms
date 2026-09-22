@@ -40,7 +40,7 @@ faqs:
     answer: "It's a glyph address that drops you on a system extremely close to the Galactic Centre in any galaxy that supports it. With the Portal unlocked and 16 glyphs, you can warp directly there, then make the centre jump. Some galaxy-specific gateway systems exist too. Check the wiki page for that galaxy if you want a tighter approach."
 ---
 
-There are 256 galaxies in No Man's Sky. Most players never leave the first one, and that's fine. Euclid alone is enormous. But the rest are real, the systems for getting between them are well established, and the differences are bigger than people think. This is a complete guide to how galaxies work, what changes between them, and how to actually travel through them.
+There are 256 galaxies in No Man's Sky. Most players never leave the first one, and that's fine, because Euclid alone is enormous. The others are worth knowing about, though. Getting between them is well understood by now, and they differ more than you'd expect. This guide covers how galaxies work, what changes between them, and how to travel.
 
 ---
 
@@ -48,30 +48,30 @@ There are 256 galaxies in No Man's Sky. Most players never leave the first one, 
 
 The universe in No Man's Sky is split into 256 unique galaxies. Galaxies 1 through 255 are reachable through normal gameplay; galaxy 256 (Odyalutai) and the legacy Yilsrussimil exist in the data but were closed off in the Atlas Rises update back in 2017. After Iousongola (galaxy 255), the sequence loops back to Euclid.
 
-Each galaxy contains billions of procedurally generated star systems, regions, and planets. The underlying mechanics are identical across all of them. Resources, recipes, factions, faction progression, base building, expeditions, multiplayer. Galaxy hopping doesn't unlock new content. It changes the seed.
+Each galaxy contains billions of procedurally generated star systems, regions, and planets. Resources, recipes, factions, base building, expeditions, and multiplayer all work the same everywhere. Changing galaxy doesn't unlock new content. It just changes the seed.
 
-What changes for real:
+Here's what actually differs:
 
-- The proportion of biomes the galaxy is allowed to spawn (its **type**, see below).
+- The mix of biomes the galaxy spawns (its type, covered below).
 - The galaxy's core colour. Euclid is yellow, Hilbert Dimension is deep pink, Eissentam is orange, and so on.
 - Region naming patterns and the names attached to systems.
-- Where the active player community lives. Euclid and Eissentam have most of it. Once you push past those, traffic at the Nexus and the visibility of other players drops sharply.
+- Where the active player community lives. Euclid and Eissentam have most of it. Past those, the Nexus gets quiet and you'll rarely see other players.
 
-What doesn't change: the resource pool, item drops, [Hyperdrive](/technology/HYPERDRIVE) range, [refining recipes](/refining), [Cooking](/cooking), Sentinel behaviour, your Base Computer limit, or any progression system. Galaxy 47 plays identically to galaxy 1 from a mechanical standpoint.
+What doesn't change: the resource pool, item drops, [Hyperdrive](/technology/HYPERDRIVE) range, [refining recipes](/refining), [Cooking](/cooking), Sentinel behaviour, your Base Computer limit, or any progression system. Mechanically, galaxy 47 plays exactly like galaxy 1.
 
 ### The four galaxy types
 
 Galaxies are sorted into four types. The type controls how planet generation is weighted in that galaxy.
 
-**Norm.** The default. 178 of the 256 galaxies. Cyan hologram. In-game names: Imperfect, Improved, Parallel, or Rebuilt. Standard biome distribution, balanced weather, the closest thing the game has to a baseline.
+Norm is the default, covering 178 of the 256 galaxies. They show a cyan hologram and have names like Imperfect, Improved, Parallel, or Rebuilt. Biome distribution and weather are standard. Think of it as the baseline.
 
-**Lush.** 25 galaxies. Green hologram. Names: Halcyon, Inspiring, Serene, or Tranquil. Yellow stars in Lush galaxies are weighted to produce roughly 4× the lush-biome chance compared with Norm galaxies, and dead-biome rolls are halved. The visible result: more Earth-like planets, milder weather, friendlier worlds for base building. Eissentam (galaxy 10) is the most well-known.
+Lush galaxies (25 of them) show a green hologram, with names like Halcyon, Inspiring, Serene, or Tranquil. Yellow stars in Lush galaxies have roughly 4× the chance of lush biomes compared with Norm, and half the chance of dead ones. In practice you get more Earth-like planets and milder weather, which is great for base building. Eissentam (galaxy 10) is the best known.
 
-**Harsh.** 26 galaxies. Red hologram. Names: Burning, Raging, Relentless, or Ruthless. Same biome weighting as Norm, but yellow systems behave like the red/green/blue extremes. Toxic, scorched, frozen, irradiated and "weird" worlds dominate. Sentinel aggression skews higher. Visually striking, mechanically punishing.
+Harsh galaxies (26) show a red hologram, with names like Burning, Raging, Relentless, or Ruthless. Yellow systems behave like the red/green/blue extremes, so toxic, scorched, frozen, irradiated, and "weird" worlds dominate. Sentinels tend to be more aggressive. They look great and they're rough to live in.
 
-**Empty.** 26 galaxies. Blue hologram. Names: Ancestral, Frozen, Exhausted, or Silent. Sparse system layouts, dead-biome rolls weighted up roughly 4×, almost no flora or fauna on most worlds. Lower atmosphere, lower gravity in places. A specific kind of vibe.
+Empty galaxies (26) show a blue hologram, with names like Ancestral, Frozen, Exhausted, or Silent. Systems are sparse, dead biomes are about 4× more likely, and most worlds have almost no flora or fauna. Some have thinner atmosphere and lower gravity. They're lonely, which some people love.
 
-The type is purely about planet generation. You can collect every resource and craft everything in any galaxy.
+Type only affects planet generation. Every resource and every recipe is available in every galaxy.
 
 | Type | Galaxies | Hologram | In-game names | Yellow-star bias |
 | --- | --- | --- | --- | --- |
@@ -84,9 +84,9 @@ The type is purely about planet generation. You can collect every resource and c
 
 ## What carries over and what breaks
 
-This is the most-asked question in galaxy travel and the most-misunderstood.
+People ask about this constantly, and a lot of old answers are wrong.
 
-**Carries over:**
+These carry over:
 
 - Active starship, freighter, exocraft, multi-tool, exosuit
 - Units, nanites, quicksilver
@@ -95,49 +95,47 @@ This is the most-asked question in galaxy travel and the most-misunderstood.
 - Other ships in your collection (the freighter takes them along)
 - Base teleporters and the Space Anomaly Nexus
 
-**Breaks during a Galaxy Centre transition (and only then):**
+These break during a Galaxy Centre transition (and only then):
 
 - Every upgrade module in your active ship
 - Every upgrade module in your active multi-tool
 - Every upgrade in your exosuit
 
-Repair these with [Repair Kits](/products/REPAIRKIT) or by manually restoring each module's component. Bring more kits than you expect to need. There's nothing worse than landing on a hostile starter planet with a half-broken hazard protection.
+Repair these with [Repair Kits](/products/REPAIRKIT) or by manually restoring each module's component. Bring more kits than you expect to need. Landing on a hostile planet with half-broken hazard protection is miserable.
 
-**Important nuance:** core technology (the [Hyperdrive](/technology/HYPERDRIVE) itself, [Launch Thruster](/technology/LAUNCHER), [Pulse Drive](/technology), [Hazard Protection](/technology/PROTECT)) is **not** considered an upgrade module and survives the transition intact. Only modules built into upgrade slots break.
+Core technology (the [Hyperdrive](/technology/HYPERDRIVE) itself, [Launch Thruster](/technology/LAUNCHER), [Pulse Drive](/technology), [Hazard Protection](/technology/PROTECT)) doesn't count as an upgrade module and survives the transition. Only modules built into upgrade slots break.
 
-**Black holes do not damage anything anymore.** That changed with the Waypoint update. Older guides still say otherwise; ignore them. Every black hole jump is now a clean teleport that pushes you closer to the centre.
+Black holes don't damage anything anymore. That changed with the Waypoint update, so ignore older guides that say otherwise. A black hole jump is now just a teleport toward the centre.
 
 ---
 
 ## How to reach the Galaxy Centre
 
-This is the main route between galaxies and the one that takes the most planning.
+This is the main route between galaxies, and it takes the most planning.
 
 ### Step 1: Set the Galactic Map waypoint
 
-Open the Galactic Map and select **Galactic Centre** as your destination. The route appears as a glowing line. The catch is distance. The centre is typically hundreds of thousands of light-years from the rim, and a stock [Hyperdrive](/technology/HYPERDRIVE) covers 100 light-years per jump. Even a fully upgraded build with [Cadmium Drive](/upgrades/HDRIVEBOOST1), [Emeril Drive](/upgrades/HDRIVEBOOST2), and [Indium Drive](/upgrades/HDRIVEBOOST3) installed only does a few thousand per warp. Manually flying it would take hours.
-
-This is what black holes are for.
+Open the Galactic Map and select Galactic Centre as your destination. The route appears as a glowing line. The problem is distance. The centre is typically hundreds of thousands of light-years from the rim, and a stock [Hyperdrive](/technology/HYPERDRIVE) covers 100 light-years per jump. Even a fully upgraded build with [Cadmium Drive](/upgrades/HDRIVEBOOST1), [Emeril Drive](/upgrades/HDRIVEBOOST2), and [Indium Drive](/upgrades/HDRIVEBOOST3) installed only does a few thousand per warp. Warping all the way would take hours, which is why you use black holes.
 
 ### Step 2: Use black holes to skip distance
 
-A black hole jump pulls you, on average, around 7,000 light-years closer to the centre per use. The trip isn't linear. You might travel further but end up at a tangent. Each jump still nets a meaningful chunk of distance. Stack five to eight of them and you're inside Galactic Centre range.
+A black hole jump pulls you, on average, around 7,000 light-years closer to the centre per use. It isn't a straight line, so you sometimes end up off at an angle, but each jump still gets you a good chunk closer. Five to eight of them puts you in Galactic Centre range.
 
 To find black holes:
 
-- **Talk to Polo** at the Space Anomaly. Ask for a shortcut to the centre. A black hole system gets pinned on your Galactic Map.
-- **After the Atlas Path's "birth a new star" beat,** you can see black holes natively on the local map.
-- **Region scan trick:** every region of every galaxy contains exactly one black hole system, and it always sits at portal address `0079`. If you've activated a portal in that region, you can find it by signal booster.
+- Talk to Polo at the Space Anomaly and ask for a shortcut to the centre. He'll pin a black hole system on your Galactic Map.
+- After the Atlas Path's "birth a new star" step, black holes show up on the local map.
+- Every region of every galaxy has exactly one black hole system, always at portal address `0079`. If you've activated a portal in that region, you can find it with a signal booster.
 
-A small subset of black holes (called **hyper black holes**, located in the four spiral arms of the galaxy) can carry you over 300,000 light-years toward the centre in a single jump. They're rare and worth the detour.
+A few black holes, called hyper black holes, sit in the galaxy's four spiral arms and can carry you over 300,000 light-years toward the centre in one jump. They're rare, and worth a detour.
 
-Black hole jumps no longer damage anything. You don't need repair kits between jumps anymore, only for the centre transition itself.
+Since black holes no longer cause damage, you only need repair kits for the centre transition itself.
 
 ### Step 3: The final jump
 
 Once you're inside roughly 5,000 light-years of the core, the Galactic Centre objective on the Galactic Map becomes selectable directly. Charge your [Hyperdrive](/technology/HYPERDRIVE) all the way (with [Warp Cells](/products/HYPERFUEL1) or a [Warp Hypercore](/products/HYPERFUEL2)), select the centre, hold the input until it confirms, and you're gone.
 
-You arrive in the next galaxy with a forced crash landing on a random planet. Your active ship, suit, and multi-tool upgrade modules are broken. Repair what you need to survive, then proceed.
+You arrive in the next galaxy with a forced crash landing on a random planet. Your active ship, suit, and multi-tool upgrade modules are broken. Repair what you need to survive first, then deal with the rest.
 
 ### Pre-flight checklist
 
@@ -151,37 +149,37 @@ You arrive in the next galaxy with a forced crash landing on a random planet. Yo
 
 ## The New Beginnings galaxy skip
 
-Finishing the Artemis Path culminates in the **New Beginnings** mission. The final choice lets you reset the simulation into a galaxy of a chosen type (Norm, Lush, Harsh, or Empty) and the game drops you in the next galaxy of that type in sequence.
+The Artemis Path ends with the New Beginnings mission. The final choice lets you reset the simulation into a galaxy of a chosen type (Norm, Lush, Harsh, or Empty) and the game drops you in the next galaxy of that type in sequence.
 
-If you want Eissentam and you're still in Euclid, this is the fastest legitimate route. Pick Lush at the New Beginnings prompt and you arrive in Eissentam (galaxy 10) regardless of where you currently are. Pick Harsh from Euclid and you land in Calypso (galaxy 3). Pick Norm and you go to Hilbert Dimension (galaxy 2).
+If you want Eissentam and you're still in Euclid, this is the fastest way there without save editing. Pick Lush at the New Beginnings prompt and you arrive in Eissentam (galaxy 10) regardless of where you currently are. Pick Harsh from Euclid and you land in Calypso (galaxy 3). Pick Norm and you go to Hilbert Dimension (galaxy 2).
 
-This skip can be repeated by replaying the Atlas storyline, but it is gated by an in-game cooldown and tied to the Atlas Rises. For one-off, deliberate galaxy choice, it's the cleanest method available.
+You can repeat the skip by replaying the Atlas storyline, but there's an in-game cooldown. For picking a specific galaxy type once, nothing is cleaner.
 
 ---
 
 ## Travelling back to a previous galaxy
 
-Most guides bury this. The teleporter network ignores galaxy boundaries.
+The teleporter network ignores galaxy boundaries. Not many people realize this.
 
 If you have a [Base Computer](/technology/BASE_FLAG) placed in any previous galaxy, you can warp back to it from any base teleporter, anywhere. No centre run required, no tech damage, no repair cycle. The same applies to the Space Anomaly Nexus: any other player's recently visited base shows up in the destination list, regardless of which galaxy it's in.
 
-The only requirement is the anchor. Drop a Base Computer in every new galaxy you enter, even if you never build anything else on it. It costs almost nothing, takes thirty seconds, and is the difference between "I can come back" and "I'm starting a centre run."
+You just need something to teleport to. Drop a Base Computer in every new galaxy you enter, even if you never build anything else there. It costs almost nothing and takes thirty seconds, and without it, getting back means another centre run.
 
-There's a soft cap on bases at 449. After that, new Base Computers won't appear in the teleporter list until you remove one. If you're a serial galaxy hopper, plan accordingly.
+There's a soft cap on bases at 449. After that, new Base Computers won't appear in the teleporter list until you remove one. If you hop galaxies a lot, keep an eye on that.
 
 ---
 
 ## Notable galaxies
 
-Most galaxies are functionally interchangeable. A few stand out for specific reasons.
+Most galaxies are interchangeable. These are the ones people talk about.
 
 ### Euclid (1)
 
-The starting galaxy for every player. By far the largest active community, the busiest Nexus, and the original home of every long-running civilization (Galactic Hub Project, Eyfert Khannate, Federation of Travellers, etc.). If you care about multiplayer activity at all, Euclid is where it lives.
+The starting galaxy for every player. By far the largest active community, the busiest Nexus, and the original home of every long-running civilization (Galactic Hub Project, Eyfert Khannate, Federation of Travellers, etc.). If you care about multiplayer at all, stay here.
 
 ### Hilbert Dimension (2)
 
-Norm-type, deep pink core. The first stop for anyone running the galaxy ladder. More milestone than destination. Players arrive here, snap a photo, and usually keep going.
+Norm-type, deep pink core. The first stop for anyone climbing the galaxy ladder. Most people arrive, take a photo, and keep going.
 
 ### Calypso (3)
 
@@ -189,7 +187,7 @@ Harsh-type, medium orchid core. The first Harsh galaxy in the sequence and the d
 
 ### Eissentam (10)
 
-The most popular destination after Euclid. Lush-type, orange core, home to the **Galactic Hub Eissentam** civilization, which is the second-largest player community in No Man's Sky. If you've heard about Hub bases, traveller civilizations, or community projects outside Euclid, they almost all live here. Lush biome odds make it genuinely scenic. The fastest way in is the New Beginnings Lush skip from Euclid.
+The most popular destination after Euclid. Lush-type, orange core, home to the Galactic Hub Eissentam civilization, the second-largest player community in No Man's Sky. If you've heard about Hub bases, traveller civilizations, or community projects outside Euclid, they almost all live here. The Lush biome odds make it very pretty. The fastest way in is the New Beginnings Lush skip from Euclid.
 
 ### Hesperius Dimension (4), Hyades (5)
 
@@ -197,37 +195,35 @@ Norm galaxies that get a fair amount of community traffic, mostly from explorers
 
 ### Budullangr (7)
 
-Empty-type, green core. One of the quieter galaxies on the ladder. Sparse systems, dead-heavy planet rolls, almost no fauna. Appeals to a specific kind of player who likes the solitude. The New Beginnings Empty skip from Euclid (and several galaxies after it) lands here.
+Empty-type, green core. One of the quieter galaxies on the ladder. Sparse systems, dead-heavy planet rolls, almost no fauna. Good if you like solitude. The New Beginnings Empty skip from Euclid (and several galaxies after it) lands here.
 
 ### Iousongola (255)
 
-The end of the line. After this galaxy, the sequence loops back to Euclid. Reaching it is a long-term project. 254 centre runs, give or take some New Beginnings skips. There are documented players who've done it. There are far fewer who've done it twice.
+The end of the line. After this galaxy, the sequence loops back to Euclid. Getting here takes 254 centre runs, minus whatever New Beginnings skips you can use. A handful of players have documented doing it. Far fewer have done it twice.
 
 ---
 
 ## Tips for galaxy hopping efficiently
 
-A few things that make the process less painful.
+Chain black holes. Five to eight jumps gets you within Galactic Centre range, and they don't damage anything anymore.
 
-**Chain black holes ruthlessly.** Five to eight jumps gets you within Galactic Centre range. The damage that older guides warned about doesn't exist anymore.
+Always drop a Base Computer. It takes thirty seconds and almost no materials, and it gives you teleporter access forever. Forgetting this is the biggest mistake people make.
 
-**Always drop a Base Computer.** Thirty seconds, near-zero materials, full teleporter access forever. Skipping this is the single biggest galaxy-travel mistake.
+Carry [Repair Kits](/products/REPAIRKIT). Craft them from [Di-hydrogen Jelly](/products/JELLY) and [Metal Plating](/products/CASING) before you leave, and bring more than you think you need.
 
-**Carry [Repair Kits](/products/REPAIRKIT).** Craft them from [Di-hydrogen Jelly](/products/JELLY) and [Metal Plating](/products/CASING) before you leave. Bring more than you think you need.
+Use a junk ship for transitions. Keep a cheap shuttle around just for centre jumps and let it take the upgrade-module damage. Repair it on arrival and switch back to your main ship at the next station.
 
-**Run a junk-ship for transitions.** Keep a cheap shuttle around specifically for centre jumps. Let it eat the upgrade-module damage. Repair it on arrival, switch back to your main ship at the next station.
+Use portal addresses. With all 16 glyphs, `100104005005` drops you in a system very close to the centre in most galaxies, which skips the long approach. The wiki also lists gateway systems for each galaxy.
 
-**Use portal addresses.** With all 16 glyphs, the address `100104005005` lands you in a system extremely close to the centre in most galaxies. That cuts out the manual approach entirely. Every galaxy also has its own gateway-system list documented on the wiki.
+Keep a [Hyperdrive Augmentation](/technology) on standby for the jump. The base [Hyperdrive](/technology/HYPERDRIVE) is fine, but don't show up at the centre with an empty tank. Bring one [Warp Cell](/products/HYPERFUEL1) for the jump and another for your first warp on the other side.
 
-**Keep a [Hyperdrive Augmentation](/technology) on standby** for the jump itself. The base [Hyperdrive](/technology/HYPERDRIVE) is fine, but don't show up at the centre with an empty fuel tank. Fuel one [Warp Cell](/products/HYPERFUEL1) for the trip and one for the spawn jump on the other side.
-
-**Don't bother with manual exploration during a run.** Black-hole-and-portal your way to the centre, do your scan run on the new starter planet, then start exploring. It's faster and saves resources for the climb.
+Save exploring for later. Black-hole-and-portal your way to the centre, scan the new starter planet, then start exploring. It's faster and saves resources for the climb.
 
 ---
 
 ## The 255-galaxy loop
 
-The full sequence (Euclid through Iousongola) is the longest-running endgame goal in No Man's Sky. Players who push the full ladder typically use New Beginnings skips for as much of the path as the game lets them, then black-hole-chain the rest. Hundreds of hours of play, tracked publicly by some traveller civilizations.
+The full sequence (Euclid through Iousongola) is the longest endgame goal in No Man's Sky. Players who go for it usually use New Beginnings skips wherever they can and black-hole-chain the rest. It's hundreds of hours, and some traveller civilizations track progress publicly.
 
 Galaxies 256 (Odyalutai) and the older Yilsrussimil are accessible only by:
 
@@ -239,11 +235,11 @@ For everyone else, the loop quietly resets at galaxy 1 once you cross out of Iou
 
 ---
 
-## What this all means in practice
+## Should you bother?
 
-Most players don't need to leave Euclid. The game has more content than any single galaxy can show you in 1,000 hours, and the galaxy you're in doesn't gatekeep recipes, resources, or progression.
+Most players don't need to leave Euclid. You won't run out of things to see in 1,000 hours, and no recipe, resource, or progression system is locked to a galaxy.
 
-Galaxies are interesting if:
+Leaving is worth it if:
 
 - You want a Lush biome run and the New Beginnings Lush skip to Eissentam appeals
 - You like the long-term goal of climbing the count
@@ -251,13 +247,11 @@ Galaxies are interesting if:
 - You want the Galactic Hub Eissentam community specifically
 - You like the cosmetic variety of different core colours and naming patterns
 
-Galaxies aren't worth the effort if:
+Don't bother if:
 
 - You think there's locked content beyond Euclid (there isn't)
 - You don't want to manage a base teleporter network across multiple galaxies
 - You hate repair-kit busywork
-
-Either way, now you know how the system actually works.
 
 ---
 
@@ -269,4 +263,4 @@ Either way, now you know how the system actually works.
 - [No Man's Sky Wiki: Eissentam](https://nomanssky.fandom.com/wiki/Eissentam)
 - [No Man's Sky Wiki: Hilbert Dimension](https://nomanssky.fandom.com/wiki/Hilbert_Dimension)
 - [No Man's Sky Wiki: Hyperdrive](https://nomanssky.fandom.com/wiki/Hyperdrive)
-- [Hello Games — No Man's Sky Official Site](https://www.nomanssky.com/)
+- [Hello Games: No Man's Sky Official Site](https://www.nomanssky.com/)

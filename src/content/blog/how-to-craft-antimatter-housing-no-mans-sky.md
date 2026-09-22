@@ -26,38 +26,38 @@ relatedLinks:
     href: "/raw/LAND1/"
 faqs:
   - question: "How do you unlock the Antimatter Housing blueprint?"
-    answer: "Per Fandom's Awakenings walkthrough, after you install the Hyperdrive you get sent to an Abandoned Building. Clear Residual Goop from the terminal. That step is where Housing's blueprint shows up. Official nomanssky.com does not name this item."
+    answer: "During Awakenings, after you install the Hyperdrive you get sent to an Abandoned Building. Clear the Residual Goop from the terminal and you get the Housing blueprint."
   - question: "What is the Antimatter Housing recipe?"
-    answer: "30 Oxygen plus 50 Ferrite Dust. That matches extracted game data (datav2 7.00) and Fandom."
+    answer: "30 Oxygen plus 50 Ferrite Dust."
   - question: "What is Antimatter Housing used for?"
-    answer: "Main early use: craft a Warp Cell with one Housing and one Antimatter, then fuel the starship Hyperdrive. Later freighter hyperdrive tech eats more Housing (3 to 6 depending on the module)."
+    answer: "Early on, you combine one Housing with one Antimatter to make a Warp Cell, which fuels your starship Hyperdrive. Later, freighter hyperdrive tech needs 3 to 6 Housing per module."
   - question: "Can you buy Antimatter Housing instead of crafting it?"
-    answer: "Fandom (Frontiers-stamped page) says Galactic Trade Terminals and Planetary Technology Merchants can stock it, and barrel cargo can drop it. That buy/loot path is not verified against current extracted data, so treat it as optional."
+    answer: "Possibly. The Fandom wiki (last updated for Frontiers) says Galactic Trade Terminals and Planetary Technology Merchants can stock it, and barrel cargo can drop it. I couldn't confirm that in current game data, so don't count on it. Crafting is cheap anyway."
   - question: "Do you need Antimatter Housing to install the Hyperdrive?"
-    answer: "No. Housing is fuel-side. The starship Hyperdrive installs from Chromatic Metal and Microprocessors. You burn Housing inside Warp Cells after the drive is already fitted."
+    answer: "No. The starship Hyperdrive is built from Chromatic Metal and Microprocessors. Housing only goes into the Warp Cells that fuel it."
   - question: "Is there a refine shortcut past Housing?"
-    answer: "Yes. Extracted Antimatter Bypass recipes output a Warp Cell without crafting Housing first. Time in datav2 is 600 seconds. Full input lists are on the best refiner recipes guide."
+    answer: "Yes. The Antimatter Bypass refiner recipes make a Warp Cell without Housing. They take 600 seconds. Full input lists are in the best refiner recipes guide."
 ---
 
-[Antimatter Housing](/products/AM_HOUSING/) is the can that makes antimatter travel-safe. You craft it early so you can build [Warp Cells](/products/HYPERFUEL1/) and leave your starter system. This is the unlock, the recipe, and the Warp Cell loop. It is not a full Awakenings walkthrough. If you are relearning the early game after a long break, the [returning player guide](/blog/no-mans-sky-returning-player-guide-2026) covers the broader catch-up.
+[Antimatter Housing](/products/AM_HOUSING/) is the can that makes antimatter safe to carry. You craft it early so you can build [Warp Cells](/products/HYPERFUEL1/) and leave your starter system. This post covers the unlock, the recipe, and the Warp Cell craft, not the whole Awakenings questline. If you're relearning the early game after a long break, the [returning player guide](/blog/no-mans-sky-returning-player-guide-2026) covers the rest.
 
 ## What antimatter housing is
 
-Extracted text calls it a crafted technology component. Secure antimatter containment. Required before antimatter can be packed as Warp Cells. Rebound Oxygen forms a protective gas pocket. Base value is 6,500 units.
+The in-game description calls it secure antimatter containment, with rebound Oxygen forming a protective gas pocket. It's worth 6,500 units.
 
-In plain terms: Housing is the bottle. Antimatter is the dangerous stuff that goes in it. Together they become Hyperdrive fuel. Stats and the live craft panel stay on the [item page](/products/AM_HOUSING/).
+Think of Housing as the bottle and Antimatter as the dangerous stuff inside. Put them together and you have Hyperdrive fuel. Full stats are on the [item page](/products/AM_HOUSING/).
 
 ## How to unlock the blueprint (Awakenings)
 
-Extracted product data does not spell out a mission unlock. The narrative path comes from Fandom's [Awakenings](https://nomanssky.fandom.com/wiki/Awakenings) page.
+The game data doesn't say which mission unlocks it, so this part comes from the Fandom wiki's [Awakenings](https://nomanssky.fandom.com/wiki/Awakenings) page.
 
 After you install the starship [Hyperdrive](/technology/HYPERDRIVE/), Awakenings pushes you to craft warp fuel. Scan for a signal. Land at an Abandoned Building. Use the infested terminal. Remove Residual Goop.
 
-What that terminal hands you is the messy part. Fandom's Awakenings walkthrough says you walk away with a unit of [Antimatter](/products/ANTIMATTER/) and the Antimatter Housing blueprint. The Antimatter page leans harder on learning the antimatter blueprint. The rewards list mentions both blueprints. Safest takeaway: expect Housing's craft recipe from this step, and expect antimatter in some form (unit, blueprint, or both). Do not treat any one Fandom line as gospel until you see it on a fresh save.
+Exactly what the terminal gives you is a bit murky. The Awakenings walkthrough says you get one unit of [Antimatter](/products/ANTIMATTER/) plus the Housing blueprint. The wiki's Antimatter page suggests you get the Antimatter blueprint instead, and the rewards list mentions both. So expect the Housing recipe for sure, and some form of antimatter (a unit, a blueprint, or both).
 
-Official Hello Games notes talk about streamlining the antimatter tutorial and the Antimatter Reactor. They never name "Antimatter Housing." Cite Fandom for the Abandoned Building beat. Cite extracted data for the craft once you have it.
+Hello Games' own patch notes mention streamlining the antimatter tutorial but never name Antimatter Housing, so there's no official word on this.
 
-Lose the antimatter, the Warp Cell, or a fueled Hyperdrive before your first warp? Fandom documents a [Replacement Antimatter](https://nomanssky.fandom.com/wiki/Replacement_Antimatter) fallback mission. Use that if the tutorial fuel chain breaks.
+Lose the antimatter, the Warp Cell, or a fueled Hyperdrive before your first warp? There's a [Replacement Antimatter](https://nomanssky.fandom.com/wiki/Replacement_Antimatter) fallback mission for exactly that.
 
 ## Craft recipe
 
@@ -67,9 +67,9 @@ Once the blueprint is unlocked:
 | --- | --- |
 | Antimatter Housing ×1 | [Oxygen](/raw/OXYGEN/) ×30 + [Ferrite Dust](/raw/LAND1/) ×50 |
 
-That recipe matches datav2 (game version 7.00) and Fandom. Oxygen is everywhere once you have a decent harvest loop. Ferrite Dust is the gray dust you pull from almost any rock with the Multi-Tool.
+The game data (version 7.00) and the wiki agree on this one. Oxygen is easy to come by once you're harvesting plants, and Ferrite Dust comes off almost any rock you shoot with the Multi-Tool.
 
-Fandom's Antimatter Housing page (Frontiers stamp, Feb 2022) also says you can buy Housing from Galactic Trade Terminals and Planetary Technology Merchants, and that barrel-type cargo has about a 10% chance to drop it (AtlasPass v1 to open those). Those buy/loot claims are not in the extracted Products entry we checked for 7.00. Attribute them to Fandom. Crafting is the reliable path.
+The wiki's Housing page (last updated for Frontiers, February 2022) says you can also buy it from Galactic Trade Terminals and Planetary Technology Merchants, and that barrel cargo has about a 10% chance to drop it (you need AtlasPass v1 to open those). I couldn't find that in the current game data. The recipe is cheap enough that I'd just craft it.
 
 ## Make a Warp Cell
 
@@ -77,40 +77,40 @@ Fandom's Antimatter Housing page (Frontiers stamp, Feb 2022) also says you can b
 | --- | --- |
 | Warp Cell ×1 | Antimatter Housing ×1 + Antimatter ×1 |
 
-Antimatter crafts from [Chromatic Metal](/raw/STELLAR2/) ×25 and [Condensed Carbon](/raw/FUEL2/) ×20. Same numbers in datav2 and Fandom.
+Antimatter crafts from [Chromatic Metal](/raw/STELLAR2/) ×25 and [Condensed Carbon](/raw/FUEL2/) ×20.
 
-Feed the Warp Cell into the Hyperdrive. Housing is fuel, not an install part. The Hyperdrive recipe itself is Chromatic Metal and Microprocessors. You do not slot Housing into the tech tree to fit the drive.
+Feed the Warp Cell into the Hyperdrive. People sometimes mix this up, so to be clear: Housing is part of the fuel, not the drive. The Hyperdrive itself is built from Chromatic Metal and Microprocessors.
 
 One Warp Cell is enough for that first yellow-system hop in Awakenings. Later travel eats more cells. The [galaxies guide](/blog/no-mans-sky-galaxies-guide) covers long-range fuel planning when you start pushing toward a galactic centre.
 
-Optional shortcut: [refining](/refining) has Antimatter Bypass recipes that output a Warp Cell without crafting Housing first. Datav2 times those at 600 seconds (Fandom's Warp Cell page still says 300 sec per unit; prefer the extracted 600s until someone stopwatches a live build). Input mixes are Condensed Carbon or Carbon, Sodium or Sodium Nitrate, plus a chunk of Chromatic Metal. Full breakdown lives in [best refiner recipes](/blog/best-no-mans-sky-refiner-recipes). Use that when you are swimming in Chromatic Metal and do not want to babysit Housing crafts.
+Optional shortcut: [refining](/refining) has Antimatter Bypass recipes that output a Warp Cell without crafting Housing first. The game data says they take 600 seconds (the wiki still says 300, which I think is out of date). Inputs are Condensed Carbon or Carbon, Sodium or Sodium Nitrate, plus a lot of Chromatic Metal. The full breakdown is in [best refiner recipes](/blog/best-no-mans-sky-refiner-recipes). It's worth it when you're swimming in Chromatic Metal and don't want to babysit Housing crafts.
 
 ## Later freighter uses
 
-Housing sticks around after the tutorial. Freighter hyperdrive gear eats stacks of it. Keep this section short; freighter hunting is its own post ([S-class freighter guide](/blog/how-to-get-s-class-freighter-no-mans-sky)).
+You'll keep needing Housing after the tutorial, because freighter hyperdrive tech eats stacks of it. (Getting a freighter is its own topic. See the [S-class freighter guide](/blog/how-to-get-s-class-freighter-no-mans-sky).)
 
-| Tech | Housing | Other ingredients (datav2) |
+| Tech | Housing | Other ingredients |
 | --- | --- | --- |
 | [Freighter Hyperdrive](/technology/F_HYPERDRIVE/) | ×3 | Chromatic Metal ×500, Antimatter ×3 |
 | [Warp Core Resonator](/technology/F_HDRIVEBOOST1/) | ×4 | Cadmium ×250, Quantum Computer ×1 |
 | [Plasmatic Warp Injector](/technology/F_HDRIVEBOOST2/) | ×5 | Emeril ×250, Solar Mirror ×1 |
 | [Reality De-threader](/technology/F_HDRIVEBOOST3/) | ×6 | Indium ×250, Magnetic Resonator ×1 |
 
-Same quantities show up on Fandom's use lists. Stock Oxygen and Ferrite Dust before you start a freighter upgrade binge.
+Stock up on Oxygen and Ferrite Dust before you start a freighter upgrade binge.
 
 ## FAQ
 
 **How do you unlock Antimatter Housing?**  
-Fandom Awakenings: Abandoned Building terminal after Hyperdrive install, Residual Goop cleared, Housing blueprint from that step. Fandom pages disagree on whether you also get antimatter as a unit, a blueprint, or both.
+In Awakenings, after installing the Hyperdrive, clear the Residual Goop from the terminal at the Abandoned Building. The wiki disagrees with itself on whether you also get antimatter as a unit, a blueprint, or both.
 
-**Recipe again?**  
-30 Oxygen, 50 Ferrite Dust. Done.
+**What's the recipe again?**  
+30 Oxygen, 50 Ferrite Dust.
 
-**Buy it?**  
-Maybe, per Fandom's older Housing page. Crafting is what we can confirm from current extracted data.
+**Can I buy it?**  
+Maybe, according to an older wiki page. I'd just craft it.
 
-**Install vs fuel?**  
-Install the Hyperdrive without Housing. Craft Housing to make Warp Cells that charge it.
+**Do I need it to install the Hyperdrive?**  
+No. You install the Hyperdrive without Housing, then craft Housing to make the Warp Cells that fuel it.
 
 ## Sources
 

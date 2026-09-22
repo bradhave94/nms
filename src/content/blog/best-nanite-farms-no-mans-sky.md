@@ -29,9 +29,9 @@ faqs:
     answer: "Yes. Buy them from pirate station vendors, open them for upgrade modules, then sell those modules to Technology Merchants at normal stations. Each module is worth 300-1,100 nanites."
 ---
 
-Nanites buy the tech upgrades that matter — ship class bumps, multi-tool damage modules, hyperdrive extensions. Here are the methods that produce them fastest, from no-setup options to the farms that run while you play.
+Nanites buy the tech upgrades that matter: ship class bumps, multi-tool damage modules, hyperdrive extensions. These are the fastest ways I know to get them, starting with a base farm and working down to the zero-setup options.
 
-## Method Comparison
+## Method comparison
 
 | Method | Nanites/Hour | Setup |
 |---|---|---|
@@ -42,11 +42,11 @@ Nanites buy the tech upgrades that matter — ship class bumps, multi-tool damag
 | Creature products (Hyaline Brain etc.) | Varies | None |
 | Fauna scanning (full planet, S scanner) | ~3,000 | Scanner upgrades |
 
-## Runaway Mould Farm (Best Overall)
+## Runaway Mould farm (best overall)
 
 Runaway Mould refines at 5:1 (5 Mould = 1 Nanite Cluster), which sounds bad until you realize the Mould multiplies.
 
-**Bootstrapping the farm:**
+To get the farm started:
 
 | Step | Input | Output |
 |---|---|---|
@@ -54,21 +54,21 @@ Runaway Mould refines at 5:1 (5 Mould = 1 Nanite Cluster), which sounds bad unti
 | Option B | 1x Living Slime | 1x Runaway Mould |
 | Final step | 5x Runaway Mould | 1x Nanite Cluster |
 
-The real source is **Curious Deposits** — pulsing yellow nodes on the ground on certain planets. Walk up and extract them directly. Build a base nearby and you can farm the same cluster repeatedly.
+The real source is Curious Deposits, pulsing yellow nodes on the ground on certain planets. Walk up and extract them directly. Build a base nearby and you can farm the same cluster repeatedly.
 
-**Finding Curious Deposits:** Use your ship scanner when flying low. They appear as resource hotspots and tend to cluster together, so finding one usually means several more are close by.
+To find them, use your ship scanner when flying low. They appear as resource hotspots and tend to cluster together, so finding one usually means several more are close by.
 
-A base with good deposit density, running multiple refiners in parallel, can hit 20,000+ nanites per hour. Set it up once, then farm it on every session.
+A base with good deposit density, running multiple refiners in parallel, can hit 20,000+ nanites per hour. It takes an evening to set up, and after that you farm it every session.
 
-## Tainted Metal (Fastest No-Setup Option)
+## Tainted Metal (fastest no-setup option)
 
 **1x Tainted Metal → 2x Nanite Clusters** in any refiner.
 
-Tainted Metal drops from **Corrupted Sentinels** on Dissonant planets (the ones with purple crystal formations on the surface). Kill them, collect the metal, refine it. A solid Sentinel combat loop can produce thousands of nanites per hour with zero base building.
+Tainted Metal drops from Corrupted Sentinels on Dissonant planets (the ones with purple crystal formations on the surface). Kill them, collect the metal, refine it. A solid Sentinel combat loop can produce thousands of nanites per hour with zero base building.
 
-Corrupted Sentinels also drop **Pugneum** as a byproduct. You can refine Pugneum directly for nanites, or use it to bootstrap Runaway Mould production via the Option A recipe above.
+Corrupted Sentinels also drop Pugneum. You can refine Pugneum directly for nanites, or use it to bootstrap Runaway Mould production via the Option A recipe above.
 
-## Creature Products (Best Per-Item Rate)
+## Creature products (best per-item rate)
 
 These have the highest nanite conversion rate in the game:
 
@@ -83,43 +83,43 @@ These have the highest nanite conversion rate in the game:
 
 One Hyaline Brain is 230 nanites in a single refiner cycle. If you're already on Dissonant planets farming Tainted Metal, the creature drops from the same sessions are free nanites on top.
 
-## Suspicious Packets (Best Mid-Game Method)
+## Suspicious Packets (best mid-game method)
 
-Pirate space stations sell **Suspicious Packet (Tech)** and **Suspicious Packet (Arms)**. Open them and you get weapon or tech upgrade modules. Sell those modules to Technology Merchants at normal space stations. Each module is worth 300-1,100 nanites depending on class.
+Pirate space stations sell Suspicious Packet (Tech) and Suspicious Packet (Arms). Open them and you get weapon or tech upgrade modules. Sell those modules to Technology Merchants at normal space stations. Each module is worth 300-1,100 nanites depending on class.
 
-**The loop:**
+The loop:
 1. Travel to an Outlaw system (filter for pirate-controlled systems on the Galaxy Map)
 2. Buy all Suspicious Packets in stock
 3. Open them immediately
 4. Teleport to a normal space station
 5. Sell the modules to the Technology Merchant
 
-One vendor with 10-15 packets typically yields 4,000-12,000 nanites per run. Rotate between multiple Outlaw systems to keep stock replenishing. You need units to buy the packets, but the conversion rate is very good.
+One vendor with 10-15 packets typically yields 4,000-12,000 nanites per run. Rotate between multiple Outlaw systems to keep stock replenishing. You need units to buy the packets, but it's one of the best units-to-nanites conversions in the game.
 
-## Ship Scrapping
+## Ship scrapping
 
 Scrap A or S-class ships and you get upgrade modules as part of the haul. Sell those modules to a Technology Merchant for nanites.
 
 Each A-class module is worth a few hundred nanites. S-class modules can hit 1,000+. The catch is startup cost: you need units to buy ships before you can scrap them, so this is more of a mid/late-game loop. It also doubles as a unit farm, since scrapping produces tradeable goods alongside the modules.
 
-## Fauna Scanning
+## Fauna scanning
 
 Scan every creature on a planet and upload the discovery. You get a nanite bonus per species, with a larger bonus for completing all species on a single planet.
 
 This is worth doing if you have S-class scanner upgrades installed. Without good upgrades, the per-hour rate is low compared to the other methods. With S-class, a full planet scan can yield 3,000+ nanites for a couple of hours of work.
 
-Good for early-game and for when you're exploring anyway. Once you have a Mould farm running, don't treat this as a primary grind.
+It's fine early on, or when you're exploring anyway. Once you have a Mould farm running, don't bother grinding it.
 
-## What to Spend Nanites On First
+## What to spend nanites on first
 
 In order of priority:
 
-1. **S-class scanner upgrades** — boosts both nanite and unit income from scanning, pays for itself fast
-2. **Hyperdrive upgrades** — unlocks blue star systems for Activated Indium farming
-3. **Multi-Tool damage upgrades** — makes Sentinel farming and Tainted Metal collection faster
-4. **Ship weapon and shield upgrades** — general survivability
+1. S-class scanner upgrades. They boost both nanite and unit income from scanning and pay for themselves fast.
+2. Hyperdrive upgrades, which unlock blue star systems for Activated Indium farming.
+3. Multi-Tool damage upgrades, so Sentinel fights (and Tainted Metal collection) go faster.
+4. Ship weapon and shield upgrades, for general survivability.
 
-Don't spend nanites on base building blueprints. Use Salvaged Data for those instead — it's the intended currency for base tech and saves your nanites for the upgrades that actually change your combat and exploration performance.
+Don't spend nanites on base building blueprints. Salvaged Data is the currency for base tech. Save your nanites for upgrades that change how your ship and multi-tool perform.
 
 For the full recipe list covering Tainted Metal, Runaway Mould, and all the other refiner conversions, check the [refining page](/refining).
 

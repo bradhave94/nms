@@ -33,17 +33,17 @@ faqs:
     answer: "The Colossus Exocraft with a tipping flatbed attachment. It has the cargo space for large hauls and the stability to handle volatile materials."
 ---
 
-The Gravitino Coil is a Multi-Tool module added in the Remnant update (6.2). It's a gravity gun: point it at industrial waste, pull it toward you, and either carry it carefully or fling it across the planet. Here's how to get it, what it costs to craft, and how to use it.
+The Gravitino Coil is a Multi-Tool module added in the Remnant update (6.2). It's a gravity gun: point it at industrial waste, pull it toward you, and either carry it carefully or fling it across the planet. It's cheap to get and more fun than it has any right to be.
 
-## How to Get the Gravitino Coil Blueprint
+## How to get the Gravitino Coil blueprint
 
-Go to the Space Anomaly and find **Iteration: Eos**, the Multi-Tool upgrade vendor. Head left from the Nexus, up the ramp, and Eos is at the end of the corridor near the floating Anomaly model. The blueprint costs **520 Nanites**.
+Go to the Space Anomaly and find Iteration: Eos, the Multi-Tool upgrade vendor. Head left from the Nexus, up the ramp, and Eos is at the end of the corridor near the floating Anomaly model. The blueprint costs **520 Nanites**.
 
 If you're already on a scrap world, Waste Processing Plants also sell the blueprint. The Anomaly is faster since you can summon it from anywhere in the galaxy.
 
-## How to Craft the Gravitino Coil
+## How to craft the Gravitino Coil
 
-| Component | Quantity | Where to Get It |
+| Component | Quantity | Where to get it |
 |---|---|---|
 | Magnetic Resonator | 3x | Craft or buy from traders |
 | Gravitino Ball | 1x | Planets with Extreme Sentinel activity |
@@ -53,7 +53,7 @@ Gravitino Balls are the only awkward ingredient. They spawn on planets where Sen
 
 Once crafted, install the Coil in a free Multi-Tool technology slot. It draws power from your Multi-Tool's existing supply, so no separate fuel is needed.
 
-## How to Use the Gravitino Coil
+## How to use the Gravitino Coil
 
 Cycle to it with **G** on PC (or your weapon cycle button on console). Then:
 
@@ -61,15 +61,15 @@ Cycle to it with **G** on PC (or your weapon cycle button on console). Then:
 - **Press LMB / Attack** to launch the magnetized object as a projectile
 - **Press RMB again** to gently release whatever you're holding
 
-The coil can hold multiple pieces of waste at once. Loading your Colossus gets faster once you get the hang of sweeping up several items in one pull rather than grabbing them one at a time.
+The coil can hold multiple pieces of waste at once. Once you get the hang of sweeping up several items in one pull, loading the Colossus goes a lot faster.
 
-### Combat Uses
+### Combat uses
 
-The Coil stuns Sentinels for a short period after launching them. It also works on most large objects, turning them into projectiles. Not the most efficient combat tool, but useful when you're already holding it and a Sentinel rolls up.
+The Coil stuns Sentinels for a short period after launching them. It also works on most large objects, turning them into projectiles. It's not a great weapon, but it'll do when you're already holding it and a Sentinel rolls up.
 
-## Waste Hauling: The Full Loop
+## Waste hauling: the full loop
 
-Scrap worlds are planets covered in industrial waste from abandoned operations. The loop is straightforward:
+Scrap worlds are planets covered in industrial waste from abandoned operations. The loop goes like this:
 
 1. Find a scrap world (planets with the industrial waste scanner tag)
 2. Load your Colossus using the Gravitino Coil
@@ -78,11 +78,11 @@ Scrap worlds are planets covered in industrial waste from abandoned operations. 
 
 Waste Processing Plants appear as objectives on your HUD once you've crafted the Coil. They're the drop-off points and also sell the blueprint if you haven't bought it yet.
 
-### Setting Up Your Colossus
+### Setting up your Colossus
 
-The **Colossus** is the right vehicle for hauling. Equip it with the **tipping flatbed** to carry more per trip. A **mountable furnace** lets you process some materials while driving, which cuts down on trips back to base.
+Use the Colossus for hauling. Equip it with the tipping flatbed to carry more per trip. A mountable furnace lets you process some materials while driving, which cuts down on trips back to base.
 
-Loading tips from players who've done this a lot:
+A few loading tips:
 
 - Pack heavier waste against the front bulkhead first
 - Stack lighter debris on top
@@ -91,15 +91,15 @@ Loading tips from players who've done this a lot:
 
 The Remnant Expedition (Twenty-One) builds on this loop in convoy format with other players. Rewards include exclusive Colossus modules and the Heirloom armor set.
 
-## Is Waste Hauling Worth It for Nanites?
+## Is waste hauling worth it for nanites?
 
-Not if nanites are your main goal. Each piece of waste gives around 15 to 50 nanites at the Processing Plant, which is low compared to Runaway Mould or Tainted Metal farming. The real draws are:
+Not if nanites are your main goal. Each piece of waste gives around 15 to 50 nanites at the Processing Plant, which is low compared to Runaway Mould or Tainted Metal farming. People do it for other reasons:
 
 - Resources unique to scrap worlds
 - Expedition rewards (cosmetics, Colossus parts)
 - The Gravitino Coil as a combat and physics tool
 
-If you want efficient nanites, use the Coil to stun Corrupted Sentinels on Dissonant planets and farm their Tainted Metal drops instead. That's 2 nanites per metal piece and considerably faster than hauling junk.
+If you want efficient nanites, use the Coil to stun Corrupted Sentinels on Dissonant planets and farm their Tainted Metal drops instead. That's 2 nanites per metal piece and much faster than hauling junk.
 
 ## Sources
 - Extracted game data

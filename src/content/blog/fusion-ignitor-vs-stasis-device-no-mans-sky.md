@@ -30,9 +30,9 @@ faqs:
     answer: "Yes. If you build farms for both, many ingredients overlap. Running both crafting chains at once is more efficient than running either one alone."
 ---
 
-Both items sell for 15,600,000 units. Both have long recipe chains. The question is which one is easier to build given what you already have. The short answer: **Stasis Device** for most players, but it depends on your farms.
+Both items sell for 15,600,000 units and both have long recipe chains. So the real question is which one is easier to build with the farms you already have. For most players that's the Stasis Device, though a Fungal Mould farm can flip it.
 
-## Side-by-Side Recipe Breakdown
+## Side-by-side recipe breakdown
 
 | | Fusion Ignitor | Stasis Device |
 |---|---|---|
@@ -44,18 +44,18 @@ Both items sell for 15,600,000 units. Both have long recipe chains. The question
 | Hardest mineral | Ammonia + Uranium | Phosphorus (easy) |
 | Gas requirements | Sulphurine, Radon, Nitrogen | Sulphurine, Radon, Nitrogen |
 
-## What They Share
+## What they share
 
-Both require a **Quantum Processor** — the most complex intermediate component in either chain. It takes:
+Both require a Quantum Processor, the most complex intermediate component in either chain. It takes:
 
 - 1x Circuit Board (100x Frost Crystal + 200x Solanium + 100x Cactus Flesh + 200x Star Bulb)
 - 1x Superconductor (250x Sulphurine + 250x Radon + 250x Nitrogen + 150x Condensed Carbon)
 
-Both also consume the same three gases (Sulphurine, Radon, Nitrogen), so your gas extractor setup serves both crafting chains. Build it once, use it for either item.
+Both also consume the same three gases (Sulphurine, Radon, Nitrogen), so one gas extractor setup covers both.
 
-## Where They Diverge
+## Where they diverge
 
-### Fusion Ignitor: The Portable Reactor Chain
+### Fusion Ignitor: the Portable Reactor chain
 
 The Portable Reactor needs Liquid Explosive and Fusion Accelerant.
 
@@ -63,11 +63,11 @@ Liquid Explosive needs:
 - **Acid:** 25x Mordite + 600x Fungal Mould
 - **Unstable Gel:** 200x Cactus Flesh
 
-**600x Fungal Mould is the problem.** It grows on swamp and toxic planets, or in Biodomes with swamp conditions. It's not impossible, but it's a dedicated farm commitment at that volume. No other high-value craft needs it, so you're building a Fungal Mould farm just for this.
+600x Fungal Mould is the problem. It grows on swamp and toxic planets, or in Biodomes with swamp conditions. At that volume you need a dedicated farm. No other high-value craft needs it, so you're building a Fungal Mould farm just for this.
 
-The **Geodesite** alloy also needs Ammonia (toxic planet) and Uranium (radioactive planet). If you don't have quick access to both planet types, you're making extra supply runs.
+The Geodesite alloy also needs Ammonia (toxic planet) and Uranium (radioactive planet). If you don't have quick access to both planet types, you're making extra supply runs.
 
-### Stasis Device: The Cryogenic Chamber Chain
+### Stasis Device: the Cryogenic Chamber chain
 
 The Cryogenic Chamber needs Living Glass and Cryo-pump.
 
@@ -75,19 +75,19 @@ Living Glass needs:
 - **Lubricant:** 50x Faecium + 400x Gamma Root
 - **5x Glass:** 200x Frost Crystal total
 
-Gamma Root at 400x is the main farm here. It grows on irradiated planets or in Biodomes. Most established players already have it if they've run the NPC mission chains. Faecium is easy — creatures drop it almost everywhere, and you only need 50x.
+Gamma Root at 400x is the main farm here. It grows on irradiated planets or in Biodomes. Most established players already have it if they've run the NPC mission chains. Faecium is easy. Creatures drop it almost everywhere, and you only need 50x.
 
-The **Iridesite** alloy needs Paraffinium, Phosphorus, and Dioxite — from lush, fiery, and frozen planets. All three are common planet types and the quantities are modest (50x each).
+The Iridesite alloy needs Paraffinium, Phosphorus, and Dioxite, which come from lush, fiery, and frozen planets. All three are common planet types and the quantities are modest (50x each).
 
-## The Verdict
+## The verdict
 
-**Stasis Device is easier for most players,** for two reasons:
+I'd pick the Stasis Device, for two reasons:
 
-1. **Gamma Root is a simpler farm than Fungal Mould.** Both need Biodomes if you don't have the right native planet, but Gamma Root has no volume spike on the scale of 600x. The hardest single ingredient in the Stasis chain is 400x Gamma Root. The Fusion Ignitor asks for 600x Fungal Mould, which is rarer to come by.
+1. Gamma Root is a simpler farm than Fungal Mould. Both need Biodomes if you don't have the right native planet, but Gamma Root has no volume spike on the scale of 600x. The hardest single ingredient in the Stasis chain is 400x Gamma Root. The Fusion Ignitor asks for 600x Fungal Mould, which is rarer to come by.
 
-2. **Iridesite is easier to supply than Geodesite.** Paraffinium, Phosphorus, and Dioxite all appear on accessible, common planet types. Geodesite requires Ammonia and Uranium, which specifically need toxic and radioactive planets — a bit more specialized to stock up on.
+2. Iridesite is easier to supply than Geodesite. Paraffinium, Phosphorus, and Dioxite all show up on common planet types. Geodesite needs Ammonia and Uranium, so you're hunting for toxic and radioactive planets specifically.
 
-### When Fusion Ignitor Is Easier
+### When the Fusion Ignitor is easier
 
 Fusion Ignitor wins if you already have:
 - A working Fungal Mould farm (e.g., from farming Acid for other recipes)
@@ -96,11 +96,11 @@ Fusion Ignitor wins if you already have:
 
 If both farms are zero and you're starting fresh, the Stasis Device chain gets you to a sellable item faster.
 
-## Running Both at Once
+## Running both at once
 
-Here's the practical approach: run both. The shared ingredients (Quantum Processor, all three gases, Cactus Flesh, Star Bulb, Solanium, Frost Crystal) mean your gas setup and most of your plant farm feeds both chains simultaneously. Add a Fungal Mould setup for the Portable Reactor and a Gamma Root farm for the Cryogenic Chamber, and one collection run produces materials for both items.
+Honestly, just run both. The shared ingredients (Quantum Processor, all three gases, Cactus Flesh, Star Bulb, Solanium, Frost Crystal) mean your gas setup and most of your plant farm already feed both chains. Add a Fungal Mould setup for the Portable Reactor and a Gamma Root farm for the Cryogenic Chamber, and one collection run produces materials for both items.
 
-That doubles your output per session for almost no extra infrastructure.
+That roughly doubles your output per session, and the only extra infrastructure is the Fungal Mould and Gamma Root farms.
 
 | Farm | Feeds |
 |---|---|

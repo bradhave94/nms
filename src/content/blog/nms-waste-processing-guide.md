@@ -25,42 +25,38 @@ relatedLinks:
     href: "/exocraft"
 faqs:
   - question: "Where do you find industrial waste in No Man's Sky?"
-    answer: "On planets that already have salvageable scrap. Remnant added waste in small piles and large heaps on those scrap worlds."
+    answer: "On planets that already have salvageable scrap. Remnant added small piles and large heaps of waste to those scrap worlds."
   - question: "What does a Waste Processing Plant do?"
-    answer: "It is a facility on scrap worlds where you drop industrial waste. The valuation scale can auto-process a load for a basic reward. Manual sorting generally pays better. Special radioactive, toxic, and explosive waste should go in the matching processor for the full reward and scrap-hauling title progress."
+    answer: "It's a facility on scrap worlds where you drop off industrial waste. The valuation scale can process a load automatically for a basic reward, but sorting it by hand usually pays better. Radioactive, toxic, and explosive waste should go in the matching processor to get the full reward and progress toward scrap-hauling titles."
   - question: "Is the Colossus furnace better than a Waste Processing Plant?"
-    answer: "No per piece. The furnace lets you burn waste on the road. Extracted game text says it is less efficient than a Waste Processing Plant. Fandom says it pays like common scrap even if you feed it special waste. Use the furnace for convenience while hauling. Use the plant for the best return per piece and full special-waste progress."
+    answer: "Not per piece. The furnace lets you burn waste while you drive, but the in-game text says it's less efficient than a plant, and according to the Fandom wiki it pays out like common scrap even when you feed it special waste. Use it for convenience. Use the plant for the best return."
   - question: "Is waste processing good for nanites?"
-    answer: "Not as a main nanite farm. Official notes promise recycled resources and rewards, not a nanite rate. For nanites, use the existing nanite farms guide."
+    answer: "Not really. Hello Games promises recycled resources and rewards, not a nanite rate. For nanites, see the nanite farms guide."
   - question: "How do you find waste heaps and processing plants?"
-    answer: "Scan with the Exocraft Radar from a Colossus. Official 6.2 notes say it can pinpoint nearby plants and waste heaps."
+    answer: "Scan with the Exocraft Radar from a Colossus. It pinpoints nearby plants and waste heaps."
 ---
 
-Waste processing landed in Remnant (update 6.2). You collect industrial waste on Salvageable Scrap planets and recycle it at Waste Processing Plants for resources and rewards, plus scrap-hauling titles that unlock [Colossus](/exocraft) customisation. The [Gravitino Coil](/technology/GRAVITYGUN/) unlock is already covered in the [Coil guide](/blog/gravitino-coil-guide-no-mans-sky/). This post is the processing loop: waste types, the plant, and when the furnace is worth installing.
+Waste processing arrived with Remnant (update 6.2). You collect industrial waste on scrap worlds and recycle it at Waste Processing Plants for resources and rewards. It also earns scrap-hauling titles that unlock [Colossus](/exocraft) customisation. I already covered getting the [Gravitino Coil](/technology/GRAVITYGUN/) in the [Coil guide](/blog/gravitino-coil-guide-no-mans-sky/), so this post is about the processing side: waste types, the plant, and whether the furnace is worth installing.
 
 ## What waste processing actually is
 
-Hello Games added industrial waste to planets that already have salvageable scrap. You collect it, haul it, and drop it at a Waste Processing Plant for recycled resources and rewards. There is a short tutorial mission, and the in-game guide got a Scrap Salvaging & Industrial Waste entry.
+Hello Games added industrial waste to planets that already had salvageable scrap. You collect it, haul it, and drop it at a Waste Processing Plant in exchange for recycled resources and rewards. There's a short tutorial mission, and the in-game guide has a Scrap Salvaging & Industrial Waste entry.
 
-If you do not have the Coil yet, buy the blueprint at the Space Anomaly or at a plant, then craft it. Extracted recipe: 3x [Magnetic Resonator](/products/MAGNET/), 1x [Gravitino Ball](/curiosities/GRAVBALL/), 50x [Chromatic Metal](/raw/STELLAR2/).
+If you don't have the Coil yet, buy the blueprint at the Space Anomaly or at a plant. It's crafted from 3x [Magnetic Resonator](/products/MAGNET/), 1x [Gravitino Ball](/curiosities/GRAVBALL/), and 50x [Chromatic Metal](/raw/STELLAR2/).
 
 ## Find a scrap world
 
-Look for planets with salvageable scrap. Those worlds now also spawn industrial waste. Official notes put it in two sizes: small piles and large heaps.
-
-You do not need a special new planet type. If the world already had scrap, it has waste.
+There's no new planet type to hunt for. Any world that already had salvageable scrap now has waste too, in small piles and large heaps.
 
 ## Waste types
 
-Most of the haul is ordinary industrial debris. That is the safe stuff.
+Most of what you'll haul is ordinary industrial debris, which is safe to handle.
 
 ### Volatile waste
 
-Remnant also added waste that can hurt you: toxic barrels, radioactive crates, and explosive canisters. Official notes tell you to handle volatile waste carefully.
+Remnant also added waste that can hurt you: toxic barrels, radioactive crates, and explosive canisters. Handle these carefully. Plants have separate processing units for radioactive, explosive, and toxic materials, so don't just dump a glowing crate on the pile with everything else.
 
-Plants have specialised processing units for radioactive, explosive, and toxic materials. Do not treat a glowing crate like a scrap pile.
-
-The Coil can grab more than waste. Official 6.2 notes list golden balls at planetary ruins, spheres from a Sphere Creator, combat supplies dropped by Sentinel drones, and the drones themselves. Fun. Not the recycling loop.
+The Coil can pick up more than waste, by the way. Golden balls at planetary ruins, spheres from a Sphere Creator, supplies dropped by Sentinel drones, and the drones themselves all work. That's mostly just for fun, though. None of it counts toward recycling.
 
 ## The haul loop
 
@@ -70,45 +66,39 @@ The Coil can grab more than waste. Official 6.2 notes list golden balls at plane
 4. Drive to a Waste Processing Plant.
 5. Dump the haul for resources and rewards.
 
-The [Exocraft Radar](/exocraft/VEHICLE_SCAN/) can pinpoint nearby plants and waste heaps. Fit the Colossus with a [Flatbed Chassis Module](/exocraft/TRUCK_BODY02/). Extracted text: an electromagnetic containment field cuts cargo loss on uneven ground, and a tipping lever dumps the bed. Official 6.2 notes still warn you about steep slopes.
+The [Exocraft Radar](/exocraft/VEHICLE_SCAN/) can pinpoint nearby plants and waste heaps. Fit the Colossus with a [Flatbed Chassis Module](/exocraft/TRUCK_BODY02/), which has an electromagnetic containment field that cuts down on cargo falling off over rough ground, plus a lever to tip the bed. Steep slopes will still cost you some cargo, so take them slowly.
 
-The [Cyclops Scope](/exocraft/VEHICLE_SCOPE/) puts the Analysis Visor on the driver's display. Nice for spotting the next heap without hopping out. Not required.
+The [Cyclops Scope](/exocraft/VEHICLE_SCOPE/) puts the Analysis Visor on the driver's display. It's nice for spotting the next heap without hopping out, but you don't need it.
 
 ## Waste Processing Plants
 
-Waste Processing Plants are a Remnant building on scrap worlds. You bring waste here. Official notes say the plant extracts recycled resources and rewards, including valuable alloys hidden in the debris. They do not name the alloys or publish amounts.
+Plants are the Remnant buildings on scrap worlds where you drop off your waste. According to the patch notes, they pull recycled resources and rewards out of it, including valuable alloys hidden in the debris. Which alloys, and how many, isn't documented.
 
-Official 6.2 notes: double-toot the Colossus horn while parked at the plant's valuation scale to open the control panel.
+To open the control panel, park at the plant's valuation scale and double-toot the Colossus horn. I love that this is the actual mechanic.
 
-The valuation scale can automatically process your load for a basic reward. Manual sorting generally pays better. Special radioactive, toxic, and explosive waste should go in the matching processor ([Radioactive Hazard](/other/SCRAP_RAD/), [Toxic Containment](/other/SCRAP_TOX/), [Potentially Explosive](/other/SCRAP_EXP/)) if you want the full reward and the scrap-hauling title progress. Using the wrong processor can consume the waste without the corresponding reward. Official 6.2 notes confirm the specialised units. They do not document the miss penalty.
+The valuation scale can process your load automatically for a basic reward, but sorting by hand usually pays better. Special waste should go in its matching processor ([Radioactive Hazard](/other/SCRAP_RAD/), [Toxic Containment](/other/SCRAP_TOX/), [Potentially Explosive](/other/SCRAP_EXP/)) if you want the full reward and title progress. Put it in the wrong one and you may lose the waste without getting the reward. The patch notes confirm the separate processors exist but don't say exactly what happens if you get it wrong.
 
-Official patch notes still do not publish a yield table. If you want a real nanite farm, use the [nanite farms guide](/blog/best-nanite-farms-no-mans-sky/).
-
-Scrap-hauling titles exist for this work. Official notes say those titles also unlock Colossus customisation modules across all saves.
+There's no official yield table. If you want a proper nanite farm, the [nanite farms guide](/blog/best-nanite-farms-no-mans-sky/) has better options.
 
 ## Colossus furnace vs the plant
 
-The [Furnace Chassis Module](/exocraft/TRUCK_BODY03/) burns waste while you drive. Extracted game text is blunt: resource extraction is less efficient than at a Waste Processing Plant. Fandom's Colossus notes say the furnace accepts every waste type but only pays out like common scrap.
+The [Furnace Chassis Module](/exocraft/TRUCK_BODY03/) burns waste while you drive. The in-game text doesn't hide that it's less efficient than a Waste Processing Plant. The Fandom wiki adds that it takes every waste type but only pays out like common scrap.
 
-Use the furnace for convenience while hauling. Use the plant when you want the best return per piece of waste and full special-waste progress. The furnace can still win on time if you are already driving and do not want the return trip.
+So the plant gives you the best return per piece, plus full credit for special waste. The furnace is for convenience. If you're already driving around and don't want to make the trip back, it can still come out ahead on time.
 
-The [Excavation Blade](/exocraft/EXO_PLOUGH/) is a side tool. It harvests a small number of resources from minerals and vegetation you hit, and it keeps the paint cleaner. It does not replace the waste loop.
+The [Excavation Blade](/exocraft/EXO_PLOUGH/) is a side tool. It harvests a few resources from minerals and plants you plough through, and it keeps your paint cleaner. It's no substitute for the waste loop.
 
 ## Colossus unlocks
 
-Official 6.2 notes give this loop a second payout besides the plant itself. Scrap-hauling and waste-processing titles unlock Colossus customisation modules, and those unlocks apply across all saves.
+Besides what the plant gives you, scrap-hauling and waste-processing titles unlock Colossus customisation modules, and those unlocks carry across all your saves. Hello Games hasn't published the full module list or how much waste each title takes. Special waste counts toward these titles, which is another reason to use the right processor.
 
-Hello Games did not publish the full module list or the waste counts behind each title. Matching processors still matter here. Special radioactive, toxic, and explosive waste is part of that title track, not only the cash-in.
+The Remnant expedition (Expedition 21) ran this loop as a convoy event with its own exclusive Colossus rewards: a camouflage finish, an asymmetrical cabin, and mechanical legs. That expedition is over, but the waste loop and the title unlocks are still in the normal game.
 
-The Remnant expedition also had exclusive Colossus rewards (camouflage finish, asymmetrical cabin, mechanical legs). That event is over. The title unlocks are the part that stays in the normal game.
+## Is it worth it?
 
-## What you get (and what you don't)
+You get recycled resources, plant rewards, and titles. You don't get a great nanite farm. I'd treat it as something fun to do with the Colossus rather than a grind.
 
-You get recycled resources, plant rewards, and those titles. You do not get a top-tier nanite farm.
-
-Expedition 21: Remnant used this loop as a convoy event. That expedition is over. The waste loop is still in the normal game.
-
-If you still need the gun itself, go back to the [Gravitino Coil guide](/blog/gravitino-coil-guide-no-mans-sky/). For other refining loops, the [refiner recipes](/blog/best-no-mans-sky-refiner-recipes/) post is the older list.
+If you still need the gun, head back to the [Gravitino Coil guide](/blog/gravitino-coil-guide-no-mans-sky/). For other refining loops, see [refiner recipes](/blog/best-no-mans-sky-refiner-recipes/).
 
 ## Sources
 

@@ -28,7 +28,7 @@ faqs:
     answer: "With a 2% spawn rate in wealthy systems, expect anywhere from 10 to 60+ reloads. Most players land one within 20-40 attempts. Outlaw systems have a 5% rate but sometimes roll A-class stats, so wealthy systems are the safer grind."
 ---
 
-The reliable way to get an S-class freighter is save scumming freighter rescue events in wealthy systems. It's a grind. At 2% spawn odds, expect 20 to 40 reloads, sometimes more. Here's the exact method, including the two-stage approach that saves you from grinding an S-class version of a freighter you don't actually want to look at for the next 500 hours.
+The reliable way to get an S-class freighter is save scumming freighter rescue events in wealthy systems. It's a grind. At 2% spawn odds, expect 20 to 40 reloads, sometimes more. Below is the method I'd use, split into two stages so you don't burn an evening rolling S-class on a freighter you'll hate looking at for the next 500 hours.
 
 ## Why S-class is worth the grind
 
@@ -41,16 +41,16 @@ S-class freighters have the highest base stat bonuses of any class. When you cla
 | A | +40% to +60% | +20% to +40% |
 | S | +60% to +80% | +40% to +60% |
 
-S-class also comes with 4 supercharged slots on the tech grid, which is a real advantage for stacking freighter upgrade modules. (There's a known bug that sometimes spawns S-class freighters with only 2-3 supercharged slots. More on checking that below.)
+S-class also comes with 4 supercharged slots on the tech grid, which matters a lot once you start stacking upgrade modules. (There's a known bug that sometimes spawns S-class freighters with only 2-3 supercharged slots. More on checking that below.)
 
-Beyond stats, you want a **capital freighter**, not a system freighter. Here's the difference:
+You also want a capital freighter, not a system freighter:
 
 | Type | Cargo Slots | Tech Slots | Price Range |
 |------|------------|-----------|-------------|
 | System Freighter | 15-19 | 8-12 | 5M – 23M units |
 | Capital Freighter | 24-34 | 12-20 | 26M – 178M units |
 
-Capital freighters start with significantly more slots, and both types can be upgraded to 48 cargo / 21 tech with Cargo Bulkheads. They also look the part. These are the massive ships you see getting attacked in rescue events.
+Capital freighters start with a lot more slots, though both types can be upgraded to 48 cargo / 21 tech with Cargo Bulkheads. They're also the huge ships you see getting attacked in rescue events, and they look like it.
 
 ## Prerequisites
 
@@ -62,11 +62,11 @@ Install an Economy Scanner. You'll use this to identify wealthy 3-star systems o
 
 Budget 150-200M units. S-class capital freighters cost up to ~178M units based on game data. If this is your very first freighter, it's free regardless of class, but for everyone else, get the credits ready.
 
-Check your difficulty settings. Rescue events can't trigger if Space Combat is set to None. It sounds obvious, but it's the kind of thing you discover after two hours of fruitless warping.
+Check your difficulty settings. Rescue events can't trigger if Space Combat is set to None. Obvious, sure, but it's the kind of thing you find out after two hours of warping around for nothing.
 
 ## Pick your design before you grind
 
-This is the step most guides skip, and it's the most important one.
+Don't skip this step. It matters more than anything else here.
 
 The freighter's design is locked to the star system. Every time you warp into a specific system during an active rescue event, the same freighter design spawns. What's random is the class (C, B, A, or S), and that's what you're reloading for.
 
@@ -84,9 +84,9 @@ Capital freighters come in two families:
 - Battleship: 5 midsection segments, mid-size
 - Dreadnought: 7 midsection segments, the largest, 20 turrets
 
-The **Pirate Dreadnought** is a third option: a unique design available only through a specific event type, covered below.
+The Pirate Dreadnought is a third option. It's a unique design that only comes from one event type, covered below.
 
-There are community catalogues (the NMS Galactic Fleet Catalog on the wiki) where players have documented which systems spawn each design. If you have a specific ship in mind, look it up there and work from the nearest system.
+The NMS Galactic Fleet Catalog on the wiki documents which systems spawn each design. If you have a specific ship in mind, look it up there and work from the nearest system.
 
 ## Best systems to hunt in
 
@@ -99,9 +99,9 @@ Spawn rates are tied to system economy:
 | Wealthy (3-star) | 30% | 40% | 28% | 2% |
 | Outlaw | 85% | 5% | 5% | 5% |
 
-Wealthy 3-star systems are the standard recommendation. The 2% S-class rate is low but the stat rolls will be within proper S-class ranges. Look for economy descriptors like Opulent, Booming, Affluent, or Flourishing on the galaxy map.
+Hunt in wealthy 3-star systems. The 2% S-class rate is low, but the stat rolls land in proper S-class ranges. Look for economy descriptors like Opulent, Booming, Affluent, or Flourishing on the galaxy map.
 
-Outlaw systems have higher S-class odds at 5%, but there's a catch: some players report that S-class freighters in outlaw systems occasionally roll stats that are closer to A-class ranges. If you want guaranteed S-class stat spreads, stick to wealthy systems.
+Outlaw systems have better S-class odds at 5%. The catch is that S-class freighters there have been reported rolling stats closer to A-class ranges. If you want guaranteed S-class stat spreads, stick to wealthy systems.
 
 ## The two-stage save scum method
 
@@ -127,7 +127,7 @@ Now you're reloading within the same system until you hit the 2% S-class roll.
 9. S-class? Clear the remaining pirates without shooting the freighter itself. Damaging the freighter can prevent the captain from inviting you aboard. Once the pirates are gone, board, talk to the captain, and claim or purchase it.
 10. Not S-class? Reload the Stage 2 restore point and try again.
 
-Expect to reload 15 to 40+ times at this stage. At 2% odds, you might hit it on attempt 5 or attempt 70. The process is fast once you know the steps. Warp in, fly to freighter, scan, reload. Under 2 minutes per attempt.
+Expect to reload 15 to 40+ times at this stage. At 2% odds, you might hit it on attempt 5 or attempt 70. Once you have the rhythm down (warp in, fly to freighter, scan, reload) each attempt takes under 2 minutes.
 
 One thing to watch for: after reloading, the freighter sometimes spawns in a different spot, often behind the space station. If you warp in and don't see it right away, look around. It's there.
 
@@ -141,7 +141,7 @@ About 20% of pirate systems will always spawn a Pirate Dreadnought event when yo
 
 During the event, the Pirate Dreadnought attacks the civilian freighter. Damage it down to 25% health. At that point it starts fleeing and charges its hyperdrive. Destroy the hyperdrive before it escapes to force a surrender. Then board and check class with your visor before claiming.
 
-If you destroy the Pirate Dreadnought completely without letting it surrender, you get an S-class Salvaged Fleet Unit, nanites, and units instead. Worth knowing if you'd rather farm those rewards.
+If you destroy the Pirate Dreadnought completely without letting it surrender, you get an S-class Salvaged Fleet Unit, nanites, and units instead. Some people farm these on purpose.
 
 ## Claiming it
 
@@ -155,13 +155,13 @@ If you're exchanging an existing freighter, here's what carries over:
 - Unlocked research
 - Storage container contents
 
-Tech modules and upgrade modules don't transfer. Package everything from your tech grid before committing to the exchange. It's easy to forget that when you've just rolled S-class after 40 attempts.
+Tech modules and upgrade modules don't transfer. Package everything from your tech grid before committing to the exchange. You will be tempted to rush this after 40 reloads. Don't.
 
 Also check the supercharged slot count before finalising. Land in the hangar, go to your new freighter's technology grid, and confirm you're seeing 4 supercharged slots. If it's showing 2 or 3, reload the restore point. That's a known bug and it doesn't fix itself after claiming.
 
 ## Upgrading your new S-class
 
-Claiming the freighter is the start, not the end. Base S-class capital freighters come with 24-34 cargo slots and 12-20 tech slots. You can push both to maximum (48 cargo / 21 tech) using Cargo Bulkheads.
+Once it's yours, there's still upgrading to do. Base S-class capital freighters come with 24-34 cargo slots and 12-20 tech slots. You can push both to maximum (48 cargo / 21 tech) using Cargo Bulkheads.
 
 Cargo Bulkheads come from derelict freighters. Buy an Emergency Signal Scanner from the Scrap Dealer at any space station (around 5M units) and activate it to locate one. At the end of the run, you'll hit an Engineering Console where you can fabricate a Cargo Bulkhead or a Technology Upgrade module.
 
@@ -175,6 +175,6 @@ Freighter technology blueprints are unlocked separately using Salvaged Frigate M
 
 ## Sources
 - Extracted game data
-- [NMS Wiki — Freighter](https://nomanssky.fandom.com/wiki/Freighter)
-- [NMS Wiki — Class spawn rates](https://nomanssky.fandom.com/wiki/Class)
-- [NMS Wiki — Freighter Types](https://nomanssky.fandom.com/wiki/Freighter_Types)
+- [NMS Wiki: Freighter](https://nomanssky.fandom.com/wiki/Freighter)
+- [NMS Wiki: Class spawn rates](https://nomanssky.fandom.com/wiki/Class)
+- [NMS Wiki: Freighter Types](https://nomanssky.fandom.com/wiki/Freighter_Types)

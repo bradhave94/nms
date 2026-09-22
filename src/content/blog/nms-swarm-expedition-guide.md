@@ -41,19 +41,17 @@ faqs:
     answer: "The full Direwasp cosmetic set (Helm, Chestpiece, Plating, Gloves, Cuisses, Boots), the Direwasp Disintegrator rifle multi-tool, the Direwasp Flightpack jetpack, team-specific flags, all three faction posters, a Swarm Decal, and the title 'the Fragmented'. All rewards transfer to your main save after the expedition."
 ---
 
-Expedition 22, The Swarm, launched with update 6.4 on May 27, 2026. You have roughly eight weeks. It's shorter than most expeditions but leans hard into space combat, a community-wide war effort, and a boss encounter with a ship that Hello Games says is capable of destroying a space station.
+Expedition 22, The Swarm, launched with update 6.4 on May 27, 2026. You have roughly eight weeks. It's shorter than most expeditions and much heavier on space combat. The whole community works toward one goal, and it ends with a boss fight against a ship that Hello Games says can destroy a space station.
 
-Here's what you need to know.
-
-## What Is The Swarm Expedition?
+## What is the Swarm expedition?
 
 The Swarm is a time-limited community expedition where every active player fights back against the Hive of Glass, a massive alien warship hovering at the edge of planetary atmospheres. The goal is to build a Prismatic Core inside the Space Anomaly by running missions across three categories, then use it to take the Hive down for good.
 
 Progress is public. The [Galactic Atlas Countermeasures page](https://galacticatlas.nomanssky.com/poi/countermeasures) shows live contribution totals for all three factions, and the Anomaly has a physical construction tracker above the Core site. The faction that contributes the most gets permanently commemorated inside the Anomaly when the expedition closes.
 
-## The Three Factions
+## The three factions
 
-A short personality quiz assigns your faction when you first load into the expedition. No wrong answers. Just pick what sounds right.
+A short personality quiz assigns your faction when you first load into the expedition. There are no wrong answers, so don't overthink it.
 
 | Faction | Color | Theme |
 | --- | --- | --- |
@@ -61,11 +59,11 @@ A short personality quiz assigns your faction when you first load into the exped
 | Sages | Green | Knowledge and insight |
 | Weavers | Blue | Connection and creation |
 
-Each faction gets its own ship, uniform, flags, and posters. Every faction earns the same core rewards. Only the top contributor earns the monument.
+Each faction gets its own ship, uniform, flags, and posters. The core rewards are the same for everyone. Only the faction that contributes the most gets the monument.
 
-## Mission Types: Purge, Restoration, Sabotage
+## Mission types: Purge, Restoration, Sabotage
 
-Phase 3 opens up the three mission categories at the Prismatic Core. Pick the one that fits how you play.
+Phase 3 opens up the three mission categories at the Prismatic Core.
 
 | Mission type | What you do | Effect on Core |
 | --- | --- | --- |
@@ -73,13 +71,13 @@ Phase 3 opens up the three mission categories at the Prismatic Core. Pick the on
 | Restoration | Deploy sweepers to cleanse contaminated planets | Stabilizes build balance |
 | Sabotage | Deploy from the Anomaly to intercept swarm activity | Disrupts swarm network |
 
-Purge is the most straightforward if you just want to shoot things. Restoration and Sabotage both have more steps but contribute differently to the overall construction rate. The community needs all three, so anything you run helps.
+If you just want to shoot things, run Purge. Restoration and Sabotage have more steps and feed the construction rate in different ways. The community needs all three, so run whichever one you enjoy.
 
-## Phase-by-Phase Walkthrough
+## Phase-by-phase walkthrough
 
 ### Phase 1
 
-You wake up near a crashed ship. The story establishes the Traveller soul fragmentation and introduces the swarm threat. Every task has an on-screen quest marker.
+You wake up near a crashed ship. The opening sets up the Traveller's fragmented soul and introduces the swarm. Every task has an on-screen quest marker.
 
 | Milestone | How to complete |
 | --- | --- |
@@ -106,33 +104,33 @@ Phase 2 pushes you into deeper space. Install a Cadmium Drive before you start s
 | Devoured | Escape the World of Glass (this resolves automatically) |
 | Headquarters | Return to Polo and use the Prismatic Core to start tracking swarm activity |
 
-The Emperor of Glass fight intentionally ends with the Hive pulling you in. That's a scripted story beat, not a failure state. The Devoured milestone clears on its own.
+The Emperor of Glass fight is supposed to end with the Hive pulling you in. You didn't fail. The Devoured milestone clears on its own.
 
-### Phase 3 and Beyond
+### Phase 3 and beyond
 
 Later phases gate on community Prismatic Core progress rather than just personal milestones. Some steps unlock on a schedule tied to collective completion. Check the Mission Log and the Galactic Atlas tracker to see what's currently open. The final battle against the Hive requires the community to finish enough Core construction first.
 
-## The Hive of Glass: Boss Tips
+## The Hive of Glass: boss tips
 
-The Hive of Glass is a Death Star-scale alien warship. Its iris opens to fire a weapon capable of destroying freighter fleets. The fight sends you through a rotating ring of lasers to reach a central core.
+The Hive of Glass is an alien warship roughly the size of the Death Star. Its iris opens to fire a weapon that can wipe out freighter fleets. The fight sends you through a rotating ring of lasers to reach a central core.
 
 One 6.4 combat change matters a lot here: hitting a weak point now guarantees a critical hit, and hitting anywhere else never crits. Go for the core every shot.
 
-Practical notes:
+A few tips:
 
 - Clear escort swarmers first with burst weapons or missiles before committing to the core
 - Auto-follow can now boost during pursuit, which helps when chasing the core as the Hive moves
-- Keep moving through the laser wheel rather than stopping to aim; sustained fire beats stationary precision shots
+- Keep moving through the laser wheel instead of stopping to aim. Sustained fire beats careful stationary shots
 
-## New Raw Material: Corrupted Ichor
+## New raw material: Corrupted Ichor
 
-[Corrupted Ichor](/raw/SWARMDUST) is the primary new material in update 6.4. You get it by using the [Gravitino Coil](/blog/gravitino-coil-guide-no-mans-sky) to dismantle fallen swarmer ships on dissonant planets. Crash sites spawn regularly on dissonant worlds and are defended by small planetary swarmers.
+[Corrupted Ichor](/raw/SWARMDUST) is the main new material in update 6.4. You get it by using the [Gravitino Coil](/blog/gravitino-coil-guide-no-mans-sky) to dismantle fallen swarmer ships on dissonant planets. Crash sites spawn regularly on dissonant worlds and are defended by small planetary swarmers.
 
-Polo asks for it in Phase 1, and it shows up again in the research chain. Collect it whenever you clear swarmers. It accumulates fast.
+Polo asks for it in Phase 1, and you'll need it again in the research chain. Grab it whenever you clear swarmers. It piles up quickly.
 
 Swarmer crash sites exist in the base game too, not just the expedition. If you're farming Corrupted Ichor outside the expedition, head to any dissonant planet and look for the debris.
 
-## All Swarm Expedition Rewards
+## All Swarm expedition rewards
 
 Everything transfers to your main save when the expedition ends.
 
@@ -151,22 +149,22 @@ Everything transfers to your main save when the expedition ends.
 | Swarm Decal | Ship decal |
 | Title: 'the Fragmented' | Character title |
 
-The Flightpack hums and oscillates as though buzzing with the rage of a thousand metal insects. That's directly from Hello Games and is a reasonable description.
+Hello Games describes the Flightpack as humming and oscillating "as though buzzing with the rage of a thousand metal insects." Honestly, that's accurate.
 
 See the full [list of new items in 6.4](/new) if you want every addition from this update.
 
-## A Few Things to Sort Before You Start
+## Before you start
 
-**Install a Cadmium Drive.** Phase 2 requires red-star warps. Without one, you'll stall out before the Emperor of Glass fight.
+Install a Cadmium Drive. Phase 2 needs red-star warps, and without one you'll get stuck before the Emperor of Glass fight.
 
-**Start collecting Corrupted Ichor early.** Dismantle every swarmer crash site you find. You'll need it in Phase 1 and the research chain.
+Start collecting Corrupted Ichor early. Dismantle every swarmer crash site you find, since you need it in Phase 1 and again in the research chain.
 
-**Check the Galactic Atlas.** Live standings for all three factions are at the [Countermeasures page](https://galacticatlas.nomanssky.com/poi/countermeasures). If your faction is behind, run more missions.
+Keep an eye on the [Countermeasures page](https://galacticatlas.nomanssky.com/poi/countermeasures) on the Galactic Atlas for live faction standings. If your faction is behind, run more missions.
 
-**Pace yourself.** The expedition runs until approximately late July 2026. Eight weeks is enough time to clear everything without burning out in the first week.
+And pace yourself. The expedition runs until around late July 2026. Eight weeks is plenty of time to clear everything without burning out in week one.
 
 ## Sources
 
-- [No Man's Sky 6.4 Swarm patch notes](https://www.nomanssky.com/swarm-update/) — Hello Games
-- [Sean Murray's update letter](https://www.nomanssky.com/2026/05/no-mans-sky-the-swarm/) — Hello Games
-- [Galactic Atlas Countermeasures](https://galacticatlas.nomanssky.com/poi/countermeasures) — Hello Games
+- [No Man's Sky 6.4 Swarm patch notes](https://www.nomanssky.com/swarm-update/) (Hello Games)
+- [Sean Murray's update letter](https://www.nomanssky.com/2026/05/no-mans-sky-the-swarm/) (Hello Games)
+- [Galactic Atlas Countermeasures](https://galacticatlas.nomanssky.com/poi/countermeasures) (Hello Games)
