@@ -24,24 +24,24 @@ relatedLinks:
     href: "/creatures/companions/"
 faqs:
   - question: "How do I start Expedition 23 in No Man's Sky?"
-    answer: "From the Expedition Terminus on the Space Anomaly, or start a fresh new save. A fresh expedition save can convert to Normal Mode later. Official Hello Games wording."
+    answer: "Use the Expedition Terminus on the Space Anomaly, or start a fresh save. An expedition save can be converted to Normal Mode later."
   - question: "When does Our Journey Continues end?"
     answer: "Hello Games says it runs about six weeks from the September 16, 2026 launch. The Fandom wiki lists an end date of October 28, 2026."
   - question: "What are the Expedition 23 exclusive rewards?"
-    answer: "Official list: nine framed update artworks, an astronaut bobblehead cockpit companion, the Starbound v0.27 Multi-Tool, the Golden Rasamama S36 starter ship, a vintage Sentinel Interceptor, and a diplodocus companion. Fandom also lists phase cosmetics (Time Traveller title, decal, banner) and a Diplo Companion Egg for full completion."
+    answer: "Nine framed update artworks, an astronaut bobblehead for your cockpit, the Starbound v0.27 Multi-Tool, the Golden Rasamama S36 starter ship, a vintage Sentinel Interceptor, and a diplodocus companion. The Fandom wiki also lists phase cosmetics (the Time Traveller title, a decal, and a banner) and a Diplo Companion Egg for finishing everything."
   - question: "How do I redeem Expedition 23 rewards on my main save?"
-    answer: "Claim phase rewards in the expedition Log, then visit the Quicksilver Synthesis Companion on the Space Anomaly. Exclusive rewards are redeemable across all save games."
+    answer: "Claim phase rewards in the expedition Log, then visit the Quicksilver Synthesis Companion on the Space Anomaly. The exclusives can be redeemed on any save."
   - question: "Is this a full milestone walkthrough?"
-    answer: "Not yet. This early guide covers rewards, dates, how to start, and how to redeem. Milestone names are listed as a roadmap. Exact objective text will be filled in once documented."
+    answer: "Not yet. For now it covers rewards, dates, how to start, and how to redeem, plus the milestone names. I'll add objectives once they're properly documented."
   - question: "Does this replace the Swarm expedition guide?"
-    answer: "No. Swarm is Expedition 22. This page is only for Expedition 23: Our Journey Continues."
+    answer: "No. Swarm is Expedition 22. This page only covers Expedition 23: Our Journey Continues."
 ---
 
-Expedition 23 is live. **Our Journey Continues** is the 10th anniversary expedition. Ten years of updates, developer commentary on the milestones, and a stack of exclusive cosmetics that lean hard into nostalgia.
+Expedition 23 is live. Our Journey Continues is the 10th anniversary expedition, built around ten years of updates, with developer commentary on each milestone and a pile of nostalgic exclusive cosmetics.
 
-This is a **WIP early guide**. Rewards, schedule, start path, and redeem steps are solid. Per-milestone how-tos are not. Fandom still shows placeholder *Objective* rows for most milestones, so we are not inventing requirement text. Milestone **names** and the filled rendezvous lines are here as a roadmap. Full walkthrough comes later when those objectives are documented.
+This guide is a work in progress. The rewards, schedule, how to start, and how to redeem are all confirmed. Step-by-step milestone instructions aren't here yet, because the Fandom wiki still has placeholder text for most objectives and I'd rather not guess. The milestone names are listed below so you can see what's coming, and I'll add a proper walkthrough once the objectives are documented.
 
-If you still need Expedition 22, that lives on the [Swarm expedition guide](/blog/nms-swarm-expedition-guide/). This page does not replace it. For the 7.0 station and salvage context that shipped right before this expedition, see the [Cosmos update](/blog/nms-cosmos-update/).
+Looking for Expedition 22? That's the [Swarm expedition guide](/blog/nms-swarm-expedition-guide/). For the 7.0 station and salvage changes that landed just before this expedition, see the [Cosmos update](/blog/nms-cosmos-update/).
 
 ## Dates and how to start
 
@@ -51,29 +51,29 @@ If you still need Expedition 22, that lives on the [Swarm expedition guide](/blo
 | Duration | About six weeks (official) |
 | Community end date | October 28, 2026 (Fandom) |
 
-Two ways in, per Hello Games:
+There are two ways in:
 
-1. **Expedition Terminus** aboard the Space Anomaly
-2. **Fresh new save** (convertible to Normal Mode later)
+1. The Expedition Terminus aboard the Space Anomaly
+2. A fresh new save (you can convert it to Normal Mode later)
 
-Usual expedition habits still apply: pin the active milestone, follow the Expedition route on the galaxy map (not the galactic core path), and land at each rendezvous station so it stays on your teleporter list.
+The usual expedition habits apply. Pin the active milestone, follow the Expedition route on the galaxy map (not the galactic core path), and land at each rendezvous station so it stays on your teleporter list.
 
-Hello Games was blunt about spoilers. They resurrected older versions of systems and hid easter eggs for long-term players. Newer Travellers get a time capsule. Some mechanics will feel dated until a later phase unlocks the modern version. That is the point.
+Hello Games gave a heads-up about what to expect. They brought back older versions of some systems and hid easter eggs for long-time players, so for newer Travellers it's a bit of a time capsule. Some mechanics will feel dated until a later phase unlocks the modern version. That's intentional.
 
 ## Expedition 23 rewards
 
-Official exclusive rewards from the Hello Games post:
+These are the exclusive rewards from Hello Games' announcement:
 
 | Reward | Notes (official) |
 | --- | --- |
-| Set of **9 framed artworks** | Update cover art for your base. Phase 1 reward UI once threw "Too many rewards to display…" |
-| **Bobblehead / astronaut figurine** | Cockpit companion from an old unreleased test asset modders found years ago |
-| **Starbound v0.27 Multi-Tool** | Built from pre-release concept art |
-| **Golden Rasamama S36** | Golden edition of the original launch starter ship |
-| **Vintage Sentinel Interceptor** | Rebuilt from pre-release footage models |
-| **Diplodocus companion** | Original diplo models, re-rigged and re-animated |
+| Set of 9 framed artworks | Update cover art for your base. The Phase 1 reward screen once showed "Too many rewards to display…" |
+| Bobblehead / astronaut figurine | A cockpit companion based on an old unreleased test asset that modders found years ago |
+| Starbound v0.27 Multi-Tool | Built from pre-release concept art |
+| Golden Rasamama S36 | A golden version of the original launch starter ship |
+| Vintage Sentinel Interceptor | Rebuilt from pre-release footage models |
+| Diplodocus companion | The original diplo models, re-rigged and re-animated |
 
-Fandom maps those into phase completion rewards and adds a few cosmetics. Treat the phase table below as the wiki's current fill, not a second official list.
+The Fandom wiki splits those across phase completion rewards and adds a few extra cosmetics. The table below is the wiki's current version, not a second official list.
 
 | Phase complete | Fandom phase reward |
 | --- | --- |
@@ -84,11 +84,11 @@ Fandom maps those into phase completion rewards and adds a few cosmetics. Treat 
 | Phase 5 (2024-????) | Title: Time Traveller; Our Journey Continues Decal plans; Banner customisation |
 | Full expedition | Diplo Companion Egg (Fandom); matches the official diplodocus companion |
 
-Redeem path is separate from claiming in the Log. See below.
+Claiming a reward in the Log and redeeming it are two separate steps. See below.
 
 ## Phase roadmap (names only)
 
-Names and filled requirement lines come from the Fandom wiki (still marked stub). Most Requirement cells are still the placeholder word *Objective*. We are not filling those blanks from unverified community tips.
+Milestone names come from the Fandom wiki, which is still marked as a stub. Most of the requirement fields just say *Objective*, so I've only included the ones that are filled in.
 
 ### Phase 1: 2016-2018
 
@@ -110,52 +110,52 @@ Outlaws · Leviathian *(wiki spelling; phase screenshot reads Leviathan)* · End
 
 Worlds I · Aquarius · Worlds II · Relics · Beacon · Voyagers · Remnant · Xeno-Arena · **Our Journey Continues** (Reach the final rendezvous) · **2024-????** (Complete all milestones in Phase 5)
 
-Community tips already circulate for several of these. Soft pass for now: we will not list unverified "do X" steps as fact while Fandom objectives stay empty.
+There are community tips floating around for several of these already. I'm holding off on listing them as fact until the wiki objectives are filled in.
 
 ## How to redeem rewards
 
 1. Finish the milestones for a phase.
 2. Claim the phase rewards in the expedition Log.
-3. On **any** save, go to the Space Anomaly → **Quicksilver Synthesis Companion**.
-4. Redeem the exclusives you earned. Official note: they are available across all save games.
+3. On any save, go to the Space Anomaly and find the Quicksilver Synthesis Companion.
+4. Redeem the exclusives you earned. They work on every save.
 
-[Quicksilver](/other/QUICKSILVER/) is the Anomaly currency you already know. The Companion is where expedition exclusives show up after you unlock them. The diplodocus / Diplo egg sits in the same companion ecosystem as other pets; see [Companions](/creatures/companions/) if you need the broader pet loop.
+The Companion is where expedition exclusives show up once you've unlocked them, alongside the usual [Quicksilver](/other/QUICKSILVER/) shop. The diplodocus egg works like any other pet, so check [Companions](/creatures/companions/) if you need a refresher on those.
 
-Fresh expedition saves can convert to Normal after you are done. That is the usual expedition off-ramp.
+When you're done, you can convert your expedition save to Normal Mode like any other expedition.
 
-## What this guide does not cover yet
+## Not covered yet
 
-- Exact in-game **objective** text for non-rendezvous milestones
-- Per-milestone item / unit / nanite reward tables
-- Starting blueprint list
-- Glyphs, coordinates, or named rendezvous systems
+- Exact objective text for milestones other than the rendezvous ones
+- Item, unit, and nanite rewards for each milestone
+- The starting blueprint list
+- Glyphs, coordinates, or rendezvous system names
 - Bug workarounds from Experimental patch notes or Steam threads
 
-When Fandom (or a clean set of Log screenshots) fills those Objective rows, this post gets a walkthrough pass. Until then: rewards and start/redeem only.
+Once the wiki (or a clean set of Log screenshots) fills in the objectives, I'll add a full walkthrough.
 
 ## Related
 
-- [Swarm expedition guide](/blog/nms-swarm-expedition-guide/) - Expedition 22, prior full walkthrough
-- [Cosmos update](/blog/nms-cosmos-update/) - 7.0 stations, salvage, and the Exp 23 teaser
+- [Swarm expedition guide](/blog/nms-swarm-expedition-guide/): Expedition 22, full walkthrough
+- [Cosmos update](/blog/nms-cosmos-update/): 7.0 stations, salvage, and the Expedition 23 teaser
 
 ## FAQ
 
 **How do I start Expedition 23?**  
-Expedition Terminus on the Space Anomaly, or a fresh save. Official.
+From the Expedition Terminus on the Space Anomaly, or with a fresh save.
 
 **When does it end?**  
-About six weeks from Sep 16, 2026 (official). Fandom lists October 28, 2026.
+About six weeks after September 16, 2026. The wiki lists October 28, 2026.
 
 **What do I unlock?**  
-Nine framed artworks, astronaut bobblehead, Starbound v0.27 Multi-Tool, Golden Rasamama S36, vintage Sentinel Interceptor, diplodocus companion. Plus Fandom's Time Traveller title, decal, banner, and Diplo egg on full clear.
+Nine framed artworks, an astronaut bobblehead, the Starbound v0.27 Multi-Tool, the Golden Rasamama S36, a vintage Sentinel Interceptor, and a diplodocus companion. The wiki also lists the Time Traveller title, a decal, a banner, and the Diplo egg for a full clear.
 
-**Redeem on main save?**  
-Quicksilver Synthesis Companion on the Anomaly. All saves.
+**Can I use the rewards on my main save?**  
+Yes. Redeem them at the Quicksilver Synthesis Companion on the Anomaly. They work on every save.
 
-**Full walkthrough here?**  
-Not yet. Names and rendezvous only until objectives are documented.
+**Is there a full walkthrough here?**  
+Not yet. Just milestone names and rendezvous steps until the objectives are documented.
 
 ## Sources
 
-- [Expedition Twenty-Three: Our Journey Continues](https://www.nomanssky.com/2026/09/expedition-twenty-three-our-journey-continues/) - Hello Games (official)
-- [Expedition 23: Our Journey Continues](https://nomanssky.fandom.com/wiki/Expedition_23:_Our_Journey_Continues) - Fandom (milestone names, phase rewards, Oct 28 end date, Diplo egg / Time Traveller)
+- [Expedition Twenty-Three: Our Journey Continues](https://www.nomanssky.com/2026/09/expedition-twenty-three-our-journey-continues/) (Hello Games, official)
+- [Expedition 23: Our Journey Continues](https://nomanssky.fandom.com/wiki/Expedition_23:_Our_Journey_Continues) (Fandom: milestone names, phase rewards, October 28 end date, Diplo egg, Time Traveller title)
