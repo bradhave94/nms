@@ -1,0 +1,178 @@
+---
+import '@assets/css/alliances.css';
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { FOCUSES, PLATFORMS } from '@utils/alliances';
+import {
+	listApprovedAlliances,
+	listApprovedGalaxies,
+	type AllianceFilters,
+	type PublicAlliance,
+} from '@utils/alliancesDb';
+
+export const prerender = false;
+
+const params = Astro.url.searchParams;
+const pick = <T extends string>(value: string | null, allowed: readonly T[]): T | undefined =>
+	allowed.find((option) => option === value);
+
+const filters: AllianceFilters = {
+	q: params.get('q')?.trim().slice(0, 80) || undefined,
+	galaxy: params.get('galaxy')?.trim().slice(0, 40) || undefined,
+	platform: pick(params.get('platform'), PLATFORMS),
+	focus: pick(params.get('focus'), FOCUSES),
+	sort: params.get('sort') === 'name' ? 'name' : 'newest',
+};
+const isFiltered = Boolean(filters.q || filters.galaxy || filters.platform || filters.focus);
+
+let alliances: PublicAlliance[] = [];
+let galaxies: Array<{ galaxy: string; count: number }> = [];
+let loadFailed = false;
+try {
+	[alliances, galaxies] = await Promise.all([listApprovedAlliances(filters), listApprovedGalaxies()]);
+} catch (error) {
+	console.error('Alliance directory failed to load', error);
+	loadFailed = true;
+}
+
+Astro.response.headers.set(
+	'Cache-Control',
+	loadFailed ? 'no-store' : 'public, max-age=0, s-maxage=60, stale-while-revalidate=300'
+);
+
+const title = "No Man's Sky Alliance Directory: Find an Alliance to Join";
+const description =
+	"Browse No Man's Sky alliances by galaxy, platform and playstyle. Find a station system and portal address, then join at the Station Core.";
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Alliances' }];
+const canonical = '/alliances/';
+const siteOrigin = 'https://nomansskyrecipes.com';
+const structuredData = [
+	{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+			{ '@type': 'ListItem', position: 2, name: 'Alliances', item: `${siteOrigin}/alliances/` },
+		],
+	},
+	...(isFiltered || alliances.length === 0
+		? []
+		: [
+				{
+					'@context': 'https://schema.org',
+					'@type': 'ItemList',
+					name: "No Man's Sky alliances",
+					itemListElement: alliances.map((alliance, index) => ({
+						'@type': 'ListItem',
+						position: index + 1,
+						name: alliance.name,
+						url: `${siteOrigin}/alliances/${alliance.slug}/`,
+					})),
+				},
+			]),
+];
+const location = (alliance: PublicAlliance) =>
+	[alliance.galaxy, alliance.region, alliance.languages].filter(Boolean).join(' · ');
+---
+
+<Layout {title} {description} slug="alliances" {canonical} {structuredData} robots={isFiltered ? 'noindex,follow' : undefined}>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<div class="alliances mx-auto max-w-6xl px-2 pb-16 sm:px-4">
+		<header class="mb-10 flex flex-wrap items-end justify-between gap-6">
+			<div>
+				<p class="eyebrow">Community</p>
+				<h1>Alliance Directory</h1>
+				<p class="lede">
+					Find a No Man's Sky alliance to join. Each listing tells you where to find one of the alliance's stations. Dock there and join at the Station Core.
+				</p>
+			</div>
+			<a class="button" href="/alliances/submit/">List your alliance</a>
+		</header>
+
+		<form method="get" class="panel mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(4,minmax(0,1fr))_auto] lg:items-end" role="search" aria-label="Filter alliances">
+			<div class="sm:col-span-2 lg:col-span-1">
+				<label for="filter-q">Search</label>
+				<input id="filter-q" type="search" name="q" value={filters.q ?? ''} placeholder="Name, tag or region" />
+			</div>
+			<div>
+				<label for="filter-galaxy">Galaxy</label>
+				<select id="filter-galaxy" name="galaxy">
+					<option value="">All</option>
+					{galaxies.map(({ galaxy, count }) => (
+						<option value={galaxy} selected={filters.galaxy?.toLowerCase() === galaxy.toLowerCase()}>{galaxy} ({count})</option>
+					))}
+				</select>
+			</div>
+			<div>
+				<label for="filter-platform">Platform</label>
+				<select id="filter-platform" name="platform">
+					<option value="">Any</option>
+					{PLATFORMS.map((platform) => <option value={platform} selected={filters.platform === platform}>{platform}</option>)}
+				</select>
+			</div>
+			<div>
+				<label for="filter-focus">Focus</label>
+				<select id="filter-focus" name="focus">
+					<option value="">Any</option>
+					{FOCUSES.map((focus) => <option value={focus} selected={filters.focus === focus}>{focus}</option>)}
+				</select>
+			</div>
+			<div>
+				<label for="filter-sort">Sort</label>
+				<select id="filter-sort" name="sort">
+					<option value="newest" selected={filters.sort === 'newest'}>Newest</option>
+					<option value="name" selected={filters.sort === 'name'}>A–Z</option>
+				</select>
+			</div>
+			<div class="flex gap-2">
+				<button type="submit" class="button secondary control">Filter</button>
+				{isFiltered && <a class="button secondary control" href="/alliances/">Clear</a>}
+			</div>
+		</form>
+
+		{loadFailed ? (
+			<p class="notice error" role="alert">The directory couldn't load right now. Please try again in a minute.</p>
+		) : alliances.length === 0 ? (
+			<div class="notice info">
+				{isFiltered ? (
+					<p>No alliances match those filters. <a class="prose-link" href="/alliances/">Show all alliances</a>.</p>
+				) : (
+					<p>No alliances are listed yet. <a class="prose-link" href="/alliances/submit/">Add yours</a> and it can be the first one here.</p>
+				)}
+			</div>
+		) : (
+			<>
+				<ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+					{alliances.map((alliance) => (
+						<li>
+							<article class="card" style={`--alliance-color: ${alliance.color}`}>
+								<div class="flex items-start justify-between gap-3">
+									<h2><a href={`/alliances/${alliance.slug}/`}>{alliance.name}</a></h2>
+									{alliance.tag && <span class="tag" style={`color: ${alliance.color}`}>{alliance.tag}</span>}
+								</div>
+								<p class="meta">{location(alliance)}</p>
+								<p class="summary">{alliance.description}</p>
+								<div class="chips">
+									{alliance.focuses.map((focus) => <span class="chip">{focus}</span>)}
+								</div>
+							</article>
+						</li>
+					))}
+				</ul>
+				<p class="help !mt-4" role="status">{alliances.length} {alliances.length === 1 ? 'alliance' : 'alliances'}{isFiltered ? ' match' : ' listed'}</p>
+			</>
+		)}
+
+		<section class="panel mt-10" aria-labelledby="how-to-join">
+			<h2 id="how-to-join">How to join an alliance</h2>
+			<ol class="steps mt-5">
+				<li>Travel to the alliance's galaxy and station system. The fastest way is a portal address, if the listing has one.</li>
+				<li>Dock at the alliance's space station and go to the Station Core.</li>
+				<li>Choose to join the alliance. You can belong to up to three alliances at once.</li>
+			</ol>
+			<p class="help mt-5">
+				New to alliances? Read our <a class="prose-link" href="/blog/no-mans-sky-alliances-guide/">alliance guide</a>. Spotted an outdated or inappropriate listing? <a class="prose-link" href="/feedback">Let us know</a>.
+			</p>
+		</section>
+	</div>
+</Layout>

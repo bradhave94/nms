@@ -43,6 +43,7 @@ export default tseslint.config(
       'dist/**',
       'node_modules/**',
       '.astro/**',
+      '.vercel/**',
       '**/*.config.{js,mjs,cjs,ts}',
       'package-lock.json',
     ],

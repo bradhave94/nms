@@ -24,3 +24,9 @@ pnpm-debug.log*
 .data-import-stage-*/
 .data-import-backups/
 .data-import.lock
+
+.vercel
+.env*
+
+# local alliance directory database
+.data/

@@ -1,0 +1,226 @@
+---
+import '@assets/css/alliances.css';
+import Layout from '@layouts/Layout.astro';
+import AllianceForm from '@components/alliances/AllianceForm.astro';
+import {
+	ALLIANCE_STATUSES,
+	allianceInputFromForm,
+	formatPortalGlyphs,
+	validateAllianceInput,
+	type Alliance,
+	type AllianceFieldErrors,
+	type AllianceInput,
+	type AllianceStatus,
+} from '@utils/alliances';
+import {
+	countAlliancesByStatus,
+	deleteAlliance,
+	getAllianceById,
+	importStarterAlliances,
+	listAlliancesByStatus,
+	setAllianceStatus,
+	updateAlliance,
+} from '@utils/alliancesDb';
+import { isAdmin, isAdminConfigured, logIn, logOut } from '@utils/allianceAdmin';
+
+export const prerender = false;
+
+Astro.response.headers.set('Cache-Control', 'no-store');
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+
+const ADMIN_PATH = '/alliances/admin/';
+const params = Astro.url.searchParams;
+const view: AllianceStatus = ALLIANCE_STATUSES.find((status) => status === params.get('view')) ?? 'pending';
+const viewUrl = (status: AllianceStatus, notice?: string) =>
+	`${ADMIN_PATH}?view=${status}${notice ? `&notice=${encodeURIComponent(notice)}` : ''}`;
+
+let loginError = false;
+let editing: Alliance | undefined;
+let editValues: AllianceInput | undefined;
+let editErrors: AllianceFieldErrors = {};
+
+if (Astro.request.method === 'POST') {
+	const form = await Astro.request.formData();
+	const action = String(form.get('action') ?? '');
+
+	if (action === 'login') {
+		if (logIn(Astro.cookies, String(form.get('token') ?? ''))) return Astro.redirect(ADMIN_PATH, 303);
+		loginError = true;
+		Astro.response.status = 401;
+	} else if (action === 'logout') {
+		logOut(Astro.cookies);
+		return Astro.redirect(ADMIN_PATH, 303);
+	} else if (isAdmin(Astro.cookies)) {
+		const id = Number(form.get('id'));
+		const returnTo = ALLIANCE_STATUSES.find((status) => status === form.get('view')) ?? view;
+		if (action === 'approve' || action === 'reject' || action === 'pending') {
+			await setAllianceStatus(id, action === 'approve' ? 'approved' : action === 'reject' ? 'rejected' : 'pending');
+			return Astro.redirect(viewUrl(returnTo, `Listing ${action === 'pending' ? 'moved back to pending' : `${action}d`}.`), 303);
+		}
+		if (action === 'seed') {
+			const added = await importStarterAlliances();
+			return Astro.redirect(viewUrl('pending', `Added ${added} starter ${added === 1 ? 'listing' : 'listings'}.`), 303);
+		}
+		if (action === 'delete') {
+			await deleteAlliance(id);
+			return Astro.redirect(viewUrl(returnTo, 'Listing deleted.'), 303);
+		}
+		if (action === 'update') {
+			const result = validateAllianceInput(allianceInputFromForm(form));
+			if (result.ok) {
+				await updateAlliance(id, result.value);
+				return Astro.redirect(viewUrl(returnTo, 'Listing updated.'), 303);
+			}
+			editing = await getAllianceById(id);
+			editValues = result.value;
+			editErrors = result.errors;
+			Astro.response.status = 400;
+		}
+	} else {
+		Astro.response.status = 403;
+	}
+}
+
+const authorised = isAdmin(Astro.cookies);
+const notice = params.get('notice')?.slice(0, 120);
+let alliances: Alliance[] = [];
+let counts: Record<AllianceStatus, number> = { pending: 0, approved: 0, rejected: 0 };
+if (authorised) {
+	const editId = Number(params.get('edit'));
+	if (!editing && Number.isInteger(editId) && editId > 0) {
+		editing = await getAllianceById(editId);
+		editValues = editing;
+	}
+	if (!editing) {
+		[alliances, counts] = await Promise.all([listAlliancesByStatus(view), countAlliancesByStatus()]);
+	}
+}
+
+const dateTime = (iso: string) =>
+	new Date(iso).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'UTC' }) + ' UTC';
+const statusActions: Record<AllianceStatus, Array<{ action: string; label: string; style: string }>> = {
+	pending: [
+		{ action: 'approve', label: 'Approve', style: '' },
+		{ action: 'reject', label: 'Reject', style: 'secondary' },
+	],
+	approved: [{ action: 'pending', label: 'Unpublish', style: 'secondary' }],
+	rejected: [
+		{ action: 'approve', label: 'Approve', style: '' },
+		{ action: 'pending', label: 'Move to pending', style: 'secondary' },
+	],
+};
+---
+
+<Layout title="Alliance moderation | No Man's Sky Recipes" description="Moderate alliance directory submissions." slug="alliances" robots="noindex,nofollow">
+	<div class="alliances mx-auto max-w-5xl px-2 py-8 pb-16 sm:px-4">
+		<header class="mb-10 flex flex-wrap items-end justify-between gap-4">
+			<div>
+				<p class="eyebrow">Alliance directory</p>
+				<h1>Moderation</h1>
+			</div>
+			{authorised && (
+				<form method="post"><input type="hidden" name="action" value="logout" /><button class="button secondary small" type="submit">Log out</button></form>
+			)}
+		</header>
+
+		{!isAdminConfigured() ? (
+			<p class="notice error">Set the <code>ALLIANCES_ADMIN_TOKEN</code> environment variable to enable moderation.</p>
+		) : !authorised ? (
+			<form method="post" class="panel max-w-md space-y-4">
+				<input type="hidden" name="action" value="login" />
+				<div>
+					<label for="admin-token">Admin token</label>
+					<input id="admin-token" type="password" name="token" autocomplete="current-password" required aria-invalid={loginError ? 'true' : undefined} />
+					{loginError && <p class="field-error">That token didn't match.</p>}
+				</div>
+				<button type="submit" class="button">Log in</button>
+			</form>
+		) : editing && editValues ? (
+			<section>
+				<p class="mb-4"><a class="prose-link" href={viewUrl(editing.status)}>← Back to {editing.status}</a></p>
+				<h2 class="mb-4">Edit “{editing.name}”</h2>
+				{Object.keys(editErrors).length > 0 && <p class="notice error mb-6" role="alert">Some fields need fixing.</p>}
+				<AllianceForm values={editValues} errors={editErrors} submitLabel="Save changes"
+					hidden={{ action: 'update', id: String(editing.id), view: editing.status }} />
+			</section>
+		) : (
+			<>
+				{notice && <p class="notice success mb-6" role="status">{notice}</p>}
+				<nav class="tabs mb-6" aria-label="Listing status">
+					{ALLIANCE_STATUSES.map((status) => (
+						<a href={viewUrl(status)} aria-current={status === view ? 'page' : undefined}>
+							{status[0].toUpperCase() + status.slice(1)} ({counts[status]})
+						</a>
+					))}
+				</nav>
+				{alliances.length === 0 ? (
+					<div class="notice info flex flex-wrap items-center justify-between gap-3">
+						<p>Nothing here.</p>
+						{view === 'pending' && (
+							<form method="post">
+								<input type="hidden" name="action" value="seed" />
+								<button type="submit" class="button small secondary">Load starter listings</button>
+							</form>
+						)}
+					</div>
+				) : (
+					<ul class="mod-list">
+						{alliances.map((alliance) => (
+							<li class="panel">
+								<div class="flex flex-wrap items-start justify-between gap-3">
+									<div>
+										<h2 class="flex flex-wrap items-center gap-2">
+											<span class="colour-dot" style={`background: ${alliance.color}`} aria-hidden="true"></span>
+											{alliance.status === 'approved'
+												? <a class="prose-link" href={`/alliances/${alliance.slug}/`}>{alliance.name}</a>
+												: alliance.name}
+											{alliance.tag && <span class="tag">{alliance.tag}</span>}
+										</h2>
+										<p class="help !mt-1">Submitted {dateTime(alliance.createdAt)}{alliance.approvedAt && ` · approved ${dateTime(alliance.approvedAt)}`}</p>
+									</div>
+									<div class="flex flex-wrap gap-2">
+										{statusActions[alliance.status].map((item) => (
+											<form method="post">
+												<input type="hidden" name="action" value={item.action} />
+												<input type="hidden" name="id" value={alliance.id} />
+												<input type="hidden" name="view" value={view} />
+												<button type="submit" class={`button small ${item.style}`}>{item.label}</button>
+											</form>
+										))}
+										<a class="button small secondary" href={`${ADMIN_PATH}?edit=${alliance.id}`}>Edit</a>
+										<form method="post" class="ml-3 border-l border-cyan-900/60 pl-3" data-confirm={`Delete “${alliance.name}” permanently?`}>
+											<input type="hidden" name="action" value="delete" />
+											<input type="hidden" name="id" value={alliance.id} />
+											<input type="hidden" name="view" value={view} />
+											<button type="submit" class="button small danger">Delete</button>
+										</form>
+									</div>
+								</div>
+								<dl class="mod-fields">
+									<dt>Description</dt><dd>{alliance.description}</dd>
+									<dt>Galaxy / region</dt><dd>{[alliance.galaxy, alliance.region].filter(Boolean).join(' · ')}</dd>
+									<dt>Station system</dt><dd>{alliance.joinSystem}</dd>
+									{alliance.portalGlyphs && <><dt>Portal address</dt><dd>{formatPortalGlyphs(alliance.portalGlyphs)}</dd></>}
+									<dt>Platforms</dt><dd>{alliance.platforms.join(', ') || 'All'}</dd>
+									<dt>Languages</dt><dd>{alliance.languages || '—'}</dd>
+									<dt>Focus</dt><dd>{alliance.focuses.join(', ') || '—'}</dd>
+									{alliance.discordUrl && <><dt>Discord</dt><dd><a class="prose-link" href={alliance.discordUrl} rel="noopener noreferrer" target="_blank">{alliance.discordUrl}</a></dd></>}
+									{alliance.websiteUrl && <><dt>Website</dt><dd><a class="prose-link" href={alliance.websiteUrl} rel="noopener noreferrer" target="_blank">{alliance.websiteUrl}</a></dd></>}
+									<dt>Contact</dt><dd>{alliance.contact || '—'}</dd>
+								</dl>
+							</li>
+						))}
+					</ul>
+				)}
+			</>
+		)}
+	</div>
+</Layout>
+
+<script>
+	document.querySelectorAll<HTMLFormElement>('form[data-confirm]').forEach((form) => {
+		form.addEventListener('submit', (event) => {
+			if (!window.confirm(form.dataset.confirm ?? 'Are you sure?')) event.preventDefault();
+		});
+	});
+</script>

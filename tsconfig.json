@@ -15,6 +15,6 @@
 	  "noImplicitReturns": true,
 	  "noFallthroughCasesInSwitch": true
 	},
-	"include": ["src/**/*"],
-	"exclude": ["node_modules", "dist", ".astro"]
+	"include": [".astro/types.d.ts", "src/**/*"],
+	"exclude": ["node_modules", "dist"]
   }

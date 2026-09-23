@@ -20,6 +20,9 @@
 		"test:route-eligible": "node --experimental-strip-types scripts/check-route-eligible.mjs",
 		"test:data-import": "node scripts/check-import-safety.mjs",
 		"test:power": "node --experimental-strip-types scripts/check-base-power.mjs",
+		"test:alliances": "node --experimental-strip-types scripts/check-alliances.mjs",
+		"seed:alliances": "node --experimental-strip-types scripts/seed-alliances.mjs",
+		"data:galaxies": "node scripts/fetch-galaxies.mjs",
 		"data:check": "node scripts/import-extractor-data.mjs --check",
 		"data:sync": "node scripts/import-extractor-data.mjs --sync",
 		"type-check": "tsc --noEmit",
@@ -28,6 +31,8 @@
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^3.7.3",
+		"@astrojs/vercel": "^11.0.11",
+		"@libsql/client": "^0.18.0",
 		"@tailwindcss/vite": "^4.3.1",
 		"@vercel/analytics": "^2.0.1",
 		"astro": "^7.0.0",

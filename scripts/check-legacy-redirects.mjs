@@ -9,6 +9,8 @@ if (vercelConfigText.includes('/api/legacy-redirect')) {
 }
 
 const redirectMap = JSON.parse(await readFile('redirects.generated.json', 'utf8'));
+// The Vercel adapter writes prerendered pages to dist/client.
+const staticDir = existsSync(join('dist', 'client')) ? join('dist', 'client') : 'dist';
 const samples = [
   '/raw/raw1',
   '/products/prod1',
@@ -23,7 +25,7 @@ for (const source of samples) {
     throw new Error(`Missing legacy redirect mapping for ${source}.`);
   }
 
-  const outputPath = join('dist', ...source.slice(1).split('/'), 'index.html');
+  const outputPath = join(staticDir, ...source.slice(1).split('/'), 'index.html');
   if (!existsSync(outputPath)) {
     throw new Error(`Missing built redirect page at ${outputPath}. Run pnpm run build first.`);
   }

@@ -1,0 +1,139 @@
+---
+import '@assets/css/alliances.css';
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { findGalaxy, formatPortalGlyphs } from '@utils/alliances';
+import { findCommunityBanners } from '@utils/allianceBanners';
+import { SITE } from '@config';
+import { getApprovedAllianceBySlug, type PublicAlliance } from '@utils/alliancesDb';
+
+export const prerender = false;
+
+const slug = Astro.params.slug ?? '';
+let alliance: PublicAlliance | undefined;
+try {
+	alliance = await getApprovedAllianceBySlug(slug);
+} catch (error) {
+	console.error('Alliance lookup failed', error);
+	return new Response('The alliance directory is temporarily unavailable.', {
+		status: 503,
+		headers: { 'Cache-Control': 'no-store', 'Content-Type': 'text/plain; charset=utf-8' },
+	});
+}
+if (!alliance) {
+	return Astro.rewrite('/404');
+}
+
+Astro.response.headers.set('Cache-Control', 'public, max-age=0, s-maxage=60, stale-while-revalidate=300');
+
+const siteOrigin = 'https://nomansskyrecipes.com';
+const canonical = `/alliances/${alliance.slug}/`;
+const title = `${alliance.name}${alliance.tag ? ` [${alliance.tag}]` : ''}: No Man's Sky Alliance`;
+const locationText = [alliance.galaxy, alliance.region].filter(Boolean).join(', ');
+const firstSentence = alliance.description.split(/(?<=[.!?])\s/)[0] ?? alliance.description;
+const description = `${alliance.name} is a No Man's Sky alliance in ${locationText}. ${firstSentence}`.slice(0, 158);
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Alliances', href: '/alliances/' }, { name: alliance.name }];
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
+		{ '@type': 'ListItem', position: 2, name: 'Alliances', item: `${siteOrigin}/alliances/` },
+		{ '@type': 'ListItem', position: 3, name: alliance.name, item: `${siteOrigin}${canonical}` },
+	],
+};
+const communityItems = findCommunityBanners(alliance.name);
+const galaxyNumber = findGalaxy(alliance.galaxy)?.number;
+const platformsText = alliance.platforms.length > 0 ? alliance.platforms.join(', ') : 'All platforms';
+const listedOn = alliance.approvedAt
+	? new Date(alliance.approvedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+	: undefined;
+---
+
+<Layout {title} {description} slug="alliances" {canonical} {structuredData}>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<div class="alliances mx-auto max-w-5xl px-2 pb-16 sm:px-4" style={`--alliance-color: ${alliance.color}`}>
+		<header class="mb-10 border-l-4 pl-5" style={`border-color: ${alliance.color}`}>
+			<p class="eyebrow">No Man's Sky alliance</p>
+			<h1 class="flex flex-wrap items-center gap-x-4 gap-y-2">
+				<span>{alliance.name}</span>
+				{alliance.tag && <span class="tag !text-lg" style={`color: ${alliance.color}`}>{alliance.tag}</span>}
+			</h1>
+			<p class="lede">{locationText}</p>
+		</header>
+
+		<div class="grid items-start gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+			<div class="space-y-6">
+				<section class="panel" aria-labelledby="about-heading">
+					<h2 id="about-heading">About</h2>
+					<p class="description mt-4">{alliance.description}</p>
+					{alliance.focuses.length > 0 && (
+						<div class="chips mt-5">{alliance.focuses.map((focus) => <span class="chip">{focus}</span>)}</div>
+					)}
+				</section>
+
+				<section class="panel" aria-labelledby="join-heading">
+					<h2 id="join-heading">How to join {alliance.name}</h2>
+					<ol class="steps mt-5">
+						<li>
+							Travel to the <strong>{alliance.galaxy}</strong> galaxy{galaxyNumber && galaxyNumber > 1 && <> (galaxy {galaxyNumber})</>}{alliance.region && <> and the <strong>{alliance.region}</strong> region</>}.
+							{alliance.galaxy.toLowerCase() !== 'euclid' && <> See our <a class="prose-link" href="/blog/no-mans-sky-galaxies-guide/">galaxies guide</a> for getting between galaxies.</>}
+						</li>
+						<li>
+							Find the <strong>{alliance.joinSystem}</strong> system.
+							{alliance.portalGlyphs ? <> The quickest route is a portal. Dial this address:</> : <> Ask the alliance for directions if you can't find it on the Galaxy Map.</>}
+							{alliance.portalGlyphs && (
+								<p class="glyphs mt-2" aria-label={`Portal address ${alliance.portalGlyphs.split('').join(' ')}`}>{formatPortalGlyphs(alliance.portalGlyphs)}</p>
+							)}
+						</li>
+						<li>Dock at the space station, go to the Station Core and choose to join the alliance.</li>
+					</ol>
+				</section>
+			</div>
+
+			<aside class="space-y-6">
+				<section class="panel" aria-labelledby="details-heading">
+					<h2 id="details-heading" class="sr-only">Details</h2>
+					<dl class="facts">
+						{alliance.tag && <div><dt>Tag</dt><dd>{alliance.tag}</dd></div>}
+						<div><dt>Galaxy</dt><dd>{alliance.galaxy}{galaxyNumber && <span class="text-sky-300/70"> · #{galaxyNumber}</span>}</dd></div>
+						{alliance.region && <div><dt>Region</dt><dd>{alliance.region}</dd></div>}
+						<div><dt>Station system</dt><dd>{alliance.joinSystem}</dd></div>
+						<div><dt>Platforms</dt><dd>{platformsText}</dd></div>
+						{alliance.languages && <div><dt>Languages</dt><dd>{alliance.languages}</dd></div>}
+						{listedOn && <div><dt>Listed</dt><dd>{listedOn}</dd></div>}
+					</dl>
+					{(alliance.discordUrl || alliance.websiteUrl) && (
+						<div class="mt-6 flex flex-wrap gap-3">
+							{alliance.discordUrl && <a class="button" href={alliance.discordUrl} rel="nofollow ugc noopener" target="_blank">Join the Discord</a>}
+							{alliance.websiteUrl && <a class="button secondary" href={alliance.websiteUrl} rel="nofollow ugc noopener" target="_blank">Website</a>}
+						</div>
+					)}
+				</section>
+				{communityItems && (
+					<section class="panel" aria-labelledby="flair-heading">
+						<h2 id="flair-heading">In-game banner and decal</h2>
+						<p class="help !mt-1">{alliance.name} has its own items in the game.</p>
+						<ul class="mt-4 space-y-3">
+							{[communityItems.banner, communityItems.decal].map((flair) => (
+								<li>
+									<a class="flex items-center gap-3 prose-link" href={flair.href}>
+										<img src={`${SITE.imageBaseUrl}${flair.icon}`} alt="" width="40" height="40" loading="lazy" class="h-10 w-10 rounded bg-black/40 object-contain" />
+										<span>{flair.name}</span>
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				)}
+			</aside>
+		</div>
+
+		<div class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-cyan-900/60 pt-6">
+			<a class="button secondary" href="/alliances/">← All alliances</a>
+			<p class="help !mt-0">
+				Listings are submitted by alliance members and reviewed before they go live. See something wrong? <a class="prose-link" href="/feedback">Let us know</a>.
+			</p>
+		</div>
+	</div>
+</Layout>

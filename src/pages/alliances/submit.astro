@@ -1,0 +1,87 @@
+---
+import '@assets/css/alliances.css';
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import AllianceForm from '@components/alliances/AllianceForm.astro';
+import {
+	EMPTY_ALLIANCE_INPUT,
+	allianceInputFromForm,
+	validateAllianceInput,
+	type AllianceFieldErrors,
+	type AllianceInput,
+} from '@utils/alliances';
+import { countRecentSubmissions, createAlliance, hashSubmitter } from '@utils/alliancesDb';
+
+export const prerender = false;
+
+const MAX_SUBMISSIONS_PER_DAY = 3;
+// Humans take longer than this to fill in the form; most bots don't.
+const MIN_FILL_MILLISECONDS = 3000;
+
+let values: AllianceInput = EMPTY_ALLIANCE_INPUT;
+let errors: AllianceFieldErrors = {};
+let formError: string | undefined;
+const submitted = Astro.url.searchParams.get('submitted') === '1';
+
+if (Astro.request.method === 'POST') {
+	const form = await Astro.request.formData();
+	const result = validateAllianceInput(allianceInputFromForm(form));
+	values = result.value;
+
+	const startedAt = Number(form.get('startedAt'));
+	const looksAutomated =
+		String(form.get('websiteConfirm') ?? '') !== '' ||
+		!Number.isFinite(startedAt) ||
+		Date.now() - startedAt < MIN_FILL_MILLISECONDS;
+
+	if (!result.ok) {
+		errors = result.errors;
+		formError = 'Some fields need fixing. Check the highlighted fields below.';
+	} else if (looksAutomated) {
+		// Pretend it worked so automated submitters get no signal.
+		return Astro.redirect('/alliances/submit/?submitted=1', 303);
+	} else {
+		try {
+			const submitterHash = hashSubmitter(Astro.clientAddress);
+			if ((await countRecentSubmissions(submitterHash, 24)) >= MAX_SUBMISSIONS_PER_DAY) {
+				formError = 'You have sent a few listings today already. Please try again tomorrow.';
+			} else {
+				await createAlliance(result.value, { submitterHash });
+				return Astro.redirect('/alliances/submit/?submitted=1', 303);
+			}
+		} catch (error) {
+			console.error('Alliance submission failed', error);
+			formError = 'We could not save your listing right now. Please try again in a few minutes.';
+		}
+	}
+	Astro.response.status = 400;
+}
+
+Astro.response.headers.set('Cache-Control', 'no-store');
+
+const title = "Submit Your Alliance | No Man's Sky Alliance Directory";
+const description = "List your No Man's Sky alliance in the directory so players can find your space station and join.";
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Alliances', href: '/alliances/' }, { name: 'Submit' }];
+---
+
+<Layout {title} {description} slug="alliances" robots="noindex,follow">
+	<div class="alliances mx-auto max-w-3xl px-2 pb-16 sm:px-4">
+		<Breadcrumbs items={breadcrumbs} className="!px-0 pt-4 mb-6" />
+		<header class="mb-10">
+			<p class="eyebrow">Alliance directory</p>
+			<h1>Submit your alliance</h1>
+			<p class="lede">Tell players what your alliance is about and where to find one of your stations. We review each listing before it appears.</p>
+		</header>
+
+		{submitted ? (
+			<div class="notice success" role="status">
+				<p><strong>Thanks, your alliance has been submitted.</strong> We'll review it shortly, and it will appear in the <a class="prose-link" href="/alliances/">directory</a> once approved.</p>
+			</div>
+		) : (
+			<>
+				{formError && <p class="notice error mb-6" role="alert">{formError}</p>}
+				<AllianceForm {values} {errors} submitLabel="Submit for review" spamGuard />
+			</>
+		)}
+	</div>
+</Layout>

@@ -1,0 +1,1286 @@
+{
+	"source": "https://nomanssky.fandom.com/wiki/Galaxy",
+	"fetched": "2026-09-23",
+	"galaxies": [
+		{
+			"number": 1,
+			"name": "Euclid",
+			"reachable": true
+		},
+		{
+			"number": 2,
+			"name": "Hilbert Dimension",
+			"reachable": true
+		},
+		{
+			"number": 3,
+			"name": "Calypso",
+			"reachable": true
+		},
+		{
+			"number": 4,
+			"name": "Hesperius Dimension",
+			"reachable": true
+		},
+		{
+			"number": 5,
+			"name": "Hyades",
+			"reachable": true
+		},
+		{
+			"number": 6,
+			"name": "Ickjamatew",
+			"reachable": true
+		},
+		{
+			"number": 7,
+			"name": "Budullangr",
+			"reachable": true
+		},
+		{
+			"number": 8,
+			"name": "Kikolgallr",
+			"reachable": true
+		},
+		{
+			"number": 9,
+			"name": "Eltiensleen",
+			"reachable": true
+		},
+		{
+			"number": 10,
+			"name": "Eissentam",
+			"reachable": true
+		},
+		{
+			"number": 11,
+			"name": "Elkupalos",
+			"reachable": true
+		},
+		{
+			"number": 12,
+			"name": "Aptarkaba",
+			"reachable": true
+		},
+		{
+			"number": 13,
+			"name": "Ontiniangp",
+			"reachable": true
+		},
+		{
+			"number": 14,
+			"name": "Odiwagiri",
+			"reachable": true
+		},
+		{
+			"number": 15,
+			"name": "Ogtialabi",
+			"reachable": true
+		},
+		{
+			"number": 16,
+			"name": "Muhacksonto",
+			"reachable": true
+		},
+		{
+			"number": 17,
+			"name": "Hitonskyer",
+			"reachable": true
+		},
+		{
+			"number": 18,
+			"name": "Rerasmutul",
+			"reachable": true
+		},
+		{
+			"number": 19,
+			"name": "Isdoraijung",
+			"reachable": true
+		},
+		{
+			"number": 20,
+			"name": "Doctinawyra",
+			"reachable": true
+		},
+		{
+			"number": 21,
+			"name": "Loychazinq",
+			"reachable": true
+		},
+		{
+			"number": 22,
+			"name": "Zukasizawa",
+			"reachable": true
+		},
+		{
+			"number": 23,
+			"name": "Ekwathore",
+			"reachable": true
+		},
+		{
+			"number": 24,
+			"name": "Yeberhahne",
+			"reachable": true
+		},
+		{
+			"number": 25,
+			"name": "Twerbetek",
+			"reachable": true
+		},
+		{
+			"number": 26,
+			"name": "Sivarates",
+			"reachable": true
+		},
+		{
+			"number": 27,
+			"name": "Eajerandal",
+			"reachable": true
+		},
+		{
+			"number": 28,
+			"name": "Aldukesci",
+			"reachable": true
+		},
+		{
+			"number": 29,
+			"name": "Wotyarogii",
+			"reachable": true
+		},
+		{
+			"number": 30,
+			"name": "Sudzerbal",
+			"reachable": true
+		},
+		{
+			"number": 31,
+			"name": "Maupenzhay",
+			"reachable": true
+		},
+		{
+			"number": 32,
+			"name": "Sugueziume",
+			"reachable": true
+		},
+		{
+			"number": 33,
+			"name": "Brogoweldian",
+			"reachable": true
+		},
+		{
+			"number": 34,
+			"name": "Ehbogdenbu",
+			"reachable": true
+		},
+		{
+			"number": 35,
+			"name": "Ijsenufryos",
+			"reachable": true
+		},
+		{
+			"number": 36,
+			"name": "Nipikulha",
+			"reachable": true
+		},
+		{
+			"number": 37,
+			"name": "Autsurabin",
+			"reachable": true
+		},
+		{
+			"number": 38,
+			"name": "Lusontrygiamh",
+			"reachable": true
+		},
+		{
+			"number": 39,
+			"name": "Rewmanawa",
+			"reachable": true
+		},
+		{
+			"number": 40,
+			"name": "Ethiophodhe",
+			"reachable": true
+		},
+		{
+			"number": 41,
+			"name": "Urastrykle",
+			"reachable": true
+		},
+		{
+			"number": 42,
+			"name": "Xobeurindj",
+			"reachable": true
+		},
+		{
+			"number": 43,
+			"name": "Oniijialdu",
+			"reachable": true
+		},
+		{
+			"number": 44,
+			"name": "Wucetosucc",
+			"reachable": true
+		},
+		{
+			"number": 45,
+			"name": "Ebyeloof",
+			"reachable": true
+		},
+		{
+			"number": 46,
+			"name": "Odyavanta",
+			"reachable": true
+		},
+		{
+			"number": 47,
+			"name": "Milekistri",
+			"reachable": true
+		},
+		{
+			"number": 48,
+			"name": "Waferganh",
+			"reachable": true
+		},
+		{
+			"number": 49,
+			"name": "Agnusopwit",
+			"reachable": true
+		},
+		{
+			"number": 50,
+			"name": "Teyaypilny",
+			"reachable": true
+		},
+		{
+			"number": 51,
+			"name": "Zalienkosm",
+			"reachable": true
+		},
+		{
+			"number": 52,
+			"name": "Ladgudiraf",
+			"reachable": true
+		},
+		{
+			"number": 53,
+			"name": "Mushonponte",
+			"reachable": true
+		},
+		{
+			"number": 54,
+			"name": "Amsentisz",
+			"reachable": true
+		},
+		{
+			"number": 55,
+			"name": "Fladiselm",
+			"reachable": true
+		},
+		{
+			"number": 56,
+			"name": "Laanawemb",
+			"reachable": true
+		},
+		{
+			"number": 57,
+			"name": "Ilkerloor",
+			"reachable": true
+		},
+		{
+			"number": 58,
+			"name": "Davanossi",
+			"reachable": true
+		},
+		{
+			"number": 59,
+			"name": "Ploehrliou",
+			"reachable": true
+		},
+		{
+			"number": 60,
+			"name": "Corpinyaya",
+			"reachable": true
+		},
+		{
+			"number": 61,
+			"name": "Leckandmeram",
+			"reachable": true
+		},
+		{
+			"number": 62,
+			"name": "Quulngais",
+			"reachable": true
+		},
+		{
+			"number": 63,
+			"name": "Nokokipsechl",
+			"reachable": true
+		},
+		{
+			"number": 64,
+			"name": "Rinblodesa",
+			"reachable": true
+		},
+		{
+			"number": 65,
+			"name": "Loydporpen",
+			"reachable": true
+		},
+		{
+			"number": 66,
+			"name": "Ibtrevskip",
+			"reachable": true
+		},
+		{
+			"number": 67,
+			"name": "Elkowaldb",
+			"reachable": true
+		},
+		{
+			"number": 68,
+			"name": "Heholhofsko",
+			"reachable": true
+		},
+		{
+			"number": 69,
+			"name": "Yebrilowisod",
+			"reachable": true
+		},
+		{
+			"number": 70,
+			"name": "Husalvangewi",
+			"reachable": true
+		},
+		{
+			"number": 71,
+			"name": "Ovna'uesed",
+			"reachable": true
+		},
+		{
+			"number": 72,
+			"name": "Bahibusey",
+			"reachable": true
+		},
+		{
+			"number": 73,
+			"name": "Nuybeliaure",
+			"reachable": true
+		},
+		{
+			"number": 74,
+			"name": "Doshawchuc",
+			"reachable": true
+		},
+		{
+			"number": 75,
+			"name": "Ruckinarkh",
+			"reachable": true
+		},
+		{
+			"number": 76,
+			"name": "Thorettac",
+			"reachable": true
+		},
+		{
+			"number": 77,
+			"name": "Nuponoparau",
+			"reachable": true
+		},
+		{
+			"number": 78,
+			"name": "Moglaschil",
+			"reachable": true
+		},
+		{
+			"number": 79,
+			"name": "Uiweupose",
+			"reachable": true
+		},
+		{
+			"number": 80,
+			"name": "Nasmilete",
+			"reachable": true
+		},
+		{
+			"number": 81,
+			"name": "Ekdaluskin",
+			"reachable": true
+		},
+		{
+			"number": 82,
+			"name": "Hakapanasy",
+			"reachable": true
+		},
+		{
+			"number": 83,
+			"name": "Dimonimba",
+			"reachable": true
+		},
+		{
+			"number": 84,
+			"name": "Cajaccari",
+			"reachable": true
+		},
+		{
+			"number": 85,
+			"name": "Olonerovo",
+			"reachable": true
+		},
+		{
+			"number": 86,
+			"name": "Umlanswick",
+			"reachable": true
+		},
+		{
+			"number": 87,
+			"name": "Henayliszm",
+			"reachable": true
+		},
+		{
+			"number": 88,
+			"name": "Utzenmate",
+			"reachable": true
+		},
+		{
+			"number": 89,
+			"name": "Umirpaiya",
+			"reachable": true
+		},
+		{
+			"number": 90,
+			"name": "Paholiang",
+			"reachable": true
+		},
+		{
+			"number": 91,
+			"name": "Iaereznika",
+			"reachable": true
+		},
+		{
+			"number": 92,
+			"name": "Yudukagath",
+			"reachable": true
+		},
+		{
+			"number": 93,
+			"name": "Boealalosnj",
+			"reachable": true
+		},
+		{
+			"number": 94,
+			"name": "Yaevarcko",
+			"reachable": true
+		},
+		{
+			"number": 95,
+			"name": "Coellosipp",
+			"reachable": true
+		},
+		{
+			"number": 96,
+			"name": "Wayndohalou",
+			"reachable": true
+		},
+		{
+			"number": 97,
+			"name": "Smoduraykl",
+			"reachable": true
+		},
+		{
+			"number": 98,
+			"name": "Apmaneessu",
+			"reachable": true
+		},
+		{
+			"number": 99,
+			"name": "Hicanpaav",
+			"reachable": true
+		},
+		{
+			"number": 100,
+			"name": "Akvasanta",
+			"reachable": true
+		},
+		{
+			"number": 101,
+			"name": "Tuychelisaor",
+			"reachable": true
+		},
+		{
+			"number": 102,
+			"name": "Rivskimbe",
+			"reachable": true
+		},
+		{
+			"number": 103,
+			"name": "Daksanquix",
+			"reachable": true
+		},
+		{
+			"number": 104,
+			"name": "Kissonlin",
+			"reachable": true
+		},
+		{
+			"number": 105,
+			"name": "Aediabiel",
+			"reachable": true
+		},
+		{
+			"number": 106,
+			"name": "Ulosaginyik",
+			"reachable": true
+		},
+		{
+			"number": 107,
+			"name": "Roclaytonycar",
+			"reachable": true
+		},
+		{
+			"number": 108,
+			"name": "Kichiaroa",
+			"reachable": true
+		},
+		{
+			"number": 109,
+			"name": "Irceauffey",
+			"reachable": true
+		},
+		{
+			"number": 110,
+			"name": "Nudquathsenfe",
+			"reachable": true
+		},
+		{
+			"number": 111,
+			"name": "Getaizakaal",
+			"reachable": true
+		},
+		{
+			"number": 112,
+			"name": "Hansolmien",
+			"reachable": true
+		},
+		{
+			"number": 113,
+			"name": "Bloytisagra",
+			"reachable": true
+		},
+		{
+			"number": 114,
+			"name": "Ladsenlay",
+			"reachable": true
+		},
+		{
+			"number": 115,
+			"name": "Luyugoslasr",
+			"reachable": true
+		},
+		{
+			"number": 116,
+			"name": "Ubredhatk",
+			"reachable": true
+		},
+		{
+			"number": 117,
+			"name": "Cidoniana",
+			"reachable": true
+		},
+		{
+			"number": 118,
+			"name": "Jasinessa",
+			"reachable": true
+		},
+		{
+			"number": 119,
+			"name": "Torweierf",
+			"reachable": true
+		},
+		{
+			"number": 120,
+			"name": "Saffneckm",
+			"reachable": true
+		},
+		{
+			"number": 121,
+			"name": "Thnistner",
+			"reachable": true
+		},
+		{
+			"number": 122,
+			"name": "Dotusingg",
+			"reachable": true
+		},
+		{
+			"number": 123,
+			"name": "Luleukous",
+			"reachable": true
+		},
+		{
+			"number": 124,
+			"name": "Jelmandan",
+			"reachable": true
+		},
+		{
+			"number": 125,
+			"name": "Otimanaso",
+			"reachable": true
+		},
+		{
+			"number": 126,
+			"name": "Enjaxusanto",
+			"reachable": true
+		},
+		{
+			"number": 127,
+			"name": "Sezviktorew",
+			"reachable": true
+		},
+		{
+			"number": 128,
+			"name": "Zikehpm",
+			"reachable": true
+		},
+		{
+			"number": 129,
+			"name": "Bephembah",
+			"reachable": true
+		},
+		{
+			"number": 130,
+			"name": "Broomerrai",
+			"reachable": true
+		},
+		{
+			"number": 131,
+			"name": "Meximicka",
+			"reachable": true
+		},
+		{
+			"number": 132,
+			"name": "Venessika",
+			"reachable": true
+		},
+		{
+			"number": 133,
+			"name": "Gaiteseling",
+			"reachable": true
+		},
+		{
+			"number": 134,
+			"name": "Zosakasiro",
+			"reachable": true
+		},
+		{
+			"number": 135,
+			"name": "Drajayanes",
+			"reachable": true
+		},
+		{
+			"number": 136,
+			"name": "Ooibekuar",
+			"reachable": true
+		},
+		{
+			"number": 137,
+			"name": "Urckiansi",
+			"reachable": true
+		},
+		{
+			"number": 138,
+			"name": "Dozivadido",
+			"reachable": true
+		},
+		{
+			"number": 139,
+			"name": "Emiekereks",
+			"reachable": true
+		},
+		{
+			"number": 140,
+			"name": "Meykinunukur",
+			"reachable": true
+		},
+		{
+			"number": 141,
+			"name": "Kimycuristh",
+			"reachable": true
+		},
+		{
+			"number": 142,
+			"name": "Roansfien",
+			"reachable": true
+		},
+		{
+			"number": 143,
+			"name": "Isgarmeso",
+			"reachable": true
+		},
+		{
+			"number": 144,
+			"name": "Daitibeli",
+			"reachable": true
+		},
+		{
+			"number": 145,
+			"name": "Gucuttarik",
+			"reachable": true
+		},
+		{
+			"number": 146,
+			"name": "Enlaythie",
+			"reachable": true
+		},
+		{
+			"number": 147,
+			"name": "Drewweste",
+			"reachable": true
+		},
+		{
+			"number": 148,
+			"name": "Akbulkabi",
+			"reachable": true
+		},
+		{
+			"number": 149,
+			"name": "Homskiw",
+			"reachable": true
+		},
+		{
+			"number": 150,
+			"name": "Zavainlani",
+			"reachable": true
+		},
+		{
+			"number": 151,
+			"name": "Jewijkmas",
+			"reachable": true
+		},
+		{
+			"number": 152,
+			"name": "Itlhotagra",
+			"reachable": true
+		},
+		{
+			"number": 153,
+			"name": "Podalicess",
+			"reachable": true
+		},
+		{
+			"number": 154,
+			"name": "Hiviusauer",
+			"reachable": true
+		},
+		{
+			"number": 155,
+			"name": "Halsebenk",
+			"reachable": true
+		},
+		{
+			"number": 156,
+			"name": "Puikitoac",
+			"reachable": true
+		},
+		{
+			"number": 157,
+			"name": "Gaybakuaria",
+			"reachable": true
+		},
+		{
+			"number": 158,
+			"name": "Grbodubhe",
+			"reachable": true
+		},
+		{
+			"number": 159,
+			"name": "Rycempler",
+			"reachable": true
+		},
+		{
+			"number": 160,
+			"name": "Indjalala",
+			"reachable": true
+		},
+		{
+			"number": 161,
+			"name": "Fontenikk",
+			"reachable": true
+		},
+		{
+			"number": 162,
+			"name": "Pasycihelwhee",
+			"reachable": true
+		},
+		{
+			"number": 163,
+			"name": "Ikbaksmit",
+			"reachable": true
+		},
+		{
+			"number": 164,
+			"name": "Telicianses",
+			"reachable": true
+		},
+		{
+			"number": 165,
+			"name": "Oyleyzhan",
+			"reachable": true
+		},
+		{
+			"number": 166,
+			"name": "Uagerosat",
+			"reachable": true
+		},
+		{
+			"number": 167,
+			"name": "Impoxectin",
+			"reachable": true
+		},
+		{
+			"number": 168,
+			"name": "Twoodmand",
+			"reachable": true
+		},
+		{
+			"number": 169,
+			"name": "Hilfsesorbs",
+			"reachable": true
+		},
+		{
+			"number": 170,
+			"name": "Ezdaranit",
+			"reachable": true
+		},
+		{
+			"number": 171,
+			"name": "Wiensanshe",
+			"reachable": true
+		},
+		{
+			"number": 172,
+			"name": "Ewheelonc",
+			"reachable": true
+		},
+		{
+			"number": 173,
+			"name": "Litzmantufa",
+			"reachable": true
+		},
+		{
+			"number": 174,
+			"name": "Emarmatosi",
+			"reachable": true
+		},
+		{
+			"number": 175,
+			"name": "Mufimbomacvi",
+			"reachable": true
+		},
+		{
+			"number": 176,
+			"name": "Wongquarum",
+			"reachable": true
+		},
+		{
+			"number": 177,
+			"name": "Hapirajua",
+			"reachable": true
+		},
+		{
+			"number": 178,
+			"name": "Igbinduina",
+			"reachable": true
+		},
+		{
+			"number": 179,
+			"name": "Wepaitvas",
+			"reachable": true
+		},
+		{
+			"number": 180,
+			"name": "Sthatigudi",
+			"reachable": true
+		},
+		{
+			"number": 181,
+			"name": "Yekathsebehn",
+			"reachable": true
+		},
+		{
+			"number": 182,
+			"name": "Ebedeagurst",
+			"reachable": true
+		},
+		{
+			"number": 183,
+			"name": "Nolisonia",
+			"reachable": true
+		},
+		{
+			"number": 184,
+			"name": "Ulexovitab",
+			"reachable": true
+		},
+		{
+			"number": 185,
+			"name": "Iodhinxois",
+			"reachable": true
+		},
+		{
+			"number": 186,
+			"name": "Irroswitzs",
+			"reachable": true
+		},
+		{
+			"number": 187,
+			"name": "Bifredait",
+			"reachable": true
+		},
+		{
+			"number": 188,
+			"name": "Beiraghedwe",
+			"reachable": true
+		},
+		{
+			"number": 189,
+			"name": "Yeonatlak",
+			"reachable": true
+		},
+		{
+			"number": 190,
+			"name": "Cugnatachh",
+			"reachable": true
+		},
+		{
+			"number": 191,
+			"name": "Nozoryenki",
+			"reachable": true
+		},
+		{
+			"number": 192,
+			"name": "Ebralduri",
+			"reachable": true
+		},
+		{
+			"number": 193,
+			"name": "Evcickcandj",
+			"reachable": true
+		},
+		{
+			"number": 194,
+			"name": "Ziybosswin",
+			"reachable": true
+		},
+		{
+			"number": 195,
+			"name": "Heperclait",
+			"reachable": true
+		},
+		{
+			"number": 196,
+			"name": "Sugiuniam",
+			"reachable": true
+		},
+		{
+			"number": 197,
+			"name": "Aaseertush",
+			"reachable": true
+		},
+		{
+			"number": 198,
+			"name": "Uglyestemaa",
+			"reachable": true
+		},
+		{
+			"number": 199,
+			"name": "Horeroedsh",
+			"reachable": true
+		},
+		{
+			"number": 200,
+			"name": "Drundemiso",
+			"reachable": true
+		},
+		{
+			"number": 201,
+			"name": "Ityanianat",
+			"reachable": true
+		},
+		{
+			"number": 202,
+			"name": "Purneyrine",
+			"reachable": true
+		},
+		{
+			"number": 203,
+			"name": "Dokiessmat",
+			"reachable": true
+		},
+		{
+			"number": 204,
+			"name": "Nupiacheh",
+			"reachable": true
+		},
+		{
+			"number": 205,
+			"name": "Dihewsonj",
+			"reachable": true
+		},
+		{
+			"number": 206,
+			"name": "Rudrailhik",
+			"reachable": true
+		},
+		{
+			"number": 207,
+			"name": "Tweretnort",
+			"reachable": true
+		},
+		{
+			"number": 208,
+			"name": "Snatreetze",
+			"reachable": true
+		},
+		{
+			"number": 209,
+			"name": "Iwundaracos",
+			"reachable": true
+		},
+		{
+			"number": 210,
+			"name": "Digarlewena",
+			"reachable": true
+		},
+		{
+			"number": 211,
+			"name": "Erquagsta",
+			"reachable": true
+		},
+		{
+			"number": 212,
+			"name": "Logovoloin",
+			"reachable": true
+		},
+		{
+			"number": 213,
+			"name": "Boyaghosganh",
+			"reachable": true
+		},
+		{
+			"number": 214,
+			"name": "Kuolungau",
+			"reachable": true
+		},
+		{
+			"number": 215,
+			"name": "Pehneldept",
+			"reachable": true
+		},
+		{
+			"number": 216,
+			"name": "Yevettiiqidcon",
+			"reachable": true
+		},
+		{
+			"number": 217,
+			"name": "Sahliacabru",
+			"reachable": true
+		},
+		{
+			"number": 218,
+			"name": "Noggalterpor",
+			"reachable": true
+		},
+		{
+			"number": 219,
+			"name": "Chmageaki",
+			"reachable": true
+		},
+		{
+			"number": 220,
+			"name": "Veticueca",
+			"reachable": true
+		},
+		{
+			"number": 221,
+			"name": "Vittesbursul",
+			"reachable": true
+		},
+		{
+			"number": 222,
+			"name": "Nootanore",
+			"reachable": true
+		},
+		{
+			"number": 223,
+			"name": "Innebdjerah",
+			"reachable": true
+		},
+		{
+			"number": 224,
+			"name": "Kisvarcini",
+			"reachable": true
+		},
+		{
+			"number": 225,
+			"name": "Cuzcogipper",
+			"reachable": true
+		},
+		{
+			"number": 226,
+			"name": "Pamanhermonsu",
+			"reachable": true
+		},
+		{
+			"number": 227,
+			"name": "Brotoghek",
+			"reachable": true
+		},
+		{
+			"number": 228,
+			"name": "Mibittara",
+			"reachable": true
+		},
+		{
+			"number": 229,
+			"name": "Huruahili",
+			"reachable": true
+		},
+		{
+			"number": 230,
+			"name": "Raldwicarn",
+			"reachable": true
+		},
+		{
+			"number": 231,
+			"name": "Ezdartlic",
+			"reachable": true
+		},
+		{
+			"number": 232,
+			"name": "Badesclema",
+			"reachable": true
+		},
+		{
+			"number": 233,
+			"name": "Isenkeyan",
+			"reachable": true
+		},
+		{
+			"number": 234,
+			"name": "Iadoitesu",
+			"reachable": true
+		},
+		{
+			"number": 235,
+			"name": "Yagrovoisi",
+			"reachable": true
+		},
+		{
+			"number": 236,
+			"name": "Ewcomechio",
+			"reachable": true
+		},
+		{
+			"number": 237,
+			"name": "Inunnunnoda",
+			"reachable": true
+		},
+		{
+			"number": 238,
+			"name": "Dischiutun",
+			"reachable": true
+		},
+		{
+			"number": 239,
+			"name": "Yuwarugha",
+			"reachable": true
+		},
+		{
+			"number": 240,
+			"name": "Ialmendra",
+			"reachable": true
+		},
+		{
+			"number": 241,
+			"name": "Reponudrle",
+			"reachable": true
+		},
+		{
+			"number": 242,
+			"name": "Rinjanagrbo",
+			"reachable": true
+		},
+		{
+			"number": 243,
+			"name": "Zeziceloh",
+			"reachable": true
+		},
+		{
+			"number": 244,
+			"name": "Oeileutasc",
+			"reachable": true
+		},
+		{
+			"number": 245,
+			"name": "Zicniijinis",
+			"reachable": true
+		},
+		{
+			"number": 246,
+			"name": "Dugnowarilda",
+			"reachable": true
+		},
+		{
+			"number": 247,
+			"name": "Neuxoisan",
+			"reachable": true
+		},
+		{
+			"number": 248,
+			"name": "Ilmenhorn",
+			"reachable": true
+		},
+		{
+			"number": 249,
+			"name": "Rukwatsuku",
+			"reachable": true
+		},
+		{
+			"number": 250,
+			"name": "Nepitzaspru",
+			"reachable": true
+		},
+		{
+			"number": 251,
+			"name": "Chcehoemig",
+			"reachable": true
+		},
+		{
+			"number": 252,
+			"name": "Haffneyrin",
+			"reachable": true
+		},
+		{
+			"number": 253,
+			"name": "Uliciawai",
+			"reachable": true
+		},
+		{
+			"number": 254,
+			"name": "Tuhgrespod",
+			"reachable": true
+		},
+		{
+			"number": 255,
+			"name": "Iousongola",
+			"reachable": true
+		},
+		{
+			"number": 256,
+			"name": "Odyalutai",
+			"reachable": false
+		}
+	]
+}

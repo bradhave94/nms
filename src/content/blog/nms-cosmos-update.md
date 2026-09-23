@@ -60,6 +60,8 @@ A director can found an alliance and give it a name and a banner. Other players 
 
 The teleporter lists allied systems, and rankings are shown at the station core. Alliances are ranked on population, activity, and how much space they cover. There's no published reward table yet.
 
+The [alliance guide](/blog/no-mans-sky-alliances-guide/) covers claiming a station, founding an alliance and joining one. To find an alliance, browse the [alliance directory](/alliances/).
+
 ## The star system map
 
 Open it from the Quick Menu. It shows the planets, the station, and deep-space points of interest in your current system. Mark one and your ship will help you fly there.

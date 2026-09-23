@@ -1,5 +1,7 @@
 ---
+import '@assets/css/alliances.css';
 import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Form from '../components/Form.astro';
 ---
 
@@ -9,5 +11,13 @@ import Form from '../components/Form.astro';
 	slug="feedback"
 	robots="noindex,follow,max-image-preview:large"
 >
-	<Form />
+	<div class="site-form mx-auto max-w-2xl px-2 pb-16 sm:px-4">
+		<Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Feedback' }]} className="!px-0 pt-4 mb-6" />
+		<header class="mb-10">
+			<p class="eyebrow">Contact</p>
+			<h1>Share your feedback</h1>
+			<p class="lede">Spotted a wrong recipe, a missing item or a bug? Have an idea for the site? We read every message.</p>
+		</header>
+		<Form />
+	</div>
 </Layout>

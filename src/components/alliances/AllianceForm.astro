@@ -1,0 +1,189 @@
+---
+import {
+	ALLIANCE_COLOURS,
+	GALAXIES,
+	findGalaxy,
+	FOCUSES,
+	PLATFORMS,
+	type AllianceFieldErrors,
+	type AllianceInput,
+} from '@utils/alliances';
+
+interface Props {
+	values: AllianceInput;
+	errors?: AllianceFieldErrors;
+	submitLabel: string;
+	/** Extra hidden fields, e.g. the moderation action and row id. */
+	hidden?: Record<string, string>;
+	/** Show the anti-spam honeypot and timing fields on public forms. */
+	spamGuard?: boolean;
+}
+
+const { values, errors = {}, submitLabel, hidden = {}, spamGuard = false } = Astro.props;
+const selectedGalaxy = findGalaxy(values.galaxy);
+const selectedColour = ALLIANCE_COLOURS.find((colour) => colour.hex === values.color) ?? ALLIANCE_COLOURS[5];
+const invalid = (field: keyof AllianceInput) => (errors[field] ? 'true' : undefined);
+const describedBy = (field: keyof AllianceInput, help?: string) =>
+	[help, errors[field] ? `${field}-error` : undefined].filter(Boolean).join(' ') || undefined;
+---
+
+<form method="post" class="space-y-6" novalidate>
+	{Object.entries(hidden).map(([name, value]) => <input type="hidden" name={name} value={value} />)}
+	{spamGuard && (
+		<>
+			<input type="hidden" name="startedAt" value={String(Date.now())} />
+			<div class="honeypot" aria-hidden="true">
+				<label for="alliance-website-confirm">Leave this empty</label>
+				<input id="alliance-website-confirm" type="text" name="websiteConfirm" tabindex="-1" autocomplete="off" />
+			</div>
+		</>
+	)}
+
+	<section class="panel space-y-5" aria-labelledby="form-identity">
+		<h2 id="form-identity">Your alliance</h2>
+		<div class="grid gap-5 sm:grid-cols-[minmax(0,1fr)_8rem]">
+			<div>
+				<label for="alliance-name">Alliance name</label>
+				<input id="alliance-name" type="text" name="name" value={values.name} maxlength="31" required
+					aria-invalid={invalid('name')} aria-describedby={describedBy('name', 'name-help')} />
+				<p id="name-help" class="help">As it appears in game.</p>
+				{errors.name && <p id="name-error" class="field-error">{errors.name}</p>}
+			</div>
+			<div>
+				<label for="alliance-tag">Tag <span class="optional">(optional)</span></label>
+				<input id="alliance-tag" type="text" name="tag" value={values.tag} maxlength="4" spellcheck="false"
+					aria-invalid={invalid('tag')} aria-describedby={describedBy('tag')} />
+				{errors.tag && <p id="tag-error" class="field-error">{errors.tag}</p>}
+			</div>
+		</div>
+		<fieldset>
+			<legend>Banner colour: <span class="optional" data-colour-name>{selectedColour.name}</span></legend>
+			<div class="swatches">
+				{ALLIANCE_COLOURS.map((colour) => (
+					<label class="swatch" title={colour.name}>
+						<input type="radio" name="color" value={colour.hex} data-name={colour.name} checked={selectedColour.hex === colour.hex} />
+						<span style={`background: ${colour.hex}`}></span>
+						<span class="sr-only">{colour.name}</span>
+					</label>
+				))}
+			</div>
+			<p class="help">The main colour from your in-game banner palette.</p>
+		</fieldset>
+		<div>
+			<label for="alliance-description">Description</label>
+			<textarea id="alliance-description" name="description" maxlength="1000" required
+				aria-invalid={invalid('description')} aria-describedby={describedBy('description', 'description-help')}>{values.description}</textarea>
+			<p id="description-help" class="help">What your alliance is about, who you're looking for and what members do together. 20–1,000 characters.</p>
+			{errors.description && <p id="description-error" class="field-error">{errors.description}</p>}
+		</div>
+		<fieldset>
+			<legend>Focus <span class="optional">(up to 4)</span></legend>
+			<div class="checks">
+				{FOCUSES.map((focus) => (
+					<label><input type="checkbox" name="focuses" value={focus} checked={values.focuses.includes(focus)} /> {focus}</label>
+				))}
+			</div>
+			{errors.focuses && <p class="field-error">{errors.focuses}</p>}
+		</fieldset>
+	</section>
+
+	<section class="panel space-y-5" aria-labelledby="form-join">
+		<div>
+			<h2 id="form-join">Where players can join</h2>
+			<p class="help !mt-1">Players join an alliance at the Station Core of one of its space stations, so tell them where to find one.</p>
+		</div>
+		<div class="grid gap-5 sm:grid-cols-2">
+			<div>
+				<label for="alliance-galaxy">Galaxy</label>
+				<select id="alliance-galaxy" name="galaxy" required aria-invalid={invalid('galaxy')} aria-describedby={describedBy('galaxy')}>
+					{!selectedGalaxy && <option value="" selected>Choose a galaxy…</option>}
+					{GALAXIES.filter((galaxy) => galaxy.reachable || galaxy === selectedGalaxy).map((galaxy) => (
+						<option value={galaxy.name} selected={galaxy === selectedGalaxy}>{galaxy.number}. {galaxy.name}</option>
+					))}
+				</select>
+				{errors.galaxy && <p id="galaxy-error" class="field-error">{errors.galaxy}</p>}
+			</div>
+			<div>
+				<label for="alliance-region">Region <span class="optional">(optional)</span></label>
+				<input id="alliance-region" type="text" name="region" value={values.region} maxlength="60"
+					aria-invalid={invalid('region')} aria-describedby={describedBy('region')} />
+				{errors.region && <p id="region-error" class="field-error">{errors.region}</p>}
+			</div>
+			<div>
+				<label for="alliance-system">Station system</label>
+				<input id="alliance-system" type="text" name="joinSystem" value={values.joinSystem} maxlength="60" required
+					aria-invalid={invalid('joinSystem')} aria-describedby={describedBy('joinSystem', 'system-help')} />
+				<p id="system-help" class="help">The system name of an alliance space station.</p>
+				{errors.joinSystem && <p id="joinSystem-error" class="field-error">{errors.joinSystem}</p>}
+			</div>
+			<div>
+				<label for="alliance-glyphs">Portal address <span class="optional">(optional)</span></label>
+				<input id="alliance-glyphs" type="text" name="portalGlyphs" value={values.portalGlyphs} maxlength="16"
+					autocapitalize="characters" spellcheck="false" placeholder="e.g. 0123 4567 89AB"
+					aria-invalid={invalid('portalGlyphs')} aria-describedby={describedBy('portalGlyphs', 'glyphs-help')} />
+				<p id="glyphs-help" class="help">The 12 glyphs as hex (0–9, A–F), for a portal on a planet in that system.</p>
+				{errors.portalGlyphs && <p id="portalGlyphs-error" class="field-error">{errors.portalGlyphs}</p>}
+			</div>
+		</div>
+	</section>
+
+	<section class="panel space-y-5" aria-labelledby="form-community">
+		<h2 id="form-community">Community</h2>
+		<fieldset>
+			<legend>Platforms <span class="optional">(leave empty if everyone's welcome)</span></legend>
+			<div class="checks">
+				{PLATFORMS.map((platform) => (
+					<label><input type="checkbox" name="platforms" value={platform} checked={values.platforms.includes(platform)} /> {platform}</label>
+				))}
+			</div>
+		</fieldset>
+		<div class="grid gap-5 sm:grid-cols-2">
+			<div>
+				<label for="alliance-languages">Languages</label>
+				<input id="alliance-languages" type="text" name="languages" value={values.languages} maxlength="60"
+					aria-invalid={invalid('languages')} aria-describedby={describedBy('languages', 'languages-help')} />
+				<p id="languages-help" class="help">Separate languages with commas.</p>
+				{errors.languages && <p id="languages-error" class="field-error">{errors.languages}</p>}
+			</div>
+			<div>
+				<label for="alliance-discord">Discord invite <span class="optional">(optional)</span></label>
+				<input id="alliance-discord" type="url" name="discordUrl" value={values.discordUrl} maxlength="200" placeholder="https://discord.gg/…"
+					aria-invalid={invalid('discordUrl')} aria-describedby={describedBy('discordUrl', 'discord-help')} />
+				<p id="discord-help" class="help">Use an invite that doesn't expire.</p>
+				{errors.discordUrl && <p id="discordUrl-error" class="field-error">{errors.discordUrl}</p>}
+			</div>
+			<div class="sm:col-span-2">
+				<label for="alliance-website">Website or wiki page <span class="optional">(optional)</span></label>
+				<input id="alliance-website" type="url" name="websiteUrl" value={values.websiteUrl} maxlength="200" placeholder="https://"
+					aria-invalid={invalid('websiteUrl')} aria-describedby={describedBy('websiteUrl')} />
+				{errors.websiteUrl && <p id="websiteUrl-error" class="field-error">{errors.websiteUrl}</p>}
+			</div>
+		</div>
+	</section>
+
+	<section class="panel space-y-5" aria-labelledby="form-contact">
+		<h2 id="form-contact">Contact for review</h2>
+		<div>
+			<label for="alliance-contact">Your Discord username or email</label>
+			<input id="alliance-contact" type="text" name="contact" value={values.contact} maxlength="300" required
+				aria-invalid={invalid('contact')} aria-describedby={describedBy('contact', 'contact-help')} />
+			<p id="contact-help" class="help">Private. We only use it if we have a question about your listing. It is never shown on the site.</p>
+			{errors.contact && <p id="contact-error" class="field-error">{errors.contact}</p>}
+		</div>
+	</section>
+
+	<div class="flex flex-wrap items-center gap-3 pt-2">
+		<button type="submit" class="button large">{submitLabel}</button>
+		<slot name="actions" />
+	</div>
+</form>
+
+<script>
+	// Name the selected banner colour next to the legend.
+	document.querySelectorAll<HTMLInputElement>('input[name="color"][data-name]').forEach((input) => {
+		input.addEventListener('change', () => {
+			const label = input.closest('fieldset')?.querySelector('[data-colour-name]');
+			if (label) label.textContent = input.dataset.name ?? '';
+		});
+	});
+</script>

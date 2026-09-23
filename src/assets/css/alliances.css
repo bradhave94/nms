@@ -1,0 +1,123 @@
+/* Alliance directory pages and the feedback form. Scoped under :is(.alliances, .site-form) or .site-form. */
+/* Components layer, so Tailwind utilities (mt-*, space-y-*) still win over these resets.
+   The order statement matches main.css in case this file loads first. */
+@layer theme, base, components, utilities;
+
+@layer components {
+	:is(.alliances, .site-form) { --edge: rgb(14 116 144 / .45); --control-height: 2.75rem; box-sizing: border-box; color-scheme: dark; }
+	:is(.alliances, .site-form) *, :is(.alliances, .site-form) *::before, :is(.alliances, .site-form) *::after { box-sizing: inherit; }
+	/* The site doesn't load Tailwind's preflight, so clear browser default margins here. */
+	:is(.alliances, .site-form) :is(p, dl, dd, figure) { margin: 0; }
+	:is(.alliances, .site-form) ul { list-style: none; padding-left: 0; margin: 0; }
+	:is(.alliances, .site-form) h1 { margin: .75rem 0 0; font-size: 2.25rem; line-height: 1.1; }
+	:is(.alliances, .site-form) h2 { margin: 0; font-size: 1.15rem; font-weight: 600; line-height: 1.5; }
+	:is(.alliances, .site-form) .lede { margin-top: 1rem; font-size: 1.125rem; line-height: 1.6; color: #bae6fd; max-width: 48rem; }
+	:is(.alliances, .site-form) .eyebrow { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: #7dd3fc; }
+	:is(.alliances, .site-form) .panel { border: 1px solid var(--edge); background: rgb(8 32 47 / .6); border-radius: .5rem; padding: 1.4rem; }
+	:is(.alliances, .site-form) .help { margin-top: .5rem; font-size: .78rem; line-height: 1.6; color: #93b7c9; }
+	:is(.alliances, .site-form) .prose-link { color: #7dd3fc; text-decoration: underline; text-underline-offset: .2em; }
+	:is(.alliances, .site-form) .prose-link:hover { color: #e0f2fe; }
+	:is(.alliances, .site-form) a:focus-visible, :is(.alliances, .site-form) button:focus-visible, :is(.alliances, .site-form) input:focus-visible,
+	:is(.alliances, .site-form) select:focus-visible, :is(.alliances, .site-form) textarea:focus-visible, :is(.alliances, .site-form) summary:focus-visible {
+		outline: 2px solid #38bdf8; outline-offset: 3px;
+	}
+
+	/* Buttons */
+	:is(.alliances, .site-form) .button { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border: 1px solid transparent; border-radius: .25rem; background: #0284c7; padding: .6rem .95rem; font-size: .85rem; line-height: 1.2; color: white; font-weight: 600; cursor: pointer; text-decoration: none; }
+	:is(.alliances, .site-form) .button:hover { background: #0369a1; }
+	:is(.alliances, .site-form) .button.secondary { background: transparent; border-color: #155e75; }
+	:is(.alliances, .site-form) .button.secondary:hover { background: #164e63; }
+	:is(.alliances, .site-form) .button.danger { background: transparent; border-color: #9f1239; color: #fecdd3; }
+	:is(.alliances, .site-form) .button.danger:hover { background: #4c0519; }
+	:is(.alliances, .site-form) .button.small { padding: .4rem .7rem; font-size: .75rem; }
+	:is(.alliances, .site-form) .button.large { min-height: var(--control-height); padding: .7rem 1.4rem; font-size: .95rem; }
+	:is(.alliances, .site-form) .button.control { min-height: var(--control-height); }
+
+	/* Form controls */
+	:is(.alliances, .site-form) label, :is(.alliances, .site-form) legend { display: block; padding: 0; font-size: .875rem; color: #e0f2fe; margin-bottom: .4rem; font-weight: 500; }
+	:is(.alliances, .site-form) .optional { color: #93b7c9; font-weight: 400; }
+	:is(.alliances, .site-form) .required { color: #fda4af; font-weight: 400; }
+	/* :where keeps this at low specificity so the textarea and select rules below can adjust it. */
+	:is(.alliances, .site-form) :where(input[type="text"], input[type="email"], input[type="url"], input[type="search"], input[type="password"], select, textarea) {
+		display: block; width: 100%; min-height: var(--control-height); background-color: #071923; border: 1px solid #155e75; border-radius: .25rem;
+		padding: .5rem .7rem; color: white; font-family: inherit; font-size: .95rem;
+	}
+	:is(.alliances, .site-form) :is(input, select) { height: var(--control-height); }
+	:is(.alliances, .site-form) select {
+		padding-right: 2.4rem; appearance: none; background-repeat: no-repeat; background-position: right .6rem center; background-size: 1.1rem;
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%237dd3fc' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+	}
+	:is(.alliances, .site-form) ::placeholder { color: #5f8599; opacity: 1; }
+	:is(.alliances, .site-form) textarea { height: auto; min-height: 8rem; line-height: 1.5; resize: vertical; }
+	:is(.alliances, .site-form) [aria-invalid="true"] { border-color: #f43f5e; }
+	:is(.alliances, .site-form) .field-error { margin-top: .35rem; font-size: .8rem; color: #fda4af; }
+	:is(.alliances, .site-form) fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+
+	/* Colour swatches */
+	:is(.alliances, .site-form) .swatches { display: grid; grid-template-columns: repeat(10, 2.25rem); gap: .5rem; }
+	:is(.alliances, .site-form) .swatch { position: relative; display: block; width: 2.25rem; height: 2.25rem; margin: 0; cursor: pointer; }
+	:is(.alliances, .site-form) .swatch input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+	:is(.alliances, .site-form) .swatch span[style] { display: block; width: 100%; height: 100%; border-radius: .3rem; border: 1px solid rgb(255 255 255 / .4); }
+	:is(.alliances, .site-form) .swatch input:checked + span { box-shadow: 0 0 0 2px #071923, 0 0 0 4px #38bdf8; }
+	:is(.alliances, .site-form) .swatch input:focus-visible + span { outline: 2px solid #e0f2fe; outline-offset: 5px; }
+
+	/* Toggle pills: the pill shows the checked state, the checkbox itself is hidden */
+	:is(.alliances, .site-form) .checks { display: flex; flex-wrap: wrap; gap: .5rem; }
+	:is(.alliances, .site-form) .checks label { position: relative; display: inline-flex; align-items: center; gap: .4rem; margin: 0; padding: .4rem .85rem; border: 1px solid #155e75; border-radius: 999px; color: #bae6fd; font-weight: 400; cursor: pointer; transition: background .15s, border-color .15s; }
+	:is(.alliances, .site-form) .checks label:hover { border-color: #0e7490; background: rgb(14 116 144 / .15); }
+	:is(.alliances, .site-form) .checks input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+	:is(.alliances, .site-form) .checks label::before { content: '+'; width: .75rem; text-align: center; color: #5f8599; }
+	:is(.alliances, .site-form) .checks label:has(input:checked) { background: #0c4a6e; border-color: #38bdf8; color: white; }
+	:is(.alliances, .site-form) .checks label:has(input:checked)::before { content: '✓'; color: #7dd3fc; }
+	:is(.alliances, .site-form) .checks label:has(input:focus-visible) { outline: 2px solid #38bdf8; outline-offset: 2px; }
+	:is(.alliances, .site-form) .honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+	/* Notices */
+	:is(.alliances, .site-form) .notice { border-radius: .4rem; padding: .9rem 1.1rem; font-size: .95rem; line-height: 1.6; }
+	:is(.alliances, .site-form) .notice.success { border: 1px solid #047857; background: rgb(6 78 59 / .45); color: #d1fae5; }
+	:is(.alliances, .site-form) .notice.error { border: 1px solid #9f1239; background: rgb(76 5 25 / .45); color: #ffe4e6; }
+	:is(.alliances, .site-form) .notice.info { border: 1px solid #0e7490; background: rgb(8 51 68 / .5); color: #e0f2fe; }
+
+	/* Chips (read-only labels, deliberately not pill-shaped like the form toggles) */
+	:is(.alliances, .site-form) .chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+	:is(.alliances, .site-form) .chip { display: inline-block; border-radius: .25rem; padding: .15rem .5rem; font-size: .78rem; color: #bae6fd; background: rgb(14 116 144 / .28); }
+	:is(.alliances, .site-form) .tag { display: inline-block; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .8rem; letter-spacing: .08em; padding: .1rem .45rem; border-radius: .25rem; border: 1px solid currentColor; }
+
+	/* Directory cards */
+	:is(.alliances, .site-form) .card { position: relative; display: flex; flex-direction: column; height: 100%; border: 1px solid var(--edge); border-top: 4px solid var(--alliance-color, #38bdf8); background: rgb(8 32 47 / .6); border-radius: .5rem; padding: 1.2rem 1.25rem; transition: border-color .15s, background .15s; }
+	:is(.alliances, .site-form) .card:hover { background: rgb(8 42 60 / .8); border-color: #0e7490; border-top-color: var(--alliance-color, #38bdf8); }
+	:is(.alliances, .site-form) .card h2 a { color: white; text-decoration: none; }
+	:is(.alliances, .site-form) .card h2 a::after { content: ''; position: absolute; inset: 0; }
+	:is(.alliances, .site-form) .card .meta { margin-top: .25rem; font-size: .85rem; color: #93b7c9; }
+	:is(.alliances, .site-form) .card .summary { margin-top: .75rem; font-size: .9rem; line-height: 1.55; color: #cfe3ee; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+	:is(.alliances, .site-form) .card .chips { margin-top: auto; padding-top: 1rem; }
+
+	/* Detail page */
+	:is(.alliances, .site-form) .glyphs { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.35rem; letter-spacing: .12em; color: #f0f9ff; }
+	:is(.alliances, .site-form) .steps { counter-reset: step; display: grid; gap: 1rem; list-style: none; padding-left: 0; margin: 0; }
+	:is(.alliances, .site-form) .steps li { counter-increment: step; position: relative; padding-left: 2.5rem; line-height: 1.6; color: #cfe3ee; }
+	:is(.alliances, .site-form) .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 1.75rem; height: 1.75rem; border-radius: 999px; background: #0c4a6e; color: #e0f2fe; font-size: .85rem; font-weight: 600; display: grid; place-items: center; }
+	:is(.alliances, .site-form) .facts { display: grid; gap: .9rem; }
+	:is(.alliances, .site-form) .facts dt { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: #7dd3fc; }
+	:is(.alliances, .site-form) .facts dd { margin-top: .15rem; color: #f0f9ff; }
+	:is(.alliances, .site-form) .description { white-space: pre-line; font-size: 1rem; line-height: 1.6; color: #d6e8f2; }
+
+	/* Moderation */
+	:is(.alliances, .site-form) .mod-list { display: grid; gap: 1rem; }
+	:is(.alliances, .site-form) .mod-fields { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: .5rem 1rem; font-size: .85rem; margin-top: 1rem; }
+	:is(.alliances, .site-form) .mod-fields dt { color: #93b7c9; }
+	:is(.alliances, .site-form) .mod-fields dd { color: #e0f2fe; overflow-wrap: anywhere; white-space: pre-line; }
+	:is(.alliances, .site-form) .colour-dot { display: inline-block; width: .75rem; height: .75rem; border-radius: 999px; border: 1px solid rgb(255 255 255 / .4); vertical-align: middle; }
+	:is(.alliances, .site-form) .tabs { display: flex; flex-wrap: wrap; gap: .5rem; }
+	:is(.alliances, .site-form) .tabs a { padding: .4rem .8rem; border-radius: .25rem; border: 1px solid #155e75; color: #bae6fd; text-decoration: none; font-size: .85rem; }
+	:is(.alliances, .site-form) .tabs a[aria-current="page"] { background: #0c4a6e; border-color: #38bdf8; color: white; }
+
+	@media (min-width: 640px) {
+		:is(.alliances, .site-form) h1 { font-size: 3.75rem; }
+	}
+	@media (max-width: 639px) {
+		:is(.alliances, .site-form) .mod-fields { grid-template-columns: 1fr; gap: .15rem; }
+		:is(.alliances, .site-form) .mod-fields dd { margin-bottom: .5rem; }
+		:is(.alliances, .site-form) .swatches { grid-template-columns: repeat(5, 2.25rem); }
+	}
+}

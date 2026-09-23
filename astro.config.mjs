@@ -1,5 +1,6 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
+import vercel from '@astrojs/vercel';
 import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from 'node:fs';
 
@@ -44,12 +45,24 @@ const shouldIncludeInSitemap = (page) => {
 // https://astro.build/config
 export default defineConfig({
   site: "https://nomansskyrecipes.com",
+  // Pages stay static; only routes that set `prerender = false` (the alliance directory) run as functions.
+  adapter: vercel(),
+  env: {
+    schema: {
+      // Added by the Turso integration on Vercel. Unset locally, which uses a SQLite file in .data/.
+      SQLITE_TURSO_DATABASE_URL: envField.string({ context: 'server', access: 'secret', optional: true }),
+      SQLITE_TURSO_AUTH_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
+      ALLIANCES_ADMIN_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
+    },
+  },
   redirects: {
     '/farm': '/calculator/farm',
   },
   integrations: [
     sitemap({
       filter: shouldIncludeInSitemap,
+      // On-demand pages aren't discovered by the sitemap integration.
+      customPages: ['https://nomansskyrecipes.com/alliances/'],
       lastmod: new Date(SITE.version_date),
       changefreq: 'weekly',
       priority: 0.7,
