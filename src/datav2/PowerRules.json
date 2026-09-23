@@ -1,0 +1,52 @@
+{
+	"Provenance": {
+		"SteamBuildId": "25320008",
+		"CompilerVersion": "7.03.2.2",
+		"ObservedDate": "2026-09-22",
+		"Sources": {
+			"gcskyglobals.globals.MXML": "ffd181559be7d39c70caaec44defb7af00ec9b9ee1563484776f948b5066a2d2",
+			"regionhotspotstable.MXML": "630a0f32b4457334a51aecb014355869f4d519739a91fb483b1387a8c3d4209e"
+		}
+	},
+	"DayCycleSeconds": 1800,
+	"HotspotClassStrengths": {
+		"Power": {
+			"C": 150,
+			"B": 220,
+			"A": 250,
+			"S": 300
+		},
+		"Mineral1": {
+			"C": 1,
+			"B": 1.5,
+			"A": 2,
+			"S": 2.5
+		},
+		"Mineral2": {
+			"C": 1,
+			"B": 1.5,
+			"A": 2,
+			"S": 2.5
+		},
+		"Mineral3": {
+			"C": 1,
+			"B": 1.5,
+			"A": 2,
+			"S": 2.5
+		},
+		"Gas1": {
+			"C": 1,
+			"B": 1.5,
+			"A": 2,
+			"S": 2.5
+		},
+		"Gas2": {
+			"C": 1,
+			"B": 1.5,
+			"A": 2,
+			"S": 2.5
+		}
+	},
+	"SolarSchedule": null,
+	"Notes": "Cycle length and class strengths are extracted. Solar phase durations and location-dependent output are not established by these fields."
+}

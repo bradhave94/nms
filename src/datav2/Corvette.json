@@ -7845,7 +7845,31 @@
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
 		"Slug": "corvette/B_WALL_PLAN0",
-		"IsCraftable": true
+		"IsCraftable": true,
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": false,
+		"BuildableOnSpaceBase": false,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BIGGS_INT",
+				"SubGroupName": "BIGGS_INT_DEC"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "540",
+			"ConnectionDistance": "1.500000",
+			"UseMinDistance": "false",
+			"Rate": -20,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "B_DOOR0",

@@ -1229,7 +1229,35 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/FRE_ROOM_TELEPO"
+		"Slug": "technology/FRE_ROOM_TELEPO",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": false,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "FREIGHTER_TECH",
+				"SubGroupName": "FRE_TECH_SUB"
+			},
+			{
+				"Group": "SPACE",
+				"SubGroupName": "SPACE_TECH_SUB"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "BASE_FLAG",
@@ -1469,7 +1497,35 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/HEALTHSTATION"
+		"Slug": "technology/HEALTHSTATION",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			},
+			{
+				"Group": "FREIGHTER_TECH",
+				"SubGroupName": "FRE_TECH_OTHER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "5",
+			"NetworkMask": "1048",
+			"ConnectionDistance": "0.630000",
+			"UseMinDistance": "false",
+			"Rate": -10,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "SHIELDSTATION",
@@ -1553,7 +1609,35 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/SHIELDSTATION"
+		"Slug": "technology/SHIELDSTATION",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			},
+			{
+				"Group": "FREIGHTER_TECH",
+				"SubGroupName": "FRE_TECH_OTHER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "5",
+			"NetworkMask": "1048",
+			"ConnectionDistance": "0.620000",
+			"UseMinDistance": "false",
+			"Rate": -10,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BUILDBEACON",
@@ -1885,7 +1969,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/TELEPORTER"
+		"Slug": "technology/TELEPORTER",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "28",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": -20,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "TELEPORTER_F",
@@ -1969,7 +2077,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/TELEPORTER_F"
+		"Slug": "technology/TELEPORTER_F",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": false,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTEMINALS"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "28",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": -20,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BP_ANALYSER",
@@ -2461,7 +2593,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CREATURE_FEED"
+		"Slug": "technology/CREATURE_FEED",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "12",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": -20,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CREATURE_FARM",
@@ -2545,7 +2701,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CREATURE_FARM"
+		"Slug": "technology/CREATURE_FARM",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "12",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": -20,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "MESSAGEMODULE",
@@ -3185,7 +3365,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER0"
+		"Slug": "technology/CONTAINER0",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER1",
@@ -3265,7 +3469,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER1"
+		"Slug": "technology/CONTAINER1",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER2",
@@ -3345,7 +3573,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER2"
+		"Slug": "technology/CONTAINER2",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER3",
@@ -3425,7 +3677,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER3"
+		"Slug": "technology/CONTAINER3",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER4",
@@ -3505,7 +3781,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER4"
+		"Slug": "technology/CONTAINER4",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER5",
@@ -3585,7 +3885,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER5"
+		"Slug": "technology/CONTAINER5",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER6",
@@ -3665,7 +3989,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER6"
+		"Slug": "technology/CONTAINER6",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER7",
@@ -3745,7 +4093,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER7"
+		"Slug": "technology/CONTAINER7",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER8",
@@ -3825,7 +4197,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER8"
+		"Slug": "technology/CONTAINER8",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CONTAINER9",
@@ -3905,7 +4301,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/CONTAINER9"
+		"Slug": "technology/CONTAINER9",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHSTORAGE"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": -5,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CHEST",
@@ -4477,7 +4897,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/SPAWNER_BALL"
+		"Slug": "technology/SPAWNER_BALL",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "NOISEBOX",
@@ -4561,7 +5005,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/NOISEBOX"
+		"Slug": "technology/NOISEBOX",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "28",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": -1,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BYTEBEAT",
@@ -4645,7 +5113,45 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/BYTEBEAT"
+		"Slug": "technology/BYTEBEAT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			},
+			{
+				"Group": "FREIGHTER_TECH",
+				"SubGroupName": "FRE_TECH_OTHER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "ByteBeat",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "3",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "8",
+					"NetworkMask": "1052",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": -3,
+					"DependentEffect": "EnablesConnection"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "AM_SUITTREE",
@@ -5705,7 +6211,41 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_EXTRACTOR_S"
+		"Slug": "technology/U_EXTRACTOR_S",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERINDUSTRY"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Resources",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": 100,
+			"Storage": 360000,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "Mineral",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "1",
+					"NetworkMask": "4",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": -50,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_GASEXTRACTOR",
@@ -5785,7 +6325,41 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_GASEXTRACTOR"
+		"Slug": "technology/U_GASEXTRACTOR",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERINDUSTRY"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Resources",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": 100,
+			"Storage": 360000,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "Gas",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "1",
+					"NetworkMask": "4",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": -50,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_SILO_S",
@@ -5861,7 +6435,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_SILO_S"
+		"Slug": "technology/U_SILO_S",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERINDUSTRY"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Resources",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 1440000,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_SOLAR_S",
@@ -5945,7 +6543,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_SOLAR_S"
+		"Slug": "technology/U_SOLAR_S",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERPOWER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "12",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 50,
+			"Storage": 0,
+			"DependsOnEnvironment": "DayNight",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_GENERATOR_S",
@@ -6029,7 +6651,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_GENERATOR_S"
+		"Slug": "technology/U_GENERATOR_S",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERPOWER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "Power",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_BIOGENERATOR",
@@ -6109,7 +6755,41 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_BIOGENERATOR"
+		"Slug": "technology/U_BIOGENERATOR",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERPOWER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Fuel",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": -1,
+			"Storage": 180000,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "0",
+					"NetworkMask": "12",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": 50,
+					"DependentEffect": "None"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_POWERLINE",
@@ -6180,7 +6860,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_POWERLINE"
+		"Slug": "technology/U_POWERLINE",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERPOWER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "2",
+			"NetworkMask": "1359",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "true",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_PORTALLINE",
@@ -6251,7 +6955,35 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_PORTALLINE"
+		"Slug": "technology/U_PORTALLINE",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			},
+			{
+				"Group": "FREIGHTER_TECH",
+				"SubGroupName": "FRE_TECH_OTHER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Portals",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "1",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "U_BYTEBEATLINE",
@@ -6322,7 +7054,35 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_BYTEBEATLINE"
+		"Slug": "technology/U_BYTEBEATLINE",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			},
+			{
+				"Group": "FREIGHTER_TECH",
+				"SubGroupName": "FRE_TECH_OTHER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "ByteBeat",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "1",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "true",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "U_SWITCHWALL",
@@ -6402,7 +7162,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_SWITCHWALL"
+		"Slug": "technology/U_SWITCHWALL",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERSWITCHES"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "6",
+			"NetworkMask": "132",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_SWITCHPRESS",
@@ -6482,7 +7266,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_SWITCHPRESS"
+		"Slug": "technology/U_SWITCHPRESS",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERSWITCHES"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "6",
+			"NetworkMask": "132",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_BATTERY_S",
@@ -6562,7 +7370,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_BATTERY_S"
+		"Slug": "technology/U_BATTERY_S",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERPOWER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "12",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 45000,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_SWITCHBUTTON",
@@ -6638,7 +7470,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_SWITCHBUTTON"
+		"Slug": "technology/U_SWITCHBUTTON",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERSWITCHES"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_SWITCHPROX",
@@ -6714,7 +7570,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_SWITCHPROX"
+		"Slug": "technology/U_SWITCHPROX",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERSWITCHES"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "6",
+			"NetworkMask": "132",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_PIPELINE",
@@ -6794,7 +7674,31 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_PIPELINE"
+		"Slug": "technology/U_PIPELINE",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERINDUSTRY"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Resources",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "3",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_TRANSISTOR1",
@@ -6874,7 +7778,41 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_TRANSISTOR1"
+		"Slug": "technology/U_TRANSISTOR1",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERSWITCHES"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "1",
+					"NetworkMask": "4",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "DisablesConnection"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_TRANSISTOR2",
@@ -6954,7 +7892,41 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_TRANSISTOR2"
+		"Slug": "technology/U_TRANSISTOR2",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "POWER",
+				"SubGroupName": "POWERSWITCHES"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "1",
+					"NetworkMask": "4",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesConnection"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_MINIPORTAL",
@@ -7038,7 +8010,45 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_MINIPORTAL"
+		"Slug": "technology/U_MINIPORTAL",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			},
+			{
+				"Group": "FREIGHTER_TECH",
+				"SubGroupName": "FRE_TECH_OTHER"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Portals",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "8",
+					"NetworkMask": "1052",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": -5,
+					"DependentEffect": "None"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "U_MINIPORTAL_CV",
@@ -7122,7 +8132,41 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/U_MINIPORTAL_CV"
+		"Slug": "technology/U_MINIPORTAL_CV",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": false,
+		"BuildableOnSpaceBase": false,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Portals",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "8",
+					"NetworkMask": "1052",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": -5,
+					"DependentEffect": "None"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BYTEBEATSWITCH",
@@ -7202,7 +8246,41 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "technology/BYTEBEATSWITCH"
+		"Slug": "technology/BYTEBEATSWITCH",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHTECH"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "28",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "ByteBeat",
+					"NetworkSubGroup": "0",
+					"NetworkMask": "2",
+					"ConnectionDistance": "0.100000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesConnection"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "POWERLINE_HIDER",

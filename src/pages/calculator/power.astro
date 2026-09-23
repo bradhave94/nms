@@ -1,0 +1,240 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildPowerCatalog } from '@utils/basePowerCatalog.js';
+import { AUTO_SOLAR_PANEL_LIMIT } from '@utils/basePower.js';
+
+const catalog = buildPowerCatalog();
+const rulesSource = catalog.rulesProvenance.SteamBuildId ? `Steam build ${catalog.rulesProvenance.SteamBuildId}` : `game ${catalog.rulesProvenance.GameVersion}`;
+const title = "Base Power Calculator | No Man's Sky Recipes";
+const description = 'Calculate solar panels, batteries, electromagnetic generators and biofuel reactors for your No Man’s Sky base. Get a power plan and construction materials list.';
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Calculators', href: '/calculator' }, { name: 'Base Power Calculator' }];
+const structuredData = {
+	'@context': 'https://schema.org', '@type': 'BreadcrumbList',
+	itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name,
+		item: `https://nomansskyrecipes.com${item.href ?? '/calculator/power'}` })),
+};
+---
+<Layout {title} {description} slug="calculator" {structuredData}>
+	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
+	<div id="base-power" data-catalog={JSON.stringify(catalog)} class="power-tool mx-auto max-w-6xl px-2 pb-16 sm:px-4">
+		<header class="mb-10 max-w-3xl">
+			<p class="eyebrow">Base building / Power planning</p>
+			<h1 class="mt-3 text-4xl sm:text-6xl">Base Power Calculator</h1>
+			<p class="mt-4 text-lg text-sky-200">Plan your base’s power with solar panels, electromagnetic generators or biofuel reactors.</p>
+		</header>
+		<noscript><p class="panel">Enable JavaScript to calculate your base’s power requirements.</p></noscript>
+		<div class="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+			<form id="power-form" class="space-y-5">
+				<section class="panel" aria-labelledby="load-heading">
+					<h2 id="load-heading"><span class="step">01</span> Your base’s power draw</h2>
+					<fieldset class="choice mt-5"><legend class="sr-only">How to calculate consumption</legend>
+						<label><input type="radio" name="load-mode" value="total" checked /> Enter total</label>
+						<label><input type="radio" name="load-mode" value="devices" /> Add devices</label>
+					</fieldset>
+					<div id="total-fields" class="mt-5">
+						<label for="power-load">Total consumption (kP/s)</label>
+						<input id="power-load" type="number" min="0" max="1000000" step="any" value="100" required />
+						<p class="help">Use the power grid’s consumption reading from a connected battery or generator.</p>
+					</div>
+					<div id="device-fields" class="mt-5" hidden>
+						<label for="power-device">Add a powered building or device</label>
+						<div class="flex items-end gap-2">
+							<select id="power-device" class="min-w-0 flex-1"><option value="">Choose a device…</option>
+								{catalog.devices.map((item) => <option value={item.id}>{item.name} — {item.consumption} kP/s</option>)}
+							</select><button type="button" id="power-add" class="button">Add</button>
+						</div>
+						<div id="power-devices" class="mt-3 space-y-3"></div>
+						<p id="device-empty" class="help">Add devices to build your base’s power budget.</p>
+						<p class="help">All selected devices are treated as active. Include powered rooms, corridors, doors and trays; crops add no separate power draw. For wiring or switched devices, the measured total is more accurate.</p>
+					</div>
+					<div class="mt-5"><label for="power-reserve">Spare capacity (%)</label>
+						<input id="power-reserve" type="number" min="0" max="100" step="1" value="0" required />
+						<p class="help">Leave room for growth by planning for a higher load.</p>
+					</div>
+				</section>
+				<section class="panel" aria-labelledby="supply-heading">
+					<h2 id="supply-heading"><span class="step">02</span> Power you already have</h2>
+					<div class="mt-5 grid grid-cols-2 gap-4">
+						<div><label for="power-panels">Solar panels</label><input id="power-panels" type="number" min="0" max="100000" step="1" value="0" required /></div>
+						<div><label for="power-batteries">Batteries</label><input id="power-batteries" type="number" min="0" max="100000" step="1" value="0" required /></div>
+					</div>
+					<div class="mt-4"><label for="power-continuous">Continuous generation (kP/s)</label>
+						<input id="power-continuous" type="number" min="0" max="1000000" step="any" value="0" required />
+						<p class="help">Combined output of existing electromagnetic generators. Exclude solar panels and fuel-dependent reactors for an unattended base.</p>
+					</div>
+				</section>
+				<section class="panel" aria-labelledby="plan-heading">
+					<h2 id="plan-heading"><span class="step">03</span> Choose your power source</h2>
+					<fieldset class="choice mt-5"><legend class="sr-only">Power source to build</legend>
+						<label><input type="radio" name="strategy" value="auto" checked /> Automatic</label>
+						<label><input type="radio" name="strategy" value="solar" /> Solar + batteries</label>
+						<label><input type="radio" name="strategy" value="electromagnetic" /> Electromagnetic</label>
+						<label><input type="radio" name="strategy" value="biofuel" /> Biofuel</label>
+					</fieldset>
+					<p class="help">Automatic suggests electromagnetic power when you need {AUTO_SOLAR_PANEL_LIMIT} or more additional solar panels. Choose a source yourself to keep that choice.</p>
+					<div id="biofuel-fields" class="mt-5" hidden>
+						<label for="power-reactors">Biofuel reactors you already have</label>
+						<input id="power-reactors" type="number" min="0" max="100000" step="1" value="0" required />
+						<p class="help">Each reactor supplies {catalog.equipment.find((item) => item.id === 'U_BIOGENERATOR')?.generation} kP/s while fueled. This plan assumes you keep every reactor fueled; solar output is not counted toward it. Fuel quantities and runtime are not estimated.</p>
+					</div>
+					<div id="solar-fields" class="mt-4">
+						<p class="help">The default estimate uses 15 minutes of full sun and 15 minutes of darkness. Batteries must charge before the first night.</p>
+						<details class="mt-4"><summary>Adjust the daylight estimate</summary>
+							<div class="mt-4 grid grid-cols-2 gap-4">
+								<div><label for="power-night">Darkness (minutes)</label><input id="power-night" type="number" min="0" max="30" step="0.1" value="15" required /></div>
+									<div><label for="power-twilight">Dawn + dusk (minutes)</label><input id="power-twilight" type="number" min="0" max="30" step="0.1" value="0" required /></div>
+								</div>
+							<p class="help">Within the extracted {catalog.cycleSeconds / 60}-minute cycle, the remaining time is full sun. Twilight is modeled at half output. These phase lengths are adjustable estimates, not extracted guarantees for every location.</p>
+						</details>
+					</div>
+					<div id="generator-fields" class="mt-5" hidden>
+						<label for="power-generator">Output per additional generator (kP/s)</label>
+						<input id="power-generator" type="number" min="0.1" max="1000000" step="any" value="150" required />
+						<p class="help">Requires an electromagnetic hotspot. Enter the output measured where you’ll place it. Choose solar or biofuel if you have no suitable hotspot.</p>
+						<div class="flex flex-wrap gap-2 mt-3" aria-label="Hotspot reference strengths">
+							{Object.entries(catalog.hotspotStrengths).map(([key, value]) => <button type="button" class="preset" data-strength={value}>{key}: {value}</button>)}
+						</div><p class="help">Extracted class-strength references; actual output depends on placement.</p>
+					</div>
+				</section>
+			</form>
+			<div class="space-y-5 lg:sticky lg:top-6">
+				<section class="panel results" aria-labelledby="result-heading">
+					<p class="eyebrow">Your power plan</p><h2 id="result-heading" class="mt-2">Ready for day and night</h2>
+					<p id="power-error" class="mt-4 text-amber-200" role="alert" hidden></p>
+					<div id="power-result-body">
+						<p id="power-budget" class="mt-3 text-sky-200"></p>
+						<p id="power-recommendation" class="help mt-3" role="status" aria-live="polite" hidden></p>
+						<div id="power-counts" class="mt-6 grid grid-cols-2 gap-4"></div>
+						<p id="power-status" class="mt-5 border-l-2 border-sky-400 pl-3 text-sm text-sky-100" role="status" aria-live="polite"></p>
+						<dl id="power-details" class="mt-5 space-y-3 text-sm"></dl>
+						<p class="help mt-5">An estimate for one connected planetary base grid, with normal power requirements enabled. Freighters, corvettes and free-power settings are outside this plan.</p>
+					</div>
+				</section>
+				<section id="power-materials-panel" class="panel" aria-labelledby="materials-heading">
+					<h2 id="materials-heading">Materials for the additions</h2>
+					<p class="help">Direct construction ingredients for new power equipment.</p>
+					<ul id="power-materials" class="mt-4 space-y-3"></ul>
+					<a id="power-planner" class="button mt-5 inline-block" href="/calculator/planner">Open in crafting planner →</a>
+				</section>
+				<div class="flex flex-wrap gap-3"><button type="button" id="power-share" class="button secondary">Copy plan link</button><button type="button" id="power-reset" class="button secondary">Reset</button></div>
+				<p id="power-share-status" class="help" role="status"></p>
+			</div>
+		</div>
+		<details class="panel power-explainer mt-8">
+			<summary>How the calculation works & data sources</summary>
+			<div class="explainer-content">
+				<dl class="power-reference">
+					<div><dt>Solar panel output</dt><dd>Up to <strong>{catalog.panelRate}</strong> kP/s</dd></div>
+					<div><dt>Battery capacity</dt><dd><strong>{catalog.batteryCapacity.toLocaleString('en-US')}</strong> kP</dd></div>
+					<div><dt>Biofuel reactor output</dt><dd><strong>{catalog.equipment.find((item) => item.id === 'U_BIOGENERATOR')?.generation}</strong> kP/s <span>while fueled</span></dd></div>
+				</dl>
+				<div class="explainer-columns">
+					<section aria-labelledby="power-method-heading">
+						<h3 id="power-method-heading">How we size your system</h3>
+						<div class="explainer-topic">
+							<h4>Solar panels & batteries</h4>
+							<p>Panels must power your base during the day and recharge the energy used overnight. <strong>More batteries cannot make up for too few panels.</strong></p>
+							<p>We check the daily energy budget and the largest storage shortfall across full sun, dusk, night and dawn. Your existing panels count toward the plan; continuous generation reduces the load they need to cover.</p>
+						</div>
+						<div class="explainer-topic">
+							<h4>Electromagnetic generators</h4>
+							<p>This mode adds enough continuous generation to cover the remaining load without relying on solar.</p>
+						</div>
+						<div class="explainer-topic">
+							<h4>Biofuel reactors</h4>
+							<p>Biofuel mode covers the remaining load with fueled reactors, including any you already own. It includes construction materials, but does not estimate fuel quantities or runtime. Reactors need refueling to keep supplying power.</p>
+						</div>
+					</section>
+					<section aria-labelledby="power-assumptions-heading">
+						<h3 id="power-assumptions-heading">Assumptions to keep in mind</h3>
+						<div class="explainer-topic">
+							<h4>Battery discharge</h4>
+							<p>Battery sizing is based on stored energy. The <a href="https://nomanssky.fandom.com/wiki/Battery">wiki lists a 50 kP/s discharge limit per battery</a>, which we have not verified in the game data.</p>
+							<p>The default 15-minute night already allows at least one battery per 50 kP/s of remaining load. <strong>Shorter custom nights may need an in-game check.</strong></p>
+						</div>
+						<div class="explainer-topic">
+							<h4>Short-range teleporters</h4>
+							<p>We budget 5 kP/s for each powered unit. The <a href="https://nomanssky.fandom.com/wiki/Short-Range_Teleporter">wiki documents versions where they work without power</a>. Use your measured grid consumption if your base behaves differently.</p>
+						</div>
+					</section>
+				</div>
+				<section class="explainer-sources" aria-labelledby="power-sources-heading">
+					<h3 id="power-sources-heading">Data sources</h3>
+					<dl>
+						<div><dt>Device rates & recipes</dt><dd>Extracted game {catalog.gameVersion} catalog.</dd></div>
+						<div><dt>Day cycle & hotspot strengths</dt><dd>{rulesSource}{catalog.rulesProvenance.ObservedDate ? ` · observed ${catalog.rulesProvenance.ObservedDate}` : ''}.</dd></div>
+					</dl>
+					<p>The cycle length does not establish the full solar schedule at your base. Daylight and twilight durations remain adjustable estimates.</p>
+				</section>
+			</div>
+		</details>
+		<details class="panel mt-4"><summary>Parts that add no power draw</summary>
+			<p class="help">These parts have electrical connections but add no consumption in the game data. They do not need to be added to your power budget.</p>
+			<ul class="mt-3 grid gap-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+				{catalog.zeroDrawDevices.map((item) => <li><a class="text-sky-200 underline" href={item.url}>{item.name}</a></li>)}
+			</ul>
+			<p class="help">The Galactic Trade Terminal has required no base power since <a href="https://www.nomanssky.com/frontiers-update/" class="underline">Frontiers</a>. The Small Generator is a decoration and produces no electricity. Supply depots and pipes store or transport resources; they add no electrical load.</p>
+		</details>
+	</div>
+</Layout>
+
+<script>
+	import '../../scripts/basePower';
+</script>
+
+<style>
+	.power-tool { --edge: rgb(14 116 144 / .45); }
+	.power-tool, .power-tool :global(*) { box-sizing: border-box; }
+	.power-tool :global(p) { margin-bottom: 0; }
+	.power-tool :global(ul) { list-style: none; padding-left: 0; }
+	.power-tool :global(dd) { margin-left: 0; }
+	.panel { border: 1px solid var(--edge); background: rgb(8 32 47 / .6); border-radius: .5rem; padding: 1.4rem; }
+	.panel h2 { font-size: 1.15rem; font-weight: 600; line-height: 1.5; }
+	.results { background: linear-gradient(145deg, rgb(7 65 82 / .65), rgb(3 22 36 / .9)); border-color: #0e7490; }
+	.eyebrow { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: #7dd3fc; }
+	.step { color: #38bdf8; font-size: .8rem; margin-right: .7rem; }
+	label { display: block; font-size: .8rem; color: #bae6fd; margin-bottom: .4rem; }
+	input[type="number"], select { width: 100%; min-height: 2.6rem; background: #071923; border: 1px solid #155e75; border-radius: .25rem; padding: .45rem .65rem; color: white; }
+	input:focus-visible, select:focus-visible, button:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid #38bdf8; outline-offset: 3px; }
+	.choice { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; border: 0; padding: 0; margin-left: 0; margin-right: 0; min-width: 0; }
+	.choice label { display: flex; align-items: center; gap: .45rem; margin: 0; color: white; cursor: pointer; }
+	.choice input { accent-color: #38bdf8; }
+	.help { margin-top: .5rem; font-size: .75rem; line-height: 1.6; color: #93b7c9; }
+	.button { border-radius: .25rem; background: #0284c7; padding: .6rem .9rem; font-size: .8rem; color: white; font-weight: 600; cursor: pointer; text-decoration: none; }
+	.button:hover { background: #0369a1; }
+	.secondary, .preset { background: transparent; border: 1px solid #155e75; }
+	.preset { border-radius: .25rem; padding: .3rem .65rem; font-size: .75rem; cursor: pointer; }
+	.preset:hover { background: #164e63; }
+	summary { cursor: pointer; color: #bae6fd; font-size: .85rem; }
+	.power-explainer > summary { font-size: 1rem; font-weight: 600; color: #e0f2fe; line-height: 1.5; }
+	.explainer-content { display: grid; gap: 2rem; margin-top: 1.5rem; font-size: 1rem; line-height: 1.75; color: #bfd3df; }
+	.power-reference { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin: 0; }
+	.power-reference > div { padding: 1rem 1.15rem; background: rgb(14 116 144 / .12); border: 1px solid var(--edge); border-radius: .35rem; }
+	.power-reference dt { color: #93b7c9; font-size: .85rem; }
+	.power-reference dd { margin-top: .3rem; color: #e0f2fe; }
+	.power-reference strong { font-size: 1.5rem; font-weight: 600; }
+	.power-reference span { display: block; color: #93b7c9; font-size: .85rem; }
+	.explainer-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
+	.explainer-content h3 { margin: 0; font-size: 1.1rem; font-weight: 600; color: #f0f9ff; line-height: 1.5; }
+	.explainer-topic { margin-top: 1.25rem; }
+	.explainer-topic h4 { margin: 0 0 .5rem; font-size: 1rem; font-weight: 600; color: #bae6fd; line-height: 1.5; }
+	.explainer-content p { margin-top: 0; max-width: 68ch; }
+	.explainer-topic p + p { margin-top: .85rem; }
+	.explainer-content strong { color: #e0f2fe; font-weight: 600; }
+	.explainer-content a { color: #7dd3fc; text-decoration: underline; text-underline-offset: .2em; }
+	.explainer-content a:hover { color: #e0f2fe; }
+	.explainer-sources { border-top: 1px solid var(--edge); padding-top: 1.5rem; font-size: .9rem; }
+	.explainer-sources dl { display: grid; gap: .75rem; margin: 1rem 0; }
+	.explainer-sources dl > div { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: 1rem; }
+	.explainer-sources dt { color: #bae6fd; font-weight: 600; }
+	.explainer-sources dd { margin: 0; overflow-wrap: anywhere; }
+	@media (max-width: 767px) {
+		.power-reference, .explainer-columns { grid-template-columns: 1fr; }
+		.explainer-columns { gap: 1.75rem; }
+		.power-reference > div { padding: .85rem 1rem; }
+		.explainer-sources dl > div { grid-template-columns: 1fr; gap: .15rem; }
+	}
+
+	[hidden] { display: none !important; }
+</style>

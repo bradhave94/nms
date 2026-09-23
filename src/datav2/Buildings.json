@@ -19318,10 +19318,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "5",
+			"NetworkMask": "1048",
+			"ConnectionDistance": "0.500000",
+			"UseMinDistance": "false",
 			"Rate": -5,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BASE_WPLANT1",
@@ -33120,7 +33129,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CUBEROOMB_SPACE",
@@ -33211,7 +33233,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CUBEROOMC_SPACE",
@@ -33302,7 +33337,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "BRIDGECONNECTOR",
@@ -33388,7 +33436,20 @@
 		"BuildableOnSpaceBase": true,
 		"BuildableOnFreighter": true,
 		"Groups": null,
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "35.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDOR_S",
@@ -33559,7 +33620,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORL_SPACE",
@@ -33650,7 +33724,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORT_SPACE",
@@ -33741,7 +33828,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORSTAIRS_SPACE",
@@ -33828,7 +33928,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "6.900000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CUBEWALL_SPACE",
@@ -33995,7 +34108,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER0",
@@ -34084,7 +34210,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER1",
@@ -34173,7 +34312,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER2",
@@ -34262,7 +34414,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER3",
@@ -34351,7 +34516,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER4",
@@ -34440,7 +34618,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER5",
@@ -34529,7 +34720,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER6",
@@ -34618,7 +34822,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER7",
@@ -34707,7 +34924,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER8",
@@ -34796,7 +35026,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "S_CONTAINER9",
@@ -34885,7 +35128,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "NPCFRIGTERM",
@@ -34978,7 +35234,20 @@
 				"SubGroupName": "FREIGHTERLEGACY"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_A",
@@ -35073,7 +35342,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_A_STR",
@@ -35168,7 +35450,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_A_L",
@@ -35263,7 +35558,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_A_T",
@@ -35358,7 +35666,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_A_GLAS",
@@ -35453,7 +35774,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_GLA_ST",
@@ -35548,7 +35882,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_GLA_L",
@@ -35643,7 +35990,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_GLA_T",
@@ -35738,7 +36098,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_LADDER",
@@ -35829,7 +36202,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "8.500000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_EXT_PLATFOR",
@@ -35920,7 +36306,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_EXT_WALKWAY",
@@ -36011,7 +36410,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_FACE_DOOR_A",
@@ -36102,7 +36514,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_FACE_WINDOW",
@@ -36197,7 +36622,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_FACE_WALL",
@@ -36288,7 +36726,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_SCAN",
@@ -36387,7 +36838,20 @@
 				"SubGroupName": "SPACE_TECH_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_SHOP",
@@ -36486,7 +36950,20 @@
 				"SubGroupName": "SPACE_TECH_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_FLEET",
@@ -36585,7 +37062,20 @@
 				"SubGroupName": "SPACE_TECH_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_DRESS",
@@ -36684,7 +37174,20 @@
 				"SubGroupName": "SPACE_TECH_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_NPCSCI",
@@ -36783,7 +37286,20 @@
 				"SubGroupName": "SPACE_TECH_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_NPCBUI",
@@ -36882,7 +37398,20 @@
 				"SubGroupName": "SPACE_TECH_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_ROCLOC",
@@ -36977,7 +37506,20 @@
 				"SubGroupName": "SPACE_TECH_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_TECH",
@@ -37072,7 +37614,20 @@
 				"SubGroupName": "SPACE_TECH_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_PLANT1",
@@ -37171,7 +37726,20 @@
 				"SubGroupName": "SPACE_BIO_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "10",
+			"NetworkMask": "1852",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_PLANT0",
@@ -37270,7 +37838,20 @@
 				"SubGroupName": "SPACE_BIO_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "10",
+			"NetworkMask": "1852",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_COOK",
@@ -37369,7 +37950,20 @@
 				"SubGroupName": "SPACE_BIO_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_NPCFAR",
@@ -37468,7 +38062,20 @@
 				"SubGroupName": "SPACE_BIO_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_BIO",
@@ -37563,7 +38170,20 @@
 				"SubGroupName": "SPACE_BIO_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_REFINE",
@@ -37662,7 +38282,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_EXTR",
@@ -37762,10 +38395,29 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Resources",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
 			"Rate": 100,
-			"Storage": 360000
-		}
+			"Storage": 360000,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "4",
+					"NetworkMask": "1464",
+					"ConnectionDistance": "5.000000",
+					"UseMinDistance": "false",
+					"DependentRate": -50,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_NPCWEA",
@@ -37864,7 +38516,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE0",
@@ -37959,7 +38624,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE1",
@@ -38054,7 +38732,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE2",
@@ -38149,7 +38840,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE3",
@@ -38244,7 +38948,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE4",
@@ -38339,7 +39056,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE5",
@@ -38434,7 +39164,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE6",
@@ -38529,7 +39272,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE7",
@@ -38624,7 +39380,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE8",
@@ -38719,7 +39488,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_STORE9",
@@ -38814,7 +39596,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_IND",
@@ -38909,7 +39704,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_IND1",
@@ -39004,7 +39812,20 @@
 				"SubGroupName": "SPACE_IND_SUB"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_STA",
@@ -39099,7 +39920,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "4.500000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_G_STA",
@@ -39194,7 +40028,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "4.500000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_EXT_W_STA",
@@ -39285,7 +40132,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "4.500000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_STA_B",
@@ -39380,7 +40240,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "4.500000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "STA_SMALLSIGN",
@@ -48635,7 +49508,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_B_STR",
@@ -48730,7 +49616,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_B_L",
@@ -48825,7 +49724,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_CORR_B_T",
@@ -48920,7 +49832,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_B",
@@ -49015,7 +49940,20 @@
 				"SubGroupName": "SPACE_CORE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "STA_CORR_B",
@@ -53282,10 +54220,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORL",
@@ -53373,10 +54320,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORT",
@@ -53464,10 +54420,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORX",
@@ -53555,10 +54520,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "MAINROOM",
@@ -53646,10 +54620,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "7.500000",
+			"UseMinDistance": "false",
 			"Rate": -10,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "FOUNDLEG4",
@@ -53965,10 +54948,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
 			"Rate": -5,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CUBEFOUND",
@@ -54230,10 +55222,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "GLASSCORRIDOR",
@@ -54325,10 +55326,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "BUILDRAMP",
@@ -54511,10 +55521,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "10",
+			"NetworkMask": "1596",
+			"ConnectionDistance": "7.500000",
+			"UseMinDistance": "false",
 			"Rate": -50,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CURVEDCUBEROOF",
@@ -54606,10 +55625,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
 			"Rate": -5,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CUBEROOMCURVED",
@@ -54697,10 +55725,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
 			"Rate": -5,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CUBEGLASS",
@@ -54791,7 +55828,20 @@
 				"SubGroupName": "ROOMSCUBE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "3.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CUBEFRAME",
@@ -54878,7 +55928,20 @@
 				"SubGroupName": "ROOMSCUBE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "15",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CUBEINNERDOOR",
@@ -55318,10 +56381,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "DOOR2",
@@ -55417,10 +56489,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "5",
+			"NetworkMask": "1048",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "VIEWSPHERE",
@@ -55512,10 +56593,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "MAINROOMFRAME",
@@ -55602,7 +56692,20 @@
 				"SubGroupName": "ROOMSMAIN"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "15",
+			"ConnectionDistance": "8.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CORRIDORC",
@@ -55690,10 +56793,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "MAINROOMCUBE",
@@ -55781,10 +56893,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "7.500000",
+			"UseMinDistance": "false",
 			"Rate": -10,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "MAINROOMCUBEF",
@@ -56225,10 +57346,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "2.020000",
+			"UseMinDistance": "false",
 			"Rate": -50,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "GARAGE_S",
@@ -56704,10 +57834,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "540",
+			"ConnectionDistance": "1.000000",
+			"UseMinDistance": "false",
 			"Rate": -5,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "PLANTERMEGA",
@@ -56803,10 +57942,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "540",
+			"ConnectionDistance": "1.500000",
+			"UseMinDistance": "false",
 			"Rate": -20,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CARBONPLANTER",
@@ -56902,10 +58050,29 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": 1,
-			"Storage": 600
-		}
+			"Storage": 600,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "8",
+					"NetworkMask": "1052",
+					"ConnectionDistance": "4.500000",
+					"UseMinDistance": "false",
+					"DependentRate": -5,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "WALLLIGHTBLUE",
@@ -56993,10 +58160,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.447000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "WALLLIGHTPINK",
@@ -57084,10 +58260,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.447000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "WALLLIGHTYELLOW",
@@ -57175,10 +58360,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.447000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "WALLLIGHTGREEN",
@@ -57266,10 +58460,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.447000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "WALLLIGHTRED",
@@ -57357,10 +58560,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.447000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "WALLLIGHTWHITE",
@@ -57448,10 +58660,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.447000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "SMALLLIGHT",
@@ -57539,10 +58760,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1048",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BUILDLIGHT",
@@ -57630,10 +58860,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BUILDLIGHT2",
@@ -57721,10 +58960,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BUILDLIGHT3",
@@ -57812,10 +59060,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "LIGHTBOX",
@@ -57907,10 +59164,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "28",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "L_FLOOR_Q",
@@ -58002,10 +59268,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "28",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CEILINGLIGHT",
@@ -58097,10 +59372,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "8",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "BUILDPAVING",
@@ -64286,7 +65570,20 @@
 				"SubGroupName": "ROOMSCUBE"
 			}
 		],
-		"LinkGridData": null
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "16",
+			"ConnectionDistance": "3.950000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "CYLINDERSHAPE",
@@ -67130,10 +68427,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORL_WATER",
@@ -67229,10 +68535,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORT_WATER",
@@ -67328,10 +68643,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORX_WATER",
@@ -67427,10 +68751,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CORRIDORV_WATER",
@@ -67526,10 +68859,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "2.250000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "MAINROOM_WATER",
@@ -67617,10 +68959,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "7.500000",
+			"UseMinDistance": "false",
 			"Rate": -10,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "MAINROOMCUBE_W",
@@ -67708,10 +69059,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "3",
+			"NetworkMask": "1469",
+			"ConnectionDistance": "7.500000",
+			"UseMinDistance": "false",
 			"Rate": -30,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "PANEL_GLASS",
@@ -67985,10 +69345,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "5",
+			"NetworkMask": "1048",
+			"ConnectionDistance": "1.000000",
+			"UseMinDistance": "false",
 			"Rate": -2,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "BASE_ENGINEORB",
@@ -77214,10 +78583,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "M_GDOOR_D",
@@ -79399,10 +80777,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "C_GDOOR_D",
@@ -81576,10 +82963,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "W_GDOOR_D",
@@ -100289,10 +101685,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "S_GDOORB0",
@@ -100380,10 +101785,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "S_GDOORM0",
@@ -100471,10 +101885,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "S_GDOORT0",
@@ -100562,10 +101985,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "S_ARCH",
@@ -108307,10 +109739,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "T_GDOORB0",
@@ -108398,10 +109839,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "T_GDOORM0",
@@ -108489,10 +109939,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "T_GDOORT0",
@@ -108580,10 +110039,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "T_ARCH",
@@ -116368,10 +117836,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "F_GDOORB0",
@@ -116459,10 +117936,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "F_GDOORM0",
@@ -116550,10 +118036,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "F_GDOORT0",
@@ -116641,10 +118136,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "F_ARCH",
@@ -124429,10 +125933,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "B_GDOORB0",
@@ -124520,10 +126033,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "B_GDOORM0",
@@ -124611,10 +126133,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "B_GDOORT0",
@@ -124702,10 +126233,19 @@
 			}
 		],
 		"LinkGridData": {
-			"Network": null,
+			"Network": "Power",
+			"NetworkSubGroup": "1",
+			"NetworkMask": "4",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
 			"Rate": -1,
-			"Storage": 0
-		}
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": false,
+		"IsPlaceable": true
 	},
 	{
 		"Id": "B_ARCH",

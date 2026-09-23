@@ -7107,7 +7107,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/TOXICPLANT"
+		"Slug": "products/TOXICPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 14400,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "SNOWPLANT",
@@ -7187,7 +7229,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/SNOWPLANT"
+		"Slug": "products/SNOWPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 3600,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "RADIOPLANT",
@@ -7267,7 +7351,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/RADIOPLANT"
+		"Slug": "products/RADIOPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 14400,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "BARRENPLANT",
@@ -7347,7 +7473,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/BARRENPLANT"
+		"Slug": "products/BARRENPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 57600,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "LUSHPLANT",
@@ -7427,7 +7595,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/LUSHPLANT"
+		"Slug": "products/LUSHPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 14400,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "SCORCHEDPLANT",
@@ -7507,7 +7717,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/SCORCHEDPLANT"
+		"Slug": "products/SCORCHEDPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 57600,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "CREATUREPLANT",
@@ -7583,7 +7835,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/CREATUREPLANT"
+		"Slug": "products/CREATUREPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 28800,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "POOPPLANT",
@@ -7659,7 +7953,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/POOPPLANT"
+		"Slug": "products/POOPPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 14400,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "GRAVPLANT",
@@ -7743,7 +8079,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/GRAVPLANT"
+		"Slug": "products/GRAVPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 7200,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "SACVENOMPLANT",
@@ -7823,7 +8201,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/SACVENOMPLANT"
+		"Slug": "products/SACVENOMPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 12000,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "PEARLPLANT",
@@ -7903,7 +8323,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/PEARLPLANT"
+		"Slug": "products/PEARLPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 7200,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "NIPPLANT",
@@ -7983,7 +8445,49 @@
 		"FoodBonusStatAmount": 0.0,
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
-		"Slug": "products/NIPPLANT"
+		"Slug": "products/NIPPLANT",
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": true,
+		"BuildableOnSpaceBase": true,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "BASE_TECH",
+				"SubGroupName": "TECHFARMING"
+			},
+			{
+				"Group": "FREIGHTER_BIO",
+				"SubGroupName": "FRE_PLANTS"
+			},
+			{
+				"Group": "BIGGS_LOW_PERF",
+				"SubGroupName": "BIGGSFARMING"
+			}
+		],
+		"LinkGridData": {
+			"Network": "PlantGrowth",
+			"NetworkSubGroup": "0",
+			"NetworkMask": "2",
+			"ConnectionDistance": "0.100000",
+			"UseMinDistance": "false",
+			"Rate": 1,
+			"Storage": 14400,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": [
+				{
+					"Network": "Power",
+					"NetworkSubGroup": "9",
+					"NetworkMask": "1280",
+					"ConnectionDistance": "0.400000",
+					"UseMinDistance": "false",
+					"DependentRate": 0,
+					"DependentEffect": "EnablesRate"
+				}
+			]
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "GAS1",

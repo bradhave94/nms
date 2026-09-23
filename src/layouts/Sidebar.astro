@@ -53,6 +53,7 @@ const calculatorsNav: NavItem[] = [
 	{ name: 'Crafting Planner', href: '/calculator/planner', icon: 'archive-box' },
 	{ name: 'Reverse Calculator', href: '/calculator/reverse', icon: 'scale' },
 	{ name: 'Farm Calculator', href: '/calculator/farm', icon: 'sun' },
+	{ name: 'Base Power Calculator', href: '/calculator/power', icon: 'bolt' },
 ];
 
 const catalogsNav: NavItem[] = [
@@ -648,7 +649,7 @@ const sectionLabelClasses =
 		<div
 			class="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-md border border-white/10 bg-black p-2 shadow-lg"
 		>
-			<div class="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
+			<div class="grid grid-cols-1 gap-0.5">
 				{
 					calculatorsNav.map((item) => {
 						const active = isNavItemActive(item.href);

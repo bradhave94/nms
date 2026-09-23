@@ -3035,7 +3035,31 @@
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
 		"Slug": "exocraft/GARAGE_FREIGHT",
-		"IsCraftable": false
+		"IsCraftable": false,
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": false,
+		"BuildableOnSpaceBase": false,
+		"BuildableOnFreighter": false,
+		"Groups": [
+			{
+				"Group": "FREIGHT_LEGACY",
+				"SubGroupName": "FREIGHTERLEGACY"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_VEHICL",
@@ -3120,7 +3144,35 @@
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
 		"Slug": "exocraft/FRE_ROOM_VEHICL",
-		"IsCraftable": true
+		"IsCraftable": true,
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": false,
+		"BuildableOnSpaceBase": false,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "FREIGHTER_IND",
+				"SubGroupName": "FRE_IND_SUB"
+			},
+			{
+				"Group": "SPACE",
+				"SubGroupName": "SPACE_IND_SUB"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "FRE_ROOM_NPCVEH",
@@ -3205,7 +3257,35 @@
 		"IsTechbox": false,
 		"CanSendToOtherPlayers": true,
 		"Slug": "exocraft/FRE_ROOM_NPCVEH",
-		"IsCraftable": true
+		"IsCraftable": true,
+		"IconOverrideProductID": null,
+		"BuildableOnPlanetBase": false,
+		"BuildableOnSpaceBase": false,
+		"BuildableOnFreighter": true,
+		"Groups": [
+			{
+				"Group": "FREIGHTER_IND",
+				"SubGroupName": "FRE_IND_SUB"
+			},
+			{
+				"Group": "SPACE",
+				"SubGroupName": "SPACE_IND_SUB"
+			}
+		],
+		"LinkGridData": {
+			"Network": "Power",
+			"NetworkSubGroup": "4",
+			"NetworkMask": "1464",
+			"ConnectionDistance": "5.000000",
+			"UseMinDistance": "false",
+			"Rate": 0,
+			"Storage": 0,
+			"DependsOnEnvironment": "None",
+			"DependsOnHotspots": "None",
+			"DependentConnections": []
+		},
+		"ShowInBuildMenu": true,
+		"IsPlaceable": false
 	},
 	{
 		"Id": "STA_ROOM_NPCVEH",

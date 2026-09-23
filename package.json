@@ -19,6 +19,7 @@
 		"test:new-items": "node scripts/check-new-items.mjs",
 		"test:route-eligible": "node --experimental-strip-types scripts/check-route-eligible.mjs",
 		"test:data-import": "node scripts/check-import-safety.mjs",
+		"test:power": "node --experimental-strip-types scripts/check-base-power.mjs",
 		"data:check": "node scripts/import-extractor-data.mjs --check",
 		"data:sync": "node scripts/import-extractor-data.mjs --sync",
 		"type-check": "tsc --noEmit",
