@@ -11,6 +11,7 @@ import {
 	type AllianceInput,
 } from '@utils/alliances';
 import { countRecentSubmissions, createAlliance, hashSubmitter } from '@utils/alliancesDb';
+import { notifyNewSubmission } from '@utils/allianceNotify';
 
 export const prerender = false;
 
@@ -46,7 +47,8 @@ if (Astro.request.method === 'POST') {
 			if ((await countRecentSubmissions(submitterHash, 24)) >= MAX_SUBMISSIONS_PER_DAY) {
 				formError = 'You have sent a few listings today already. Please try again tomorrow.';
 			} else {
-				await createAlliance(result.value, { submitterHash });
+				const alliance = await createAlliance(result.value, { submitterHash });
+				await notifyNewSubmission(alliance);
 				return Astro.redirect('/alliances/submit/?submitted=1', 303);
 			}
 		} catch (error) {

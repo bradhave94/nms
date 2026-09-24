@@ -53,6 +53,8 @@ export default defineConfig({
       SQLITE_TURSO_DATABASE_URL: envField.string({ context: 'server', access: 'secret', optional: true }),
       SQLITE_TURSO_AUTH_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
       ALLIANCES_ADMIN_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
+      // ntfy topic for new-submission push notifications. Unset: no notifications.
+      ALLIANCES_NTFY_TOPIC: envField.string({ context: 'server', access: 'secret', optional: true }),
     },
   },
   redirects: {
