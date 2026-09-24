@@ -2,7 +2,7 @@
 title: "No Man's Sky Alliances: How to Join or Create One"
 description: "What Cosmos alliances are, how to claim a station and found one, how joining works, and our new directory for finding an alliance to join."
 pubDate: 2026-09-23
-heroImage: "/images/blog/nms-cosmos-update.webp"
+heroImage: "/images/blog/no-mans-sky-alliances.webp"
 category: "blog"
 tags:
   - cosmos

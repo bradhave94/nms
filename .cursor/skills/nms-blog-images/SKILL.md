@@ -61,6 +61,7 @@ watermarks, no branding.
 | How to Craft Stasis Device | `public/images/blog/craft-stasis-device.webp` | `ULTRAPROD2.png` |
 | How to Make Units Fast | `public/images/blog/make-units-fast.webp` | `UNITS.png` |
 | Is NMS Worth It 2026 | `public/images/blog/is-nms-worth-it-2026.webp` | — |
+| No Man's Sky Alliances Guide | `public/images/blog/no-mans-sky-alliances.webp` | Composite of in-game alliance crests (`textures/ui/frontend/icons/bannericons/community/*.dds`), not generated |
 
 ## Frontmatter Integration
 
