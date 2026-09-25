@@ -95,7 +95,8 @@ const describedBy = (field: keyof AllianceInput, help?: string) =>
 		<div class="grid gap-5 sm:grid-cols-2">
 			<div>
 				<label for="alliance-galaxy">Galaxy</label>
-				<select id="alliance-galaxy" name="galaxy" required aria-invalid={invalid('galaxy')} aria-describedby={describedBy('galaxy')}>
+				<select id="alliance-galaxy" name="galaxy" required data-searchable data-search-placeholder="Search by name or number"
+					aria-invalid={invalid('galaxy')} aria-describedby={describedBy('galaxy')}>
 					{!selectedGalaxy && <option value="" selected>Choose a galaxy…</option>}
 					{GALAXIES.filter((galaxy) => galaxy.reachable || galaxy === selectedGalaxy).map((galaxy) => (
 						<option value={galaxy.name} selected={galaxy === selectedGalaxy}>{galaxy.number}. {galaxy.name}</option>
@@ -179,6 +180,8 @@ const describedBy = (field: keyof AllianceInput, help?: string) =>
 </form>
 
 <script>
+	import '../../scripts/selectSearch';
+
 	// Name the selected banner colour next to the legend.
 	document.querySelectorAll<HTMLInputElement>('input[name="color"][data-name]').forEach((input) => {
 		input.addEventListener('change', () => {

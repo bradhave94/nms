@@ -90,6 +90,8 @@ assert.equal(GALAXIES.length, 256);
 assert.equal(findGalaxy('  eissentam ')?.number, 10);
 assert.equal(check({ galaxy: 'zavainlani' }).value.galaxy, 'Zavainlani');
 assert.ok(!check({ galaxy: 'Andromeda' }).ok);
+assert.equal(check({ galaxy: 'Iousongola' }).value.galaxy, 'Iousongola', 'galaxy 255 is accepted');
+assert.equal(findGalaxy('Iousongola')?.number, 255);
 
 // Community banner matching.
 assert.equal(findCommunityBanners('The Qitanian Empire')?.banner.href, '/other/BANNER_QIT/');

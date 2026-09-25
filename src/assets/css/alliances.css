@@ -53,6 +53,21 @@
 	:is(.alliances, .site-form) .field-error { margin-top: .35rem; font-size: .8rem; color: #fda4af; }
 	:is(.alliances, .site-form) fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
 
+	/* Keep the hidden attribute working on elements these styles give a display value. */
+	:is(.alliances, .site-form) [hidden] { display: none !important; }
+
+	/* Searchable select (scripts/selectSearch.ts) */
+	:is(.alliances, .site-form) .select-search { position: relative; }
+	:is(.alliances, .site-form) .select-search [role="listbox"] {
+		position: absolute; z-index: 20; top: calc(100% + .25rem); left: 0; right: 0; max-height: 16rem; overflow-y: auto;
+		margin: 0; padding: .25rem; list-style: none; background: #071923; border: 1px solid #0e7490; border-radius: .25rem;
+		box-shadow: 0 12px 24px rgb(0 0 0 / .5);
+	}
+	:is(.alliances, .site-form) .select-search [role="option"] { padding: .55rem .6rem; border-radius: .2rem; color: #e0f2fe; cursor: pointer; font-size: .95rem; }
+	:is(.alliances, .site-form) .select-search [role="option"]:hover,
+	:is(.alliances, .site-form) .select-search [role="option"][aria-selected="true"] { background: #0c4a6e; color: white; }
+	:is(.alliances, .site-form) .select-search-empty { padding: .55rem .6rem; color: #93b7c9; font-size: .9rem; }
+
 	/* Colour swatches */
 	:is(.alliances, .site-form) .swatches { display: grid; grid-template-columns: repeat(10, 2.25rem); gap: .5rem; }
 	:is(.alliances, .site-form) .swatch { position: relative; display: block; width: 2.25rem; height: 2.25rem; margin: 0; cursor: pointer; }
