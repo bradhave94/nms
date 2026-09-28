@@ -238,3 +238,48 @@ export const validatedAllianceInputs = (listings: Array<Partial<AllianceInput>>)
 		if (!result.ok) throw new Error(`Invalid alliance listing ${listing.name}: ${JSON.stringify(result.errors)}`);
 		return result.value;
 	});
+
+// ── Edit requests ───────────────────────────────────────────────────────────
+
+/** Public listing fields, in form order. The private contact is never part of an edit diff. */
+const EDITABLE_FIELDS: Array<[keyof AllianceInput, string]> = [
+	['name', 'Name'],
+	['tag', 'Tag'],
+	['color', 'Banner colour'],
+	['description', 'Description'],
+	['focuses', 'Focus'],
+	['galaxy', 'Galaxy'],
+	['region', 'Region'],
+	['joinSystem', 'Station system'],
+	['portalGlyphs', 'Portal address'],
+	['platforms', 'Platforms'],
+	['languages', 'Languages'],
+	['discordUrl', 'Discord'],
+	['websiteUrl', 'Website'],
+];
+
+export type AllianceChange = { field: keyof AllianceInput; label: string; before: string; after: string };
+
+const displayValue = (field: keyof AllianceInput, value: AllianceInput[keyof AllianceInput]): string => {
+	// Compare lists in their canonical order, so a reordered but identical list isn't a change.
+	if (Array.isArray(value)) {
+		const order: readonly string[] = field === 'platforms' ? PLATFORMS : FOCUSES;
+		return [...value].sort((a, b) => order.indexOf(a) - order.indexOf(b)).join(', ');
+	}
+	if (field === 'color') return ALLIANCE_COLOURS.find((colour) => colour.hex === value)?.name ?? String(value);
+	if (field === 'portalGlyphs' && value) return formatPortalGlyphs(String(value));
+	return String(value ?? '');
+};
+
+/** The public fields that differ between a listing and a proposed edit. */
+export const diffAllianceInput = (current: AllianceInput, proposed: AllianceInput): AllianceChange[] =>
+	EDITABLE_FIELDS.flatMap(([field, label]) => {
+		const before = displayValue(field, current[field]);
+		const after = displayValue(field, proposed[field]);
+		return before === after ? [] : [{ field, label, before, after }];
+	});
+
+export const MAX_EDIT_NOTE_LENGTH = 500;
+
+/** The optional "what changed and why" note on an edit request. */
+export const editNoteFromForm = (form: FormData): string => cleanMultiline(form.get('note')).slice(0, MAX_EDIT_NOTE_LENGTH);

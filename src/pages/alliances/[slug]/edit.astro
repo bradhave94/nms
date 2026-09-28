@@ -1,0 +1,122 @@
+---
+import '@assets/css/alliances.css';
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import AllianceForm from '@components/alliances/AllianceForm.astro';
+import {
+	MAX_EDIT_NOTE_LENGTH,
+	allianceInputFromForm,
+	diffAllianceInput,
+	editNoteFromForm,
+	validateAllianceInput,
+	type AllianceFieldErrors,
+	type AllianceInput,
+} from '@utils/alliances';
+import { countRecentEdits, createAllianceEdit, getApprovedAllianceBySlug, hashSubmitter } from '@utils/alliancesDb';
+import { notifyEditRequest } from '@utils/allianceNotify';
+
+export const prerender = false;
+
+const MAX_EDITS_PER_DAY = 3;
+// Humans take longer than this to review a form; most bots don't.
+const MIN_FILL_MILLISECONDS = 3000;
+
+Astro.response.headers.set('Cache-Control', 'no-store');
+
+const alliance = await getApprovedAllianceBySlug(Astro.params.slug ?? '').catch((error: unknown) => {
+	console.error('Alliance lookup failed', error);
+	return undefined;
+});
+if (!alliance) return Astro.rewrite('/404');
+
+const listingUrl = `/alliances/${alliance.slug}/`;
+const editUrl = `${listingUrl}edit/`;
+// The listing's own contact is private, so requesters start with an empty contact field.
+const current: AllianceInput = { ...alliance, contact: '' };
+let values: AllianceInput = current;
+let note = '';
+let errors: AllianceFieldErrors = {};
+let formError: string | undefined;
+const submitted = Astro.url.searchParams.get('submitted') === '1';
+
+if (Astro.request.method === 'POST') {
+	const form = await Astro.request.formData();
+	const result = validateAllianceInput(allianceInputFromForm(form));
+	values = result.value;
+	note = editNoteFromForm(form);
+
+	const startedAt = Number(form.get('startedAt'));
+	const looksAutomated =
+		String(form.get('websiteConfirm') ?? '') !== '' ||
+		!Number.isFinite(startedAt) ||
+		Date.now() - startedAt < MIN_FILL_MILLISECONDS;
+	const changes = diffAllianceInput(current, result.value);
+
+	if (!result.ok) {
+		errors = result.errors;
+		formError = 'Some fields need fixing. Check the highlighted fields below.';
+	} else if (changes.length === 0 && !note) {
+		formError = "Nothing has changed yet. Update the fields that are wrong, or explain what's out of date in the note.";
+	} else if (looksAutomated) {
+		// Pretend it worked so automated submitters get no signal.
+		return Astro.redirect(`${editUrl}?submitted=1`, 303);
+	} else {
+		try {
+			const submitterHash = hashSubmitter(Astro.clientAddress);
+			if ((await countRecentEdits(submitterHash, 24)) >= MAX_EDITS_PER_DAY) {
+				formError = 'You have sent a few edits today already. Please try again tomorrow.';
+			} else {
+				await createAllianceEdit(alliance.id, result.value, note, submitterHash);
+				await notifyEditRequest(alliance.name, changes.map((change) => change.label));
+				return Astro.redirect(`${editUrl}?submitted=1`, 303);
+			}
+		} catch (error) {
+			console.error('Alliance edit request failed', error);
+			formError = 'We could not save your edit right now. Please try again in a few minutes.';
+		}
+	}
+	Astro.response.status = 400;
+}
+
+const title = `Suggest an Edit: ${alliance.name} | No Man's Sky Alliance Directory`;
+const breadcrumbs = [
+	{ name: 'Home', href: '/' },
+	{ name: 'Alliances', href: '/alliances/' },
+	{ name: alliance.name, href: listingUrl },
+	{ name: 'Suggest an edit' },
+];
+---
+
+<Layout {title} description={`Suggest a correction to the ${alliance.name} alliance listing.`} slug="alliances" robots="noindex,follow">
+	<div class="alliances mx-auto max-w-3xl px-2 pb-16 sm:px-4">
+		<Breadcrumbs items={breadcrumbs} className="!px-0 pt-4 mb-6" />
+		<header class="mb-10">
+			<p class="eyebrow">Alliance directory</p>
+			<h1>Suggest an edit</h1>
+			<p class="lede">Update anything that's wrong or out of date for <strong>{alliance.name}</strong>. We review every change before it goes live.</p>
+		</header>
+
+		{submitted ? (
+			<div class="notice success" role="status">
+				<p><strong>Thanks, your edit has been sent.</strong> We'll review it shortly. <a class="prose-link" href={listingUrl}>Back to {alliance.name}</a></p>
+			</div>
+		) : (
+			<>
+				{formError && <p class="notice error mb-6" role="alert">{formError}</p>}
+				<AllianceForm {values} {errors} submitLabel="Send edit for review" spamGuard>
+					<section slot="extra" class="panel space-y-5" aria-labelledby="form-note">
+						<div>
+							<h2 id="form-note">What changed?</h2>
+							<p class="help !mt-1">Optional, but it helps us review. For example, "We moved our capital" or "New Discord invite".</p>
+						</div>
+						<div>
+							<label for="alliance-edit-note">Note <span class="optional">(optional)</span></label>
+							<textarea id="alliance-edit-note" name="note" rows="3" maxlength={MAX_EDIT_NOTE_LENGTH}>{note}</textarea>
+						</div>
+					</section>
+					<a slot="actions" class="button secondary large" href={listingUrl}>Cancel</a>
+				</AllianceForm>
+			</>
+		)}
+	</div>
+</Layout>

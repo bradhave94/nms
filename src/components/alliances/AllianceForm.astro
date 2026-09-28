@@ -173,6 +173,8 @@ const describedBy = (field: keyof AllianceInput, help?: string) =>
 		</div>
 	</section>
 
+	<slot name="extra" />
+
 	<div class="flex flex-wrap items-center gap-3 pt-2">
 		<button type="submit" class="button large">{submitLabel}</button>
 		<slot name="actions" />

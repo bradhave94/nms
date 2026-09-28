@@ -123,6 +123,13 @@
 	:is(.alliances, .site-form) .mod-fields dt { color: #93b7c9; }
 	:is(.alliances, .site-form) .mod-fields dd { color: #e0f2fe; overflow-wrap: anywhere; white-space: pre-line; }
 	:is(.alliances, .site-form) .colour-dot { display: inline-block; width: .75rem; height: .75rem; border-radius: 999px; border: 1px solid rgb(255 255 255 / .4); vertical-align: middle; }
+	:is(.alliances, .site-form) .edit-diff { width: 100%; margin-top: 1rem; border-collapse: collapse; font-size: .85rem; table-layout: fixed; }
+	:is(.alliances, .site-form) .edit-diff th, :is(.alliances, .site-form) .edit-diff td { padding: .5rem .6rem; border-top: 1px solid var(--edge); text-align: left; vertical-align: top; overflow-wrap: anywhere; white-space: pre-line; }
+	:is(.alliances, .site-form) .edit-diff thead th { border-top: 0; color: #93b7c9; font-weight: 400; font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
+	:is(.alliances, .site-form) .edit-diff tbody th { width: 9rem; color: #93b7c9; font-weight: 400; }
+	:is(.alliances, .site-form) .edit-diff .before { color: #fda4af; text-decoration: line-through; text-decoration-color: rgb(253 164 175 / .5); }
+	:is(.alliances, .site-form) .edit-diff .after { color: #a7f3d0; }
+	:is(.alliances, .site-form) .button:disabled { opacity: .45; cursor: not-allowed; }
 	:is(.alliances, .site-form) .tabs { display: flex; flex-wrap: wrap; gap: .5rem; }
 	:is(.alliances, .site-form) .tabs a { padding: .4rem .8rem; border-radius: .25rem; border: 1px solid #155e75; color: #bae6fd; text-decoration: none; font-size: .85rem; }
 	:is(.alliances, .site-form) .tabs a[aria-current="page"] { background: #0c4a6e; border-color: #38bdf8; color: white; }

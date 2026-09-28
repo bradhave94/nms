@@ -4,6 +4,8 @@ import {
 	EMPTY_ALLIANCE_INPUT,
 	GALAXIES,
 	allianceInputFromForm,
+	diffAllianceInput,
+	editNoteFromForm,
 	findGalaxy,
 	formatPortalGlyphs,
 	isDiscordInvite,
@@ -92,6 +94,18 @@ assert.equal(check({ galaxy: 'zavainlani' }).value.galaxy, 'Zavainlani');
 assert.ok(!check({ galaxy: 'Andromeda' }).ok);
 assert.equal(check({ galaxy: 'Iousongola' }).value.galaxy, 'Iousongola', 'galaxy 255 is accepted');
 assert.equal(findGalaxy('Iousongola')?.number, 255);
+
+// Edit requests: only changed public fields are reported; the private contact never is.
+assert.deepEqual(diffAllianceInput(parsed, { ...parsed, contact: 'someone else' }), []);
+assert.deepEqual(diffAllianceInput({ ...parsed, focuses: ['Building', 'Exploration'] }, parsed), [], 'focus order is not a change');
+const changes = diffAllianceInput(parsed, { ...parsed, region: 'New Region', platforms: ['PC'], color: '#c12a2a', portalGlyphs: '' });
+assert.deepEqual(changes.map((change) => change.label), ['Banner colour', 'Region', 'Portal address', 'Platforms']);
+assert.deepEqual(changes[0], { field: 'color', label: 'Banner colour', before: 'Orange', after: 'Red' });
+assert.equal(changes[2].before, '105F F354 5C3E');
+const CRLF = String.fromCharCode(13, 10);
+const LF = String.fromCharCode(10);
+assert.equal(editNoteFromForm(form({ note: `  We moved.${CRLF.repeat(3)}New system.  ` })), `We moved.${LF.repeat(2)}New system.`);
+assert.equal(editNoteFromForm(form({ note: 'x'.repeat(900) })).length, 500);
 
 // Community banner matching.
 assert.equal(findCommunityBanners('The Qitanian Empire')?.banner.href, '/other/BANNER_QIT/');

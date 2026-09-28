@@ -25,4 +25,17 @@ export const ALLIANCE_SCHEMA: string[] = [
 	)`,
 	'CREATE INDEX IF NOT EXISTS alliances_status_idx ON alliances (status, approved_at)',
 	'CREATE INDEX IF NOT EXISTS alliances_submitter_idx ON alliances (submitter_hash, created_at)',
+	// Suggested changes to a listing. `proposed` is the full AllianceInput as JSON; its contact is the requester's.
+	`CREATE TABLE IF NOT EXISTS alliance_edits (
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		alliance_id INTEGER NOT NULL,
+		proposed TEXT NOT NULL,
+		note TEXT NOT NULL DEFAULT '',
+		status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'applied', 'rejected')),
+		submitter_hash TEXT NOT NULL DEFAULT '',
+		created_at TEXT NOT NULL,
+		reviewed_at TEXT
+	)`,
+	'CREATE INDEX IF NOT EXISTS alliance_edits_status_idx ON alliance_edits (status, created_at)',
+	'CREATE INDEX IF NOT EXISTS alliance_edits_submitter_idx ON alliance_edits (submitter_hash, created_at)',
 ];

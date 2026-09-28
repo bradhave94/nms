@@ -32,7 +32,8 @@ This project uses **pnpm 11+** (`packageManager` in `package.json`). See `packag
 
 - The only on-demand pages. They use `@astrojs/vercel` with `export const prerender = false`, and every other page stays static. Static output now builds to `dist/client/`.
 - Storage is SQLite through `@libsql/client`. In production it's Turso (the Vercel integration sets `SQLITE_TURSO_DATABASE_URL`/`SQLITE_TURSO_AUTH_TOKEN`, Production only). Locally it falls back to `.data/alliances.db` (gitignored).
-- Submissions are `pending` until approved at `/alliances/admin/`, which is gated by `ALLIANCES_ADMIN_TOKEN` (put it in `.env.local` for dev). If `ALLIANCES_NTFY_TOPIC` is set, each new submission sends a push notification to that ntfy.sh topic.
+- Submissions are `pending` until approved at `/alliances/admin/`, which is gated by `ALLIANCES_ADMIN_TOKEN` (put it in `.env.local` for dev). If `ALLIANCES_NTFY_TOPIC` is set, each new submission and edit request sends a push notification to that ntfy.sh topic.
+- Anyone can suggest changes to a listing at `/alliances/<slug>/edit/`. Requests are stored in `alliance_edits` and reviewed in the admin page's Edits tab, which shows only the changed fields; applying one updates the listing but keeps its private contact.
 - Starter listings live in `src/utils/allianceSeeds.ts`. Load them as pending with `pnpm run seed:alliances` (local) or the "Load starter listings" button on the admin page (production, because Turso's env vars are sensitive and pull as empty). `pnpm run test:alliances` checks validation.
 - `src/data/galaxies.json` (all 256 galaxy names and numbers) is generated from the Fandom wiki by `pnpm run data:galaxies`. The submit form and validation use it.
 - The feedback form (`/feedback`) shares the alliance styles via the `.site-form` scope in `src/assets/css/alliances.css`.

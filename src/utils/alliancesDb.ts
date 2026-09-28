@@ -262,7 +262,13 @@ export const setAllianceStatus = async (id: number, status: AllianceStatus): Pro
 };
 
 export const deleteAlliance = async (id: number): Promise<void> => {
-	await (await db()).execute({ sql: 'DELETE FROM alliances WHERE id = ?', args: [id] });
+	await (await db()).batch(
+		[
+			{ sql: 'DELETE FROM alliance_edits WHERE alliance_id = ?', args: [id] },
+			{ sql: 'DELETE FROM alliances WHERE id = ?', args: [id] },
+		],
+		'write'
+	);
 };
 
 /** Adds the starter listings (verified ones approved), skipping any whose name is already listed. */
@@ -281,3 +287,79 @@ export const importStarterAlliances = async (): Promise<number> => {
 	}
 	return added;
 };
+
+// ── Edit requests ───────────────────────────────────────────────────────────
+
+export type AllianceEdit = {
+	id: number;
+	allianceId: number;
+	proposed: AllianceInput;
+	note: string;
+	createdAt: string;
+};
+
+const toAllianceEdit = (row: Row): AllianceEdit => ({
+	id: Number(row.id),
+	allianceId: Number(row.alliance_id),
+	proposed: JSON.parse(text(row.proposed)) as AllianceInput,
+	note: text(row.note),
+	createdAt: text(row.created_at),
+});
+
+export const createAllianceEdit = async (
+	allianceId: number,
+	proposed: AllianceInput,
+	note: string,
+	submitterHash: string
+): Promise<void> => {
+	await (await db()).execute({
+		sql: `INSERT INTO alliance_edits (alliance_id, proposed, note, submitter_hash, created_at) VALUES (?, ?, ?, ?, ?)`,
+		args: [allianceId, JSON.stringify(proposed), note, submitterHash, now()],
+	});
+};
+
+export const countRecentEdits = async (submitterHash: string, hours: number): Promise<number> => {
+	const since = new Date(Date.now() - hours * 3_600_000).toISOString();
+	const result = await (await db()).execute({
+		sql: 'SELECT COUNT(*) AS count FROM alliance_edits WHERE submitter_hash = ? AND created_at >= ?',
+		args: [submitterHash, since],
+	});
+	return Number(result.rows[0]?.count ?? 0);
+};
+
+export const countPendingEdits = async (): Promise<number> => {
+	const result = await (await db()).execute(`SELECT COUNT(*) AS count FROM alliance_edits WHERE status = 'pending'`);
+	return Number(result.rows[0]?.count ?? 0);
+};
+
+/** Pending edit requests, oldest first, each with the listing it would change. */
+export const listPendingEdits = async (): Promise<Array<{ edit: AllianceEdit; alliance: Alliance }>> => {
+	const client = await db();
+	const edits = (await client.execute(`SELECT * FROM alliance_edits WHERE status = 'pending' ORDER BY created_at ASC`)).rows.map(
+		toAllianceEdit
+	);
+	const pairs = await Promise.all(edits.map(async (edit) => ({ edit, alliance: await getAllianceById(edit.allianceId) })));
+	return pairs.filter((pair): pair is { edit: AllianceEdit; alliance: Alliance } => Boolean(pair.alliance));
+};
+
+const setEditStatus = async (id: number, status: 'applied' | 'rejected'): Promise<void> => {
+	await (await db()).execute({
+		sql: `UPDATE alliance_edits SET status = ?, reviewed_at = ? WHERE id = ? AND status = 'pending'`,
+		args: [status, now(), id],
+	});
+};
+
+/** Copies a pending edit onto its listing. The listing keeps its own private contact. */
+export const applyAllianceEdit = async (id: number): Promise<Alliance | undefined> => {
+	const result = await (await db()).execute({ sql: `SELECT * FROM alliance_edits WHERE id = ? AND status = 'pending'`, args: [id] });
+	const row = result.rows[0];
+	if (!row) return undefined;
+	const edit = toAllianceEdit(row);
+	const alliance = await getAllianceById(edit.allianceId);
+	if (!alliance) return undefined;
+	await updateAlliance(alliance.id, { ...edit.proposed, contact: alliance.contact });
+	await setEditStatus(id, 'applied');
+	return alliance;
+};
+
+export const rejectAllianceEdit = (id: number): Promise<void> => setEditStatus(id, 'rejected');

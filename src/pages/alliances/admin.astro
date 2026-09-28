@@ -5,6 +5,7 @@ import AllianceForm from '@components/alliances/AllianceForm.astro';
 import {
 	ALLIANCE_STATUSES,
 	allianceInputFromForm,
+	diffAllianceInput,
 	formatPortalGlyphs,
 	validateAllianceInput,
 	type Alliance,
@@ -13,13 +14,18 @@ import {
 	type AllianceStatus,
 } from '@utils/alliances';
 import {
+	applyAllianceEdit,
 	countAlliancesByStatus,
+	countPendingEdits,
 	deleteAlliance,
 	getAllianceById,
 	importStarterAlliances,
 	listAlliancesByStatus,
+	listPendingEdits,
+	rejectAllianceEdit,
 	setAllianceStatus,
 	updateAlliance,
+	type AllianceEdit,
 } from '@utils/alliancesDb';
 import { isAdmin, isAdminConfigured, logIn, logOut } from '@utils/allianceAdmin';
 
@@ -30,8 +36,11 @@ Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
 
 const ADMIN_PATH = '/alliances/admin/';
 const params = Astro.url.searchParams;
-const view: AllianceStatus = ALLIANCE_STATUSES.find((status) => status === params.get('view')) ?? 'pending';
-const viewUrl = (status: AllianceStatus, notice?: string) =>
+type AdminView = AllianceStatus | 'edits';
+const toView = (value: unknown): AdminView | undefined =>
+	value === 'edits' ? 'edits' : ALLIANCE_STATUSES.find((status) => status === value);
+const view: AdminView = toView(params.get('view')) ?? 'pending';
+const viewUrl = (status: AdminView, notice?: string) =>
 	`${ADMIN_PATH}?view=${status}${notice ? `&notice=${encodeURIComponent(notice)}` : ''}`;
 
 let loginError = false;
@@ -52,10 +61,18 @@ if (Astro.request.method === 'POST') {
 		return Astro.redirect(ADMIN_PATH, 303);
 	} else if (isAdmin(Astro.cookies)) {
 		const id = Number(form.get('id'));
-		const returnTo = ALLIANCE_STATUSES.find((status) => status === form.get('view')) ?? view;
+		const returnTo = toView(form.get('view')) ?? view;
 		if (action === 'approve' || action === 'reject' || action === 'pending') {
 			await setAllianceStatus(id, action === 'approve' ? 'approved' : action === 'reject' ? 'rejected' : 'pending');
 			return Astro.redirect(viewUrl(returnTo, `Listing ${action === 'pending' ? 'moved back to pending' : `${action}d`}.`), 303);
+		}
+		if (action === 'apply-edit') {
+			const updated = await applyAllianceEdit(id);
+			return Astro.redirect(viewUrl('edits', updated ? `Edit applied to ${updated.name}.` : 'That edit was already handled.'), 303);
+		}
+		if (action === 'reject-edit') {
+			await rejectAllianceEdit(id);
+			return Astro.redirect(viewUrl('edits', 'Edit rejected.'), 303);
 		}
 		if (action === 'seed') {
 			const added = await importStarterAlliances();
@@ -85,6 +102,8 @@ const authorised = isAdmin(Astro.cookies);
 const notice = params.get('notice')?.slice(0, 120);
 let alliances: Alliance[] = [];
 let counts: Record<AllianceStatus, number> = { pending: 0, approved: 0, rejected: 0 };
+let pendingEdits: Array<{ edit: AllianceEdit; alliance: Alliance }> = [];
+let editCount = 0;
 if (authorised) {
 	const editId = Number(params.get('edit'));
 	if (!editing && Number.isInteger(editId) && editId > 0) {
@@ -92,7 +111,12 @@ if (authorised) {
 		editValues = editing;
 	}
 	if (!editing) {
-		[alliances, counts] = await Promise.all([listAlliancesByStatus(view), countAlliancesByStatus()]);
+		[alliances, counts, editCount, pendingEdits] = await Promise.all([
+			view === 'edits' ? Promise.resolve([]) : listAlliancesByStatus(view),
+			countAlliancesByStatus(),
+			countPendingEdits(),
+			view === 'edits' ? listPendingEdits() : Promise.resolve([]),
+		]);
 	}
 }
 
@@ -152,8 +176,65 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 							{status[0].toUpperCase() + status.slice(1)} ({counts[status]})
 						</a>
 					))}
+					<a href={viewUrl('edits')} aria-current={view === 'edits' ? 'page' : undefined}>Edits ({editCount})</a>
 				</nav>
-				{alliances.length === 0 ? (
+				{view === 'edits' ? (
+					pendingEdits.length === 0 ? (
+						<p class="notice info">No edit requests waiting.</p>
+					) : (
+						<ul class="mod-list">
+							{pendingEdits.map(({ edit, alliance }) => {
+								const changes = diffAllianceInput(alliance, edit.proposed);
+								return (
+									<li class="panel">
+										<div class="flex flex-wrap items-start justify-between gap-3">
+											<div>
+												<h2 class="flex flex-wrap items-center gap-2">
+													<span class="colour-dot" style={`background: ${alliance.color}`} aria-hidden="true"></span>
+													<a class="prose-link" href={`/alliances/${alliance.slug}/`}>{alliance.name}</a>
+													{alliance.status !== 'approved' && <span class="chip">{alliance.status}</span>}
+												</h2>
+												<p class="help !mt-1">Requested {dateTime(edit.createdAt)}</p>
+											</div>
+											<div class="flex flex-wrap gap-2">
+												<form method="post">
+													<input type="hidden" name="action" value="apply-edit" />
+													<input type="hidden" name="id" value={edit.id} />
+													<button type="submit" class="button small" disabled={changes.length === 0}>Apply changes</button>
+												</form>
+												<form method="post">
+													<input type="hidden" name="action" value="reject-edit" />
+													<input type="hidden" name="id" value={edit.id} />
+													<button type="submit" class="button small secondary">{changes.length === 0 ? 'Dismiss' : 'Reject'}</button>
+												</form>
+											</div>
+										</div>
+										<dl class="mod-fields">
+											{edit.note && <><dt>Note</dt><dd>{edit.note}</dd></>}
+											<dt>Requested by</dt><dd>{edit.proposed.contact || '—'}</dd>
+										</dl>
+										{changes.length === 0 ? (
+											<p class="help">No field changes, note only.</p>
+										) : (
+											<table class="edit-diff">
+												<thead><tr><th scope="col">Field</th><th scope="col">Now</th><th scope="col">Proposed</th></tr></thead>
+												<tbody>
+													{changes.map((change) => (
+														<tr>
+															<th scope="row">{change.label}</th>
+															<td class="before">{change.before || '—'}</td>
+															<td class="after">{change.after || '—'}</td>
+														</tr>
+													))}
+												</tbody>
+											</table>
+										)}
+									</li>
+								);
+							})}
+						</ul>
+					)
+				) : alliances.length === 0 ? (
 					<div class="notice info flex flex-wrap items-center justify-between gap-3">
 						<p>Nothing here.</p>
 						{view === 'pending' && (

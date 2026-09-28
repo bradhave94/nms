@@ -131,9 +131,10 @@ const listedOn = alliance.approvedAt
 
 		<div class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-cyan-900/60 pt-6">
 			<a class="button secondary" href="/alliances/">← All alliances</a>
-			<p class="help !mt-0">
-				Listings are submitted by alliance members and reviewed before they go live. See something wrong? <a class="prose-link" href="/feedback">Let us know</a>.
-			</p>
+			<div class="flex flex-wrap items-center gap-3">
+				<p class="help !mt-0">Something out of date?</p>
+				<a class="button" href={`/alliances/${alliance.slug}/edit/`}>Suggest an edit</a>
+			</div>
 		</div>
 	</div>
 </Layout>
