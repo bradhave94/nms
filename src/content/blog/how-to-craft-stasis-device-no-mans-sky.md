@@ -1,6 +1,6 @@
 ---
-title: "How to Craft a Stasis Device in No Man's Sky"
-description: "Full Stasis Device crafting guide with every ingredient and sub-recipe. Sells for 15.6M units and shares components with the Fusion Ignitor."
+title: "NMS Stasis Device Craft Guide"
+description: "Craft a Stasis Device in No Man's Sky: full recipe tree, blueprint unlock, farm list, and 15.6M unit value. Shares parts with the Fusion Ignitor."
 pubDate: 2025-04-22
 updatedDate: 2025-04-22
 category: "blog"
@@ -18,6 +18,10 @@ relatedLinks:
     href: "/calculator"
   - label: "All refiner recipes"
     href: "/refining"
+  - label: "Fusion Ignitor vs Stasis Device"
+    href: "/blog/fusion-ignitor-vs-stasis-device-no-mans-sky/"
+  - label: "Stasis Device product"
+    href: "/products/ULTRAPROD2/"
 faqs:
   - question: "What do I need to craft a Stasis Device in No Man's Sky?"
     answer: "A Stasis Device requires 1x Quantum Processor, 1x Cryogenic Chamber, and 1x Iridesite. The full chain needs gas farming (Sulphurine, Radon, Nitrogen), plant farming (Gamma Root, Frost Crystal, Cactus Flesh, Star Bulb, Solanium), and alloy minerals (Paraffinium, Phosphorus, Dioxite, Ionised Cobalt)."

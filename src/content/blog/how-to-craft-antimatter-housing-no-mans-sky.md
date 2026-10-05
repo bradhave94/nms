@@ -1,5 +1,5 @@
 ---
-title: "How to Craft Antimatter Housing in No Man's Sky"
+title: "Craft Antimatter Housing (NMS)"
 description: "Craft Antimatter Housing in No Man's Sky: Awakenings blueprint unlock, Oxygen + Ferrite Dust recipe, and Warp Cell fuel."
 pubDate: 2026-09-14
 updatedDate: 2026-09-14
@@ -24,6 +24,8 @@ relatedLinks:
     href: "/raw/OXYGEN/"
   - label: "Ferrite Dust"
     href: "/raw/LAND1/"
+  - label: "Best refiner recipes"
+    href: "/blog/best-no-mans-sky-refiner-recipes/"
 faqs:
   - question: "How do you unlock the Antimatter Housing blueprint?"
     answer: "During Awakenings, after you install the Hyperdrive you get sent to an Abandoned Building. Clear the Residual Goop from the terminal and you get the Housing blueprint."
