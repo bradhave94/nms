@@ -54,14 +54,14 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	products: {
 		slug: 'products',
 		h1: 'Products',
-		metaTitle: 'NMS Products & Crafting Components',
+		metaTitle: 'NMS Products Database & Craft Chains',
 		idLabel: 'Product',
 		description:
-			"Browse No Man's Sky products and advanced crafting components. Open each page for ingredients, unit values, and manufacturing chains.",
+			"Search No Man's Sky craftable products and components. Open each page for ingredients, unit values, and full manufacturing chains.",
 		pageDescription:
-			"Browse No Man's Sky products and advanced crafting components. Open each page for ingredients, unit values, and manufacturing chains.",
+			"Search No Man's Sky craftable products and components. Open each page for ingredients, unit values, and full manufacturing chains.",
 		intro:
-			'Products include crafted components, trade goods, and advanced materials used throughout your journey. See the [crafting guide](/crafting-guide/) and [crafting calculator](/calculator/).',
+			'Products include crafted components, trade goods, and advanced materials used throughout your journey. See the [crafting guide](/crafting-guide/), [crafting calculator](/calculator/), [all items](/items/), and [refiner recipes](/refining/).',
 		datasets: ['Products'],
 		idStrategy: 'props',
 	},
@@ -155,24 +155,24 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	corvette: {
 		slug: 'corvette',
 		h1: 'Corvette Items',
-		metaTitle: 'Corvette Items',
+		metaTitle: 'NMS Corvette Parts & Modules',
 		idLabel: 'Corvette Item',
 		description:
-			"A list of corvette items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"Browse every No Man's Sky Corvette part: cockpits, reactors, engines, weapons, and hab modules. Open each page for craft or salvage details.",
 		intro:
-			'Corvette items cover freighter expedition systems, support gear, and mission-related components.',
+			'Corvette parts are the modular pieces you assemble at the Corvette Workshop. See the [Corvette guide](/blog/no-mans-sky-corvette-guide/) and [all items](/items/).',
 		datasets: ['Corvette'],
 		idStrategy: 'props',
 	},
 	curiosities: {
 		slug: 'curiosities',
 		h1: 'Curiosities',
-		metaTitle: 'Curiosities',
+		metaTitle: 'NMS Curiosities & Special Items',
 		idLabel: 'Curiosity',
 		description:
-			"A list of curiosities for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"Browse No Man's Sky curiosities: relics, special finds, and unique items. Open each page for uses, recipes, and related guides.",
 		intro:
-			'Curiosities are unusual finds, relics, and special-use items gathered across planets and systems.',
+			'Curiosities are unusual finds, relics, and special-use items gathered across planets and systems. See [all items](/items/) and [Gravitino Ball](/curiosities/GRAVBALL/).',
 		datasets: ['Curiosities'],
 		idStrategy: 'props',
 	},
@@ -191,12 +191,12 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	technology: {
 		slug: 'technology',
 		h1: 'Technology',
-		metaTitle: 'Technology Items',
+		metaTitle: 'NMS Technology & Suit Upgrades',
 		idLabel: 'Technology Item',
 		description:
-			"A list of technology items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"Browse No Man's Sky technology for exosuit, multi-tool, ship, and base systems. Open each page for craft costs and upgrade modules.",
 		intro:
-			'Technology items power your suit, ship, multitool, and base systems with specialized upgrades and devices.',
+			'Technology items power your suit, ship, multitool, and base systems with specialized upgrades and devices. See [upgrades](/upgrades/) and the [crafting guide](/crafting-guide/).',
 		datasets: ['ConstructedTechnology', 'Technology', 'TechnologyModule'],
 		idStrategy: 'props',
 		idSort: true,

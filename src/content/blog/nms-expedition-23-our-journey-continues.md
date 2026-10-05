@@ -1,5 +1,5 @@
 ---
-title: "NMS Expedition 23 Guide: Rewards & How to Start"
+title: "NMS Expedition 23 Guide & Rewards"
 description: "NMS Expedition 23 Our Journey Continues: start path, rewards, and milestone objectives from Fandom. Redeem via Quicksilver Companion."
 pubDate: 2026-09-18
 updatedDate: 2026-09-25
@@ -22,6 +22,8 @@ relatedLinks:
     href: "/other/QUICKSILVER/"
   - label: "Companions"
     href: "/creatures/companions/"
+  - label: "Returning player guide 2026"
+    href: "/blog/no-mans-sky-returning-player-guide-2026/"
 faqs:
   - question: "How do I start Expedition 23 in No Man's Sky?"
     answer: "From the Expedition Terminus on the Space Anomaly, or start a fresh new save. A fresh expedition save can convert to Normal Mode later. Official Hello Games wording."
