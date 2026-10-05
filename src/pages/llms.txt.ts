@@ -9,25 +9,25 @@ Data is current as of ${SITE.version_name} (${SITE.version_date}). Item pages in
 
 ## Blog
 
-- [Refining](${base}/refining): Refiner recipes table – combine ingredients to produce outputs
-- [Cooking](${base}/cooking): Nutrient Processor recipes – cook food from ingredients
-- [Crafting Guide](${base}/crafting-guide): Craft products from blueprints and materials
-- [Crafting Calculator](${base}/calculator): Calculate ingredients needed for any craftable item
-- [Blog](${base}/blog): Strategy posts and walkthrough content for No Man's Sky
+- [Refining](${base}/refining/): Refiner recipes table – combine ingredients to produce outputs
+- [Cooking](${base}/cooking/): Nutrient Processor recipes – cook food from ingredients
+- [Crafting Guide](${base}/crafting-guide/): Craft products from blueprints and materials
+- [Crafting Calculator](${base}/calculator/): Calculate ingredients needed for any craftable item
+- [Blog](${base}/blog/): Strategy posts and walkthrough content for No Man's Sky
 
 ## Categories
 
-- [Products](${base}/products): Crafted tradeable items
-- [Food](${base}/food): Edible items and cooking ingredients
-- [Raw Materials](${base}/raw): Base resources (mined, harvested)
-- [Technology](${base}/technology): Exosuit, multi-tool, exocraft, starship upgrades
-- [Upgrades](${base}/upgrades): Inventory expansions and module enhancements
-- [Exocraft](${base}/exocraft): Vehicle modules and upgrades
-- [Starships](${base}/starships): Ship components and trade items
-- [Buildings](${base}/buildings): Base building parts
-- [Fish](${base}/fish): Aquatic catches
-- [Curiosities](${base}/curiosities): Found items for selling or crafting
-- [All Items](${base}/items): Browse all items with search and filters
+- [Products](${base}/products/): Crafted tradeable items
+- [Food](${base}/food/): Edible items and cooking ingredients
+- [Raw Materials](${base}/raw/): Base resources (mined, harvested)
+- [Technology](${base}/technology/): Exosuit, multi-tool, exocraft, starship upgrades
+- [Upgrades](${base}/upgrades/): Inventory expansions and module enhancements
+- [Exocraft](${base}/exocraft/): Vehicle modules and upgrades
+- [Starships](${base}/starships/): Ship components and trade items
+- [Buildings](${base}/buildings/): Base building parts
+- [Fish](${base}/fish/): Aquatic catches
+- [Curiosities](${base}/curiosities/): Found items for selling or crafting
+- [All Items](${base}/items/): Browse all items with search and filters
 
 ## Sitemaps
 

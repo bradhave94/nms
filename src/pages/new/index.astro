@@ -27,7 +27,7 @@ const generatedDate = new Date(update.GeneratedAt).toLocaleDateString('en-US', {
 });
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL('/new', siteOrigin).toString();
+const canonicalUrl = new URL('/new/', siteOrigin).toString();
 const itemListElements = addedItems.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,

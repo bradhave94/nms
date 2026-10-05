@@ -62,7 +62,7 @@ const columns = [
 const data = products.map(createArray).filter((item): item is TableRow => item !== undefined);
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL('/crafting-guide', siteOrigin).toString();
+const canonicalUrl = new URL('/crafting-guide/', siteOrigin).toString();
 const baseDescription =
 	"No Man's Sky crafting recipes, crafting tree, and ingredient chart. Browse product recipes, unit values, and step-by-step craft paths in one list.";
 const itemListElements = data.slice(0, 25).map((row, index) => {

@@ -3,6 +3,7 @@ import type { Item } from '@utils/lookup.js';
 import type { JsonLdObject } from '@utils/structuredData';
 import { buildPageSignals } from '@utils/structuredData';
 import type { IOItem, RawItem, RecipeOutput } from '@utils/recipeTree';
+import { ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
 
 export type HowToIngredient = {
   Id: string;
@@ -58,9 +59,9 @@ export const buildItemPageSchema = ({
   item,
   categoryName,
   categorySingular,
-  categoryUrl,
+  categoryUrl: categoryUrlInput,
   siteOrigin,
-  canonicalUrl,
+  canonicalUrl: canonicalUrlInput,
   itemImageUrl,
   isFoodItem,
   outputRecipes,
@@ -70,6 +71,8 @@ export const buildItemPageSchema = ({
   outputCookedLength,
   dateModified,
 }: ItemPageSchemaInput): ItemPageSchemaResult => {
+  const canonicalUrl = ensureTrailingSlashUrl(canonicalUrlInput);
+  const categoryUrl = ensureTrailingSlashUrl(categoryUrlInput);
   const howToMethods: HowToMethod[] = [];
   const craftingHowToIngredients = toHowToIngredients(item.RequiredItems ?? []);
   if (craftingHowToIngredients.length > 0) {

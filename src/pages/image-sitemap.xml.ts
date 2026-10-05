@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { SITE } from '@config';
 import { getRouteEligibleCatalog } from '@utils/routeCatalog.js';
+import { ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
 
 const escapeXml = (value: string): string =>
 	value
@@ -16,7 +17,7 @@ export const GET: APIRoute = ({ site, url }) => {
 	const siteOrigin = (site ? new URL('/', site) : new URL('/', url)).toString().replace(/\/$/, '');
 	const imagesByPage = new Map<string, Array<{ imageLoc: string; title: string }>>();
 	for (const { item, url: itemRoute } of getRouteEligibleCatalog()) {
-		const loc = `${siteOrigin}${itemRoute.split('#', 1)[0]}`;
+		const loc = ensureTrailingSlashUrl(`${siteOrigin}${itemRoute.split('#', 1)[0]}`);
 		const images = imagesByPage.get(loc) ?? [];
 		const imageLoc = `${SITE.imageBaseUrl}${String(item.Icon)}`;
 		if (!images.some((image) => image.imageLoc === imageLoc)) {
