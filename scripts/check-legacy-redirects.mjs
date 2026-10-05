@@ -9,6 +9,11 @@ if (vercelConfigText.includes('/api/legacy-redirect')) {
 }
 
 const redirectMap = JSON.parse(await readFile('redirects.generated.json', 'utf8'));
+const isFilePath = (path) => /\.[a-zA-Z0-9]+$/.test(path);
+for (const entry of redirectMap) {
+  if (!entry.destination || isFilePath(entry.destination) || entry.destination.endsWith('/')) continue;
+  throw new Error(`Legacy redirect destination ${entry.destination} must end with /.`);
+}
 // The Vercel adapter writes prerendered pages to dist/client.
 const staticDir = existsSync(join('dist', 'client')) ? join('dist', 'client') : 'dist';
 const samples = [
