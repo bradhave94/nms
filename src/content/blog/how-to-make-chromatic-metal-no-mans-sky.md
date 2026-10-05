@@ -119,7 +119,7 @@ Every yield below matches both our extracted game data and the Fandom wiki. I've
 
 This needs a [Large Refiner](/technology/BUILD_REFINER3/), which itself costs 200 Chromatic Metal, 100 [Sodium Nitrate](/raw/CATALYST2/), and 5 Microprocessors.
 
-On speed: Indium, Quartzite, Activated Indium, and Activated Quartzite are the fastest single-input recipes. Pure Ferrite recipes all run at the same speed as plain Copper, the slowest single-input recipe. Gold and Silver fusion is roughly 13 times slower per unit than that. You're trading time for yield.
+On speed: Indium, Quartzite, Activated Indium, and Activated Quartzite are the fastest single-input recipes. Pure Ferrite recipes all run at the same speed as plain Copper, the slowest single-input recipe. Gold and Silver fusion is roughly 13 times slower per batch than that. You're trading time for yield.
 
 ## Best ratio by star color
 
@@ -159,7 +159,7 @@ Every jump puts a better ratio in reach, so the Copper grind is the worst it eve
 
 ## Activated metals: the 2x upgrade
 
-An activated stellar metal does in one unit what the plain version needs two for. 1 Activated Indium makes 4 Chromatic Metal. So do 2 plain Indium.
+An activated stellar metal does in one unit what the plain version needs two for. 1 Activated Indium makes 4 Chromatic Metal. So do 2 plain Indium. Cadmium is the outlier: 1 Activated Cadmium makes 2, double what 2 plain Cadmium give you.
 
 The item text only says these metals were "activated by the extreme conditions in which it was formed." The Fandom wiki is more specific and says Activated Quartzite typically turns up on extreme weather planets. It lines up with the game's wording, but the planet type is the wiki's claim, not the game's.
 
@@ -183,7 +183,7 @@ These come from the Fandom wiki, not our game data, so treat the numbers as the 
 
 Chromatic Expansion recipes go the other way: 1 stellar metal plus 1 Chromatic Metal makes 2 of that stellar metal. You can do it with Copper, Cadmium, Emeril, Indium, or Quartzite.
 
-Fandom documents a loop with Indium or Quartzite. Expand into more Indium, refine it back at 2 to 4, and you end up with more Chromatic Metal than you started with. The wiki says it only works with Indium or Quartzite as of Worlds Part II, and not with Activated Indium. With Copper, Cadmium, or Emeril, the round trip loses metal.
+Fandom documents a loop with Indium or Quartzite. Expand into more Indium, refine it back at 2 to 4, and you end up with more Chromatic Metal than you started with. The wiki says it only works with Indium or Quartzite as of Worlds Part II, and not with Activated Indium. With Copper or Cadmium, the round trip loses metal.
 
 It works. It's also a lot of refiner babysitting, and honestly, mining more Indium or Quartzite and pairing it with Pure Ferrite is less effort for most people.
 
