@@ -59,7 +59,6 @@ export default defineConfig({
     },
   },
   redirects: {
-    '/farm': '/calculator/farm/',
     '/farm/': '/calculator/farm/',
   },
   integrations: [
