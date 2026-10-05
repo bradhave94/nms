@@ -17,7 +17,7 @@ const baseDescription =
 	"No Man's Sky guides for expeditions, refiners, crafting, galaxies, and returning players. New posts for current updates and community events.";
 const { title, description } = buildPaginatedMeta(titleBase, baseDescription, 1, 1);
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL('/blog', siteOrigin).toString();
+const canonicalUrl = new URL('/blog/', siteOrigin).toString();
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,
 	canonicalUrl,

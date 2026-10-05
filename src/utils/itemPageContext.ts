@@ -3,6 +3,7 @@ import type { Item } from '@utils/lookup.js';
 import { createArray } from '@utils/recipeTree';
 import type { RecipeOutput } from '@utils/recipeTree';
 import type { ItemPageSchemaInput } from '@utils/itemPageSchema';
+import { ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
 
 export type ItemPageSchemaContext = Omit<ItemPageSchemaInput, 'dateModified'>;
 
@@ -58,13 +59,13 @@ export const prepareItemPageSchemaInput = (
 	siteOrigin: string,
 	pathname: string,
 ): ItemPageSchemaContext => {
-	const canonicalUrl = new URL(pathname, siteOrigin).toString();
+	const canonicalUrl = ensureTrailingSlashUrl(new URL(pathname, siteOrigin).toString());
 	const normalizedSlug = (item.Slug ?? '').replace(/^\/+/, '').replace(/^cooking\//, 'food/');
 	const categorySlug = normalizedSlug.split('/')[0] || 'items';
 	const categoryName = categoryNameMap[categorySlug] ?? 'Items';
 	const categorySingular = categorySingularMap[categorySlug] ?? 'item';
 	const categoryPath = categoryFirstPagePathMap[categorySlug] ?? '/items';
-	const categoryUrl = `${siteOrigin}${categoryPath}`;
+	const categoryUrl = ensureTrailingSlashUrl(`${siteOrigin}${categoryPath}`);
 	const itemImageUrl = `${siteOrigin}/images/items/${item.Icon}`;
 	const isFoodItem = Boolean(item.Slug?.startsWith('food/') || item.Slug?.startsWith('cooking/'));
 

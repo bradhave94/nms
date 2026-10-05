@@ -264,13 +264,13 @@ interface Props {
 const { species } = Astro.props as Props;
 
 if (!species) {
-	return Astro.redirect('/creatures');
+	return Astro.redirect('/creatures/');
 }
 
 const resolvedMoveSets = resolveMovesForSpecies(species);
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const canonicalUrl = new URL(Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`, siteOrigin).toString();
 
 const speciesSubtitle = species.SpeciesSubtitle?.trim();
 const speciesLabel = speciesSubtitle ? `${species.Name} (${speciesSubtitle})` : species.Name;

@@ -8,5 +8,5 @@ export async function getStaticPaths() {
 	}));
 }
 
-return Astro.redirect(`/creatures/${Astro.params.id ?? ''}`);
+return Astro.redirect(`/creatures/${Astro.params.id ?? ''}/`);
 ---

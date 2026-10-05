@@ -16,6 +16,7 @@ import SearchModal from '@components/SearchModal.astro';
 import Footer from '@components/Footer.astro';
 import NitroGlobalAds from '@components/ads/NitroGlobalAds.astro';
 import { SITE } from '@config';
+import { ensureTrailingSlashPath, ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
 
 export interface Props {
 	title?: string;
@@ -51,6 +52,9 @@ const {
 const canonicalURL = canonical
 	? new URL(canonical, SITE.website)
 	: new URL(Astro.url.pathname, Astro.site ?? SITE.website);
+canonicalURL.pathname = ensureTrailingSlashPath(canonicalURL.pathname);
+const prevHref = prevUrl ? ensureTrailingSlashUrl(prevUrl) : undefined;
+const nextHref = nextUrl ? ensureTrailingSlashUrl(nextUrl) : undefined;
 const siteOrigin = SITE.website.replace(/\/$/, '');
 const defaultOgImage = `${siteOrigin}/images/icon.png`;
 const imageUrl = ogImage ?? defaultOgImage;
@@ -87,8 +91,8 @@ inject();
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href="/images/icon.png" sizes="32x32" />
 		<link rel="canonical" href={canonicalURL} />
-		{prevUrl && <link rel="prev" href={prevUrl} />}
-		{nextUrl && <link rel="next" href={nextUrl} />}
+		{prevHref && <link rel="prev" href={prevHref} />}
+		{nextHref && <link rel="next" href={nextHref} />}
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
 

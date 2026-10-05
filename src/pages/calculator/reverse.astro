@@ -5,7 +5,7 @@ import { getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL('/calculator/reverse', siteOrigin).toString();
+const canonicalUrl = new URL('/calculator/reverse/', siteOrigin).toString();
 const title = "Reverse Calculator — What Can I Make? | No Man's Sky Recipes";
 const description =
 	'Pick a raw material or ingredient and see everything you can refine, cook, or craft with it.';
@@ -20,7 +20,7 @@ const breadcrumbSchema = {
 	'@id': `${canonicalUrl}#breadcrumb`,
 	itemListElement: [
 		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
-		{ '@type': 'ListItem', position: 2, name: 'Crafting Calculator', item: `${siteOrigin}/calculator` },
+		{ '@type': 'ListItem', position: 2, name: 'Crafting Calculator', item: `${siteOrigin}/calculator/` },
 		{ '@type': 'ListItem', position: 3, name: 'Reverse Calculator', item: canonicalUrl },
 	],
 };

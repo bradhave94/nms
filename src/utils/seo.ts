@@ -15,8 +15,8 @@ const truncate = (value: string, maxLength: number): string => {
 
 const normalizePath = (path: string): string => {
 	const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-	const trimmedPath = normalizedPath.replace(/\/+$/, '');
-	return trimmedPath === '' ? '/' : trimmedPath;
+	if (normalizedPath === '/') return '/';
+	return `${normalizedPath.replace(/\/+$/, '')}/`;
 };
 
 type ItemMetaInput = Pick<Item, 'Id' | 'Name' | 'Description' | 'Group' | 'Slug'>;
@@ -328,7 +328,7 @@ export const buildPaginatedMeta = (
 const normalizePrevHref = (href?: string): string | undefined => {
 	if (!href) return href;
 	const normalized = href.replace(/\/1\/?$/, '');
-	return normalized === '' ? '/' : normalized;
+	return normalized === '' ? '/' : normalizePath(normalized);
 };
 
 export const buildPaginationUrls = (
@@ -337,6 +337,7 @@ export const buildPaginationUrls = (
 ): { prevUrl?: string; nextUrl?: string } => {
 	const prevHref = normalizePrevHref(page.url.prev);
 	const prevUrl = prevHref ? new URL(prevHref, siteOrigin).toString() : undefined;
-	const nextUrl = page.url.next ? new URL(page.url.next, siteOrigin).toString() : undefined;
+	const nextHref = page.url.next ? normalizePath(page.url.next) : undefined;
+	const nextUrl = nextHref ? new URL(nextHref, siteOrigin).toString() : undefined;
 	return { prevUrl, nextUrl };
 };

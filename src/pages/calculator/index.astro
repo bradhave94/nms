@@ -25,7 +25,7 @@ const page = {
 };
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL('/calculator', siteOrigin).toString();
+const canonicalUrl = new URL('/calculator/', siteOrigin).toString();
 const calculatorItems = page.data.filter((item) => ('RequiredItems' in item && item.RequiredItems && item.RequiredItems.length > 0));
 const itemListElements = calculatorItems.map((item, index) => ({
 	name: item.Name,

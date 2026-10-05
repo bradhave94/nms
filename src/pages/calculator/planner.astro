@@ -5,7 +5,7 @@ import { getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL('/calculator/planner', siteOrigin).toString();
+const canonicalUrl = new URL('/calculator/planner/', siteOrigin).toString();
 const title = 'Crafting Planner | No Man\'s Sky Recipes';
 const description =
 	'Plan multiple crafted products at once. Add items and quantities to see total raw materials needed across your entire build list.';
@@ -20,7 +20,7 @@ const breadcrumbSchema = {
 	'@id': `${canonicalUrl}#breadcrumb`,
 	itemListElement: [
 		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${siteOrigin}/` },
-		{ '@type': 'ListItem', position: 2, name: 'Crafting Calculator', item: `${siteOrigin}/calculator` },
+		{ '@type': 'ListItem', position: 2, name: 'Crafting Calculator', item: `${siteOrigin}/calculator/` },
 		{ '@type': 'ListItem', position: 3, name: 'Crafting Planner', item: canonicalUrl },
 	],
 };
