@@ -25,6 +25,7 @@
 		"data:galaxies": "node scripts/fetch-galaxies.mjs",
 		"data:check": "node scripts/import-extractor-data.mjs --check",
 		"data:sync": "node scripts/import-extractor-data.mjs --sync",
+		"data:icons": "node scripts/icon-webp.mjs",
 		"type-check": "tsc --noEmit",
 		"check": "pnpm run type-check",
 		"check:all": "pnpm run type-check && pnpm run lint"

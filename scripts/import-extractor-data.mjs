@@ -3,6 +3,7 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { tables, validateImages, publishImport } from './import-safety.mjs';
+import { ICON_DIR, writeIconWebps } from './icon-webp.mjs';
 
 const SITE_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DEFAULT_EXTRACTOR_ROOT = path.resolve(SITE_ROOT, '..', 'nms-data-extractor');
@@ -420,6 +421,8 @@ const main = async () => {
 		const jsonNames = (await readdir(jsonDir)).filter(n => n.endsWith('.json'));
 		await publishImport(SITE_ROOT, sourceRoot, jsonNames, [...images.names, ...(images.manifest ? ['manifest.json'] : [])], undefined,
 			{'data/json': manifest?.outputs || {}, 'data/images': images.hashes});
+		const { written } = await writeIconWebps(ICON_DIR, { names: images.names });
+		process.stdout.write(`Wrote ${written} WebP icons.\n`);
 	} else {
 		process.stdout.write('Check complete; no files were written.\n');
 	}

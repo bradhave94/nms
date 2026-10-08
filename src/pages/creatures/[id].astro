@@ -5,6 +5,7 @@ import type { BreadcrumbItem } from '@utils/seo.js';
 import { getSiteOrigin, buildPageSignals } from '@utils/structuredData.js';
 import { SITE } from '@config';
 import creaturesData from '@datav2/Creatures.json';
+import { toWebp } from '@utils/icons';
 
 type CreatureSpecies = (typeof creaturesData.Species)[number];
 type CreatureMove = (typeof creaturesData.BattleMoves)[number];
@@ -369,14 +370,14 @@ const speciesMatchup =
 				</div>
 				<div class="flex items-center gap-3">
 					<img
-						src={`${imageBase}${speciesIcon}`}
+						src={`${imageBase}${toWebp(speciesIcon)}`}
 						alt={`${species.Name} icon`}
 						class="h-14 w-14 rounded-sm bg-black/30 p-1"
 						loading="lazy"
 					/>
 					{species.BattleAffinityIcon && species.BattleAffinityIcon !== speciesIcon && (
 						<img
-							src={`${imageBase}${species.BattleAffinityIcon}`}
+							src={`${imageBase}${toWebp(species.BattleAffinityIcon)}`}
 							alt={`${species.Name} affinity icon`}
 							class="h-14 w-14 rounded-sm bg-black/30 p-1"
 							loading="lazy"
@@ -399,7 +400,7 @@ const speciesMatchup =
 					<span class="flex items-center gap-1 text-sm text-lime-300">
 						{affinityIconById.get(speciesMatchup.strong) && (
 							<img
-								src={`${imageBase}${affinityIconById.get(speciesMatchup.strong)}`}
+								src={`${imageBase}${toWebp(affinityIconById.get(speciesMatchup.strong))}`}
 								class="h-5 w-5"
 								alt=""
 								loading="lazy"
@@ -410,7 +411,7 @@ const speciesMatchup =
 					<span class="flex items-center gap-1 text-sm text-amber-300">
 						{affinityIconById.get(speciesMatchup.weak) && (
 							<img
-								src={`${imageBase}${affinityIconById.get(speciesMatchup.weak)}`}
+								src={`${imageBase}${toWebp(affinityIconById.get(speciesMatchup.weak))}`}
 								class="h-5 w-5"
 								alt=""
 								loading="lazy"
@@ -456,7 +457,7 @@ const speciesMatchup =
 														<div class="flex items-center gap-2">
 															{move.icon && (
 																<img
-																	src={`${imageBase}${move.icon}`}
+																	src={`${imageBase}${toWebp(move.icon)}`}
 																	alt={`${move.displayName} icon`}
 																	class="h-6 w-6 shrink-0"
 																	loading="lazy"

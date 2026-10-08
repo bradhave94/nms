@@ -66,6 +66,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 </div>
 
 <script>
+	import { toWebp } from '@utils/icons';
 	const searchInput = document.getElementById('search-input');
 	const typeCheckboxes = Array.from(document.querySelectorAll('input[name=type-filter]'));
 	const resultsList = document.getElementById('results');
@@ -248,7 +249,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 					if (result.icon) {
 						const img = document.createElement('img');
-						img.src = `${imageBaseUrl}${result.icon}`;
+						img.src = `${imageBaseUrl}${toWebp(result.icon)}`;
 						img.alt = '';
 						img.className = 'h-6 w-6 shrink-0 object-contain self-center';
 						img.loading = 'lazy';

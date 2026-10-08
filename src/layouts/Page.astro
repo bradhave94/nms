@@ -26,6 +26,7 @@ import { formatSignedPercent, formatFoodEffectStats } from '@utils/itemFormatter
 import type { ItemPageSchemaResult } from '@utils/itemPageSchema';
 import refinery from '@datav2/Refinery.json';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 // Define the props interface
 interface Props {
@@ -214,14 +215,14 @@ groupedInputCrafting.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
 const initialUsedInCrafting = groupedInputCrafting.slice(0, 30);
 const deferredUsedInCrafting: DeferredUsedInItem[] = groupedInputCrafting.slice(30).map((usedInItem) => ({
   href: getSlug(usedInItem.Id),
-  icon: usedInItem.Icon,
+  icon: toWebp(usedInItem.Icon),
   name: usedInItem.Name,
   ways: usedInItem.recipes.length,
   recipes: usedInItem.recipes.map((recipe) => ({
     outputQuantity: recipe.outputQuantity,
     inputs: recipe.inputs.map((ing) => ({
       href: getSlug(ing.Id),
-      icon: ing.Icon,
+      icon: toWebp(ing.Icon),
       name: ing.Name,
       quantity: ing.Quantity,
     })),
@@ -237,8 +238,8 @@ const blueprintItem = item as BlueprintLikeItem;
 const blueprintCost = blueprintItem.BlueprintCost ?? 0;
 const blueprintCostType = blueprintItem.BlueprintCostType;
 const blueprintIconByType: Record<string, string> = {
-  nanites: `${SITE.imageBaseUrl}TECHFRAG_R.png`,
-  factoryoverride: `${SITE.imageBaseUrl}FACT_TOKEN.png`,
+  nanites: `${SITE.imageBaseUrl}TECHFRAG_R.webp`,
+  factoryoverride: `${SITE.imageBaseUrl}FACT_TOKEN.webp`,
 };
 const blueprintIcon = blueprintCostType ? blueprintIconByType[blueprintCostType.toLowerCase()] : undefined;
 const showBlueprintCost = blueprintCost > 0 && Boolean(blueprintIcon);

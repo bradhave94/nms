@@ -111,6 +111,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 </Layout>
 
 <script>
+	import { toWebp } from '@utils/icons';
 	type PlannerItem = {
 		id: string;
 		name: string;
@@ -312,7 +313,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 		if (item.icon) {
 			const img = document.createElement('img');
-			img.src = `${imageBaseUrl}${item.icon}`;
+			img.src = `${imageBaseUrl}${toWebp(item.icon)}`;
 			img.alt = '';
 			img.className = 'h-7 w-7 shrink-0 object-contain';
 			img.loading = 'lazy';
@@ -344,7 +345,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 		if (item.icon) {
 			const img = document.createElement('img');
-			img.src = `${imageBaseUrl}${item.icon}`;
+			img.src = `${imageBaseUrl}${toWebp(item.icon)}`;
 			img.alt = '';
 			img.className = 'h-7 w-7 shrink-0 object-contain';
 			img.loading = 'lazy';
@@ -442,7 +443,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 				if (product.icon) {
 					const img = document.createElement('img');
-					img.src = `${imageBaseUrl}${product.icon}`;
+					img.src = `${imageBaseUrl}${toWebp(product.icon)}`;
 					img.alt = '';
 					img.className = 'h-7 w-7 shrink-0 object-contain';
 					img.loading = 'lazy';
@@ -528,7 +529,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 			if (product.icon) {
 				const img = document.createElement('img');
-				img.src = `${imageBaseUrl}${product.icon}`;
+				img.src = `${imageBaseUrl}${toWebp(product.icon)}`;
 				img.alt = '';
 				img.className = 'h-8 w-8 shrink-0 object-contain';
 				img.loading = 'lazy';
@@ -633,7 +634,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 			if (product.icon) {
 				const img = document.createElement('img');
-				img.src = `${imageBaseUrl}${product.icon}`;
+				img.src = `${imageBaseUrl}${toWebp(product.icon)}`;
 				img.alt = '';
 				img.className = 'h-6 w-6 shrink-0 object-contain';
 				img.loading = 'lazy';

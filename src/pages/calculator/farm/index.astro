@@ -162,7 +162,7 @@ const structuredData = [breadcrumbSchema];
 					<td class="px-4 py-3">
 						<div class="flex items-center gap-3">
 							<img
-								src="${IMAGE_BASE}${escapeHtml(plant.icon)}"
+								src="${IMAGE_BASE}${escapeHtml(plant.icon).replace(/\.png$/i, '.webp')}"
 								alt="${escapeHtml(plant.name)}"
 								class="h-10 w-10 object-contain"
 								loading="lazy"

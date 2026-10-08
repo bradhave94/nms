@@ -4,6 +4,7 @@ import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
 import { formatRefineryTime } from '@utils/itemFormatters';
 import type { UsedInItem } from '@utils/recipeTree';
+import { toWebp } from '@utils/icons';
 
 interface Props {
   item: { Name: string };
@@ -29,7 +30,7 @@ const { item, outputRefined, imageBaseUrl } = Astro.props;
             <Accordion>
               <div class="flex items-center gap-3" slot="title">
                 <Image
-                  src={`${imageBaseUrl}${outputItem.Icon}`}
+                  src={`${imageBaseUrl}${toWebp(outputItem.Icon)}`}
                   alt={outputItem.Name}
                   sizes="40px"
                   width={40}

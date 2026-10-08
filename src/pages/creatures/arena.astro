@@ -4,6 +4,7 @@ import Breadcrumbs from '@components/Breadcrumbs.astro';
 import creaturesData from '@datav2/Creatures.json';
 import { getById, getSlug } from '@utils/lookup.js';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 type ArenaMode = {
 	Id: string;
@@ -343,7 +344,7 @@ const breadcrumbs = [
 						>
 							<div class="mb-3 flex items-start gap-3">
 								<img
-									src={`${IMAGE_BASE}${egg.Icon}`}
+									src={`${IMAGE_BASE}${toWebp(egg.Icon)}`}
 									alt={egg.Name}
 									class="h-16 w-16 shrink-0 rounded-sm border border-sky-800/60 bg-black/30 p-1"
 									loading="lazy"
