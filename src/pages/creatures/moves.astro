@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import creaturesData from '@datav2/Creatures.json';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 type CreatureAffinity = {
 	Id: string;
@@ -262,7 +263,7 @@ const breadcrumbs = [
 			<button data-filter="all" class="aff-btn active rounded-sm border border-sky-500 bg-sky-700/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition-colors hover:bg-sky-600/80">All</button>
 			{affinities.map((a) => (
 				<button data-filter={a.Id} class="aff-btn flex items-center gap-1 rounded-sm border border-sky-700 bg-sky-900/40 px-3 py-1 text-xs uppercase tracking-wide text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-800/60">
-					{a.Icon && <img src={`${IMAGE_BASE}${a.Icon}`} alt="" class="h-5 w-5" loading="lazy" />}
+					{a.Icon && <img src={`${IMAGE_BASE}${toWebp(a.Icon)}`} alt="" class="h-5 w-5" loading="lazy" />}
 					{a.DisplayName ?? a.Id}
 				</button>
 			))}
@@ -296,7 +297,7 @@ const breadcrumbs = [
 										<div class="flex min-w-0 items-center gap-2">
 											{family.categoryIcon && (
 												<img
-													src={`${IMAGE_BASE}${family.categoryIcon}`}
+													src={`${IMAGE_BASE}${toWebp(family.categoryIcon)}`}
 													alt={`${family.name} icon`}
 													class="h-7 w-7 shrink-0"
 													loading="lazy"
@@ -320,7 +321,7 @@ const breadcrumbs = [
 													const aff = affinityById.get(affId);
 													return (
 														<span class="flex items-center gap-1 rounded bg-black/30 px-1.5 py-0.5 text-sky-100/80" data-aff={affId}>
-															{aff?.Icon && <img src={`${IMAGE_BASE}${aff.Icon}`} alt="" class="inline h-4 w-4 shrink-0" loading="lazy" />}
+															{aff?.Icon && <img src={`${IMAGE_BASE}${toWebp(aff.Icon)}`} alt="" class="inline h-4 w-4 shrink-0" loading="lazy" />}
 															{!aff?.Icon && <span class="inline-block h-4 w-4 shrink-0 rounded-full bg-sky-700/50" />}
 															<span class="truncate">{String(affName)}</span>
 														</span>
@@ -386,7 +387,7 @@ const breadcrumbs = [
 													<div class="flex items-center gap-1.5">
 														{option.categoryIcon && (
 															<img
-																src={`${IMAGE_BASE}${option.categoryIcon}`}
+																src={`${IMAGE_BASE}${toWebp(option.categoryIcon)}`}
 																alt=""
 																class="h-4 w-4 shrink-0"
 																loading="lazy"
@@ -394,7 +395,7 @@ const breadcrumbs = [
 														)}
 														{option.affinityIcon && (
 															<img
-																src={`${IMAGE_BASE}${option.affinityIcon}`}
+																src={`${IMAGE_BASE}${toWebp(option.affinityIcon)}`}
 																alt=""
 																class="h-4 w-4 shrink-0"
 																loading="lazy"

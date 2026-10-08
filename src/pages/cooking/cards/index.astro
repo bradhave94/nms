@@ -6,6 +6,7 @@ import { Image } from 'astro:assets'
 import processor from '@datav2/NutrientProcessor.json';
 import { getById, getSlug, sortTable, type Item } from '@utils/lookup.js';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 interface ItemDetails {
 	id: string;
@@ -176,7 +177,7 @@ const sortedData = sortTable(data);
 						style={'background: #' + item.output.colour}
 					>
 						<Image
-							src={SITE.imageBaseUrl + item.output.image}
+							src={SITE.imageBaseUrl + toWebp(item.output.image)}
 							alt={item.output.name}
 							sizes="50px"
 							width={50}
@@ -204,7 +205,7 @@ const sortedData = sortTable(data);
 									<Image
 										src={
 											SITE.imageBaseUrl +
-											input1.image
+											toWebp(input1.image)
 										}
 										alt={input1.name}
 										sizes="50px"
@@ -233,7 +234,7 @@ const sortedData = sortTable(data);
 									<Image
 										src={
 											SITE.imageBaseUrl +
-											input2.image
+											toWebp(input2.image)
 										}
 										alt={input2.name}
 										sizes="50px"
@@ -262,7 +263,7 @@ const sortedData = sortTable(data);
 									<Image
 										src={
 											SITE.imageBaseUrl +
-											input3.image
+											toWebp(input3.image)
 										}
 										alt={input3.name}
 										sizes="50px"

@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import { getSlug } from '@utils/lookup.js';
 import type { GroupedUsedIn } from '@utils/recipeTree';
+import { toWebp } from '@utils/icons';
 
 interface Props {
   item: { Name: string };
@@ -28,7 +29,7 @@ const { item, groupedInputCooked, imageBaseUrl } = Astro.props;
           <Accordion>
             <div class="flex items-center gap-3" slot="title">
               <Image
-                src={`${imageBaseUrl}${usedInItem.Icon}`}
+                src={`${imageBaseUrl}${toWebp(usedInItem.Icon)}`}
                 alt={usedInItem.Name}
                 sizes="40px"
                 width={40}
@@ -61,7 +62,7 @@ const { item, groupedInputCooked, imageBaseUrl } = Astro.props;
                               class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
                             >
                               <Image
-                                src={`${imageBaseUrl}${ing.Icon}`}
+                                src={`${imageBaseUrl}${toWebp(ing.Icon)}`}
                                 alt={ing.Name}
                                 sizes="20px"
                                 width={20}
@@ -80,7 +81,7 @@ const { item, groupedInputCooked, imageBaseUrl } = Astro.props;
                           class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
                         >
                           <Image
-                            src={`${imageBaseUrl}${usedInItem.Icon}`}
+                            src={`${imageBaseUrl}${toWebp(usedInItem.Icon)}`}
                             alt={usedInItem.Name}
                             sizes="20px"
                             width={20}

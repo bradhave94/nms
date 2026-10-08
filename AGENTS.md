@@ -27,6 +27,8 @@ This project uses **pnpm 11+** (`packageManager` in `package.json`). See `packag
 - `pnpm run build` generates ~4,800+ static pages and takes ~25 seconds. This is expected.
 - **Node.js:** Astro 7 requires `>=22.12.0`. Production (Vercel) uses **24.x**; `.nvmrc` is set to `24` for local parity.
 - No environment variables or secrets are needed for development.
+- Item icons in `public/images/items/` are the game's PNGs, each with a committed WebP copy that pages display (wrap icon names in `toWebp()` from `src/utils/icons.ts`). Social previews, structured data, and the image sitemap keep the PNG URLs. `pnpm run data:sync` refreshes the WebP copies; after adding or replacing PNGs by hand, run `pnpm run data:icons` (or `pnpm run data:icons -- --all` for replaced files). The build fills in missing copies and warns.
+- Internal links are written without a trailing slash in many places. A post-build step (`src/integrations/trailingSlashLinks.ts`) adds it in the HTML so clicks skip a 308 redirect.
 
 ### Alliance directory (`/alliances`)
 

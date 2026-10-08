@@ -4,6 +4,7 @@ import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
 import { getSlug } from '@utils/lookup.js';
 import type { ProcessedItem, RawItem } from '@utils/recipeTree';
+import { toWebp } from '@utils/icons';
 
 interface Props {
   item: { Name: string };
@@ -40,7 +41,7 @@ const { item, data, rawItems, isFoodItem, outputRefinedLength, outputCookedLengt
           <Accordion open={data.length + outputRefinedLength + outputCookedLength === 1}>
             <div class="flex items-center gap-3" slot="title">
               <Image
-                src={`${imageBaseUrl}${craftItem.Icon}`}
+                src={`${imageBaseUrl}${toWebp(craftItem.Icon)}`}
                 alt={craftItem.Name}
                 sizes="48px"
                 width={48}
@@ -75,7 +76,7 @@ const { item, data, rawItems, isFoodItem, outputRefinedLength, outputCookedLengt
                   style={`background: #${rawItem.Colour || '666'}33; border: 1px solid #${rawItem.Colour || '666'}55`}
                 >
                   <Image
-                    src={`${imageBaseUrl}${rawItem.Icon}`}
+                    src={`${imageBaseUrl}${toWebp(rawItem.Icon)}`}
                     alt={rawItem.Name}
                     sizes="24px"
                     width={24}

@@ -5,6 +5,7 @@ import { formatStatName, formatStatRange } from '@utils/itemFormatters';
 import type { HowToIngredient } from '@utils/itemPageSchema';
 import credit from '../../assets/img/credits.png';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 interface Props {
   item: {
@@ -111,7 +112,7 @@ const {
 <div class="lg:grid lg:grid-cols-3 lg:items-start lg:gap-x-8 lg:pt-12 lg:py-8 max-w-4xl mx-auto">
   <div class="flex flex-col-reverse items-center">
     <Image
-      src={`${imageBaseUrl}${item.Icon}`}
+      src={`${imageBaseUrl}${toWebp(item.Icon)}`}
       alt={item.Name}
       sizes="256px"
       width={256}

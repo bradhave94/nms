@@ -3,8 +3,11 @@ import sitemap from "@astrojs/sitemap";
 import vercel from '@astrojs/vercel';
 import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 import { SITE } from './src/config.ts';
+import trailingSlashLinks from './src/integrations/trailingSlashLinks.ts';
+import { writeIconWebps } from './scripts/icon-webp.mjs';
 
 const legacyRedirects = JSON.parse(
   readFileSync(new URL('./redirects.generated.json', import.meta.url), 'utf8')
@@ -62,6 +65,18 @@ export default defineConfig({
     '/farm/': '/calculator/farm/',
   },
   integrations: [
+    // `/alliances` is rendered on demand, so it has no HTML file to detect.
+    trailingSlashLinks({ extraPaths: ['/alliances'] }),
+    {
+      // Pages show WebP icons; fill in any that weren't generated so none render broken.
+      name: 'icon-webp',
+      hooks: {
+        'astro:build:done': async ({ dir, logger }) => {
+          const { written } = await writeIconWebps(fileURLToPath(new URL('images/items/', dir)));
+          if (written) logger.warn(`Generated ${written} missing WebP icons. Run \`node scripts/icon-webp.mjs\` and commit them.`);
+        },
+      },
+    },
     sitemap({
       filter: shouldIncludeInSitemap,
       // On-demand pages aren't discovered by the sitemap integration.

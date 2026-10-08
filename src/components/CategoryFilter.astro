@@ -258,7 +258,7 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 				<div class="aspect-square bg-[#0b3550]">
 					<img
 						class="h-full w-full object-contain object-center"
-						src="${IMAGE_BASE}${icon}"
+						src="${IMAGE_BASE}${icon.replace(/\.png$/i, '.webp')}"
 						alt="${name}"
 						loading="lazy"
 						width="128"

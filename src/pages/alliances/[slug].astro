@@ -6,6 +6,7 @@ import { findGalaxy, formatPortalGlyphs } from '@utils/alliances';
 import { findCommunityBanners } from '@utils/allianceBanners';
 import { SITE } from '@config';
 import { getApprovedAllianceBySlug, type PublicAlliance } from '@utils/alliancesDb';
+import { toWebp } from '@utils/icons';
 
 export const prerender = false;
 
@@ -118,7 +119,7 @@ const listedOn = alliance.approvedAt
 							{[communityItems.banner, communityItems.decal].map((flair) => (
 								<li>
 									<a class="flex items-center gap-3 prose-link" href={flair.href}>
-										<img src={`${SITE.imageBaseUrl}${flair.icon}`} alt="" width="40" height="40" loading="lazy" class="h-10 w-10 rounded bg-black/40 object-contain" />
+										<img src={`${SITE.imageBaseUrl}${toWebp(flair.icon)}`} alt="" width="40" height="40" loading="lazy" class="h-10 w-10 rounded bg-black/40 object-contain" />
 										<span>{flair.name}</span>
 									</a>
 								</li>

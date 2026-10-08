@@ -10,6 +10,7 @@ import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta, build
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Products.json';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 const pageSize = 80;
 const sortedItems = (data as Item[]).sort((a: Item, b: Item) => b.BaseValueUnits - a.BaseValueUnits);
@@ -72,7 +73,7 @@ const { nextUrl } = buildPaginationUrls(siteOrigin, page);
 					<CompactCard
 						card={{
 							name: item.Name,
-							image: SITE.imageBaseUrl + item.Icon,
+							image: SITE.imageBaseUrl + toWebp(item.Icon),
 							link: getSlug(item),
 						}}
 						index={index}

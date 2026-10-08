@@ -10,6 +10,7 @@ import type { Item } from '@utils/lookup.js';
 import { CATEGORY_SLUGS, categories, type CategorySlug } from '../../config/categories.js';
 import { getCategoryDataset } from '../../config/categoryData.js';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number; params?: Record<string, string> }) => unknown[] }) {
 	return CATEGORY_SLUGS.flatMap((slug) => {
@@ -96,7 +97,7 @@ const { prevUrl, nextUrl } = buildPaginationUrls(siteOrigin, page);
 				<CompactCard
 					card={{
 						name: item.Name,
-						image: SITE.imageBaseUrl + item.Icon,
+						image: SITE.imageBaseUrl + toWebp(item.Icon),
 						link: getSlug(item),
 					}}
 					index={index}

@@ -111,6 +111,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 </Layout>
 
 <script>
+	import { toWebp } from '@utils/icons';
 	type ReverseRecipeInput = {
 		id: string;
 		name: string;
@@ -264,7 +265,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 		if (selectedEntry.icon) {
 			const img = document.createElement('img');
-			img.src = `${imageBaseUrl}${selectedEntry.icon}`;
+			img.src = `${imageBaseUrl}${toWebp(selectedEntry.icon)}`;
 			img.alt = '';
 			img.className = 'h-8 w-8 shrink-0 object-contain';
 			img.loading = 'lazy';
@@ -287,7 +288,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		// Output icon
 		if (recipe.outputIcon) {
 			const img = document.createElement('img');
-			img.src = `${imageBaseUrl}${recipe.outputIcon}`;
+			img.src = `${imageBaseUrl}${toWebp(recipe.outputIcon)}`;
 			img.alt = '';
 			img.className = 'h-9 w-9 shrink-0 object-contain';
 			img.loading = 'lazy';
@@ -447,7 +448,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 			if (entry.icon) {
 				const img = document.createElement('img');
-				img.src = `${imageBaseUrl}${entry.icon}`;
+				img.src = `${imageBaseUrl}${toWebp(entry.icon)}`;
 				img.alt = '';
 				img.className = 'h-6 w-6 shrink-0 object-contain';
 				img.loading = 'lazy';

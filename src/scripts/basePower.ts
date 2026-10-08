@@ -1,5 +1,6 @@
 import { calculateBasePower, calculateBiofuel, recommendPowerSource } from '../utils/basePower';
 import type { PowerCatalog } from '../utils/basePowerCatalog';
+import { toWebp } from '../utils/icons';
 
 const root = document.querySelector<HTMLElement>('#base-power');
 if (root) setup(root);
@@ -22,7 +23,7 @@ function setup(root: HTMLElement) {
 	};
 	const picture = (icon: string, size = 'h-10 w-10') => {
 		const image = document.createElement('img');
-		image.src = `/images/items/${encodeURIComponent(icon)}`;
+		image.src = `/images/items/${encodeURIComponent(toWebp(icon))}`;
 		image.alt = '';
 		image.width = 64; image.height = 64;
 		image.className = `${size} object-contain shrink-0`;

@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets'
 import { getSlug } from '@utils/lookup.js';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 interface CellData {
     id: string;
@@ -71,7 +72,7 @@ const { cell } = Astro.props;
                     </span>
                     {cell.image && (
                         <Image
-                            src={`${SITE.imageBaseUrl}${cell.image}`}
+                            src={`${SITE.imageBaseUrl}${toWebp(cell.image)}`}
                             alt={cell.name}
                             sizes="50px"
                             width={50}

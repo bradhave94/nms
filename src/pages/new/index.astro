@@ -13,6 +13,7 @@ import {
 import type { Item } from '@utils/lookup.js';
 import { getRouteEligibleNewItems } from '@utils/routeCatalog.js';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
 
 const update = getNewUpdatePayload();
 const addedItems = sort(
@@ -52,7 +53,7 @@ const toCard = (item: NewUpdateItem, index: number) => {
 	return {
 		name,
 		subtitle: item.ReleaseVariant ? `Expedition ${item.ReleaseVariant.Expedition} variant` : undefined,
-		image: `${SITE.imageBaseUrl}${item.Icon}`,
+		image: `${SITE.imageBaseUrl}${toWebp(item.Icon)}`,
 		link: path,
 		index,
 	};
