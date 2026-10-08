@@ -2,10 +2,11 @@
 import Layout from '@layouts/Layout.astro';
 import { getSiteOrigin, buildPageSignals } from '@utils/structuredData.js';
 import { SITE } from '@config';
+import { ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
 
 const IMAGE_BASE = SITE.imageBaseUrl;
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const canonicalUrl = ensureTrailingSlashUrl(new URL(Astro.url.pathname, siteOrigin).toString());
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'BreadcrumbList',

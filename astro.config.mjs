@@ -48,6 +48,7 @@ const shouldIncludeInSitemap = (page) => {
 // https://astro.build/config
 export default defineConfig({
   site: "https://nomansskyrecipes.com",
+  trailingSlash: 'always',
   // Pages stay static; only routes that set `prerender = false` (the alliance directory) run as functions.
   adapter: vercel(),
   env: {
@@ -61,7 +62,7 @@ export default defineConfig({
     },
   },
   redirects: {
-    '/farm': '/calculator/farm',
+    '/farm/': '/calculator/farm/',
   },
   integrations: [
     // `/alliances` is rendered on demand, so it has no HTML file to detect.

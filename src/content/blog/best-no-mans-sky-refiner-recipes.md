@@ -1,6 +1,6 @@
 ---
-title: "Best No Man's Sky Refiner Recipes for Nanites, Units, and Fast Progress"
-description: "The best NMS refiner recipes for nanites, units, and chromatic metal, with exact quantities, ratios, and which refiner you actually need."
+title: "Best NMS Refiner Recipes"
+description: "Best No Man's Sky refiner recipes for nanites, units, and chromatic metal — exact ratios, Chlorine loop, and which refiner you need."
 pubDate: 2024-10-09
 updatedDate: 2024-10-09
 heroImage: "/images/blog/refiner-recipes.webp"
@@ -20,6 +20,10 @@ relatedLinks:
     href: "/raw"
   - label: "Technology upgrades"
     href: "/technology"
+  - label: "Nanite farm guide"
+    href: "/blog/best-nanite-farms-no-mans-sky/"
+  - label: "Chromatic Metal"
+    href: "/raw/STELLAR2/"
 faqs:
   - question: "What is the fastest way to get nanites in No Man's Sky?"
     answer: "Tainted Metal is the most efficient single-step nanite recipe: 1 Tainted Metal refines into 2 Nanite Clusters in any refiner. For bulk farming, build a Runaway Mould setup: farm Curious Deposits, then refine 5 Runaway Mould into 1 Nanite Cluster at scale."

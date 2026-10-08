@@ -31,7 +31,7 @@ const page = {
 };
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL(categoryPath, siteOrigin).toString();
+const canonicalUrl = new URL(`${categoryPath}/`, siteOrigin).toString();
 const itemListElements = page.data.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,

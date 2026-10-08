@@ -1,6 +1,6 @@
 ---
-title: "The Ultimate No Man's Sky Returning Player Guide (2026)"
-description: "The complete No Man's Sky returning player guide: every update since 2016, what changed, and exactly what to do when you come back."
+title: "NMS Returning Player Guide 2026"
+description: "Coming back to No Man's Sky in 2026? Update timeline since 2016, what changed, whether to start a new save, and the first systems to relearn."
 pubDate: 2026-04-17
 updatedDate: 2026-04-17
 heroImage: "/images/blog/returning-player-guide.webp"
@@ -18,6 +18,10 @@ relatedLinks:
     href: "/blog/no-mans-sky-corvette-guide"
   - label: "Xeno Arena guide"
     href: "/blog/no-mans-sky-xeno-arena-guide"
+  - label: "Expedition 23 guide"
+    href: "/blog/nms-expedition-23-our-journey-continues/"
+  - label: "Gravitino Coil guide"
+    href: "/blog/gravitino-coil-guide-no-mans-sky/"
   - label: "All refiner recipes"
     href: "/refining"
   - label: "Cooking recipes"

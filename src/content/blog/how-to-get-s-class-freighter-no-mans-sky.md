@@ -1,6 +1,6 @@
 ---
-title: "How to Get an S-Class Freighter in No Man's Sky"
-description: "The only reliable way to get an S-class capital freighter in NMS is save scumming rescue events."
+title: "NMS S-Class Freighter Guide"
+description: "Get an S-class freighter in No Man's Sky: wealthy-system rescue events, two-stage save scum, Pirate Dreadnought notes, and what to upgrade first."
 pubDate: 2025-06-03
 heroImage: "/images/blog/s-class-freighter.webp"
 category: "blog"
@@ -17,6 +17,8 @@ relatedLinks:
     href: "/technology"
   - label: "All items browser"
     href: "/items"
+  - label: "Nanite farm guide"
+    href: "/blog/best-nanite-farms-no-mans-sky/"
 faqs:
   - question: "Can I upgrade a lower-class freighter to S-class?"
     answer: "No. Freighter class is fixed at the moment you claim it and cannot be changed. The only way to get an S-class freighter is to find and claim one during a rescue event."

@@ -108,7 +108,7 @@ const columns = [
 const data = refinery.map(createArray).filter((item): item is TableItem => item !== undefined);
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL('/refining', siteOrigin).toString();
+const canonicalUrl = new URL('/refining/', siteOrigin).toString();
 const baseDescription =
 	"Browse No Man's Sky refiner recipes, ingredient combinations, and outputs. Use this refiner guide to discover the best refining chains for units and crafting.";
 const itemListElements = data.slice(0, 25).map((row, index) => {

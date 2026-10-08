@@ -43,7 +43,7 @@ const baseDescription = config.pageDescription ?? config.description;
 const introText = config.pageIntro ?? config.intro;
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
-const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const canonicalUrl = new URL(Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`, siteOrigin).toString();
 const itemListElements = page.data.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,

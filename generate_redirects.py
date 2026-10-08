@@ -439,8 +439,10 @@ def resolve_bucket_order_ambiguities(
 def build_destination_url(record: NewRecord) -> str:
     """Build destination URL from new record slug/id."""
     if record.slug:
-        return "/" + record.slug.strip("/")
-    return f"/{record.segment}/{record.item_id}"
+        path = "/" + record.slug.strip("/")
+    else:
+        path = f"/{record.segment}/{record.item_id}"
+    return path if path.endswith("/") else f"{path}/"
 
 
 def generate_redirects(

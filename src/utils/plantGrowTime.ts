@@ -13,6 +13,22 @@ const SEED_HARVEST_OVERRIDES: Record<string, string> = {
 	PEARLPLANT: 'ALBUMENPEARL',
 };
 
+// RequiredItems contains the cost to plant a seed, not its harvest yield.
+const BASE_HARVEST_QUANTITY_BY_SEED: Record<string, number> = {
+	TOXICPLANT: 50,
+	SNOWPLANT: 50,
+	RADIOPLANT: 50,
+	BARRENPLANT: 100,
+	LUSHPLANT: 25,
+	SCORCHEDPLANT: 50,
+	CREATUREPLANT: 25,
+	POOPPLANT: 25,
+	GRAVPLANT: 1,
+	SACVENOMPLANT: 1,
+	PEARLPLANT: 1,
+	NIPPLANT: 1,
+};
+
 const localizationStrings = localization as Record<string, string>;
 
 function parseGrowTime(description: string): string | undefined {
@@ -81,11 +97,6 @@ export function parseGrowTimeMinutes(growTime: string): number {
 	return total;
 }
 
-function resolveHarvestQuantity(seed: Item, harvestId: string): number {
-	const harvestEntry = seed.RequiredItems?.find((item) => item.Id === harvestId);
-	return harvestEntry?.Quantity ?? 1;
-}
-
 export function getAllGrowablePlants(): GrowablePlant[] {
 	const plants: GrowablePlant[] = [];
 
@@ -104,6 +115,10 @@ export function getAllGrowablePlants(): GrowablePlant[] {
 		if (!harvestId) {
 			continue;
 		}
+		const harvestQuantity = BASE_HARVEST_QUANTITY_BY_SEED[product.Id];
+		if (harvestQuantity === undefined) {
+			throw new Error(`Missing base harvest quantity for ${product.Id}`);
+		}
 
 		const harvestItem = getById(harvestId);
 		plants.push({
@@ -113,7 +128,7 @@ export function getAllGrowablePlants(): GrowablePlant[] {
 			icon: harvestItem?.Icon ?? product.Icon,
 			growTime,
 			growTimeMinutes: parseGrowTimeMinutes(growTime),
-			harvestQuantity: resolveHarvestQuantity(product, harvestId),
+			harvestQuantity,
 		});
 	}
 

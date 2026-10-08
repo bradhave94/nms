@@ -1,4 +1,5 @@
 import { SITE } from '@config';
+import { ensureTrailingSlashPath, ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
 
 export type JsonLdObject = Record<string, unknown>;
 
@@ -79,7 +80,7 @@ export const buildWebSiteSchema = (siteOrigin: string): JsonLdObject => {
 		publisher: { '@id': `${safeOrigin}#organization` },
 		potentialAction: {
 			'@type': 'SearchAction',
-			target: `${safeOrigin}/items?q={search_term_string}`,
+			target: `${safeOrigin}/items/?q={search_term_string}`,
 			'query-input': 'required name=search_term_string',
 		},
 	};
@@ -101,11 +102,12 @@ export const buildWebPageSchema = ({
 	dateModified,
 }: BuildWebPageSchemaOptions): JsonLdObject => {
 	const safeOrigin = normalizeOrigin(siteOrigin);
+	const pageUrl = ensureTrailingSlashUrl(canonicalUrl);
 	return {
 		'@context': 'https://schema.org',
 		'@type': 'WebPage',
-		'@id': `${canonicalUrl}#webpage`,
-		url: canonicalUrl,
+		'@id': `${pageUrl}#webpage`,
+		url: pageUrl,
 		name: title,
 		description,
 		isPartOf: { '@id': `${safeOrigin}#website` },
@@ -151,7 +153,8 @@ export const buildPageSignals = ({
 
 const normalizePath = (path: string): string => {
 	if (!path) return '/';
-	return path.startsWith('/') ? path : `/${path}`;
+	const withLeading = path.startsWith('/') ? path : `/${path}`;
+	return ensureTrailingSlashPath(withLeading);
 };
 
 const buildBreadcrumbList = (canonicalUrl: string, entries: BreadcrumbEntry[]): JsonLdObject => ({
@@ -182,11 +185,11 @@ export const buildCollectionStructuredData = ({
 	items,
 }: CollectionStructuredDataOptions): JsonLdObject[] => {
 	const safeOrigin = normalizeOrigin(siteOrigin);
-	const safePath = normalizePath(collectionPath);
+	const pageUrl = ensureTrailingSlashUrl(canonicalUrl);
 	const firstPagePath = firstPagePathOverride
-		? normalizePath(firstPagePathOverride).replace(/\/+$/, '') || '/'
-		: safePath.replace(/\/+$/, '') || '/';
-	const collectionUrl = `${safeOrigin}${firstPagePath}`;
+		? normalizePath(firstPagePathOverride)
+		: normalizePath(collectionPath);
+	const collectionUrl = ensureTrailingSlashUrl(`${safeOrigin}${firstPagePath}`);
 	const breadcrumbEntries: BreadcrumbEntry[] = [
 		{ name: 'Home', url: `${safeOrigin}/` },
 		{ name: collectionName, url: collectionUrl },
@@ -195,19 +198,19 @@ export const buildCollectionStructuredData = ({
 	if (currentPage > 1) {
 		breadcrumbEntries.push({
 			name: `Page ${currentPage}`,
-			url: canonicalUrl,
+			url: pageUrl,
 		});
 	}
 
-	const breadcrumb = buildBreadcrumbList(canonicalUrl, breadcrumbEntries);
+	const breadcrumb = buildBreadcrumbList(pageUrl, breadcrumbEntries);
 	const collectionPage: JsonLdObject = {
 		'@context': 'https://schema.org',
 		'@type': 'CollectionPage',
-		'@id': `${canonicalUrl}#collection`,
-		url: canonicalUrl,
+		'@id': `${pageUrl}#collection`,
+		url: pageUrl,
 		name: currentPage > 1 ? `${collectionName} - Page ${currentPage}` : collectionName,
 		description: collectionDescription,
-		breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+		breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
 		...buildPageSignals({ siteOrigin: safeOrigin }),
 		mainEntity: {
 			'@type': 'ItemList',
@@ -217,7 +220,7 @@ export const buildCollectionStructuredData = ({
 				'@type': 'ListItem',
 				position: item.position,
 				name: item.name,
-				url: item.url,
+				url: ensureTrailingSlashUrl(item.url),
 			})),
 		},
 	};

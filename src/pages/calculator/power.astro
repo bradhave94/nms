@@ -8,11 +8,11 @@ const catalog = buildPowerCatalog();
 const rulesSource = catalog.rulesProvenance.SteamBuildId ? `Steam build ${catalog.rulesProvenance.SteamBuildId}` : `game ${catalog.rulesProvenance.GameVersion}`;
 const title = "Base Power Calculator | No Man's Sky Recipes";
 const description = 'Calculate solar panels, batteries, electromagnetic generators and biofuel reactors for your No Man’s Sky base. Get a power plan and construction materials list.';
-const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Calculators', href: '/calculator' }, { name: 'Base Power Calculator' }];
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Calculators', href: '/calculator/' }, { name: 'Base Power Calculator' }];
 const structuredData = {
 	'@context': 'https://schema.org', '@type': 'BreadcrumbList',
 	itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name,
-		item: `https://nomansskyrecipes.com${item.href ?? '/calculator/power'}` })),
+		item: `https://nomansskyrecipes.com${item.href ?? '/calculator/power/'}` })),
 };
 ---
 <Layout {title} {description} slug="calculator" {structuredData}>
