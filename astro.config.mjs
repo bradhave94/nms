@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from 'node:fs';
 
 import { SITE } from './src/config.ts';
+import trailingSlashLinks from './src/integrations/trailingSlashLinks.ts';
 
 const legacyRedirects = JSON.parse(
   readFileSync(new URL('./redirects.generated.json', import.meta.url), 'utf8')
@@ -61,6 +62,8 @@ export default defineConfig({
     '/farm': '/calculator/farm',
   },
   integrations: [
+    // `/alliances` is rendered on demand, so it has no HTML file to detect.
+    trailingSlashLinks({ extraPaths: ['/alliances'] }),
     sitemap({
       filter: shouldIncludeInSitemap,
       // On-demand pages aren't discovered by the sitemap integration.
