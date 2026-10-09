@@ -25,32 +25,46 @@
 		return target.isContentEditable;
 	}
 
+	const searchPanel = document.getElementById('site-search-panel');
+	let returnFocusTo: HTMLElement | null = null;
+
 	function toggleSiteSearch(forceOpen?: boolean): void {
 		if (!siteSearch) return;
 
 		const shouldOpen = forceOpen ?? siteSearch.classList.contains('hidden');
 		if (shouldOpen) {
+			if (siteSearch.classList.contains('hidden')) {
+				returnFocusTo = document.activeElement instanceof HTMLElement ? document.activeElement : openSearch;
+			}
 			siteSearch.classList.remove('hidden');
 			searchInput?.focus();
 		} else {
-			siteSearch.classList.add('hidden');
+			closeSiteSearch();
 		}
+	}
+
+	function closeSiteSearch(): void {
+		if (!siteSearch || siteSearch.classList.contains('hidden')) return;
+		siteSearch.classList.add('hidden');
+		(returnFocusTo ?? openSearch)?.focus();
+		returnFocusTo = null;
 	}
 
 	if (openSearch) {
 		openSearch.addEventListener('click', () => toggleSiteSearch(true));
 	}
 
-	document.addEventListener('click', (event: MouseEvent) => {
-		const target = event.target as HTMLElement;
-		if (target.id === 'site-search' || target.id === 'site-search-backdrop') {
-			siteSearch?.classList.add('hidden');
+	// Close when a click lands anywhere in the overlay outside the search panel.
+	siteSearch?.addEventListener('click', (event: MouseEvent) => {
+		const target = event.target as Node | null;
+		if (target && searchPanel && !searchPanel.contains(target)) {
+			closeSiteSearch();
 		}
 	});
 
 	document.addEventListener('keydown', (event: KeyboardEvent) => {
 		if (event.key === 'Escape' && siteSearch && !siteSearch.classList.contains('hidden')) {
-			siteSearch.classList.add('hidden');
+			closeSiteSearch();
 			return;
 		}
 
