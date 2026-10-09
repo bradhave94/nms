@@ -34,6 +34,8 @@
     { "source": "/guides", "destination": "/blog/", "permanent": true },
     { "source": "/guides/", "destination": "/blog/", "permanent": true },
     { "source": "/guides/:path*", "destination": "/blog/", "permanent": true },
+    { "source": "/creatures/species/:id", "destination": "/creatures/:id/", "permanent": true },
+    { "source": "/creatures/species/:id/", "destination": "/creatures/:id/", "permanent": true },
     { "source": "/buildings/1", "destination": "/buildings/", "permanent": true },
     { "source": "/buildings/1/", "destination": "/buildings/", "permanent": true },
     { "source": "/calculator/1", "destination": "/calculator/", "permanent": true },
