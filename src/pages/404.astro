@@ -40,21 +40,19 @@ const popular = [
 	</section>
 	<section class="mx-auto max-w-4xl px-4 pb-16">
 		<h2 class="mb-4 text-center text-2xl text-white">Popular pages</h2>
-		<ul class="m-0 grid list-none gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
+		<nav aria-label="Popular pages" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 			{
 				popular.map((page) => (
-					<li>
-						<a
-							href={page.href}
-							class="block h-full rounded-xl border border-sky-900/60 bg-sky-950/30 p-4 text-white transition hover:border-sky-400/50 hover:bg-sky-900/30"
-						>
-							<span class="block text-lg font-semibold">{page.name}</span>
-							<span class="mt-1 block text-sm text-sky-100/70">{page.blurb}</span>
-						</a>
-					</li>
+					<a
+						href={page.href}
+						class="group flex flex-col justify-center rounded-xl border border-sky-900/60 bg-sky-950/40 px-5 py-4 text-left text-white no-underline transition hover:border-cyan-400/60 hover:bg-sky-900/40"
+					>
+						<span class="text-base font-semibold group-hover:text-cyan-300">{page.name}</span>
+						<span class="mt-1 text-sm text-sky-100/70">{page.blurb}</span>
+					</a>
 				))
 			}
-		</ul>
+		</nav>
 	</section>
 </Layout>
 
