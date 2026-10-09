@@ -1,71 +1,344 @@
 {
   "trailingSlash": true,
   "headers": [
-    { "source": "/images/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=604800" }] },
-    { "source": "/fonts/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/favicon.svg", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=604800" }] }
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/favicon.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=604800"
+        }
+      ]
+    }
   ],
   "redirects": [
-    { "source": "/ads.txt", "destination": "https://api.nitropay.com/v1/ads-2507.txt", "permanent": true },
-    { "source": "/portable-refiner", "destination": "/refining/", "permanent": true },
-    { "source": "/portable-refiner/", "destination": "/refining/", "permanent": true },
-    { "source": "/medium-refiner", "destination": "/refining/", "permanent": true },
-    { "source": "/medium-refiner/", "destination": "/refining/", "permanent": true },
-    { "source": "/large-refiner", "destination": "/refining/", "permanent": true },
-    { "source": "/large-refiner/", "destination": "/refining/", "permanent": true },
-    { "source": "/all", "destination": "/refining/", "permanent": true },
-    { "source": "/all/", "destination": "/refining/", "permanent": true },
-    { "source": "/all-items", "destination": "/items/", "permanent": true },
-    { "source": "/all-items/", "destination": "/items/", "permanent": true },
-    { "source": "/none", "destination": "/items/", "permanent": true },
-    { "source": "/none/", "destination": "/items/", "permanent": true },
-    { "source": "/refinery", "destination": "/refining/", "permanent": true },
-    { "source": "/refinery/", "destination": "/refining/", "permanent": true },
-    { "source": "/guides/how-to-craft-fusion-ignitor", "destination": "/blog/how-to-craft-fusion-ignitor-no-mans-sky/", "permanent": true },
-    { "source": "/guides/how-to-craft-fusion-ignitor/", "destination": "/blog/how-to-craft-fusion-ignitor-no-mans-sky/", "permanent": true },
-    { "source": "/guides/how-to-craft-stasis-device", "destination": "/blog/how-to-craft-stasis-device-no-mans-sky/", "permanent": true },
-    { "source": "/guides/how-to-craft-stasis-device/", "destination": "/blog/how-to-craft-stasis-device-no-mans-sky/", "permanent": true },
-    { "source": "/guides/best-no-mans-sky-refiner-recipes", "destination": "/blog/best-no-mans-sky-refiner-recipes/", "permanent": true },
-    { "source": "/guides/best-no-mans-sky-refiner-recipes/", "destination": "/blog/best-no-mans-sky-refiner-recipes/", "permanent": true },
-    { "source": "/guides/best-no-mans-sky-cooking-recipes", "destination": "/cooking/", "permanent": true },
-    { "source": "/guides/best-no-mans-sky-cooking-recipes/", "destination": "/cooking/", "permanent": true },
-    { "source": "/guides/no-mans-sky-creature-affinities-guide", "destination": "/creatures/affinities/", "permanent": true },
-    { "source": "/guides/no-mans-sky-creature-affinities-guide/", "destination": "/creatures/affinities/", "permanent": true },
-    { "source": "/guides", "destination": "/blog/", "permanent": true },
-    { "source": "/guides/", "destination": "/blog/", "permanent": true },
-    { "source": "/guides/:path*", "destination": "/blog/", "permanent": true },
-    { "source": "/creatures/species/:id", "destination": "/creatures/:id/", "permanent": true },
-    { "source": "/creatures/species/:id/", "destination": "/creatures/:id/", "permanent": true },
-    { "source": "/buildings/1", "destination": "/buildings/", "permanent": true },
-    { "source": "/buildings/1/", "destination": "/buildings/", "permanent": true },
-    { "source": "/calculator/1", "destination": "/calculator/", "permanent": true },
-    { "source": "/calculator/1/", "destination": "/calculator/", "permanent": true },
-    { "source": "/corvette/1", "destination": "/corvette/", "permanent": true },
-    { "source": "/corvette/1/", "destination": "/corvette/", "permanent": true },
-    { "source": "/curiosities/1", "destination": "/curiosities/", "permanent": true },
-    { "source": "/curiosities/1/", "destination": "/curiosities/", "permanent": true },
-    { "source": "/exocraft/1", "destination": "/exocraft/", "permanent": true },
-    { "source": "/exocraft/1/", "destination": "/exocraft/", "permanent": true },
-    { "source": "/fish/1", "destination": "/fish/", "permanent": true },
-    { "source": "/fish/1/", "destination": "/fish/", "permanent": true },
-    { "source": "/food/1", "destination": "/food/", "permanent": true },
-    { "source": "/food/1/", "destination": "/food/", "permanent": true },
-    { "source": "/other/1", "destination": "/other/", "permanent": true },
-    { "source": "/other/1/", "destination": "/other/", "permanent": true },
-    { "source": "/products/1", "destination": "/products/", "permanent": true },
-    { "source": "/products/1/", "destination": "/products/", "permanent": true },
-    { "source": "/raw/1", "destination": "/raw/", "permanent": true },
-    { "source": "/raw/1/", "destination": "/raw/", "permanent": true },
-    { "source": "/starships/1", "destination": "/starships/", "permanent": true },
-    { "source": "/starships/1/", "destination": "/starships/", "permanent": true },
-    { "source": "/technology/1", "destination": "/technology/", "permanent": true },
-    { "source": "/technology/1/", "destination": "/technology/", "permanent": true },
-    { "source": "/upgrades/1", "destination": "/upgrades/", "permanent": true },
-    { "source": "/upgrades/1/", "destination": "/upgrades/", "permanent": true },
-    { "source": "/farm", "destination": "/calculator/farm/", "permanent": true },
-    { "source": "/farm/", "destination": "/calculator/farm/", "permanent": true },
-    { "source": "/sitemap", "destination": "/sitemap-0.xml", "permanent": true },
-    { "source": "/sitemap/", "destination": "/sitemap-0.xml", "permanent": true },
-    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true }
+    {
+      "source": "/alliances/null/",
+      "destination": "/alliances/null-2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ads.txt",
+      "destination": "https://api.nitropay.com/v1/ads-2507.txt",
+      "permanent": true
+    },
+    {
+      "source": "/portable-refiner",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/portable-refiner/",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/medium-refiner",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/medium-refiner/",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/large-refiner",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/large-refiner/",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/all",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/all/",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/all-items",
+      "destination": "/items/",
+      "permanent": true
+    },
+    {
+      "source": "/all-items/",
+      "destination": "/items/",
+      "permanent": true
+    },
+    {
+      "source": "/none",
+      "destination": "/items/",
+      "permanent": true
+    },
+    {
+      "source": "/none/",
+      "destination": "/items/",
+      "permanent": true
+    },
+    {
+      "source": "/refinery",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/refinery/",
+      "destination": "/refining/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/how-to-craft-fusion-ignitor",
+      "destination": "/blog/how-to-craft-fusion-ignitor-no-mans-sky/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/how-to-craft-fusion-ignitor/",
+      "destination": "/blog/how-to-craft-fusion-ignitor-no-mans-sky/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/how-to-craft-stasis-device",
+      "destination": "/blog/how-to-craft-stasis-device-no-mans-sky/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/how-to-craft-stasis-device/",
+      "destination": "/blog/how-to-craft-stasis-device-no-mans-sky/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/best-no-mans-sky-refiner-recipes",
+      "destination": "/blog/best-no-mans-sky-refiner-recipes/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/best-no-mans-sky-refiner-recipes/",
+      "destination": "/blog/best-no-mans-sky-refiner-recipes/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/best-no-mans-sky-cooking-recipes",
+      "destination": "/cooking/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/best-no-mans-sky-cooking-recipes/",
+      "destination": "/cooking/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/no-mans-sky-creature-affinities-guide",
+      "destination": "/creatures/affinities/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/no-mans-sky-creature-affinities-guide/",
+      "destination": "/creatures/affinities/",
+      "permanent": true
+    },
+    {
+      "source": "/guides",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/:path*",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/creatures/species/:id",
+      "destination": "/creatures/:id/",
+      "permanent": true
+    },
+    {
+      "source": "/creatures/species/:id/",
+      "destination": "/creatures/:id/",
+      "permanent": true
+    },
+    {
+      "source": "/buildings/1",
+      "destination": "/buildings/",
+      "permanent": true
+    },
+    {
+      "source": "/buildings/1/",
+      "destination": "/buildings/",
+      "permanent": true
+    },
+    {
+      "source": "/calculator/1",
+      "destination": "/calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/calculator/1/",
+      "destination": "/calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/corvette/1",
+      "destination": "/corvette/",
+      "permanent": true
+    },
+    {
+      "source": "/corvette/1/",
+      "destination": "/corvette/",
+      "permanent": true
+    },
+    {
+      "source": "/curiosities/1",
+      "destination": "/curiosities/",
+      "permanent": true
+    },
+    {
+      "source": "/curiosities/1/",
+      "destination": "/curiosities/",
+      "permanent": true
+    },
+    {
+      "source": "/exocraft/1",
+      "destination": "/exocraft/",
+      "permanent": true
+    },
+    {
+      "source": "/exocraft/1/",
+      "destination": "/exocraft/",
+      "permanent": true
+    },
+    {
+      "source": "/fish/1",
+      "destination": "/fish/",
+      "permanent": true
+    },
+    {
+      "source": "/fish/1/",
+      "destination": "/fish/",
+      "permanent": true
+    },
+    {
+      "source": "/food/1",
+      "destination": "/food/",
+      "permanent": true
+    },
+    {
+      "source": "/food/1/",
+      "destination": "/food/",
+      "permanent": true
+    },
+    {
+      "source": "/other/1",
+      "destination": "/other/",
+      "permanent": true
+    },
+    {
+      "source": "/other/1/",
+      "destination": "/other/",
+      "permanent": true
+    },
+    {
+      "source": "/products/1",
+      "destination": "/products/",
+      "permanent": true
+    },
+    {
+      "source": "/products/1/",
+      "destination": "/products/",
+      "permanent": true
+    },
+    {
+      "source": "/raw/1",
+      "destination": "/raw/",
+      "permanent": true
+    },
+    {
+      "source": "/raw/1/",
+      "destination": "/raw/",
+      "permanent": true
+    },
+    {
+      "source": "/starships/1",
+      "destination": "/starships/",
+      "permanent": true
+    },
+    {
+      "source": "/starships/1/",
+      "destination": "/starships/",
+      "permanent": true
+    },
+    {
+      "source": "/technology/1",
+      "destination": "/technology/",
+      "permanent": true
+    },
+    {
+      "source": "/technology/1/",
+      "destination": "/technology/",
+      "permanent": true
+    },
+    {
+      "source": "/upgrades/1",
+      "destination": "/upgrades/",
+      "permanent": true
+    },
+    {
+      "source": "/upgrades/1/",
+      "destination": "/upgrades/",
+      "permanent": true
+    },
+    {
+      "source": "/farm",
+      "destination": "/calculator/farm/",
+      "permanent": true
+    },
+    {
+      "source": "/farm/",
+      "destination": "/calculator/farm/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap-0.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap/",
+      "destination": "/sitemap-0.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    }
   ]
 }
