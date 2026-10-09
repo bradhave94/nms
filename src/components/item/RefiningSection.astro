@@ -2,12 +2,12 @@
 import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import NestedList from '@components/NestedList.astro';
-import { formatRefineryTime } from '@utils/itemFormatters';
+import { formatRefineryTime, REFINE_TIME_NOTE } from '@utils/itemFormatters';
 import type { UsedInItem } from '@utils/recipeTree';
 import { toWebp } from '@utils/icons';
 
 interface Props {
-  item: { Name: string };
+  item: { Id: string; Name: string };
   outputRefined: UsedInItem[];
   imageBaseUrl: string;
 }
@@ -51,8 +51,8 @@ const { item, outputRefined, imageBaseUrl } = Astro.props;
                       </span>
                     )}
                     {outputItem.Time && (
-                      <span class="rounded-sm bg-gray-700 px-2 py-1 text-xs text-cyan-200">
-                        Time: {formatRefineryTime(outputItem.Time)}
+                      <span class="rounded-sm bg-gray-700 px-2 py-1 text-xs text-cyan-200" title={REFINE_TIME_NOTE}>
+                        ~{formatRefineryTime(outputItem.Time, item.Id)} per batch
                       </span>
                     )}
                   </div>
