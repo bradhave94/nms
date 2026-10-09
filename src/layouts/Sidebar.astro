@@ -4,7 +4,10 @@ import { classNames } from '../utils/classNames.js';
 
 interface Props {
 	slug?: string;
+	showAds?: boolean;
 }
+
+const { showAds = true } = Astro.props;
 
 interface IconPath {
 	d: string;
@@ -636,13 +639,13 @@ const sectionLabelClasses =
 							})
 						}
 					</nav>
-				<NitroAd
+				{showAds && <NitroAd
 					id="nav-left"
 					class="nav-left-ad my-0 mt-4 max-h-[300px] min-h-[300px] w-[160px] max-w-[160px] overflow-hidden px-0"
 					minHeight={300}
 					sizes={[[160, 300]]}
 					mediaQuery="(min-width: 1024px)"
-				/>
+				/>}
 			</div>
 		</div>
 	</div>

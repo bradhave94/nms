@@ -32,6 +32,8 @@ export interface Props {
 	canonical?: string;
 	prevUrl?: string;
 	nextUrl?: string;
+	/** Set false on pages that must not carry ads (e.g. the 404 page). */
+	ads?: boolean;
 }
 
 const {
@@ -48,6 +50,7 @@ const {
 	canonical,
 	prevUrl,
 	nextUrl,
+	ads = true,
 } = Astro.props;
 const canonicalURL = canonical
 	? new URL(canonical, SITE.website)
@@ -128,7 +131,9 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 			crossorigin="anonymous"
 		/>
 
-		<!-- NitroPay -->
+		<!-- NitroPay (skipped on ad-free pages such as the 404) -->
+		{ads && (
+			<Fragment>
 		<script is:inline data-cfasync="false">
 			/* eslint-disable prefer-rest-params -- NitroPay stock snippet queues the Arguments object. */
 			window.nitroAds = window.nitroAds || {
@@ -145,6 +150,8 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 			/* eslint-enable prefer-rest-params */
 		</script>
 		<script is:inline data-cfasync="false" async src="https://s.nitropay.com/ads-2507.js"></script>
+			</Fragment>
+		)}
 
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
@@ -162,13 +169,13 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 		<script type="application/ld+json" set:html={mergedStructuredDataJson}></script>
 	</head>
 	<body class={`h-full overflow-x-hidden m-0 ${slug === '/' ? 'home' : ''}`}>
-		<Sidebar slug={slug}>
+		<Sidebar slug={slug} showAds={ads}>
 			<slot slot="layout" />
 		</Sidebar>
 		<SearchModal />
 		<Search />
 		<Footer />
-		<NitroGlobalAds />
+		{ads && <NitroGlobalAds />}
 		<Analytics />
 	</body>
 </html>
