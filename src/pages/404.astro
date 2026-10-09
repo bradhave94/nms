@@ -1,0 +1,64 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+const popular = [
+	{ name: 'Refining recipes', href: '/refining/', blurb: 'Every refiner recipe with ratios and times' },
+	{ name: 'Cooking recipes', href: '/cooking/', blurb: 'Nutrient Processor recipes and values' },
+	{ name: 'Crafting guide', href: '/crafting-guide/', blurb: 'What every craftable item needs' },
+	{ name: 'Crafting calculator', href: '/calculator/', blurb: 'Total raw materials for any build' },
+	{ name: 'All items', href: '/items/', blurb: 'Browse the full item catalog' },
+	{ name: 'Blog', href: '/blog/', blurb: 'Guides for expeditions, updates and farming' },
+];
+---
+
+<Layout
+	title="Page Not Found | No Man's Sky Recipes"
+	description="This page doesn't exist. Search the site or jump to refining, cooking, crafting and the calculator."
+	robots="noindex,follow"
+>
+	<section class="mx-auto max-w-3xl px-4 py-16 text-center">
+		<p class="text-sm font-semibold uppercase tracking-wider text-cyan-300">404</p>
+		<h1 class="mt-2 text-4xl font-bold text-white sm:text-6xl">Lost in space</h1>
+		<p class="mx-auto mt-4 max-w-xl text-lg text-sky-100/80">
+			We couldn't find that page. It may have moved after a game update. Search for the item or recipe you wanted, or start
+			from one of the pages below.
+		</p>
+		<button
+			type="button"
+			id="notfound-search"
+			class="mt-8 inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-black hover:bg-blue-500 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
+		>
+			<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+				<path
+					fill-rule="evenodd"
+					d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+					clip-rule="evenodd"></path>
+			</svg>
+			Search items and guides
+		</button>
+	</section>
+	<section class="mx-auto max-w-4xl px-4 pb-16">
+		<h2 class="mb-4 text-center text-2xl text-white">Popular pages</h2>
+		<ul class="m-0 grid list-none gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
+			{
+				popular.map((page) => (
+					<li>
+						<a
+							href={page.href}
+							class="block h-full rounded-xl border border-sky-900/60 bg-sky-950/30 p-4 text-white transition hover:border-sky-400/50 hover:bg-sky-900/30"
+						>
+							<span class="block text-lg font-semibold">{page.name}</span>
+							<span class="mt-1 block text-sm text-sky-100/70">{page.blurb}</span>
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</Layout>
+
+<script>
+	document.getElementById('notfound-search')?.addEventListener('click', () => {
+		document.getElementById('open-search')?.click();
+	});
+</script>
