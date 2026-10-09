@@ -1,7 +1,7 @@
 ---
 import '../../assets/css/tabulator.css';
 import TableHead from '@components/table/Head.astro';
-import TableCell from '@components/table/Cell.astro';
+import TableBody from '@components/table/Body.astro';
 import NitroAd from '@components/ads/NitroAd.astro';
 import { Image } from 'astro:assets';
 
@@ -9,16 +9,6 @@ interface Column {
   title: string;
   field: string;
 }
-
-type CellData = {
-  id: string;
-  name: string;
-  amount?: number;
-  colour: string;
-  image?: string;
-  description?: string;
-  value?: number;
-};
 
 export interface TableRow {
   input_1?: object;
@@ -43,8 +33,30 @@ export interface Props {
 const { title, image, image_width, image_height, columns, sort = 'output', data } = Astro.props;
 ---
 
+<style is:global>
+  .nms-sort {
+    display: none !important;
+  }
+  .cell-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  .cell-content {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  .cell-text {
+    margin-right: 10px;
+  }
+  .cell-amount {
+    font-size: 0.9em;
+    opacity: 0.8;
+  }
+</style>
+
 <style>
-  .table-wrapper {
+  .table-rows {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
   }
@@ -55,7 +67,7 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
   }
 </style>
 
-<div class="table-wrapper d-hidden" data-layout="table" data-astro-transition-persist="table-wrapper">
+<div class="table-wrapper" data-layout="table" data-astro-transition-persist="table-wrapper">
   <div
     class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-center before:bg-black/80 before:w-full before:h-full before:absolute before:left-0 before:top-0"
     style="background-image: url(/images/resources.png)"
@@ -111,19 +123,14 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
       </div>
     </div>
   </div>
-  <NitroAd id="table-above" class="px-4" />
-  <table id="table" data-columns={JSON.stringify(columns)} data-sort={sort}>
-    <TableHead columns={columns} />
-    <tbody>
-      {data.map((row) => (
-        <tr>
-          {columns.map((column) => (
-            <TableCell cell={row[column.field] as CellData | string | number} />
-          ))}
-        </tr>
-      ))}
-    </tbody>
-  </table>
+  <!-- Only the rows wait for Tabulator; the header (the LCP element) paints immediately. -->
+  <div class="table-rows d-hidden">
+    <NitroAd id="table-above" class="px-4" />
+    <table id="table" data-columns={JSON.stringify(columns)} data-sort={sort}>
+      <TableHead columns={columns} />
+      <TableBody columns={columns} data={data} />
+    </table>
+  </div>
 </div>
 
 <script>
@@ -159,6 +166,77 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
     return firstNumber?.[0] ? Number(firstNumber[0]) : Number.NEGATIVE_INFINITY;
   };
 
+  const imageBase = '/images/items/';
+  const parser = document.createElement('template');
+
+  // Visible text of a compact cell, without the amount badge.
+  const cellText = (value: unknown): string =>
+    String(value ?? '')
+      .replace(/<b>[^<]*<\/b>/g, '')
+      .replace(/<span class="nms-sort">[^<]*<\/span>/g, '')
+      .replace(/<[^>]*>/g, '')
+      .replace(/&amp;/g, '&')
+      .trim();
+
+  // Empty cells (recipes with fewer inputs) always sort to the bottom.
+  const sortByText = (
+    a: SortValue,
+    b: SortValue,
+    _aRow: unknown,
+    _bRow: unknown,
+    _column: unknown,
+    dir: string,
+  ): number => {
+    const textA = cellText(a);
+    const textB = cellText(b);
+    if (!textA && !textB) return 0;
+    if (!textA) return dir === 'asc' ? 1 : -1;
+    if (!textB) return dir === 'asc' ? -1 : 1;
+    return textA.localeCompare(textB);
+  };
+
+  // Expand compact server markup (<a data-c data-i>Name</a><b>amount</b>) into the item card.
+  const formatCell = (cell: { getValue: () => unknown }): string | HTMLElement => {
+    const value = cell.getValue();
+    if (typeof value !== 'string' || !value.includes('data-c=')) {
+      return typeof value === 'string' ? value : '';
+    }
+    parser.innerHTML = value;
+    const source = parser.content.querySelector('a');
+    if (!source) return value;
+
+    const link = document.createElement('a');
+    link.href = source.getAttribute('href') ?? '#';
+    link.className = 'cell-link';
+    const content = document.createElement('div');
+    content.className = 'cell-content';
+    content.style.background = `#${source.dataset.c ?? '333333'}`;
+    const text = document.createElement('span');
+    text.className = 'cell-text flex items-center gap-2 flex-wrap';
+    text.append(source.textContent ?? '');
+    const amount = parser.content.querySelector('b')?.textContent;
+    if (amount) {
+      const badge = document.createElement('span');
+      badge.className =
+        'cell-amount inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums';
+      badge.textContent = amount;
+      text.append(badge);
+    }
+    content.append(text);
+    if (source.dataset.i) {
+      const img = document.createElement('img');
+      img.src = `${imageBase}${source.dataset.i}`;
+      img.alt = '';
+      img.width = 50;
+      img.height = 50;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      content.append(img);
+    }
+    link.append(content);
+    return link;
+  };
+
   // Use requestAnimationFrame to defer execution until after React hydration
   requestAnimationFrame(() => {
     const tableElement = document.getElementById('table') as HTMLTableElement;
@@ -173,11 +251,11 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
       sorterParams: {
         alignEmptyValues: 'bottom',
       },
-      formatter: 'html',
+      formatter: formatCell,
       sorter:
         sort === element.field && sort === 'value'
           ? (a: SortValue, b: SortValue) => parseSortNumber(a) - parseSortNumber(b)
-          : undefined,
+          : sortByText,
     }));
     } catch (error) {
       console.error('Failed to parse table columns:', error);

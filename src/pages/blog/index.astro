@@ -41,7 +41,7 @@ const breadcrumbs = [
 	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
 	<section class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
 		<div class="mx-auto max-w-2xl lg:max-w-none">
-			<h1 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mt-16">No Man&apos;s Sky  Recipes Blog</h1>
+			<h1 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mt-16">No Man&apos;s Sky Recipes Blog</h1>
 			<p class="mt-2 text-lg/8 text-sky-200/80">
 				Guides, crafting breakdowns, and tips to help you get the most out of No Man&apos;s Sky.
 				Start with the <a href="/blog/no-mans-sky-returning-player-guide-2026" class="text-cyan-300 underline hover:text-cyan-200">returning player guide</a>
@@ -49,23 +49,29 @@ const breadcrumbs = [
 			</p>
 			<div class="mt-8 grid gap-8 sm:grid-cols-3 lg:mt-20">
 				{
-					posts.map((post) => (
+					posts.map((post, index) => (
 						<article class="group relative isolate flex flex-col overflow-hidden rounded-2xl border border-sky-900/60 bg-sky-950/30 transition hover:border-sky-400/50 hover:bg-sky-900/30">
 							<div class="relative aspect-video w-full shrink-0 overflow-hidden">
 								<img
 									src={post.data.heroImage ?? '/images/refiner.webp'}
-									alt={post.data.title}
+									alt=""
+									width="1536"
+									height="864"
+									loading={index < 3 ? 'eager' : 'lazy'}
+									decoding="async"
 									class="absolute inset-0 size-full bg-sky-950 object-cover transition-transform duration-300 group-hover:scale-105"
 								/>
 								<div class="absolute inset-0 ring-1 ring-inset ring-white/10"></div>
 							</div>
 							<div class="flex flex-1 flex-col p-5">
 								<div class="flex items-center gap-x-3 text-xs">
-									<time datetime={post.data.pubDate.toISOString().slice(0, 10)} class="text-sky-300/80">
-										{post.data.pubDate.toLocaleDateString('en-US', {
+									<time datetime={(post.data.updatedDate ?? post.data.pubDate).toISOString().slice(0, 10)} class="text-sky-300/80">
+										{post.data.updatedDate && post.data.updatedDate.getTime() > post.data.pubDate.getTime() ? 'Updated ' : ''}
+										{(post.data.updatedDate ?? post.data.pubDate).toLocaleDateString('en-US', {
 											year: 'numeric',
 											month: 'short',
 											day: 'numeric',
+											timeZone: 'UTC',
 										})}
 									</time>
 									{post.data.tags.slice(0, 2).map((tag: string) => (

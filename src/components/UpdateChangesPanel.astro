@@ -12,6 +12,8 @@ const diffRows = getUpdateDiffRows(meta);
 const hasDiff = diffRows.length > 0;
 const versionLabel = meta.versionLabel;
 const previousLabel = meta.previousVersionLabel;
+// The game uses the literal enum value "None" for unset fields.
+const showValue = (value: string): string => (value === 'None' ? '(not set)' : value);
 const originalVariantItem = meta.releaseVariant ? getById(meta.releaseVariant.BaseItemId) : undefined;
 ---
 
@@ -60,11 +62,11 @@ const originalVariantItem = meta.releaseVariant ? getById(meta.releaseVariant.Ba
 							<dl class="m-0 grid min-w-0 gap-3 sm:grid-cols-2">
 								<div class="min-w-0">
 									<dt class="text-xs text-amber-200/90">Before ({previousLabel})</dt>
-									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-amber-100/70">{row.before}</dd>
+									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-amber-100/70">{showValue(row.before)}</dd>
 								</div>
 								<div class="min-w-0">
 									<dt class="text-xs text-amber-200/90">After ({versionLabel})</dt>
-									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-white">{row.after}</dd>
+									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-white">{showValue(row.after)}</dd>
 								</div>
 							</dl>
 						</section>

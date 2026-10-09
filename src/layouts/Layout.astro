@@ -1,6 +1,6 @@
 ---
 import '../assets/css/main.css';
-import { inject } from '@vercel/analytics';
+import Analytics from '@vercel/analytics/astro';
 import type { JsonLdObject } from '@utils/structuredData.js';
 import {
 	buildOrganizationSchema,
@@ -32,6 +32,8 @@ export interface Props {
 	canonical?: string;
 	prevUrl?: string;
 	nextUrl?: string;
+	/** Set false on pages that must not carry ads (e.g. the 404 page). */
+	ads?: boolean;
 }
 
 const {
@@ -48,6 +50,7 @@ const {
 	canonical,
 	prevUrl,
 	nextUrl,
+	ads = true,
 } = Astro.props;
 const canonicalURL = canonical
 	? new URL(canonical, SITE.website)
@@ -81,7 +84,6 @@ const mergedStructuredData: JsonLdObject[] = [
 ];
 const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 
-inject();
 ---
 
 <!DOCTYPE html>
@@ -89,7 +91,8 @@ inject();
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/png" href="/images/icon.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/images/favicon-32.png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180" />
 		<link rel="canonical" href={canonicalURL} />
 		{prevHref && <link rel="prev" href={prevHref} />}
 		{nextHref && <link rel="next" href={nextHref} />}
@@ -128,7 +131,9 @@ inject();
 			crossorigin="anonymous"
 		/>
 
-		<!-- NitroPay -->
+		<!-- NitroPay (skipped on ad-free pages such as the 404) -->
+		{ads && (
+			<Fragment>
 		<script is:inline data-cfasync="false">
 			/* eslint-disable prefer-rest-params -- NitroPay stock snippet queues the Arguments object. */
 			window.nitroAds = window.nitroAds || {
@@ -145,6 +150,8 @@ inject();
 			/* eslint-enable prefer-rest-params */
 		</script>
 		<script is:inline data-cfasync="false" async src="https://s.nitropay.com/ads-2507.js"></script>
+			</Fragment>
+		)}
 
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
@@ -162,12 +169,13 @@ inject();
 		<script type="application/ld+json" set:html={mergedStructuredDataJson}></script>
 	</head>
 	<body class={`h-full overflow-x-hidden m-0 ${slug === '/' ? 'home' : ''}`}>
-		<Sidebar slug={slug}>
+		<Sidebar slug={slug} showAds={ads}>
 			<slot slot="layout" />
 		</Sidebar>
 		<SearchModal />
 		<Search />
 		<Footer />
-		<NitroGlobalAds />
+		{ads && <NitroGlobalAds />}
+		<Analytics />
 	</body>
 </html>

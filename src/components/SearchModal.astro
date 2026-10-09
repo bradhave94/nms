@@ -26,21 +26,21 @@ const imageBaseUrl = SITE.imageBaseUrl;
 	<div id="site-search-backdrop" class="absolute inset-0 bg-black/40"></div>
 
 	<div id="site-search-modal" class="relative z-10 flex min-h-full items-center justify-center overflow-y-auto p-4">
-		<div class="w-full max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-black shadow-2xl ring-1 ring-blue-500 ring-opacity-5 transition-all">
+		<div id="site-search-panel" class="w-full max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-black shadow-2xl ring-1 ring-blue-500 ring-opacity-5 transition-all">
 			<div class="relative">
 				<svg class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 					<path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
 				</svg>
 
-				<input id="search-input" type="text" class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." role="combobox" aria-expanded="false" aria-controls="options" aria-label="Search items and blog posts" />
+				<input id="search-input" type="text" class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." aria-label="Search items and blog posts" />
 				<p class="text-sm px-4 text-white">Select Categories</p>
 				<div class="flex flex-wrap gap-2 px-4 pb-4 pt-2">
 					{
 						filters.map((filter) => {
 							return (
 								<div class="inline-flex">
-									<input type="checkbox" class="peer hidden" name="type-filter" id={filter.id} value={filter.id} tabindex="-1" />
-									<label for={filter.id} class="select-none cursor-pointer rounded-lg border-2 border-blue-500 py-0 px-1.5 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:bg-blue-500 peer-checked:text-black">
+									<input type="checkbox" class="peer sr-only" name="type-filter" id={filter.id} value={filter.id} />
+									<label for={filter.id} class="select-none cursor-pointer rounded-lg border-2 border-blue-500 py-0 px-1.5 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:bg-blue-500 peer-checked:text-black peer-focus-visible:ring-2 peer-focus-visible:ring-white">
 										{filter.name}
 									</label>
 								</div>
@@ -127,9 +127,10 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			return;
 		}
 
+		const cacheKey = `${selectedTypes.slice().sort().join(',')}|${searchTerm}`;
 		// Check cache first before fetching
-		if (searchCache.has(searchTerm)) {
-			const cachedResults = searchCache.get(searchTerm);
+		if (searchCache.has(cacheKey)) {
+			const cachedResults = searchCache.get(cacheKey);
 			if (cachedResults) {
 				displayResults(cachedResults, selectedTypes);
 			}
@@ -142,6 +143,8 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			const searchDataset = await loadSearchDataset();
 			const filteredResults = searchDataset
 				.filter((result) => {
+					// Apply the category filter before ranking and the result cap.
+					if (selectedTypes.length && !selectedTypes.includes(result.type)) return false;
 					const nameMatch = result.name.toLowerCase().includes(searchTerm);
 					const extra =
 						typeof result.searchText === 'string' ? result.searchText.toLowerCase() : '';
@@ -163,7 +166,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 					searchCache.delete(firstKey);
 				}
 			}
-			searchCache.set(searchTerm, groupedResults);
+			searchCache.set(cacheKey, groupedResults);
 			displayResults(groupedResults, selectedTypes);
 		} catch (error) {
 			if (import.meta.env.DEV) {
@@ -234,13 +237,10 @@ const imageBaseUrl = SITE.imageBaseUrl;
 				resultsList.appendChild(h3);
 
 				const ul = document.createElement('ul');
-				ul.setAttribute('role', 'listbox');
 				ul.classList.add('flex', 'flex-col', 'gap-2', 'p-0', 'list-none');
 
 				filteredGroupResults.forEach((result, index) => {
 					const li = document.createElement('li');
-					li.setAttribute('role', 'option');
-					li.setAttribute('tabindex', '0');
 					li.setAttribute('data-index', String(index));
 
 					const a = document.createElement('a');
@@ -284,37 +284,38 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		setupKeyboardNavigation();
 	}
 
+	function getResultLinks() {
+		return resultsList ? Array.from(resultsList.querySelectorAll('a')) : [];
+	}
+
 	function setupKeyboardNavigation() {
 		if (!searchInput || !resultsList) return;
 
-		const resultItems = Array.from(resultsList.querySelectorAll('li[role="option"]'));
-		resultItems.forEach((item, index) => {
-			item.addEventListener('keydown', (e) => {
-				switch (e.key) {
-					case 'ArrowDown':
-						e.preventDefault();
-						if (index < resultItems.length - 1) {
-							resultItems[index + 1].focus();
-						}
-						break;
-					case 'ArrowUp':
-						e.preventDefault();
-						if (index > 0) {
-							resultItems[index - 1].focus();
-						} else {
-							searchInput.focus();
-						}
-						break;
-					case 'Enter': {
-						e.preventDefault();
-						const link = item.querySelector('a');
-						if (link) {
-							link.click();
-						}
-						break;
+		const resultLinks = getResultLinks();
+		resultLinks.forEach((link, index) => {
+			link.addEventListener('keydown', (e) => {
+				if (e.key === 'ArrowDown') {
+					e.preventDefault();
+					resultLinks[index + 1]?.focus();
+				} else if (e.key === 'ArrowUp') {
+					e.preventDefault();
+					if (index > 0) {
+						resultLinks[index - 1].focus();
+					} else {
+						searchInput.focus();
 					}
 				}
 			});
 		});
 	}
+
+	searchInput?.addEventListener('keydown', (e) => {
+		if (e.key === 'ArrowDown') {
+			const first = getResultLinks()[0];
+			if (first) {
+				e.preventDefault();
+				first.focus();
+			}
+		}
+	});
 </script>

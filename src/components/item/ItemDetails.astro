@@ -188,12 +188,13 @@ const {
       </div>
     )}
 
-    {deploysIntoId && (
+    {/* Only link targets that exist in the catalog; others (e.g. SEA_TRASH) have no page. */}
+    {deploysIntoId && deploysIntoItemName && (
       <div class="mt-2">
         <p class="inline-flex items-center gap-2 m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           Installs as:
           <a href={getSlug(deploysIntoId)} class="text-cyan-300 hover:text-cyan-200">
-            {deploysIntoItemName ?? deploysIntoId}
+            {deploysIntoItemName}
           </a>
         </p>
       </div>

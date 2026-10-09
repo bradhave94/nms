@@ -2,10 +2,9 @@ import { defineConfig, envField } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
 import vercel from '@astrojs/vercel';
 import tailwindcss from "@tailwindcss/vite";
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
-import { SITE } from './src/config.ts';
 import trailingSlashLinks from './src/integrations/trailingSlashLinks.ts';
 import { writeIconWebps } from './scripts/icon-webp.mjs';
 
@@ -16,6 +15,26 @@ const LEGACY_REDIRECT_PATHS = new Set(
   legacyRedirects.map(({ source }) => source.replace(/\/$/, ''))
 );
 
+// Blog posts get a real <lastmod> (updatedDate, else pubDate) read from their frontmatter.
+// Data pages get none: their content only changes with game updates, and a shared
+// fake date makes Google ignore lastmod for the whole site.
+const BLOG_DIR = new URL('./src/content/blog/', import.meta.url);
+const readFrontmatterDate = (source, key) => {
+  const match = source.match(new RegExp(`^${key}:\\s*["']?(\\d{4}-\\d{2}-\\d{2})`, 'm'));
+  return match ? match[1] : undefined;
+};
+const BLOG_LASTMOD = new Map(
+  readdirSync(BLOG_DIR)
+    .filter((file) => file.endsWith('.md') || file.endsWith('.mdx'))
+    .map((file) => {
+      const source = readFileSync(new URL(file, BLOG_DIR), 'utf8');
+      const date = readFrontmatterDate(source, 'updatedDate') ?? readFrontmatterDate(source, 'pubDate');
+      return [`/blog/${file.replace(/\.mdx?$/, '')}`, date];
+    })
+    .filter(([, date]) => Boolean(date))
+);
+const LATEST_BLOG_DATE = [...BLOG_LASTMOD.values()].sort().at(-1);
+
 const SITEMAP_EXCLUDED_PATHS = new Set([
   '/feedback',
   '/privacy-policy',
@@ -24,6 +43,9 @@ const SITEMAP_EXCLUDED_PATHS = new Set([
   '/crafting-guide/cards',
   '/creatures/affinites',
   '/guides',
+  // noindex pages
+  '/alliances/admin',
+  '/alliances/submit',
 ]);
 
 const shouldIncludeInSitemap = (page) => {
@@ -39,6 +61,11 @@ const shouldIncludeInSitemap = (page) => {
   }
 
   if (pathname.startsWith('/guides/')) {
+    return false;
+  }
+
+  // /creatures/species/<ID>/ are redirect stubs to /creatures/<ID>/ (the index stays).
+  if (/^\/creatures\/species\/[^/]+$/.test(pathname)) {
     return false;
   }
 
@@ -81,9 +108,16 @@ export default defineConfig({
       filter: shouldIncludeInSitemap,
       // On-demand pages aren't discovered by the sitemap integration.
       customPages: ['https://nomansskyrecipes.com/alliances/'],
-      lastmod: new Date(SITE.version_date),
-      changefreq: 'weekly',
-      priority: 0.7,
+      // Alliance listings are rendered on demand, so they get their own SSR sitemap.
+      customSitemaps: ['https://nomansskyrecipes.com/alliances/sitemap.xml'],
+      serialize: (item) => {
+        const pathname = new URL(item.url).pathname.replace(/\/$/, '') || '/';
+        const lastmod = pathname === '/blog' ? LATEST_BLOG_DATE : BLOG_LASTMOD.get(pathname);
+        return {
+          url: item.url,
+          ...(lastmod ? { lastmod: new Date(`${lastmod}T00:00:00Z`).toISOString() } : {}),
+        };
+      },
     })
   ],
   vite: {

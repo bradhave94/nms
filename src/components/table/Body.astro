@@ -1,0 +1,48 @@
+---
+// Compact server-rendered rows for the recipe tables (refining, cooking, crafting guide).
+// Each item cell is just its link, name, amount, colour and icon id; Tabulator expands it
+// into the coloured card with the icon on the client (formatCell in Table.astro), so the
+// HTML stays small and icons load only for rows on screen. Crawlers still get every recipe
+// and link. This component deliberately has no <style> block: scoped styles would add a
+// data-astro-cid attribute to every cell.
+import { getSlug } from '@utils/lookup.js';
+import { toWebp } from '@utils/icons';
+
+type CellData = {
+  id: string;
+  name: string;
+  amount?: number;
+  colour: string;
+  image?: string;
+  href?: string;
+};
+
+export interface Props {
+  columns: Array<{ field: string }>;
+  data: Array<Record<string, unknown>>;
+}
+
+const { columns, data } = Astro.props;
+
+const isItemCell = (cell: unknown): cell is CellData =>
+  Boolean(cell && typeof cell === 'object' && 'id' in cell);
+---
+
+<tbody>
+  {data.map((row) => (
+    <tr>
+      {columns.map((column) => {
+        const cell = row[column.field];
+        if (isItemCell(cell)) {
+          return (
+            <td><a href={cell.href ?? getSlug(cell.id)} data-c={cell.colour} data-i={cell.image ? toWebp(cell.image) : undefined}>{cell.name}</a>{cell.amount ? <b>{cell.amount.toLocaleString()}</b> : null}</td>
+          );
+        }
+        if (typeof cell === 'number') {
+          return <td><span class="nms-sort">{cell}</span>{cell.toLocaleString()}</td>;
+        }
+        return <td>{typeof cell === 'string' ? cell : null}</td>;
+      })}
+    </tr>
+  ))}
+</tbody>

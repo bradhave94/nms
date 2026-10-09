@@ -34,7 +34,7 @@ const AFFINITY_COLOURS: Record<string, string> = {
 	'Mechanical': '2C3E50',
 	'Anomalous': '6C3483',
 	'Physical': '333333',
-	'None': '333333',
+	'Varies': '333333',
 };
 
 const RARITY_COLOURS: Record<string, string> = {
@@ -199,7 +199,8 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 				<TableHead columns={columns} />
 				<tbody>
 					{species.map((s) => {
-						const affinity = s.BattleForcedAffinityDisplay ?? 'None';
+						// Species without a forced affinity roll one per planet.
+						const affinity = s.BattleForcedAffinityDisplay ?? 'Varies';
 						const battle = s.CanBeUsedInBattle ? 'Yes' : 'No';
 						const rarity = s.Rarity ?? 'Unknown';
 						const moveArea = s.MoveArea ?? 'Unknown';

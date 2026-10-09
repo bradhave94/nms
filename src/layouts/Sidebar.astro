@@ -4,7 +4,10 @@ import { classNames } from '../utils/classNames.js';
 
 interface Props {
 	slug?: string;
+	showAds?: boolean;
 }
+
+const { showAds = true } = Astro.props;
 
 interface IconPath {
 	d: string;
@@ -43,41 +46,41 @@ const getBestMatchHref = (currentPathname: string, navHrefs: string[]): string |
 };
 
 const toolsNav: NavItem[] = [
-	{ name: 'Refining', href: '/refining', icon: 'funnel' },
-	{ name: 'Cooking', href: '/cooking', icon: 'beaker' },
-	{ name: 'Crafting', href: '/crafting-guide', icon: 'wrench-screwdriver' },
+	{ name: 'Refining', href: '/refining/', icon: 'funnel' },
+	{ name: 'Cooking', href: '/cooking/', icon: 'beaker' },
+	{ name: 'Crafting', href: '/crafting-guide/', icon: 'wrench-screwdriver' },
 ];
 
 const calculatorsNav: NavItem[] = [
-	{ name: 'Calculator', href: '/calculator', icon: 'calculator' },
-	{ name: 'Crafting Planner', href: '/calculator/planner', icon: 'archive-box' },
-	{ name: 'Reverse Calculator', href: '/calculator/reverse', icon: 'scale' },
-	{ name: 'Farm Calculator', href: '/calculator/farm', icon: 'sun' },
-	{ name: 'Base Power Calculator', href: '/calculator/power', icon: 'bolt' },
+	{ name: 'Calculator', href: '/calculator/', icon: 'calculator' },
+	{ name: 'Crafting Planner', href: '/calculator/planner/', icon: 'archive-box' },
+	{ name: 'Reverse Calculator', href: '/calculator/reverse/', icon: 'scale' },
+	{ name: 'Farm Calculator', href: '/calculator/farm/', icon: 'sun' },
+	{ name: 'Base Power Calculator', href: '/calculator/power/', icon: 'bolt' },
 ];
 
 const catalogsNav: NavItem[] = [
-	{ name: 'All Items', href: '/items', icon: 'squares-2x2' },
-	{ name: 'Buildings', href: '/buildings', icon: 'home-modern' },
-	{ name: 'Corvette', href: '/corvette', icon: 'globe-alt' },
-	{ name: 'Creatures', href: '/creatures', icon: 'bug-ant' },
-	{ name: 'Curiosities', href: '/curiosities', icon: 'question-mark-circle' },
-	{ name: 'Exocraft', href: '/exocraft', icon: 'rocket-launch' },
-	{ name: 'Fish', href: '/fish', icon: 'scale' },
-	{ name: 'Food', href: '/food', icon: 'cake' },
-	{ name: 'Other', href: '/other', icon: 'paper-clip' },
-	{ name: 'Products', href: '/products', icon: 'archive-box' },
-	{ name: 'Raw Materials', href: '/raw', icon: 'bolt' },
-	{ name: 'Starships', href: '/starships', icon: 'paper-airplane' },
-	{ name: 'Technology', href: '/technology', icon: 'cog' },
-	{ name: 'Upgrades', href: '/upgrades', icon: 'wrench' },
+	{ name: 'All Items', href: '/items/', icon: 'squares-2x2' },
+	{ name: 'Buildings', href: '/buildings/', icon: 'home-modern' },
+	{ name: 'Corvette', href: '/corvette/', icon: 'globe-alt' },
+	{ name: 'Creatures', href: '/creatures/', icon: 'bug-ant' },
+	{ name: 'Curiosities', href: '/curiosities/', icon: 'question-mark-circle' },
+	{ name: 'Exocraft', href: '/exocraft/', icon: 'rocket-launch' },
+	{ name: 'Fish', href: '/fish/', icon: 'scale' },
+	{ name: 'Food', href: '/food/', icon: 'cake' },
+	{ name: 'Other', href: '/other/', icon: 'paper-clip' },
+	{ name: 'Products', href: '/products/', icon: 'archive-box' },
+	{ name: 'Raw Materials', href: '/raw/', icon: 'bolt' },
+	{ name: 'Starships', href: '/starships/', icon: 'paper-airplane' },
+	{ name: 'Technology', href: '/technology/', icon: 'cog' },
+	{ name: 'Upgrades', href: '/upgrades/', icon: 'wrench' },
 ];
 
 const moreNav: NavItem[] = [
-	{ name: 'Alliances', href: '/alliances', icon: 'shield' },
-	{ name: 'New Items', href: '/new', icon: 'sparkles' },
-	{ name: 'Blog', href: '/blog', icon: 'book-open' },
-	{ name: 'Feedback', href: '/feedback', icon: 'envelope' },
+	{ name: 'Alliances', href: '/alliances/', icon: 'shield' },
+	{ name: 'New Items', href: '/new/', icon: 'sparkles' },
+	{ name: 'Blog', href: '/blog/', icon: 'book-open' },
+	{ name: 'Feedback', href: '/feedback/', icon: 'envelope' },
 ];
 
 const allNavHrefs = [...toolsNav, ...calculatorsNav, ...catalogsNav, ...moreNav].map((item) => item.href);
@@ -264,7 +267,7 @@ const iconClasses = (active: boolean) =>
 	);
 
 const sectionLabelClasses =
-	'px-2 pt-3 pb-1 text-xs font-medium uppercase tracking-wider text-gray-500';
+	'px-2 pt-3 pb-1 text-xs font-medium uppercase tracking-wider text-gray-400';
 ---
 
 <div>
@@ -273,6 +276,7 @@ const sectionLabelClasses =
 		id="mobile-sidebar"
 		class="pointer-events-none fixed inset-0 z-40 lg:hidden"
 		aria-hidden="true"
+		inert
 	>
 		<div
 			id="mobile-backdrop"
@@ -519,6 +523,8 @@ const sectionLabelClasses =
 						<img
 							class="block h-auto w-full max-w-[12.5rem]"
 							src="/images/logo-nms.webp"
+							width="600"
+							height="57"
 							alt="No Man's Sky Recipes"
 						/>
 					</a>
@@ -633,13 +639,13 @@ const sectionLabelClasses =
 							})
 						}
 					</nav>
-				<NitroAd
+				{showAds && <NitroAd
 					id="nav-left"
 					class="nav-left-ad my-0 mt-4 max-h-[300px] min-h-[300px] w-[160px] max-w-[160px] overflow-hidden px-0"
 					minHeight={300}
 					sizes={[[160, 300]]}
 					mediaQuery="(min-width: 1024px)"
-				/>
+				/>}
 			</div>
 		</div>
 	</div>
@@ -728,6 +734,8 @@ const sectionLabelClasses =
 			<button
 				id="sidebar-open"
 				type="button"
+				aria-expanded="false"
+				aria-controls="mobile-sidebar"
 				class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-black/80 text-white hover:bg-gray-900 hover:text-white focus:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500"
 			>
 				<span class="sr-only">Open sidebar</span>
@@ -763,17 +771,24 @@ const sectionLabelClasses =
 		if (!mobileSidebar || !mobileBackdrop || !mobilePanel) return;
 		mobileSidebar.classList.remove('pointer-events-none');
 		mobileSidebar.setAttribute('aria-hidden', 'false');
+		mobileSidebar.inert = false;
+		sidebarOpenBtn?.setAttribute('aria-expanded', 'true');
 		mobileBackdrop.classList.remove('opacity-0');
 		mobileBackdrop.classList.add('opacity-100');
 		mobilePanel.classList.remove('-translate-x-full');
 		mobilePanel.classList.add('translate-x-0');
 		document.body.classList.add('overflow-hidden');
+		sidebarCloseBtn?.focus();
 	}
 
 	function closeMobileDrawer(): void {
 		if (!mobileSidebar || !mobileBackdrop || !mobilePanel) return;
 		mobileSidebar.classList.add('pointer-events-none');
+		const hadFocus = mobileSidebar.contains(document.activeElement);
 		mobileSidebar.setAttribute('aria-hidden', 'true');
+		mobileSidebar.inert = true;
+		sidebarOpenBtn?.setAttribute('aria-expanded', 'false');
+		if (hadFocus) sidebarOpenBtn?.focus();
 		mobileBackdrop.classList.remove('opacity-100');
 		mobileBackdrop.classList.add('opacity-0');
 		mobilePanel.classList.remove('translate-x-0');

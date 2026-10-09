@@ -320,8 +320,7 @@ const statPills: StatPill[] = [
 				label: 'Affinity',
 				value:
 					species.BattleForcedAffinityDisplay ??
-					formatAffinity(species.BattleForcedAffinity) ??
-					'None',
+					(species.BattleForcedAffinity ? formatAffinity(species.BattleForcedAffinity) : 'Varies'),
 			}
 		: null,
 	{ label: 'Creature Type', value: species.CreatureType ? toTitleCase(species.CreatureType) : 'Unknown' },
