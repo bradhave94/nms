@@ -2,7 +2,7 @@
 title: "Craft Antimatter Housing (NMS)"
 description: "Craft Antimatter Housing in No Man's Sky: Awakenings blueprint unlock, Oxygen + Ferrite Dust recipe, and Warp Cell fuel."
 pubDate: 2026-09-14
-updatedDate: 2026-09-14
+updatedDate: 2026-10-09
 heroImage: "/images/blog/how-to-craft-antimatter-housing-no-mans-sky.webp"
 category: "blog"
 tags:
@@ -38,7 +38,7 @@ faqs:
   - question: "Do you need Antimatter Housing to install the Hyperdrive?"
     answer: "No. The starship Hyperdrive is built from Chromatic Metal and Microprocessors. Housing only goes into the Warp Cells that fuel it."
   - question: "Is there a refine shortcut past Housing?"
-    answer: "Yes. The Antimatter Bypass refiner recipes make a Warp Cell without Housing. They take 600 seconds. Full input lists are in the best refiner recipes guide."
+    answer: "Yes. The Antimatter Bypass refiner recipes make a Warp Cell without Housing. The wiki lists about 300 seconds per Warp Cell. Full input lists are in the best refiner recipes guide."
 ---
 
 [Antimatter Housing](/products/AM_HOUSING/) is the can that makes antimatter safe to carry. You craft it early so you can build [Warp Cells](/products/HYPERFUEL1/) and leave your starter system. This post covers the unlock, the recipe, and the Warp Cell craft, not the whole Awakenings questline. If you're relearning the early game after a long break, the [returning player guide](/blog/no-mans-sky-returning-player-guide-2026) covers the rest.
@@ -85,7 +85,7 @@ Feed the Warp Cell into the Hyperdrive. People sometimes mix this up, so to be c
 
 One Warp Cell is enough for that first yellow-system hop in Awakenings. Later travel eats more cells. The [galaxies guide](/blog/no-mans-sky-galaxies-guide) covers long-range fuel planning when you start pushing toward a galactic centre.
 
-Optional shortcut: [refining](/refining) has Antimatter Bypass recipes that output a Warp Cell without crafting Housing first. The game data says they take 600 seconds (the wiki still says 300, which I think is out of date). Inputs are Condensed Carbon or Carbon, Sodium or Sodium Nitrate, plus a lot of Chromatic Metal. The full breakdown is in [best refiner recipes](/blog/best-no-mans-sky-refiner-recipes). It's worth it when you're swimming in Chromatic Metal and don't want to babysit Housing crafts.
+Optional shortcut: [refining](/refining) has Antimatter Bypass recipes that output a Warp Cell without crafting Housing first. The wiki lists about 300 seconds per Warp Cell. The raw 600 in the game files isn't seconds, so ignore it if you see it in a datamine. Inputs are Condensed Carbon or Carbon, Sodium or Sodium Nitrate, plus a lot of Chromatic Metal. The full breakdown is in [best refiner recipes](/blog/best-no-mans-sky-refiner-recipes). It's worth it when you're swimming in Chromatic Metal and don't want to babysit Housing crafts.
 
 ## Later freighter uses
 

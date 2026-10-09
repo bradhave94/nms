@@ -1,15 +1,41 @@
+import products from '../datav2/Products.json';
+
 export const formatSignedPercent = (value: number): string => `${value >= 0 ? '+' : ''}${(value * 100).toLocaleString()}%`;
 
-export const formatRefineryTime = (time?: string): string | undefined => {
+// Refinery.json `Time` is the game's raw TimeToMake value, not seconds.
+// The No Man's Sky wiki (nomanssky.fandom.com) lists refine times that equal
+// TimeToMake / 250 when the output is a substance (Copper -> Chromatic Metal: 90 -> 0.36s)
+// and TimeToMake / 2 when the output is a product (Antimatter Bypass Warp Cell: 600 -> 300s).
+// The wiki's own timings (20 Di-hydrogen Jelly -> 800 Di-hydrogen in 80s) show the value is
+// per batch, i.e. one run of the recipe. The wiki also warns in-game timers are often off,
+// so treat the result as approximate.
+const productOutputIds = new Set(
+  (products as Array<{ Id: string; ProductCategory?: string | null }>)
+    .filter((product) => Boolean(product.ProductCategory))
+    .map((product) => product.Id)
+);
+
+export const getRefineSecondsPerBatch = (time?: string, outputId?: string): number | undefined => {
   if (!time) return undefined;
-  const seconds = Number.parseFloat(time);
-  if (!Number.isFinite(seconds) || seconds <= 0) return time;
+  const raw = Number.parseFloat(time);
+  if (!Number.isFinite(raw) || raw <= 0) return undefined;
+  const divisor = outputId && productOutputIds.has(outputId) ? 2 : 250;
+  return raw / divisor;
+};
+
+export const REFINE_TIME_NOTE =
+  "Approximate time per batch (one run of the recipe), converted from game data to match the No Man's Sky wiki. In-game refine timers are often off.";
+
+export const formatRefineryTime = (time?: string, outputId?: string): string | undefined => {
+  const seconds = getRefineSecondsPerBatch(time, outputId);
+  if (seconds === undefined) return time || undefined;
   if (seconds >= 60) {
     const minutes = Math.floor(seconds / 60);
     const remainder = Math.round(seconds % 60);
     return remainder > 0 ? `${minutes}m ${remainder}s` : `${minutes}m`;
   }
-  return `${Math.round(seconds)}s`;
+  if (seconds >= 10) return `${Math.round(seconds)}s`;
+  return `${Number.parseFloat(seconds.toFixed(2))}s`;
 };
 
 export const formatStatName = (name: string): string =>

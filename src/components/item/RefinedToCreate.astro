@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Accordion from '@components/Accordion.astro';
 import { getSlug } from '@utils/lookup.js';
-import { formatRefineryTime } from '@utils/itemFormatters';
+import { formatRefineryTime, REFINE_TIME_NOTE } from '@utils/itemFormatters';
 import type { GroupedUsedIn } from '@utils/recipeTree';
 import { toWebp } from '@utils/icons';
 
@@ -50,8 +50,8 @@ const { item, groupedInputRefined, imageBaseUrl } = Astro.props;
                       </span>
                     )}
                     {usedInItem.Time && (
-                      <span class="rounded-sm bg-gray-700 px-1.5 py-0.5 text-xs text-cyan-200">
-                        {formatRefineryTime(usedInItem.Time)}
+                      <span class="rounded-sm bg-gray-700 px-1.5 py-0.5 text-xs text-cyan-200" title={REFINE_TIME_NOTE}>
+                        ~{formatRefineryTime(usedInItem.Time, usedInItem.Id)} per batch
                       </span>
                     )}
                   </div>

@@ -2,7 +2,7 @@
 title: "Best NMS Refiner Recipes"
 description: "Best No Man's Sky refiner recipes for nanites, units, and chromatic metal — exact ratios, Chlorine loop, and which refiner you need."
 pubDate: 2024-10-09
-updatedDate: 2024-10-09
+updatedDate: 2026-10-09
 heroImage: "/images/blog/refiner-recipes.webp"
 category: "blog"
 tags:
@@ -30,7 +30,7 @@ faqs:
   - question: "What is the best refiner recipe for making units?"
     answer: "The Chlorine expansion loop: 1 Chlorine + 2 Oxygen → 6 Chlorine. Feed the output back as input and your stack multiplies every cycle. A full stack of Chlorine sells for millions of units at any Galactic Trade Terminal."
   - question: "What refiner do I need for Chromatic Metal?"
-    answer: "Any refiner works for basic chromatic metal conversion. For the most efficient recipes (like Activated Indium + Pure Ferrite → 8 Chromatic Metal), you only need a portable or medium refiner."
+    answer: "Any refiner works for basic chromatic metal conversion. For the most efficient recipes (like Activated Indium + Pure Ferrite → 8 Chromatic Metal), you need two input slots. That means a Medium or Large Refiner, or the Personal Refiner Mk 2. The Portable Refiner only takes one ingredient."
   - question: "How do I make Condensed Carbon faster?"
     answer: "Don't just refine 2 Carbon into 1 Condensed Carbon. Use the Oxygenate Carbon recipe instead: 1 Condensed Carbon + 2 Oxygen → 6 Condensed Carbon. It multiplies your stock every cycle."
 ---
@@ -215,7 +215,7 @@ Warp Cells from scratch without crafting Antimatter:
 
 ## Which refiner do you actually need?
 
-Most of these recipes work in any refiner: Portable, Medium, or Large. The only exceptions are the three-input recipes (stellar fusion Chromatic Metal, Warp Cells, and alloy recipes), which require a Large Refiner.
+Single-input recipes work in any refiner, Portable included. Two-input recipes need a Medium Refiner, a Large Refiner, or the Personal Refiner Mk 2, since the Portable and Personal Refiners only take one ingredient. Three-input recipes (stellar fusion Chromatic Metal, Warp Cells, and alloy recipes) need a Large Refiner.
 
 If you're just starting out, build a Medium Refiner as soon as possible. The Portable one caps out fast. The Large Refiner unlocks the three-input slots but doesn't speed up single/dual input recipes.
 
