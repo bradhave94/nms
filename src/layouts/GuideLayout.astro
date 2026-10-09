@@ -44,6 +44,12 @@ const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[
 const guideFaqs = (guide.data.faqs ?? []) as Array<{ question: string; answer: string }>;
 const publishedTime = guide.data.pubDate.toISOString();
 const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString();
+const updatedDate =
+	guide.data.updatedDate && guide.data.updatedDate.getTime() > guide.data.pubDate.getTime()
+		? guide.data.updatedDate
+		: undefined;
+const formatDate = (date: Date): string =>
+	date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
 
 <Layout
@@ -61,6 +67,10 @@ const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString(
 			<img
 				src={guide.data.heroImage}
 				alt=""
+				width="1536"
+				height="864"
+				fetchpriority="high"
+				decoding="async"
 				class="absolute inset-0 -z-10 size-full object-cover brightness-[0.3]"
 			/>
 			<div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#051413] via-[#051413]/60 to-transparent"></div>
@@ -69,12 +79,13 @@ const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString(
 				<div class="mx-auto max-w-3xl py-20 sm:py-28 lg:py-32 text-center">
 					<div class="flex items-center justify-center gap-x-4 text-sm">
 						<time datetime={guide.data.pubDate.toISOString().slice(0, 10)} class="text-sky-300/90">
-							{guide.data.pubDate.toLocaleDateString('en-US', {
-								year: 'numeric',
-								month: 'long',
-								day: 'numeric',
-							})}
+							{formatDate(guide.data.pubDate)}
 						</time>
+						{updatedDate && (
+							<span class="text-sky-300/90">
+								Updated <time datetime={updatedDate.toISOString().slice(0, 10)}>{formatDate(updatedDate)}</time>
+							</span>
+						)}
 					</div>
 					<h1 class="mt-4 text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl">{guide.data.title}</h1>
 					<p class="mt-6 text-lg font-medium text-pretty text-sky-100/80 sm:text-xl/8">{guide.data.description}</p>
