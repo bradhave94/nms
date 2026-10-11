@@ -110,9 +110,11 @@ const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const schemaResult = buildItemPageSchema({
 	...prepareItemPageSchemaInput(item, siteOrigin, Astro.url.pathname),
 	dateModified: getItemDateModified(item.Id),
+	pageTitle: title,
+	pageDescription: description,
 });
 ---
 
-<Layout {title} {description} slug={config.slug} {ogImage} structuredData={schemaResult.structuredData}>
+<Layout {title} {description} slug={config.slug} {ogImage} ogImageAlt={item.Name} structuredData={schemaResult.structuredData}>
 	<Page item={item} schemaResult={schemaResult} relatedLinks={relatedLinks} />
 </Layout>

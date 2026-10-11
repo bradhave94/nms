@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 import trailingSlashLinks from './src/integrations/trailingSlashLinks.ts';
 import { writeIconWebps } from './scripts/icon-webp.mjs';
+import { writeImageSizes } from './scripts/image-sizes.mjs';
 
 const legacyRedirects = JSON.parse(
   readFileSync(new URL('./redirects.generated.json', import.meta.url), 'utf8')
@@ -98,6 +99,11 @@ export default defineConfig({
       // Pages show WebP icons; fill in any that weren't generated so none render broken.
       name: 'icon-webp',
       hooks: {
+        // og:image sizes: refresh src/data/image-sizes.json before anything imports it.
+        'astro:config:setup': ({ logger }) => {
+          const { count, changed } = writeImageSizes();
+          if (changed) logger.info(`Updated image sizes (${count} images). Commit src/data/image-sizes.json.`);
+        },
         'astro:build:done': async ({ dir, logger }) => {
           const { written } = await writeIconWebps(fileURLToPath(new URL('images/items/', dir)));
           if (written) logger.warn(`Generated ${written} missing WebP icons. Run \`node scripts/icon-webp.mjs\` and commit them.`);

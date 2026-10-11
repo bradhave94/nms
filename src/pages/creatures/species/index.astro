@@ -88,6 +88,7 @@ const structuredData = buildCollectionStructuredData({
 	collectionName: 'Creature Species',
 	collectionDescription,
 	collectionPath: '/creatures/species',
+	breadcrumbs: [{ name: 'Home', href: '/' }, { name: 'Creatures', href: '/creatures/' }, { name: 'Species' }],
 	currentPage: 1,
 	items: species.slice(0, 25).map((item, index) => ({
 		name: item.Name,

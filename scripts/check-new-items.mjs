@@ -47,7 +47,8 @@ assert(!namedAdditions.some((item) => item.Id === 'STA_ROOM_DRESS'), 'A product 
 const variantHtml = await readFile(`${DIST}/buildings/STA_ROOM_DRESS/index.html`, 'utf8');
 assert(!variantHtml.includes('Added in update'));
 assert(variantHtml.includes('Orbital-base version of'));
-assert(variantHtml.includes('href="/buildings/FRE_ROOM_DRESS"'));
+// The post-build trailing-slash step rewrites internal links to end in /.
+assert(/href="\/buildings\/FRE_ROOM_DRESS\/?"/.test(variantHtml));
 const originalHtml = await readFile(`${DIST}/buildings/FRE_ROOM_DRESS/index.html`, 'utf8');
 assert(originalHtml.includes('Updated in update'));
 assert(originalHtml.includes('Can be built on a space base'));

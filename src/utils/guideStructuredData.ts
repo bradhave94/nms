@@ -1,5 +1,5 @@
 import type { JsonLdObject } from '@utils/structuredData.js';
-import { buildPageSignals } from '@utils/structuredData.js';
+import { buildPageSignals, getGameId } from '@utils/structuredData.js';
 
 type BreadcrumbItemInput = {
 	name: string;
@@ -8,6 +8,8 @@ type BreadcrumbItemInput = {
 
 type BuildGuideStructuredDataOptions = {
 	canonicalUrl: string;
+	/** The page's <title>, for the WebPage node; `title` is the post headline. */
+	pageTitle: string;
 	title: string;
 	description: string;
 	publishedTime: string;
@@ -22,10 +24,9 @@ type BuildGuideStructuredDataOptions = {
 	}>;
 };
 
-const isHowToGuide = (title: string): boolean => /\bhow to\b|\bguide\b/i.test(title);
-
 export const buildGuideStructuredData = ({
 	canonicalUrl,
+	pageTitle,
 	title,
 	description,
 	publishedTime,
@@ -49,11 +50,25 @@ export const buildGuideStructuredData = ({
 		})),
 	};
 
+	const pageSignals = buildPageSignals({ siteOrigin, dateModified: modifiedTime.slice(0, 10) });
+	const webPageSchema: JsonLdObject = {
+		'@context': 'https://schema.org',
+		'@type': 'WebPage',
+		'@id': `${canonicalUrl}#webpage`,
+		url: canonicalUrl,
+		name: pageTitle,
+		description,
+		breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
+		...pageSignals,
+		datePublished: publishedTime,
+		...(image ? { primaryImageOfPage: { '@type': 'ImageObject', url: image } } : {}),
+	};
+
 	const blogPostingSchema: JsonLdObject = {
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
 		'@id': `${canonicalUrl}#article`,
-		mainEntityOfPage: { '@id': `${canonicalUrl}#article` },
+		mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` },
 		headline: title,
 		description,
 		datePublished: publishedTime,
@@ -62,8 +77,8 @@ export const buildGuideStructuredData = ({
 			name: authorName,
 		},
 		publisher: { '@id': `${siteOrigin}#organization` },
-		breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` },
-		...buildPageSignals({ siteOrigin, dateModified: modifiedTime.slice(0, 10) }),
+		about: { '@id': getGameId(siteOrigin) },
+		...pageSignals,
 		...(image ? { image: { '@type': 'ImageObject', url: image } } : {}),
 		...(keywords && keywords.length > 0 ? { keywords: keywords.join(', ') } : {}),
 	};
@@ -84,35 +99,8 @@ export const buildGuideStructuredData = ({
 				}
 			: undefined;
 
-	const howToSchema: JsonLdObject | undefined = isHowToGuide(title)
-		? {
-				'@context': 'https://schema.org',
-				'@type': 'HowTo',
-				'@id': `${canonicalUrl}#howto`,
-				name: title,
-				description,
-				step:
-					faqs.length > 0
-						? faqs.map((faq, index) => ({
-								'@type': 'HowToStep',
-								position: index + 1,
-								name: faq.question,
-								text: faq.answer,
-								url: `${canonicalUrl}#faq-${index + 1}`,
-							}))
-						: [
-								{
-									'@type': 'HowToStep',
-									position: 1,
-									name: title,
-									text: description,
-								},
-							],
-			}
-		: undefined;
-
-	const schemas: JsonLdObject[] = [breadcrumbSchema, blogPostingSchema];
-	if (howToSchema) schemas.push(howToSchema);
+	// FAQPage only mirrors the FAQ that GuideLayout renders on the page.
+	const schemas: JsonLdObject[] = [webPageSchema, breadcrumbSchema, blogPostingSchema];
 	if (faqSchema) schemas.push(faqSchema);
 	return schemas;
 };

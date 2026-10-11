@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import { getSlug } from '@utils/lookup.js';
 import { formatStatName, formatStatRange } from '@utils/itemFormatters';
-import type { HowToIngredient } from '@utils/itemPageSchema';
+import type { Ingredient } from '@utils/itemPageSchema';
 import credit from '../../assets/img/credits.png';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
@@ -53,7 +53,7 @@ interface Props {
   upgradeStatsMin?: number;
   upgradeStatsMax?: number;
   upgradeStats: Array<{ name: string; image: string; min?: number; max?: number }>;
-  recipeIngredients: HowToIngredient[];
+  recipeIngredients: Ingredient[];
   recipeToolName: string;
   recipeOutputQuantity: number;
   showQuantityInput: boolean;

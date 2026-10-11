@@ -58,7 +58,7 @@ const originalVariantItem = meta.releaseVariant ? getById(meta.releaseVariant.Ba
 				<div id="update-changes-detail" class="update-changes-detail hidden min-w-0 border-t border-amber-800/60 px-4 py-3">
 					{diffRows.map((row) => (
 						<section class="min-w-0 border-t border-amber-900/50 py-3 first:border-0">
-							<h3 class="m-0 mb-2 text-sm font-semibold text-amber-100">{row.field}</h3>
+							<p class="m-0 mb-2 text-sm font-semibold text-amber-100">{row.field}</p>
 							<dl class="m-0 grid min-w-0 gap-3 sm:grid-cols-2">
 								<div class="min-w-0">
 									<dt class="text-xs text-amber-200/90">Before ({previousLabel})</dt>

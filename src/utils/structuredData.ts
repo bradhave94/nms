@@ -35,9 +35,47 @@ type CollectionStructuredDataOptions = {
 	firstPagePath?: string;
 	currentPage: number;
 	items: CollectionItem[];
+	/** Visible breadcrumbs, when they differ from Home > collection name. */
+	breadcrumbs?: Array<{ name: string; href?: string }>;
 };
 
 const normalizeOrigin = (origin: string): string => origin.replace(/\/$/, '');
+
+/** @id of the site-wide VideoGame node; page nodes point at it with `about`. */
+export const getGameId = (siteOrigin: string): string => `${normalizeOrigin(siteOrigin)}#game`;
+
+export const buildVideoGameSchema = (siteOrigin: string): JsonLdObject => ({
+	'@context': 'https://schema.org',
+	'@type': 'VideoGame',
+	'@id': getGameId(siteOrigin),
+	name: "No Man's Sky",
+	alternateName: 'NMS',
+	url: 'https://www.nomanssky.com/',
+	author: { '@type': 'Organization', name: 'Hello Games' },
+	publisher: { '@type': 'Organization', name: 'Hello Games' },
+	sameAs: ['https://store.steampowered.com/app/275850/'],
+});
+
+/** BreadcrumbList for the visible breadcrumbs (`href` is site-relative; the last crumb is the page itself). */
+export const buildBreadcrumbSchema = (
+	siteOrigin: string,
+	canonicalUrl: string,
+	items: Array<{ name: string; href?: string }>,
+): JsonLdObject => {
+	const safeOrigin = normalizeOrigin(siteOrigin);
+	const pageUrl = ensureTrailingSlashUrl(canonicalUrl);
+	return buildBreadcrumbList(
+		pageUrl,
+		items.map((item, index) => ({
+			name: item.name,
+			url: item.href
+				? ensureTrailingSlashUrl(new URL(item.href, `${safeOrigin}/`).toString())
+				: index === items.length - 1
+					? pageUrl
+					: `${safeOrigin}/`,
+		})),
+	);
+};
 
 export const hasPageEntity = (schemas: JsonLdObject[]): boolean =>
 	schemas.some(
@@ -92,6 +130,7 @@ type BuildWebPageSchemaOptions = {
 	title: string;
 	description: string;
 	dateModified: string;
+	breadcrumbId?: string;
 };
 
 export const buildWebPageSchema = ({
@@ -100,6 +139,7 @@ export const buildWebPageSchema = ({
 	title,
 	description,
 	dateModified,
+	breadcrumbId,
 }: BuildWebPageSchemaOptions): JsonLdObject => {
 	const safeOrigin = normalizeOrigin(siteOrigin);
 	const pageUrl = ensureTrailingSlashUrl(canonicalUrl);
@@ -115,10 +155,8 @@ export const buildWebPageSchema = ({
 		dateModified,
 		isAccessibleForFree: true,
 		inLanguage: 'en',
-		about: {
-			'@type': 'Thing',
-			name: SITE.pageAbout,
-		},
+		about: { '@id': getGameId(safeOrigin) },
+		...(breadcrumbId ? { breadcrumb: { '@id': breadcrumbId } } : {}),
 	};
 };
 
@@ -183,6 +221,7 @@ export const buildCollectionStructuredData = ({
 	firstPagePath: firstPagePathOverride,
 	currentPage,
 	items,
+	breadcrumbs,
 }: CollectionStructuredDataOptions): JsonLdObject[] => {
 	const safeOrigin = normalizeOrigin(siteOrigin);
 	const pageUrl = ensureTrailingSlashUrl(canonicalUrl);
@@ -202,7 +241,9 @@ export const buildCollectionStructuredData = ({
 		});
 	}
 
-	const breadcrumb = buildBreadcrumbList(pageUrl, breadcrumbEntries);
+	const breadcrumb = breadcrumbs
+		? buildBreadcrumbSchema(safeOrigin, pageUrl, breadcrumbs)
+		: buildBreadcrumbList(pageUrl, breadcrumbEntries);
 	const collectionPage: JsonLdObject = {
 		'@context': 'https://schema.org',
 		'@type': 'CollectionPage',
@@ -212,6 +253,7 @@ export const buildCollectionStructuredData = ({
 		description: collectionDescription,
 		breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
 		...buildPageSignals({ siteOrigin: safeOrigin }),
+		about: { '@id': getGameId(safeOrigin) },
 		mainEntity: {
 			'@type': 'ItemList',
 			itemListOrder: 'https://schema.org/ItemListOrderAscending',

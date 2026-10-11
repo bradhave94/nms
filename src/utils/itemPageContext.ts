@@ -5,7 +5,7 @@ import type { RecipeOutput } from '@utils/recipeTree';
 import type { ItemPageSchemaInput } from '@utils/itemPageSchema';
 import { ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
 
-export type ItemPageSchemaContext = Omit<ItemPageSchemaInput, 'dateModified'>;
+export type ItemPageSchemaContext = Omit<ItemPageSchemaInput, 'dateModified' | 'pageTitle' | 'pageDescription'>;
 
 const categoryNameMap: Record<string, string> = {
 	raw: 'Raw Materials',

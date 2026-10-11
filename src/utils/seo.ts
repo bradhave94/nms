@@ -8,9 +8,35 @@ export type BreadcrumbItem = {
 
 const normalizeWhitespace = (value: string): string => value.replace(/\s+/g, ' ').trim();
 
+/** Cuts at the last word boundary that fits, never mid-word. */
 const truncate = (value: string, maxLength: number): string => {
 	if (value.length <= maxLength) return value;
-	return `${value.slice(0, maxLength - 1).trimEnd()}…`;
+	const head = value.slice(0, maxLength - 1);
+	const endsAtWord = /\s/.test(value.charAt(maxLength - 1));
+	const cut = (endsAtWord ? head : head.replace(/\s+\S*$/, '')).replace(/[\s,;:–-]+$/, '');
+	return `${cut}…`;
+};
+
+const TITLE_MAX = 60;
+const DESCRIPTION_MAX = 160;
+const GAME_NAME = /No Man['’]?s Sky|\bNMS\b/i;
+
+const splitSentences = (text: string): string[] =>
+	text
+		.split(/(?<=[.!?]["”’)]?)\s+/)
+		.map((sentence) => sentence.trim())
+		.filter(Boolean)
+		.map((sentence) => (/[.!?]["”’)]?$/.test(sentence) ? sentence : `${sentence}.`));
+
+/** Adds whole sentences of `extra` to `base` while the result fits in a meta description. */
+const appendSentences = (base: string, extra: string, maxLength = DESCRIPTION_MAX): string => {
+	let result = base;
+	for (const sentence of splitSentences(extra)) {
+		const next = `${result} ${sentence}`;
+		if (next.length > maxLength) break;
+		result = next;
+	}
+	return result;
 };
 
 const normalizePath = (path: string): string => {
@@ -38,6 +64,12 @@ type ItemMetaOverride = {
 };
 
 const SITE_TITLE_SUFFIX = " | No Man's Sky Recipes";
+
+/** Adds the site name, unless the title already names the game and the suffix would push it past 60 characters. */
+export const withSiteTitle = (title: string): string => {
+	const full = `${title}${SITE_TITLE_SUFFIX}`;
+	return full.length > TITLE_MAX && GAME_NAME.test(title) ? title : full;
+};
 
 const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 	PLANT_TOXIC: {
@@ -138,14 +170,14 @@ const normalizeDescriptionHint = (value: string | undefined): string | undefined
 	return cleaned;
 };
 
-const buildDescriptionHint = (item: ItemMetaInput): string | undefined => {
+const buildDescriptionHint = (item: ItemMetaInput, maxLength: number): string | undefined => {
 	const normalizedDescription = normalizeDescriptionHint(item.Description);
 	if (!normalizedDescription) return undefined;
 
 	const firstClause = normalizedDescription.split(/[.!?]/)[0]?.trim() ?? normalizedDescription;
-	if (!firstClause) return undefined;
+	if (!firstClause || maxLength < 20) return undefined;
 
-	return truncate(firstClause, 72);
+	return firstClause.length + 1 <= maxLength ? `${firstClause}.` : truncate(firstClause, maxLength - 1);
 };
 
 const allItems = Object.values(dataSources).flatMap((source) =>
@@ -217,7 +249,8 @@ const buildItemUniquenessHint = (item: ItemMetaInput, categoryLabel: string): st
 		if (!group) return undefined;
 		if (group.toLowerCase() === normalizedName) return undefined;
 		if (hasPlaceholderTokens(group)) return undefined;
-		return group;
+		// Some groups are decorated, e.g. ":: Datestamp 22516.01 ::"
+		return group.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N})]+$/gu, '') || undefined;
 	});
 
 	if (groupHint) {
@@ -232,6 +265,7 @@ const buildItemUniquenessHint = (item: ItemMetaInput, categoryLabel: string): st
 	return `ID ${item.Id}`;
 };
 
+// Name | [hint |] category | site. The category goes first when the title runs past 60 characters.
 const buildItemTitle = (item: ItemMetaInput, categoryLabel: string, uniquenessHint?: string): string => {
 	const titleSegments = [item.Name];
 
@@ -239,8 +273,9 @@ const buildItemTitle = (item: ItemMetaInput, categoryLabel: string, uniquenessHi
 		titleSegments.push(uniquenessHint);
 	}
 
-	titleSegments.push(categoryLabel, "No Man's Sky Recipes");
-	return titleSegments.join(' | ');
+	const full = [...titleSegments, categoryLabel, "No Man's Sky Recipes"].join(' | ');
+	if (full.length <= TITLE_MAX) return full;
+	return [...titleSegments, "No Man's Sky Recipes"].join(' | ');
 };
 
 export const buildItemMeta = (
@@ -250,7 +285,7 @@ export const buildItemMeta = (
 	const override = ITEM_META_OVERRIDES[item.Id];
 	if (override) {
 		return {
-			title: `${override.title}${SITE_TITLE_SUFFIX}`,
+			title: withSiteTitle(override.title),
 			description: override.description,
 			...(override.relatedLinks ? { relatedLinks: override.relatedLinks } : {}),
 		};
@@ -265,14 +300,22 @@ export const buildItemMeta = (
 			? `${uniquenessHint.toLowerCase()} ${itemTypeLabel.toLowerCase()}`
 			: itemTypeLabel.toLowerCase();
 	const duplicateCount = itemNameCounts.get(normalizeWhitespace(item.Name ?? '').toLowerCase()) ?? 0;
-	const descriptionHint = duplicateCount > 1 ? buildDescriptionHint(item) : undefined;
-	const baseDescription = descriptionHint
-		? `Learn how to craft, refine, use, and unlock ${item.Name}, a ${descriptiveType} in No Man's Sky. ${descriptionHint}.`
-		: `Learn how to craft, refine, use, and unlock ${item.Name}, a ${descriptiveType} in No Man's Sky.`;
-	const description = truncate(
-		normalizeWhitespace(`${baseDescription} ${normalizedDescription}`),
-		155
+	const baseDescription = truncate(
+		`Learn how to craft, refine, use, and unlock ${item.Name}, ${/^[aeiou]/i.test(descriptiveType) ? 'an' : 'a'} ${descriptiveType} in No Man's Sky.`,
+		DESCRIPTION_MAX
 	);
+	// Whole sentences of the in-game description, so the snippet is never cut mid-word.
+	let description = appendSentences(baseDescription, normalizedDescription);
+	const room = DESCRIPTION_MAX - baseDescription.length - 1;
+	const firstSentence = splitSentences(normalizedDescription)[0];
+	if (description === baseDescription && firstSentence && room >= 40) {
+		// The first sentence is too long to fit: cut it at a word boundary.
+		description = `${baseDescription} ${truncate(firstSentence, room)}`;
+	} else if (description === baseDescription && duplicateCount > 1) {
+		// Same-named items need some of their own text to stay unique.
+		const hint = buildDescriptionHint(item, DESCRIPTION_MAX - baseDescription.length - 1);
+		if (hint) description = `${baseDescription} ${hint}`;
+	}
 	return { title, description };
 };
 
@@ -314,10 +357,7 @@ export const buildPaginatedMeta = (
 	currentPage: number,
 	lastPage: number
 ): { title: string; description: string } => {
-	const title =
-		currentPage > 1
-			? `${label} - Page ${currentPage} | No Man's Sky Recipes`
-			: `${label} | No Man's Sky Recipes`;
+	const title = withSiteTitle(currentPage > 1 ? `${label} - Page ${currentPage}` : label);
 	const description =
 		currentPage > 1
 			? `Page ${currentPage} of ${lastPage}. ${baseDescription}`
