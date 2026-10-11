@@ -5,6 +5,7 @@ import Accordion from '@components/Accordion.astro';
 import NitroAd from '@components/ads/NitroAd.astro';
 import { buildGuideStructuredData } from '@utils/guideStructuredData.js';
 import { getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
 import type { CollectionEntry } from 'astro:content';
 import type { MarkdownHeading } from 'astro';
 
@@ -25,8 +26,10 @@ const breadcrumbs = [
 	{ name: 'Blog', href: '/blog/' },
 	{ name: guide.data.title },
 ];
+const pageTitle = withSiteTitle(guide.data.title);
 const structuredData = buildGuideStructuredData({
 	canonicalUrl,
+	pageTitle,
 	title: guide.data.title,
 	description: guide.data.description,
 	publishedTime: guide.data.pubDate.toISOString(),
@@ -53,7 +56,7 @@ const formatDate = (date: Date): string =>
 ---
 
 <Layout
-	title={`${guide.data.title} | No Man's Sky Recipes`}
+	title={pageTitle}
 	description={guide.data.description}
 	slug="blog"
 	ogImage={ogImage}

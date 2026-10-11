@@ -25,6 +25,7 @@ const structuredData = buildCollectionStructuredData({
 	collectionDescription: baseDescription,
 	collectionPath: '/blog',
 	currentPage: 1,
+	breadcrumbs: [{ name: 'Home', href: '/' }, { name: 'Blog' }],
 	items: posts.map((post, index) => ({
 		name: post.data.title,
 		url: `${siteOrigin}/blog/${post.id}/`,

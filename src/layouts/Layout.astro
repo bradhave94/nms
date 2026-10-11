@@ -3,12 +3,16 @@ import '../assets/css/main.css';
 import Analytics from '@vercel/analytics/astro';
 import type { JsonLdObject } from '@utils/structuredData.js';
 import {
+	buildBreadcrumbSchema,
 	buildOrganizationSchema,
+	buildVideoGameSchema,
 	buildWebPageSchema,
 	buildWebSiteSchema,
 	hasPageEntity,
 	serializeJsonLdGraph,
 } from '@utils/structuredData.js';
+import type { BreadcrumbItem } from '@utils/seo.js';
+import { getPublicImageSize } from '@utils/imageSize';
 
 import Sidebar from '@layouts/Sidebar.astro';
 import Search from '@components/Search.astro';
@@ -23,11 +27,15 @@ export interface Props {
 	author?: string;
 	description?: string;
 	ogImage?: string;
+	/** Alt text for the social preview image; defaults to the page title. */
+	ogImageAlt?: string;
 	ogType?: string;
 	articlePublishedTime?: string;
 	articleModifiedTime?: string;
 	slug?: string;
 	structuredData?: JsonLdObject | JsonLdObject[];
+	/** Visible breadcrumbs; adds a BreadcrumbList when structuredData has none. */
+	breadcrumbs?: BreadcrumbItem[];
 	robots?: string;
 	canonical?: string;
 	prevUrl?: string;
@@ -42,7 +50,9 @@ const {
 	description = SITE.desc,
 	slug,
 	structuredData,
+	breadcrumbs,
 	ogImage,
+	ogImageAlt,
 	ogType = 'website',
 	articlePublishedTime,
 	articleModifiedTime,
@@ -61,25 +71,38 @@ const nextHref = nextUrl ? ensureTrailingSlashUrl(nextUrl) : undefined;
 const siteOrigin = SITE.website.replace(/\/$/, '');
 const defaultOgImage = `${siteOrigin}/images/icon.png`;
 const imageUrl = ogImage ?? defaultOgImage;
+// Sizes come from the files in public/ at build time; on-demand pages skip them.
+const imageSize = Astro.isPrerendered ? getPublicImageSize(imageUrl, siteOrigin) : null;
+// Item icons are small squares: a large card would upscale them, so use the summary card.
+const twitterCard = imageSize && imageSize.width < 600 ? 'summary' : 'summary_large_image';
+const imageAlt = ogImageAlt ?? title;
 const organizationSchema = buildOrganizationSchema(siteOrigin);
 const webSiteSchema = buildWebSiteSchema(siteOrigin);
+const videoGameSchema = buildVideoGameSchema(siteOrigin);
 const extraStructuredData = structuredData
 	? (Array.isArray(structuredData) ? structuredData : [structuredData])
 	: [];
+const breadcrumbSchema =
+	breadcrumbs?.length && !extraStructuredData.some((schema) => schema['@type'] === 'BreadcrumbList')
+		? buildBreadcrumbSchema(siteOrigin, canonicalURL.toString(), breadcrumbs)
+		: undefined;
 const dateModified = (articleModifiedTime ?? SITE.version_date).slice(0, 10);
 const webPageSchema = !hasPageEntity(extraStructuredData)
 	? buildWebPageSchema({
-				siteOrigin,
-				canonicalUrl: canonicalURL.toString(),
-				title,
-				description,
+			siteOrigin,
+			canonicalUrl: canonicalURL.toString(),
+			title,
+			description,
 			dateModified,
+			breadcrumbId: breadcrumbSchema ? String(breadcrumbSchema['@id']) : undefined,
 		})
 	: undefined;
 const mergedStructuredData: JsonLdObject[] = [
 	organizationSchema,
 	webSiteSchema,
+	videoGameSchema,
 	...(webPageSchema ? [webPageSchema] : []),
+	...(breadcrumbSchema ? [breadcrumbSchema] : []),
 	...extraStructuredData,
 ];
 const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
@@ -105,6 +128,8 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 		<meta name="author" content={author} />
 
 		<meta property="og:type" content={ogType} />
+		<meta property="og:site_name" content={SITE.title} />
+		<meta property="og:locale" content="en_US" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalURL} />
@@ -116,12 +141,15 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 		)}
 
 		<meta property="og:image" content={imageUrl} />
-		<meta property="twitter:image" content={imageUrl} />
+		{imageSize && <meta property="og:image:width" content={String(imageSize.width)} />}
+		{imageSize && <meta property="og:image:height" content={String(imageSize.height)} />}
+		<meta property="og:image:alt" content={imageAlt} />
 
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={canonicalURL} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
+		<meta name="twitter:card" content={twitterCard} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={imageUrl} />
+		<meta name="twitter:image:alt" content={imageAlt} />
 
 		<link
 			rel="preload"
