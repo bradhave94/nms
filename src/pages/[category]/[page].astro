@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
+import PageLinks from '@components/PageLinks.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getSlug, sort } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
@@ -106,4 +107,5 @@ const { prevUrl, nextUrl } = buildPaginationUrls(siteOrigin, page);
 		}
 	</div>
 	<Pagination page={page} />
+	<PageLinks currentPage={page.currentPage} lastPage={page.lastPage} basePath={categoryPath} />
 </Layout>

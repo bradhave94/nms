@@ -1,0 +1,28 @@
+---
+// Plain links to every page of a paginated list, so crawlers reach page N in one click
+// (page 1 of a category loads its items with JavaScript).
+interface Props {
+	currentPage: number;
+	lastPage: number;
+	/** List root without the page number, e.g. `/buildings`. Defaults to the current URL. */
+	basePath?: string;
+}
+
+const { currentPage, lastPage } = Astro.props;
+const basePath = (Astro.props.basePath ?? Astro.url.pathname.replace(/\/\d+\/?$/, '')).replace(/\/+$/, '');
+const pageHref = (page: number): string => (page === 1 ? `${basePath}/` : `${basePath}/${page}/`);
+const pages = Array.from({ length: lastPage }, (_, index) => index + 1);
+---
+
+{lastPage > 1 && (
+	<nav aria-label="Pages" class="my-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-sky-300">
+		<span class="text-sky-200/70">Browse by page:</span>
+		{pages.map((page) =>
+			page === currentPage ? (
+				<span aria-current="page" class="text-white">{page}</span>
+			) : (
+				<a href={pageHref(page)} class="hover:text-white hover:underline">{page}</a>
+			)
+		)}
+	</nav>
+)}

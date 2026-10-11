@@ -1,12 +1,16 @@
 ---
 import { SITE } from '@config';
+import CompactCard from '@components/CompactCard.astro';
 
 interface Props {
 	type: string;
 	basePath: string;
+	/** First page of cards, rendered into the HTML so the links work before (and without) the script. */
+	initialItems?: Array<{ name: string; image: string; link: string }>;
 }
 
-const { type, basePath } = Astro.props;
+const { type, basePath, initialItems = [] } = Astro.props;
+const hasInitialItems = initialItems.length > 0;
 const IMAGE_BASE = SITE.imageBaseUrl;
 const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 ---
@@ -61,7 +65,7 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 	</div>
 </form>
 
-<div id={`${idPrefix}-loading`} class="text-center py-12 text-sky-400" aria-live="polite">Loading...</div>
+<div id={`${idPrefix}-loading`} class:list={['text-center py-12 text-sky-400', { hidden: hasInitialItems }]} aria-live="polite">Loading...</div>
 <div id={`${idPrefix}-empty`} class="hidden text-center py-12 text-sky-400" aria-live="polite">
 	No items found. Try adjusting your filters.
 </div>
@@ -75,11 +79,14 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 		Retry
 	</button>
 </div>
-<div id={`${idPrefix}-items-container`} class="hidden">
+<div id={`${idPrefix}-items-container`} class:list={{ hidden: !hasInitialItems }}>
 	<div
 		id={`${idPrefix}-items`}
 		class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 px-2"
-	></div>
+		data-static={hasInitialItems ? '1' : undefined}
+	>
+		{initialItems.map((card, index) => <CompactCard card={card} index={index} loading={index < 12 ? 'eager' : 'lazy'} />)}
+	</div>
 	<div id={`${idPrefix}-load-more-sentinel`} class="h-1 w-full" aria-hidden="true"></div>
 </div>
 
@@ -320,11 +327,16 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 	async function loadItems(forceFetch = false) {
 		if (!loadingEl || !emptyEl || !itemsEl || !itemsContainer) return;
 
-		loadingEl.classList.remove('hidden');
+		// The server-rendered first page stays on screen until the full list arrives.
+		const keepStaticItems = itemsEl.dataset.static === '1';
+		delete itemsEl.dataset.static;
 		emptyEl.classList.add('hidden');
 		errorEl?.classList.add('hidden');
-		itemsContainer.classList.add('hidden');
-		itemsEl.innerHTML = '';
+		if (!keepStaticItems) {
+			loadingEl.classList.remove('hidden');
+			itemsContainer.classList.add('hidden');
+			itemsEl.innerHTML = '';
+		}
 
 		const q = searchInput?.value?.trim() || '';
 
@@ -353,8 +365,10 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 			const items = filterItems(allItemsData, groupVal, q);
 
 			loadingEl.classList.add('hidden');
+			itemsEl.innerHTML = '';
 
 			if (items.length === 0) {
+				itemsContainer.classList.add('hidden');
 				emptyEl.classList.remove('hidden');
 			} else {
 				filteredItems = items;
