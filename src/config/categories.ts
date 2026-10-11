@@ -71,7 +71,7 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 		metaTitle: 'Building Parts',
 		idLabel: 'Building Part',
 		description:
-			"A list of building parts for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"Every No Man's Sky building part: base structures, decorations, freighter rooms and orbital base modules. Open each part for its build cost.",
 		intro:
 			'Building parts let you design and expand bases, decorations, and functional structures across the galaxy.',
 		datasets: ['Buildings'],
@@ -80,10 +80,10 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 	fish: {
 		slug: 'fish',
 		h1: 'Fish',
-		metaTitle: 'Fish',
+		metaTitle: 'NMS Fish List',
 		idLabel: 'Fish Item',
 		description:
-			"A list of fish for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"Every fish you can catch in No Man's Sky. Open each catch for its biome, size, quality, weather and the recipes that use it.",
 		intro:
 			'Fish items include aquatic catches, bait outcomes, and ocean-specific resources used in recipes.',
 		datasets: ['Fish'],
@@ -95,7 +95,7 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 		metaTitle: 'Upgrades',
 		idLabel: 'Upgrade Module',
 		description:
-			"A list of upgrade items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"No Man's Sky upgrade modules for exosuit, multi-tool, starship, exocraft and freighter technology. Open each module for its stat ranges.",
 		intro: 'Upgrade modules boost stats for your equipment, vehicles, and freighter systems.',
 		datasets: ['Upgrades'],
 		idStrategy: 'props',
@@ -135,7 +135,7 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 		metaTitle: 'Exocraft',
 		idLabel: 'Exocraft Item',
 		description:
-			"A list of exocraft items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"No Man's Sky exocraft items: vehicle technology, modules and components. Open each page for craft costs and the recipes they appear in.",
 		intro: 'Exocraft items support planetary vehicles with fuel, modules, and specialized components.',
 		datasets: ['Exocraft'],
 		idStrategy: 'props',
@@ -182,7 +182,7 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 		metaTitle: 'Other Items',
 		idLabel: "No Man's Sky Item",
 		description:
-			"A list of other items for No Man's Sky. Our guide has everything you need to take your game to the next level.",
+			"Other No Man's Sky items: mission items, trade goods, curios and special resources. Open each page for its uses and related recipes.",
 		intro:
 			'Other items include unique curios, mission items, and special resources that do not fit standard categories.',
 		datasets: ['Others', 'Trade'],
