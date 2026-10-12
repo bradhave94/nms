@@ -76,7 +76,7 @@ Touch controls were rebuilt from scratch. That matters in a game where you spend
 
 ## What's included
 
-It's the full game. That means over forty major updates, including Cosmos from a few weeks ago and Voyagers, which added big rig starships you build yourself.
+It's the full game. That means over forty major updates, including [Cosmos](/blog/nms-cosmos-update/) from a few weeks ago and Voyagers from 2025, which added [Corvettes](/blog/no-mans-sky-corvette-guide/), starships you build yourself.
 
 ## First crafts for new iOS Travellers
 
