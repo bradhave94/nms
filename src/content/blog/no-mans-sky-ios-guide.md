@@ -28,14 +28,14 @@ faqs:
   - question: "Does No Man's Sky on iOS have multiplayer?"
     answer: "No. Hello Games says multiplayer is not supported on iOS."
   - question: "How big is the No Man's Sky iOS download?"
-    answer: "Under 4GB, according to Hello Games."
+    answer: "Around 4 to 5GB. Hello Games' announcement says under 4GB, but the description on its iOS Deep Dive video says just under 5GB. Leave yourself 5GB to be safe."
   - question: "Is the iOS version the full game?"
     answer: "Yes. Hello Games says it isn't a lite version. It includes over forty major updates, including Cosmos and Voyagers."
 ---
 
 No Man's Sky is coming to iPhone and iPad. Hello Games announced it on October 12, and it's not a cut-down spin-off. Here's what you need to run it, what's missing, and what to craft in your first hour.
 
-Everything below comes from the [official announcement](https://www.nomanssky.com/2026/10/no-mans-sky-ios/). I'll update this page at launch.
+Everything below comes from the [official announcement](https://www.nomanssky.com/2026/10/no-mans-sky-ios/) and Hello Games' [iOS Deep Dive video](https://www.youtube.com/watch?v=4IZ-uYvtH58). I'll update this page at launch.
 
 ## Release date and price
 
@@ -49,9 +49,9 @@ Everything below comes from the [official announcement](https://www.nomanssky.co
 |---|---|
 | Playing the game | iPhone 11, or iPad Air (3rd generation) |
 | Planetary Settlements | iPhone 15 Pro |
-| Storage | Under 4GB |
+| Storage | 4-5GB (sources differ, see below) |
 
-That device floor is low for a game this size. The universe is generated on your device as you play, which is also why the download is so small.
+That device floor is low for a game this size. The universe is generated on your device as you play, which is also why the download is so small. Hello Games hasn't settled on one number, though: the announcement says under 4GB and the Deep Dive video says just under 5GB. Leave yourself 5GB.
 
 The announcement names iPhone 15 Pro for settlements. It doesn't say which iPads support them, so I'd wait for launch before you plan a settlement on an iPad.
 
@@ -76,7 +76,9 @@ Touch controls were rebuilt from scratch. That matters in a game where you spend
 
 ## What's included
 
-It's the full game. That means over forty major updates, including Cosmos from a few weeks ago and Voyagers, which added big rig starships you build yourself.
+It's the full game. That means over forty major updates, including [Cosmos](/blog/nms-cosmos-update/) from a few weeks ago and Voyagers from 2025, which added [Corvettes](/blog/no-mans-sky-corvette-guide/), starships you build yourself.
+
+The Deep Dive video also confirms you can manage a Cosmos space station and play the current Expedition on your phone. Sean says the game has been a side project for nearly three years, and some of the work behind it improves every platform.
 
 ## First crafts for new iOS Travellers
 
@@ -113,3 +115,4 @@ Once you've got a refiner going, [our list of the best refiner recipes](/blog/be
 ## Sources
 
 - [No Man's Sky: iOS, Hello Games](https://www.nomanssky.com/2026/10/no-mans-sky-ios/)
+- [No Man's Sky iOS Deep Dive, Hello Games (YouTube)](https://www.youtube.com/watch?v=4IZ-uYvtH58)

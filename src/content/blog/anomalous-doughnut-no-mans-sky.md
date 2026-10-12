@@ -45,6 +45,7 @@ Everything here is made in the [Nutrient Processor](/technology/COOKER/). One do
   - **Lumpen Doughnut** = [Clarified Oil](/food/FOOD_R_OIL/) + [Dough](/food/FOOD_R_DOUGH/) + Processed Sugar
     - **Clarified Oil** = 2 [Churned Butter](/food/FOOD_R_BUTTER/) (Proto-butter or Bone Butter combos also work)
       - **Churned Butter** = [Cream](/food/FOOD_R_CREAM/)
+        - **Cream** = [Fresh Milk](/food/FOOD_V_COW/) or [Wild Milk](/food/FOOD_V_MILK/)
     - **Dough** = [Refined Flour](/food/FOOD_R_FLOUR/) + [Wild Yeast](/food/FOOD_P_POOP/)
       - **Refined Flour** = [Heptaploid Wheat](/food/FOOD_P_ALL1/), Glass Grains or Kelp Rice
     - **Processed Sugar** = [Sweetroot](/food/FOOD_P_ALL2/), Grahberry or Cactus Nectar
@@ -55,15 +56,15 @@ Shopping list per doughnut:
 |---|---|---|
 | Hexaberry | 1 | Anomalous Jam |
 | Sweetroot (or Grahberry / Cactus Nectar) | 2 | Two Processed Sugar |
-| Cream | 2 | Two Churned Butter, then Clarified Oil |
+| Fresh Milk (or Wild Milk) | 2 | Two Cream, then two Churned Butter, then Clarified Oil |
 | Heptaploid Wheat (or Glass Grains / Kelp Rice) | 1 | Refined Flour |
 | Wild Yeast | 1 | Dough |
 
-That's seven processor steps for one doughnut, so prep the base ingredients in bulk before you start.
+That's twelve processor steps for one doughnut (thirteen if you make the Wild Yeast from Faecium), so prep the base ingredients in bulk before you start.
 
 ## What the Anomalous Doughnut does
 
-Eat it from your inventory and you get a short jetpack boost. Nice, not worth seven cooking steps.
+Eat it from your inventory and you get a short jetpack boost. Nice, not worth twelve cooking steps.
 
 The real use is the [Nutrient Ingestor](/technology/FOOD_UNIT/). Load doughnuts into it and the Fandom wiki lists each one at **+6443% Fauna Analysis Rewards for 10 minutes**. That's the number people are chasing.
 
@@ -71,7 +72,7 @@ It also has a base value of 70,000 units if you'd rather just sell.
 
 ## Where to get Hexaberry
 
-Hexaberry is the only ingredient you can't grow on a normal base. It grows wild on exotic planets, and you can also get it from some fauna on those worlds.
+Hexaberry is the hard one, because it only shows up on exotic planets. It grows wild there, and you can also get it from some fauna on those worlds.
 
 Once you find an exotic planet with plenty of it, drop a base marker there. You'll be back.
 
@@ -79,12 +80,12 @@ Once you find an exotic planet with plenty of it, drop a base marker there. You'
 
 The rest is ordinary cooking stock:
 
-- **Cream:** milk creatures you've befriended or farm at base.
+- **Milk:** milk creatures you've befriended or farm at base for Fresh Milk, then process it into Cream.
 - **Sugar:** Sweetroot, Grahberry or Cactus Nectar each process into Processed Sugar.
 - **Flour:** Heptaploid Wheat, Glass Grains or Kelp Rice each process into Refined Flour.
 - **Wild Yeast:** process it from [Faecium](/raw/PLANT_POOP/), which fed creatures leave behind.
 
-If you already run a creature farm for Cream, you're most of the way there. The [cooking hub](/cooking) has every other recipe if you run out of one input.
+If you already run a creature farm for milk, you're most of the way there. The [cooking hub](/cooking) has every other recipe if you run out of one input.
 
 ## How to farm Anomalous Doughnuts for fauna analysis
 
