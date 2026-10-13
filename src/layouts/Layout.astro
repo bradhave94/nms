@@ -197,6 +197,7 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 		<script type="application/ld+json" set:html={mergedStructuredDataJson}></script>
 	</head>
 	<body class={`h-full overflow-x-hidden m-0 ${slug === '/' ? 'home' : ''}`}>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
 		<Sidebar slug={slug} showAds={ads}>
 			<slot slot="layout" />
 		</Sidebar>
@@ -205,5 +206,55 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 		<Footer />
 		{ads && <NitroGlobalAds />}
 		<Analytics />
+		<script>
+			// Escape dismisses hover/focus tooltips until the pointer or focus moves (WCAG 1.4.13).
+			const root = document.documentElement;
+			document.addEventListener('keydown', (event) => {
+				if (event.key === 'Escape') root.setAttribute('data-tooltips-dismissed', '');
+			});
+			const restoreTooltips = () => root.removeAttribute('data-tooltips-dismissed');
+			document.addEventListener('pointerover', restoreTooltips);
+			document.addEventListener('focusin', restoreTooltips);
+
+			// Horizontally scrolling table wrappers must be reachable by keyboard (WCAG 2.1.1):
+			// make each one a focusable, labelled region while it actually overflows.
+			const headingBefore = (el: Element): string => {
+				for (let node: Element | null = el; node && node !== document.body; node = node.parentElement) {
+					for (let sib = node.previousElementSibling; sib; sib = sib.previousElementSibling) {
+						const heading = sib.matches('h1,h2,h3,h4') ? sib : sib.querySelector('h1,h2,h3,h4');
+						if (heading?.textContent?.trim()) return heading.textContent.trim();
+					}
+				}
+				return '';
+			};
+			const labelScrollRegions = () => {
+				document.querySelectorAll<HTMLElement>('.overflow-x-auto, .prose-table-scroll').forEach((wrapper) => {
+					const table = wrapper.querySelector('table');
+					if (!table) return;
+					const overflowing = wrapper.scrollWidth > wrapper.clientWidth + 1;
+					if (!overflowing) {
+						if (wrapper.dataset.scrollRegion) {
+							wrapper.removeAttribute('tabindex');
+							wrapper.removeAttribute('role');
+							wrapper.removeAttribute('aria-label');
+							delete wrapper.dataset.scrollRegion;
+						}
+						return;
+					}
+					if (wrapper.dataset.scrollRegion) return;
+					wrapper.dataset.scrollRegion = '1';
+					wrapper.tabIndex = 0;
+					wrapper.setAttribute('role', 'region');
+					const name = table.caption?.textContent?.trim() || headingBefore(wrapper) || 'Table';
+					wrapper.setAttribute('aria-label', `${name} (scrollable table)`);
+				});
+			};
+			window.addEventListener('load', labelScrollRegions);
+			let resizeTimer: ReturnType<typeof setTimeout> | undefined;
+			window.addEventListener('resize', () => {
+				if (resizeTimer) clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(labelScrollRegions, 200);
+			});
+		</script>
 	</body>
 </html>

@@ -1,9 +1,17 @@
 ---
-const { open = false, id } = Astro.props;
+// `heading` wraps the toggle button in a heading element (e.g. FAQ questions), so the
+// question stays a heading for screen readers; a heading inside a <button> is not allowed.
+import { uniqueId } from '@utils/uid';
+const { open = false, heading } = Astro.props as { open?: boolean; id?: string; heading?: 'h2' | 'h3' | 'h4' };
+const id = Astro.props.id ?? uniqueId('acc');
+const Heading = heading ?? Fragment;
+const headingProps = heading ? { class: 'm-0 text-[length:inherit] font-[inherit]' } : {};
 ---
 <accordion-component class="accordion-container" data-open={String(open)}>
 
+  <Heading {...headingProps}>
   <button
+    type="button"
     id={`accordion-header-${id}`}
     class="accordion flex w-full items-center gap-2 px-2 py-2.5 text-left transition-colors hover:bg-gray-800/50 sm:gap-3 sm:px-3 sm:py-3"
     aria-expanded={open}
@@ -16,6 +24,7 @@ const { open = false, id } = Astro.props;
       <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
     </svg>
   </button>
+  </Heading>
   <div
     id={`accordion-panel-${id}`}
     role="region"

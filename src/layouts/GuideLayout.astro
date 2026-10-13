@@ -166,8 +166,8 @@ const formatDate = (date: Date): string =>
 					<h2 class="mt-0 text-2xl text-white">Frequently Asked Questions</h2>
 					<div class="mt-4 space-y-2">
 						{guideFaqs.map((faq, index) => (
-							<Accordion id={`faq-${index + 1}`}>
-								<h3 class="m-0 text-lg text-white" slot="title">{faq.question}</h3>
+							<Accordion id={`faq-${index + 1}`} heading="h3">
+								<span class="text-lg font-bold text-white" slot="title">{faq.question}</span>
 								<p class="m-0 text-sky-100/90" slot="content">{faq.answer}</p>
 							</Accordion>
 						))}

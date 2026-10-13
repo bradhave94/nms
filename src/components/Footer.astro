@@ -27,7 +27,7 @@ const navigation = [
       {navigation.map((item) => (
         <a
           href={item.href}
-          class="text-sm leading-6 text-white hover:text-blue-500 transition-colors"
+          class="inline-block min-w-6 text-center text-sm leading-6 text-white hover:text-blue-400 hover:underline transition-colors"
         >
           {item.name}
         </a>
@@ -36,25 +36,26 @@ const navigation = [
     <p class="mt-8 text-center text-xs leading-5 text-gray-400">
       No Man's Sky Recipes | Updated to&nbsp;
       <a
-        class="hover:text-blue-500 transition-colors"
+        class="underline underline-offset-2 hover:text-blue-400 transition-colors"
         target="_blank"
         rel="noopener noreferrer"
         href={SITE.version_link}
       >
-        {SITE.version_name} ({SITE.version})
+        {SITE.version_name} ({SITE.version})<span class="sr-only"> (opens in a new tab)</span>
       </a>
       &nbsp;on {SITE.version_date}
     </p>
     <div class="disclaimer">
       <p>This is a fan-made website. No Man's Sky™ and all related assets are trademarks
       of Hello Games. This site is not affiliated with or endorsed by Hello Games.</p>
-      <p class="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-        <a href="/privacy/" class="text-blue-500 hover:text-blue-400">Privacy Policy</a>
+      <div class="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+        <a href="/privacy/" class="inline-flex min-h-6 items-center text-blue-400 underline underline-offset-2 hover:text-blue-300">Privacy Policy</a>
+        <a href="/accessibility/" class="inline-flex min-h-6 items-center text-blue-400 underline underline-offset-2 hover:text-blue-300">Accessibility</a>
         <!-- NitroPay CCPA: injects "Do Not Sell My Personal Information" for CA users -->
         <span data-ccpa-link="1"></span>
         <!-- NitroPay CMP: injects consent management for GDPR users -->
         <div id="ncmp-consent-link"></div>
-      </p>
+      </div>
     </div>
   </div>
 </footer>

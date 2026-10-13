@@ -50,9 +50,10 @@ const options = {
 const scriptBody = `window.nitroAds.createAd(${JSON.stringify(id)}, ${JSON.stringify(options)});`;
 ---
 
-<section
-	class:list={['nitro-ad-slot mx-auto my-8 w-full', !hasMaxWidthClass && 'max-w-[970px]', className]}
-	aria-label="Advertisement"
+<!-- Not a landmark: several slots per page would give screen readers a list of identical
+     "Advertisement" regions (axe landmark-unique). -->
+<div
+	class:list={['nitro-ad-slot mx-auto my-8 box-border w-full', !hasMaxWidthClass && 'max-w-[970px]', className]}
 	style={`min-height: ${reservedHeight}px`}
 >
 	<div
@@ -61,5 +62,5 @@ const scriptBody = `window.nitroAds.createAd(${JSON.stringify(id)}, ${JSON.strin
 		style={`min-height: ${reservedHeight}px`}
 	>
 	</div>
-</section>
+</div>
 <script is:inline set:html={scriptBody} />

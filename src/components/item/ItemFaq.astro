@@ -18,8 +18,8 @@ const { faqQuestions } = Astro.props;
     </h2>
     <div class="mx-auto max-w-3xl space-y-2">
       {faqQuestions.map((faq, index) => (
-        <Accordion id={`item-faq-${index + 1}`}>
-          <h3 class="m-0 text-lg text-white" slot="title">{faq.question}</h3>
+        <Accordion id={`item-faq-${index + 1}`} heading="h3">
+          <span class="text-lg font-bold text-white" slot="title">{faq.question}</span>
           <p class="m-0 text-gray-300" slot="content">{faq.answer}</p>
         </Accordion>
       ))}

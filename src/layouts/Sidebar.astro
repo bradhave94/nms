@@ -86,6 +86,9 @@ const moreNav: NavItem[] = [
 const allNavHrefs = [...toolsNav, ...calculatorsNav, ...catalogsNav, ...moreNav].map((item) => item.href);
 const activeHref = getBestMatchHref(pathname, allNavHrefs);
 const isNavItemActive = (href: string): boolean => activeHref !== null && href === activeHref;
+// "page" only on the exact page; a section match (e.g. an item under /products/) gets "true".
+const ariaCurrent = (href: string): 'page' | 'true' | undefined =>
+	normalizePath(pathname) === normalizePath(href) ? 'page' : isNavItemActive(href) ? 'true' : undefined;
 const calculatorsHrefs = new Set(calculatorsNav.map((item) => item.href));
 const catalogsHrefs = new Set(catalogsNav.map((item) => item.href));
 const isCalculatorsActive = activeHref !== null && calculatorsHrefs.has(activeHref);
@@ -286,6 +289,9 @@ const sectionLabelClasses =
 		<div class="fixed inset-0 z-40 flex">
 			<div
 				id="mobile-panel"
+				role="dialog"
+				aria-modal="true"
+				aria-label="Site menu"
 				class="relative flex w-full max-w-xs flex-1 -translate-x-full flex-col overflow-hidden bg-black transition-transform duration-300 ease-in-out"
 			>
 				<div class="flex shrink-0 items-center justify-between gap-2 px-4 pt-5 pb-2">
@@ -319,7 +325,7 @@ const sectionLabelClasses =
 							toolsNav.map((item) => {
 								const active = isNavItemActive(item.href);
 								return (
-									<a href={item.href} class={linkClasses(active)}>
+									<a href={item.href} class={linkClasses(active)} aria-current={ariaCurrent(item.href)}>
 										<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 											{icons[item.icon].map((path) => (
 												<path
@@ -388,7 +394,7 @@ const sectionLabelClasses =
 									calculatorsNav.map((item) => {
 										const active = isNavItemActive(item.href);
 										return (
-											<a href={item.href} class={linkClasses(active)}>
+											<a href={item.href} class={linkClasses(active)} aria-current={ariaCurrent(item.href)}>
 												<svg
 													class={iconClasses(active)}
 													viewBox="0 0 24 24"
@@ -465,7 +471,7 @@ const sectionLabelClasses =
 									catalogsNav.map((item) => {
 										const active = isNavItemActive(item.href);
 										return (
-											<a href={item.href} class={linkClasses(active)}>
+											<a href={item.href} class={linkClasses(active)} aria-current={ariaCurrent(item.href)}>
 												<svg
 													class={iconClasses(active)}
 													viewBox="0 0 24 24"
@@ -493,7 +499,7 @@ const sectionLabelClasses =
 							moreNav.map((item) => {
 								const active = isNavItemActive(item.href);
 								return (
-									<a href={item.href} class={linkClasses(active)}>
+									<a href={item.href} class={linkClasses(active)} aria-current={ariaCurrent(item.href)}>
 										<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 											{icons[item.icon].map((path) => (
 												<path
@@ -516,10 +522,11 @@ const sectionLabelClasses =
 	</div>
 
 	<!-- Desktop sidebar stays 224px; leftover space under the menu holds a 160-wide unit -->
-	<div id="desktop-sidebar" class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-56 lg:flex-col">
+	<div id="desktop-sidebar" class="hidden lg:fixed lg:inset-y-0 lg:z-30 lg:flex lg:w-56 lg:flex-col">
 		<div class="flex min-h-0 flex-1 flex-col overflow-hidden bg-black">
 			<div class="flex min-h-0 flex-1 flex-col overflow-hidden pt-3 pb-3">
-					<a href="/" class="mb-3 block w-full shrink-0 px-3">
+					<nav class="flex shrink-0 flex-col" aria-label="Site navigation">
+					<a href="/" class="mb-2 box-border block w-full shrink-0 px-3 py-1">
 						<img
 							class="block h-auto w-full max-w-[12.5rem]"
 							src="/images/logo-nms.webp"
@@ -528,13 +535,13 @@ const sectionLabelClasses =
 							alt="No Man's Sky Recipes"
 						/>
 					</a>
-					<nav class="mt-3 shrink-0 space-y-1 bg-black px-2" aria-label="Site navigation">
+					<div class="mt-3 shrink-0 space-y-1 bg-black px-2">
 						<p id="nav-tools-label" class={sectionLabelClasses}>Tools</p>
 						{
 							toolsNav.map((item) => {
 								const active = isNavItemActive(item.href);
 								return (
-									<a href={item.href} class={linkClasses(active)}>
+									<a href={item.href} class={linkClasses(active)} aria-current={ariaCurrent(item.href)}>
 										<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 											{icons[item.icon].map((path) => (
 												<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
@@ -552,7 +559,6 @@ const sectionLabelClasses =
 							type="button"
 							class={classNames(linkClasses(isCalculatorsActive), 'w-full justify-between')}
 							aria-expanded="false"
-							aria-haspopup="true"
 							aria-controls="calculators-flyout"
 						>
 							<span class="flex items-center">
@@ -583,6 +589,37 @@ const sectionLabelClasses =
 									clip-rule="evenodd"></path>
 							</svg>
 						</button>
+						<div
+							id="calculators-flyout"
+							data-flyout="calculators"
+							class="fixed z-50 hidden pl-3"
+						>
+							<div
+								class="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-md border border-white/10 bg-black p-2 shadow-lg"
+							>
+								<div class="grid grid-cols-1 gap-0.5">
+									{
+										calculatorsNav.map((item) => {
+											const active = isNavItemActive(item.href);
+											return (
+												<a
+													href={item.href}
+													class={linkClasses(active)}
+													aria-current={ariaCurrent(item.href)}
+												>
+													<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+														{icons[item.icon].map((path) => (
+															<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+														))}
+													</svg>
+													{item.name}
+												</a>
+											);
+										})
+									}
+								</div>
+							</div>
+						</div>
 
 						<p id="nav-catalogs-label" class={sectionLabelClasses}>Catalogs</p>
 						<button
@@ -590,7 +627,6 @@ const sectionLabelClasses =
 							type="button"
 							class={classNames(linkClasses(isCatalogActive), 'w-full justify-between')}
 							aria-expanded="false"
-							aria-haspopup="true"
 							aria-controls="catalogs-flyout"
 						>
 							<span class="flex items-center">
@@ -621,13 +657,44 @@ const sectionLabelClasses =
 									clip-rule="evenodd"></path>
 							</svg>
 						</button>
+						<div
+							id="catalogs-flyout"
+							data-flyout="catalogs"
+							class="fixed z-50 hidden pl-3"
+						>
+							<div
+								class="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-md border border-white/10 bg-black p-2 shadow-lg"
+							>
+								<div class="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
+									{
+										catalogsNav.map((item) => {
+											const active = isNavItemActive(item.href);
+											return (
+												<a
+													href={item.href}
+													class={linkClasses(active)}
+													aria-current={ariaCurrent(item.href)}
+												>
+													<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+														{icons[item.icon].map((path) => (
+															<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
+														))}
+													</svg>
+													{item.name}
+												</a>
+											);
+										})
+									}
+								</div>
+							</div>
+						</div>
 
 						<p id="nav-more-label" class={sectionLabelClasses}>More</p>
 						{
 							moreNav.map((item) => {
 								const active = isNavItemActive(item.href);
 								return (
-									<a href={item.href} class={linkClasses(active)}>
+									<a href={item.href} class={linkClasses(active)} aria-current={ariaCurrent(item.href)}>
 										<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 											{icons[item.icon].map((path) => (
 												<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
@@ -638,6 +705,7 @@ const sectionLabelClasses =
 								);
 							})
 						}
+					</div>
 					</nav>
 				{showAds && <NitroAd
 					id="nav-left"
@@ -650,78 +718,8 @@ const sectionLabelClasses =
 		</div>
 	</div>
 
-	<!-- Desktop calculators flyout (outside overflow container) -->
-	<div
-		id="calculators-flyout"
-		data-flyout="calculators"
-		class="fixed z-50 hidden pl-3"
-		role="menu"
-		aria-labelledby="nav-calculators-label"
-	>
-		<div
-			class="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-md border border-white/10 bg-black p-2 shadow-lg"
-		>
-			<div class="grid grid-cols-1 gap-0.5">
-				{
-					calculatorsNav.map((item) => {
-						const active = isNavItemActive(item.href);
-						return (
-							<a
-								href={item.href}
-								role="menuitem"
-								class={linkClasses(active)}
-							>
-								<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-									{icons[item.icon].map((path) => (
-										<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
-									))}
-								</svg>
-								{item.name}
-							</a>
-						);
-					})
-				}
-			</div>
-		</div>
-	</div>
-
-	<!-- Desktop catalogs flyout (outside overflow container) -->
-	<div
-		id="catalogs-flyout"
-		data-flyout="catalogs"
-		class="fixed z-50 hidden pl-3"
-		role="menu"
-		aria-labelledby="nav-catalogs-label"
-	>
-		<div
-			class="max-h-[calc(100vh-2rem)] overflow-y-auto rounded-md border border-white/10 bg-black p-2 shadow-lg"
-		>
-			<div class="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
-				{
-					catalogsNav.map((item) => {
-						const active = isNavItemActive(item.href);
-						return (
-							<a
-								href={item.href}
-								role="menuitem"
-								class={linkClasses(active)}
-							>
-								<svg class={iconClasses(active)} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-									{icons[item.icon].map((path) => (
-										<path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />
-									))}
-								</svg>
-								{item.name}
-							</a>
-						);
-					})
-				}
-			</div>
-		</div>
-	</div>
-
 	<div class="flex flex-1 flex-col lg:pl-56">
-		<div class="sticky top-0 z-10 flex items-center justify-between gap-3 bg-black px-3 py-2 lg:hidden">
+		<header class="sticky top-0 z-10 flex items-center justify-between gap-3 bg-black px-3 py-2 lg:hidden">
 			<a href="/" class="min-w-0">
 				<img
 					class="block h-4 w-auto object-contain object-left"
@@ -746,8 +744,8 @@ const sectionLabelClasses =
 						clip-rule="evenodd"></path>
 				</svg>
 			</button>
-		</div>
-		<main class="flex-1">
+		</header>
+		<main id="main-content" class="flex-1" tabindex="-1">
 			<div class="nms-bg mx-auto p-4">
 				<slot name="layout" />
 			</div>
@@ -857,7 +855,7 @@ const sectionLabelClasses =
 		if (open) {
 			positionFlyout(group);
 			if (focusFirstLink) {
-				const firstLink = group.flyout.querySelector<HTMLAnchorElement>('a[role="menuitem"]');
+				const firstLink = group.flyout.querySelector<HTMLAnchorElement>('a');
 				firstLink?.focus();
 			}
 		}
@@ -900,10 +898,6 @@ const sectionLabelClasses =
 		bindHoverZone(group, trigger);
 		bindHoverZone(group, flyout);
 
-		trigger.addEventListener('focus', () => {
-			if (isLargeScreen()) scheduleFlyoutOpen(group);
-		});
-
 		trigger.addEventListener('blur', (event) => {
 			if (!isLargeScreen()) return;
 			const related = event.relatedTarget as Node | null;
@@ -943,6 +937,23 @@ const sectionLabelClasses =
 		}
 		if (event.key === 'Escape' && mobileSidebar?.getAttribute('aria-hidden') === 'false') {
 			closeMobileDrawer();
+		}
+		// Keep Tab inside the open mobile drawer (it is a modal dialog).
+		if (event.key === 'Tab' && mobilePanel && mobileSidebar?.getAttribute('aria-hidden') === 'false') {
+			const focusables = Array.from(
+				mobilePanel.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'),
+			).filter((el) => el.offsetParent !== null);
+			const first = focusables[0];
+			const last = focusables[focusables.length - 1];
+			if (!first || !last) return;
+			const active = document.activeElement;
+			if (event.shiftKey && (active === first || !mobilePanel.contains(active))) {
+				event.preventDefault();
+				last.focus();
+			} else if (!event.shiftKey && (active === last || !mobilePanel.contains(active))) {
+				event.preventDefault();
+				first.focus();
+			}
 		}
 	});
 

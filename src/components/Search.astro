@@ -34,7 +34,9 @@
 		const shouldOpen = forceOpen ?? siteSearch.classList.contains('hidden');
 		if (shouldOpen) {
 			if (siteSearch.classList.contains('hidden')) {
-				returnFocusTo = document.activeElement instanceof HTMLElement ? document.activeElement : openSearch;
+				// Opened with "/" or Ctrl+K from nowhere in particular: return focus to the search button.
+				const active = document.activeElement;
+				returnFocusTo = active instanceof HTMLElement && active !== document.body ? active : openSearch;
 			}
 			siteSearch.classList.remove('hidden');
 			searchInput?.focus();
@@ -65,6 +67,25 @@
 	document.addEventListener('keydown', (event: KeyboardEvent) => {
 		if (event.key === 'Escape' && siteSearch && !siteSearch.classList.contains('hidden')) {
 			closeSiteSearch();
+			return;
+		}
+
+		// The search dialog is modal: keep Tab inside it.
+		if (event.key === 'Tab' && siteSearch && searchPanel && !siteSearch.classList.contains('hidden')) {
+			const focusables = Array.from(
+				searchPanel.querySelectorAll<HTMLElement>('input, a[href], button:not([disabled])'),
+			).filter((el) => el.offsetParent !== null || el.matches('input[type="checkbox"]'));
+			const first = focusables[0];
+			const last = focusables[focusables.length - 1];
+			if (!first || !last) return;
+			const active = document.activeElement;
+			if (event.shiftKey && (active === first || !searchPanel.contains(active))) {
+				event.preventDefault();
+				last.focus();
+			} else if (!event.shiftKey && (active === last || !searchPanel.contains(active))) {
+				event.preventDefault();
+				first.focus();
+			}
 			return;
 		}
 
