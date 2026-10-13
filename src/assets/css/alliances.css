@@ -23,8 +23,8 @@
 	}
 
 	/* Buttons */
-	:is(.alliances, .site-form) .button { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border: 1px solid transparent; border-radius: .25rem; background: #0284c7; padding: .6rem .95rem; font-size: .85rem; line-height: 1.2; color: white; font-weight: 600; cursor: pointer; text-decoration: none; }
-	:is(.alliances, .site-form) .button:hover { background: #0369a1; }
+	:is(.alliances, .site-form) .button { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border: 1px solid transparent; border-radius: .25rem; background: #0369a1; padding: .6rem .95rem; font-size: .85rem; line-height: 1.2; color: white; font-weight: 600; cursor: pointer; text-decoration: none; }
+	:is(.alliances, .site-form) .button:hover { background: #075985; }
 	:is(.alliances, .site-form) .button.secondary { background: transparent; border-color: #155e75; }
 	:is(.alliances, .site-form) .button.secondary:hover { background: #164e63; }
 	:is(.alliances, .site-form) .button.danger { background: transparent; border-color: #9f1239; color: #fecdd3; }
@@ -39,7 +39,7 @@
 	:is(.alliances, .site-form) .required { color: #fda4af; font-weight: 400; }
 	/* :where keeps this at low specificity so the textarea and select rules below can adjust it. */
 	:is(.alliances, .site-form) :where(input[type="text"], input[type="email"], input[type="url"], input[type="search"], input[type="password"], select, textarea) {
-		display: block; width: 100%; min-height: var(--control-height); background-color: #071923; border: 1px solid #155e75; border-radius: .25rem;
+		display: block; width: 100%; min-height: var(--control-height); background-color: #071923; border: 1px solid #0e7490; border-radius: .25rem;
 		padding: .5rem .7rem; color: white; font-family: inherit; font-size: .95rem;
 	}
 	:is(.alliances, .site-form) :is(input, select) { height: var(--control-height); }

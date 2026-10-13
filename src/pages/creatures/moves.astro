@@ -259,10 +259,10 @@ const breadcrumbs = [
 			affinity variants are easier to compare.
 		</p>
 
-		<div class="sticky top-0 z-10 mb-6 flex flex-wrap items-center justify-center gap-2 rounded-sm bg-[#0a1929]/95 py-3 backdrop-blur" id="affinity-filter">
-			<button data-filter="all" class="aff-btn active rounded-sm border border-sky-500 bg-sky-700/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition-colors hover:bg-sky-600/80">All</button>
+		<div class="lg:sticky lg:top-0 z-10 mb-6 flex flex-wrap items-center justify-center gap-2 rounded-sm bg-[#0a1929]/95 py-3 backdrop-blur" id="affinity-filter" role="group" aria-label="Show moves for affinity">
+			<button type="button" aria-pressed="true" data-filter="all" class="aff-btn active rounded-sm border border-sky-500 bg-sky-700/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition-colors hover:bg-sky-600/80">All</button>
 			{affinities.map((a) => (
-				<button data-filter={a.Id} class="aff-btn flex items-center gap-1 rounded-sm border border-sky-700 bg-sky-900/40 px-3 py-1 text-xs uppercase tracking-wide text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-800/60">
+				<button type="button" aria-pressed="false" data-filter={a.Id} class="aff-btn flex items-center gap-1 rounded-sm border border-sky-700 bg-sky-900/40 px-3 py-1 text-xs uppercase tracking-wide text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-800/60">
 					{a.Icon && <img src={`${IMAGE_BASE}${toWebp(a.Icon)}`} alt="" class="h-5 w-5" loading="lazy" />}
 					{a.DisplayName ?? a.Id}
 				</button>
@@ -439,9 +439,11 @@ const breadcrumbs = [
 				buttons.forEach((b) => {
 					b.classList.remove(...ACTIVE.split(' '));
 					b.classList.add(...INACTIVE.split(' '));
+					b.setAttribute('aria-pressed', 'false');
 				});
 				btn.classList.remove(...INACTIVE.split(' '));
 				btn.classList.add(...ACTIVE.split(' '));
+				btn.setAttribute('aria-pressed', 'true');
 			}
 
 			function applyFilter(affinity: string) {

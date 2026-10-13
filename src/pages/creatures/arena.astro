@@ -200,7 +200,7 @@ const breadcrumbs = [
 												<>
 													{index > 0 && ', '}
 													{part.href ? (
-														<a href={part.href} class="text-cyan-300 hover:text-cyan-200">
+														<a href={part.href} class="text-cyan-300 underline underline-offset-2 hover:text-cyan-200">
 															{part.label}
 														</a>
 													) : (
@@ -255,7 +255,7 @@ const breadcrumbs = [
 														<>
 															{index > 0 && ', '}
 															{part.href ? (
-																<a href={part.href} class="text-cyan-300 hover:text-cyan-200">
+																<a href={part.href} class="text-cyan-300 underline underline-offset-2 hover:text-cyan-200">
 																	{part.label}
 																</a>
 															) : (
@@ -345,7 +345,7 @@ const breadcrumbs = [
 							<div class="mb-3 flex items-start gap-3">
 								<img
 									src={`${IMAGE_BASE}${toWebp(egg.Icon)}`}
-									alt={egg.Name}
+									alt=""
 									class="h-16 w-16 shrink-0 rounded-sm border border-sky-800/60 bg-black/30 p-1"
 									loading="lazy"
 								/>

@@ -19,9 +19,9 @@ const pages = Array.from({ length: lastPage }, (_, index) => index + 1);
 		<span class="text-sky-200/70">Browse by page:</span>
 		{pages.map((page) =>
 			page === currentPage ? (
-				<span aria-current="page" class="text-white">{page}</span>
+				<span aria-current="page" class="inline-flex min-h-6 min-w-6 items-center justify-center font-bold text-white">{page}</span>
 			) : (
-				<a href={pageHref(page)} class="hover:text-white hover:underline">{page}</a>
+				<a href={pageHref(page)} class="inline-flex min-h-6 min-w-6 items-center justify-center underline underline-offset-2 hover:text-white" aria-label={`Page ${page}`}>{page}</a>
 			)
 		)}
 	</nav>

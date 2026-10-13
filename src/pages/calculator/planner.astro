@@ -52,14 +52,13 @@ const imageBaseUrl = SITE.imageBaseUrl;
 				type="text"
 				autocomplete="off"
 				placeholder="Search products to add…"
-				class="box-border h-12 w-full max-w-full rounded-sm border border-sky-700 bg-sky-900/50 px-4 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+				class="box-border h-12 w-full max-w-full rounded-sm border border-sky-600 bg-sky-900/50 px-4 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
 			/>
 			<div
 				id="product-results"
 				class="box-border mt-2 max-h-64 max-w-full overflow-y-auto rounded-sm border border-sky-800 bg-black/40 hidden"
-				role="listbox"
-				aria-label="Matching products"
 			></div>
+			<p id="planner-status" class="sr-only" role="status" aria-live="polite"></p>
 		</div>
 
 		<section aria-labelledby="plan-heading" class="mb-8">
@@ -97,7 +96,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 						type="checkbox"
 						class="peer sr-only"
 					/>
-					<span class="select-none rounded-lg border-2 border-sky-600 px-2 py-0.5 transition-colors duration-200 peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+					<span class="select-none rounded-lg border-2 border-sky-600 px-2 py-0.5 transition-colors duration-200 peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-yellow-400">
 						Show crafting trees
 					</span>
 				</label>
@@ -489,12 +488,27 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		plan.push({ id: productId, qty: 1 });
 		renderPlan();
 		updateUrl();
+		announce(`Added ${productsById.get(productId)?.name ?? 'item'} to your plan.`);
+		// The results list closes after a pick; keep focus on the new row instead of losing it.
+		focusPlanQty(productId);
 	}
 
 	function removeFromPlan(productId: string) {
+		const index = plan.findIndex((entry) => entry.id === productId);
+		const name = productsById.get(productId)?.name ?? 'item';
 		plan = plan.filter((entry) => entry.id !== productId);
 		renderPlan();
 		updateUrl();
+		announce(`Removed ${name} from your plan.`);
+		// Focus the next row's remove button (or the search box when the plan is empty).
+		const buttons = planRows?.querySelectorAll<HTMLButtonElement>('button[aria-label^="Remove "]');
+		const next = buttons?.[Math.min(index, (buttons?.length ?? 1) - 1)];
+		(next ?? productSearch)?.focus();
+	}
+
+	const plannerStatus = document.getElementById('planner-status');
+	function announce(message: string) {
+		if (plannerStatus) plannerStatus.textContent = message;
 	}
 
 	function setPlanQty(productId: string, qty: number) {
@@ -550,7 +564,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			qtyInput.id = `qty-${product.id}`;
 			qtyInput.dataset.productId = product.id;
 			qtyInput.className =
-				'h-9 w-20 rounded-sm border border-sky-700 bg-black/40 px-2 text-center text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400';
+				'h-9 w-20 rounded-sm border border-sky-600 bg-black/40 px-2 text-center text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400';
 			qtyInput.addEventListener('change', () => {
 				const parsed = Number.parseInt(qtyInput.value, 10);
 				setPlanQty(product.id, Number.isFinite(parsed) ? parsed : 1);
@@ -616,16 +630,18 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			empty.className = 'p-3 text-sm text-sky-200/70';
 			empty.textContent = 'No matching products found.';
 			productResults.appendChild(empty);
+			announce('No matching products found.');
 			return;
 		}
 
 		productResults.classList.remove('hidden');
+		announce(`${matches.length} matching product${matches.length === 1 ? '' : 's'}. Press Tab to reach them.`);
 		const ul = document.createElement('ul');
 		ul.className = 'm-0 list-none p-0';
+		ul.setAttribute('aria-label', 'Matching products');
 
 		for (const product of matches) {
 			const li = document.createElement('li');
-			li.setAttribute('role', 'option');
 
 			const btn = document.createElement('button');
 			btn.type = 'button';
@@ -714,11 +730,13 @@ const imageBaseUrl = SITE.imageBaseUrl;
 				await navigator.clipboard.writeText(window.location.href);
 				const originalText = copyLinkBtn.textContent;
 				copyLinkBtn.textContent = 'Copied!';
+				announce('Link copied to the clipboard.');
 				setTimeout(() => {
 					copyLinkBtn.textContent = originalText;
 				}, 2000);
 			} catch {
 				copyLinkBtn.textContent = 'Copy failed';
+				announce('Copying the link failed.');
 				setTimeout(() => {
 					copyLinkBtn.textContent = 'Copy link';
 				}, 2000);

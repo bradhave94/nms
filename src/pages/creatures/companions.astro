@@ -520,7 +520,7 @@ const breadcrumbs = [
 										<td class="px-3 py-2 text-center">
 											{b.UsefulBehaviour
 												? <span class="text-emerald-400">&#10003;</span>
-												: <span class="text-gray-500">&#10005;</span>}
+												: <span class="text-gray-400">&#10005;</span>}
 										</td>
 										<td class="px-3 py-2 text-sky-200/80">{b.Validity}</td>
 										<td class="px-3 py-2 text-right tabular-nums">{b.Weight}</td>
@@ -591,12 +591,12 @@ const breadcrumbs = [
 				{traits.map((trait) => (
 					<div class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
 						<h3 class={`m-0 mb-3 text-xl ${traitColors[trait]}`}>{trait}</h3>
-						<div class="grid gap-4 md:grid-cols-2">
+						<div class="grid gap-4 md:grid-cols-2 [&>*]:min-w-0">
 							<div>
 								<p class="m-0 mb-2 text-xs uppercase tracking-wide text-emerald-400/90">Increase (+)</p>
 								<div class="space-y-1.5">
 									{modsByTrait[trait].increase.map((m) => (
-										<div class="flex items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
+										<div class="flex flex-wrap items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
 											<span class="shrink-0 rounded-sm border border-sky-700/50 bg-sky-900/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300/90">
 												{m.ItemType}
 											</span>
@@ -610,7 +610,7 @@ const breadcrumbs = [
 								<p class="m-0 mb-2 text-xs uppercase tracking-wide text-red-400/90">Decrease (-)</p>
 								<div class="space-y-1.5">
 									{modsByTrait[trait].decrease.map((m) => (
-										<div class="flex items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
+										<div class="flex flex-wrap items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
 											<span class="shrink-0 rounded-sm border border-sky-700/50 bg-sky-900/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300/90">
 												{m.ItemType}
 											</span>
@@ -711,7 +711,7 @@ const breadcrumbs = [
 					</p>
 					<div class="grid grid-cols-2 gap-2">
 						{Object.entries(eggLabels.TraitWords).map(([key, word]) => (
-							<span class="flex items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
+							<span class="flex flex-wrap items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
 								<span class="shrink-0 rounded-sm border border-sky-700/50 bg-sky-900/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300/90">{key}</span>
 								<span class="text-white">{word}</span>
 							</span>
@@ -725,7 +725,7 @@ const breadcrumbs = [
 					</p>
 					<div class="grid grid-cols-2 gap-2">
 						{Object.entries(eggLabels.SizeWords).map(([key, word]) => (
-							<span class="flex items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
+							<span class="flex flex-wrap items-center gap-2 rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-sm">
 								<span class="shrink-0 rounded-sm border border-sky-700/50 bg-sky-900/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300/90">{key}</span>
 								<span class="text-white">{word}</span>
 							</span>
@@ -763,22 +763,22 @@ const breadcrumbs = [
 										<td class="px-3 py-2 text-center">
 											{eo.CanChangeGrowth
 												? <span class="text-emerald-400">&#10003;</span>
-												: <span class="text-gray-500">&#10005;</span>}
+												: <span class="text-gray-400">&#10005;</span>}
 										</td>
 										<td class="px-3 py-2 text-center">
 											{eo.CanChangeAccessories
 												? <span class="text-emerald-400">&#10003;</span>
-												: <span class="text-gray-500">&#10005;</span>}
+												: <span class="text-gray-400">&#10005;</span>}
 										</td>
 										<td class="px-3 py-2 text-center">
 											{eo.CanChangeColour
 												? <span class="text-emerald-400">&#10003;</span>
-												: <span class="text-gray-500">&#10005;</span>}
+												: <span class="text-gray-400">&#10005;</span>}
 										</td>
 										<td class="px-3 py-2 text-center">
 											{eo.CanChangeTraits
 												? <span class="text-emerald-400">&#10003;</span>
-												: <span class="text-gray-500">&#10005;</span>}
+												: <span class="text-gray-400">&#10005;</span>}
 										</td>
 										<td class="px-3 py-2 text-right tabular-nums text-white">
 											{eo.MinScaleOverride} – {eo.MaxScaleOverride}
@@ -830,7 +830,7 @@ const breadcrumbs = [
 			<div class="rounded-sm border border-sky-800/70 bg-sky-950/35">
 				<div class="grid gap-4 p-4 sm:grid-cols-3">
 					<div>
-						<h4 class="m-0 mb-2 text-base text-emerald-300">Happy</h4>
+						<h3 class="m-0 mb-2 text-base text-emerald-300">Happy</h3>
 						<div class="space-y-1">
 							{goodMoods.map((m) => (
 								<span class="block rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1 text-sm text-white">{m}</span>
@@ -838,7 +838,7 @@ const breadcrumbs = [
 						</div>
 					</div>
 					<div>
-						<h4 class="m-0 mb-2 text-base text-amber-300">Hungry</h4>
+						<h3 class="m-0 mb-2 text-base text-amber-300">Hungry</h3>
 						<div class="space-y-1">
 							{hungryMoods.map((m) => (
 								<span class="block rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1 text-sm text-white">{m}</span>
@@ -846,7 +846,7 @@ const breadcrumbs = [
 						</div>
 					</div>
 					<div>
-						<h4 class="m-0 mb-2 text-base text-violet-300">Lonely</h4>
+						<h3 class="m-0 mb-2 text-base text-violet-300">Lonely</h3>
 						<div class="space-y-1">
 							{lonelyMoods.map((m) => (
 								<span class="block rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1 text-sm text-white">{m}</span>

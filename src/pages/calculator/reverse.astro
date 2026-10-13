@@ -52,14 +52,13 @@ const imageBaseUrl = SITE.imageBaseUrl;
 				type="text"
 				autocomplete="off"
 				placeholder="Search ingredients (e.g. Ferrite Dust, Carbon)…"
-				class="box-border h-12 w-full max-w-full rounded-sm border border-sky-700 bg-sky-900/50 px-4 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+				class="box-border h-12 w-full max-w-full rounded-sm border border-sky-600 bg-sky-900/50 px-4 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
 			/>
 			<div
 				id="item-results"
 				class="box-border mt-2 max-h-64 max-w-full overflow-y-auto rounded-sm border border-sky-800 bg-black/40 hidden"
-				role="listbox"
-				aria-label="Matching ingredients"
 			></div>
+			<p id="reverse-status" class="sr-only" role="status" aria-live="polite"></p>
 		</div>
 
 		<div id="selected-item" class="mb-6 hidden"></div>
@@ -71,7 +70,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 				type="number"
 				min="1"
 				value="1"
-				class="h-10 w-24 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+				class="h-10 w-24 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
 			/>
 			<span id="have-label" class="text-sm text-sky-200/80">of the selected item</span>
 		</div>
@@ -79,19 +78,19 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		<div class="mb-4 flex flex-wrap gap-2">
 			<div class="inline-flex">
 				<input type="checkbox" class="peer sr-only" name="method-filter" id="filter-refine" value="refine" checked />
-				<label for="filter-refine" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+				<label for="filter-refine" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-yellow-400">
 					Refine
 				</label>
 			</div>
 			<div class="inline-flex">
 				<input type="checkbox" class="peer sr-only" name="method-filter" id="filter-cook" value="cook" checked />
-				<label for="filter-cook" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+				<label for="filter-cook" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-yellow-400">
 					Cook
 				</label>
 			</div>
 			<div class="inline-flex">
 				<input type="checkbox" class="peer sr-only" name="method-filter" id="filter-craft" value="craft" checked />
-				<label for="filter-craft" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200">
+				<label for="filter-craft" class="select-none cursor-pointer rounded-lg border-2 border-sky-600 py-0.5 px-2 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-yellow-400">
 					Craft
 				</label>
 			</div>
@@ -233,7 +232,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		return { itemId, haveQty };
 	}
 
-	function selectEntry(entry: ReverseEntry) {
+	function selectEntry(entry: ReverseEntry, fromUser = true) {
 		selectedEntry = entry;
 		if (itemSearch) {
 			itemSearch.value = entry.name;
@@ -245,6 +244,15 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		renderSelectedItem();
 		renderResults();
 		updateUrl();
+		if (!fromUser) return;
+		announce(`Showing recipes that use ${entry.name}.`);
+		// The results list closes after a pick; return focus to the search box.
+		itemSearch?.focus();
+	}
+
+	const reverseStatus = document.getElementById('reverse-status');
+	function announce(message: string) {
+		if (reverseStatus) reverseStatus.textContent = message;
 	}
 
 	function renderSelectedItem() {
@@ -430,16 +438,18 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			empty.className = 'p-3 text-sm text-sky-200/70';
 			empty.textContent = 'No matching ingredients found.';
 			itemResults.appendChild(empty);
+			announce('No matching ingredients found.');
 			return;
 		}
 
 		itemResults.classList.remove('hidden');
+		announce(`${matches.length} matching ingredient${matches.length === 1 ? '' : 's'}. Press Tab to reach them.`);
 		const ul = document.createElement('ul');
 		ul.className = 'm-0 list-none p-0';
+		ul.setAttribute('aria-label', 'Matching ingredients');
 
 		for (const entry of matches) {
 			const li = document.createElement('li');
-			li.setAttribute('role', 'option');
 
 			const btn = document.createElement('button');
 			btn.type = 'button';
@@ -491,7 +501,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			if (itemId) {
 				const entry = entriesById.get(itemId);
 				if (entry) {
-					selectEntry(entry);
+					selectEntry(entry, false);
 				}
 			}
 		} catch (error) {
