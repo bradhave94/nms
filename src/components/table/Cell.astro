@@ -3,6 +3,7 @@ import { Image } from 'astro:assets'
 import { getSlug } from '@utils/lookup.js';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
+import { swatchStyle } from '@utils/contrast';
 
 interface CellData {
     id: string;
@@ -61,11 +62,11 @@ const { cell } = Astro.props;
         <>
             <span class="d-none sort">{cell.name}</span>
             <a href={cell.href ?? getSlug(cell.id)} class="cell-link">
-                <div class="cell-content" style={`background: #${cell.colour}`}>
+                <div class="cell-content" style={swatchStyle(cell.colour)}>
                     <span class="cell-text flex items-center gap-2 flex-wrap">
                         {cell.name}
                         {cell.amount && (
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums amount">
+                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/60 text-white tabular-nums amount">
                                 {cell.amount.toLocaleString()}
                             </span>
                         )}
@@ -73,7 +74,7 @@ const { cell } = Astro.props;
                     {cell.image && (
                         <Image
                             src={`${SITE.imageBaseUrl}${toWebp(cell.image)}`}
-                            alt={cell.name}
+                            alt=""
                             sizes="50px"
                             width={50}
                             height={50}

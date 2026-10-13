@@ -9,6 +9,7 @@ import { getById, getSlug, type Item } from '@utils/lookup.js';
 import type { RequiredItem } from '@utils/lookup.js';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
+import { swatchStyle } from '@utils/contrast';
 
 interface ItemDetails {
   id: string;
@@ -124,14 +125,13 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 			<div class="tabulator-search relative">
 				<input
 					class="rounded-md w-full bg-black border-blue-500 focus:border-blue-500 focus:ring-blue-500 peer"
-					required
 					type="text"
 					id="search"
 					name="search"
-					placeholder=""
+					placeholder=" "
 				/>
 				<label
-					class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
+					class="absolute top-1/2 -translate-y-1/2 left-3 pointer-events-none peer-focus:opacity-0 peer-[:not(:placeholder-shown)]:opacity-0"
 					for="search">Search</label
 				>
 			</div>
@@ -144,20 +144,20 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 					<a
 						href={getSlug(item.output.id)}
 						class="flex items-center gap-3 text-lg w-full p-2 transition-opacity hover:opacity-75"
-						style={'background: #' + item.output.colour}
+						style={swatchStyle(item.output.colour)}
 					>
 						<Image
 							src={SITE.imageBaseUrl + toWebp(item.output.image)}
-							alt={item.output.name}
+							alt=""
 							sizes="50px"
 							width={50}
 							height={50}
 							class="shrink-0"
 						/>
 						<div class="min-w-0 flex-1">
-							<h4 class="lg:text-lg truncate">
+							<h2 class="rc-title lg:text-lg truncate">
 								<span class="output">{item.output.name}</span>
-							</h4>
+							</h2>
 							<p class="flex text-sm items-center gap-2 pt-1">
 								<Image
 									src={credit}
@@ -180,7 +180,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 							<a
 								href={getSlug(input1.id)}
 								class="flex pt-4 p-2 transition-opacity hover:opacity-75 items-center gap-3"
-								style={'background: #' + input1.colour}
+								style={swatchStyle(input1.colour)}
 							>
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
@@ -188,17 +188,17 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 											SITE.imageBaseUrl +
 											toWebp(input1.image)
 										}
-										alt={input1.name}
+										alt=""
 										sizes="50px"
 										width={50}
 										height={50}
 									/>
 								</div>
 								<div class="flex items-center gap-2 min-w-0 flex-1">
-									<h4 class="lg:text-lg flex items-center gap-2 truncate">
+									<p class="rc-title lg:text-lg flex items-center gap-2 truncate">
 										{input1.name}
-										{input1.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input1.amount}>{input1.amount.toLocaleString()}</span>}
-									</h4>
+										{input1.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/60 text-white tabular-nums shrink-0" data-quantity={input1.amount}>{input1.amount.toLocaleString()}</span>}
+									</p>
 								</div>
 							</a>
 						);
@@ -209,7 +209,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 							<a
 								href={getSlug(input2.id)}
 								class="flex p-2 transition-opacity hover:opacity-75 items-center gap-3"
-								style={'background: #' + input2.colour}
+								style={swatchStyle(input2.colour)}
 							>
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
@@ -217,17 +217,17 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 											SITE.imageBaseUrl +
 											toWebp(input2.image)
 										}
-										alt={input2.name}
+										alt=""
 										sizes="50px"
 										width={50}
 										height={50}
 									/>
 								</div>
 								<div class="flex items-center gap-2 min-w-0 flex-1">
-									<h4 class="lg:text-lg flex items-center gap-2 truncate">
+									<p class="rc-title lg:text-lg flex items-center gap-2 truncate">
 										{input2.name}
-										{input2.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input2.amount}>{input2.amount.toLocaleString()}</span>}
-									</h4>
+										{input2.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/60 text-white tabular-nums shrink-0" data-quantity={input2.amount}>{input2.amount.toLocaleString()}</span>}
+									</p>
 								</div>
 							</a>
 						);
@@ -238,7 +238,7 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 							<a
 								href={getSlug(input3.id)}
 								class="flex p-2 transition-opacity hover:opacity-75 items-center gap-3"
-								style={'background: #' + input3.colour}
+								style={swatchStyle(input3.colour)}
 							>
 								<div class="flex w-[50px] shrink-0 justify-center">
 									<Image
@@ -246,17 +246,17 @@ const sortedData = [...data].sort((a, b) => b.value - a.value);
 											SITE.imageBaseUrl +
 											toWebp(input3.image)
 										}
-										alt={input3.name}
+										alt=""
 										sizes="50px"
 										width={50}
 										height={50}
 									/>
 								</div>
 								<div class="flex items-center gap-2 min-w-0 flex-1">
-									<h4 class="lg:text-lg flex items-center gap-2 truncate">
+									<p class="rc-title lg:text-lg flex items-center gap-2 truncate">
 										{input3.name}
-										{input3.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums shrink-0" data-quantity={input3.amount}>{input3.amount.toLocaleString()}</span>}
-									</h4>
+										{input3.amount && <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/60 text-white tabular-nums shrink-0" data-quantity={input3.amount}>{input3.amount.toLocaleString()}</span>}
+									</p>
 								</div>
 							</a>
 						);

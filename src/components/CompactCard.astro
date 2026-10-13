@@ -13,7 +13,7 @@ const { card, index, loading } = Astro.props;
 			<Image
 				class="h-full w-full object-contain object-center"
 				src={card.image}
-				alt={card.name}
+				alt=""
 				sizes="(min-width: 1280px) 12vw, (min-width: 1024px) 16vw, (min-width: 768px) 24vw, 45vw"
 				width={160}
 				height={160}
@@ -25,10 +25,14 @@ const { card, index, loading } = Astro.props;
 			{card.subtitle && <p class="m-0 mt-1 text-xs text-amber-200">{card.subtitle}</p>}
 		</div>
 	</a>
+	<!-- Full name for truncated cards. Hoverable (no gap to the card), Escape hides it (Layout). -->
 	<div
-		class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-max max-w-72 -translate-x-1/2 rounded-md border border-sky-400 bg-[#06283d] px-3 py-2 text-sm font-semibold text-white opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100"
+		class="absolute bottom-full left-1/2 z-20 hidden w-max max-w-72 -translate-x-1/2 pb-2 group-hover:block group-focus-within:block"
 		role="tooltip"
+		aria-hidden="true"
 	>
-		{card.name}
+		<div class="rounded-md border border-sky-400 bg-[#06283d] px-3 py-2 text-sm font-semibold text-white shadow-lg">
+			{card.name}
+		</div>
 	</div>
 </article>

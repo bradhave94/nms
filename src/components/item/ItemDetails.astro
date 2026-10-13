@@ -146,7 +146,7 @@ const {
       {answerSummary}
     </p>
 
-    <p class="mt-2 text-sm text-gray-500">
+    <p class="mt-2 text-sm text-gray-400">
       Last updated: {SITE.version_date}
     </p>
 
@@ -181,7 +181,7 @@ const {
       <div class="mt-2">
         <p class="inline-flex items-center gap-2 m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           Ship Tech:
-          <a href={getSlug(shipTechId)} class="text-cyan-300 hover:text-cyan-200">
+          <a href={getSlug(shipTechId)} class="text-cyan-300 underline underline-offset-2 hover:text-cyan-200">
             {shipTechName ?? shipTechItemName ?? shipTechId}
           </a>
         </p>
@@ -193,7 +193,7 @@ const {
       <div class="mt-2">
         <p class="inline-flex items-center gap-2 m-0 rounded-sm bg-gray-700 px-3 py-1 text-sm text-cyan-200">
           Installs as:
-          <a href={getSlug(deploysIntoId)} class="text-cyan-300 hover:text-cyan-200">
+          <a href={getSlug(deploysIntoId)} class="text-cyan-300 underline underline-offset-2 hover:text-cyan-200">
             {deploysIntoItemName}
           </a>
         </p>

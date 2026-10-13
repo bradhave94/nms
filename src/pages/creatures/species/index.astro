@@ -173,7 +173,7 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 					<button
 						id="affinity-filter-clear"
 						type="button"
-						class="rounded-sm border border-sky-600 px-2 py-0.5 text-xs text-sky-400 hover:bg-sky-900/50 hover:text-white"
+						class="min-h-6 rounded-sm border border-sky-600 px-2 py-0.5 text-xs text-sky-400 hover:bg-sky-900/50 hover:text-white"
 					>
 						Clear
 					</button>
@@ -181,14 +181,13 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 				<div class="tabulator-search relative">
 					<input
 						class="rounded-md w-full bg-black border-blue-500 focus:border-blue-500 focus:ring-blue-500 peer"
-						required
 						type="text"
 						id="search"
 						name="search"
-						placeholder=""
+						placeholder=" "
 					/>
 					<label
-						class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
+						class="absolute top-1/2 -translate-y-1/2 left-3 pointer-events-none peer-focus:opacity-0 peer-[:not(:placeholder-shown)]:opacity-0"
 						for="search">Search</label
 					>
 				</div>
@@ -251,6 +250,7 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 
 <script>
 	import { TabulatorFull as Tabulator } from 'tabulator-tables';
+	import { applyTabulatorA11y } from '@utils/tabulatorA11y';
 	type ColumnData = { title: string; field: string };
 
 	requestAnimationFrame(() => {
@@ -282,6 +282,8 @@ const { title, description } = buildPaginatedMeta('Creature Species', baseDescri
 			placeholder: 'No results found',
 			printAsHtml: true,
 		});
+
+		applyTabulatorA11y(table, 'Creature species', 'species');
 
 		table.on('dataLoaded', function () {
 			if (table.element?.parentElement?.parentElement) {

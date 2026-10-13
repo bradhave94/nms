@@ -110,14 +110,13 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
       <div class="tabulator-search relative">
         <input
           class="rounded-md w-full bg-black border-blue-500 focus:border-blue-500 focus:ring-blue-500 peer"
-          required
           type="text"
           id="search"
           name="search"
-          placeholder=""
+          placeholder=" "
         />
         <label
-          class="absolute top-1/2 -translate-y-1/2 left-3 peer-focus:opacity-0 peer-valid:opacity-0"
+          class="absolute top-1/2 -translate-y-1/2 left-3 pointer-events-none peer-focus:opacity-0 peer-[:not(:placeholder-shown)]:opacity-0"
           for="search">Search</label
         >
       </div>
@@ -135,6 +134,8 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
 
 <script>
   import { TabulatorFull as Tabulator } from 'tabulator-tables';
+  import { readableTextOn } from '@utils/contrast';
+  import { applyTabulatorA11y } from '@utils/tabulatorA11y';
   type ColumnData = { title: string; field: string };
   type SortValue = string | number | null | undefined;
 
@@ -210,7 +211,9 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
     link.className = 'cell-link';
     const content = document.createElement('div');
     content.className = 'cell-content';
-    content.style.background = `#${source.dataset.c ?? '333333'}`;
+    const colour = source.dataset.c ?? '333333';
+    content.style.background = `#${colour}`;
+    content.style.color = readableTextOn(colour);
     const text = document.createElement('span');
     text.className = 'cell-text flex items-center gap-2 flex-wrap';
     text.append(source.textContent ?? '');
@@ -218,7 +221,7 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
     if (amount) {
       const badge = document.createElement('span');
       badge.className =
-        'cell-amount inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums';
+        'cell-amount inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/60 text-white tabular-nums';
       badge.textContent = amount;
       text.append(badge);
     }
@@ -273,6 +276,8 @@ const { title, image, image_width, image_height, columns, sort = 'output', data 
       placeholder: 'No results found',
       printAsHtml: true,
     });
+
+    applyTabulatorA11y(table, document.querySelector('h1')?.textContent?.trim() || 'Recipes', 'recipes');
 
     table.on('dataLoaded', function () {
       if (table.element?.parentElement) {

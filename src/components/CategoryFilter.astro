@@ -30,7 +30,7 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 			aria-expanded="false"
 			aria-controls={`${idPrefix}-group-dropdown`}
 			aria-autocomplete="list"
-			class="h-10 w-48 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+			class="h-10 w-48 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
 		/>
 		<div
 			id={`${idPrefix}-group-dropdown`}
@@ -44,14 +44,14 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 			id={`${idPrefix}-search-input`}
 			type="text"
 			placeholder="Search by name..."
-			class="h-10 w-48 rounded-sm border border-sky-700 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
+			class="h-10 w-48 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
 		/>
 	</div>
 	<div class="flex gap-2">
 		<button
 			id={`${idPrefix}-apply-filters`}
 			type="button"
-			class="h-10 rounded-sm bg-sky-600 px-4 font-semibold text-white transition-colors hover:bg-sky-500"
+			class="h-10 rounded-sm bg-sky-700 px-4 font-semibold text-white transition-colors hover:bg-sky-800"
 		>
 			Apply
 		</button>
@@ -74,11 +74,12 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 	<button
 		id={`${idPrefix}-retry-btn`}
 		type="button"
-		class="rounded-sm bg-sky-600 px-4 py-2 font-semibold text-white transition-colors hover:bg-sky-500"
+		class="rounded-sm bg-sky-700 px-4 py-2 font-semibold text-white transition-colors hover:bg-sky-800"
 	>
 		Retry
 	</button>
 </div>
+<p id={`${idPrefix}-status`} class="sr-only" role="status" aria-live="polite"></p>
 <div id={`${idPrefix}-items-container`} class:list={{ hidden: !hasInitialItems }}>
 	<div
 		id={`${idPrefix}-items`}
@@ -104,6 +105,7 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 	const itemsContainer = document.getElementById(`${idPrefix}-items-container`);
 	const itemsEl = document.getElementById(`${idPrefix}-items`);
 	const loadMoreSentinel = document.getElementById(`${idPrefix}-load-more-sentinel`);
+	const statusEl = document.getElementById(`${idPrefix}-status`);
 
 	let allItemsData = [];
 	let allGroups = [];
@@ -266,7 +268,7 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 					<img
 						class="h-full w-full object-contain object-center"
 						src="${IMAGE_BASE}${icon.replace(/\.png$/i, '.webp')}"
-						alt="${name}"
+						alt=""
 						loading="lazy"
 						width="128"
 						height="128"
@@ -366,6 +368,11 @@ const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
 
 			loadingEl.classList.add('hidden');
 			itemsEl.innerHTML = '';
+
+			// Announce result counts for filter changes (not the silent first load).
+			if (statusEl && !keepStaticItems) {
+				statusEl.textContent = `${items.length.toLocaleString()} item${items.length === 1 ? '' : 's'} found`;
+			}
 
 			if (items.length === 0) {
 				itemsContainer.classList.add('hidden');

@@ -54,7 +54,7 @@ const {
             <div class="flex items-center gap-3" slot="title">
               <Image
                 src={`${imageBaseUrl}${toWebp(usedInItem.Icon)}`}
-                alt={usedInItem.Name}
+                alt=""
                 sizes="40px"
                 width={40}
                 height={40}
@@ -63,7 +63,7 @@ const {
               <div class="flex-1 min-w-0">
                 <span class="text-white font-medium">{usedInItem.Name}</span>
                 {usedInItem.recipes.length > 1 && (
-                  <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
+                  <span class="ml-1 text-xs text-gray-400">({usedInItem.recipes.length} ways)</span>
                 )}
               </div>
             </div>
@@ -87,7 +87,7 @@ const {
                             >
                               <Image
                                 src={`${imageBaseUrl}${toWebp(ing.Icon)}`}
-                                alt={ing.Name}
+                                alt=""
                                 sizes="20px"
                                 width={20}
                                 height={20}
@@ -106,7 +106,7 @@ const {
                         >
                           <Image
                             src={`${imageBaseUrl}${toWebp(usedInItem.Icon)}`}
-                            alt={usedInItem.Name}
+                            alt=""
                             sizes="20px"
                             width={20}
                             height={20}
@@ -201,7 +201,7 @@ const {
                               .map(
                                 (ing) => `
                                   <a href="${escapeHtml(ing.href)}" class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit">
-                                    <img src="${escapeHtml(`${imageBase}${ing.icon}`)}" alt="${escapeHtml(ing.name)}" class="h-5 w-5 shrink-0" loading="lazy" />
+                                    <img src="${escapeHtml(`${imageBase}${ing.icon}`)}" alt="" class="h-5 w-5 shrink-0" loading="lazy" />
                                     <span class="text-white">${escapeHtml(ing.name)}</span>
                                     <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity="${Number(ing.quantity)}">${numberFormatter.format(Number(ing.quantity))}</span>
                                   </a>
@@ -212,7 +212,7 @@ const {
                         </td>
                         <td class="py-2 px-2 align-top">
                           <a href="${escapeHtml(usedInItem.href)}" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300">
-                            <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-5 w-5 shrink-0" loading="lazy" />
+                            <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="" class="h-5 w-5 shrink-0" loading="lazy" />
                             <span>${escapeHtml(usedInItem.name)}</span>
                             <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity="${Number(recipe.outputQuantity)}">${numberFormatter.format(Number(recipe.outputQuantity))}</span>
                           </a>
@@ -226,10 +226,10 @@ const {
                 card.className = 'rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden group';
                 card.innerHTML = `
                   <summary class="list-none cursor-pointer p-3 flex items-center gap-3">
-                    <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="${escapeHtml(usedInItem.name)}" class="h-10 w-10 shrink-0" loading="lazy" />
+                    <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="" class="h-10 w-10 shrink-0" loading="lazy" />
                     <div class="flex-1 min-w-0">
                       <span class="text-white font-medium">${escapeHtml(usedInItem.name)}</span>
-                      ${usedInItem.ways > 1 ? `<span class="ml-1 text-xs text-gray-500">(${Number(usedInItem.ways)} ways)</span>` : ''}
+                      ${usedInItem.ways > 1 ? `<span class="ml-1 text-xs text-gray-400">(${Number(usedInItem.ways)} ways)</span>` : ''}
                     </div>
                   </summary>
                   <div class="pt-2 overflow-x-auto">

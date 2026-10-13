@@ -30,7 +30,7 @@ const { item, groupedInputCooked, imageBaseUrl } = Astro.props;
             <div class="flex items-center gap-3" slot="title">
               <Image
                 src={`${imageBaseUrl}${toWebp(usedInItem.Icon)}`}
-                alt={usedInItem.Name}
+                alt=""
                 sizes="40px"
                 width={40}
                 height={40}
@@ -39,7 +39,7 @@ const { item, groupedInputCooked, imageBaseUrl } = Astro.props;
               <div class="flex-1 min-w-0">
                 <span class="text-white font-medium">{usedInItem.Name}</span>
                 {usedInItem.recipes.length > 1 && (
-                  <span class="ml-1 text-xs text-gray-500">({usedInItem.recipes.length} ways)</span>
+                  <span class="ml-1 text-xs text-gray-400">({usedInItem.recipes.length} ways)</span>
                 )}
               </div>
             </div>
@@ -63,7 +63,7 @@ const { item, groupedInputCooked, imageBaseUrl } = Astro.props;
                             >
                               <Image
                                 src={`${imageBaseUrl}${toWebp(ing.Icon)}`}
-                                alt={ing.Name}
+                                alt=""
                                 sizes="20px"
                                 width={20}
                                 height={20}
@@ -82,7 +82,7 @@ const { item, groupedInputCooked, imageBaseUrl } = Astro.props;
                         >
                           <Image
                             src={`${imageBaseUrl}${toWebp(usedInItem.Icon)}`}
-                            alt={usedInItem.Name}
+                            alt=""
                             sizes="20px"
                             width={20}
                             height={20}
