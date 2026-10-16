@@ -4,17 +4,17 @@ How changes to this repo get reviewed, and what reviewers check. This file was w
 
 ## When a change needs review
 
-- **New features need review before `main`.** That means a new tool, page type, map layer, save or file reader, pipeline stage, or anything a player interacts with. Run independent review rounds before the change reaches `main`; one-shot reviews don't count.
+- **New features should get review rounds before `main` (strongly recommended).** That means a new tool, page type, map layer, save or file reader, pipeline stage, or anything a player interacts with. Independent rounds beat a one-shot review.
 - **Small changes skip review.** Plain bug fixes, copy, data refreshes and small styling changes ship after your own checks: build, tests, and the browser checks below.
-- **Reviewers are Claude Opus 5.5 subagents,** independent of each other and of the author. Use two reviewers for a big feature (findings both raise are the most likely to be real) and one for a small one. Don't use other models unless BH asks.
+- **Reviewers are independent subagents,** separate from each other and from the author. Use two reviewers for a big feature (findings both raise are the most likely to be real) and one for a small one.
 - **Rounds:**
   - Round 1 is a full review against a brief.
   - Later rounds are delta-only. Re-run every earlier repro to confirm each fix, review only the changed code for regressions (fixes regularly introduce new bugs), and add a short list of anything new.
   - Stop when a round finds nothing blocking.
 - **Branches and shipping:**
   - Work on a branch in its own git worktree, never in someone else's checkout.
-  - After the last round, fast-forward `main`, push, and confirm the change is on the live site: poll the live URL or the GitHub deployment status.
-  - If Vercel missed the push, run the repo's deploy workflow.
+  - After the last round, open a PR and BH merges it. Merge or push to `main` yourself only when BH says so for that change. On nms, blog work goes on `nms-writer/<slug>` branches (see `AGENTS.md`).
+  - After merge, confirm the change is live: poll the live URL or the Vercel deployment status for the merge commit.
 - **Keep it fast.** BH wants things finished quickly: keep briefs tight, keep later rounds to the delta, and don't reopen decisions already made.
 
 ## The brief (what each reviewer gets)
@@ -84,7 +84,7 @@ Each fixed finding gets a regression test or a check in the QA script, so the ne
   - Removed or renamed URLs get 301s.
   - Titles and descriptions are unique, and JSON-LD is valid.
   - Asset paths match case exactly. Windows hides `Altar_d.webp` vs `altar_d.webp`; Vercel returns 404.
-- **Blog:** no two posts across BH's game sites share a `pubDate`. List all of them first.
+- **Blog:** no two posts across BH's game sites share a `pubDate`. List all of them first, and keep `updatedDate` no earlier than `pubDate`.
 
 ### State and async
 - **Deep links:** loading a save never overrides a deep link or shared view (`?s=`, `#z/x/y`, `?q=`). Jump to the base only when the player picks it.
