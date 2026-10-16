@@ -1,7 +1,7 @@
 ---
 title: "No Man's Sky iOS Guide: Requirements, Settlements & Limits"
 description: "No Man's Sky on iPhone and iPad: Oct 28 release, free to try, supported devices, settlement and multiplayer limits, controls, and first crafts."
-pubDate: 2026-10-12
+pubDate: 2026-10-13
 updatedDate: 2026-10-12
 category: "blog"
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "No Man's Sky Xeno Arena: Beginner's Guide to Creature Battles"
 description: "How to start creature battles in No Man's Sky Xeno Arena: affinities, Holo-Arena locations, evolving with Retroviral Pellets, and Arena League rewards."
-pubDate: 2026-04-17
+pubDate: 2026-04-18
 updatedDate: 2026-04-17
 heroImage: "/images/blog/xeno-arena-guide.webp"
 category: "blog"

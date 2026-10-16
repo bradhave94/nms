@@ -1,7 +1,7 @@
 ---
 title: "NMS Expedition 23 Guide & Rewards"
 description: "NMS Expedition 23 Our Journey Continues: start path, rewards, and milestone objectives from Fandom. Redeem via Quicksilver Companion."
-pubDate: 2026-09-18
+pubDate: 2026-09-17
 updatedDate: 2026-09-25
 heroImage: "/images/blog/nms-expedition-23-our-journey-continues.webp"
 category: "blog"

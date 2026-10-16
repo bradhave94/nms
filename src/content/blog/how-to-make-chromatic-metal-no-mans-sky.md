@@ -1,7 +1,7 @@
 ---
 title: "How to Make Chromatic Metal in No Man's Sky (Best Ratios and Early Copper)"
 description: "How to make Chromatic Metal in No Man's Sky: early Copper refining, Pure Ferrite doubling, best ratios by star color, and the Quartzite purple boost."
-pubDate: 2026-10-04
+pubDate: 2026-10-14
 updatedDate: 2026-10-04
 heroImage: "/images/blog/how-to-make-chromatic-metal-no-mans-sky.webp"
 category: "blog"
