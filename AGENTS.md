@@ -1,5 +1,7 @@
 # AGENTS.md
 
+**Code review:** new features get multi-round review before `main`; follow [REVIEW.md](REVIEW.md) (when to review, briefs, report format, checklist).
+
 ## Cursor Cloud specific instructions
 
 This is a self-contained **Astro** static site (No Man's Sky Recipes) with no database, external APIs, or Docker dependencies. All game data lives as static JSON in `src/data/` and `src/datav2/`.
