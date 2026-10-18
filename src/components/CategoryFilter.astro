@@ -120,8 +120,9 @@ const total = items.length;
 			</div>
 		</div>
 	</form>
-	<p class="list-status" role="status" data-status>
-		<span class="tabular">{total.toLocaleString('en-US')}</span> {total === 1 ? noun[0] : noun[1]}
+	<p class="list-status">
+		<span aria-hidden="true" data-status-visible><span class="tabular">{total.toLocaleString('en-US')}</span> {total === 1 ? noun[0] : noun[1]}</span>
+		<span class="sr-only" role="status" data-status></span>
 	</p>
 	<div class="list-empty panel" hidden data-empty>
 		<p class="mb-3">Nothing matches. Try a shorter name or another group.</p>
@@ -257,7 +258,10 @@ const total = items.length;
 			return `${fmt(count)} of ${fmt(data.rows.length)} ${data.noun[1]}${q ? ` matching “${q}”` : ''}`;
 		}
 
+		// the visible count updates at once; the screen-reader announcement waits for typing to settle
+		const visibleEl = root.querySelector<HTMLElement>('[data-status-visible]');
 		function setStatus(text: string, announce: boolean) {
+			if (visibleEl) visibleEl.textContent = text;
 			if (!statusEl) return;
 			window.clearTimeout(announceTimer);
 			if (!announce) {

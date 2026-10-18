@@ -269,7 +269,7 @@ const bodyHtml = fixSkippedHeadings(await Astro.slots.render('default'));
 			let current = '';
 			for (const id of sections) {
 				const el = document.getElementById(id);
-				if (el && el.getBoundingClientRect().top <= 120) current = id;
+				if (el && el.getBoundingClientRect().top <= 200) current = id;
 			}
 			links.forEach((link) => {
 				if (link.getAttribute('data-section') === current) link.setAttribute('aria-current', 'true');

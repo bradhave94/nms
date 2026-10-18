@@ -157,6 +157,12 @@ const filterLabels = Object.fromEntries(filters.map((f) => [f.id, f.name]));
 			li.appendChild(a);
 			results.appendChild(li);
 		}
+		if (hits.length > MAX) {
+			const more = document.createElement('li');
+			more.className = 'px-3 py-3 text-sm text-dim';
+			more.textContent = `Showing the first ${MAX} of ${hits.length.toLocaleString('en-US')}. Type more of the name to narrow it down.`;
+			results.appendChild(more);
+		}
 		const n = hits.length;
 		say(`${n > MAX ? `${MAX} of ${n}` : n} result${n === 1 ? '' : 's'}. Press Down Arrow to move to them.`);
 	}
@@ -179,7 +185,8 @@ const filterLabels = Object.fromEntries(filters.map((f) => [f.id, f.name]));
 	const links = () => (results ? Array.from(results.querySelectorAll<HTMLAnchorElement>('a')) : []);
 	input?.addEventListener('keydown', (e) => {
 		if (e.key === 'ArrowDown') { const first = links()[0]; if (first) { e.preventDefault(); first.focus(); } }
-		if (e.key === 'Enter') { const first = links()[0]; if (first) { e.preventDefault(); first.click(); } }
+		// Enter: run the pending search for the text as typed now, then open its first result
+		if (e.key === 'Enter') { e.preventDefault(); clearTimeout(timer); run().then(() => links()[0]?.click()); }
 	});
 	results?.addEventListener('keydown', (e) => {
 		const list = links();

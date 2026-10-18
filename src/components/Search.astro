@@ -44,8 +44,15 @@
 		const trigger = (event.target as HTMLElement | null)?.closest<HTMLElement>('[data-open-search]');
 		if (!trigger) return;
 		event.preventDefault();
-		// a trigger may carry a starting query (e.g. the home page's "Popular" links)
-		openSiteSearch(trigger, trigger.dataset.openSearch || undefined);
+		// a trigger may carry a starting query (data-open-search="text")
+		// from inside the mobile menu: close the menu first (two modal dialogs would fight over Tab and Escape),
+		// and return focus to the menu button afterwards, since the drawer's own button goes inert
+		let from: HTMLElement | null = trigger;
+		if (trigger.closest('#mobile-sidebar')) {
+			document.getElementById('sidebar-close')?.click();
+			from = document.getElementById('sidebar-open');
+		}
+		openSiteSearch(from, trigger.dataset.openSearch || undefined);
 	});
 
 	// Inline search boxes (home, 404) hand their text to the dialog instead of a page reload.
@@ -72,7 +79,7 @@
 		// The dialog is modal: keep Tab inside it.
 		if (event.key === 'Tab' && open && searchPanel) {
 			const focusables = Array.from(searchPanel.querySelectorAll<HTMLElement>('input, a[href], button:not([disabled])'))
-				.filter((el) => el.offsetParent !== null || el.matches('input[type="checkbox"]'));
+				.filter((el) => el.offsetParent !== null || (el.matches('input[type="checkbox"]') && !el.closest('[hidden], .hidden')));
 			const first = focusables[0];
 			const last = focusables[focusables.length - 1];
 			if (!first || !last) return;

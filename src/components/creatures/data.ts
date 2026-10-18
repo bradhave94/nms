@@ -107,13 +107,16 @@ export const sentence = (value: string | null | undefined): string => {
  * applies to its own id; other species fall back to the generic name built from the id, the same
  * way every other ecosystem creature is named ("Crab", "Space Floater").
  */
+// readable names where the id alone runs words together
+const GENERIC_NAMES: Record<string, string> = { HERMITCRAB: 'Hermit Crab' };
+
 export const speciesNames = (s: CreatureSpecies): { name: string; subtitle: string | null; trait: string | null } => {
 	const own = specialNames[s.Id];
 	if (own) return { name: own.Name, subtitle: own.Species ?? null, trait: own.Trait ?? s.SpecialTrait ?? null };
 	const borrowed = Object.entries(specialNames).some(
 		([id, special]) => id !== s.Id && special.Name === s.Name
 	);
-	if (borrowed) return { name: toTitleCase(s.Id), subtitle: null, trait: null };
+	if (borrowed) return { name: GENERIC_NAMES[s.Id] ?? toTitleCase(s.Id), subtitle: null, trait: null };
 	return { name: s.Name, subtitle: s.SpeciesSubtitle?.trim() || null, trait: s.SpecialTrait ?? null };
 };
 

@@ -4,6 +4,10 @@ import { getRouteEligibleCatalog } from '@utils/routeCatalog.js';
 import type { Item } from '@utils/lookup.js';
 import * as dataSources from '@datav2/index.js';
 import { getNewUpdatePayload } from '@utils/newUpdate';
+import { allSpecies, speciesLabel } from '../components/creatures/data';
+
+// creatures are named the way the creature pages name them (a special name belongs to one species only)
+const creatureLabels = new Map(allSpecies.map((s) => [s.Id, speciesLabel(s)]));
 
 type RecipeForSearch = {
 	Inputs?: { Name?: string | null }[];
@@ -95,7 +99,7 @@ const itemSearchEntries: SearchIndexEntry[] = namedEntries.map(({ item, url, ali
 	);
 	const entry: SearchIndexEntry = {
 		id: item.Id,
-		name: item.Name,
+		name: (getTypeFromUrl(url) === 'creatures' && creatureLabels.get(item.Id)) || item.Name,
 		type: getTypeFromUrl(url),
 		url,
 		icon: item.Icon,
