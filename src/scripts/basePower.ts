@@ -1,6 +1,6 @@
 import { calculateBasePower, calculateBiofuel, recommendPowerSource } from '../utils/basePower';
 import type { PowerCatalog } from '../utils/basePowerCatalog';
-import { toWebp } from '../utils/icons';
+import { bindNumericPaste, itemSlot, removeButton } from './calculatorUi';
 
 const root = document.querySelector<HTMLElement>('#base-power');
 if (root) setup(root);
@@ -21,18 +21,12 @@ function setup(root: HTMLElement) {
 		element.className = classes;
 		return element;
 	};
-	const picture = (icon: string, size = 'h-10 w-10') => {
-		const image = document.createElement('img');
-		image.src = `/images/items/${encodeURIComponent(toWebp(icon))}`;
-		image.alt = '';
-		image.width = 64; image.height = 64;
-		image.className = `${size} object-contain shrink-0`;
-		return image;
-	};
+	const slot = (item: { icon: string; colour?: string }, size = 'w-11', quantity?: number) =>
+		itemSlot({ icon: item.icon, colour: item.colour, quantity, size });
 	const link = (name: string, url: string) => {
 		const a = document.createElement('a');
 		a.textContent = name; a.href = url;
-		a.className = 'text-sky-200 hover:text-white underline decoration-sky-700 underline-offset-4';
+		a.className = 'name-link';
 		return a;
 	};
 
@@ -72,20 +66,20 @@ function setup(root: HTMLElement) {
 		el('device-empty').hidden = selected.size > 0;
 		for (const [id, count] of selected) {
 			const item = devices.get(id)!;
-			const row = node('div', '', 'flex flex-wrap items-center gap-3 rounded border border-sky-900 p-3');
-			row.append(picture(item.icon, 'h-8 w-8'));
-			const text = node('div', '', 'min-w-0 flex-1 text-sm');
-			text.append(link(item.name, item.url), node('div', `${item.consumption} kP/s each`, 'text-xs text-sky-400'));
+			const row = node('li', '', 'calc-row');
+			row.append(slot(item));
+			const text = node('div', '', 'name');
+			text.append(link(item.name, item.url), node('span', `${item.consumption} kP/s each`, 'sub tabular'));
 			const field = document.createElement('input');
 			field.type = 'number'; field.min = '1'; field.max = '10000'; field.step = '1'; field.required = true;
+			field.inputMode = 'numeric';
 			field.value = String(count); field.setAttribute('aria-label', `${item.name} quantity`);
-			field.className = 'w-20 rounded border border-sky-700 bg-sky-950 p-2 text-sm text-white';
+			field.className = 'field w-[4.5rem] sm:w-24 flex-none text-center';
 			field.dataset.deviceId = id;
 			field.addEventListener('input', () => {
 				if (field.validity.valid) selected.set(id, field.valueAsNumber);
 			});
-			const remove = node('button', '×', 'px-2 text-xl text-sky-300 hover:text-white') as HTMLButtonElement;
-			remove.type = 'button'; remove.setAttribute('aria-label', `Remove ${item.name}`);
+			const remove = removeButton(`Remove ${item.name}`);
 			remove.addEventListener('click', () => { selected.delete(id); renderDevices(); update(); el<HTMLSelectElement>('power-device').focus(); });
 			row.append(text, field, remove);
 			el('power-devices').append(row);
@@ -94,22 +88,24 @@ function setup(root: HTMLElement) {
 
 	function countCard(id: string, count: number | null, total: number | null) {
 		const item = catalog.equipment.find((item) => item.id === id)!;
-		const card = node('div', '', 'rounded border border-sky-800 bg-sky-950/60 p-4');
-		card.append(picture(item.icon, 'h-12 w-12'), node('p', count === null ? '—' : fmt(count), 'mt-3 text-4xl font-semibold text-white'),
-			node('p', `${item.name === 'Battery' ? 'Batteries' : item.name === 'Solar Panel' ? 'Solar panels' : item.id === 'U_BIOGENERATOR' ? 'Biofuel reactors' : 'Generators'} to add`, 'mt-1 text-sm text-sky-200'));
-		if (total !== null) card.append(node('p', `${fmt(total)} total in this plan`, 'mt-2 text-xs text-sky-400'));
+		const card = node('div', '', 'flex items-center gap-4');
+		const text = node('div', '', 'min-w-0');
+		text.append(node('p', count === null ? '—' : fmt(count), 'tabular text-4xl font-bold leading-none text-white'),
+			node('p', `${item.name === 'Battery' ? 'Batteries' : item.name === 'Solar Panel' ? 'Solar panels' : item.id === 'U_BIOGENERATOR' ? 'Biofuel reactors' : 'Generators'} to add`, 'mt-1.5 font-medium'));
+		if (total !== null) text.append(node('p', `${fmt(total)} total in this plan`, 'tabular text-sm text-dim'));
+		card.append(slot(item, 'w-16'), text);
 		return card;
 	}
 
 	function detail(label: string, value: string) {
-		const row = node('div', '', 'flex justify-between gap-4 border-b border-sky-900 pb-2');
-		row.append(node('dt', label, 'text-sky-300'), node('dd', value, 'text-right text-white'));
+		const row = node('div', '', 'flex justify-between gap-4 border-t border-[rgb(255_195_86/.16)] py-2');
+		row.append(node('dt', label, 'text-dim'), node('dd', value, 'tabular whitespace-nowrap text-right font-medium text-white'));
 		el('power-details').append(row);
 	}
 
 	function materials(additions: [string, number][]) {
 		const list = el('power-materials'); list.replaceChildren();
-		const merged = new Map<string, { name: string; url: string; icon: string; quantity: number }>();
+		const merged = new Map<string, { name: string; url: string; icon: string; colour?: string; quantity: number }>();
 		for (const [id, count] of additions) {
 			if (count <= 0) continue;
 			for (const material of catalog.equipment.find((item) => item.id === id)!.recipe) {
@@ -118,11 +114,13 @@ function setup(root: HTMLElement) {
 			}
 		}
 		for (const material of [...merged.values()].sort((a, b) => a.name.localeCompare(b.name))) {
-			const row = node('li', '', 'flex items-center gap-3 text-sm');
-			row.append(picture(material.icon, 'h-8 w-8'), link(material.name, material.url), node('span', `× ${fmt(material.quantity)}`, 'ml-auto whitespace-nowrap text-white'));
+			const row = node('li', '', 'calc-row');
+			const name = node('span', '', 'name');
+			name.append(link(material.name, material.url));
+			row.append(slot(material, 'w-11', material.quantity), name, node('span', fmt(material.quantity), 'calc-amount'));
 			list.append(row);
 		}
-		if (merged.size === 0) list.append(node('li', 'No additional power equipment needed.', 'text-sm text-sky-300'));
+		if (merged.size === 0) list.append(node('li', 'No additional power equipment needed.', 'calc-empty'));
 		const planner = el<HTMLAnchorElement>('power-planner');
 		planner.hidden = merged.size === 0;
 		planner.href = `/calculator/planner?${new URLSearchParams({ items: additions.filter(([, count]) => count > 0).map(([id, count]) => `${id}:${count}`).join(',') })}`;
@@ -215,6 +213,7 @@ function setup(root: HTMLElement) {
 	}
 
 	form.addEventListener('submit', (event) => event.preventDefault());
+	bindNumericPaste(form);
 	form.addEventListener('input', update);
 	form.addEventListener('change', update);
 	el('power-add').addEventListener('click', () => {

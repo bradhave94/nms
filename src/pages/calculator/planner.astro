@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
+import '@assets/css/calculators.css';
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/calculator/planner/', siteOrigin).toString();
@@ -34,87 +35,73 @@ const imageBaseUrl = SITE.imageBaseUrl;
 	structuredData={breadcrumbSchema}
 	ogImage={`${SITE.website}/images/calculator.webp`}
 >
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Planner</h1>
-	<p class="mx-auto mb-8 mt-3 max-w-3xl text-center text-sky-200/90">
-		Add multiple products with quantities to see the combined raw materials you need. Share your plan via URL.
-	</p>
+	<div class="calc">
+		<Breadcrumbs items={breadcrumbs} className="pt-2 mb-2 px-0!" />
+		<header class="calc-head">
+			<h1>Crafting planner</h1>
+			<p>Add the products you want to build and get one combined list of raw materials. Share the plan with a link.</p>
+		</header>
 
-	<div
-		id="planner-app"
-		class="mx-auto max-w-4xl px-4 pb-12"
-		data-image-base={imageBaseUrl}
-	>
-		<div class="mb-6">
-			<label for="product-search" class="sr-only">Search products</label>
-			<input
-				id="product-search"
-				type="text"
-				autocomplete="off"
-				placeholder="Search products to add…"
-				class="box-border h-12 w-full max-w-full rounded-sm border border-sky-600 bg-sky-900/50 px-4 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
-			/>
-			<div
-				id="product-results"
-				class="box-border mt-2 max-h-64 max-w-full overflow-y-auto rounded-sm border border-sky-800 bg-black/40 hidden"
-			></div>
-			<p id="planner-status" class="sr-only" role="status" aria-live="polite"></p>
-		</div>
-
-		<section aria-labelledby="plan-heading" class="mb-8">
-			<div class="mb-4 flex flex-wrap items-center justify-between gap-4">
-				<h2 id="plan-heading" class="mb-0 text-2xl">Your plan</h2>
-				<button
-					id="copy-link-btn"
-					type="button"
-					class="rounded-sm border border-sky-600 bg-sky-900/50 px-3 py-1.5 text-sm text-cyan-300 hover:border-cyan-400 hover:text-cyan-200 disabled:cursor-not-allowed disabled:opacity-50"
-					disabled
-				>
-					Copy link
-				</button>
-			</div>
-			<div id="plan-rows" class="flex flex-col gap-2"></div>
-			<p id="plan-empty" class="text-sky-200/70 text-sm">
-				No items added yet. Search above to add products (e.g. Stasis Device, Living Glass).
-			</p>
-		</section>
-
-		<section aria-labelledby="totals-heading" class="mb-8">
-			<h2 id="totals-heading" class="mb-4 text-2xl">Total raw materials</h2>
-			<div id="totals-list"></div>
-			<p id="totals-empty" class="text-sky-200/70 text-sm hidden">
-				Add products to your plan to see total raw materials.
-			</p>
-		</section>
-
-		<section aria-labelledby="breakdown-heading" id="breakdown-panel" class="mb-6 hidden">
-			<div class="mb-4 flex flex-wrap items-center justify-between gap-4">
-				<h2 id="breakdown-heading" class="mb-0 text-2xl">Per-item breakdown</h2>
-				<label class="inline-flex cursor-pointer items-center gap-2 text-sm text-sky-200">
+		<div id="planner-app" class="calc-grid" data-image-base={imageBaseUrl}>
+			<section class="panel calc-pad" aria-labelledby="plan-heading">
+				<div class="flex flex-wrap items-center justify-between gap-3">
+					<h2 id="plan-heading">Your plan</h2>
+					<button id="copy-link-btn" type="button" class="btn-quiet" disabled>Copy link</button>
+				</div>
+				<div class="mt-4">
+					<label for="product-search" class="calc-label">Add a product</label>
 					<input
-						id="breakdown-toggle"
-						type="checkbox"
-						class="peer sr-only"
+						id="product-search"
+						type="text"
+						autocomplete="off"
+						spellcheck="false"
+						placeholder="Search products, e.g. Stasis Device"
+						aria-controls="product-results"
+						class="field"
 					/>
-					<span class="select-none rounded-lg border-2 border-sky-600 px-2 py-0.5 transition-colors duration-200 peer-checked:border-cyan-400 peer-checked:bg-cyan-500/20 peer-checked:text-cyan-200 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-yellow-400">
-						Show crafting trees
-					</span>
-				</label>
+					<div id="product-results" class="calc-picker hidden"></div>
+					<p id="planner-status" class="sr-only" role="status" aria-live="polite"></p>
+				</div>
+				<ul id="plan-rows" class="mt-4" aria-label="Products in your plan"></ul>
+				<p id="plan-empty" class="calc-empty mt-4">
+					No items added yet. Search above to add products (e.g. Stasis Device, Living Glass).
+				</p>
+			</section>
+
+			<div class="calc-col">
+				<section class="panel-amber calc-pad" aria-labelledby="totals-heading">
+					<h2 id="totals-heading">Total raw materials<span id="totals-count" class="count tabular"></span></h2>
+					<ul id="totals-list" class="mt-3"></ul>
+					<p id="totals-empty" class="calc-empty mt-3">
+						Add products to your plan to see total raw materials.
+					</p>
+				</section>
+
+				<section aria-labelledby="breakdown-heading" id="breakdown-panel" class="panel calc-pad hidden">
+					<div class="flex flex-wrap items-center justify-between gap-3">
+						<h2 id="breakdown-heading">Per-item breakdown</h2>
+						<button id="breakdown-toggle" type="button" class="btn-quiet" aria-pressed="false" aria-controls="breakdown-section">
+							Show crafting trees
+						</button>
+					</div>
+					<p id="breakdown-hint" class="calc-help">
+						Expand to see the full crafting tree for each product in your plan, down to raw resources.
+					</p>
+					<div id="breakdown-section" class="hidden"></div>
+				</section>
 			</div>
-			<p id="breakdown-hint" class="text-sky-200/70 text-sm">
-				Expand to see the full crafting tree for each product in your plan, down to raw resources.
-			</p>
-			<div id="breakdown-section" class="hidden"></div>
-		</section>
+		</div>
 	</div>
 </Layout>
 
 <script>
-	import { toWebp } from '@utils/icons';
+	import { bindNumericPaste, bindResultKeys, itemSlot, removeButton } from '../../scripts/calculatorUi';
+
 	type PlannerItem = {
 		id: string;
 		name: string;
 		icon: string;
+		colour?: string;
 		quantity: number;
 	};
 
@@ -122,6 +109,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		id: string;
 		name: string;
 		icon: string;
+		colour?: string;
 		quantity: number;
 		url: string;
 		children: PlannerTreeItem[];
@@ -131,6 +119,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		id: string;
 		name: string;
 		icon: string;
+		colour?: string;
 		url: string;
 		recipeTree: PlannerTreeItem[];
 		rawItems: PlannerItem[];
@@ -140,6 +129,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		id?: string;
 		name?: string;
 		icon?: string;
+		colour?: string;
 		quantity?: number;
 		url?: string;
 		children?: PlannerApiTreeItem[];
@@ -149,6 +139,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		id?: string;
 		name?: string;
 		icon?: string;
+		colour?: string;
 		url?: string;
 		recipeTree?: PlannerApiTreeItem[];
 		ingredients?: PlannerApiTreeItem[];
@@ -169,7 +160,8 @@ const imageBaseUrl = SITE.imageBaseUrl;
 	const planEmpty = document.getElementById('plan-empty');
 	const totalsList = document.getElementById('totals-list');
 	const totalsEmpty = document.getElementById('totals-empty');
-	const breakdownToggle = document.getElementById('breakdown-toggle') as HTMLInputElement | null;
+	const totalsCount = document.getElementById('totals-count');
+	const breakdownToggle = document.getElementById('breakdown-toggle') as HTMLButtonElement | null;
 	const breakdownPanel = document.getElementById('breakdown-panel');
 	const breakdownHint = document.getElementById('breakdown-hint');
 	const breakdownSection = document.getElementById('breakdown-section');
@@ -184,6 +176,10 @@ const imageBaseUrl = SITE.imageBaseUrl;
 	let urlDebounceTimer: ReturnType<typeof setTimeout> | undefined;
 	let datasetPromise: Promise<PlannerProduct[]> | null = null;
 
+	const slot = (item: { icon?: string; colour?: string }, size = 'w-11', quantity?: number) =>
+		itemSlot({ icon: item.icon, colour: item.colour, quantity, size, imageBase: imageBaseUrl });
+	const showTrees = () => breakdownToggle?.getAttribute('aria-pressed') === 'true';
+
 	function normalizeTreeItem(item: PlannerApiTreeItem): PlannerTreeItem | null {
 		if (!item?.id || !item?.name) return null;
 
@@ -191,6 +187,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			id: item.id,
 			name: item.name,
 			icon: item.icon ?? '',
+			colour: item.colour,
 			quantity: item.quantity ?? 1,
 			url: item.url ?? `/item/${item.id}`,
 			children: (item.children ?? [])
@@ -212,6 +209,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			id: entry.id,
 			name: entry.name,
 			icon: entry.icon ?? '',
+			colour: entry.colour,
 			url: entry.url ?? `/item/${entry.id}`,
 			recipeTree: treeSource
 				.map(normalizeTreeItem)
@@ -236,7 +234,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 					return results.body
 						.map((entry: PlannerApiProduct) => normalizeProduct(entry))
-						.filter((entry): entry is PlannerProduct => entry !== null);
+						.filter((entry: PlannerProduct | null): entry is PlannerProduct => entry !== null);
 				})
 				.catch((error) => {
 					datasetPromise = null;
@@ -297,6 +295,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 						id: rawItem.id,
 						name: rawItem.name,
 						icon: rawItem.icon,
+						colour: rawItem.colour,
 						quantity: totalQty,
 					});
 				}
@@ -308,24 +307,16 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 	function createItemRow(item: MergedItem): HTMLLIElement {
 		const li = document.createElement('li');
-		li.className = 'flex items-center gap-3 border-b border-sky-800/30 py-2 last:border-b-0';
-
-		if (item.icon) {
-			const img = document.createElement('img');
-			img.src = `${imageBaseUrl}${toWebp(item.icon)}`;
-			img.alt = '';
-			img.className = 'h-7 w-7 shrink-0 object-contain';
-			img.loading = 'lazy';
-			li.appendChild(img);
-		}
+		li.className = 'calc-row';
+		li.appendChild(slot(item, 'w-11', item.quantity));
 
 		const nameSpan = document.createElement('span');
-		nameSpan.className = 'min-w-0 flex-1 truncate text-sky-100';
+		nameSpan.className = 'name';
 		nameSpan.textContent = item.name;
 		li.appendChild(nameSpan);
 
 		const qtySpan = document.createElement('span');
-		qtySpan.className = 'shrink-0 text-base font-bold tabular-nums text-cyan-300';
+		qtySpan.className = 'calc-amount';
 		qtySpan.textContent = item.quantity.toLocaleString();
 		li.appendChild(qtySpan);
 
@@ -334,45 +325,29 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 	function createTreeNodeRow(item: PlannerTreeItem, isLeaf: boolean): HTMLElement {
 		const row = document.createElement(isLeaf ? 'a' : 'div');
-		row.className = isLeaf
-			? 'flex items-center gap-2 rounded-r py-1.5 pl-1 transition-colors hover:bg-cyan-500/10'
-			: 'flex items-center gap-2 py-1.5 pl-1';
+		row.className = 'node';
 
 		if (isLeaf) {
 			(row as HTMLAnchorElement).href = item.url;
 		}
 
-		if (item.icon) {
-			const img = document.createElement('img');
-			img.src = `${imageBaseUrl}${toWebp(item.icon)}`;
-			img.alt = '';
-			img.className = 'h-7 w-7 shrink-0 object-contain';
-			img.loading = 'lazy';
-			row.appendChild(img);
-		}
+		row.appendChild(slot(item, 'w-10', item.quantity));
 
 		const nameSpan = document.createElement('span');
-		nameSpan.className = `min-w-0 flex-1 truncate font-medium ${isLeaf ? 'text-cyan-200' : 'text-sky-100'}`;
+		nameSpan.className = `node-name ${isLeaf ? '' : 'font-medium'}`;
 		nameSpan.textContent = item.name;
 		row.appendChild(nameSpan);
 
-		row.appendChild(createTreeQuantityBadge(item.quantity));
+		const qtySpan = document.createElement('span');
+		qtySpan.className = 'sr-only';
+		qtySpan.textContent = `, quantity ${item.quantity.toLocaleString()}`;
+		row.appendChild(qtySpan);
 
 		return row;
 	}
 
-	function createTreeQuantityBadge(quantity: number): HTMLSpanElement {
-		const qtySpan = document.createElement('span');
-		qtySpan.className =
-			'inline-flex min-w-7 shrink-0 items-center justify-center rounded-sm bg-sky-800/80 px-1.5 py-0.5 text-xs font-medium tabular-nums text-sky-200';
-		qtySpan.textContent = quantity.toLocaleString();
-		qtySpan.setAttribute('aria-label', `quantity ${quantity}`);
-		return qtySpan;
-	}
-
 	function appendRecipeTree(container: HTMLElement, items: PlannerTreeItem[], parentQuantity = 1) {
 		const list = document.createElement('ul');
-		list.className = 'm-0 list-none p-0';
 
 		for (const item of items) {
 			const displayQuantity = item.quantity * parentQuantity;
@@ -381,11 +356,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 			if (item.children.length > 0) {
 				listItem.appendChild(createTreeNodeRow(displayItem, false));
-
-				const childContainer = document.createElement('div');
-				childContainer.className = 'ml-1 border-l border-sky-800/50 pl-2';
-				appendRecipeTree(childContainer, item.children, displayQuantity);
-				listItem.appendChild(childContainer);
+				appendRecipeTree(listItem, item.children, displayQuantity);
 			} else {
 				listItem.appendChild(createTreeNodeRow(displayItem, true));
 			}
@@ -401,6 +372,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 		totalsList.textContent = '';
 		breakdownSection.textContent = '';
+		if (totalsCount) totalsCount.textContent = '';
 
 		if (plan.length === 0) {
 			totalsEmpty.classList.remove('hidden');
@@ -415,15 +387,13 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		totalsEmpty.classList.add('hidden');
 		breakdownPanel.classList.remove('hidden');
 		const merged = mergeRawItems(plan);
+		if (totalsCount) totalsCount.textContent = `${merged.length} item${merged.length === 1 ? '' : 's'}`;
 
-		const ul = document.createElement('ul');
-		ul.className = 'm-0 flex list-none flex-col p-0';
 		for (const rawItem of merged) {
-			ul.appendChild(createItemRow(rawItem));
+			totalsList.appendChild(createItemRow(rawItem));
 		}
-		totalsList.appendChild(ul);
 
-		if (breakdownToggle?.checked) {
+		if (showTrees()) {
 			breakdownSection.classList.remove('hidden');
 			if (breakdownHint) {
 				breakdownHint.classList.add('hidden');
@@ -434,28 +404,20 @@ const imageBaseUrl = SITE.imageBaseUrl;
 				if (!product) continue;
 
 				const productBlock = document.createElement('article');
-				productBlock.className =
-					'mt-4 rounded-sm border border-sky-800 bg-sky-900/20 p-3 first:mt-0';
+				productBlock.className = 'mt-5 border-t border-line pt-4 first:mt-3 first:border-t-0 first:pt-0';
 
 				const heading = document.createElement('h3');
-				heading.className = 'mb-3 flex items-center gap-2 text-lg text-cyan-200';
-
-				if (product.icon) {
-					const img = document.createElement('img');
-					img.src = `${imageBaseUrl}${toWebp(product.icon)}`;
-					img.alt = '';
-					img.className = 'h-7 w-7 shrink-0 object-contain';
-					img.loading = 'lazy';
-					heading.appendChild(img);
-				}
+				heading.className = 'mb-2 flex items-center gap-3';
+				heading.appendChild(slot(product, 'w-10'));
 
 				const headingText = document.createElement('span');
+				headingText.className = 'tabular';
 				headingText.textContent = `${product.name} × ${entry.qty.toLocaleString()}`;
 				heading.appendChild(headingText);
 				productBlock.appendChild(heading);
 
 				const treeContainer = document.createElement('div');
-				treeContainer.className = 'ml-1';
+				treeContainer.className = 'calc-tree calc-tree-root';
 				appendRecipeTree(treeContainer, product.recipeTree, entry.qty);
 				productBlock.appendChild(treeContainer);
 				breakdownSection.appendChild(productBlock);
@@ -470,7 +432,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 	function focusPlanQty(productId: string) {
 		const qtyInput = planRows?.querySelector(
-			`input[data-product-id="${productId}"]`
+			`input[data-product-id="${CSS.escape(productId)}"]`
 		) as HTMLInputElement | null;
 		if (qtyInput) {
 			qtyInput.focus();
@@ -536,23 +498,14 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			const product = productsById.get(entry.id);
 			if (!product) continue;
 
-			const row = document.createElement('div');
-			row.className =
-				'flex flex-wrap items-center gap-3 rounded-sm border border-sky-800 bg-sky-900/30 px-3 py-2';
+			const row = document.createElement('li');
+			row.className = 'calc-row';
 			row.dataset.productId = product.id;
-
-			if (product.icon) {
-				const img = document.createElement('img');
-				img.src = `${imageBaseUrl}${toWebp(product.icon)}`;
-				img.alt = '';
-				img.className = 'h-8 w-8 shrink-0 object-contain';
-				img.loading = 'lazy';
-				row.appendChild(img);
-			}
+			row.appendChild(slot(product, 'w-11'));
 
 			const nameLink = document.createElement('a');
 			nameLink.href = product.url;
-			nameLink.className = 'flex-1 min-w-0 truncate text-cyan-300 hover:text-cyan-200 hover:underline';
+			nameLink.className = 'name name-link';
 			nameLink.textContent = product.name;
 			row.appendChild(nameLink);
 
@@ -560,14 +513,15 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			qtyInput.type = 'number';
 			qtyInput.min = '1';
 			qtyInput.step = '1';
+			qtyInput.inputMode = 'numeric';
 			qtyInput.value = String(entry.qty);
 			qtyInput.id = `qty-${product.id}`;
 			qtyInput.dataset.productId = product.id;
-			qtyInput.className =
-				'h-9 w-20 rounded-sm border border-sky-600 bg-black/40 px-2 text-center text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400';
+			qtyInput.className = 'field w-[4.5rem] sm:w-24 flex-none text-center';
 			qtyInput.addEventListener('change', () => {
 				const parsed = Number.parseInt(qtyInput.value, 10);
 				setPlanQty(product.id, Number.isFinite(parsed) ? parsed : 1);
+				qtyInput.value = String(entry.qty);
 			});
 			qtyInput.addEventListener('input', () => {
 				const parsed = Number.parseInt(qtyInput.value, 10);
@@ -585,12 +539,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			row.appendChild(qtyLabel);
 			row.appendChild(qtyInput);
 
-			const removeBtn = document.createElement('button');
-			removeBtn.type = 'button';
-			removeBtn.className =
-				'flex h-9 w-9 shrink-0 items-center justify-center rounded-sm text-xl text-sky-300 hover:bg-sky-800/60 hover:text-white';
-			removeBtn.setAttribute('aria-label', `Remove ${product.name}`);
-			removeBtn.textContent = '×';
+			const removeBtn = removeButton(`Remove ${product.name}`);
 			removeBtn.addEventListener('click', () => removeFromPlan(product.id));
 			row.appendChild(removeBtn);
 
@@ -598,6 +547,12 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		}
 
 		renderTotals();
+	}
+
+	function closeResults() {
+		if (!productResults) return;
+		productResults.classList.add('hidden');
+		productResults.textContent = '';
 	}
 
 	function renderProductSearch() {
@@ -627,7 +582,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		if (matches.length === 0) {
 			productResults.classList.remove('hidden');
 			const empty = document.createElement('p');
-			empty.className = 'p-3 text-sm text-sky-200/70';
+			empty.className = 'calc-empty';
 			empty.textContent = 'No matching products found.';
 			productResults.appendChild(empty);
 			announce('No matching products found.');
@@ -635,9 +590,8 @@ const imageBaseUrl = SITE.imageBaseUrl;
 		}
 
 		productResults.classList.remove('hidden');
-		announce(`${matches.length} matching product${matches.length === 1 ? '' : 's'}. Press Tab to reach them.`);
+		announce(`${matches.length} matching product${matches.length === 1 ? '' : 's'}. Press Tab or the down arrow to reach them.`);
 		const ul = document.createElement('ul');
-		ul.className = 'm-0 list-none p-0';
 		ul.setAttribute('aria-label', 'Matching products');
 
 		for (const product of matches) {
@@ -645,17 +599,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 
 			const btn = document.createElement('button');
 			btn.type = 'button';
-			btn.className =
-				'flex w-full items-center gap-2 px-3 py-2 text-left text-white hover:bg-sky-800/60';
-
-			if (product.icon) {
-				const img = document.createElement('img');
-				img.src = `${imageBaseUrl}${toWebp(product.icon)}`;
-				img.alt = '';
-				img.className = 'h-6 w-6 shrink-0 object-contain';
-				img.loading = 'lazy';
-				btn.appendChild(img);
-			}
+			btn.appendChild(slot(product, 'w-9'));
 
 			const nameSpan = document.createElement('span');
 			nameSpan.textContent = product.name;
@@ -664,7 +608,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			const inPlan = plan.some((entry) => entry.id === product.id);
 			if (inPlan) {
 				const badge = document.createElement('span');
-				badge.className = 'ml-auto text-xs text-sky-400';
+				badge.className = 'meta';
 				badge.textContent = 'In plan';
 				btn.appendChild(badge);
 			}
@@ -672,8 +616,7 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			btn.addEventListener('click', () => {
 				addToPlan(product.id);
 				productSearch.value = '';
-				productResults.classList.add('hidden');
-				productResults.textContent = '';
+				closeResults();
 			});
 
 			li.appendChild(btn);
@@ -718,10 +661,18 @@ const imageBaseUrl = SITE.imageBaseUrl;
 			}
 			searchDebounceTimer = setTimeout(renderProductSearch, 200);
 		});
+		if (productResults) bindResultKeys(productSearch, productResults, closeResults);
 	}
 
+	if (planRows) bindNumericPaste(planRows);
+
 	if (breakdownToggle) {
-		breakdownToggle.addEventListener('change', renderTotals);
+		breakdownToggle.addEventListener('click', () => {
+			const next = !showTrees();
+			breakdownToggle.setAttribute('aria-pressed', String(next));
+			breakdownToggle.textContent = next ? 'Hide crafting trees' : 'Show crafting trees';
+			renderTotals();
+		});
 	}
 
 	if (copyLinkBtn) {

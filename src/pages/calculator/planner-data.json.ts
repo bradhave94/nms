@@ -2,13 +2,14 @@ import type { APIRoute } from 'astro';
 import * as dataSources from '@datav2/index.js';
 import { createArray } from '@utils/recipeTree.js';
 import type { ProcessedItem } from '@utils/recipeTree.js';
-import { getSlug } from '@utils/lookup.js';
+import { getById, getSlug } from '@utils/lookup.js';
 import type { Item } from '@utils/lookup.js';
 
 type PlannerItem = {
 	id: string;
 	name: string;
 	icon: string;
+	colour?: string;
 	quantity: number;
 };
 
@@ -16,6 +17,7 @@ type PlannerTreeItem = {
 	id: string;
 	name: string;
 	icon: string;
+	colour?: string;
 	quantity: number;
 	url: string;
 	children: PlannerTreeItem[];
@@ -25,6 +27,7 @@ type PlannerProduct = {
 	id: string;
 	name: string;
 	icon: string;
+	colour?: string;
 	url: string;
 	recipeTree: PlannerTreeItem[];
 	rawItems: PlannerItem[];
@@ -42,10 +45,13 @@ const craftableItems = allData.filter((item) => {
 	return true;
 });
 
-const mapPlannerItem = (entry: { Id: string; Name: string; Icon: string; Quantity: number }): PlannerItem => ({
+const colourOf = (id: string, colour?: string | null) => colour || getById(id)?.Colour || undefined;
+
+const mapPlannerItem = (entry: { Id: string; Name: string; Icon: string; Colour?: string; Quantity: number }): PlannerItem => ({
 	id: entry.Id,
 	name: entry.Name,
 	icon: entry.Icon,
+	colour: colourOf(entry.Id, entry.Colour),
 	quantity: entry.Quantity,
 });
 
@@ -53,6 +59,7 @@ const mapTreeItem = (entry: ProcessedItem): PlannerTreeItem => ({
 	id: entry.Id,
 	name: entry.Name,
 	icon: entry.Icon,
+	colour: colourOf(entry.Id, entry.Colour),
 	quantity: entry.Quantity,
 	url: getSlug(entry.Id),
 	children: entry.RequiredItems.map(mapTreeItem),
@@ -72,6 +79,7 @@ const body: PlannerProduct[] = craftableItems
 		id: item.Id,
 		name: item.Name,
 		icon: item.Icon,
+		colour: colourOf(item.Id, item.Colour),
 		url: getSlug(item),
 		recipeTree: recipeTree.map(mapTreeItem),
 		rawItems: rawItems.map(mapPlannerItem),

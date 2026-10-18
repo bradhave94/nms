@@ -35,6 +35,7 @@ type ReverseRecipeInput = {
 	id: string;
 	name: string;
 	icon: string;
+	colour?: string;
 	quantity: number;
 };
 
@@ -43,6 +44,7 @@ type ReverseRecipe = {
 	outputId: string;
 	outputName: string;
 	outputIcon: string;
+	outputColour?: string;
 	outputUrl: string;
 	outputQuantity: number;
 	inputs: ReverseRecipeInput[];
@@ -52,6 +54,7 @@ type ReverseEntry = {
 	id: string;
 	name: string;
 	icon: string;
+	colour?: string;
 	recipes: ReverseRecipe[];
 };
 
@@ -113,6 +116,7 @@ function mapRecipe(
 		outputId,
 		outputName: outputItem.Name,
 		outputIcon: outputItem.Icon ?? '',
+		outputColour: outputItem.Colour || undefined,
 		outputUrl: getSlug(outputItem),
 		outputQuantity: recipe.Output?.Quantity ?? 1,
 		inputs: recipe.Inputs.map((input) => {
@@ -121,6 +125,7 @@ function mapRecipe(
 				id: input.Id,
 				name: inputItem?.Name ?? input.Id,
 				icon: inputItem?.Icon ?? '',
+				colour: inputItem?.Colour || undefined,
 				quantity: input.Quantity,
 			};
 		}),
@@ -152,6 +157,7 @@ function buildEntry(inputId: string): ReverseEntry {
 		id: inputId,
 		name: item?.Name ?? inputId,
 		icon: item?.Icon ?? '',
+		colour: item?.Colour || undefined,
 		recipes,
 	};
 }

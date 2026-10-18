@@ -2,11 +2,16 @@
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getAllGrowablePlants } from '@utils/plantGrowTime.js';
+import { getById } from '@utils/lookup.js';
 import { getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
+import '@assets/css/calculators.css';
 
 const IMAGE_BASE = SITE.imageBaseUrl;
-const plants = getAllGrowablePlants();
+const plants = getAllGrowablePlants().map((plant) => ({
+	...plant,
+	colour: getById(plant.harvestId)?.Colour || undefined,
+}));
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/calculator/farm/', siteOrigin).toString();
 const breadcrumbs = [
@@ -31,205 +36,221 @@ const structuredData = [breadcrumbSchema];
 ---
 
 <Layout {title} {description} slug="calculator" structuredData={structuredData}>
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Farm Calculator</h1>
-	<p class="mx-auto mb-8 max-w-3xl text-center text-sky-200/90">
-		Select growable plants and set plot counts to estimate harvest cycle time and base yield per crop. Harvest upgrades may increase your actual yield.
-	</p>
+	<div class="calc">
+		<Breadcrumbs items={breadcrumbs} className="pt-2 mb-2 px-0!" />
+		<header class="calc-head">
+			<h1>Farm calculator</h1>
+			<p>Pick your crops and plot counts to see the harvest cycle time and base yield. Harvest upgrades may increase your actual yield.</p>
+		</header>
 
-	<div class="mx-auto max-w-5xl px-4 mb-8">
-		<label for="plant-select" class="mb-2 block text-sm font-semibold text-sky-300">Add a plant</label>
-		<div class="flex flex-wrap gap-3">
-			<select
-				id="plant-select"
-				class="h-10 min-w-0 sm:min-w-[16rem] flex-1 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
-			>
-				<option value="">Choose a plant…</option>
-				{
-					plants.map((plant) => (
-						<option value={plant.harvestId}>
-							{plant.name} ({plant.growTime})
-						</option>
-					))
-				}
-			</select>
-			<button
-				id="add-plant-btn"
-				type="button"
-				class="h-10 rounded-sm bg-sky-700 px-4 font-semibold text-white transition-colors hover:bg-sky-800"
-			>
-				Add plant
-			</button>
-		</div>
-	</div>
+		<div id="farm-app" class="calc-grid" data-image-base={IMAGE_BASE} data-plants={JSON.stringify(plants)}>
+			<section class="panel calc-pad" aria-labelledby="crops-heading">
+				<h2 id="crops-heading">Your crops</h2>
+				<div class="mt-4">
+					<label for="plant-select" class="calc-label">Add a plant</label>
+					<div class="flex flex-wrap gap-3">
+						<select id="plant-select" class="field min-w-0 basis-full sm:basis-auto sm:flex-1 sm:min-w-[14rem]">
+							<option value="">Choose a plant…</option>
+							{
+								plants.map((plant) => (
+									<option value={plant.harvestId}>
+										{plant.name} ({plant.growTime})
+									</option>
+								))
+							}
+						</select>
+						<button id="add-plant-btn" type="button" class="btn-primary">Add plant</button>
+					</div>
+					<p id="farm-status" class="sr-only" role="status" aria-live="polite"></p>
+				</div>
+				<ul id="selected-plants" class="mt-4" aria-label="Selected plants"></ul>
+				<p id="empty-selection" class="calc-empty mt-4">
+					No plants selected yet. Add a crop above to start planning.
+				</p>
+			</section>
 
-	<div id="empty-selection" class="mx-auto max-w-5xl px-4 py-8 text-center text-sky-400">
-		No plants selected yet. Add a crop above to start planning.
-	</div>
-
-	<div id="farm-results" class="mx-auto hidden max-w-5xl px-4 pb-12">
-		<div class="mb-6 grid gap-4 sm:grid-cols-2">
-			<div class="rounded-sm border border-sky-800/70 bg-sky-950/40 p-4">
-				<p class="m-0 text-sm uppercase tracking-wide text-sky-400">Full harvest cycle</p>
-				<p id="cycle-time" class="m-0 mt-1 text-2xl font-semibold text-white"></p>
-				<p class="m-0 mt-1 text-sm text-sky-300">Longest grow time among selected plants</p>
-			</div>
-			<div class="rounded-sm border border-sky-800/70 bg-sky-950/40 p-4">
-				<p class="m-0 text-sm uppercase tracking-wide text-sky-400">Total plots</p>
-				<p id="total-plots" class="m-0 mt-1 text-2xl font-semibold text-white"></p>
-				<p class="m-0 mt-1 text-sm text-sky-300">Combined plant count across all crops</p>
-			</div>
-		</div>
-
-		<div class="overflow-x-auto rounded-sm border border-sky-800/70 bg-sky-950/40">
-			<table class="min-w-full border-collapse text-sm">
-				<thead>
-					<tr class="bg-sky-600/90 text-left uppercase tracking-wide text-white">
-						<th class="px-4 py-3">Plant</th>
-						<th class="px-4 py-3">Grow time</th>
-						<th class="px-4 py-3">Plots</th>
-						<th class="px-4 py-3">Yield / harvest</th>
-						<th class="px-4 py-3">Total yield</th>
-						<th class="px-4 py-3"></th>
-					</tr>
-				</thead>
-				<tbody id="selected-plants-body"></tbody>
-			</table>
+			<section class="panel-amber calc-pad" aria-labelledby="harvest-heading">
+				<h2 id="harvest-heading">Harvest</h2>
+				<p id="results-empty" class="calc-empty mt-3">Add a plant to see the harvest cycle and yield.</p>
+				<div id="farm-results" hidden>
+					<dl class="calc-stats mt-4">
+						<div class="calc-stat">
+							<dt>Full harvest cycle</dt>
+							<dd id="cycle-time" class="value"></dd>
+							<dd class="calc-help mt-1">Longest grow time among selected plants</dd>
+						</div>
+						<div class="calc-stat">
+							<dt>Total plots</dt>
+							<dd id="total-plots" class="value"></dd>
+							<dd class="calc-help mt-1">Combined plant count across all crops</dd>
+						</div>
+					</dl>
+					<h3 class="mt-6">Total yield per harvest</h3>
+					<ul id="yield-list" class="mt-1"></ul>
+				</div>
+			</section>
 		</div>
 	</div>
 </Layout>
 
-<script define:vars={{ IMAGE_BASE, plants }}>
-	const plantById = new Map(plants.map((plant) => [plant.harvestId, plant]));
-	const selected = new Map();
+<script>
+	import { bindNumericPaste, itemSlot, removeButton } from '../../../scripts/calculatorUi';
 
-	const plantSelect = document.getElementById('plant-select');
-	const addBtn = document.getElementById('add-plant-btn');
-	const emptyEl = document.getElementById('empty-selection');
-	const resultsEl = document.getElementById('farm-results');
-	const tbody = document.getElementById('selected-plants-body');
-	const cycleTimeEl = document.getElementById('cycle-time');
-	const totalPlotsEl = document.getElementById('total-plots');
+	type Plant = {
+		harvestId: string;
+		name: string;
+		icon: string;
+		colour?: string;
+		growTime: string;
+		growTimeMinutes: number;
+		harvestQuantity: number;
+	};
 
-	function escapeHtml(str) {
-		if (str == null) return '';
-		const s = String(str);
-		return s
-			.replace(/&/g, '&amp;')
-			.replace(/</g, '&lt;')
-			.replace(/>/g, '&gt;')
-			.replace(/"/g, '&quot;')
-			.replace(/'/g, '&#39;');
-	}
+	const app = document.getElementById('farm-app');
+	if (app) setup(app);
 
-	function formatMinutes(minutes) {
-		const hours = Math.floor(minutes / 60);
-		const mins = minutes % 60;
-		if (hours && mins) {
-			return `${hours} hour${hours !== 1 ? 's' : ''} ${mins} minute${mins !== 1 ? 's' : ''}`;
+	function setup(app: HTMLElement) {
+		const plants: Plant[] = JSON.parse(app.dataset.plants ?? '[]');
+		const imageBase = app.dataset.imageBase ?? '/images/items/';
+		const plantById = new Map(plants.map((plant) => [plant.harvestId, plant]));
+		const selected = new Map<string, number>();
+
+		const plantSelect = document.getElementById('plant-select') as HTMLSelectElement;
+		const addBtn = document.getElementById('add-plant-btn') as HTMLButtonElement;
+		const list = document.getElementById('selected-plants')!;
+		const emptyEl = document.getElementById('empty-selection')!;
+		const resultsEmpty = document.getElementById('results-empty')!;
+		const resultsEl = document.getElementById('farm-results')!;
+		const yieldList = document.getElementById('yield-list')!;
+		const cycleTimeEl = document.getElementById('cycle-time')!;
+		const totalPlotsEl = document.getElementById('total-plots')!;
+		const status = document.getElementById('farm-status')!;
+
+		const slot = (plant: Plant, quantity?: number) =>
+			itemSlot({ icon: plant.icon, colour: plant.colour, quantity, size: 'w-11', imageBase });
+
+		function formatMinutes(minutes: number) {
+			const hours = Math.floor(minutes / 60);
+			const mins = minutes % 60;
+			if (hours && mins) {
+				return `${hours} hour${hours !== 1 ? 's' : ''} ${mins} minute${mins !== 1 ? 's' : ''}`;
+			}
+			if (hours) {
+				return `${hours} hour${hours !== 1 ? 's' : ''}`;
+			}
+			return `${mins} minute${mins !== 1 ? 's' : ''}`;
 		}
-		if (hours) {
-			return `${hours} hour${hours !== 1 ? 's' : ''}`;
+
+		/** Results only; the input rows stay in place so typing keeps focus. */
+		function renderResults() {
+			const empty = selected.size === 0;
+			emptyEl.hidden = !empty;
+			resultsEmpty.hidden = !empty;
+			resultsEl.hidden = empty;
+			yieldList.replaceChildren();
+			if (empty) return;
+
+			let maxMinutes = 0;
+			let totalPlots = 0;
+			for (const [harvestId, count] of selected) {
+				const plant = plantById.get(harvestId);
+				if (!plant) continue;
+				maxMinutes = Math.max(maxMinutes, plant.growTimeMinutes);
+				totalPlots += count;
+				const totalYield = count * plant.harvestQuantity;
+
+				const row = document.createElement('li');
+				row.className = 'calc-row';
+				row.appendChild(slot(plant, totalYield));
+				const name = document.createElement('span');
+				name.className = 'name';
+				const sub = document.createElement('span');
+				sub.className = 'sub tabular';
+				sub.textContent = `${plant.harvestQuantity.toLocaleString()} per plot × ${count.toLocaleString()} plot${count === 1 ? '' : 's'}`;
+				name.append(plant.name, sub);
+				const amount = document.createElement('span');
+				amount.className = 'calc-amount';
+				amount.textContent = totalYield.toLocaleString();
+				row.append(name, amount);
+				yieldList.appendChild(row);
+			}
+
+			cycleTimeEl.textContent = maxMinutes > 0 ? formatMinutes(maxMinutes) : '—';
+			totalPlotsEl.textContent = totalPlots.toLocaleString();
 		}
-		return `${mins} minute${mins !== 1 ? 's' : ''}`;
-	}
 
-	function render() {
-		if (!tbody || !emptyEl || !resultsEl || !cycleTimeEl || !totalPlotsEl) return;
+		function renderRows() {
+			list.replaceChildren();
+			for (const [harvestId, count] of selected) {
+				const plant = plantById.get(harvestId);
+				if (!plant) continue;
+				const row = document.createElement('li');
+				row.className = 'calc-row';
+				row.dataset.harvestId = harvestId;
+				row.appendChild(slot(plant));
 
-		if (selected.size === 0) {
-			emptyEl.classList.remove('hidden');
-			resultsEl.classList.add('hidden');
-			tbody.innerHTML = '';
-			return;
+				const name = document.createElement('span');
+				name.className = 'name font-medium';
+				const sub = document.createElement('span');
+				sub.className = 'sub font-normal';
+				sub.textContent = plant.growTime;
+				name.append(plant.name, sub);
+				row.appendChild(name);
+
+				const field = document.createElement('input');
+				field.type = 'number';
+				field.min = '1';
+				field.step = '1';
+				field.inputMode = 'numeric';
+				field.value = String(count);
+				field.className = 'field w-[4.5rem] sm:w-24 flex-none text-center';
+				field.setAttribute('aria-label', `Plot count for ${plant.name}`);
+				field.addEventListener('input', () => {
+					const value = Number.parseInt(field.value, 10);
+					if (Number.isFinite(value) && value >= 1) {
+						selected.set(harvestId, value);
+						renderResults();
+					}
+				});
+				field.addEventListener('change', () => {
+					const value = Math.max(1, Number.parseInt(field.value, 10) || 1);
+					field.value = String(value);
+					selected.set(harvestId, value);
+					renderResults();
+				});
+				row.appendChild(field);
+
+				const remove = removeButton(`Remove ${plant.name}`);
+				remove.addEventListener('click', () => {
+					const index = [...selected.keys()].indexOf(harvestId);
+					selected.delete(harvestId);
+					renderRows();
+					renderResults();
+					status.textContent = `Removed ${plant.name}.`;
+					const buttons = list.querySelectorAll<HTMLButtonElement>('.calc-remove');
+					(buttons[Math.min(index, buttons.length - 1)] ?? plantSelect).focus();
+				});
+				row.appendChild(remove);
+				list.appendChild(row);
+			}
 		}
 
-		emptyEl.classList.add('hidden');
-		resultsEl.classList.remove('hidden');
-
-		let maxMinutes = 0;
-		let totalPlots = 0;
-		const rows = [];
-
-		for (const [harvestId, count] of selected.entries()) {
+		addBtn.addEventListener('click', () => {
+			const harvestId = plantSelect.value;
 			const plant = plantById.get(harvestId);
-			if (!plant) continue;
-			maxMinutes = Math.max(maxMinutes, plant.growTimeMinutes);
-			totalPlots += count;
-			const totalYield = count * plant.harvestQuantity;
-			rows.push(`
-				<tr class="border-t border-sky-800/60" data-harvest-id="${escapeHtml(harvestId)}">
-					<td class="px-4 py-3">
-						<div class="flex items-center gap-3">
-							<img
-								src="${IMAGE_BASE}${escapeHtml(plant.icon).replace(/\.png$/i, '.webp')}"
-								alt="${escapeHtml(plant.name)}"
-								class="h-10 w-10 object-contain"
-								loading="lazy"
-								width="40"
-								height="40"
-							/>
-							<span class="font-semibold text-white">${escapeHtml(plant.name)}</span>
-						</div>
-					</td>
-					<td class="px-4 py-3 text-sky-200">${escapeHtml(plant.growTime)}</td>
-					<td class="px-4 py-3">
-						<input
-							type="number"
-							min="1"
-							value="${count}"
-							class="plot-count h-9 w-20 rounded-sm border border-sky-600 bg-sky-900/50 px-2 text-white"
-							aria-label="Plot count for ${escapeHtml(plant.name)}"
-						/>
-					</td>
-					<td class="px-4 py-3 text-sky-200">${plant.harvestQuantity.toLocaleString()}</td>
-					<td class="px-4 py-3 font-semibold text-lime-300">${totalYield.toLocaleString()}</td>
-					<td class="px-4 py-3">
-						<button
-							type="button"
-							class="remove-plant rounded-sm border border-sky-600 px-2 py-1 text-xs text-sky-400 hover:bg-sky-900/50 hover:text-white"
-						>
-							Remove
-						</button>
-					</td>
-				</tr>
-			`);
-		}
-
-		tbody.innerHTML = rows.join('');
-		cycleTimeEl.textContent = maxMinutes > 0 ? formatMinutes(maxMinutes) : '—';
-		totalPlotsEl.textContent = totalPlots.toLocaleString();
-
-		tbody.querySelectorAll('.plot-count').forEach((input) => {
-			input.addEventListener('change', (event) => {
-				const target = event.currentTarget;
-				const row = target.closest('tr');
-				const harvestId = row?.dataset.harvestId;
-				if (!harvestId) return;
-				const value = Math.max(1, Number.parseInt(target.value, 10) || 1);
-				target.value = String(value);
-				selected.set(harvestId, value);
-				render();
-			});
+			if (!plant) return;
+			if (!selected.has(harvestId)) {
+				selected.set(harvestId, 1);
+				renderRows();
+				status.textContent = `Added ${plant.name}.`;
+			}
+			renderResults();
+			const field = list.querySelector<HTMLInputElement>(`li[data-harvest-id="${CSS.escape(harvestId)}"] input`);
+			field?.focus();
+			field?.select();
 		});
 
-		tbody.querySelectorAll('.remove-plant').forEach((button) => {
-			button.addEventListener('click', (event) => {
-				const row = event.currentTarget.closest('tr');
-				const harvestId = row?.dataset.harvestId;
-				if (!harvestId) return;
-				selected.delete(harvestId);
-				render();
-			});
-		});
+		bindNumericPaste(list);
+		renderResults();
 	}
-
-	addBtn?.addEventListener('click', () => {
-		const harvestId = plantSelect?.value;
-		if (!harvestId || !plantById.has(harvestId)) return;
-		if (!selected.has(harvestId)) {
-			selected.set(harvestId, 1);
-		}
-		render();
-	});
 </script>

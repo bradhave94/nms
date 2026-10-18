@@ -1,0 +1,106 @@
+/* Calculator pages (planner, reverse, farm, base power): one layout for all of them.
+   Header (h1 + one line), inputs panel on the left, results on the right; one column on phones
+   with the results straight under the inputs. Scoped under .calc. Components layer, so Tailwind
+   utilities still win; the order statement matches main.css in case this file loads first. */
+@layer theme, base, components, utilities;
+
+@layer components {
+	.calc { max-width: 1180px; margin-inline: auto; padding-bottom: 3rem; color-scheme: dark; }
+	.calc, .calc *, .calc *::before, .calc *::after { box-sizing: border-box; }
+	/* No preflight on this site: clear browser default margins and list indents. */
+	.calc :is(h1, h2, h3, h4, p, ul, ol, dl, dd, figure, fieldset) { margin: 0; }
+	.calc :is(ul, ol) { list-style: none; padding: 0; }
+	.calc fieldset { border: 0; padding: 0; min-width: 0; }
+	.calc legend { padding: 0; }
+	.calc ::selection { background: rgb(255 195 86 / .35); color: #fff; }
+	.calc [hidden] { display: none !important; }
+
+	.calc-head { padding: .75rem 0 1.75rem; }
+	.calc-head h1 { font-size: clamp(2.25rem, 1.7rem + 2vw, 3rem); line-height: 1.05; font-weight: 700; }
+	.calc-head p { margin-top: .65rem; max-width: 62ch; color: var(--color-dim); font-size: 1.05rem; }
+
+	.calc-grid { display: grid; gap: 1.5rem; align-items: start; }
+	@media (min-width: 1024px) {
+		.calc-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 2rem; }
+	}
+	.calc-col { display: grid; gap: 1.5rem; min-width: 0; }
+
+	.calc-pad { padding: 1.25rem; }
+	@media (min-width: 640px) { .calc-pad { padding: 1.5rem; } }
+	.calc h2 { font-size: 1.3rem; line-height: 1.3; font-weight: 600; }
+	.calc h2 .count { margin-left: .4rem; font-size: .95rem; font-weight: 400; color: var(--color-dim); }
+	.calc h3 { font-size: 1.1rem; line-height: 1.35; font-weight: 600; }
+	.panel-amber h2 { color: var(--color-accent); }
+
+	.calc-label { display: block; margin-bottom: .4rem; font-size: .9rem; font-weight: 500; color: var(--color-ink); }
+	.calc-help { margin-top: .5rem; max-width: 68ch; font-size: .875rem; line-height: 1.55; color: var(--color-dim); }
+	.calc-empty { color: var(--color-dim); }
+	.calc-field-num { max-width: 9rem; }
+	.calc .field[type="number"] { font-variant-numeric: tabular-nums; }
+	.calc .field:disabled { opacity: .55; cursor: not-allowed; }
+	.calc select.field { padding-right: 2.5rem; }
+	.calc .btn-quiet:disabled, .calc .btn-primary:disabled { opacity: .5; cursor: not-allowed; }
+	.calc .btn-quiet:disabled:hover { border-color: var(--color-line-strong); }
+
+	/* Search results under an item search field. */
+	.calc-picker { margin-top: .5rem; max-height: 19rem; overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--color-line-strong); border-radius: 10px; background: var(--color-panel-2); }
+	.calc-picker button { display: flex; width: 100%; min-height: 44px; align-items: center; gap: .7rem; padding: .3rem .7rem; text-align: left; cursor: pointer; }
+	.calc-picker li + li button { border-top: 1px solid var(--color-line); }
+	.calc-picker button:hover, .calc-picker button:focus-visible { background: var(--color-panel-3); }
+	.calc-picker .meta { margin-left: auto; padding-left: .5rem; font-size: .85rem; color: var(--color-dim); white-space: nowrap; }
+	.calc-picker .calc-empty { padding: .75rem; font-size: .95rem; }
+
+	/* An item row: slot, name, then a control or the amount on the right. */
+	.calc-row { display: flex; align-items: center; gap: .75rem; padding: .55rem 0; border-top: 1px solid var(--color-line); }
+	.calc-row:first-child { border-top: 0; }
+	.calc-row .name { flex: 1; min-width: 0; overflow-wrap: break-word; hyphens: auto; }
+	.calc-row .sub { display: block; font-size: .85rem; color: var(--color-dim); }
+	.calc-row a.name-link:hover { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+	.calc .slot > .qty { white-space: nowrap; }
+	@media (max-width: 479px) { .calc-row { gap: .6rem; } .calc-row .field { padding-inline: .4rem; } .calc-pad { padding: 1rem; } }
+	.calc-amount { flex: none; font-variant-numeric: tabular-nums; font-size: 1.2rem; font-weight: 600; color: #fff; text-align: right; }
+	.panel-amber .calc-row { border-color: rgb(255 195 86 / .16); }
+
+	/* Icon-only remove button (24px+ target; 40px here). */
+	.calc-remove { display: inline-grid; flex: none; place-items: center; width: 40px; height: 40px; border-radius: 10px; color: var(--color-dim); cursor: pointer; transition: background-color .15s, color .15s; }
+	.calc-remove:hover { background: var(--color-panel-3); color: var(--color-ink); }
+	.calc-remove svg { width: 18px; height: 18px; }
+
+	/* Segmented choice: radios or checkboxes styled like .btn-quiet. The real input stays
+	   on top of the label (transparent) so it keeps its native keyboard behaviour and target. */
+	.calc-seg { display: flex; flex-wrap: wrap; gap: .5rem; }
+	.calc-seg label { position: relative; display: inline-flex; align-items: center; gap: .4rem; min-height: 40px; padding: 0 .9rem; border-radius: 10px; border: 1px solid var(--color-line-strong); background: var(--color-panel-2); color: var(--color-ink); font-weight: 500; cursor: pointer; transition: border-color .15s, background-color .15s; }
+	.calc-seg label:hover { border-color: var(--color-accent); }
+	.calc-seg input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+	.calc-seg label:has(input:checked) { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+	.calc-seg label:has(input:focus-visible) { outline: 3px solid #facc15; outline-offset: 2px; }
+
+	/* Key figures in the answer panel. */
+	.calc-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 1.5rem; }
+	.calc-stat dt, .calc-stat .label { font-size: .9rem; color: var(--color-dim); }
+	.calc-stat .value { margin-top: .15rem; font-variant-numeric: tabular-nums; font-size: 1.9rem; line-height: 1.15; font-weight: 700; color: #fff; }
+
+	/* Crafting tree (planner breakdown). */
+	.calc-tree ul { margin-left: 1.3rem; padding-left: .75rem; border-left: 1px solid var(--color-line); }
+	.calc-tree-root > ul { margin-left: 0; padding-left: 0; border-left: 0; }
+	.calc-tree .node { display: flex; align-items: center; gap: .6rem; min-height: 44px; padding: .2rem .4rem .2rem 0; border-radius: 8px; }
+	.calc-tree a.node:hover { background: var(--color-panel-3); }
+	.calc-tree a.node:hover .node-name { color: var(--color-accent); }
+	.calc-tree .node-name { min-width: 0; overflow-wrap: anywhere; }
+
+	/* Reverse calculator: one recipe = inputs, arrow, output. */
+	.calc-eq { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .5rem; font-size: .95rem; color: var(--color-ink); }
+	.calc-eq .op { color: var(--color-dim); font-weight: 600; }
+	.calc-eq .part { display: inline-flex; align-items: center; gap: .45rem; }
+
+	/* Power calculator explainer and reference figures. */
+	.calc details > summary { display: flex; align-items: center; gap: .5rem; min-height: 44px; cursor: pointer; font-weight: 600; list-style: none; }
+	.calc details > summary::-webkit-details-marker { display: none; }
+	.calc details > summary::before { content: ""; flex: none; width: .55rem; height: .55rem; margin-right: .2rem; border-right: 2px solid var(--color-dim); border-bottom: 2px solid var(--color-dim); transform: rotate(-45deg); transition: transform .15s; }
+	.calc details[open] > summary::before { transform: rotate(45deg); }
+	.calc details > summary:hover { color: var(--color-accent); }
+	.calc-prose { max-width: 68ch; line-height: 1.65; color: #cfd9e4; }
+	.calc-prose p + p { margin-top: .75rem; }
+	.calc-prose strong { color: var(--color-ink); font-weight: 600; }
+	.calc .link:focus-visible { border-radius: 2px; }
+}
