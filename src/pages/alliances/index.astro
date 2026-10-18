@@ -3,6 +3,7 @@ import '@assets/css/alliances.css';
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { FOCUSES, PLATFORMS } from '@utils/alliances';
+import { swatchStyle } from '@utils/contrast';
 import {
 	listApprovedAlliances,
 	listApprovedGalaxies,
@@ -76,20 +77,19 @@ const location = (alliance: PublicAlliance) =>
 ---
 
 <Layout {title} {description} slug="alliances" {canonical} {structuredData} robots={isFiltered ? 'noindex,follow' : undefined}>
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<div class="alliances mx-auto max-w-6xl px-2 pb-16 sm:px-4">
-		<header class="mb-10 flex flex-wrap items-end justify-between gap-6">
-			<div>
-				<p class="eyebrow">Community</p>
-				<h1>Alliance Directory</h1>
+	<div class="alliances mx-auto max-w-[1180px] pb-16 lg:px-8">
+		<Breadcrumbs items={breadcrumbs} className="!px-0 pt-4 mb-4" />
+		<header class="mb-8 flex flex-wrap items-end justify-between gap-6">
+			<div class="min-w-0">
+				<h1>Alliance directory</h1>
 				<p class="lede">
 					Find a No Man's Sky alliance to join. Each listing tells you where to find one of the alliance's stations. Dock there and join at the Station Core.
 				</p>
 			</div>
-			<a class="button" href="/alliances/submit/">List your alliance</a>
+			<a class="btn-primary" href="/alliances/submit/">List your alliance</a>
 		</header>
 
-		<form method="get" class="panel mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(4,minmax(0,1fr))_auto] lg:items-end" role="search" aria-label="Filter alliances">
+		<form method="get" class="panel mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(4,minmax(0,1fr))_auto] lg:items-end" role="search" aria-label="Filter alliances">
 			<div class="sm:col-span-2 lg:col-span-1">
 				<label for="filter-q">Search</label>
 				<input id="filter-q" type="search" name="q" value={filters.q ?? ''} placeholder="Name, tag or region" />
@@ -125,8 +125,8 @@ const location = (alliance: PublicAlliance) =>
 				</select>
 			</div>
 			<div class="flex gap-2">
-				<button type="submit" class="button secondary control">Filter</button>
-				{isFiltered && <a class="button secondary control" href="/alliances/">Clear</a>}
+				<button type="submit" class="btn-quiet">Filter</button>
+				{isFiltered && <a class="btn-quiet" href="/alliances/">Clear</a>}
 			</div>
 		</form>
 
@@ -135,43 +135,43 @@ const location = (alliance: PublicAlliance) =>
 		) : alliances.length === 0 ? (
 			<div class="notice info">
 				{isFiltered ? (
-					<p>No alliances match those filters. <a class="prose-link" href="/alliances/">Show all alliances</a>.</p>
+					<p>No alliances match those filters. <a class="link" href="/alliances/">Show all alliances</a>.</p>
 				) : (
-					<p>No alliances are listed yet. <a class="prose-link" href="/alliances/submit/">Add yours</a> and it can be the first one here.</p>
+					<p>No alliances are listed yet. <a class="link" href="/alliances/submit/">Add yours</a> and it can be the first one here.</p>
 				)}
 			</div>
 		) : (
 			<>
-				<ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+				<p class="mb-4 text-dim tabular" role="status">{alliances.length} {alliances.length === 1 ? 'alliance' : 'alliances'}{isFiltered ? ' match' : ' listed'}</p>
+				<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 					{alliances.map((alliance) => (
-						<li>
-							<article class="card" style={`--alliance-color: ${alliance.color}`}>
-								<div class="flex items-start justify-between gap-3">
+						<li class="min-w-0">
+							<article class="card panel">
+								<div class="flex items-start gap-3">
+									{alliance.tag
+										? <span class="tag" style={swatchStyle(alliance.color)}>{alliance.tag}</span>
+										: <span class="colour-dot mt-1" style={`background: ${alliance.color}`} aria-hidden="true"></span>}
 									<h2><a href={`/alliances/${alliance.slug}/`}>{alliance.name}</a></h2>
-									{alliance.tag && <span class="tag" style={`color: ${alliance.color}`}>{alliance.tag}</span>}
 								</div>
 								<p class="meta">{location(alliance)}</p>
 								<p class="summary">{alliance.description}</p>
-								<div class="chips">
-									{alliance.focuses.map((focus) => <span class="chip">{focus}</span>)}
-								</div>
+								{alliance.focuses.length > 0 && <p class="focuses">{alliance.focuses.join(' · ')}</p>}
 							</article>
 						</li>
 					))}
 				</ul>
-				<p class="help !mt-4" role="status">{alliances.length} {alliances.length === 1 ? 'alliance' : 'alliances'}{isFiltered ? ' match' : ' listed'}</p>
 			</>
 		)}
 
-		<section class="panel mt-10" aria-labelledby="how-to-join">
+		<section class="panel mt-8" aria-labelledby="how-to-join">
 			<h2 id="how-to-join">How to join an alliance</h2>
-			<ol class="steps mt-5">
+			<ol class="steps mt-4">
 				<li>Travel to the alliance's galaxy and station system. The fastest way is a portal address, if the listing has one.</li>
 				<li>Dock at the alliance's space station and go to the Station Core.</li>
 				<li>Choose to join the alliance. You can belong to up to three alliances at once.</li>
 			</ol>
-			<p class="help mt-5">
-				New to alliances? Read our <a class="prose-link" href="/blog/no-mans-sky-alliances-guide/">alliance guide</a>. Spotted an outdated or inappropriate listing? <a class="prose-link" href="/feedback">Let us know</a>.
+			<p class="help mt-4">
+				New to alliances? Read our <a class="link" href="/blog/no-mans-sky-alliances-guide/">alliance guide</a>. Spotted an outdated or inappropriate listing? <a class="link" href="/feedback/">Let us know</a>.
 			</p>
 		</section>
 	</div>

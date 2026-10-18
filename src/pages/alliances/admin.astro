@@ -27,6 +27,7 @@ import {
 	updateAlliance,
 	type AllianceEdit,
 } from '@utils/alliancesDb';
+import { swatchStyle } from '@utils/contrast';
 import { isAdmin, isAdminConfigured, logIn, logOut } from '@utils/allianceAdmin';
 
 export const prerender = false;
@@ -124,26 +125,25 @@ const dateTime = (iso: string) =>
 	new Date(iso).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'UTC' }) + ' UTC';
 const statusActions: Record<AllianceStatus, Array<{ action: string; label: string; style: string }>> = {
 	pending: [
-		{ action: 'approve', label: 'Approve', style: '' },
+		{ action: 'approve', label: 'Approve', style: 'primary' },
 		{ action: 'reject', label: 'Reject', style: 'secondary' },
 	],
 	approved: [{ action: 'pending', label: 'Unpublish', style: 'secondary' }],
 	rejected: [
-		{ action: 'approve', label: 'Approve', style: '' },
+		{ action: 'approve', label: 'Approve', style: 'primary' },
 		{ action: 'pending', label: 'Move to pending', style: 'secondary' },
 	],
 };
 ---
 
 <Layout title="Alliance moderation | No Man's Sky Recipes" description="Moderate alliance directory submissions." slug="alliances" robots="noindex,nofollow">
-	<div class="alliances mx-auto max-w-5xl px-2 py-8 pb-16 sm:px-4">
-		<header class="mb-10 flex flex-wrap items-end justify-between gap-4">
+	<div class="alliances mx-auto max-w-5xl pt-4 pb-16">
+		<header class="mb-8 flex flex-wrap items-end justify-between gap-4">
 			<div>
-				<p class="eyebrow">Alliance directory</p>
 				<h1>Moderation</h1>
 			</div>
 			{authorised && (
-				<form method="post"><input type="hidden" name="action" value="logout" /><button class="button secondary small" type="submit">Log out</button></form>
+				<form method="post"><input type="hidden" name="action" value="logout" /><button class="btn-quiet btn-sm" type="submit">Log out</button></form>
 			)}
 		</header>
 
@@ -157,11 +157,11 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 					<input id="admin-token" type="password" name="token" autocomplete="current-password" required aria-invalid={loginError ? 'true' : undefined} />
 					{loginError && <p class="field-error">That token didn't match.</p>}
 				</div>
-				<button type="submit" class="button">Log in</button>
+				<button type="submit" class="btn-primary">Log in</button>
 			</form>
 		) : editing && editValues ? (
 			<section>
-				<p class="mb-4"><a class="prose-link" href={viewUrl(editing.status)}>← Back to {editing.status}</a></p>
+				<p class="mb-4"><a class="link" href={viewUrl(editing.status)}>← Back to {editing.status}</a></p>
 				<h2 class="mb-4">Edit “{editing.name}”</h2>
 				{Object.keys(editErrors).length > 0 && <p class="notice error mb-6" role="alert">Some fields need fixing.</p>}
 				<AllianceForm values={editValues} errors={editErrors} submitLabel="Save changes"
@@ -170,13 +170,13 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 		) : (
 			<>
 				{notice && <p class="notice success mb-6" role="status">{notice}</p>}
-				<nav class="tabs mb-6" aria-label="Listing status">
+				<nav class="mb-6 flex flex-wrap gap-2" aria-label="Listing status">
 					{ALLIANCE_STATUSES.map((status) => (
-						<a href={viewUrl(status)} aria-current={status === view ? 'page' : undefined}>
+						<a class="btn-quiet btn-sm" href={viewUrl(status)} aria-current={status === view ? 'page' : undefined}>
 							{status[0].toUpperCase() + status.slice(1)} ({counts[status]})
 						</a>
 					))}
-					<a href={viewUrl('edits')} aria-current={view === 'edits' ? 'page' : undefined}>Edits ({editCount})</a>
+					<a class="btn-quiet btn-sm" href={viewUrl('edits')} aria-current={view === 'edits' ? 'page' : undefined}>Edits ({editCount})</a>
 				</nav>
 				{view === 'edits' ? (
 					pendingEdits.length === 0 ? (
@@ -191,8 +191,8 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 											<div>
 												<h2 class="flex flex-wrap items-center gap-2">
 													<span class="colour-dot" style={`background: ${alliance.color}`} aria-hidden="true"></span>
-													<a class="prose-link" href={`/alliances/${alliance.slug}/`}>{alliance.name}</a>
-													{alliance.status !== 'approved' && <span class="chip">{alliance.status}</span>}
+													<a class="link" href={`/alliances/${alliance.slug}/`}>{alliance.name}</a>
+													{alliance.status !== 'approved' && <span class="status-label">({alliance.status})</span>}
 												</h2>
 												<p class="help !mt-1">Requested {dateTime(edit.createdAt)}</p>
 											</div>
@@ -200,12 +200,12 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 												<form method="post">
 													<input type="hidden" name="action" value="apply-edit" />
 													<input type="hidden" name="id" value={edit.id} />
-													<button type="submit" class="button small" disabled={changes.length === 0}>Apply changes</button>
+													<button type="submit" class="btn-primary btn-sm" disabled={changes.length === 0}>Apply changes</button>
 												</form>
 												<form method="post">
 													<input type="hidden" name="action" value="reject-edit" />
 													<input type="hidden" name="id" value={edit.id} />
-													<button type="submit" class="button small secondary">{changes.length === 0 ? 'Dismiss' : 'Reject'}</button>
+													<button type="submit" class="btn-quiet btn-sm">{changes.length === 0 ? 'Dismiss' : 'Reject'}</button>
 												</form>
 											</div>
 										</div>
@@ -240,7 +240,7 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 						{view === 'pending' && (
 							<form method="post">
 								<input type="hidden" name="action" value="seed" />
-								<button type="submit" class="button small secondary">Load starter listings</button>
+								<button type="submit" class="btn-quiet btn-sm">Load starter listings</button>
 							</form>
 						)}
 					</div>
@@ -253,9 +253,9 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 										<h2 class="flex flex-wrap items-center gap-2">
 											<span class="colour-dot" style={`background: ${alliance.color}`} aria-hidden="true"></span>
 											{alliance.status === 'approved'
-												? <a class="prose-link" href={`/alliances/${alliance.slug}/`}>{alliance.name}</a>
+												? <a class="link" href={`/alliances/${alliance.slug}/`}>{alliance.name}</a>
 												: alliance.name}
-											{alliance.tag && <span class="tag">{alliance.tag}</span>}
+											{alliance.tag && <span class="tag" style={swatchStyle(alliance.color)}>{alliance.tag}</span>}
 										</h2>
 										<p class="help !mt-1">Submitted {dateTime(alliance.createdAt)}{alliance.approvedAt && ` · approved ${dateTime(alliance.approvedAt)}`}</p>
 									</div>
@@ -265,15 +265,15 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 												<input type="hidden" name="action" value={item.action} />
 												<input type="hidden" name="id" value={alliance.id} />
 												<input type="hidden" name="view" value={view} />
-												<button type="submit" class={`button small ${item.style}`}>{item.label}</button>
+												<button type="submit" class={item.style === 'primary' ? 'btn-primary btn-sm' : 'btn-quiet btn-sm'}>{item.label}</button>
 											</form>
 										))}
-										<a class="button small secondary" href={`${ADMIN_PATH}?edit=${alliance.id}`}>Edit</a>
-										<form method="post" class="ml-3 border-l border-cyan-900/60 pl-3" data-confirm={`Delete “${alliance.name}” permanently?`}>
+										<a class="btn-quiet btn-sm" href={`${ADMIN_PATH}?edit=${alliance.id}`}>Edit</a>
+										<form method="post" class="ml-3 border-l border-line pl-3" data-confirm={`Delete “${alliance.name}” permanently?`}>
 											<input type="hidden" name="action" value="delete" />
 											<input type="hidden" name="id" value={alliance.id} />
 											<input type="hidden" name="view" value={view} />
-											<button type="submit" class="button small danger">Delete</button>
+											<button type="submit" class="btn-quiet btn-sm btn-danger">Delete</button>
 										</form>
 									</div>
 								</div>
@@ -285,8 +285,8 @@ const statusActions: Record<AllianceStatus, Array<{ action: string; label: strin
 									<dt>Platforms</dt><dd>{alliance.platforms.join(', ') || 'All'}</dd>
 									<dt>Languages</dt><dd>{alliance.languages || '—'}</dd>
 									<dt>Focus</dt><dd>{alliance.focuses.join(', ') || '—'}</dd>
-									{alliance.discordUrl && <><dt>Discord</dt><dd><a class="prose-link" href={alliance.discordUrl} rel="noopener noreferrer" target="_blank">{alliance.discordUrl}</a></dd></>}
-									{alliance.websiteUrl && <><dt>Website</dt><dd><a class="prose-link" href={alliance.websiteUrl} rel="noopener noreferrer" target="_blank">{alliance.websiteUrl}</a></dd></>}
+									{alliance.discordUrl && <><dt>Discord</dt><dd><a class="link" href={alliance.discordUrl} rel="noopener noreferrer" target="_blank">{alliance.discordUrl}</a></dd></>}
+									{alliance.websiteUrl && <><dt>Website</dt><dd><a class="link" href={alliance.websiteUrl} rel="noopener noreferrer" target="_blank">{alliance.websiteUrl}</a></dd></>}
 									<dt>Contact</dt><dd>{alliance.contact || '—'}</dd>
 								</dl>
 							</li>
