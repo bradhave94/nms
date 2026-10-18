@@ -31,6 +31,7 @@ const icon = (file?: string) => (file ? `/images/items/${file}` : undefined);
 				data-so={row.output.name.toLowerCase()}
 				data-si={row.inputs.map((input) => input.name.toLowerCase()).join('|')}
 				data-n={row.inputs.length}
+				data-sop={row.operation?.toLowerCase() ?? ''}
 			>
 				<a href={row.output.href} class="rc-out" style={swatchStyle(row.output.colour)}>
 					{row.output.icon && <img src={icon(row.output.icon)} width="44" height="44" alt="" loading="lazy" decoding="async" />}
@@ -70,6 +71,7 @@ const icon = (file?: string) => (file ? `/images/items/${file}` : undefined);
 			so: el.dataset.so ?? '',
 			si: el.dataset.si ?? '',
 			n: Number(el.dataset.n) || 0,
+			sop: el.dataset.sop ?? '',
 		}));
 		const count = root.querySelector<HTMLElement>('[data-rt-count]');
 		const empty = root.querySelector<HTMLElement>('[data-rc-empty]');

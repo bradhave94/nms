@@ -18,6 +18,8 @@ export interface Searchable {
 	si: string;
 	/** Number of inputs. */
 	n: number;
+	/** Lower-cased operation name ("subjugation of glass"); matched in "Both" mode, as the old table search did. */
+	sop?: string;
 }
 
 export const matches = (state: FilterState, row: Searchable): boolean => {
@@ -26,7 +28,7 @@ export const matches = (state: FilterState, row: Searchable): boolean => {
 	const out = row.so.includes(state.q);
 	if (state.mode === 'out') return out;
 	const used = row.si.includes(state.q);
-	return state.mode === 'in' ? used : out || used;
+	return state.mode === 'in' ? used : out || used || Boolean(row.sop?.includes(state.q));
 };
 
 export const isFiltering = (state: FilterState): boolean => Boolean(state.q || state.size);

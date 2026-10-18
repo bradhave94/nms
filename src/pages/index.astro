@@ -64,7 +64,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 >
 	<div class="home -mx-4 -mt-4 lg:-mx-8">
 		<section class="hero" aria-labelledby="home-title">
-			<img class="hero-art" src="/images/backgrounds/bg11-1600.webp" srcset="/images/backgrounds/bg11-960.webp 960w, /images/backgrounds/bg11-1600.webp 1600w, /images/backgrounds/bg11.webp 1920w" sizes="(min-width: 1024px) calc(100vw - 224px), 100vw" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
+			<picture><source media="(max-width: 767px)" srcset="/images/backgrounds/bg11-960.webp" /><img class="hero-art" src="/images/backgrounds/bg11-1600.webp" srcset="/images/backgrounds/bg11-1600.webp 1600w, /images/backgrounds/bg11.webp 1920w" sizes="calc(100vw - 224px)" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" /></picture>
 			<div class="hero-in">
 				<h1 id="home-title">Every recipe in No Man's Sky</h1>
 				<p class="hero-lead">Refiner, Nutrient Processor and crafting recipes from the game files, with calculators for what to farm. Updated for the {SITE.version_name} update.</p>

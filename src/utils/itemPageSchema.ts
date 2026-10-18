@@ -36,6 +36,8 @@ export type ItemPageSchemaInput = {
   outputRefinedLength: number;
   outputCookedLength: number;
   dateModified: string;
+  /** The page's Best yield machine recipe ("id:qty,...>outQty"), so the summary and FAQ cite the same one. */
+  bestMachineSignature?: string;
   /** The page's <title> and meta description, reused for the ItemPage node. */
   pageTitle: string;
   pageDescription: string;
@@ -75,6 +77,7 @@ export const buildItemPageSchema = ({
   dateModified,
   pageTitle,
   pageDescription,
+  bestMachineSignature,
 }: ItemPageSchemaInput): ItemPageSchemaResult => {
   const canonicalUrl = ensureTrailingSlashUrl(canonicalUrlInput);
   const categoryUrl = ensureTrailingSlashUrl(categoryUrlInput);
@@ -172,8 +175,11 @@ export const buildItemPageSchema = ({
     const units = method.ingredients.reduce((sum, ingredient) => sum + ingredient.Quantity, 0);
     return units > 0 ? method.outputQuantity / units : 0;
   };
+  const signature = (method: Method) =>
+    `${method.ingredients.map((i) => `${i.Id}:${i.Quantity}`).sort().join(',')}>${method.outputQuantity}`;
   const primaryMethod =
     uniqueMethods.find((method) => method.action === 'craft') ??
+    (bestMachineSignature ? uniqueMethods.find((method) => signature(method) === bestMachineSignature) : undefined) ??
     [...uniqueMethods].sort((a, b) => yieldPerInput(b) - yieldPerInput(a) || b.outputQuantity - a.outputQuantity)[0];
   const ingredientList =
     primaryMethod?.ingredients.map((i) => `${i.Name} x${i.Quantity}`).join(', ') ??
@@ -183,7 +189,7 @@ export const buildItemPageSchema = ({
   // Name raw materials by their in-game group instead ("a highly refined stellar metal").
   const group = typeof item.Group === 'string' ? item.Group.trim() : '';
   const kind =
-    categorySingular === 'raw material' && group && !/[%{}]|-null-/i.test(group) ? group.toLowerCase() : categorySingular;
+    categorySingular === 'raw material' && group && !/[%{}]|-null-/i.test(group) ? group.split(':')[0].trim().toLowerCase() : categorySingular;
   const lead = `${item.Name} is ${/^[aeiou]/i.test(kind) ? 'an' : 'a'} ${kind} in No Man's Sky.`;
   const refinerSize = (count: number) => (count >= 3 ? 'Large Refiner' : count === 2 ? 'Medium Refiner' : 'Portable Refiner');
   const outputNote = (method: Method) => (method.outputQuantity > 1 ? ` to get ${method.outputQuantity}` : '');

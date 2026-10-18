@@ -19,13 +19,17 @@ const craftText = (row: RecipeRowView) =>
 const bestData = best
   ? JSON.stringify({
       out: best.output.qty,
+      net: best.netOut,
+      self: best.inputs.filter((slot) => slot.id === best.output.id).reduce((sum, slot) => sum + slot.qty, 0),
       seconds: best.seconds ?? null,
       machine: best.machine,
       inputs: best.inputs.map((slot) => [slot.name, slot.qty]),
     })
   : undefined;
+const selfNote = (row: RecipeRowView) =>
+  row.netOut < row.output.qty ? ` (${row.netOut.toLocaleString()} more than you put in)` : '';
 const batchText = (row: RecipeRowView) =>
-  `1 batch: ${row.inputs.map((slot) => `${slot.qty.toLocaleString()} ${slot.name}`).join(' + ')} in a ${row.machine} makes ${row.output.qty.toLocaleString()}${row.time ? `, about ${row.time}` : ''}.`;
+  `1 batch: ${row.inputs.map((slot) => `${slot.qty.toLocaleString()} ${slot.name}`).join(' + ')} in a ${row.machine} makes ${row.output.qty.toLocaleString()}${selfNote(row)}${row.time ? `, about ${row.time} in one refiner` : ''}.`;
 ---
 
 <div class="panel item-calc p-4" data-calc data-best={bestData} data-craft={craftData} data-tree={hasTree ? '1' : undefined}>
@@ -70,13 +74,13 @@ const batchText = (row: RecipeRowView) =>
     const hasTree = Boolean(box.dataset.tree);
     if (!input) return;
     const best = box.dataset.best
-      ? (JSON.parse(box.dataset.best) as { out: number; seconds: number | null; machine: string; inputs: [string, number][] })
+      ? (JSON.parse(box.dataset.best) as { out: number; net: number; self: number; seconds: number | null; machine: string; inputs: [string, number][] })
       : undefined;
     const fmt = (value: number) => (Number.isFinite(value) ? value.toLocaleString() : '0');
 
     const update = () => {
-      if (input.value === '') return;
-      let need = Number.parseInt(input.value, 10);
+      // an empty field counts as 1 so the numbers below never go stale
+      let need = input.value === '' ? 1 : Number.parseInt(input.value, 10);
       if (!Number.isFinite(need) || need < 1) {
         need = 1;
         input.value = '1';
@@ -108,10 +112,13 @@ const batchText = (row: RecipeRowView) =>
         craftLine.textContent = `${craftLine.dataset.verb} ${fmt(need)}: ${inputs}${hasTree ? '. The tree below shows every part.' : '.'}`;
       }
       if (best && result) {
-        const batches = Math.ceil(need / best.out);
+        // a recipe that uses its own output only gains the difference per batch
+        const net = best.net > 0 ? best.net : best.out;
+        const batches = Math.ceil(need / net);
         const inputs = best.inputs.map(([name, qty]) => `${fmt(qty * batches)} ${name}`).join(' + ');
         const time = typeof best.seconds === 'number' ? `, about ${formatSeconds(best.seconds * batches)} in one refiner` : '';
-        result.textContent = `${fmt(batches)} ${batches === 1 ? 'batch' : 'batches'}: ${inputs} in a ${best.machine} makes ${fmt(best.out * batches)}${time}.`;
+        const more = best.self > 0 ? ` (${fmt(net * batches)} more than you put in)` : '';
+        result.textContent = `${fmt(batches)} ${batches === 1 ? 'batch' : 'batches'}: ${inputs} in a ${best.machine} makes ${fmt(best.out * batches)}${more}${time}.`;
       }
     };
 

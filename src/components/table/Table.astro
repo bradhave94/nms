@@ -71,6 +71,7 @@ const columns = [
     y: number;
     so: string;
     si: string;
+    sop: string;
     i1: Item | null;
     i2: Item | null;
     i3: Item | null;
@@ -110,6 +111,7 @@ const columns = [
         y: Number(tr.dataset.y) || 0,
         so: (out?.name ?? '').toLowerCase(),
         si: inputs.map((x) => x.name.toLowerCase()).join('|'),
+        sop: opName.trim().toLowerCase(),
         i1,
         i2,
         i3,

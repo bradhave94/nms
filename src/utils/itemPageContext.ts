@@ -99,7 +99,15 @@ export const prepareItemPageSchemaInput = (
 		dataLength,
 		outputRefinedLength,
 		outputCookedLength,
+		bestMachineSignature: bestMachineSignature(item),
 	};
+};
+
+/** "id:qty,id:qty>outQty" of the Best yield machine recipe (the one the page's box shows). */
+const bestMachineSignature = (item: Item): string | undefined => {
+	const view = buildItemRecipeView(item);
+	const best = view.bestRefine ?? view.bestCook;
+	return best ? `${best.inputs.map((slot) => `${slot.id}:${slot.qty}`).sort().join(',')}>${best.output.qty}` : undefined;
 };
 
 // ── Item page view model (Page.astro) ─────────────────────────────────────────────
@@ -126,7 +134,18 @@ export type RecipeRowView = {
 	seconds?: number;
 	time?: string;
 	inputUnits: number;
+	/** Output gained per batch: the output minus any of the same item the recipe consumes ("Indium + Chromatic Metal -> 2 Indium" gains 1). */
+	netOut: number;
+	/** Net output per unit of the other inputs consumed. */
 	yieldPerInput: number;
+};
+
+/** Net gain and yield for a recipe that may consume its own output. */
+const netYield = (inputs: RecipeSlot[], output: RecipeSlot) => {
+	const self = inputs.filter((slot) => slot.id === output.id).reduce((sum, slot) => sum + slot.qty, 0);
+	const netOut = output.qty - self;
+	const otherUnits = inputs.reduce((sum, slot) => sum + slot.qty, 0) - self;
+	return { netOut, yieldPerInput: netOut > 0 ? netOut / Math.max(otherUnits, self || 1) : 0 };
 };
 
 type IO = { Id: string; Quantity: number };
@@ -177,14 +196,14 @@ export const toRecipeRow = (recipe: MachineRecipe): RecipeRowView | undefined =>
 		seconds: cooking ? undefined : getRefineSecondsPerBatch(recipe.Time, recipe.Output.Id),
 		time: cooking ? undefined : formatRefineryTime(recipe.Time, recipe.Output.Id),
 		inputUnits,
-		yieldPerInput: inputUnits > 0 ? output.qty / inputUnits : 0,
+		...netYield(inputs, output),
 	};
 };
 
-/** Best yield per input unit first; ties go to the bigger batch, then the faster one. */
+/** Best net yield per input unit first; ties go to the bigger net batch, then the faster one. */
 export const byYield = (a: RecipeRowView, b: RecipeRowView): number =>
 	b.yieldPerInput - a.yieldPerInput ||
-	b.output.qty - a.output.qty ||
+	b.netOut - a.netOut ||
 	(a.seconds ?? Number.POSITIVE_INFINITY) - (b.seconds ?? Number.POSITIVE_INFINITY) ||
 	a.inputs.length - b.inputs.length;
 
@@ -240,19 +259,22 @@ export const buildItemRecipeView = (item: Item): ItemRecipeView => {
 				machine: isFood ? 'Nutrient Processor' : 'Crafting menu',
 				machineShort: isFood ? 'Nutrient Processor' : 'Crafting',
 				inputUnits,
+				netOut: 1,
 				yieldPerInput: inputUnits > 0 ? 1 / inputUnits : 0,
 			};
 		}
 	}
 
 	const bestRefine = makeRefine[0];
+	// "Quickest" = least time per item gained (not the shortest batch), and only shown when it beats the best yield.
+	const perItem = (row: RecipeRowView) =>
+		typeof row.seconds === 'number' && row.netOut > 0 ? row.seconds / row.netOut : Number.POSITIVE_INFINITY;
 	const quickest = makeRefine.reduce<RecipeRowView | undefined>(
-		(best, row) =>
-			typeof row.seconds === 'number' && (!best || row.seconds < (best.seconds as number)) ? row : best,
+		(best, row) => (perItem(row) < (best ? perItem(best) : Number.POSITIVE_INFINITY) ? row : best),
 		undefined
 	);
 	const quickestRefine =
-		quickest && bestRefine && quickest !== bestRefine && quickest.seconds !== bestRefine.seconds ? quickest : undefined;
+		quickest && bestRefine && quickest !== bestRefine && perItem(quickest) < perItem(bestRefine) ? quickest : undefined;
 
 	const refineInto = uniqueRows(
 		(findInputFromRefiner(item.Id) as unknown as MachineRecipe[])

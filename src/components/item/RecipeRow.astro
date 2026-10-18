@@ -19,7 +19,7 @@ const scale = mode === 'make';
 const machine = longMachine ? row.machine : row.machineShort;
 ---
 
-<li class="recipe-row" hidden={hidden} data-out={scale ? row.output.qty : undefined}>
+<li class="recipe-row" hidden={hidden} data-out={scale && row.netOut > 0 ? row.netOut : undefined}>
   <span class="recipe-eq">
     {row.inputs.map((slot, index) => (
       <>

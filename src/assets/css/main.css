@@ -181,21 +181,7 @@
     @apply text-black!
 }
 
-.hide-scrollbar {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-.hide-scrollbar::-webkit-scrollbar {
-    display: none;
-}
 
-.nms-bg {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    isolation: isolate;
-    min-height: 100vh;
-}
 
 /* Desktop sticky right rail (Nitro `rail-right`). Left nav stays 224px
    (`#desktop-sidebar` + in-flow `#nav-left` 160×300, max-height 300px).
@@ -205,17 +191,6 @@
 .nav-left-ad .nitro-ad,
 .nav-left-ad iframe {
     max-height: 300px;
-}
-.nms-bg::after {
-    content: "";
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--color-space);
-    position: absolute;
-    top: 0;
-    opacity: 0.82;
-    z-index: -1;
 }
 
 
@@ -256,15 +231,6 @@
 }
 
 /* ── Accessibility helpers ─────────────────────────────────────────────── */
-/* Recipe card titles were <h4>s (skipping heading levels); they are now an <h2> for the
-   output and <p>s for inputs, sized like the old h4. */
-@layer components {
-    .rc-title {
-        font-size: 1em;
-        font-weight: bold;
-        margin-block: 1.33em;
-    }
-}
 
 /* One visible focus style everywhere (3:1+ against black, navy and the item colour swatches).
    Deliberately unlayered so `focus:outline-hidden` utilities and the forms plugin can't hide it. */
@@ -279,10 +245,6 @@
 /* Item colour swatches: yellow alone can vanish on yellow/orange items, so the outline uses the
    swatch's text colour (picked for >= 4.5:1 against the swatch by utils/contrast.ts) with a
    yellow band inside it. */
-.recipe-card a[style]:focus-visible {
-    outline-color: currentColor;
-    box-shadow: inset 0 0 0 6px #facc15;
-}
 .cell-link:focus-visible {
     outline: none;
 }
