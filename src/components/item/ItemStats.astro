@@ -1,0 +1,33 @@
+---
+// Upgrade and technology stat ranges.
+import { formatStatName, formatStatRange } from '@utils/itemFormatters';
+
+interface Props {
+  min?: number;
+  max?: number;
+  stats: Array<{ name: string; min?: number; max?: number }>;
+}
+
+const { min, max, stats } = Astro.props;
+---
+
+{stats.length > 0 && (
+  <section id="stats" class="recipe-panel" aria-labelledby="stats-title">
+    <div class="recipe-panel-head">
+      <h2 id="stats-title" class="m-0 text-[1.15rem] font-semibold">Stats</h2>
+      {typeof min === 'number' && typeof max === 'number' && (
+        <p class="m-0 text-[.85rem] text-dim">
+          {min === max ? `${min} ${min === 1 ? 'stat' : 'stats'}` : `${min} to ${max} stats`} per module
+        </p>
+      )}
+    </div>
+    <dl class="m-0 grid sm:grid-cols-2">
+      {stats.map((stat) => (
+        <div class="stat-cell">
+          <dt class="text-[.95rem] text-ink">{formatStatName(stat.name)}</dt>
+          <dd class="m-0 tabular text-[.9rem] text-dim">{formatStatRange(stat.name, stat.min, stat.max)}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+)}

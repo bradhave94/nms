@@ -1,268 +1,97 @@
 ---
-import { Image } from 'astro:assets';
-import Accordion from '@components/Accordion.astro';
-import { getSlug } from '@utils/lookup.js';
-import type { GroupedUsedIn } from '@utils/recipeTree';
-import { toWebp } from '@utils/icons';
+// "Craft with it": everything whose crafting recipe uses this item, as compact icon tiles, with
+// category filters and counts. The first 16 show; "Show all" reveals the rest of the current filter.
+import ItemSlot from '@components/item/ItemSlot.astro';
+import type { CraftUseTile } from '@utils/itemPageContext';
 
 interface Props {
   item: { Name: string; Slug?: string };
-  groupedInputCrafting: GroupedUsedIn[];
-  initialUsedInCrafting: GroupedUsedIn[];
-  deferredUsedInCrafting: Array<{
-    href: string;
-    icon: string;
-    name: string;
-    ways: number;
-    recipes: Array<{
-      outputQuantity: number;
-      inputs: Array<{ href: string; icon: string; name: string; quantity: number }>;
-    }>;
-  }>;
-  deferredUsedInCraftingJson?: string;
-  imageBaseUrl: string;
+  tiles: CraftUseTile[];
+  categories: Array<{ slug: string; label: string; count: number }>;
 }
 
-const {
-  item,
-  groupedInputCrafting,
-  initialUsedInCrafting,
-  deferredUsedInCrafting,
-  deferredUsedInCraftingJson,
-  imageBaseUrl,
-} = Astro.props;
+const { item, tiles, categories } = Astro.props;
+const VISIBLE = 16;
+const isFish = Boolean(item.Slug?.startsWith('fish/'));
+const countLabel = tiles.length === 1 ? '1 item' : `${tiles.length} items`;
 ---
 
-<!-- Used to create (crafting: products, upgrades, exocraft, etc.) -->
-{groupedInputCrafting.length > 0 && (
-  <div id="used-to-create" class="mt-6 border-t border-gray-600/60 py-6">
-    <h2 class="relative mb-3 text-center">
-      <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-        {(item.Slug && item.Slug.startsWith('fish/'))
-          ? 'What does this fish yield?'
-          : `What can you craft with ${item.Name}?`}
-      </span>
-      <span class="ml-2 text-sm font-normal text-gray-400">({groupedInputCrafting.length})</span>
+{tiles.length > 0 && (
+  <section id="used-to-create" class="item-section" aria-labelledby="used-to-create-title" data-uses data-visible={VISIBLE}>
+    <h2 id="used-to-create-title" class="section-title">
+      {isFish ? 'What this fish is used for' : 'Craft with it'}
+      <span class="count">{countLabel}</span>
     </h2>
-    <div
-      id="used-to-create-grid"
-      class="grid gap-3 items-start justify-center grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
-    >
-      {initialUsedInCrafting.map((usedInItem) => (
-        <div class="rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden">
-          <Accordion>
-            <div class="flex items-center gap-3" slot="title">
-              <Image
-                src={`${imageBaseUrl}${toWebp(usedInItem.Icon)}`}
-                alt=""
-                sizes="40px"
-                width={40}
-                height={40}
-                class="shrink-0"
-              />
-              <div class="flex-1 min-w-0">
-                <span class="text-white font-medium">{usedInItem.Name}</span>
-                {usedInItem.recipes.length > 1 && (
-                  <span class="ml-1 text-xs text-gray-400">({usedInItem.recipes.length} ways)</span>
-                )}
-              </div>
-            </div>
-            <div slot="content" class="pt-2 overflow-x-auto">
-              <table class="w-full text-sm table-fixed">
-                <thead>
-                  <tr class="border-b border-gray-600/50">
-                    <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
-                    <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {usedInItem.recipes.map((recipe) => (
-                    <tr class="border-b border-gray-600/30 last:border-b-0">
-                      <td class="py-2 px-2 align-top">
-                        <div class="flex flex-col gap-1">
-                          {recipe.inputs.map((ing) => (
-                            <a
-                              href={getSlug(ing.Id)}
-                              class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit"
-                            >
-                              <Image
-                                src={`${imageBaseUrl}${toWebp(ing.Icon)}`}
-                                alt=""
-                                sizes="20px"
-                                width={20}
-                                height={20}
-                                class="shrink-0"
-                              />
-                              <span class="text-white">{ing.Name}</span>
-                              <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={ing.Quantity}>{ing.Quantity.toLocaleString()}</span>
-                            </a>
-                          ))}
-                        </div>
-                      </td>
-                      <td class="py-2 px-2 align-top">
-                        <a
-                          href={getSlug(usedInItem.Id)}
-                          class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300"
-                        >
-                          <Image
-                            src={`${imageBaseUrl}${toWebp(usedInItem.Icon)}`}
-                            alt=""
-                            sizes="20px"
-                            width={20}
-                            height={20}
-                            class="shrink-0"
-                          />
-                          <span>{usedInItem.Name}</span>
-                          <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity={recipe.outputQuantity}>{recipe.outputQuantity.toLocaleString()}</span>
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </Accordion>
-        </div>
-      ))}
-    </div>
-    {deferredUsedInCraftingJson && (
-      <>
-        <script type="application/json" id="used-in-hidden-data" set:html={deferredUsedInCraftingJson}></script>
-        <div class="mt-4 text-center">
-          <button
-            type="button"
-            id="used-in-load-more"
-            class="px-6 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-medium transition-colors"
-          >
-            Load more ({deferredUsedInCrafting.length} more)
+    {categories.length > 1 && (
+      <div class="mb-3 flex flex-wrap gap-2" role="group" aria-label="Filter by category">
+        <button type="button" class="use-tab" aria-pressed="true" data-cat="all" data-label="items">
+          All <span class="tabular">{tiles.length}</span>
+        </button>
+        {categories.map((category) => (
+          <button type="button" class="use-tab" aria-pressed="false" data-cat={category.slug} data-label={category.label.toLowerCase()}>
+            {category.label} <span class="tabular">{category.count}</span>
           </button>
-        </div>
-        <script is:inline define:vars={{ imageBaseUrl }}>
-          (() => {
-            const dataEl = document.getElementById('used-in-hidden-data');
-            const loadMoreBtn = document.getElementById('used-in-load-more');
-            const grid = document.getElementById('used-to-create-grid');
-            if (!dataEl || !loadMoreBtn || !grid) return;
-
-            let remainingItems = [];
-            try {
-              remainingItems = JSON.parse(dataEl.textContent || '[]');
-            } catch {
-              remainingItems = [];
-            }
-
-            if (!Array.isArray(remainingItems) || remainingItems.length === 0) {
-              loadMoreBtn.closest('div.mt-4')?.remove();
-              dataEl.remove();
-              return;
-            }
-
-            const imageBase = imageBaseUrl;
-            const numberFormatter = new Intl.NumberFormat();
-            const batchSize = 12;
-            const escapeHtml = (value) =>
-              String(value)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#39;');
-            let offset = 0;
-
-            const applyQuantityMultiplier = () => {
-              const quantityInput = document.querySelector('input.quantity');
-              if (!(quantityInput instanceof HTMLInputElement)) return;
-              const quantity = Number.parseInt(quantityInput.value || '1', 10);
-              if (!Number.isFinite(quantity) || quantity <= 1) return;
-              document.querySelectorAll('[data-quantity]').forEach((element) => {
-                const baseValue = parseFloat(element.getAttribute('data-quantity') || '0');
-                const total = baseValue * quantity;
-                element.textContent = Number.isFinite(total) ? total.toLocaleString() : '0';
-              });
-              const rawTotalEl = document.getElementById('raw-total');
-              if (rawTotalEl) {
-                const baseTotal = parseFloat(rawTotalEl.getAttribute('data-base-total') || '0');
-                rawTotalEl.textContent = Number.isFinite(baseTotal * quantity) ? (baseTotal * quantity).toLocaleString() : '0';
-              }
-            };
-
-            const renderBatch = () => {
-              const batch = remainingItems.slice(offset, offset + batchSize);
-              if (batch.length === 0) return;
-
-              for (const usedInItem of batch) {
-                const recipesHtml = (usedInItem.recipes || [])
-                  .map(
-                    (recipe) => `
-                      <tr class="border-b border-gray-600/30 last:border-b-0">
-                        <td class="py-2 px-2 align-top">
-                          <div class="flex flex-col gap-1">
-                            ${(recipe.inputs || [])
-                              .map(
-                                (ing) => `
-                                  <a href="${escapeHtml(ing.href)}" class="inline-flex items-center gap-1.5 rounded-sm bg-gray-800/80 px-2 py-1 transition-colors hover:bg-gray-700/80 w-fit">
-                                    <img src="${escapeHtml(`${imageBase}${ing.icon}`)}" alt="" class="h-5 w-5 shrink-0" loading="lazy" />
-                                    <span class="text-white">${escapeHtml(ing.name)}</span>
-                                    <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity="${Number(ing.quantity)}">${numberFormatter.format(Number(ing.quantity))}</span>
-                                  </a>
-                                `
-                              )
-                              .join('')}
-                          </div>
-                        </td>
-                        <td class="py-2 px-2 align-top">
-                          <a href="${escapeHtml(usedInItem.href)}" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300">
-                            <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="" class="h-5 w-5 shrink-0" loading="lazy" />
-                            <span>${escapeHtml(usedInItem.name)}</span>
-                            <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-cyan-500/20 text-cyan-300 tabular-nums" data-quantity="${Number(recipe.outputQuantity)}">${numberFormatter.format(Number(recipe.outputQuantity))}</span>
-                          </a>
-                        </td>
-                      </tr>
-                    `
-                  )
-                  .join('');
-
-                const card = document.createElement('details');
-                card.className = 'rounded-lg border border-gray-700/60 bg-gray-900/80 overflow-hidden group';
-                card.innerHTML = `
-                  <summary class="list-none cursor-pointer p-3 flex items-center gap-3">
-                    <img src="${escapeHtml(`${imageBase}${usedInItem.icon}`)}" alt="" class="h-10 w-10 shrink-0" loading="lazy" />
-                    <div class="flex-1 min-w-0">
-                      <span class="text-white font-medium">${escapeHtml(usedInItem.name)}</span>
-                      ${usedInItem.ways > 1 ? `<span class="ml-1 text-xs text-gray-400">(${Number(usedInItem.ways)} ways)</span>` : ''}
-                    </div>
-                  </summary>
-                  <div class="pt-2 overflow-x-auto">
-                    <table class="w-full text-sm table-fixed">
-                      <thead>
-                        <tr class="border-b border-gray-600/50">
-                          <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Inputs</th>
-                          <th class="text-left py-2 px-2 font-medium text-gray-400 w-1/2">Output</th>
-                        </tr>
-                      </thead>
-                      <tbody>${recipesHtml}</tbody>
-                    </table>
-                  </div>
-                `;
-                grid.appendChild(card);
-              }
-
-              offset += batch.length;
-              const remaining = remainingItems.length - offset;
-              if (remaining <= 0) {
-                loadMoreBtn.closest('div.mt-4')?.remove();
-                dataEl.remove();
-              } else {
-                loadMoreBtn.textContent = `Load more (${remaining} more)`;
-              }
-
-              applyQuantityMultiplier();
-            };
-
-            loadMoreBtn.addEventListener('click', renderBatch);
-          })();
-        </script>
-      </>
+        ))}
+      </div>
     )}
-  </div>
+    <p class="sr-only" role="status" data-use-status></p>
+    <ul id="used-to-create-grid" class="use-tiles" role="list">
+      {tiles.map((tile, index) => (
+        <li data-cat={tile.category} hidden={index >= VISIBLE}>
+          <a class="use-tile" href={tile.href}>
+            <ItemSlot icon={tile.icon} colour={tile.colour} class="w-10" />
+            <span class="nm">{tile.name}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    {tiles.length > VISIBLE && (
+      <button type="button" class="recipe-more px-0!" aria-expanded="false" aria-controls="used-to-create-grid" data-use-all>
+        Show all <span class="tabular" data-use-total>{tiles.length}</span> <span aria-hidden="true">↓</span>
+      </button>
+    )}
+  </section>
 )}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-uses]').forEach((section) => {
+    const visible = Number(section.dataset.visible ?? 16);
+    const tiles = Array.from(section.querySelectorAll<HTMLLIElement>('li[data-cat]'));
+    const tabs = Array.from(section.querySelectorAll<HTMLButtonElement>('button[data-cat]'));
+    const more = section.querySelector<HTMLButtonElement>('button[data-use-all]');
+    const total = section.querySelector<HTMLElement>('[data-use-total]');
+    const status = section.querySelector<HTMLElement>('[data-use-status]');
+    let category = 'all';
+    let expanded = false;
+
+    const apply = (announce: boolean) => {
+      const matching = tiles.filter((tile) => category === 'all' || tile.dataset.cat === category);
+      tiles.forEach((tile) => (tile.hidden = true));
+      matching.forEach((tile, index) => (tile.hidden = !expanded && index >= visible));
+      if (more) {
+        more.hidden = matching.length <= visible;
+        more.setAttribute('aria-expanded', String(expanded));
+        if (total) total.textContent = String(matching.length);
+        more.firstChild!.textContent = expanded ? 'Show fewer ' : 'Show all ';
+        if (total) total.hidden = expanded;
+      }
+      if (announce && status) {
+        const tab = tabs.find((button) => button.dataset.cat === category);
+        status.textContent = `${matching.length} ${tab?.dataset.label ?? 'items'}`;
+      }
+    };
+
+    tabs.forEach((tab) =>
+      tab.addEventListener('click', () => {
+        category = tab.dataset.cat ?? 'all';
+        expanded = false;
+        tabs.forEach((button) => button.setAttribute('aria-pressed', String(button === tab)));
+        apply(true);
+      })
+    );
+    more?.addEventListener('click', () => {
+      expanded = !expanded;
+      apply(false);
+    });
+  });
+</script>

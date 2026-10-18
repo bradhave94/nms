@@ -1,0 +1,57 @@
+---
+// One open recipe: inputs (slot + name) joined by "+", "→", the output, and the machine and time
+// on the right. `mode="make"` rows belong to the item's own page, so the output is just the amount;
+// their amounts follow the "I need" box (batches = ceil(need / output)).
+import ItemSlot from '@components/item/ItemSlot.astro';
+import type { RecipeRowView } from '@utils/itemPageContext';
+import { REFINE_TIME_NOTE } from '@utils/itemFormatters';
+
+interface Props {
+  row: RecipeRowView;
+  mode: 'make' | 'use';
+  hidden?: boolean;
+  /** Show the machine's full name instead of the short refiner size. */
+  longMachine?: boolean;
+}
+
+const { row, mode, hidden = false, longMachine = false } = Astro.props;
+const scale = mode === 'make';
+const machine = longMachine ? row.machine : row.machineShort;
+---
+
+<li class="recipe-row" hidden={hidden} data-out={scale ? row.output.qty : undefined}>
+  <span class="recipe-eq">
+    {row.inputs.map((slot, index) => (
+      <>
+        {index > 0 && <span class="op" aria-hidden="true">+</span>}
+        <a class="recipe-io" href={slot.href}>
+          <ItemSlot icon={slot.icon} colour={slot.colour} qty={slot.qty} qtyAttr={scale ? 'data-per' : undefined} class="w-9 sm:w-10" />
+          <span class="nm">{slot.name}</span>
+        </a>
+      </>
+    ))}
+    <span class="op" aria-hidden="true">→</span>
+    <span class="sr-only">makes</span>
+    {mode === 'make' ? (
+      <span class="recipe-res">
+        <b class="tabular" data-per={row.output.qty}>{row.output.qty.toLocaleString()}</b>
+        <span class="sr-only">{row.output.name}</span>
+      </span>
+    ) : (
+      <a class="recipe-io" href={row.output.href}>
+        <ItemSlot icon={row.output.icon} colour={row.output.colour} qty={row.output.qty} class="w-9 sm:w-10" />
+        <span class="nm">{row.output.name}</span>
+      </a>
+    )}
+  </span>
+  <span class="recipe-meta">
+    {scale && <span data-batches></span>}
+    <span>{machine}</span>
+    {row.time && (
+      <>
+        <span aria-hidden="true"> · </span>
+        <span class="tabular" title={REFINE_TIME_NOTE}><span class="sr-only">, about </span><span aria-hidden="true">~</span>{row.time}</span>
+      </>
+    )}
+  </span>
+</li>
