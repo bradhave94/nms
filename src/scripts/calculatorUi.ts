@@ -63,7 +63,7 @@ export function removeButton(label: string): HTMLButtonElement {
  * become plain numbers. Returns null when the text isn't a number at all.
  */
 export function cleanNumericPaste(text: string, allowDecimal: boolean): string | null {
-	let value = text.trim().replace(/[\s  ']/g, '');
+	let value = text.trim().replace(/[\s\u00a0\u202f']/g, '');
 	value = value.replace(/^[×x*]/i, '').replace(/(?:[a-z/%]+|[×x])$/i, '');
 	if (value.includes(',') && value.includes('.')) {
 		// Whichever separator comes last is the decimal point.
