@@ -88,17 +88,16 @@ const breadcrumbs = [
 ---
 
 <Layout {title} description={`Suggest a correction to the ${alliance.name} alliance listing.`} slug="alliances" robots="noindex,follow">
-	<div class="alliances mx-auto max-w-3xl px-2 pb-16 sm:px-4">
-		<Breadcrumbs items={breadcrumbs} className="!px-0 pt-4 mb-6" />
-		<header class="mb-10">
-			<p class="eyebrow">Alliance directory</p>
+	<div class="alliances mx-auto max-w-3xl pb-16">
+		<Breadcrumbs items={breadcrumbs} className="!px-0 pt-4 mb-4" />
+		<header class="mb-8">
 			<h1>Suggest an edit</h1>
 			<p class="lede">Update anything that's wrong or out of date for <strong>{alliance.name}</strong>. We review every change before it goes live.</p>
 		</header>
 
 		{submitted ? (
 			<div class="notice success" role="status">
-				<p><strong>Thanks, your edit has been sent.</strong> We'll review it shortly. <a class="prose-link" href={listingUrl}>Back to {alliance.name}</a></p>
+				<p><strong>Thanks, your edit has been sent.</strong> We'll review it shortly. <a class="link" href={listingUrl}>Back to {alliance.name}</a></p>
 			</div>
 		) : (
 			<>
@@ -114,7 +113,7 @@ const breadcrumbs = [
 							<textarea id="alliance-edit-note" name="note" rows="3" maxlength={MAX_EDIT_NOTE_LENGTH}>{note}</textarea>
 						</div>
 					</section>
-					<a slot="actions" class="button secondary large" href={listingUrl}>Cancel</a>
+					<a slot="actions" class="btn-quiet" href={listingUrl}>Cancel</a>
 				</AllianceForm>
 			</>
 		)}
