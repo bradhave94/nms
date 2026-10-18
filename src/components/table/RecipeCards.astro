@@ -1,0 +1,87 @@
+---
+// Card view of a recipe table (/refining/cards, /cooking/cards, /crafting-guide/cards; noindex).
+// Same header and filter bar as the table. Each card: the output on its own item colour, then the
+// inputs in the game's inventory slot, then the operation or value. No ad slot here (there never was).
+import '../../assets/css/tables.css';
+import PageHead from '@components/table/PageHead.astro';
+import FilterBar from '@components/table/FilterBar.astro';
+import type { RecipeKind } from '@components/table/FilterBar.astro';
+import { swatchStyle } from '@utils/contrast';
+import type { RecipeRow } from './recipeRows';
+
+export interface Props {
+	title: string;
+	image: string;
+	base: string;
+	kind: RecipeKind;
+	rows: RecipeRow[];
+}
+
+const { title, image, base, kind, rows } = Astro.props;
+const icon = (file?: string) => (file ? `/images/items/${file}` : undefined);
+---
+
+<div class="rt" data-rc>
+	<PageHead title={title} image={image} base={base} view="cards"><slot /></PageHead>
+	<FilterBar kind={kind} total={rows.length} />
+	<ul class="rc-grid">
+		{rows.map((row) => (
+			<li
+				class="rc"
+				data-so={row.output.name.toLowerCase()}
+				data-si={row.inputs.map((input) => input.name.toLowerCase()).join('|')}
+				data-n={row.inputs.length}
+			>
+				<a href={row.output.href} class="rc-out" style={swatchStyle(row.output.colour)}>
+					{row.output.icon && <img src={icon(row.output.icon)} width="44" height="44" alt="" loading="lazy" decoding="async" />}
+					<h2>{row.output.name}</h2>
+					{row.output.amount && <span class="rt-qty"><span class="sr-only"> x</span>{row.output.amount.toLocaleString()}</span>}
+				</a>
+				<ul class="rc-in" aria-label={`Inputs for ${row.output.name}`}>
+					{row.inputs.map((input) => (
+						<li>
+							<a href={input.href}>
+								<span class="slot" style={`--c:#${input.colour}`}>
+									{input.icon && <img src={icon(input.icon)} width="28" height="28" alt="" loading="lazy" decoding="async" />}
+								</span>
+								<span>{input.name}</span>
+								{input.amount && <span class="rt-qty"><span class="sr-only"> x</span>{input.amount.toLocaleString()}</span>}
+							</a>
+						</li>
+					))}
+				</ul>
+				{(row.operation || row.detail) && (
+					<p class="rc-meta">{[row.operation, row.detail].filter(Boolean).join(' · ')}</p>
+				)}
+				{kind === 'crafting' && row.value !== undefined && <p class="rc-meta tabular">{row.value.toLocaleString()} units</p>}
+			</li>
+		))}
+	</ul>
+	<p class="rc-empty" data-rc-empty hidden>No recipes match. Try another name or clear a filter.</p>
+</div>
+
+<script>
+	import { bindFilters, countLabel, matches } from './filters';
+
+	const root = document.querySelector<HTMLElement>('[data-rc]');
+	if (root) {
+		const cards = [...root.querySelectorAll<HTMLElement>('li.rc')].map((el) => ({
+			el,
+			so: el.dataset.so ?? '',
+			si: el.dataset.si ?? '',
+			n: Number(el.dataset.n) || 0,
+		}));
+		const count = root.querySelector<HTMLElement>('[data-rt-count]');
+		const empty = root.querySelector<HTMLElement>('[data-rc-empty]');
+		bindFilters(root, (state) => {
+			let shown = 0;
+			for (const card of cards) {
+				const hit = matches(state, card);
+				card.el.hidden = !hit;
+				if (hit) shown += 1;
+			}
+			if (empty) empty.hidden = shown > 0;
+			if (count) count.textContent = countLabel(shown, state, false);
+		});
+	}
+</script>

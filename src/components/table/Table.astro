@@ -1,312 +1,359 @@
 ---
+// Recipe table (refining, cooking, crafting guide): compact header, filter bar, Tabulator grid with
+// the per-item colour swatches, compact pager, and the `table-above` ad after the first 5 rows.
+//
+// The ad: NitroPay units must be created once, and moving an iframe in the DOM reloads it, so the
+// slot never moves. It sits after the grid in the DOM, absolutely positioned inside `.rt-stage`;
+// after every render the script gives the 5th visible row (or the last one, on short pages) a
+// bottom margin the height of the slot and moves the slot into that gap with `top`. With no rows
+// the slot sits under the filter bar. Phones (<= 640px) get stacked rows with the output first.
 import '../../assets/css/tabulator.css';
+import '../../assets/css/tables.css';
 import TableHead from '@components/table/Head.astro';
 import TableBody from '@components/table/Body.astro';
+import PageHead from '@components/table/PageHead.astro';
+import FilterBar from '@components/table/FilterBar.astro';
+import type { RecipeKind } from '@components/table/FilterBar.astro';
 import NitroAd from '@components/ads/NitroAd.astro';
-import { Image } from 'astro:assets';
-
-interface Column {
-  title: string;
-  field: string;
-}
-
-export interface TableRow {
-  input_1?: object;
-  input_2?: object;
-  input_3?: object;
-  output?: object;
-  description?: string;
-  value?: number;
-  [key: string]: unknown;
-}
+import type { RecipeRow } from './recipeRows';
 
 export interface Props {
   title: string;
+  /** Machine art in /public, e.g. /images/refiner.webp. */
   image: string;
-  image_width: number;
-  image_height: number;
-  columns: Column[];
-  sort?: string;
-  data: TableRow[];
+  /** Base path of the page family, e.g. /refining. */
+  base: string;
+  kind: RecipeKind;
+  /** Rows in the default order. */
+  rows: RecipeRow[];
+  /** Last column: the machine operation (refining, cooking) or the unit value (crafting). */
+  extra: 'operation' | 'value';
+  outputTitle?: string;
+  /** Order while a query is active: best yield per input unit, or keep the default order. */
+  querySort?: 'yield' | 'default';
 }
 
-const { title, image, image_width, image_height, columns, sort = 'output', data } = Astro.props;
+const { title, image, base, kind, rows, extra, outputTitle = 'Output', querySort = 'yield' } = Astro.props;
+const columns = [
+  { title: 'Input 1', field: 'i1' },
+  { title: 'Input 2', field: 'i2' },
+  { title: 'Input 3', field: 'i3' },
+  { title: outputTitle, field: 'out' },
+  extra === 'operation' ? { title: 'Operation', field: 'op' } : { title: 'Value', field: 'v' },
+];
 ---
 
-<style is:global>
-  .nms-sort {
-    display: none !important;
-  }
-  .cell-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  .cell-content {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-  }
-  .cell-text {
-    margin-right: 10px;
-  }
-  .cell-amount {
-    font-size: 0.9em;
-    opacity: 0.8;
-  }
-</style>
-
-<style>
-  .table-rows {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-  }
-  .d-hidden {
-    opacity: 0;
-    height: 500px;
-    overflow: hidden;
-  }
-</style>
-
-<div class="table-wrapper" data-layout="table" data-astro-transition-persist="table-wrapper">
-  <div
-    class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-center before:bg-black/80 before:w-full before:h-full before:absolute before:left-0 before:top-0"
-    style="background-image: url(/images/resources.png)"
-  >
-    <div class="flex items-center gap-2 z-10 relative">
-      <Image
-        class="logo"
-        src={import(`../../assets/img/${image}.png`)}
-        sizes={`${image_width}px`}
-        width={image_width}
-        height={image_height}
-        alt={title}
-      />
-      <h1 class="text-2xl">{title}</h1>
-    </div>
-
-    <div class="relative text-center">
-      <div class="flex gap-2 justify-center">
-        <p>Layout:</p>
-        <div>
-          <a
-            href={`/${image}`}
-            class="block cursor-pointer select-none rounded-md px-2 transition-colors bg-blue-500 text-black border border-blue-500 peer-checked:bg-blue-500 peer-checked:text-black"
-          >
-            Table
-          </a>
-        </div>
-        <div>
-          <a
-            href={`/${image}/cards`}
-            class="block cursor-pointer select-none rounded-md px-2 border transition-colors hover:bg-blue-500 hover:text-black border-blue-500 peer-checked:bg-blue-500 peer-checked:text-black"
-          >
-            Cards
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex items-center z-10">
-      <div class="tabulator-search relative">
-        <input
-          class="rounded-md w-full bg-black border-blue-500 focus:border-blue-500 focus:ring-blue-500 peer"
-          type="text"
-          id="search"
-          name="search"
-          placeholder=" "
-        />
-        <label
-          class="absolute top-1/2 -translate-y-1/2 left-3 pointer-events-none peer-focus:opacity-0 peer-[:not(:placeholder-shown)]:opacity-0"
-          for="search">Search</label
-        >
-      </div>
-    </div>
-  </div>
-  <!-- Only the rows wait for Tabulator; the header (the LCP element) paints immediately. -->
-  <div class="table-rows d-hidden">
-    <NitroAd id="table-above" class="px-4" />
-    <table id="table" data-columns={JSON.stringify(columns)} data-sort={sort}>
+<div class="rt" data-rt data-query-sort={querySort} data-extra={extra}>
+  <PageHead title={title} image={image} base={base} view="table"><slot /></PageHead>
+  <FilterBar kind={kind} total={rows.length} />
+  <div class="rt-stage rt-pending" data-rt-stage>
+    <table id="recipe-table" data-columns={JSON.stringify(columns)}>
       <TableHead columns={columns} />
-      <TableBody columns={columns} data={data} />
+      <TableBody rows={rows} extra={extra} />
     </table>
+    <div class="rt-ad" data-rt-ad>
+      <NitroAd id="table-above" class="px-4" />
+    </div>
   </div>
+  <div class="rt-pager" data-rt-pager></div>
 </div>
 
 <script>
   import { TabulatorFull as Tabulator } from 'tabulator-tables';
   import { readableTextOn } from '@utils/contrast';
   import { applyTabulatorA11y } from '@utils/tabulatorA11y';
-  type ColumnData = { title: string; field: string };
-  type SortValue = string | number | null | undefined;
+  import { bindFilters, countLabel, isFiltering, matches, type FilterState } from './filters';
 
-  const parseSortNumber = (value: SortValue): number => {
-    if (typeof value === 'number' && !Number.isNaN(value)) {
-      return value;
-    }
-
-    if (typeof value !== 'string') {
-      return Number.NEGATIVE_INFINITY;
-    }
-
-    // Prefer explicit hidden sort value when present in the HTML cell.
-    const hiddenSortMatch = value.match(
-      /<span[^>]*class=["'][^"']*sort[^"']*["'][^>]*>(-?\d+(?:\.\d+)?)<\/span>/i,
-    );
-    if (hiddenSortMatch?.[1]) {
-      return Number(hiddenSortMatch[1]);
-    }
-
-    // Fallback to text extraction to support non-HTML/edge-case values.
-    const textOnly = value.replace(/<[^>]*>/g, '').replace(/,/g, '').trim();
-    const parsed = Number(textOnly);
-    if (!Number.isNaN(parsed)) {
-      return parsed;
-    }
-
-    const firstNumber = textOnly.match(/-?\d+(?:\.\d+)?/);
-    return firstNumber?.[0] ? Number(firstNumber[0]) : Number.NEGATIVE_INFINITY;
+  type Item = { name: string; href: string; c: string; i?: string; amt?: string };
+  type Row = {
+    ord: number;
+    n: number;
+    y: number;
+    so: string;
+    si: string;
+    i1: Item | null;
+    i2: Item | null;
+    i3: Item | null;
+    out: Item | null;
+    op: { name: string; detail: string } | null;
+    v: number;
   };
+  type CellLike = { getValue: () => unknown; getElement: () => HTMLElement };
+  type RowLike = { getData: () => Row };
+  type Column = { title: string; field: string };
 
   const imageBase = '/images/items/';
-  const parser = document.createElement('template');
 
-  // Visible text of a compact cell, without the amount badge.
-  const cellText = (value: unknown): string =>
-    String(value ?? '')
-      .replace(/<b>[^<]*<\/b>/g, '')
-      .replace(/<span class="nms-sort">[^<]*<\/span>/g, '')
-      .replace(/<[^>]*>/g, '')
-      .replace(/&amp;/g, '&')
-      .trim();
-
-  // Empty cells (recipes with fewer inputs) always sort to the bottom.
-  const sortByText = (
-    a: SortValue,
-    b: SortValue,
-    _aRow: unknown,
-    _bRow: unknown,
-    _column: unknown,
-    dir: string,
-  ): number => {
-    const textA = cellText(a);
-    const textB = cellText(b);
-    if (!textA && !textB) return 0;
-    if (!textA) return dir === 'asc' ? 1 : -1;
-    if (!textB) return dir === 'asc' ? -1 : 1;
-    return textA.localeCompare(textB);
+  const readItem = (td: Element | undefined): Item | null => {
+    const a = td?.querySelector('a');
+    if (!a) return null;
+    return {
+      name: a.textContent?.trim() ?? '',
+      href: a.getAttribute('href') ?? '#',
+      c: a.dataset.c ?? '333333',
+      i: a.dataset.i,
+      amt: td?.querySelector('b')?.textContent ?? undefined,
+    };
   };
 
-  // Expand compact server markup (<a data-c data-i>Name</a><b>amount</b>) into the item card.
-  const formatCell = (cell: { getValue: () => unknown }): string | HTMLElement => {
-    const value = cell.getValue();
-    if (typeof value !== 'string' || !value.includes('data-c=')) {
-      return typeof value === 'string' ? value : '';
-    }
-    parser.innerHTML = value;
-    const source = parser.content.querySelector('a');
-    if (!source) return value;
+  const readRows = (table: HTMLTableElement): Row[] =>
+    [...table.tBodies[0].rows].map((tr, ord) => {
+      const tds = [...tr.cells];
+      const [i1, i2, i3, out] = tds.slice(0, 4).map(readItem);
+      const last = tds[4];
+      const detail = last?.querySelector('small')?.textContent ?? '';
+      const opName = (last?.firstChild?.nodeType === Node.TEXT_NODE ? last.firstChild.textContent : '') ?? '';
+      const inputs = [i1, i2, i3].filter((x): x is Item => Boolean(x));
+      return {
+        ord,
+        n: Number(tr.dataset.n) || inputs.length,
+        y: Number(tr.dataset.y) || 0,
+        so: (out?.name ?? '').toLowerCase(),
+        si: inputs.map((x) => x.name.toLowerCase()).join('|'),
+        i1,
+        i2,
+        i3,
+        out,
+        op: opName || detail ? { name: opName.trim(), detail } : null,
+        v: Number(last?.dataset.v) || 0,
+      };
+    });
 
+  // The swatch: the item's own colour with readable text, icon, name and amount badge.
+  const formatItem = (cell: CellLike): string | HTMLElement => {
+    const item = cell.getValue() as Item | null;
+    cell.getElement().classList.toggle('is-empty', !item);
+    if (!item) return '';
     const link = document.createElement('a');
-    link.href = source.getAttribute('href') ?? '#';
+    link.href = item.href;
     link.className = 'cell-link';
-    const content = document.createElement('div');
+    const content = document.createElement('span');
     content.className = 'cell-content';
-    const colour = source.dataset.c ?? '333333';
-    content.style.background = `#${colour}`;
-    content.style.color = readableTextOn(colour);
-    const text = document.createElement('span');
-    text.className = 'cell-text flex items-center gap-2 flex-wrap';
-    text.append(source.textContent ?? '');
-    const amount = parser.content.querySelector('b')?.textContent;
-    if (amount) {
-      const badge = document.createElement('span');
-      badge.className =
-        'cell-amount inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/60 text-white tabular-nums';
-      badge.textContent = amount;
-      text.append(badge);
-    }
-    content.append(text);
-    if (source.dataset.i) {
+    content.style.background = `#${item.c}`;
+    content.style.color = readableTextOn(item.c);
+    if (item.i) {
       const img = document.createElement('img');
-      img.src = `${imageBase}${source.dataset.i}`;
+      img.src = `${imageBase}${item.i}`;
       img.alt = '';
-      img.width = 50;
-      img.height = 50;
+      img.width = 32;
+      img.height = 32;
       img.loading = 'lazy';
       img.decoding = 'async';
       content.append(img);
+    }
+    const name = document.createElement('span');
+    name.className = 'rt-name';
+    name.textContent = item.name;
+    content.append(name);
+    if (item.amt) {
+      const badge = document.createElement('span');
+      badge.className = 'rt-qty';
+      // "Silver x1" for screen readers; the badge alone would read "Silver1".
+      const times = document.createElement('span');
+      times.className = 'sr-only';
+      times.textContent = ' x';
+      badge.append(times, item.amt);
+      content.append(badge);
     }
     link.append(content);
     return link;
   };
 
-  // Use requestAnimationFrame to defer execution until after React hydration
-  requestAnimationFrame(() => {
-    const tableElement = document.getElementById('table') as HTMLTableElement;
-    if (!tableElement) return;
+  const formatOp = (cell: CellLike): string | HTMLElement => {
+    const op = cell.getValue() as Row['op'];
+    if (!op) return '';
+    const wrap = document.createElement('span');
+    wrap.className = 'rt-op';
+    wrap.append(op.name);
+    if (op.detail) {
+      const small = document.createElement('small');
+      small.textContent = op.detail;
+      wrap.append(small);
+    }
+    return wrap;
+  };
 
-    const sort = tableElement.dataset.sort;
-    let columns;
+  const formatValue = (cell: CellLike): string | HTMLElement => {
+    const wrap = document.createElement('span');
+    wrap.className = 'rt-value tabular';
+    wrap.textContent = (cell.getValue() as number).toLocaleString();
+    const unit = document.createElement('small');
+    unit.textContent = ' units';
+    wrap.append(unit);
+    return wrap;
+  };
+
+  // Empty cells (recipes with fewer inputs) always sort to the bottom.
+  const byName =
+    (key: (value: unknown) => string) =>
+    (a: unknown, b: unknown, _ar: unknown, _br: unknown, _c: unknown, dir: string): number => {
+      const ta = key(a);
+      const tb = key(b);
+      if (!ta && !tb) return 0;
+      if (!ta) return dir === 'asc' ? 1 : -1;
+      if (!tb) return dir === 'asc' ? -1 : 1;
+      return ta.localeCompare(tb);
+    };
+  const itemName = (v: unknown) => (v as Item | null)?.name ?? '';
+  const opName = (v: unknown) => (v as Row['op'])?.name ?? '';
+  // Ties keep the default order (the sorter result is reversed for "desc").
+  const byYield = (a: unknown, b: unknown, ar: RowLike, br: RowLike): number =>
+    (a as number) - (b as number) || br.getData().ord - ar.getData().ord;
+
+  const init = (): void => {
+    const root = document.querySelector<HTMLElement>('[data-rt]');
+    const source = document.getElementById('recipe-table') as HTMLTableElement | null;
+    const stage = root?.querySelector<HTMLElement>('[data-rt-stage]');
+    const ad = root?.querySelector<HTMLElement>('[data-rt-ad]');
+    const pager = root?.querySelector<HTMLElement>('[data-rt-pager]');
+    const countEl = root?.querySelector<HTMLElement>('[data-rt-count]');
+    if (!root || !source || !stage || !ad || !pager) return;
+
+    let titles: Column[];
     try {
-      columns = JSON.parse(tableElement.dataset.columns || '[]').map((element: ColumnData) => ({
-      title: element.title,
-      field: element.field,
-      sorterParams: {
-        alignEmptyValues: 'bottom',
-      },
-      formatter: formatCell,
-      sorter:
-        sort === element.field && sort === 'value'
-          ? (a: SortValue, b: SortValue) => parseSortNumber(a) - parseSortNumber(b)
-          : sortByText,
-    }));
+      titles = JSON.parse(source.dataset.columns || '[]');
     } catch (error) {
       console.error('Failed to parse table columns:', error);
       return;
     }
+    const data = readRows(source);
+    const host = document.createElement('div');
+    host.id = 'recipe-table';
+    source.replaceWith(host);
 
-    const table = new Tabulator('#table', {
+    const columns = titles.map((col) => {
+      if (col.field === 'op') return { title: col.title, field: 'op', formatter: formatOp, sorter: byName(opName), minWidth: 180, widthGrow: 1 };
+      if (col.field === 'v')
+        return { title: col.title, field: 'v', formatter: formatValue, sorter: 'number', headerSortStartingDir: 'desc', minWidth: 120, widthGrow: 0.6 };
+      return { title: col.title, field: col.field, formatter: formatItem, sorter: byName(itemName), minWidth: 140, widthGrow: col.field === 'out' ? 1.2 : 1 };
+    });
+    columns.push({ title: '', field: 'ord', sorter: 'number', visible: false } as never, { title: '', field: 'y', sorter: byYield, visible: false } as never);
+
+    const defaultSort = [{ column: 'ord', dir: 'asc' }];
+    const table = new Tabulator(host, {
+      data,
       columns,
-      initialSort: [{ column: sort, dir: sort !== 'value' ? 'asc' : 'desc' }],
+      columnDefaults: { resizable: false },
+      initialSort: defaultSort,
       layout: 'fitColumns',
+      renderVertical: 'basic',
       pagination: true,
-      paginationSize: 10,
-      paginationSizeSelector: [10, 25, 50, 100, true],
-      paginationCounter: 'rows',
-      placeholder: 'No results found',
-      printAsHtml: true,
+      paginationSize: 25,
+      paginationSizeSelector: [25, 50, 100, true],
+      paginationButtonCount: 0,
+      paginationElement: pager,
+      placeholder: 'No recipes match. Try another name or clear a filter.',
+      langs: {
+        default: {
+          pagination: {
+            page_size: 'Rows',
+            first: 'First',
+            first_title: 'First page',
+            last: 'Last',
+            last_title: 'Last page',
+            prev: '‹',
+            prev_title: 'Previous page',
+            next: '›',
+            next_title: 'Next page',
+            all: 'All',
+          },
+        },
+      },
     });
 
-    applyTabulatorA11y(table, document.querySelector('h1')?.textContent?.trim() || 'Recipes', 'recipes');
+    let state: FilterState = { q: '', mode: 'out', size: 0 };
+    const bestFirst = root.dataset.querySort === 'yield';
+    applyTabulatorA11y(table, document.querySelector('h1')?.textContent?.trim() || 'Recipes', 'recipes', {
+      status: countEl ?? undefined,
+      format: (count) => countLabel(count, state, bestFirst),
+      delay: 250,
+    });
 
-    table.on('dataLoaded', function () {
-      if (table.element?.parentElement) {
-        table.element.parentElement.classList.remove('d-hidden');
+    // "‹ 1 / 15 ›": the counter sits between Tabulator's prev and next buttons (CSS order).
+    const counter = document.createElement('span');
+    counter.className = 'rt-pagecount tabular';
+    pager.append(counter);
+    const updateCounter = (): void => {
+      const page = Number(table.getPage()) || 1;
+      const max = Number(table.getPageMax()) || 1;
+      counter.innerHTML = `<span aria-hidden="true">${page} / ${max}</span><span class="sr-only">Page ${page} of ${max}</span>`;
+      pager.hidden = max <= 1 && table.getDataCount('active') <= 25;
+    };
+
+    // Ad placement (see the header comment).
+    let gapRow: HTMLElement | null = null;
+    let frame = 0;
+    const placeAd = (): void => {
+      frame = 0;
+      const grid = table.element as HTMLElement | undefined;
+      if (!grid) return;
+      const rows = [...grid.querySelectorAll<HTMLElement>('.tabulator-table > .tabulator-row')];
+      const gap = ad.offsetHeight;
+      stage.style.setProperty('--rt-ad-gap', `${gap}px`);
+      const target = rows[Math.min(5, rows.length) - 1] ?? null;
+      if (gapRow !== target) {
+        gapRow?.classList.remove('rt-gap');
+        target?.classList.add('rt-gap');
+        gapRow = target;
       }
+      stage.classList.toggle('rt-ad-top', !target);
+      const top = target ? target.getBoundingClientRect().bottom - stage.getBoundingClientRect().top : 0;
+      ad.style.top = `${Math.round(top)}px`;
+    };
+    const schedule = (): void => {
+      if (!frame) frame = requestAnimationFrame(placeAd);
+    };
+
+    // Phones hide the header visually (stacked rows), so its sort buttons leave the tab order.
+    const stacked = window.matchMedia('(max-width: 640px)');
+    const syncHeaderFocus = (): void => {
+      (table.element as HTMLElement | undefined)
+        ?.querySelectorAll<HTMLElement>('.tabulator-col.tabulator-sortable')
+        .forEach((col) => (col.tabIndex = stacked.matches ? -1 : 0));
+    };
+    stacked.addEventListener('change', syncHeaderFocus);
+
+    table.on('tableBuilt', () => {
+      syncHeaderFocus();
+      stage.classList.remove('rt-pending');
+      updateCounter();
+      schedule();
+      new ResizeObserver(schedule).observe(stage);
+    });
+    table.on('renderComplete', schedule);
+    table.on('dataFiltered', schedule);
+    table.on('pageLoaded', () => {
+      updateCounter();
+      schedule();
+    });
+    table.on('dataSorted', schedule);
+
+    // Paging from the bottom: bring the top of the new page into view.
+    pager.addEventListener('click', (event) => {
+      if (!(event.target as Element).closest('button')) return;
+      requestAnimationFrame(() => {
+        if (stage.getBoundingClientRect().top < 0) root.querySelector('[data-rt-filters]')?.scrollIntoView({ block: 'start' });
+      });
     });
 
-    function matchAny(data: Record<string, unknown>, filterParams: { value: string }) {
-      // Escape special regex characters to prevent ReDoS attacks
-      const escapedValue = filterParams.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const regex = new RegExp(escapedValue, 'i');
-      return Object.values(data).some((value) => regex.test(String(value)));
-    }
+    let wasQuery = false;
+    const onFilters = (next: FilterState): void => {
+      state = next;
+      if (isFiltering(state)) table.setFilter((row: Row) => matches(state, row));
+      else table.clearFilter();
+      const isQuery = Boolean(state.q);
+      if (isQuery !== wasQuery) {
+        table.setSort(isQuery && bestFirst ? [{ column: 'y', dir: 'desc' }] : defaultSort);
+        wasQuery = isQuery;
+      }
+      updateCounter();
+    };
+    // Filters bind once the table exists (Tabulator warns about setFilter before tableBuilt).
+    table.on('tableBuilt', () => {
+      state = bindFilters(root, onFilters);
+    });
+  };
 
-    const input = document.getElementById('search') as HTMLInputElement;
-    if (input) {
-      let debounceTimer: ReturnType<typeof setTimeout> | undefined;
-      input.addEventListener('keyup', function () {
-        if (debounceTimer) {
-          clearTimeout(debounceTimer);
-        }
-        debounceTimer = setTimeout(() => {
-          if (input.value.trim() === '') {
-            table.clearFilter();
-          } else {
-            table.setFilter(matchAny, { value: input.value });
-          }
-        }, 150);
-      });
-    }
-  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+  else init();
 </script>
