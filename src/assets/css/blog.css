@@ -1,0 +1,119 @@
+/* Blog: post prose, tables, table of contents and post cards. Imported by GuideLayout and
+   /blog/. Plain CSS on the DESIGN.md tokens (no typography plugin is installed, so `.prose`
+   never did anything; these rules are the whole reading style). */
+
+/* ── Post prose ────────────────────────────────────────────────────────── */
+.guide-prose {
+    max-width: 46rem; /* tables may use the full column */
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-ink, #e8eef5);
+    overflow-wrap: break-word;
+}
+@media (min-width: 640px) { .guide-prose { font-size: 1.125rem; } }
+/* The reading measure: ~66 characters per line. Jost is narrow (about .43em per character at
+   these sizes), so that is 32rem rather than 66ch; text blocks keep it, tables don't. */
+.guide-prose > :where(p, ul, ol, h2, h3, h4, hr, blockquote) { max-width: 32rem; }
+.guide-prose > :first-child { margin-top: 0; }
+.guide-prose p,
+.guide-prose ul,
+.guide-prose ol { margin: 0 0 1.1em; }
+.guide-prose strong { font-weight: 600; color: #fff; }
+.guide-prose em { font-style: normal; color: #fff; }
+
+/* headings: clearly more space above than below, so each sits with its own section */
+.guide-prose h2,
+.guide-prose h3,
+.guide-prose h4 { color: #fff; font-weight: 600; scroll-margin-top: 5rem; }
+.guide-prose h2 { margin: 2.1em 0 .5em; font-size: 1.5em; line-height: 1.2; }
+.guide-prose h3 { margin: 1.8em 0 .4em; font-size: 1.2em; line-height: 1.3; }
+.guide-prose h4 { margin: 1.6em 0 .3em; font-size: 1.05em; line-height: 1.35; }
+.guide-prose h2 + h3 { margin-top: 1em; }
+
+.guide-prose ul { list-style: disc; padding-left: 1.3em; }
+.guide-prose ol { list-style: decimal; padding-left: 1.5em; }
+.guide-prose li { margin: .35em 0; padding-left: .2em; }
+.guide-prose li::marker { color: var(--color-dim, #9fb0c3); }
+.guide-prose li > ul,
+.guide-prose li > ol { margin: .35em 0 0; }
+
+.guide-prose hr { margin: 2.5em 0; border: 0; border-top: 1px solid var(--color-line, #243041); }
+.guide-prose blockquote { margin: 1.4em 0; padding: .2em 0 .2em 1em; border-left: 2px solid var(--color-line-strong, #3a4658); color: var(--color-dim, #9fb0c3); }
+.guide-prose code { padding: .1em .35em; border-radius: 6px; background: var(--color-panel-2, #0e141c); font-size: .9em; }
+
+/* Links in post text (and the item/tool links in tables) use the `.link` style. The global
+   `a { color: inherit; text-decoration: inherit }` would otherwise hide them. */
+#guide-content a {
+    color: var(--color-accent, #ffc356);
+    text-decoration: underline;
+    text-decoration-color: rgb(255 195 86 / .5);
+    text-underline-offset: 3px;
+    transition: text-decoration-color .15s;
+}
+#guide-content a:hover { text-decoration-color: currentColor; }
+
+/* ── Tables ────────────────────────────────────────────────────────────── */
+/* GuideLayout wraps each table in .prose-table-scroll so wide tables scroll on phones
+   (main.css draws focus outlines inset inside it). */
+.prose-table-scroll {
+    margin: 1.6em 0;
+    overflow-x: auto;
+    border: 1px solid var(--color-line, #243041);
+    border-radius: 12px;
+    background: var(--color-panel, #121821);
+}
+.guide-prose table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: .875rem;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+}
+.guide-prose thead th {
+    padding: .7rem .9rem;
+    background: var(--color-panel-2, #0e141c);
+    border-bottom: 1px solid var(--color-line-strong, #3a4658);
+    color: var(--color-ink, #e8eef5);
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+.guide-prose tbody td {
+    padding: .65rem .9rem;
+    border-top: 1px solid var(--color-line, #243041);
+    color: var(--color-ink, #e8eef5);
+    vertical-align: top;
+}
+.guide-prose tbody tr:first-child td { border-top: 0; }
+.guide-prose tbody td:first-child { font-weight: 500; color: #fff; }
+.guide-prose tbody tr:hover { background: var(--color-panel-3, #1a2330); }
+
+/* ── Table of contents ─────────────────────────────────────────────────── */
+.toc-list { margin: 0; padding: 0; list-style: none; font-size: .875rem; line-height: 1.4; }
+.toc-list a {
+    display: block;
+    padding: .3rem 0 .3rem .75rem;
+    border-left: 2px solid var(--color-line, #243041);
+    color: var(--color-dim, #9fb0c3);
+    transition: color .15s, border-color .15s;
+}
+.toc-list .toc-sub a { padding-left: 1.5rem; }
+.toc-list a:hover { color: var(--color-ink, #e8eef5); }
+.toc-list a[aria-current="true"] { color: var(--color-accent, #ffc356); border-left-color: var(--color-accent, #ffc356); }
+
+.toc-mobile > summary { list-style: none; cursor: pointer; }
+.toc-mobile > summary::-webkit-details-marker { display: none; }
+.toc-mobile > summary .toc-chevron { transition: transform .15s; }
+.toc-mobile[open] > summary .toc-chevron { transform: rotate(180deg); }
+
+/* ── Post cards (blog index, related guides) ───────────────────────────── */
+.post-card { position: relative; overflow: hidden; transition: border-color .15s, background-color .15s; }
+.post-card:hover { border-color: var(--color-line-strong, #3a4658); background: var(--color-panel-3, #1a2330); }
+.post-card .post-card-img { transition: transform .3s; }
+.post-card:hover .post-card-img { transform: scale(1.03); }
+.post-card:hover .post-card-title { color: var(--color-accent, #ffc356); }
+/* the title link covers the card so the whole card is one target */
+.post-card .post-card-title a::after { content: ""; position: absolute; inset: 0; }
+.post-card:has(a:focus-visible) { outline: 3px solid #facc15; outline-offset: 2px; }
+.post-card .post-card-title a:focus-visible { outline: none; }

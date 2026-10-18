@@ -1,4 +1,5 @@
 ---
+import '../assets/css/blog.css';
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Accordion from '@components/Accordion.astro';
@@ -6,6 +7,8 @@ import NitroAd from '@components/ads/NitroAd.astro';
 import { buildGuideStructuredData } from '@utils/guideStructuredData.js';
 import { getSiteOrigin } from '@utils/structuredData.js';
 import { withSiteTitle } from '@utils/seo.js';
+import { fixSkippedHeadings, formatPostDate, groupRelatedLinks, isoDay, laterUpdate, tagLabel } from '@utils/blog.js';
+import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { MarkdownHeading } from 'astro';
 
@@ -47,12 +50,17 @@ const relatedLinks = guide.data.relatedLinks as { label: string; href: string }[
 const guideFaqs = (guide.data.faqs ?? []) as Array<{ question: string; answer: string }>;
 const publishedTime = guide.data.pubDate.toISOString();
 const modifiedTime = (guide.data.updatedDate ?? guide.data.pubDate).toISOString();
-const updatedDate =
-	guide.data.updatedDate && guide.data.updatedDate.getTime() > guide.data.pubDate.getTime()
-		? guide.data.updatedDate
-		: undefined;
-const formatDate = (date: Date): string =>
-	date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const updatedDate = laterUpdate(guide.data.pubDate, guide.data.updatedDate);
+
+// Related: item pages get their game icon, guides get their hero, the rest are tool links.
+const related = groupRelatedLinks(relatedLinks);
+const postsById = new Map((await getCollection('blog')).map((post) => [post.id, post]));
+const relatedPosts = related.posts.flatMap((link) => {
+	const post = postsById.get(link.slug);
+	return post && post.id !== guide.id ? [{ ...link, post }] : [];
+});
+const hasRelated = related.items.length + related.tools.length + relatedPosts.length > 0;
+const bodyHtml = fixSkippedHeadings(await Astro.slots.render('default'));
 ---
 
 <Layout
@@ -65,58 +73,66 @@ const formatDate = (date: Date): string =>
 	articleModifiedTime={modifiedTime}
 	structuredData={structuredData}
 >
-	{guide.data.heroImage ? (
-		<div class="relative isolate overflow-hidden">
-			<img
-				src={guide.data.heroImage}
-				alt=""
-				width="1536"
-				height="864"
-				fetchpriority="high"
-				decoding="async"
-				class="absolute inset-0 -z-10 size-full object-cover brightness-[0.3]"
-			/>
-			<div class="absolute inset-0 -z-10 bg-gradient-to-t from-[#051413] via-[#051413]/60 to-transparent"></div>
-			<div class="mx-auto max-w-7xl px-4">
-				<Breadcrumbs items={breadcrumbs} className="pt-6 mb-0 px-0 relative z-10" />
-				<div class="mx-auto max-w-3xl py-20 sm:py-28 lg:py-32 text-center">
-					<div class="flex items-center justify-center gap-x-4 text-sm">
-						<time datetime={guide.data.pubDate.toISOString().slice(0, 10)} class="text-sky-300/90">
-							{formatDate(guide.data.pubDate)}
-						</time>
+	<div class="mx-auto max-w-[1180px]">
+		<header class="relative isolate overflow-hidden rounded-2xl border border-line">
+			{guide.data.heroImage && (
+				<>
+					<img
+						src={guide.data.heroImage}
+						alt=""
+						width="1536"
+						height="864"
+						fetchpriority="high"
+						decoding="async"
+						class="absolute inset-0 -z-20 size-full object-cover"
+					/>
+					<div class="guide-hero-scrim absolute inset-0 -z-10" aria-hidden="true"></div>
+				</>
+			)}
+			<div class:list={['px-5 sm:px-10 lg:px-12', guide.data.heroImage ? 'pt-4 pb-8 sm:pt-5 sm:pb-14 lg:pt-6 lg:pb-16' : 'bg-panel pt-5 pb-10']}>
+				<Breadcrumbs items={breadcrumbs} className="mb-0 px-0! [&_a]:text-[#c3d0dd]" />
+				<div class:list={['max-w-[44rem]', guide.data.heroImage ? 'mt-8 sm:mt-20 lg:mt-24' : 'mt-8']}>
+					<h1 class="m-0 text-[2.1rem] leading-[1.08] font-bold text-white sm:text-[2.6rem] lg:text-[3rem]">{guide.data.title}</h1>
+					<p class="mt-4 mb-0 max-w-[40rem] text-[1.05rem] leading-relaxed text-[#dfe7f0] sm:text-lg">{guide.data.description}</p>
+					<p class="mt-5 mb-0 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-[#c3d0dd]">
+						<time datetime={isoDay(guide.data.pubDate)} class="tabular">{formatPostDate(guide.data.pubDate)}</time>
 						{updatedDate && (
-							<span class="text-sky-300/90">
-								Updated <time datetime={updatedDate.toISOString().slice(0, 10)}>{formatDate(updatedDate)}</time>
-							</span>
+							<>
+								<span aria-hidden="true">·</span>
+								<span>Updated{' '}<time datetime={isoDay(updatedDate)} class="tabular">{formatPostDate(updatedDate)}</time></span>
+							</>
 						)}
-					</div>
-					<h1 class="mt-4 text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl">{guide.data.title}</h1>
-					<p class="mt-6 text-lg font-medium text-pretty text-sky-100/80 sm:text-xl/8">{guide.data.description}</p>
-					{tags.length > 0 && (
-						<div class="mt-8 flex flex-wrap justify-center gap-2">
-							{tags.map((keyword: string) => (
-								<span class="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200 backdrop-blur-sm">
-									{keyword}
-								</span>
-							))}
-						</div>
-					)}
+						{tags.length > 0 && (
+							<>
+								<span aria-hidden="true">·</span>
+								<span><span class="sr-only">Topics: </span>{tags.map(tagLabel).join(', ')}</span>
+							</>
+						)}
+					</p>
 				</div>
 			</div>
-		</div>
-	) : (
-		<div class="mx-auto max-w-7xl px-4 pt-10">
-			<Breadcrumbs items={breadcrumbs} className="mb-6 px-0" />
-		</div>
-	)}
+		</header>
 
-	<article class="mx-auto max-w-7xl px-4 py-10">
-		<div class="flex justify-center gap-8 xl:items-start">
-			<div class="w-full max-w-[680px] min-w-0">
+		<article class="mt-8 grid gap-10 xl:mt-10 xl:grid-cols-[minmax(0,1fr)_300px] xl:gap-12">
+			<div class="min-w-0">
+				{tocHeadings.length > 0 && (
+					<details class="toc-mobile panel mb-8 max-w-[32rem] xl:hidden">
+						<summary class="flex min-h-[44px] items-center justify-between gap-3 px-4 font-semibold text-ink">
+							On this page
+							<svg class="toc-chevron h-4 w-4 text-dim" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" /></svg>
+						</summary>
+						<div class="px-4 pb-4"><ul class="toc-list">
+							{tocHeadings.map((heading) => (
+								<li class={heading.depth === 3 ? 'toc-sub' : ''}>
+									<a href={`#${heading.slug}`}>{heading.text}</a>
+								</li>
+							))}
+						</ul></div>
+					</details>
+				)}
+
 				<div id="guide-article">
-					<div id="guide-content" class="prose prose-invert max-w-none prose-headings:text-white prose-strong:text-white prose-li:text-sky-100/90 prose-p:text-sky-100/90">
-						<slot />
-					</div>
+					<div id="guide-content" class="guide-prose" set:html={bodyHtml} />
 				</div>
 				<script is:inline>
 					window.nitroAds.createAd('guide-article', {
@@ -137,43 +153,85 @@ const formatDate = (date: Date): string =>
 					});
 				</script>
 				<script>
-					document.querySelectorAll('#guide-content table').forEach((table) => {
+					// Wrap each table so it scrolls sideways on phones; a scrolling wrapper gets a tab stop
+					// and a name so keyboard users can scroll it too.
+					document.querySelectorAll<HTMLTableElement>('#guide-content table').forEach((table, index) => {
 						if (table.parentElement?.classList.contains('prose-table-scroll')) return;
 						const wrapper = document.createElement('div');
 						wrapper.className = 'prose-table-scroll';
 						table.parentNode?.insertBefore(wrapper, table);
 						wrapper.appendChild(table);
+						const sync = () => {
+							if (wrapper.scrollWidth > wrapper.clientWidth + 1) {
+								wrapper.tabIndex = 0;
+								wrapper.setAttribute('role', 'region');
+								wrapper.setAttribute('aria-label', `Table ${index + 1}, scrolls sideways`);
+							} else {
+								wrapper.removeAttribute('tabindex');
+								wrapper.removeAttribute('role');
+								wrapper.removeAttribute('aria-label');
+							}
+						};
+						sync();
+						new ResizeObserver(sync).observe(wrapper);
 					});
 				</script>
 
-			{relatedLinks.length > 0 && (
-				<section class="mt-10 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
-					<h2 class="mt-0 text-2xl text-white">Related</h2>
-					<ul class="mb-0 mt-4 space-y-3 pl-5 text-sky-100/90">
-						{relatedLinks.map((link: { label: string; href: string }) => (
-							<li>
-								<a href={link.href} class="text-cyan-300 hover:text-cyan-200">
-									{link.label}
-									</a>
-								</li>
-							))}
-						</ul>
+				{hasRelated && (
+					<section class="mt-14 max-w-[46rem]" aria-labelledby="related-title">
+						<h2 id="related-title" class="section-title text-white">Related</h2>
+						{related.items.length > 0 && (
+							<ul class="m-0 grid list-none gap-3 p-0 sm:grid-cols-2">
+								{related.items.map((item) => (
+									<li>
+										<a href={item.href} class="panel flex min-h-[64px] items-center gap-3 p-2.5 pr-4 transition-colors hover:border-line-strong hover:bg-panel-3">
+											<span class="slot w-11" style={`--c:${item.colour}`}><img src={item.icon} alt="" width="32" height="32" loading="lazy" decoding="async" /></span>
+											<span class="min-w-0 font-medium text-ink">{item.label}</span>
+										</a>
+									</li>
+								))}
+							</ul>
+						)}
+						{related.tools.length > 0 && (
+							<ul class:list={['m-0 flex list-none flex-wrap gap-2 p-0', related.items.length > 0 && 'mt-4']}>
+								{related.tools.map((tool) => (
+									<li><a href={tool.href} class="btn-quiet text-[.95rem]">{tool.label}</a></li>
+								))}
+							</ul>
+						)}
+						{relatedPosts.length > 0 && (
+							<>
+								<h3 class="mt-8 mb-3 text-[1.15rem] font-semibold text-white">More guides</h3>
+								<ul class="m-0 grid list-none gap-4 p-0 sm:grid-cols-2">
+									{relatedPosts.map(({ href, label, post }) => (
+										<li class="group panel relative flex items-center gap-3 p-2.5 transition-colors hover:border-line-strong hover:bg-panel-3">
+											{post.data.heroImage && (
+												<img src={post.data.heroImage} alt="" width="1536" height="864" loading="lazy" decoding="async" class="aspect-video h-auto w-28 shrink-0 rounded-lg object-cover" />
+											)}
+											<p class="m-0 min-w-0 text-[.95rem] leading-snug font-medium text-ink group-hover:text-accent">
+												<a href={href} class="after:absolute after:inset-0">{label}</a>
+											</p>
+										</li>
+									))}
+								</ul>
+							</>
+						)}
 					</section>
 				)}
 
-			{guideFaqs.length > 0 && (
-				<section id="faq" class="mt-10 rounded-lg border border-sky-900/70 bg-sky-950/30 p-6">
-					<h2 class="mt-0 text-2xl text-white">Frequently Asked Questions</h2>
-					<div class="mt-4 space-y-2">
-						{guideFaqs.map((faq, index) => (
-							<Accordion id={`faq-${index + 1}`} heading="h3">
-								<span class="text-lg font-bold text-white" slot="title">{faq.question}</span>
-								<p class="m-0 text-sky-100/90" slot="content">{faq.answer}</p>
-							</Accordion>
-						))}
-					</div>
-				</section>
-			)}
+				{guideFaqs.length > 0 && (
+					<section id="faq" class="mt-14 max-w-[46rem]" aria-labelledby="faq-title">
+						<h2 id="faq-title" class="section-title text-white">Frequently asked questions</h2>
+						<div class="panel divide-y divide-line px-1 py-1 sm:px-2">
+							{guideFaqs.map((faq, index) => (
+								<Accordion id={`faq-${index + 1}`} heading="h3">
+									<span class="text-[1.05rem] font-semibold text-white" slot="title">{faq.question}</span>
+									<p class="m-0 max-w-[38rem] leading-relaxed text-ink" slot="content">{faq.answer}</p>
+								</Accordion>
+							))}
+						</div>
+					</section>
+				)}
 			</div>
 
 			<aside class="hidden xl:block w-[300px] shrink-0 self-start sticky top-4 h-fit space-y-4">
@@ -184,26 +242,22 @@ const formatDate = (date: Date): string =>
 					sizes={[[300, 250]]}
 				/>
 				{tocHeadings.length > 0 && (
-					<div class="rounded-lg border border-sky-900/70 bg-sky-950/30 p-4">
-						<h2 class="mt-0 mb-3 text-lg font-semibold text-white">On this page</h2>
-						<ul class="space-y-2 text-sm list-none p-0" id="blog-toc-links">
+					<nav class="panel max-h-[calc(100vh-250px-3rem)] overflow-y-auto p-4" aria-labelledby="toc-title">
+						<h2 id="toc-title" class="mt-0 mb-3 text-base font-semibold text-ink">On this page</h2>
+						<ul class="toc-list" id="blog-toc-links">
 							{tocHeadings.map((heading) => (
-								<li class={heading.depth === 3 ? 'pl-4' : ''}>
-									<a
-										href={`#${heading.slug}`}
-										class="blog-toc-link text-sky-300/80 hover:text-white transition"
-										data-section={heading.slug}
-									>
+								<li class={heading.depth === 3 ? 'toc-sub' : ''}>
+									<a href={`#${heading.slug}`} class="blog-toc-link" data-section={heading.slug}>
 										{heading.text}
 									</a>
 								</li>
 							))}
 						</ul>
-					</div>
+					</nav>
 				)}
 			</aside>
-		</div>
-	</article>
+		</article>
+	</div>
 </Layout>
 
 {tocHeadings.length > 0 && (
@@ -215,20 +269,11 @@ const formatDate = (date: Date): string =>
 			let current = '';
 			for (const id of sections) {
 				const el = document.getElementById(id);
-				if (el) {
-					const rect = el.getBoundingClientRect();
-					if (rect.top <= 120) current = id;
-				}
+				if (el && el.getBoundingClientRect().top <= 120) current = id;
 			}
 			links.forEach((link) => {
-				const section = link.getAttribute('data-section');
-				if (section === current) {
-					link.classList.remove('text-sky-300/80');
-					link.classList.add('text-white', 'font-semibold', 'border-l-2', 'border-sky-400', 'pl-2');
-				} else {
-					link.classList.add('text-sky-300/80');
-					link.classList.remove('text-white', 'font-semibold', 'border-l-2', 'border-sky-400', 'pl-2');
-				}
+				if (link.getAttribute('data-section') === current) link.setAttribute('aria-current', 'true');
+				else link.removeAttribute('aria-current');
 			});
 		}
 
@@ -236,3 +281,14 @@ const formatDate = (date: Date): string =>
 		updateActive();
 	</script>
 )}
+
+<style>
+	.guide-hero-scrim {
+		background:
+			linear-gradient(90deg, rgb(11 15 20 / .94), rgb(11 15 20 / .72) 55%, rgb(11 15 20 / .35)),
+			linear-gradient(0deg, rgb(11 15 20 / .9), transparent 55%);
+	}
+	@media (max-width: 639px) {
+		.guide-hero-scrim { background: linear-gradient(0deg, rgb(11 15 20 / .96) 35%, rgb(11 15 20 / .7)); }
+	}
+</style>
