@@ -54,10 +54,15 @@ a.best-io:hover .nm { color: var(--color-accent); text-decoration: underline; te
 .item-main { display: flex; flex-direction: column; gap: 1.75rem; min-width: 0; }
 .item-main:empty { display: none; }
 .item-aside { min-width: 0; }
-/* phones, no Best yield box: the first section is the answer, so the ad follows it instead of leading */
-.item-body.no-answer > .item-main { order: 1; }
-.item-body.no-answer > .item-ad { order: 2; }
-.item-body.no-answer > .item-aside { order: 3; }
+/* phones, no Best yield box: the first section (About, or the first list of uses) is the answer, so the ad
+   follows it, then the rest. The main column dissolves into the stack so the ad can sit between its sections. */
+@media (max-width: 1023px) {
+  .item-body.no-answer > .item-main { display: contents; }
+  .item-body.no-answer > .item-main > * { order: 3; }
+  .item-body.no-answer > .item-main > :first-child { order: 1; }
+  .item-body.no-answer > .item-ad { order: 2; }
+  .item-body.no-answer > .item-aside { order: 4; }
+}
 @media (min-width: 1200px) {
   .item-body {
     display: grid;
