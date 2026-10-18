@@ -1,10 +1,12 @@
 ---
+import '../../assets/css/blog.css';
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildPaginatedMeta } from '@utils/seo.js';
+import { formatPostDate, isoDay, laterUpdate, tagLabel } from '@utils/blog.js';
 
 type BlogEntry = CollectionEntry<'blog'>;
 const allPosts = await getCollection('blog');
@@ -36,68 +38,96 @@ const breadcrumbs = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Blog' },
 ];
+
+const [featured, ...rest] = posts;
+const FALLBACK_HERO = '/images/refiner.webp';
+/** The card date: the update date when it is later than the publish date. */
+const cardDate = (post: BlogEntry) => {
+	const updated = laterUpdate(post.data.pubDate, post.data.updatedDate);
+	return { date: updated ?? post.data.pubDate, updated: Boolean(updated) };
+};
+const topics = (post: BlogEntry, count: number) => post.data.tags.slice(0, count).map(tagLabel).join(', ');
+const featuredDate = featured ? cardDate(featured) : undefined;
 ---
 
 <Layout title={title} description={description} slug="blog" structuredData={structuredData}>
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<section class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-		<div class="mx-auto max-w-2xl lg:max-w-none">
-			<h1 class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl mt-16">No Man&apos;s Sky Recipes Blog</h1>
-			<p class="mt-2 text-lg/8 text-sky-200/80">
-				Guides, crafting breakdowns, and tips to help you get the most out of No Man&apos;s Sky.
-				Start with the <a href="/blog/no-mans-sky-returning-player-guide-2026" class="text-cyan-300 underline hover:text-cyan-200">returning player guide</a>
-				or the <a href="/crafting-guide/" class="text-cyan-300 underline hover:text-cyan-200">crafting guide</a>.
+	<div class="mx-auto max-w-[1180px]">
+		<Breadcrumbs items={breadcrumbs} className="mb-0 px-0!" />
+		<header class="mt-6 max-w-[44rem]">
+			<h1 class="m-0 text-[2.25rem] leading-[1.05] font-bold text-white sm:text-[3rem]">No Man&apos;s Sky Recipes blog</h1>
+			<p class="mt-4 mb-0 text-[1.0625rem] leading-relaxed text-dim">
+				Guides, crafting breakdowns and tips for No Man&apos;s Sky. New here? Start with the{' '}
+				<a href="/blog/no-mans-sky-returning-player-guide-2026/" class="link">returning player guide</a>{' '}
+				or the <a href="/crafting-guide/" class="link">crafting guide</a>.
 			</p>
-			<div class="mt-8 grid gap-8 sm:grid-cols-3 lg:mt-20">
-				{
-					posts.map((post, index) => (
-						<article class="group relative isolate flex flex-col overflow-hidden rounded-2xl border border-sky-900/60 bg-sky-950/30 transition hover:border-sky-400/50 hover:bg-sky-900/30">
-							<div class="relative aspect-video w-full shrink-0 overflow-hidden">
-								<img
-									src={post.data.heroImage ?? '/images/refiner.webp'}
-									alt=""
-									width="1536"
-									height="864"
-									loading={index < 3 ? 'eager' : 'lazy'}
-									decoding="async"
-									class="absolute inset-0 size-full bg-sky-950 object-cover transition-transform duration-300 group-hover:scale-105"
-								/>
-								<div class="absolute inset-0 ring-1 ring-inset ring-white/10"></div>
-							</div>
-							<div class="flex flex-1 flex-col p-5">
-								<div class="flex items-center gap-x-3 text-xs">
-									<time datetime={(post.data.updatedDate ?? post.data.pubDate).toISOString().slice(0, 10)} class="text-sky-300/80">
-										{post.data.updatedDate && post.data.updatedDate.getTime() > post.data.pubDate.getTime() ? 'Updated ' : ''}
-										{(post.data.updatedDate ?? post.data.pubDate).toLocaleDateString('en-US', {
-											year: 'numeric',
-											month: 'short',
-											day: 'numeric',
-											timeZone: 'UTC',
-										})}
-									</time>
-									{post.data.tags.slice(0, 2).map((tag: string) => (
-										<span class="rounded-full bg-sky-900/60 px-2.5 py-1 font-medium text-sky-200">
-											{tag}
-										</span>
-									))}
+		</header>
+
+		{featured && featuredDate && (
+			<article class="post-card panel mt-8 flex flex-col sm:mt-10 lg:grid lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)]" aria-labelledby={`post-${featured.id}`}>
+				<div class="relative aspect-video overflow-hidden lg:aspect-auto lg:min-h-[340px]">
+					<img
+						src={featured.data.heroImage ?? FALLBACK_HERO}
+						alt=""
+						width="1536"
+						height="864"
+						fetchpriority="high"
+						decoding="async"
+						class="post-card-img absolute inset-0 size-full object-cover"
+					/>
+				</div>
+				<div class="flex flex-col justify-center p-5 sm:p-8">
+					<p class="m-0 text-sm text-dim">
+						Latest guide · {featuredDate.updated ? 'Updated ' : ''}<time datetime={isoDay(featuredDate.date)} class="tabular">{formatPostDate(featuredDate.date)}</time>
+					</p>
+					<h2 id={`post-${featured.id}`} class="post-card-title mt-3 mb-0 text-[1.6rem] leading-tight font-bold text-white transition-colors sm:text-[2rem]">
+						<a href={`/blog/${featured.id}/`}>{featured.data.title}</a>
+					</h2>
+					<p class="mt-3 mb-0 leading-relaxed text-ink">{featured.data.description}</p>
+					{featured.data.tags.length > 0 && (
+						<p class="mt-4 mb-0 text-sm text-dim"><span class="sr-only">Topics: </span>{topics(featured, 3)}</p>
+					)}
+				</div>
+			</article>
+		)}
+
+		{rest.length > 0 && (
+			<section class="mt-12" aria-labelledby="all-guides">
+				<h2 id="all-guides" class="section-title text-white">More guides <span class="count tabular">{rest.length}</span></h2>
+				<ul class="m-0 grid list-none gap-5 p-0 sm:grid-cols-2 lg:grid-cols-3">
+					{rest.map((post, index) => {
+						const { date, updated } = cardDate(post);
+						return (
+							<li class="post-card panel flex flex-col">
+								<div class="relative aspect-video shrink-0 overflow-hidden border-b border-line">
+									<img
+										src={post.data.heroImage ?? FALLBACK_HERO}
+										alt=""
+										width="1536"
+										height="864"
+										loading={index < 3 ? 'eager' : 'lazy'}
+										decoding="async"
+										class="post-card-img absolute inset-0 size-full object-cover"
+									/>
 								</div>
-								<h2 class="mt-3 mb-0 text-2xl font-semibold text-white group-hover:text-sky-300">
-									<a href={`/blog/${post.id}/`}>
-										<span class="absolute inset-0"></span>
-										{post.data.title}
-									</a>
-								</h2>
-								<p class="mt-3 mb-0 line-clamp-3 text-base text-sky-100/70">{post.data.description}</p>
-							</div>
-						</article>
-					))
-				}
-			</div>
-		</div>
-	</section>
-	<div class="mx-auto max-w-7xl px-6 pb-8 lg:px-8 text-xs text-sky-400/70 ">
-		<p>
-			<strong>Disclaimer:</strong> Blog images are generated using AI and No Man's Sky game data. Images are stylized artwork and may not always match in-game visuals exactly.
+								<div class="flex flex-1 flex-col p-4 sm:p-5">
+									<p class="m-0 text-sm text-dim">
+										{updated ? 'Updated ' : ''}<time datetime={isoDay(date)} class="tabular">{formatPostDate(date, 'short')}</time>
+										{post.data.tags.length > 0 && <><span aria-hidden="true"> · </span><span class="sr-only">Topics: </span>{topics(post, 1)}</>}
+									</p>
+									<h3 class="post-card-title mt-2 mb-0 text-[1.15rem] leading-snug font-semibold text-white transition-colors">
+										<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+									</h3>
+									<p class="mt-2 mb-0 line-clamp-3 text-[.95rem] leading-relaxed text-dim">{post.data.description}</p>
+								</div>
+							</li>
+						);
+					})}
+				</ul>
+			</section>
+		)}
+
+		<p class="mt-10 mb-4 max-w-[44rem] text-sm text-dim">
+			Blog images are generated with AI from No Man&apos;s Sky game data. They are stylised artwork and may not match in-game visuals exactly.
 		</p>
 	</div>
 </Layout>
