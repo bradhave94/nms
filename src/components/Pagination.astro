@@ -1,4 +1,8 @@
 ---
+// Previous / next links for the paginated list pages (/[category]/[page], /calculator/[page]).
+interface Props {
+	page: { currentPage: number; lastPage: number; url: { prev?: string; next?: string } };
+}
 const { page } = Astro.props;
 const normalizePrevHref = (href?: string): string | undefined => {
 	if (!href) return href;
@@ -8,8 +12,8 @@ const normalizePrevHref = (href?: string): string | undefined => {
 const prevHref = normalizePrevHref(page?.url?.prev);
 ---
 
-<div class="flex gap-4 justify-center items-center my-8">
-	{prevHref && <a class="btn" href={prevHref}>Previous</a>}
-	<span>Page: {page.currentPage} of {page.lastPage}</span>
-	{page.url.next && <a class="btn" href={page.url.next}>Next</a>}
-</div>
+<nav class="pager" aria-label="Previous and next page">
+	{prevHref && <a class="btn-quiet" href={prevHref} rel="prev"><span aria-hidden="true">←</span> Previous</a>}
+	<span class="pos tabular">Page {page.currentPage} of {page.lastPage}</span>
+	{page.url.next && <a class="btn-quiet" href={page.url.next} rel="next">Next <span aria-hidden="true">→</span></a>}
+</nav>

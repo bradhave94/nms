@@ -6,22 +6,38 @@ import NitroAd from '@components/ads/NitroAd.astro';
 import PageLinks from '@components/PageLinks.astro';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
-import { getSlug, sort } from '@utils/lookup.js';
+import { getSlug } from '@utils/lookup.js';
+import type { Item } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta, buildPaginationUrls, parseIntroLinks } from '@utils/seo.js';
+import { nameSortKey } from '../../integrations/cleanGameNames';
 import { CATEGORY_SLUGS, categories, type CategorySlug } from '../../config/categories.js';
 import { getCategoryDataset } from '../../config/categoryData.js';
+import '../../assets/css/lists.css';
+
+/** A–Z by nameSortKey(): leading quotes and punctuation ignored, names starting with a digit last. */
+const compareNames = (a: string, b: string): number => {
+	const x = nameSortKey(a);
+	const y = nameSortKey(b);
+	// the digit marker is '~', which localeCompare would put first
+	return Number(x.startsWith('~')) - Number(y.startsWith('~')) || x.localeCompare(y, 'en', { numeric: true });
+};
 
 export function getStaticPaths() {
 	return CATEGORY_SLUGS.map((slug) => ({ params: { category: slug } }));
 }
 
+/** A–Z, ignoring leading quotes and punctuation; names starting with a digit go last. */
+const sortByName = (items: Item[]): Item[] =>
+	[...items].sort((a, b) => compareNames(a.Name ?? '', b.Name ?? ''));
+
 const slug = Astro.params.category as CategorySlug;
 const config = categories[slug];
 const categoryPath = `/${config.slug}`;
 
+// Must match the page size in [page].astro: the /[category]/[page] URLs depend on it.
 const pageSize = 80;
-const sortedItems = sort(getCategoryDataset(config.datasets));
+const sortedItems = sortByName(getCategoryDataset(config.datasets));
 const pageData = sortedItems.slice(0, pageSize);
 const lastPage = Math.max(1, Math.ceil(sortedItems.length / pageSize));
 const page = {
@@ -61,6 +77,14 @@ const { title, description } = buildPaginatedMeta(
 	page.lastPage
 );
 const { nextUrl } = buildPaginationUrls(siteOrigin, page);
+const filterItems = sortedItems.map((item) => ({
+	name: item.Name,
+	group: item.Group,
+	icon: toWebp(item.Icon),
+	link: getSlug(item),
+	colour: item.Colour,
+	value: item.BaseValueUnits,
+}));
 ---
 
 <Layout
@@ -70,26 +94,26 @@ const { nextUrl } = buildPaginationUrls(siteOrigin, page);
 	structuredData={structuredData}
 	nextUrl={nextUrl}
 >
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">{config.h1}</h1>
-	<p class="mx-auto mb-12 max-w-3xl text-center text-sky-200/90">
-		{parseIntroLinks(intro).map((segment) =>
-			segment.href ? (
-				<a href={segment.href} class="text-cyan-300 underline hover:text-cyan-200">{segment.text}</a>
-			) : (
-				segment.text
-			)
-		)}
-	</p>
-	<NitroAd id="list-after-intro" />
-	<CategoryFilter
-		type={config.slug}
-		basePath={categoryPath}
-		initialItems={page.data.map((item) => ({
-			name: item.Name,
-			image: SITE.imageBaseUrl + toWebp(item.Icon),
-			link: getSlug(item),
-		}))}
-	/>
-	<PageLinks currentPage={1} lastPage={page.lastPage} basePath={categoryPath} />
+	<div class="list-page">
+		<Breadcrumbs items={breadcrumbs} className="pt-2 mb-4 !px-0" />
+		<header class="list-head">
+			<h1>{config.h1}</h1>
+			<p class="intro">
+				{parseIntroLinks(intro).map((segment) =>
+					segment.href ? <a href={segment.href}>{segment.text}</a> : segment.text
+				)}
+			</p>
+		</header>
+		<CategoryFilter
+			id={config.slug}
+			basePath={categoryPath}
+			items={filterItems}
+			imageBase={SITE.imageBaseUrl}
+			initialCount={pageSize}
+			searchLabel={`Search ${config.h1.toLowerCase()}`}
+		>
+			<NitroAd slot="ad" id="list-after-intro" />
+		</CategoryFilter>
+		<PageLinks currentPage={1} lastPage={page.lastPage} basePath={categoryPath} />
+	</div>
 </Layout>

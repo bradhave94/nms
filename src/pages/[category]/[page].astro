@@ -4,19 +4,34 @@ import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
 import PageLinks from '@components/PageLinks.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
-import { getSlug, sort } from '@utils/lookup.js';
+import { getSlug } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta, buildPaginationUrls, parseIntroLinks } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
+import { nameSortKey } from '../../integrations/cleanGameNames';
 import { CATEGORY_SLUGS, categories, type CategorySlug } from '../../config/categories.js';
 import { getCategoryDataset } from '../../config/categoryData.js';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
+import '../../assets/css/lists.css';
+
+// 80 per page keeps every existing /[category]/[page] URL: a bigger page would drop the last pages.
+const PAGE_SIZE = 80;
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number; params?: Record<string, string> }) => unknown[] }) {
+	/** A–Z by nameSortKey(): leading quotes and punctuation ignored, names starting with a digit last. */
+	const compareNames = (a: string, b: string): number => {
+		const x = nameSortKey(a);
+		const y = nameSortKey(b);
+		// the digit marker is '~', which localeCompare would put first
+		return Number(x.startsWith('~')) - Number(y.startsWith('~')) || x.localeCompare(y, 'en', { numeric: true });
+	};
 	return CATEGORY_SLUGS.flatMap((slug) => {
 		const config = categories[slug];
-		const pages = paginate(sort(getCategoryDataset(config.datasets)), {
+		const sorted = [...getCategoryDataset(config.datasets)].sort((a, b) =>
+			compareNames(a.Name ?? '', b.Name ?? '')
+		);
+		const pages = paginate(sorted, {
 			pageSize: 80,
 			params: { category: slug },
 		});
@@ -48,7 +63,7 @@ const canonicalUrl = new URL(Astro.url.pathname.endsWith('/') ? Astro.url.pathna
 const itemListElements = page.data.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,
-	position: (page.currentPage - 1) * 80 + index + 1,
+	position: (page.currentPage - 1) * PAGE_SIZE + index + 1,
 }));
 const structuredData = buildCollectionStructuredData({
 	siteOrigin,
@@ -81,31 +96,35 @@ const { prevUrl, nextUrl } = buildPaginationUrls(siteOrigin, page);
 	prevUrl={prevUrl}
 	nextUrl={nextUrl}
 >
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">{config.h1}</h1>
-	<p class="mx-auto mb-12 max-w-3xl text-center text-sky-200/90">
-		{parseIntroLinks(intro).map((segment) =>
-			segment.href ? (
-				<a href={segment.href} class="text-cyan-300 underline hover:text-cyan-200">{segment.text}</a>
-			) : (
-				segment.text
-			)
-		)}
-	</p>
-	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
-		{
-			page.data.map((item, index) => (
-				<CompactCard
-					card={{
-						name: item.Name,
-						image: SITE.imageBaseUrl + toWebp(item.Icon),
-						link: getSlug(item),
-					}}
-					index={index}
-				/>
-			))
-		}
+	<div class="list-page">
+		<Breadcrumbs items={breadcrumbs} className="pt-2 mb-4 !px-0" />
+		<header class="list-head">
+			<h1>{config.h1}</h1>
+			<p class="intro">
+				{parseIntroLinks(intro).map((segment) =>
+					segment.href ? <a href={segment.href}>{segment.text}</a> : segment.text
+				)}
+				{' '}<a href={`${categoryPath}/`}>Search all {config.h1.toLowerCase()}</a>.
+			</p>
+		</header>
+		<div id="items" class="tile-grid">
+			{
+				page.data.map((item, index) => (
+					<CompactCard
+						card={{
+							name: item.Name,
+							image: SITE.imageBaseUrl + toWebp(item.Icon),
+							link: getSlug(item),
+							colour: item.Colour,
+							group: item.Group,
+						}}
+						index={index}
+						loading={index < 20 ? 'eager' : 'lazy'}
+					/>
+				))
+			}
+		</div>
+		<Pagination page={page} />
+		<PageLinks currentPage={page.currentPage} lastPage={page.lastPage} basePath={categoryPath} />
 	</div>
-	<Pagination page={page} />
-	<PageLinks currentPage={page.currentPage} lastPage={page.lastPage} basePath={categoryPath} />
 </Layout>
