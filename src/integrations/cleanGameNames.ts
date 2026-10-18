@@ -3,7 +3,8 @@
 // - Unfilled localisation tokens: "%name% Implant", "Pre-packaged %name% Unit", "%name% Exhibit", "-null- Figurine".
 // - Description placeholders: "%TECH_DESC%", "%CRE_DESC%".
 // - Quoted titles that start lower-case: "\"built to Last\" Poster" -> "\"Built to Last\" Poster".
-import type { Plugin } from 'vite';
+// minimal Vite plugin shape (the vite package's types aren't a direct dependency)
+type Plugin = { name: string; enforce?: 'pre' | 'post'; transform?: (code: string, id: string) => { code: string; map: null } | null };
 
 const NAME_TOKENS: [RegExp, string][] = [
 	[/^%name% Exhibit$/, 'Fossil Exhibit'],
