@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
+import CreaturesShell from '@components/creatures/CreaturesShell.astro';
 import creaturesData from '@datav2/Creatures.json';
 import { getById, getSlug } from '@utils/lookup.js';
 import { SITE } from '@config';
@@ -70,7 +70,9 @@ const IMAGE_BASE = SITE.imageBaseUrl;
 const globals = (data.CreatureGlobals as Record<string, unknown>) ?? {};
 const arenaGuild = globals.ArenaGuild as { Name?: string; Description?: string } | undefined;
 const battleUI = globals.BattleUI as Record<string, string> | undefined;
-const holoArenaHeader = battleUI?.MAIN_HEADER ?? 'Creature Battles';
+const holoArenaHeader = (battleUI?.MAIN_HEADER ?? 'Creature battles')
+	.toLowerCase()
+	.replace(/(^|[\s-])\w/g, (m) => m.toUpperCase());
 
 const arenaModes = (data.ArenaModes as ArenaMode[] | undefined) ?? [];
 const arenaLeagues = (data.ArenaLeague as ArenaLeague[] | undefined) ?? [];
@@ -84,12 +86,6 @@ const leagueById = new Map<string, ArenaLeague>(
 	arenaLeagues.filter((l) => Boolean(l?.Id)).map((l) => [l.Id, l] as const),
 );
 
-const difficultyColor: Record<string, string> = {
-	'Player vs Player': 'border-violet-500 bg-violet-500/20 text-violet-200',
-	Easy: 'border-emerald-500 bg-emerald-500/20 text-emerald-200',
-	Medium: 'border-amber-500 bg-amber-500/20 text-amber-200',
-	Hard: 'border-red-500 bg-red-500/20 text-red-200',
-};
 
 const toTitleCase = (value: string): string =>
 	value
@@ -131,6 +127,14 @@ function rewardItemParts(item: RewardItem): { label: string; href?: string; chan
 	return { label: toTitleCase(item.Id ?? item.Type), chanceSuffix };
 }
 
+// League-stat increments carry no stat id in the data; show them once as "league progress".
+function winParts(reward: ArenaReward | undefined) {
+	const items = reward?.Items ?? [];
+	const parts = items.filter((item) => item.Type !== 'IncrementStat').map(rewardItemParts);
+	if (items.some((item) => item.Type === 'IncrementStat')) parts.push({ label: 'league progress' });
+	return parts;
+}
+
 function summarizeReward(reward: ArenaReward | undefined): string {
 	if (!reward) return 'None';
 	const parts: string[] = [];
@@ -152,222 +156,158 @@ const breadcrumbs = [
 	{ name: 'Creatures', href: '/creatures' },
 	{ name: 'Arena' },
 ];
+const modeGroups = [
+	{ heading: holoArenaHeader, modes: petBattlerModes },
+	{ heading: 'Dice game', modes: diceGameModes },
+].filter((group) => group.modes.length > 0);
+// Every mode currently pays 1× XP; only show the column when a mode differs.
+const showXp = arenaModes.some((mode) => mode.ExperienceMultiplier !== 1);
 ---
 
 <Layout title={title} description={description} slug="creatures" {breadcrumbs}>
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<section class="mx-auto max-w-7xl px-4 pb-12">
-		<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Xeno Arena</h1>
-		<p class="mx-auto mb-10 max-w-5xl text-center text-sky-200/90">
-			Battle modes, league ladders, and exclusive reward eggs from the Xeno Arena system.
-		</p>
-
-		{arenaGuild?.Description && (
-			<p class="mx-auto mb-8 max-w-5xl text-sm text-sky-200/80 leading-relaxed">{arenaGuild.Description}</p>
-		)}
-
-		{/* ── Section 1: Arena Modes ── */}
-		<section class="mb-12">
-			<h2 class="mb-1 text-2xl text-white">Arena Modes</h2>
-			<p class="mt-0 mb-6 text-sm text-sky-300/80">
-				Modes are grouped by game type. Each card shows the difficulty, win reward, and XP multiplier.
-			</p>
-
-			<h3 class="mb-3 text-lg text-sky-100">{holoArenaHeader}</h3>
-			<div class="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-				{petBattlerModes.map((mode) => {
-					const diff = mode.Difficulty ?? 'Unknown';
-					const colors = difficultyColor[diff] ?? 'border-sky-700 bg-sky-700/20 text-sky-200';
-					const winReward = mode.RewardWin ? rewardById.get(mode.RewardWin) : undefined;
-					return (
-						<article class="rounded-sm border border-sky-800/70 bg-sky-950/40 p-4">
-							<div class="mb-2 flex items-start justify-between gap-2">
-								<h4 class="m-0 text-lg text-white">{mode.Name}</h4>
-								<span class={`shrink-0 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${colors}`}>
-									{diff}
-								</span>
-							</div>
-							{mode.Description && (
-								<p class="m-0 mb-2 text-sm text-sky-200/80">{mode.Description}</p>
-							)}
-							<div class="mt-3 space-y-1 text-sm text-sky-200/90">
-								<p class="m-0">
-									<span class="font-semibold text-sky-100">Win:</span>{' '}
-									{winReward && winReward.Items.length > 0 ? (
-										winReward.Items.map((rewardItem, index) => {
-											const part = rewardItemParts(rewardItem);
-											return (
-												<>
-													{index > 0 && ', '}
-													{part.href ? (
-														<a href={part.href} class="text-cyan-300 underline underline-offset-2 hover:text-cyan-200">
-															{part.label}
-														</a>
-													) : (
-														part.label
-													)}
-													{part.chanceSuffix}
-												</>
-											);
-										})
-									) : (
-										summarizeReward(winReward)
-									)}
-								</p>
-								{mode.ExperienceMultiplier !== 1.0 && (
-									<p class="m-0">
-										<span class="font-semibold text-sky-100">XP Multiplier:</span>{' '}
-										{mode.ExperienceMultiplier}×
-									</p>
-								)}
-							</div>
-						</article>
-					);
-				})}
-			</div>
-
-			{diceGameModes.length > 0 && (
+	<CreaturesShell
+		active="arena"
+		title="Xeno Arena"
+		lead={`${arenaModes.length} arena modes, ${arenaLeagues.length} league ladders and ${petShop.length} reward eggs, with what each win pays.`}
+		breadcrumbs={breadcrumbs}
+	>
+		<section class="cr-section" aria-labelledby="modes-heading">
+			<h2 class="section-title" id="modes-heading">Modes <span class="count tabular">{arenaModes.length}</span></h2>
+			{modeGroups.map((group) => (
 				<>
-					<h3 class="mb-3 text-lg text-sky-100">Dice Game</h3>
-					<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-						{diceGameModes.map((mode) => {
-							const diff = mode.Difficulty ?? 'Unknown';
-							const colors = difficultyColor[diff] ?? 'border-sky-700 bg-sky-700/20 text-sky-200';
-							const winReward = mode.RewardWin ? rewardById.get(mode.RewardWin) : undefined;
-							return (
-								<article class="rounded-sm border border-sky-800/70 bg-sky-950/40 p-4">
-									<div class="mb-2 flex items-start justify-between gap-2">
-										<h4 class="m-0 text-lg text-white">{mode.Name}</h4>
-										<span class={`shrink-0 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${colors}`}>
-											{diff}
-										</span>
-									</div>
-									{mode.Description && (
-										<p class="m-0 mb-2 text-sm text-sky-200/80">{mode.Description}</p>
-									)}
-									<div class="mt-3 space-y-1 text-sm text-sky-200/90">
-										<p class="m-0">
-											<span class="font-semibold text-sky-100">Win:</span>{' '}
-											{winReward && winReward.Items.length > 0 ? (
-												winReward.Items.map((rewardItem, index) => {
-													const part = rewardItemParts(rewardItem);
-													return (
-														<>
-															{index > 0 && ', '}
-															{part.href ? (
-																<a href={part.href} class="text-cyan-300 underline underline-offset-2 hover:text-cyan-200">
-																	{part.label}
-																</a>
-															) : (
-																part.label
-															)}
-															{part.chanceSuffix}
-														</>
-													);
-												})
-											) : (
-												summarizeReward(winReward)
-											)}
-										</p>
-										{mode.ExperienceMultiplier !== 1.0 && (
-											<p class="m-0">
-												<span class="font-semibold text-sky-100">XP Multiplier:</span>{' '}
-												{mode.ExperienceMultiplier}×
-											</p>
-										)}
-									</div>
-								</article>
-							);
-						})}
-					</div>
-				</>
-			)}
-		</section>
-
-		{/* ── Section 2: League Progression ── */}
-		<section class="mb-12">
-			<h2 class="mb-1 text-2xl text-white">League Progression</h2>
-			<p class="mt-0 mb-6 text-sm text-sky-300/80">
-				Four stat-based ladders track your Arena career. Reach higher tiers to unlock pet shop rewards.
-			</p>
-			<div class="space-y-3">
-				{arenaLeagues.map((league) => (
-					<details class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
-						<summary class="cursor-pointer list-none text-white">
-							<span class="text-xl font-semibold">{league.StatTitle}</span>
-							<span class="ml-2 text-xs uppercase tracking-wide text-sky-300/90">
-								{league.Levels.length} tiers
-							</span>
-						</summary>
-						{league.WikiDescription && (
-							<p class="mt-2 mb-3 text-sm text-sky-200/80">{league.WikiDescription}</p>
-						)}
-						<div class="mt-4 overflow-x-auto">
-							<table class="min-w-full border-collapse text-sm">
-								<thead>
-									<tr class="bg-sky-600/90 text-left text-xs uppercase tracking-wide text-white">
-										<th class="px-4 py-2">Tier</th>
-										<th class="px-4 py-2">Title</th>
-										<th class="px-4 py-2">Threshold</th>
+					<h3 class="cr-h3">{group.heading}</h3>
+					<table class="cr-table stack ar-modes">
+						<thead>
+							<tr>
+								<th scope="col">Mode</th>
+								<th scope="col">Difficulty</th>
+								<th scope="col">Win reward</th>
+								{showXp && <th scope="col" class="num">XP</th>}
+							</tr>
+						</thead>
+						<tbody>
+							{group.modes.map((mode) => {
+								const winReward = mode.RewardWin ? rewardById.get(mode.RewardWin) : undefined;
+								const diff = mode.Difficulty ?? (/pvp/i.test(mode.Id) ? 'Player vs player' : '—');
+								return (
+									<tr>
+										<th scope="row">
+											<span class="ar-mode">
+												{mode.Name}
+												{mode.Description && <span class="ar-desc">{mode.Description}</span>}
+											</span>
+										</th>
+										<td data-label="Difficulty">
+											<span class={`ar-diff ar-${(mode.Difficulty ?? 'pvp').toLowerCase()}`}>{diff}</span>
+										</td>
+										<td data-label="Win reward">
+											<span>
+												{winParts(winReward).length > 0
+													? winParts(winReward).map((part, index) => (
+															<>
+																{index > 0 && ', '}
+																{part.href ? <a href={part.href} class="link">{part.label}</a> : part.label}
+																{part.chanceSuffix}
+															</>
+														))
+													: summarizeReward(winReward)}
+											</span>
+										</td>
+										{showXp && <td data-label="XP multiplier" class="num">{mode.ExperienceMultiplier}×</td>}
 									</tr>
-								</thead>
-								<tbody>
-									{league.Levels.map((level, idx) => (
-										<tr class={`border-t border-sky-800/60 ${idx % 2 === 0 ? 'bg-sky-950/30' : 'bg-black/20'}`}>
-											<td class="px-4 py-2 text-sky-400">{idx}</td>
-											<td class="px-4 py-2 text-sky-100">{level.LevelName}</td>
-											<td class="px-4 py-2 text-sky-200/80">{level.Threshold}</td>
-										</tr>
-									))}
-								</tbody>
-							</table>
-						</div>
-					</details>
-				))}
-			</div>
+								);
+							})}
+						</tbody>
+					</table>
+				</>
+			))}
 		</section>
 
-		{/* ── Section 3: Pet Shop Reward Eggs ── */}
-		<section>
-			<h2 class="mb-1 text-2xl text-white">Pet Shop Reward Eggs</h2>
-			<p class="mt-0 mb-6 text-sm text-sky-300/80">
-				Exclusive companion eggs earned by reaching league milestones.
-			</p>
-			<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+		<section class="cr-section" aria-labelledby="leagues-heading">
+			<h2 class="section-title" id="leagues-heading">League ladders <span class="count tabular">{arenaLeagues.length}</span></h2>
+			{arenaGuild?.Description && <p>{arenaGuild.Description}</p>}
+			<p>Each ladder tracks one arena stat. Higher tiers unlock the reward eggs below.</p>
+			{arenaLeagues.map((league) => (
+				<details class="cr-details">
+					<summary>
+						<h3 class="m-0 text-[1.0625rem] font-semibold">{league.StatTitle}</h3>
+						<span class="cr-sum-meta tabular">{league.Levels.length} tiers</span>
+					</summary>
+					<div class="cr-details-body">
+						{league.WikiDescription && <p class="cr-note">{league.WikiDescription}</p>}
+						<table class="cr-table">
+							<thead>
+								<tr>
+									<th scope="col" class="num">Tier</th>
+									<th scope="col">Title</th>
+									<th scope="col" class="num">Threshold</th>
+								</tr>
+							</thead>
+							<tbody>
+								{league.Levels.map((level, idx) => (
+									<tr>
+										<td class="num">{idx}</td>
+										<th scope="row">{level.LevelName}</th>
+										<td class="num">{level.Threshold}</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				</details>
+			))}
+		</section>
+
+		<section class="cr-section" aria-labelledby="eggs-heading">
+			<h2 class="section-title" id="eggs-heading">Pet shop reward eggs <span class="count tabular">{petShop.length}</span></h2>
+			<p>Companion eggs you can only earn by climbing the league ladders.</p>
+			<div class="cr-grid c3">
 				{petShop.map((egg) => {
 					const league = leagueById.get(egg.RequiredStat);
 					const statLabel = league?.StatTitle ?? toTitleCase(egg.RequiredStat);
 					return (
-						<article
-							id={`pet-shop-${egg.Id}`}
-							class="flex flex-col rounded-sm border border-sky-800/70 bg-sky-950/40 p-4 scroll-mt-24"
-						>
-							<div class="mb-3 flex items-start gap-3">
-								<img
-									src={`${IMAGE_BASE}${toWebp(egg.Icon)}`}
-									alt=""
-									class="h-16 w-16 shrink-0 rounded-sm border border-sky-800/60 bg-black/30 p-1"
-									loading="lazy"
-								/>
+						<article id={`pet-shop-${egg.Id}`} class="panel cr-card ar-egg">
+							<div class="ar-egg-head">
+								<span class="slot w-14">
+									<img src={`${IMAGE_BASE}${toWebp(egg.Icon)}`} alt="" width="56" height="56" loading="lazy" />
+								</span>
 								<div class="min-w-0">
-									<h3 class="m-0 text-lg text-white">
-										<a href={getSlug(egg.ProductID)} class="text-white hover:text-cyan-200">
-											{egg.Name}
-										</a>
+									<h3>
+										<a href={getSlug(egg.ProductID)} class="ar-egg-name">{egg.Name}</a>
 									</h3>
-									<p class="m-0 text-xs uppercase tracking-wide text-sky-300/90">{egg.Group}</p>
+									<p class="cr-meta !mt-0">{egg.Group}</p>
 								</div>
 							</div>
-							<p class="mt-0 mb-3 flex-1 text-sm leading-relaxed text-sky-200/80 whitespace-pre-line">
-								{egg.Description}
+							<p class="whitespace-pre-line">{egg.Description}</p>
+							<p class="cr-meta">
+								Requires <strong class="font-semibold text-ink">{statLabel} tier {egg.RequiredStatTier}</strong>
 							</p>
-							<span class="mt-auto inline-block self-start rounded-full border border-sky-600 bg-sky-800/30 px-3 py-1 text-xs font-semibold text-sky-100">
-								Requires: {statLabel} Tier {egg.RequiredStatTier}
-							</span>
 						</article>
 					);
 				})}
 			</div>
 		</section>
-	</section>
+	</CreaturesShell>
 </Layout>
+
+<style>
+	.ar-mode { display: flex; flex-direction: column; gap: .15rem; }
+	.ar-desc { font-size: .875rem; font-weight: 400; color: var(--color-dim); max-width: 46ch; }
+	.ar-diff { display: inline-flex; align-items: center; gap: .4rem; white-space: nowrap; }
+	.ar-diff::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--color-dim); }
+	.ar-easy::before { background: #4ade80; }
+	.ar-medium::before { background: var(--color-accent); }
+	.ar-hard::before { background: #f87171; }
+	.ar-modes th:first-child { width: 40%; }
+	.ar-egg { display: flex; flex-direction: column; gap: .6rem; scroll-margin-top: 5rem; }
+	.ar-egg:target { border-color: var(--color-accent-line); }
+	.ar-egg-head { display: flex; align-items: center; gap: .8rem; }
+	.ar-egg-head h3 { margin: 0; }
+	.ar-egg-name { color: var(--color-ink); text-decoration: underline; text-decoration-color: rgb(255 195 86 / .45); text-underline-offset: 3px; }
+	.ar-egg-name:hover { color: var(--color-accent); }
+	@media (max-width: 639px) {
+		.ar-modes th:first-child { width: auto; }
+		.ar-modes tbody th { display: block !important; }
+		.cr-table.stack .ar-desc { max-width: none; }
+	}
+</style>

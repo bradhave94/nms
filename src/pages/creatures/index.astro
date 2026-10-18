@@ -1,59 +1,19 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
-import creaturesData from '@datav2/Creatures.json';
+import CreaturesShell from '@components/creatures/CreaturesShell.astro';
+import SpeciesTable from '@components/creatures/SpeciesTable.astro';
+import { counts } from '@components/creatures/data';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildCategoryBreadcrumbs } from '@utils/seo.js';
-import { SITE } from '@config';
 
-const IMAGE_BASE = SITE.imageBaseUrl;
-const speciesCount = creaturesData.Species?.length ?? 0;
-const affinityCount = creaturesData.Affinities?.length ?? 0;
-const moveCount = creaturesData.BattleMoves?.length ?? 0;
-const modeCount = creaturesData.ArenaModes?.length ?? 0;
-const behaviourCount = creaturesData.Behaviours?.length ?? 0;
-
-const accessoryCount = creaturesData.PetAccessories?.length ?? 0;
-
-const hubCards = [
-	{
-		name: 'Species',
-		description: `Browse all ${speciesCount} creature species with sortable stats, affinities, and battle readiness.`,
-		button: 'View Species',
-		image: `${IMAGE_BASE}SPEC_PB_EGG01.webp`,
-		link: '/creatures/species/',
-	},
-	{
-		name: 'Affinities',
-		description: `Master the ${affinityCount} elemental affinities and their strength-versus-weakness matchup chart.`,
-		button: 'View Affinities',
-		image: `${IMAGE_BASE}biomes--stats.planet.fire.webp`,
-		link: '/creatures/affinities/',
-	},
-	{
-		name: 'Moves',
-		description: `Explore ${moveCount} battle moves with affinity-specific names, categories, and move set archetypes.`,
-		button: 'View Moves',
-		image: `${IMAGE_BASE}moves--move.pet.attack.webp`,
-		link: '/creatures/moves/',
-	},
-	{
-		name: 'Arena',
-		description: `${modeCount} arena modes with difficulty ratings, reward breakdowns, league progression, and pet shop eggs.`,
-		button: 'View Arena',
-		image: `${IMAGE_BASE}biomes--stats.planet.mech.webp`,
-		link: '/creatures/arena/',
-	},
+// The hub's sections, in nav order (also the CollectionPage item list).
+const sections = [
+	{ name: 'Species', link: '/creatures/species/' },
+	{ name: 'Affinities', link: '/creatures/affinities/' },
+	{ name: 'Moves', link: '/creatures/moves/' },
+	{ name: 'Arena', link: '/creatures/arena/' },
+	{ name: 'Companions', link: '/creatures/companions/' },
 ];
-
-const companionCard = {
-	name: 'Companions',
-	description: `${behaviourCount} companion behaviours, ${accessoryCount} pet accessories, leveling & genetics guide, egg sequencer, mood states, and trait modifiers. Everything you need to raise, customise, and battle-train your creatures.`,
-	button: 'View Companions',
-	image: `${IMAGE_BASE}biomes--stats.planet.lush.webp`,
-	link: '/creatures/companions/',
-};
 
 const title = "Creatures | No Man's Sky Recipes";
 const description =
@@ -67,9 +27,9 @@ const structuredData = buildCollectionStructuredData({
 	collectionDescription: description,
 	collectionPath: '/creatures',
 	currentPage: 1,
-	items: [...hubCards, companionCard].map((card, index) => ({
-		name: card.name,
-		url: `${siteOrigin}${card.link}`,
+	items: sections.map((section, index) => ({
+		name: section.name,
+		url: `${siteOrigin}${section.link}`,
 		position: index + 1,
 	})),
 });
@@ -77,54 +37,15 @@ const breadcrumbs = buildCategoryBreadcrumbs('Creatures', '/creatures', 1);
 ---
 
 <Layout title={title} description={description} slug="creatures" structuredData={structuredData}>
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<header class="bg-linear-to-r from-purple-900/20 to-slate-900/50 py-10 text-center">
-		<h1 class="m-0 text-4xl sm:text-6xl text-white font-bold mb-4">Creatures</h1>
-		<p class="m-0 text-xl sm:text-3xl text-gray-300 tracking-widest">
-			Species | Affinities | Moves | Arena | Companions
-		</p>
-	</header>
-	<div class="container w-auto mx-auto px-4 py-8">
-		<div id="items" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-			{
-				hubCards.map((card, index) => (
-					<Card
-						card={card}
-						index={index}
-						loading={index < 3 ? "eager" : "lazy"}
-					/>
-				))
-			}
-			<article class="sm:col-span-2 xl:col-span-2">
-				<a
-					href="/creatures/companions"
-					class="flex flex-col transition border border-black hover:border-blue-500 bg-black rounded-md overflow-hidden h-full"
-				>
-					<div class="p-4 sm:p-6 pb-0 sm:pb-0">
-						<img
-							src={companionCard.image}
-							alt="Companions"
-							class="h-48 w-48 object-contain"
-							loading="lazy"
-						/>
-					</div>
-					<div class="flex flex-1 flex-col justify-between p-4 sm:p-6 pt-3 sm:pt-3">
-						<div>
-							<h2 class="m-0 font-bold text-3xl tracking-wider text-white">
-								Companions
-							</h2>
-							<p class="mt-2 leading-relaxed xl:tracking-wider text-sm xl:text-base text-gray-200">
-								{companionCard.description}
-							</p>
-						</div>
-						<div class="sm:flex sm:items-end sm:justify-end mt-4">
-							<span class="block bg-blue-500 px-5 py-3 text-center text-xs font-bold tracking-wider text-gray-900 transition hover:bg-blue-700">
-								View Companions
-							</span>
-						</div>
-					</div>
-				</a>
-			</article>
-		</div>
-	</div>
+	<CreaturesShell
+		active="hub"
+		title="Creatures"
+		lead={`${counts.species} species from the game files, ${counts.battleReady} of them battle-ready in the Xeno Arena.`}
+		breadcrumbs={breadcrumbs}
+	>
+		<section aria-labelledby="species-heading">
+			<h2 id="species-heading" class="section-title">Species</h2>
+			<SpeciesTable />
+		</section>
+	</CreaturesShell>
 </Layout>

@@ -1,0 +1,79 @@
+---
+// One frame for every /creatures page: breadcrumbs, a compact page header, the section nav, then the content.
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import type { BreadcrumbItem } from '@utils/seo.js';
+import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
+import { counts } from './data';
+import '../../assets/css/creatures.css';
+
+export type CreaturesSection = 'hub' | 'species' | 'moves' | 'arena' | 'companions' | 'affinities';
+
+interface Props {
+	active: CreaturesSection;
+	title: string;
+	lead?: string;
+	breadcrumbs: BreadcrumbItem[];
+	/** Item icon file name (from the game data) shown in a tinted inventory slot. */
+	icon?: string | null;
+	/** Hex colour (no #) for the icon slot. */
+	iconColour?: string;
+	iconAlt?: string;
+	/** A page inside a section (a species page): highlight the tab without marking it the current page. */
+	detail?: boolean;
+}
+
+const { active, title, lead, breadcrumbs, icon, iconColour, iconAlt = '', detail = false } = Astro.props as Props;
+
+const sections: { key: CreaturesSection; label: string; href: string; count: string }[] = [
+	{ key: 'species', label: 'Species', href: '/creatures/species/', count: String(counts.species) },
+	{ key: 'moves', label: 'Moves', href: '/creatures/moves/', count: String(counts.moves) },
+	{ key: 'arena', label: 'Arena', href: '/creatures/arena/', count: `${counts.arenaModes} modes` },
+	{ key: 'companions', label: 'Companions', href: '/creatures/companions/', count: '' },
+	{ key: 'affinities', label: 'Affinities', href: '/creatures/affinities/', count: String(counts.affinities) },
+];
+---
+
+<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+<div class="cr-wrap">
+	<header class="cr-head">
+		{
+			icon && (
+				<span class="slot cr-head-slot" style={`--c:#${iconColour ?? '2C3E50'}`}>
+					<img src={`${SITE.imageBaseUrl}${toWebp(icon)}`} alt={iconAlt} width="56" height="56" loading="eager" />
+				</span>
+			)
+		}
+		<div class="min-w-0">
+			<h1 class="cr-title">{title}</h1>
+			{lead && <p class="cr-lead">{lead}</p>}
+			<slot name="head" />
+		</div>
+	</header>
+
+	<nav class="cr-tabs" aria-label="Creature sections">
+		<ul>
+			{
+				sections.map((s) => (
+					<li>
+						<a href={s.href} aria-current={s.key === active && !detail ? 'page' : undefined} class={s.key === active ? 'is-active' : ''}>
+							{s.label}
+							{s.count && <span class="cr-tab-count tabular">{s.count}</span>}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+
+	<slot />
+</div>
+
+<script>
+	// On phones the section nav scrolls sideways: bring the current tab into view.
+	const tabs = document.querySelector<HTMLElement>('.cr-tabs');
+	const current = tabs?.querySelector<HTMLElement>('a.is-active');
+	if (tabs && current && tabs.scrollWidth > tabs.clientWidth) {
+		tabs.scrollLeft = current.offsetLeft - (tabs.clientWidth - current.offsetWidth) / 2;
+	}
+</script>

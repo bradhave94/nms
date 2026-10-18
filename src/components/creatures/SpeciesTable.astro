@@ -1,0 +1,208 @@
+---
+// The colour-coded species table: search, affinity filter (?affinity=Fire), sortable columns.
+// A plain server-rendered table (85 rows) instead of Tabulator: every row is in the HTML, it sorts and
+// filters in place, and below 640px each row stacks into a card with the name first.
+import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
+import {
+	AFFINITY_COLOURS,
+	AREA_COLOURS,
+	BATTLE_COLOURS,
+	RARITY_COLOURS,
+	affinities,
+	speciesRows,
+	swatch,
+} from './data';
+
+interface Props {
+	/** Accessible name for the table. */
+	caption?: string;
+}
+
+const { caption = "No Man's Sky creature species" } = Astro.props as Props;
+const rows = speciesRows();
+const IMG = SITE.imageBaseUrl;
+const RARITY_RANK: Record<string, number> = { Common: 0, Uncommon: 1, Rare: 2, SuperRare: 3 };
+
+const columns = [
+	{ key: 'name', label: 'Species' },
+	{ key: 'affinity', label: 'Affinity' },
+	{ key: 'battle', label: 'Battle ready' },
+	{ key: 'rarity', label: 'Rarity' },
+	{ key: 'area', label: 'Move area' },
+];
+---
+
+<div class="sp" data-species>
+	<div class="sp-tools">
+		<div class="sp-search">
+			<label for="species-search" class="sr-only">Search species</label>
+			<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path></svg>
+			<input id="species-search" type="search" class="field" placeholder="Search species, rarity, area" autocomplete="off" data-sp-search />
+		</div>
+		<div class="sp-affs" role="group" aria-label="Filter by affinity">
+			<button type="button" class="btn-quiet" aria-pressed="true" data-aff="">All</button>
+			{
+				affinities.map((a) => (
+					<button type="button" class="btn-quiet" aria-pressed="false" data-aff={a.DisplayName}>
+						<img src={`${IMG}${toWebp(a.Icon)}`} alt="" width="22" height="22" loading="lazy" />
+						{a.DisplayName}
+					</button>
+				))
+			}
+		</div>
+	</div>
+	<p class="sp-count tabular" role="status" data-sp-count>{rows.length} species</p>
+
+	<table class="sp-table" role="table">
+		<caption class="sr-only">{caption}. Column headers sort the table.</caption>
+		<thead role="rowgroup">
+			<tr role="row">
+				{
+					columns.map((c, i) => (
+						<th scope="col" role="columnheader" aria-sort={i === 0 ? 'ascending' : undefined} data-col={c.key}>
+							<button type="button" class="sp-sort" data-sort={c.key}>
+								{c.label}
+								<svg viewBox="0 0 12 12" aria-hidden="true"><path class="up" d="M6 1.5l3.5 4h-7z" fill="currentColor" /><path class="down" d="M6 10.5l-3.5-4h7z" fill="currentColor" /></svg>
+							</button>
+						</th>
+					))
+				}
+			</tr>
+		</thead>
+		<tbody role="rowgroup" data-sp-body>
+			{
+				rows.map((r) => (
+					<tr
+						role="row"
+						data-name={`${r.name} ${r.subtitle ?? ''}`.trim().toLowerCase()}
+						data-affinity={r.affinity}
+						data-battle={r.battle}
+						data-rarity={RARITY_RANK[r.rarity] ?? 9}
+						data-area={r.area}
+						data-text={[r.name, r.subtitle, r.affinity, r.battle === 'Yes' ? 'battle ready' : '', r.rarityLabel, r.area, r.id]
+							.filter(Boolean)
+							.join(' ')
+							.toLowerCase()}
+					>
+						<th scope="row" role="rowheader" class="sp-name">
+							<a href={r.href}>
+								<span class="slot" style={`--c:#${AFFINITY_COLOURS[r.affinity] ?? '333333'}`}>
+									<img src={`${IMG}${toWebp(r.icon)}`} alt="" width="40" height="40" loading="lazy" />
+								</span>
+								<span class="sp-label">
+									<span class="sp-n">{r.name}</span>
+									{r.subtitle && <span class="sp-sub">{r.subtitle}</span>}
+								</span>
+							</a>
+						</th>
+						<td role="cell" class="sp-sw" style={swatch(AFFINITY_COLOURS[r.affinity])}>
+							<span class="sp-k">Affinity</span>
+							<span class="sp-v">
+								{r.affinityIcon && <img src={`${IMG}${toWebp(r.affinityIcon)}`} alt="" width="22" height="22" loading="lazy" />}
+								{r.affinity}
+							</span>
+						</td>
+						<td role="cell" class="sp-sw" style={swatch(BATTLE_COLOURS[r.battle])}>
+							<span class="sp-k">Battle ready</span>
+							<span class="sp-v">{r.battle}</span>
+						</td>
+						<td role="cell" class="sp-sw" style={swatch(RARITY_COLOURS[r.rarity])}>
+							<span class="sp-k">Rarity</span>
+							<span class="sp-v">{r.rarityLabel}</span>
+						</td>
+						<td role="cell" class="sp-sw" style={swatch(AREA_COLOURS[r.area])}>
+							<span class="sp-k">Move area</span>
+							<span class="sp-v">{r.area}</span>
+						</td>
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+	<div class="sp-empty" hidden data-sp-empty>
+		<p>No species match these filters.</p>
+		<button type="button" class="btn-quiet" data-sp-clear>Clear filters</button>
+	</div>
+</div>
+
+<script>
+	const root = document.querySelector<HTMLElement>('[data-species]');
+	if (root) {
+		const body = root.querySelector<HTMLTableSectionElement>('[data-sp-body]')!;
+		const rows = Array.from(body.rows);
+		const total = rows.length;
+		const search = root.querySelector<HTMLInputElement>('[data-sp-search]')!;
+		const status = root.querySelector<HTMLElement>('[data-sp-count]')!;
+		const empty = root.querySelector<HTMLElement>('[data-sp-empty]')!;
+		const affButtons = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-aff]'));
+		const headers = Array.from(root.querySelectorAll<HTMLTableCellElement>('thead th'));
+		let affinity = '';
+		let sortKey = 'name';
+		let sortDir: 1 | -1 = 1;
+
+		const apply = () => {
+			const q = search.value.trim().toLowerCase();
+			let shown = 0;
+			for (const row of rows) {
+				const okAff = !affinity || row.dataset.affinity?.toLowerCase() === affinity.toLowerCase();
+				const okQ = !q || (row.dataset.text ?? '').includes(q);
+				row.hidden = !(okAff && okQ);
+				if (!row.hidden) shown++;
+			}
+			empty.hidden = shown > 0;
+			const what = affinity ? ` with ${affinity} affinity` : '';
+			status.textContent = shown === total && !q ? `${total} species${what}` : `${shown} of ${total} species${what}`;
+		};
+
+		const setAffinity = (value: string, updateUrl = true) => {
+			const match = affButtons.find((b) => (b.dataset.aff ?? '').toLowerCase() === value.toLowerCase());
+			affinity = match ? (match.dataset.aff ?? '') : '';
+			affButtons.forEach((b) => b.setAttribute('aria-pressed', String(b === (match ?? affButtons[0]))));
+			apply();
+			if (updateUrl) {
+				const params = new URLSearchParams(location.search);
+				if (affinity) params.set('affinity', affinity);
+				else params.delete('affinity');
+				const qs = params.toString();
+				history.replaceState(history.state, '', `${location.pathname}${qs ? `?${qs}` : ''}${location.hash}`);
+			}
+		};
+
+		const sortBy = (key: string) => {
+			sortDir = key === sortKey ? (sortDir === 1 ? -1 : 1) : 1;
+			sortKey = key;
+			const val = (r: HTMLTableRowElement) => (key === 'rarity' ? Number(r.dataset.rarity) : (r.dataset[key] ?? ''));
+			const sorted = rows.slice().sort((a, b) => {
+				const x = val(a);
+				const y = val(b);
+				const c = typeof x === 'number' && typeof y === 'number' ? x - y : String(x).localeCompare(String(y));
+				return (c || (a.dataset.name ?? '').localeCompare(b.dataset.name ?? '')) * sortDir;
+			});
+			body.append(...sorted);
+			headers.forEach((th) => {
+				if (th.dataset.col === key) th.setAttribute('aria-sort', sortDir === 1 ? 'ascending' : 'descending');
+				else th.removeAttribute('aria-sort');
+			});
+		};
+
+		let timer: ReturnType<typeof setTimeout> | undefined;
+		search.addEventListener('input', () => {
+			clearTimeout(timer);
+			timer = setTimeout(apply, 120);
+		});
+		affButtons.forEach((b) => b.addEventListener('click', () => setAffinity(b.dataset.aff ?? '')));
+		root.querySelectorAll<HTMLButtonElement>('[data-sort]').forEach((b) =>
+			b.addEventListener('click', () => sortBy(b.dataset.sort ?? 'name'))
+		);
+		root.querySelector('[data-sp-clear]')?.addEventListener('click', () => {
+			search.value = '';
+			setAffinity('');
+			search.focus();
+		});
+
+		const initial = new URLSearchParams(location.search).get('affinity')?.trim();
+		if (initial) setAffinity(initial, false);
+		else if (search.value) apply();
+	}
+</script>

@@ -1,82 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
-import TableHead from '@components/table/Head.astro';
-import TableCell from '@components/table/Cell.astro';
-import creaturesData from '@datav2/Creatures.json';
+import CreaturesShell from '@components/creatures/CreaturesShell.astro';
+import SpeciesTable from '@components/creatures/SpeciesTable.astro';
+import { counts, speciesRows } from '@components/creatures/data';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { buildPaginatedMeta } from '@utils/seo.js';
-import '../../../assets/css/tabulator.css';
-import { SITE } from '@config';
 
-type CreatureSpecies = {
-	Id: string;
-	Name: string;
-	SpeciesSubtitle?: string | null;
-	MoveArea?: string | null;
-	Rarity?: string | null;
-	CanBeUsedInBattle?: boolean;
-	BattleForcedAffinityDisplay?: string | null;
-	BattleAffinityIcon?: string | null;
-	Icon?: string | null;
-};
-
-const IMAGE_BASE = SITE.imageBaseUrl;
-const NORMAL_AFFINITY_ICON = 'moves--move.pet.attack.png';
-
-const AFFINITY_COLOURS: Record<string, string> = {
-	'Fire': '8B2500',
-	'Frost': '1A5276',
-	'Toxic': '4A5A00',
-	'Desert': '7D6608',
-	'Tropical': '1B6B2A',
-	'Radioactive': '5B2C6F',
-	'Mechanical': '2C3E50',
-	'Anomalous': '6C3483',
-	'Physical': '333333',
-	'Varies': '333333',
-};
-
-const RARITY_COLOURS: Record<string, string> = {
-	'Common': '2E4053',
-	'Uncommon': '1A5276',
-	'Rare': '6C3483',
-	'SuperRare': '922B21',
-	'Unknown': '333333',
-};
-
-const BATTLE_COLOURS: Record<string, string> = {
-	'Yes': '1B6B2A',
-	'No': '4A0E0E',
-};
-
-const AREA_COLOURS: Record<string, string> = {
-	'Ground': '5D4E37',
-	'Air': '2E5984',
-	'Water': '1A5276',
-	'Cave': '4A3728',
-	'Unknown': '333333',
-};
-
-const allSpecies = ((creaturesData as Record<string, unknown>).Species as CreatureSpecies[] | undefined) ?? [];
-const species = allSpecies
-	.filter((item): item is CreatureSpecies => Boolean(item?.Id && item?.Name))
-	.slice()
-	.sort((a, b) => (a.Name ?? '').localeCompare(b.Name ?? ''));
-
-const iconFor = (s: CreatureSpecies): string => {
-	if (s.BattleAffinityIcon) return s.BattleAffinityIcon;
-	if (s.Icon) return s.Icon;
-	return NORMAL_AFFINITY_ICON;
-};
-
-const columns = [
-	{ title: 'Species', field: 'species' },
-	{ title: 'Affinity', field: 'affinity' },
-	{ title: 'Battle Ready', field: 'battle' },
-	{ title: 'Rarity', field: 'rarity' },
-	{ title: 'Move Area', field: 'area' },
-];
+const species = speciesRows();
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/creatures/species/', siteOrigin).toString();
@@ -91,8 +21,8 @@ const structuredData = buildCollectionStructuredData({
 	breadcrumbs: [{ name: 'Home', href: '/' }, { name: 'Creatures', href: '/creatures/' }, { name: 'Species' }],
 	currentPage: 1,
 	items: species.slice(0, 25).map((item, index) => ({
-		name: item.Name,
-		url: `${siteOrigin}/creatures/${item.Id}/`,
+		name: item.subtitle ? `${item.name} (${item.subtitle})` : item.name,
+		url: `${siteOrigin}/creatures/${item.id}/`,
 		position: index + 1,
 	})),
 });
@@ -101,281 +31,21 @@ const breadcrumbs = [
 	{ name: 'Creatures', href: '/creatures/' },
 	{ name: 'Species' },
 ];
-const baseDescription = collectionDescription;
-const { title, description } = buildPaginatedMeta('Creature Species', baseDescription, 1, 1);
+const { title, description } = buildPaginatedMeta('Creature Species', collectionDescription, 1, 1);
 ---
 
-<style>
-	.table-wrapper {
-		opacity: 1;
-		transition: opacity 0.5s ease-in-out;
-	}
-	.d-hidden {
-		opacity: 0;
-		height: 500px;
-		overflow: hidden;
-	}
-</style>
-
-<style is:global>
-	#table .tabulator-row .tabulator-cell {
-		min-width: 200px !important;
-	}
-	#table .tabulator-header .tabulator-col {
-		min-width: 200px !important;
-	}
-	#table .tabulator-row .tabulator-cell picture {
-		min-width: 35px !important;
-		width: 35px !important;
-		height: 35px !important;
-		flex-shrink: 0;
-	}
-	#table .tabulator-row .tabulator-cell picture img {
-		width: 35px !important;
-		height: 35px !important;
-		object-fit: contain;
-	}
-	.table-scroll-wrapper {
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
-	}
-	.table-scroll-wrapper #table {
-		min-width: 1000px;
-	}
-</style>
-
 <Layout title={title} description={description} slug="creatures" structuredData={structuredData}>
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<p class="mx-auto mb-4 max-w-4xl px-4 text-center">
-		<a
-			href="/creatures/affinities"
-			class="text-sky-400 underline decoration-sky-600/50 underline-offset-2 hover:text-sky-300"
-		>
-			← Back to Affinity guide
-		</a>
-	</p>
-
-	<div class="table-wrapper d-hidden" data-layout="table" data-astro-transition-persist="table-wrapper">
-		<div class="card-header p-4 relative flex lg:flex-row flex-col gap-5 items-center justify-between bg-black">
-			<div class="flex items-center gap-3 z-10 relative">
-				<img
-					src={`${IMAGE_BASE}SPEC_PB_EGG01.webp`}
-					alt="Species"
-					width="50"
-					height="50"
-					class="rounded"
-				/>
-				<h1 class="text-2xl m-0">Creature Species</h1>
-			</div>
-			<div class="flex flex-col sm:flex-row items-center gap-3 z-10">
-				<div id="affinity-filter-chip" class="hidden items-center gap-2 rounded-md border border-sky-700 bg-sky-950/60 px-3 py-1.5 text-sm text-sky-200">
-					<span>Filtered by affinity: <strong id="affinity-filter-label"></strong></span>
-					<button
-						id="affinity-filter-clear"
-						type="button"
-						class="min-h-6 rounded-sm border border-sky-600 px-2 py-0.5 text-xs text-sky-400 hover:bg-sky-900/50 hover:text-white"
-					>
-						Clear
-					</button>
-				</div>
-				<div class="tabulator-search relative">
-					<input
-						class="rounded-md w-full bg-black border-blue-500 focus:border-blue-500 focus:ring-blue-500 peer"
-						type="text"
-						id="search"
-						name="search"
-						placeholder=" "
-					/>
-					<label
-						class="absolute top-1/2 -translate-y-1/2 left-3 pointer-events-none peer-focus:opacity-0 peer-[:not(:placeholder-shown)]:opacity-0"
-						for="search">Search</label
-					>
-				</div>
-			</div>
-		</div>
-
-		<div class="table-scroll-wrapper">
-			<table id="table" data-columns={JSON.stringify(columns)} data-sort="species">
-				<TableHead columns={columns} />
-				<tbody>
-					{species.map((s) => {
-						// Species without a forced affinity roll one per planet.
-						const affinity = s.BattleForcedAffinityDisplay ?? 'Varies';
-						const battle = s.CanBeUsedInBattle ? 'Yes' : 'No';
-						const rarity = s.Rarity ?? 'Unknown';
-						const moveArea = s.MoveArea ?? 'Unknown';
-						const subtitle = s.SpeciesSubtitle?.trim();
-						const displayName = subtitle ? `${s.Name} (${subtitle})` : s.Name;
-						return (
-							<tr data-affinity={affinity}>
-								<TableCell cell={{
-									id: s.Id,
-									name: displayName,
-									colour: AFFINITY_COLOURS[affinity] ?? '333333',
-									image: iconFor(s),
-									href: `/creatures/${s.Id}`,
-								}} />
-								<TableCell cell={{
-									id: `aff-${s.Id}`,
-									name: affinity,
-									colour: AFFINITY_COLOURS[affinity] ?? '333333',
-									href: `/creatures/${s.Id}`,
-								}} />
-								<TableCell cell={{
-									id: `bat-${s.Id}`,
-									name: battle,
-									colour: BATTLE_COLOURS[battle] ?? '333333',
-									href: `/creatures/${s.Id}`,
-								}} />
-								<TableCell cell={{
-									id: `rar-${s.Id}`,
-									name: rarity,
-									colour: RARITY_COLOURS[rarity] ?? '333333',
-									href: `/creatures/${s.Id}`,
-								}} />
-								<TableCell cell={{
-									id: `area-${s.Id}`,
-									name: moveArea,
-									colour: AREA_COLOURS[moveArea] ?? '333333',
-									href: `/creatures/${s.Id}`,
-								}} />
-							</tr>
-						);
-					})}
-				</tbody>
-			</table>
-		</div>
-	</div>
+	<CreaturesShell
+		active="species"
+		title="Creature species"
+		lead={`${counts.species} species, ${counts.battleReady} of them battle-ready. Colours mark affinity, battle readiness, rarity and where each one moves.`}
+		breadcrumbs={breadcrumbs}
+		icon="SPEC_PB_EGG01.png"
+		iconColour="2C3E50"
+	>
+		<SpeciesTable caption="Creature species" />
+		<p class="cr-note mt-6">
+			Affinity decides who wins a Xeno Arena fight. See the <a class="link" href="/creatures/affinities/">affinity matchups</a>.
+		</p>
+	</CreaturesShell>
 </Layout>
-
-<script>
-	import { TabulatorFull as Tabulator } from 'tabulator-tables';
-	import { applyTabulatorA11y } from '@utils/tabulatorA11y';
-	type ColumnData = { title: string; field: string };
-
-	requestAnimationFrame(() => {
-		const tableElement = document.getElementById('table') as HTMLTableElement;
-		if (!tableElement) return;
-
-		const sort = tableElement.dataset.sort;
-		let columns;
-		try {
-			columns = JSON.parse(tableElement.dataset.columns || '[]').map((element: ColumnData) => ({
-				title: element.title,
-				field: element.field,
-				sorterParams: { alignEmptyValues: 'bottom' },
-				formatter: 'html',
-			}));
-		} catch (error) {
-			console.error('Failed to parse table columns:', error);
-			return;
-		}
-
-		const table = new Tabulator('#table', {
-			columns,
-			initialSort: [{ column: sort, dir: 'asc' }],
-			layout: 'fitColumns',
-			pagination: true,
-			paginationSize: 25,
-			paginationSizeSelector: [10, 25, 50, 100, true],
-			paginationCounter: 'rows',
-			placeholder: 'No results found',
-			printAsHtml: true,
-		});
-
-		applyTabulatorA11y(table, 'Creature species', 'species');
-
-		table.on('dataLoaded', function () {
-			if (table.element?.parentElement?.parentElement) {
-				table.element.parentElement.parentElement.classList.remove('d-hidden');
-			}
-		});
-
-		function affinityFromCell(value: unknown): string {
-			const text = String(value ?? '')
-				.replace(/<[^>]*>/g, ' ')
-				.replace(/&amp;/g, '&')
-				.replace(/\s+/g, ' ')
-				.trim();
-			return (text.split(' ')[0] || '').toLowerCase();
-		}
-
-		function matchFilters(
-			data: Record<string, unknown>,
-			filterParams: { value: string; affinity: string }
-		) {
-			if (
-				filterParams.affinity &&
-				affinityFromCell(data.affinity) !== filterParams.affinity.toLowerCase()
-			) {
-				return false;
-			}
-			const search = filterParams.value.trim();
-			if (!search) return true;
-			const escapedValue = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-			const regex = new RegExp(escapedValue, 'i');
-			return Object.values(data).some((value) => regex.test(String(value)));
-		}
-
-		let activeAffinity = '';
-		const affinityChip = document.getElementById('affinity-filter-chip');
-		const affinityLabel = document.getElementById('affinity-filter-label');
-		const affinityClear = document.getElementById('affinity-filter-clear');
-
-		function applyTableFilter(searchValue: string) {
-			if (!searchValue.trim() && !activeAffinity) {
-				table.clearFilter();
-				return;
-			}
-			table.setFilter(matchFilters, { value: searchValue, affinity: activeAffinity });
-		}
-
-		function setAffinityFilter(affinity: string, updateUrl = true) {
-			activeAffinity = affinity;
-			if (affinityChip && affinityLabel) {
-				if (affinity) {
-					affinityLabel.textContent = affinity;
-					affinityChip.classList.remove('hidden');
-					affinityChip.classList.add('flex');
-				} else {
-					affinityChip.classList.add('hidden');
-					affinityChip.classList.remove('flex');
-					affinityLabel.textContent = '';
-				}
-			}
-			const input = document.getElementById('search') as HTMLInputElement | null;
-			applyTableFilter(input?.value ?? '');
-			if (updateUrl) {
-				const params = new URLSearchParams(window.location.search);
-				if (affinity) {
-					params.set('affinity', affinity);
-				} else {
-					params.delete('affinity');
-				}
-				const query = params.toString();
-				const newUrl = `/creatures/species${query ? '?' + query : ''}`;
-				window.history.replaceState({}, '', newUrl);
-			}
-		}
-
-		const input = document.getElementById('search') as HTMLInputElement;
-		if (input) {
-			let debounceTimer: ReturnType<typeof setTimeout> | undefined;
-			input.addEventListener('keyup', function () {
-				if (debounceTimer) {
-					clearTimeout(debounceTimer);
-				}
-				debounceTimer = setTimeout(() => {
-					applyTableFilter(input.value);
-				}, 150);
-			});
-		}
-
-		affinityClear?.addEventListener('click', () => setAffinityFilter(''));
-
-		const initialAffinity = new URLSearchParams(window.location.search).get('affinity')?.trim() ?? '';
-		if (initialAffinity) {
-			setAffinityFilter(initialAffinity, false);
-		}
-	});
-</script>
