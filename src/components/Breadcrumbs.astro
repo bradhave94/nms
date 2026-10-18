@@ -10,17 +10,17 @@ const { items, className = '' } = Astro.props as Props;
 ---
 
 <nav aria-label="Breadcrumb" class={`mx-auto px-4 ${className}`}>
-	<ol class="m-0 flex list-none flex-wrap items-center gap-x-2 gap-y-1 p-0 text-xs text-gray-300 sm:text-sm">
+	<ol class="m-0 flex list-none flex-wrap items-center gap-x-2 gap-y-1 p-0 text-sm text-dim">
 		{
 			items.map((item, index) => (
 					<li class="flex min-w-0 items-center gap-2">
-						{index > 0 && <span aria-hidden="true" class="text-gray-500">/</span>}
+						{index > 0 && <span aria-hidden="true" class="text-[#56708a]">/</span>}
 						{item.href ? (
-							<a href={item.href} class="inline-block truncate py-1 text-cyan-300 hover:text-cyan-200 hover:underline underline-offset-2">
+							<a href={item.href} class="inline-block max-w-[16rem] truncate py-1 text-dim underline-offset-2 hover:text-accent hover:underline">
 								{item.name}
 							</a>
 						) : (
-							<span aria-current="page" class="inline-block truncate py-1 text-white">{item.name}</span>
+							<span aria-current="page" class="inline-block max-w-[20rem] truncate py-1 text-ink">{item.name}</span>
 						)}
 					</li>
 			))

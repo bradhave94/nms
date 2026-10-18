@@ -30,3 +30,11 @@ pnpm-debug.log*
 
 # local alliance directory database
 .data/
+
+# Impeccable (local install)
+.claude/skills/impeccable/
+.claude/agents/impeccable-*
+.claude/settings.local.json
+.impeccable/build/
+.impeccable/review/
+.impeccable/live/

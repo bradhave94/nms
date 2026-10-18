@@ -2,335 +2,198 @@
 import { SITE } from '@config';
 
 const filters = [
-	{ id: 'blog', name: 'Blog' },
+	{ id: 'raw', name: 'Raw Materials' },
 	{ id: 'products', name: 'Products' },
 	{ id: 'technology', name: 'Technology' },
 	{ id: 'upgrades', name: 'Upgrades' },
+	{ id: 'buildings', name: 'Buildings' },
+	{ id: 'food', name: 'Food' },
+	{ id: 'curiosities', name: 'Curiosities' },
 	{ id: 'exocraft', name: 'Exocraft' },
 	{ id: 'starships', name: 'Starships' },
-	{ id: 'buildings', name: 'Buildings' },
 	{ id: 'corvette', name: 'Corvette' },
 	{ id: 'creatures', name: 'Creatures' },
 	{ id: 'fish', name: 'Fish' },
-	{ id: 'curiosities', name: 'Curiosities' },
 	{ id: 'other', name: 'Other' },
-	{ id: 'food', name: 'Food' },
-	{ id: 'raw', name: 'Raw Materials' },
+	{ id: 'blog', name: 'Guides' },
 ];
-
-const filterLabels = Object.fromEntries(filters.map((filter) => [filter.id, filter.name]));
-const imageBaseUrl = SITE.imageBaseUrl;
+const filterLabels = Object.fromEntries(filters.map((f) => [f.id, f.name]));
 ---
 
-<div class="fixed inset-0 z-30 hidden" id="site-search" role="dialog" aria-modal="true" aria-labelledby="site-search-title">
-	<div id="site-search-backdrop" class="absolute inset-0 bg-black/40"></div>
-
-	<div id="site-search-modal" class="relative z-10 flex min-h-full items-center justify-center overflow-y-auto p-4">
-		<div id="site-search-panel" class="w-full max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-black shadow-2xl ring-1 ring-blue-500 ring-opacity-5 transition-all">
-			<div class="relative">
-				<h2 id="site-search-title" class="sr-only">Search the site</h2>
-				<svg class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-					<path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path>
-				</svg>
-
-				<input id="search-input" type="text" class="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-white placeholder-gray-400 focus:ring-0 sm:text-sm" placeholder="Search..." aria-label="Search items and blog posts" aria-describedby="search-status" autocomplete="off" />
-				<p id="search-filter-label" class="text-sm px-4 text-white">Select Categories</p>
-				<div class="flex flex-wrap gap-2 px-4 pb-4 pt-2" role="group" aria-labelledby="search-filter-label">
-					{
-						filters.map((filter) => {
-							return (
-								<div class="inline-flex">
-									<input type="checkbox" class="peer sr-only" name="type-filter" id={filter.id} value={filter.id} />
-									<label for={filter.id} class="inline-flex min-h-7 items-center select-none cursor-pointer rounded-lg border-2 border-blue-500 py-0 px-1.5 text-sm text-white transition-colors duration-200 ease-in-out peer-checked:bg-blue-500 peer-checked:text-black peer-focus-visible:ring-2 peer-focus-visible:ring-white">
-										{filter.name}
-									</label>
-								</div>
-							);
-						})
-					}
+<div class="fixed inset-0 z-50 hidden" id="site-search" role="dialog" aria-modal="true" aria-labelledby="site-search-title">
+	<div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+	<div class="relative z-10 flex min-h-full items-start justify-center p-3 sm:p-6 sm:pt-[10vh]">
+		<div id="site-search-panel" class="flex max-h-[calc(100dvh-1.5rem)] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-line bg-[#0b1017] shadow-2xl shadow-black/70 sm:max-h-[80vh]">
+			<h2 id="site-search-title" class="sr-only">Search the site</h2>
+			<div class="flex items-center gap-2 border-b border-line px-3">
+				<svg class="h-5 w-5 shrink-0 text-dim" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"></path></svg>
+				<input id="search-input" type="search" enterkeyhint="search" class="h-14 min-w-0 flex-1 border-0 bg-transparent px-1 text-lg text-ink placeholder:text-dim focus:outline-none focus:ring-0" placeholder="Search items, recipes and guides" aria-label="Search items, recipes and guides" aria-describedby="search-status" autocomplete="off" spellcheck="false" />
+				<button id="search-filter-toggle" type="button" class="btn-quiet !min-h-9 !px-3 text-sm" aria-expanded="false" aria-controls="search-filters">Filter<span id="search-filter-count" class="tabular"></span></button>
+				<button id="site-search-close" type="button" class="btn-quiet !min-h-9 !px-3 text-sm"><span class="sr-only">Close search</span><span aria-hidden="true">Esc</span></button>
+			</div>
+			<fieldset id="search-filters" class="hidden border-b border-line px-3 py-3">
+				<legend class="sr-only">Only show</legend>
+				<div class="flex flex-wrap gap-1.5">
+					{filters.map((f) => (
+						<span class="inline-flex">
+							<input type="checkbox" class="peer sr-only" name="type-filter" id={`sf-${f.id}`} value={f.id} />
+							<label for={`sf-${f.id}`} class="inline-flex min-h-8 cursor-pointer items-center rounded-full border border-line-strong px-3 text-sm text-ink select-none peer-checked:border-accent peer-checked:bg-accent peer-checked:text-accent-ink peer-focus-visible:outline-3 peer-focus-visible:outline-[#facc15]">{f.name}</label>
+						</span>
+					))}
 				</div>
-			</div>
-
-			<div id="loading-indicator" class="hidden p-4 text-center text-white">
-				Loading...
-			</div>
+			</fieldset>
 			<p id="search-status" class="sr-only" role="status" aria-live="polite"></p>
-
-			<div
-				class="max-h-72 scroll-py-2 overflow-y-auto p-8 text-sm text-white"
-				id="results"
-				data-filter-labels={JSON.stringify(filterLabels)}
-				data-image-base={imageBaseUrl}
-			></div>
+			<div id="search-hint" class="px-4 py-5 text-sm text-dim">Type a name, an ingredient or a refiner operation. Use the arrow keys to move through results.</div>
+			<ul id="results" class="m-0 hidden min-h-0 flex-1 list-none overflow-y-auto overscroll-contain p-2" data-filter-labels={JSON.stringify(filterLabels)} data-image-base={SITE.imageBaseUrl}></ul>
 		</div>
 	</div>
 </div>
 
 <script>
 	import { toWebp } from '@utils/icons';
-	const searchInput = document.getElementById('search-input');
-	const typeCheckboxes = Array.from(document.querySelectorAll('input[name=type-filter]'));
-	const resultsList = document.getElementById('results');
-	const filterLabelMap = resultsList?.dataset.filterLabels
-		? JSON.parse(resultsList.dataset.filterLabels)
-		: {};
-	const imageBaseUrl = resultsList?.dataset.imageBase ?? '/images/items/';
-	const loadingIndicator = document.getElementById('loading-indicator');
 
-	const searchCache = new Map();
-	const MAX_CACHE_SIZE = 50; // Limit cache to prevent memory issues
-	const MAX_RESULTS = 200;
-	let debounceTimer;
-	let searchDatasetPromise = null;
+	type Entry = { id: string; name: string; type: string; url: string; icon?: string; subtitle?: string; searchText?: string };
 
-	function groupBy(arr, key) {
-		return arr.reduce((acc, obj) => {
-			const group = String(obj[key]);
-			acc[group] = acc[group] || [];
-			acc[group].push(obj);
-			return acc;
-		}, {});
+	const input = document.getElementById('search-input') as HTMLInputElement | null;
+	const results = document.getElementById('results') as HTMLUListElement | null;
+	const hint = document.getElementById('search-hint');
+	const status = document.getElementById('search-status');
+	const filterToggle = document.getElementById('search-filter-toggle');
+	const filterBox = document.getElementById('search-filters');
+	const filterCount = document.getElementById('search-filter-count');
+	const boxes = Array.from(document.querySelectorAll<HTMLInputElement>('input[name=type-filter]'));
+	const labels: Record<string, string> = results?.dataset.filterLabels ? JSON.parse(results.dataset.filterLabels) : {};
+	const imageBase = results?.dataset.imageBase ?? '/images/items/';
+	const MAX = 60;
+	let dataset: Promise<Entry[]> | null = null;
+	let timer: ReturnType<typeof setTimeout> | undefined;
+
+	const load = (): Promise<Entry[]> => {
+		dataset ??= fetch('/search.json', { cache: 'force-cache' })
+			.then((r) => r.json())
+			.then((j) => (Array.isArray(j?.body) ? j.body.filter((e: Entry) => typeof e?.name === 'string') : []))
+			.catch((e) => { dataset = null; throw e; });
+		return dataset;
+	};
+
+	// Exact name, then names starting with the query, then a word in the name starting with it, then any
+	// name match, then matches only in hidden text (ingredients, aliases, guide descriptions).
+	function rank(e: Entry, q: string): number {
+		const n = e.name.toLowerCase();
+		if (n === q) return 0;
+		if (n.startsWith(q)) return 1;
+		if (n.split(/[\s\-–:()']+/).some((w) => w.startsWith(q))) return 2;
+		if (n.includes(q)) return 3;
+		if (e.searchText?.toLowerCase().includes(q)) return 4;
+		return 9;
 	}
 
-	function getSearchRelevanceRank(name, searchText, searchTerm) {
-		const lowerName = name.toLowerCase();
-		if (lowerName === searchTerm) return 0;
-		if (lowerName.startsWith(searchTerm)) return 1;
-		if (lowerName.includes(searchTerm)) return 2;
-		const extra = typeof searchText === 'string' ? searchText.toLowerCase() : '';
-		if (extra.includes(searchTerm)) return 3;
-		return 4;
-	}
+	const say = (msg: string) => { if (status) status.textContent = msg; };
 
-	async function loadSearchDataset() {
-		if (!searchDatasetPromise) {
-			searchDatasetPromise = fetch('/search.json', { cache: 'force-cache' })
-				.then((response) => response.json())
-				.then((results) => {
-					if (!results || !Array.isArray(results.body)) {
-						return [];
-					}
-					return results.body.filter((result) => result && typeof result.name === 'string');
-				})
-				.catch((error) => {
-					// Allow retry if the network request failed.
-					searchDatasetPromise = null;
-					throw error;
-				});
-		}
-		return searchDatasetPromise;
-	}
-
-	async function performSearch(searchTerm, selectedTypes) {
-		if (!loadingIndicator || !resultsList) return;
-		if (!searchTerm) {
-			resultsList.textContent = '';
-			announce('');
+	async function run(): Promise<void> {
+		if (!input || !results || !hint) return;
+		const q = input.value.trim().toLowerCase();
+		const types = boxes.filter((b) => b.checked).map((b) => b.value);
+		if (!q) {
+			results.classList.add('hidden');
+			hint.classList.remove('hidden');
+			hint.textContent = 'Type a name, an ingredient or a refiner operation. Use the arrow keys to move through results.';
+			say('');
 			return;
 		}
-
-		const cacheKey = `${selectedTypes.slice().sort().join(',')}|${searchTerm}`;
-		// Check cache first before fetching
-		if (searchCache.has(cacheKey)) {
-			const cachedResults = searchCache.get(cacheKey);
-			if (cachedResults) {
-				displayResults(cachedResults, selectedTypes);
-			}
-			return;
-		}
-
-		loadingIndicator.classList.remove('hidden');
-
+		let data: Entry[];
 		try {
-			const searchDataset = await loadSearchDataset();
-			const filteredResults = searchDataset
-				.filter((result) => {
-					// Apply the category filter before ranking and the result cap.
-					if (selectedTypes.length && !selectedTypes.includes(result.type)) return false;
-					const nameMatch = result.name.toLowerCase().includes(searchTerm);
-					const extra =
-						typeof result.searchText === 'string' ? result.searchText.toLowerCase() : '';
-					return nameMatch || extra.includes(searchTerm);
-				})
-				.sort((a, b) => {
-					const rankA = getSearchRelevanceRank(a.name, a.searchText, searchTerm);
-					const rankB = getSearchRelevanceRank(b.name, b.searchText, searchTerm);
-					if (rankA !== rankB) return rankA - rankB;
-					return a.name.localeCompare(b.name);
-				})
-				.slice(0, MAX_RESULTS);
-			const groupedResults = groupBy(filteredResults, 'type');
-
-			// Limit cache size to prevent memory issues
-			if (searchCache.size >= MAX_CACHE_SIZE) {
-				const firstKey = searchCache.keys().next().value;
-				if (firstKey) {
-					searchCache.delete(firstKey);
-				}
-			}
-			searchCache.set(cacheKey, groupedResults);
-			displayResults(groupedResults, selectedTypes);
-		} catch (error) {
-			if (import.meta.env.DEV) {
-				console.error('Error in performSearch:', error);
-			}
-			if (resultsList) {
-				resultsList.innerHTML = '<p>Sorry, an error occurred while fetching results.</p>';
-				announce('Sorry, an error occurred while fetching results.');
-			}
-		} finally {
-			if (loadingIndicator) {
-				loadingIndicator.classList.add('hidden');
-			}
+			data = await load();
+		} catch {
+			hint.textContent = 'Search could not load. Check your connection and try again.';
+			say(hint.textContent);
+			return;
 		}
-	}
-
-	function handleSearchInput() {
-		if (!searchInput) return;
-
-		const searchTerm = searchInput.value.trim().toLowerCase();
-		const selectedTypes = typeCheckboxes
-			.filter((checkbox) => checkbox.checked)
-			.map((checkbox) => checkbox.value);
-
-		if (debounceTimer) {
-			clearTimeout(debounceTimer);
+		const hits = data
+			.filter((e) => !types.length || types.includes(e.type))
+			.map((e) => ({ e, r: rank(e, q) }))
+			.filter((x) => x.r < 9)
+			.sort((a, b) => a.r - b.r || a.e.name.length - b.e.name.length || a.e.name.localeCompare(b.e.name));
+		results.textContent = '';
+		if (!hits.length) {
+			results.classList.add('hidden');
+			hint.classList.remove('hidden');
+			hint.textContent = types.length ? 'No matches in the selected categories.' : 'No matches. Try a shorter word.';
+			say(hint.textContent);
+			return;
 		}
-		debounceTimer = setTimeout(() => performSearch(searchTerm, selectedTypes), 300);
+		hint.classList.add('hidden');
+		results.classList.remove('hidden');
+		for (const { e } of hits.slice(0, MAX)) {
+			const li = document.createElement('li');
+			const a = document.createElement('a');
+			a.href = e.url.replace(/\/+/g, '/');
+			a.className = 'search-hit';
+			const slot = document.createElement('span');
+			slot.className = 'search-ico';
+			if (e.icon) {
+				const img = document.createElement('img');
+				img.src = `${imageBase}${toWebp(e.icon)}`;
+				img.alt = '';
+				img.loading = 'lazy';
+				img.width = 36;
+				img.height = 36;
+				slot.appendChild(img);
+			}
+			const name = document.createElement('span');
+			name.className = 'search-name';
+			name.textContent = e.name;
+			if (e.subtitle) {
+				const sub = document.createElement('small');
+				sub.textContent = e.subtitle;
+				name.appendChild(sub);
+			}
+			const type = document.createElement('span');
+			type.className = 'search-type';
+			type.textContent = labels[e.type] ?? e.type;
+			a.append(slot, name, type);
+			li.appendChild(a);
+			results.appendChild(li);
+		}
+		const n = hits.length;
+		say(`${n > MAX ? `${MAX} of ${n}` : n} result${n === 1 ? '' : 's'}. Press Down Arrow to move to them.`);
 	}
 
-	function handleCheckboxChange() {
-		handleSearchInput();
-	}
-
-	if (searchInput) {
-		searchInput.addEventListener(
-			'focus',
-			() => {
-				loadSearchDataset().catch(() => {
-					// Ignore prefetch errors; performSearch handles errors for user feedback.
-				});
-			},
-			{ once: true }
-		);
-		searchInput.addEventListener('input', handleSearchInput);
-	}
-
-	typeCheckboxes.forEach((checkbox) => {
-		checkbox.addEventListener('change', handleCheckboxChange);
+	const schedule = () => { clearTimeout(timer); timer = setTimeout(run, 120); };
+	input?.addEventListener('focus', () => { load().catch(() => {}); }, { once: true });
+	input?.addEventListener('input', schedule);
+	boxes.forEach((b) => b.addEventListener('change', () => {
+		const n = boxes.filter((x) => x.checked).length;
+		if (filterCount) filterCount.textContent = n ? ` (${n})` : '';
+		schedule();
+	}));
+	filterToggle?.addEventListener('click', () => {
+		const open = filterToggle.getAttribute('aria-expanded') !== 'true';
+		filterToggle.setAttribute('aria-expanded', String(open));
+		filterBox?.classList.toggle('hidden', !open);
 	});
 
-	const searchStatus = document.getElementById('search-status');
-	function announce(message) {
-		if (searchStatus) searchStatus.textContent = message;
-	}
-
-	function displayResults(groupedResults, selectedTypes) {
-		if (!resultsList) return;
-
-		// Use DOM methods instead of innerHTML for better security
-		resultsList.textContent = ''; // Clear existing content
-		let hasResults = false;
-
-		Object.keys(groupedResults).forEach((group) => {
-			const filteredGroupResults = selectedTypes.length
-				? groupedResults[group].filter((result) => selectedTypes.includes(result.type))
-				: groupedResults[group];
-
-			if (filteredGroupResults.length > 0) {
-				hasResults = true;
-				const h3 = document.createElement('h3');
-				h3.className = 'text-2xl mb-0';
-				h3.textContent = filterLabelMap[group] || group;
-				resultsList.appendChild(h3);
-
-				const ul = document.createElement('ul');
-				ul.classList.add('flex', 'flex-col', 'gap-2', 'p-0', 'list-none');
-
-				filteredGroupResults.forEach((result, index) => {
-					const li = document.createElement('li');
-					li.setAttribute('data-index', String(index));
-
-					const a = document.createElement('a');
-					a.href = result.url.replace(/\/+/g, '/');
-					a.className = 'flex items-center gap-2 py-1 hover:text-cyan-300';
-
-					if (result.icon) {
-						const img = document.createElement('img');
-						img.src = `${imageBaseUrl}${toWebp(result.icon)}`;
-						img.alt = '';
-						img.className = 'h-6 w-6 shrink-0 object-contain self-center';
-						img.loading = 'lazy';
-						a.appendChild(img);
-					}
-
-					const nameSpan = document.createElement('span');
-					nameSpan.textContent = result.name;
-					a.appendChild(nameSpan);
-					if (result.subtitle) {
-						const subtitle = document.createElement('small');
-						subtitle.className = 'block text-xs text-sky-200/70';
-						subtitle.textContent = result.subtitle;
-						nameSpan.appendChild(subtitle);
-					}
-
-					li.appendChild(a);
-					ul.appendChild(li);
-				});
-
-				resultsList.appendChild(ul);
-			}
-		});
-
-		const resultCount = resultsList.querySelectorAll('a').length;
-		announce(
-			resultCount === 0
-				? 'No matching results found.'
-				: `${resultCount}${resultCount >= MAX_RESULTS ? '+' : ''} result${resultCount === 1 ? '' : 's'}. Press Down Arrow to move to them.`,
-		);
-
-		if (!hasResults) {
-			const emptyState = document.createElement('p');
-			emptyState.className = 'text-gray-300';
-			emptyState.textContent = 'No matching results found.';
-			resultsList.appendChild(emptyState);
-		}
-
-		setupKeyboardNavigation();
-	}
-
-	function getResultLinks() {
-		return resultsList ? Array.from(resultsList.querySelectorAll('a')) : [];
-	}
-
-	function setupKeyboardNavigation() {
-		if (!searchInput || !resultsList) return;
-
-		const resultLinks = getResultLinks();
-		resultLinks.forEach((link, index) => {
-			link.addEventListener('keydown', (e) => {
-				if (e.key === 'ArrowDown') {
-					e.preventDefault();
-					resultLinks[index + 1]?.focus();
-				} else if (e.key === 'ArrowUp') {
-					e.preventDefault();
-					if (index > 0) {
-						resultLinks[index - 1].focus();
-					} else {
-						searchInput.focus();
-					}
-				}
-			});
-		});
-	}
-
-	searchInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'ArrowDown') {
-			const first = getResultLinks()[0];
-			if (first) {
-				e.preventDefault();
-				first.focus();
-			}
-		}
+	// Arrow keys: input -> first result, then through the list; Up from the first goes back to the input.
+	const links = () => (results ? Array.from(results.querySelectorAll<HTMLAnchorElement>('a')) : []);
+	input?.addEventListener('keydown', (e) => {
+		if (e.key === 'ArrowDown') { const first = links()[0]; if (first) { e.preventDefault(); first.focus(); } }
+		if (e.key === 'Enter') { const first = links()[0]; if (first) { e.preventDefault(); first.click(); } }
+	});
+	results?.addEventListener('keydown', (e) => {
+		const list = links();
+		const i = list.indexOf(document.activeElement as HTMLAnchorElement);
+		if (i < 0) return;
+		if (e.key === 'ArrowDown') { e.preventDefault(); list[i + 1]?.focus(); }
+		if (e.key === 'ArrowUp') { e.preventDefault(); (i > 0 ? list[i - 1] : input)?.focus(); }
 	});
 </script>
+
+<style is:global>
+	.search-hit { display: flex; align-items: center; gap: .75rem; padding: .45rem .6rem; border-radius: 10px; color: var(--color-ink); }
+	.search-hit:hover, .search-hit:focus-visible { background: var(--color-panel-3); }
+	.search-ico { display: grid; place-items: center; width: 40px; height: 40px; flex: none; border-radius: 9px; background: var(--color-panel-2); border: 1px solid var(--color-line); }
+	.search-ico img { width: 32px; height: 32px; object-fit: contain; }
+	.search-name { min-width: 0; flex: 1; font-size: 1.0625rem; line-height: 1.25; }
+	.search-name small { display: block; font-size: .8125rem; color: var(--color-dim); }
+	.search-type { flex: none; font-size: .8125rem; color: var(--color-dim); }
+</style>

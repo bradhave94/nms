@@ -1,0 +1,20 @@
+---
+import type { NavItem } from '../config/nav';
+import { icons } from '../layouts/navIcons';
+
+interface Props {
+	item: NavItem;
+	active: boolean;
+	/** "page" on the exact page, "true" inside its section */
+	current?: 'page' | 'true';
+}
+
+const { item, active, current } = Astro.props;
+---
+
+<a href={item.href} class:list={['nav-link', active && 'is-active']} aria-current={current}>
+	<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+		{icons[item.icon]?.map((path) => <path d={path.d} fill-rule={path.fillRule} clip-rule={path.clipRule} />)}
+	</svg>
+	{item.name}
+</a>
