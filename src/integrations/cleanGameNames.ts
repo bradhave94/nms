@@ -18,7 +18,7 @@ export function cleanName(name: string): string {
 	// capitalise the first letter inside a leading quote
 	out = out.replace(/^(["'“‘])([a-z])/, (_, q: string, c: string) => q + c.toUpperCase());
 	// roman numerals the data title-cases: "Botanical Pod Ii", "Mark Iv"
-	out = out.replace(/(Ii|Iii|Iv|Vi|Vii|Viii|Ix|Xi|Xii)/g, (m) => m.toUpperCase());
+	out = out.replace(/\b(Ii|Iii|Iv|Vi|Vii|Viii|Ix|Xi|Xii)\b/g, (m) => m.toUpperCase());
 	return out.replace(/\s{2,}/g, ' ').trim();
 }
 
