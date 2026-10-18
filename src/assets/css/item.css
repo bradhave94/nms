@@ -3,7 +3,6 @@
 
 .item-page { padding-bottom: 2rem; }
 .item-page [hidden] { display: none !important; }
-@media (min-width: 1024px) { .item-page { padding-inline: 1rem; } }
 
 /* ── Header: icon, name, pills, summary, Best yield ── */
 .item-head {
