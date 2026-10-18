@@ -159,7 +159,7 @@
         background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--c, #1b2533) 55%, var(--color-panel-2)), var(--color-panel-2) 75%);
         border: 1px solid color-mix(in srgb, var(--c, #2a3546) 70%, #2a3546); }
     .slot > img { width: 72%; height: 72%; object-fit: contain; }
-    .slot > .qty { position: absolute; right: 3px; bottom: 2px; padding: 0 .3rem; border-radius: 4px; background: rgb(0 0 0 / .65); color: #fff; font-size: .72rem; font-weight: 700; line-height: 1.35; font-variant-numeric: tabular-nums; }
+    .slot > .qty { position: absolute; right: 3px; bottom: 2px; padding: 0 .3rem; border-radius: 4px; background: rgb(0 0 0 / .65); color: #fff; font-size: .72rem; font-weight: 700; line-height: 1.35; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .tabular { font-variant-numeric: tabular-nums; }
 }
 
