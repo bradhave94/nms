@@ -1,0 +1,31 @@
+---
+// Compact header for the recipe tables and their card views: machine art, h1, one-line intro
+// (the default slot) and the Table / Cards view switch.
+export interface Props {
+	title: string;
+	/** Machine art in /public, e.g. /images/refiner.webp (256x256). */
+	image: string;
+	/** Base path of the page family, e.g. /refining. */
+	base: string;
+	view: 'table' | 'cards';
+}
+
+const { title, image, base, view } = Astro.props;
+const views = [
+	{ key: 'table', label: 'Table', href: `${base}/` },
+	{ key: 'cards', label: 'Cards', href: `${base}/cards/` },
+] as const;
+---
+
+<header class="rt-head">
+	<img src={image} width="256" height="256" alt="" fetchpriority="high" decoding="async" />
+	<div class="min-w-0">
+		<h1>{title}</h1>
+		<p><slot /></p>
+	</div>
+	<nav class="rt-views" aria-label="Layout">
+		{views.map((v) => (
+			<a href={v.href} aria-current={v.key === view ? 'page' : undefined}>{v.label}</a>
+		))}
+	</nav>
+</header>

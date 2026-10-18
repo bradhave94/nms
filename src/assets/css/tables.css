@@ -1,0 +1,146 @@
+/* Recipe tables and card views: /refining, /cooking, /crafting-guide and their /cards pages.
+   Imported by components/table/Table.astro and RecipeCards.astro. Tokens come from main.css @theme.
+   Text on item colours is set inline by readableTextOn()/swatchStyle(); amount badges are white on
+   black/60 (>= 5.7:1 on any swatch). */
+
+/* ── Page header ───────────────────────────────────────────────────── */
+.rt { max-width: 1180px; margin-inline: auto; }
+.rt-head { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; gap: 1.1rem; align-items: center; padding-top: .5rem; }
+.rt-head > img { width: 88px; height: 88px; object-fit: contain; }
+.rt-head h1 { margin: 0; font-size: clamp(2.25rem, 1.5rem + 2vw, 3rem); line-height: 1.05; font-weight: 700; }
+.rt-head p { margin: .35rem 0 0; max-width: 68ch; color: var(--color-dim); font-size: 1rem; }
+.rt-views { display: flex; gap: .25rem; align-self: start; padding: .2rem; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-panel-2); }
+.rt-views a { display: inline-flex; align-items: center; min-height: 32px; padding: 0 .75rem; border-radius: 7px; font-size: .875rem; color: var(--color-dim); }
+.rt-views a:hover { color: var(--color-ink); background: var(--color-panel-3); }
+.rt-views a[aria-current="page"] { background: rgb(255 195 86 / .14); color: var(--color-accent); font-weight: 600; }
+
+/* ── Filter bar ────────────────────────────────────────────────────── */
+.rt-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin: 1.25rem 0 .75rem; }
+.rt-search { position: relative; flex: 1 1 320px; max-width: 26rem; }
+.rt-search > svg { position: absolute; left: .8rem; top: 50%; width: 1.1rem; height: 1.1rem; translate: 0 -50%; color: var(--color-dim); pointer-events: none; }
+.rt-search .field { padding-left: 2.5rem; padding-right: 2.75rem; font-size: 1rem; }
+.rt-search .field::-webkit-search-cancel-button { display: none; }
+.rt-search .field:not(:placeholder-shown) { border-color: var(--color-accent); }
+.rt-clear { position: absolute; right: 6px; top: 50%; translate: 0 -50%; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 8px; color: var(--color-dim); cursor: pointer; }
+.rt-clear:hover { color: var(--color-ink); background: var(--color-panel-3); }
+.rt-clear svg { width: 1rem; height: 1rem; }
+.rt-clear[hidden] { display: none; }
+
+/* Segmented toggles: buttons with aria-pressed (no overflow clipping, so focus rings show). */
+.rt-seg { display: inline-flex; align-items: stretch; border: 1px solid var(--color-line-strong); border-radius: 10px; background: var(--color-panel-2); }
+.rt-seg > button { display: inline-flex; align-items: center; min-height: 42px; padding: 0 .85rem; font-size: .9375rem; color: #cfd9e4; cursor: pointer; transition: background-color .15s, color .15s; }
+.rt-seg > :first-child { border-radius: 9px 0 0 9px; }
+.rt-seg > :last-child { border-radius: 0 9px 9px 0; }
+.rt-seg > button + button { box-shadow: inset 1px 0 0 var(--color-line); }
+.rt-seg > button:hover { background: var(--color-panel-3); color: var(--color-ink); }
+.rt-seg > button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-accent-ink); font-weight: 600; box-shadow: none; }
+.rt-seg-label { display: inline-flex; align-items: center; padding: 0 .4rem 0 .85rem; font-size: .875rem; color: var(--color-dim); }
+.rt-count { margin: 0 0 0 auto; font-size: .9375rem; color: var(--color-dim); }
+
+/* ── Table stage and the in-table ad slot ─────────────────────────── */
+.rt-stage { position: relative; }
+.rt-stage.rt-pending { height: 1700px; overflow: hidden; }
+.rt-stage.rt-pending > table { opacity: 0; }
+.rt-stage.rt-ad-top { padding-top: var(--rt-ad-gap, 266px); }
+.rt-ad { position: absolute; left: 0; right: 0; top: 330px; display: flow-root; }
+.rt-ad .nitro-ad-slot { margin-block: 8px; }
+
+/* ── Tabulator skin (scoped; the vendor base is tabulator.css) ─────── */
+.rt .tabulator { border: 0; background: transparent; font-size: 1rem; color: var(--color-ink); }
+.rt .tabulator .tabulator-header { border-bottom: 0; background: transparent; color: var(--color-dim); font-weight: 600; }
+.rt .tabulator .tabulator-header .tabulator-col { border-right: 0; background: transparent; }
+.rt .tabulator .tabulator-header .tabulator-col .tabulator-col-content { padding: .35rem .75rem; }
+.rt .tabulator .tabulator-header .tabulator-col .tabulator-col-title { font-size: .8125rem; }
+.rt .tabulator .tabulator-header .tabulator-col.tabulator-sortable.tabulator-col-sorter-element:hover { background: var(--color-panel-3); }
+.rt .tabulator .tabulator-header .tabulator-col .tabulator-col-sorter .tabulator-arrow { border-bottom-color: var(--color-line-strong); }
+.rt .tabulator .tabulator-header .tabulator-col[aria-sort="ascending"] .tabulator-arrow { border-bottom-color: var(--color-accent); }
+.rt .tabulator .tabulator-header .tabulator-col[aria-sort="descending"] .tabulator-arrow { border-top-color: var(--color-accent); border-bottom: none; }
+.rt .tabulator .tabulator-header .tabulator-col[aria-sort="none"] .tabulator-arrow { opacity: 0; transition: opacity .15s; }
+.rt .tabulator .tabulator-header .tabulator-col[aria-sort="none"]:is(:hover, :focus-visible) .tabulator-arrow { opacity: 1; }
+.rt .tabulator .tabulator-tableholder { height: auto !important; background: transparent; }
+.rt .tabulator-col-resize-handle { display: none; }
+.rt .tabulator .tabulator-tableholder .tabulator-table { background: transparent; color: var(--color-ink); }
+.rt .tabulator .tabulator-tableholder .tabulator-placeholder .tabulator-placeholder-contents { padding: 2rem 1rem; color: var(--color-dim); font-size: 1rem; font-weight: 400; white-space: normal; }
+
+.rt .tabulator-row,
+.rt .tabulator-row.tabulator-row-even,
+.rt .tabulator-row.tabulator-selectable:hover { display: flex; min-height: 52px; margin-bottom: 4px; border: 0; border-radius: 8px; overflow: hidden; background: var(--color-panel); }
+.rt .tabulator-row.rt-gap { margin-bottom: calc(var(--rt-ad-gap, 266px) + 4px); }
+.rt .tabulator-row .tabulator-cell { display: flex; align-items: stretch; padding: 0; border-right: 0; white-space: normal; overflow: hidden; }
+.rt .tabulator-row .tabulator-cell.is-empty { background: var(--color-panel); }
+
+.rt .cell-link { display: flex; width: 100%; color: inherit; text-decoration: none; }
+.rt .cell-content { display: flex; align-items: center; gap: .5rem; width: 100%; min-height: 52px; padding: .35rem .7rem; font-size: .9375rem; line-height: 1.2; }
+.rt .cell-content > img { width: 32px; height: 32px; flex: none; object-fit: contain; }
+.rt .cell-link:hover .rt-name { text-decoration: underline; text-underline-offset: 3px; }
+.rt-name { min-width: 0; overflow-wrap: anywhere; }
+.rt-qty { flex: none; padding: 0 .38rem; border-radius: 4px; background: rgb(0 0 0 / .6); color: #fff; font-size: .75rem; font-weight: 700; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.rt-op, .rt-value { display: flex; flex-direction: column; justify-content: center; width: 100%; padding: .35rem .8rem; background: var(--color-panel); color: #dfe7f0; font-size: .875rem; line-height: 1.25; }
+.rt-op small, .rt-value small { color: var(--color-dim); font-size: .78rem; }
+.rt-value { flex-direction: row; align-items: center; gap: .25rem; font-size: .9375rem; }
+
+/* ── Pager: "‹ 1 / 15 ›" and the page-size select ─────────────────── */
+.rt-pager { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; padding: .75rem 0 1rem; color: var(--color-dim); font-size: .9375rem; }
+.rt-pager[hidden] { display: none; }
+.rt-pager .tabulator-page[data-page="first"],
+.rt-pager .tabulator-page[data-page="last"],
+.rt-pager .tabulator-pages { display: none; }
+.rt-pager .tabulator-page { order: 1; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--color-line-strong); border-radius: 10px; background: var(--color-panel-2); color: var(--color-ink); font-size: 1.35rem; line-height: 1; cursor: pointer; }
+.rt-pager .tabulator-page:not(:disabled):hover { border-color: var(--color-accent); color: var(--color-accent); }
+.rt-pager .tabulator-page:disabled { opacity: .45; cursor: default; }
+.rt-pager .rt-pagecount { order: 2; min-width: 4.5rem; text-align: center; color: var(--color-ink); }
+.rt-pager .tabulator-page[data-page="next"] { order: 3; }
+.rt-pager label { order: 4; margin-left: auto; }
+.rt-pager select { order: 5; min-height: 42px; padding: 0 2.2rem 0 .75rem; border: 1px solid var(--color-line-strong); border-radius: 10px; background-color: var(--color-panel-2); color: var(--color-ink); font-size: .9375rem; }
+.rt-pager select:focus { border-color: var(--color-accent); box-shadow: none; }
+
+/* ── Phones: stacked rows, output first, no horizontal scroll ──────── */
+@media (max-width: 640px) {
+    .rt-head { grid-template-columns: 64px minmax(0, 1fr); gap: .8rem; }
+    .rt-head > img { width: 64px; height: 64px; }
+    /* On phones the stacked table already reads like cards; the sidebar links both views' pages. */
+    .rt-views { display: none; }
+    .rt-search { flex-basis: 100%; max-width: none; }
+    .rt-seg { flex: 1 1 100%; }
+    .rt-seg > button { flex: 1 1 auto; justify-content: center; padding: 0 .6rem; }
+    .rt-count { flex-basis: 100%; margin: 0; }
+    .rt-stage.rt-pending { height: 3200px; }
+
+    /* Stacked rows: the column headers stay for screen readers only (the script takes their sort
+       buttons out of the tab order at this width, so focus never lands on something invisible). */
+    .rt .tabulator .tabulator-header { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .rt .tabulator .tabulator-tableholder { width: 100% !important; overflow: visible !important; }
+    .rt .tabulator .tabulator-tableholder .tabulator-table { display: block; width: 100% !important; min-width: 0 !important; }
+    .rt .tabulator-row,
+    .rt .tabulator-row.tabulator-row-even,
+    .rt .tabulator-row.tabulator-selectable:hover { flex-wrap: wrap; gap: 4px; padding: 4px; margin-bottom: 8px; border: 1px solid var(--color-line); border-radius: 12px; }
+    .rt .tabulator-row.rt-gap { margin-bottom: calc(var(--rt-ad-gap, 266px) + 8px); }
+    .rt .tabulator-row .tabulator-cell { flex: 1 1 140px; width: auto !important; min-width: 0 !important; height: auto !important; border-radius: 8px; }
+    .rt .tabulator-row .tabulator-cell.is-empty { display: none; }
+    .rt .tabulator-row .tabulator-cell[tabulator-field="out"] { order: -1; flex-basis: 100%; }
+    .rt .tabulator-row .tabulator-cell[tabulator-field="op"],
+    .rt .tabulator-row .tabulator-cell[tabulator-field="v"] { order: 10; flex-basis: 100%; }
+    .rt .cell-content { min-height: 44px; padding: .3rem .55rem; font-size: .875rem; }
+    .rt .cell-content > img { width: 28px; height: 28px; }
+    .rt [tabulator-field="out"] .cell-content { min-height: 54px; font-size: 1.0625rem; font-weight: 600; }
+    .rt [tabulator-field="out"] .cell-content > img { width: 36px; height: 36px; }
+    .rt-op, .rt-value { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: baseline; gap: .1rem .5rem; padding: .2rem .4rem; background: transparent; }
+    .rt-pager label { margin-left: auto; }
+}
+
+/* ── Card views (/refining/cards etc.) ─────────────────────────────── */
+.rc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: .75rem; align-items: start; margin: 0; padding: 0; list-style: none; }
+.rc { display: flex; flex-direction: column; overflow: hidden; background: var(--color-panel); border: 1px solid var(--color-line); border-radius: 12px; }
+.rc[hidden] { display: none; }
+.rc-out { display: flex; align-items: center; gap: .65rem; min-height: 60px; padding: .45rem .8rem; }
+.rc-out img { width: 44px; height: 44px; flex: none; object-fit: contain; }
+.rc-out h2 { margin: 0; min-width: 0; font-size: 1.0625rem; font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
+.rc-out:hover h2 { text-decoration: underline; text-underline-offset: 3px; }
+.rc-in { display: grid; gap: 2px; margin: 0; padding: .4rem; list-style: none; }
+.rc-in a { display: flex; align-items: center; gap: .55rem; min-height: 40px; padding: .2rem .45rem; border-radius: 8px; font-size: .9375rem; }
+.rc-in a:hover { background: var(--color-panel-3); }
+.rc-in .slot { width: 2.1rem; border-radius: 8px; }
+.rc-in .rt-qty { margin-left: auto; }
+.rc-meta { margin: 0; padding: .1rem .85rem .6rem; color: var(--color-dim); font-size: .8125rem; }
+.rc-empty { padding: 2rem 0; color: var(--color-dim); }
+.rc-empty[hidden] { display: none; }

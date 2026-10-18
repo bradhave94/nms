@@ -1,48 +1,33 @@
 ---
 // Compact server-rendered rows for the recipe tables (refining, cooking, crafting guide).
-// Each item cell is just its link, name, amount, colour and icon id; Tabulator expands it
-// into the coloured card with the icon on the client (formatCell in Table.astro), so the
-// HTML stays small and icons load only for rows on screen. Crawlers still get every recipe
-// and link. This component deliberately has no <style> block: scoped styles would add a
-// data-astro-cid attribute to every cell.
-import { getSlug } from '@utils/lookup.js';
-import { toWebp } from '@utils/icons';
-
-type CellData = {
-  id: string;
-  name: string;
-  amount?: number;
-  colour: string;
-  image?: string;
-  href?: string;
-};
+// Each item cell is just its link, name, amount, colour and icon; Table.astro's script reads these
+// rows into Tabulator and draws the coloured swatch with the icon, so the HTML stays small and icons
+// load only for rows on screen. Crawlers still get every recipe and link. The row's data attributes
+// carry the filter keys (n = number of inputs, y = output units per input unit).
+// No <style> block on purpose: scoped styles would add a data-astro-cid attribute to every cell.
+import type { RecipeItem, RecipeRow } from './recipeRows';
 
 export interface Props {
-  columns: Array<{ field: string }>;
-  data: Array<Record<string, unknown>>;
+	rows: RecipeRow[];
+	extra: 'operation' | 'value';
 }
 
-const { columns, data } = Astro.props;
-
-const isItemCell = (cell: unknown): cell is CellData =>
-  Boolean(cell && typeof cell === 'object' && 'id' in cell);
+const { rows, extra } = Astro.props;
+const slots = [0, 1, 2] as const;
 ---
 
 <tbody>
-  {data.map((row) => (
-    <tr>
-      {columns.map((column) => {
-        const cell = row[column.field];
-        if (isItemCell(cell)) {
-          return (
-            <td><a href={cell.href ?? getSlug(cell.id)} data-c={cell.colour} data-i={cell.image ? toWebp(cell.image) : undefined}>{cell.name}</a>{cell.amount ? <b>{cell.amount.toLocaleString()}</b> : null}</td>
-          );
-        }
-        if (typeof cell === 'number') {
-          return <td><span class="nms-sort">{cell}</span>{cell.toLocaleString()}</td>;
-        }
-        return <td>{typeof cell === 'string' ? cell : null}</td>;
-      })}
-    </tr>
-  ))}
+	{rows.map((row) => {
+		const item = (cell: RecipeItem | undefined) =>
+			cell ? <td><a href={cell.href} data-c={cell.colour} data-i={cell.icon}>{cell.name}</a>{cell.amount ? <b>{cell.amount.toLocaleString()}</b> : null}</td> : <td></td>;
+		return (
+			<tr data-n={row.inputs.length} data-y={Number(row.yield.toFixed(4))}>
+				{slots.map((i) => item(row.inputs[i]))}
+				{item(row.output)}
+				{extra === 'operation'
+					? <td>{row.operation}{row.detail && <small>{row.detail}</small>}</td>
+					: <td data-v={row.value ?? 0}>{(row.value ?? 0).toLocaleString()}</td>}
+			</tr>
+		);
+	})}
 </tbody>

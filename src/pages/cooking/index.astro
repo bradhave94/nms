@@ -1,109 +1,14 @@
 ---
-
-// Importing required components and data
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
-import processor from '@datav2/NutrientProcessor.json';
+import { cookingRows, sortRows } from '@components/table/recipeRows';
 import { getById, getSlug } from '@utils/lookup.js';
-import type { Item } from '@utils/lookup.js';
-import type { TableRow } from '@components/table/Table.astro';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
-// Interfaces for defining the shape of input and output objects
-interface Input {
-	Id: string;
-	Quantity: number;
-}
-
-interface Output {
-	Id: string;
-	Quantity: number;
-}
-
-interface Processor {
-	Inputs: Input[];
-	Output: Output;
-}
-
-interface ItemDetails {
-	id: string;
-	name: string;
-	description: string;
-	value: number;
-	amount: number;
-	image: string;
-	colour: string;
-}
-
-type TableItem = TableRow & {
-	input_1: ItemDetails;
-	input_2?: ItemDetails;
-	input_3?: ItemDetails;
-	output: ItemDetails;
-};
-// Function to create an array of data for each item
-const createArray = (item: Processor): TableItem | undefined => {
-
-	// Map the inputs and get the details of each input item using `getById` function
-	const inputs = item.Inputs.map((element) => {
-		const i: Item | undefined = getById(element.Id);
-		// If item is not found, return undefined
-		if (!i) return;
-		// Return the item details
-		const details: ItemDetails = {
-			id: i.Id,
-			name: i.Name,
-			description: i.Description,
-			value: i.BaseValueUnits,
-			amount: element.Quantity,
-			image: i.Icon,
-			colour: i.Colour,
-		};
-		return details;
-	});
-
-	// Get the details of the output item using `getById` function
-	const o: Item | undefined = getById(item.Output.Id);
-	// If item is not found, return undefined
-	if (!o) return;
-	// Return the item details
-	const output: ItemDetails = {
-		id: o.Id,
-		name: o.Name,
-		description: o.Description,
-		value: o.BaseValueUnits,
-		amount: item.Output.Quantity,
-		image: o.Icon,
-		colour: o.Colour,
-	};
-
-	// Combine the inputs and output data in a new object
-	// Must have output and at least one input
-	if (!inputs[0]) return undefined;
-
-	const newItem: TableItem = {
-		input_1: inputs[0],
-		input_2: inputs[1],
-		input_3: inputs[2],
-		output,
-		description: output.description,
-		value: output.value,
-	};
-	return newItem;
-};
-
-// Define the columns to be displayed in the table
-const columns = [
-	{ title: 'Input 1', field: 'input_1' },
-	{ title: 'Input 2', field: 'input_2' },
-	{ title: 'Input 3', field: 'input_3' },
-	{ title: 'Output', field: 'output' }
-
-];
-
-// Map the data and create an array of filtered items
-const data = processor.map(createArray).filter((item): item is TableItem => item !== undefined);
+// Data order for the structured data list (unchanged); the table shows them by output name.
+const data = cookingRows();
+const rows = sortRows(data, 'name');
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/cooking/', siteOrigin).toString();
@@ -135,6 +40,7 @@ const structuredData = buildCollectionStructuredData({
 	ogImage={`${SITE.website}/images/cooker.webp`}
 	structuredData={structuredData}
 >
-	<Table title="Cooking" image="cooking" image_width={60} image_height={60} columns={columns} data={data} />
+	<Table title="Cooking" image="/images/cooker.webp" base="/cooking" kind="cooking" rows={rows} extra="operation">
+		All {rows.length.toLocaleString()} Nutrient Processor recipes. Type an ingredient to see what it cooks into, or a dish to see how to make it.
+	</Table>
 </Layout>
-

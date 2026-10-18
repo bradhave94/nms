@@ -163,34 +163,6 @@
     .tabular { font-variant-numeric: tabular-nums; }
 }
 
-#table {
-    @apply  border-0
-}
-
-#table .tabulator-row .tabulator-cell {
-    @apply p-0 border-b border-r border-gray-500 transition-all hover:opacity-80 min-w-[275px] inline-flex items-center text-white
-}
-
-#table  .tabulator-row .tabulator-cell[tabulator-field="value"] {
-    @apply text-base px-3
-}
-
-#table .tabulator-row .tabulator-cell picture {
-    @apply min-w-[50px]
-}
-
-#table .tabulator-row .tabulator-cell:last-of-type {
-    @apply border-r-0
-}
-
-#table .tabulator-cell > a {
-    @apply w-full h-full flex
-}
-
-#table .tabulator-cell > a > div {
-    @apply flex flex-row-reverse items-center justify-end flex-1 text-white text-base gap-2 px-2
-}
-
 :is(
     [style="background: #FFC356"],
     [style="background: #DEDCD1"],
@@ -202,58 +174,6 @@
     [style="background: #CCCCCC"]
     ) {
     @apply text-black!
-}
-
-#table .tabulator-cell > a > div[style="background: #CCCCCC"] {
-    @apply bg-slate-900! text-white!
-}
-
-#table .tabulator-row {
-    @apply bg-gray-800
-}
-
-#table .tabulator-row.tabulator-row-even {
-    @apply bg-gray-800
-}
-
-#table .tabulator-header .tabulator-col {
-    @apply bg-black! text-base! text-white! p-2! min-w-[275px]!
-}
-
-#table .tabulator-header .tabulator-col:last-of-type {
-    @apply border-r-0
-}
-
-#table .tabulator-arrow {
-    @apply border-b-blue-500
-}
-
-#table .tabulator-col.tabulator-sortable[aria-sort="descending"] .tabulator-arrow {
-    @apply border-t-blue-500
-}
-
-#table + .tabulator-footer {
-    @apply bg-black text-base text-white py-2 px-10 border-0 overflow-x-scroll
-}
-
-#table + .tabulator-footer .tabulator-page {
-    @apply inline-flex items-center transition-colors rounded-sm border-0 bg-blue-500 px-2.5 py-1.5 text-xs font-medium text-black shadow-xs hover:bg-blue-800 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-}
-
-#table + .tabulator-footer .tabulator-page.active {
-    @apply bg-blue-700 hover:bg-blue-800
-}
-
-#table + .tabulator-footer .tabulator-page-size {
-    @apply rounded-md border-gray-300 py-[4.5px] pl-3 pr-10 text-xs focus:border-blue-500 focus:outline-hidden focus:ring-blue-500 sm:text-sm bg-blue-500 border-0 text-black
-}
-
-#table + .tabulator-footer .tabulator-paginator {
-    @apply text-white ml-5
-}
-
-.tabulator-tooltip.tabulator-popup-container {
-    @apply text-base p-4 bg-black border-blue-500 rounded-md
 }
 
 .hide-scrollbar {
@@ -296,10 +216,6 @@
 
 .btn {
     @apply inline-flex items-center rounded-md border border-transparent bg-blue-500 px-3 py-2 text-sm font-medium leading-4 text-black shadow-xs hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-}
-
-.tabulator-search input {
-    @apply text-white placeholder-gray-400;
 }
 
 #results li a {

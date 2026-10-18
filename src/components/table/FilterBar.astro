@@ -1,0 +1,79 @@
+---
+// Filter bar shared by the recipe tables and the card views: search, "Makes it / Uses it / Both",
+// machine size (number of inputs) and the result count (a role="status" region).
+// Behaviour lives in ./filters.ts (bindFilters).
+export type RecipeKind = 'refining' | 'cooking' | 'crafting';
+
+export interface Props {
+	kind: RecipeKind;
+	total: number;
+}
+
+const { kind, total } = Astro.props;
+
+const sizes: Record<RecipeKind, { label: string; prefix?: string; options: Array<[string, string, string?]> }> = {
+	refining: {
+		label: 'Refiner size',
+		options: [
+			['', 'Any refiner'],
+			['1', 'Portable', ' (1 input)'],
+			['2', 'Medium', ' (2 inputs)'],
+			['3', 'Large', ' (3 inputs)'],
+		],
+	},
+	cooking: {
+		label: 'Number of ingredients',
+		prefix: 'Ingredients',
+		options: [
+			['', 'Any'],
+			['1', '1', ' ingredient'],
+			['2', '2', ' ingredients'],
+			['3', '3', ' ingredients'],
+		],
+	},
+	crafting: {
+		label: 'Number of components',
+		prefix: 'Components',
+		options: [
+			['', 'Any'],
+			['1', '1', ' component'],
+			['2', '2', ' components'],
+			['3', '3', ' components'],
+		],
+	},
+};
+
+const placeholder: Record<RecipeKind, string> = {
+	refining: 'Search, e.g. Chromatic Metal',
+	cooking: 'Search an ingredient or dish',
+	crafting: 'Search a product or component',
+};
+
+const size = sizes[kind];
+const noun = 'recipes';
+---
+
+<div class="rt-bar" data-rt-filters>
+	<div class="rt-search">
+		<label for="rt-search" class="sr-only">Search {noun}</label>
+		<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M8.5 3a5.5 5.5 0 0 1 4.38 8.83l3.65 3.64a.75.75 0 1 1-1.06 1.06l-3.64-3.65A5.5 5.5 0 1 1 8.5 3Zm0 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" /></svg>
+		<input id="rt-search" type="search" class="field" placeholder={placeholder[kind]} autocomplete="off" spellcheck="false" enterkeyhint="search" data-rt-q />
+		<button type="button" class="rt-clear" aria-label="Clear search" data-rt-clear hidden>
+			<svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L8.94 10l-4.72 4.72a.75.75 0 1 0 1.06 1.06L10 11.06l4.72 4.72a.75.75 0 1 0 1.06-1.06L11.06 10l4.72-4.72a.75.75 0 0 0-1.06-1.06L10 8.94 5.28 4.22Z" /></svg>
+		</button>
+	</div>
+	<div class="rt-seg" role="group" aria-label="Show recipes that" data-rt-mode>
+		<button type="button" aria-pressed="true" data-value="out">Makes it</button>
+		<button type="button" aria-pressed="false" data-value="in">Uses it</button>
+		<button type="button" aria-pressed="false" data-value="both">Both</button>
+	</div>
+	<div class="rt-seg" role="group" aria-label={size.label} data-rt-size>
+		{size.prefix && <span class="rt-seg-label" aria-hidden="true">{size.prefix}</span>}
+		{size.options.map(([value, text, hint], index) => (
+			<button type="button" aria-pressed={index === 0 ? 'true' : 'false'} data-value={value}>
+				{text}{hint && <span class="sr-only">{hint}</span>}
+			</button>
+		))}
+	</div>
+	<p class="rt-count tabular" role="status" data-rt-count>{total.toLocaleString()} {noun}</p>
+</div>
