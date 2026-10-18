@@ -136,7 +136,7 @@ export type RecipeRowView = {
 	inputUnits: number;
 	/** Output gained per batch: the output minus any of the same item the recipe consumes ("Indium + Chromatic Metal -> 2 Indium" gains 1). */
 	netOut: number;
-	/** Net output per unit of the other inputs consumed. */
+	/** Net output per input unit: divided by the other inputs, or by the self input when that is larger. */
 	yieldPerInput: number;
 };
 

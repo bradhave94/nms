@@ -40,6 +40,7 @@ export function cleanDescription(text: string): string {
 			return kept.join(' ');
 		})
 		.join('\n')
+		.replace(/Traveller -null-/g, 'Traveller')
 		.replace(/-null-/g, 'Traveller')
 		.replace(/[ \t]{2,}/g, ' ')
 		.replace(/\n{3,}/g, '\n\n')

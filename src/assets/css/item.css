@@ -56,10 +56,11 @@ a.best-io:hover .nm { color: var(--color-accent); text-decoration: underline; te
 .item-aside { min-width: 0; }
 /* phones, no Best yield box: the first section (About, or the first list of uses) is the answer, so the ad
    follows it, then the rest. The main column dissolves into the stack so the ad can sit between its sections. */
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
+  .item-body.no-answer { gap: 1.75rem; }
   .item-body.no-answer > .item-main { display: contents; }
   .item-body.no-answer > .item-main > * { order: 3; }
-  .item-body.no-answer > .item-main > :first-child { order: 1; }
+  .item-body.no-answer > .item-main > :nth-child(1 of :not(script, style)) { order: 1; }
   .item-body.no-answer > .item-ad { order: 2; }
   .item-body.no-answer > .item-aside { order: 4; }
 }
