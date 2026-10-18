@@ -16,57 +16,59 @@ const previousLabel = meta.previousVersionLabel;
 const showValue = (value: string): string => (value === 'None' ? '(not set)' : value);
 const originalVariantItem = meta.releaseVariant ? getById(meta.releaseVariant.BaseItemId) : undefined;
 ---
-
 {
 	meta.kind === 'added' ? (
-		<div class="mb-6 mt-6 rounded-md border border-emerald-700/60 bg-emerald-950/40 px-4 py-3 text-sm text-emerald-100">
-			<p class="m-0 font-semibold">Added in update {versionLabel}</p>
-			{meta.releaseVariant && (
-				<p class="m-0 mt-1 text-emerald-200/80">
-					Expedition {meta.releaseVariant.Expedition} variant
-					{originalVariantItem && <> of <a class="underline" href={getSlug(originalVariantItem)}>{originalVariantItem.Name}</a></>}.
-				</p>
-			)}
+		<div class="update-note panel flex items-start gap-3 px-4 py-3 text-[.9rem]">
+			<span class="mt-[.45rem] h-2 w-2 shrink-0 rounded-full bg-glow" aria-hidden="true"></span>
+			<div class="min-w-0">
+				<p class="m-0 font-semibold text-ink">Added in update {versionLabel}</p>
+				{meta.releaseVariant && (
+					<p class="m-0 mt-1 text-dim">
+						Expedition {meta.releaseVariant.Expedition} variant
+						{originalVariantItem && <> of <a class="link" href={getSlug(originalVariantItem)}>{originalVariantItem.Name}</a></>}.
+					</p>
+				)}
+			</div>
 		</div>
 	) : (
 		<div
 			id="update-changes-panel"
-			class="update-changes-panel mb-6 mt-6 rounded-md border border-amber-700/60 bg-amber-950/35 text-sm text-amber-50"
+			class="update-changes-panel update-note panel text-[.9rem]"
 			data-has-diff={hasDiff ? '1' : '0'}
 		>
-			<div class="px-4 py-3">
-				<p class="m-0 font-semibold">Updated in update {versionLabel}</p>
-				<p class="m-0 mt-1 text-amber-100/80">
-					{hasDiff ? (
-						<>
-							{' '}
+			<div class="flex items-start gap-3 px-4 py-3">
+				<span class="mt-[.45rem] h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
+				<div class="min-w-0">
+					<p class="m-0 font-semibold text-ink">Updated in update {versionLabel}</p>
+					<p class="m-0 mt-1 text-dim">
+						{hasDiff ? (
 							<button
 								type="button"
 								aria-expanded="false"
 								aria-controls="update-changes-detail"
-								class="update-changes-toggle ml-1 underline hover:text-white"
+								class="update-changes-toggle link min-h-6"
 							>
 								Show what changed
 							</button>
-						</>
-					) : (
-						<> Data was refreshed for this patch; no player-facing text fields changed.</>
-					)}
-				</p>
+						) : (
+							<>Data was refreshed for this patch; no player-facing text fields changed.</>
+						)}
+					</p>
+				</div>
 			</div>
 			{hasDiff && (
-				<div id="update-changes-detail" class="update-changes-detail hidden min-w-0 border-t border-amber-800/60 px-4 py-3">
+				<div id="update-changes-detail" class="update-changes-detail hidden min-w-0 border-t border-line px-4 py-3">
 					{diffRows.map((row) => (
-						<section class="min-w-0 border-t border-amber-900/50 py-3 first:border-0">
-							<p class="m-0 mb-2 text-sm font-semibold text-amber-100">{row.field}</p>
+						<section class="min-w-0 border-t border-line py-3 first:border-0">
+							<p class="m-0 mb-2 font-semibold text-ink">{row.field}</p>
 							<dl class="m-0 grid min-w-0 gap-3 sm:grid-cols-2">
 								<div class="min-w-0">
-									<dt class="text-xs text-amber-200/90">Before ({previousLabel})</dt>
-									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-amber-100/70">{showValue(row.before)}</dd>
+									<dt class="text-[.8rem] text-dim">Before ({previousLabel})</dt>
+									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-dim">{showValue(row.before)}</dd>
 								</div>
 								<div class="min-w-0">
-									<dt class="text-xs text-amber-200/90">After ({versionLabel})</dt>
-									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-white">{showValue(row.after)}</dd>
+									<dt class="text-[.8rem] text-dim">After ({versionLabel})</dt>
+									<dd class="m-0 mt-1 whitespace-pre-wrap [overflow-wrap:anywhere] text-ink">{showValue(row.after)}</dd>
 								</div>
 							</dl>
 						</section>

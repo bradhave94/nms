@@ -1,7 +1,8 @@
 ---
-import { Image } from 'astro:assets';
-import Accordion from '@components/Accordion.astro';
+// "How to craft it": the crafting tree (crafted parts open to their own recipes) and the raw
+// materials it all comes down to. Amounts follow the "I need" box.
 import NestedList from '@components/NestedList.astro';
+import ItemSlot from '@components/item/ItemSlot.astro';
 import { getSlug } from '@utils/lookup.js';
 import type { ProcessedItem, RawItem } from '@utils/recipeTree';
 import { toWebp } from '@utils/icons';
@@ -17,79 +18,47 @@ interface Props {
   }>;
   rawItems: RawItem[];
   isFoodItem: boolean;
-  outputRefinedLength: number;
-  outputCookedLength: number;
-  imageBaseUrl: string;
 }
 
-const { item, data, rawItems, isFoodItem, outputRefinedLength, outputCookedLength, imageBaseUrl } = Astro.props;
+const { item, data, rawItems, isFoodItem } = Astro.props;
+const craftItem = data[0];
+const hasSubRecipes = craftItem?.RequiredItems.some((part) => part.RequiredItems.length > 0) ?? false;
+const sortedRaw = [...rawItems].sort((a, b) => b.Quantity - a.Quantity);
+const rawTotal = rawItems.reduce((sum, r) => sum + r.Quantity, 0);
 ---
 
-<!-- Crafting section -->
-{data.length > 0 && (
-  <div id="crafting" class="mb-[7.5rem]">
-    <h2 class="relative mt-8 mb-4 text-center">
-      <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
+{craftItem && (
+  <section id="crafting" class="recipe-panel" aria-labelledby="crafting-title">
+    <div class="recipe-panel-head">
+      <h2 id="crafting-title" class="m-0 text-[1.15rem] font-semibold">
         {isFoodItem ? `How to cook ${item.Name}` : `How to craft ${item.Name}`}
-      </span>
-    </h2>
-
-    <div class="max-w-4xl mx-auto">
-      {/* Crafting tree - full width, single column */}
-      <div class="bg-gray-900 rounded-lg border border-gray-700 overflow-hidden">
-        {data.map((craftItem) => (
-          <Accordion open={data.length + outputRefinedLength + outputCookedLength === 1}>
-            <div class="flex items-center gap-3" slot="title">
-              <Image
-                src={`${imageBaseUrl}${toWebp(craftItem.Icon)}`}
-                alt=""
-                sizes="48px"
-                width={48}
-                height={48}
-                class="shrink-0"
-              />
-              <p class="m-0 text-lg font-medium text-white flex items-center gap-2">
-                {craftItem.Name}
-                <span class="inline-flex items-center justify-center min-w-7 rounded-sm px-1.5 py-0.5 text-xs font-medium bg-gray-700/80 text-gray-300 tabular-nums" data-quantity={craftItem.Quantity}>{craftItem.Quantity.toLocaleString()}</span>
-              </p>
-            </div>
-            <div slot="content">
-              {craftItem.RequiredItems?.length > 0 && <NestedList items={craftItem} depth={0} />}
-            </div>
-          </Accordion>
-        ))}
-      </div>
-
-      {/* Raw materials - compact list below tree */}
-      {rawItems.length > 0 && (
-        <div class="mt-6">
-          <h3 class="mb-3 text-sm font-medium text-gray-400 uppercase tracking-wide">
-            Raw materials · {rawItems.length} items · <span id="raw-total" data-base-total={rawItems.reduce((sum, r) => sum + r.Quantity, 0)}>{rawItems.reduce((sum, r) => sum + r.Quantity, 0).toLocaleString()}</span> total
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            {rawItems
-              .sort((a, b) => b.Quantity - a.Quantity)
-              .map((rawItem) => (
-                <a
-                  href={getSlug(rawItem.Id)}
-                  class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-opacity hover:opacity-90"
-                  style={`background: #${rawItem.Colour || '666'}33; border: 1px solid #${rawItem.Colour || '666'}55`}
-                >
-                  <Image
-                    src={`${imageBaseUrl}${toWebp(rawItem.Icon)}`}
-                    alt=""
-                    sizes="24px"
-                    width={24}
-                    height={24}
-                    class="shrink-0"
-                  />
-                  <span class="text-white font-medium">{rawItem.Name}</span>
-                  <span class="inline-flex items-center justify-center min-w-[1.75rem] rounded-sm px-1.5 py-0.5 text-xs font-medium bg-black/30 text-gray-300 tabular-nums" data-quantity={rawItem.Quantity}>{rawItem.Quantity.toLocaleString()}</span>
-                </a>
-              ))}
-          </div>
-        </div>
-      )}
+      </h2>
+      {hasSubRecipes && <p class="m-0 text-[.85rem] text-dim">Open a part to see its recipe</p>}
     </div>
-  </div>
+    <div class="px-3 py-2 sm:px-4">
+      <NestedList items={craftItem} depth={0} />
+    </div>
+
+    {hasSubRecipes && sortedRaw.length > 0 && (
+      <div class="border-t border-line px-3 py-3 sm:px-4">
+        <h3 class="m-0 mb-2 text-[1rem] font-semibold">
+          Raw materials
+          <span class="ml-1 font-normal text-dim text-[.9rem]">
+            {sortedRaw.length} {sortedRaw.length === 1 ? 'item' : 'items'},{' '}
+            <span id="raw-total" class="tabular" data-base-total={rawTotal}>{rawTotal.toLocaleString()}</span> in total
+          </span>
+        </h3>
+        <ul class="m-0 flex list-none flex-wrap gap-2 p-0" role="list">
+          {sortedRaw.map((rawItem) => (
+            <li>
+              <a href={getSlug(rawItem.Id)} class="raw-chip">
+                <ItemSlot icon={toWebp(rawItem.Icon)} colour={rawItem.Colour} qty={rawItem.Quantity} qtyAttr="data-quantity" class="w-9" />
+                <span class="nm">{rawItem.Name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </section>
 )}

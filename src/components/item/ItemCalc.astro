@@ -1,0 +1,121 @@
+---
+// "Calculate": the quantity multiplier, worded as "I need [n]". Crafting-tree amounts
+// (`data-quantity`) scale by n; each refiner/cooking row (`data-out`) scales to the batches it takes
+// to make n (ceil(n / output)), and the summary spells out the best recipe in batches.
+import type { RecipeRowView } from '@utils/itemPageContext';
+
+interface Props {
+  itemName: string;
+  best?: RecipeRowView;
+  craft?: RecipeRowView;
+  /** A crafting tree with `data-quantity` amounts is on the page. */
+  hasTree?: boolean;
+}
+
+const { itemName, best, craft, hasTree = false } = Astro.props;
+const craftData = craft ? JSON.stringify(craft.inputs.map((slot) => [slot.name, slot.qty])) : undefined;
+const craftText = (row: RecipeRowView) =>
+  `${row.machine === 'Nutrient Processor' ? 'Cook' : 'Craft'} 1: ${row.inputs.map((slot) => `${slot.qty.toLocaleString()} ${slot.name}`).join(' + ')}${hasTree ? '. The tree below shows every part.' : '.'}`;
+const bestData = best
+  ? JSON.stringify({
+      out: best.output.qty,
+      seconds: best.seconds ?? null,
+      machine: best.machine,
+      inputs: best.inputs.map((slot) => [slot.name, slot.qty]),
+    })
+  : undefined;
+const batchText = (row: RecipeRowView) =>
+  `1 batch: ${row.inputs.map((slot) => `${slot.qty.toLocaleString()} ${slot.name}`).join(' + ')} in a ${row.machine} makes ${row.output.qty.toLocaleString()}${row.time ? `, about ${row.time}` : ''}.`;
+---
+
+<div class="panel item-calc p-4" data-calc data-best={bestData} data-craft={craftData} data-tree={hasTree ? '1' : undefined}>
+  <h2 class="m-0 text-[1rem] font-semibold">Calculate</h2>
+  <div class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">
+    <label for="quantity" class="shrink-0 text-[.95rem]">I need</label>
+    <input
+      id="quantity"
+      class="quantity field tabular w-28! flex-none"
+      name="quantity"
+      type="number"
+      inputmode="numeric"
+      min="1"
+      max="999999"
+      value="1"
+      aria-describedby="calc-result"
+    />
+    <span class="min-w-0 text-[.95rem] text-dim">{itemName}</span>
+  </div>
+  <div id="calc-result" class="mt-2 grid gap-1 text-[.875rem] text-dim" aria-live="polite">
+    {best && <p class="m-0" data-calc-result>{batchText(best)}</p>}
+    {craft && <p class="m-0" data-calc-craft data-verb={craft.machine === 'Nutrient Processor' ? 'Cook' : 'Craft'}>{craftText(craft)}</p>}
+  </div>
+</div>
+
+<script>
+  const formatSeconds = (seconds: number): string => {
+    if (seconds < 60) return `${Number.parseFloat(seconds.toFixed(seconds < 10 ? 2 : 0))}s`;
+    if (seconds < 3600) {
+      const minutes = Math.floor(seconds / 60);
+      const rest = Math.round(seconds % 60);
+      return rest > 0 ? `${minutes}m ${rest}s` : `${minutes}m`;
+    }
+    return `${Number.parseFloat((seconds / 3600).toFixed(1))} h`;
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-calc]').forEach((box) => {
+    const input = box.querySelector<HTMLInputElement>('input.quantity');
+    const result = box.querySelector<HTMLElement>('[data-calc-result]');
+    const craftLine = box.querySelector<HTMLElement>('[data-calc-craft]');
+    const craft = box.dataset.craft ? (JSON.parse(box.dataset.craft) as [string, number][]) : undefined;
+    const hasTree = Boolean(box.dataset.tree);
+    if (!input) return;
+    const best = box.dataset.best
+      ? (JSON.parse(box.dataset.best) as { out: number; seconds: number | null; machine: string; inputs: [string, number][] })
+      : undefined;
+    const fmt = (value: number) => (Number.isFinite(value) ? value.toLocaleString() : '0');
+
+    const update = () => {
+      if (input.value === '') return;
+      let need = Number.parseInt(input.value, 10);
+      if (!Number.isFinite(need) || need < 1) {
+        need = 1;
+        input.value = '1';
+      }
+      if (need > 999999) {
+        need = 999999;
+        input.value = '999999';
+      }
+
+      // Crafting tree and raw materials: one craft makes one item, so amounts scale by n.
+      document.querySelectorAll<HTMLElement>('[data-quantity]').forEach((element) => {
+        element.textContent = fmt(Number.parseFloat(element.dataset.quantity ?? '0') * need);
+      });
+      const rawTotal = document.getElementById('raw-total');
+      if (rawTotal) rawTotal.textContent = fmt(Number.parseFloat(rawTotal.dataset.baseTotal ?? '0') * need);
+
+      // Machine recipes: each row runs ceil(n / output) batches.
+      document.querySelectorAll<HTMLElement>('[data-out]').forEach((row) => {
+        const batches = Math.ceil(need / Number(row.dataset.out || 1));
+        row.querySelectorAll<HTMLElement>('[data-per]').forEach((element) => {
+          element.textContent = fmt(Number(element.dataset.per ?? 0) * batches);
+        });
+        const label = row.querySelector<HTMLElement>('[data-batches]');
+        if (label) label.textContent = batches > 1 ? `${batches.toLocaleString()} batches · ` : '';
+      });
+
+      if (craft && craftLine) {
+        const inputs = craft.map(([name, qty]) => `${fmt(qty * need)} ${name}`).join(' + ');
+        craftLine.textContent = `${craftLine.dataset.verb} ${fmt(need)}: ${inputs}${hasTree ? '. The tree below shows every part.' : '.'}`;
+      }
+      if (best && result) {
+        const batches = Math.ceil(need / best.out);
+        const inputs = best.inputs.map(([name, qty]) => `${fmt(qty * batches)} ${name}`).join(' + ');
+        const time = typeof best.seconds === 'number' ? `, about ${formatSeconds(best.seconds * batches)} in one refiner` : '';
+        result.textContent = `${fmt(batches)} ${batches === 1 ? 'batch' : 'batches'}: ${inputs} in a ${best.machine} makes ${fmt(best.out * batches)}${time}.`;
+      }
+    };
+
+    input.addEventListener('input', update);
+    if (input.value !== '1') update();
+  });
+</script>

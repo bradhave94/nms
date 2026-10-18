@@ -1,4 +1,5 @@
 ---
+// The visible FAQ. itemPageSchema.ts emits FAQPage JSON-LD for exactly these questions.
 import Accordion from '@components/Accordion.astro';
 import type { FaqQuestion } from '@utils/itemPageSchema';
 
@@ -10,17 +11,13 @@ const { faqQuestions } = Astro.props;
 ---
 
 {faqQuestions.length > 0 && (
-  <section id="faq" class="mt-6 border-t border-gray-600/60 py-6">
-    <h2 class="relative mb-4 text-center">
-      <span class="bg-gray-800 px-3 text-lg lg:text-2xl font-medium text-white">
-        Frequently Asked Questions
-      </span>
-    </h2>
-    <div class="mx-auto max-w-3xl space-y-2">
+  <section id="faq" class="item-section" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="section-title">Questions</h2>
+    <div class="faq-list">
       {faqQuestions.map((faq, index) => (
         <Accordion id={`item-faq-${index + 1}`} heading="h3">
-          <span class="text-lg font-bold text-white" slot="title">{faq.question}</span>
-          <p class="m-0 text-gray-300" slot="content">{faq.answer}</p>
+          <span class="text-[1rem] font-medium text-ink" slot="title">{faq.question}</span>
+          <p class="m-0 max-w-[68ch] text-[.95rem] text-dim" slot="content">{faq.answer}</p>
         </Accordion>
       ))}
     </div>

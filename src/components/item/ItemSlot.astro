@@ -1,0 +1,31 @@
+---
+// The game's inventory slot (DESIGN.md `.slot`): the item icon on a tile tinted by its own Colour,
+// with an optional amount badge. Icons are 256px WebPs; width/height are set so nothing shifts.
+import { SITE } from '@config';
+
+interface Props {
+  icon: string;
+  colour?: string;
+  qty?: number;
+  /** Base amount for the "I need" multiplier (crafting tree: `data-quantity`; recipe rows: `data-per`). */
+  qtyAttr?: 'data-quantity' | 'data-per';
+  class?: string;
+  eager?: boolean;
+}
+
+const { icon, colour, qty, qtyAttr, class: className = 'w-10', eager = false } = Astro.props;
+const style = colour ? `--c:#${colour.replace(/^#/, '')}` : undefined;
+const qtyProps = qtyAttr && typeof qty === 'number' ? { [qtyAttr]: qty } : {};
+---
+
+<span class:list={['slot', className]} style={style}>
+  <img
+    src={`${SITE.imageBaseUrl}${icon}`}
+    alt=""
+    width="256"
+    height="256"
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+  />
+  {typeof qty === 'number' && <span class="qty" {...qtyProps}>{qty.toLocaleString()}</span>}
+</span>
