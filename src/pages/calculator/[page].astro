@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import CompactCard from '@components/CompactCard.astro';
 import Pagination from '@components/Pagination.astro';
+import PageLinks from '@components/PageLinks.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { getSlug } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
@@ -10,9 +11,19 @@ import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Products.json';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
+import { nameSortKey } from '../../integrations/cleanGameNames';
+import '../../assets/css/lists.css';
 
 export async function getStaticPaths({ paginate }: { paginate: <T>(data: T[], options: { pageSize: number }) => unknown[] }) {
-	const pages = paginate((data as Item[]).sort((a: Item, b: Item) => b.BaseValueUnits - a.BaseValueUnits), { pageSize: 80 });
+	/** A–Z by nameSortKey(): leading quotes and punctuation ignored, names starting with a digit last. */
+	const compareNames = (a: string, b: string): number => {
+		const x = nameSortKey(a);
+		const y = nameSortKey(b);
+		// the digit marker is '~', which localeCompare would put first
+		return Number(x.startsWith('~')) - Number(y.startsWith('~')) || x.localeCompare(y, 'en', { numeric: true });
+	};
+	const sorted = [...(data as Item[])].sort((a, b) => compareNames(a.Name ?? '', b.Name ?? ''));
+	const pages = paginate(sorted, { pageSize: 80 });
 	return pages.slice(1);
 }
 // All paginated data is passed on the "page" prop
@@ -28,9 +39,11 @@ interface PageProps {
 	};
 }
 const { page } = Astro.props as PageProps;
+const hasRecipe = (item: Item): boolean =>
+	'RequiredItems' in item && Array.isArray(item.RequiredItems) && item.RequiredItems.length > 0;
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL(Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`, siteOrigin).toString();
-const calculatorItems = page.data.filter((item) => ('RequiredItems' in item && item.RequiredItems && item.RequiredItems.length > 0));
+const calculatorItems = page.data.filter(hasRecipe);
 const itemListElements = calculatorItems.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,
@@ -47,7 +60,7 @@ const structuredData = buildCollectionStructuredData({
 });
 const breadcrumbs = buildCategoryBreadcrumbs('Crafting Calculator', '/calculator', page.currentPage);
 const intro = buildCategoryIntro(
-	'Use the crafting calculator to estimate ingredients and optimize farming routes for complex builds.',
+	'Pick an item, then set the quantity on its page to see how much of each ingredient you need.',
 	page.currentPage,
 	page.lastPage
 );
@@ -64,25 +77,32 @@ const { prevUrl, nextUrl } = buildPaginationUrls(siteOrigin, page);
 	prevUrl={prevUrl}
 	nextUrl={nextUrl}
 >
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>
-	<p class="mx-auto mb-4 mt-3 max-w-3xl text-center text-sky-200/90">{intro}</p>
-	<p class="text-xl text-center mt-3 mb-8">Choose an item below to start</p>
-	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
-		{
-			page.data.map((item, index) =>
-				('RequiredItems' in item && item.RequiredItems && item.RequiredItems.length > 0) ? (
+	<div class="list-page">
+		<Breadcrumbs items={breadcrumbs} className="pt-2 mb-4 !px-0" />
+		<header class="list-head">
+			<h1>Crafting Calculator</h1>
+			<p class="intro">
+				{intro} <a href="/calculator/">Search every craftable product</a>.
+			</p>
+		</header>
+		<div id="items" class="tile-grid">
+			{
+				calculatorItems.map((item, index) => (
 					<CompactCard
 						card={{
 							name: item.Name,
 							image: SITE.imageBaseUrl + toWebp(item.Icon),
 							link: getSlug(item),
+							colour: item.Colour,
+							group: item.Group,
 						}}
 						index={index}
+						loading={index < 20 ? 'eager' : 'lazy'}
 					/>
-				) : null
-			)
-		}
+				))
+			}
+		</div>
+		<Pagination page={page} />
+		<PageLinks currentPage={page.currentPage} lastPage={page.lastPage} basePath="/calculator" />
 	</div>
-	<Pagination page={page} />
 </Layout>
