@@ -14,14 +14,14 @@ export const toolsNav: NavItem[] = [
 
 export const calculatorsNav: NavItem[] = [
 	{ name: 'Calculator', href: '/calculator/', icon: 'calculator' },
-	{ name: 'Crafting Planner', href: '/calculator/planner/', icon: 'archive-box' },
-	{ name: 'Reverse Calculator', href: '/calculator/reverse/', icon: 'scale' },
-	{ name: 'Farm Calculator', href: '/calculator/farm/', icon: 'sun' },
-	{ name: 'Base Power Calculator', href: '/calculator/power/', icon: 'bolt' },
+	{ name: 'Crafting planner', href: '/calculator/planner/', icon: 'archive-box' },
+	{ name: 'Reverse calculator', href: '/calculator/reverse/', icon: 'scale' },
+	{ name: 'Farm calculator', href: '/calculator/farm/', icon: 'sun' },
+	{ name: 'Base power calculator', href: '/calculator/power/', icon: 'bolt' },
 ];
 
 export const catalogsNav: NavItem[] = [
-	{ name: 'All Items', href: '/items/', icon: 'squares-2x2' },
+	{ name: 'All items', href: '/items/', icon: 'squares-2x2' },
 	{ name: 'Buildings', href: '/buildings/', icon: 'home-modern' },
 	{ name: 'Corvette', href: '/corvette/', icon: 'globe-alt' },
 	{ name: 'Creatures', href: '/creatures/', icon: 'bug-ant' },
@@ -31,7 +31,7 @@ export const catalogsNav: NavItem[] = [
 	{ name: 'Food', href: '/food/', icon: 'cake' },
 	{ name: 'Other', href: '/other/', icon: 'paper-clip' },
 	{ name: 'Products', href: '/products/', icon: 'archive-box' },
-	{ name: 'Raw Materials', href: '/raw/', icon: 'bolt' },
+	{ name: 'Raw materials', href: '/raw/', icon: 'bolt' },
 	{ name: 'Starships', href: '/starships/', icon: 'paper-airplane' },
 	{ name: 'Technology', href: '/technology/', icon: 'cog' },
 	{ name: 'Upgrades', href: '/upgrades/', icon: 'wrench' },
@@ -39,7 +39,7 @@ export const catalogsNav: NavItem[] = [
 
 export const moreNav: NavItem[] = [
 	{ name: 'Alliances', href: '/alliances/', icon: 'shield' },
-	{ name: 'New Items', href: '/new/', icon: 'sparkles' },
+	{ name: 'New items', href: '/new/', icon: 'sparkles' },
 	{ name: 'Blog', href: '/blog/', icon: 'book-open' },
 ];
 

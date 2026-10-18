@@ -8,7 +8,7 @@
 .rt-head { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; gap: 1.1rem; align-items: center; padding-top: .5rem; }
 .rt-head > img { width: 88px; height: 88px; object-fit: contain; }
 .rt-head h1 { margin: 0; font-size: clamp(2.25rem, 1.5rem + 2vw, 3rem); line-height: 1.05; font-weight: 700; }
-.rt-head p { margin: .35rem 0 0; max-width: 68ch; color: var(--color-dim); font-size: 1rem; }
+.rt-head p { margin: .35rem 0 0; max-width: 36rem; color: var(--color-dim); font-size: 1rem; }
 .rt-views { display: flex; gap: .25rem; align-self: start; padding: .2rem; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-panel-2); }
 .rt-views a { display: inline-flex; align-items: center; min-height: 32px; padding: 0 .75rem; border-radius: 7px; font-size: .875rem; color: var(--color-dim); }
 .rt-views a:hover { color: var(--color-ink); background: var(--color-panel-3); }
@@ -35,7 +35,7 @@
 .rt-seg > button:hover { background: var(--color-panel-3); color: var(--color-ink); }
 .rt-seg > button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-accent-ink); font-weight: 600; box-shadow: none; }
 .rt-seg-label { display: inline-flex; align-items: center; padding: 0 .4rem 0 .85rem; font-size: .875rem; color: var(--color-dim); }
-.rt-count { margin: 0 0 0 auto; font-size: .9375rem; color: var(--color-dim); }
+.rt-count { flex: 0 0 15rem; margin: 0 0 0 auto; text-align: right; font-size: .9375rem; color: var(--color-dim); }
 
 /* ── Table stage and the in-table ad slot ─────────────────────────── */
 .rt-stage { position: relative; }
@@ -103,7 +103,7 @@
     .rt-search { flex-basis: 100%; max-width: none; }
     .rt-seg { flex: 1 1 100%; }
     .rt-seg > button { flex: 1 1 auto; justify-content: center; padding: 0 .6rem; }
-    .rt-count { flex-basis: 100%; margin: 0; }
+    .rt-count { flex-basis: 100%; margin: 0; text-align: left; }
     .rt-stage.rt-pending { height: 3200px; }
 
     /* Stacked rows: the column headers stay for screen readers only (the script takes their sort

@@ -106,7 +106,9 @@ if ((item.BaseValueUnits ?? 0) > 1) pills.push({ label: `${Number(item.BaseValue
 const fishTier = isFishPage && extra.Quality ? FISH_TIERS[extra.Quality] : undefined;
 // Fish have their own quality tier, which is what players mean by a fish's rarity.
 if (!fishTier && extra.Rarity && RARITY_TIERS[extra.Rarity]) pills.push({ label: humanize(extra.Rarity), tier: RARITY_TIERS[extra.Rarity] });
-if (fishTier) pills.push({ label: `${extra.Quality} fish`, tier: fishTier });
+// the group usually already names the tier ("Legendary Fish"); colour that pill instead of adding a second one
+if (fishTier && cleanGroup && cleanGroup.toLowerCase().includes(String(extra.Quality).toLowerCase())) pills[0] = { ...pills[0], tier: fishTier };
+else if (fishTier) pills.push({ label: `${extra.Quality} fish`, tier: fishTier });
 // Substances store a stack multiplier of 1 here, not their real stack size, so only show real stacks.
 if (typeof extra.MaxStackSize === 'number' && extra.MaxStackSize > 1) pills.push({ label: `Max stack ${extra.MaxStackSize.toLocaleString()}` });
 if (view.waysToMake > 1) pills.push({ label: `${view.waysToMake} ways to make it` });
@@ -129,7 +131,7 @@ const addFact = (label: string, value: string | undefined | null, href?: string)
   if (value) facts.push({ label, value, ...(href ? { href } : {}) });
 };
 const yesNo = (value: boolean | undefined) => (value === true ? 'Yes' : value === false ? 'No' : undefined);
-if (extra.Rarity && extra.Rarity !== 'None' && (fishTier || !RARITY_TIERS[extra.Rarity])) addFact('Rarity', humanize(extra.Rarity));
+if (extra.Rarity && extra.Rarity !== 'None' && (fishTier || !RARITY_TIERS[extra.Rarity])) addFact(fishTier ? 'Item rarity' : 'Rarity', humanize(extra.Rarity));
 if (extra.Legality && extra.Legality !== 'None') addFact('Legality', extra.Legality);
 if (extra.OnlyFoundInPurpleSystems === true) addFact('Source', 'Purple systems only');
 const deploysIntoId = extra.DeploysInto && extra.DeploysInto !== 'None' ? extra.DeploysInto : undefined;
@@ -178,7 +180,8 @@ if (isFishPage) {
   const biomes = Array.isArray(extra.Biomes) ? extra.Biomes.filter(Boolean) : [];
   if (biomes.length > 0) addFact('Biomes', biomes.join(', '));
   if (extra.NeedsStorm) addFact('Weather', 'Storm required');
-  if (extra.RequiresMissionActive && extra.RequiresMissionActive !== 'NONE') addFact('Mission', extra.RequiresMissionActive);
+  // the mission id (e.g. S15_CATCHANGLER) means nothing to players: just say a mission is needed
+  if (extra.RequiresMissionActive && extra.RequiresMissionActive !== 'NONE') addFact('Availability', 'Only during its mission');
   if (typeof extra.MissionCatchChanceOverride === 'number' && extra.MissionCatchChanceOverride > 0) {
     addFact('Catch chance', `${(extra.MissionCatchChanceOverride * 100).toLocaleString()}%`);
   }
@@ -214,14 +217,14 @@ const showTree = (craftTree[0]?.RequiredItems ?? []).some((part) => part.Require
 const refineRows = view.makeRefine.length > 1 ? view.makeRefine : [];
 const cookRows = view.makeCook.length > 1 ? view.makeCook : [];
 const showCalc = Boolean(view.craft || view.bestRefine || view.bestCook);
-const hasUses = view.refineInto.length > 0 || view.cookInto.length > 0 || view.craftWith.length > 0;
 // Rough height of the left column in rows. When it's short, the "uses" sections, guide and FAQ move
 // up into it so the right column (ad, calculator, About) doesn't stand beside an empty gap.
 const mainWeight =
   (showTree ? 6 : 0) + Math.min(refineRows.length, 8) + Math.min(cookRows.length, 8) + (upgradeStats.length > 0 ? 3 : 0);
 const restInMain = mainWeight < 7;
-// Nothing to make or use: the in-game description is the answer, so it leads the left column.
-const aboutInMain = mainWeight === 0 && !hasUses;
+// Nothing to make: the in-game description is the answer, so it leads the left column (above any uses),
+// and the right column keeps only the ad and calculator instead of a long About beside an empty gap.
+const aboutInMain = mainWeight === 0;
 ---
 
 <div class="item-page">
@@ -261,7 +264,7 @@ const aboutInMain = mainWeight === 0 && !hasUses;
     </div>
   )}
 
-  <div class="item-body">
+  <div class:list={['item-body', !showCalc && 'no-answer']}>
     <div class="item-ad">
       <NitroAd
         id="item-after-details"

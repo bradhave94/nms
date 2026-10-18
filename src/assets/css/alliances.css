@@ -124,7 +124,7 @@
 	:is(.alliances, .site-form) .facts { display: grid; gap: 1rem; }
 	:is(.alliances, .site-form) .facts dt { font-size: .875rem; color: var(--color-dim); }
 	:is(.alliances, .site-form) .facts dd { margin-top: .125rem; color: var(--color-ink); }
-	:is(.alliances, .site-form) .description { white-space: pre-line; line-height: 1.6; color: #cfd9e4; max-width: 68ch; }
+	:is(.alliances, .site-form) .description { white-space: pre-line; line-height: 1.6; color: #cfd9e4; max-width: 36rem; }
 
 	/* Moderation */
 	:is(.alliances, .site-form) .mod-list { display: grid; gap: 1rem; }

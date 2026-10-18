@@ -117,3 +117,7 @@
 .post-card .post-card-title a::after { content: ""; position: absolute; inset: 0; }
 .post-card:has(a:focus-visible) { outline: 3px solid #facc15; outline-offset: 2px; }
 .post-card .post-card-title a:focus-visible { outline: none; }
+
+/* NitroPay's in-article unit (format "article") inserts one block per screen when the column fits a 728px
+   creative. Keep the column at the pre-redesign 680px so it serves the same number of units as before. */
+#guide-article { max-width: 680px; }

@@ -131,6 +131,10 @@
     html { background: var(--color-space); color: var(--color-ink); -webkit-font-smoothing: antialiased; }
     /* no preflight is loaded: form controls must inherit the site face (they fell back to system sans) */
     input, select, textarea, button { font: inherit; letter-spacing: inherit; }
+    /* no preflight is loaded: size boxes by their border so padded height:100% tiles fit their grid cells */
+    *, ::before, ::after { box-sizing: border-box; }
+    /* the browser's blue clear button in search fields: the dialog and filters have their own */
+    input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
     /* only real weights: never let the browser fake bold or italic */
     html { font-synthesis: none; }
     /* long single-word names (or larger user text spacing) break instead of widening the page (WCAG 1.4.10/1.4.12) */
@@ -215,9 +219,6 @@
 }
 
 
-.btn {
-    @apply inline-flex items-center rounded-md border border-transparent bg-blue-500 px-3 py-2 text-sm font-medium leading-4 text-black shadow-xs hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-}
 
 
 .disclaimer {

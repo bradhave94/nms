@@ -17,7 +17,7 @@ const paragraphs = (description ?? '')
 {paragraphs.length > 0 && (
   <section class="item-about" aria-labelledby="item-about-title">
     <h2 id="item-about-title" class="rail-title">About</h2>
-    {paragraphs.map((text) => <p class="m-0 mb-2 text-[.95rem] text-ink/85">{text}</p>)}
+    {paragraphs.map((text) => <p class="m-0 mb-2 max-w-[36rem] text-[.95rem] text-ink/85">{text}</p>)}
   </section>
 )}
 {facts.length > 0 && (

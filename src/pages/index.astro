@@ -5,6 +5,7 @@ import NitroAd from '@components/ads/NitroAd.astro';
 import { SITE } from '@config';
 import { Refinery, NutrientProcessor } from '@datav2/index.js';
 import { getNewUpdatePayload } from '@utils/newUpdate';
+import { getRouteEligibleNewItems } from '@utils/routeCatalog.js';
 
 // Home: search first, then the three machines, then calculators, catalogs, what's new and the latest guides.
 // Counts come from the data; the catalog art is the same 3D renders the old card grid used.
@@ -17,14 +18,14 @@ const machines = [
 ];
 
 const calculators = [
-	{ name: 'Crafting Planner', href: '/calculator/planner/', image: '/images/calculator.webp', text: 'Add what you want to build and get one shopping list.' },
-	{ name: 'Reverse Calculator', href: '/calculator/reverse/', image: img('ACCESS3'), text: 'Start from what you have and see what it makes.' },
-	{ name: 'Farm Calculator', href: '/calculator/farm/', image: img('FARMPROD3'), text: 'Plant counts and harvest times for a farm.' },
-	{ name: 'Base Power', href: '/calculator/power/', image: img('U_BATTERY_S'), text: 'Generators, batteries and solar for your base.' },
+	{ name: 'Crafting planner', href: '/calculator/planner/', image: '/images/calculator.webp', text: 'Add what you want to build and get one shopping list.' },
+	{ name: 'Reverse calculator', href: '/calculator/reverse/', image: img('ACCESS3'), text: 'Start from what you have and see what it makes.' },
+	{ name: 'Farm calculator', href: '/calculator/farm/', image: img('FARMPROD3'), text: 'Plant counts and harvest times for a farm.' },
+	{ name: 'Base power', href: '/calculator/power/', image: img('U_BATTERY_S'), text: 'Generators, batteries and solar for your base.' },
 ];
 
 const catalogs = [
-	{ name: 'Raw Materials', href: '/raw/', image: img('FUEL1') },
+	{ name: 'Raw materials', href: '/raw/', image: img('FUEL1') },
 	{ name: 'Products', href: '/products/', image: img('ULTRAPROD1') },
 	{ name: 'Technology', href: '/technology/', image: img('U_BATTERY_S') },
 	{ name: 'Upgrades', href: '/upgrades/', image: img('UP_SLASR1') },
@@ -37,7 +38,7 @@ const catalogs = [
 	{ name: 'Curiosities', href: '/curiosities/', image: img('BIOSHIP_EGG1') },
 	{ name: 'Food', href: '/food/', image: img('FOOD_F_MED1') },
 	{ name: 'Other', href: '/other/', image: img('SPEC_EMOTE03') },
-	{ name: 'All Items', href: '/items/', image: img('STA_00') },
+	{ name: 'All items', href: '/items/', image: img('STA_00') },
 ];
 
 const popular = [
@@ -48,7 +49,8 @@ const popular = [
 	{ name: 'Glass', href: '/products/FARMPROD3/' },
 ];
 
-const newCount = getNewUpdatePayload().Items.length;
+// same count as /new/ (only items that have a page)
+const newCount = getRouteEligibleNewItems(getNewUpdatePayload().Items).length;
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 3);
@@ -60,7 +62,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 	slug="home"
 	ogImage={`${SITE.website}/images/refiner.webp`}
 >
-	<div class="home -m-4">
+	<div class="home -mx-4 -mt-4 lg:-mx-8">
 		<section class="hero" aria-labelledby="home-title">
 			<img class="hero-art" src="/images/backgrounds/bg11-1600.webp" srcset="/images/backgrounds/bg11-960.webp 960w, /images/backgrounds/bg11-1600.webp 1600w, /images/backgrounds/bg11.webp 1920w" sizes="(min-width: 1024px) calc(100vw - 224px), 100vw" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
 			<div class="hero-in">
@@ -68,7 +70,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 				<p class="hero-lead">Refiner, Nutrient Processor and crafting recipes from the game files, with calculators for what to farm. Updated for the {SITE.version_name} update.</p>
 				<form class="hero-search" role="search" data-search-form action="/items/">
 					<label for="home-q" class="sr-only">Search items and recipes</label>
-					<input id="home-q" name="q" type="search" class="field !min-h-14 !rounded-xl !border-[#56657a] !bg-[#07090e]/85 !text-lg" placeholder="Try “chromatic metal” or “stasis device”" autocomplete="off" />
+					<input id="home-q" name="q" type="search" class="field !min-h-14 !rounded-xl !border-[#56657a] !bg-[#07090e]/85 !text-lg" placeholder="Try “chromatic metal”" autocomplete="off" />
 					<button class="btn-primary !min-h-14 !rounded-xl !px-6 !text-lg">Search</button>
 				</form>
 				<p class="hero-popular">Popular:{' '}
@@ -146,8 +148,8 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 </Layout>
 
 <style>
-	.hero { position: relative; isolation: isolate; overflow: hidden; padding: 3.5rem 1.25rem 3rem; }
-	@media (min-width: 768px) { .hero { padding: 5rem 3rem 4.5rem; } }
+	.hero { position: relative; isolation: isolate; overflow: hidden; padding: 3.5rem 1rem 3rem; }
+	@media (min-width: 1024px) { .hero { padding: 5rem 2rem 4.5rem; } }
 	.hero-art { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 55% 38%; }
 	.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(11 15 20 / .95), rgb(11 15 20 / .7) 55%, rgb(11 15 20 / .2)), linear-gradient(0deg, var(--color-space), transparent 45%); }
 	@media (max-width: 767px) { .hero::after { background: linear-gradient(0deg, var(--color-space), rgb(11 15 20 / .78) 60%, rgb(11 15 20 / .55)); } }
@@ -159,7 +161,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 	.hero-popular a { color: var(--color-accent); font-weight: 500; text-decoration: underline; text-decoration-color: rgb(255 195 86 / .4); text-underline-offset: 3px; }
 	.hero-popular a:hover { text-decoration-color: currentColor; }
 	.home-body { padding: .5rem 1rem 3rem; }
-	@media (min-width: 768px) { .home-body { padding: .5rem 3rem 4rem; } }
+	@media (min-width: 1024px) { .home-body { padding: .5rem 2rem 4rem; } }
 	ul { margin: 0; padding: 0; list-style: none; }
 	.machines { display: grid; gap: 1rem; }
 	@media (min-width: 900px) { .machines { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

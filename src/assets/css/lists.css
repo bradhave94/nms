@@ -1,12 +1,10 @@
 /* Catalog and list pages (categories, /items, /new, /calculator): header, filter bar and item tiles. */
 
-.list-page { max-width: 1180px; margin-inline: auto; padding-inline: 0; }
-@media (min-width: 640px) { .list-page { padding-inline: 1rem; } }
-@media (min-width: 1280px) { .list-page { padding-inline: 2rem; } }
+.list-page { padding-inline: 0; } /* gutter and width come from the page column (Sidebar.astro) */
 
 .list-head { margin: .5rem 0 1.25rem; }
 .list-head h1 { margin: 0 0 .6rem; font-size: clamp(2.25rem, 1.6rem + 2.2vw, 3rem); line-height: 1.05; font-weight: 700; }
-.list-head .intro { max-width: 68ch; margin: 0; color: var(--color-dim); }
+.list-head .intro { max-width: 36rem; margin: 0; color: var(--color-dim); }
 .list-head .intro a { color: var(--color-accent); text-decoration: underline; text-decoration-color: rgb(255 195 86 / .5); text-underline-offset: 3px; }
 .list-head .intro a:hover { text-decoration-color: currentColor; }
 
@@ -37,7 +35,8 @@
     .tile-grid > .tile-cell:nth-child(n+4) { order: 0; }
     .tile-grid > .tile-cell:nth-child(n+5) { order: 2; }
 }
-@media (min-width: 1440px) {
+/* five columns only when tiles stay ~220px wide (names wrapped to 3-4 lines at 1440) */
+@media (min-width: 1760px) {
     .tile-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
     .tile-grid > .tile-cell:nth-child(n+5) { order: 0; }
     .tile-grid > .tile-cell:nth-child(n+6) { order: 2; }

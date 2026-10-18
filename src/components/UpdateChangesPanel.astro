@@ -21,7 +21,7 @@ const originalVariantItem = meta.releaseVariant ? getById(meta.releaseVariant.Ba
 		<div class="update-note panel flex items-start gap-3 px-4 py-3 text-[.9rem]">
 			<span class="mt-[.45rem] h-2 w-2 shrink-0 rounded-full bg-glow" aria-hidden="true"></span>
 			<div class="min-w-0">
-				<p class="m-0 font-semibold text-ink">Added in update {versionLabel}</p>
+				<p class="m-0 font-semibold text-ink">Added in {versionLabel}</p>
 				{meta.releaseVariant && (
 					<p class="m-0 mt-1 text-dim">
 						Expedition {meta.releaseVariant.Expedition} variant
@@ -39,7 +39,7 @@ const originalVariantItem = meta.releaseVariant ? getById(meta.releaseVariant.Ba
 			<div class="flex items-start gap-3 px-4 py-3">
 				<span class="mt-[.45rem] h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
 				<div class="min-w-0">
-					<p class="m-0 font-semibold text-ink">Updated in update {versionLabel}</p>
+					<p class="m-0 font-semibold text-ink">Changed in {versionLabel}</p>
 					<p class="m-0 mt-1 text-dim">
 						{hasDiff ? (
 							<button

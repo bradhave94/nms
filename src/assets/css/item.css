@@ -1,7 +1,7 @@
 /* Item pages (src/layouts/Page.astro + src/components/item/*). Tokens and .panel/.slot/.pill come
    from main.css; this file only lays out the item page family. See DESIGN.md. */
 
-.item-page { max-width: 1180px; margin: 0 auto; padding-bottom: 2rem; }
+.item-page { padding-bottom: 2rem; }
 .item-page [hidden] { display: none !important; }
 @media (min-width: 1024px) { .item-page { padding-inline: 1rem; } }
 
@@ -55,6 +55,10 @@ a.best-io:hover .nm { color: var(--color-accent); text-decoration: underline; te
 .item-main { display: flex; flex-direction: column; gap: 1.75rem; min-width: 0; }
 .item-main:empty { display: none; }
 .item-aside { min-width: 0; }
+/* phones, no Best yield box: the first section is the answer, so the ad follows it instead of leading */
+.item-body.no-answer > .item-main { order: 1; }
+.item-body.no-answer > .item-ad { order: 2; }
+.item-body.no-answer > .item-aside { order: 3; }
 @media (min-width: 1200px) {
   .item-body {
     display: grid;

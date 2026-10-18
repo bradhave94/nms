@@ -33,7 +33,7 @@
 	.panel-amber h2 { color: var(--color-accent); }
 
 	.calc-label { display: block; margin-bottom: .4rem; font-size: .9rem; font-weight: 500; color: var(--color-ink); }
-	.calc-help { margin-top: .5rem; max-width: min(68ch, 100%); overflow-wrap: anywhere; font-size: .875rem; line-height: 1.55; color: var(--color-dim); }
+	.calc-help { margin-top: .5rem; max-width: min(36rem, 100%); overflow-wrap: anywhere; font-size: .875rem; line-height: 1.55; color: var(--color-dim); }
 	.calc-empty { color: var(--color-dim); }
 	.calc-field-num { max-width: 9rem; }
 	.calc .field[type="number"] { font-variant-numeric: tabular-nums; }
@@ -99,7 +99,7 @@
 	.calc details > summary::before { content: ""; flex: none; width: .55rem; height: .55rem; margin-right: .2rem; border-right: 2px solid var(--color-dim); border-bottom: 2px solid var(--color-dim); transform: rotate(-45deg); transition: transform .15s; }
 	.calc details[open] > summary::before { transform: rotate(45deg); }
 	.calc details > summary:hover { color: var(--color-accent); }
-	.calc-prose { max-width: 68ch; line-height: 1.65; color: #cfd9e4; }
+	.calc-prose { max-width: 36rem; line-height: 1.65; color: #cfd9e4; }
 	.calc-prose p + p { margin-top: .75rem; }
 	.calc-prose strong { color: var(--color-ink); font-weight: 600; }
 	.calc .link:focus-visible { border-radius: 2px; }

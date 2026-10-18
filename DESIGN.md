@@ -57,7 +57,7 @@ Never go dimmer than `dim` for text.
   - h3: 1.15rem, weight 600
   - body: 1rem
   - small: .875rem
-- **Line length.** Prose runs at most 68ch.
+- **Line length.** Prose runs at most 36rem (about 68 characters in Jost; `ch` is wide in Jost, so don't use `68ch`).
 - **Case.** Sentence case everywhere. No `tracking-widest`, and no uppercase except the logo image.
 - **Numbers.** Amounts, counts, times and prices use `.tabular`.
 

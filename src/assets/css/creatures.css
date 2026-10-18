@@ -4,13 +4,12 @@
 /* Layered so Tailwind utilities (mt-*, text-*) on these elements still win. */
 @layer components {
 /* ── Frame: header + section nav ─────────────────────────────────────── */
-.cr-wrap { max-width: 1180px; margin-inline: auto; padding: 0 1rem 3rem; }
-@media (min-width: 1024px) { .cr-wrap { padding-inline: 2rem; } }
+.cr-wrap { padding: 0 0 3rem; } /* gutter and width come from the page column (Sidebar.astro) */
 
 .cr-head { display: flex; align-items: center; gap: 1.1rem; padding: .75rem 0 1rem; }
 .cr-head-slot { width: 4.25rem; }
 .cr-title { margin: 0; font-size: clamp(2.1rem, 1.6rem + 2vw, 3rem); line-height: 1.05; font-weight: 700; }
-.cr-lead { margin: .45rem 0 0; max-width: 68ch; color: var(--color-dim); font-size: 1rem; line-height: 1.5; }
+.cr-lead { margin: .45rem 0 0; max-width: 36rem; color: var(--color-dim); font-size: 1rem; line-height: 1.5; }
 .cr-lead strong { color: var(--color-ink); font-weight: 600; }
 @media (max-width: 639px) { .cr-head { align-items: flex-start; } .cr-head-slot { width: 3.25rem; margin-top: .35rem; } }
 
@@ -26,7 +25,7 @@
 /* section headings and prose inside the family */
 .cr-section { margin-top: 2.75rem; scroll-margin-top: 5rem; }
 .cr-section:first-of-type { margin-top: 0; }
-.cr-section > p, .cr-note { max-width: 68ch; margin: 0 0 1rem; color: var(--color-dim); font-size: .9375rem; line-height: 1.55; }
+.cr-section > p, .cr-note { max-width: 36rem; margin: 0 0 1rem; color: var(--color-dim); font-size: .9375rem; line-height: 1.55; }
 .cr-h3 { margin: 1.75rem 0 .65rem; font-size: 1.15rem; font-weight: 600; }
 
 /* ── Compact data tables (arena, companions): fit 390px without sideways scroll ── */
