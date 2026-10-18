@@ -133,7 +133,8 @@
     input, select, textarea, button { font: inherit; letter-spacing: inherit; }
     /* only real weights: never let the browser fake bold or italic */
     html { font-synthesis: none; }
-    h1, h2, h3 { text-wrap: balance; }
+    /* long single-word names (or larger user text spacing) break instead of widening the page (WCAG 1.4.10/1.4.12) */
+    h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
     p { text-wrap: pretty; }
 }
 

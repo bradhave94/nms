@@ -33,7 +33,7 @@
 	.panel-amber h2 { color: var(--color-accent); }
 
 	.calc-label { display: block; margin-bottom: .4rem; font-size: .9rem; font-weight: 500; color: var(--color-ink); }
-	.calc-help { margin-top: .5rem; max-width: 68ch; font-size: .875rem; line-height: 1.55; color: var(--color-dim); }
+	.calc-help { margin-top: .5rem; max-width: min(68ch, 100%); overflow-wrap: anywhere; font-size: .875rem; line-height: 1.55; color: var(--color-dim); }
 	.calc-empty { color: var(--color-dim); }
 	.calc-field-num { max-width: 9rem; }
 	.calc .field[type="number"] { font-variant-numeric: tabular-nums; }
@@ -76,7 +76,7 @@
 	.calc-seg label:has(input:focus-visible) { outline: 3px solid #facc15; outline-offset: 2px; }
 
 	/* Key figures in the answer panel. */
-	.calc-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem 1.5rem; }
+	.calc-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr)); gap: 1rem 1.5rem; }
 	.calc-stat dt, .calc-stat .label { font-size: .9rem; color: var(--color-dim); }
 	.calc-stat .value { margin-top: .15rem; font-variant-numeric: tabular-nums; font-size: 1.9rem; line-height: 1.15; font-weight: 700; color: #fff; }
 
@@ -104,3 +104,8 @@
 	.calc-prose strong { color: var(--color-ink); font-weight: 600; }
 	.calc .link:focus-visible { border-radius: 2px; }
 }
+
+/* sr-only legends position against their own fieldset, so they cannot widen the column */
+.calc fieldset { position: relative; min-width: 0; }
+.calc-col > * { min-width: 0; max-width: 100%; }
+.calc-pad { overflow-wrap: anywhere; }

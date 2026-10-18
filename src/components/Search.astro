@@ -34,7 +34,9 @@
 		if (!siteSearch || siteSearch.classList.contains('hidden')) return;
 		siteSearch.classList.add('hidden');
 		document.body.classList.remove('overflow-hidden');
-		returnFocusTo?.focus();
+		// opened with "/" or Ctrl+K from nowhere in particular: land on the visible search button
+		const fallback = Array.from(document.querySelectorAll<HTMLElement>('[data-open-search]')).find((el) => el.offsetParent !== null && !el.closest('[inert]'));
+		(returnFocusTo && document.contains(returnFocusTo) ? returnFocusTo : fallback)?.focus();
 		returnFocusTo = null;
 	}
 

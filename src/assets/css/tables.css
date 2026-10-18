@@ -129,7 +129,7 @@
 }
 
 /* ── Card views (/refining/cards etc.) ─────────────────────────────── */
-.rc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: .75rem; align-items: start; margin: 0; padding: 0; list-style: none; }
+.rc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr)); gap: .75rem; align-items: start; margin: 0; padding: 0; list-style: none; }
 .rc { display: flex; flex-direction: column; overflow: hidden; background: var(--color-panel); border: 1px solid var(--color-line); border-radius: 12px; }
 .rc[hidden] { display: none; }
 .rc-out { display: flex; align-items: center; gap: .65rem; min-height: 60px; padding: .45rem .8rem; }
@@ -141,6 +141,9 @@
 .rc-in a:hover { background: var(--color-panel-3); }
 .rc-in .slot { width: 2.1rem; border-radius: 8px; }
 .rc-in .rt-qty { margin-left: auto; }
-.rc-meta { margin: 0; padding: .1rem .85rem .6rem; color: var(--color-dim); font-size: .8125rem; }
+.rc-meta { overflow-wrap: anywhere; margin: 0; padding: .1rem .85rem .6rem; color: var(--color-dim); font-size: .8125rem; }
 .rc-empty { padding: 2rem 0; color: var(--color-dim); }
 .rc-empty[hidden] { display: none; }
+
+/* the segmented filters wrap instead of overflowing at 320px or with larger text spacing (WCAG 1.4.10, 1.4.12) */
+.rt-seg { flex-wrap: wrap; }
