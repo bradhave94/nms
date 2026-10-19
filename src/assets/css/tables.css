@@ -37,13 +37,11 @@
 .rt-seg-label { display: inline-flex; align-items: center; padding: 0 .4rem 0 .85rem; font-size: .875rem; color: var(--color-dim); }
 .rt-count { flex: 0 0 15rem; margin: 0 0 0 auto; text-align: right; font-size: .9375rem; color: var(--color-dim); }
 
-/* ── Table stage and the in-table ad slot ─────────────────────────── */
+/* ── Table stage and the ads above and below it ───────────────────── */
 .rt-stage { position: relative; }
 .rt-stage.rt-pending { height: 1700px; overflow: hidden; }
 .rt-stage.rt-pending > table { opacity: 0; }
-.rt-stage.rt-ad-top { padding-top: var(--rt-ad-gap, 266px); }
-.rt-ad { position: absolute; left: 0; right: 0; top: 330px; display: flow-root; }
-.rt-ad .nitro-ad-slot { margin-block: 8px; }
+.rt-ad { margin-block: .75rem; }
 
 /* ── Tabulator skin (scoped; the vendor base is tabulator.css) ─────── */
 .rt .tabulator { border: 0; background: transparent; font-size: 1rem; color: var(--color-ink); }
@@ -65,7 +63,6 @@
 .rt .tabulator-row,
 .rt .tabulator-row.tabulator-row-even,
 .rt .tabulator-row.tabulator-selectable:hover { display: flex; min-height: 52px; margin-bottom: 4px; border: 0; border-radius: 8px; overflow: hidden; background: var(--color-panel); }
-.rt .tabulator-row.rt-gap { margin-bottom: calc(var(--rt-ad-gap, 266px) + 4px); }
 .rt .tabulator-row .tabulator-cell { display: flex; align-items: stretch; padding: 0; border-right: 0; white-space: normal; overflow: hidden; }
 /* cells of the same item colour sit side by side (two grey inputs, an orange input next to an orange output):
    a dark 2px line between columns keeps them apart */

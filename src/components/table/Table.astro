@@ -1,12 +1,8 @@
 ---
 // Recipe table (refining, cooking, crafting guide): compact header, filter bar, Tabulator grid with
-// the per-item colour swatches, compact pager, and the `table-above` ad after the first 5 rows.
-//
-// The ad: NitroPay units must be created once, and moving an iframe in the DOM reloads it, so the
-// slot never moves. It sits after the grid in the DOM, absolutely positioned inside `.rt-stage`;
-// after every render the script gives the 5th visible row (or the last one, on short pages) a
-// bottom margin the height of the slot and moves the slot into that gap with `top`. With no rows
-// the slot sits under the filter bar. Phones keep the table and scroll it sideways.
+// the per-item colour swatches and compact pager. The `table-above` ad sits between the filters and
+// the table (as on the live site) and `table-below` follows the pager; neither is inside the rows.
+// Phones keep the table and scroll it sideways.
 import '../../assets/css/tabulator.css';
 import '../../assets/css/tables.css';
 import TableHead from '@components/table/Head.astro';
@@ -46,16 +42,15 @@ const columns = [
 <div class="rt" data-rt data-query-sort={querySort} data-extra={extra}>
   <PageHead title={title} image={image} base={base} view="table"><slot /></PageHead>
   <FilterBar kind={kind} total={rows.length} />
+  <NitroAd id="table-above" class="rt-ad px-4" />
   <div class="rt-stage rt-pending" data-rt-stage>
     <table id="recipe-table" data-columns={JSON.stringify(columns)}>
       <TableHead columns={columns} />
       <TableBody rows={rows} extra={extra} />
     </table>
-    <div class="rt-ad" data-rt-ad>
-      <NitroAd id="table-above" class="px-4" />
-    </div>
   </div>
   <div class="rt-pager" data-rt-pager></div>
+  <NitroAd id="table-below" class="rt-ad px-4" />
 </div>
 
 <script>
@@ -206,10 +201,9 @@ const columns = [
     const root = document.querySelector<HTMLElement>('[data-rt]');
     const source = document.getElementById('recipe-table') as HTMLTableElement | null;
     const stage = root?.querySelector<HTMLElement>('[data-rt-stage]');
-    const ad = root?.querySelector<HTMLElement>('[data-rt-ad]');
     const pager = root?.querySelector<HTMLElement>('[data-rt-pager]');
     const countEl = root?.querySelector<HTMLElement>('[data-rt-count]');
-    if (!root || !source || !stage || !ad || !pager) return;
+    if (!root || !source || !stage || !pager) return;
 
     let titles: Column[];
     try {
@@ -282,43 +276,11 @@ const columns = [
       pager.hidden = max <= 1 && table.getDataCount('active') <= 25;
     };
 
-    // Ad placement (see the header comment).
-    let gapRow: HTMLElement | null = null;
-    let frame = 0;
-    const placeAd = (): void => {
-      frame = 0;
-      const grid = table.element as HTMLElement | undefined;
-      if (!grid) return;
-      const rows = [...grid.querySelectorAll<HTMLElement>('.tabulator-table > .tabulator-row')];
-      const gap = ad.offsetHeight;
-      stage.style.setProperty('--rt-ad-gap', `${gap}px`);
-      const target = rows[Math.min(5, rows.length) - 1] ?? null;
-      if (gapRow !== target) {
-        gapRow?.classList.remove('rt-gap');
-        target?.classList.add('rt-gap');
-        gapRow = target;
-      }
-      stage.classList.toggle('rt-ad-top', !target);
-      const top = target ? target.getBoundingClientRect().bottom - stage.getBoundingClientRect().top : 0;
-      ad.style.top = `${Math.round(top)}px`;
-    };
-    const schedule = (): void => {
-      if (!frame) frame = requestAnimationFrame(placeAd);
-    };
-
     table.on('tableBuilt', () => {
       stage.classList.remove('rt-pending');
       updateCounter();
-      schedule();
-      new ResizeObserver(schedule).observe(stage);
     });
-    table.on('renderComplete', schedule);
-    table.on('dataFiltered', schedule);
-    table.on('pageLoaded', () => {
-      updateCounter();
-      schedule();
-    });
-    table.on('dataSorted', schedule);
+    table.on('pageLoaded', updateCounter);
 
     // Paging from the bottom: bring the top of the new page into view.
     pager.addEventListener('click', (event) => {
