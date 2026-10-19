@@ -1,0 +1,44 @@
+---
+// Site-wide notice at the top of the page column (not above the sidebar, so the rail ad keeps its
+// place). Dismissing it is remembered in localStorage; Layout.astro reads that key in <head> and adds
+// `announce-off` to <html> before paint, so a dismissed bar never flashes or shifts the page.
+// To announce something new, change the key and link in src/config/announce.ts and the text here.
+import { ANNOUNCE_HREF as href } from '../config/announce';
+const onPost = Astro.url.pathname.replace(/\/?$/, '/') === href;
+---
+
+{!onPost && (
+	<div class="announce" data-announce>
+		<p>
+			<span class="announce-tag">New</span>
+			We rebuilt the site for speed, usability and accessibility. <a href={href}>See what changed</a>, and tell us if anything looks off.
+		</p>
+		<button type="button" class="announce-close" data-announce-close aria-label="Dismiss announcement">
+			<svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" /></svg>
+		</button>
+	</div>
+)}
+
+<script>
+	import { ANNOUNCE_KEY } from '../config/announce';
+	document.querySelector('[data-announce-close]')?.addEventListener('click', () => {
+		try {
+			localStorage.setItem(ANNOUNCE_KEY, '1');
+		} catch {
+			/* private mode: hide for this page only */
+		}
+		document.documentElement.classList.add('announce-off');
+	});
+</script>
+
+<style is:global>
+	.announce { display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem; padding: .35rem .35rem .35rem 1rem; border: 1px solid var(--color-accent-line); border-radius: 10px; background: var(--color-panel); font-size: .9375rem; line-height: 1.4; }
+	.announce p { flex: 1; margin: 0; padding-block: .3rem; }
+	.announce a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+	.announce a:hover { color: var(--color-ink); }
+	.announce-tag { display: inline-block; margin-right: .5rem; padding: 0 .45rem; border-radius: 6px; background: var(--color-accent); color: var(--color-accent-ink); font-size: .8125rem; }
+	.announce-close { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 8px; background: none; color: var(--color-dim); cursor: pointer; }
+	.announce-close:hover { color: var(--color-ink); background: var(--color-panel-3); }
+	.announce-close svg { width: 1.25rem; height: 1.25rem; }
+	.announce-off .announce { display: none; }
+</style>
