@@ -49,7 +49,7 @@ Never go dimmer than `dim` for text.
 **Focus.** One unlayered `:focus-visible` outline, 3px `#facc15`. Keep it.
 
 ## Type
-- **Font.** Jost variable (self-hosted at `/fonts/Jost-latin*.woff2`, OFL). Use its real weights (400, 500, 600, 700). `font-synthesis: none` is set, so use only these weights.
+- **Font.** FuturaProBook, the site's custom face made to mimic the game's UI font (`/fonts/FuturaProBook.woff2`), with Jost as a fallback for any glyph it lacks. It has one weight; `font-synthesis: none` is set, so hierarchy comes from size and colour, never a browser-faked bold.
 - **Base size.** The root is 18px (`text-lg` on `<html>`).
 - **Scale:**
   - h1: 2.25–3rem/1.05, weight 700
@@ -57,7 +57,7 @@ Never go dimmer than `dim` for text.
   - h3: 1.15rem, weight 600
   - body: 1rem
   - small: .875rem
-- **Line length.** Prose runs at most 36rem (about 68 characters in Jost; `ch` is wide in Jost, so don't use `68ch`).
+- **Line length.** Prose runs at most 36rem (about 68 characters; don't use `68ch`, the `ch` unit is wide in this face).
 - **Case.** Sentence case everywhere. No `tracking-widest`, and no uppercase except the logo image.
 - **Numbers.** Amounts, counts, times and prices use `.tabular`.
 

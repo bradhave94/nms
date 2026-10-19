@@ -6,11 +6,12 @@
 @plugin "@tailwindcss/forms";
 
 /* Design system: see DESIGN.md. Deep-space ground, cool steel panels, the game's warm amber for
-   actions and selection, the game's own item colours on swatches. Jost (OFL, a Futura-style geometric
-   face with real weights 400-700) replaces the single-weight FuturaProBook that forced faux bold. */
+   actions and selection, the game's own item colours on swatches. FuturaProBook (one weight) everywhere; font-synthesis is off, so
+   hierarchy comes from size and colour, never from a browser-faked bold. */
 @theme {
-    --font-nms: "Jost", "Futura", system-ui, sans-serif;
-    --font-sans: "Jost", "Futura", system-ui, sans-serif;
+    /* FuturaProBook: the site's custom face made to mimic the game's UI font (one weight). Jost covers any glyph it lacks. */
+    --font-nms: "FuturaProBook", "Jost", system-ui, sans-serif;
+    --font-sans: "FuturaProBook", "Jost", system-ui, sans-serif;
 
     /* surfaces */
     --color-space: #0b0f14;      /* page ground */
@@ -111,6 +112,13 @@
         }
     }
 
+    @font-face {
+        font-family: 'FuturaProBook';
+        src: url('/fonts/FuturaProBook.woff2') format('woff2'), url('/fonts/FuturaProBook.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
     @font-face {
         font-family: 'Jost';
         src: url('/fonts/Jost-latin.woff2') format('woff2');

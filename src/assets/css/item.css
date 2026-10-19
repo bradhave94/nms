@@ -12,14 +12,16 @@
   align-items: center;
   margin-top: .75rem;
 }
-.item-icon img { display: block; width: 100%; height: auto; }
+.item-icon { border-radius: 14px; }
+.item-icon img { display: block; width: 70%; height: 70%; object-fit: contain; }
 .item-answer { grid-column: 1 / -1; }
 @media (min-width: 640px) {
   .item-head { grid-template-columns: 120px minmax(0, 1fr); }
 }
 @media (min-width: 1024px) {
-  .item-head { grid-template-columns: 168px minmax(0, 1fr); column-gap: 1.75rem; row-gap: .25rem; }
-  .item-icon { grid-row: 1 / span 2; align-self: center; }
+  /* the icon column takes whatever the square tile needs; the tile is as tall as the text beside it */
+  .item-head { grid-template-columns: auto minmax(0, 46rem); column-gap: 1.75rem; row-gap: .25rem; justify-content: start; }
+  .item-icon { grid-row: 1 / span 2; align-self: stretch; height: 100%; width: auto; aspect-ratio: 1; min-width: 168px; max-width: 400px; max-height: 400px; }
   .item-answer { grid-column: 2; }
 }
 

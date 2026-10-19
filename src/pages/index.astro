@@ -18,6 +18,7 @@ const machines = [
 ];
 
 const calculators = [
+	{ name: 'Crafting calculator', href: '/calculator/', image: img('ULTRAPROD2'), text: 'Pick any item and see every ingredient for the amount you need.' },
 	{ name: 'Crafting planner', href: '/calculator/planner/', image: '/images/calculator.webp', text: 'Add what you want to build and get one shopping list.' },
 	{ name: 'Reverse calculator', href: '/calculator/reverse/', image: img('ACCESS3'), text: 'Start from what you have and see what it makes.' },
 	{ name: 'Farm calculator', href: '/calculator/farm/', image: img('FARMPROD3'), text: 'Plant counts and harvest times for a farm.' },
@@ -38,7 +39,8 @@ const catalogs = [
 	{ name: 'Curiosities', href: '/curiosities/', image: img('BIOSHIP_EGG1') },
 	{ name: 'Food', href: '/food/', image: img('FOOD_F_MED1') },
 	{ name: 'Other', href: '/other/', image: img('SPEC_EMOTE03') },
-	{ name: 'All items', href: '/items/', image: img('STA_00') },
+	{ name: 'New items', href: '/new/', image: img('STA_00') },
+	{ name: 'All items', href: '/items/', image: '/images/resources.png' },
 ];
 
 const popular = [
@@ -153,9 +155,9 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', day: 'n
 	.hero-art { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 55% 38%; }
 	.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgb(11 15 20 / .95), rgb(11 15 20 / .7) 55%, rgb(11 15 20 / .2)), linear-gradient(0deg, var(--color-space), transparent 45%); }
 	@media (max-width: 767px) { .hero::after { background: linear-gradient(0deg, var(--color-space), rgb(11 15 20 / .78) 60%, rgb(11 15 20 / .55)); } }
-	.hero-in { max-width: 40rem; }
+	.hero-in { max-width: 44rem; }
 	.hero h1 { margin: 0; font-size: clamp(2.25rem, 5.2vw, 3.6rem); font-weight: 700; line-height: 1.03; letter-spacing: -.01em; }
-	.hero-lead { margin: 1rem 0 1.5rem; max-width: 46ch; font-size: 1.125rem; color: #dfe7f0; }
+	.hero-lead { margin: 1rem 0 1.5rem; max-width: 40rem; font-size: 1.125rem; color: #dfe7f0; }
 	.hero-search { display: flex; gap: .6rem; max-width: 36rem; }
 	.hero-popular { margin: .9rem 0 0; font-size: .95rem; color: #c9d4e0; }
 	.hero-popular a { color: var(--color-accent); font-weight: 500; text-decoration: underline; text-decoration-color: rgb(255 195 86 / .4); text-underline-offset: 3px; }

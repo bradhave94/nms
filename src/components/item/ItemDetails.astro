@@ -33,7 +33,7 @@ const shortList = (row: RecipeRowView) =>
 ---
 
 <div class="item-head">
-  <div class="item-icon">
+  <div class="item-icon slot" style={item.Colour ? `--c:#${String(item.Colour).replace(/^#/, '')}` : undefined}>
     <img
       src={`${SITE.imageBaseUrl}${toWebp(item.Icon)}`}
       alt=""
