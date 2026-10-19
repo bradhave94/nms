@@ -1,8 +1,8 @@
 ---
-title: "NMS Gravitino Coil: Get & Use"
-description: "NMS Gravitino Coil: buy the blueprint from Eos, craft it with a Gravitino Ball plus Chromatic Metal, and use it for waste hauling and combat."
+title: "NMS Gravitino Coil: How to Get, Use, and Find Balls"
+description: "Buy the Gravitino Coil blueprint from Eos for 520 Nanites. Gravitino Balls spawn where Sentinels attack on sight. Use the coil to haul waste or stun Sentinels."
 pubDate: 2026-03-20
-updatedDate: 2026-03-20
+updatedDate: 2026-10-19
 heroImage: "/images/blog/gravitino-coil.webp"
 category: "blog"
 tags:
@@ -12,6 +12,8 @@ tags:
   - waste hauling
 featured: false
 relatedLinks:
+  - label: "Gravitino Coil"
+    href: "/technology/GRAVITYGUN/"
   - label: "Gravitino Ball"
     href: "/curiosities/GRAVBALL/"
   - label: "Chromatic Metal recipes"
@@ -33,7 +35,7 @@ faqs:
     answer: "The Colossus Exocraft with a tipping flatbed attachment. It has the cargo space for large hauls and the stability to handle volatile materials."
 ---
 
-The Gravitino Coil is a Multi-Tool module added in the Remnant update (6.2). It's a gravity gun: point it at industrial waste, pull it toward you, and either carry it carefully or fling it across the planet. It's cheap to get and more fun than it has any right to be.
+The [Gravitino Coil](/technology/GRAVITYGUN/) is a Multi-Tool module added in the Remnant update (6.2). It's a gravity gun: point it at industrial waste, pull it toward you, and either carry it carefully or fling it across the planet. It's cheap to get and more fun than it has any right to be.
 
 ## How to get the Gravitino Coil blueprint
 
@@ -49,7 +51,7 @@ If you're already on a scrap world, Waste Processing Plants also sell the bluepr
 | Gravitino Ball | 1x | Planets with Extreme Sentinel activity |
 | Chromatic Metal | 50x | Refine any stellar metal |
 
-Gravitino Balls are the only awkward ingredient. They spawn on planets where Sentinels attack on sight. Grab one and get out. You don't need to build anything there.
+[Gravitino Balls](/curiosities/GRAVBALL/) are the only awkward ingredient. They spawn on planets where Sentinels attack on sight. Grab one and get out. You don't need to build anything there.
 
 Once crafted, install the Coil in a free Multi-Tool technology slot. It draws power from your Multi-Tool's existing supply, so no separate fuel is needed.
 
@@ -99,7 +101,7 @@ Not if nanites are your main goal. Each piece of waste gives around 15 to 50 nan
 - Expedition rewards (cosmetics, Colossus parts)
 - The Gravitino Coil as a combat and physics tool
 
-If you want efficient nanites, use the Coil to stun Corrupted Sentinels on Dissonant planets and farm their Tainted Metal drops instead. That's 2 nanites per metal piece and much faster than hauling junk.
+If you want efficient nanites, the [nanite farms guide](/blog/best-nanite-farms-no-mans-sky/) is the better route. You can also use the Coil to stun Corrupted Sentinels on Dissonant planets and farm their Tainted Metal drops. That's 2 nanites per metal piece and much faster than hauling junk.
 
 ## Sources
 - Extracted game data

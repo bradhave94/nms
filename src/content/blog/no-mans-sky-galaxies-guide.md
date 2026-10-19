@@ -1,8 +1,8 @@
 ---
-title: "NMS Galaxy Types, List & Travel"
-description: "NMS galaxy types (Norm, Lush, Harsh, Empty), the 256-galaxy list, and how to travel: black holes, New Beginnings skip, and teleporting back."
+title: "How Many Galaxies Are in No Man's Sky? Types & List"
+description: "No Man's Sky has 256 galaxies (1 through 255 in normal play). See Norm, Lush, Harsh and Empty types, plus how to travel by black hole or the galaxy centre."
 pubDate: 2026-05-03
-updatedDate: 2026-05-03
+updatedDate: 2026-10-19
 heroImage: "/images/blog/galaxies-guide.webp"
 category: "blog"
 tags:

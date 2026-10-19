@@ -146,7 +146,7 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 		metaTitle: 'NMS Starship Parts List & Wings',
 		idLabel: 'Starship Item',
 		description:
-			'NMS starship parts list: wings, components, and modules. Open each part page for craft costs and the recipes tied to starship management.',
+			"NMS starship parts: wings, cockpits and engines for fighter, hauler, explorer and solar ships. Break ships down at a space station's Starship Outfitting unit.",
 		intro:
 			'Starship items include components, modules, and parts tied to spaceflight and starship management. See [technology upgrades](/technology/) and [corvette parts](/corvette/).',
 		datasets: ['Starships'],

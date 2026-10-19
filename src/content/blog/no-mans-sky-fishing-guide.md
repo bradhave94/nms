@@ -1,8 +1,8 @@
 ---
-title: "NMS Fishing Guide: Bait & Uses"
-description: "NMS fishing guide: Fishing Rig, best bait, depth for size, and what to do with fish: cook, sell, bait, or release for nanites."
+title: "How to Fish in No Man's Sky: Get the Fishing Rig & Bait"
+description: "Buy the Fishing Rig blueprint from Iteration Eos for 1 Nanite, craft it, install it on your Multi-Tool, then bait the line and cast into water to start."
 pubDate: 2024-12-20
-updatedDate: 2024-12-20
+updatedDate: 2026-10-19
 heroImage: "/images/blog/fishing-guide.webp"
 category: "blog"
 tags:
@@ -37,7 +37,7 @@ faqs:
     answer: "Cook them in the Nutrient Processor for stat-boosting food, use them as bait in the Bait Box, release them into water for Nanites, or sell them for units. Legendary fish sell for up to 200,000 units each."
 ---
 
-Fishing was added in the Aquarius update (version 5.10, September 2024), and it's better than it has any right to be. There are over 200 [fish](/fish) spread across seven biomes and four rarity tiers, and water depth decides how big a fish you catch.
+Fishing was added in the Aquarius update (version 5.10, September 2024), and it's better than it has any right to be. To start, buy the Fishing Rig blueprint from Iteration Eos at the Space Anomaly for 1 Nanite, craft it, and install it on your Multi-Tool. There are over 200 [fish](/fish) spread across seven biomes and four rarity tiers, and water depth decides how big a fish you catch.
 
 ## Getting the Fishing Rig
 
