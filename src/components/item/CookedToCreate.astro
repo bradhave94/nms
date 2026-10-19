@@ -4,15 +4,16 @@ import RecipeRows from '@components/item/RecipeRows.astro';
 import type { RecipeRowView } from '@utils/itemPageContext';
 
 interface Props {
+  itemName: string;
   rows: RecipeRowView[];
 }
 
-const { rows } = Astro.props;
+const { itemName, rows } = Astro.props;
 ---
 
 <RecipeRows
   id="cooked-to-create"
-  title="Cook it into"
+  title={`What can you cook from ${itemName}?`}
   count={rows.length === 1 ? '1 recipe' : `${rows.length} recipes`}
   rows={rows}
   mode="use"

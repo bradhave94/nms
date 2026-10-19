@@ -15041,7 +15041,7 @@
   },
   {
     "source": "/technology/tech15",
-    "destination": "/technology/STARSUIT/",
+    "destination": "/curiosities/STARSUIT/",
     "permanent": true
   },
   {
@@ -15651,7 +15651,7 @@
   },
   {
     "source": "/technology/tech260",
-    "destination": "/technology/DENYSUIT/",
+    "destination": "/curiosities/DENYSUIT/",
     "permanent": true
   },
   {

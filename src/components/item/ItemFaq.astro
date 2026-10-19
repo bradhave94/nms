@@ -12,7 +12,7 @@ const { faqQuestions } = Astro.props;
 
 {faqQuestions.length > 0 && (
   <section id="faq" class="item-section" aria-labelledby="faq-title">
-    <h2 id="faq-title" class="section-title">Questions</h2>
+    <h2 id="faq-title" class="section-title">Frequently asked questions</h2>
     <div class="faq-list">
       {faqQuestions.map((faq, index) => (
         <Accordion id={`item-faq-${index + 1}`} heading="h3">

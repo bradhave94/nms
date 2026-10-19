@@ -19,7 +19,7 @@ const countLabel = tiles.length === 1 ? '1 item' : `${tiles.length} items`;
 {tiles.length > 0 && (
   <section id="used-to-create" class="item-section" aria-labelledby="used-to-create-title" data-uses data-visible={VISIBLE}>
     <h2 id="used-to-create-title" class="section-title">
-      {isFish ? 'What this fish is used for' : 'Craft with it'}
+      {isFish ? 'What this fish is used for' : `What can you craft with ${item.Name}?`}
       <span class="count">{countLabel}</span>
     </h2>
     {categories.length > 1 && (

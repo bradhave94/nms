@@ -19,9 +19,11 @@ interface Props {
   quickestRefine?: RecipeRowView;
   craft?: RecipeRowView;
   bestCook?: RecipeRowView;
+  /** Set when the page has no crafting tree: the craft label becomes the "How to craft X" heading. */
+  craftHeading?: string;
 }
 
-const { item, answerSummary, pills, relatedLinks, bestRefine, quickestRefine, craft, bestCook } = Astro.props;
+const { item, answerSummary, pills, relatedLinks, bestRefine, quickestRefine, craft, bestCook, craftHeading } = Astro.props;
 const hasBest = Boolean(bestRefine || craft || bestCook);
 const blocks = [
   bestRefine && { key: 'refine', label: 'Best yield', row: bestRefine },
@@ -81,7 +83,7 @@ const shortList = (row: RecipeRowView) =>
       <div class="panel-amber best-box">
         {blocks.map((block) => (
           <div class="best-block">
-            <p class="best-label">{block.label}</p>
+            {block.key === 'craft' && craftHeading ? <h2 class="best-label">{craftHeading}</h2> : <p class="best-label">{block.label}</p>}
             <div class="best-eq">
               {block.row.inputs.map((slot, index) => (
                 <>

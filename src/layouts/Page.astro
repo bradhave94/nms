@@ -247,6 +247,7 @@ const aboutInMain = mainWeight === 0 && !hasUses;
     quickestRefine={view.quickestRefine}
     craft={view.craft}
     bestCook={view.bestCook}
+    craftHeading={!showTree && view.craft ? `How to ${view.craft.machine === 'Nutrient Processor' ? 'cook' : 'craft'} ${item.Name}` : undefined}
   />
 
   {(originalBuilding || originalReward || itemUpdateMeta) && (
@@ -295,8 +296,8 @@ const aboutInMain = mainWeight === 0 && !hasUses;
       <ItemStats min={extra.NumStatsMin} max={extra.NumStatsMax} stats={upgradeStats} />
       {restInMain && (
         <>
-          <RefinedToCreate rows={view.refineInto} />
-          <CookedToCreate rows={view.cookInto} />
+          <RefinedToCreate itemName={item.Name} rows={view.refineInto} />
+          <CookedToCreate itemName={item.Name} rows={view.cookInto} />
           <UsedToCreate item={item} tiles={view.craftWith} categories={view.craftWithCategories} />
           {guideEntry && <ItemGuide guide={guideEntry} />}
           <ItemFaq faqQuestions={faqQuestions} />
@@ -313,8 +314,8 @@ const aboutInMain = mainWeight === 0 && !hasUses;
 
   {!restInMain && (
     <div class="item-rest">
-      <RefinedToCreate rows={view.refineInto} />
-      <CookedToCreate rows={view.cookInto} />
+      <RefinedToCreate itemName={item.Name} rows={view.refineInto} />
+      <CookedToCreate itemName={item.Name} rows={view.cookInto} />
       <UsedToCreate item={item} tiles={view.craftWith} categories={view.craftWithCategories} />
       {guideEntry && <ItemGuide guide={guideEntry} />}
       <ItemFaq faqQuestions={faqQuestions} />
