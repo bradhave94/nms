@@ -222,9 +222,10 @@ const showCalc = Boolean(view.craft || view.bestRefine || view.bestCook);
 const mainWeight =
   (showTree ? 6 : 0) + Math.min(refineRows.length, 8) + Math.min(cookRows.length, 8) + (upgradeStats.length > 0 ? 3 : 0);
 const restInMain = mainWeight < 7;
-// Nothing to make: the in-game description is the answer, so it leads the left column (above any uses),
-// and the right column keeps only the ad and calculator instead of a long About beside an empty gap.
-const aboutInMain = mainWeight === 0;
+// Nothing to make and nothing it's used in: the in-game description is the whole answer, so it leads
+// the left column. Otherwise About and Details stay in the sidebar (BH prefers them there).
+const hasUses = view.refineInto.length > 0 || view.cookInto.length > 0 || view.craftWith.length > 0;
+const aboutInMain = mainWeight === 0 && !hasUses;
 ---
 
 <div class="item-page">

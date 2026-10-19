@@ -57,7 +57,7 @@
 .rt .tabulator .tabulator-header .tabulator-col[aria-sort="descending"] .tabulator-arrow { border-top-color: var(--color-accent); border-bottom: none; }
 .rt .tabulator .tabulator-header .tabulator-col[aria-sort="none"] .tabulator-arrow { opacity: 0; transition: opacity .15s; }
 .rt .tabulator .tabulator-header .tabulator-col[aria-sort="none"]:is(:hover, :focus-visible) .tabulator-arrow { opacity: 1; }
-.rt .tabulator .tabulator-tableholder { height: auto !important; background: transparent; }
+.rt .tabulator .tabulator-tableholder { height: auto !important; background: transparent; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .rt .tabulator-col-resize-handle { display: none; }
 .rt .tabulator .tabulator-tableholder .tabulator-table { background: transparent; color: var(--color-ink); }
 .rt .tabulator .tabulator-tableholder .tabulator-placeholder .tabulator-placeholder-contents { padding: 2rem 1rem; color: var(--color-dim); font-size: 1rem; font-weight: 400; white-space: normal; }
@@ -76,7 +76,7 @@
 .rt .cell-content { display: flex; align-items: center; gap: .5rem; width: 100%; min-height: 52px; padding: .35rem .7rem; font-size: .9375rem; line-height: 1.2; }
 .rt .cell-content > img { width: 32px; height: 32px; flex: none; object-fit: contain; }
 .rt .cell-link:hover .rt-name { text-decoration: underline; text-underline-offset: 3px; }
-.rt-name { min-width: 0; overflow-wrap: anywhere; }
+.rt-name { min-width: 0; overflow-wrap: break-word; }
 .rt-qty { flex: none; padding: 0 .38rem; border-radius: 4px; background: rgb(0 0 0 / .6); color: #fff; font-size: .75rem; font-weight: 700; line-height: 1.5; font-variant-numeric: tabular-nums; }
 .rt-op, .rt-value { display: flex; flex-direction: column; justify-content: center; width: 100%; padding: .35rem .8rem; background: var(--color-panel); color: #dfe7f0; font-size: .875rem; line-height: 1.25; }
 .rt-op small, .rt-value small { color: var(--color-dim); font-size: .78rem; }
@@ -102,32 +102,15 @@
     .rt-head { grid-template-columns: 64px minmax(0, 1fr); gap: .8rem; }
     .rt-head > img { width: 64px; height: 64px; }
     /* On phones the stacked table already reads like cards; the sidebar links both views' pages. */
-    .rt-views { display: none; }
     .rt-search { flex-basis: 100%; max-width: none; }
     .rt-seg { flex: 1 1 100%; }
     .rt-seg > button { flex: 1 1 auto; justify-content: center; padding: 0 .6rem; }
     .rt-count { flex-basis: 100%; margin: 0; text-align: left; }
     .rt-stage.rt-pending { height: 3200px; }
 
-    /* Stacked rows: the column headers stay for screen readers only (the script takes their sort
-       buttons out of the tab order at this width, so focus never lands on something invisible). */
-    .rt .tabulator .tabulator-header { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-    .rt .tabulator .tabulator-tableholder { width: 100% !important; overflow: visible !important; }
-    .rt .tabulator .tabulator-tableholder .tabulator-table { display: block; width: 100% !important; min-width: 0 !important; }
-    .rt .tabulator-row,
-    .rt .tabulator-row.tabulator-row-even,
-    .rt .tabulator-row.tabulator-selectable:hover { flex-wrap: wrap; gap: 4px; padding: 4px; margin-bottom: 8px; border: 1px solid var(--color-line); border-radius: 12px; }
-    .rt .tabulator-row.rt-gap { margin-bottom: calc(var(--rt-ad-gap, 266px) + 8px); }
-    .rt .tabulator-row .tabulator-cell { flex: 1 1 140px; width: auto !important; min-width: 0 !important; height: auto !important; border-radius: 8px; }
-    .rt .tabulator-row .tabulator-cell.is-empty { display: none; }
-    .rt .tabulator-row .tabulator-cell[tabulator-field="out"] { order: -1; flex-basis: 100%; }
-    .rt .tabulator-row .tabulator-cell[tabulator-field="op"],
-    .rt .tabulator-row .tabulator-cell[tabulator-field="v"] { order: 10; flex-basis: 100%; }
+    /* Phones keep the table: it scrolls sideways inside its frame, with slightly smaller cells. */
     .rt .cell-content { min-height: 44px; padding: .3rem .55rem; font-size: .875rem; }
     .rt .cell-content > img { width: 28px; height: 28px; }
-    .rt [tabulator-field="out"] .cell-content { min-height: 54px; font-size: 1.0625rem; font-weight: 600; }
-    .rt [tabulator-field="out"] .cell-content > img { width: 36px; height: 36px; }
-    .rt-op, .rt-value { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: baseline; gap: .1rem .5rem; padding: .2rem .4rem; background: transparent; }
     .rt-pager label { margin-left: auto; }
 }
 

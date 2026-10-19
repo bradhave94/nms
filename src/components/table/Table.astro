@@ -6,7 +6,7 @@
 // slot never moves. It sits after the grid in the DOM, absolutely positioned inside `.rt-stage`;
 // after every render the script gives the 5th visible row (or the last one, on short pages) a
 // bottom margin the height of the slot and moves the slot into that gap with `top`. With no rows
-// the slot sits under the filter bar. Phones (<= 640px) get stacked rows with the output first.
+// the slot sits under the filter bar. Phones keep the table and scroll it sideways.
 import '../../assets/css/tabulator.css';
 import '../../assets/css/tables.css';
 import TableHead from '@components/table/Head.astro';
@@ -227,7 +227,7 @@ const columns = [
       if (col.field === 'op') return { title: col.title, field: 'op', formatter: formatOp, sorter: byName(opName), minWidth: 180, widthGrow: 1 };
       if (col.field === 'v')
         return { title: col.title, field: 'v', formatter: formatValue, sorter: 'number', headerSortStartingDir: 'desc', minWidth: 120, widthGrow: 0.6 };
-      return { title: col.title, field: col.field, formatter: formatItem, sorter: byName(itemName), minWidth: 140, widthGrow: col.field === 'out' ? 1.2 : 1 };
+      return { title: col.title, field: col.field, formatter: formatItem, sorter: byName(itemName), minWidth: 175, widthGrow: col.field === 'out' ? 1.2 : 1 };
     });
     columns.push({ title: '', field: 'ord', sorter: 'number', visible: false } as never, { title: '', field: 'y', sorter: byYield, visible: false } as never);
 
@@ -306,17 +306,7 @@ const columns = [
       if (!frame) frame = requestAnimationFrame(placeAd);
     };
 
-    // Phones hide the header visually (stacked rows), so its sort buttons leave the tab order.
-    const stacked = window.matchMedia('(max-width: 640px)');
-    const syncHeaderFocus = (): void => {
-      (table.element as HTMLElement | undefined)
-        ?.querySelectorAll<HTMLElement>('.tabulator-col.tabulator-sortable')
-        .forEach((col) => (col.tabIndex = stacked.matches ? -1 : 0));
-    };
-    stacked.addEventListener('change', syncHeaderFocus);
-
     table.on('tableBuilt', () => {
-      syncHeaderFocus();
       stage.classList.remove('rt-pending');
       updateCounter();
       schedule();

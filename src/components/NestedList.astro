@@ -32,7 +32,7 @@ const colourOf = (node: NestedItem) => node.Colour ?? getById(node.Id)?.Colour;
       ? (item.Quantity ?? 1) * (items.Quantity ?? 1)
       : (item.Quantity ?? 1);
     return item.RequiredItems?.length ? (
-      <li class="tree-node" data-index={index}>
+      <li class="tree-node tree-branch" data-index={index}>
         <Accordion>
           <span class="tree-label" slot="title">
             <ItemSlot icon={toWebp(item.Icon)} colour={colourOf(item)} qty={quantity} qtyAttr="data-quantity" class="w-10" />
@@ -40,9 +40,11 @@ const colourOf = (node: NestedItem) => node.Colour ?? getById(node.Id)?.Colour;
           </span>
           <div slot="content">
             <Astro.self items={{ ...item, Quantity: quantity }} depth={depth + 1} />
-            <a href={getSlug(item.Id)} class="link ml-2 inline-block py-1 text-[.85rem]">{item.Name} page</a>
           </div>
         </Accordion>
+        <a href={getSlug(item.Id)} class="tree-go" aria-label={`${item.Name} page`} title={`${item.Name} page`}>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" /></svg>
+        </a>
       </li>
     ) : (
       <li class="tree-node" data-index={index}>
