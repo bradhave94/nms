@@ -201,6 +201,15 @@
     max-height: 300px;
 }
 
+/* In-content slots reserve 250px against CLS, but Nitro often fills them with a 728x90 or
+   smaller banner. A panel makes that read as an ad space rather than a stray gap. No
+   overflow clip: it would cut the creative's corners and AdChoices / Report Ad icons. */
+.nitro-ad-slot:not(.nav-left-ad) > .nitro-ad {
+    background: var(--color-panel);
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+}
+
 
 
 
