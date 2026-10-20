@@ -14,7 +14,7 @@ type BuildGuideStructuredDataOptions = {
 	description: string;
 	publishedTime: string;
 	modifiedTime: string;
-	authorName: string;
+	authorName?: string;
 	image?: string;
 	breadcrumbs: BreadcrumbItemInput[];
 	keywords?: string[];
@@ -31,7 +31,7 @@ export const buildGuideStructuredData = ({
 	description,
 	publishedTime,
 	modifiedTime,
-	authorName = "No Man's Sky Recipes",
+	authorName,
 	image,
 	breadcrumbs,
 	keywords,
@@ -72,11 +72,9 @@ export const buildGuideStructuredData = ({
 		headline: title,
 		description,
 		datePublished: publishedTime,
-		author: {
-			'@type': 'Person',
-			name: authorName,
-		},
-		publisher: { '@id': `${siteOrigin}#organization` },
+		// Posts without a named writer are by the site itself: the Organization, not a Person named after it.
+		author: authorName ? { '@type': 'Person', name: authorName } : { '@type': 'Organization', '@id': `${siteOrigin}#organization`, name: "No Man's Sky Recipes", url: `${siteOrigin}/` },
+		publisher: { '@type': 'Organization', '@id': `${siteOrigin}#organization`, name: "No Man's Sky Recipes", url: `${siteOrigin}/` },
 		about: { '@id': getGameId(siteOrigin) },
 		...pageSignals,
 		...(image ? { image: { '@type': 'ImageObject', url: image } } : {}),

@@ -6,6 +6,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 import trailingSlashLinks from './src/integrations/trailingSlashLinks.ts';
+import cleanGameNames from './src/integrations/cleanGameNames.ts';
 import { writeIconWebps } from './scripts/icon-webp.mjs';
 import { writeImageSizes } from './scripts/image-sizes.mjs';
 
@@ -127,7 +128,7 @@ export default defineConfig({
     })
   ],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [cleanGameNames(), tailwindcss()],
     build: {
       rollupOptions: {
         output: {

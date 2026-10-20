@@ -1,19 +1,34 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import CompactCard from '@components/CompactCard.astro';
-import Pagination from '@components/Pagination.astro';
+import CategoryFilter from '@components/CategoryFilter.astro';
+import PageLinks from '@components/PageLinks.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import NitroAd from '@components/ads/NitroAd.astro';
 import { getSlug } from '@utils/lookup.js';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
-import { buildCategoryBreadcrumbs, buildCategoryIntro, buildPaginatedMeta, buildPaginationUrls } from '@utils/seo.js';
+import { buildCategoryBreadcrumbs, buildPaginatedMeta, buildPaginationUrls } from '@utils/seo.js';
 import type { Item } from '@utils/lookup.js';
 import data from '@datav2/Products.json';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
+import { nameSortKey } from '../../integrations/cleanGameNames';
+import '../../assets/css/lists.css';
 
+/** A–Z by nameSortKey(): leading quotes and punctuation ignored, names starting with a digit last. */
+const compareNames = (a: string, b: string): number => {
+	const x = nameSortKey(a);
+	const y = nameSortKey(b);
+	// the digit marker is '~', which localeCompare would put first
+	return Number(x.startsWith('~')) - Number(y.startsWith('~')) || x.localeCompare(y, 'en', { numeric: true });
+};
+
+// 80 per page keeps /calculator/2 (see [page].astro); this page lists every craftable product.
 const pageSize = 80;
-const sortedItems = (data as Item[]).sort((a: Item, b: Item) => b.BaseValueUnits - a.BaseValueUnits);
+const hasRecipe = (item: Item): boolean =>
+	'RequiredItems' in item && Array.isArray(item.RequiredItems) && item.RequiredItems.length > 0;
+const sortedItems = [...(data as Item[])].sort((a, b) =>
+	compareNames(a.Name ?? '', b.Name ?? '')
+);
 const pageData = sortedItems.slice(0, pageSize);
 const lastPage = Math.max(1, Math.ceil(sortedItems.length / pageSize));
 const page = {
@@ -27,7 +42,7 @@ const page = {
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/calculator/', siteOrigin).toString();
-const calculatorItems = page.data.filter((item) => ('RequiredItems' in item && item.RequiredItems && item.RequiredItems.length > 0));
+const calculatorItems = page.data.filter(hasRecipe);
 const itemListElements = calculatorItems.map((item, index) => ({
 	name: item.Name,
 	url: `${siteOrigin}${getSlug(item)}`,
@@ -43,14 +58,19 @@ const structuredData = buildCollectionStructuredData({
 	items: itemListElements,
 });
 const breadcrumbs = buildCategoryBreadcrumbs('Crafting Calculator', '/calculator', page.currentPage);
-const intro = buildCategoryIntro(
-	'Use the crafting calculator to estimate ingredients and optimize farming routes for complex builds.',
-	page.currentPage,
-	page.lastPage
-);
 const baseDescription = 'A calculator to help your farming efforts by calculating exactly what you need to craft any item.';
 const { title, description } = buildPaginatedMeta('Crafting Calculator', baseDescription, page.currentPage, page.lastPage);
 const { nextUrl } = buildPaginationUrls(siteOrigin, page);
+
+const allCraftable = sortedItems.filter(hasRecipe);
+const pickerItems = allCraftable.map((item) => ({
+	name: item.Name,
+	group: item.Group,
+	icon: toWebp(item.Icon),
+	link: getSlug(item),
+	colour: item.Colour,
+	value: item.BaseValueUnits,
+}));
 ---
 
 <Layout
@@ -61,26 +81,26 @@ const { nextUrl } = buildPaginationUrls(siteOrigin, page);
 	nextUrl={nextUrl}
 	ogImage={`${SITE.website}/images/calculator.webp`}
 >
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<h1 class="text-center text-4xl sm:text-6xl mt-2">Crafting Calculator</h1>
-	<p class="mx-auto mb-4 mt-3 max-w-3xl text-center text-sky-200/90">{intro}</p>
-	<p class="text-xl text-center mt-3 mb-8">Choose an item below to start</p>
-	<NitroAd id="calculator-after-intro" />
-	<div id="items" class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
-		{
-			page.data.map((item, index) =>
-				('RequiredItems' in item && item.RequiredItems && item.RequiredItems.length > 0) ? (
-					<CompactCard
-						card={{
-							name: item.Name,
-							image: SITE.imageBaseUrl + toWebp(item.Icon),
-							link: getSlug(item),
-						}}
-						index={index}
-					/>
-				) : null
-			)
-		}
+	<div class="list-page">
+		<Breadcrumbs items={breadcrumbs} className="pt-2 mb-4 !px-0" />
+		<header class="list-head">
+			<h1>Crafting Calculator</h1>
+			<p class="intro">
+				Pick an item, then set the quantity on its page to see how much of each ingredient you need.
+			</p>
+		</header>
+		<CategoryFilter
+			id="calculator"
+			basePath="/calculator"
+			items={pickerItems}
+			imageBase={SITE.imageBaseUrl}
+			initialCount={calculatorItems.length}
+			searchLabel="Find the item you want to craft"
+			searchPlaceholder="e.g. Warp Cell"
+			noun={['craftable product', 'craftable products']}
+		>
+			<NitroAd slot="ad" id="calculator-after-intro" />
+		</CategoryFilter>
+		<PageLinks currentPage={1} lastPage={page.lastPage} basePath="/calculator" />
 	</div>
-	<Pagination page={page} />
 </Layout>

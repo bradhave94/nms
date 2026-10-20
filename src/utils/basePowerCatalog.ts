@@ -13,7 +13,7 @@ type Buildable = Item & {
 export function buildPowerCatalog() {
 	const items = Object.values(dataSources).flatMap((source) => Array.isArray(source) ? source as Buildable[] : []);
 	const byId = new Map(items.map((item) => [item.Id, item]));
-	const describe = (item: Item) => ({ id: item.Id, name: item.Name, icon: item.Icon, url: getSlug(item) });
+	const describe = (item: Item) => ({ id: item.Id, name: item.Name, icon: item.Icon, colour: item.Colour || undefined, url: getSlug(item) });
 	const planetaryParts = items.filter((item) => isPlanetPowerPart(item) && item.LinkGridData);
 	const devices = planetaryParts.filter((item) => (item.RequiredItems?.length ?? 0) > 0)
 		.map((item) => ({ ...describe(item), ...electricalValues(item.LinkGridData!) }))

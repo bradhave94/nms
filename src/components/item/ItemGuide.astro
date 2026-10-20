@@ -1,0 +1,33 @@
+---
+// A card for the blog post written about this item (matched by slug in itemPageContext.findItemGuide).
+import { getPublicImageSize } from '@utils/imageSize';
+
+interface Props {
+  guide: { id: string; title: string; description: string; heroImage?: string };
+}
+
+const { guide } = Astro.props;
+const origin = 'https://nomansskyrecipes.com';
+const size = guide.heroImage ? getPublicImageSize(`${origin}${guide.heroImage}`, origin) : null;
+---
+
+<section id="guide" class="item-section" aria-labelledby="guide-title">
+  <h2 id="guide-title" class="section-title">Guide</h2>
+  <a href={`/blog/${guide.id}`} class="guide-card panel">
+    {guide.heroImage && (
+      <img
+        src={guide.heroImage}
+        alt=""
+        width={size?.width ?? 1200}
+        height={size?.height ?? 630}
+        loading="lazy"
+        decoding="async"
+      />
+    )}
+    <span class="min-w-0">
+      <span class="block text-[1.15rem] font-semibold text-ink">{guide.title}</span>
+      <span class="mt-1 block text-[.9rem] text-dim">{guide.description}</span>
+      <span class="mt-2 inline-block font-semibold text-accent">Read the guide <span aria-hidden="true">→</span></span>
+    </span>
+  </a>
+</section>

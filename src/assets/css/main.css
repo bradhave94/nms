@@ -5,8 +5,54 @@
 
 @plugin "@tailwindcss/forms";
 
+/* Design system: see DESIGN.md. Deep-space ground, cool steel panels, the game's warm amber for
+   actions and selection, the game's own item colours on swatches. FuturaProBook (one weight) everywhere; font-synthesis is off, so
+   hierarchy comes from size and colour, never from a browser-faked bold. */
 @theme {
-    --font-nms: "FuturaProBook", sans-serif;
+    /* FuturaProBook: the site's custom face made to mimic the game's UI font (one weight). Jost covers any glyph it lacks. */
+    --font-nms: "FuturaProBook", "Jost", system-ui, sans-serif;
+    --font-sans: "FuturaProBook", "Jost", system-ui, sans-serif;
+
+    /* surfaces */
+    --color-space: #0b0f14;      /* page ground */
+    --color-panel: #121821;      /* cards, panels */
+    --color-panel-2: #0e141c;    /* inset fields, table heads */
+    --color-panel-3: #1a2330;    /* hover, raised */
+    --color-line: #243041;       /* 1px borders */
+    --color-line-strong: #3a4658;/* field borders: 3:1+ on panel */
+    --color-ink: #e8eef5;        /* body text */
+    --color-dim: #9fb0c3;        /* secondary text: 7:1+ on panel */
+    /* the game's warm accent: primary actions, selection, links in UI chrome */
+    --color-accent: #ffc356;
+    --color-accent-strong: #f5ad2e;
+    --color-accent-ink: #1a1000; /* text on accent */
+    --color-accent-line: #6b5422;/* amber hairline for highlighted panels */
+    --color-glow: #8be9e0;       /* the game's scanner teal, used sparingly (focus, scan readouts) */
+
+    /* Legacy palette remap: pages still use blue/sky utilities. Blue was the stock accent, so it
+       becomes the amber scale; sky was the navy panel/text family, so it becomes cool steel at the
+       same lightness steps (contrast pairs that passed before still pass). */
+    --color-blue-300: #ffe0a3;
+    --color-blue-400: #ffd27f;
+    --color-blue-500: #ffc356;
+    --color-blue-600: #f5ad2e;
+    --color-blue-700: #d9921a;
+    --color-blue-800: #a86f10;
+    --color-sky-100: #e8eef5;
+    --color-sky-200: #d0dbe6;
+    --color-sky-300: #b3c3d4;
+    --color-sky-400: #8ea3b8;
+    --color-sky-500: #6b8299;
+    --color-sky-600: #56708a;
+    --color-sky-700: #33495f;
+    --color-sky-800: #223244;
+    --color-sky-900: #172331;
+    --color-sky-950: #0f1822;
+    --color-cyan-200: #d6f5f2;
+    --color-cyan-300: #a8ece6;
+    --color-cyan-400: #8be9e0;
+    --color-cyan-500: #4fc9be;
+
     --color-warm-gray-50: #fafaf9;
     --color-warm-gray-100: #f5f5f4;
     --color-warm-gray-200: #e7e5e4;
@@ -68,40 +114,66 @@
 
     @font-face {
         font-family: 'FuturaProBook';
-        src: url('/fonts/FuturaProBook.woff2') format('woff2'),
-            url('/fonts/FuturaProBook.woff') format('woff');
-        font-weight: normal;
+        src: url('/fonts/FuturaProBook.woff2') format('woff2'), url('/fonts/FuturaProBook.woff') format('woff');
+        font-weight: 400;
         font-style: normal;
         font-display: swap;
     }
+    @font-face {
+        font-family: 'Jost';
+        src: url('/fonts/Jost-latin.woff2') format('woff2');
+        font-weight: 300 800;
+        font-style: normal;
+        font-display: swap;
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+        font-family: 'Jost';
+        src: url('/fonts/Jost-latin-ext.woff2') format('woff2');
+        font-weight: 300 800;
+        font-style: normal;
+        font-display: swap;
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    html { background: var(--color-space); color: var(--color-ink); -webkit-font-smoothing: antialiased; }
+    /* no preflight is loaded: form controls must inherit the site face (they fell back to system sans) */
+    input, select, textarea, button { font: inherit; letter-spacing: inherit; }
+    /* no preflight is loaded: size boxes by their border so padded height:100% tiles fit their grid cells */
+    *, ::before, ::after { box-sizing: border-box; }
+    /* the browser's blue clear button in search fields: the dialog and filters have their own */
+    input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+    /* only real weights: never let the browser fake bold or italic */
+    html { font-synthesis: none; }
+    /* long single-word names (or larger user text spacing) break instead of widening the page (WCAG 1.4.10/1.4.12) */
+    h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
+    p { text-wrap: pretty; }
 }
 
-#table {
-    @apply  border-0
-}
-
-#table .tabulator-row .tabulator-cell {
-    @apply p-0 border-b border-r border-gray-500 transition-all hover:opacity-80 min-w-[275px] inline-flex items-center text-white
-}
-
-#table  .tabulator-row .tabulator-cell[tabulator-field="value"] {
-    @apply text-base px-3
-}
-
-#table .tabulator-row .tabulator-cell picture {
-    @apply min-w-[50px]
-}
-
-#table .tabulator-row .tabulator-cell:last-of-type {
-    @apply border-r-0
-}
-
-#table .tabulator-cell > a {
-    @apply w-full h-full flex
-}
-
-#table .tabulator-cell > a > div {
-    @apply flex flex-row-reverse items-center justify-end flex-1 text-white text-base gap-2 px-2
+/* ── Shared UI primitives (see DESIGN.md) ─────────────────────────────── */
+@layer components {
+    .panel { background: var(--color-panel); border: 1px solid var(--color-line); border-radius: 14px; }
+    .panel-amber { background: linear-gradient(180deg, rgb(255 195 86 / .10), rgb(255 195 86 / .03)); border: 1px solid var(--color-accent-line); border-radius: 14px; }
+    .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; padding: 0 1.1rem; border-radius: 10px; background: var(--color-accent); color: var(--color-accent-ink); font-weight: 600; transition: background-color .15s; }
+    .btn-primary:hover { background: var(--color-accent-strong); }
+    .btn-quiet { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 40px; padding: 0 .9rem; border-radius: 10px; border: 1px solid var(--color-line-strong); background: var(--color-panel-2); color: var(--color-ink); font-weight: 500; transition: border-color .15s, background-color .15s; }
+    .btn-quiet:hover { border-color: var(--color-accent); }
+    .btn-quiet[aria-pressed="true"], .btn-quiet[aria-selected="true"] { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+    .field { width: 100%; min-height: 44px; padding: 0 .9rem; border-radius: 10px; border: 1px solid var(--color-line-strong); background: var(--color-panel-2); color: var(--color-ink); }
+    .field::placeholder { color: var(--color-dim); }
+    .field:focus { border-color: var(--color-accent); outline: none; box-shadow: 0 0 0 3px rgb(255 195 86 / .25); }
+    .link { color: var(--color-accent); text-decoration: underline; text-decoration-color: rgb(255 195 86 / .5); text-underline-offset: 3px; }
+    .link:hover { text-decoration-color: currentColor; }
+    .pill { display: inline-flex; align-items: center; gap: .35rem; padding: .15rem .65rem; border-radius: 999px; border: 1px solid var(--color-line); color: #cfd9e4; font-size: .875rem; }
+    .section-title { display: flex; align-items: baseline; gap: .6rem; margin: 0 0 .9rem; font-size: 1.5rem; font-weight: 600; }
+    .section-title .count { font-size: .95rem; font-weight: 400; color: var(--color-dim); }
+    /* the game's inventory slot: rounded tile tinted by the item's own Colour (set --c), amount badge bottom-right */
+    .slot { position: relative; display: grid; place-items: center; flex: none; aspect-ratio: 1; border-radius: 10px;
+        background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--c, #1b2533) 55%, var(--color-panel-2)), var(--color-panel-2) 75%);
+        border: 1px solid color-mix(in srgb, var(--c, #2a3546) 70%, #2a3546); }
+    .slot > img { width: 72%; height: 72%; object-fit: contain; }
+    .slot > .qty { position: absolute; right: 3px; bottom: 2px; padding: 0 .3rem; border-radius: 4px; background: rgb(0 0 0 / .65); color: #fff; font-size: .72rem; font-weight: 700; line-height: 1.35; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .tabular { font-variant-numeric: tabular-nums; }
 }
 
 :is(
@@ -117,73 +189,7 @@
     @apply text-black!
 }
 
-#table .tabulator-cell > a > div[style="background: #CCCCCC"] {
-    @apply bg-slate-900! text-white!
-}
 
-#table .tabulator-row {
-    @apply bg-gray-800
-}
-
-#table .tabulator-row.tabulator-row-even {
-    @apply bg-gray-800
-}
-
-#table .tabulator-header .tabulator-col {
-    @apply bg-black! text-base! text-white! p-2! min-w-[275px]!
-}
-
-#table .tabulator-header .tabulator-col:last-of-type {
-    @apply border-r-0
-}
-
-#table .tabulator-arrow {
-    @apply border-b-blue-500
-}
-
-#table .tabulator-col.tabulator-sortable[aria-sort="descending"] .tabulator-arrow {
-    @apply border-t-blue-500
-}
-
-#table + .tabulator-footer {
-    @apply bg-black text-base text-white py-2 px-10 border-0 overflow-x-scroll
-}
-
-#table + .tabulator-footer .tabulator-page {
-    @apply inline-flex items-center transition-colors rounded-sm border-0 bg-blue-500 px-2.5 py-1.5 text-xs font-medium text-black shadow-xs hover:bg-blue-800 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-}
-
-#table + .tabulator-footer .tabulator-page.active {
-    @apply bg-blue-700 hover:bg-blue-800
-}
-
-#table + .tabulator-footer .tabulator-page-size {
-    @apply rounded-md border-gray-300 py-[4.5px] pl-3 pr-10 text-xs focus:border-blue-500 focus:outline-hidden focus:ring-blue-500 sm:text-sm bg-blue-500 border-0 text-black
-}
-
-#table + .tabulator-footer .tabulator-paginator {
-    @apply text-white ml-5
-}
-
-.tabulator-tooltip.tabulator-popup-container {
-    @apply text-base p-4 bg-black border-blue-500 rounded-md
-}
-
-.hide-scrollbar {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-.hide-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-.nms-bg {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    isolation: isolate;
-    min-height: 100vh;
-}
 
 /* Desktop sticky right rail (Nitro `rail-right`). Left nav stays 224px
    (`#desktop-sidebar` + in-flow `#nav-left` 160×300, max-height 300px).
@@ -194,114 +200,16 @@
 .nav-left-ad iframe {
     max-height: 300px;
 }
-.nms-bg::after {
-    content: "";
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #051413;
-    position: absolute;
-    top: 0;
-    opacity: 0.7;
-    z-index: -1;
-}
 
 
-.btn {
-    @apply inline-flex items-center rounded-md border border-transparent bg-blue-500 px-3 py-2 text-sm font-medium leading-4 text-black shadow-xs hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-}
 
-.tabulator-search input {
-    @apply text-white placeholder-gray-400;
-}
-
-#results li a {
-    @apply select-none block hover:bg-blue-500 hover:text-black  focus:bg-blue-500 focus:text-black
-}
-
-/* ── Blog prose tables ─────────────────────────────────────────────────── */
-.prose table {
-    @apply w-full border-collapse text-sm my-6 rounded-lg overflow-hidden;
-    /* Rounded corners need the overflow:hidden on a wrapping element;
-       the wrapper is applied below via the responsive container. */
-}
-
-.prose table thead {
-    @apply bg-sky-900/60;
-}
-
-.prose table thead th {
-    @apply px-4 py-3 text-left font-semibold text-cyan-200 border-b border-sky-700/80 whitespace-nowrap;
-}
-
-.prose table thead th:first-child {
-    @apply rounded-tl-lg;
-}
-
-.prose table thead th:last-child {
-    @apply rounded-tr-lg;
-}
-
-.prose table tbody tr {
-    @apply border-b border-sky-900/40 transition-colors duration-150;
-}
-
-.prose table tbody tr:nth-child(even) {
-    @apply bg-sky-950/40;
-}
-
-.prose table tbody tr:nth-child(odd) {
-    @apply bg-sky-950/20;
-}
-
-.prose table tbody tr:last-child {
-    @apply border-b-0;
-}
-
-.prose table tbody tr:last-child td:first-child {
-    @apply rounded-bl-lg;
-}
-
-.prose table tbody tr:last-child td:last-child {
-    @apply rounded-br-lg;
-}
-
-.prose table tbody tr:hover {
-    @apply bg-sky-800/30;
-}
-
-.prose table tbody td {
-    @apply px-4 py-3 text-sky-100/90 align-top;
-}
-
-/* First column as a label in comparison tables */
-.prose table tbody td:first-child {
-    @apply font-medium text-white/80;
-}
-
-/* Responsive wrapper injected around <table> in GuideLayout */
-.prose-table-scroll {
-    @apply w-full overflow-x-auto rounded-lg border border-sky-900/50 shadow-lg shadow-black/30 my-6;
-}
-
-.prose-table-scroll table {
-    @apply my-0;
-}
-
-/* Blog markdown links: global `a { color: inherit; text-decoration: inherit }`
-   would otherwise make body and table links indistinguishable from text. */
-#guide-content a {
-    @apply text-sky-400 underline decoration-sky-400/70 underline-offset-[3px] transition-colors hover:text-sky-300 hover:decoration-sky-300/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400;
-}
-
-/* ── end Blog prose tables ─────────────────────────────────────────────── */
 
 .disclaimer {
-  font-size: 0.8rem;
-  color: #fff;
+  font-size: 0.8125rem;
+  color: var(--color-dim);
   text-align: center;
   padding: 1rem;
-  line-height: 1.2
+  line-height: 1.55
 }
 
 /* Prevent Auto Ads from occupying card slots inside item grids. */
@@ -331,15 +239,6 @@
 }
 
 /* ── Accessibility helpers ─────────────────────────────────────────────── */
-/* Recipe card titles were <h4>s (skipping heading levels); they are now an <h2> for the
-   output and <p>s for inputs, sized like the old h4. */
-@layer components {
-    .rc-title {
-        font-size: 1em;
-        font-weight: bold;
-        margin-block: 1.33em;
-    }
-}
 
 /* One visible focus style everywhere (3:1+ against black, navy and the item colour swatches).
    Deliberately unlayered so `focus:outline-hidden` utilities and the forms plugin can't hide it. */
@@ -354,10 +253,6 @@
 /* Item colour swatches: yellow alone can vanish on yellow/orange items, so the outline uses the
    swatch's text colour (picked for >= 4.5:1 against the swatch by utils/contrast.ts) with a
    yellow band inside it. */
-.recipe-card a[style]:focus-visible {
-    outline-color: currentColor;
-    box-shadow: inset 0 0 0 6px #facc15;
-}
 .cell-link:focus-visible {
     outline: none;
 }

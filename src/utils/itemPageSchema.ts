@@ -36,6 +36,8 @@ export type ItemPageSchemaInput = {
   outputRefinedLength: number;
   outputCookedLength: number;
   dateModified: string;
+  /** The page's Best yield machine recipe ("id:qty,...>outQty"), so the summary and FAQ cite the same one. */
+  bestMachineSignature?: string;
   /** The page's <title> and meta description, reused for the ItemPage node. */
   pageTitle: string;
   pageDescription: string;
@@ -75,6 +77,7 @@ export const buildItemPageSchema = ({
   dateModified,
   pageTitle,
   pageDescription,
+  bestMachineSignature,
 }: ItemPageSchemaInput): ItemPageSchemaResult => {
   const canonicalUrl = ensureTrailingSlashUrl(canonicalUrlInput);
   const categoryUrl = ensureTrailingSlashUrl(categoryUrlInput);
@@ -165,20 +168,40 @@ export const buildItemPageSchema = ({
     mainEntity: { '@id': `${canonicalUrl}#item` },
   };
 
-  // Answer-first summary and the visible FAQ (ItemFaq.astro renders the same questions)
-  const primaryMethod = uniqueMethods[0];
+  // Answer-first summary and the visible FAQ (ItemFaq.astro renders the same questions).
+  // The crafting recipe when there is one, else the machine recipe with the best yield per input
+  // unit (the same one the page's "Best yield" box shows), not whichever recipe the data lists first.
+  const yieldPerInput = (method: Method) => {
+    const units = method.ingredients.reduce((sum, ingredient) => sum + ingredient.Quantity, 0);
+    return units > 0 ? method.outputQuantity / units : 0;
+  };
+  const signature = (method: Method) =>
+    `${method.ingredients.map((i) => `${i.Id}:${i.Quantity}`).sort().join(',')}>${method.outputQuantity}`;
+  const primaryMethod =
+    uniqueMethods.find((method) => method.action === 'craft') ??
+    (bestMachineSignature ? uniqueMethods.find((method) => signature(method) === bestMachineSignature) : undefined) ??
+    [...uniqueMethods].sort((a, b) => yieldPerInput(b) - yieldPerInput(a) || b.outputQuantity - a.outputQuantity)[0];
   const ingredientList =
     primaryMethod?.ingredients.map((i) => `${i.Name} x${i.Quantity}`).join(', ') ??
     rawItems.map((r) => `${r.Name} x${r.Quantity}`).join(', ');
   const toolName = primaryMethod?.tool ?? (isFoodItem ? 'Nutrient Processor' : 'Refiner');
-  const answerSummary =
-    dataLength > 0 || outputRefinedLength > 0 || outputCookedLength > 0
-      ? item.Description
-        ? `${item.Name} is a ${categorySingular} in No Man's Sky. ${(item.Description as string).trim()} To craft it, combine ${ingredientList} in a ${toolName}.`
-        : `${item.Name} is a ${categorySingular} in No Man's Sky. To craft it, combine ${ingredientList} in a ${toolName}.`
-      : item.Description
-        ? `${item.Name} is a ${categorySingular} in No Man's Sky. ${item.Description}`
-        : `${item.Name} is a ${categorySingular} in No Man's Sky.`;
+  // "Raw Materials" is the site's catalog, not what the item is: Chromatic Metal is a refined alloy.
+  // Name raw materials by their in-game group instead ("a highly refined stellar metal").
+  const group = typeof item.Group === 'string' ? item.Group.trim() : '';
+  const kind =
+    categorySingular === 'raw material' && group && !/[%{}]|-null-/i.test(group) ? group.split(':')[0].trim().toLowerCase() : categorySingular;
+  const lead = `${item.Name} is ${/^[aeiou]/i.test(kind) ? 'an' : 'a'} ${kind} in No Man's Sky.`;
+  const refinerSize = (count: number) => (count >= 3 ? 'Large Refiner' : count === 2 ? 'Medium Refiner' : 'Portable Refiner');
+  const outputNote = (method: Method) => (method.outputQuantity > 1 ? ` to get ${method.outputQuantity}` : '');
+  const howTo = !primaryMethod
+    ? ''
+    : primaryMethod.action === 'refine'
+      ? ` The best yield: refine ${ingredientList} in a ${refinerSize(primaryMethod.ingredients.length)}${outputNote(primaryMethod)}.`
+      : primaryMethod.action === 'cook'
+        ? ` To cook it, combine ${ingredientList} in a Nutrient Processor${outputNote(primaryMethod)}.`
+        : ` To craft it, combine ${ingredientList}${isFoodItem ? ' in a Nutrient Processor' : ''}.`;
+  // The in-game description is shown in its own "About" block, so the summary doesn't repeat it.
+  const answerSummary = `${lead}${howTo}`;
 
   const faqQuestions: FaqQuestion[] = [];
   if (dataLength > 0 || outputRefinedLength > 0 || outputCookedLength > 0) {

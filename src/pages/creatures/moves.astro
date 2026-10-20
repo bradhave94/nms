@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
+import CreaturesShell from '@components/creatures/CreaturesShell.astro';
 import creaturesData from '@datav2/Creatures.json';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
@@ -247,256 +247,213 @@ const breadcrumbs = [
 	{ name: 'Creatures', href: '/creatures' },
 	{ name: 'Moves' },
 ];
+const totalMoves = battleMoves.filter((move) => Boolean(move?.Id)).length;
+
 ---
 
 <Layout title={title} description={description} slug="creatures" {breadcrumbs}>
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<section class="mx-auto max-w-7xl px-4 pb-12">
-		<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Move Library</h1>
-		<p class="mx-auto mb-8 max-w-5xl text-center text-sky-200/90">
-			<b>Battle Moves</b> are individual templates (damage, heal, buffs, and affinity behavior). <b>Move
-			Sets</b> are slot-based pools that species pull from. Families below group near-identical templates so
-			affinity variants are easier to compare.
-		</p>
-
-		<div class="lg:sticky lg:top-0 z-10 mb-6 flex flex-wrap items-center justify-center gap-2 rounded-sm bg-[#0a1929]/95 py-3 backdrop-blur" id="affinity-filter" role="group" aria-label="Show moves for affinity">
-			<button type="button" aria-pressed="true" data-filter="all" class="aff-btn active rounded-sm border border-sky-500 bg-sky-700/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition-colors hover:bg-sky-600/80">All</button>
-			{affinities.map((a) => (
-				<button type="button" aria-pressed="false" data-filter={a.Id} class="aff-btn flex items-center gap-1 rounded-sm border border-sky-700 bg-sky-900/40 px-3 py-1 text-xs uppercase tracking-wide text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-800/60">
-					{a.Icon && <img src={`${IMAGE_BASE}${toWebp(a.Icon)}`} alt="" class="h-5 w-5" loading="lazy" />}
-					{a.DisplayName ?? a.Id}
-				</button>
-			))}
-		</div>
-
-		<div class="mb-8 flex flex-wrap items-center justify-center gap-2">
-			{
-				categoryList.map((category) => (
-					<a
-						href={`#category-${slugify(category)}`}
-						class="rounded-sm border border-sky-700 bg-sky-900/40 px-3 py-1 text-xs uppercase tracking-wide text-sky-100 hover:border-sky-400"
-					>
-						{toTitleCase(category)} ({familiesByCategory.get(category)?.length ?? 0})
-					</a>
-				))
-			}
-		</div>
-
-		<div class="space-y-8">
-			{
-				categoryList.map((category) => (
-					<section id={`category-${slugify(category)}`}>
-						<h2 class="mb-3 text-2xl text-white">{toTitleCase(category)} Families</h2>
-						<div class="grid gap-4 lg:grid-cols-2">
-							{(familiesByCategory.get(category) ?? []).map((family) => {
-								const familyNamesMap = family.variants[0]?.namesByAffinity;
-								const hasAffinityNames = familyNamesMap && Object.keys(familyNamesMap).length > 1;
-								return (
-								<article class="variant-card rounded-sm border border-sky-800/70 bg-sky-950/35 p-4" data-default-label={family.name} data-aff-labels={hasAffinityNames ? JSON.stringify(familyNamesMap) : undefined}>
-									<div class="mb-3 flex items-start justify-between gap-3">
-										<div class="flex min-w-0 items-center gap-2">
-											{family.categoryIcon && (
-												<img
-													src={`${IMAGE_BASE}${toWebp(family.categoryIcon)}`}
-													alt={`${family.name} icon`}
-													class="h-7 w-7 shrink-0"
-													loading="lazy"
-												/>
-											)}
-											<div class="min-w-0">
-												<h3 class="m-0 truncate text-xl text-white" data-move-name>{family.name}</h3>
-												<p class="m-0 text-xs uppercase tracking-wide text-sky-300/90">
-													{family.category} • {family.key} • {family.variants.length === 1 ? '1 variant' : `${family.variants.length} variants`}
-												</p>
-											</div>
-										</div>
-									</div>
-									{family.description && (
-										<p class="mt-0 mb-3 text-sm text-sky-200/90">{family.description}</p>
-									)}
-									{hasAffinityNames && (
-										<div class="names-by-affinity mb-3" data-affinity-names>
-											<div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs sm:grid-cols-3" data-affinity-all>
-												{Object.entries(familyNamesMap!).map(([affId, affName]) => {
-													const aff = affinityById.get(affId);
-													return (
-														<span class="flex items-center gap-1 rounded bg-black/30 px-1.5 py-0.5 text-sky-100/80" data-aff={affId}>
-															{aff?.Icon && <img src={`${IMAGE_BASE}${toWebp(aff.Icon)}`} alt="" class="inline h-4 w-4 shrink-0" loading="lazy" />}
-															{!aff?.Icon && <span class="inline-block h-4 w-4 shrink-0 rounded-full bg-sky-700/50" />}
-															<span class="truncate">{String(affName)}</span>
-														</span>
-													);
-												})}
-											</div>
-											<p class="m-0 mt-1 hidden text-xs font-medium text-white" data-affinity-single />
-										</div>
-									)}
-									{family.variantDescGroups.length > 1 ? (
-										<div class="space-y-1">
-											{family.variantDescGroups.map((group) => (
-												<div class="rounded-sm border border-sky-800/60 bg-black/20 px-3 py-1.5 text-xs text-sky-200/90">
-													{group.desc}
-													{group.affinities.length > 1 && (
-														<span class="text-sky-400/70"> ({group.affinities.join(', ')})</span>
-													)}
-													{group.affinities.length === 1 && group.affinities[0] !== 'None' && (
-														<span class="text-sky-400/70"> ({group.affinities[0]})</span>
-													)}
-												</div>
-											))}
-											<p class="m-0 mt-1 text-xs text-sky-400/70">Target: {family.variants[0]?.targetLabel ?? 'Enemy'} • {family.variants.length} variants</p>
-										</div>
-									) : (
-										<p class="m-0 text-xs text-sky-300/90">
-											Target: {family.variants[0]?.targetLabel ?? 'Enemy'}
-											{family.variants.length > 1 && <span> • {family.variants.length} variants</span>}
-										</p>
-									)}
-								</article>
-								);
-							})}
-						</div>
-					</section>
-				))
-			}
-		</div>
-
-		<section class="mt-10">
-			<h2 class="mb-3 text-2xl text-white">Move Set Archetypes</h2>
-			<p class="mt-0 mb-4 text-sm text-sky-200/90">
-				Move sets define which moves a species can learn. Each slot represents a move the creature picks
-				from a weighted pool -- higher weight means the move is chosen more often.
-			</p>
-			<div class="space-y-3">
-				{
-					moveSetCards.map((moveSet) => (
-						<details class="rounded-sm border border-sky-800/70 bg-sky-950/35 p-4">
-							<summary class="cursor-pointer list-none text-white">
-								<span class="text-xl font-semibold">{moveSet.name}</span>
-								<span class="ml-2 text-xs uppercase tracking-wide text-sky-300/90">
-									{moveSet.slotCount} slots • {moveSet.templateCount} move options
-								</span>
-							</summary>
-							<div class="mt-3 grid gap-3 md:grid-cols-2">
-								{moveSet.slots.map((slot) => (
-									<div class="rounded-sm border border-sky-800/60 bg-black/20 p-3">
-										<p class="m-0 mb-2 text-sm font-semibold text-sky-200">{slot.slotName}</p>
-										<div class="space-y-2">
-											{slot.options.map((option) => (
-												<div class="rounded-sm border border-sky-900/80 px-2 py-1.5 text-xs">
-													<div class="flex items-center gap-1.5">
-														{option.categoryIcon && (
-															<img
-																src={`${IMAGE_BASE}${toWebp(option.categoryIcon)}`}
-																alt=""
-																class="h-4 w-4 shrink-0"
-																loading="lazy"
-															/>
-														)}
-														{option.affinityIcon && (
-															<img
-																src={`${IMAGE_BASE}${toWebp(option.affinityIcon)}`}
-																alt=""
-																class="h-4 w-4 shrink-0"
-																loading="lazy"
-															/>
-														)}
-														<p class="m-0 font-medium text-white">{option.label}</p>
-													</div>
-													{option.description && (
-														<p class="m-0 mt-0.5 text-sky-200/80">{option.description}</p>
-													)}
-													<p class="m-0 mt-0.5 text-sky-400/70">
-														{option.category && <span>{toTitleCase(option.category)}</span>}
-														{option.affinity && <span> • {option.affinity}</span>}
-														<span> • Cooldown: {option.cooldownLabel}</span>
-														<span> • Weight: {option.weighting}</span>
-													</p>
-												</div>
-											))}
-										</div>
-									</div>
-								))}
-							</div>
-						</details>
-					))
-				}
+	<CreaturesShell
+		active="moves"
+		title="Battle moves"
+		lead={`${totalMoves} move templates in ${familyList.length} families, and the ${moveSetCards.length} move sets species draw them from. Pick an affinity to see what each attack is called for it.`}
+		breadcrumbs={breadcrumbs}
+	>
+		<div class="mv-tools">
+			<div class="sp-affs" id="affinity-filter" role="group" aria-label="Show move names for affinity">
+				<button type="button" class="btn-quiet aff-btn" aria-pressed="true" data-filter="all">All</button>
+				{affinities.map((a) => (
+					<button type="button" class="btn-quiet aff-btn" aria-pressed="false" data-filter={a.Id}>
+						{a.Icon && <img src={`${IMAGE_BASE}${toWebp(a.Icon)}`} alt="" width="22" height="22" loading="lazy" />}
+						{a.DisplayName ?? a.Id}
+					</button>
+				))}
 			</div>
+			<nav aria-label="Move categories">
+				<ul class="cr-jump">
+					{categoryList.map((category) => (
+						<li>
+							<a href={`#category-${slugify(category)}`}>
+								{toTitleCase(category)}<span class="ml-1.5 text-dim tabular">{familiesByCategory.get(category)?.length ?? 0}</span>
+							</a>
+						</li>
+					))}
+					<li><a href="#move-sets">Move sets<span class="ml-1.5 text-dim tabular">{moveSetCards.length}</span></a></li>
+				</ul>
+			</nav>
+		</div>
+
+		{categoryList.map((category) => (
+			<section class="cr-section" id={`category-${slugify(category)}`} aria-labelledby={`h-${slugify(category)}`}>
+				<h2 class="section-title" id={`h-${slugify(category)}`}>
+					{toTitleCase(category)} moves <span class="count tabular">{familiesByCategory.get(category)?.length ?? 0}</span>
+				</h2>
+				<div class="cr-grid c2">
+					{(familiesByCategory.get(category) ?? []).map((family) => {
+						const familyNamesMap = family.variants[0]?.namesByAffinity;
+						const hasAffinityNames = familyNamesMap && Object.keys(familyNamesMap).length > 1;
+						return (
+							<article class="panel cr-card variant-card" data-default-label={family.name} data-aff-labels={hasAffinityNames ? JSON.stringify(familyNamesMap) : undefined}>
+								<div class="mv-head">
+									{family.categoryIcon && (
+										<img src={`${IMAGE_BASE}${toWebp(family.categoryIcon)}`} alt="" width="36" height="36" loading="lazy" />
+									)}
+									<div class="min-w-0">
+										<h3 data-move-name>{family.name}</h3>
+										<p class="mv-meta">
+											{toTitleCase(family.category)} · targets {(family.variants[0]?.targetLabel ?? 'Enemy').toLowerCase()} · {family.variants.length === 1 ? '1 variant' : `${family.variants.length} variants`}
+										</p>
+									</div>
+								</div>
+								{family.variantDescGroups.length > 1 ? (
+									<ul class="mv-descs">
+										{family.variantDescGroups.map((group) => (
+											<li>
+												{group.desc}
+												{group.affinities.length > 0 && group.affinities[0] !== 'None' && (
+													<span class="text-dim"> ({group.affinities.join(', ')})</span>
+												)}
+											</li>
+										))}
+									</ul>
+								) : (
+									family.description && <p class="mt-2">{family.description}</p>
+								)}
+								{hasAffinityNames && (
+									<div class="mt-3" data-affinity-names>
+										<ul class="cr-chips" data-affinity-all aria-label="Name by affinity">
+											{Object.entries(familyNamesMap!).map(([affId, affName]) => {
+												const aff = affinityById.get(affId);
+												return (
+													<li class="cr-chip" data-aff={affId}>
+														{aff?.Icon ? (
+															<img src={`${IMAGE_BASE}${toWebp(aff.Icon)}`} alt={aff.DisplayName ?? affId} width="20" height="20" loading="lazy" />
+														) : (
+															<span class="text-dim">{affId === 'Normal' ? 'Physical:' : `${affId}:`}</span>
+														)}
+														{String(affName)}
+													</li>
+												);
+											})}
+										</ul>
+										<p class="mv-single" hidden data-affinity-single />
+									</div>
+								)}
+							</article>
+						);
+					})}
+				</div>
+			</section>
+		))}
+
+		<section class="cr-section" id="move-sets" aria-labelledby="move-sets-heading">
+			<h2 class="section-title" id="move-sets-heading">Move sets <span class="count tabular">{moveSetCards.length}</span></h2>
+			<p>
+				A move set decides which moves a species can learn. Each slot picks one move from a weighted pool: the
+				higher the weight, the more often it is chosen.
+			</p>
+			{moveSetCards.map((moveSet, i) => (
+				<details class="cr-details" open={i === 0}>
+					<summary>
+						<h3 class="m-0 text-[1.0625rem] font-semibold">{moveSet.name}</h3>
+						<span class="cr-sum-meta tabular">{moveSet.slotCount} slots · {moveSet.templateCount} move options</span>
+					</summary>
+					<div class="cr-details-body cr-grid c2">
+						{moveSet.slots.map((slot) => (
+							<div>
+								<h4 class="mv-slot">{slot.slotName}</h4>
+								<table class="cr-table stack">
+									<thead>
+										<tr>
+											<th scope="col">Move</th>
+											<th scope="col" class="num">Weight</th>
+											<th scope="col" class="num">Cooldown</th>
+										</tr>
+									</thead>
+									<tbody>
+										{slot.options.map((option) => (
+											<tr>
+												<th scope="row">
+													<span class="mv-opt">
+														{(option.affinityIcon ?? option.categoryIcon) && (
+															<img src={`${IMAGE_BASE}${toWebp(option.affinityIcon ?? option.categoryIcon)}`} alt="" width="22" height="22" loading="lazy" />
+														)}
+														<span>
+															{option.label}
+															<span class="mv-opt-meta">
+																{[option.category && toTitleCase(option.category), option.affinity].filter(Boolean).join(' · ')}
+															</span>
+														</span>
+													</span>
+												</th>
+												<td data-label="Weight" class="num">{option.weighting}</td>
+												<td data-label="Cooldown" class="num">{option.cooldownLabel}</td>
+											</tr>
+										))}
+									</tbody>
+								</table>
+							</div>
+						))}
+					</div>
+				</details>
+			))}
 		</section>
-	</section>
+	</CreaturesShell>
 
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const filterBar = document.getElementById('affinity-filter');
-			if (!filterBar) return;
-
+		const filterBar = document.getElementById('affinity-filter');
+		if (filterBar) {
 			const buttons = filterBar.querySelectorAll<HTMLButtonElement>('.aff-btn');
 			const cards = document.querySelectorAll<HTMLElement>('.variant-card');
-			const ACTIVE = 'active border-sky-500 bg-sky-700/60 text-white font-semibold';
-			const INACTIVE = 'border-sky-700 bg-sky-900/40 text-sky-100';
 
-			function setActive(btn: HTMLButtonElement) {
-				buttons.forEach((b) => {
-					b.classList.remove(...ACTIVE.split(' '));
-					b.classList.add(...INACTIVE.split(' '));
-					b.setAttribute('aria-pressed', 'false');
-				});
-				btn.classList.remove(...INACTIVE.split(' '));
-				btn.classList.add(...ACTIVE.split(' '));
-				btn.setAttribute('aria-pressed', 'true');
-			}
-
-			function applyFilter(affinity: string) {
+			const applyFilter = (affinity: string) => {
 				cards.forEach((card) => {
 					const nameEl = card.querySelector<HTMLElement>('[data-move-name]');
 					const allGrid = card.querySelector<HTMLElement>('[data-affinity-all]');
 					const singleEl = card.querySelector<HTMLElement>('[data-affinity-single]');
 					const raw = card.dataset.affLabels;
 					if (!raw || !nameEl) return;
-
 					let labels: Record<string, string>;
-					try { labels = JSON.parse(raw); } catch { return; }
-
-					if (affinity === 'all') {
-						nameEl.textContent = card.dataset.defaultLabel ?? nameEl.textContent;
-						if (allGrid) allGrid.classList.remove('hidden');
-						if (singleEl) singleEl.classList.add('hidden');
-						card.querySelectorAll<HTMLElement>('[data-aff]').forEach((el) => el.classList.remove('hidden'));
-					} else {
-						const matched = labels[affinity];
-						if (matched) {
-							nameEl.textContent = matched;
-						} else {
-							nameEl.textContent = card.dataset.defaultLabel ?? nameEl.textContent;
-						}
-						if (allGrid) {
-							allGrid.classList.remove('hidden');
-							card.querySelectorAll<HTMLElement>('[data-aff]').forEach((el) => {
-								el.classList.toggle('hidden', el.dataset.aff !== affinity);
-							});
-							const anyVisible = card.querySelector<HTMLElement>(`[data-aff="${affinity}"]`);
-							if (!anyVisible && allGrid) allGrid.classList.add('hidden');
-						}
-						if (singleEl) {
-							if (matched) {
-								singleEl.textContent = matched;
-								singleEl.classList.remove('hidden');
-								if (allGrid) allGrid.classList.add('hidden');
-							} else {
-								singleEl.classList.add('hidden');
-							}
-						}
+					try {
+						labels = JSON.parse(raw);
+					} catch {
+						return;
+					}
+					const matched = affinity === 'all' ? '' : labels[affinity];
+					nameEl.textContent = matched || card.dataset.defaultLabel || nameEl.textContent;
+					if (allGrid) allGrid.hidden = Boolean(matched);
+					if (singleEl) {
+						singleEl.hidden = !matched;
+						singleEl.textContent = matched ? `Shown as ${matched} for this affinity.` : '';
 					}
 				});
-			}
+			};
 
 			buttons.forEach((btn) => {
 				btn.addEventListener('click', () => {
-					const filter = btn.dataset.filter ?? 'all';
-					setActive(btn);
-					applyFilter(filter);
+					buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+					applyFilter(btn.dataset.filter ?? 'all');
 				});
 			});
-		});
+		}
 	</script>
 </Layout>
+
+<style>
+	.mv-tools { margin-bottom: .5rem; }
+	.mv-tools .sp-affs { margin-bottom: .9rem; }
+	.mv-head { display: flex; align-items: flex-start; gap: .7rem; }
+	.mv-head img { flex: none; margin-top: .1rem; }
+	.mv-head h3 { margin: 0; font-size: 1.15rem; font-weight: 600; }
+	.mv-meta { margin: .1rem 0 0 !important; font-size: .875rem !important; color: var(--color-dim) !important; }
+	.mv-descs { margin: .6rem 0 0; padding-left: 1.1rem; font-size: .9375rem; color: #cfd9e4; }
+	.mv-descs li + li { margin-top: .2rem; }
+	.mv-single { margin-top: .4rem !important; font-weight: 500; color: var(--color-ink) !important; }
+	.mv-slot { margin: 0 0 .4rem; font-size: 1rem; font-weight: 600; color: var(--color-dim); }
+	.mv-opt { display: inline-flex; align-items: flex-start; gap: .5rem; }
+	.mv-opt img { flex: none; margin-top: .1rem; }
+	.mv-opt-meta { display: block; font-size: .8125rem; font-weight: 400; color: var(--color-dim); }
+	@media (max-width: 639px) {
+		.mv-tools .sp-affs { flex-wrap: nowrap; overflow-x: auto; margin-inline: -1rem; padding: 0 1rem 4px; scrollbar-width: none; }
+		.mv-tools .sp-affs .btn-quiet { flex: none; }
+	}
+</style>

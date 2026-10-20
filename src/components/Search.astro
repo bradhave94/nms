@@ -1,80 +1,85 @@
-<button
-	id="open-search"
-	type="button"
-	class="fixed bottom-[50px] right-[50px] z-20 inline-flex items-center rounded-full border border-transparent bg-blue-600 p-3 text-black shadow-xs hover:bg-blue-700 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-	aria-label="Open search"
-	title="Search ( / or Ctrl+K )"
->
-	<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-		<path
-			fill-rule="evenodd"
-			d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-			clip-rule="evenodd"></path>
-	</svg>
-</button>
-
+<!-- Opens the site search dialog (SearchModal) from any [data-open-search] button (the sidebar field, the
+     mobile top bar, home and 404 search boxes), or with "/" or Ctrl+K. The old floating button is gone: it
+     covered table columns and card buttons. -->
 <script>
-	const openSearch = document.getElementById('open-search') as HTMLButtonElement | null;
 	const siteSearch = document.getElementById('site-search') as HTMLElement | null;
 	const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
+	const searchPanel = document.getElementById('site-search-panel');
+	let returnFocusTo: HTMLElement | null = null;
 
 	function isEditableTarget(target: EventTarget | null): boolean {
 		if (!(target instanceof HTMLElement)) return false;
 		const tag = target.tagName;
-		if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true;
-		return target.isContentEditable;
+		return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || target.isContentEditable;
 	}
 
-	const searchPanel = document.getElementById('site-search-panel');
-	let returnFocusTo: HTMLElement | null = null;
-
-	function toggleSiteSearch(forceOpen?: boolean): void {
+	function openSiteSearch(from?: HTMLElement | null, prefill?: string): void {
 		if (!siteSearch) return;
-
-		const shouldOpen = forceOpen ?? siteSearch.classList.contains('hidden');
-		if (shouldOpen) {
-			if (siteSearch.classList.contains('hidden')) {
-				// Opened with "/" or Ctrl+K from nowhere in particular: return focus to the search button.
-				const active = document.activeElement;
-				returnFocusTo = active instanceof HTMLElement && active !== document.body ? active : openSearch;
+		if (siteSearch.classList.contains('hidden')) {
+			const active = document.activeElement;
+			returnFocusTo = from ?? (active instanceof HTMLElement && active !== document.body ? active : null);
+		}
+		siteSearch.classList.remove('hidden');
+		document.body.classList.add('overflow-hidden');
+		if (searchInput) {
+			if (prefill !== undefined) {
+				searchInput.value = prefill;
+				searchInput.dispatchEvent(new Event('input'));
 			}
-			siteSearch.classList.remove('hidden');
-			searchInput?.focus();
-		} else {
-			closeSiteSearch();
+			searchInput.focus();
 		}
 	}
 
 	function closeSiteSearch(): void {
 		if (!siteSearch || siteSearch.classList.contains('hidden')) return;
 		siteSearch.classList.add('hidden');
-		(returnFocusTo ?? openSearch)?.focus();
+		document.body.classList.remove('overflow-hidden');
+		// opened with "/" or Ctrl+K from nowhere in particular: land on the visible search button
+		const fallback = Array.from(document.querySelectorAll<HTMLElement>('[data-open-search]')).find((el) => el.offsetParent !== null && !el.closest('[inert]'));
+		(returnFocusTo && document.contains(returnFocusTo) ? returnFocusTo : fallback)?.focus();
 		returnFocusTo = null;
 	}
 
-	if (openSearch) {
-		openSearch.addEventListener('click', () => toggleSiteSearch(true));
-	}
-
-	// Close when a click lands anywhere in the overlay outside the search panel.
-	siteSearch?.addEventListener('click', (event: MouseEvent) => {
-		const target = event.target as Node | null;
-		if (target && searchPanel && !searchPanel.contains(target)) {
-			closeSiteSearch();
+	document.addEventListener('click', (event) => {
+		const trigger = (event.target as HTMLElement | null)?.closest<HTMLElement>('[data-open-search]');
+		if (!trigger) return;
+		event.preventDefault();
+		// a trigger may carry a starting query (data-open-search="text")
+		// from inside the mobile menu: close the menu first (two modal dialogs would fight over Tab and Escape),
+		// and return focus to the menu button afterwards, since the drawer's own button goes inert
+		let from: HTMLElement | null = trigger;
+		if (trigger.closest('#mobile-sidebar')) {
+			document.getElementById('sidebar-close')?.click();
+			from = document.getElementById('sidebar-open');
 		}
+		openSiteSearch(from, trigger.dataset.openSearch || undefined);
 	});
 
+	// Inline search boxes (home, 404) hand their text to the dialog instead of a page reload.
+	document.querySelectorAll<HTMLFormElement>('form[data-search-form]').forEach((form) => {
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			const input = form.querySelector('input');
+			openSiteSearch(input, input?.value ?? '');
+		});
+	});
+
+	siteSearch?.addEventListener('click', (event: MouseEvent) => {
+		const target = event.target as Node | null;
+		if (target && searchPanel && !searchPanel.contains(target)) closeSiteSearch();
+	});
+	document.getElementById('site-search-close')?.addEventListener('click', closeSiteSearch);
+
 	document.addEventListener('keydown', (event: KeyboardEvent) => {
-		if (event.key === 'Escape' && siteSearch && !siteSearch.classList.contains('hidden')) {
+		const open = siteSearch && !siteSearch.classList.contains('hidden');
+		if (event.key === 'Escape' && open) {
 			closeSiteSearch();
 			return;
 		}
-
-		// The search dialog is modal: keep Tab inside it.
-		if (event.key === 'Tab' && siteSearch && searchPanel && !siteSearch.classList.contains('hidden')) {
-			const focusables = Array.from(
-				searchPanel.querySelectorAll<HTMLElement>('input, a[href], button:not([disabled])'),
-			).filter((el) => el.offsetParent !== null || el.matches('input[type="checkbox"]'));
+		// The dialog is modal: keep Tab inside it.
+		if (event.key === 'Tab' && open && searchPanel) {
+			const focusables = Array.from(searchPanel.querySelectorAll<HTMLElement>('input, a[href], button:not([disabled])'))
+				.filter((el) => el.offsetParent !== null || (el.matches('input[type="checkbox"]') && !el.closest('[hidden], .hidden')));
 			const first = focusables[0];
 			const last = focusables[focusables.length - 1];
 			if (!first || !last) return;
@@ -88,15 +93,12 @@
 			}
 			return;
 		}
-
 		if (isEditableTarget(event.target)) return;
-
 		const isModifierK = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k';
 		const isSlash = event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey;
-
 		if (isModifierK || isSlash) {
 			event.preventDefault();
-			toggleSiteSearch(true);
+			openSiteSearch();
 		}
 	});
 </script>

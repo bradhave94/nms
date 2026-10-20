@@ -1,8 +1,23 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import { getSiteOrigin, buildPageSignals } from '@utils/structuredData.js';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import CategoryFilter from '@components/CategoryFilter.astro';
 import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
+import { getRouteEligibleCatalog } from '@utils/routeCatalog.js';
+import { nameSortKey } from '../../integrations/cleanGameNames';
+import { categories, type CategorySlug } from '../../config/categories.js';
+import '../../assets/css/lists.css';
 import { ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
+
+/** A–Z by nameSortKey(): leading quotes and punctuation ignored, names starting with a digit last. */
+const compareNames = (a: string, b: string): number => {
+	const x = nameSortKey(a);
+	const y = nameSortKey(b);
+	// the digit marker is '~', which localeCompare would put first
+	return Number(x.startsWith('~')) - Number(y.startsWith('~')) || x.localeCompare(y, 'en', { numeric: true });
+};
 
 const IMAGE_BASE = SITE.imageBaseUrl;
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
@@ -51,6 +66,31 @@ const collectionSchema = {
 	mainEntity: { '@id': `${siteOrigin}/items.json#dataset` },
 };
 const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
+
+// Same records as /items.json, sorted A–Z (leading quotes and punctuation ignored, digits last).
+const TYPE_ALIASES: Record<string, string> = { 'nutrient-processor': 'food' };
+const typeOf = (url: string): string => {
+	const segment = url.split('/')[1] ?? '';
+	return TYPE_ALIASES[segment] ?? segment;
+};
+const typeLabel = (type: string): string =>
+	categories[type as CategorySlug]?.h1 ?? type.charAt(0).toUpperCase() + type.slice(1).replace(/-/g, ' ');
+const str = (value: unknown): string => (typeof value === 'string' ? value : '');
+const allItems = getRouteEligibleCatalog()
+	.filter(({ item }) => str(item.Name).trim() !== '')
+	.map(({ item, url }) => ({
+		name: str(item.Name),
+		group: str(item.Group) || null,
+		icon: toWebp(str(item.Icon)),
+		link: url,
+		colour: str(item.Colour) || null,
+		value: typeof item.BaseValueUnits === 'number' ? item.BaseValueUnits : 0,
+		type: typeOf(url),
+	}))
+	.sort((a, b) => compareNames(a.name, b.name));
+const typeOptions = [...new Set(allItems.map((item) => item.type).filter(Boolean))]
+	.map((value) => ({ value, label: typeLabel(value) }))
+	.sort((a, b) => a.label.localeCompare(b.label));
 ---
 
 <Layout
@@ -59,465 +99,23 @@ const structuredData = [breadcrumbSchema, collectionSchema, datasetSchema];
 	slug="items"
 	structuredData={structuredData}
 >
-	<h1 class="text-center text-4xl sm:text-6xl pt-12 mb-3">Items</h1>
-	<p class="mx-auto mb-4 max-w-4xl px-4 text-center text-sky-200/90">
-		Search the full No Man&apos;s Sky item database by name, group, or category. Use this hub to discover
-		crafting ingredients, trade goods, upgrade modules, creature rewards, and links to every item guide on
-		the site. See the <a href="/crafting-guide/" class="text-cyan-300 underline hover:text-cyan-200">crafting guide</a>
-		and <a href="/refining/" class="text-cyan-300 underline hover:text-cyan-200">refiner recipes</a>.
-	</p>
-
-	<form class="mx-auto max-w-4xl mb-8 flex flex-wrap gap-4 justify-center items-center">
-		<div class="relative" id="group-combobox-wrapper">
-			<label for="group-input" class="sr-only">Group</label>
-			<input
-				id="group-input"
-				type="text"
-				autocomplete="off"
-				placeholder="All groups"
-				role="combobox"
-				aria-expanded="false"
-				aria-controls="group-dropdown"
-				aria-autocomplete="list"
-				class="h-10 w-48 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
-			/>
-			<div
-				id="group-dropdown"
-				role="listbox"
-				class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-sm border border-sky-700 bg-sky-900 shadow-lg hidden"
-			></div>
-		</div>
-		<div class="relative" id="type-combobox-wrapper">
-			<label for="type-input" class="sr-only">Type</label>
-			<input
-				id="type-input"
-				type="text"
-				autocomplete="off"
-				placeholder="All types"
-				role="combobox"
-				aria-expanded="false"
-				aria-controls="type-dropdown"
-				aria-autocomplete="list"
-				class="h-10 w-36 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
-			/>
-			<div
-				id="type-dropdown"
-				role="listbox"
-				class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-sm border border-sky-700 bg-sky-900 shadow-lg hidden"
-			></div>
-		</div>
-		<div>
-			<label for="items-search-input" class="sr-only">Search</label>
-			<input
-				id="items-search-input"
-				type="text"
-				placeholder="Search by name..."
-				class="h-10 w-48 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
-			/>
-		</div>
-		<div class="flex gap-2">
-			<button
-				id="apply-filters"
-				type="button"
-				class="h-10 rounded-sm bg-sky-700 px-4 font-semibold text-white transition-colors hover:bg-sky-800"
-			>
-				Apply
-			</button>
-			<button
-				id="reset-filters"
-				type="button"
-				class="h-10 rounded-sm border border-sky-600 px-4 font-semibold text-sky-400 transition-colors hover:bg-sky-900/50 hover:text-white"
-			>
-				Reset
-			</button>
-		</div>
-	</form>
-
-	<div id="loading" class="text-center py-12 text-sky-400" aria-live="polite">Loading...</div>
-	<div id="empty" class="hidden text-center py-12 text-sky-400" aria-live="polite">
-		No items found. Try adjusting your filters.
-	</div>
-	<div id="error" class="hidden text-center py-12" aria-live="assertive">
-		<p class="text-sky-400 mb-4">Failed to load items. Please try again.</p>
-		<button
-			id="retry-btn"
-			type="button"
-			class="rounded-sm bg-sky-700 px-4 py-2 font-semibold text-white transition-colors hover:bg-sky-800"
-		>
-			Retry
-		</button>
-	</div>
-	<div id="items-container" class="hidden">
-		<div
+	<div class="list-page">
+		<Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Items' }]} className="pt-2 mb-4 !px-0" />
+		<header class="list-head">
+			<h1>Items</h1>
+			<p class="intro">
+				Every No Man&apos;s Sky item in one place. Filter by category or group, or search by name. See
+				the <a href="/crafting-guide/">crafting guide</a>{' '}and <a href="/refining/">refiner recipes</a>.
+			</p>
+		</header>
+		<CategoryFilter
 			id="items"
-			class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 px-2"
-		></div>
-		<div id="load-more-sentinel" class="h-1 w-full" aria-hidden="true"></div>
+			basePath="/items"
+			items={allItems}
+			imageBase={IMAGE_BASE}
+			initialCount={80}
+			searchLabel="Search all items"
+			types={typeOptions}
+		/>
 	</div>
 </Layout>
-
-<script define:vars={{ IMAGE_BASE }}>
-	const PAGE_SIZE = 80;
-	const groupInput = document.getElementById('group-input');
-	const typeInput = document.getElementById('type-input');
-	const groupDropdown = document.getElementById('group-dropdown');
-	const typeDropdown = document.getElementById('type-dropdown');
-	const searchInput = document.getElementById('items-search-input');
-	const applyBtn = document.getElementById('apply-filters');
-	const resetBtn = document.getElementById('reset-filters');
-	const loadingEl = document.getElementById('loading');
-	const emptyEl = document.getElementById('empty');
-	const errorEl = document.getElementById('error');
-	const retryBtn = document.getElementById('retry-btn');
-	const itemsContainer = document.getElementById('items-container');
-	const itemsEl = document.getElementById('items');
-	const loadMoreSentinel = document.getElementById('load-more-sentinel');
-
-	let allItemsData = [];
-	let allGroups = [];
-	let allTypes = [];
-	let filteredItems = [];
-	let displayedCount = 0;
-	let scrollObserver = null;
-
-	function escapeHtml(str) {
-		if (str == null) return '';
-		const s = String(str);
-		return s
-			.replace(/&/g, '&amp;')
-			.replace(/</g, '&lt;')
-			.replace(/>/g, '&gt;')
-			.replace(/"/g, '&quot;')
-			.replace(/'/g, '&#39;');
-	}
-
-	function getItemType(item) {
-		return (item.url || '').split('/')[1] || '';
-	}
-
-	function getGroupsForType(type) {
-		if (!type) return allGroups;
-		const t = type.toLowerCase();
-		return [...new Set(allItemsData.filter((i) => getItemType(i).toLowerCase().includes(t)).map((i) => i.group).filter(Boolean))].sort();
-	}
-
-	function getTypesForGroup(group) {
-		if (!group) return allTypes;
-		const g = group.trim().toLowerCase();
-		return [...new Set(allItemsData.filter((i) => i.group && String(i.group).toLowerCase().includes(g)).map((i) => getItemType(i)))].sort().map((t) => t.charAt(0).toUpperCase() + t.slice(1));
-	}
-
-	function getParams() {
-		const params = new URLSearchParams(window.location.search);
-		return {
-			group: params.get('group') || '',
-			type: params.get('type') || '',
-			q: params.get('q') || '',
-		};
-	}
-
-	function syncInputsFromUrl() {
-		const { group, type, q } = getParams();
-		if (groupInput) groupInput.value = group;
-		if (typeInput) typeInput.value = type ? type.charAt(0).toUpperCase() + type.slice(1) : '';
-		if (searchInput) searchInput.value = q;
-	}
-
-	function updateUrl() {
-		const group = groupInput?.value?.trim() || '';
-		const type = (typeInput?.value?.trim() || '').toLowerCase();
-		const q = searchInput?.value?.trim() || '';
-		const params = new URLSearchParams();
-		if (group) params.set('group', group);
-		if (type) params.set('type', type);
-		if (q) params.set('q', q);
-		const query = params.toString();
-		const newUrl = `/items${query ? '?' + query : ''}`;
-		window.history.replaceState({}, '', newUrl);
-	}
-
-	function renderDropdown(list, filter, idPrefix) {
-		const q = (filter || '').toLowerCase().trim();
-		const filtered = list.filter((item) => item.toLowerCase().includes(q));
-		const items = filtered.map(
-			(item, i) =>
-				`<div role="option" id="${idPrefix}-opt-${i + 1}" tabindex="-1" class="block w-full px-3 py-2 text-left text-sm text-white hover:bg-sky-700/80 cursor-pointer" data-value="${escapeHtml(item)}">${escapeHtml(item)}</div>`
-		);
-		const clearBtn = `<div role="option" id="${idPrefix}-opt-0" tabindex="-1" class="block w-full px-3 py-2 text-left text-sm text-sky-400 hover:bg-sky-700/80 cursor-pointer" data-value="">(All)</div>`;
-		return clearBtn + items.join('');
-	}
-
-	function setupCombobox(inputEl, dropdownEl, getOptions, onSelect) {
-		if (!inputEl || !dropdownEl) return;
-		const idPrefix = dropdownEl.id;
-		let activeIndex = -1;
-
-		function getOptionEls() {
-			return dropdownEl.querySelectorAll('[role="option"]');
-		}
-
-		function setActiveOption(index) {
-			const options = getOptionEls();
-			options.forEach((opt) => opt.classList.remove('bg-sky-700/80'));
-			activeIndex = index;
-			if (index >= 0 && index < options.length) {
-				const opt = options[index];
-				opt.classList.add('bg-sky-700/80');
-				opt.scrollIntoView({ block: 'nearest' });
-				inputEl.setAttribute('aria-activedescendant', opt.id);
-			} else {
-				inputEl.removeAttribute('aria-activedescendant');
-			}
-		}
-
-		function selectOption(optionEl) {
-			inputEl.value = optionEl.dataset.value || '';
-			hide();
-			onSelect();
-		}
-
-		function show() {
-			const options = getOptions();
-			dropdownEl.innerHTML = renderDropdown(options, inputEl.value, idPrefix);
-			dropdownEl.classList.remove('hidden');
-			inputEl.setAttribute('aria-expanded', 'true');
-			activeIndex = -1;
-			inputEl.removeAttribute('aria-activedescendant');
-			dropdownEl.querySelectorAll('[role="option"]').forEach((opt) => {
-				opt.addEventListener('mousedown', (e) => e.preventDefault());
-				opt.addEventListener('click', () => selectOption(opt));
-			});
-		}
-
-		function hide() {
-			dropdownEl.classList.add('hidden');
-			inputEl.setAttribute('aria-expanded', 'false');
-			activeIndex = -1;
-			inputEl.removeAttribute('aria-activedescendant');
-		}
-
-		inputEl.addEventListener('focus', show);
-		inputEl.addEventListener('input', show);
-		inputEl.addEventListener('blur', hide);
-		dropdownEl.addEventListener('mousedown', (e) => e.preventDefault());
-
-		inputEl.addEventListener('keydown', (e) => {
-			const options = getOptionEls();
-			if (!options.length) return;
-			const isOpen = !dropdownEl.classList.contains('hidden');
-
-			if (e.key === 'ArrowDown') {
-				e.preventDefault();
-				if (!isOpen) { show(); return; }
-				setActiveOption(Math.min(activeIndex + 1, options.length - 1));
-			} else if (e.key === 'ArrowUp') {
-				e.preventDefault();
-				if (!isOpen) return;
-				setActiveOption(Math.max(activeIndex - 1, 0));
-			} else if (e.key === 'Escape') {
-				e.preventDefault();
-				hide();
-			} else if (e.key === 'Enter' && isOpen) {
-				e.preventDefault();
-				if (activeIndex >= 0) {
-					selectOption(options[activeIndex]);
-				} else {
-					hide();
-					onSelect();
-				}
-			}
-		});
-	}
-
-	function resetFilters() {
-		if (groupInput) groupInput.value = '';
-		if (typeInput) typeInput.value = '';
-		if (searchInput) searchInput.value = '';
-		groupDropdown?.classList.add('hidden');
-		typeDropdown?.classList.add('hidden');
-		loadItems();
-	}
-
-	function renderCard(item) {
-		const name = escapeHtml(item.name);
-		const icon = escapeHtml(item.icon || '');
-		const rawUrl = item.url || '';
-		const url = escapeHtml(rawUrl.startsWith('/') && !rawUrl.includes('//') ? rawUrl : '#');
-		const article = document.createElement('article');
-		article.className = 'group relative';
-		article.innerHTML = `
-			<a
-				href="${url}"
-				class="group block h-full overflow-hidden rounded-xs border border-sky-900 bg-sky-800/80 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-700/90"
-			>
-				<div class="aspect-square bg-[#0b3550]">
-					<img
-						class="h-full w-full object-contain object-center"
-						src="${IMAGE_BASE}${icon.replace(/\.png$/i, '.webp')}"
-						alt=""
-						loading="lazy"
-						width="128"
-						height="128"
-					/>
-				</div>
-				<div class="border-t border-sky-900 px-2 py-1.5">
-					<p class="truncate text-base font-semibold text-white/95" title="${name}">${name}</p>
-				</div>
-			</a>
-		`;
-		return article;
-	}
-
-	function filterItems(items, group, type, q) {
-		let filtered = items;
-		if (group) {
-			const g = group.trim().toLowerCase();
-			filtered = filtered.filter((item) => item.group && String(item.group).toLowerCase().includes(g));
-		}
-		if (type) {
-			const t = type.toLowerCase().trim();
-			filtered = filtered.filter((item) => {
-				const itemType = (item.url || '').split('/')[1] || '';
-				return itemType.toLowerCase().includes(t);
-			});
-		}
-		if (q) {
-			const search = q.toLowerCase().trim();
-			filtered = filtered.filter(
-				(item) =>
-					(item.name && String(item.name).toLowerCase().includes(search)) ||
-					(item.group && String(item.group).toLowerCase().includes(search))
-			);
-		}
-		return filtered;
-	}
-
-	function renderNextBatch() {
-		const start = displayedCount;
-		const end = Math.min(displayedCount + PAGE_SIZE, filteredItems.length);
-		for (let i = start; i < end; i++) {
-			itemsEl?.appendChild(renderCard(filteredItems[i]));
-		}
-		displayedCount = end;
-		if (loadMoreSentinel) {
-			loadMoreSentinel.classList.toggle('hidden', displayedCount >= filteredItems.length);
-		}
-	}
-
-	function setupScrollObserver() {
-		if (!loadMoreSentinel || scrollObserver) return;
-		scrollObserver = new IntersectionObserver(
-			(entries) => {
-				const entry = entries[0];
-				if (!entry?.isIntersecting || displayedCount >= filteredItems.length) return;
-				renderNextBatch();
-			},
-			{ rootMargin: '600px', threshold: 0 }
-		);
-		scrollObserver.observe(loadMoreSentinel);
-	}
-
-	async function loadItems(forceFetch = false) {
-		if (!loadingEl || !emptyEl || !itemsEl || !itemsContainer) return;
-
-		loadingEl.classList.remove('hidden');
-		emptyEl.classList.add('hidden');
-		errorEl?.classList.add('hidden');
-		itemsContainer.classList.add('hidden');
-		itemsEl.innerHTML = '';
-
-		const q = searchInput?.value?.trim() || '';
-
-		try {
-			const needsFetch = forceFetch || allItemsData.length === 0;
-			if (needsFetch) {
-				const res = await fetch('/items.json');
-				const json = await res.json();
-				const allItems = json?.body ?? [];
-				let groups = json?.groups ?? [];
-				let types = json?.types ?? [];
-
-				// Fallback: derive from items if API didn't include them (e.g. cached response)
-				if (!groups.length && allItems.length) {
-					groups = [...new Set(allItems.map((i) => i.group).filter(Boolean))].sort();
-				}
-				if (!types.length && allItems.length) {
-					types = [...new Set(allItems.map((i) => (i.url || '').split('/')[1]).filter(Boolean))].sort();
-				}
-
-				allItemsData = allItems;
-				allGroups = groups;
-				allTypes = types.map((t) => t.charAt(0).toUpperCase() + t.slice(1));
-			}
-
-			// Setup comboboxes on first load only
-			const needsSetup = !groupDropdown?.dataset.ready;
-			if (needsSetup) {
-				groupDropdown.dataset.ready = '1';
-				typeDropdown.dataset.ready = '1';
-				setupCombobox(groupInput, groupDropdown, () => getGroupsForType(typeInput?.value?.trim()), () => loadItems());
-				setupCombobox(typeInput, typeDropdown, () => getTypesForGroup(groupInput?.value?.trim()), () => loadItems());
-				syncInputsFromUrl();
-			}
-
-			const groupVal = groupInput?.value?.trim() || '';
-			const typeVal = typeInput?.value?.trim()?.toLowerCase() || '';
-			const items = filterItems(allItemsData, groupVal, typeVal, q);
-
-			loadingEl.classList.add('hidden');
-
-			if (items.length === 0) {
-				emptyEl.classList.remove('hidden');
-			} else {
-				filteredItems = items;
-				displayedCount = 0;
-				renderNextBatch();
-				itemsContainer.classList.remove('hidden');
-				if (filteredItems.length > PAGE_SIZE) {
-					setupScrollObserver();
-				} else if (scrollObserver) {
-					scrollObserver.disconnect();
-					scrollObserver = null;
-				}
-			}
-
-			updateUrl();
-		} catch (err) {
-			console.error('Failed to load items:', err);
-			loadingEl.classList.add('hidden');
-			errorEl?.classList.remove('hidden');
-		}
-	}
-
-	applyBtn?.addEventListener('click', (e) => {
-		e.preventDefault();
-		loadItems();
-	});
-	resetBtn?.addEventListener('click', (e) => {
-		e.preventDefault();
-		resetFilters();
-	});
-
-	searchInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'Enter') {
-			e.preventDefault();
-			loadItems();
-		}
-	});
-	groupInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'Enter' && groupDropdown?.classList.contains('hidden')) {
-			e.preventDefault();
-			loadItems();
-		}
-	});
-	typeInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'Enter' && typeDropdown?.classList.contains('hidden')) {
-			e.preventDefault();
-			loadItems();
-		}
-	});
-
-	retryBtn?.addEventListener('click', () => loadItems(true));
-
-	loadItems();
-</script>

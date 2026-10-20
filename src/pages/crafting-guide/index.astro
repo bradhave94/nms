@@ -1,65 +1,14 @@
 ---
-// Importing required components and data
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
-import products from '@datav2/Products.json';
+import { craftingRows, sortRows } from '@components/table/recipeRows';
 import { getById, getSlug } from '@utils/lookup.js';
-import type { Item, RequiredItem } from '@utils/lookup.js';
-import type { TableRow } from '@components/table/Table.astro';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
-interface ItemDetails {
-  id: string;
-  name: string;
-  description: string;
-  value: number;
-  amount?: number;
-  image: string;
-  colour: string;
-}
-
-const createItemDetails = (item: Item, quantity?: number): ItemDetails => ({
-  id: item.Id,
-  name: item.Name,
-  description: item.Description,
-  value: item.BaseValueUnits,
-  ...(quantity && { amount: quantity }),
-  image: item.Icon,
-  colour: item.Colour,
-});
-
-const createArray = (item: Item): TableRow | undefined => {
-  if (!('RequiredItems' in item) || !item.RequiredItems || item.RequiredItems.length === 0) return undefined;
-
-  const requiredItems = item.RequiredItems.map((element: RequiredItem) => {
-    const requiredItem = getById(element.Id);
-    return requiredItem ? createItemDetails(requiredItem, element.Quantity) : undefined;
-  }).filter((detail: ItemDetails | undefined): detail is ItemDetails => detail !== undefined);
-
-  // Must have at least one input
-  if (requiredItems.length === 0 || !requiredItems[0]) return undefined;
-
-  return {
-    input_1: requiredItems[0],
-    input_2: requiredItems[1],
-    input_3: requiredItems[2],
-    output: createItemDetails(item),
-    value: item.BaseValueUnits,
-  };
-};
-
-// Define the columns to be displayed in the table
-const columns = [
-	{ title: 'Input 1', field: 'input_1' },
-	{ title: 'Input 2', field: 'input_2' },
-	{ title: 'Input 3', field: 'input_3' },
-	{ title: 'Product', field: 'output' },
-	{ title: 'Value', field: 'value' },
-];
-
-// Map the data and create an array of filtered items with proper type guard
-const data = products.map(createArray).filter((item): item is TableRow => item !== undefined);
+// Data order for the structured data list (unchanged); the table shows them by unit value.
+const data = craftingRows();
+const rows = sortRows(data, 'value');
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/crafting-guide/', siteOrigin).toString();
@@ -91,17 +40,7 @@ const structuredData = buildCollectionStructuredData({
 	ogImage={`${SITE.website}/images/crafting.webp`}
 	structuredData={structuredData}
 >
-		<p class="mx-auto mb-8 max-w-3xl px-4 text-center text-sky-200/90">
-			Plan totals with the <a href="/calculator/" class="text-cyan-300 underline hover:text-cyan-200">crafting calculator</a>
-			or browse <a href="/refining/" class="text-cyan-300 underline hover:text-cyan-200">refiner recipes</a>.
-		</p>
-		<Table
-			title="Crafting"
-			image="crafting-guide"
-			image_width={100}
-			image_height={63}
-			columns={columns}
-			data={data}
-			sort="value"
-		 />
+	<Table title="Crafting" image="/images/crafting.webp" base="/crafting-guide" kind="crafting" rows={rows} extra="value" outputTitle="Product" querySort="default">
+		All {rows.length.toLocaleString()} crafted products, most valuable first. Plan totals with the <a href="/calculator/" class="link">crafting calculator</a> or browse <a href="/refining/" class="link">refiner recipes</a>.
+	</Table>
 </Layout>

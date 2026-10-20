@@ -1,61 +1,45 @@
 ---
 import { SITE } from '@config';
+import { toolsNav, calculatorsNav, catalogsNav, moreNav, footerExtraNav } from '../config/nav';
 
-const navigation = [
-  { name: 'Refining', href: '/refining/' },
-  { name: 'Cooking', href: '/cooking/' },
-  { name: 'Crafting', href: '/crafting-guide/' },
-  { name: 'Blog', href: '/blog/' },
-  { name: 'Calculator', href: '/calculator/' },
-  { name: 'Products', href: '/products/' },
-  { name: 'Technology', href: '/technology/' },
-  { name: 'Upgrades', href: '/upgrades/' },
-  { name: 'Exocraft', href: '/exocraft/' },
-  { name: 'Starships', href: '/starships/' },
-  { name: 'Buildings', href: '/buildings/' },
-  { name: 'Fish', href: '/fish/' },
-  { name: 'Curiosities', href: '/curiosities/' },
-  { name: 'Food', href: '/food/' },
-  { name: 'Raw Materials', href: '/raw/' },
-  { name: 'All Items', href: '/items/' },
+const columns = [
+	{ title: 'Tools', items: [...toolsNav, ...calculatorsNav.slice(1)] },
+	{ title: 'Catalogs', items: catalogsNav },
+	{ title: 'More', items: [...moreNav, ...footerExtraNav] },
 ];
 ---
 
-<footer class="bg-black flex flex-1 flex-col lg:pl-80">
-  <div class="p-6 py-12 max-w-4xl mx-auto">
-    <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 sm:gap-x-12" aria-label="Footer">
-      {navigation.map((item) => (
-        <a
-          href={item.href}
-          class="inline-block min-w-6 text-center text-sm leading-6 text-white hover:text-blue-400 hover:underline transition-colors"
-        >
-          {item.name}
-        </a>
-      ))}
-    </nav>
-    <p class="mt-8 text-center text-xs leading-5 text-gray-400">
-      No Man's Sky Recipes | Updated to&nbsp;
-      <a
-        class="underline underline-offset-2 hover:text-blue-400 transition-colors"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={SITE.version_link}
-      >
-        {SITE.version_name} ({SITE.version})<span class="sr-only"> (opens in a new tab)</span>
-      </a>
-      &nbsp;on {SITE.version_date}
-    </p>
-    <div class="disclaimer">
-      <p>This is a fan-made website. No Man's Sky™ and all related assets are trademarks
-      of Hello Games. This site is not affiliated with or endorsed by Hello Games.</p>
-      <div class="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-        <a href="/privacy/" class="inline-flex min-h-6 items-center text-blue-400 underline underline-offset-2 hover:text-blue-300">Privacy Policy</a>
-        <a href="/accessibility/" class="inline-flex min-h-6 items-center text-blue-400 underline underline-offset-2 hover:text-blue-300">Accessibility</a>
-        <!-- NitroPay CCPA: injects "Do Not Sell My Personal Information" for CA users -->
-        <span data-ccpa-link="1"></span>
-        <!-- NitroPay CMP: injects consent management for GDPR users -->
-        <div id="ncmp-consent-link"></div>
-      </div>
-    </div>
-  </div>
+<footer class="border-t border-[#141c26] bg-[#05080b] lg:pl-56">
+	<div class="mx-auto max-w-6xl px-6 pt-12 pb-28 lg:pb-32">
+		<nav class="grid gap-8 sm:grid-cols-[1fr_2fr_1fr]" aria-label="Footer">
+			{columns.map((col) => (
+				<div>
+					<p class="m-0 mb-3 text-sm font-semibold text-dim">{col.title}</p>
+					<ul class:list={['m-0 grid list-none gap-x-6 gap-y-1.5 p-0', col.title === 'Catalogs' && 'grid-cols-2']}>
+						{col.items.map((item) => (
+							<li><a href={item.href} class="inline-flex min-h-6 items-center text-[0.95rem] text-ink hover:text-accent hover:underline underline-offset-2">{item.name}</a></li>
+						))}
+					</ul>
+				</div>
+			))}
+		</nav>
+		<div class="mt-10 border-t border-line pt-6 text-center">
+			<p class="m-0 text-sm text-dim">
+				No Man's Sky Recipes · Updated to{' '}
+				<a class="link" target="_blank" rel="noopener noreferrer" href={SITE.version_link}>{SITE.version_name} ({SITE.version})<span class="sr-only"> (opens in a new tab)</span></a>{' '}
+				on {SITE.version_date}
+			</p>
+			<div class="disclaimer">
+				<p class="m-0">This is a fan-made website. No Man's Sky™ and all related assets are trademarks of Hello Games. This site is not affiliated with or endorsed by Hello Games.</p>
+				<div class="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+					<a href="/privacy/" class="link inline-flex min-h-6 items-center">Privacy policy</a>
+					<a href="/accessibility/" class="link inline-flex min-h-6 items-center">Accessibility</a>
+					<!-- NitroPay CCPA: injects "Do Not Sell My Personal Information" for CA users -->
+					<span data-ccpa-link="1"></span>
+					<!-- NitroPay CMP: injects consent management for GDPR users -->
+					<div id="ncmp-consent-link"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>

@@ -20,6 +20,7 @@ import SearchModal from '@components/SearchModal.astro';
 import Footer from '@components/Footer.astro';
 import NitroGlobalAds from '@components/ads/NitroGlobalAds.astro';
 import { SITE } from '@config';
+import { ANNOUNCE_KEY } from '../config/announce';
 import { ensureTrailingSlashPath, ensureTrailingSlashUrl } from '@utils/trailingSlash.js';
 
 export interface Props {
@@ -110,7 +111,7 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-full  bg-black font-nms text-lg text-white">
+<html lang="en" class="h-full bg-space font-nms text-lg text-ink">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -181,6 +182,14 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 			</Fragment>
 		)}
 
+		<!-- a dismissed announcement bar stays hidden from the first paint -->
+		<script is:inline define:vars={{ announceKey: ANNOUNCE_KEY }}>
+			try {
+				if (localStorage.getItem(announceKey)) document.documentElement.classList.add('announce-off');
+			} catch {
+				/* storage blocked: show the bar */
+			}
+		</script>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GEFK3YPV3"></script>
 		<script is:inline>

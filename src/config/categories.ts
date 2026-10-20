@@ -61,7 +61,7 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 		pageDescription:
 			"Search No Man's Sky craftable products and components. Open each page for ingredients, unit values, and full manufacturing chains.",
 		intro:
-			'Products include crafted components, trade goods, and advanced materials used throughout your journey. See the [crafting guide](/crafting-guide/), [crafting calculator](/calculator/), [all items](/items/), and [refiner recipes](/refining/).',
+			'Crafted components, trade goods and advanced materials. See the [crafting guide](/crafting-guide/), [crafting calculator](/calculator/), [refiner recipes](/refining/) and [all items](/items/).',
 		datasets: ['Products'],
 		idStrategy: 'props',
 	},
@@ -110,7 +110,7 @@ export const categories: Record<CategorySlug, CategoryConfig> = {
 		pageDescription:
 			"Browse No Man's Sky raw materials, base resources, and mining ingredients used in crafting, refining, cooking, and technology upgrades.",
 		intro:
-			'Browse No Man\u2019s Sky raw materials used in crafting, refining, cooking, and upgrade chains. Track foundational resources, gather ingredients, and jump into the recipes they unlock.',
+			'The resources behind every crafting, refining, cooking and upgrade chain in No Man\u2019s Sky. Open one for the recipes it unlocks.',
 		pageIntro:
 			"Raw materials are the foundation of crafting, refining, and upgrades in No Man's Sky.",
 		datasets: ['RawMaterials'],

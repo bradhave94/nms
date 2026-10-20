@@ -1,0 +1,69 @@
+---
+// A titled panel of open recipe rows. The first `visible` rows show; the rest sit behind a
+// "Show N more" disclosure button (hidden rows don't load their icons until shown).
+import RecipeRow from '@components/item/RecipeRow.astro';
+import type { RecipeRowView } from '@utils/itemPageContext';
+
+interface Props {
+  id: string;
+  title: string;
+  /** Muted text after the title (e.g. "13 recipes"). */
+  count?: string;
+  /** Muted text at the right of the header (e.g. "best yield per input first"). */
+  note?: string;
+  rows: RecipeRowView[];
+  mode: 'make' | 'use';
+  visible?: number;
+  longMachine?: boolean;
+  footnote?: string;
+}
+
+const { id, title, count, note, rows, mode, visible = 8, longMachine = false, footnote } = Astro.props;
+const extra = Math.max(0, rows.length - visible);
+const listId = `${id}-list`;
+---
+
+{rows.length > 0 && (
+  <section id={id} class="recipe-panel" aria-labelledby={`${id}-title`}>
+    <div class="recipe-panel-head">
+      <h2 id={`${id}-title`} class="m-0 text-[1.15rem] font-semibold">
+        {title}
+        {count && <span class="ml-1 text-[.9rem] font-normal text-dim">{count}</span>}
+      </h2>
+      {note && <p class="m-0 text-[.85rem] text-dim">{note}</p>}
+    </div>
+    <ul id={listId} class="recipe-list" role="list">
+      {rows.map((row, index) => (
+        <RecipeRow row={row} mode={mode} hidden={index >= visible} longMachine={longMachine} />
+      ))}
+    </ul>
+    {extra > 0 && (
+      <button
+        type="button"
+        class="recipe-more"
+        aria-expanded="false"
+        aria-controls={listId}
+        data-show-more={extra}
+      >
+        Show {extra} more <span aria-hidden="true">↓</span>
+      </button>
+    )}
+    {footnote && <p class="m-0 border-t border-line px-4 py-2 text-[.8rem] text-dim">{footnote}</p>}
+  </section>
+)}
+
+<script>
+  // "Show N more": reveal every hidden row of the list, then offer to collapse again.
+  document.querySelectorAll<HTMLButtonElement>('button[data-show-more]').forEach((button) => {
+    const list = document.getElementById(button.getAttribute('aria-controls') ?? '');
+    if (!list) return;
+    const label = button.innerHTML;
+    const extraRows = Array.from(list.children).filter((child) => (child as HTMLElement).hidden) as HTMLElement[];
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      extraRows.forEach((row) => (row.hidden = open));
+      button.setAttribute('aria-expanded', String(!open));
+      button.innerHTML = open ? label : 'Show fewer <span aria-hidden="true">↑</span>';
+    });
+  });
+</script>

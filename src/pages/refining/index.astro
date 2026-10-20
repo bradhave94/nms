@@ -1,100 +1,14 @@
 ---
-// Importing required components and data
 import Layout from '@layouts/Layout.astro';
 import Table from '@components/table/Table.astro';
-import refinery from '@datav2/Refinery.json';
+import { refiningRows, sortRows } from '@components/table/recipeRows';
 import { getById, getSlug } from '@utils/lookup.js';
-import type { Item } from '@utils/lookup.js';
-import { formatRefineryTime } from '@utils/itemFormatters';
-import type { TableRow } from '@components/table/Table.astro';
 import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
 import { SITE } from '@config';
 
-// Interfaces for defining the shape of input and output objects
-interface Input {
-	Id: string;
-	Quantity: number;
-}
-
-interface Output {
-	Id: string;
-	Quantity: number;
-}
-
-interface Refinery {
-	Inputs: Input[];
-	Output: Output;
-	Operation?: string;
-	Time?: string;
-}
-
-interface ItemData {
-    id: string;
-    name: string;
-    description: string;
-    value: number;
-    amount: number;
-    image: string;
-    colour: string;
-}
-
-type TableItem = TableRow & {
-    input_1: ItemData;
-    input_2?: ItemData;
-    input_3?: ItemData;
-    output: ItemData;
-    operation?: string;
-    time?: string;
-};
-
-// Extract item data creation to a separate function
-const createItemData = (element: Input | Output): ItemData | undefined => {
-    const item: Item | undefined = getById(element.Id);
-    if (!item) return undefined;
-
-    return {
-        id: item.Id,
-        name: item.Name,
-        description: item.Description,
-        value: item.BaseValueUnits,
-        amount: element.Quantity,
-        image: item.Icon,
-        colour: item.Colour,
-    };
-};
-
-// Improve type safety and readability
-const createArray = (item: Refinery): TableItem | undefined => {
-    const inputs = item.Inputs.map((element) => createItemData(element)).filter((item): item is ItemData => item !== undefined);
-    const output = createItemData(item.Output);
-
-    // Must have output and at least one input
-    if (!output || !inputs[0]) return undefined;
-
-    return {
-        input_1: inputs[0],
-        input_2: inputs[1],
-        input_3: inputs[2],
-        output,
-        operation: item.Operation,
-        time: formatRefineryTime(item.Time, item.Output.Id),
-        description: output.description,
-        value: output.value,
-    };
-};
-
-// Define the columns to be displayed in the table
-const columns = [
-	{ title: 'Input 1', field: 'input_1' },
-	{ title: 'Input 2', field: 'input_2' },
-	{ title: 'Input 3', field: 'input_3' },
-	{ title: 'Output', field: 'output' },
-	{ title: 'Operation', field: 'operation' },
-	{ title: 'Time per batch', field: 'time' },
-];
-
-// Use type assertion for better type inference
-const data = refinery.map(createArray).filter((item): item is TableItem => item !== undefined);
+// Data order for the structured data list (unchanged); the table shows them by output name.
+const data = refiningRows();
+const rows = sortRows(data, 'name');
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL('/refining/', siteOrigin).toString();
@@ -126,12 +40,7 @@ const structuredData = buildCollectionStructuredData({
 	ogImage={`${SITE.website}/images/refiner.webp`}
 	structuredData={structuredData}
 >
-	<Table
-		title="Refining"
-		image="refining"
-		image_width={60}
-		image_height={60}
-		columns={columns}
-		data={data}
-	/>
+	<Table title="Refining" image="/images/refiner.webp" base="/refining" kind="refining" rows={rows} extra="operation">
+		All {rows.length.toLocaleString()} refiner recipes. Type an item to see what makes it or what it's used for.
+	</Table>
 </Layout>

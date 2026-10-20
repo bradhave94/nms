@@ -1,426 +1,377 @@
 ---
-import { SITE } from '@config';
+// Filterable item grid for the catalog pages, /items and the calculator picker.
+// - The first `initialCount` tiles are server-rendered (links work without JS, crawlers see them).
+// - The full list ships inline as compact JSON, pre-sorted A–Z by the page; the script filters on
+//   `input`, sorts by value on request, and appends more tiles as you scroll.
+// - The optional `ad` slot is placed after the first row of tiles (CSS `order`, see lists.css).
 import CompactCard from '@components/CompactCard.astro';
 
-interface Props {
-	type: string;
-	basePath: string;
-	/** First page of cards, rendered into the HTML so the links work before (and without) the script. */
-	initialItems?: Array<{ name: string; image: string; link: string }>;
+export interface FilterItem {
+	name: string;
+	group?: string | null;
+	/** Icon file name (the WebP copy), joined to `imageBase`. */
+	icon: string;
+	link: string;
+	colour?: string | null;
+	value?: number | null;
+	/** Category segment of the link (`products`, `raw`, ...); used by the category filter on /items. */
+	type?: string;
 }
 
-const { type, basePath, initialItems = [] } = Astro.props;
-const hasInitialItems = initialItems.length > 0;
-const IMAGE_BASE = SITE.imageBaseUrl;
-const idPrefix = type.replace(/[^a-z0-9]/gi, '-');
+interface Props {
+	/** Unique id prefix for this list. */
+	id: string;
+	/** Path the filter state is written to (query string), e.g. `/buildings`. */
+	basePath: string;
+	/** Every item in the list, already sorted A–Z. */
+	items: FilterItem[];
+	imageBase: string;
+	/** How many tiles are rendered on the server. */
+	initialCount?: number;
+	searchLabel?: string;
+	searchPlaceholder?: string;
+	/** Category options for /items. */
+	types?: Array<{ value: string; label: string }>;
+	showGroups?: boolean;
+	/** [singular, plural] for the result count. */
+	noun?: [string, string];
+}
+
+const {
+	id,
+	basePath,
+	items,
+	imageBase,
+	initialCount = 80,
+	searchLabel = 'Search by name or group',
+	searchPlaceholder = 'Type a name…',
+	types,
+	showGroups = true,
+	noun = ['item', 'items'],
+} = Astro.props;
+
+const groups = [...new Set(items.map((item) => item.group).filter((g): g is string => Boolean(g)))].sort((a, b) =>
+	a.localeCompare(b)
+);
+const groupIndex = new Map(groups.map((g, i) => [g, i]));
+const typeValues = types?.map((t) => t.value) ?? [];
+const typeIndex = new Map(typeValues.map((t, i) => [t, i]));
+const rows = items.map((item) => [
+	item.name,
+	item.group ? groupIndex.get(item.group) ?? -1 : -1,
+	item.icon,
+	item.link,
+	(item.colour ?? '').replace(/^#/, ''),
+	item.value ?? 0,
+	item.type !== undefined ? typeIndex.get(item.type) ?? -1 : -1,
+]);
+const payload = JSON.stringify({
+	rows,
+	groups,
+	types: typeValues,
+	imageBase,
+	basePath,
+	initial: Math.min(initialCount, items.length),
+	noun,
+}).replace(/</g, '\\u003c');
+const initialItems = items.slice(0, initialCount);
+const hasAd = Astro.slots.has('ad');
+const total = items.length;
 ---
 
-<form
-	class="mx-auto max-w-4xl mb-8 flex flex-wrap gap-4 justify-center items-center"
-	data-category-filter={type}
->
-	<div class="relative" id={`${idPrefix}-group-combobox-wrapper`}>
-		<label for={`${idPrefix}-group-input`} class="sr-only">Group</label>
-		<input
-			id={`${idPrefix}-group-input`}
-			type="text"
-			autocomplete="off"
-			placeholder="All groups"
-			role="combobox"
-			aria-expanded="false"
-			aria-controls={`${idPrefix}-group-dropdown`}
-			aria-autocomplete="list"
-			class="h-10 w-48 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
-		/>
-		<div
-			id={`${idPrefix}-group-dropdown`}
-			role="listbox"
-			class="absolute left-0 right-0 top-full z-20 mt-1 max-h-60 overflow-y-auto rounded-sm border border-sky-700 bg-sky-900 shadow-lg hidden"
-		></div>
-	</div>
-	<div>
-		<label for={`${idPrefix}-search-input`} class="sr-only">Search</label>
-		<input
-			id={`${idPrefix}-search-input`}
-			type="text"
-			placeholder="Search by name..."
-			class="h-10 w-48 rounded-sm border border-sky-600 bg-sky-900/50 px-3 text-white placeholder-sky-400 focus:border-sky-400 focus:outline-hidden focus:ring-1 focus:ring-sky-400"
-		/>
-	</div>
-	<div class="flex gap-2">
-		<button
-			id={`${idPrefix}-apply-filters`}
-			type="button"
-			class="h-10 rounded-sm bg-sky-700 px-4 font-semibold text-white transition-colors hover:bg-sky-800"
-		>
-			Apply
-		</button>
-		<button
-			id={`${idPrefix}-reset-filters`}
-			type="button"
-			class="h-10 rounded-sm border border-sky-600 px-4 font-semibold text-sky-400 transition-colors hover:bg-sky-900/50 hover:text-white"
-		>
-			Reset
-		</button>
-	</div>
-</form>
-
-<div id={`${idPrefix}-loading`} class:list={['text-center py-12 text-sky-400', { hidden: hasInitialItems }]} aria-live="polite">Loading...</div>
-<div id={`${idPrefix}-empty`} class="hidden text-center py-12 text-sky-400" aria-live="polite">
-	No items found. Try adjusting your filters.
-</div>
-<div id={`${idPrefix}-error`} class="hidden text-center py-12" aria-live="assertive">
-	<p class="text-sky-400 mb-4">Failed to load items. Please try again.</p>
-	<button
-		id={`${idPrefix}-retry-btn`}
-		type="button"
-		class="rounded-sm bg-sky-700 px-4 py-2 font-semibold text-white transition-colors hover:bg-sky-800"
-	>
-		Retry
-	</button>
-</div>
-<p id={`${idPrefix}-status`} class="sr-only" role="status" aria-live="polite"></p>
-<div id={`${idPrefix}-items-container`} class:list={{ hidden: !hasInitialItems }}>
-	<div
-		id={`${idPrefix}-items`}
-		class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 px-2"
-		data-static={hasInitialItems ? '1' : undefined}
-	>
-		{initialItems.map((card, index) => <CompactCard card={card} index={index} loading={index < 12 ? 'eager' : 'lazy'} />)}
-	</div>
-	<div id={`${idPrefix}-load-more-sentinel`} class="h-1 w-full" aria-hidden="true"></div>
-</div>
-
-<script define:vars={{ IMAGE_BASE, type, basePath, idPrefix }}>
-	const PAGE_SIZE = 80;
-	const groupInput = document.getElementById(`${idPrefix}-group-input`);
-	const groupDropdown = document.getElementById(`${idPrefix}-group-dropdown`);
-	const searchInput = document.getElementById(`${idPrefix}-search-input`);
-	const applyBtn = document.getElementById(`${idPrefix}-apply-filters`);
-	const resetBtn = document.getElementById(`${idPrefix}-reset-filters`);
-	const loadingEl = document.getElementById(`${idPrefix}-loading`);
-	const emptyEl = document.getElementById(`${idPrefix}-empty`);
-	const errorEl = document.getElementById(`${idPrefix}-error`);
-	const retryBtn = document.getElementById(`${idPrefix}-retry-btn`);
-	const itemsContainer = document.getElementById(`${idPrefix}-items-container`);
-	const itemsEl = document.getElementById(`${idPrefix}-items`);
-	const loadMoreSentinel = document.getElementById(`${idPrefix}-load-more-sentinel`);
-	const statusEl = document.getElementById(`${idPrefix}-status`);
-
-	let allItemsData = [];
-	let allGroups = [];
-	let filteredItems = [];
-	let displayedCount = 0;
-	let scrollObserver = null;
-
-	function escapeHtml(str) {
-		if (str == null) return '';
-		const s = String(str);
-		return s
-			.replace(/&/g, '&amp;')
-			.replace(/</g, '&lt;')
-			.replace(/>/g, '&gt;')
-			.replace(/"/g, '&quot;')
-			.replace(/'/g, '&#39;');
-	}
-
-	function getParams() {
-		const params = new URLSearchParams(window.location.search);
-		return {
-			group: params.get('group') || '',
-			q: params.get('q') || '',
-		};
-	}
-
-	function syncInputsFromUrl() {
-		const { group, q } = getParams();
-		if (groupInput) groupInput.value = group;
-		if (searchInput) searchInput.value = q;
-	}
-
-	function updateUrl() {
-		const group = groupInput?.value?.trim() || '';
-		const q = searchInput?.value?.trim() || '';
-		const params = new URLSearchParams();
-		if (group) params.set('group', group);
-		if (q) params.set('q', q);
-		const query = params.toString();
-		const newUrl = `${basePath}${query ? '?' + query : ''}`;
-		window.history.replaceState({}, '', newUrl);
-	}
-
-	function renderDropdown(list, filter, dropdownId) {
-		const q = (filter || '').toLowerCase().trim();
-		const filtered = list.filter((item) => item.toLowerCase().includes(q));
-		const items = filtered.map(
-			(item, i) =>
-				`<div role="option" id="${dropdownId}-opt-${i + 1}" tabindex="-1" class="block w-full px-3 py-2 text-left text-sm text-white hover:bg-sky-700/80 cursor-pointer" data-value="${escapeHtml(item)}">${escapeHtml(item)}</div>`
-		);
-		const clearBtn = `<div role="option" id="${dropdownId}-opt-0" tabindex="-1" class="block w-full px-3 py-2 text-left text-sm text-sky-400 hover:bg-sky-700/80 cursor-pointer" data-value="">(All)</div>`;
-		return clearBtn + items.join('');
-	}
-
-	function setupCombobox(inputEl, dropdownEl, getOptions, onSelect) {
-		if (!inputEl || !dropdownEl) return;
-		const dropdownId = dropdownEl.id;
-		let activeIndex = -1;
-
-		function getOptionEls() {
-			return dropdownEl.querySelectorAll('[role="option"]');
-		}
-
-		function setActiveOption(index) {
-			const options = getOptionEls();
-			options.forEach((opt) => opt.classList.remove('bg-sky-700/80'));
-			activeIndex = index;
-			if (index >= 0 && index < options.length) {
-				const opt = options[index];
-				opt.classList.add('bg-sky-700/80');
-				opt.scrollIntoView({ block: 'nearest' });
-				inputEl.setAttribute('aria-activedescendant', opt.id);
-			} else {
-				inputEl.removeAttribute('aria-activedescendant');
-			}
-		}
-
-		function selectOption(optionEl) {
-			inputEl.value = optionEl.dataset.value || '';
-			hide();
-			onSelect();
-		}
-
-		function show() {
-			const options = getOptions();
-			dropdownEl.innerHTML = renderDropdown(options, inputEl.value, dropdownId);
-			dropdownEl.classList.remove('hidden');
-			inputEl.setAttribute('aria-expanded', 'true');
-			activeIndex = -1;
-			inputEl.removeAttribute('aria-activedescendant');
-			dropdownEl.querySelectorAll('[role="option"]').forEach((opt) => {
-				opt.addEventListener('mousedown', (e) => e.preventDefault());
-				opt.addEventListener('click', () => selectOption(opt));
-			});
-		}
-
-		function hide() {
-			dropdownEl.classList.add('hidden');
-			inputEl.setAttribute('aria-expanded', 'false');
-			activeIndex = -1;
-			inputEl.removeAttribute('aria-activedescendant');
-		}
-
-		inputEl.addEventListener('focus', show);
-		inputEl.addEventListener('input', show);
-		inputEl.addEventListener('blur', hide);
-		dropdownEl.addEventListener('mousedown', (e) => e.preventDefault());
-
-		inputEl.addEventListener('keydown', (e) => {
-			const options = getOptionEls();
-			if (!options.length) return;
-			const isOpen = !dropdownEl.classList.contains('hidden');
-
-			if (e.key === 'ArrowDown') {
-				e.preventDefault();
-				if (!isOpen) {
-					show();
-					return;
-				}
-				setActiveOption(Math.min(activeIndex + 1, options.length - 1));
-			} else if (e.key === 'ArrowUp') {
-				e.preventDefault();
-				if (!isOpen) return;
-				setActiveOption(Math.max(activeIndex - 1, 0));
-			} else if (e.key === 'Escape') {
-				e.preventDefault();
-				hide();
-			} else if (e.key === 'Enter' && isOpen) {
-				e.preventDefault();
-				if (activeIndex >= 0) {
-					selectOption(options[activeIndex]);
-				} else {
-					hide();
-					onSelect();
-				}
-			}
-		});
-	}
-
-	function resetFilters() {
-		if (groupInput) groupInput.value = '';
-		if (searchInput) searchInput.value = '';
-		groupDropdown?.classList.add('hidden');
-		loadItems();
-	}
-
-	function renderCard(item) {
-		const name = escapeHtml(item.name);
-		const icon = escapeHtml(item.icon || '');
-		const rawUrl = item.url || '';
-		const url = escapeHtml(rawUrl.startsWith('/') && !rawUrl.includes('//') ? rawUrl : '#');
-		const article = document.createElement('article');
-		article.className = 'group relative';
-		article.innerHTML = `
-			<a
-				href="${url}"
-				class="group block h-full overflow-hidden rounded-xs border border-sky-900 bg-sky-800/80 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-sky-700/90"
-			>
-				<div class="aspect-square bg-[#0b3550]">
-					<img
-						class="h-full w-full object-contain object-center"
-						src="${IMAGE_BASE}${icon.replace(/\.png$/i, '.webp')}"
-						alt=""
-						loading="lazy"
-						width="128"
-						height="128"
-					/>
+<div data-tile-list class="tile-list">
+	<script type="application/json" set:html={payload} />
+	<form class="list-filter panel" role="search" aria-label={`Filter ${noun[1]}`} data-filter-form>
+		<div class="lf-search">
+			<label for={`${id}-q`}>{searchLabel}</label>
+			<input id={`${id}-q`} type="search" class="field" placeholder={searchPlaceholder} autocomplete="off" spellcheck="false" data-q />
+		</div>
+		{
+			types && types.length > 0 && (
+				<div class="lf-select">
+					<label for={`${id}-type`}>Category</label>
+					<select id={`${id}-type`} class="field" data-type>
+						<option value="">All categories</option>
+						{types.map((t) => (
+							<option value={t.value}>{t.label}</option>
+						))}
+					</select>
 				</div>
-				<div class="border-t border-sky-900 px-2 py-1.5">
-					<p class="truncate text-base font-semibold text-white/95" title="${name}">${name}</p>
+			)
+		}
+		{
+			showGroups && groups.length > 1 && (
+				<div class="lf-select">
+					<label for={`${id}-group`}>Group</label>
+					<select id={`${id}-group`} class="field" data-group>
+						<option value="">All groups</option>
+						{groups.map((g) => (
+							<option value={g}>{g}</option>
+						))}
+					</select>
 				</div>
-			</a>
-		`;
-		return article;
+			)
+		}
+		<div>
+			<span class="lf-label" id={`${id}-sort-label`}>Sort</span>
+			<div class="lf-sort" role="group" aria-labelledby={`${id}-sort-label`}>
+				<button type="button" class="btn-quiet" aria-pressed="true" data-sort="az">A–Z</button>
+				<button type="button" class="btn-quiet" aria-pressed="false" data-sort="value">Value</button>
+			</div>
+		</div>
+	</form>
+	<p class="list-status">
+		<span aria-hidden="true" data-status-visible><span class="tabular">{total.toLocaleString('en-US')}</span> {total === 1 ? noun[0] : noun[1]}</span>
+		<span class="sr-only" role="status" data-status></span>
+	</p>
+	<div class="list-empty panel" hidden data-empty>
+		<p class="mb-3">Nothing matches. Try a shorter name or another group.</p>
+		<button type="button" class="btn-quiet" data-reset>Clear filters</button>
+	</div>
+	<div class="tile-grid" id={`${id}-items`} data-grid>
+		{initialItems.map((item, index) => (
+			<CompactCard
+				card={{ name: item.name, image: imageBase + item.icon, link: item.link, colour: item.colour, group: item.group }}
+				index={index}
+				loading={index < 20 ? 'eager' : 'lazy'}
+			/>
+		))}
+		{hasAd && (
+			<div class="grid-ad" data-ad>
+				<slot name="ad" />
+			</div>
+		)}
+	</div>
+	<div class="h-1 w-full" aria-hidden="true" data-sentinel></div>
+</div>
+
+<script>
+	type Row = [string, number, string, string, string, number, number];
+	interface Payload {
+		rows: Row[];
+		groups: string[];
+		types: string[];
+		imageBase: string;
+		basePath: string;
+		initial: number;
+		noun: [string, string];
 	}
 
-	function filterItems(items, group, q) {
-		let filtered = items.filter((item) => (item.url || '').split('/')[1] === type);
-		if (group) {
-			const g = group.trim().toLowerCase();
-			filtered = filtered.filter(
-				(item) => item.group && String(item.group).toLowerCase().includes(g)
-			);
-		}
-		if (q) {
-			const search = q.toLowerCase().trim();
-			filtered = filtered.filter(
-				(item) =>
-					(item.name && String(item.name).toLowerCase().includes(search)) ||
-					(item.group && String(item.group).toLowerCase().includes(search))
-			);
-		}
-		return filtered;
-	}
+	const BATCH = 120;
+	const HEX = /^[0-9a-f]{6}$/i;
 
-	function renderNextBatch() {
-		const start = displayedCount;
-		const end = Math.min(displayedCount + PAGE_SIZE, filteredItems.length);
-		for (let i = start; i < end; i++) {
-			itemsEl?.appendChild(renderCard(filteredItems[i]));
-		}
-		displayedCount = end;
-		if (loadMoreSentinel) {
-			loadMoreSentinel.classList.toggle('hidden', displayedCount >= filteredItems.length);
-		}
-	}
+	function initList(root: HTMLElement) {
+		const dataEl = root.querySelector('script[type="application/json"]');
+		if (!dataEl?.textContent) return;
+		const data = JSON.parse(dataEl.textContent) as Payload;
+		const form = root.querySelector<HTMLFormElement>('[data-filter-form]');
+		const qInput = root.querySelector<HTMLInputElement>('[data-q]');
+		const groupSelect = root.querySelector<HTMLSelectElement>('[data-group]');
+		const typeSelect = root.querySelector<HTMLSelectElement>('[data-type]');
+		const sortButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-sort]')];
+		const statusEl = root.querySelector<HTMLElement>('[data-status]');
+		const emptyEl = root.querySelector<HTMLElement>('[data-empty]');
+		const resetBtn = root.querySelector<HTMLButtonElement>('[data-reset]');
+		const grid = root.querySelector<HTMLElement>('[data-grid]');
+		const adEl = root.querySelector<HTMLElement>('[data-ad]');
+		const sentinel = root.querySelector<HTMLElement>('[data-sentinel]');
+		if (!grid || !sentinel) return;
 
-	function setupScrollObserver() {
-		if (!loadMoreSentinel || scrollObserver) return;
-		scrollObserver = new IntersectionObserver(
+		const allGroupOptions = data.groups;
+		let sortMode: 'az' | 'value' = 'az';
+		let list: Row[] = data.rows;
+		let shown = data.initial;
+		let announceTimer: number | undefined;
+
+		const fmt = (n: number) => n.toLocaleString('en-US');
+
+		function tile(row: Row): HTMLElement {
+			const [name, gi, icon, link, colour, value] = row;
+			const a = document.createElement('a');
+			a.className = 'tile';
+			a.href = link.startsWith('/') && !link.startsWith('//') ? link : '#';
+			const slot = document.createElement('span');
+			slot.className = 'slot';
+			if (HEX.test(colour)) slot.style.setProperty('--c', `#${colour}`);
+			const img = document.createElement('img');
+			img.src = data.imageBase + icon;
+			img.alt = '';
+			img.width = 48;
+			img.height = 48;
+			img.loading = 'lazy';
+			img.decoding = 'async';
+			slot.append(img);
+			const text = document.createElement('span');
+			text.className = 'tile-text';
+			const nameEl = document.createElement('span');
+			nameEl.className = 'tile-name';
+			nameEl.textContent = name;
+			text.append(nameEl);
+			const metaParts: string[] = [];
+			if (gi >= 0) metaParts.push(data.groups[gi]);
+			if (sortMode === 'value' && value > 0) metaParts.push(`${fmt(value)} units`);
+			if (metaParts.length) {
+				const meta = document.createElement('span');
+				meta.className = 'tile-meta';
+				meta.textContent = metaParts.join(' · ');
+				text.append(meta);
+			}
+			a.append(slot, text);
+			const cell = document.createElement('article');
+			cell.className = 'tile-cell';
+			cell.append(a);
+			return cell;
+		}
+
+		function appendBatch() {
+			const end = Math.min(shown + BATCH, list.length);
+			if (end <= shown) return;
+			const frag = document.createDocumentFragment();
+			for (let i = shown; i < end; i++) frag.append(tile(list[i]));
+			grid!.insertBefore(frag, adEl);
+			shown = end;
+		}
+
+		const observer = new IntersectionObserver(
 			(entries) => {
-				const entry = entries[0];
-				if (!entry?.isIntersecting || displayedCount >= filteredItems.length) return;
-				renderNextBatch();
+				if (!entries[0]?.isIntersecting || shown >= list.length) return;
+				appendBatch();
+				// re-arm so a still-visible sentinel fires again
+				observer.unobserve(sentinel);
+				observer.observe(sentinel);
 			},
-			{ rootMargin: '600px', threshold: 0 }
+			{ rootMargin: '900px 0px' }
 		);
-		scrollObserver.observe(loadMoreSentinel);
-	}
 
-	async function loadItems(forceFetch = false) {
-		if (!loadingEl || !emptyEl || !itemsEl || !itemsContainer) return;
-
-		// The server-rendered first page stays on screen until the full list arrives.
-		const keepStaticItems = itemsEl.dataset.static === '1';
-		delete itemsEl.dataset.static;
-		emptyEl.classList.add('hidden');
-		errorEl?.classList.add('hidden');
-		if (!keepStaticItems) {
-			loadingEl.classList.remove('hidden');
-			itemsContainer.classList.add('hidden');
-			itemsEl.innerHTML = '';
+		function state() {
+			return {
+				q: qInput?.value.trim() ?? '',
+				group: groupSelect?.value ?? '',
+				type: typeSelect?.value ?? '',
+			};
 		}
 
-		const q = searchInput?.value?.trim() || '';
+		function statusText(count: number) {
+			const { q, group, type } = state();
+			const word = count === 1 ? data.noun[0] : data.noun[1];
+			if (!q && !group && !type) return `${fmt(count)} ${word}`;
+			return `${fmt(count)} of ${fmt(data.rows.length)} ${data.noun[1]}${q ? ` matching “${q}”` : ''}`;
+		}
 
-		try {
-			const needsFetch = forceFetch || allItemsData.length === 0;
-			if (needsFetch) {
-				const res = await fetch(`/items.json?type=${encodeURIComponent(type)}`);
-				const json = await res.json();
-				const allItems = json?.body ?? [];
-				const categoryItems = allItems.filter(
-					(item) => (item.url || '').split('/')[1] === type
-				);
-
-				allItemsData = categoryItems;
-				allGroups = [...new Set(categoryItems.map((i) => i.group).filter(Boolean))].sort();
+		// the visible count updates at once; the screen-reader announcement waits for typing to settle
+		const visibleEl = root.querySelector<HTMLElement>('[data-status-visible]');
+		function setStatus(text: string, announce: boolean) {
+			if (visibleEl) visibleEl.textContent = text;
+			if (!statusEl) return;
+			window.clearTimeout(announceTimer);
+			if (!announce) {
+				statusEl.textContent = text;
+				return;
 			}
+			// one announcement after typing settles
+			announceTimer = window.setTimeout(() => (statusEl.textContent = text), 450);
+		}
 
-			const needsSetup = !groupDropdown?.dataset.ready;
-			if (needsSetup) {
-				groupDropdown.dataset.ready = '1';
-				setupCombobox(groupInput, groupDropdown, () => allGroups, () => loadItems());
-				syncInputsFromUrl();
-			}
+		function refreshGroups() {
+			if (!groupSelect || !typeSelect) return;
+			const type = typeSelect.value;
+			const ti = type ? data.types.indexOf(type) : -1;
+			const allowed = new Set<number>();
+			for (const r of data.rows) if (ti < 0 || r[6] === ti) allowed.add(r[1]);
+			const current = groupSelect.value;
+			groupSelect.replaceChildren(new Option('All groups', ''));
+			allGroupOptions.forEach((g, i) => {
+				if (allowed.has(i)) groupSelect.append(new Option(g, g));
+			});
+			groupSelect.value = [...groupSelect.options].some((o) => o.value === current) ? current : '';
+		}
 
-			const groupVal = groupInput?.value?.trim() || '';
-			const items = filterItems(allItemsData, groupVal, q);
+		function writeUrl() {
+			const { q, group, type } = state();
+			const params = new URLSearchParams();
+			if (group) params.set('group', group);
+			if (type) params.set('type', type);
+			if (q) params.set('q', q);
+			if (sortMode === 'value') params.set('sort', 'value');
+			const query = params.toString();
+			window.history.replaceState(window.history.state, '', `${data.basePath.replace(/\/+$/, '')}/${query ? `?${query}` : ''}`);
+		}
 
-			loadingEl.classList.add('hidden');
-			itemsEl.innerHTML = '';
-
-			// Announce result counts for filter changes (not the silent first load).
-			if (statusEl && !keepStaticItems) {
-				statusEl.textContent = `${items.length.toLocaleString()} item${items.length === 1 ? '' : 's'} found`;
-			}
-
-			if (items.length === 0) {
-				itemsContainer.classList.add('hidden');
-				emptyEl.classList.remove('hidden');
-			} else {
-				filteredItems = items;
-				displayedCount = 0;
-				renderNextBatch();
-				itemsContainer.classList.remove('hidden');
-				if (filteredItems.length > PAGE_SIZE) {
-					setupScrollObserver();
-				} else if (scrollObserver) {
-					scrollObserver.disconnect();
-					scrollObserver = null;
+		function apply(announce = true) {
+			const { q, group, type } = state();
+			const needle = q.toLowerCase();
+			const gi = group ? data.groups.indexOf(group) : -1;
+			const ti = type ? data.types.indexOf(type) : -1;
+			let next = data.rows.filter((r) => {
+				if (gi >= 0 && r[1] !== gi) return false;
+				if (ti >= 0 && r[6] !== ti) return false;
+				if (needle) {
+					const g = r[1] >= 0 ? data.groups[r[1]].toLowerCase() : '';
+					if (!r[0].toLowerCase().includes(needle) && !g.includes(needle)) return false;
 				}
+				return true;
+			});
+			if (sortMode === 'value') {
+				next = next
+					.map((r, i) => [r, i] as const)
+					.sort((a, b) => b[0][5] - a[0][5] || a[1] - b[1])
+					.map(([r]) => r);
 			}
-
-			updateUrl();
-		} catch (err) {
-			console.error('Failed to load items:', err);
-			loadingEl.classList.add('hidden');
-			errorEl?.classList.remove('hidden');
+			list = next;
+			grid!.querySelectorAll('.tile-cell').forEach((el) => el.remove());
+			shown = 0;
+			appendBatch();
+			if (emptyEl) emptyEl.hidden = list.length > 0;
+			setStatus(statusText(list.length), announce);
+			writeUrl();
 		}
+
+		function setSort(mode: 'az' | 'value') {
+			sortMode = mode;
+			sortButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.sort === mode)));
+		}
+
+		// state from the URL (old links used ?group=, ?type= and ?q=)
+		const params = new URLSearchParams(window.location.search);
+		const pType = params.get('type')?.toLowerCase() ?? '';
+		if (typeSelect && pType && data.types.includes(pType)) typeSelect.value = pType;
+		refreshGroups();
+		const pGroup = params.get('group')?.trim() ?? '';
+		if (groupSelect && pGroup) {
+			const match = [...groupSelect.options].find((o) => o.value.toLowerCase() === pGroup.toLowerCase())
+				?? [...groupSelect.options].find((o) => o.value && o.value.toLowerCase().includes(pGroup.toLowerCase()));
+			if (match) groupSelect.value = match.value;
+		}
+		if (qInput) qInput.value = params.get('q') ?? '';
+		if (params.get('sort') === 'value') setSort('value');
+		const { q, group, type } = state();
+		if (q || group || type || sortMode !== 'az') apply(false);
+
+		qInput?.addEventListener('input', () => apply());
+		groupSelect?.addEventListener('change', () => apply());
+		typeSelect?.addEventListener('change', () => {
+			refreshGroups();
+			apply();
+		});
+		sortButtons.forEach((b) =>
+			b.addEventListener('click', () => {
+				setSort(b.dataset.sort === 'value' ? 'value' : 'az');
+				apply();
+			})
+		);
+		form?.addEventListener('submit', (e) => e.preventDefault());
+		resetBtn?.addEventListener('click', () => {
+			if (qInput) qInput.value = '';
+			if (typeSelect) typeSelect.value = '';
+			refreshGroups();
+			if (groupSelect) groupSelect.value = '';
+			setSort('az');
+			apply();
+			qInput?.focus();
+		});
+
+		observer.observe(sentinel);
 	}
 
-	applyBtn?.addEventListener('click', (e) => {
-		e.preventDefault();
-		loadItems();
-	});
-	resetBtn?.addEventListener('click', (e) => {
-		e.preventDefault();
-		resetFilters();
-	});
-
-	searchInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'Enter') {
-			e.preventDefault();
-			loadItems();
-		}
-	});
-	groupInput?.addEventListener('keydown', (e) => {
-		if (e.key === 'Enter' && groupDropdown?.classList.contains('hidden')) {
-			e.preventDefault();
-			loadItems();
-		}
-	});
-
-	retryBtn?.addEventListener('click', () => loadItems(true));
-
-	loadItems();
+	document.querySelectorAll<HTMLElement>('[data-tile-list]').forEach(initList);
 </script>

@@ -17,18 +17,13 @@ const popular = [
 	robots="noindex,follow"
 	ads={false}
 >
-	<section class="mx-auto max-w-3xl px-4 py-16 text-center">
-		<p class="text-sm font-semibold uppercase tracking-wider text-cyan-300">404</p>
-		<h1 class="mt-2 text-4xl font-bold text-white sm:text-6xl">Lost in space</h1>
-		<p class="mx-auto mt-4 max-w-xl text-lg text-sky-100/80">
-			We couldn't find that page. It may have moved after a game update. Search for the item or recipe you wanted, or start
-			from one of the pages below.
+	<section class="mx-auto max-w-3xl px-4 pt-16 pb-12 text-center">
+		<h1 class="text-4xl font-bold leading-[1.05] text-ink sm:text-6xl">Lost in space</h1>
+		<p class="mx-auto mt-4 max-w-xl text-lg text-dim">
+			Error 404: we couldn't find that page. It may have moved after a game update. Search for the item or recipe you wanted, or
+			start from one of the pages below.
 		</p>
-		<button
-			type="button"
-			id="notfound-search"
-			class="mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 text-base font-semibold text-black hover:bg-blue-400 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
-		>
+		<button type="button" data-open-search class="btn-primary mt-8 cursor-pointer px-6">
 			<svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 				<path
 					fill-rule="evenodd"
@@ -39,25 +34,19 @@ const popular = [
 		</button>
 	</section>
 	<section class="mx-auto max-w-4xl px-4 pb-16">
-		<h2 class="mb-4 text-center text-2xl text-white">Popular pages</h2>
+		<h2 class="section-title justify-center">Popular pages</h2>
 		<nav aria-label="Popular pages" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 			{
 				popular.map((page) => (
 					<a
 						href={page.href}
-						class="group flex flex-col justify-center rounded-xl border border-sky-900/60 bg-sky-950/40 px-5 py-4 text-left text-white no-underline transition hover:border-cyan-400/60 hover:bg-sky-900/40"
+						class="panel group flex flex-col justify-center px-5 py-4 text-left no-underline transition-colors hover:border-line-strong hover:bg-panel-3"
 					>
-						<span class="text-base font-semibold group-hover:text-cyan-300">{page.name}</span>
-						<span class="mt-1 text-sm text-sky-100/70">{page.blurb}</span>
+						<span class="font-semibold text-ink group-hover:text-accent">{page.name}</span>
+						<span class="mt-1 text-sm text-dim">{page.blurb}</span>
 					</a>
 				))
 			}
 		</nav>
 	</section>
 </Layout>
-
-<script>
-	document.getElementById('notfound-search')?.addEventListener('click', () => {
-		document.getElementById('open-search')?.click();
-	});
-</script>

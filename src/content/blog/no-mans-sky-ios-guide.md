@@ -106,9 +106,9 @@ If iOS is your first time playing, these are the early recipes you'll lean on. A
 
 **First refiner recipes:**
 
-- 2 Carbon → 1 [Condensed Carbon](/raw/FUEL2/) ([recipe](/refinery/REFINERECIPE_26/))
-- 1 Ferrite Dust → 1 [Pure Ferrite](/raw/LAND2/) ([recipe](/refinery/REFINERECIPE_29/))
-- 2 Sodium → 1 [Sodium Nitrate](/raw/CATALYST2/) ([recipe](/refinery/REFINERECIPE_27/))
+- 2 Carbon → 1 [Condensed Carbon](/raw/FUEL2/)
+- 1 Ferrite Dust → 1 [Pure Ferrite](/raw/LAND2/)
+- 2 Sodium → 1 [Sodium Nitrate](/raw/CATALYST2/)
 
 Once you've got a refiner going, [our list of the best refiner recipes](/blog/best-no-mans-sky-refiner-recipes/) covers the rest. Coming back from another platform? The [returning player guide](/blog/no-mans-sky-returning-player-guide-2026/) covers what's changed recently.
 

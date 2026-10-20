@@ -67,17 +67,16 @@ const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Alliances', href: '/a
 ---
 
 <Layout {title} {description} slug="alliances" robots="noindex,follow">
-	<div class="alliances mx-auto max-w-3xl px-2 pb-16 sm:px-4">
-		<Breadcrumbs items={breadcrumbs} className="!px-0 pt-4 mb-6" />
-		<header class="mb-10">
-			<p class="eyebrow">Alliance directory</p>
+	<div class="alliances mx-auto max-w-3xl pb-16">
+		<Breadcrumbs items={breadcrumbs} className="!px-0 pt-4 mb-4" />
+		<header class="mb-8">
 			<h1>Submit your alliance</h1>
 			<p class="lede">Tell players what your alliance is about and where to find one of your stations. We review each listing before it appears.</p>
 		</header>
 
 		{submitted ? (
 			<div class="notice success" role="status">
-				<p><strong>Thanks, your alliance has been submitted.</strong> We'll review it shortly, and it will appear in the <a class="prose-link" href="/alliances/">directory</a> once approved.</p>
+				<p><strong>Thanks, your alliance has been submitted.</strong> We'll review it shortly, and it will appear in the <a class="link" href="/alliances/">directory</a> once approved.</p>
 			</div>
 		) : (
 			<>

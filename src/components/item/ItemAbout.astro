@@ -1,0 +1,35 @@
+---
+// Right column: the in-game description ("About") and the item's other facts as a definition list.
+import type { ItemFact } from '@utils/itemPageContext';
+
+interface Props {
+  description?: string;
+  facts: ItemFact[];
+}
+
+const { description, facts } = Astro.props;
+const paragraphs = (description ?? '')
+  .split(/\n\s*\n/)
+  .map((part) => part.replace(/\s*\n\s*/g, ' ').trim())
+  .filter(Boolean);
+---
+
+{paragraphs.length > 0 && (
+  <section class="item-about" aria-labelledby="item-about-title">
+    <h2 id="item-about-title" class="rail-title">About</h2>
+    {paragraphs.map((text) => <p class="m-0 mb-2 max-w-[36rem] text-[.95rem] text-ink/85">{text}</p>)}
+  </section>
+)}
+{facts.length > 0 && (
+  <section class="item-facts" aria-labelledby="item-facts-title">
+    <h2 id="item-facts-title" class="rail-title">Details</h2>
+    <dl class="fact-list">
+      {facts.map((fact) => (
+        <div>
+          <dt>{fact.label}</dt>
+          <dd>{fact.href ? <a class="link" href={fact.href}>{fact.value}</a> : fact.value}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+)}

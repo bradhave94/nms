@@ -1,6 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
+import CreaturesShell from '@components/creatures/CreaturesShell.astro';
+import {
+	AFFINITY_COLOURS,
+	speciesLabel as labelFor,
+	speciesLabelCounts,
+	speciesNames,
+} from '@components/creatures/data';
 import type { BreadcrumbItem } from '@utils/seo.js';
 import { getSiteOrigin, buildPageSignals, getGameId } from '@utils/structuredData.js';
 import { SITE } from '@config';
@@ -26,16 +32,6 @@ const affinityIconById = new Map<string, string>(
 	affinities
 		.filter((affinity): affinity is CreatureAffinity => Boolean(affinity?.Id && affinity?.Icon))
 		.map((affinity) => [affinity.Id, affinity.Icon] as const)
-);
-const speciesLabelCounts = ((creaturesData.Species ?? []) as CreatureSpecies[]).reduce<Map<string, number>>(
-	(counts, entry) => {
-		if (!entry?.Name) return counts;
-		const subtitle = entry.SpeciesSubtitle?.trim();
-		const label = subtitle ? `${entry.Name} (${subtitle})` : entry.Name;
-		counts.set(label, (counts.get(label) ?? 0) + 1);
-		return counts;
-	},
-	new Map()
 );
 
 const DEFAULT_IMAGE_BASE = SITE.imageBaseUrl;
@@ -273,8 +269,9 @@ const resolvedMoveSets = resolveMovesForSpecies(species);
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
 const canonicalUrl = new URL(Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`, siteOrigin).toString();
 
-const speciesSubtitle = species.SpeciesSubtitle?.trim();
-const speciesLabel = speciesSubtitle ? `${species.Name} (${speciesSubtitle})` : species.Name;
+// Display names come from the shared helper, which keeps a special name on its own creature id only.
+const { name: speciesName, subtitle: speciesSubtitle, trait: speciesTrait } = speciesNames(species);
+const speciesLabel = labelFor(species);
 const hasDuplicateSpeciesLabel = (speciesLabelCounts.get(speciesLabel) ?? 0) > 1;
 const speciesSeoQualifier = hasDuplicateSpeciesLabel ? `${speciesLabel} | ${species.Id}` : speciesLabel;
 const pageTitle = `${speciesSeoQualifier} | Creatures | No Man's Sky Recipes`;
@@ -289,7 +286,7 @@ const breadcrumbs: BreadcrumbItem[] = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Creatures', href: '/creatures' },
 	{ name: 'Species', href: '/creatures/species' },
-	{ name: species.Name },
+	{ name: speciesName },
 ];
 
 // Layout adds the BreadcrumbList (#breadcrumb) from the visible breadcrumbs.
@@ -311,7 +308,7 @@ const pageSchema = {
 type StatPill = { label: string; value: string };
 
 const statPills: StatPill[] = [
-	{ label: 'Battle Ready', value: species.CanBeUsedInBattle ? 'Yes' : 'No' },
+	{ label: 'Battle ready', value: species.CanBeUsedInBattle ? 'Yes' : 'No' },
 	species.CanBeUsedInBattle
 		? {
 				label: 'Affinity',
@@ -320,29 +317,42 @@ const statPills: StatPill[] = [
 					(species.BattleForcedAffinity ? formatAffinity(species.BattleForcedAffinity) : 'Varies'),
 			}
 		: null,
-	{ label: 'Creature Type', value: species.CreatureType ? toTitleCase(species.CreatureType) : 'Unknown' },
+	{ label: 'Creature type', value: species.CreatureType ? toTitleCase(species.CreatureType) : 'Unknown' },
 	{ label: 'Rarity', value: species.Rarity ? toTitleCase(species.Rarity) : 'Unknown' },
-	{ label: 'Move Area', value: species.MoveArea ? toTitleCase(species.MoveArea) : 'Unknown' },
+	{ label: 'Move area', value: species.MoveArea ? toTitleCase(species.MoveArea) : 'Unknown' },
 	{ label: 'Scale', value: `${species.MinScale} - ${species.MaxScale}` },
-	{ label: 'Egg Type', value: species.EggType ? toTitleCase(species.EggType) : 'Unknown' },
+	{ label: 'Egg type', value: species.EggType ? toTitleCase(species.EggType) : 'Unknown' },
 	species.CanBeUsedInBattle
 		? {
-				label: 'Move Set Source',
+				label: 'Move set source',
 				value:
 					species.MoveSetSource === 'Explicit'
-						? 'Direct Mapping'
+						? 'Direct mapping'
 						: species.MoveSetSource === 'GlobalPool'
-							? 'Global Pool'
+							? 'Global pool'
 							: 'Unknown',
 			}
 		: null,
-	species.SpecialTrait ? { label: 'Special Trait', value: species.SpecialTrait } : null,
+	speciesTrait ? { label: 'Special trait', value: speciesTrait } : null,
 ].filter((pill): pill is StatPill => pill != null);
 
 const speciesMatchup =
 	species.BattleForcedAffinity && MATCHUPS[species.BattleForcedAffinity]
 		? MATCHUPS[species.BattleForcedAffinity]
 		: null;
+
+const affinityDisplay =
+	species.BattleForcedAffinityDisplay ??
+	(species.BattleForcedAffinity ? formatAffinity(species.BattleForcedAffinity) : null);
+const headColour = (affinityDisplay && AFFINITY_COLOURS[affinityDisplay]) || '2C3E50';
+const leadText = [
+	speciesSubtitle,
+	species.CanBeUsedInBattle
+		? `Battle-ready${affinityDisplay ? `, ${affinityDisplay} affinity` : ''}.`
+		: 'Cannot be used in Xeno Arena battles.',
+]
+	.filter(Boolean)
+	.join(' · ');
 
 ---
 
@@ -353,139 +363,107 @@ const speciesMatchup =
 	structuredData={pageSchema}
 	{breadcrumbs}
 	ogImage={ogImage}
-	ogImageAlt={`${species.Name} affinity icon`}
+	ogImageAlt={`${speciesName} affinity icon`}
 >
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<section class="mx-auto max-w-6xl px-4 pb-10">
-		<div class="mb-8 rounded-sm border border-sky-900 bg-sky-900/30 p-5">
-			<div class="flex flex-wrap items-center justify-between gap-4">
-				<div>
-					<h1 class="m-0 text-4xl sm:text-5xl text-white">{species.Name}</h1>
-					{species.SpeciesSubtitle && (
-						<p class="mt-2 text-lg text-sky-200/90">{species.SpeciesSubtitle}</p>
-					)}
-					<p class="mt-2 text-sm text-sky-300/80">Creature ID: {species.Id}</p>
-				</div>
-				<div class="flex items-center gap-3">
-					<img
-						src={`${imageBase}${toWebp(speciesIcon)}`}
-						alt={`${species.Name} icon`}
-						class="h-14 w-14 rounded-sm bg-black/30 p-1"
-						loading="lazy"
-					/>
-					{species.BattleAffinityIcon && species.BattleAffinityIcon !== speciesIcon && (
-						<img
-							src={`${imageBase}${toWebp(species.BattleAffinityIcon)}`}
-							alt={`${species.Name} affinity icon`}
-							class="h-14 w-14 rounded-sm bg-black/30 p-1"
-							loading="lazy"
-						/>
-					)}
-				</div>
-			</div>
-			<div class="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+	<CreaturesShell
+		active="species"
+		detail
+		title={speciesName}
+		lead={leadText}
+		breadcrumbs={breadcrumbs}
+		icon={speciesIcon}
+		iconColour={headColour}
+	>
+		<section class="cr-section" aria-labelledby="profile-heading">
+			<h2 id="profile-heading" class="sr-only">Profile</h2>
+			<dl class="cr-facts">
 				{
 					statPills.map((pill) => (
-						<p class="m-0 rounded-sm bg-black/35 px-3 py-2 text-sm text-sky-100">
-							<span class="font-semibold text-sky-300">{pill.label}:</span> {pill.value}
-						</p>
+						<div>
+							<dt>{pill.label}</dt>
+							<dd>{pill.value}</dd>
+						</div>
 					))
 				}
-			</div>
-			{speciesMatchup && (
-				<div class="mt-4 flex flex-wrap items-center gap-4 rounded-sm bg-black/35 px-4 py-3">
-					<span class="text-sm text-sky-300">Matchups:</span>
-					<span class="flex items-center gap-1 text-sm text-lime-300">
-						{affinityIconById.get(speciesMatchup.strong) && (
-							<img
-								src={`${imageBase}${toWebp(affinityIconById.get(speciesMatchup.strong))}`}
-								class="h-5 w-5"
-								alt=""
-								loading="lazy"
-							/>
-						)}
-						Strong vs {formatAffinity(speciesMatchup.strong)}
-					</span>
-					<span class="flex items-center gap-1 text-sm text-amber-300">
-						{affinityIconById.get(speciesMatchup.weak) && (
-							<img
-								src={`${imageBase}${toWebp(affinityIconById.get(speciesMatchup.weak))}`}
-								class="h-5 w-5"
-								alt=""
-								loading="lazy"
-							/>
-						)}
-						Weak vs {formatAffinity(speciesMatchup.weak)}
-					</span>
+				<div>
+					<dt>Creature ID</dt>
+					<dd>{species.Id}</dd>
 				</div>
+			</dl>
+			{speciesMatchup && (
+				<ul class="cr-chips mt-3" aria-label="Matchups">
+					<li class="cr-chip">
+						{affinityIconById.get(speciesMatchup.strong) && (
+							<img src={`${imageBase}${toWebp(affinityIconById.get(speciesMatchup.strong))}`} alt="" width="20" height="20" loading="lazy" />
+						)}
+						<span class="cr-strong">Strong vs</span> {formatAffinity(speciesMatchup.strong)}
+					</li>
+					<li class="cr-chip">
+						{affinityIconById.get(speciesMatchup.weak) && (
+							<img src={`${imageBase}${toWebp(affinityIconById.get(speciesMatchup.weak))}`} alt="" width="20" height="20" loading="lazy" />
+						)}
+						<span class="cr-weak">Weak vs</span> {formatAffinity(speciesMatchup.weak)}
+					</li>
+					<li><a class="link text-[.9375rem]" href="/creatures/affinities/">All matchups</a></li>
+				</ul>
 			)}
-		</div>
+		</section>
 
 		{species.CanBeUsedInBattle ? (
-			<section class="rounded-sm border border-sky-900 bg-sky-900/20 p-5">
-				<h2 class="mt-0 mb-4 text-2xl text-white">Move Set Archetypes</h2>
-				<p class="mt-0 mb-4 text-xs text-sky-300/90">
-					Affinity options: {ALL_BATTLE_AFFINITIES.join(' • ')}.
-				</p>
-				{species.MoveSetSource === 'GlobalPool' && (
-					<p class="mt-0 mb-4 text-sm text-sky-300/90">
-						This species has no explicit move-set assignment in the game table. Showing the full global
-						move-set pool used by pet battler archetypes.
+			<section class="cr-section" aria-labelledby="movesets-heading">
+				<h2 id="movesets-heading" class="section-title">
+					Move sets <span class="count tabular">{resolvedMoveSets.length}</span>
+				</h2>
+				{species.MoveSetSource === 'GlobalPool' ? (
+					<p>
+						This species has no move set of its own in the game's creature table, so it draws from the
+						global pool of {resolvedMoveSets.length} battler move sets below.
 					</p>
+				) : (
+					<p>Moves this species can roll, one per slot. Attack names change with the creature's affinity.</p>
 				)}
-				{
-					resolvedMoveSets.length === 0 ? (
-						<p class="m-0 text-sky-200/90">No direct move set mapping is available for this species yet.</p>
-					) : (
-						<div class="space-y-4">
-							{
-								resolvedMoveSets.map((moveSet) => (
-									<div class="rounded-sm border border-sky-800/70 bg-black/25 p-4">
-										<h3 class="mt-0 mb-1 text-xl text-sky-100">{moveSet.name}</h3>
-										<p class="mt-0 mb-3 text-xs uppercase tracking-wide text-sky-300/80">
-											{moveSet.id} • {moveSet.slotCount} slots • {moveSet.resolvedMoves.length} move templates
-										</p>
-										<div class="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
-											{
-												moveSet.resolvedMoves.map((move) => (
-													<a
-														href={`/creatures/moves#category-${slugifyCategory(move.category)}`}
-														class="rounded-sm border border-sky-800/70 bg-sky-950/60 px-3 py-2 text-sm text-sky-100 transition-colors hover:border-sky-400 hover:bg-sky-900/70"
-													>
-														<div class="flex items-center gap-2">
-															{move.icon && (
-																<img
-																	src={`${imageBase}${toWebp(move.icon)}`}
-																	alt={`${move.displayName} icon`}
-																	class="h-6 w-6 shrink-0"
-																	loading="lazy"
-																/>
-															)}
-															<div class="min-w-0">
-																<p class="m-0 truncate font-semibold text-white">{move.displayName}</p>
-																<p class="m-0 truncate text-xs text-sky-300/90">
-																	{formatCategory(move.category)} • {formatAffinity(move.affinity)}
-																</p>
-															</div>
-														</div>
-													{move.description && (
-														<p class="mt-2 mb-0 text-xs text-sky-200/85">{move.description}</p>
-													)}
+				{resolvedMoveSets.length === 0 ? (
+					<p>No direct move set mapping is available for this species yet.</p>
+				) : (
+					resolvedMoveSets.map((moveSet, setIndex) => (
+						<details class="cr-details" open={setIndex === 0}>
+							<summary>
+								<h3 class="m-0 text-[1.0625rem] font-semibold">{moveSet.name}</h3>
+								<span class="cr-sum-meta tabular">
+									{moveSet.slotCount} slots · {moveSet.resolvedMoves.length} moves
+								</span>
+							</summary>
+							<div class="cr-details-body">
+								<ul class="cr-moves">
+									{moveSet.resolvedMoves.map((move) => (
+										<li>
+											{move.icon ? (
+												<img src={`${imageBase}${toWebp(move.icon)}`} alt="" width="32" height="32" loading="lazy" />
+											) : (
+												<span class="cr-move-noicon" />
+											)}
+											<div class="min-w-0">
+												<a class="cr-move-name" href={`/creatures/moves/#category-${slugifyCategory(move.category)}`}>
+													{move.displayName}
 												</a>
-												))
-											}
-										</div>
-									</div>
-								))
-							}
-						</div>
-					)
-				}
+												<span class="cr-move-meta">
+													{formatCategory(move.category)} · {formatAffinity(move.affinity)}
+												</span>
+												{move.description && <p>{move.description}</p>}
+											</div>
+										</li>
+									))}
+								</ul>
+							</div>
+						</details>
+					))
+				)}
+				<p class="cr-note mt-3">Attack affinity options: {ALL_BATTLE_AFFINITIES.join(', ')}.</p>
 			</section>
 		) : (
-			<p class="rounded-sm border border-sky-800/50 bg-sky-950/20 px-4 py-3 text-sm text-sky-300/90">
-				This species cannot be used in Xeno Arena battles.
+			<p class="cr-note mt-6">
+				This species cannot be used in Xeno Arena battles. <a class="link" href="/creatures/species/">Browse battle-ready species</a>.
 			</p>
 		)}
-	</section>
+	</CreaturesShell>
 </Layout>

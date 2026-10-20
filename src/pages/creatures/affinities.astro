@@ -1,34 +1,19 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
-import creaturesData from '@datav2/Creatures.json';
+import CreaturesShell from '@components/creatures/CreaturesShell.astro';
 import { SITE } from '@config';
 import { toWebp } from '@utils/icons';
-
-type CreatureAffinity = (typeof creaturesData.Affinities)[number];
+import { AFFINITY_COLOURS, MATCHUPS, affinityById, speciesRows } from '@components/creatures/data';
 
 const IMAGE_BASE = SITE.imageBaseUrl;
-const affinities = creaturesData.Affinities ?? [];
-const affinityById = new Map<string, CreatureAffinity>(
-	affinities.map((affinity) => [affinity.Id, affinity] as const)
-);
+const rows = speciesRows();
 
-const matchups = [
-	{ affinityId: 'Fire', strongAgainstId: 'Cold', weakAgainstId: 'Radioactive' },
-	{ affinityId: 'Cold', strongAgainstId: 'Barren', weakAgainstId: 'Fire' },
-	{ affinityId: 'Radioactive', strongAgainstId: 'Fire', weakAgainstId: 'Toxic' },
-	{ affinityId: 'Toxic', strongAgainstId: 'Lush', weakAgainstId: 'Mech' },
-	{ affinityId: 'Mech', strongAgainstId: 'Toxic', weakAgainstId: 'Weird' },
-	{ affinityId: 'Weird', strongAgainstId: 'Mech', weakAgainstId: 'Barren' },
-	{ affinityId: 'Barren', strongAgainstId: 'Radioactive', weakAgainstId: 'Cold' },
-	{ affinityId: 'Lush', strongAgainstId: 'Weird', weakAgainstId: 'Toxic' },
-];
-
-const displayNameFor = (affinityId: string): string =>
-	affinityById.get(affinityId)?.DisplayName ?? affinityId;
+const displayNameFor = (affinityId: string): string => affinityById.get(affinityId)?.DisplayName ?? affinityId;
 const iconFor = (affinityId: string): string | null => affinityById.get(affinityId)?.Icon ?? null;
 const speciesFilterUrl = (affinityId: string): string =>
-	`/creatures/species?affinity=${encodeURIComponent(displayNameFor(affinityId))}`;
+	`/creatures/species/?affinity=${encodeURIComponent(displayNameFor(affinityId))}`;
+const speciesCount = (affinityId: string): number =>
+	rows.filter((r) => r.affinity === displayNameFor(affinityId)).length;
 
 const title = "Creature Affinities | No Man's Sky Recipes";
 const description =
@@ -41,89 +26,76 @@ const breadcrumbs = [
 ---
 
 <Layout title={title} description={description} slug="creatures" {breadcrumbs}>
-	<Breadcrumbs items={breadcrumbs} className="pt-4 mb-6" />
-	<section class="mx-auto max-w-6xl px-4 pb-10">
-		<h1 class="text-center text-4xl sm:text-6xl mt-12 mb-3">Affinity System</h1>
-		<p class="mx-auto mb-6 max-w-4xl text-center text-sky-200/90">
-			Winning Arena battles depends on affinity matchups. Use this chart to plan favorable counters and
-			avoid weak pairings.
-		</p>
-		<p class="mx-auto mb-10 max-w-4xl text-center">
-			<a
-				href="/creatures/species"
-				class="text-sky-400 underline decoration-sky-600/50 underline-offset-2 hover:text-sky-300"
-			>
-				Browse all creature species
-			</a>
-		</p>
-
-		<div class="mb-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
-			{
-				matchups.map((row) => {
-					const icon = iconFor(row.affinityId);
-					const displayName = displayNameFor(row.affinityId);
-					return (
-						<a
-							href={speciesFilterUrl(row.affinityId)}
-							class="rounded-sm border border-sky-800/70 bg-sky-950/40 px-3 py-4 text-center transition hover:border-sky-500 hover:bg-sky-900/50"
-						>
-							{icon && (
-								<img
-									src={`${IMAGE_BASE}${toWebp(icon)}`}
-									alt={`${displayName} icon`}
-									class="mx-auto mb-2 h-10 w-10"
-									loading="lazy"
-								/>
-							)}
-							<p class="m-0 text-sm font-semibold text-white">{displayName}</p>
-						</a>
-					);
-				})
-			}
-		</div>
-
-		<div class="overflow-x-auto rounded-sm border border-sky-800/70 bg-sky-950/40">
-			<table class="min-w-full border-collapse">
+	<CreaturesShell
+		active="affinities"
+		title="Affinities"
+		lead={`Arena battles turn on affinity. Each of the ${MATCHUPS.length} affinities beats one other and loses to one, so pick a companion that counters your opponent.`}
+		breadcrumbs={breadcrumbs}
+	>
+		<section class="cr-section" aria-labelledby="matchups-heading">
+			<h2 id="matchups-heading" class="section-title">Matchup chart</h2>
+			<table class="cr-table stack af-table">
 				<thead>
-					<tr class="bg-sky-600/90 text-left text-sm uppercase tracking-wide text-white">
-						<th class="px-4 py-3">Affinity</th>
-						<th class="px-4 py-3">Strong Against</th>
-						<th class="px-4 py-3">Weak Against</th>
+					<tr>
+						<th scope="col">Affinity</th>
+						<th scope="col">Strong against</th>
+						<th scope="col">Weak against</th>
+						<th scope="col" class="num">Species</th>
 					</tr>
 				</thead>
 				<tbody>
 					{
-						matchups.map((row) => (
-							<tr class="border-t border-sky-800/60 text-sm">
-								<td class="px-4 py-3 text-sky-100">
-									<a
-										href={speciesFilterUrl(row.affinityId)}
-										class="text-sky-300 underline decoration-sky-600/50 underline-offset-2 hover:text-white"
-									>
-										{displayNameFor(row.affinityId)}
-									</a>
-								</td>
-								<td class="px-4 py-3 text-lime-300">
-									<a
-										href={speciesFilterUrl(row.strongAgainstId)}
-										class="underline decoration-lime-600/50 underline-offset-2 hover:text-lime-200"
-									>
-										{displayNameFor(row.strongAgainstId)}
-									</a>
-								</td>
-								<td class="px-4 py-3 text-amber-300">
-									<a
-										href={speciesFilterUrl(row.weakAgainstId)}
-										class="underline decoration-amber-600/50 underline-offset-2 hover:text-amber-200"
-									>
-										{displayNameFor(row.weakAgainstId)}
-									</a>
-								</td>
-							</tr>
-						))
+						MATCHUPS.map((row) => {
+							const icon = iconFor(row.affinityId);
+							const strongIcon = iconFor(row.strongAgainstId);
+							const weakIcon = iconFor(row.weakAgainstId);
+							const n = speciesCount(row.affinityId);
+							return (
+								<tr>
+									<th scope="row">
+										<a class="af-name" href={speciesFilterUrl(row.affinityId)}>
+											<span class="slot" style={`--c:#${AFFINITY_COLOURS[displayNameFor(row.affinityId)] ?? '333333'}`}>
+												{icon && <img src={`${IMAGE_BASE}${toWebp(icon)}`} alt="" width="40" height="40" loading="lazy" />}
+											</span>
+											{displayNameFor(row.affinityId)}
+										</a>
+									</th>
+									<td data-label="Strong against">
+										<a class="af-link" href={speciesFilterUrl(row.strongAgainstId)}>
+											{strongIcon && <img src={`${IMAGE_BASE}${toWebp(strongIcon)}`} alt="" width="24" height="24" loading="lazy" />}
+											{displayNameFor(row.strongAgainstId)}
+										</a>
+									</td>
+									<td data-label="Weak against">
+										<a class="af-link" href={speciesFilterUrl(row.weakAgainstId)}>
+											{weakIcon && <img src={`${IMAGE_BASE}${toWebp(weakIcon)}`} alt="" width="24" height="24" loading="lazy" />}
+											{displayNameFor(row.weakAgainstId)}
+										</a>
+									</td>
+									<td data-label="Species" class="num">
+										<a class="link" href={speciesFilterUrl(row.affinityId)}>
+											{n}<span class="sr-only"> {displayNameFor(row.affinityId)} species</span>
+										</a>
+									</td>
+								</tr>
+							);
+						})
 					}
 				</tbody>
 			</table>
-		</div>
-	</section>
+			<p class="cr-note mt-4">
+				Each affinity links to the <a class="link" href="/creatures/species/">species table</a>, filtered to creatures
+				with that affinity.
+			</p>
+		</section>
+	</CreaturesShell>
 </Layout>
+
+<style>
+	.af-table td, .af-table th { vertical-align: middle; }
+	.af-name { display: inline-flex; align-items: center; gap: .65rem; min-height: 44px; font-weight: 600; color: var(--color-ink); text-decoration: underline; text-decoration-color: rgb(255 195 86 / .45); text-underline-offset: 3px; }
+	.af-name:hover { color: var(--color-accent); }
+	.af-name .slot { width: 2.75rem; }
+	.af-link { display: inline-flex; align-items: center; gap: .45rem; min-height: 32px; color: var(--color-ink); text-decoration: underline; text-decoration-color: rgb(159 176 195 / .5); text-underline-offset: 3px; }
+	.af-link:hover { color: var(--color-accent); }
+</style>
