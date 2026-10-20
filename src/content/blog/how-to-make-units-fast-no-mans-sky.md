@@ -2,7 +2,7 @@
 title: "How to Make Units Fast in No Man's Sky"
 description: "The best ways to earn units in No Man's Sky, from the Chlorine loop to Activated Indium farms and ship scrapping. Exact methods with numbers."
 pubDate: 2025-05-20
-updatedDate: 2025-05-20
+updatedDate: 2026-10-19
 category: "blog"
 tags:
   - units
@@ -107,7 +107,7 @@ Note: space station economies are system-wide. Buying all the Nav Data from one 
 Find crashed ships on planets, repair just the launch thruster and pulse engine, fly to a space station and scrap them. Each scrapped ship gives:
 
 - Trade goods you can sell for units
-- Upgrade modules (sell to Technology Merchants for nanites)
+- Upgrade modules (sell to Technology Merchants for nanites; the [nanite farms guide](/blog/best-nanite-farms-no-mans-sky/) covers the faster routes)
 - Storage Augmentations for your ship inventory
 
 To find crashed ships, buy Planetary Charts (Distress Signal type) from station cartographers, or use your ship's scanner when flying low over planets.

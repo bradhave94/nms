@@ -58,8 +58,8 @@ export type IntroSegment = {
 };
 
 type ItemMetaOverride = {
-	title: string;
-	description: string;
+	title?: string;
+	description?: string;
 	relatedLinks?: ItemRelatedLink[];
 };
 
@@ -88,6 +88,35 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 		description:
 			'Superconducting Fiber (Fibre) NMS: how to get this trade good, what it sells for, and every recipe or use tied to Superconducting Fibre.',
 		relatedLinks: [{ label: 'all products', href: '/products/' }],
+	},
+	FRIG_BOOST_TRA: {
+		title: 'Mind Control Device (NMS): Crafting Recipe and Uses',
+		description:
+			'Craft the Mind Control Device from 1 Solar Mirror and 50 Gold. This one-expedition frigate upgrade helps the Fleet Commander in trading negotiations.',
+	},
+	// Links only. Generated titles and descriptions stay in place.
+	AM_HOUSING: {
+		relatedLinks: [
+			{
+				label: 'How to craft Antimatter Housing',
+				href: '/blog/how-to-craft-antimatter-housing-no-mans-sky/',
+			},
+		],
+	},
+	GRAVITYGUN: {
+		relatedLinks: [
+			{ label: 'Gravitino Coil guide', href: '/blog/gravitino-coil-guide-no-mans-sky/' },
+			{ label: 'Gravitino Ball', href: '/curiosities/GRAVBALL/' },
+		],
+	},
+	SPACEGUNK2: {
+		relatedLinks: [{ label: 'Best nanite farms', href: '/blog/best-nanite-farms-no-mans-sky/' }],
+	},
+	AF_METAL: {
+		relatedLinks: [{ label: 'Best nanite farms', href: '/blog/best-nanite-farms-no-mans-sky/' }],
+	},
+	TECHFRAG: {
+		relatedLinks: [{ label: 'Best nanite farms', href: '/blog/best-nanite-farms-no-mans-sky/' }],
 	},
 };
 
@@ -283,7 +312,7 @@ export const buildItemMeta = (
 	categoryLabel: string
 ): { title: string; description: string; relatedLinks?: ItemRelatedLink[] } => {
 	const override = ITEM_META_OVERRIDES[item.Id];
-	if (override) {
+	if (override?.title && override.description) {
 		return {
 			title: withSiteTitle(override.title),
 			description: override.description,
@@ -316,7 +345,11 @@ export const buildItemMeta = (
 		const hint = buildDescriptionHint(item, DESCRIPTION_MAX - baseDescription.length - 1);
 		if (hint) description = `${baseDescription} ${hint}`;
 	}
-	return { title, description };
+	return {
+		title,
+		description,
+		...(override?.relatedLinks ? { relatedLinks: override.relatedLinks } : {}),
+	};
 };
 
 export const buildCategoryBreadcrumbs = (

@@ -1,8 +1,8 @@
 ---
-title: "Best Nanite Farms in No Man's Sky"
-description: "The fastest ways to farm nanites in No Man's Sky: Runaway Mould, Tainted Metal, creature products, ship scrapping, and Suspicious Packets explained."
+title: "Best Nanite Farms in No Man's Sky: Fastest in 2026"
+description: "The best nanite farms in No Man's Sky, and the fastest way to farm them in 2026: Runaway Mould, Tainted Metal, ship scrapping, and Suspicious Packets."
 pubDate: 2025-11-12
-updatedDate: 2025-11-12
+updatedDate: 2026-10-19
 category: "blog"
 tags:
   - nanites
@@ -12,6 +12,10 @@ tags:
 heroImage: "/images/blog/nanite-farms.webp"
 featured: false
 relatedLinks:
+  - label: "Runaway Mould"
+    href: "/raw/SPACEGUNK2/"
+  - label: "Tainted Metal"
+    href: "/raw/AF_METAL/"
   - label: "All refiner recipes"
     href: "/refining"
   - label: "Raw materials"
@@ -44,7 +48,7 @@ Nanites buy the tech upgrades that matter: ship class bumps, multi-tool damage m
 
 ## Runaway Mould farm (best overall)
 
-Runaway Mould refines at 5:1 (5 Mould = 1 Nanite Cluster), which sounds bad until you realize the Mould multiplies.
+[Runaway Mould](/raw/SPACEGUNK2/) refines at 5:1 (5 Mould = 1 Nanite Cluster), which sounds bad until you realize the Mould multiplies.
 
 To get the farm started:
 
@@ -62,7 +66,7 @@ A base with good deposit density, running multiple refiners in parallel, can hit
 
 ## Tainted Metal (fastest no-setup option)
 
-**1x Tainted Metal → 2x Nanite Clusters** in any refiner.
+**1x [Tainted Metal](/raw/AF_METAL/) → 2x Nanite Clusters** in any refiner.
 
 Tainted Metal drops from Corrupted Sentinels on Dissonant planets (the ones with purple crystal formations on the surface). Kill them, collect the metal, refine it. A solid Sentinel combat loop can produce thousands of nanites per hour with zero base building.
 
