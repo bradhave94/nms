@@ -16,4 +16,6 @@ declare module 'cloudflare:workers' {
 	export const env: {
 		ALLIANCES_DB?: D1Database;
 	};
+	/** Keeps the Worker alive after the response until the promise settles. */
+	export function waitUntil(promise: Promise<unknown>): void;
 }
