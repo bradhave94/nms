@@ -4,7 +4,9 @@
 
 ## Cursor Cloud specific instructions
 
-This is a self-contained **Astro** static site (No Man's Sky Recipes) with no database, external APIs, or Docker dependencies. All game data lives as static JSON in `src/data/` and `src/datav2/`.
+This is an **Astro** site (No Man's Sky Recipes) on **Cloudflare Workers** (Worker `nms`, `wrangler.jsonc`): every page is prerendered and served as a static asset except the alliance directory, which runs in the Worker on Cloudflare D1. All game data lives as static JSON in `src/data/` and `src/datav2/`.
+
+- **Hosting:** Workers Builds builds and deploys the Worker (build `pnpm build`, deploy `npx wrangler deploy`). The adapter writes `dist/client/` (static assets) and `dist/server/` (Worker plus its generated `wrangler.json`). `public/_redirects` and `public/_headers` port the redirects and headers of vercel.json; keep both in step until vercel.json is removed. Redirects for Worker-rendered paths (`/alliances/null`) live in `astro.config.mjs`, because `_redirects` only covers static assets.
 
 ### Running services
 
@@ -27,18 +29,18 @@ This project uses **pnpm 11+** (`packageManager` in `package.json`). See `packag
 - The ESLint config uses flat config format (`eslint.config.mjs`) with ESLint 9. The `lint` script uses `--ext` flags which work with the current setup.
 - `pnpm-workspace.yaml` lists `allowBuilds` for `esbuild` and `sharp` (required for Astro image optimization under pnpm’s install-script policy).
 - `pnpm run build` generates ~4,800+ static pages and takes ~25 seconds. This is expected.
-- **Node.js:** Astro 7 requires `>=22.12.0`. Production (Vercel) uses **24.x**; `.nvmrc` is set to `24` for local parity.
-- No environment variables or secrets are needed for development.
+- **Node.js:** Astro 7.4 requires `>=22.23.4`. Workers Builds uses **24.x**; `.nvmrc` is set to `24` for local parity.
+- No environment variables or secrets are needed for development (the admin token is optional, see below).
 - Item icons in `public/images/items/` are the game's PNGs, each with a committed WebP copy that pages display (wrap icon names in `toWebp()` from `src/utils/icons.ts`). Social previews, structured data, and the image sitemap keep the PNG URLs. `pnpm run data:sync` refreshes the WebP copies; after adding or replacing PNGs by hand, run `pnpm run data:icons` (or `pnpm run data:icons -- --all` for replaced files). The build fills in missing copies and warns.
 - Internal links are written without a trailing slash in many places. A post-build step (`src/integrations/trailingSlashLinks.ts`) adds it in the HTML so clicks skip a 308 redirect.
 
 ### Alliance directory (`/alliances`)
 
-- The only on-demand pages. They use `@astrojs/vercel` with `export const prerender = false`, and every other page stays static. Static output now builds to `dist/client/`.
-- Storage is SQLite through `@libsql/client`. In production it's Turso (the Vercel integration sets `SQLITE_TURSO_DATABASE_URL`/`SQLITE_TURSO_AUTH_TOKEN`, Production only). Locally it falls back to `.data/alliances.db` (gitignored).
-- Submissions are `pending` until approved at `/alliances/admin/`, which is gated by `ALLIANCES_ADMIN_TOKEN` (put it in `.env.local` for dev). If `ALLIANCES_NTFY_TOPIC` is set, each new submission and edit request sends a push notification to that ntfy.sh topic.
+- The only on-demand pages. They use `@astrojs/cloudflare` with `export const prerender = false`, and every other page stays static.
+- Storage is Cloudflare D1 database `nms-alliances`, bound as `ALLIANCES_DB` (`src/utils/alliancesDb.ts`, schema in `migrations/`). `astro dev` uses a local D1 copy under `.wrangler/`: create its tables once with `pnpm exec wrangler d1 migrations apply nms-alliances --local`. Never run a remote write against production data without BH's OK.
+- Submissions are `pending` until approved at `/alliances/admin/`, which is gated by `ALLIANCES_ADMIN_TOKEN` (a Worker secret in production; put it in `.dev.vars` for dev, gitignored). If the optional `ALLIANCES_NTFY_TOPIC` secret is set, each new submission and edit request sends a push notification to that ntfy.sh topic; unset, nothing is sent.
 - Anyone can suggest changes to a listing at `/alliances/<slug>/edit/`. Requests are stored in `alliance_edits` and reviewed in the admin page's Edits tab, which shows only the changed fields; applying one updates the listing but keeps its private contact.
-- Starter listings live in `src/utils/allianceSeeds.ts`. Load them as pending with `pnpm run seed:alliances` (local) or the "Load starter listings" button on the admin page (production, because Turso's env vars are sensitive and pull as empty). `pnpm run test:alliances` checks validation.
+- Starter listings live in `src/utils/allianceSeeds.ts`. Load them with the "Load starter listings" button on the admin page (local or production). `pnpm run test:alliances` checks validation.
 - `src/data/galaxies.json` (all 256 galaxy names and numbers) is generated from the Fandom wiki by `pnpm run data:galaxies`. The submit form and validation use it.
 - The feedback form (`/feedback`) shares the alliance styles via the `.site-form` scope in `src/assets/css/alliances.css`.
 - In agent shells, Astro 7's `astro dev` tries to background itself and fails on Windows. Run `ASTRO_DEV_BACKGROUND=1 pnpm exec astro dev` instead.

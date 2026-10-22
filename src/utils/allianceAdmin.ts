@@ -1,4 +1,5 @@
 /** Cookie session for the alliance moderation page, keyed off ALLIANCES_ADMIN_TOKEN. */
+import { Buffer } from 'node:buffer';
 import { createHash, timingSafeEqual } from 'node:crypto';
 import type { AstroCookies } from 'astro';
 import { ALLIANCES_ADMIN_TOKEN } from 'astro:env/server';

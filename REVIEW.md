@@ -14,7 +14,7 @@ How changes to this repo get reviewed, and what reviewers check. This file was w
 - **Branches and shipping:**
   - Work on a branch in its own git worktree, never in someone else's checkout.
   - After the last round, open a PR and BH merges it. Merge or push to `main` yourself only when BH says so for that change. On nms, blog work goes on `nms-writer/<slug>` branches (see `AGENTS.md`).
-  - After merge, confirm the change is live: poll the live URL or the Vercel deployment status for the merge commit.
+  - After merge, confirm the change is live: poll the live URL or the Workers Builds status of Worker `nms` for the merge commit.
 - **Keep it fast.** BH wants things finished quickly: keep briefs tight, keep later rounds to the delta, and don't reopen decisions already made.
 
 ## The brief (what each reviewer gets)

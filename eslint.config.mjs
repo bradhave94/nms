@@ -44,6 +44,7 @@ export default tseslint.config(
       'node_modules/**',
       '.astro/**',
       '.vercel/**',
+      '.wrangler/**',
       '**/*.config.{js,mjs,cjs,ts}',
       'package-lock.json',
     ],

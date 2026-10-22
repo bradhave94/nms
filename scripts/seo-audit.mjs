@@ -15,7 +15,7 @@ const SITE = 'https://nomansskyrecipes.com';
 const BRAND = " | No Man's Sky Recipes";
 const GAME = /No Man['’]?s Sky|\bNMS\b/i;
 const DIST = path.resolve('dist/client');
-// prerender = false routes: no HTML in dist, served by the Vercel function.
+// prerender = false routes: no HTML in dist, served by the Worker.
 const ON_DEMAND = /^\/alliances(\/|$)/;
 const arg = (k) => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; };
 const OUT = arg('--out'); const VOCAB = arg('--vocab'); const LIVE = process.argv.includes('--live');

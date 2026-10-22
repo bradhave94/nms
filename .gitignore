@@ -38,3 +38,7 @@ pnpm-debug.log*
 .impeccable/build/
 .impeccable/review/
 .impeccable/live/
+
+# Wrangler local state and dev secrets
+.wrangler/
+.dev.vars*
