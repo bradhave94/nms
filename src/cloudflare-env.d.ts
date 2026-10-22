@@ -12,9 +12,17 @@ interface D1Database {
 	batch(statements: D1PreparedStatement[]): Promise<D1Result<unknown>[]>;
 }
 
+/** The `send_email` binding's structured send (https://developers.cloudflare.com/email-service/api/send-emails/workers-api/). */
+interface SendEmail {
+	send(message: { to: string; from: string | { email: string; name?: string }; subject: string; text?: string; html?: string }): Promise<{
+		messageId: string;
+	}>;
+}
+
 declare module 'cloudflare:workers' {
 	export const env: {
 		ALLIANCES_DB?: D1Database;
+		ALERT_EMAIL?: SendEmail;
 	};
 	/** Keeps the Worker alive after the response until the promise settles. */
 	export function waitUntil(promise: Promise<unknown>): void;
