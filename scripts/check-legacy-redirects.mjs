@@ -14,7 +14,7 @@ for (const entry of redirectMap) {
   if (!entry.destination || isFilePath(entry.destination) || entry.destination.endsWith('/')) continue;
   throw new Error(`Legacy redirect destination ${entry.destination} must end with /.`);
 }
-// The Vercel adapter writes prerendered pages to dist/client.
+// The Cloudflare adapter writes prerendered pages to dist/client.
 const staticDir = existsSync(join('dist', 'client')) ? join('dist', 'client') : 'dist';
 const samples = [
   '/raw/raw1',

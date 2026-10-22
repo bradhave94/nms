@@ -1,11 +1,10 @@
 /**
- * Alliance directory storage. Uses Turso (hosted SQLite) when the Vercel
- * integration's env vars are present, and a local SQLite file otherwise.
+ * Alliance directory storage: Cloudflare D1 (SQLite), bound to the Worker as `ALLIANCES_DB` (wrangler.jsonc).
+ * Schema lives in migrations/. Locally, `astro dev` uses a local D1 copy: apply the schema once with
+ * `pnpm exec wrangler d1 migrations apply nms-alliances --local`.
  */
-import { mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { createClient, type Client, type InStatement, type Row } from '@libsql/client';
-import { SQLITE_TURSO_AUTH_TOKEN, SQLITE_TURSO_DATABASE_URL } from 'astro:env/server';
+import { env } from 'cloudflare:workers';
 import {
 	ALLIANCE_STATUSES,
 	slugify,
@@ -14,7 +13,6 @@ import {
 	type AllianceInput,
 	type AllianceStatus,
 } from './alliances';
-import { ALLIANCE_SCHEMA } from './allianceSchema';
 import { ALLIANCE_SEEDS } from './allianceSeeds';
 
 /** What the public pages may see: everything except the private moderator contact. */
@@ -28,32 +26,32 @@ export type AllianceFilters = {
 	sort?: 'newest' | 'name';
 };
 
-const LOCAL_DATABASE_DIR = '.data';
-const LOCAL_DATABASE_URL = `file:${LOCAL_DATABASE_DIR}/alliances.db`;
+type Row = Record<string, unknown>;
+type SqlValue = string | number | null;
+type InStatement = string | { sql: string; args?: SqlValue[] };
 
-let clientPromise: Promise<Client> | undefined;
-
-const connect = async (): Promise<Client> => {
-	let url = SQLITE_TURSO_DATABASE_URL;
-	if (!url) {
-		// Vercel's filesystem is read-only and reset on deploy, so a file database can't work there.
-		if (process.env.VERCEL) {
-			throw new Error('SQLITE_TURSO_DATABASE_URL is not set for this deployment.');
-		}
-		mkdirSync(LOCAL_DATABASE_DIR, { recursive: true });
-		url = LOCAL_DATABASE_URL;
-	}
-	const client = createClient({ url, authToken: SQLITE_TURSO_AUTH_TOKEN });
-	await client.batch(ALLIANCE_SCHEMA, 'write');
-	return client;
+/** Thin wrapper so the queries below read like the old libSQL client: execute() and batch() return `{ rows }`. */
+type Client = {
+	execute: (statement: InStatement) => Promise<{ rows: Row[] }>;
+	batch: (statements: InStatement[]) => Promise<void>;
 };
 
-const db = (): Promise<Client> => {
-	clientPromise ??= connect().catch((error: unknown) => {
-		clientPromise = undefined;
-		throw error;
-	});
-	return clientPromise;
+const prepare = (database: D1Database, statement: InStatement): D1PreparedStatement => {
+	const { sql, args = [] } = typeof statement === 'string' ? { sql: statement } : statement;
+	const prepared = database.prepare(sql);
+	return args.length ? prepared.bind(...args) : prepared;
+};
+
+const db = async (): Promise<Client> => {
+	const database = env.ALLIANCES_DB;
+	if (!database) throw new Error('The ALLIANCES_DB D1 binding is missing (see wrangler.jsonc).');
+	return {
+		execute: async (statement) => ({ rows: (await prepare(database, statement).all<Row>()).results }),
+		batch: async (statements) => {
+			// D1 runs a batch as one transaction, like libSQL's 'write' batch.
+			await database.batch(statements.map((statement) => prepare(database, statement)));
+		},
+	};
 };
 
 const now = (): string => new Date().toISOString();
@@ -266,8 +264,7 @@ export const deleteAlliance = async (id: number): Promise<void> => {
 		[
 			{ sql: 'DELETE FROM alliance_edits WHERE alliance_id = ?', args: [id] },
 			{ sql: 'DELETE FROM alliances WHERE id = ?', args: [id] },
-		],
-		'write'
+		]
 	);
 };
 

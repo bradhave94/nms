@@ -1,6 +1,6 @@
 import { defineConfig, envField } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
-import vercel from '@astrojs/vercel';
+import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from "@tailwindcss/vite";
 import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -78,20 +78,23 @@ const shouldIncludeInSitemap = (page) => {
 export default defineConfig({
   site: "https://nomansskyrecipes.com",
   trailingSlash: 'always',
-  // Pages stay static; only routes that set `prerender = false` (the alliance directory) run as functions.
-  adapter: vercel(),
+  // Pages stay static; only routes that set `prerender = false` (the alliance directory) run in the Worker.
+  // Cloudflare Workers with static assets (wrangler.jsonc). Pages prerender in Node (they read files at build time);
+  // no Images or KV binding: images aren't transformed and Astro sessions aren't used.
+  adapter: cloudflare({ imageService: 'passthrough', prerenderEnvironment: 'node' }),
+  session: false,
   env: {
     schema: {
-      // Added by the Turso integration on Vercel. Unset locally, which uses a SQLite file in .data/.
-      SQLITE_TURSO_DATABASE_URL: envField.string({ context: 'server', access: 'secret', optional: true }),
-      SQLITE_TURSO_AUTH_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
       ALLIANCES_ADMIN_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
       // ntfy topic for new-submission push notifications. Unset: no notifications.
       ALLIANCES_NTFY_TOPIC: envField.string({ context: 'server', access: 'secret', optional: true }),
     },
   },
+  // Rendered by the Worker, so these can't live in public/_redirects (it only covers static assets).
   redirects: {
     '/farm/': '/calculator/farm/',
+    // One key covers /alliances/null and /alliances/null/ (vercel.json had a rule for each).
+    '/alliances/null': { status: 301, destination: '/alliances/null-2/' },
   },
   integrations: [
     // `/alliances` is rendered on demand, so it has no HTML file to detect.

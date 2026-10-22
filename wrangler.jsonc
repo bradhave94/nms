@@ -1,0 +1,31 @@
+// Cloudflare Worker for nomansskyrecipes.com: static assets plus the on-demand /alliances pages (Astro Cloudflare adapter).
+// Built by Workers Builds (build `pnpm build`, deploy `npx wrangler deploy`). The adapter fills in `main` and the
+// ASSETS binding; prerendered pages, public/_redirects and public/_headers are served as static assets.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "nms",
+  "compatibility_date": "2026-10-22",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // Alliance directory (was Turso). Schema: migrations/.
+  "d1_databases": [
+    {
+      "binding": "ALLIANCES_DB",
+      "database_name": "nms-alliances",
+      "database_id": "9eb0b194-7f27-4d95-83dc-27f7632e8980",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Secrets (set on the Worker, never in this repo): ALLIANCES_ADMIN_TOKEN, optional ALLIANCES_NTFY_TOPIC.
+  // Test address <name>.<subdomain>.workers.dev until cutover; public/_headers sends noindex there.
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {
+    "enabled": true,
+    "traces": { "enabled": true }
+  }
+}

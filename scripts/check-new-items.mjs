@@ -4,7 +4,7 @@ import { existsSync } from 'node:fs';
 // names on the page go through the same cleanup as every page (src/integrations/cleanGameNames.ts)
 import { cleanName } from '../src/integrations/cleanGameNames.ts';
 
-// The Vercel adapter writes prerendered pages to dist/client.
+// The Cloudflare adapter writes prerendered pages to dist/client.
 const DIST = existsSync('dist/client') ? 'dist/client' : 'dist';
 
 const update = JSON.parse(await readFile('src/datav2/new.json', 'utf8'));
