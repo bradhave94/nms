@@ -1,6 +1,5 @@
 ---
 import '../assets/css/main.css';
-import Analytics from '@vercel/analytics/astro';
 import type { JsonLdObject } from '@utils/structuredData.js';
 import {
 	buildBreadcrumbSchema,
@@ -214,7 +213,6 @@ const mergedStructuredDataJson = serializeJsonLdGraph(mergedStructuredData);
 		<Search />
 		<Footer />
 		{ads && <NitroGlobalAds />}
-		<Analytics />
 		<script>
 			// Escape dismisses hover/focus tooltips until the pointer or focus moves (WCAG 1.4.13).
 			const root = document.documentElement;
