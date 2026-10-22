@@ -86,8 +86,10 @@ export default defineConfig({
   env: {
     schema: {
       ALLIANCES_ADMIN_TOKEN: envField.string({ context: 'server', access: 'secret', optional: true }),
-      // ntfy topic for new-submission push notifications. Unset: no notifications.
+      // Legacy ntfy topic for submission push alerts; left unset because ntfy.sh rate-limits shared Workers IPs.
       ALLIANCES_NTFY_TOPIC: envField.string({ context: 'server', access: 'secret', optional: true }),
+      // Verified Email Routing destination for submission alerts (ALERT_EMAIL binding). Unset: no email alerts.
+      ALLIANCES_ALERT_EMAIL: envField.string({ context: 'server', access: 'secret', optional: true }),
     },
   },
   // /farm and /farm/ are in public/_redirects (from vercel.json); the Cloudflare adapter copies these into

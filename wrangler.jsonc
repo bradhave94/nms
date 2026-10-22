@@ -20,7 +20,16 @@
       "migrations_dir": "migrations"
     }
   ],
-  // Secrets (set on the Worker, never in this repo): ALLIANCES_ADMIN_TOKEN, optional ALLIANCES_NTFY_TOPIC.
+  // Alliance submission alerts (src/utils/allianceNotify.ts). Email Routing is enabled on subnauticadatabase.com, which
+  // has no other mail; nomansskyrecipes.com keeps its Google mail. Sends to a verified destination address are free.
+  "send_email": [
+    {
+      "name": "ALERT_EMAIL",
+      "allowed_sender_addresses": ["alerts@subnauticadatabase.com"]
+    }
+  ],
+  // Secrets (set on the Worker, never in this repo): ALLIANCES_ADMIN_TOKEN, optional ALLIANCES_ALERT_EMAIL (the verified
+  // destination address), optional ALLIANCES_NTFY_TOPIC (legacy, unset: ntfy rate-limits shared Workers IPs).
   // Test address <name>.<subdomain>.workers.dev until cutover; public/_headers sends noindex there.
   "workers_dev": true,
   "preview_urls": false,
