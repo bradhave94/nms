@@ -1,5 +1,5 @@
 # Static-asset redirects for Cloudflare Workers, ported from the redirects block of vercel.json (keep both in step
-# until vercel.json is removed). The /alliances/null rules are Worker routes and live in astro.config.mjs instead.
+# until vercel.json is removed). /alliances/null lives in astro.config.mjs; the adapter appends it to the built file.
 # The 3,236 legacy item URLs are prerendered meta-refresh pages (redirects.generated.json), not rules here.
 /ads.txt https://api.nitropay.com/v1/ads-2507.txt 308
 /portable-refiner /refining/ 308

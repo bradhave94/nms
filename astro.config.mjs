@@ -90,10 +90,9 @@ export default defineConfig({
       ALLIANCES_NTFY_TOPIC: envField.string({ context: 'server', access: 'secret', optional: true }),
     },
   },
-  // Rendered by the Worker, so these can't live in public/_redirects (it only covers static assets).
+  // /farm and /farm/ are in public/_redirects (from vercel.json); the Cloudflare adapter copies these into
+  // dist/client/_redirects too, so a path must not be in both. /alliances/null shadows a Worker route.
   redirects: {
-    '/farm/': '/calculator/farm/',
-    // One key covers /alliances/null and /alliances/null/ (vercel.json had a rule for each).
     '/alliances/null': { status: 301, destination: '/alliances/null-2/' },
   },
   integrations: [
