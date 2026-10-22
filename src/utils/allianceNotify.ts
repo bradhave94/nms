@@ -1,6 +1,6 @@
 /**
  * Alerts for new alliance submissions and edit requests. Sent by email through the Worker's ALERT_EMAIL
- * `send_email` binding (Cloudflare Email Routing on subnauticadatabase.com) to the verified address in
+ * `send_email` binding (Cloudflare Email Sending on mail.nomansskyrecipes.com) to the verified address in
  * ALLIANCES_ALERT_EMAIL. The old ntfy (https://ntfy.sh) path still runs if ALLIANCES_NTFY_TOPIC is set, but it is left
  * unset: ntfy's anonymous quota is per IP and Workers share egress IPs, so it answers 429.
  */
@@ -9,7 +9,7 @@ import { env, waitUntil } from 'cloudflare:workers';
 import type { Alliance } from './alliances';
 
 const ADMIN_URL = 'https://nomansskyrecipes.com/alliances/admin/';
-const FROM = { email: 'alerts@subnauticadatabase.com', name: 'NMS Recipes alliances' };
+const FROM = { email: 'alerts@mail.nomansskyrecipes.com', name: 'NMS Recipes alliances' };
 
 const escapeHtml = (value: string): string =>
 	value.replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
