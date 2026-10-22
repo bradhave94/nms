@@ -20,12 +20,13 @@
       "migrations_dir": "migrations"
     }
   ],
-  // Alliance submission alerts (src/utils/allianceNotify.ts). Email Routing is enabled on subnauticadatabase.com, which
-  // has no other mail; nomansskyrecipes.com keeps its Google mail. Sends to a verified destination address are free.
+  // Alliance submission alerts (src/utils/allianceNotify.ts). Cloudflare Email Sending is enabled on the subdomain
+  // mail.nomansskyrecipes.com only (its records live under mail.); the apex keeps its Google mail. Sends to a verified
+  // destination address are free.
   "send_email": [
     {
       "name": "ALERT_EMAIL",
-      "allowed_sender_addresses": ["alerts@subnauticadatabase.com"]
+      "allowed_sender_addresses": ["alerts@mail.nomansskyrecipes.com"]
     }
   ],
   // Secrets (set on the Worker, never in this repo): ALLIANCES_ADMIN_TOKEN, optional ALLIANCES_ALERT_EMAIL (the verified
