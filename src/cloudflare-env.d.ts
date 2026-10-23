@@ -23,6 +23,8 @@ declare module 'cloudflare:workers' {
 	export const env: {
 		ALLIANCES_DB?: D1Database;
 		ALERT_EMAIL?: SendEmail;
+		/** Static assets (dist/client), wrangler.jsonc `assets.binding`. */
+		ASSETS?: { fetch(input: Request | URL | string): Promise<Response> };
 	};
 	/** Keeps the Worker alive after the response until the promise settles. */
 	export function waitUntil(promise: Promise<unknown>): void;

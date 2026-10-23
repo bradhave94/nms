@@ -13,6 +13,7 @@ import {
 	type AllianceInput,
 } from '@utils/alliances';
 import { countRecentEdits, createAllianceEdit, getApprovedAllianceBySlug, hashSubmitter } from '@utils/alliancesDb';
+import { notFoundResponse } from '@utils/notFound';
 import { notifyEditRequest } from '@utils/allianceNotify';
 
 export const prerender = false;
@@ -34,7 +35,7 @@ try {
 		headers: { 'Cache-Control': 'no-store', 'Content-Type': 'text/plain; charset=utf-8' },
 	});
 }
-if (!alliance) return Astro.rewrite('/404');
+if (!alliance) return notFoundResponse();
 
 const listingUrl = `/alliances/${alliance.slug}/`;
 const editUrl = `${listingUrl}edit/`;
