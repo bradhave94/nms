@@ -23,10 +23,17 @@ const MIN_FILL_MILLISECONDS = 3000;
 
 Astro.response.headers.set('Cache-Control', 'no-store');
 
-const alliance = await getApprovedAllianceBySlug(Astro.params.slug ?? '').catch((error: unknown) => {
+let alliance: Awaited<ReturnType<typeof getApprovedAllianceBySlug>>;
+try {
+	alliance = await getApprovedAllianceBySlug(Astro.params.slug ?? '');
+} catch (error) {
+	// A database failure is not a missing alliance: answer 503 so it is never mistaken for (or cached as) a 404.
 	console.error('Alliance lookup failed', error);
-	return undefined;
-});
+	return new Response('The alliance directory is temporarily unavailable.', {
+		status: 503,
+		headers: { 'Cache-Control': 'no-store', 'Content-Type': 'text/plain; charset=utf-8' },
+	});
+}
 if (!alliance) return Astro.rewrite('/404');
 
 const listingUrl = `/alliances/${alliance.slug}/`;
