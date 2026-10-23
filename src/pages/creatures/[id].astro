@@ -3,6 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import CreaturesShell from '@components/creatures/CreaturesShell.astro';
 import {
 	AFFINITY_COLOURS,
+	matchupFor,
 	speciesLabel as labelFor,
 	speciesLabelCounts,
 	speciesNames,
@@ -117,17 +118,6 @@ const getPreferredMoveLabel = (move: CreatureMove, species: CreatureSpecies): st
 		if (namesByAffinity.Normal) return String(namesByAffinity.Normal);
 	}
 	return move.DefaultDisplayName ?? move.Name ?? move.NameStub ?? move.Id;
-};
-
-const MATCHUPS: Record<string, { strong: string; weak: string }> = {
-	Fire: { strong: 'Cold', weak: 'Radioactive' },
-	Cold: { strong: 'Barren', weak: 'Fire' },
-	Radioactive: { strong: 'Fire', weak: 'Toxic' },
-	Toxic: { strong: 'Lush', weak: 'Mech' },
-	Mech: { strong: 'Toxic', weak: 'Weird' },
-	Weird: { strong: 'Mech', weak: 'Barren' },
-	Barren: { strong: 'Radioactive', weak: 'Cold' },
-	Lush: { strong: 'Weird', weak: 'Toxic' },
 };
 
 const slugifyCategory = (value: string | null | undefined): string =>
@@ -336,10 +326,15 @@ const statPills: StatPill[] = [
 	speciesTrait ? { label: 'Special trait', value: speciesTrait } : null,
 ].filter((pill): pill is StatPill => pill != null);
 
-const speciesMatchup =
-	species.BattleForcedAffinity && MATCHUPS[species.BattleForcedAffinity]
-		? MATCHUPS[species.BattleForcedAffinity]
-		: null;
+const speciesMatchup = matchupFor(species.BattleForcedAffinity);
+const matchupChips = speciesMatchup
+	? [
+			{ label: 'Attack strong vs', tone: 'cr-strong', id: speciesMatchup.attackStrongId },
+			{ label: 'Attack weak vs', tone: 'cr-weak', id: speciesMatchup.attackWeakId },
+			{ label: 'Defense strong vs', tone: 'cr-strong', id: speciesMatchup.defenseStrongId },
+			{ label: 'Defense weak vs', tone: 'cr-weak', id: speciesMatchup.defenseWeakId },
+		]
+	: [];
 
 const affinityDisplay =
 	species.BattleForcedAffinityDisplay ??
@@ -392,18 +387,14 @@ const leadText = [
 			</dl>
 			{speciesMatchup && (
 				<ul class="cr-chips mt-3" aria-label="Matchups">
-					<li class="cr-chip">
-						{affinityIconById.get(speciesMatchup.strong) && (
-							<img src={`${imageBase}${toWebp(affinityIconById.get(speciesMatchup.strong))}`} alt="" width="20" height="20" loading="lazy" />
-						)}
-						<span class="cr-strong">Strong vs</span> {formatAffinity(speciesMatchup.strong)}
-					</li>
-					<li class="cr-chip">
-						{affinityIconById.get(speciesMatchup.weak) && (
-							<img src={`${imageBase}${toWebp(affinityIconById.get(speciesMatchup.weak))}`} alt="" width="20" height="20" loading="lazy" />
-						)}
-						<span class="cr-weak">Weak vs</span> {formatAffinity(speciesMatchup.weak)}
-					</li>
+					{matchupChips.map((chip) => (
+						<li class="cr-chip">
+							{affinityIconById.get(chip.id) && (
+								<img src={`${imageBase}${toWebp(affinityIconById.get(chip.id))}`} alt="" width="20" height="20" loading="lazy" />
+							)}
+							<span class={chip.tone}>{chip.label}</span> {formatAffinity(chip.id)}
+						</li>
+					))}
 					<li><a class="link text-[.9375rem]" href="/creatures/affinities/">All matchups</a></li>
 				</ul>
 			)}

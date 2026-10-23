@@ -22,17 +22,44 @@ export const affinityByDisplay = new Map<string, CreatureAffinity>(
 	affinities.map((a) => [a.DisplayName.toLowerCase(), a] as const)
 );
 
-/** The Xeno Arena matchup wheel (each affinity beats one and loses to one). */
-export const MATCHUPS: { affinityId: string; strongAgainstId: string; weakAgainstId: string }[] = [
-	{ affinityId: 'Fire', strongAgainstId: 'Cold', weakAgainstId: 'Radioactive' },
-	{ affinityId: 'Cold', strongAgainstId: 'Barren', weakAgainstId: 'Fire' },
-	{ affinityId: 'Radioactive', strongAgainstId: 'Fire', weakAgainstId: 'Toxic' },
-	{ affinityId: 'Toxic', strongAgainstId: 'Lush', weakAgainstId: 'Mech' },
-	{ affinityId: 'Mech', strongAgainstId: 'Toxic', weakAgainstId: 'Weird' },
-	{ affinityId: 'Weird', strongAgainstId: 'Mech', weakAgainstId: 'Barren' },
-	{ affinityId: 'Barren', strongAgainstId: 'Radioactive', weakAgainstId: 'Cold' },
-	{ affinityId: 'Lush', strongAgainstId: 'Weird', weakAgainstId: 'Toxic' },
+/**
+ * Holo-Arena affinity matchups, matching the Attack Profile and Defenses panels the game shows for each creature.
+ * Attack: the affinity a creature deals extra damage to, and the one it deals reduced damage to.
+ * The defense side follows from that: a creature takes extra damage from the affinity whose attacks
+ * are strong against it, and reduced damage from the one whose attacks are weak against it.
+ * Attack-strong forms one eight-step cycle: Mechanical > Desert > Toxic > Tropical > Anomalous > Radioactive > Fire > Frost > Mechanical.
+ */
+const ATTACK_PROFILE: { affinityId: string; strongId: string; weakId: string }[] = [
+	{ affinityId: 'Fire', strongId: 'Cold', weakId: 'Barren' },
+	{ affinityId: 'Cold', strongId: 'Mech', weakId: 'Radioactive' },
+	{ affinityId: 'Radioactive', strongId: 'Fire', weakId: 'Toxic' },
+	{ affinityId: 'Toxic', strongId: 'Lush', weakId: 'Cold' },
+	{ affinityId: 'Mech', strongId: 'Barren', weakId: 'Weird' },
+	{ affinityId: 'Weird', strongId: 'Radioactive', weakId: 'Fire' },
+	{ affinityId: 'Barren', strongId: 'Toxic', weakId: 'Lush' },
+	{ affinityId: 'Lush', strongId: 'Weird', weakId: 'Mech' },
 ];
+
+export type AffinityMatchup = {
+	affinityId: string;
+	/** Deals extra damage to this affinity. */
+	attackStrongId: string;
+	/** Deals reduced damage to this affinity. */
+	attackWeakId: string;
+	/** Takes reduced damage from this affinity. */
+	defenseStrongId: string;
+	/** Takes extra damage from this affinity. */
+	defenseWeakId: string;
+};
+
+export const MATCHUPS: AffinityMatchup[] = ATTACK_PROFILE.map((row) => ({
+	affinityId: row.affinityId,
+	attackStrongId: row.strongId,
+	attackWeakId: row.weakId,
+	defenseStrongId: ATTACK_PROFILE.find((other) => other.weakId === row.affinityId)?.affinityId ?? '',
+	defenseWeakId: ATTACK_PROFILE.find((other) => other.strongId === row.affinityId)?.affinityId ?? '',
+}));
+
 export const matchupFor = (affinityId: string | null | undefined) =>
 	MATCHUPS.find((m) => m.affinityId === affinityId) ?? null;
 
