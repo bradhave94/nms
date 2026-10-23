@@ -17,7 +17,7 @@ const speciesCount = (affinityId: string): number =>
 
 const title = "Creature Affinities | No Man's Sky Recipes";
 const description =
-	"See the eight Xeno Arena creature affinities and the strength-versus-weakness matchup chart.";
+	"See the eight Xeno Arena creature affinities and the Holo-Arena attack and defense matchup chart.";
 const breadcrumbs = [
 	{ name: 'Home', href: '/' },
 	{ name: 'Creatures', href: '/creatures' },
@@ -29,7 +29,7 @@ const breadcrumbs = [
 	<CreaturesShell
 		active="affinities"
 		title="Affinities"
-		lead={`Arena battles turn on affinity. Each of the ${MATCHUPS.length} affinities beats one other and loses to one, so pick a companion that counters your opponent.`}
+		lead={`Arena battles turn on affinity. Each of the ${MATCHUPS.length} affinities hits one affinity hard and one weakly, and takes extra damage from one and less from another, so pick a companion that counters your opponent.`}
 		breadcrumbs={breadcrumbs}
 	>
 		<section class="cr-section" aria-labelledby="matchups-heading">
@@ -38,8 +38,10 @@ const breadcrumbs = [
 				<thead>
 					<tr>
 						<th scope="col">Affinity</th>
-						<th scope="col">Strong against</th>
-						<th scope="col">Weak against</th>
+						<th scope="col">Attack strong vs</th>
+						<th scope="col">Attack weak vs</th>
+						<th scope="col">Defense strong vs</th>
+						<th scope="col">Defense weak vs</th>
 						<th scope="col" class="num">Species</th>
 					</tr>
 				</thead>
@@ -47,8 +49,6 @@ const breadcrumbs = [
 					{
 						MATCHUPS.map((row) => {
 							const icon = iconFor(row.affinityId);
-							const strongIcon = iconFor(row.strongAgainstId);
-							const weakIcon = iconFor(row.weakAgainstId);
 							const n = speciesCount(row.affinityId);
 							return (
 								<tr>
@@ -60,16 +60,28 @@ const breadcrumbs = [
 											{displayNameFor(row.affinityId)}
 										</a>
 									</th>
-									<td data-label="Strong against">
-										<a class="af-link" href={speciesFilterUrl(row.strongAgainstId)}>
-											{strongIcon && <img src={`${IMAGE_BASE}${toWebp(strongIcon)}`} alt="" width="24" height="24" loading="lazy" />}
-											{displayNameFor(row.strongAgainstId)}
+									<td data-label="Attack strong vs">
+										<a class="af-link" href={speciesFilterUrl(row.attackStrongId)}>
+											{iconFor(row.attackStrongId) && <img src={`${IMAGE_BASE}${toWebp(iconFor(row.attackStrongId) as string)}`} alt="" width="24" height="24" loading="lazy" />}
+											{displayNameFor(row.attackStrongId)}
 										</a>
 									</td>
-									<td data-label="Weak against">
-										<a class="af-link" href={speciesFilterUrl(row.weakAgainstId)}>
-											{weakIcon && <img src={`${IMAGE_BASE}${toWebp(weakIcon)}`} alt="" width="24" height="24" loading="lazy" />}
-											{displayNameFor(row.weakAgainstId)}
+									<td data-label="Attack weak vs">
+										<a class="af-link" href={speciesFilterUrl(row.attackWeakId)}>
+											{iconFor(row.attackWeakId) && <img src={`${IMAGE_BASE}${toWebp(iconFor(row.attackWeakId) as string)}`} alt="" width="24" height="24" loading="lazy" />}
+											{displayNameFor(row.attackWeakId)}
+										</a>
+									</td>
+									<td data-label="Defense strong vs">
+										<a class="af-link" href={speciesFilterUrl(row.defenseStrongId)}>
+											{iconFor(row.defenseStrongId) && <img src={`${IMAGE_BASE}${toWebp(iconFor(row.defenseStrongId) as string)}`} alt="" width="24" height="24" loading="lazy" />}
+											{displayNameFor(row.defenseStrongId)}
+										</a>
+									</td>
+									<td data-label="Defense weak vs">
+										<a class="af-link" href={speciesFilterUrl(row.defenseWeakId)}>
+											{iconFor(row.defenseWeakId) && <img src={`${IMAGE_BASE}${toWebp(iconFor(row.defenseWeakId) as string)}`} alt="" width="24" height="24" loading="lazy" />}
+											{displayNameFor(row.defenseWeakId)}
 										</a>
 									</td>
 									<td data-label="Species" class="num">
@@ -84,6 +96,12 @@ const breadcrumbs = [
 				</tbody>
 			</table>
 			<p class="cr-note mt-4">
+				Attack is the damage a creature deals: extra against its strong affinity, reduced against its weak one.
+				Defense is the damage it takes: reduced from its strong affinity, extra from its weak one. The game shows
+				both on each creature's Attack Profile and Defenses panels. Strong attacks run in one loop: Mechanical,
+				Desert, Toxic, Tropical, Anomalous, Radioactive, Fire, Frost, then back to Mechanical.
+			</p>
+			<p class="cr-note mt-2">
 				Each affinity links to the <a class="link" href="/creatures/species/">species table</a>, filtered to creatures
 				with that affinity.
 			</p>

@@ -2,7 +2,7 @@
 title: "No Man's Sky Xeno Arena: Beginner's Guide to Creature Battles"
 description: "How to start creature battles in No Man's Sky Xeno Arena: affinities, Holo-Arena locations, evolving with Retroviral Pellets, and Arena League rewards."
 pubDate: 2026-04-18
-updatedDate: 2026-04-18
+updatedDate: 2026-10-23
 heroImage: "/images/blog/xeno-arena-guide.webp"
 category: "blog"
 tags:
@@ -24,7 +24,7 @@ faqs:
   - question: "How do I start creature battles in No Man's Sky?"
     answer: "Adopt at least one creature companion by feeding it Creature Pellets (or an Ion Battery for mechanical creatures), then find a Holo-Arena table at any space station, planetary outpost, or the Space Anomaly and interact with it to start a battle."
   - question: "What are the 8 creature affinities in Xeno Arena?"
-    answer: "Fire, Frost, Radioactive, Toxic, Tropical, Anomalous, Mechanical, and Desert. Each affinity has one type it's strong against and one it's weak to. Fire beats Frost but loses to Radioactive, for example."
+    answer: "Fire, Frost, Radioactive, Toxic, Tropical, Anomalous, Mechanical, and Desert. Each affinity has an attack profile (one type it hits hard, one it hits weakly) and a defense profile (one type it resists, one it takes extra damage from). Fire hits Frost hard but takes extra damage from Radioactive, for example."
   - question: "What are Retroviral Pellets used for in No Man's Sky?"
     answer: "Retroviral Pellets are used to trigger creature evolution, unlocking genetic mutations that improve a creature's agility, health, and combat effectiveness. Always summon your creature first before feeding it the pellet."
   - question: "Where is the Holo-Arena in No Man's Sky?"
@@ -63,22 +63,20 @@ After the tutorial, Oceanus points you to two more battles. Completing all three
 
 If you learn one thing about Xeno Arena, learn this. Every creature has an affinity, an elemental type based on the biome it evolved in. The right affinity against an opponent deals bonus damage. The wrong one puts you at a serious disadvantage.
 
-There are eight affinities in total. From the official patch notes: *"Fire-based companions may excel against frozen creatures, but find themselves vulnerable to radioactive attacks."* The full matchup chart below comes from community testing:
+There are eight affinities in total. From the official patch notes: *"Fire-based companions may excel against frozen creatures, but find themselves vulnerable to radioactive attacks."* Each creature has two profiles, and the game shows both when you inspect it before a battle. Its **attack profile** lists the affinity it deals extra damage to and the one it deals reduced damage to. Its **defenses** list the affinity it takes reduced damage from and the one it takes extra damage from.
 
-| Affinity | Strong against | Weak against |
-|---|---|---|
-| Fire | Frost | Radioactive |
-| Frost | Desert | Fire |
-| Radioactive | Fire | Toxic |
-| Toxic | Tropical | Mechanical |
-| Tropical | Anomalous | Toxic |
-| Anomalous | Mechanical | Desert |
-| Mechanical | Toxic | Anomalous |
-| Desert | Radioactive | Frost |
+| Affinity | Attack strong vs | Attack weak vs | Defense strong vs | Defense weak vs |
+|---|---|---|---|---|
+| Fire | Frost | Desert | Anomalous | Radioactive |
+| Frost | Mechanical | Radioactive | Toxic | Fire |
+| Radioactive | Fire | Toxic | Frost | Anomalous |
+| Toxic | Tropical | Frost | Radioactive | Desert |
+| Tropical | Anomalous | Mechanical | Desert | Toxic |
+| Anomalous | Radioactive | Fire | Mechanical | Tropical |
+| Mechanical | Desert | Anomalous | Tropical | Frost |
+| Desert | Toxic | Tropical | Fire | Mechanical |
 
-People are still mapping out every interaction. These matchups show up consistently, but not every edge case is documented yet.
-
-There are two separate four-way cycles. One: Fire > Frost > Desert > Radioactive > Fire. The other: Toxic > Tropical > Anomalous > Mechanical > Toxic. Cross-chain matchups are less predictable, so early on, stick to the confirmed counters.
+The strong attacks form one loop: Mechanical > Desert > Toxic > Tropical > Anomalous > Radioactive > Fire > Frost > Mechanical. Whatever an affinity hits hard takes extra damage from it, so the two halves of the chart always agree.
 
 Before each fight, inspect the opposing team's affinities. Swapping in one better-matched creature often turns a slow grind into an easy win.
 
