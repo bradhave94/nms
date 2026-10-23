@@ -7,6 +7,7 @@ import { swatchStyle } from '@utils/contrast';
 import { findCommunityBanners } from '@utils/allianceBanners';
 import { SITE } from '@config';
 import { getApprovedAllianceBySlug, type PublicAlliance } from '@utils/alliancesDb';
+import { notFoundResponse } from '@utils/notFound';
 import { toWebp } from '@utils/icons';
 
 export const prerender = false;
@@ -23,7 +24,7 @@ try {
 	});
 }
 if (!alliance) {
-	return Astro.rewrite('/404');
+	return notFoundResponse();
 }
 
 Astro.response.headers.set('Cache-Control', 'public, max-age=0, s-maxage=60, stale-while-revalidate=300');
