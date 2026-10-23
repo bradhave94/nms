@@ -6,7 +6,7 @@
 
 This is an **Astro** site (No Man's Sky Recipes) on **Cloudflare Workers** (Worker `nms`, `wrangler.jsonc`): every page is prerendered and served as a static asset except the alliance directory, which runs in the Worker on Cloudflare D1. All game data lives as static JSON in `src/data/` and `src/datav2/`.
 
-- **Hosting:** Workers Builds builds and deploys the Worker (build `pnpm build`, deploy `npx wrangler deploy`). The adapter writes `dist/client/` (static assets) and `dist/server/` (Worker plus its generated `wrangler.json`). `public/_redirects` and `public/_headers` port the redirects and headers of vercel.json; keep both in step until vercel.json is removed. Redirects for Worker-rendered paths (`/alliances/null`) live in `astro.config.mjs`, because `_redirects` only covers static assets.
+- **Hosting:** Workers Builds builds and deploys the Worker (build `pnpm build`, deploy `npx wrangler deploy`). The adapter writes `dist/client/` (static assets) and `dist/server/` (Worker plus its generated `wrangler.json`). `public/_redirects` and `public/_headers` port the redirects and headers of vercel.json; keep both in step until vercel.json is removed. Redirects for Worker-rendered paths (`/alliances/null`) live in `astro.config.mjs`, because `_redirects` only covers static assets. Keep the `assets_navigation_has_no_effect` compatibility flag in `wrangler.jsonc`: without it, browser page loads (`Sec-Fetch-Mode: navigate`) of any Worker-rendered path get the static 404 page without the Worker running. Test Worker routes with that header (plain curl doesn't send it): `curl -H 'Sec-Fetch-Mode: navigate' https://nomansskyrecipes.com/alliances/`.
 
 ### Running services
 

@@ -5,7 +5,11 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "nms",
   "compatibility_date": "2026-10-22",
-  "compatibility_flags": ["nodejs_compat"],
+  // assets_navigation_has_no_effect: since compatibility date 2025-04-01, browser page loads (Sec-Fetch-Mode: navigate)
+  // that match no static file get the static 404.html straight from the asset layer WITHOUT invoking the Worker. That
+  // 404'd every real visit to the on-demand /alliances pages (curl, which sends no Sec-Fetch-Mode, still got 200). This
+  // flag restores "no matching asset -> run the Worker" for every request.
+  "compatibility_flags": ["nodejs_compat", "assets_navigation_has_no_effect"],
   "assets": {
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
