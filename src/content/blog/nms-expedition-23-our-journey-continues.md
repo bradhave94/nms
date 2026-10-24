@@ -1,8 +1,8 @@
 ---
-title: "NMS Expedition 23 Guide & Rewards"
-description: "NMS Expedition 23 Our Journey Continues: start path, rewards, and milestone objectives from Fandom. Redeem via Quicksilver Companion."
+title: "NMS Expedition 23 Rewards & End Date (Oct 28)"
+description: "Expedition 23 Our Journey Continues ends October 28, 2026. All six exclusive rewards, what each phase unlocks, how to start, and how to redeem on any save."
 pubDate: 2026-09-17
-updatedDate: 2026-09-25
+updatedDate: 2026-10-24
 heroImage: "/images/blog/nms-expedition-23-our-journey-continues.webp"
 category: "blog"
 tags:
@@ -28,7 +28,7 @@ faqs:
   - question: "How do I start Expedition 23 in No Man's Sky?"
     answer: "From the Expedition Terminus on the Space Anomaly, or start a fresh new save. A fresh expedition save can convert to Normal Mode later. Official Hello Games wording."
   - question: "When does Our Journey Continues end?"
-    answer: "Hello Games says it runs about six weeks from the September 16, 2026 launch. The Fandom wiki lists an end date of October 28, 2026."
+    answer: "Fandom lists the end as Wednesday, October 28, 2026. Hello Games only says it runs about six weeks from the September 16, 2026 launch, and has not posted an end time."
   - question: "What are the Expedition 23 exclusive rewards?"
     answer: "Official list: nine framed update artworks, an astronaut bobblehead cockpit companion, the Starbound v0.27 Multi-Tool, the Golden Rasamama S36 starter ship, a vintage Sentinel Interceptor, and a diplodocus companion. Fandom also lists phase cosmetics (Time Traveller title, decal, banner) and a Diplo Companion Egg for full completion."
   - question: "How do I redeem Expedition 23 rewards on my main save?"
@@ -45,13 +45,34 @@ This guide covers rewards, schedule, start path, redeem steps, and the per-miles
 
 If you still need Expedition 22, that lives on the [Swarm expedition guide](/blog/nms-swarm-expedition-guide/). This page does not replace it. For the 7.0 station and salvage context that shipped right before this expedition, see the [Cosmos update](/blog/nms-cosmos-update/).
 
-## Dates and how to start
+## When does Expedition 23 end?
+
+**Wednesday, October 28, 2026**, per the Fandom wiki. Hello Games' own post only says the expedition "will run for approximately six weeks" from its September 16 launch, and six weeks from September 16 is October 28. There's no official end time, so don't leave the last phase for the final evening.
 
 | | |
 | --- | --- |
-| Launch | September 16, 2026 (official) |
-| Duration | About six weeks (official) |
-| Community end date | October 28, 2026 (Fandom) |
+| Start | Wednesday, September 16, 2026 (official) |
+| Length | About six weeks (official) |
+| End | Wednesday, October 28, 2026 (Fandom) |
+
+Hello Games says the exclusives you earn can be redeemed on all save games through the Quicksilver Synthesis Companion on the Space Anomaly. See [how to redeem](#how-to-redeem-rewards).
+
+## What are the Expedition 23 rewards?
+
+Hello Games lists six exclusive rewards. Fandom maps them to phases like this:
+
+| When you get it (Fandom) | Reward (official) |
+| --- | --- |
+| Phase 1 complete | Set of **9 framed artworks**, update cover art for your base |
+| Phase 2 complete | **Astronaut bobblehead** for your starship cockpit |
+| Phase 3 complete | **Starbound v0.27 Multi-Tool** |
+| Phase 4 complete | **Golden Rasamama S36** starship and the **vintage Sentinel Interceptor** |
+| Phase 5 complete | Time Traveller title, Our Journey Continues decal plans, banner customisation (Fandom only) |
+| Full expedition | **Diplodocus companion** (Diplo Companion Egg on Fandom) |
+
+The [full rewards breakdown](#expedition-23-rewards-in-detail) below has Hello Games' notes on each one.
+
+## How to start Expedition 23
 
 Two ways in, per Hello Games:
 
@@ -81,7 +102,7 @@ Fandom: you spawn in the **Paroi Major** system, next to a starship with broken 
 
 Each completed milestone also unlocks a **Journey Records** developer commentary (Sean Murray) in Catalog & Guide. That is unique to this expedition.
 
-## Expedition 23 rewards
+## Expedition 23 rewards in detail
 
 Official exclusive rewards from the Hello Games post:
 
@@ -109,7 +130,7 @@ Redeem path is separate from claiming in the Log. See below.
 
 ## Milestone objectives (WIP)
 
-Requirement text and key rewards below come from the Fandom wiki (revid 1334077, still stub). Hello Games does not publish per-milestone objectives on the official post. Cells that still show ??? on Fandom stay marked here.
+Requirement text and key rewards below come from the Fandom wiki (revid 1334077, still stub; end date rechecked at revid 1334259 on October 24, 2026). Hello Games does not publish per-milestone objectives on the official post. Cells that still show ??? on Fandom stay marked here.
 
 ### Phase 1: 2016-2018
 
@@ -230,7 +251,7 @@ When those ??? cells clear, we will patch this post again.
 Expedition Terminus on the Space Anomaly, or a fresh save. Official.
 
 **When does it end?**  
-About six weeks from Sep 16, 2026 (official). Fandom lists October 28, 2026.
+Wednesday, October 28, 2026 (Fandom). Hello Games says about six weeks from the September 16 launch.
 
 **What do I unlock?**  
 Nine framed artworks, astronaut bobblehead, Starbound v0.27 Multi-Tool, Golden Rasamama S36, vintage Sentinel Interceptor, diplodocus companion. Plus Fandom's Time Traveller title, decal, banner, and Diplo egg on full clear.
@@ -244,4 +265,4 @@ Objectives and key rewards for Phases 1-5 are in the tables above, from Fandom. 
 ## Sources
 
 - [Expedition Twenty-Three: Our Journey Continues](https://www.nomanssky.com/2026/09/expedition-twenty-three-our-journey-continues/) - Hello Games (official: rewards, dates, start, redeem)
-- [Expedition 23: Our Journey Continues](https://nomanssky.fandom.com/wiki/Expedition_23:_Our_Journey_Continues) - Fandom revid 1334077 (objectives, rewards, Paroi Major spawn, starting blueprints, rendezvous coords, Diplo egg / Time Traveller; still stub)
+- [Expedition 23: Our Journey Continues](https://nomanssky.fandom.com/wiki/Expedition_23:_Our_Journey_Continues) - Fandom revid 1334077, end date rechecked at revid 1334259 (objectives, rewards, Paroi Major spawn, starting blueprints, rendezvous coords, Diplo egg / Time Traveller; still stub)
