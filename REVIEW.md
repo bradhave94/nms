@@ -84,7 +84,7 @@ Each fixed finding gets a regression test or a check in the QA script, so the ne
   - Removed or renamed URLs get 301s.
   - Titles and descriptions are unique, and JSON-LD is valid.
   - Asset paths match case exactly. Windows hides `Altar_d.webp` vs `altar_d.webp`; Cloudflare returns 404.
-- **Blog:** no two posts across BH's game sites share a `pubDate`. List all of them first, and keep `updatedDate` no earlier than `pubDate`. New posts are published (no draft), dated today, never future-dated.
+- **Blog:** no two posts on this site share a `pubDate` unless BH says so (dates on BH's other game sites don't matter). List this site's posts first, and keep `updatedDate` no earlier than `pubDate`. New posts are published (no draft), dated today, never future-dated.
 
 ### State and async
 - **Deep links:** loading a save never overrides a deep link or shared view (`?s=`, `#z/x/y`, `?q=`). Jump to the base only when the player picks it.
