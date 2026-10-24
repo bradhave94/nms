@@ -1,0 +1,27 @@
+---
+// "Where to find X": hand-checked paragraphs from ITEM_META_OVERRIDES (src/utils/seo.ts).
+// `[label](/path/)` in the copy becomes an underlined in-sentence link.
+import { parseIntroLinks } from '@utils/seo.js';
+
+interface Props {
+  itemName: string;
+  paragraphs: string[];
+}
+
+const { itemName, paragraphs } = Astro.props;
+---
+
+{paragraphs.length > 0 && (
+  <section id="where-to-find" class="item-section" aria-labelledby="where-to-find-title">
+    <h2 id="where-to-find-title" class="m-0 mb-3 text-[1.15rem] font-semibold">Where to find {itemName}</h2>
+    <div class="panel px-4 py-3">
+      {paragraphs.map((paragraph) => (
+        <p class="m-0 mb-2 last:mb-0 max-w-[44rem] text-[.95rem] text-ink/85">
+          {parseIntroLinks(paragraph).map((segment) =>
+            segment.href ? <a class="link" href={segment.href}>{segment.text}</a> : segment.text
+          )}
+        </p>
+      ))}
+    </div>
+  </section>
+)}

@@ -6,6 +6,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 import trailingSlashLinks from './src/integrations/trailingSlashLinks.ts';
+import trailingSlashRedirects from './src/integrations/trailingSlashRedirects.ts';
 import cleanGameNames from './src/integrations/cleanGameNames.ts';
 import { writeIconWebps } from './scripts/icon-webp.mjs';
 import { writeImageSizes } from './scripts/image-sizes.mjs';
@@ -100,6 +101,8 @@ export default defineConfig({
   integrations: [
     // `/alliances` is rendered on demand, so it has no HTML file to detect.
     trailingSlashLinks({ extraPaths: ['/alliances'] }),
+    // Permanent 308s from /path to /path/ (the asset layer's own redirect is a 307).
+    trailingSlashRedirects(),
     {
       // Pages show WebP icons; fill in any that weren't generated so none render broken.
       name: 'icon-webp',

@@ -1,8 +1,8 @@
 ---
-title: "How to Make Chromatic Metal in No Man's Sky (Best Ratios and Early Copper)"
-description: "How to make Chromatic Metal in No Man's Sky: early Copper refining, Pure Ferrite doubling, best ratios by star color, and the Quartzite purple boost."
+title: "Chromatic Metal NMS: How to Make It, Best Ratios"
+description: "How to make Chromatic Metal in No Man's Sky: where to find Copper, Cadmium, Emeril and Indium, every refiner recipe, and the best ratio by star color."
 pubDate: 2026-10-14
-updatedDate: 2026-10-14
+updatedDate: 2026-10-24
 heroImage: "/images/blog/how-to-make-chromatic-metal-no-mans-sky.webp"
 category: "blog"
 tags:
@@ -56,6 +56,20 @@ You need a lot of it, and you need it early:
 | [Base Computer](/technology/BASE_FLAG/) | 30 |
 
 That's 805 just for the basics, before you touch a single upgrade module.
+
+## Where to find the stellar metals
+
+Each stellar metal comes from planets orbiting one star color. The in-game item text for all five says so, and four of them add that it forms deposits in the planet's crust.
+
+| Metal | Star color | Drive you need to reach it |
+|---|---|---|
+| [Copper](/raw/YELLOW2/) | Yellow | None (your starting Hyperdrive) |
+| [Cadmium](/raw/RED2/) | Red | [Cadmium Drive](/upgrades/HDRIVEBOOST1/) |
+| [Emeril](/raw/GREEN2/) | Green | [Emeril Drive](/upgrades/HDRIVEBOOST2/) |
+| [Indium](/raw/BLUE2/) | Blue | [Indium Drive](/upgrades/HDRIVEBOOST3/) |
+| [Quartzite](/raw/PURPLE2/) | Purple | [Atlantid Drive](/upgrades/HDRIVEBOOST4/) |
+
+Check a system's star color on the Galaxy Map before you warp. The drive costs are further down in [Moving up the drives](#moving-up-the-drives).
 
 ## Early game: Copper in a Refiner
 
