@@ -13,8 +13,8 @@ How changes to this repo get reviewed, and what reviewers check. This file was w
   - Stop when a round finds nothing blocking.
 - **Branches and shipping:**
   - Work on a branch in its own git worktree, never in someone else's checkout.
-  - After the last round, open a PR and BH merges it. Merge or push to `main` yourself only when BH says so for that change. On nms, blog work goes on `nms-writer/<slug>` branches (see `AGENTS.md`).
-  - After merge, confirm the change is live: poll the live URL or the Workers Builds status of Worker `nms` for the merge commit.
+  - After the last round, open a PR. BH's standing permission lets the site bot squash-merge its own PR once `pnpm run build` passes: one merge per batch, and no other pushes to `main`. Workers Builds runs only on `main`, so the local build is the gate. On nms, blog work goes on `nms-writer/<slug>` branches and publishes right away (see **Shipping** and **Blog posts** in `AGENTS.md`).
+  - After merge, wait for the Workers Builds run of Worker `nms` on the merge commit, then confirm the change is live with browser-like headers (real User-Agent, `Sec-Fetch-Mode: navigate`, `Sec-Fetch-Dest: document`, `Accept: text/html`).
 - **Keep it fast.** BH wants things finished quickly: keep briefs tight, keep later rounds to the delta, and don't reopen decisions already made.
 
 ## The brief (what each reviewer gets)
@@ -46,7 +46,7 @@ Write the report to `_output/<site>/<feature>-review[-rN]/<reviewer>/REPORT.md`.
   - Label pre-existing issues as pre-existing.
   - Separate harness artifacts from real bugs: a probe holding IndexedDB open, Playwright scroll shifts, timings made flaky by load on a shared CPU.
 - **Test a fresh build** of the commit under review, on your own port. `dist/` is often older than the last commit.
-- **List what you couldn't test** separately, such as Vercel middleware, the real Chrome folder picker, real drag-and-drop, pinch and iOS. Never mark it as passing.
+- **List what you couldn't test** separately, such as Worker-only behaviour you couldn't run locally, the real Chrome folder picker, real drag-and-drop, pinch and iOS. Never mark it as passing.
 - Keep scripts and screenshots in `_output`, never in the repo.
 
 ## Fix report
@@ -83,8 +83,8 @@ Each fixed finding gets a regression test or a check in the QA script, so the ne
   - The sitemap only gains URLs; diff it against the live sitemap.
   - Removed or renamed URLs get 301s.
   - Titles and descriptions are unique, and JSON-LD is valid.
-  - Asset paths match case exactly. Windows hides `Altar_d.webp` vs `altar_d.webp`; Vercel returns 404.
-- **Blog:** no two posts across BH's game sites share a `pubDate`. List all of them first, and keep `updatedDate` no earlier than `pubDate`.
+  - Asset paths match case exactly. Windows hides `Altar_d.webp` vs `altar_d.webp`; Cloudflare returns 404.
+- **Blog:** no two posts across BH's game sites share a `pubDate`. List all of them first, and keep `updatedDate` no earlier than `pubDate`. New posts are published (no draft), dated today, never future-dated.
 
 ### State and async
 - **Deep links:** loading a save never overrides a deep link or shared view (`?s=`, `#z/x/y`, `?q=`). Jump to the base only when the player picks it.
