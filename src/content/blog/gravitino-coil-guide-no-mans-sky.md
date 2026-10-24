@@ -1,6 +1,6 @@
 ---
-title: "NMS Gravitino Coil: How to Get, Use, and Find Balls"
-description: "Buy the Gravitino Coil blueprint from Eos for 520 Nanites. Gravitino Balls spawn where Sentinels attack on sight. Use the coil to haul waste or stun Sentinels."
+title: "Gravitino Coil NMS: Blueprint, Recipe & Gravitino Balls"
+description: "Gravitino Coil blueprint: 520 Nanites from Iteration: Eos. Craft it from 3 Magnetic Resonators, 1 Gravitino Ball and 50 Chromatic Metal, then haul scrap waste."
 pubDate: 2026-03-20
 updatedDate: 2026-10-19
 heroImage: "/images/blog/gravitino-coil.webp"

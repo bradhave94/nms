@@ -61,6 +61,12 @@ type ItemMetaOverride = {
 	title?: string;
 	description?: string;
 	relatedLinks?: ItemRelatedLink[];
+	/**
+	 * "Where to find" paragraphs, shown under an h2 on the item page. `[label](/path/)` becomes a link.
+	 * Only facts from src/datav2 (in-game text, refiner and Nutrient Processor recipes) or a cited
+	 * source (noted beside each entry). Never guess where an item spawns.
+	 */
+	whereToFind?: string[];
 };
 
 const SITE_TITLE_SUFFIX = " | No Man's Sky Recipes";
@@ -94,6 +100,72 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 		description:
 			'Craft the Mind Control Device from 1 Solar Mirror and 50 Gold. This one-expedition frigate upgrade helps the Fleet Commander in trading negotiations.',
 	},
+	// Where-to-find copy: GSC 2026-10 showed these at position 8-9 with almost no clicks.
+	// Facts: in-game descriptions and recipes in src/datav2 unless noted.
+	GAS3: {
+		title: 'Nitrogen NMS: Where to Find It and How to Refine It',
+		description:
+			"Where to find Nitrogen in No Man's Sky: harvest it from Lush and Toxic planet atmospheres, or refine it from Radon or Methane. Every Nitrogen recipe.",
+		whereToFind: [
+			"The game's own text says Nitrogen is readily harvested from the atmospheres of Lush and Toxic planets. If you're on one of those, that's your source.",
+			'Anywhere else, refine it. 3 [Radon](/products/GAS2/) or 3 [Methane](/products/GAS4/) make 1 Nitrogen in a Portable Refiner. In a Medium Refiner, 1 Radon or Methane plus 1 [Oxygen](/raw/OXYGEN/) also makes 1, so you spend a third of the gas.',
+			'Per their in-game text, Radon comes from Radioactive and Frozen atmospheres, and Methane from equipment deployed on gas worlds.',
+		],
+	},
+	ASTEROID3: {
+		title: 'Platinum NMS: Where to Find It and How to Farm It',
+		description:
+			"Where to find Platinum in No Man's Sky: mine asteroids, dig underground deposits, or refine Gold and Silver. Plus the alloys that break down into 250.",
+		whereToFind: [
+			'Platinum is typically mined from asteroids and occasionally found in underground planetary deposits, per its in-game text. Asteroids are the reliable source.',
+			'To refine it, 1 [Gold](/raw/ASTEROID2/) plus 1 [Silver](/raw/ASTEROID1/) makes 1 Platinum in a Medium Refiner. Gold and Silver are asteroid minerals too, so one mining run covers all three.',
+			'The big payout is breaking down alloys: 1 [Geodesite](/products/ALLOY7/) or 1 [Iridesite](/products/ALLOY8/) refines into 250 Platinum. A Large Refiner also turns 1 [Ferrite Dust](/raw/LAND1/), 1 [Oxygen](/raw/OXYGEN/) and 250 [Chromatic Metal](/raw/STELLAR2/) into 10 Platinum.',
+			'Base value is 505 Units each, so spare Platinum sells well.',
+		],
+	},
+	SPACEGUNK2: {
+		title: 'Runaway Mould NMS: Where to Find and Farm It',
+		description:
+			"Where to find Runaway Mould in No Man's Sky: Curious Deposits, trade terminals, and the Living Slime refine. 5 Runaway Mould refine into 1 Nanite Cluster.",
+		relatedLinks: [{ label: 'Best nanite farms', href: '/blog/best-nanite-farms-no-mans-sky/' }],
+		// Curious Deposits and trade terminals: Fandom "Runaway Mould", revid 1335203.
+		whereToFind: [
+			'Mine it from Curious Deposits on some planets. The Runaway Mould shows up as a sphere that rolls when you mine the deposit. Galactic Trade Terminals also buy and sell it.',
+			'You can also refine it: 1 [Living Slime](/raw/SPACEGUNK4/) makes 1 Runaway Mould, and 1 [Atlantideum](/raw/ROBOT2/) plus 1 [Pugneum](/curiosities/ROBOT1/) makes 3 in a Medium Refiner.',
+			'Why bother: 5 Runaway Mould refine into 1 [Nanite Cluster](/other/TECHFRAG/). The [nanite farm guide](/blog/best-nanite-farms-no-mans-sky/) has the full loop.',
+		],
+	},
+	FOOD_R_MEAT: {
+		title: 'Processed Meat NMS: How to Make It and Where to Get Meat',
+		description:
+			"Processed Meat in No Man's Sky: put any of 18 raw creature meats in a Nutrient Processor. Where the meat comes from, and every dish that uses it.",
+		whereToFind: [
+			"You don't find Processed Meat lying around. You make it: 1 raw meat in a [Nutrient Processor](/technology/COOKER/) makes 1 Processed Meat.",
+			'18 raw meats work, including [Meaty Chunks](/food/FOOD_M_MEAT/), [Raw Steak](/food/FOOD_M_COW/), Meaty Wings, Diplo Chunks and Scaly Meat. The game describes every one of them as harvested from the corpse of the creature that once contained it, so you get them from hunting creatures.',
+			'Processed Meat is a stepping stone. Stews, pies and Smoked Meat start from it, listed below.',
+		],
+	},
+	WATERWORLD1: {
+		title: 'Lithium NMS: Where to Find It (Purple Star Systems)',
+		description:
+			"Where to find Lithium in No Man's Sky: ocean planets in purple star systems only, or refine Quartzite and Crystallised Helium. Every Lithium recipe.",
+		relatedLinks: [{ label: 'How to get Lithium', href: '/blog/how-to-get-lithium-no-mans-sky/' }],
+		whereToFind: [
+			"Lithium only shows up in purple star systems, and its in-game text says it's typically found on ocean planets. Look for large deposits, or scan mineral formations with the Analysis Visor and harvest them.",
+			"Already in a purple system? 1 [Quartzite](/raw/PURPLE2/) plus 1 [Crystallised Helium](/raw/GASGIANT1/) makes 1 Lithium in a Medium Refiner, and [Activated Quartzite](/raw/EX_PURPLE/) makes 2.",
+			'Purple systems need the [Atlantid Drive](/upgrades/HDRIVEBOOST4/). The [Lithium guide](/blog/how-to-get-lithium-no-mans-sky/) covers the unlock.',
+		],
+	},
+	GASGIANT1: {
+		title: 'Crystallised Helium NMS: Where to Find It (Crystallized)',
+		description:
+			"Where to find Crystallised Helium in No Man's Sky: deposits on gas giants, or refine Quartzite and Lithium. Every recipe that makes or uses it.",
+		whereToFind: [
+			"Crystallised Helium comes from gas giants. Its in-game text says it's extracted from deposits formed in their hostile conditions: large deposits, or smaller mineral formations you spot with the Analysis Visor.",
+			'Or refine it: 1 [Quartzite](/raw/PURPLE2/) plus 1 [Lithium](/raw/WATERWORLD1/) makes 1 in a Medium Refiner, or 2 with [Activated Quartzite](/raw/EX_PURPLE/).',
+			'Quartzite and Lithium both come from purple star systems, so that route only helps once you can reach them. See the [Lithium guide](/blog/how-to-get-lithium-no-mans-sky/).',
+		],
+	},
 	// Links only. Generated titles and descriptions stay in place.
 	AM_HOUSING: {
 		relatedLinks: [
@@ -108,9 +180,6 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 			{ label: 'Gravitino Coil guide', href: '/blog/gravitino-coil-guide-no-mans-sky/' },
 			{ label: 'Gravitino Ball', href: '/curiosities/GRAVBALL/' },
 		],
-	},
-	SPACEGUNK2: {
-		relatedLinks: [{ label: 'Best nanite farms', href: '/blog/best-nanite-farms-no-mans-sky/' }],
 	},
 	AF_METAL: {
 		relatedLinks: [{ label: 'Best nanite farms', href: '/blog/best-nanite-farms-no-mans-sky/' }],
@@ -310,13 +379,14 @@ const buildItemTitle = (item: ItemMetaInput, categoryLabel: string, uniquenessHi
 export const buildItemMeta = (
 	item: ItemMetaInput,
 	categoryLabel: string
-): { title: string; description: string; relatedLinks?: ItemRelatedLink[] } => {
+): { title: string; description: string; relatedLinks?: ItemRelatedLink[]; whereToFind?: string[] } => {
 	const override = ITEM_META_OVERRIDES[item.Id];
 	if (override?.title && override.description) {
 		return {
 			title: withSiteTitle(override.title),
 			description: override.description,
 			...(override.relatedLinks ? { relatedLinks: override.relatedLinks } : {}),
+			...(override.whereToFind ? { whereToFind: override.whereToFind } : {}),
 		};
 	}
 
@@ -349,6 +419,7 @@ export const buildItemMeta = (
 		title,
 		description,
 		...(override?.relatedLinks ? { relatedLinks: override.relatedLinks } : {}),
+		...(override?.whereToFind ? { whereToFind: override.whereToFind } : {}),
 	};
 };
 
