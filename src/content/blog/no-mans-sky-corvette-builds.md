@@ -1,8 +1,7 @@
 ---
 title: "No Man's Sky Corvette Builds: Best Setups for Every Role"
 description: "Four No Man's Sky corvette builds for warp range, combat, hauling and handling, with the upgrade each reactor, engine and hab adds and the 3-part bonus cap."
-pubDate: 2026-10-21
-updatedDate: 2026-10-24
+pubDate: 2026-10-24
 heroImage: "/images/blog/no-mans-sky-corvette-builds.webp"
 category: "blog"
 tags: ["corvette", "starships", "builds", "voyagers", "guides"]
