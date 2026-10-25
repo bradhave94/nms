@@ -2,7 +2,7 @@
 title: "No Man's Sky iOS Guide: Requirements, Settlements & Limits"
 description: "No Man's Sky on iPhone and iPad: Oct 28 release, free to try, supported devices, settlement and multiplayer limits, controls, and first crafts."
 pubDate: 2026-10-13
-updatedDate: 2026-10-13
+updatedDate: 2026-10-25
 category: "blog"
 tags:
   - ios
@@ -41,7 +41,7 @@ Everything below comes from the [official announcement](https://www.nomanssky.co
 
 - **Pre-orders:** live now on the App Store, as part of Apple's Indie Games Week.
 - **Launch:** October 28, 2026.
-- **Price:** free to try at launch. Hello Games hasn't said yet how the trial works or what the full unlock costs.
+- **Price:** free to try at launch, then a one-time Full Game Unlock, listed at $19.99 (£19.99) on the App Store. More in the [launch week starter guide](/blog/no-mans-sky-iphone-launch-week-guide/).
 
 ## Supported iPhones and iPads
 
