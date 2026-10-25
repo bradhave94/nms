@@ -25,6 +25,7 @@ This project uses **pnpm 11+** (`packageManager` in `package.json`). See `packag
 | Type-check | `pnpm run type-check` |
 | Build | `pnpm run build` |
 | Dev server | `pnpm run dev` |
+| After a game patch | `pnpm game-update` (see below) |
 
 ### Notes
 
@@ -35,6 +36,11 @@ This project uses **pnpm 11+** (`packageManager` in `package.json`). See `packag
 - No environment variables or secrets are needed for development (the admin token is optional, see below).
 - Item icons in `public/images/items/` are the game's PNGs, each with a committed WebP copy that pages display (wrap icon names in `toWebp()` from `src/utils/icons.ts`). Social previews, structured data, and the image sitemap keep the PNG URLs. `pnpm run data:sync` refreshes the WebP copies; after adding or replacing PNGs by hand, run `pnpm run data:icons` (or `pnpm run data:icons -- --all` for replaced files). The build fills in missing copies and warns.
 - Internal links are written without a trailing slash in many places. A post-build step (`src/integrations/trailingSlashLinks.ts`) adds it in the HTML so clicks skip a 308 redirect.
+
+### Shared tooling and game updates
+
+- `scripts/seo-audit.mjs` and `scripts/game-update.mjs` are shared tooling: byte-identical copies of the same files in all six game-site repos (nms, dragonwilds, enshrouded, af, sn2, valheim). Don't edit them here. Change this site's behaviour in `site-tooling.config.mjs`; if a shared file has a bug, fix it and copy the same file to all six repos.
+- **After a game patch:** run the nms-data-extractor first, then `pnpm game-update`. It checks the extractor output (`../nms-data-extractor`, or `NMS_EXTRACTOR_PATH` / `--source <dir>`), then runs data:check, data:sync, data:icons, the `test:*` scripts and check:all, the build, test:new-items, test:legacy-redirects and the SEO audit, stopping at the first failure. It ends with a summary of changed data files and the new.json counts, and commits nothing. `--list` shows the numbered steps, `--from N` resumes at step N after a fix, `--with <group>` adds an optional step group (none configured here yet), `--only`/`--skip <phases>` filter by phase, and `--dry-run` prints the commands without running them.
 
 ### Alliance directory (`/alliances`)
 
@@ -53,7 +59,7 @@ This project uses **pnpm 11+** (`packageManager` in `package.json`). See `packag
 - **Head tags:** `src/layouts/Layout.astro` writes canonical, OG and Twitter tags. og:image width/height come from the file in `public/` at build time; images narrower than 600px get a `summary` card.
 - **JSON-LD:** `Layout` always emits Organization, WebSite and the VideoGame (`#game`), plus a WebPage unless the page passes its own page node. Pass `breadcrumbs` to `Layout` to get a BreadcrumbList that matches the visible `<Breadcrumbs>`. Item pages: `src/utils/itemPageSchema.ts` (ItemPage `about` the item and the game, BreadcrumbList, FAQPage for the FAQ shown on the page). Lists: `buildCollectionStructuredData` in `src/utils/structuredData.ts`. Blog posts: `src/utils/guideStructuredData.ts` (WebPage + BlogPosting, FAQPage only when the post shows a FAQ).
 - **Don't** mark up crafting, refining or cooking as schema.org `Recipe`/`NutritionInformation` (that type is for food; Google can treat it as spammy structured data), and don't add `HowTo` (no rich results) or `SpeakableSpecification` (news publishers only). FAQPage only where the questions are visible.
-- **Audit:** after `pnpm run build`, run `node scripts/seo-audit.mjs --out seo-report.json --vocab <schemaorg-current-https.jsonld>` (vocabulary from https://schema.org/version/latest/schemaorg-current-https.jsonld; optional). It checks titles, descriptions, OG tags, canonicals, h1s, sitemap/robots, JSON-LD against schema.org, internal links and click depth over `dist/client/`. It's a report and always exits 0.
+- **Audit:** after `pnpm run build`, run `node scripts/seo-audit.mjs --out seo-report.json --vocab <schemaorg-current-https.jsonld>` (vocabulary from https://schema.org/version/latest/schemaorg-current-https.jsonld; optional). It checks titles, descriptions, OG tags, canonicals, h1s, sitemap/robots, JSON-LD against schema.org, internal links and click depth over `dist/client/`. It's a report and always exits 0. Its rules for this site (brand suffix, banned JSON-LD types, the on-demand `/alliances` routes, page types) live in `site-tooling.config.mjs`.
 
 ### Accessibility
 
