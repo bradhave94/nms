@@ -7,6 +7,15 @@ const columns = [
 	{ title: 'Catalogs', items: catalogsNav },
 	{ title: 'More', items: [...moreNav, ...footerExtraNav] },
 ];
+
+// BH's other game reference sites (this site's own entry is left out).
+const sisterSites = [
+	{ name: 'Subnautica Database', href: 'https://www.subnauticadatabase.com/' },
+	{ name: 'Valheim Database', href: 'https://www.valheimdatabase.com/' },
+	{ name: 'Enshrouded Database', href: 'https://enshroudeddatabase.com/' },
+	{ name: 'Dragonwilds Database', href: 'https://www.dragonwildsdatabase.com/' },
+	{ name: 'Abiotic Factor Database', href: 'https://www.abioticdatabase.com/' },
+];
 ---
 
 <footer class="border-t border-[#141c26] bg-[#05080b] lg:pl-56">
@@ -23,6 +32,14 @@ const columns = [
 				</div>
 			))}
 		</nav>
+		<div class="mt-8">
+			<p id="sister-sites-title" class="m-0 mb-3 text-sm font-semibold text-dim">More game databases</p>
+			<ul class="m-0 flex list-none flex-wrap gap-x-6 gap-y-1.5 p-0" aria-labelledby="sister-sites-title">
+				{sisterSites.map((site) => (
+					<li><a href={site.href} target="_blank" rel="noopener" class="inline-flex min-h-6 items-center text-[0.95rem] text-ink hover:text-accent hover:underline underline-offset-2">{site.name}<span class="sr-only"> (opens in a new tab)</span></a></li>
+				))}
+			</ul>
+		</div>
 		<div class="mt-10 border-t border-line pt-6 text-center">
 			<p class="m-0 text-sm text-dim">
 				No Man's Sky Recipes · Updated to{' '}
