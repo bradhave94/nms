@@ -89,7 +89,7 @@ const amountText = (low: number, high: number): string =>
 	low === high ? low.toLocaleString('en-US') : `${low.toLocaleString('en-US')}–${high.toLocaleString('en-US')}`;
 
 export type ObtainLine =
-	| { kind: 'text'; text: string }
+	| { kind: 'text'; text: string; href?: string }
 	| { kind: 'exchange'; option: string | null; cost: CostLabel; currency: boolean; amount: string; who: string; followUp: boolean };
 
 /** One line per way to get an item: identical sources are merged (an item sold in many shop rotations reads once). */
@@ -110,7 +110,11 @@ export function obtainLines(itemId: string): ObtainLine[] {
 				const phases = shownPhases.length ? `, phase ${shownPhases.join(', ')}` : '';
 				const name = expedition ? `: ${expedition.Name}` : '';
 				const switchOnly = source.SwitchExclusive ? ' (Nintendo Switch only)' : '';
-				push(`exp-${number}-${shownPhases}-${switchOnly}`, { kind: 'text', text: `Expedition ${number}${name} reward${phases}${switchOnly}` });
+				push(`exp-${number}-${shownPhases}-${switchOnly}`, {
+					kind: 'text',
+					text: `Expedition ${number}${name} reward${phases}${switchOnly}`,
+					href: expedition ? `/expeditions/#expedition-${number}` : undefined,
+				});
 			}
 		} else if (source.Type === 'Twitch') {
 			push('twitch', { kind: 'text', text: 'Twitch drop reward' });

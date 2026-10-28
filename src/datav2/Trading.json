@@ -1,0 +1,172 @@
+{
+	"Economies": [
+		{
+			"Id": "Mining",
+			"Names": [
+				"Mining",
+				"Minerals",
+				"Ore Extraction",
+				"Prospecting"
+			],
+			"Sells": "Mineral",
+			"Needs": "Energy",
+			"MinSellingPriceMultiplier": 0.7,
+			"MaxSellingPriceMultiplier": 0.9,
+			"MinBuyingPriceMultiplier": 1.4,
+			"MaxBuyingPriceMultiplier": 1.8,
+			"MinBuyingPriceMultiplierSurge": 1.8,
+			"MaxBuyingPriceMultiplierSurge": 2.8
+		},
+		{
+			"Id": "HighTech",
+			"Names": [
+				"High Tech",
+				"Technology",
+				"Nano-construction",
+				"Engineering"
+			],
+			"Sells": "Tech",
+			"Needs": "Component",
+			"MinSellingPriceMultiplier": 0.7,
+			"MaxSellingPriceMultiplier": 0.9,
+			"MinBuyingPriceMultiplier": 1.4,
+			"MaxBuyingPriceMultiplier": 1.8,
+			"MinBuyingPriceMultiplierSurge": 1.8,
+			"MaxBuyingPriceMultiplierSurge": 2.8
+		},
+		{
+			"Id": "Trading",
+			"Names": [
+				"Mercantile",
+				"Trading",
+				"Shipping",
+				"Commercial"
+			],
+			"Sells": "Commodity",
+			"Needs": "Exotic",
+			"MinSellingPriceMultiplier": 0.7,
+			"MaxSellingPriceMultiplier": 0.9,
+			"MinBuyingPriceMultiplier": 1.4,
+			"MaxBuyingPriceMultiplier": 1.8,
+			"MinBuyingPriceMultiplierSurge": 1.8,
+			"MaxBuyingPriceMultiplierSurge": 2.8
+		},
+		{
+			"Id": "Manufacturing",
+			"Names": [
+				"Manufacturing",
+				"Industrial",
+				"Construction",
+				"Mass Production"
+			],
+			"Sells": "Component",
+			"Needs": "Mineral",
+			"MinSellingPriceMultiplier": 0.7,
+			"MaxSellingPriceMultiplier": 0.9,
+			"MinBuyingPriceMultiplier": 1.4,
+			"MaxBuyingPriceMultiplier": 1.8,
+			"MinBuyingPriceMultiplierSurge": 1.8,
+			"MaxBuyingPriceMultiplierSurge": 2.8
+		},
+		{
+			"Id": "Fusion",
+			"Names": [
+				"Advanced Materials",
+				"Alchemical",
+				"Metal Processing",
+				"Material Fusion"
+			],
+			"Sells": "Alloy",
+			"Needs": "Commodity",
+			"MinSellingPriceMultiplier": 0.7,
+			"MaxSellingPriceMultiplier": 0.9,
+			"MinBuyingPriceMultiplier": 1.4,
+			"MaxBuyingPriceMultiplier": 1.8,
+			"MinBuyingPriceMultiplierSurge": 1.8,
+			"MaxBuyingPriceMultiplierSurge": 2.8
+		},
+		{
+			"Id": "Scientific",
+			"Names": [
+				"Scientific",
+				"Research",
+				"Experimental",
+				"Mathematical"
+			],
+			"Sells": "Exotic",
+			"Needs": "Alloy",
+			"MinSellingPriceMultiplier": 0.7,
+			"MaxSellingPriceMultiplier": 0.9,
+			"MinBuyingPriceMultiplier": 1.4,
+			"MaxBuyingPriceMultiplier": 1.8,
+			"MinBuyingPriceMultiplierSurge": 1.8,
+			"MaxBuyingPriceMultiplierSurge": 2.8
+		},
+		{
+			"Id": "PowerGeneration",
+			"Names": [
+				"Power Generation",
+				"Energy Supply",
+				"Fuel Generation",
+				"High Voltage"
+			],
+			"Sells": "Energy",
+			"Needs": "Tech",
+			"MinSellingPriceMultiplier": 0.7,
+			"MaxSellingPriceMultiplier": 0.9,
+			"MinBuyingPriceMultiplier": 1.4,
+			"MaxBuyingPriceMultiplier": 1.8,
+			"MinBuyingPriceMultiplierSurge": 1.8,
+			"MaxBuyingPriceMultiplierSurge": 2.8
+		}
+	],
+	"Categories": {
+		"Mineral": {
+			"Name": "MINING COMMODITY",
+			"ProductMultiplierChangePer100": 0.3,
+			"SubstanceMultiplierChangePer100": 0.03
+		},
+		"Tech": {
+			"Name": "TECHNOLOGY PARTS",
+			"ProductMultiplierChangePer100": 0.3,
+			"SubstanceMultiplierChangePer100": 0.03
+		},
+		"Commodity": {
+			"Name": "TRADE GOODS",
+			"ProductMultiplierChangePer100": 0.3,
+			"SubstanceMultiplierChangePer100": 0.03
+		},
+		"Component": {
+			"Name": "INDUSTRIAL COMPONENTS",
+			"ProductMultiplierChangePer100": 0.3,
+			"SubstanceMultiplierChangePer100": 0.03
+		},
+		"Alloy": {
+			"Name": "ADVANCED MATERIALS",
+			"ProductMultiplierChangePer100": 0.3,
+			"SubstanceMultiplierChangePer100": 0.03
+		},
+		"Exotic": {
+			"Name": "SCIENTIFIC COMPONENTS",
+			"ProductMultiplierChangePer100": 0.3,
+			"SubstanceMultiplierChangePer100": 0.03
+		},
+		"Energy": {
+			"Name": "TRADABLE ENERGY SOURCE",
+			"ProductMultiplierChangePer100": 0.3,
+			"SubstanceMultiplierChangePer100": 0.03
+		},
+		"None": {
+			"Name": null,
+			"ProductMultiplierChangePer100": 0.03,
+			"SubstanceMultiplierChangePer100": 0.001
+		},
+		"SpecialShop": {
+			"Name": null,
+			"ProductMultiplierChangePer100": 0.3,
+			"SubstanceMultiplierChangePer100": 0.03
+		}
+	},
+	"MinTradingMultiplier": 0.2,
+	"MaxTradingMultiplier": 3.0
+}

@@ -19,6 +19,7 @@
 		"test:new-items": "node --experimental-strip-types scripts/check-new-items.mjs",
 		"test:player-unlocks": "node scripts/check-player-unlocks.mjs",
 		"test:reference-pages": "node scripts/check-reference-pages.mjs",
+		"test:progression-pages": "node scripts/check-progression-pages.mjs",
 		"test:route-eligible": "node --experimental-strip-types scripts/check-route-eligible.mjs",
 		"test:data-import": "node scripts/check-import-safety.mjs",
 		"test:power": "node --experimental-strip-types scripts/check-base-power.mjs",

@@ -1,0 +1,108 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
+import { journeyRanks, ladderAnchor, milestoneLadders, standingLadders, type LadderView } from '@utils/progressionData';
+import '../assets/css/creatures.css';
+
+const milestones = milestoneLadders();
+const standings = standingLadders();
+const format = (ladder: LadderView, value: number) => `${value.toLocaleString('en-US')}${ladder.unit}`;
+
+const title = withSiteTitle("Milestones, Standing and Journey Ranks in No Man's Sky");
+const description = `The ranks in No Man's Sky's milestone terminal and what each takes, faction and guild standing ranks, and the ${journeyRanks.length} Journey ranks from ${journeyRanks[0]?.name} to ${journeyRanks.at(-1)?.name}.`;
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Milestones and ranks' }];
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/milestones/', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: "No Man's Sky milestones and ranks",
+	collectionDescription: description,
+	collectionPath: '/milestones',
+	currentPage: 1,
+	breadcrumbs,
+	items: [
+		{ name: 'Journey ranks', url: `${canonicalUrl}#journey`, position: 1 },
+		...[...milestones, ...standings].map((ladder, index) => ({ name: ladder.name, url: `${canonicalUrl}#${ladderAnchor(ladder.id)}`, position: index + 2 })),
+	],
+});
+---
+
+<Layout {title} {description} slug="milestones" {structuredData} {breadcrumbs}>
+	<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+	<div class="cr-wrap">
+		<header class="cr-head">
+			<div class="min-w-0">
+				<h1 class="cr-title">Milestones and ranks</h1>
+				<p class="cr-lead">
+					The ranks in the game's milestone terminal, faction and guild standing, and the Journey, with what it takes to reach each one. Many ranks also unlock a <a class="link" href="/titles/">title</a>.
+				</p>
+			</div>
+		</header>
+
+		<section class="cr-section" id="journey" aria-labelledby="journey-heading">
+			<h2 class="section-title" id="journey-heading">Journey ranks <span class="count tabular">{journeyRanks.length}</span></h2>
+			<p>Your overall Journey rank and the points each one needs.</p>
+			<table class="cr-table stack ms-table">
+				<thead><tr><th scope="col">Rank</th><th scope="col" class="num">Points</th></tr></thead>
+				<tbody>
+					{journeyRanks.map((rank) => (
+						<tr><th scope="row">{rank.name}</th><td data-label="Points" class="num">{rank.points}</td></tr>
+					))}
+				</tbody>
+			</table>
+		</section>
+
+		<section class="cr-section" id="milestones" aria-labelledby="milestones-heading">
+			<h2 class="section-title" id="milestones-heading">Milestones <span class="count tabular">{milestones.length}</span></h2>
+			<p>The ladders in the game's milestone terminal, with the total needed for each rank.</p>
+			<div class="ms-grid">
+				{milestones.map((ladder) => (
+					<div id={ladderAnchor(ladder.id)}>
+						<h3 class="cr-h3">{ladder.name}</h3>
+						{ladder.counts && <p class="ms-counts">{ladder.counts}</p>}
+						{ladder.note && <p class="ms-counts">{ladder.note}</p>}
+						<table class="cr-table ms-table">
+							<thead><tr><th scope="col">Rank</th><th scope="col" class="num">Needs</th></tr></thead>
+							<tbody>
+								{ladder.levels.map((level) => (
+									<tr><th scope="row">{level.name}</th><td class="num">{format(ladder, level.value)}</td></tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				))}
+			</div>
+		</section>
+
+		<section class="cr-section" id="standing" aria-labelledby="standing-heading">
+			<h2 class="section-title" id="standing-heading">Standing <span class="count tabular">{standings.length}</span></h2>
+			<p>Ranks with each alien race, guild and the Outlaws, and the standing each one needs. Negative standing gives the hostile ranks.</p>
+			<div class="ms-grid">
+				{standings.map((ladder) => (
+					<div id={ladderAnchor(ladder.id)}>
+						<h3 class="cr-h3">{ladder.name}</h3>
+						<table class="cr-table ms-table">
+							<thead><tr><th scope="col">Rank</th><th scope="col" class="num">Standing</th></tr></thead>
+							<tbody>
+								{ladder.levels.map((level) => (
+									<tr><th scope="row">{level.name}</th><td class="num">{format(ladder, level.value)}</td></tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+				))}
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.ms-grid { display: grid; gap: 0 1.5rem; grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr)); }
+	.ms-grid .cr-h3 { margin-top: 1rem; font-size: 1.05rem; }
+	.ms-grid > div { scroll-margin-top: 5rem; }
+	.ms-counts { margin: -.35rem 0 .5rem; font-size: .875rem; color: var(--color-dim); }
+</style>

@@ -1,0 +1,3522 @@
+{
+	"Ladders": [
+		{
+			"Id": "DIST_WALKED",
+			"Title": "On-foot Exploration",
+			"Notify": "Travelled %STAT%",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "First Steps",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Setting Out",
+					"Value": 8000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Drifter",
+					"Value": 10000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambulatory",
+					"Value": 15000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Wayfarer",
+					"Value": 20000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Rambler",
+					"Value": 25000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Hiker",
+					"Value": 30000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Nomad",
+					"Value": 40000.0,
+					"Trophy": "PIONEER2"
+				},
+				{
+					"Name": "Wanderer",
+					"Value": 50000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Expeditionist",
+					"Value": 75000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Adventurer",
+					"Value": 100000.0,
+					"Trophy": "THEEVERLASTING"
+				}
+			]
+		},
+		{
+			"Id": "ALIENS_MET",
+			"Title": "Alien Encounters",
+			"Notify": "Met %STAT% Aliens",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Lonesome",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Not Alone",
+					"Value": 10,
+					"Trophy": "TAXONOMIST"
+				},
+				{
+					"Name": "Visitor",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Familiar",
+					"Value": 35,
+					"Trophy": null
+				},
+				{
+					"Name": "Famous",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Emissary",
+					"Value": 45,
+					"Trophy": null
+				},
+				{
+					"Name": "Diplomat",
+					"Value": 50,
+					"Trophy": "ARCHIVIST"
+				},
+				{
+					"Name": "Envoy",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Consul",
+					"Value": 70,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 80,
+					"Trophy": "ATTENBORG"
+				}
+			]
+		},
+		{
+			"Id": "WORDS_LEARNT",
+			"Title": "Words Collected",
+			"Notify": "Learned %STAT% words",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Babbler",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Beginner",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Student",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Comprehended",
+					"Value": 10,
+					"Trophy": "CONFUSED"
+				},
+				{
+					"Name": "Scholar",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Fluent",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Interpreter",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Linguist",
+					"Value": 50,
+					"Trophy": "ALMOSTTHERE"
+				},
+				{
+					"Name": "Polyglot",
+					"Value": 80,
+					"Trophy": null
+				},
+				{
+					"Name": "Universal Translator",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Babelfish",
+					"Value": 150,
+					"Trophy": "BABELFISH"
+				}
+			]
+		},
+		{
+			"Id": "MONEY",
+			"Title": "Units Accrued",
+			"Notify": "Earned %STAT% Units",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "New Business",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Space Trucker",
+					"Value": 75000,
+					"Trophy": null
+				},
+				{
+					"Name": "Trader",
+					"Value": 100000,
+					"Trophy": null
+				},
+				{
+					"Name": "Moneymaker",
+					"Value": 150000,
+					"Trophy": "LIMITEDFUNDS"
+				},
+				{
+					"Name": "Merchant",
+					"Value": 250000,
+					"Trophy": null
+				},
+				{
+					"Name": "Enterprising",
+					"Value": 500000,
+					"Trophy": null
+				},
+				{
+					"Name": "Entrepreneur",
+					"Value": 750000,
+					"Trophy": null
+				},
+				{
+					"Name": "Investor",
+					"Value": 1000000,
+					"Trophy": "SPACETRUCKER"
+				},
+				{
+					"Name": "Capitalist",
+					"Value": 1250000,
+					"Trophy": null
+				},
+				{
+					"Name": "Tycoon",
+					"Value": 1500000,
+					"Trophy": null
+				},
+				{
+					"Name": "Magnate",
+					"Value": 2000000,
+					"Trophy": "SHIPPINGMAGNATE"
+				}
+			]
+		},
+		{
+			"Id": "ENEMIES_KILLED",
+			"Title": "Ships Destroyed",
+			"Notify": "Destroyed %STAT% Starships",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Untested",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Novice",
+					"Value": 5,
+					"Trophy": "THUG"
+				},
+				{
+					"Name": "Nuisance",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Scrapper",
+					"Value": 15,
+					"Trophy": "THUG"
+				},
+				{
+					"Name": "Troublemaker",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Fighter",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Menace",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Notorious",
+					"Value": 50,
+					"Trophy": "WARCRIME"
+				},
+				{
+					"Name": "Dangerous",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Expert",
+					"Value": 70,
+					"Trophy": null
+				},
+				{
+					"Name": "Legend",
+					"Value": 80,
+					"Trophy": "GENOCIDAL"
+				}
+			]
+		},
+		{
+			"Id": "SENTINEL_KILLS",
+			"Title": "Sentinels Destroyed",
+			"Notify": "Destroyed %STAT% Sentinels",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Untroubled",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Novice",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Targeted Anomaly",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Hardened",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Radical",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Called by Fire",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Undying",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Champion",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Crusader",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Cleanser of Worlds",
+					"Value": 70,
+					"Trophy": null
+				},
+				{
+					"Name": "Destroyer of Glass",
+					"Value": 80,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "LONGEST_LIFE_EX",
+			"Title": "Extreme Survival",
+			"Notify": "Survived %STAT% on extreme worlds",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Hopeful",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Undaunted",
+					"Value": 900.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Resolute",
+					"Value": 2700.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Determined",
+					"Value": 4500.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Spirited",
+					"Value": 8000.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Persistent",
+					"Value": 12960.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Rugged",
+					"Value": 18720.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Robust",
+					"Value": 27000.0,
+					"Trophy": "GETTINGON"
+				},
+				{
+					"Name": "Indefatigable",
+					"Value": 32400.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Survivalist",
+					"Value": 37800.0,
+					"Trophy": null
+				},
+				{
+					"Name": "Everlasting",
+					"Value": 43200.0,
+					"Trophy": "METHUSELAH"
+				}
+			]
+		},
+		{
+			"Id": "DIST_WARP",
+			"Title": "Space Exploration",
+			"Notify": "Warped %STAT% times",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Stargazer",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Trailblazer",
+					"Value": 5,
+					"Trophy": "TRAILBLAZER"
+				},
+				{
+					"Name": "Scout",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Warp Engaged",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Surveyor",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Rover",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Voyager",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Pioneer",
+					"Value": 40,
+					"Trophy": "PIONEER"
+				},
+				{
+					"Name": "Explorer",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Overseer",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Discoverer",
+					"Value": 75,
+					"Trophy": "DISCOVERER"
+				}
+			]
+		},
+		{
+			"Id": "DISC_ALL_CREATU",
+			"Title": "Planetary Zoology",
+			"Notify": "Discovered all species on %STAT% planets",
+			"ShowInTerminal": true,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Amateur",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Naturalist",
+					"Value": 1,
+					"Trophy": "NATURALIST"
+				},
+				{
+					"Name": "Collector",
+					"Value": 2,
+					"Trophy": null
+				},
+				{
+					"Name": "Scanner",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Analyst",
+					"Value": 4,
+					"Trophy": null
+				},
+				{
+					"Name": "Researcher",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Compiler",
+					"Value": 6,
+					"Trophy": null
+				},
+				{
+					"Name": "Archivist",
+					"Value": 7,
+					"Trophy": "CLASSIFIER"
+				},
+				{
+					"Name": "Classifier",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Zoologist",
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": "Encyclopedia",
+					"Value": 10,
+					"Trophy": "ENCYCLOPAEDIA"
+				}
+			]
+		},
+		{
+			"Id": "TRA_STANDING",
+			"Title": null,
+			"Notify": "GEK RANK %STAT% / 9",
+			"ShowInTerminal": false,
+			"UseRank": true,
+			"Levels": [
+				{
+					"Name": "Rival",
+					"Value": -5,
+					"Trophy": null
+				},
+				{
+					"Name": "Competitor",
+					"Value": -2,
+					"Trophy": null
+				},
+				{
+					"Name": "Customer",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Client",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Valued Customer",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Colleague",
+					"Value": 14,
+					"Trophy": null
+				},
+				{
+					"Name": "Partner",
+					"Value": 21,
+					"Trophy": null
+				},
+				{
+					"Name": "Friend",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Best Friend",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Most Favoured",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Trade Lord",
+					"Value": 100,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "WAR_STANDING",
+			"Title": null,
+			"Notify": "VY'KEEN RANK %STAT% / 9",
+			"ShowInTerminal": false,
+			"UseRank": true,
+			"Levels": [
+				{
+					"Name": "Enemy",
+					"Value": -5,
+					"Trophy": null
+				},
+				{
+					"Name": "Detractor",
+					"Value": -2,
+					"Trophy": null
+				},
+				{
+					"Name": "Neutral",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Accomplice",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Ally",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Close Ally",
+					"Value": 14,
+					"Trophy": null
+				},
+				{
+					"Name": "Comrade",
+					"Value": 21,
+					"Trophy": null
+				},
+				{
+					"Name": "Preceptor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Adjutant",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Commandant",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Templar",
+					"Value": 100,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "EXP_STANDING",
+			"Title": null,
+			"Notify": "KORVAX RANK %STAT% / 9",
+			"ShowInTerminal": false,
+			"UseRank": true,
+			"Levels": [
+				{
+					"Name": "Annoyance",
+					"Value": -5,
+					"Trophy": null
+				},
+				{
+					"Name": "Irritation",
+					"Value": -2,
+					"Trophy": null
+				},
+				{
+					"Name": "Unstudied",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Point of Interest",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Test Subject",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Research Focus",
+					"Value": 14,
+					"Trophy": null
+				},
+				{
+					"Name": "Trial Candidate",
+					"Value": 21,
+					"Trophy": null
+				},
+				{
+					"Name": "Significance",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Saviour",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Singularity",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Traveller of the Atlas",
+					"Value": 100,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "BUI_STANDING",
+			"Title": null,
+			"Notify": "AUTOPHAGE RANK %STAT% / 9",
+			"ShowInTerminal": false,
+			"UseRank": true,
+			"Levels": [
+				{
+					"Name": "Convergence-Waste",
+					"Value": -5,
+					"Trophy": null
+				},
+				{
+					"Name": "Banished",
+					"Value": -2,
+					"Trophy": null
+				},
+				{
+					"Name": "Unregistered",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Pre-built",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Returned",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Reclaimed",
+					"Value": 14,
+					"Trophy": null
+				},
+				{
+					"Name": "Machinist",
+					"Value": 21,
+					"Trophy": null
+				},
+				{
+					"Name": "Disruptor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Artificer",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Void-Eyes",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Wild Spark",
+					"Value": 100,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "TGUILD_STAND",
+			"Title": null,
+			"Notify": "TRADERS GUILD RANK %STAT% / 9",
+			"ShowInTerminal": false,
+			"UseRank": true,
+			"Levels": [
+				{
+					"Name": "Hated",
+					"Value": -5,
+					"Trophy": null
+				},
+				{
+					"Name": "Hostile",
+					"Value": -2,
+					"Trophy": null
+				},
+				{
+					"Name": "Unknown",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Apprentice",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 14,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 21,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Elder",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 100,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "EGUILD_STAND",
+			"Title": null,
+			"Notify": "EXPLORERS GUILD RANK %STAT% / 9",
+			"ShowInTerminal": false,
+			"UseRank": true,
+			"Levels": [
+				{
+					"Name": "Hated",
+					"Value": -5,
+					"Trophy": null
+				},
+				{
+					"Name": "Hostile",
+					"Value": -2,
+					"Trophy": null
+				},
+				{
+					"Name": "Unknown",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Apprentice",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 14,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 21,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Elder",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 100,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "WGUILD_STAND",
+			"Title": null,
+			"Notify": "MERCENARIES GUILD RANK %STAT% / 9",
+			"ShowInTerminal": false,
+			"UseRank": true,
+			"Levels": [
+				{
+					"Name": "Hated",
+					"Value": -5,
+					"Trophy": null
+				},
+				{
+					"Name": "Hostile",
+					"Value": -2,
+					"Trophy": null
+				},
+				{
+					"Name": "Unknown",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Apprentice",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 14,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 21,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Elder",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 100,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "TUTORIAL",
+			"Title": null,
+			"Notify": "Accomplished",
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Starship Repair",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "Starship Launch",
+					"Value": 2,
+					"Trophy": null
+				},
+				{
+					"Name": "Enable Galactic Travel",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 4,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 9,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "TWORDS_LEARNT",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Incomprehensible",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Beginner",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Student",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Understood",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Familiar",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Conversationalist",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 250,
+					"Trophy": null
+				},
+				{
+					"Name": "Interpreter",
+					"Value": 350,
+					"Trophy": null
+				},
+				{
+					"Name": "Scholar",
+					"Value": 450,
+					"Trophy": null
+				},
+				{
+					"Name": "Linguist",
+					"Value": 550,
+					"Trophy": null
+				},
+				{
+					"Name": "Universal Translator",
+					"Value": 650,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "WWORDS_LEARNT",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Incomprehensible",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Beginner",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Student",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Understood",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Familiar",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Conversationalist",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": "Fluent",
+					"Value": 250,
+					"Trophy": null
+				},
+				{
+					"Name": "Interpreter",
+					"Value": 350,
+					"Trophy": null
+				},
+				{
+					"Name": "Scholar",
+					"Value": 450,
+					"Trophy": null
+				},
+				{
+					"Name": "Linguist",
+					"Value": 550,
+					"Trophy": null
+				},
+				{
+					"Name": "Universal Translator",
+					"Value": 650,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "EWORDS_LEARNT",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Incomprehensible",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Beginner",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Student",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Understood",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Familiar",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Conversationalist",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": "Fluent",
+					"Value": 250,
+					"Trophy": null
+				},
+				{
+					"Name": "Interpreter",
+					"Value": 350,
+					"Trophy": null
+				},
+				{
+					"Name": "Scholar",
+					"Value": 450,
+					"Trophy": null
+				},
+				{
+					"Name": "Linguist",
+					"Value": 550,
+					"Trophy": null
+				},
+				{
+					"Name": "Universal Translator",
+					"Value": 650,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "BWORDS_LEARNT",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Incomprehensible",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Beginner",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Student",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Understood",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Familiar",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Conversationalist",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": "Fluent",
+					"Value": 250,
+					"Trophy": null
+				},
+				{
+					"Name": "Interpreter",
+					"Value": 350,
+					"Trophy": null
+				},
+				{
+					"Name": "Scholar",
+					"Value": 450,
+					"Trophy": null
+				},
+				{
+					"Name": "Linguist",
+					"Value": 550,
+					"Trophy": null
+				},
+				{
+					"Name": "Universal Translator",
+					"Value": 650,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "TSEEN_SYSTEMS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Uncharted",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Trailblazer",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Scout",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Warp Engaged",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Surveyor",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Rover",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Voyager",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Pioneer",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Explorer",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Overseer",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Discoverer",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "WSEEN_SYSTEMS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Uncharted",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Trailblazer",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Scout",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Warp Engaged",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Surveyor",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Rover",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Voyager",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Pioneer",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Explorer",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Overseer",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Discoverer",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "ESEEN_SYSTEMS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Uncharted",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Trailblazer",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Scout",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Warp Engaged",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Surveyor",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Rover",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Voyager",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Pioneer",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Explorer",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Overseer",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Discoverer",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "TDONE_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Outsider",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Advisor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Veteran",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "WDONE_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Outsider",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Advisor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Veteran",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "EDONE_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Outsider",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Advisor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Veteran",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "BDONE_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Outsider",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Advisor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Veteran",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "TGDONE_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Outsider",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Advisor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Veteran",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "WGDONE_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Outsider",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Advisor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Veteran",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "EGDONE_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Outsider",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Advisor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Veteran",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "NEXUS_STAND",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "NEXUS_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": null,
+					"Value": 0,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PLANTS_PLANTED",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Soft Handed",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Forager",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Farmhand",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Harvester",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Exo-Cropper",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Agriculturist",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Botanist",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Soil Warrior",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Astro-Agronomy",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Cropmaster",
+					"Value": 70,
+					"Trophy": null
+				},
+				{
+					"Name": "Born of Soil",
+					"Value": 80,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "RARE_SCANNED",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Uneducated",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Naturalist",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Collector",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Scanner",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Analyst",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Researcher",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Compiler",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Archivist",
+					"Value": 35,
+					"Trophy": null
+				},
+				{
+					"Name": "Classifier",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Zoologist",
+					"Value": 45,
+					"Trophy": null
+				},
+				{
+					"Name": "Encyclopedia",
+					"Value": 50,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PIRATES_KILLED",
+			"Title": "Ships Destroyed",
+			"Notify": "Destroyed %STAT% Starships",
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Untested",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Novice",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Nuisance",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Scrapper",
+					"Value": 15,
+					"Trophy": "THUG"
+				},
+				{
+					"Name": "Troublemaker",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Fighter",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Menace",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Notorious",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Dangerous",
+					"Value": 60,
+					"Trophy": null
+				},
+				{
+					"Name": "Expert",
+					"Value": 70,
+					"Trophy": null
+				},
+				{
+					"Name": "Legend",
+					"Value": 80,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PIRATE_MISSIONS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Outsider",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Initiate",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Recognised",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Journeyman",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Associate",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Senior",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Advisor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Veteran",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Exalted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ambassador",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PIRATE_STAND",
+			"Title": null,
+			"Notify": "OUTLAWS RANK %STAT% / 9",
+			"ShowInTerminal": false,
+			"UseRank": true,
+			"Levels": [
+				{
+					"Name": "Traitor",
+					"Value": -5,
+					"Trophy": null
+				},
+				{
+					"Name": "Turncoat",
+					"Value": -2,
+					"Trophy": null
+				},
+				{
+					"Name": "Unknown",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Bilge Rat",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Privateer",
+					"Value": 12,
+					"Trophy": null
+				},
+				{
+					"Name": "Corsair",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Buccaneer",
+					"Value": 32,
+					"Trophy": null
+				},
+				{
+					"Name": "Scourge",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Legend",
+					"Value": 75,
+					"Trophy": null
+				},
+				{
+					"Name": "Dread-Pirate",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Admiral of the Black",
+					"Value": 150,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PROC_PRODS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Empty Handed",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "On the Hunt",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "Digger",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Seeker",
+					"Value": 8,
+					"Trophy": null
+				},
+				{
+					"Name": "Collector",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Connoisseur",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Hoarder",
+					"Value": 35,
+					"Trophy": null
+				},
+				{
+					"Name": "Treasure Hunter",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ancient Restoration",
+					"Value": 65,
+					"Trophy": null
+				},
+				{
+					"Name": "Gifts from History",
+					"Value": 80,
+					"Trophy": null
+				},
+				{
+					"Name": "All that Glitters",
+					"Value": 100,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "FIENDS_KILLED",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Innocent",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Scarred",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Stained",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Tainted",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Haunted",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Consumed",
+					"Value": 75,
+					"Trophy": null
+				},
+				{
+					"Name": "Fiendish",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Eradicator",
+					"Value": 125,
+					"Trophy": null
+				},
+				{
+					"Name": "Annihilator",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": "Exterminator",
+					"Value": 200,
+					"Trophy": null
+				},
+				{
+					"Name": "Face of Death",
+					"Value": 250,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "DISC_FLORA",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Plant Blind",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Hobby Scanner",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Enthusiast",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Green Fingers",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Plant Hunter",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Ecologist",
+					"Value": 75,
+					"Trophy": null
+				},
+				{
+					"Name": "Floral Collector",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Botanical Archive",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": "Seed Bank",
+					"Value": 200,
+					"Trophy": null
+				},
+				{
+					"Name": "Exobotanist",
+					"Value": 250,
+					"Trophy": null
+				},
+				{
+					"Name": "Verdant Horde",
+					"Value": 300,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "NANITES_EVER",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Untainted",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Glittered",
+					"Value": 250,
+					"Trophy": null
+				},
+				{
+					"Name": "Shifting Clusters",
+					"Value": 500,
+					"Trophy": null
+				},
+				{
+					"Name": "Creeping Light",
+					"Value": 1000,
+					"Trophy": null
+				},
+				{
+					"Name": "Like Sand",
+					"Value": 5000,
+					"Trophy": null
+				},
+				{
+					"Name": "Harvest of Light",
+					"Value": 10000,
+					"Trophy": null
+				},
+				{
+					"Name": "Cluster Horde",
+					"Value": 20000,
+					"Trophy": null
+				},
+				{
+					"Name": "Impossibly Fragmented",
+					"Value": 40000,
+					"Trophy": null
+				},
+				{
+					"Name": "Drawn to Glass",
+					"Value": 60000,
+					"Trophy": null
+				},
+				{
+					"Name": "Awash with Foam",
+					"Value": 80000,
+					"Trophy": null
+				},
+				{
+					"Name": "Reality Grains",
+					"Value": 100000,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "SMUGGLE_VALUE",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Good as Gold",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Clerical Errors",
+					"Value": 10000,
+					"Trophy": null
+				},
+				{
+					"Name": "On the Run",
+					"Value": 100000,
+					"Trophy": null
+				},
+				{
+					"Name": "Fence",
+					"Value": 200000,
+					"Trophy": null
+				},
+				{
+					"Name": "Bootlegger",
+					"Value": 500000,
+					"Trophy": null
+				},
+				{
+					"Name": "Smuggler",
+					"Value": 1000000,
+					"Trophy": null
+				},
+				{
+					"Name": "Lawbreaker",
+					"Value": 2000000,
+					"Trophy": null
+				},
+				{
+					"Name": "The Agent",
+					"Value": 5000000,
+					"Trophy": null
+				},
+				{
+					"Name": "Master Smuggler",
+					"Value": 10000000,
+					"Trophy": null
+				},
+				{
+					"Name": "Uncatchable",
+					"Value": 20000000,
+					"Trophy": null
+				},
+				{
+					"Name": "Blockade Runner",
+					"Value": 50000000,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "WALKERS_KILLED",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Untested",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Beheaded",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "The Coup",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Triumph",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Victory",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Vanquisher",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Battle Hardened",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Unstoppable",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Hunter-Killer",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Ascendant",
+					"Value": 35,
+					"Trophy": null
+				},
+				{
+					"Name": "Pillar of Glass",
+					"Value": 40,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "BOUNTIES",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Harmless",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Mostly Harmless",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "Vigilante",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Bounty Hunter",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Marshal",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Bounty Master",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Bloodhound",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Enforcer",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Retributor",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Deadeye",
+					"Value": 35,
+					"Trophy": null
+				},
+				{
+					"Name": "Star Wolf",
+					"Value": 40,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "TRADERS_KILLED",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Lawful",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Opportunist",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "Nuisance",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Outlaw",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Menace",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Raider",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Marauder",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Star Pirate",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Most Wanted",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Wings of Peril",
+					"Value": 35,
+					"Trophy": null
+				},
+				{
+					"Name": "Lord of Plunder",
+					"Value": 40,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "FPODS_BROKEN",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Lawful",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Opportunist",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Nuisance",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Outlaw",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Menace",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Raider",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Marauder",
+					"Value": 75,
+					"Trophy": null
+				},
+				{
+					"Name": "Star Pirate",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Most Wanted",
+					"Value": 125,
+					"Trophy": null
+				},
+				{
+					"Name": "Wings of Peril",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": "Lord of Plunder",
+					"Value": 200,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "DRONE_SHARDS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Compliant",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Dissonant",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Crystalline",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Sparkling",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Lucid",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Re-Harmonised",
+					"Value": 75,
+					"Trophy": null
+				},
+				{
+					"Name": "Melodic",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Void Seeker",
+					"Value": 125,
+					"Trophy": null
+				},
+				{
+					"Name": "Void Harvester",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": "Radiant",
+					"Value": 175,
+					"Trophy": null
+				},
+				{
+					"Name": "Atlantidian",
+					"Value": 200,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "HEAD_REPAIRS",
+			"Title": null,
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Null",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Fragmented",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "Undeleted",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Defragmented",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Salvaged",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "Reassembled",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Recycled",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Recovered",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Optimised",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Rebuilt",
+					"Value": 35,
+					"Trophy": null
+				},
+				{
+					"Name": "Returned",
+					"Value": 40,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PB_BOSS_WINS",
+			"Title": "Champions Defeated",
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Untested",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Casual",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Amateur Battler",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Rising Star",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "System Contender",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Station Champion",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Stellar Phenomenon",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Sector Celebrity",
+					"Value": 30,
+					"Trophy": null
+				},
+				{
+					"Name": "Regional Defender",
+					"Value": 40,
+					"Trophy": null
+				},
+				{
+					"Name": "Quadrant Elite",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Galactic Champion",
+					"Value": 60,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PB_WINS",
+			"Title": "Arena League Rating",
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Nestling",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Fledgling",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Crested",
+					"Value": 10,
+					"Trophy": null
+				},
+				{
+					"Name": "White Crest",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Amber Crest",
+					"Value": 50,
+					"Trophy": null
+				},
+				{
+					"Name": "Violet Crest",
+					"Value": 75,
+					"Trophy": null
+				},
+				{
+					"Name": "Azure Crest",
+					"Value": 100,
+					"Trophy": null
+				},
+				{
+					"Name": "Scarlet Crest",
+					"Value": 125,
+					"Trophy": null
+				},
+				{
+					"Name": "Onyx Crest",
+					"Value": 150,
+					"Trophy": null
+				},
+				{
+					"Name": "Silver Crest",
+					"Value": 180,
+					"Trophy": null
+				},
+				{
+					"Name": "Gold Crest",
+					"Value": 220,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PB_PETS_MAXED",
+			"Title": "Full Mutations",
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Dabbler",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Trainer",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "Hybridiser",
+					"Value": 2,
+					"Trophy": null
+				},
+				{
+					"Name": "Evolver",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Mutator",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Splicer",
+					"Value": 7,
+					"Trophy": null
+				},
+				{
+					"Name": "Biosynthesiser",
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": "Genewright",
+					"Value": 11,
+					"Trophy": null
+				},
+				{
+					"Name": "Mad Scientist",
+					"Value": 14,
+					"Trophy": null
+				},
+				{
+					"Name": "Xenobiologist",
+					"Value": 17,
+					"Trophy": null
+				},
+				{
+					"Name": "Morphogeneticist",
+					"Value": 20,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "PB_D_NEXUS",
+			"Title": "Oceanus Battles",
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Stranger",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "New Collector",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "Contender",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Challenger",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Adversary",
+					"Value": 7,
+					"Trophy": null
+				},
+				{
+					"Name": "Strategist",
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": "Tactician",
+					"Value": 11,
+					"Trophy": null
+				},
+				{
+					"Name": "Professional",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Battle Idol",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Master",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Grandmaster",
+					"Value": 30,
+					"Trophy": null
+				}
+			]
+		},
+		{
+			"Id": "EGGS_HATCHED",
+			"Title": "Eggs Hatched",
+			"Notify": null,
+			"ShowInTerminal": false,
+			"UseRank": false,
+			"Levels": [
+				{
+					"Name": "Scrambler",
+					"Value": 0,
+					"Trophy": null
+				},
+				{
+					"Name": "Cracker",
+					"Value": 1,
+					"Trophy": null
+				},
+				{
+					"Name": "Fosterer",
+					"Value": 3,
+					"Trophy": null
+				},
+				{
+					"Name": "Broodkeeper",
+					"Value": 5,
+					"Trophy": null
+				},
+				{
+					"Name": "Caretaker",
+					"Value": 7,
+					"Trophy": null
+				},
+				{
+					"Name": "Hatcher",
+					"Value": 9,
+					"Trophy": null
+				},
+				{
+					"Name": "Incubator",
+					"Value": 11,
+					"Trophy": null
+				},
+				{
+					"Name": "Egg Custodian",
+					"Value": 15,
+					"Trophy": null
+				},
+				{
+					"Name": "Shell Warden",
+					"Value": 20,
+					"Trophy": null
+				},
+				{
+					"Name": "Clutch Guardian",
+					"Value": 25,
+					"Trophy": null
+				},
+				{
+					"Name": "Egg Expert",
+					"Value": 30,
+					"Trophy": null
+				}
+			]
+		}
+	],
+	"Journey": [
+		{
+			"Id": "JOURNEY00",
+			"Name": "Apollo",
+			"Points": 0
+		},
+		{
+			"Id": "JOURNEY01",
+			"Name": "Pathfinder",
+			"Points": 5
+		},
+		{
+			"Id": "JOURNEY02",
+			"Name": "Juno",
+			"Points": 10
+		},
+		{
+			"Id": "JOURNEY03",
+			"Name": "Rosetta",
+			"Points": 15
+		},
+		{
+			"Id": "JOURNEY04",
+			"Name": "Cassini",
+			"Points": 20
+		},
+		{
+			"Id": "JOURNEY05",
+			"Name": "Kepler",
+			"Points": 25
+		},
+		{
+			"Id": "JOURNEY06",
+			"Name": "Dawn",
+			"Points": 30
+		},
+		{
+			"Id": "JOURNEY07",
+			"Name": "Curiosity",
+			"Points": 35
+		},
+		{
+			"Id": "JOURNEY08",
+			"Name": "Hubble",
+			"Points": 40
+		},
+		{
+			"Id": "JOURNEY09",
+			"Name": "Viking",
+			"Points": 45
+		},
+		{
+			"Id": "JOURNEY10",
+			"Name": "Magellan",
+			"Points": 50
+		},
+		{
+			"Id": "JOURNEY11",
+			"Name": "Galileo",
+			"Points": 55
+		}
+	]
+}

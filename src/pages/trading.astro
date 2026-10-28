@@ -1,0 +1,121 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
+import { economies, economyName, goodsByCategory, tradeLoops } from '@utils/progressionData';
+import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
+import '../assets/css/creatures.css';
+
+const list = economies();
+const loops = tradeLoops();
+const goods = goodsByCategory();
+const percent = (value: number) => `${Math.round(value * 100)}%`;
+const share = (min: number, max: number) => (min === max ? percent(min) : `${percent(min)}–${percent(max)}`);
+// Every economy uses the same multipliers in 7.10; show them once if so.
+const first = list[0];
+const uniform = list.every((economy) =>
+	(['MinSellingPriceMultiplier', 'MaxSellingPriceMultiplier', 'MinBuyingPriceMultiplier', 'MaxBuyingPriceMultiplier',
+		'MinBuyingPriceMultiplierSurge', 'MaxBuyingPriceMultiplierSurge'] as const).every((key) => economy[key] === first[key]),
+);
+
+const title = withSiteTitle("Trading Routes and Economy Prices in No Man's Sky");
+const description = "What each No Man's Sky economy type sells and needs, the trade loops that link them, how much more a system pays for goods it needs, and the trade goods.";
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Trading' }];
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/trading/', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: "No Man's Sky trading",
+	collectionDescription: description,
+	collectionPath: '/trading',
+	currentPage: 1,
+	breadcrumbs,
+	items: goods.flatMap((group) => group.goods).map((good, index) => ({ name: good.item.name, url: `${siteOrigin}${good.item.url}`, position: index + 1 })),
+});
+---
+
+<Layout {title} {description} slug="trading" {structuredData} {breadcrumbs}>
+	<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+	<div class="cr-wrap">
+		<header class="cr-head">
+			<div class="min-w-0">
+				<h1 class="cr-title">Trading</h1>
+				<p class="cr-lead">
+					Every system's economy sells one kind of trade good and needs another. Buy where a good is sold, then sell it where it's needed.
+				</p>
+			</div>
+		</header>
+
+		<section class="cr-section" id="economies" aria-labelledby="economies-heading">
+			<h2 class="section-title" id="economies-heading">Economy types <span class="count tabular">{list.length}</span></h2>
+			{uniform && (
+				<p>
+					A system sells its own goods for {share(first.MinSellingPriceMultiplier, first.MaxSellingPriceMultiplier)} of their value and pays {share(first.MinBuyingPriceMultiplier, first.MaxBuyingPriceMultiplier)} for the goods it needs, or {share(first.MinBuyingPriceMultiplierSurge, first.MaxBuyingPriceMultiplierSurge)} during a demand surge.
+				</p>
+			)}
+			<table class="cr-table stack">
+				<thead><tr><th scope="col">Economy</th><th scope="col">Also shown as</th><th scope="col">Sells</th><th scope="col">Needs</th>{!uniform && <th scope="col">Sells for / pays</th>}</tr></thead>
+				<tbody>
+					{list.map((economy) => (
+						<tr>
+							<th scope="row">{economy.name}</th>
+							<td data-label="Also shown as">{economy.alsoNamed.join(', ')}</td>
+							<td data-label="Sells">{economy.sells}</td>
+							<td data-label="Needs">{economy.needs}</td>
+							{!uniform && (
+								<td data-label="Sells for / pays">
+									{share(economy.MinSellingPriceMultiplier, economy.MaxSellingPriceMultiplier)} / {share(economy.MinBuyingPriceMultiplier, economy.MaxBuyingPriceMultiplier)}
+								</td>
+							)}
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</section>
+
+		<section class="cr-section" id="routes" aria-labelledby="routes-heading">
+			<h2 class="section-title" id="routes-heading">Trade loops</h2>
+			<p>Each economy needs what the one before it sells, so these chains loop back to the start.</p>
+			<ol class="tr-loops">
+				{loops.map((loop) => (
+					<li>{[...loop, loop[0]].map((id, index) => (<>{index > 0 && <><span class="tr-arrow" aria-hidden="true"> → </span><span class="sr-only"> then </span></>}{economyName(id)}</>))}</li>
+				))}
+			</ol>
+		</section>
+
+		<section class="cr-section" id="goods" aria-labelledby="goods-heading">
+			<h2 class="section-title" id="goods-heading">Trade goods</h2>
+			<div class="tr-grid">
+				{goods.map((group) => (
+					<div>
+						<h3 class="cr-h3">{group.name}</h3>
+						<ul class="tr-goods">
+							{group.goods.map(({ item, value }) => (
+								<li>
+									{item.icon && <img src={`${SITE.imageBaseUrl}${toWebp(item.icon)}`} alt="" width="32" height="32" loading="lazy" />}
+									<a class="link" href={item.url}>{item.name}</a>
+									<span class="tr-value tabular">{value.toLocaleString('en-US')} u</span>
+								</li>
+							))}
+						</ul>
+					</div>
+				))}
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.tr-loops { margin: 0 0 1rem; padding-left: 1.25rem; display: grid; gap: .4rem; }
+	.tr-arrow { color: var(--color-dim); }
+	.tr-grid { display: grid; gap: 0 2rem; grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr)); }
+	.tr-grid .cr-h3 { margin-top: 1rem; font-size: 1.05rem; }
+	.tr-goods { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; }
+	.tr-goods li { display: flex; align-items: center; gap: .5rem; font-size: .9375rem; }
+	.tr-goods img { width: 2rem; height: 2rem; flex: none; }
+	.tr-value { margin-left: auto; color: var(--color-dim); font-size: .875rem; }
+</style>
