@@ -12,6 +12,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
 				"Strength": "NegativeSmall",
 				"Min": -2,
 				"Max": -1,
@@ -33,6 +34,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
 				"Strength": "PositiveLarge",
 				"Min": 4,
 				"Max": 6,
@@ -54,6 +56,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
 				"Strength": "NegativeSmall",
 				"Min": -2,
 				"Max": -1,
@@ -75,6 +78,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
 				"Strength": "NegativeMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -96,6 +100,7 @@
 			{
 				"Stat": "MaxPopulation",
 				"Label": "Population capacity",
+				"Text": "-3–5 population capacity",
 				"Strength": "NegativeLarge",
 				"Min": -5,
 				"Max": -3,
@@ -117,6 +122,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
 				"Strength": "NegativeMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -138,6 +144,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -159,6 +166,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -180,6 +188,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
 				"Strength": "NegativeMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -201,6 +210,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
 				"Strength": "NegativeMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -222,6 +232,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -243,6 +254,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -264,6 +276,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+10,000–30,000 u/day maintenance",
 				"Strength": "NegativeSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -285,6 +298,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+10,000–30,000 u/day maintenance",
 				"Strength": "NegativeSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -306,6 +320,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -327,6 +342,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+3–4% citizen happiness",
 				"Strength": "PositiveMedium",
 				"Min": 3,
 				"Max": 4,
@@ -335,6 +351,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+30,000–50,000 productivity",
 				"Strength": "PositiveMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -343,6 +360,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-30,000–50,000 u/day maintenance",
 				"Strength": "PositiveMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -351,6 +369,7 @@
 			{
 				"Stat": "MaxPopulation",
 				"Label": "Population capacity",
+				"Text": "+2–3 population capacity",
 				"Strength": "PositiveMedium",
 				"Min": 2,
 				"Max": 3,
@@ -372,6 +391,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-10,000–100,000 u/day maintenance",
 				"Strength": "PositiveWide",
 				"Min": -100000,
 				"Max": -10000,
@@ -393,6 +413,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+2–6% citizen happiness",
 				"Strength": "PositiveWide",
 				"Min": 2,
 				"Max": 6,
@@ -414,6 +435,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
 				"Strength": "PositiveWide",
 				"Min": 20000,
 				"Max": 100000,
@@ -435,6 +457,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+3–4% citizen happiness",
 				"Strength": "PositiveMedium",
 				"Min": 3,
 				"Max": 4,
@@ -456,6 +479,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+3–4% citizen happiness",
 				"Strength": "PositiveMedium",
 				"Min": 3,
 				"Max": 4,
@@ -477,6 +501,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-30,000–50,000 u/day maintenance",
 				"Strength": "PositiveMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -498,6 +523,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
 				"Strength": "PositiveLarge",
 				"Min": 4,
 				"Max": 6,
@@ -519,6 +545,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
 				"Strength": "PositiveLarge",
 				"Min": 4,
 				"Max": 6,
@@ -527,6 +554,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+30,000–50,000 productivity",
 				"Strength": "PositiveMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -548,6 +576,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
 				"Strength": "NegativeSmall",
 				"Min": -2,
 				"Max": -1,
@@ -556,6 +585,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+50,000–100,000 productivity",
 				"Strength": "PositiveLarge",
 				"Min": 50000,
 				"Max": 100000,
@@ -577,6 +607,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
 				"Strength": "NegativeSmall",
 				"Min": -2,
 				"Max": -1,
@@ -585,6 +616,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+50,000–100,000 productivity",
 				"Strength": "PositiveLarge",
 				"Min": 50000,
 				"Max": 100000,
@@ -606,6 +638,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+2–6% citizen happiness",
 				"Strength": "PositiveWide",
 				"Min": 2,
 				"Max": 6,
@@ -614,6 +647,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-10,000–30,000 productivity",
 				"Strength": "NegativeSmall",
 				"Min": -30000,
 				"Max": -10000,
@@ -637,6 +671,7 @@
 			{
 				"Stat": "Sentinels",
 				"Label": "Sentinel Visibility",
+				"Text": "-1–6% Sentinel attention",
 				"Strength": "PositiveWide",
 				"Min": -6,
 				"Max": -1,
@@ -660,6 +695,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-10,000–100,000 u/day maintenance",
 				"Strength": "PositiveWide",
 				"Min": -100000,
 				"Max": -10000,
@@ -689,6 +725,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
 				"Strength": "PositiveWide",
 				"Min": 20000,
 				"Max": 100000,
@@ -717,6 +754,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
 				"Strength": "PositiveWide",
 				"Min": 20000,
 				"Max": 100000,
@@ -742,6 +780,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-10,000–100,000 u/day maintenance",
 				"Strength": "PositiveWide",
 				"Min": -100000,
 				"Max": -10000,
@@ -765,6 +804,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+2–6% citizen happiness",
 				"Strength": "PositiveWide",
 				"Min": 2,
 				"Max": 6,
@@ -786,6 +826,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
 				"Strength": "PositiveWide",
 				"Min": 20000,
 				"Max": 100000,
@@ -807,6 +848,7 @@
 			{
 				"Stat": "MaxPopulation",
 				"Label": "Population capacity",
+				"Text": "+1–5 population capacity",
 				"Strength": "PositiveWide",
 				"Min": 1,
 				"Max": 5,
@@ -832,6 +874,7 @@
 			{
 				"Stat": "Sentinels",
 				"Label": "Sentinel Visibility",
+				"Text": "-1–6% Sentinel attention",
 				"Strength": "PositiveWide",
 				"Min": -6,
 				"Max": -1,
@@ -857,6 +900,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
 				"Strength": "PositiveWide",
 				"Min": 20000,
 				"Max": 100000,
@@ -881,6 +925,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-10,000–100,000 u/day maintenance",
 				"Strength": "PositiveWide",
 				"Min": -100000,
 				"Max": -10000,
@@ -910,6 +955,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
 				"Strength": "NegativeMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -918,6 +964,7 @@
 			{
 				"Stat": "Sentinels",
 				"Label": "Sentinel Visibility",
+				"Text": "-3–5% Sentinel attention",
 				"Strength": "PositiveLarge",
 				"Min": -5,
 				"Max": -3,
@@ -939,6 +986,7 @@
 			{
 				"Stat": "Sentinels",
 				"Label": "Sentinel Visibility",
+				"Text": "+2–3% Sentinel attention",
 				"Strength": "NegativeSmall",
 				"Min": 2,
 				"Max": 3,
@@ -947,6 +995,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+50,000–100,000 productivity",
 				"Strength": "PositiveLarge",
 				"Min": 50000,
 				"Max": 100000,
@@ -968,6 +1017,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
 				"Strength": "NegativeMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -989,6 +1039,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
 				"Strength": "NegativeSmall",
 				"Min": -2,
 				"Max": -1,
@@ -1010,6 +1061,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -1031,6 +1083,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
 				"Strength": "NegativeMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -1052,6 +1105,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
 				"Strength": "NegativeLarge",
 				"Min": -6,
 				"Max": -4,
@@ -1073,6 +1127,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
 				"Strength": "NegativeMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -1094,6 +1149,7 @@
 			{
 				"Stat": "MaxPopulation",
 				"Label": "Population capacity",
+				"Text": "-2–3 population capacity",
 				"Strength": "NegativeMedium",
 				"Min": -3,
 				"Max": -2,
@@ -1115,6 +1171,7 @@
 			{
 				"Stat": "MaxPopulation",
 				"Label": "Population capacity",
+				"Text": "-2–3 population capacity",
 				"Strength": "NegativeMedium",
 				"Min": -3,
 				"Max": -2,
@@ -1136,6 +1193,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
 				"Strength": "NegativeMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -1157,6 +1215,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -1178,6 +1237,7 @@
 			{
 				"Stat": "MaxPopulation",
 				"Label": "Population capacity",
+				"Text": "-3–5 population capacity",
 				"Strength": "NegativeLarge",
 				"Min": -5,
 				"Max": -3,
@@ -1199,6 +1259,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
 				"Strength": "NegativeLarge",
 				"Min": -6,
 				"Max": -4,
@@ -1220,6 +1281,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+50,000–100,000 u/day maintenance",
 				"Strength": "NegativeLarge",
 				"Min": 50000,
 				"Max": 100000,
@@ -1241,6 +1303,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+50,000–100,000 u/day maintenance",
 				"Strength": "NegativeLarge",
 				"Min": 50000,
 				"Max": 100000,
@@ -1262,6 +1325,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
 				"Strength": "NegativeMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -1283,6 +1347,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
 				"Strength": "NegativeSmall",
 				"Min": -2,
 				"Max": -1,
@@ -1304,6 +1369,7 @@
 			{
 				"Stat": "MaxPopulation",
 				"Label": "Population capacity",
+				"Text": "-2–3 population capacity",
 				"Strength": "NegativeMedium",
 				"Min": -3,
 				"Max": -2,
@@ -1325,6 +1391,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
 				"Strength": "NegativeLarge",
 				"Min": -6,
 				"Max": -4,
@@ -1346,6 +1413,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-10,000–30,000 productivity",
 				"Strength": "NegativeSmall",
 				"Min": -30000,
 				"Max": -10000,
@@ -1367,6 +1435,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -1388,6 +1457,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -1409,6 +1479,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
 				"Strength": "NegativeMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -1430,6 +1501,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
 				"Strength": "NegativeMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -1451,6 +1523,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
 				"Strength": "NegativeLarge",
 				"Min": -6,
 				"Max": -4,
@@ -1472,6 +1545,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+10,000–30,000 u/day maintenance",
 				"Strength": "NegativeSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -1493,6 +1567,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -1514,6 +1589,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
 				"Strength": "NegativeLarge",
 				"Min": -6,
 				"Max": -4,
@@ -1535,6 +1611,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
 				"Strength": "NegativeLarge",
 				"Min": -6,
 				"Max": -4,
@@ -1556,6 +1633,7 @@
 			{
 				"Stat": "Sentinels",
 				"Label": "Sentinel Visibility",
+				"Text": "+5–10% Sentinel attention",
 				"Strength": "NegativeLarge",
 				"Min": 5,
 				"Max": 10,
@@ -1577,6 +1655,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
 				"Strength": "NegativeMedium",
 				"Min": -4,
 				"Max": -2,
@@ -1598,6 +1677,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
 				"Strength": "NegativeLarge",
 				"Min": -6,
 				"Max": -4,
@@ -1619,6 +1699,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
 				"Strength": "NegativeMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -1640,6 +1721,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
 				"Strength": "NegativeMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -1661,6 +1743,7 @@
 			{
 				"Stat": "Sentinels",
 				"Label": "Sentinel Visibility",
+				"Text": "+2–3% Sentinel attention",
 				"Strength": "NegativeSmall",
 				"Min": 2,
 				"Max": 3,
@@ -1682,6 +1765,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
 				"Strength": "NegativeMedium",
 				"Min": 30000,
 				"Max": 50000,
@@ -1703,6 +1787,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
 				"Strength": "PositiveSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -1724,6 +1809,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+2–3% citizen happiness",
 				"Strength": "PositiveSmall",
 				"Min": 2,
 				"Max": 3,
@@ -1745,6 +1831,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+50,000–100,000 productivity",
 				"Strength": "PositiveLarge",
 				"Min": 50000,
 				"Max": 100000,
@@ -1766,6 +1853,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
 				"Strength": "PositiveLarge",
 				"Min": 4,
 				"Max": 6,
@@ -1787,6 +1875,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
 				"Strength": "PositiveSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -1808,6 +1897,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
 				"Strength": "PositiveSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -1829,6 +1919,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
 				"Strength": "PositiveLarge",
 				"Min": 4,
 				"Max": 6,
@@ -1850,6 +1941,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
 				"Strength": "PositiveSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -1871,6 +1963,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-30,000–50,000 u/day maintenance",
 				"Strength": "PositiveMedium",
 				"Min": -50000,
 				"Max": -30000,
@@ -1892,6 +1985,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
 				"Strength": "PositiveSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -1913,6 +2007,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-10,000–30,000 u/day maintenance",
 				"Strength": "PositiveSmall",
 				"Min": -30000,
 				"Max": -10000,
@@ -1934,6 +2029,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
 				"Strength": "PositiveSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -1955,6 +2051,7 @@
 			{
 				"Stat": "Production",
 				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
 				"Strength": "PositiveSmall",
 				"Min": 10000,
 				"Max": 30000,
@@ -1976,6 +2073,7 @@
 			{
 				"Stat": "Upkeep",
 				"Label": "Upkeep Costs",
+				"Text": "-10,000–30,000 u/day maintenance",
 				"Strength": "PositiveSmall",
 				"Min": -30000,
 				"Max": -10000,
@@ -1997,6 +2095,7 @@
 			{
 				"Stat": "Happiness",
 				"Label": "Citizen Happiness",
+				"Text": "+3–4% citizen happiness",
 				"Strength": "PositiveMedium",
 				"Min": 3,
 				"Max": 4,

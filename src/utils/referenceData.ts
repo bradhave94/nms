@@ -294,7 +294,7 @@ export type SettlementPerk = {
 	IsProc: boolean;
 	IsJob: boolean;
 	IsBlessing: boolean;
-	Effects: Array<{ Stat: string; Label: string; Strength: string; Min: number; Max: number; ChangesPopulation: boolean }>;
+	Effects: Array<{ Stat: string; Label: string; Text: string | null; Strength: string; Min: number; Max: number; ChangesPopulation: boolean }>;
 	Buildings: string[];
 };
 

@@ -34,7 +34,7 @@ const structuredData = buildCollectionStructuredData({
 			<div class="min-w-0">
 				<h1 class="cr-title">Settlement perks</h1>
 				<p class="cr-lead">
-					Every perk a settlement can have and the stats each one moves, in the game's own units. Where a perk shows a range, the game picks a value in it.
+					Every perk a settlement can have and what it changes, in the game's own wording. Where a perk shows a range, the game picks a value in it.
 				</p>
 			</div>
 		</header>
@@ -62,7 +62,7 @@ const structuredData = buildCollectionStructuredData({
 										{perk.Effects.length
 											? perk.Effects.map((effect) => (
 													<span class={effect.Strength.startsWith('Negative') ? 'sp-bad' : 'sp-good'}>
-														{effect.Label} {effectRange(effect)}
+														{effect.Text ?? `${effect.Label} ${effectRange(effect)}`}
 													</span>
 												))
 											: '—'}

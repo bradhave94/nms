@@ -22,8 +22,8 @@ const perks = await json('SettlementPerks.json');
 const perksHtml = await read('settlement-perks');
 const perkRows = rows(perksHtml) - (perksHtml.match(/<thead/g) ?? []).length;
 assert(perkRows > 0.8 * perks.length && perkRows < perks.length, `settlement perks are listed, identical ones once (${perkRows} of ${perks.length})`);
-assert(/\+10,000 to \+30,000/.test(text(perksHtml)), 'settlement numbers are formatted');
-assert(text(perksHtml).includes('Upkeep Costs') && text(perksHtml).includes('Citizen Happiness'), 'settlement stats use the game names');
+assert(text(perksHtml).includes('+50,000–100,000 u/day maintenance'), 'settlement effects use the game wording, formatted');
+assert(text(perksHtml).includes('citizen happiness') && text(perksHtml).includes('Sentinel attention'), 'settlement stats use the game names');
 assert(/Organic/.test(text(traitsHtml)) && /Trade/.test(text(traitsHtml)) && !/DeepSpace|Diplomacy/.test(text(traitsHtml)), 'frigate classes use the game names');
 assert(!/%[A-Z_]+%/.test(perksHtml), 'perk name templates are never shown raw');
 

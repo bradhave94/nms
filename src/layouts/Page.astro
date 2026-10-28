@@ -118,26 +118,13 @@ else if (fishTier) pills.push({ label: `${extra.Quality} fish`, tier: fishTier }
 // Substances store a stack multiplier of 1 here, not their real stack size, so only show real stacks.
 if (typeof extra.MaxStackSize === 'number' && extra.MaxStackSize > 1) pills.push({ label: `Max stack ${extra.MaxStackSize.toLocaleString()}` });
 if (view.waysToMake > 1) pills.push({ label: `${view.waysToMake} ways to make it` });
-const blueprintIconByType: Record<string, string> = {
-  nanites: `${SITE.imageBaseUrl}TECHFRAG_R.webp`,
-  factoryoverride: `${SITE.imageBaseUrl}FACT_TOKEN.webp`,
-};
-// The extractor stores 1 as every technology's BlueprintCost. When a research tree sells the
-// blueprint, show the game's price in that tree's currency (Nanites, Salvaged Frigate Modules…);
-// otherwise keep the item's own value, except the placeholder 1.
+// The blueprint price where a research tree sells it, in that tree's currency (Nanites, Salvaged
+// Frigate Modules, Factory Override Units…). An item's own BlueprintCostType can't say which
+// currency a blueprint is paid in, so items no tree sells get no pill.
 const research = blueprintPrice(item.Id);
 if (research) {
-  const icon = research.currency.id === 'Nanites' ? blueprintIconByType.nanites : research.currency.icon ? `${SITE.imageBaseUrl}${toWebp(research.currency.icon)}` : undefined;
+  const icon = research.currency.id === 'Nanites' ? `${SITE.imageBaseUrl}TECHFRAG_R.webp` : research.currency.icon ? `${SITE.imageBaseUrl}${toWebp(research.currency.icon)}` : undefined;
   if (icon) pills.push({ label: `Blueprint ${research.price.toLocaleString()} ${research.currency.name}`, icon });
-} else {
-  const blueprintCost = extra.BlueprintCostType === 'Nanites' && extra.BlueprintCost === 1 ? 0 : (extra.BlueprintCost ?? 0);
-  const blueprintIcon = extra.BlueprintCostType ? blueprintIconByType[extra.BlueprintCostType.toLowerCase()] : undefined;
-  if (blueprintCost > 0 && blueprintIcon) {
-    pills.push({
-      label: `Blueprint ${blueprintCost.toLocaleString()}${extra.BlueprintCostType && extra.BlueprintCostType !== 'None' ? ` ${extra.BlueprintCostType}` : ''}`,
-      icon: blueprintIcon,
-    });
-  }
 }
 
 // ── Details (right column) ──

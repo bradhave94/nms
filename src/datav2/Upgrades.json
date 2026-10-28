@@ -20832,7 +20832,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -20914,7 +20914,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -20992,7 +20992,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 90,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21092,7 +21092,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 200,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21174,7 +21174,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 350,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21260,7 +21260,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21346,7 +21346,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 460,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21432,7 +21432,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 80,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21514,7 +21514,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21596,7 +21596,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 200,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21678,7 +21678,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 200,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21764,7 +21764,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 85,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21850,7 +21850,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 50,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -21932,7 +21932,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 75,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22018,7 +22018,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22106,7 +22106,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22194,7 +22194,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22280,7 +22280,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22362,7 +22362,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 4,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22448,7 +22448,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 8,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22534,7 +22534,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 12,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22620,7 +22620,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 12,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22706,7 +22706,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22794,7 +22794,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 320,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -22972,7 +22972,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 90,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23066,7 +23066,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 90,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23148,7 +23148,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 160,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23232,7 +23232,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 180,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23314,7 +23314,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 180,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23406,7 +23406,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 180,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23488,7 +23488,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 180,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23570,7 +23570,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 180,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23656,7 +23656,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 180,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23754,7 +23754,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 180,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23852,7 +23852,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 210,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -23938,7 +23938,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 320,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -24024,7 +24024,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 180,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -24122,7 +24122,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 210,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -24210,7 +24210,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 350,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -24296,7 +24296,7 @@
 		"Usages": [
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 120,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
