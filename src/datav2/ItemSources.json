@@ -1,0 +1,8839 @@
+{
+	"Expeditions": [
+		{
+			"Number": 1,
+			"Remix": 0,
+			"DisplayNumber": 1,
+			"Name": "The Pioneers"
+		},
+		{
+			"Number": 2,
+			"Remix": 0,
+			"DisplayNumber": 2,
+			"Name": "Beachhead"
+		},
+		{
+			"Number": 3,
+			"Remix": 0,
+			"DisplayNumber": 3,
+			"Name": "The Cartographers"
+		},
+		{
+			"Number": 4,
+			"Remix": 0,
+			"DisplayNumber": 4,
+			"Name": "Emergence"
+		},
+		{
+			"Number": 9,
+			"Remix": 0,
+			"DisplayNumber": 5,
+			"Name": "Exobiology"
+		},
+		{
+			"Number": 10,
+			"Remix": 0,
+			"DisplayNumber": 6,
+			"Name": "The Blighted"
+		},
+		{
+			"Number": 11,
+			"Remix": 0,
+			"DisplayNumber": 7,
+			"Name": "Leviathan"
+		},
+		{
+			"Number": 12,
+			"Remix": 0,
+			"DisplayNumber": 8,
+			"Name": "Polestar"
+		},
+		{
+			"Number": 17,
+			"Remix": 0,
+			"DisplayNumber": 9,
+			"Name": "Utopia"
+		},
+		{
+			"Number": 18,
+			"Remix": 0,
+			"DisplayNumber": 10,
+			"Name": "Singularity"
+		},
+		{
+			"Number": 19,
+			"Remix": 0,
+			"DisplayNumber": 11,
+			"Name": "Voyagers"
+		},
+		{
+			"Number": 24,
+			"Remix": 0,
+			"DisplayNumber": 12,
+			"Name": "Omega"
+		},
+		{
+			"Number": 26,
+			"Remix": 0,
+			"DisplayNumber": 13,
+			"Name": "Adrift"
+		},
+		{
+			"Number": 27,
+			"Remix": 0,
+			"DisplayNumber": 14,
+			"Name": "Liquidators"
+		},
+		{
+			"Number": 28,
+			"Remix": 0,
+			"DisplayNumber": 15,
+			"Name": "Aquarius"
+		},
+		{
+			"Number": 29,
+			"Remix": 0,
+			"DisplayNumber": 16,
+			"Name": "The Cursed"
+		},
+		{
+			"Number": 36,
+			"Remix": 0,
+			"DisplayNumber": 17,
+			"Name": "Titan"
+		},
+		{
+			"Number": 37,
+			"Remix": 0,
+			"DisplayNumber": 18,
+			"Name": "Relics"
+		},
+		{
+			"Number": 38,
+			"Remix": 0,
+			"DisplayNumber": 19,
+			"Name": "Corvette"
+		},
+		{
+			"Number": 39,
+			"Remix": 0,
+			"DisplayNumber": 20,
+			"Name": "Breach"
+		},
+		{
+			"Number": 45,
+			"Remix": 0,
+			"DisplayNumber": 21,
+			"Name": "Remnant"
+		},
+		{
+			"Number": 46,
+			"Remix": 0,
+			"DisplayNumber": 22,
+			"Name": "Swarm"
+		},
+		{
+			"Number": 47,
+			"Remix": 0,
+			"DisplayNumber": 23,
+			"Name": "Our Journey Continues"
+		}
+	],
+	"Exchanges": [
+		{
+			"Id": "?D_SPOOK_SHOP_WEAPON@None#0",
+			"Puzzle": "?D_SPOOK_SHOP_WEAPON",
+			"Race": "None",
+			"Interaction": "StoryUtility",
+			"Category": "Default",
+			"Option": "Make Offering",
+			"Cost": {
+				"Type": "Product",
+				"Id": "SPOOK_PACKAGE2",
+				"Amount": 5
+			},
+			"Gives": [
+				{
+					"Type": "Weapon",
+					"Id": "R_GRUB_GUN",
+					"Name": "Larva Cannon"
+				}
+			]
+		},
+		{
+			"Id": "?EXP_NPC_DUST_CHAIN2_A_3@Explorers#0",
+			"Puzzle": "?EXP_NPC_DUST_CHAIN2_A_3",
+			"Race": "Explorers",
+			"Interaction": "NPC",
+			"Category": "BiomeDusty",
+			"Option": "Offer resources",
+			"Cost": {
+				"Type": "Substance",
+				"Id": "CATALYST1",
+				"Amount": 20
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "PRODFUEL2",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "?EXP_NPC_DUST_CHAIN_3@Explorers#1",
+			"Puzzle": "?EXP_NPC_DUST_CHAIN_3",
+			"Race": "Explorers",
+			"Interaction": "NPC",
+			"Category": "BiomeDusty",
+			"Option": "Offer resources",
+			"Cost": {
+				"Type": "Substance",
+				"Id": "CATALYST1",
+				"Amount": 20
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "PRODFUEL2",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "?EXP_NPC_DUST_RET_3@Explorers#0",
+			"Puzzle": "?EXP_NPC_DUST_RET_3",
+			"Race": "Explorers",
+			"Interaction": "NPC",
+			"Category": "BiomeDusty",
+			"Option": "Offer resources",
+			"Cost": {
+				"Type": "Substance",
+				"Id": "CATALYST1",
+				"Amount": 20
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "PRODFUEL2",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "?PP_TOXIC_FARM_INTERIM_CHAIN@Traders#0",
+			"Puzzle": "?PP_TOXIC_FARM_INTERIM_CHAIN",
+			"Race": "Traders",
+			"Interaction": "None",
+			"Category": "Default",
+			"Option": "Give units",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 10
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "TOXICPLANT",
+					"AmountMin": 3,
+					"AmountMax": 3
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_CHAIN2_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_CHAIN2_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_CHAIN3_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_CHAIN3_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_CHAIN4_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_CHAIN4_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_CHAIN_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_CHAIN_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_RET2_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_RET2_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_RET3_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_RET3_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_RET4_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_RET4_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_RET5_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_RET5_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_COLD_RET_4@Traders#0",
+			"Puzzle": "?TRA_NPC_COLD_RET_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_LUSH_CHAIN_B_3@Traders#0",
+			"Puzzle": "?TRA_NPC_LUSH_CHAIN_B_3",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeLush",
+			"Option": "Life support fuel",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 100
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "PRODFUEL2",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_LUSH_CHAIN_B_3@Traders#1",
+			"Puzzle": "?TRA_NPC_LUSH_CHAIN_B_3",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeLush",
+			"Option": "Hazard protection fuel",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 100
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "POWERCELL",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "?TRA_NPC_LUSH_CHAIN_B_3@Traders#2",
+			"Puzzle": "?TRA_NPC_LUSH_CHAIN_B_3",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeLush",
+			"Option": "Starship launch fuel",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 100
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "LAUNCHFUEL",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "?TRA_SCAVENGER_EXT_CHAIN_1@Traders#0",
+			"Puzzle": "?TRA_SCAVENGER_EXT_CHAIN_1",
+			"Race": "Traders",
+			"Interaction": "NPC_Scavenger",
+			"Category": "ExtremeWeather",
+			"Option": "Offer units",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 5000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "STORM_CRYSTAL",
+					"AmountMin": 2,
+					"AmountMax": 2
+				}
+			]
+		},
+		{
+			"Id": "?WAR_NPC_OUTPOST_CHAIN_A_1@Warriors#0",
+			"Puzzle": "?WAR_NPC_OUTPOST_CHAIN_A_1",
+			"Race": "Warriors",
+			"Interaction": "NPC_Secondary",
+			"Category": "Default",
+			"Option": "Offer mordite",
+			"Cost": {
+				"Type": "Substance",
+				"Id": "CREATURE1",
+				"Amount": 25
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "WAR_CURIO2",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "?WAR_NPC_OUTPOST_CHAIN_B2_1@Warriors#0",
+			"Puzzle": "?WAR_NPC_OUTPOST_CHAIN_B2_1",
+			"Race": "Warriors",
+			"Interaction": "NPC_Secondary",
+			"Category": "Default",
+			"Option": "Offer mordite",
+			"Cost": {
+				"Type": "Substance",
+				"Id": "CREATURE1",
+				"Amount": 25
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "WAR_CURIO2",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "?WAR_NPC_OUTPOST_CHAIN_B_1@Warriors#0",
+			"Puzzle": "?WAR_NPC_OUTPOST_CHAIN_B_1",
+			"Race": "Warriors",
+			"Interaction": "NPC_Secondary",
+			"Category": "Default",
+			"Option": "Offer mordite",
+			"Cost": {
+				"Type": "Substance",
+				"Id": "CREATURE1",
+				"Amount": 25
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "WAR_CURIO2",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "EXP_NPC_16@Explorers#2",
+			"Puzzle": "EXP_NPC_16",
+			"Race": "Explorers",
+			"Interaction": "NPC",
+			"Category": "Default",
+			"Option": "Give processed catalyst",
+			"Cost": {
+				"Type": "Substance",
+				"Id": "CATALYST2",
+				"Amount": 10
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "STORM_CRYSTAL",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "LIBRARY_MAP@Explorers#0",
+			"Puzzle": "LIBRARY_MAP",
+			"Race": "Explorers",
+			"Interaction": "LibraryMap",
+			"Category": "Default",
+			"Option": "Print Chart",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Nanites",
+				"Amount": 15
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "CHART_TREASURE",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "LIBRARY_MAP@Traders#0",
+			"Puzzle": "LIBRARY_MAP",
+			"Race": "Traders",
+			"Interaction": "LibraryMap",
+			"Category": "Default",
+			"Option": "Print Chart",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Nanites",
+				"Amount": 15
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "CHART_TREASURE",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "LIBRARY_MAP@Warriors#0",
+			"Puzzle": "LIBRARY_MAP",
+			"Race": "Warriors",
+			"Interaction": "LibraryMap",
+			"Category": "Default",
+			"Option": "Print Chart",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Nanites",
+				"Amount": 15
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "CHART_TREASURE",
+					"AmountMin": 1,
+					"AmountMax": 1
+				}
+			]
+		},
+		{
+			"Id": "TRA_NPC_COLD_4@Traders#0",
+			"Puzzle": "TRA_NPC_COLD_4",
+			"Race": "Traders",
+			"Interaction": "NPC",
+			"Category": "BiomeCold",
+			"Option": "Buy food products",
+			"Cost": {
+				"Type": "Currency",
+				"Id": "Units",
+				"Amount": 1000
+			},
+			"Gives": [
+				{
+					"Type": "Product",
+					"Id": "FOOD_P_COLDWILD",
+					"AmountMin": 10,
+					"AmountMax": 20
+				}
+			]
+		}
+	],
+	"Items": {
+		"BANNER_AF": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 98,
+				"MissionTier": 4
+			}
+		],
+		"BANNER_AGT": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 41,
+				"MissionTier": 1
+			}
+		],
+		"BANNER_AMINO": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 41,
+				"MissionTier": 2
+			}
+		],
+		"BANNER_BLOB": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 28,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_172"
+			}
+		],
+		"BANNER_CAFE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 41,
+				"MissionTier": 3
+			}
+		],
+		"BANNER_CHEF": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 28,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_171"
+			}
+		],
+		"BANNER_CHU": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 28,
+				"MissionTier": 1
+			}
+		],
+		"BANNER_EXP": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 101,
+				"MissionTier": 3
+			}
+		],
+		"BANNER_HUB": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 25,
+				"MissionTier": 1
+			}
+		],
+		"BANNER_NADA": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 25,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_173"
+			}
+		],
+		"BANNER_NMSCORD": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 98,
+				"MissionTier": 2
+			}
+		],
+		"BANNER_NMS_FR": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 98,
+				"MissionTier": 1
+			}
+		],
+		"BANNER_OOGC": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 116,
+				"MissionTier": 2
+			}
+		],
+		"BANNER_PEEP": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 103,
+				"MissionTier": 1
+			}
+		],
+		"BANNER_POLO": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 25,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_175"
+			}
+		],
+		"BANNER_QIT": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 46,
+				"MissionTier": 1
+			}
+		],
+		"BANNER_RSS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 116,
+				"MissionTier": 1
+			}
+		],
+		"BANNER_SLIMY": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_174"
+			}
+		],
+		"BANNER_TRA": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 101,
+				"MissionTier": 1
+			}
+		],
+		"BANNER_UFT": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 41,
+				"MissionTier": 4
+			}
+		],
+		"BANNER_UN42": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 98,
+				"MissionTier": 3
+			}
+		],
+		"BANNER_WAR": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 101,
+				"MissionTier": 2
+			}
+		],
+		"BASE_AQUARIUM": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 6,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_030"
+			}
+		],
+		"BASE_BARNACLE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 7,
+				"MissionTier": -1
+			}
+		],
+		"BASE_BUBPIPE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 56,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_105"
+			}
+		],
+		"BASE_CAVE1": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_096"
+			}
+		],
+		"BASE_CAVE2": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_097"
+			}
+		],
+		"BASE_CAVE3": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_098"
+			}
+		],
+		"BASE_CAVE4": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_099"
+			}
+		],
+		"BASE_CAVE5": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_100"
+			}
+		],
+		"BASE_COLDPLANT1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 31,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_166"
+			}
+		],
+		"BASE_COLDPLANT2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 31,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_167"
+			}
+		],
+		"BASE_COLDPLANT3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 31,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_168"
+			}
+		],
+		"BASE_DUST01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 117,
+				"MissionTier": 2
+			}
+		],
+		"BASE_DUST02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 118,
+				"MissionTier": 2
+			}
+		],
+		"BASE_DUST03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 113,
+				"MissionTier": 2
+			}
+		],
+		"BASE_DUST04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 112,
+				"MissionTier": 3
+			}
+		],
+		"BASE_DUST05": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 113,
+				"MissionTier": 3
+			}
+		],
+		"BASE_DUST06": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 112,
+				"MissionTier": 1
+			}
+		],
+		"BASE_DUST07": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 113,
+				"MissionTier": 1
+			}
+		],
+		"BASE_DUST08": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 115,
+				"MissionTier": 1
+			}
+		],
+		"BASE_DUST09": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 115,
+				"MissionTier": 2
+			}
+		],
+		"BASE_DUST10": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 115,
+				"MissionTier": 3
+			}
+		],
+		"BASE_DUST11": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 117,
+				"MissionTier": 3
+			}
+		],
+		"BASE_DUST12": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 118,
+				"MissionTier": 3
+			}
+		],
+		"BASE_DUST13": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 112,
+				"MissionTier": 2
+			}
+		],
+		"BASE_DUSTPLANT1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 37,
+				"MissionTier": 1
+			}
+		],
+		"BASE_DUSTPLANT2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 37,
+				"MissionTier": 2
+			}
+		],
+		"BASE_DUSTPLANT3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 37,
+				"MissionTier": 3
+			}
+		],
+		"BASE_FLORAL01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 99,
+				"MissionTier": 2
+			}
+		],
+		"BASE_FLORAL02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 99,
+				"MissionTier": 3
+			}
+		],
+		"BASE_FLORAL03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 99,
+				"MissionTier": 4
+			}
+		],
+		"BASE_FLORAL04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 99,
+				"MissionTier": 5
+			}
+		],
+		"BASE_FLOWER1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 68,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_243"
+			}
+		],
+		"BASE_FLOWER2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 68,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_271"
+			}
+		],
+		"BASE_FLOWER3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 68,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_272"
+			}
+		],
+		"BASE_FLYINGFERN": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 95,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_416"
+			}
+		],
+		"BASE_FOXGLOVE01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 99,
+				"MissionTier": 1
+			}
+		],
+		"BASE_GRASS1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 64,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_241"
+			}
+		],
+		"BASE_GRASS2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 64,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_301"
+			}
+		],
+		"BASE_GRASS3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 64,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_328"
+			}
+		],
+		"BASE_GRASS4": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 64,
+				"MissionTier": 4
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_357"
+			}
+		],
+		"BASE_GRASS5": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 66,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_349"
+			}
+		],
+		"BASE_GRASS6": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 66,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_350"
+			}
+		],
+		"BASE_GRASS7": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 66,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_386"
+			}
+		],
+		"BASE_HOTPLANT01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 9,
+				"MissionTier": 1
+			}
+		],
+		"BASE_HOTPLANT02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 9,
+				"MissionTier": 1
+			}
+		],
+		"BASE_HOTPLANT03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 9,
+				"MissionTier": 1
+			}
+		],
+		"BASE_HOTPLANT04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 111,
+				"MissionTier": 3
+			}
+		],
+		"BASE_HOTPLANT05": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 111,
+				"MissionTier": 1
+			}
+		],
+		"BASE_HOTPLANT06": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 111,
+				"MissionTier": 2
+			}
+		],
+		"BASE_HOTPLANT07": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 118,
+				"MissionTier": 1
+			}
+		],
+		"BASE_HOTPLANT08": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 117,
+				"MissionTier": 1
+			}
+		],
+		"BASE_HOUDINI1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 44,
+				"MissionTier": 1
+			}
+		],
+		"BASE_HOUDINI2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 44,
+				"MissionTier": 2
+			}
+		],
+		"BASE_HOUDINI3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 44,
+				"MissionTier": 3
+			}
+		],
+		"BASE_INFEST1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 42,
+				"MissionTier": 1
+			}
+		],
+		"BASE_INFEST2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 42,
+				"MissionTier": 2
+			}
+		],
+		"BASE_INFEST3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 42,
+				"MissionTier": 3
+			}
+		],
+		"BASE_JUNGLE01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 104,
+				"MissionTier": 1
+			}
+		],
+		"BASE_JUNGLE02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 104,
+				"MissionTier": 2
+			}
+		],
+		"BASE_JUNGLE03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 104,
+				"MissionTier": 3
+			}
+		],
+		"BASE_JUNGLE04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 110,
+				"MissionTier": 4
+			}
+		],
+		"BASE_LAVA1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 48,
+				"MissionTier": 1
+			}
+		],
+		"BASE_LAVA2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 48,
+				"MissionTier": 2
+			}
+		],
+		"BASE_LAVA3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 48,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_072"
+			}
+		],
+		"BASE_MEDPLANT01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 6,
+				"MissionTier": -1
+			}
+		],
+		"BASE_MEDPLANT02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 6,
+				"MissionTier": -1
+			}
+		],
+		"BASE_MEDPLANT03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 6,
+				"MissionTier": -1
+			}
+		],
+		"BASE_NEXUS1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 51,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_201"
+			}
+		],
+		"BASE_NEXUS2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 51,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_202"
+			}
+		],
+		"BASE_NEXUS3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 51,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_203"
+			}
+		],
+		"BASE_PEACOCK01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 100,
+				"MissionTier": 1
+			}
+		],
+		"BASE_PEACOCK02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 100,
+				"MissionTier": 2
+			}
+		],
+		"BASE_PEACOCK03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 100,
+				"MissionTier": 3
+			}
+		],
+		"BASE_RADPLANT01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 26,
+				"MissionTier": 1
+			}
+		],
+		"BASE_RADPLANT02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 26,
+				"MissionTier": 2
+			}
+		],
+		"BASE_RADPLANT03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 26,
+				"MissionTier": 3
+			}
+		],
+		"BASE_RADPLANT04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 110,
+				"MissionTier": 2
+			}
+		],
+		"BASE_ROBOTOY": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 3,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_029"
+			}
+		],
+		"BASE_ROCK01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 24,
+				"MissionTier": 1
+			}
+		],
+		"BASE_ROCK02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 24,
+				"MissionTier": 2
+			}
+		],
+		"BASE_ROCK03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 24,
+				"MissionTier": 3
+			}
+		],
+		"BASE_SPRIGBUSH": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 95,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_420"
+			}
+		],
+		"BASE_SUBZPLANT1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 97,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_419"
+			}
+		],
+		"BASE_SUBZPLANT2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 97,
+				"MissionTier": 2
+			}
+		],
+		"BASE_SUBZPLANT3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 97,
+				"MissionTier": 3
+			}
+		],
+		"BASE_SUBZPLANT4": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 97,
+				"MissionTier": 4
+			}
+		],
+		"BASE_SUBZPLANT5": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 102,
+				"MissionTier": 1
+			}
+		],
+		"BASE_SUBZPLANT6": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 102,
+				"MissionTier": 2
+			}
+		],
+		"BASE_SUBZPLANT7": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 102,
+				"MissionTier": 3
+			}
+		],
+		"BASE_SUBZPLANT8": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 102,
+				"MissionTier": 4
+			}
+		],
+		"BASE_SUBZPLANT9": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 110,
+				"MissionTier": 3
+			}
+		],
+		"BASE_SWAMP1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 40,
+				"MissionTier": 1
+			}
+		],
+		"BASE_SWAMP2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 40,
+				"MissionTier": 2
+			}
+		],
+		"BASE_SWAMP3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 40,
+				"MissionTier": 3
+			}
+		],
+		"BASE_TERRARIUM": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 9,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_028"
+			}
+		],
+		"BASE_TOXPLANT01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 29,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_126"
+			}
+		],
+		"BASE_TOXPLANT02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 29,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_127"
+			}
+		],
+		"BASE_TOXPLANT03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 29,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_128"
+			}
+		],
+		"BASE_TOXPLANT04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 110,
+				"MissionTier": 1
+			}
+		],
+		"BASE_TOYCORE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 8,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_169"
+			}
+		],
+		"BASE_TOYCUBE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 5,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_074"
+			}
+		],
+		"BASE_TOYJELLY": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_129"
+			}
+		],
+		"BASE_TOYSPHERE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 5,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_170"
+			}
+		],
+		"BASE_TREE01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 4,
+				"MissionTier": -1
+			}
+		],
+		"BASE_TREE02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 4,
+				"MissionTier": -1
+			}
+		],
+		"BASE_TREE03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 4,
+				"MissionTier": -1
+			}
+		],
+		"BASE_WPLANT1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 7,
+				"MissionTier": -1
+			}
+		],
+		"BASE_WPLANT2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 7,
+				"MissionTier": -1
+			}
+		],
+		"BASE_WPLANT3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 7,
+				"MissionTier": -1
+			}
+		],
+		"BASE_WPLANT4": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 71,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_275"
+			}
+		],
+		"BASE_WPLANT5": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 71,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_329"
+			}
+		],
+		"BASE_WPLANT6": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 71,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_358"
+			}
+		],
+		"BASE_WPLANT7": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 108,
+				"MissionTier": 1
+			}
+		],
+		"BASE_WPLANT8": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 108,
+				"MissionTier": 2
+			}
+		],
+		"BLD_BUGHEAD1": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_BUGHEAD2": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_BUGHEAD3": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_BUGHEAD4": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_BUGHEAD5": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_BUI_HAND": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_BUI_HEAD": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_BUI_TENT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_389"
+			}
+		],
+		"BLD_COVCRATE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 81,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_390"
+			}
+		],
+		"BLD_COVSILOS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 81,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_356"
+			}
+		],
+		"BLD_CRANE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 81,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_417"
+			}
+		],
+		"BLD_CRYS_DRONE": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_CRYS_SENT0": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_388"
+			}
+		],
+		"BLD_DATASIGN": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_387"
+			}
+		],
+		"BLD_EXPD_BASE01": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					1
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_FIREPIT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_239"
+			}
+		],
+		"BLD_FLYJAR": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_204"
+			}
+		],
+		"BLD_HOLOGEK": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_365"
+			}
+		],
+		"BLD_MAPTUBE": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_238"
+			}
+		],
+		"BLD_MINI_BIOFRI": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_240"
+			}
+		],
+		"BLD_PLANET_HOLO": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_236"
+			}
+		],
+		"BLD_SHIPBREAK1": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_SHIPBREAK2": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_SHIPBREAK3": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_SHIPBREAK4": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_SHIPBREAK5": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BLD_SKULL": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					4
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_205"
+			}
+		],
+		"BOBBLE_APOLLO": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 35,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_015"
+			}
+		],
+		"BOBBLE_ART": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 35,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_031"
+			}
+		],
+		"BOBBLE_ASTRO": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BOBBLE_ATLAS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 32,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_034"
+			}
+		],
+		"BOBBLE_NADA": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 27,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_033"
+			}
+		],
+		"BOBBLE_NULL": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 35,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_059"
+			}
+		],
+		"BOBBLE_OCTO": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"BOBBLE_POLO": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 27,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_032"
+			}
+		],
+		"BUGMECH_ARML": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 90,
+				"MissionTier": 2
+			}
+		],
+		"BUGMECH_ARMR": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 90,
+				"MissionTier": 5
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_422"
+			}
+		],
+		"BUGMECH_HEAD": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 90,
+				"MissionTier": 4
+			}
+		],
+		"BUGMECH_LEGS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 90,
+				"MissionTier": 3
+			}
+		],
+		"BUILDCHAIR4": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 59,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_360"
+			}
+		],
+		"B_DECO_Q_0": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_DECO_R": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_DECO_S": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_DECO_T": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_SHL_E": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_STR_AA_N": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_TUR_B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_WNG_P": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_WNG_Q": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"B_WNG_R": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"CAPE_BIOFRIG": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 70,
+				"MissionTier": 1
+			}
+		],
+		"CAPE_JELLY": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 72,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_424"
+			}
+		],
+		"CAPE_SEED": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 76,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_334"
+			}
+		],
+		"CAPE_WORM": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 67,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_303"
+			}
+		],
+		"CHART_TREASURE": [
+			{
+				"Type": "Exchange",
+				"Exchange": "LIBRARY_MAP@Explorers#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "LIBRARY_MAP@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "LIBRARY_MAP@Warriors#0"
+			}
+		],
+		"DECAL_AF": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 98,
+				"MissionTier": 4
+			}
+		],
+		"DECAL_AGT": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 46,
+				"MissionTier": 2
+			}
+		],
+		"DECAL_AMINO": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 46,
+				"MissionTier": 3
+			}
+		],
+		"DECAL_BIOME3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 53,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_266"
+			}
+		],
+		"DECAL_BLUESYS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 86,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_320"
+			}
+		],
+		"DECAL_BONEJUDGE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 106,
+				"MissionTier": 2
+			}
+		],
+		"DECAL_BONESOUP": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 106,
+				"MissionTier": 5
+			}
+		],
+		"DECAL_CAFE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 46,
+				"MissionTier": 4
+			}
+		],
+		"DECAL_CPLANET1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 53,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_267"
+			}
+		],
+		"DECAL_CREBEETLE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 86,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_326"
+			}
+		],
+		"DECAL_CREFLY": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 86,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_327"
+			}
+		],
+		"DECAL_CREPAWS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 88,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_346"
+			}
+		],
+		"DECAL_EXTINCT": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 106,
+				"MissionTier": 4
+			}
+		],
+		"DECAL_FPLANET2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 88,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_347"
+			}
+		],
+		"DECAL_GALCORE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 57,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_269"
+			}
+		],
+		"DECAL_HAZARD": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_060"
+			}
+		],
+		"DECAL_HORROR": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_135"
+			}
+		],
+		"DECAL_JELLY": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_134"
+			}
+		],
+		"DECAL_NEXUSM": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 57,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_260"
+			}
+		],
+		"DECAL_NMSCORD": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 98,
+				"MissionTier": 2
+			}
+		],
+		"DECAL_NMS_FR": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 98,
+				"MissionTier": 1
+			}
+		],
+		"DECAL_OOGC": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 116,
+				"MissionTier": 2
+			}
+		],
+		"DECAL_PEEP": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 103,
+				"MissionTier": 2
+			}
+		],
+		"DECAL_PIRATESYS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 80,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_319"
+			}
+		],
+		"DECAL_QIT": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 46,
+				"MissionTier": 5
+			}
+		],
+		"DECAL_RSS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 116,
+				"MissionTier": 1
+			}
+		],
+		"DECAL_RUINMECH": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 106,
+				"MissionTier": 1
+			}
+		],
+		"DECAL_SCAN": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 106,
+				"MissionTier": 3
+			}
+		],
+		"DECAL_SHIP1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 80,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_290"
+			}
+		],
+		"DECAL_SKULL": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_133"
+			}
+		],
+		"DECAL_SPOOKATL": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 80,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_289"
+			}
+		],
+		"DECAL_STARTSHIP": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 53,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_268"
+			}
+		],
+		"DECAL_TOSTARS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 88,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_348"
+			}
+		],
+		"DECAL_UFT": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 46,
+				"MissionTier": 6
+			}
+		],
+		"DECAL_UN42": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 98,
+				"MissionTier": 3
+			}
+		],
+		"DECAL_UWTREAS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 57,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_270"
+			}
+		],
+		"DECAL_WORM_P1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 60,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_296"
+			}
+		],
+		"DECAL_WORM_P2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 60,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_297"
+			}
+		],
+		"DECAL_WORM_P3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 60,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_298"
+			}
+		],
+		"DECAL_WORM_P4": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 60,
+				"MissionTier": 4
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_299"
+			}
+		],
+		"DECAL_WORM_P5": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 60,
+				"MissionTier": 5
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_300"
+			}
+		],
+		"EXPD_ATLASHELM": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_ATLASPACK": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_ATLASSTAFF": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BACKPACK01": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					1
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_107"
+			}
+		],
+		"EXPD_BACKPACK05": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_245"
+			}
+		],
+		"EXPD_BANNER01": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					1
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER02": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					2
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER03": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER04": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					4
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER05": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER06": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER07": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER08": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER09": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER10": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER11": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER12": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER13": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER14": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER15": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER16": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER17": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER18": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER19": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER20": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER21": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER22": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BANNER23": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_BIOFRIG": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_CAPE06": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_394"
+			}
+		],
+		"EXPD_CAPE07": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_364"
+			}
+		],
+		"EXPD_CAPE08": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_CAPE17": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_CUBE_06": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_237"
+			}
+		],
+		"EXPD_DECAL01": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					1
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL02": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					2
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL03": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL04": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					4
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL05": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL06": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL07": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL08": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL09": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL10": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL11": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL12": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL13": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL14": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL15": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL16": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL17": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL18": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL19": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL20": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL21": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL22": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_DECAL23": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_EGG_03": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_185"
+			}
+		],
+		"EXPD_EGG_04": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					4
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_220"
+			}
+		],
+		"EXPD_EGG_05": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_310"
+			}
+		],
+		"EXPD_EGG_08": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_250"
+			}
+		],
+		"EXPD_EGG_09": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_400"
+			}
+		],
+		"EXPD_EGG_11": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_EGG_13": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_EGG_14": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_EGG_16": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_EGG_18": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_EGG_19": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_EGG_23": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_FIREPACK01": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					1
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_FIREPACK04": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					4
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_FISH_PACK": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_FLAG_06A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_206"
+			}
+		],
+		"EXPD_FLAG_06B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_207"
+			}
+		],
+		"EXPD_FLAG_06C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_208"
+			}
+		],
+		"EXPD_FLAG_06D": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_209"
+			}
+		],
+		"EXPD_FLAG_06E": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_210"
+			}
+		],
+		"EXPD_GHOSTFRIG": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_GUN23": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_HELMET01": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					1
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_106"
+			}
+		],
+		"EXPD_ODD_EGG": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": true
+			}
+		],
+		"EXPD_PETCUST05": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_213"
+			}
+		],
+		"EXPD_PETCUST11": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_392"
+			}
+		],
+		"EXPD_POSTER05A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_156"
+			}
+		],
+		"EXPD_POSTER05B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_125"
+			}
+		],
+		"EXPD_POSTER05C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_124"
+			}
+		],
+		"EXPD_POSTER06A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_157"
+			}
+		],
+		"EXPD_POSTER06B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_158"
+			}
+		],
+		"EXPD_POSTER06C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_159"
+			}
+		],
+		"EXPD_POSTER07A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_160"
+			}
+		],
+		"EXPD_POSTER07B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_196"
+			}
+		],
+		"EXPD_POSTER07C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_197"
+			}
+		],
+		"EXPD_POSTER08A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_198"
+			}
+		],
+		"EXPD_POSTER08B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_199"
+			}
+		],
+		"EXPD_POSTER08C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_200"
+			}
+		],
+		"EXPD_POSTER09A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_286"
+			}
+		],
+		"EXPD_POSTER09B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_287"
+			}
+		],
+		"EXPD_POSTER09C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_288"
+			}
+		],
+		"EXPD_POSTER10A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_316"
+			}
+		],
+		"EXPD_POSTER10B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_317"
+			}
+		],
+		"EXPD_POSTER10C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_318"
+			}
+		],
+		"EXPD_POSTER11A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_376"
+			}
+		],
+		"EXPD_POSTER11B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_377"
+			}
+		],
+		"EXPD_POSTER11C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_378"
+			}
+		],
+		"EXPD_POSTER12A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_379"
+			}
+		],
+		"EXPD_POSTER12B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_380"
+			}
+		],
+		"EXPD_POSTER12C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_409"
+			}
+		],
+		"EXPD_POSTER13A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_410"
+			}
+		],
+		"EXPD_POSTER13B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER13C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER14A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER14B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER14C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER15A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER15B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER15C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER16A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER16B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER16C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER17A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER17B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER17C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER18A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER18B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER18C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER19A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER19B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER19C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER20A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER20B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER20C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER21A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER21B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER21C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER22A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER22B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER22C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23C": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23D": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23E": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23F": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23G": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23H": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_POSTER23I": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_S15_ARMOUR": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_S15_BOOTS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_S15_HAT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_S15_LASER": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_S15_LEGS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_S16_HAT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP01": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					1
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP09": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP12": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP13": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP16": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP17": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP23A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP23B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIPMAT13": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIPMAT17": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SHIP_METAL": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_SPEC02": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					2
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_STAFF_17": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_STAFF_18": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_STONE_PACK": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE01": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					1
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE02A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					2
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE02B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					2
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE03": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE04": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					4
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE05": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE06": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE07": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE08": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE09": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE10": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE11": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE12": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					12
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE13": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					13
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE14": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE15": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					15
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE16": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE17": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					17
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE18": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE19": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE20": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE21": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE22": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_TITLE23": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					23
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPD_WORMHAT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					4
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_215"
+			}
+		],
+		"EXPED_BUG_ARMOR": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPED_BUG_BOOTS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPED_BUG_GLOVE": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPED_BUG_HAT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"EXPED_BUG_PACK": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					14
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"FOOD_P_COLDWILD": [
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_CHAIN2_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_CHAIN3_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_CHAIN4_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_CHAIN_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_RET2_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_RET3_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_RET4_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_RET5_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_COLD_RET_4@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "TRA_NPC_COLD_4@Traders#0"
+			}
+		],
+		"FREI_TRAIL_GRAV": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					8
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_274"
+			}
+		],
+		"FREI_TRAIL_PUR": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 63,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_304"
+			}
+		],
+		"FREI_TRAIL_RED": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_393"
+			}
+		],
+		"FREI_TRAIL_TUR": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 63,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_423"
+			}
+		],
+		"FREI_TRAIL_YEL": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 63,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_244"
+			}
+		],
+		"HOOD_GEK": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 75,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_391"
+			}
+		],
+		"JETS_BLUE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 21,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_061"
+			}
+		],
+		"JETS_BUBBLE": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					3
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_089"
+			}
+		],
+		"JETS_CONFETTI": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 79,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_363"
+			}
+		],
+		"JETS_CORRUPT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"JETS_DARK": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 22,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_011"
+			}
+		],
+		"JETS_ELECTRIC": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					11
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"JETS_FIRE": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 79,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_333"
+			}
+		],
+		"JETS_FIREWORK": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 79,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_395"
+			}
+		],
+		"JETS_FUSION": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 79,
+				"MissionTier": 5
+			}
+		],
+		"JETS_GREEN": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 21,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_065"
+			}
+		],
+		"JETS_PLASMA": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 79,
+				"MissionTier": 4
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_425"
+			}
+		],
+		"JETS_RAINBOW": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 22,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_009"
+			}
+		],
+		"JETS_RED": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 21,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_064"
+			}
+		],
+		"JETS_RUIN": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"JETS_SENT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					5
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_242"
+			}
+		],
+		"JETS_SQUID": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"JETS_WORM": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					4
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_090"
+			}
+		],
+		"LAUNCHFUEL": [
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_LUSH_CHAIN_B_3@Traders#2"
+			}
+		],
+		"MYSTERY_BEACON": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 107,
+				"MissionTier": 1
+			}
+		],
+		"MYSTERY_TRACKER": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					2
+				],
+				"Phases": [
+					5
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"NEW_BACKPACK": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 30,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_140"
+			}
+		],
+		"ODD_EGG": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 23,
+				"MissionTier": 1
+			}
+		],
+		"PLANTPOT4": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 59,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_302"
+			}
+		],
+		"POWERCELL": [
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_LUSH_CHAIN_B_3@Traders#1"
+			}
+		],
+		"PRODFUEL2": [
+			{
+				"Type": "Exchange",
+				"Exchange": "?EXP_NPC_DUST_CHAIN2_A_3@Explorers#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?EXP_NPC_DUST_CHAIN_3@Explorers#1"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?EXP_NPC_DUST_RET_3@Explorers#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_NPC_LUSH_CHAIN_B_3@Traders#0"
+			}
+		],
+		"S10_PART1A": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"S10_PART1B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"S10_PART2": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"S10_PART3": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"S10_PART4": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"S10_PART5": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"S16_HEATER": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					16
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SHIP_ATLAS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					20
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SHIP_DARK": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 38,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_062"
+			}
+		],
+		"SHIP_GOLD": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 33,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_010"
+			}
+		],
+		"SHIP_GREEN": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 33,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_013"
+			}
+		],
+		"SHIP_PIRATE": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					6
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_214"
+			}
+		],
+		"SHIP_PLASMA": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					19
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SHIP_RAINBOW": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 38,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_063"
+			}
+		],
+		"SHIP_RED": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 33,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_012"
+			}
+		],
+		"SHIP_ROGUE": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					7
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_212"
+			}
+		],
+		"SPEC_BB_TRACK01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 54,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_BB_TRACK02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 54,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_BB_TRACK03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 54,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_BUCKETHELM": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					9
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_421"
+			}
+		],
+		"SPEC_DECAL01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_067"
+			}
+		],
+		"SPEC_DECAL02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			}
+		],
+		"SPEC_DECAL03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_068"
+			}
+		],
+		"SPEC_DECAL04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_069"
+			}
+		],
+		"SPEC_DECAL05": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_070"
+			}
+		],
+		"SPEC_DECAL06": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 3,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_066"
+			}
+		],
+		"SPEC_DECAL07": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 4,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_131"
+			}
+		],
+		"SPEC_DECAL08": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 4,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_132"
+			}
+		],
+		"SPEC_EMOTE01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_004"
+			}
+		],
+		"SPEC_EMOTE02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 3,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_005"
+			}
+		],
+		"SPEC_EMOTE03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_056"
+			}
+		],
+		"SPEC_EMOTE04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 5,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_007"
+			}
+		],
+		"SPEC_EMOTE05": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 7,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_008"
+			}
+		],
+		"SPEC_EMOTE08": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 8,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_057"
+			}
+		],
+		"SPEC_EMOTE09": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 8,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_006"
+			}
+		],
+		"SPEC_EMOTE10": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 8,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_058"
+			}
+		],
+		"SPEC_EMOTE11": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 78,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_331"
+			}
+		],
+		"SPEC_EMOTE12": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 78,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_332"
+			}
+		],
+		"SPEC_EMOTE13": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 78,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_335"
+			}
+		],
+		"SPEC_EMOTE14": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 78,
+				"MissionTier": 4
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_361"
+			}
+		],
+		"SPEC_EMOTE15": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 78,
+				"MissionTier": 5
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_362"
+			}
+		],
+		"SPEC_EMOTE16": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SPEC_EXOTIC1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 20,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_037"
+			}
+		],
+		"SPEC_EXOTIC10": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 11,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_136"
+			}
+		],
+		"SPEC_EXOTIC11": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 17,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_137"
+			}
+		],
+		"SPEC_EXOTIC12": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 14,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_138"
+			}
+		],
+		"SPEC_EXOTIC2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 11,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_038"
+			}
+		],
+		"SPEC_EXOTIC3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 11,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_077"
+			}
+		],
+		"SPEC_EXOTIC4": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 19,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_078"
+			}
+		],
+		"SPEC_EXOTIC5": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 16,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_079"
+			}
+		],
+		"SPEC_EXOTIC6": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 12,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_080"
+			}
+		],
+		"SPEC_EXOTIC7": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 13,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_108"
+			}
+		],
+		"SPEC_EXOTIC8": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 15,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_109"
+			}
+		],
+		"SPEC_EXOTIC9": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 18,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_110"
+			}
+		],
+		"SPEC_FIREWORK01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 8,
+				"MissionTier": -1
+			}
+		],
+		"SPEC_FIREWORK02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 8,
+				"MissionTier": -1
+			}
+		],
+		"SPEC_FIREWORK03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 8,
+				"MissionTier": -1
+			}
+		],
+		"SPEC_FIREWORK04": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 50,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_FIREWORK05": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 50,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_FIREWORK06": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 50,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_FIREWORK07": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 89,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_FIREWORK08": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 89,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_FIREWORK09": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 89,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_FIREWORK10": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 92,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_FIREWORK11": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 92,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_FIREWORK12": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 92,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_HELMET01": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_016"
+			}
+		],
+		"SPEC_HELMET02": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_035"
+			}
+		],
+		"SPEC_HELMET03": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 8,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_036"
+			}
+		],
+		"SPEC_HELMET05": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 9,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_076"
+			}
+		],
+		"SPEC_PETCUST1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 45,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_014"
+			}
+		],
+		"SPEC_PETCUST2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 45,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_071"
+			}
+		],
+		"SPEC_PETCUST3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 45,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_211"
+			}
+		],
+		"SPEC_ROCKETHAT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					10
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SPEC_SPOOKYHEAD": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_139"
+			}
+		],
+		"SPEC_TITLE1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 34,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_TITLE10": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 43,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_TITLE12": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 43,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_TITLE2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 39,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_TITLE21": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 43,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_TITLE24": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 34,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_TITLE25": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 49,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_TITLE26": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 49,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_TITLE27": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 49,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_TITLE3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 34,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_TITLE4": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 36,
+				"MissionTier": 1
+			}
+		],
+		"SPEC_TITLE5": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 36,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_TITLE6": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 36,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_TITLE7": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 36,
+				"MissionTier": 4
+			}
+		],
+		"SPEC_TITLE8": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 39,
+				"MissionTier": 2
+			}
+		],
+		"SPEC_TITLE9": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 39,
+				"MissionTier": 3
+			}
+		],
+		"SPEC_VYK_ARMOUR": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 10,
+				"MissionTier": 5
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_177"
+			}
+		],
+		"SPEC_VYK_BOOTS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 10,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_176"
+			}
+		],
+		"SPEC_VYK_GLOVES": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 10,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_178"
+			}
+		],
+		"SPEC_VYK_LEGS": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 10,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_179"
+			}
+		],
+		"SPEC_VYK_TORSO": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 10,
+				"MissionTier": 4
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_180"
+			}
+		],
+		"STATUE_ASTRO_B": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_ASTRO_G": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_027"
+			}
+		],
+		"STATUE_ASTRO_I": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 83,
+				"MissionTier": 1
+			}
+		],
+		"STATUE_ASTRO_S": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_073"
+			}
+		],
+		"STATUE_ATLAS_B": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 6,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_ATLAS_G": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 6,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_ATLAS_I": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 87,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_359"
+			}
+		],
+		"STATUE_ATLAS_S": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 6,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_075"
+			}
+		],
+		"STATUE_BLOB_B": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_BLOB_G": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_BLOB_I": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 83,
+				"MissionTier": 2
+			}
+		],
+		"STATUE_BLOB_S": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 1,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_DIP_B": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 3,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_DIP_G": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 3,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_DIP_I": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 87,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_418"
+			}
+		],
+		"STATUE_DIP_S": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 3,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_GEK_B": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_GEK_G": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_GEK_I": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 83,
+				"MissionTier": 3
+			}
+		],
+		"STATUE_GEK_S": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_SHIP_B": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 5,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_SHIP_G": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 5,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_SHIP_I": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 87,
+				"MissionTier": 3
+			}
+		],
+		"STATUE_SHIP_S": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 5,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_WALK_B": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_WALK_G": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			}
+		],
+		"STATUE_WALK_I": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 83,
+				"MissionTier": 4
+			}
+		],
+		"STATUE_WALK_S": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 2,
+				"MissionTier": -1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_130"
+			}
+		],
+		"STONE_ARMOUR": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"STONE_BOOTS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"STONE_GLOVES": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"STONE_HAT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"STONE_LEGS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"STONE_TORSO": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					18
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"STORM_CRYSTAL": [
+			{
+				"Type": "Exchange",
+				"Exchange": "?TRA_SCAVENGER_EXT_CHAIN_1@Traders#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "EXP_NPC_16@Explorers#2"
+			}
+		],
+		"SWARM_ARMOUR": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_BOOTS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_B1": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_B2": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_B3": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_G1": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_G2": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_G3": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_R1": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_R2": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_FLAG_R3": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_GLOVES": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_GUN": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_HAT": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_LEGS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_PACK": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_TORSO": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWARM_TROPHY_B": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					22
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"SWITCH_GUN01": [
+			{
+				"Type": "Platform",
+				"Reward": "SW_PREORDER2"
+			}
+		],
+		"SWITCH_SHIP01": [
+			{
+				"Type": "Platform",
+				"Reward": "SW_PREORDER"
+			}
+		],
+		"S_POSTER12": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 55,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_086"
+			}
+		],
+		"S_POSTER14": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 55,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_087"
+			}
+		],
+		"S_POSTER16": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 55,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_088"
+			}
+		],
+		"S_POSTER17": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 58,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_121"
+			}
+		],
+		"S_POSTER18": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 58,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_122"
+			}
+		],
+		"S_POSTER19": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 58,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_123"
+			}
+		],
+		"S_POSTER20": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 62,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_226"
+			}
+		],
+		"S_POSTER21": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 62,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_227"
+			}
+		],
+		"S_POSTER22": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 62,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_228"
+			}
+		],
+		"S_POSTER23": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 65,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_229"
+			}
+		],
+		"S_POSTER24": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 65,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_230"
+			}
+		],
+		"S_POSTER25": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 65,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_256"
+			}
+		],
+		"S_POSTER26": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 73,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_257"
+			}
+		],
+		"S_POSTER27": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 73,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_258"
+			}
+		],
+		"S_POSTER28": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 73,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_259"
+			}
+		],
+		"S_POSTER29": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 91,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_406"
+			}
+		],
+		"S_POSTER30": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 91,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_407"
+			}
+		],
+		"S_POSTER31": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 91,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_408"
+			}
+		],
+		"S_SAIL0": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 52,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_101"
+			}
+		],
+		"S_SAIL1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 52,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_102"
+			}
+		],
+		"S_SAIL2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 52,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_103"
+			}
+		],
+		"S_SAIL3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 52,
+				"MissionTier": 4
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_104"
+			}
+		],
+		"S_SIGN_BAR1": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 74,
+				"MissionTier": 1
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_273"
+			}
+		],
+		"S_SIGN_BAR2": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 74,
+				"MissionTier": 2
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_305"
+			}
+		],
+		"S_SIGN_BAR3": [
+			{
+				"Type": "Quicksilver",
+				"Shop": 74,
+				"MissionTier": 3
+			},
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_330"
+			}
+		],
+		"TGA_SHIP01": [
+			{
+				"Type": "Platform",
+				"Reward": "TGA_SHIP1"
+			}
+		],
+		"TOXICPLANT": [
+			{
+				"Type": "Exchange",
+				"Exchange": "?PP_TOXIC_FARM_INTERIM_CHAIN@Traders#0"
+			}
+		],
+		"TRUCK_CAB03": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					3
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"TRUCK_PAINT03": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					2
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"TRUCK_WHEELS08": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					4
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"TWITCH_FIREW01A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_001"
+			}
+		],
+		"TWITCH_FIREW01B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_002"
+			}
+		],
+		"TWITCH_FIREW01C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_003"
+			}
+		],
+		"TWITCH_FIREW01D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_044"
+			}
+		],
+		"TWITCH_FIREW01E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_045"
+			}
+		],
+		"TWITCH_FIREW02A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_081"
+			}
+		],
+		"TWITCH_FIREW02B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_082"
+			}
+		],
+		"TWITCH_FIREW02C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_083"
+			}
+		],
+		"TWITCH_FIREW02D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_084"
+			}
+		],
+		"TWITCH_FIREW02E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_085"
+			}
+		],
+		"TWITCH_FIREW03A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_091"
+			}
+		],
+		"TWITCH_FIREW03B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_092"
+			}
+		],
+		"TWITCH_FIREW03C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_093"
+			}
+		],
+		"TWITCH_FIREW03D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_094"
+			}
+		],
+		"TWITCH_FIREW03E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_095"
+			}
+		],
+		"TWITCH_FIREW04A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_155"
+			}
+		],
+		"TWITCH_FIREW04B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_154"
+			}
+		],
+		"TWITCH_FIREW04C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_153"
+			}
+		],
+		"TWITCH_FIREW04D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_152"
+			}
+		],
+		"TWITCH_FIREW04E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_151"
+			}
+		],
+		"TWITCH_FIREW05A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_161"
+			}
+		],
+		"TWITCH_FIREW05B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_162"
+			}
+		],
+		"TWITCH_FIREW05C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_163"
+			}
+		],
+		"TWITCH_FIREW05D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_164"
+			}
+		],
+		"TWITCH_FIREW05E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_165"
+			}
+		],
+		"TWITCH_FIREW06A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_191"
+			}
+		],
+		"TWITCH_FIREW06B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_192"
+			}
+		],
+		"TWITCH_FIREW06C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_193"
+			}
+		],
+		"TWITCH_FIREW06D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_194"
+			}
+		],
+		"TWITCH_FIREW06E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_195"
+			}
+		],
+		"TWITCH_FIREW07A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_231"
+			}
+		],
+		"TWITCH_FIREW07B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_232"
+			}
+		],
+		"TWITCH_FIREW07C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_233"
+			}
+		],
+		"TWITCH_FIREW07D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_234"
+			}
+		],
+		"TWITCH_FIREW07E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_235"
+			}
+		],
+		"TWITCH_FIREW08A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_261"
+			}
+		],
+		"TWITCH_FIREW08B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_262"
+			}
+		],
+		"TWITCH_FIREW08C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_263"
+			}
+		],
+		"TWITCH_FIREW08D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_264"
+			}
+		],
+		"TWITCH_FIREW08E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_265"
+			}
+		],
+		"TWITCH_FIREW09A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_291"
+			}
+		],
+		"TWITCH_FIREW09B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_292"
+			}
+		],
+		"TWITCH_FIREW09C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_293"
+			}
+		],
+		"TWITCH_FIREW09D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_294"
+			}
+		],
+		"TWITCH_FIREW09E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_295"
+			}
+		],
+		"TWITCH_FIREW10A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_321"
+			}
+		],
+		"TWITCH_FIREW10B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_322"
+			}
+		],
+		"TWITCH_FIREW10C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_323"
+			}
+		],
+		"TWITCH_FIREW10D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_324"
+			}
+		],
+		"TWITCH_FIREW10E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_325"
+			}
+		],
+		"TWITCH_FIREW11A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_351"
+			}
+		],
+		"TWITCH_FIREW11B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_352"
+			}
+		],
+		"TWITCH_FIREW11C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_353"
+			}
+		],
+		"TWITCH_FIREW11D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_354"
+			}
+		],
+		"TWITCH_FIREW11E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_355"
+			}
+		],
+		"TWITCH_FIREW12A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_381"
+			}
+		],
+		"TWITCH_FIREW12B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_382"
+			}
+		],
+		"TWITCH_FIREW12C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_383"
+			}
+		],
+		"TWITCH_FIREW12D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_384"
+			}
+		],
+		"TWITCH_FIREW12E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_385"
+			}
+		],
+		"TWITCH_FIREW13A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_411"
+			}
+		],
+		"TWITCH_FIREW13B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_412"
+			}
+		],
+		"TWITCH_FIREW13C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_413"
+			}
+		],
+		"TWITCH_FIREW13D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_414"
+			}
+		],
+		"TWITCH_FIREW13E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_415"
+			}
+		],
+		"TWITCH_GUN01": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_018"
+			}
+		],
+		"TWITCH_GUN02": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_023"
+			}
+		],
+		"TWITCH_GUN03": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_024"
+			}
+		],
+		"TWITCH_GUN04": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_025"
+			}
+		],
+		"TWITCH_GUN05": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_026"
+			}
+		],
+		"TWITCH_GUN06": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_148"
+			}
+		],
+		"TWITCH_GUN07": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_149"
+			}
+		],
+		"TWITCH_GUN08": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_150"
+			}
+		],
+		"TWITCH_GUN09": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_181"
+			}
+		],
+		"TWITCH_GUN10": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_182"
+			}
+		],
+		"TWITCH_GUN11": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_217"
+			}
+		],
+		"TWITCH_GUN12": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_219"
+			}
+		],
+		"TWITCH_GUN13": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_246"
+			}
+		],
+		"TWITCH_GUN14": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_247"
+			}
+		],
+		"TWITCH_GUN15": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_249"
+			}
+		],
+		"TWITCH_GUN16": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_276"
+			}
+		],
+		"TWITCH_GUN17": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_277"
+			}
+		],
+		"TWITCH_GUN18": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_279"
+			}
+		],
+		"TWITCH_GUN19": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_306"
+			}
+		],
+		"TWITCH_GUN20": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_307"
+			}
+		],
+		"TWITCH_GUN21": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_309"
+			}
+		],
+		"TWITCH_GUN22": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_338"
+			}
+		],
+		"TWITCH_GUN23": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_339"
+			}
+		],
+		"TWITCH_GUN24": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_340"
+			}
+		],
+		"TWITCH_GUN25": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_366"
+			}
+		],
+		"TWITCH_GUN26": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_367"
+			}
+		],
+		"TWITCH_GUN27": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_369"
+			}
+		],
+		"TWITCH_GUN28": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_396"
+			}
+		],
+		"TWITCH_GUN29": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_397"
+			}
+		],
+		"TWITCH_GUN30": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_399"
+			}
+		],
+		"TWITCH_GUN31": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_426"
+			}
+		],
+		"TWITCH_GUN32": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_427"
+			}
+		],
+		"TWITCH_GUN33": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_429"
+			}
+		],
+		"TWITCH_GUNUP01A": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_039"
+			}
+		],
+		"TWITCH_GUNUP01B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_040"
+			}
+		],
+		"TWITCH_GUNUP01C": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_041"
+			}
+		],
+		"TWITCH_GUNUP01D": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_042"
+			}
+		],
+		"TWITCH_GUNUP01E": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_043"
+			}
+		],
+		"TWITCH_PET01": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_051"
+			}
+		],
+		"TWITCH_PET02": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_052"
+			}
+		],
+		"TWITCH_PET03": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_053"
+			}
+		],
+		"TWITCH_PET04": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_054"
+			}
+		],
+		"TWITCH_PET05": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_055"
+			}
+		],
+		"TWITCH_PET06": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_111"
+			}
+		],
+		"TWITCH_PET07": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_112"
+			}
+		],
+		"TWITCH_PET08": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_113"
+			}
+		],
+		"TWITCH_PET09": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_114"
+			}
+		],
+		"TWITCH_PET10": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_115"
+			}
+		],
+		"TWITCH_PET11": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_146"
+			}
+		],
+		"TWITCH_PET12": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_147"
+			}
+		],
+		"TWITCH_PET13": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_183"
+			}
+		],
+		"TWITCH_PET14": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_184"
+			}
+		],
+		"TWITCH_PET15": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_216"
+			}
+		],
+		"TWITCH_PET16": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_218"
+			}
+		],
+		"TWITCH_PET17": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_248"
+			}
+		],
+		"TWITCH_PET18": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_278"
+			}
+		],
+		"TWITCH_PET19": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_280"
+			}
+		],
+		"TWITCH_PET20": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_308"
+			}
+		],
+		"TWITCH_PET21": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_336"
+			}
+		],
+		"TWITCH_PET22": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_337"
+			}
+		],
+		"TWITCH_PET23": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_368"
+			}
+		],
+		"TWITCH_PET24": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_370"
+			}
+		],
+		"TWITCH_PET25": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_398"
+			}
+		],
+		"TWITCH_PET26": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_428"
+			}
+		],
+		"TWITCH_PET27": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_430"
+			}
+		],
+		"TWITCH_SHIP01": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_017"
+			}
+		],
+		"TWITCH_SHIP02": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_019"
+			}
+		],
+		"TWITCH_SHIP03": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_020"
+			}
+		],
+		"TWITCH_SHIP04": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_021"
+			}
+		],
+		"TWITCH_SHIP05": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_022"
+			}
+		],
+		"TWITCH_SHIP06": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_046"
+			}
+		],
+		"TWITCH_SHIP07": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_047"
+			}
+		],
+		"TWITCH_SHIP08B": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_048"
+			}
+		],
+		"TWITCH_SHIP09": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_049"
+			}
+		],
+		"TWITCH_SHIP10": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_050"
+			}
+		],
+		"TWITCH_SHIP11": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_116"
+			}
+		],
+		"TWITCH_SHIP12": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_117"
+			}
+		],
+		"TWITCH_SHIP13": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_118"
+			}
+		],
+		"TWITCH_SHIP14": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_119"
+			}
+		],
+		"TWITCH_SHIP15": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_120"
+			}
+		],
+		"TWITCH_SHIP16": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_141"
+			}
+		],
+		"TWITCH_SHIP17": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_142"
+			}
+		],
+		"TWITCH_SHIP18": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_143"
+			}
+		],
+		"TWITCH_SHIP19": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_144"
+			}
+		],
+		"TWITCH_SHIP20": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_145"
+			}
+		],
+		"TWITCH_SHIP21": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_186"
+			}
+		],
+		"TWITCH_SHIP22": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_187"
+			}
+		],
+		"TWITCH_SHIP23": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_188"
+			}
+		],
+		"TWITCH_SHIP24": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_189"
+			}
+		],
+		"TWITCH_SHIP25": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_190"
+			}
+		],
+		"TWITCH_SHIP26": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_221"
+			}
+		],
+		"TWITCH_SHIP27": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_222"
+			}
+		],
+		"TWITCH_SHIP28": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_223"
+			}
+		],
+		"TWITCH_SHIP29": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_224"
+			}
+		],
+		"TWITCH_SHIP30": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_225"
+			}
+		],
+		"TWITCH_SHIP31": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_251"
+			}
+		],
+		"TWITCH_SHIP32": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_252"
+			}
+		],
+		"TWITCH_SHIP33": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_253"
+			}
+		],
+		"TWITCH_SHIP34": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_254"
+			}
+		],
+		"TWITCH_SHIP35": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_255"
+			}
+		],
+		"TWITCH_SHIP36": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_282"
+			}
+		],
+		"TWITCH_SHIP37": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_285"
+			}
+		],
+		"TWITCH_SHIP38": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_281"
+			}
+		],
+		"TWITCH_SHIP39": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_283"
+			}
+		],
+		"TWITCH_SHIP40": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_284"
+			}
+		],
+		"TWITCH_SHIP41": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_311"
+			}
+		],
+		"TWITCH_SHIP42": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_312"
+			}
+		],
+		"TWITCH_SHIP43": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_313"
+			}
+		],
+		"TWITCH_SHIP44": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_314"
+			}
+		],
+		"TWITCH_SHIP45": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_315"
+			}
+		],
+		"TWITCH_SHIP46": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_341"
+			}
+		],
+		"TWITCH_SHIP47": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_342"
+			}
+		],
+		"TWITCH_SHIP48": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_343"
+			}
+		],
+		"TWITCH_SHIP49": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_344"
+			}
+		],
+		"TWITCH_SHIP50": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_345"
+			}
+		],
+		"TWITCH_SHIP51": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_371"
+			}
+		],
+		"TWITCH_SHIP52": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_372"
+			}
+		],
+		"TWITCH_SHIP53": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_373"
+			}
+		],
+		"TWITCH_SHIP54": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_374"
+			}
+		],
+		"TWITCH_SHIP55": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_375"
+			}
+		],
+		"TWITCH_SHIP56": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_401"
+			}
+		],
+		"TWITCH_SHIP57": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_402"
+			}
+		],
+		"TWITCH_SHIP58": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_403"
+			}
+		],
+		"TWITCH_SHIP59": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_404"
+			}
+		],
+		"TWITCH_SHIP60": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_405"
+			}
+		],
+		"TWITCH_SHIP61": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_431"
+			}
+		],
+		"TWITCH_SHIP62": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_432"
+			}
+		],
+		"TWITCH_SHIP63": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_433"
+			}
+		],
+		"TWITCH_SHIP64": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_434"
+			}
+		],
+		"TWITCH_SHIP65": [
+			{
+				"Type": "Twitch",
+				"Drop": "TWITCH_435"
+			}
+		],
+		"VAULT_ARMOUR": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"VAULT_BOOTS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"VAULT_GLOVES": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"VAULT_LEGS": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"VAULT_TORSO": [
+			{
+				"Type": "Expedition",
+				"Expeditions": [
+					21
+				],
+				"Phases": [
+					-1
+				],
+				"SwitchExclusive": false
+			}
+		],
+		"WAR_CURIO2": [
+			{
+				"Type": "Exchange",
+				"Exchange": "?WAR_NPC_OUTPOST_CHAIN_A_1@Warriors#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?WAR_NPC_OUTPOST_CHAIN_B2_1@Warriors#0"
+			},
+			{
+				"Type": "Exchange",
+				"Exchange": "?WAR_NPC_OUTPOST_CHAIN_B_1@Warriors#0"
+			}
+		]
+	}
+}

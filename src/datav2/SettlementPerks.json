@@ -1,0 +1,2107 @@
+[
+	{
+		"Id": "BLESS_NEG",
+		"Name": "Cursed by the %BLESSING%",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": true,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
+				"Strength": "NegativeSmall",
+				"Min": -2,
+				"Max": -1,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "BLESS_POS",
+		"Name": "Blessed by the %BLESSING%",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": true,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
+				"Strength": "PositiveLarge",
+				"Min": 4,
+				"Max": 6,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA1",
+		"Name": "Atmosphere of suspicion",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
+				"Strength": "NegativeSmall",
+				"Min": -2,
+				"Max": -1,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA10",
+		"Name": "Malfunctioning electronics",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
+				"Strength": "NegativeMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA11",
+		"Name": "Infrequent doom mists",
+		"Description": "Occasional population loss",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "MaxPopulation",
+				"Label": "Population capacity",
+				"Text": "-3–5 population capacity",
+				"Strength": "NegativeLarge",
+				"Min": -5,
+				"Max": -3,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA12",
+		"Name": "General listlessness",
+		"Description": "Decreases productivity",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
+				"Strength": "NegativeMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA13",
+		"Name": "General unease",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA2",
+		"Name": "Constant static noise",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA3",
+		"Name": "Hostile spy suspected",
+		"Description": "Decreases productivity",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
+				"Strength": "NegativeMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA4",
+		"Name": "Intermittently hexed",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
+				"Strength": "NegativeMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA5",
+		"Name": "Foreboding atmosphere",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA6",
+		"Name": "Sense of doom",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA7",
+		"Name": "Air of decay",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+10,000–30,000 u/day maintenance",
+				"Strength": "NegativeSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA8",
+		"Name": "Targeted by scammers",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+10,000–30,000 u/day maintenance",
+				"Strength": "NegativeSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "NEG_EXTRA9",
+		"Name": "Citizens in a cult",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "OLD_SCHOOL",
+		"Name": "Pioneer Spirit",
+		"Description": "Prepared for anything",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+3–4% citizen happiness",
+				"Strength": "PositiveMedium",
+				"Min": 3,
+				"Max": 4,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+30,000–50,000 productivity",
+				"Strength": "PositiveMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-30,000–50,000 u/day maintenance",
+				"Strength": "PositiveMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "MaxPopulation",
+				"Label": "Population capacity",
+				"Text": "+2–3 population capacity",
+				"Strength": "PositiveMedium",
+				"Min": 2,
+				"Max": 3,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POL_COST",
+		"Name": "%COST_ADJ% %COST%",
+		"Description": "Decreases maintenance costs",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-10,000–100,000 u/day maintenance",
+				"Strength": "PositiveWide",
+				"Min": -100000,
+				"Max": -10000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POL_MOOD",
+		"Name": "%HAPPY_ADJ% %HAPPY_FACILITY%",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+2–6% citizen happiness",
+				"Strength": "PositiveWide",
+				"Min": 2,
+				"Max": 6,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POL_PROD",
+		"Name": "%PROD_ADJ% %PROD%",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
+				"Strength": "PositiveWide",
+				"Min": 20000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POSITIVE_EXTRA1",
+		"Name": "Colourful paintwork",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+3–4% citizen happiness",
+				"Strength": "PositiveMedium",
+				"Min": 3,
+				"Max": 4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POSITIVE_EXTRA2",
+		"Name": "Public artworks",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+3–4% citizen happiness",
+				"Strength": "PositiveMedium",
+				"Min": 3,
+				"Max": 4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POSITIVE_EXTRA3",
+		"Name": "Bone recycling unit",
+		"Description": "Decreases maintenance costs",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-30,000–50,000 u/day maintenance",
+				"Strength": "PositiveMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POSITIVE_EXTRA4",
+		"Name": "Unionised workforce",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
+				"Strength": "PositiveLarge",
+				"Min": 4,
+				"Max": 6,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POSITIVE_EXTRA5",
+		"Name": "Generous overtime",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
+				"Strength": "PositiveLarge",
+				"Min": 4,
+				"Max": 6,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+30,000–50,000 productivity",
+				"Strength": "PositiveMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POSITIVE_EXTRA6",
+		"Name": "Factory has sleep pods",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
+				"Strength": "NegativeSmall",
+				"Min": -2,
+				"Max": -1,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+50,000–100,000 productivity",
+				"Strength": "PositiveLarge",
+				"Min": 50000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "POSITIVE_EXTRA7",
+		"Name": "Mandatory brain implants",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
+				"Strength": "NegativeSmall",
+				"Min": -2,
+				"Max": -1,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+50,000–100,000 productivity",
+				"Strength": "PositiveLarge",
+				"Min": 50000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "PROC_BAR",
+		"Name": "%BAR_ADJ% %BAR%",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+2–6% citizen happiness",
+				"Strength": "PositiveWide",
+				"Min": 2,
+				"Max": 6,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-10,000–30,000 productivity",
+				"Strength": "NegativeSmall",
+				"Min": -30000,
+				"Max": -10000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Bar"
+		]
+	},
+	{
+		"Id": "PROC_BUI",
+		"Name": "%GREEK%",
+		"Description": "Decreases Sentinel attention",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Sentinels",
+				"Label": "Sentinel Visibility",
+				"Text": "-1–6% Sentinel attention",
+				"Strength": "PositiveWide",
+				"Min": -6,
+				"Max": -1,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_SheriffsOffice"
+		]
+	},
+	{
+		"Id": "PROC_COST",
+		"Name": "%COST_ADJ% %COST%",
+		"Description": "Decreases maintenance costs",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-10,000–100,000 u/day maintenance",
+				"Strength": "PositiveWide",
+				"Min": -100000,
+				"Max": -10000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Double",
+			"Settlement_Factory",
+			"Settlement_Farm",
+			"Settlement_Market",
+			"Settlement_SheriffsOffice",
+			"Settlement_SmallIndustrial",
+			"Settlement_Tower"
+		]
+	},
+	{
+		"Id": "PROC_FACI",
+		"Name": "%PROCESS% %FACILITY%",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
+				"Strength": "PositiveWide",
+				"Min": 20000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Double",
+			"Settlement_Factory",
+			"Settlement_Farm",
+			"Settlement_Market",
+			"Settlement_SmallIndustrial",
+			"Settlement_Tower"
+		]
+	},
+	{
+		"Id": "PROC_FACT",
+		"Name": "%OBJECT% %FACTORY%",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
+				"Strength": "PositiveWide",
+				"Min": 20000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Double",
+			"Settlement_Factory",
+			"Settlement_SmallIndustrial"
+		]
+	},
+	{
+		"Id": "PROC_FARM",
+		"Name": "%FOOD% %FARM%",
+		"Description": "Decreases maintenance costs",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-10,000–100,000 u/day maintenance",
+				"Strength": "PositiveWide",
+				"Min": -100000,
+				"Max": -10000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Farm"
+		]
+	},
+	{
+		"Id": "PROC_FUN",
+		"Name": "%FUN_ADJ% %FUN_FACILITY%",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+2–6% citizen happiness",
+				"Strength": "PositiveWide",
+				"Min": 2,
+				"Max": 6,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "PROC_JOB",
+		"Name": "%JOBLEVEL%",
+		"Description": "%JOB_STAT%",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": true,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
+				"Strength": "PositiveWide",
+				"Min": 20000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "PROC_POP",
+		"Name": "%POP_ADJ% %POP%",
+		"Description": "Increases population",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "MaxPopulation",
+				"Label": "Population capacity",
+				"Text": "+1–5 population capacity",
+				"Strength": "PositiveWide",
+				"Min": 1,
+				"Max": 5,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Large",
+			"Settlement_Medium",
+			"Settlement_Small"
+		]
+	},
+	{
+		"Id": "PROC_SENT",
+		"Name": "%SENT_ADJ% %SENT%",
+		"Description": "Decreases Sentinel attention",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Sentinels",
+				"Label": "Sentinel Visibility",
+				"Text": "-1–6% Sentinel attention",
+				"Strength": "PositiveWide",
+				"Min": -6,
+				"Max": -1,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Double",
+			"Settlement_Factory",
+			"Settlement_LandingZone"
+		]
+	},
+	{
+		"Id": "PROC_SHOP",
+		"Name": "%SHOP_ADJ% %SHOP%",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+20,000–100,000 productivity",
+				"Strength": "PositiveWide",
+				"Min": 20000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Double",
+			"Settlement_Market"
+		]
+	},
+	{
+		"Id": "PROC_TECH",
+		"Name": "%TECH_ADJ% %TECH%",
+		"Description": "Decreases maintenance costs",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": true,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-10,000–100,000 u/day maintenance",
+				"Strength": "PositiveWide",
+				"Min": -100000,
+				"Max": -10000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": [
+			"Settlement_Double",
+			"Settlement_Factory",
+			"Settlement_Farm",
+			"Settlement_Market",
+			"Settlement_SheriffsOffice",
+			"Settlement_SmallIndustrial",
+			"Settlement_Tower"
+		]
+	},
+	{
+		"Id": "SENT_QUAR",
+		"Name": "Quarantined explorers",
+		"Description": "Cognitohazard containment facility",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
+				"Strength": "NegativeMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "Sentinels",
+				"Label": "Sentinel Visibility",
+				"Text": "-3–5% Sentinel attention",
+				"Strength": "PositiveLarge",
+				"Min": -5,
+				"Max": -3,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "SENT_RELEASED",
+		"Name": "Creeping, Spreading Glass",
+		"Description": "Do not drink the water",
+		"IsNegative": false,
+		"IsStarter": false,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Sentinels",
+				"Label": "Sentinel Visibility",
+				"Text": "+2–3% Sentinel attention",
+				"Strength": "NegativeSmall",
+				"Min": 2,
+				"Max": 3,
+				"ChangesPopulation": false
+			},
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+50,000–100,000 productivity",
+				"Strength": "PositiveLarge",
+				"Min": 50000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG1",
+		"Name": "Worm infestation",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
+				"Strength": "NegativeMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG10",
+		"Name": "Repressive atmosphere",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
+				"Strength": "NegativeSmall",
+				"Min": -2,
+				"Max": -1,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG11",
+		"Name": "Localised gas outbreaks",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG12",
+		"Name": "Built on fault line",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
+				"Strength": "NegativeMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG13",
+		"Name": "Dancing is banned",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
+				"Strength": "NegativeLarge",
+				"Min": -6,
+				"Max": -4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG14",
+		"Name": "Signal blackspot",
+		"Description": "Decreases productivity",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
+				"Strength": "NegativeMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG15",
+		"Name": "Gravitational anomalies",
+		"Description": "Occasional population loss",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "MaxPopulation",
+				"Label": "Population capacity",
+				"Text": "-2–3 population capacity",
+				"Strength": "NegativeMedium",
+				"Min": -3,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG16",
+		"Name": "Undrinkable water",
+		"Description": "Occasional population loss",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "MaxPopulation",
+				"Label": "Population capacity",
+				"Text": "-2–3 population capacity",
+				"Strength": "NegativeMedium",
+				"Min": -3,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG17",
+		"Name": "Localised cognitohazards",
+		"Description": "Decreases productivity",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
+				"Strength": "NegativeMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG18",
+		"Name": "Choking air",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG19",
+		"Name": "Full of parasitic eggs",
+		"Description": "Occasional population loss",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "MaxPopulation",
+				"Label": "Population capacity",
+				"Text": "-3–5 population capacity",
+				"Strength": "NegativeLarge",
+				"Min": -5,
+				"Max": -3,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG2",
+		"Name": "Built on cursed ground",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
+				"Strength": "NegativeLarge",
+				"Min": -6,
+				"Max": -4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG20",
+		"Name": "Built on sand",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+50,000–100,000 u/day maintenance",
+				"Strength": "NegativeLarge",
+				"Min": 50000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG21",
+		"Name": "Frequent tremors",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+50,000–100,000 u/day maintenance",
+				"Strength": "NegativeLarge",
+				"Min": 50000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG22",
+		"Name": "Lazy citizens",
+		"Description": "Decreases productivity",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
+				"Strength": "NegativeMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG23",
+		"Name": "Uncultured",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-1–2% citizen happiness",
+				"Strength": "NegativeSmall",
+				"Min": -2,
+				"Max": -1,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG24",
+		"Name": "Localised quicksand",
+		"Description": "Occasional population loss",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "MaxPopulation",
+				"Label": "Population capacity",
+				"Text": "-2–3 population capacity",
+				"Strength": "NegativeMedium",
+				"Min": -3,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG25",
+		"Name": "Network of thought police",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
+				"Strength": "NegativeLarge",
+				"Min": -6,
+				"Max": -4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG26",
+		"Name": "Targeted by thieves",
+		"Description": "Decreases productivity",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-10,000–30,000 productivity",
+				"Strength": "NegativeSmall",
+				"Min": -30000,
+				"Max": -10000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG27",
+		"Name": "Rude citizens",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG28",
+		"Name": "Poorly decorated",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG29",
+		"Name": "Leaking pipes",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
+				"Strength": "NegativeMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG3",
+		"Name": "Highly radioactive",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
+				"Strength": "NegativeMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG30",
+		"Name": "Many spiders",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
+				"Strength": "NegativeLarge",
+				"Min": -6,
+				"Max": -4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG31",
+		"Name": "Intermittent lighting failures",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+10,000–30,000 u/day maintenance",
+				"Strength": "NegativeSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG32",
+		"Name": "Unlucky",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG33",
+		"Name": "Haunted",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
+				"Strength": "NegativeLarge",
+				"Min": -6,
+				"Max": -4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG34",
+		"Name": "No pets allowed",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
+				"Strength": "NegativeLarge",
+				"Min": -6,
+				"Max": -4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG35",
+		"Name": "Citizens are all clones",
+		"Description": "Increases Sentinel attention",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Sentinels",
+				"Label": "Sentinel Visibility",
+				"Text": "+5–10% Sentinel attention",
+				"Strength": "NegativeLarge",
+				"Min": 5,
+				"Max": 10,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG4",
+		"Name": "Pungent food cannery",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-2–4% citizen happiness",
+				"Strength": "NegativeMedium",
+				"Min": -4,
+				"Max": -2,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG5",
+		"Name": "Sinister AI overlord",
+		"Description": "Reduces citizen happiness",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "-4–6% citizen happiness",
+				"Strength": "NegativeLarge",
+				"Min": -6,
+				"Max": -4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG6",
+		"Name": "Poisoned water",
+		"Description": "Decreases productivity",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
+				"Strength": "NegativeMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG7",
+		"Name": "Trade network failing",
+		"Description": "Decreases productivity",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "-30,000–50,000 productivity",
+				"Strength": "NegativeMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG8",
+		"Name": "Legacy nanobots",
+		"Description": "Increases Sentinel attention",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Sentinels",
+				"Label": "Sentinel Visibility",
+				"Text": "+2–3% Sentinel attention",
+				"Strength": "NegativeSmall",
+				"Min": 2,
+				"Max": 3,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_NEG9",
+		"Name": "Prototype building materials",
+		"Description": "Increases maintenance costs",
+		"IsNegative": true,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "+30,000–50,000 u/day maintenance",
+				"Strength": "NegativeMedium",
+				"Min": 30000,
+				"Max": 50000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS1",
+		"Name": "Electromagnetic hotspot",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
+				"Strength": "PositiveSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS10",
+		"Name": "Propaganda broadcast array",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+2–3% citizen happiness",
+				"Strength": "PositiveSmall",
+				"Min": 2,
+				"Max": 3,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS11",
+		"Name": "HypnoDrones",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+50,000–100,000 productivity",
+				"Strength": "PositiveLarge",
+				"Min": 50000,
+				"Max": 100000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS12",
+		"Name": "Robot butlers",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
+				"Strength": "PositiveLarge",
+				"Min": 4,
+				"Max": 6,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS13",
+		"Name": "Bounty scanner",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
+				"Strength": "PositiveSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS14",
+		"Name": "Salvage drones",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
+				"Strength": "PositiveSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS15",
+		"Name": "Well-groomed citizens",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+4–6% citizen happiness",
+				"Strength": "PositiveLarge",
+				"Min": 4,
+				"Max": 6,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS2",
+		"Name": "Algae farm supplies food",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
+				"Strength": "PositiveSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS3",
+		"Name": "Automated climate shields",
+		"Description": "Decreases maintenance costs",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-30,000–50,000 u/day maintenance",
+				"Strength": "PositiveMedium",
+				"Min": -50000,
+				"Max": -30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS4",
+		"Name": "Plentiful nanobots",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
+				"Strength": "PositiveSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS5",
+		"Name": "Anomaly scanner",
+		"Description": "Decreases maintenance costs",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-10,000–30,000 u/day maintenance",
+				"Strength": "PositiveSmall",
+				"Min": -30000,
+				"Max": -10000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS6",
+		"Name": "Interstellar signal array",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
+				"Strength": "PositiveSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS7",
+		"Name": "Cartography drones",
+		"Description": "Increases productivity",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Production",
+				"Label": "Productivity",
+				"Text": "+10,000–30,000 productivity",
+				"Strength": "PositiveSmall",
+				"Min": 10000,
+				"Max": 30000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS8",
+		"Name": "Spacetime anomaly shielding",
+		"Description": "Decreases maintenance costs",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Upkeep",
+				"Label": "Upkeep Costs",
+				"Text": "-10,000–30,000 u/day maintenance",
+				"Strength": "PositiveSmall",
+				"Min": -30000,
+				"Max": -10000,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	},
+	{
+		"Id": "STARTING_POS9",
+		"Name": "Educated citizens",
+		"Description": "Improves citizen happiness",
+		"IsNegative": false,
+		"IsStarter": true,
+		"IsProc": false,
+		"IsJob": false,
+		"IsBlessing": false,
+		"Effects": [
+			{
+				"Stat": "Happiness",
+				"Label": "Citizen Happiness",
+				"Text": "+3–4% citizen happiness",
+				"Strength": "PositiveMedium",
+				"Min": 3,
+				"Max": 4,
+				"ChangesPopulation": false
+			}
+		],
+		"Buildings": []
+	}
+]

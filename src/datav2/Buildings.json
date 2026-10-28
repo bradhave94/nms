@@ -32665,7 +32665,7 @@
 			"HasChargedBy",
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 2,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -32744,7 +32744,7 @@
 			"HasChargedBy",
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 2,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -32823,7 +32823,7 @@
 			"HasChargedBy",
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 2,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -32902,7 +32902,7 @@
 			"HasChargedBy",
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 2,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [
@@ -32981,7 +32981,7 @@
 			"HasChargedBy",
 			"HasDevProperties"
 		],
-		"BlueprintCost": 1,
+		"BlueprintCost": 2,
 		"BlueprintCostType": "Nanites",
 		"BlueprintSource": 0,
 		"RequiredItems": [

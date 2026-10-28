@@ -1,0 +1,4114 @@
+[
+	{
+		"Id": "COMBAT_BAD_1",
+		"Name": "Cowardly Gunners",
+		"Stat": "Combat",
+		"Strength": "NegativeSmall",
+		"Value": -2,
+		"Effect": "-2 Combat",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_BAD_2",
+		"Name": "Second-Hand Rockets",
+		"Stat": "Combat",
+		"Strength": "NegativeMedium",
+		"Value": -4,
+		"Effect": "-4 Combat",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_BAD_3",
+		"Name": "Faulty Torpedoes",
+		"Stat": "Combat",
+		"Strength": "NegativeLarge",
+		"Value": -6,
+		"Effect": "-6 Combat",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_BAD_4",
+		"Name": "Fragile Hull",
+		"Stat": "Combat",
+		"Strength": "NegativeSmall",
+		"Value": -2,
+		"Effect": "-2 Combat",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_BAD_5",
+		"Name": "Low-Energy Shields",
+		"Stat": "Combat",
+		"Strength": "NegativeMedium",
+		"Value": -4,
+		"Effect": "-4 Combat",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_PRI",
+		"Name": "Combat Specialist",
+		"Stat": "Combat",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Combat",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "COMBAT_SEC_1",
+		"Name": "Massive Guns",
+		"Stat": "Combat",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 15
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_SEC_2",
+		"Name": "Ablative Armour",
+		"Stat": "Combat",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 15
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_SEC_3",
+		"Name": "Cloaking Device",
+		"Stat": "Combat",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 15
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_SEC_4",
+		"Name": "Ultrasonic Weapons",
+		"Stat": "Combat",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 15
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_SEC_5",
+		"Name": "Experimental Weaponry",
+		"Stat": "Combat",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 15
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_SEC_6",
+		"Name": "Tremendous Cannons",
+		"Stat": "Combat",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_TER_1",
+		"Name": "Hidden Weaponry",
+		"Stat": "Combat",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_TER_2",
+		"Name": "Ammo Fabricators",
+		"Stat": "Combat",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_TER_3",
+		"Name": "Reinforced Hull",
+		"Stat": "Combat",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_TER_4",
+		"Name": "Aggressive Probes",
+		"Stat": "Combat",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_TER_5",
+		"Name": "Angry Captain",
+		"Stat": "Combat",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "COMBAT_TER_6",
+		"Name": "Retrofitted Turrets",
+		"Stat": "Combat",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "DEEPSPACE_1",
+		"Name": "Transcendent Vision",
+		"Stat": "Exploration",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpace",
+				"Label": "Organic",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "DEEPSPACE_2",
+		"Name": "Siren Song",
+		"Stat": "Diplomatic",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpace",
+				"Label": "Organic",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "DEEPSPACE_3",
+		"Name": "Hungering Beak",
+		"Stat": "Combat",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpace",
+				"Label": "Organic",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "DEEPSPACE_4",
+		"Name": "Time Loop",
+		"Stat": "Invulnerable",
+		"Strength": "TertiaryMedium",
+		"Value": 1,
+		"Effect": "Damage Reduction",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpace",
+				"Label": "Organic",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "DEEPSPACE_5",
+		"Name": "Nourishing Oils",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryLarge",
+		"Value": 9,
+		"Effect": "-9 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpace",
+				"Label": "Organic",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_BAD_1",
+		"Name": "Wandering Compass",
+		"Stat": "Exploration",
+		"Strength": "NegativeSmall",
+		"Value": -2,
+		"Effect": "-2 Exploration",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_BAD_2",
+		"Name": "Outdated Maps",
+		"Stat": "Exploration",
+		"Strength": "NegativeMedium",
+		"Value": -4,
+		"Effect": "-4 Exploration",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_BAD_3",
+		"Name": "Uncalibrated Warp Drive",
+		"Stat": "Exploration",
+		"Strength": "NegativeLarge",
+		"Value": -6,
+		"Effect": "-6 Exploration",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_BAD_4",
+		"Name": "Misaligned Sensors",
+		"Stat": "Exploration",
+		"Strength": "NegativeMedium",
+		"Value": -4,
+		"Effect": "-4 Exploration",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_BAD_5",
+		"Name": "Haunted Radar",
+		"Stat": "Exploration",
+		"Strength": "NegativeSmall",
+		"Value": -2,
+		"Effect": "-2 Exploration",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_PRI",
+		"Name": "Exploration Specialist",
+		"Stat": "Exploration",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_SEC_1",
+		"Name": "Anomaly Scanner",
+		"Stat": "Exploration",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_SEC_2",
+		"Name": "Interstellar Signal Array",
+		"Stat": "Exploration",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_SEC_3",
+		"Name": "Cartography Drones",
+		"Stat": "Exploration",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_SEC_4",
+		"Name": "Realtime Archival Device",
+		"Stat": "Exploration",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_SEC_5",
+		"Name": "Gravitational Visualiser",
+		"Stat": "Exploration",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_SEC_6",
+		"Name": "Spacetime Anomaly Shielding",
+		"Stat": "Exploration",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_TER_1",
+		"Name": "Planetary Data Scoop",
+		"Stat": "Exploration",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_TER_2",
+		"Name": "Stowaway Botanist",
+		"Stat": "Exploration",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_TER_3",
+		"Name": "Radio Telescopes",
+		"Stat": "Exploration",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_TER_4",
+		"Name": "Fauna Analysis Device",
+		"Stat": "Exploration",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_TER_5",
+		"Name": "Holographic Displays",
+		"Stat": "Exploration",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "EXPLORE_TER_6",
+		"Name": "Long-Distance Sensors",
+		"Stat": "Exploration",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "FUEL_BAD_1",
+		"Name": "Thirsty Crew",
+		"Stat": "FuelBurnRate",
+		"Strength": "NegativeSmall",
+		"Value": 1,
+		"Effect": "+1 Cost Per Warp",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "FUEL_BAD_2",
+		"Name": "Inefficient Engine",
+		"Stat": "FuelBurnRate",
+		"Strength": "NegativeMedium",
+		"Value": 2,
+		"Effect": "+2 Cost Per Warp",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "FUEL_BAD_3",
+		"Name": "Leaky Fuel Tubes",
+		"Stat": "FuelBurnRate",
+		"Strength": "NegativeLarge",
+		"Value": 4,
+		"Effect": "+4 Cost Per Warp",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "FUEL_BAD_4",
+		"Name": "Poorly-Aligned Ballast",
+		"Stat": "FuelBurnRate",
+		"Strength": "NegativeMedium",
+		"Value": 2,
+		"Effect": "+2 Cost Per Warp",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "FUEL_BAD_5",
+		"Name": "Oil Burner",
+		"Stat": "FuelBurnRate",
+		"Strength": "NegativeSmall",
+		"Value": 1,
+		"Effect": "+1 Cost Per Warp",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "FUEL_PRI",
+		"Name": "Support Specialist",
+		"Stat": "FuelCapacity",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "-15 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "FUEL_SEC_1",
+		"Name": "Large Tanks",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondarySmall",
+		"Value": 3,
+		"Effect": "-3 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "FUEL_SEC_2",
+		"Name": "Oversized Fuel Scoop",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryMedium",
+		"Value": 6,
+		"Effect": "-6 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "FUEL_SEC_3",
+		"Name": "Generator Grid",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryLarge",
+		"Value": 9,
+		"Effect": "-9 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "FUEL_SEC_4",
+		"Name": "Antimatter Cycler",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondarySmall",
+		"Value": 3,
+		"Effect": "-3 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "FUEL_SEC_5",
+		"Name": "Advanced Power Distributor",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryMedium",
+		"Value": 6,
+		"Effect": "-6 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "FUEL_SEC_6",
+		"Name": "Portable Fusion Ignitor",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryLarge",
+		"Value": 9,
+		"Effect": "-9 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "FUEL_TER_1",
+		"Name": "Oxygen Recycler",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiarySmall",
+		"Value": 2,
+		"Effect": "-2 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "FUEL_TER_2",
+		"Name": "Tuned Engines",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiaryMedium",
+		"Value": 4,
+		"Effect": "-4 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "FUEL_TER_3",
+		"Name": "Robot Crew",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiaryLarge",
+		"Value": 6,
+		"Effect": "-6 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "FUEL_TER_4",
+		"Name": "Photon Sails",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiarySmall",
+		"Value": 2,
+		"Effect": "-2 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "FUEL_TER_5",
+		"Name": "Overclocked Power Distributor",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiaryMedium",
+		"Value": 4,
+		"Effect": "-4 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "FUEL_TER_6",
+		"Name": "Solar Panels",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiaryLarge",
+		"Value": 6,
+		"Effect": "-6 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "FUEL_TER_7",
+		"Name": "Efficient Warp Drive",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiaryMedium",
+		"Value": 4,
+		"Effect": "-4 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "GHOSTSHIP_1",
+		"Name": "Cursed to Roam",
+		"Stat": "Exploration",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "GhostShip",
+				"Label": "Doomed",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "GHOSTSHIP_2",
+		"Name": "Phantasmic Cannons",
+		"Stat": "Combat",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "GhostShip",
+				"Label": "Doomed",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "GHOSTSHIP_3",
+		"Name": "Powered by souls",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryLarge",
+		"Value": 9,
+		"Effect": "-9 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "GhostShip",
+				"Label": "Doomed",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "GHOSTSHIP_4",
+		"Name": "Undying",
+		"Stat": "Invulnerable",
+		"Strength": "TertiaryMedium",
+		"Value": 1,
+		"Effect": "Damage Reduction",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "GhostShip",
+				"Label": "Doomed",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "GHOSTSHIP_5",
+		"Name": "Driven by the bells",
+		"Stat": "Speed",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "-3% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "GhostShip",
+				"Label": "Doomed",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "INVULN_TER_1",
+		"Name": "Self-Repairing Hull",
+		"Stat": "Invulnerable",
+		"Strength": "TertiaryMedium",
+		"Value": 1,
+		"Effect": "Damage Reduction",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "INVULN_TER_2",
+		"Name": "Advanced Maintenance Drones",
+		"Stat": "Invulnerable",
+		"Strength": "TertiaryMedium",
+		"Value": 1,
+		"Effect": "Damage Reduction",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "INVULN_TER_3",
+		"Name": "Holographic Components",
+		"Stat": "Invulnerable",
+		"Strength": "TertiaryMedium",
+		"Value": 1,
+		"Effect": "Damage Reduction",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_PRI",
+		"Name": "Bitter Memories",
+		"Stat": "Combat",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Combat",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "LIVING_COM_S_1",
+		"Name": "Muscular Tentacles",
+		"Stat": "Combat",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_S_2",
+		"Name": "Superluminal Strike",
+		"Stat": "Combat",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_S_3",
+		"Name": "Intimidating Visage",
+		"Stat": "Combat",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_S_4",
+		"Name": "Unsettling Visions",
+		"Stat": "Combat",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_S_5",
+		"Name": "Flight Pattern Analysis",
+		"Stat": "Combat",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_S_6",
+		"Name": "Hardened Flesh",
+		"Stat": "Combat",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_T_1",
+		"Name": "Disorienting Wail",
+		"Stat": "Combat",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_T_2",
+		"Name": "Blinding Miasma",
+		"Stat": "Combat",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_COM_T_3",
+		"Name": "Unforgiving",
+		"Stat": "Combat",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_PRI",
+		"Name": "Echolocation",
+		"Stat": "Exploration",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Exploration",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "LIVING_EXP_S_1",
+		"Name": "Ancient Knowledge",
+		"Stat": "Exploration",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_S_2",
+		"Name": "Retrocognition",
+		"Stat": "Exploration",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_S_3",
+		"Name": "Fauna Empathy",
+		"Stat": "Exploration",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_S_4",
+		"Name": "Galactic Wisdom",
+		"Stat": "Exploration",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_S_5",
+		"Name": "Migratory Insight",
+		"Stat": "Exploration",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_S_6",
+		"Name": "Star Memorisation",
+		"Stat": "Exploration",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_T_1",
+		"Name": "Deep Space Native",
+		"Stat": "Exploration",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_T_2",
+		"Name": "Remote Pod Uplink",
+		"Stat": "Combat",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_EXP_T_3",
+		"Name": "Trans-Reality Recollection",
+		"Stat": "Exploration",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_PRI",
+		"Name": "Slow Metabolism",
+		"Stat": "FuelCapacity",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "-15 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "LIVING_FUEL_S_1",
+		"Name": "Reality Skimming",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryLarge",
+		"Value": 9,
+		"Effect": "-9 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_S_2",
+		"Name": "Gliding Movement",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryLarge",
+		"Value": 9,
+		"Effect": "-9 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_S_3",
+		"Name": "Effortless Propulsion",
+		"Stat": "Combat",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_S_4",
+		"Name": "Efficient Forager",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondaryMedium",
+		"Value": 6,
+		"Effect": "-6 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_S_5",
+		"Name": "Stellar Wind Drifter",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondarySmall",
+		"Value": 3,
+		"Effect": "-3 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_S_6",
+		"Name": "Blubber Reserves",
+		"Stat": "FuelCapacity",
+		"Strength": "SecondarySmall",
+		"Value": 3,
+		"Effect": "-3 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_T_1",
+		"Name": "Stoic Endurance",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiaryLarge",
+		"Value": 6,
+		"Effect": "-6 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_T_2",
+		"Name": "Fleet Mascot",
+		"Stat": "Combat",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_FUEL_T_3",
+		"Name": "Long-Distance Nomad",
+		"Stat": "FuelCapacity",
+		"Strength": "TertiarySmall",
+		"Value": 2,
+		"Effect": "-2 Expedition Fuel Cost",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_PRI",
+		"Name": "Seismic Song",
+		"Stat": "Mining",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Industry",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "LIVING_MIN_S_1",
+		"Name": "Baleen Plates",
+		"Stat": "Mining",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_S_2",
+		"Name": "Asteroid Digestion",
+		"Stat": "Mining",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_S_3",
+		"Name": "Leaching Bile",
+		"Stat": "Mining",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_S_4",
+		"Name": "Metallurgic Microbes",
+		"Stat": "Mining",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_S_5",
+		"Name": "Stardust Expertise",
+		"Stat": "Mining",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_S_6",
+		"Name": "Sonic Comminution",
+		"Stat": "Mining",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_T_1",
+		"Name": "Probing Tendrils",
+		"Stat": "Mining",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_T_2",
+		"Name": "Superheated Stomach",
+		"Stat": "Mining",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_MIN_T_3",
+		"Name": "Nebula Painter",
+		"Stat": "Mining",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_PRI",
+		"Name": "Wormhole Navigation",
+		"Stat": "Speed",
+		"Strength": "Primary",
+		"Value": 10,
+		"Effect": "-10% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "LIVING_SPE_S_1",
+		"Name": "Homing Instincts",
+		"Stat": "Speed",
+		"Strength": "SecondaryLarge",
+		"Value": 3,
+		"Effect": "-3% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_S_2",
+		"Name": "Black Hole Diver",
+		"Stat": "Speed",
+		"Strength": "SecondaryLarge",
+		"Value": 3,
+		"Effect": "-3% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_S_3",
+		"Name": "Cosmic Swimmer",
+		"Stat": "Speed",
+		"Strength": "SecondaryMedium",
+		"Value": 2,
+		"Effect": "-2% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_S_4",
+		"Name": "Streamlined Form",
+		"Stat": "Speed",
+		"Strength": "SecondaryMedium",
+		"Value": 2,
+		"Effect": "-2% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_S_5",
+		"Name": "Colossal Fins",
+		"Stat": "Speed",
+		"Strength": "SecondarySmall",
+		"Value": 1,
+		"Effect": "-1% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_S_6",
+		"Name": "Slick Flesh",
+		"Stat": "Speed",
+		"Strength": "SecondarySmall",
+		"Value": 1,
+		"Effect": "-1% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_T_1",
+		"Name": "Cosmic Slipstream",
+		"Stat": "Speed",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "-3% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_T_2",
+		"Name": "Graceful Agility",
+		"Stat": "Speed",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "-2% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_SPE_T_3",
+		"Name": "Route Optimisation",
+		"Stat": "Speed",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "-1% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_PRI",
+		"Name": "Mesmerising Voice",
+		"Stat": "Diplomatic",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Trading",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "LIVING_TRA_S_1",
+		"Name": "Counterfeit Detection",
+		"Stat": "Diplomatic",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_S_2",
+		"Name": "Market Foresight",
+		"Stat": "Diplomatic",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_S_3",
+		"Name": "Dream Manipulation",
+		"Stat": "Diplomatic",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_S_4",
+		"Name": "Hypnotic Melody",
+		"Stat": "Diplomatic",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_S_5",
+		"Name": "Mind Weaver",
+		"Stat": "Diplomatic",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_S_6",
+		"Name": "Overwhelming Presence",
+		"Stat": "Diplomatic",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_T_1",
+		"Name": "Legendary Reputation",
+		"Stat": "Diplomatic",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_T_2",
+		"Name": "Peaceful Negotiator",
+		"Stat": "Diplomatic",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "LIVING_TRA_T_3",
+		"Name": "Persuasive Verse",
+		"Stat": "Diplomatic",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "DeepSpaceCommon",
+				"Label": "Organic",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "MINING_BAD_1",
+		"Name": "Lazy Crew",
+		"Stat": "Mining",
+		"Strength": "NegativeSmall",
+		"Value": -2,
+		"Effect": "-2 Industry",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "MINING_BAD_2",
+		"Name": "Small Hoppers",
+		"Stat": "Mining",
+		"Strength": "NegativeMedium",
+		"Value": -4,
+		"Effect": "-4 Industry",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "MINING_BAD_3",
+		"Name": "Clumsy Drill Operator",
+		"Stat": "Mining",
+		"Strength": "NegativeLarge",
+		"Value": -6,
+		"Effect": "-6 Industry",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "MINING_BAD_4",
+		"Name": "Underpowered Lasers",
+		"Stat": "Mining",
+		"Strength": "NegativeMedium",
+		"Value": -4,
+		"Effect": "-4 Industry",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "MINING_BAD_5",
+		"Name": "Malfunctioning Drones",
+		"Stat": "Mining",
+		"Strength": "NegativeSmall",
+		"Value": -2,
+		"Effect": "-2 Industry",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "MINING_PRI",
+		"Name": "Industrial Specialist",
+		"Stat": "Mining",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Industry",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "MINING_SEC_1",
+		"Name": "Laser Drill Array",
+		"Stat": "Mining",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "MINING_SEC_2",
+		"Name": "Tractor Beam",
+		"Stat": "Mining",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "MINING_SEC_3",
+		"Name": "Ultrasonic Welders",
+		"Stat": "Mining",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "MINING_SEC_4",
+		"Name": "Ore Processing Unit",
+		"Stat": "Mining",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "MINING_SEC_5",
+		"Name": "Terraforming Beams",
+		"Stat": "Mining",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "MINING_SEC_6",
+		"Name": "Asteroid Vaporizer",
+		"Stat": "Mining",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "MINING_TER_1",
+		"Name": "Mineral Extractors",
+		"Stat": "Mining",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "MINING_TER_2",
+		"Name": "Extendable Drills",
+		"Stat": "Mining",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "MINING_TER_3",
+		"Name": "Asteroid Scanner",
+		"Stat": "Mining",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "MINING_TER_4",
+		"Name": "Harvester Drones",
+		"Stat": "Mining",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "MINING_TER_5",
+		"Name": "Metal Detector",
+		"Stat": "Mining",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "MINING_TER_6",
+		"Name": "Remote Mining Unit",
+		"Stat": "Mining",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Industry",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "NORMANDY_1",
+		"Name": "Deep Scout Prototype",
+		"Stat": "Combat",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Normandy",
+				"Label": "Normandy",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "NORMANDY_2",
+		"Name": "Tantalus Drive",
+		"Stat": "Exploration",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Exploration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Normandy",
+				"Label": "Normandy",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "NORMANDY_3",
+		"Name": "Mass Accelerator Cannon",
+		"Stat": "Combat",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Combat",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Normandy",
+				"Label": "Normandy",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "NORMANDY_4",
+		"Name": "Internal Emission Sink",
+		"Stat": "Stealth",
+		"Strength": "TertiaryMedium",
+		"Value": 1,
+		"Effect": "Silent Running Capability Enabled",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Normandy",
+				"Label": "Normandy",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "NORMANDY_5",
+		"Name": "Long-Range FTL Capacity",
+		"Stat": "Speed",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "-3% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Normandy",
+				"Label": "Normandy",
+				"Weight": 100
+			}
+		]
+	},
+	{
+		"Id": "PIRATE_PRI",
+		"Name": "Raiding Specialist",
+		"Stat": "Combat",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Combat",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "SPEED_TER_1",
+		"Name": "Local Time Dilator",
+		"Stat": "Speed",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "-1% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "SPEED_TER_2",
+		"Name": "Mass Driver",
+		"Stat": "Speed",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "-1% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "SPEED_TER_3",
+		"Name": "Expert Navigator",
+		"Stat": "Speed",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "-2% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "SPEED_TER_4",
+		"Name": "Alcubierre Drive",
+		"Stat": "Speed",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "-2% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "SPEED_TER_5",
+		"Name": "Wormhole Generator",
+		"Stat": "Speed",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "-3% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "SPEED_TER_6",
+		"Name": "Experimental Impulse Drive",
+		"Stat": "Speed",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "-3% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "SPEED_TER_7",
+		"Name": "Motivated Crew",
+		"Stat": "Speed",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "-2% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "SPEED_TER_8",
+		"Name": "Dynamic Ballast",
+		"Stat": "Speed",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "-2% Expedition Duration",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "TRADING_BAD_1",
+		"Name": "Rude Captain",
+		"Stat": "Diplomatic",
+		"Strength": "NegativeSmall",
+		"Value": -2,
+		"Effect": "-2 Trading",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "TRADING_BAD_2",
+		"Name": "Small Hold",
+		"Stat": "Diplomatic",
+		"Strength": "NegativeMedium",
+		"Value": -4,
+		"Effect": "-4 Trading",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "TRADING_BAD_3",
+		"Name": "Roach Infestation",
+		"Stat": "Diplomatic",
+		"Strength": "NegativeLarge",
+		"Value": -6,
+		"Effect": "-6 Trading",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "TRADING_BAD_4",
+		"Name": "Thief On Board",
+		"Stat": "Diplomatic",
+		"Strength": "NegativeMedium",
+		"Value": -4,
+		"Effect": "-4 Trading",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "TRADING_BAD_5",
+		"Name": "Badly Painted",
+		"Stat": "Diplomatic",
+		"Strength": "NegativeSmall",
+		"Value": -2,
+		"Effect": "-2 Trading",
+		"Beneficial": false,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 5
+			}
+		]
+	},
+	{
+		"Id": "TRADING_PRI",
+		"Name": "Trade Specialist",
+		"Stat": "Diplomatic",
+		"Strength": "Primary",
+		"Value": 15,
+		"Effect": "+15 Trading",
+		"Beneficial": true,
+		"OfferedOn": []
+	},
+	{
+		"Id": "TRADING_SEC_1",
+		"Name": "Trade Analysis Computer",
+		"Stat": "Diplomatic",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "TRADING_SEC_2",
+		"Name": "Automatic Investment Engine",
+		"Stat": "Diplomatic",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "TRADING_SEC_3",
+		"Name": "Mind Control Device",
+		"Stat": "Diplomatic",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "TRADING_SEC_4",
+		"Name": "HypnoDrones",
+		"Stat": "Diplomatic",
+		"Strength": "SecondarySmall",
+		"Value": 2,
+		"Effect": "+2 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "TRADING_SEC_5",
+		"Name": "Propaganda Device",
+		"Stat": "Diplomatic",
+		"Strength": "SecondaryMedium",
+		"Value": 4,
+		"Effect": "+4 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "TRADING_SEC_6",
+		"Name": "Teleportation Device",
+		"Stat": "Diplomatic",
+		"Strength": "SecondaryLarge",
+		"Value": 6,
+		"Effect": "+6 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Diplomacy",
+				"Label": "Trade",
+				"Weight": 15
+			}
+		]
+	},
+	{
+		"Id": "TRADING_TER_1",
+		"Name": "Economy Scanner",
+		"Stat": "Diplomatic",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "TRADING_TER_2",
+		"Name": "Remote Market Analyser",
+		"Stat": "Diplomatic",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "TRADING_TER_3",
+		"Name": "Robot Butlers",
+		"Stat": "Diplomatic",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "TRADING_TER_4",
+		"Name": "AutoTranslator",
+		"Stat": "Diplomatic",
+		"Strength": "TertiarySmall",
+		"Value": 1,
+		"Effect": "+1 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "TRADING_TER_5",
+		"Name": "Negotiation Module",
+		"Stat": "Diplomatic",
+		"Strength": "TertiaryMedium",
+		"Value": 2,
+		"Effect": "+2 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	},
+	{
+		"Id": "TRADING_TER_6",
+		"Name": "Well-Groomed Crew",
+		"Stat": "Diplomatic",
+		"Strength": "TertiaryLarge",
+		"Value": 3,
+		"Effect": "+3 Trading",
+		"Beneficial": true,
+		"OfferedOn": [
+			{
+				"Class": "Combat",
+				"Label": "Combat",
+				"Weight": 5
+			},
+			{
+				"Class": "Exploration",
+				"Label": "Exploration",
+				"Weight": 5
+			},
+			{
+				"Class": "Mining",
+				"Label": "Industrial",
+				"Weight": 5
+			},
+			{
+				"Class": "Support",
+				"Label": "Support",
+				"Weight": 5
+			},
+			{
+				"Class": "Pirate",
+				"Label": "Raider",
+				"Weight": 10
+			}
+		]
+	}
+]

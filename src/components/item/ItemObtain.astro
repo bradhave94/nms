@@ -1,0 +1,82 @@
+---
+// "How to get X": where the game hands the item out (expeditions, Twitch drops, the Quicksilver
+// shop, platform rewards, fixed-price trades), where its blueprint is sold, and what the item
+// itself can be traded for. All from the game's tables (src/utils/referenceData.ts).
+import { blueprintLines, obtainLines, tradeLines } from '@utils/referenceData';
+
+interface Props {
+	item: { Id: string; Name: string; BlueprintCost?: number };
+}
+
+const { item } = Astro.props;
+const obtain = obtainLines(item.Id);
+const blueprints = blueprintLines(item);
+const trades = tradeLines(item.Id);
+const hasAny = obtain.length + blueprints.length + trades.length > 0;
+---
+
+{hasAny && (
+	<section id="how-to-get" class="item-section" aria-labelledby="how-to-get-title">
+		<h2 id="how-to-get-title" class="m-0 mb-3 text-[1.15rem] font-semibold">How to get {item.Name}</h2>
+		<div class="panel px-4 py-3">
+			<ul class="obtain-list">
+				{obtain.map((line) =>
+					line.kind === 'text' ? (
+						<li>{line.text}</li>
+					) : (
+						<li>
+							{line.currency ? `Buy ${line.amount} from ${line.who} for ` : `Trade `}
+							{line.cost.amount}{' '}
+							{line.cost.url ? <a class="link" href={line.cost.url}>{line.cost.name}</a> : line.cost.name}
+							{!line.currency && ` with ${line.who}${line.amount !== '1' ? ` for ${line.amount}` : ''}`}
+							{line.option && <span class="obtain-note"> ("{line.option}")</span>}
+							{line.followUp && <span class="obtain-note">, partway through a conversation</span>}
+						</li>
+					),
+				)}
+				{blueprints.map((line) => (
+					<li>
+						Research the blueprint:{' '}
+						{line.stations.map((station, index) => (
+							<>
+								{index > 0 && ' or '}
+								<a class="link" href={station.url}>{station.name}</a>
+							</>
+						))}
+						{line.tree && ` › ${line.tree}`}
+						{line.price !== null && line.currency && (
+							<>
+								,{' '}{line.price.toLocaleString('en-US')}{' '}
+								{line.currency.url ? <a class="link" href={line.currency.url}>{line.currency.name}</a> : line.currency.name}
+							</>
+						)}
+						{line.after && (
+							<span class="obtain-note">
+								{' '}after <a class="link" href={line.after.url}>{line.after.name}</a>
+							</span>
+						)}
+					</li>
+				))}
+				{trades.map((line) => (
+					<li>
+						Trade {line.amount.toLocaleString('en-US')} with {line.who} for{' '}
+						{line.gives.map((give, index) => (
+							<>
+								{index > 0 && ', '}
+								{give.amount ? `${give.amount} × ` : ''}
+								{give.url ? <a class="link" href={give.url}>{give.name}</a> : give.name}
+							</>
+						))}
+						{line.option && <span class="obtain-note"> ("{line.option}")</span>}
+						{line.followUp && <span class="obtain-note">, partway through a conversation</span>}
+					</li>
+				))}
+			</ul>
+		</div>
+	</section>
+)}
+
+<style>
+	.obtain-list { margin: 0; padding-left: 1.1rem; display: grid; gap: .35rem; font-size: .95rem; }
+	.obtain-note { color: var(--color-dim); }
+</style>
