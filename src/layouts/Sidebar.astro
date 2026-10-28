@@ -3,7 +3,7 @@ import AnnouncementBar from '@components/AnnouncementBar.astro';
 import NitroAd from '@components/ads/NitroAd.astro';
 import NavLink from '@components/NavLink.astro';
 import { icons } from './navIcons';
-import { toolsNav, calculatorsNav, catalogsNav, moreNav, normalizePath, bestMatchHref, type NavItem } from '../config/nav';
+import { toolsNav, calculatorsNav, catalogsNav, referenceNav, moreNav, normalizePath, bestMatchHref, type NavItem } from '../config/nav';
 
 interface Props {
 	slug?: string;
@@ -13,18 +13,20 @@ interface Props {
 const { showAds = true } = Astro.props;
 const pathname = Astro.url.pathname;
 
-const activeHref = bestMatchHref(pathname, [...toolsNav, ...calculatorsNav, ...catalogsNav, ...moreNav].map((i) => i.href));
+const activeHref = bestMatchHref(pathname, [...toolsNav, ...calculatorsNav, ...catalogsNav, ...referenceNav, ...moreNav].map((i) => i.href));
 const isActive = (href: string): boolean => activeHref !== null && href === activeHref;
 // "page" only on the exact page; a section match (e.g. an item under /products/) gets "true".
 const current = (href: string): 'page' | 'true' | undefined =>
 	normalizePath(pathname) === normalizePath(href) ? 'page' : isActive(href) ? 'true' : undefined;
 const calculatorsActive = calculatorsNav.some((i) => isActive(i.href));
 const catalogsActive = catalogsNav.some((i) => isActive(i.href));
+const referenceActive = referenceNav.some((i) => isActive(i.href));
 
-// Disclosure groups (Calculators, Catalogs): a flyout on desktop, an accordion in the mobile drawer.
+// Disclosure groups (Calculators, Catalogs, Reference): a flyout on desktop, an accordion in the mobile drawer.
 const groups: { id: string; label: string; trigger: string; icon: string; items: NavItem[]; active: boolean; cols: number }[] = [
 	{ id: 'calculators', label: 'Calculators', trigger: 'All calculators', icon: 'calculator', items: calculatorsNav, active: calculatorsActive, cols: 1 },
 	{ id: 'catalogs', label: 'Catalogs', trigger: 'All catalogs', icon: 'squares-2x2', items: catalogsNav, active: catalogsActive, cols: 2 },
+	{ id: 'reference', label: 'Reference', trigger: 'All reference pages', icon: 'archive-box', items: referenceNav, active: referenceActive, cols: 1 },
 ];
 const chevronRight = 'M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z';
 const chevronDown = 'M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z';
