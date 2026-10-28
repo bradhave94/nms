@@ -1,0 +1,5340 @@
+[
+	{
+		"Id": "T_ABANDLORE1",
+		"Name": "%NAME% the Corrupted",
+		"Hint": "Retrieve decayed recordings from a long-dead Traveller",
+		"Unlocked": "Retrieved the decayed records of 'The Crimson Orb'",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "AbandonedBuildings",
+			"InteractionIndex": 6
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ABANDLORE2",
+		"Name": "%NAME% the Shattered",
+		"Hint": "Retrieve decayed recordings from a long-dead Traveller",
+		"Unlocked": "Retrieved the decayed records of 'The World of Glass'",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "AbandonedBuildings",
+			"InteractionIndex": 18
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_ABANDLORE1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ABANDLORE3",
+		"Name": "%NAME% the Warned",
+		"Hint": "Retrieve decayed recordings from a long-dead Traveller",
+		"Unlocked": "Retrieved the decayed records of 'Odvinsko'",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "AbandonedBuildings",
+			"InteractionIndex": 24
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_ABANDLORE2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ABANDLORE4",
+		"Name": "%NAME% the Abandoned",
+		"Hint": "Retrieve decayed recordings from a long-dead Traveller",
+		"Unlocked": "Retrieved the decayed records of 'The Voice'",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "AbandonedBuildings",
+			"InteractionIndex": 32
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_ABANDLORE3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ABYSS",
+		"Name": "%NAME% of the Depths",
+		"Hint": "Search beneath the waves",
+		"Unlocked": "Solved an abyssal mystery",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "WATERSTORY5"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_ABYSS",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ARTEMIS",
+		"Name": "%NAME%, Traveller of the Atlas",
+		"Hint": "???",
+		"Unlocked": "Concluded Artemis' story",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "ACT3_STEP4"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ATLASDENY",
+		"Name": "%NAME%, Defier of Creation",
+		"Hint": "???",
+		"Unlocked": "Refused the call of the Atlas",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "AP11_DENY"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ATLASPATH",
+		"Name": "%NAME%, Seeder of Worlds",
+		"Hint": "???",
+		"Unlocked": "Completed the Atlas Path",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "HAS_STARSEED"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BLACK_HOL",
+		"Name": "Interstellar Traveller %NAME%",
+		"Hint": "Travel unconventionally",
+		"Unlocked": "Travelled through a Black Hole",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BLACKHOLE_WARPS",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BONES1",
+		"Name": "%NAME% the Bones",
+		"Hint": "Search for ancient bones",
+		"Unlocked": "Exhumed 3 ancient bones",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BONES_FOUND",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BONES2",
+		"Name": "%NAME% the Collector",
+		"Hint": "Search for ancient bones",
+		"Unlocked": "Exhumed 20 ancient bones",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BONES_FOUND",
+			"Value": 20.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BONES1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BONES3",
+		"Name": "Curator %NAME%",
+		"Hint": "Search for ancient bones",
+		"Unlocked": "Exhumed 50 ancient bones",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BONES_FOUND",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BONES2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BONES4",
+		"Name": "%NAME%, the Bone Thief",
+		"Hint": "Exhume a modest number of ancient bones",
+		"Unlocked": "Exhumed ancient creature bones from fossil beds",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BONES_FOUND",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BONES3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BONES5",
+		"Name": "Fossilised %NAME%",
+		"Hint": "Exhume a large number of ancient bones",
+		"Unlocked": "Collected an impressive number of ancient bones",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BONES_FOUND",
+			"Value": 150.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BONES4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BONES6",
+		"Name": "Palaeontologist %NAME%",
+		"Hint": "Exhume an exceptional number of ancient bones",
+		"Unlocked": "Amassed an exceptional collection of ancient bones",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BONES_FOUND",
+			"Value": 200.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BONES5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BOUNTY1",
+		"Name": "Deadeye %NAME%",
+		"Hint": "Complete more starship bounties",
+		"Unlocked": "Reached rank 8 for starship bounties",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BOUNTIES",
+			"Value": 0.0,
+			"LeveledStatRank": 9
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BOUNTY2",
+		"Name": "Star Wolf %NAME%",
+		"Hint": "Complete more starship bounties",
+		"Unlocked": "Reached maximum rank for starship bounties",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BOUNTIES",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BOUNTY1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUGHUNT1",
+		"Name": "%NAME% the Roach",
+		"Hint": "Hunt the vile brood",
+		"Unlocked": "Slew the vile brood",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_BUG_HAT1"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUGHUNT2",
+		"Name": "%NAME% the Winged Hunter",
+		"Hint": "Continue the hunt for the vile brood",
+		"Unlocked": "Slew the vile brood",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_BUG_HAT2"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUGHUNT1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUGHUNT3",
+		"Name": "%NAME% the Phosphorescent",
+		"Hint": "Continue the hunt for the vile brood",
+		"Unlocked": "Slew the vile brood",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_BUG_HAT3"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUGHUNT2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUGHUNT4",
+		"Name": "Brood Mother %NAME%",
+		"Hint": "Continue the hunt for the vile brood",
+		"Unlocked": "Slew the vile brood",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_BUG_HAT4"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUGHUNT3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI1",
+		"Name": "Deleted-Entity %NAME%",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Encountered your first Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI2",
+		"Name": "Pre-Built Entity %NAME%",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Reached rank 1 with the Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI3",
+		"Name": "%NAME%, the Returner",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Reached rank 2 with the Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 8.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI4",
+		"Name": "%NAME%, the Reclaimed",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Reached rank 3 with the Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 14.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI5",
+		"Name": "Machinist %NAME%",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Reached rank 4 with the Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 21.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI6",
+		"Name": "%NAME%, the Disruptor",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Reached rank 5 with the Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI7",
+		"Name": "Artificer %NAME%",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Reached rank 6 with the Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI8",
+		"Name": "%NAME% of the Void-Eyes",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Reached rank 7 with the Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUI9",
+		"Name": "Wild Spark %NAME%",
+		"Hint": "Improve your standing with the Autophage",
+		"Unlocked": "Reached rank 8 with the Autophage",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "BUI_STANDING",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUI8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUILDER1",
+		"Name": "%NAME% the Builder",
+		"Hint": "Expand your base",
+		"Unlocked": "Placed 50 base parts",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PARTS_PLACED",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUILDER2",
+		"Name": "%NAME% the Constructor",
+		"Hint": "Expand your base",
+		"Unlocked": "Placed 100 base parts",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PARTS_PLACED",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUILDER1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_BUILDER3",
+		"Name": "Master Architect %NAME%",
+		"Hint": "Expand your base",
+		"Unlocked": "Placed 200 base parts",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PARTS_PLACED",
+			"Value": 200.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_BUILDER2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_CENTRE_PERMA",
+		"Name": "%NAME% the Immortal",
+		"Hint": "Live Forever",
+		"Unlocked": "Reached the centre of the galaxy in Permadeath Mode",
+		"Unlock": {
+			"Type": "Trophy",
+			"TrophyId": "TOLIVEFOREVER"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_CENTRE_SURV",
+		"Name": "%NAME% the Survivor",
+		"Hint": "Breathe Deep",
+		"Unlocked": "Reached the centre of the galaxy in Survival Mode",
+		"Unlock": {
+			"Type": "Trophy",
+			"TrophyId": "TAKEADEEPBREATH"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_CHEF",
+		"Name": "Chef %NAME%",
+		"Hint": "Impress Cronus",
+		"Unlocked": "Impressed Cronus",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "BEST_COOK"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_CORRUPT_SENT1",
+		"Name": "%NAME% the Dissonant",
+		"Hint": "Battle the corrupted swarm",
+		"Unlocked": "Fought the corrupted Sentinels",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "C_SENT_KILLS",
+			"Value": 80.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_CORRUPT_SENT2",
+		"Name": "%NAME% the Harmonious",
+		"Hint": "Destroy Dissonance Resonators",
+		"Unlocked": "Destroyed corrupted machinery",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "CORRUPT_PILLAR",
+			"Value": 15.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_CRASHED_SHIP",
+		"Name": "Conservator %NAME%",
+		"Hint": "Perform a rescue operation",
+		"Unlocked": "Rescued a stranded pilot",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "NPC_CrashSite",
+			"InteractionIndex": 1,
+			"OnlyMainRaces": true
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH1",
+		"Name": "%NAME% the Incinerated",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by extreme heat",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_HOT",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH10",
+		"Name": "%NAME% the Reckless",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by overconfidence",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_FALL",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH11",
+		"Name": "%NAME% the Consumed",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by unspeakable entity",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_HORROR",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH12",
+		"Name": "Icarus %NAME%",
+		"Hint": "???",
+		"Unlocked": "Flew too close to the sun",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_SUN",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH2",
+		"Name": "%NAME% the Frozen",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by extreme cold",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_COLD",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH3",
+		"Name": "%NAME% the Irradiated",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by overwhelming radiation",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_RAD",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH4",
+		"Name": "%NAME% the Corroded",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by toxic consumption",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_TOXIC",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH5",
+		"Name": "%NAME% the Hunted",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by adverse fauna interaction",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_CREATURE",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH6",
+		"Name": "%NAME% the Drowned",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by asphyxiation",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_DROWN",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH7",
+		"Name": "%NAME% the Exhausted",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by life support failure",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_ENERGY",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH8",
+		"Name": "%NAME% the Purified",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by Sentinel extermination",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_ROBOT",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DEATH9",
+		"Name": "%NAME% the Unfortunate",
+		"Hint": "???",
+		"Unlocked": "Iteration reset by catastrophic accident",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DEATH_ACCIDENT",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DIG1",
+		"Name": "Raider %NAME%",
+		"Hint": "Investigate ancient ruins",
+		"Unlocked": "Claimed 1 treasures from beneath ruins",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TREASURE_FOUND",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DIG2",
+		"Name": "Historian %NAME%",
+		"Hint": "Investigate ancient ruins",
+		"Unlocked": "Claimed 10 treasures",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TREASURE_FOUND",
+			"Value": 10.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_DIG1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DIG3",
+		"Name": "Archaeologist %NAME%",
+		"Hint": "Investigate ancient ruins",
+		"Unlocked": "Claimed 30 treasures",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TREASURE_FOUND",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_DIG2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_DRONEFRIEND",
+		"Name": "Drone-Friend %NAME%",
+		"Hint": "Reconstruct a Sentinel mystery",
+		"Unlocked": "Fully reassembled a loyal drone",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "SENTINELS_5"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXO_KILL",
+		"Name": "Bulldozer %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "None"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S21_S2M4",
+				"RewardTable": "SeasonRewardTable21"
+			}
+		],
+		"RevealedBy": "T_EXO_KILL",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP1",
+		"Name": "Entity %NAME%",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Impressed your first Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP2",
+		"Name": "Test Subject %NAME%",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Reached rank 1 with the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP3",
+		"Name": "Technician Entity %NAME%",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Reached rank 2 with the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 8.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP4",
+		"Name": "Respected Carapace %NAME%",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Reached rank 3 with the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 14.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP5",
+		"Name": "The %NAME% Interface",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Reached rank 4 with the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 21.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP6",
+		"Name": "Significance %NAME%",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Reached rank 5 with the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP7",
+		"Name": "Pure Entity %NAME%",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Reached rank 6 with the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP8",
+		"Name": "%NAME%, the Convergent",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Reached rank 7 with the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP9",
+		"Name": "The Echo of %NAME%",
+		"Hint": "Improve your standing with the Korvax",
+		"Unlocked": "Reached rank 8 with the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_STANDING",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD1",
+		"Name": "Pioneer %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE01"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S1_PHASE5",
+				"RewardTable": "SeasonRewardTable1"
+			}
+		],
+		"RevealedBy": "T_EXPD1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD10",
+		"Name": "%NAME%, the Construct",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE10"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S10_PHASE5",
+				"RewardTable": "SeasonRewardTable10"
+			}
+		],
+		"RevealedBy": "T_EXPD10",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD11",
+		"Name": "%NAME%, the Intrepid",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE11"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S11_PHASE5",
+				"RewardTable": "SeasonRewardTable11"
+			}
+		],
+		"RevealedBy": "T_EXPD11",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD12",
+		"Name": "%NAME%, the Starborn",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE12"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S12_PHASE5",
+				"RewardTable": "SeasonRewardTable12"
+			}
+		],
+		"RevealedBy": "T_EXPD12",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD13",
+		"Name": "%NAME% the Drifter",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE13"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S13_PHASE5",
+				"RewardTable": "SeasonRewardTable13"
+			}
+		],
+		"RevealedBy": "T_EXPD13",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD14",
+		"Name": "Broodling %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE14"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S14_PHASE5",
+				"RewardTable": "SeasonRewardTable14"
+			}
+		],
+		"RevealedBy": "T_EXPD14",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD15",
+		"Name": "%NAME% the Fisher",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE15"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S15_PHASE5",
+				"RewardTable": "SeasonRewardTable15"
+			}
+		],
+		"RevealedBy": "T_EXPD15",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD16",
+		"Name": "%NAME% the Haunted",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE16"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S16_PHASE5",
+				"RewardTable": "SeasonRewardTable16"
+			}
+		],
+		"RevealedBy": "T_EXPD16",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD17",
+		"Name": "%NAME%, Surveyor of Worlds",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE17"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S17_PHASE5",
+				"RewardTable": "SeasonRewardTable17"
+			}
+		],
+		"RevealedBy": "T_EXPD17",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD18",
+		"Name": "Excavator %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE18"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S18_PHASE5",
+				"RewardTable": "SeasonRewardTable18"
+			}
+		],
+		"RevealedBy": "T_EXPD18",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD19",
+		"Name": "Shipwright %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE19"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S19_PHASE5",
+				"RewardTable": "SeasonRewardTable19"
+			}
+		],
+		"RevealedBy": "T_EXPD19",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD20",
+		"Name": "%NAME%, the Celestial",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE20"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S20_PHASE5",
+				"RewardTable": "SeasonRewardTable20"
+			}
+		],
+		"RevealedBy": "T_EXPD20",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD21",
+		"Name": "Mag-Field Expert %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE21"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S21_PHASE5",
+				"RewardTable": "SeasonRewardTable21"
+			}
+		],
+		"RevealedBy": "T_EXPD21",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD22",
+		"Name": "%NAME%, the Fragmented",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE22"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S22_PHASE3",
+				"RewardTable": "SeasonRewardTable22"
+			}
+		],
+		"RevealedBy": "T_EXPD22",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD23",
+		"Name": "Time Traveller %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE23"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S23_PHASE5",
+				"RewardTable": "SeasonRewardTable23"
+			}
+		],
+		"RevealedBy": "T_EXPD23",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD2A",
+		"Name": "Renegade %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE02A"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S2_COMPLETE",
+				"RewardTable": "SeasonRewardTable2"
+			}
+		],
+		"RevealedBy": "T_EXPD2A",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD2B",
+		"Name": "Paragon %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE02B"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S2_COMPLETE",
+				"RewardTable": "SeasonRewardTable2"
+			}
+		],
+		"RevealedBy": "T_EXPD2B",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD3",
+		"Name": "Globemaster %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE03"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S3_PHASE5",
+				"RewardTable": "SeasonRewardTable3"
+			}
+		],
+		"RevealedBy": "T_EXPD3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD4",
+		"Name": "Worm Lord %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE04"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S4_PHASE5",
+				"RewardTable": "SeasonRewardTable4"
+			}
+		],
+		"RevealedBy": "T_EXPD4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD5",
+		"Name": "Exobiologist %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE05"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S5_PHASE5",
+				"RewardTable": "SeasonRewardTable5"
+			}
+		],
+		"RevealedBy": "T_EXPD5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD6",
+		"Name": "%NAME%, Hunter of the Blight",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE06"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S6_PHASE5",
+				"RewardTable": "SeasonRewardTable6"
+			}
+		],
+		"RevealedBy": "T_EXPD6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD7",
+		"Name": "Looper %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE07"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXPD7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD8",
+		"Name": "%NAME%, the Seeker",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE08"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S8_PHASE5",
+				"RewardTable": "SeasonRewardTable8"
+			}
+		],
+		"RevealedBy": "T_EXPD8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXPD9",
+		"Name": "Utopia Dignitary %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for Expedition accomplishments",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "EXPD_TITLE09"
+		},
+		"GrantedByRewards": [
+			{
+				"Id": "RS_S9_PHASE5",
+				"RewardTable": "SeasonRewardTable9"
+			}
+		],
+		"RevealedBy": "T_EXPD9",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD1",
+		"Name": "Candidate %NAME%",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Completed your first Explorers Guild assignment",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD2",
+		"Name": "Pupil %NAME%",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Reached rank 1 with the Explorers Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP_GUILD1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD3",
+		"Name": "Apprentice %NAME%",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Reached rank 2 with the Explorers Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 8.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP_GUILD2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD4",
+		"Name": "Scholar %NAME%",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Reached rank 3 with the Explorers Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 14.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP_GUILD3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD5",
+		"Name": "%NAME% the Studious",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Reached rank 4 with the Explorers Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 21.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP_GUILD4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD6",
+		"Name": "Academician %NAME%",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Reached rank 5 with the Explorers Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP_GUILD5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD7",
+		"Name": "Instructor %NAME%",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Reached rank 6 with the Explorers Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP_GUILD6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD8",
+		"Name": "Professor %NAME%",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Reached rank 7 with the Explorers Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP_GUILD7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_GUILD9",
+		"Name": "%NAME%, Guardian of Knowledge",
+		"Hint": "Improve your standing with the Explorers Guild",
+		"Unlocked": "Reached rank 8 with the Explorers Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGUILD_STAND",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_EXP_GUILD8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_EXP_LORE",
+		"Name": "%NAME% Prime",
+		"Hint": "Know the pain of the Echoes",
+		"Unlocked": "Uncovered the story of the Korvax from their records",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "Plaque",
+			"InteractionIndex": 33,
+			"Race": "Explorers"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_FISHBOOT",
+		"Name": "Wet Boots %NAME%",
+		"Hint": "Catch a lot of footwear",
+		"Unlocked": "Hauled in a lot of footwear",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FISH_BOOT",
+			"Value": 5.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": [
+			"SPEC_FISH_BOB6",
+			"SPEC_FISH_HAT6"
+		]
+	},
+	{
+		"Id": "T_FISHCASH",
+		"Name": "Fishmonger %NAME%",
+		"Hint": "Sell large amounts of fish",
+		"Unlocked": "Took a hefty catch to market",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FISH_CASH",
+			"Value": 1000000.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": [
+			"SPEC_FISH_BOB3",
+			"SPEC_FISH_HAT3"
+		]
+	},
+	{
+		"Id": "T_FISHFREE",
+		"Name": "%NAME%, Friend of the Ocean",
+		"Hint": "Catch and release fish",
+		"Unlocked": "Released 60 fish to the water",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FISH_RELEASED",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": [
+			"SPEC_FISH_BOB2",
+			"SPEC_FISH_HAT2"
+		]
+	},
+	{
+		"Id": "T_FISHING1",
+		"Name": "%NAME%, the Angler",
+		"Hint": "Catch a lot of fish",
+		"Unlocked": "Caught 250 fish",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FISH_CAUGHT",
+			"Value": 250.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": [
+			"SPEC_FISH_BOB1",
+			"SPEC_FISH_HAT1"
+		]
+	},
+	{
+		"Id": "T_FISHLEGEND",
+		"Name": "%NAME% of the Old River",
+		"Hint": "Catch every legendary fish",
+		"Unlocked": "Caught every legendary fish",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FISH_LEGEND",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": [
+			"SPEC_FISH_BOB5",
+			"SPEC_FISH_HAT5"
+		]
+	},
+	{
+		"Id": "T_FLEET1",
+		"Name": "Captain %NAME%",
+		"Hint": "Expand your freighter fleet",
+		"Unlocked": "Owned a fleet of 2 frigates",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FRIGATES",
+			"Value": 2.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_FLEET2",
+		"Name": "Commodore %NAME%",
+		"Hint": "Expand your freighter fleet",
+		"Unlocked": "Owned a fleet of 15 frigates",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FRIGATES",
+			"Value": 15.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_FLEET1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_FLEET3",
+		"Name": "Admiral %NAME%",
+		"Hint": "Expand your freighter fleet",
+		"Unlocked": "Owned a fleet of 30 frigates",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FRIGATES",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_FLEET2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_GIFT",
+		"Name": "%NAME% the Generous",
+		"Hint": "???",
+		"Unlocked": "Gave a gift to another Traveller",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "GIFTS_GIVEN",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_GOAL",
+		"Name": "%NAME% of the Collective",
+		"Hint": "Contribute to a greater effort",
+		"Unlocked": "Contributed to a Community Research Project",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "COMM_CONTRIBUTE",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_HIVELORE",
+		"Name": "Hive Lord %NAME%",
+		"Hint": "Breach the archives at a Sentinel Pillar",
+		"Unlocked": "Downloaded the complete archives from a Sentinel Pillar",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "DroneHive",
+			"InteractionIndex": 23
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_HUB_VISIT",
+		"Name": "Pilgrim %NAME%",
+		"Hint": "Visit a special system",
+		"Unlocked": "Visited the Galactic Hub",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "HUB_PILGRIM"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JELLYBOSS",
+		"Name": "%NAME%, Child of Aquarius",
+		"Hint": "Survive the boiling seas...",
+		"Unlocked": "Released a haunted fish",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "JELLYBOSS",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": [
+			"SPEC_FISH_BOB4",
+			"SPEC_FISH_HAT4"
+		]
+	},
+	{
+		"Id": "T_JM_CHAT1",
+		"Name": "Guest %NAME%",
+		"Hint": "Meet more alien lifeforms",
+		"Unlocked": "Met 50 lifeforms",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ALIENS_MET",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_CHAT2",
+		"Name": "Emissary %NAME%",
+		"Hint": "Meet more alien lifeforms",
+		"Unlocked": "Met 100 lifeforms",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ALIENS_MET",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_CHAT1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_CHAT3",
+		"Name": "Ambassador %NAME%",
+		"Hint": "Meet more alien lifeforms",
+		"Unlocked": "Met 150 lifeforms",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ALIENS_MET",
+			"Value": 150.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_CHAT2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_EXPLORE1",
+		"Name": "Scout %NAME%",
+		"Hint": "Explore more star systems",
+		"Unlocked": "Visited 15 systems",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_SYSTEMS",
+			"Value": 15.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_EXPLORE2",
+		"Name": "Navigator %NAME%",
+		"Hint": "Explore more star systems",
+		"Unlocked": "Visited 40 systems",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_SYSTEMS",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_EXPLORE1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_EXPLORE3",
+		"Name": "%NAME% the Cartographer",
+		"Hint": "Explore more star systems",
+		"Unlocked": "Visited 100 systems",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_SYSTEMS",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_EXPLORE2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_FARM1",
+		"Name": "Farmer %NAME%",
+		"Hint": "Harvest more plants",
+		"Unlocked": "Harvested 40 cultivated plants",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PLANTS_PLANTED",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_FARM2",
+		"Name": "Soilmaster %NAME%",
+		"Hint": "Harvest more plants",
+		"Unlocked": "Harvested 80 plants",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PLANTS_PLANTED",
+			"Value": 80.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_FARM1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_FIGHT1",
+		"Name": "%NAME% the Wanted",
+		"Hint": "Destroy more Sentinels",
+		"Unlocked": "Defeated 25 Sentinels",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SENTINEL_KILLS",
+			"Value": 25.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_FIGHT2",
+		"Name": "Sentinel Hunter %NAME%",
+		"Hint": "Destroy more Sentinels",
+		"Unlocked": "Defeated 75 Sentinels",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SENTINEL_KILLS",
+			"Value": 75.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_FIGHT1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_FIGHT3",
+		"Name": "Aeron-Scourge %NAME%",
+		"Hint": "Destroy more Sentinels",
+		"Unlocked": "Defeated 150 Sentinels",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SENTINEL_KILLS",
+			"Value": 150.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_FIGHT2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_FLORASCAN1",
+		"Name": "Seedling %NAME%",
+		"Hint": "Scan more planetary flora",
+		"Unlocked": "Scanned 30 unique plants",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_FLORA",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_FLORASCAN2",
+		"Name": "Botanist %NAME%",
+		"Hint": "Scan more planetary flora",
+		"Unlocked": "Scanned 60 unique plants",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_FLORA",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_FLORASCAN1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_FLORASCAN3",
+		"Name": "Flower-Kin %NAME%",
+		"Hint": "Scan more planetary flora",
+		"Unlocked": "Scanned 100 unique plants",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_FLORA",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_FLORASCAN2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_MINSCAN1",
+		"Name": "Prospector %NAME%",
+		"Hint": "Scan more rock formations",
+		"Unlocked": "Scanned 50 minerals",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_MINERALS",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_MINSCAN2",
+		"Name": "Geologist %NAME%",
+		"Hint": "Scan more rock formations",
+		"Unlocked": "Scanned 100 minerals",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_MINERALS",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_MINSCAN1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_RARESCAN1",
+		"Name": "Analyst %NAME%",
+		"Hint": "Scan more rare discoveries",
+		"Unlocked": "Scanned 10 rare plants and animals",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "RARE_SCANNED",
+			"Value": 10.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_RARESCAN2",
+		"Name": "Researcher %NAME%",
+		"Hint": "Scan more rare discoveries",
+		"Unlocked": "Scanned 25 rare plants and animals",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "RARE_SCANNED",
+			"Value": 25.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_RARESCAN1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_RARESCAN3",
+		"Name": "Archivist %NAME%",
+		"Hint": "Scan more rare discoveries",
+		"Unlocked": "Scanned 50 rare plants and animals",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "RARE_SCANNED",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_RARESCAN2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_SHIPS1",
+		"Name": "Master Pilot %NAME%",
+		"Hint": "Defeat more starships in combat",
+		"Unlocked": "Vanquished 25 hostile starships",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ENEMIES_KILLED",
+			"Value": 25.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_SHIPS2",
+		"Name": "Starfighter %NAME%",
+		"Hint": "Defeat more starships in combat",
+		"Unlocked": "Vanquished 75 hostile starships",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ENEMIES_KILLED",
+			"Value": 75.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_SHIPS1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_SHIPS3",
+		"Name": "Wing Commander %NAME%",
+		"Hint": "Defeat more starships in combat",
+		"Unlocked": "Vanquished 150 hostile starships",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ENEMIES_KILLED",
+			"Value": 150.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_SHIPS2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_SURVIVE1",
+		"Name": "%NAME% the Robust",
+		"Hint": "Survive on an extreme world without taking shelter",
+		"Unlocked": "Survived 7200 sols on an extreme world in one continous adventure",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "LONGEST_LIFE",
+			"Value": 7200.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_SURVIVE2",
+		"Name": "%NAME% the Determined",
+		"Hint": "Survive on an extreme world without taking shelter",
+		"Unlocked": "Survived 18000 sols on an extreme world",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "LONGEST_LIFE",
+			"Value": 18000.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_SURVIVE1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_SURVIVE3",
+		"Name": "%NAME% the Undaunted",
+		"Hint": "Survive on an extreme world without taking shelter",
+		"Unlocked": "Survived 28800 sols on an extreme world",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "LONGEST_LIFE",
+			"Value": 28800.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_SURVIVE2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_UNITS1",
+		"Name": "Trader %NAME%",
+		"Hint": "Earn additional units",
+		"Unlocked": "Held 10000000 units",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "MONEY",
+			"Value": 10000000.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_UNITS2",
+		"Name": "Merchant %NAME%",
+		"Hint": "Earn additional units",
+		"Unlocked": "Held 50000000 units",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "MONEY",
+			"Value": 50000000.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_UNITS1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_UNITS3",
+		"Name": "Tycoon %NAME%",
+		"Hint": "Earn additional units",
+		"Unlocked": "Held 100000000 units",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "MONEY",
+			"Value": 100000000.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_UNITS2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_WALK1",
+		"Name": "Nomad %NAME%",
+		"Hint": "Continue exploring on foot",
+		"Unlocked": "Walked 20000u",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DIST_WALKED",
+			"Value": 20000.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_WALK2",
+		"Name": "%NAME% the Walker",
+		"Hint": "Continue exploring on foot",
+		"Unlocked": "Walked 40000u",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DIST_WALKED",
+			"Value": 40000.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_WALK1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_WALK3",
+		"Name": "Wayfinder %NAME%",
+		"Hint": "Continue exploring on foot",
+		"Unlocked": "Walked 100000u",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DIST_WALKED",
+			"Value": 100000.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_WALK3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_WORD1",
+		"Name": "Word-Collector %NAME%",
+		"Hint": "Learn how to translate more words",
+		"Unlocked": "Learned 60 words",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WORDS_LEARNT",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_WORD2",
+		"Name": "%NAME% the Learned",
+		"Hint": "Learn how to translate more words",
+		"Unlocked": "Learned 120 words",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WORDS_LEARNT",
+			"Value": 120.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_WORD1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_WORD3",
+		"Name": "Lorekeeper %NAME%",
+		"Hint": "Learn how to translate more words",
+		"Unlocked": "Learned 180 words",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WORDS_LEARNT",
+			"Value": 180.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_WORD2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_ZOO1",
+		"Name": "Field Agent %NAME%",
+		"Hint": "Scan more planetary creatures",
+		"Unlocked": "Discovered 30 planetary species",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_CREATURES",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_ZOO2",
+		"Name": "Ranger %NAME%",
+		"Hint": "Scan more planetary creatures",
+		"Unlocked": "Discovered 60 planetary species",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_CREATURES",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_ZOO1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_JM_ZOO3",
+		"Name": "Xenobiologist %NAME%",
+		"Hint": "Scan more planetary creatures",
+		"Unlocked": "Discovered 100 planetary species",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_CREATURES",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_JM_ZOO2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE1",
+		"Name": "Titan %NAME%",
+		"Hint": "???",
+		"Unlocked": "Traced a fallen Traveller",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "BASE_UPGRADE20"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE10",
+		"Name": "The Reflection of %NAME%",
+		"Hint": "???",
+		"Unlocked": "Met an apparition",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "GraveInCave",
+			"InteractionIndex": 1
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE2",
+		"Name": "Vision-Master %NAME%",
+		"Hint": "Feel the spirits of the Gek",
+		"Unlocked": "Learned from the Gek monoliths",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "Monolith",
+			"InteractionIndex": 20,
+			"Race": "Traders"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE3",
+		"Name": "%NAME%, the Boundary Walker",
+		"Hint": "Discover a strange world",
+		"Unlocked": "Discovered a strange planet",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_P_WEIRD",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE4",
+		"Name": "%NAME%, the Singularity",
+		"Hint": "???",
+		"Unlocked": "Met the Atlas",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "ACT1_STEP13"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE5",
+		"Name": "%NAME%, Atlas-Speaker",
+		"Hint": "???",
+		"Unlocked": "Saved by the Atlas",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "ACT2_STEP13"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE6",
+		"Name": "Oracle %NAME%",
+		"Hint": "Feel the judgement of the Echoes",
+		"Unlocked": "Learned from the Korvax monoliths",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "Monolith",
+			"InteractionIndex": 19,
+			"Race": "Explorers"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE7",
+		"Name": "Augur %NAME%",
+		"Hint": "Feel the wrath of the Vy'keen",
+		"Unlocked": "Learned from the Vy'keen monoliths",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "Monolith",
+			"InteractionIndex": 20,
+			"Race": "Warriors"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE8",
+		"Name": "%NAME%, Warden of Glass",
+		"Hint": "???",
+		"Unlocked": "Remembered",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "Epilogue",
+			"InteractionIndex": 1
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_LORE9",
+		"Name": "Voyager %NAME%",
+		"Hint": "Travel to a rare star system",
+		"Unlocked": "Visited a rare star system",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_RARE_SYS",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MAX_PETS1",
+		"Name": "%NAME%, Hybridiser",
+		"Hint": "Maximise companion mutations",
+		"Unlocked": "Reached rank 2 for maximising companion mutations",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_PETS_MAXED",
+			"Value": 0.0,
+			"LeveledStatRank": 2
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MAX_PETS2",
+		"Name": "%NAME%, Genewright",
+		"Hint": "Maximise companion mutations",
+		"Unlocked": "Reached rank 7 for maximising companion mutations",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_PETS_MAXED",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MAX_PETS3",
+		"Name": "%NAME%, Mad Scientist",
+		"Hint": "Maximise companion mutations",
+		"Unlocked": "Reached rank 8 for maximising companion mutations",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_PETS_MAXED",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MAX_PETS4",
+		"Name": "%NAME%, Morphogeneticist",
+		"Hint": "Maximise companion mutations",
+		"Unlocked": "Reached maximum rank for maximising companion mutations",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_PETS_MAXED",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MAYOR",
+		"Name": "Overlord %NAME%",
+		"Hint": "Become Overseer of a planetary settlement",
+		"Unlocked": "Became Overseer of a planetary settlement",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "JUDGEMENTS",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MECH",
+		"Name": "Pilot %NAME%",
+		"Hint": "Own an Exo-Mech",
+		"Unlocked": "Owned an Exo-Mech",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "GARAGE_MECH"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_DIST_10",
+		"Name": "Adventurer %NAME%",
+		"Hint": "Advance your rank in the On-foot Exploration milestone",
+		"Unlocked": "Advanced ranks in the On-foot Exploration milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DIST_WALKED",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_DIST_10",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_DIST_4",
+		"Name": "Wayfarer %NAME%",
+		"Hint": "Advance your rank in the On-foot Exploration milestone",
+		"Unlocked": "Advanced ranks in the On-foot Exploration milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DIST_WALKED",
+			"Value": 0.0,
+			"LeveledStatRank": 4
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_DIST_4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_ENEMIES_10",
+		"Name": "%NAME% the Legend",
+		"Hint": "Advance your rank in the Ships Destroyed milestone",
+		"Unlocked": "Advanced ranks in the Ships Destroyed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ENEMIES_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_ENEMIES_10",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_ENEMIES_6",
+		"Name": "%NAME% the Menace",
+		"Hint": "Advance your rank in the Ships Destroyed milestone",
+		"Unlocked": "Advanced ranks in the Ships Destroyed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ENEMIES_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 6
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_ENEMIES_6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_FIENDS_7",
+		"Name": "Annihilator %NAME%",
+		"Hint": "Advance your rank in the Horrors Eliminated milestone",
+		"Unlocked": "Advanced ranks in the Horrors Eliminated milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FIENDS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_FIENDS_7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_FIENDS_9",
+		"Name": "%NAME%, Face of Death",
+		"Hint": "Advance your rank in the Horrors Eliminated milestone",
+		"Unlocked": "Advanced ranks in the Horrors Eliminated milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "FIENDS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 9
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_FIENDS_9",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_FLORA_4",
+		"Name": "Ecologist %NAME%",
+		"Hint": "Advance your rank in the Plants Catalogued milestone",
+		"Unlocked": "Advanced ranks in the Plants Catalogued milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_FLORA",
+			"Value": 0.0,
+			"LeveledStatRank": 4
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_FLORA_4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_FLORA_8",
+		"Name": "Exobotanist %NAME%",
+		"Hint": "Advance your rank in the Plants Catalogued milestone",
+		"Unlocked": "Advanced ranks in the Plants Catalogued milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DISC_FLORA",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_FLORA_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_LIFE_EX_10",
+		"Name": "Everlasting %NAME%",
+		"Hint": "Advance your rank in the Extreme Survival milestone",
+		"Unlocked": "Advanced ranks in the Extreme Survival milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "LONGEST_LIFE_EX",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_LIFE_EX_10",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_LIFE_EX_8",
+		"Name": "Indefatigable %NAME%",
+		"Hint": "Advance your rank in the Extreme Survival milestone",
+		"Unlocked": "Advanced ranks in the Extreme Survival milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "LONGEST_LIFE_EX",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_LIFE_EX_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_MISSION_2",
+		"Name": "Journeyman %NAME%",
+		"Hint": "Advance your rank in the Faction Missions milestones",
+		"Unlocked": "Advanced ranks in the Faction Missions milestones",
+		"Unlock": {
+			"Type": "None"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_MISSION_2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_MISSION_8",
+		"Name": "%NAME% the Exalted",
+		"Hint": "Advance your rank in the Faction Missions milestones",
+		"Unlocked": "Advanced ranks in the Faction Missions milestones",
+		"Unlock": {
+			"Type": "None"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_MISSION_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_MONEY_10",
+		"Name": "Magnate %NAME%",
+		"Hint": "Advance your rank in the Units Accrued milestone",
+		"Unlocked": "Advanced ranks in the Units Accrued milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "MONEY",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_MONEY_10",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_MONEY_6",
+		"Name": "Entrepreneur %NAME%",
+		"Hint": "Advance your rank in the Units Accrued milestone",
+		"Unlocked": "Advanced ranks in the Units Accrued milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "MONEY",
+			"Value": 0.0,
+			"LeveledStatRank": 6
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_MONEY_6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_NANITES_6",
+		"Name": "Impossibly Fragmented %NAME%",
+		"Hint": "Advance your rank in the Nanite Clusters milestone",
+		"Unlocked": "Advanced ranks in the Nanite Clusters milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "NANITES_EVER",
+			"Value": 0.0,
+			"LeveledStatRank": 6
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_NANITES_6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_NANITES_8",
+		"Name": "%NAME%, Awash with Foam",
+		"Hint": "Advance your rank in the Nanite Clusters milestone",
+		"Unlocked": "Advanced ranks in the Nanite Clusters milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "NANITES_EVER",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_NANITES_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_PLANTS_1",
+		"Name": "Farmhand %NAME%",
+		"Hint": "Advance your rank in the Plants Farmed milestone",
+		"Unlocked": "Advanced ranks in the Plants Farmed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PLANTS_PLANTED",
+			"Value": 0.0,
+			"LeveledStatRank": 1
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_PLANTS_1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_PLANTS_4",
+		"Name": "Agriculturist %NAME%",
+		"Hint": "Advance your rank in the Plants Farmed milestone",
+		"Unlocked": "Advanced ranks in the Plants Farmed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PLANTS_PLANTED",
+			"Value": 0.0,
+			"LeveledStatRank": 4
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_PLANTS_4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_PLANTS_8",
+		"Name": "Cropmaster %NAME%",
+		"Hint": "Advance your rank in the Plants Farmed milestone",
+		"Unlocked": "Advanced ranks in the Plants Farmed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PLANTS_PLANTED",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_PLANTS_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_PPROD_5",
+		"Name": "Connoisseur %NAME%",
+		"Hint": "Advance your rank in the Rare Treasures milestone",
+		"Unlocked": "Advanced ranks in the Rare Treasures milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PROC_PRODS",
+			"Value": 0.0,
+			"LeveledStatRank": 5
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_PPROD_5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_PPROD_7",
+		"Name": "Treasure Hunter %NAME%",
+		"Hint": "Advance your rank in the Rare Treasures milestone",
+		"Unlocked": "Advanced ranks in the Rare Treasures milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PROC_PRODS",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_PPROD_7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_SCANNER_5",
+		"Name": "Compiler %NAME%",
+		"Hint": "Advance your rank in the Rare Fauna Scanned milestone",
+		"Unlocked": "Advanced ranks in the Rare Fauna Scanned milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "RARE_SCANNED",
+			"Value": 0.0,
+			"LeveledStatRank": 5
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_SCANNER_5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_SCANNER_8",
+		"Name": "Zoologist %NAME%",
+		"Hint": "Advance your rank in the Rare Fauna Scanned milestone",
+		"Unlocked": "Advanced ranks in the Rare Fauna Scanned milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "RARE_SCANNED",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_SCANNER_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_SENT_10",
+		"Name": "%NAME%, Destroyer of Glass",
+		"Hint": "Advance your rank in the Sentinels Destroyed milestone",
+		"Unlocked": "Advanced ranks in the Sentinels Destroyed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SENTINEL_KILLS",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_SENT_10",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_SENT_6",
+		"Name": "%NAME% the Undying",
+		"Hint": "Advance your rank in the Sentinels Destroyed milestone",
+		"Unlocked": "Advanced ranks in the Sentinels Destroyed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SENTINEL_KILLS",
+			"Value": 0.0,
+			"LeveledStatRank": 6
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_SENT_6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_SENT_8",
+		"Name": "Crusader %NAME%",
+		"Hint": "Advance your rank in the Sentinels Destroyed milestone",
+		"Unlocked": "Advanced ranks in the Sentinels Destroyed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SENTINEL_KILLS",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_SENT_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_SMUGGLE_7",
+		"Name": "Master Smuggler %NAME%",
+		"Hint": "Advance your rank in the Goods Smuggled milestone",
+		"Unlocked": "Advanced ranks in the Goods Smuggled milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SMUGGLE_VALUE",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_SMUGGLE_7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_SMUGGLE_8",
+		"Name": "Uncatchable %NAME%",
+		"Hint": "Advance your rank in the Goods Smuggled milestone",
+		"Unlocked": "Advanced ranks in the Goods Smuggled milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SMUGGLE_VALUE",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_SMUGGLE_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_WALKERS_4",
+		"Name": "Vanquisher %NAME%",
+		"Hint": "Advance your rank in the Walkers Killed milestone",
+		"Unlocked": "Advanced ranks in the Walkers Killed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WALKERS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 4
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_WALKERS_4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_WALKERS_5",
+		"Name": "%NAME% the Battle Hardened",
+		"Hint": "Advance your rank in the Walkers Killed milestone",
+		"Unlocked": "Advanced ranks in the Walkers Killed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WALKERS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 5
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_WALKERS_5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_WALKERS_7",
+		"Name": "Hunter-Killer %NAME%",
+		"Hint": "Advance your rank in the Walkers Killed milestone",
+		"Unlocked": "Advanced ranks in the Walkers Killed milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WALKERS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_WALKERS_7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_WARPS_1",
+		"Name": "Trailblazer %NAME%",
+		"Hint": "Advance your rank in the Space Exploration milestone",
+		"Unlocked": "Advanced ranks in the Space Exploration milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DIST_WARP",
+			"Value": 0.0,
+			"LeveledStatRank": 1
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_WARPS_1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_WARPS_9",
+		"Name": "%NAME% the Discoverer",
+		"Hint": "Advance your rank in the Space Exploration milestone",
+		"Unlocked": "Advanced ranks in the Space Exploration milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "DIST_WARP",
+			"Value": 0.0,
+			"LeveledStatRank": 9
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_WARPS_9",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_WORDS_4",
+		"Name": "Conversationalist %NAME%",
+		"Hint": "Advance your rank in the Words Collected milestone",
+		"Unlocked": "Advanced ranks in the Words Collected milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WORDS_LEARNT",
+			"Value": 0.0,
+			"LeveledStatRank": 4
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_WORDS_4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_MS_WORDS_8",
+		"Name": "Linguist %NAME%",
+		"Hint": "Advance your rank in the Words Collected milestone",
+		"Unlocked": "Advanced ranks in the Words Collected milestone",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WORDS_LEARNT",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_MS_WORDS_8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_NADAPOLO",
+		"Name": "%NAME%, the Divergent",
+		"Hint": "???",
+		"Unlocked": "Concluded Nada & Polo's story",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "NEXUS13"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_NO_RESET",
+		"Name": "%NAME%, the Timeless",
+		"Hint": "???",
+		"Unlocked": "Refused to reset the simulation",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "DID_NOT_RESET"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_OLD",
+		"Name": "%NAME%, Iteration 1",
+		"Hint": null,
+		"Unlocked": "One of the original Travellers",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "OLD_SCHOOL"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_OLD",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_BOSSES1",
+		"Name": "%NAME%, Amateur Battler",
+		"Hint": "Defeat Arena League Champions",
+		"Unlocked": "Reached rank 2 for victories over Champions",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_BOSS_WINS",
+			"Value": 0.0,
+			"LeveledStatRank": 2
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_BOSSES2",
+		"Name": "%NAME%, Sector Celebrity",
+		"Hint": "Defeat Arena League Champions",
+		"Unlocked": "Reached rank 7 for victories over Champions",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_BOSS_WINS",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_BOSSES3",
+		"Name": "%NAME%, Regional Defender",
+		"Hint": "Defeat Arena League Champions",
+		"Unlocked": "Reached rank 8 for victories over Champions",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_BOSS_WINS",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_BOSSES4",
+		"Name": "%NAME%, Galactic Champion",
+		"Hint": "Defeat Arena League Champions",
+		"Unlocked": "Reached maximum rank for victories over Champions",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_BOSS_WINS",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_D_NEXUS1",
+		"Name": "Contender %NAME%",
+		"Hint": "Defeat Iteration: Oceanus",
+		"Unlocked": "Reached rank 2 for defeating Iteration: Oceanus",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_D_NEXUS",
+			"Value": 0.0,
+			"LeveledStatRank": 2
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_D_NEXUS2",
+		"Name": "Professional %NAME%",
+		"Hint": "Defeat Iteration: Oceanus",
+		"Unlocked": "Reached rank 7 for defeating Iteration: Oceanus",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_D_NEXUS",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_D_NEXUS3",
+		"Name": "Battle Idol %NAME%",
+		"Hint": "Defeat Iteration: Oceanus",
+		"Unlocked": "Reached rank 8 for defeating Iteration: Oceanus",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_D_NEXUS",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_D_NEXUS4",
+		"Name": "Grandmaster %NAME%",
+		"Hint": "Defeat Iteration: Oceanus",
+		"Unlocked": "Reached maximum rank for defeating Iteration: Oceanus",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_D_NEXUS",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_EGGS1",
+		"Name": "%NAME%, Fosterer",
+		"Hint": "Hatch more Companion Eggs",
+		"Unlocked": "Reached rank 2 for hatching eggs",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGGS_HATCHED",
+			"Value": 0.0,
+			"LeveledStatRank": 2
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_EGGS2",
+		"Name": "%NAME%, Egg Custodian",
+		"Hint": "Hatch more Companion Eggs",
+		"Unlocked": "Reached rank 7 for hatching eggs",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGGS_HATCHED",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_EGGS3",
+		"Name": "%NAME%, Shell Warden",
+		"Hint": "Hatch more Companion Eggs",
+		"Unlocked": "Reached rank 8 for hatching eggs",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGGS_HATCHED",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_EGGS4",
+		"Name": "%NAME%, Egg Expert",
+		"Hint": "Hatch more Companion Eggs",
+		"Unlocked": "Reached maximum rank for hatching eggs",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGGS_HATCHED",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_WINS1",
+		"Name": "Crested %NAME%",
+		"Hint": "Claim more Holo-Arena victories",
+		"Unlocked": "Reached rank 2 for Holo-Arena victories",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_WINS",
+			"Value": 0.0,
+			"LeveledStatRank": 2
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_WINS2",
+		"Name": "Scarlet Crest %NAME%",
+		"Hint": "Claim more Holo-Arena victories",
+		"Unlocked": "Reached rank 7 for Holo-Arena victories",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_WINS",
+			"Value": 0.0,
+			"LeveledStatRank": 7
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_WINS3",
+		"Name": "Onyx Crest %NAME%",
+		"Hint": "Claim more Holo-Arena victories",
+		"Unlocked": "Reached rank 8 for Holo-Arena victories",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_WINS",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PB_WINS4",
+		"Name": "Gold Crest %NAME%",
+		"Hint": "Claim more Holo-Arena victories",
+		"Unlocked": "Reached maximum rank for Holo-Arena victories",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PB_WINS",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PET1",
+		"Name": "Creature Lover %NAME%",
+		"Hint": "Adopt an animal companion",
+		"Unlocked": "Adopted an animal companion",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PETS_OWNED",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PET2",
+		"Name": "Creature Breeder %NAME%",
+		"Hint": "Encourage several animal companions to lay eggs",
+		"Unlocked": "Encouraged an animal companion to lay an egg",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGGS_GOT",
+			"Value": 4.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_PET1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PET3",
+		"Name": "Gene-Splicer %NAME%",
+		"Hint": "Re-sequence the genetics of a creature egg",
+		"Unlocked": "Re-sequenced the genetics of a creature egg",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EGGS_MODDED",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_PET2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PIRATEMISS",
+		"Name": "Glorious Survivor %NAME%",
+		"Hint": "Follow a strange voice",
+		"Unlocked": "Reached the Promised Star",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "PIRATES3"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PIRATE_BETRAY",
+		"Name": "Traitor %NAME%",
+		"Hint": "Reject a strange voice",
+		"Unlocked": "Denounced the Voice of Freedom",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "PIRATE_BETRAY"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PIRATE_HIDE",
+		"Name": "Heretic %NAME%",
+		"Hint": "Accept a strange voice",
+		"Unlocked": "Sung with the Voice of Freedom",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "PIRATE_HIDE"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PIR_STAND1",
+		"Name": "Bilge Rat %NAME%",
+		"Hint": "Improve your standing with the Outlaws",
+		"Unlocked": "Reached rank 1 with the Outlaws",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PIRATE_STAND",
+			"Value": 0.0,
+			"LeveledStatRank": 3
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PIR_STAND2",
+		"Name": "Privateer %NAME%",
+		"Hint": "Improve your standing with the Outlaws",
+		"Unlocked": "Reached rank 2 with the Outlaws",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PIRATE_STAND",
+			"Value": 0.0,
+			"LeveledStatRank": 4
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_PIR_STAND1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PIR_STAND3",
+		"Name": "Dread-Pirate %NAME%",
+		"Hint": "Improve your standing with the Outlaws",
+		"Unlocked": "Reached rank 7 with the Outlaws",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PIRATE_STAND",
+			"Value": 0.0,
+			"LeveledStatRank": 9
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_PIR_STAND2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PIR_STAND4",
+		"Name": "%NAME%, Admiral of the Black",
+		"Hint": "Improve your standing with the Outlaws",
+		"Unlocked": "Reached maximum rank with the Outlaws",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PIRATE_STAND",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_PIR_STAND3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_POI_AST",
+		"Name": "Crystallographer %NAME%",
+		"Hint": "Extract condensed stellar ice from asteroid belts",
+		"Unlocked": "Extracted 50 condensed stellar ice from asteroid belts",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "POI_AST_RARE",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_POI_HULK",
+		"Name": "EVA Specialist %NAME%",
+		"Hint": "Salvage rare items from deep-space hulks",
+		"Unlocked": "Salvaged 30 rare items from deep-space hulks",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "POI_HULK_RARE",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_POI_SLIMEPOST",
+		"Name": "%NAME% the Infested",
+		"Hint": "Salvage rare items from infested outposts",
+		"Unlocked": "Salvaged 15 rare items from infested outposts",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "POI_SLIME_RARE",
+			"Value": 15.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PORTAL",
+		"Name": "Portal-Adept %NAME%",
+		"Hint": "Access the Portal network",
+		"Unlocked": "Made your first trip through a Portal",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "PORTAL_WARPS",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_PURPM",
+		"Name": "Manifestation of %NAME%",
+		"Hint": "Weave dissonant space for the Autophage",
+		"Unlocked": "Rebound space and time for the Autophage",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "PURPM3"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_RAIDER1",
+		"Name": "%NAME%, the Nuisance",
+		"Hint": "Plunder additional traders",
+		"Unlocked": "Reached rank 2 for merchants plundered",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRADERS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 2
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_RAIDER2",
+		"Name": "%NAME%, the Most Wanted",
+		"Hint": "Plunder additional traders",
+		"Unlocked": "Reached rank 7 for merchants plundered",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRADERS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 8
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_RAIDER1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_RAIDER3",
+		"Name": "%NAME%, Wings of Peril",
+		"Hint": "Plunder additional traders",
+		"Unlocked": "Reached rank 8 for merchants plundered",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRADERS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 9
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_RAIDER2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_RAIDER4",
+		"Name": "%NAME%, Lord of Plunder",
+		"Hint": "Plunder additional traders",
+		"Unlocked": "Reached maximum rank for merchants plundered",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRADERS_KILLED",
+			"Value": 0.0,
+			"LeveledStatRank": 10
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_RAIDER3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY1",
+		"Name": "%NAME% of Euclid",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": null,
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 0.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY10",
+		"Name": "%NAME% of Eissentam",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Eissentam",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 9.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY10",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY2",
+		"Name": "%NAME% of Hilbert",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Hilbert",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY3",
+		"Name": "%NAME% of Calypso",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Calypso",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 2.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY4",
+		"Name": "%NAME% of Hesperius",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Hesperius",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY5",
+		"Name": "%NAME% of Hyades",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Hyades",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 4.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY6",
+		"Name": "%NAME% of Ickjamatew",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Ickjamatew",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 5.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY7",
+		"Name": "%NAME% of Budullangr",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Budullangr",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 6.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY8",
+		"Name": "%NAME% of Kikolgallr",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Kikolgallr",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 7.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_REALITY9",
+		"Name": "%NAME% of Eltiensleen",
+		"Hint": "Journey through the centre of the Galaxy",
+		"Unlocked": "Made the journey to Eltiensleen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "HOME_REALITY",
+			"Value": 8.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_REALITY9",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_RECYCLE1",
+		"Name": "%NAME%, Cleanup Agent",
+		"Hint": "Recycle some industrial waste",
+		"Unlocked": "Recycled your first piece of industrial waste",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "CARGO_DESTROYED",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [
+			45
+		],
+		"UnlocksSpecials": [
+			"TRUCK_BODY02"
+		]
+	},
+	{
+		"Id": "T_RECYCLE2",
+		"Name": "Big Rig %NAME%",
+		"Hint": "Recycle a large amount of industrial waste",
+		"Unlocked": "Recycled a large amount of industrial waste",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "CARGO_DESTROYED",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [
+			45
+		],
+		"UnlocksSpecials": [
+			"TRUCK_CAB02"
+		]
+	},
+	{
+		"Id": "T_RECYCLE3",
+		"Name": "%NAME%, the Colossus",
+		"Hint": "Recycle a vast amount of industrial waste",
+		"Unlocked": "Recycled a vast amount of industrial waste",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "CARGO_DESTROYED",
+			"Value": 200.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [
+			45
+		],
+		"UnlocksSpecials": [
+			"SPEC_EMOTE16",
+			"TRUCK_BODY03"
+		]
+	},
+	{
+		"Id": "T_RECYCLE4",
+		"Name": "Rusty %NAME%",
+		"Hint": "Manually process scrap metal",
+		"Unlocked": "Recycled 75 pieces of scrap metal",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "CARGO_SCRAP",
+			"Value": 75.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [
+			45
+		],
+		"UnlocksSpecials": [
+			"TRUCK_WHEELS02"
+		]
+	},
+	{
+		"Id": "T_RECYCLE5",
+		"Name": "Loadmaster %NAME%",
+		"Hint": "Manually process explosive waste",
+		"Unlocked": "Recycled 50 pieces of explosive waste",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "CARGO_EXP",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [
+			45
+		],
+		"UnlocksSpecials": [
+			"TRUCK_WHEELS03"
+		]
+	},
+	{
+		"Id": "T_RECYCLE6",
+		"Name": "Fuel Handler %NAME%",
+		"Hint": "Manually process radioactive waste",
+		"Unlocked": "Recycled 50 pieces of radioactive waste",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "CARGO_RAD",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [
+			45
+		],
+		"UnlocksSpecials": [
+			"TRUCK_WHEELS07"
+		]
+	},
+	{
+		"Id": "T_RECYCLE7",
+		"Name": "Hazmat Specialist %NAME%",
+		"Hint": "Manually process toxic waste",
+		"Unlocked": "Recycled 50 pieces of toxic waste",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "CARGO_TOX",
+			"Value": 50.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [
+			45
+		],
+		"UnlocksSpecials": [
+			"TRUCK_WHEELS06"
+		]
+	},
+	{
+		"Id": "T_RECYCLE8",
+		"Name": "Ploughman %NAME%",
+		"Hint": "Acquire resources with an Excavation Blade",
+		"Unlocked": "Scoured a planet with an Excavation Blade",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXO_SMASH",
+			"Value": 500.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [
+			45
+		],
+		"UnlocksSpecials": [
+			"TRUCK_PAINT02"
+		]
+	},
+	{
+		"Id": "T_RESET",
+		"Name": "%NAME%, the Last",
+		"Hint": "???",
+		"Unlocked": "Reset the simulation for the Atlas",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "DID_RESET"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ROBOMISS1",
+		"Name": "%NAME%, Crimson Hearted",
+		"Hint": "???",
+		"Unlocked": "Submitted to the creator",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "ROBOM_ATLAS1"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ROBOMISS2",
+		"Name": "%NAME%, Atlantid-Walker",
+		"Hint": "???",
+		"Unlocked": "Defied the creator",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "ROBOM_ATLAS2"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_ROBOMISS3",
+		"Name": "%NAME%, Atlas Whisperer",
+		"Hint": "???",
+		"Unlocked": "Comforted an unfathomable mind",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "ROBOM_ATLAS3"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SALVAGE1",
+		"Name": "Scavenger %NAME%",
+		"Hint": "Collect salvage from derelict freighters",
+		"Unlocked": "Salvaged 1 derelict freighters",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ABAND_FREIGHTER",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SALVAGE2",
+		"Name": "Scrap Dealer %NAME%",
+		"Hint": "Collect salvage from derelict freighters",
+		"Unlocked": "Salvaged 10 derelicts",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ABAND_FREIGHTER",
+			"Value": 10.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SALVAGE1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SALVAGE3",
+		"Name": "Salvager %NAME%",
+		"Hint": "Collect salvage from derelict freighters",
+		"Unlocked": "Salvaged 25 derelicts",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "ABAND_FREIGHTER",
+			"Value": 25.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SALVAGE2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHIP_ALIEN",
+		"Name": "%NAME%, Starborn",
+		"Hint": "???",
+		"Unlocked": "Partner with a sentient Starship",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "BIO_SHIP5"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHIP_ALIEN",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHIP_DROP",
+		"Name": "Heavy Duty %NAME%",
+		"Hint": "Find the perfect Hauler",
+		"Unlocked": "Own an S-Class Hauler",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "S_CLASS_DROP"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHIP_EXOTIC",
+		"Name": "Perfect %NAME%",
+		"Hint": "Find an Exotic starship",
+		"Unlocked": "Own an Exotic starship",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "S_CLASS_ROYAL"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHIP_FIGHT",
+		"Name": "Ace %NAME%",
+		"Hint": "Find the perfect Fighter",
+		"Unlocked": "Own an S-Class Fighter",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "S_CLASS_FIGHT"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHIP_SCI",
+		"Name": "%NAME% the Explorer",
+		"Hint": "Find the perfect Explorer",
+		"Unlocked": "Own an S-Class Explorer",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "S_CLASS_SCI"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHIP_SHUTTLE",
+		"Name": "Reliable %NAME%",
+		"Hint": "Find the perfect Shuttle",
+		"Unlocked": "Own an S-Class Shuttle",
+		"Unlock": {
+			"Type": "Mission",
+			"MissionId": "S_CLASS_SHUT"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP1",
+		"Name": "Citizen Scientist %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE1"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP10",
+		"Name": "%NAME%, the First",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE10"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP10",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP11",
+		"Name": "%NAME% the Last",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE11"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP11",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP12",
+		"Name": "The Notorious %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE12"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP12",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP13",
+		"Name": "Solo Traveller %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE13"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP13",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP14",
+		"Name": "%NAME%, friend of Polo",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE14"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP14",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP15",
+		"Name": "%NAME%, friend of Nada",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE15"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP15",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP16",
+		"Name": "%NAME%, friend of Ariadne",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE16"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP16",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP17",
+		"Name": "%NAME%, friend of Gemini",
+		"Hint": "Unlock with Quicksilver",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE17"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP17",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP18",
+		"Name": "%NAME%, friend of Mercury",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE18"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP18",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP19",
+		"Name": "%NAME%, friend of Tethys",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE19"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP19",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP2",
+		"Name": "Dreamer %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE2"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP20",
+		"Name": "%NAME%, friend of Hesperus",
+		"Hint": "Unlock with Quicksilver",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE20"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP20",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP21",
+		"Name": "Simulated %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE21"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP21",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP22",
+		"Name": "Unknown %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE22"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP22",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP23",
+		"Name": "No Man's %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE23"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP23",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP24",
+		"Name": "Interloper %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE24"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP24",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP25",
+		"Name": "%NAME% the Exotic",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE25"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP25",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP26",
+		"Name": "%NAME% the Volcanic",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE26"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP26",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP27",
+		"Name": "Swamp-Dweller %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE27"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP27",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP28",
+		"Name": "%NAME% the 16th",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE28"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP28",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP29",
+		"Name": "%NAME% #4924 ",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE29"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP29",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP3",
+		"Name": "Anomaly %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE3"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP30",
+		"Name": "Photographer %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE30"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP30",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP4",
+		"Name": "Traveller-Friend %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE4"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP5",
+		"Name": "Friend-Entity %NAME%",
+		"Hint": "Unlock with Quicksilver",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE5"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP6",
+		"Name": "Kindred %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE6"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP7",
+		"Name": "Like-Traveller %NAME%",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE7"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP8",
+		"Name": "Lonely %NAME%",
+		"Hint": "Unlock with Quicksilver",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE8"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SHOP9",
+		"Name": "Every %NAME% Procedural",
+		"Hint": "???",
+		"Unlocked": "Earned for community effort",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "SPEC_TITLE9"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_SHOP9",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SPOOKPACKAGE",
+		"Name": "Mind Harvester %NAME%",
+		"Hint": "Gather haunting mementos",
+		"Unlocked": "Gathered 20 haunting mementos",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "SPOOK_PACKAGES",
+			"Value": 20.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": [
+			"GRUB_HAT"
+		]
+	},
+	{
+		"Id": "T_SPOOKY1",
+		"Name": "%NAME%, Pillar of Light",
+		"Hint": "Explore the darkest of derelicts",
+		"Unlocked": "Braved the darkest of derelicts",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "TITLE_SPOOKY1"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_SPOOKY2",
+		"Name": "%NAME% the Doomed",
+		"Hint": "Explore the darkest of derelicts",
+		"Unlocked": "Braved the darkest of derelicts",
+		"Unlock": {
+			"Type": "Product",
+			"ProductId": "TITLE_SPOOKY2"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_STATION_OWNED",
+		"Name": "Station Director %NAME%",
+		"Hint": "Claim a Space Station",
+		"Unlocked": "Became Director of a Space Station",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "STATIONS_OWNED",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TELAMON",
+		"Name": "The %NAME% of Glass",
+		"Hint": "See through Telamon's eyes",
+		"Unlocked": "Listened to Telamon's tale",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "GlitchyStoryBox",
+			"InteractionIndex": 31
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA1",
+		"Name": "Hireling %NAME%",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Impressed your first Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA2",
+		"Name": "ToilGek %NAME%",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Reached rank 1 with the Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA3",
+		"Name": "WorkGek %NAME%",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Reached rank 2 with the Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 8.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA4",
+		"Name": "Friend %NAME%",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Reached rank 3 with the Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 14.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA5",
+		"Name": "Overseer %NAME%",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Reached rank 4 with the Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 21.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA6",
+		"Name": "Scent-Kin %NAME%",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Reached rank 5 with the Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA7",
+		"Name": "Best Friend %NAME%",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Reached rank 6 with the Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA8",
+		"Name": "%NAME%, the Most Favoured",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Reached rank 7 with the Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA9",
+		"Name": "Trade Lord %NAME%",
+		"Hint": "Improve your standing with the Gek",
+		"Unlocked": "Reached rank 8 with the Gek",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TRA_STANDING",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD1",
+		"Name": "Messenger %NAME%",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Completed your first Merchants Guild assignment",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD2",
+		"Name": "Agent %NAME%",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Reached rank 1 with the Merchants Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA_GUILD1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD3",
+		"Name": "Envoy %NAME%",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Reached rank 2 with the Merchants Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 8.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA_GUILD2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD4",
+		"Name": "Broker %NAME%",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Reached rank 3 with the Merchants Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 14.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA_GUILD3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD5",
+		"Name": "Manager %NAME%",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Reached rank 4 with the Merchants Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 21.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA_GUILD4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD6",
+		"Name": "Diplomat %NAME%",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Reached rank 5 with the Merchants Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA_GUILD5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD7",
+		"Name": "Consul %NAME%",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Reached rank 6 with the Merchants Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA_GUILD6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD8",
+		"Name": "Director %NAME%",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Reached rank 7 with the Merchants Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA_GUILD7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_GUILD9",
+		"Name": "%NAME% the Magnificent",
+		"Hint": "Improve your standing with the Merchants Guild",
+		"Unlocked": "Reached rank 8 with the Merchants Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "TGUILD_STAND",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_TRA_GUILD8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_TRA_LORE",
+		"Name": "%NAME% the Forgiven",
+		"Hint": "Look upon the First Spawn",
+		"Unlocked": "Uncovered the story of the Gek from their plaques",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "Plaque",
+			"InteractionIndex": 30,
+			"Race": "Traders"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAKE_TITAN",
+		"Name": "instance16 %NAME%",
+		"Hint": "???",
+		"Unlocked": "Sought hidden co-ordinates",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAKE_TITAN",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAKE_TITAN",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR1",
+		"Name": "Conscript %NAME%",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Impressed your first Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR2",
+		"Name": "Liquidator %NAME%",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Reached rank 1 with the Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR3",
+		"Name": "Flagbearer %NAME%",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Reached rank 2 with the Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 8.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR4",
+		"Name": "Vy'keen-at-Arms %NAME%",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Reached rank 3 with the Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 14.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR5",
+		"Name": "Enemy Slayer %NAME%",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Reached rank 4 with the Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 21.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR6",
+		"Name": "Preceptor %NAME%",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Reached rank 5 with the Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR7",
+		"Name": "Adjutant %NAME%",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Reached rank 6 with the Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR8",
+		"Name": "Templar %NAME%",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Reached rank 7 with the Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR9",
+		"Name": "%NAME%, Hand of the Vy'keen",
+		"Hint": "Improve your standing with the Vy'keen",
+		"Unlocked": "Reached rank 8 with the Vy'keen",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WAR_STANDING",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD1",
+		"Name": "Mercenary %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Completed your first Mercenaries Guild assignment",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD2",
+		"Name": "Ensign %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Reached rank 1 with the Mercenaries Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 3.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR_GUILD1",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD3",
+		"Name": "Enforcer %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Reached rank 2 with the Mercenaries Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 8.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR_GUILD2",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD4",
+		"Name": "Warrior %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Reached rank 3 with the Mercenaries Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 14.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR_GUILD3",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD5",
+		"Name": "Guard %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Reached rank 4 with the Mercenaries Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 21.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR_GUILD4",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD6",
+		"Name": "Prefect %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Reached rank 5 with the Mercenaries Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 30.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR_GUILD5",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD7",
+		"Name": "Commandant %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Reached rank 6 with the Mercenaries Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 40.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR_GUILD6",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD8",
+		"Name": "Marshal %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Reached rank 7 with the Mercenaries Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 60.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR_GUILD7",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_GUILD9",
+		"Name": "Aegis %NAME%",
+		"Hint": "Improve your standing with the Mercenaries Guild",
+		"Unlocked": "Reached rank 8 with the Mercenaries Guild",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "WGUILD_STAND",
+			"Value": 100.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": "T_WAR_GUILD8",
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_LORE1",
+		"Name": "%NAME%, Priest of Nal",
+		"Hint": "Know the sacrifice of Nal",
+		"Unlocked": "Understood the heresy of Nal",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "Plaque",
+			"InteractionIndex": 10,
+			"Race": "Warriors"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WAR_LORE2",
+		"Name": "%NAME%, Priest of Hirk",
+		"Hint": "Meet the challenge of Hirk",
+		"Unlocked": "Learned the fate of Hirk",
+		"Unlock": {
+			"Type": "Interaction",
+			"Interaction": "Plaque",
+			"InteractionIndex": 30,
+			"Race": "Warriors"
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WATCHED",
+		"Name": "%NAME% the Watched",
+		"Hint": "???",
+		"Unlocked": "Tracked by the Korvax",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "EXP_SCAVENGER_8",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	},
+	{
+		"Id": "T_WEEKEND",
+		"Name": "%NAME%, Rift-Walker",
+		"Hint": "Explore Together",
+		"Unlocked": "Joined with other Travellers for a special mission",
+		"Unlock": {
+			"Type": "Stat",
+			"Stat": "MP_EVENT_COUNT",
+			"Value": 1.0
+		},
+		"GrantedByRewards": [],
+		"RevealedBy": null,
+		"BlockedInSeasons": [],
+		"UnlocksSpecials": []
+	}
+]

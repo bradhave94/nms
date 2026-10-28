@@ -2497,6 +2497,37 @@
 			"Slug": "creatures/LAND_SQUID"
 		},
 		{
+			"Id": "SPACE_SQUID",
+			"Name": "Space Squid",
+			"SpeciesSubtitle": null,
+			"CreatureType": "LandSquid",
+			"RealType": "None",
+			"MoveArea": "Space",
+			"Rarity": "Rare",
+			"EcoSystemCreature": false,
+			"CanBeFemale": false,
+			"MinScale": 1.0,
+			"MaxScale": 1.0,
+			"PredatorModifier": "Normal",
+			"HerbivoreModifier": "Normal",
+			"EggType": "DEFAULT",
+			"CanBeUsedInBattle": false,
+			"BattleForcedAffinityRaw": null,
+			"BattlePetTag": "None",
+			"BattleSwellOnAttack": null,
+			"BattleFlyerExtraOffset": null,
+			"MoveSets": null,
+			"BattleForcedAffinity": null,
+			"BattleForcedAffinityDisplay": null,
+			"BattleAffinityIcon": null,
+			"BattleAffinityIconPath": null,
+			"BattleAffinitySource": null,
+			"BattleAffinityReason": null,
+			"Icon": "SPACE_SQUID.png",
+			"IconPath": "textures/ui/hud/icons/creatureinteraction.dds",
+			"Slug": "creatures/SPACE_SQUID"
+		},
+		{
 			"Id": "PURPLE_WEIRD",
 			"Name": "Purple Weird",
 			"SpeciesSubtitle": null,
@@ -3117,7 +3148,7 @@
 			"RealType": "None",
 			"MoveArea": "Air",
 			"Rarity": "Rare",
-			"EcoSystemCreature": true,
+			"EcoSystemCreature": false,
 			"CanBeFemale": true,
 			"MinScale": 0.5,
 			"MaxScale": 0.5,
@@ -7152,6 +7183,17 @@
 			"Slug": "creatures/modes/PETBATTLE_SYSTEM_CHAMPION"
 		},
 		{
+			"Id": "PETBATTLE_OUTPOST_STANDARD",
+			"Name": "Petbattle Outpost Standard",
+			"Description": null,
+			"GameMode": "Creature Battle",
+			"Difficulty": "Easy",
+			"RewardWin": "R_PB_PVE_OUTP_W",
+			"RewardLoss": "R_PB_PVE_SYSS_L",
+			"ExperienceMultiplier": 1.0,
+			"Slug": "creatures/modes/PETBATTLE_OUTPOST_STANDARD"
+		},
+		{
 			"Id": "PETBATTLE_SETTLEMENT",
 			"Name": "Petbattle Settlement",
 			"Description": "Compete at Holo-Arenas on planets and Space Stations.",
@@ -7585,6 +7627,30 @@
 			"Slug": "creatures/ai-configs/PB_AI_SYSTEM_STANDARD"
 		},
 		{
+			"Id": "PB_AI_OUTPOST_STANDARD",
+			"Difficulty": "Easy",
+			"GameType": "PetBattler",
+			"TeamSeedSource": "NPCAndWins",
+			"Pets": [
+				{
+					"Pool": "All",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "All",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				},
+				{
+					"Pool": "FromSystem",
+					"MinLevel": -1,
+					"MaxLevel": -1
+				}
+			],
+			"Slug": "creatures/ai-configs/PB_AI_OUTPOST_STANDARD"
+		},
+		{
 			"Id": "PB_AI_SYSTEM_CHAMPION",
 			"Difficulty": "Hard",
 			"GameType": "PetBattler",
@@ -7845,6 +7911,35 @@
 				}
 			],
 			"Slug": "creatures/rewards/R_PB_PVE_SYSS_L"
+		},
+		{
+			"Id": "R_PB_PVE_OUTP_W",
+			"RewardChoice": "GiveAll",
+			"IncrementStat": null,
+			"Items": [
+				{
+					"Type": "Currency",
+					"Id": "Nanites",
+					"AmountMin": 15,
+					"AmountMax": 30,
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "IncrementStat",
+					"Chance": 100.0
+				},
+				{
+					"Type": "Product",
+					"ProductId": "TREAT_FREELEVEL",
+					"Amount": 1,
+					"Chance": 8.0
+				}
+			],
+			"Slug": "creatures/rewards/R_PB_PVE_OUTP_W"
 		},
 		{
 			"Id": "R_PB_PVE_PLAC_W",

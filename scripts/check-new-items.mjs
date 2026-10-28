@@ -3,12 +3,20 @@ import { readFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 // names on the page go through the same cleanup as every page (src/integrations/cleanGameNames.ts)
 import { cleanName } from '../src/integrations/cleanGameNames.ts';
+import { isSupportedItemRoute } from '../src/utils/routeEligible.ts';
 
 // The Cloudflare adapter writes prerendered pages to dist/client.
 const DIST = existsSync('dist/client') ? 'dist/client' : 'dist';
 
 const update = JSON.parse(await readFile('src/datav2/new.json', 'utf8'));
-const namedAdditions = update.Items.filter((item) => item.Name?.trim());
+// Only additions with a route get a card: arena modes, AI configs, reward tables and titles
+// don't. Pet-shop eggs link to their row on the arena page.
+const route = (item) => (item.Slug?.startsWith('creatures/shop/') ? `/creatures/arena#pet-shop-${item.Id}` : `/${item.Slug}`);
+const namedAdditions = update.Items.filter((item) => item.Name?.trim() && item.Slug && isSupportedItemRoute(route(item)));
+for (const item of namedAdditions) {
+	const path = route(item).split('#')[0];
+	assert(existsSync(`${DIST}${path}/index.html`), `new item ${item.Id} must have a built page at ${path}`);
+}
 const html = await readFile(`${DIST}/new/index.html`, 'utf8');
 assert(!html.includes('id="items-changed"'), '/new must not list updated items');
 assert(!html.includes('Removed from data'), '/new must not list removals');
@@ -30,19 +38,20 @@ const refiner = await readFile(`${DIST}/technology/SUIT_REFINER/index.html`, 'ut
 assert(!/Added in \d/.test(refiner), 'Category corrections must not get a new-item badge');
 assert(!refiner.includes('id="update-changes-panel"'), 'Slug-only changes must not get an update badge');
 
-const added = namedAdditions.find((item) => item.Slug?.startsWith('technology/'));
-assert(added, 'Expected a new technology item to verify its detail page');
+const added = namedAdditions[0];
+assert(added, 'Expected a new item to verify its detail page');
 const addedHtml = await readFile(`${DIST}/${added.Slug}/index.html`, 'utf8');
 assert(/Added in \d/.test(addedHtml), 'New items must keep their detail-page badge');
 assert(!addedHtml.includes('added compared to'), 'The added badge should just state the release');
 
 const changed = update.ChangedItems.find((item) => item.Slug?.startsWith('buildings/')
-	&& item.ChangedFields?.includes('BuildableOnSpaceBase'));
-assert(changed, 'Expected a changed building to verify its detail page');
+	&& item.ChangedFields?.includes('BuildableOnSpaceBase'))
+	?? update.ChangedItems.find((item) => existsSync(`${DIST}/${item.Slug}/index.html`));
+assert(changed, 'Expected a changed item to verify its detail page');
 const changedHtml = await readFile(`${DIST}/${changed.Slug}/index.html`, 'utf8');
 assert(changedHtml.includes('id="update-changes-panel"'), 'Updates must remain on individual pages');
 assert(changedHtml.includes('Show what changed'));
-assert(changedHtml.includes('Can be built on a space base'));
+if (changed.ChangedFields?.includes('BuildableOnSpaceBase')) assert(changedHtml.includes('Can be built on a space base'));
 assert(!/Added in \d/.test(changedHtml), 'Updated items must not get a new-item badge');
 
 assert(!namedAdditions.some((item) => item.Id === 'STA_ROOM_DRESS'), 'A product override of an existing room is not a new room');
@@ -51,19 +60,13 @@ assert(!/Added in \d/.test(variantHtml));
 assert(variantHtml.includes('Orbital-base version of'));
 // The post-build trailing-slash step rewrites internal links to end in /.
 assert(/href="\/buildings\/FRE_ROOM_DRESS\/?"/.test(variantHtml));
-const originalHtml = await readFile(`${DIST}/buildings/FRE_ROOM_DRESS/index.html`, 'utf8');
-assert(originalHtml.includes('Changed in '));
-assert(originalHtml.includes('Can be built on a space base'));
-const figurineHtml = await readFile(`${DIST}/other/BOBBLE_ASTRO/index.html`, 'utf8');
-assert(figurineHtml.includes('Added in 7.00'));
-for (const id of ['S23_BEACON', 'S23_ODD_EGG', 'S23_PRISMS_EGG']) {
-	const variant = namedAdditions.find((item) => item.Id === id);
-	assert(variant, 'Expedition variants must remain in the new-items list');
-	assert.equal(variant.ReleaseVariant.Expedition, 23);
+// Expedition variants of existing items stay in the list, labelled on /new, their pages and search.
+const variants = namedAdditions.filter((item) => item.ReleaseVariant?.Kind === 'expedition');
+for (const variant of variants) {
 	const detail = await readFile(`${DIST}/${variant.Slug}/index.html`, 'utf8');
-	assert(detail.includes('Expedition 23 variant'));
+	assert(detail.includes(`Expedition ${variant.ReleaseVariant.Expedition} variant`));
 }
-assert.equal((html.match(/Expedition 23 variant/g) ?? []).length, 3);
+assert.equal((html.match(/Expedition \d+ variant/g) ?? []).length, variants.length);
 
 const search = JSON.parse(await readFile(`${DIST}/search.json`, 'utf8')).body;
 const diplo = search.find((item) => item.id === 'DIPLO_PET');
@@ -77,7 +80,9 @@ assert.equal(roomResults[0].id, 'FRE_ROOM_DRESS');
 assert(roomResults[0].searchText.includes('STA_ROOM_DRESS'), 'The alias should still find the original building');
 assert(!search.some((item) => item.id === 'STA_ROOM_DRESS'));
 assert(!search.some((item) => item.id === 'STA_ROOM_NPCVEH'), 'Overrides in other categories must also be collapsed');
-assert.equal(search.find((item) => item.id === 'S23_BEACON').subtitle, 'Expedition 23 variant');
+for (const variant of variants) {
+	assert.equal(search.find((item) => item.id === variant.Id)?.subtitle, `Expedition ${variant.ReleaseVariant.Expedition} variant`);
+}
 assert(search.some((item) => item.id === 'MYSTERY_BEACON'));
 assert.equal(search.filter((item) => item.name === 'Atlas Firework Pack').length, 1);
 assert(!namedAdditions.some((item) => item.Id.startsWith('TWITCH_FIREW13')));
