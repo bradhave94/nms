@@ -1,0 +1,176 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
+import {
+	extraHint,
+	getItemPage,
+	groupTitles,
+	rewardSource,
+	titleAnchor,
+	titleLabel,
+	titleParts,
+	titleRank,
+	titleSearchText,
+	unlockText,
+} from '@utils/playerUnlocks';
+import '../assets/css/creatures.css';
+
+const groups = groupTitles();
+const total = groups.reduce((sum, group) => sum + group.titles.length, 0);
+
+const title = withSiteTitle("Player Titles in No Man's Sky and How to Unlock Them");
+const description = `All ${total} No Man's Sky player titles and how to unlock each: faction standing, milestones, items, missions and monoliths, from the game files.`;
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Titles' }];
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/titles/', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: "No Man's Sky player titles",
+	collectionDescription: description,
+	collectionPath: '/titles',
+	currentPage: 1,
+	breadcrumbs,
+	items: groups
+		.flatMap((group) => group.titles)
+		.map((entry, index) => ({
+			name: titleLabel(entry.Name),
+			url: `${canonicalUrl}#${titleAnchor(entry.Id)}`,
+			position: index + 1,
+		})),
+});
+---
+
+<Layout {title} {description} slug="titles" {structuredData} {breadcrumbs}>
+	<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+	<div class="cr-wrap">
+		<header class="cr-head">
+			<div class="min-w-0">
+				<h1 class="cr-title">Player titles</h1>
+				<p class="cr-lead">
+					All {total} titles you can show on your banner, grouped by how you earn them. Pick one at an Appearance Modifier.
+				</p>
+			</div>
+		</header>
+
+		<nav class="tt-jump" aria-label="Title groups">
+			<ul>
+				{groups.map((group) => (
+					<li data-jump={group.key}><a href={`#${group.key}`}>{group.heading} <span class="tabular">{group.titles.length}</span></a></li>
+				))}
+			</ul>
+		</nav>
+
+		<div class="tt-filter" role="search" aria-label="Filter titles">
+			<label for="title-filter">Find a title</label>
+			<input id="title-filter" type="search" class="field" placeholder="Harvester, Gek, monolith…" autocomplete="off" spellcheck="false" />
+			<p id="title-filter-status" class="tt-status" role="status"></p>
+		</div>
+
+		{groups.map((group) => (
+			<section class="cr-section" id={group.key} aria-labelledby={`${group.key}-heading`} data-title-group>
+				<h2 class="section-title" id={`${group.key}-heading`}>
+					{group.heading} <span class="count tabular">{group.titles.length}</span>
+				</h2>
+				<p>{group.lead}</p>
+				<table class="cr-table stack tt-table">
+					<thead>
+						<tr>
+							<th scope="col">Title</th>
+							<th scope="col">How to unlock</th>
+						</tr>
+					</thead>
+					<tbody>
+						{group.titles.map((entry) => {
+							const [before, after] = titleParts(entry.Name);
+							const item = entry.Unlock.Type === 'Product' ? getItemPage(entry.Unlock.ProductId) : undefined;
+							const unlocks = entry.UnlocksSpecials.map((id) => getItemPage(id)).filter((page) => page !== undefined);
+							const rewards = [...new Set(entry.GrantedByRewards.map((reward) => rewardSource(reward.RewardTable)))];
+							const rank = titleRank(entry);
+							const hint = extraHint(entry);
+							return (
+								<tr id={titleAnchor(entry.Id)} data-search={titleSearchText(entry)}>
+									<th scope="row">
+										<span class="tt-title">{before}<span class="tt-name">Traveller</span>{after}</span>
+									</th>
+									<td data-label="How to unlock">
+										<div class="tt-unlock">
+											<span class="tt-how">{unlockText(entry) ?? 'Not described in the game'}</span>
+											{rank !== null && <span class="tt-meta">Rank {rank}</span>}
+											{item && (
+												<span class="tt-meta">Item: <a href={item.url} class="link">{item.name}</a></span>
+											)}
+											{rewards.length > 0 && <span class="tt-meta">Reward: {rewards.join(', ')}</span>}
+											{unlocks.length > 0 && (
+												<span class="tt-meta">
+													Also unlocks:{' '}
+													{unlocks.map((page, index) => (
+														<>
+															{index > 0 && ', '}
+															<a href={page.url} class="link">{page.name}</a>
+														</>
+													))}
+												</span>
+											)}
+											{hint && <span class="tt-meta">{entry.Unlock.Type === 'Trophy' ? 'Achievement' : 'Hint'}: {hint}</span>}
+										</div>
+									</td>
+								</tr>
+							);
+						})}
+					</tbody>
+				</table>
+			</section>
+		))}
+	</div>
+</Layout>
+
+<style>
+	.tt-jump ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.25rem; padding: 0; list-style: none; }
+	.tt-jump a { display: inline-flex; gap: .4rem; padding: .3rem .7rem; border: 1px solid var(--color-line-strong); border-radius: 999px; font-size: .875rem; color: var(--color-ink); }
+	.tt-jump a span { color: var(--color-dim); }
+	.tt-jump a:hover { border-color: var(--color-dim); }
+	.tt-filter { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; margin: 0 0 2rem; }
+	.tt-filter label { font-size: .875rem; color: var(--color-dim); }
+	.tt-filter .field { flex: 1 1 16rem; max-width: 24rem; }
+	.tt-status { flex-basis: 100%; margin: 0; font-size: .875rem; color: var(--color-dim); }
+	.tt-status:empty { display: none; }
+	/* the stacked mobile rows set display:block, which would override [hidden] */
+	.tt-table tr[hidden] { display: none; }
+	.tt-table th[scope='row'] { width: 38%; }
+	.tt-name { color: var(--color-dim); font-style: italic; font-weight: 500; }
+	.tt-how, .tt-meta { display: block; }
+	.tt-meta { margin-top: .2rem; font-size: .8125rem; color: var(--color-dim); }
+	/* stacked rows: the unlock text gets the full width under its label */
+	@media (max-width: 639px) {
+		.tt-table th[scope='row'] { width: auto; }
+		.tt-table td { display: block; }
+		.tt-table td[data-label]::before { display: block; margin-bottom: .15rem; }
+	}
+</style>
+
+<script>
+	const input = document.getElementById('title-filter') as HTMLInputElement | null;
+	const status = document.getElementById('title-filter-status');
+	const sections = [...document.querySelectorAll<HTMLElement>('[data-title-group]')];
+	input?.addEventListener('input', () => {
+		const query = input.value.trim().toLowerCase();
+		let shown = 0;
+		for (const section of sections) {
+			let visible = 0;
+			for (const row of section.querySelectorAll<HTMLTableRowElement>('tbody tr')) {
+				const match = !query || (row.dataset.search ?? '').includes(query);
+				row.hidden = !match;
+				if (match) visible += 1;
+			}
+			section.hidden = visible === 0;
+			const jump = document.querySelector<HTMLElement>(`[data-jump="${section.id}"]`);
+			if (jump) jump.hidden = visible === 0;
+			shown += visible;
+		}
+		if (status) status.textContent = query ? (shown ? `${shown} ${shown === 1 ? 'title matches' : 'titles match'}` : 'No titles match.') : '';
+	});
+</script>

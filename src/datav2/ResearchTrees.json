@@ -1,0 +1,6908 @@
+{
+	"Groups": [
+		{
+			"Id": "BasicBaseParts",
+			"Name": "Basic Construction",
+			"Trees": [
+				{
+					"Name": "Timber Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "T_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "T_FLOOR",
+							"Parent": "T_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "T_GFLOOR",
+							"Parent": "T_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "T_RAMP",
+							"Parent": "T_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_RAMP_H",
+							"Parent": "T_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "T_FLOOR_Q",
+							"Parent": "T_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_TRIFLOOR",
+							"Parent": "T_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_TRIFLOOR_Q",
+							"Parent": "T_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_H",
+							"Parent": "T_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALLDIAGONAL",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_Q",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_Q_H",
+							"Parent": "T_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "T_CHEV_WIN0",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_DOOR",
+							"Parent": "T_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "T_WALL_WINDOW",
+							"Parent": "T_DOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_DOORWINDOW",
+							"Parent": "T_WALL_WINDOW",
+							"Price": 2
+						},
+						{
+							"Id": "T_DOOR_H",
+							"Parent": "T_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "T_GDOOR",
+							"Parent": "T_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF6",
+							"Parent": "T_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF_M",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_C",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_IC",
+							"Parent": "T_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "T_ARCH",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ARCH_H",
+							"Parent": "T_ARCH",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF7",
+							"Parent": "T_ROOF6",
+							"Price": 2
+						}
+					]
+				},
+				{
+					"Name": "Stone Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "S_FLOOR",
+							"Parent": "S_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "S_GFLOOR",
+							"Parent": "S_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "S_RAMP",
+							"Parent": "S_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_RAMP_H",
+							"Parent": "S_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "S_FLOOR_Q",
+							"Parent": "S_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_TRIFLOOR",
+							"Parent": "S_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_TRIFLOOR_Q",
+							"Parent": "S_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_H",
+							"Parent": "S_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALLDIAGONAL",
+							"Parent": "S_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_Q",
+							"Parent": "S_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_Q_H",
+							"Parent": "S_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "S_DOOR",
+							"Parent": "S_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "S_WALL_WINDOW",
+							"Parent": "S_DOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_DOORWINDOW",
+							"Parent": "S_WALL_WINDOW",
+							"Price": 2
+						},
+						{
+							"Id": "S_DOOR_H",
+							"Parent": "S_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "S_GDOOR",
+							"Parent": "S_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF3",
+							"Parent": "S_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF_M",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_C",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_IC",
+							"Parent": "S_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "S_ARCH",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ARCH_H",
+							"Parent": "S_ARCH",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Alloy Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "F_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "F_FLOOR",
+							"Parent": "F_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "F_GFLOOR",
+							"Parent": "F_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "F_RAMP",
+							"Parent": "F_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_RAMP_H",
+							"Parent": "F_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "F_FLOOR_Q",
+							"Parent": "F_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_TRIFLOOR",
+							"Parent": "F_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_TRIFLOOR_Q",
+							"Parent": "F_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_H",
+							"Parent": "F_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALLDIAGONAL",
+							"Parent": "F_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_Q",
+							"Parent": "F_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_Q_H",
+							"Parent": "F_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "F_DOOR",
+							"Parent": "F_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "F_WALL_WINDOW",
+							"Parent": "F_DOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_DOORWINDOW",
+							"Parent": "F_WALL_WINDOW",
+							"Price": 2
+						},
+						{
+							"Id": "F_DOOR_H",
+							"Parent": "F_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "F_GDOOR",
+							"Parent": "F_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF7",
+							"Parent": "F_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF_M",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_C",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_IC",
+							"Parent": "F_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "F_ARCH",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ARCH_H",
+							"Parent": "F_ARCH",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Salvaged Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "B_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "B_FLOOR",
+							"Parent": "B_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "B_GFLOOR",
+							"Parent": "B_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "B_RAMP",
+							"Parent": "B_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_RAMP_H",
+							"Parent": "B_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "B_FLOOR_Q",
+							"Parent": "B_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_TRIFLOOR",
+							"Parent": "B_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_TRIFLOOR_Q",
+							"Parent": "B_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_H",
+							"Parent": "B_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALLDIAGONAL",
+							"Parent": "B_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_Q",
+							"Parent": "B_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_Q_H",
+							"Parent": "B_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "B_DOOR",
+							"Parent": "B_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "B_WALL_WINDOW",
+							"Parent": "B_DOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_DOORWINDOW",
+							"Parent": "B_WALL_WINDOW",
+							"Price": 2
+						},
+						{
+							"Id": "B_DOOR_H",
+							"Parent": "B_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "B_GDOOR",
+							"Parent": "B_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF7",
+							"Parent": "B_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF_M",
+							"Parent": "B_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_C",
+							"Parent": "B_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_IC",
+							"Parent": "B_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "B_ARCH",
+							"Parent": "B_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "B_ARCH_H",
+							"Parent": "B_ARCH",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Core Habitation Tech",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "TELEPORTER",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "U_BIOGENERATOR",
+							"Parent": "TELEPORTER",
+							"Price": 1
+						},
+						{
+							"Id": "U_POWERLINE",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 0
+						},
+						{
+							"Id": "U_BATTERY_S",
+							"Parent": "U_POWERLINE",
+							"Price": 3
+						},
+						{
+							"Id": "U_SOLAR_S",
+							"Parent": "U_POWERLINE",
+							"Price": 8
+						},
+						{
+							"Id": "HEALTHSTATION",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 5
+						},
+						{
+							"Id": "SHIELDSTATION",
+							"Parent": "HEALTHSTATION",
+							"Price": 3
+						},
+						{
+							"Id": "BUILDSIGNAL",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDBEACON",
+							"Parent": "TELEPORTER",
+							"Price": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "BasicTechParts",
+			"Name": "Vital Technology",
+			"Trees": [
+				{
+					"Name": "Core Habitation Tech",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "TELEPORTER",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "U_BIOGENERATOR",
+							"Parent": "TELEPORTER",
+							"Price": 1
+						},
+						{
+							"Id": "U_POWERLINE",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 0
+						},
+						{
+							"Id": "U_BATTERY_S",
+							"Parent": "U_POWERLINE",
+							"Price": 3
+						},
+						{
+							"Id": "U_SOLAR_S",
+							"Parent": "U_POWERLINE",
+							"Price": 8
+						},
+						{
+							"Id": "HEALTHSTATION",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 5
+						},
+						{
+							"Id": "SHIELDSTATION",
+							"Parent": "HEALTHSTATION",
+							"Price": 3
+						},
+						{
+							"Id": "BUILDSIGNAL",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDBEACON",
+							"Parent": "TELEPORTER",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Timber Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "T_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "T_FLOOR",
+							"Parent": "T_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "T_GFLOOR",
+							"Parent": "T_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "T_RAMP",
+							"Parent": "T_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_RAMP_H",
+							"Parent": "T_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "T_FLOOR_Q",
+							"Parent": "T_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_TRIFLOOR",
+							"Parent": "T_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_TRIFLOOR_Q",
+							"Parent": "T_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_H",
+							"Parent": "T_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALLDIAGONAL",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_Q",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_Q_H",
+							"Parent": "T_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "T_CHEV_WIN0",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_DOOR",
+							"Parent": "T_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "T_WALL_WINDOW",
+							"Parent": "T_DOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_DOORWINDOW",
+							"Parent": "T_WALL_WINDOW",
+							"Price": 2
+						},
+						{
+							"Id": "T_DOOR_H",
+							"Parent": "T_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "T_GDOOR",
+							"Parent": "T_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF6",
+							"Parent": "T_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF_M",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_C",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_IC",
+							"Parent": "T_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "T_ARCH",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ARCH_H",
+							"Parent": "T_ARCH",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF7",
+							"Parent": "T_ROOF6",
+							"Price": 2
+						}
+					]
+				},
+				{
+					"Name": "Stone Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "S_FLOOR",
+							"Parent": "S_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "S_GFLOOR",
+							"Parent": "S_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "S_RAMP",
+							"Parent": "S_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_RAMP_H",
+							"Parent": "S_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "S_FLOOR_Q",
+							"Parent": "S_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_TRIFLOOR",
+							"Parent": "S_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_TRIFLOOR_Q",
+							"Parent": "S_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_H",
+							"Parent": "S_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALLDIAGONAL",
+							"Parent": "S_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_Q",
+							"Parent": "S_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_Q_H",
+							"Parent": "S_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "S_DOOR",
+							"Parent": "S_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "S_WALL_WINDOW",
+							"Parent": "S_DOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_DOORWINDOW",
+							"Parent": "S_WALL_WINDOW",
+							"Price": 2
+						},
+						{
+							"Id": "S_DOOR_H",
+							"Parent": "S_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "S_GDOOR",
+							"Parent": "S_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF3",
+							"Parent": "S_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF_M",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_C",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_IC",
+							"Parent": "S_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "S_ARCH",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ARCH_H",
+							"Parent": "S_ARCH",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Alloy Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "F_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "F_FLOOR",
+							"Parent": "F_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "F_GFLOOR",
+							"Parent": "F_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "F_RAMP",
+							"Parent": "F_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_RAMP_H",
+							"Parent": "F_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "F_FLOOR_Q",
+							"Parent": "F_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_TRIFLOOR",
+							"Parent": "F_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_TRIFLOOR_Q",
+							"Parent": "F_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_H",
+							"Parent": "F_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALLDIAGONAL",
+							"Parent": "F_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_Q",
+							"Parent": "F_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_Q_H",
+							"Parent": "F_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "F_DOOR",
+							"Parent": "F_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "F_WALL_WINDOW",
+							"Parent": "F_DOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_DOORWINDOW",
+							"Parent": "F_WALL_WINDOW",
+							"Price": 2
+						},
+						{
+							"Id": "F_DOOR_H",
+							"Parent": "F_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "F_GDOOR",
+							"Parent": "F_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF7",
+							"Parent": "F_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF_M",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_C",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_IC",
+							"Parent": "F_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "F_ARCH",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ARCH_H",
+							"Parent": "F_ARCH",
+							"Price": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "BaseParts",
+			"Name": "Construction Modules",
+			"Trees": [
+				{
+					"Name": "Large Prefabs",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "MAINROOM",
+							"Parent": null,
+							"Price": 3
+						},
+						{
+							"Id": "MAINROOMCUBE",
+							"Parent": "MAINROOM",
+							"Price": 3
+						},
+						{
+							"Id": "FOUNDATION",
+							"Parent": "MAINROOMCUBE",
+							"Price": 3
+						},
+						{
+							"Id": "BUILDPAVING",
+							"Parent": "FOUNDATION",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDPAVING_BIG",
+							"Parent": "BUILDPAVING",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDPAVINGTALL",
+							"Parent": "BUILDPAVING",
+							"Price": 1
+						},
+						{
+							"Id": "MAINROOMFRAME",
+							"Parent": "FOUNDATION",
+							"Price": 3
+						},
+						{
+							"Id": "CORRIDOR",
+							"Parent": "MAINROOM",
+							"Price": 5
+						},
+						{
+							"Id": "CORRIDORL",
+							"Parent": "CORRIDOR",
+							"Price": 5
+						},
+						{
+							"Id": "CORRIDORT",
+							"Parent": "CORRIDORL",
+							"Price": 5
+						},
+						{
+							"Id": "CORRIDORX",
+							"Parent": "CORRIDORL",
+							"Price": 5
+						},
+						{
+							"Id": "GLASSCORRIDOR",
+							"Parent": "CORRIDOR",
+							"Price": 5
+						},
+						{
+							"Id": "CUBEWINDOW",
+							"Parent": "GLASSCORRIDOR",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDWINDOW",
+							"Parent": "GLASSCORRIDOR",
+							"Price": 1
+						},
+						{
+							"Id": "PANEL_GLASS",
+							"Parent": "BUILDWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "BIOROOM",
+							"Parent": "GLASSCORRIDOR",
+							"Price": 10
+						},
+						{
+							"Id": "VIEWSPHERE",
+							"Parent": "BIOROOM",
+							"Price": 10
+						},
+						{
+							"Id": "CORRIDORC",
+							"Parent": "GLASSCORRIDOR",
+							"Price": 3
+						},
+						{
+							"Id": "BUILDDOOR",
+							"Parent": "MAINROOM",
+							"Price": 1
+						},
+						{
+							"Id": "DOOR2",
+							"Parent": "BUILDDOOR",
+							"Price": 8
+						},
+						{
+							"Id": "BUILDRAMP",
+							"Parent": "BUILDDOOR",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDLADDER",
+							"Parent": "BUILDRAMP",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Small Prefabs",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "CUBEROOM",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "CUBEFOUND",
+							"Parent": "CUBEROOM",
+							"Price": 1
+						},
+						{
+							"Id": "CUBEFRAME",
+							"Parent": "CUBEFOUND",
+							"Price": 1
+						},
+						{
+							"Id": "CUBEFLOOR",
+							"Parent": "CUBEFOUND",
+							"Price": 1
+						},
+						{
+							"Id": "CUBEFOUND4",
+							"Parent": "CUBEFOUND",
+							"Price": 1
+						},
+						{
+							"Id": "CUBEROOMCURVED",
+							"Parent": "CUBEROOM",
+							"Price": 3
+						},
+						{
+							"Id": "CUBESTAIRS",
+							"Parent": "CUBEROOMCURVED",
+							"Price": 2
+						},
+						{
+							"Id": "WALLFLOORLADDER",
+							"Parent": "CUBESTAIRS",
+							"Price": 1
+						},
+						{
+							"Id": "CUBEWALL",
+							"Parent": "CUBEROOMCURVED",
+							"Price": 1
+						},
+						{
+							"Id": "CUBEINNERDOOR",
+							"Parent": "CUBEWALL",
+							"Price": 1
+						},
+						{
+							"Id": "CUBEROOF",
+							"Parent": "CUBEROOMCURVED",
+							"Price": 2
+						},
+						{
+							"Id": "CUBEGLASS",
+							"Parent": "CUBEROOM",
+							"Price": 5
+						},
+						{
+							"Id": "CURVEDCUBEROOF",
+							"Parent": "CUBEGLASS",
+							"Price": 3
+						},
+						{
+							"Id": "CUBEWINDOWSMALL",
+							"Parent": "CUBEGLASS",
+							"Price": 1
+						},
+						{
+							"Id": "CUBEWINDOWOVAL",
+							"Parent": "CUBEGLASS",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Technology Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "TELEPORTER",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "HEALTHSTATION",
+							"Parent": "TELEPORTER",
+							"Price": 5
+						},
+						{
+							"Id": "SHIELDSTATION",
+							"Parent": "HEALTHSTATION",
+							"Price": 3
+						},
+						{
+							"Id": "WEAPONRACK",
+							"Parent": "SHIELDSTATION",
+							"Price": 5
+						},
+						{
+							"Id": "DRESSING_TABLE",
+							"Parent": "TELEPORTER",
+							"Price": 10
+						},
+						{
+							"Id": "HOLO_DISCO_0",
+							"Parent": "DRESSING_TABLE",
+							"Price": 12
+						},
+						{
+							"Id": "BUILDLANDINGPAD",
+							"Parent": "TELEPORTER",
+							"Price": 10
+						},
+						{
+							"Id": "S_LANDINGZONE",
+							"Parent": "BUILDLANDINGPAD",
+							"Price": 1
+						},
+						{
+							"Id": "U_MINIPORTAL",
+							"Parent": "S_LANDINGZONE",
+							"Price": 10
+						},
+						{
+							"Id": "U_PORTALLINE",
+							"Parent": "S_LANDINGZONE",
+							"Price": 0
+						},
+						{
+							"Id": "BUILDTERMINAL",
+							"Parent": "TELEPORTER",
+							"Price": 10
+						},
+						{
+							"Id": "MESSAGEMODULE",
+							"Parent": "BUILDTERMINAL",
+							"Price": 1
+						},
+						{
+							"Id": "BUILD_REFINER2",
+							"Parent": "TELEPORTER",
+							"Price": 10
+						},
+						{
+							"Id": "BUILD_REFINER3",
+							"Parent": "BUILD_REFINER2",
+							"Price": 10
+						},
+						{
+							"Id": "BUILDANTIMATTER",
+							"Parent": "BUILD_REFINER2",
+							"Price": 20
+						},
+						{
+							"Id": "CREATURE_FEED",
+							"Parent": "TELEPORTER",
+							"Price": 10
+						},
+						{
+							"Id": "CREATURE_FARM",
+							"Parent": "CREATURE_FEED",
+							"Price": 10
+						},
+						{
+							"Id": "LIGHTBOX",
+							"Parent": "TELEPORTER",
+							"Price": 1
+						},
+						{
+							"Id": "L_FLOOR_Q",
+							"Parent": "LIGHTBOX",
+							"Price": 1
+						},
+						{
+							"Id": "NOISEBOX",
+							"Parent": "LIGHTBOX",
+							"Price": 10
+						},
+						{
+							"Id": "BYTEBEAT",
+							"Parent": "NOISEBOX",
+							"Price": 10
+						},
+						{
+							"Id": "BYTEBEATSWITCH",
+							"Parent": "BYTEBEAT",
+							"Price": 2
+						},
+						{
+							"Id": "U_BYTEBEATLINE",
+							"Parent": "BYTEBEAT",
+							"Price": 0
+						},
+						{
+							"Id": "SPAWNER_BALL",
+							"Parent": "LIGHTBOX",
+							"Price": 10
+						}
+					]
+				},
+				{
+					"Name": "Deployable Technology",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BUILDBEACON",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "O2_HARVESTER",
+							"Parent": "BUILDBEACON",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDHARVESTER",
+							"Parent": "O2_HARVESTER",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDSEAHARVEST",
+							"Parent": "BUILDHARVESTER",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDGASHARVEST",
+							"Parent": "BUILDHARVESTER",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDSAVE",
+							"Parent": "BUILDBEACON",
+							"Price": 2
+						},
+						{
+							"Id": "SB_BEACON",
+							"Parent": "BUILDSAVE",
+							"Price": 5
+						},
+						{
+							"Id": "BUILDSIGNAL",
+							"Parent": "BUILDBEACON",
+							"Price": 1
+						},
+						{
+							"Id": "MESSAGE",
+							"Parent": "BUILDSIGNAL",
+							"Price": 1
+						},
+						{
+							"Id": "BUILD_REFINER1",
+							"Parent": "BUILDBEACON",
+							"Price": 10
+						},
+						{
+							"Id": "COOKER",
+							"Parent": "BUILD_REFINER1",
+							"Price": 10
+						}
+					]
+				},
+				{
+					"Name": "Transport Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "GARAGE_M",
+							"Parent": null,
+							"Price": 4
+						},
+						{
+							"Id": "SUMMON_GARAGE",
+							"Parent": "GARAGE_M",
+							"Price": 12
+						},
+						{
+							"Id": "FRE_ROOM_VEHICL",
+							"Parent": "SUMMON_GARAGE",
+							"Price": 1
+						},
+						{
+							"Id": "GARAGE_S",
+							"Parent": "GARAGE_M",
+							"Price": 8
+						},
+						{
+							"Id": "GARAGE_MECH",
+							"Parent": "GARAGE_M",
+							"Price": 10
+						},
+						{
+							"Id": "GARAGE_SUB",
+							"Parent": "GARAGE_M",
+							"Price": 10
+						},
+						{
+							"Id": "GARAGE_FLOAT",
+							"Parent": "GARAGE_SUB",
+							"Price": 10
+						},
+						{
+							"Id": "GARAGE_B",
+							"Parent": "GARAGE_M",
+							"Price": 10
+						},
+						{
+							"Id": "GARAGE_L",
+							"Parent": "GARAGE_M",
+							"Price": 8
+						},
+						{
+							"Id": "RACE_START",
+							"Parent": "GARAGE_M",
+							"Price": 10
+						},
+						{
+							"Id": "RACE_RAMP",
+							"Parent": "RACE_START",
+							"Price": 10
+						},
+						{
+							"Id": "RACE_BOOSTER",
+							"Parent": "RACE_START",
+							"Price": 10
+						}
+					]
+				},
+				{
+					"Name": "Aquatic Construction",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "MAINROOM_WATER",
+							"Parent": null,
+							"Price": 6
+						},
+						{
+							"Id": "WATERBUBBLE",
+							"Parent": "MAINROOM_WATER",
+							"Price": 10
+						},
+						{
+							"Id": "CORRIDOR_WATER",
+							"Parent": "MAINROOM_WATER",
+							"Price": 3
+						},
+						{
+							"Id": "PANEL_GLASS",
+							"Parent": "CORRIDOR_WATER",
+							"Price": 1
+						},
+						{
+							"Id": "CORRIDORL_WATER",
+							"Parent": "CORRIDOR_WATER",
+							"Price": 3
+						},
+						{
+							"Id": "CORRIDORT_WATER",
+							"Parent": "CORRIDORL_WATER",
+							"Price": 3
+						},
+						{
+							"Id": "CORRIDORX_WATER",
+							"Parent": "CORRIDORL_WATER",
+							"Price": 3
+						},
+						{
+							"Id": "CORRIDORV_WATER",
+							"Parent": "CORRIDOR_WATER",
+							"Price": 3
+						},
+						{
+							"Id": "MAINROOMCUBE_W",
+							"Parent": "MAINROOM_WATER",
+							"Price": 6
+						},
+						{
+							"Id": "BUILDDOOR_WATER",
+							"Parent": "MAINROOM_WATER",
+							"Price": 2
+						},
+						{
+							"Id": "MOONPOOL",
+							"Parent": "BUILDDOOR_WATER",
+							"Price": 10
+						},
+						{
+							"Id": "GARAGE_SUB",
+							"Parent": "MOONPOOL",
+							"Price": 10
+						}
+					]
+				},
+				{
+					"Name": "Station Decorations",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "STA_SMALLSIGN",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "STA_35",
+							"Parent": "STA_SMALLSIGN",
+							"Price": 30
+						},
+						{
+							"Id": "STA_36",
+							"Parent": "STA_35",
+							"Price": 30
+						},
+						{
+							"Id": "STA_19",
+							"Parent": "STA_36",
+							"Price": 30
+						},
+						{
+							"Id": "STA_10",
+							"Parent": "STA_19",
+							"Price": 50
+						},
+						{
+							"Id": "STA_43",
+							"Parent": "STA_35",
+							"Price": 30
+						},
+						{
+							"Id": "STA_44",
+							"Parent": "STA_43",
+							"Price": 30
+						},
+						{
+							"Id": "STA_45",
+							"Parent": "STA_44",
+							"Price": 30
+						},
+						{
+							"Id": "STA_37",
+							"Parent": "STA_SMALLSIGN",
+							"Price": 20
+						},
+						{
+							"Id": "STA_30",
+							"Parent": "STA_37",
+							"Price": 30
+						},
+						{
+							"Id": "STA_31",
+							"Parent": "STA_30",
+							"Price": 30
+						},
+						{
+							"Id": "STA_32",
+							"Parent": "STA_31",
+							"Price": 30
+						},
+						{
+							"Id": "STA_BUILDINGL",
+							"Parent": "STA_SMALLSIGN",
+							"Price": 30
+						},
+						{
+							"Id": "STA_REFUEL",
+							"Parent": "STA_BUILDINGL",
+							"Price": 40
+						},
+						{
+							"Id": "STA_33",
+							"Parent": "STA_REFUEL",
+							"Price": 40
+						},
+						{
+							"Id": "STA_20",
+							"Parent": "STA_33",
+							"Price": 40
+						},
+						{
+							"Id": "STA_34",
+							"Parent": "STA_33",
+							"Price": 40
+						},
+						{
+							"Id": "STA_52",
+							"Parent": "STA_REFUEL",
+							"Price": 50
+						},
+						{
+							"Id": "STA_56",
+							"Parent": "STA_52",
+							"Price": 50
+						},
+						{
+							"Id": "STA_49",
+							"Parent": "STA_BUILDINGL",
+							"Price": 30
+						},
+						{
+							"Id": "STA_50",
+							"Parent": "STA_49",
+							"Price": 30
+						},
+						{
+							"Id": "STA_51",
+							"Parent": "STA_50",
+							"Price": 30
+						},
+						{
+							"Id": "STA_53",
+							"Parent": "STA_49",
+							"Price": 50
+						},
+						{
+							"Id": "STA_55",
+							"Parent": "STA_53",
+							"Price": 50
+						},
+						{
+							"Id": "STA_54",
+							"Parent": "STA_53",
+							"Price": 50
+						},
+						{
+							"Id": "STA_00",
+							"Parent": "STA_SMALLSIGN",
+							"Price": 30
+						},
+						{
+							"Id": "STA_01",
+							"Parent": "STA_00",
+							"Price": 30
+						},
+						{
+							"Id": "STA_02",
+							"Parent": "STA_01",
+							"Price": 30
+						},
+						{
+							"Id": "STA_03",
+							"Parent": "STA_00",
+							"Price": 30
+						},
+						{
+							"Id": "STA_05",
+							"Parent": "STA_03",
+							"Price": 30
+						},
+						{
+							"Id": "STA_04",
+							"Parent": "STA_05",
+							"Price": 30
+						},
+						{
+							"Id": "STA_HOLOSMALL",
+							"Parent": "STA_SMALLSIGN",
+							"Price": 20
+						},
+						{
+							"Id": "STA_HOLOMED",
+							"Parent": "STA_HOLOSMALL",
+							"Price": 20
+						},
+						{
+							"Id": "STA_DRAPE",
+							"Parent": "STA_HOLOMED",
+							"Price": 20
+						},
+						{
+							"Id": "STA_07",
+							"Parent": "STA_HOLOSMALL",
+							"Price": 20
+						},
+						{
+							"Id": "STA_06",
+							"Parent": "STA_07",
+							"Price": 20
+						}
+					]
+				},
+				{
+					"Name": "Station Decorations",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "STA_HOLO3D",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "STA_SMALLAST",
+							"Parent": "STA_HOLO3D",
+							"Price": 25
+						},
+						{
+							"Id": "STA_SMALLGEK",
+							"Parent": "STA_SMALLAST",
+							"Price": 25
+						},
+						{
+							"Id": "STA_SMALLVYK",
+							"Parent": "STA_SMALLAST",
+							"Price": 25
+						},
+						{
+							"Id": "STA_SMALLKOR",
+							"Parent": "STA_SMALLAST",
+							"Price": 25
+						},
+						{
+							"Id": "STA_SMALLBUI",
+							"Parent": "STA_SMALLKOR",
+							"Price": 25
+						},
+						{
+							"Id": "STA_STATUESMALL",
+							"Parent": "STA_HOLO3D",
+							"Price": 20
+						},
+						{
+							"Id": "STA_HOLOAST",
+							"Parent": "STA_STATUESMALL",
+							"Price": 25
+						},
+						{
+							"Id": "STA_HOLOGEK",
+							"Parent": "STA_HOLOAST",
+							"Price": 25
+						},
+						{
+							"Id": "STA_HOLOVYK",
+							"Parent": "STA_HOLOAST",
+							"Price": 25
+						},
+						{
+							"Id": "STA_HOLOKORV",
+							"Parent": "STA_HOLOAST",
+							"Price": 25
+						},
+						{
+							"Id": "STA_HOLOBUI",
+							"Parent": "STA_HOLOKORV",
+							"Price": 25
+						},
+						{
+							"Id": "STA_STATUEMED",
+							"Parent": "STA_STATUESMALL",
+							"Price": 25
+						},
+						{
+							"Id": "STA_38",
+							"Parent": "STA_HOLO3D",
+							"Price": 20
+						},
+						{
+							"Id": "STA_39",
+							"Parent": "STA_38",
+							"Price": 20
+						},
+						{
+							"Id": "STA_42",
+							"Parent": "STA_39",
+							"Price": 30
+						},
+						{
+							"Id": "STA_41",
+							"Parent": "STA_42",
+							"Price": 30
+						},
+						{
+							"Id": "STA_40",
+							"Parent": "STA_42",
+							"Price": 30
+						},
+						{
+							"Id": "STA_08",
+							"Parent": "STA_38",
+							"Price": 30
+						},
+						{
+							"Id": "STA_15",
+							"Parent": "STA_38",
+							"Price": 15
+						},
+						{
+							"Id": "STA_14",
+							"Parent": "STA_15",
+							"Price": 15
+						},
+						{
+							"Id": "STA_13",
+							"Parent": "STA_15",
+							"Price": 15
+						},
+						{
+							"Id": "STA_46",
+							"Parent": "STA_13",
+							"Price": 40
+						},
+						{
+							"Id": "STA_59",
+							"Parent": "STA_HOLO3D",
+							"Price": 20
+						},
+						{
+							"Id": "STA_47",
+							"Parent": "STA_59",
+							"Price": 30
+						},
+						{
+							"Id": "STA_48",
+							"Parent": "STA_47",
+							"Price": 35
+						},
+						{
+							"Id": "STA_58",
+							"Parent": "STA_59",
+							"Price": 30
+						},
+						{
+							"Id": "STA_57",
+							"Parent": "STA_58",
+							"Price": 40
+						}
+					]
+				},
+				{
+					"Name": "Station Decorations",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "STA_62",
+							"Parent": null,
+							"Price": 20
+						},
+						{
+							"Id": "STA_61",
+							"Parent": "STA_62",
+							"Price": 20
+						},
+						{
+							"Id": "STA_60",
+							"Parent": "STA_61",
+							"Price": 20
+						},
+						{
+							"Id": "STA_63",
+							"Parent": "STA_60",
+							"Price": 20
+						},
+						{
+							"Id": "STA_65",
+							"Parent": "STA_60",
+							"Price": 20
+						},
+						{
+							"Id": "STA_71",
+							"Parent": "STA_60",
+							"Price": 20
+						},
+						{
+							"Id": "STA_70",
+							"Parent": "STA_62",
+							"Price": 20
+						},
+						{
+							"Id": "STA_72",
+							"Parent": "STA_70",
+							"Price": 20
+						},
+						{
+							"Id": "STA_73",
+							"Parent": "STA_72",
+							"Price": 20
+						},
+						{
+							"Id": "STA_74",
+							"Parent": "STA_73",
+							"Price": 20
+						},
+						{
+							"Id": "STA_75",
+							"Parent": "STA_62",
+							"Price": 20
+						},
+						{
+							"Id": "STA_76",
+							"Parent": "STA_75",
+							"Price": 20
+						},
+						{
+							"Id": "STA_77",
+							"Parent": "STA_76",
+							"Price": 20
+						},
+						{
+							"Id": "STA_79",
+							"Parent": "STA_77",
+							"Price": 20
+						},
+						{
+							"Id": "STA_78",
+							"Parent": "STA_77",
+							"Price": 20
+						},
+						{
+							"Id": "STA_64",
+							"Parent": "STA_62",
+							"Price": 20
+						},
+						{
+							"Id": "STA_68",
+							"Parent": "STA_64",
+							"Price": 20
+						},
+						{
+							"Id": "STA_69",
+							"Parent": "STA_68",
+							"Price": 20
+						},
+						{
+							"Id": "STA_66",
+							"Parent": "STA_69",
+							"Price": 20
+						},
+						{
+							"Id": "STA_67",
+							"Parent": "STA_69",
+							"Price": 20
+						}
+					]
+				},
+				{
+					"Name": "Station Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "FRE_CORR_B",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "FRE_CORR_STA_B",
+							"Parent": "FRE_CORR_B",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_B",
+							"Parent": "FRE_CORR_B",
+							"Price": 1
+						},
+						{
+							"Id": "STATION_LCASE",
+							"Parent": "FRE_CORR_B",
+							"Price": 1
+						},
+						{
+							"Id": "STATION_LSHELVE",
+							"Parent": "STATION_LCASE",
+							"Price": 1
+						},
+						{
+							"Id": "STATION_LCRATE",
+							"Parent": "STATION_LSHELVE",
+							"Price": 1
+						},
+						{
+							"Id": "STATION_HCRATE",
+							"Parent": "STATION_LSHELVE",
+							"Price": 1
+						},
+						{
+							"Id": "STATION_SOFA",
+							"Parent": "STATION_LCASE",
+							"Price": 1
+						},
+						{
+							"Id": "STATION_SERVR",
+							"Parent": "STATION_SOFA",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Decal Designs",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BUILDDECAL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALSIMP1",
+							"Parent": "BUILDDECAL",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALSIMP2",
+							"Parent": "BUILDDECALSIMP1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALSIMP3",
+							"Parent": "BUILDDECALSIMP1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALSIMP4",
+							"Parent": "BUILDDECALSIMP1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECAL2",
+							"Parent": "BUILDDECAL",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNMS",
+							"Parent": "BUILDDECAL2",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM0",
+							"Parent": "BUILDDECAL",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM1",
+							"Parent": "BUILDDECALNUM0",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM3",
+							"Parent": "BUILDDECALNUM1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM5",
+							"Parent": "BUILDDECALNUM1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM7",
+							"Parent": "BUILDDECALNUM1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM9",
+							"Parent": "BUILDDECALNUM1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM2",
+							"Parent": "BUILDDECALNUM0",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM4",
+							"Parent": "BUILDDECALNUM2",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM6",
+							"Parent": "BUILDDECALNUM2",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALNUM8",
+							"Parent": "BUILDDECALNUM2",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALVIS1",
+							"Parent": "BUILDDECAL",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALVIS2",
+							"Parent": "BUILDDECALVIS1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALVIS4",
+							"Parent": "BUILDDECALVIS2",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALVIS3",
+							"Parent": "BUILDDECALVIS1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDDECALVIS5",
+							"Parent": "BUILDDECALVIS3",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Posters",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S_POSTER0",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER1",
+							"Parent": "S_POSTER0",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER4",
+							"Parent": "S_POSTER1",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER5",
+							"Parent": "S_POSTER1",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER6",
+							"Parent": "S_POSTER1",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER2",
+							"Parent": "S_POSTER0",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER7",
+							"Parent": "S_POSTER2",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER8",
+							"Parent": "S_POSTER2",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER9",
+							"Parent": "S_POSTER2",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER3",
+							"Parent": "S_POSTER0",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER10",
+							"Parent": "S_POSTER3",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER11",
+							"Parent": "S_POSTER3",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER13",
+							"Parent": "S_POSTER3",
+							"Price": 1
+						},
+						{
+							"Id": "S_POSTER15",
+							"Parent": "S_POSTER3",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Decorative Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "WALLSCREEN",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "WALLFAN",
+							"Parent": "WALLSCREEN",
+							"Price": 1
+						},
+						{
+							"Id": "BLDWALLUNIT",
+							"Parent": "WALLFAN",
+							"Price": 1
+						},
+						{
+							"Id": "S_SHELVINGUNIT0",
+							"Parent": "BLDWALLUNIT",
+							"Price": 1
+						},
+						{
+							"Id": "STORAGEPANEL",
+							"Parent": "WALLFAN",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDFLATPANEL",
+							"Parent": "STORAGEPANEL",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDSIDEPANEL",
+							"Parent": "STORAGEPANEL",
+							"Price": 1
+						},
+						{
+							"Id": "SHELFPANEL",
+							"Parent": "STORAGEPANEL",
+							"Price": 1
+						},
+						{
+							"Id": "WALLSCREENB",
+							"Parent": "WALLSCREEN",
+							"Price": 1
+						},
+						{
+							"Id": "WALLSCREENB2",
+							"Parent": "WALLSCREENB",
+							"Price": 1
+						},
+						{
+							"Id": "ROOFMONITOR",
+							"Parent": "WALLSCREENB2",
+							"Price": 1
+						},
+						{
+							"Id": "ROBOTICARM",
+							"Parent": "ROOFMONITOR",
+							"Price": 1
+						},
+						{
+							"Id": "TECHPANEL",
+							"Parent": "WALLSCREENB",
+							"Price": 1
+						},
+						{
+							"Id": "WEAPONRACK",
+							"Parent": "TECHPANEL",
+							"Price": 5
+						},
+						{
+							"Id": "DRAWS",
+							"Parent": "WALLSCREEN",
+							"Price": 1
+						},
+						{
+							"Id": "SERVERSTACK",
+							"Parent": "DRAWS",
+							"Price": 1
+						},
+						{
+							"Id": "BOXEDSCREEN",
+							"Parent": "SERVERSTACK",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDCANRACK",
+							"Parent": "DRAWS",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDAMCRATE",
+							"Parent": "DRAWS",
+							"Price": 1
+						},
+						{
+							"Id": "OCTACABINET",
+							"Parent": "BUILDAMCRATE",
+							"Price": 1
+						},
+						{
+							"Id": "CRATELCYLINDER",
+							"Parent": "BUILDAMCRATE",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDLOCKER",
+							"Parent": "DRAWS",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDHCABINET",
+							"Parent": "BUILDLOCKER",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDLCRATE",
+							"Parent": "DRAWS",
+							"Price": 1
+						},
+						{
+							"Id": "S_MILKCRATE",
+							"Parent": "BUILDLCRATE",
+							"Price": 1
+						},
+						{
+							"Id": "CRATELRARE",
+							"Parent": "S_MILKCRATE",
+							"Price": 1
+						},
+						{
+							"Id": "S_CRATE0",
+							"Parent": "DRAWS",
+							"Price": 1
+						},
+						{
+							"Id": "S_CRATE2",
+							"Parent": "S_CRATE0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CRATE1",
+							"Parent": "S_CRATE2",
+							"Price": 1
+						},
+						{
+							"Id": "S_CRATE3",
+							"Parent": "S_CRATE0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CRATE3OPEN",
+							"Parent": "S_CRATE3",
+							"Price": 1
+						},
+						{
+							"Id": "S_CRATE4",
+							"Parent": "S_CRATE0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CRATE4OPEN",
+							"Parent": "S_CRATE4",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Decorative Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BUILDCHAIR",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "BUILDCHAIR2",
+							"Parent": "BUILDCHAIR",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDBED",
+							"Parent": "BUILDCHAIR2",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDCHAIR3",
+							"Parent": "BUILDCHAIR2",
+							"Price": 1
+						},
+						{
+							"Id": "S_CHAIR0",
+							"Parent": "BUILDCHAIR3",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDSOFA",
+							"Parent": "BUILDCHAIR2",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDSOFA2",
+							"Parent": "BUILDSOFA",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDSOFA2L",
+							"Parent": "BUILDSOFA",
+							"Price": 1
+						},
+						{
+							"Id": "FLAG1",
+							"Parent": "BUILDCHAIR",
+							"Price": 1
+						},
+						{
+							"Id": "FLAG2",
+							"Parent": "FLAG1",
+							"Price": 1
+						},
+						{
+							"Id": "FLAG3",
+							"Parent": "FLAG2",
+							"Price": 1
+						},
+						{
+							"Id": "FLAG4",
+							"Parent": "FLAG2",
+							"Price": 1
+						},
+						{
+							"Id": "WALLFLAG1",
+							"Parent": "FLAG1",
+							"Price": 1
+						},
+						{
+							"Id": "WALLFLAG2",
+							"Parent": "WALLFLAG1",
+							"Price": 1
+						},
+						{
+							"Id": "S_FLAG5",
+							"Parent": "WALLFLAG2",
+							"Price": 1
+						},
+						{
+							"Id": "WALLFLAG3",
+							"Parent": "WALLFLAG1",
+							"Price": 1
+						},
+						{
+							"Id": "S_FLAG6",
+							"Parent": "WALLFLAG3",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALLHANGING1",
+							"Parent": "FLAG1",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALLHANGING2",
+							"Parent": "S_WALLHANGING1",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALLHANGING3",
+							"Parent": "S_WALLHANGING1",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDTABLE",
+							"Parent": "BUILDCHAIR",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDTABLE2",
+							"Parent": "BUILDTABLE",
+							"Price": 1
+						},
+						{
+							"Id": "FLOORMAT1",
+							"Parent": "BUILDTABLE2",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDSIMPLEDESK",
+							"Parent": "BUILDTABLE",
+							"Price": 1
+						},
+						{
+							"Id": "LARGEDESK",
+							"Parent": "BUILDSIMPLEDESK",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDLIGHTTABLE",
+							"Parent": "LARGEDESK",
+							"Price": 1
+						},
+						{
+							"Id": "CURVEDDESK",
+							"Parent": "BUILDSIMPLEDESK",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDTABLE3",
+							"Parent": "CURVEDDESK",
+							"Price": 1
+						},
+						{
+							"Id": "MONITORDESK",
+							"Parent": "BUILDSIMPLEDESK",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDWORKTOP",
+							"Parent": "BUILDSIMPLEDESK",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Decorative Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S_BARSTOOL0",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "S_BAR",
+							"Parent": "S_BARSTOOL0",
+							"Price": 1
+						},
+						{
+							"Id": "S_BAR_C",
+							"Parent": "S_BAR",
+							"Price": 1
+						},
+						{
+							"Id": "S_BAR_H",
+							"Parent": "S_BAR",
+							"Price": 1
+						},
+						{
+							"Id": "S_BARTABLE0",
+							"Parent": "S_BARSTOOL0",
+							"Price": 1
+						},
+						{
+							"Id": "S_GLOWGLOBE",
+							"Parent": "S_BARTABLE0",
+							"Price": 1
+						},
+						{
+							"Id": "S_BURNER0",
+							"Parent": "S_BARSTOOL0",
+							"Price": 1
+						},
+						{
+							"Id": "S_TRAY0",
+							"Parent": "S_BURNER0",
+							"Price": 1
+						},
+						{
+							"Id": "S_PAN0",
+							"Parent": "S_TRAY0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CUP0",
+							"Parent": "S_BURNER0",
+							"Price": 1
+						},
+						{
+							"Id": "S_TABLEPOT0",
+							"Parent": "S_CUP0",
+							"Price": 1
+						},
+						{
+							"Id": "S_POT0",
+							"Parent": "S_BURNER0",
+							"Price": 1
+						},
+						{
+							"Id": "S_BARTAPS0",
+							"Parent": "S_BARSTOOL0",
+							"Price": 1
+						},
+						{
+							"Id": "S_GAZEBO0",
+							"Parent": "S_BARSTOOL0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CURTAIN0",
+							"Parent": "S_GAZEBO0",
+							"Price": 1
+						},
+						{
+							"Id": "S_DRAPE0",
+							"Parent": "S_CURTAIN0",
+							"Price": 1
+						},
+						{
+							"Id": "S_RUG0",
+							"Parent": "S_GAZEBO0",
+							"Price": 1
+						},
+						{
+							"Id": "S_RUG1",
+							"Parent": "S_RUG0",
+							"Price": 1
+						},
+						{
+							"Id": "S_FABROLL0",
+							"Parent": "S_GAZEBO0",
+							"Price": 1
+						},
+						{
+							"Id": "S_FABROLLPILE0",
+							"Parent": "S_FABROLL0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CANOPY_WALL0",
+							"Parent": "S_GAZEBO0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CANOPY_WALL1",
+							"Parent": "S_CANOPY_WALL0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CANOPY_WALL2",
+							"Parent": "S_CANOPY_WALL0",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Decorative Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S_STEPLADDER",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "S_TROUGH0",
+							"Parent": "S_STEPLADDER",
+							"Price": 1
+						},
+						{
+							"Id": "S_PLANTER_M",
+							"Parent": "S_TROUGH0",
+							"Price": 1
+						},
+						{
+							"Id": "S_SCISSORLIFT",
+							"Parent": "S_STEPLADDER",
+							"Price": 1
+						},
+						{
+							"Id": "S_SCAFFOLD_M",
+							"Parent": "S_SCISSORLIFT",
+							"Price": 1
+						},
+						{
+							"Id": "S_SCAFFOLD_L",
+							"Parent": "S_SCISSORLIFT",
+							"Price": 1
+						},
+						{
+							"Id": "S_CEMENTMIXER",
+							"Parent": "S_STEPLADDER",
+							"Price": 1
+						},
+						{
+							"Id": "S_CEMENTBAG",
+							"Parent": "S_CEMENTMIXER",
+							"Price": 1
+						},
+						{
+							"Id": "S_WHEELBARROW",
+							"Parent": "S_CEMENTMIXER",
+							"Price": 1
+						},
+						{
+							"Id": "S_PALLET",
+							"Parent": "S_STEPLADDER",
+							"Price": 1
+						},
+						{
+							"Id": "S_PALLET_BRICK",
+							"Parent": "S_PALLET",
+							"Price": 1
+						},
+						{
+							"Id": "S_BRICKSWRAPPED",
+							"Parent": "S_PALLET_BRICK",
+							"Price": 1
+						},
+						{
+							"Id": "S_RSJSTACK",
+							"Parent": "S_PALLET",
+							"Price": 1
+						},
+						{
+							"Id": "S_BARRIER",
+							"Parent": "S_STEPLADDER",
+							"Price": 1
+						},
+						{
+							"Id": "S_FENCE0",
+							"Parent": "S_BARRIER",
+							"Price": 1
+						},
+						{
+							"Id": "S_FENCE1",
+							"Parent": "S_FENCE0",
+							"Price": 1
+						},
+						{
+							"Id": "S_FENCE2",
+							"Parent": "S_BARRIER",
+							"Price": 1
+						},
+						{
+							"Id": "S_FENCE3",
+							"Parent": "S_FENCE2",
+							"Price": 1
+						},
+						{
+							"Id": "S_LARGETRYE0",
+							"Parent": "S_STEPLADDER",
+							"Price": 1
+						},
+						{
+							"Id": "S_CARRIAGE",
+							"Parent": "S_LARGETRYE0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CARRIAGEWHEEL",
+							"Parent": "S_LARGETRYE0",
+							"Price": 1
+						},
+						{
+							"Id": "S_SHOVEL",
+							"Parent": "S_STEPLADDER",
+							"Price": 1
+						},
+						{
+							"Id": "S_BUCKET_S",
+							"Parent": "S_SHOVEL",
+							"Price": 1
+						},
+						{
+							"Id": "S_BUCKET_M",
+							"Parent": "S_BUCKET_S",
+							"Price": 1
+						},
+						{
+							"Id": "S_EXCBUCKET",
+							"Parent": "S_SHOVEL",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Decorative Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S_SPARKPLUG",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "S_COMPOSTBIN",
+							"Parent": "S_SPARKPLUG",
+							"Price": 1
+						},
+						{
+							"Id": "S_FURNACE",
+							"Parent": "S_COMPOSTBIN",
+							"Price": 1
+						},
+						{
+							"Id": "S_GENERATOR",
+							"Parent": "S_SPARKPLUG",
+							"Price": 1
+						},
+						{
+							"Id": "S_PUMP",
+							"Parent": "S_GENERATOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_WATERTOWER",
+							"Parent": "S_PUMP",
+							"Price": 1
+						},
+						{
+							"Id": "S_MACHINE0",
+							"Parent": "S_GENERATOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_CANISTER0",
+							"Parent": "S_GENERATOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_CANISTER1",
+							"Parent": "S_CANISTER0",
+							"Price": 1
+						},
+						{
+							"Id": "S_MILKBOTTLE",
+							"Parent": "S_CANISTER0",
+							"Price": 1
+						},
+						{
+							"Id": "S_ANTENNA0",
+							"Parent": "S_SPARKPLUG",
+							"Price": 1
+						},
+						{
+							"Id": "S_ANTENNA1",
+							"Parent": "S_ANTENNA0",
+							"Price": 1
+						},
+						{
+							"Id": "S_ANTENNA2",
+							"Parent": "S_ANTENNA0",
+							"Price": 1
+						},
+						{
+							"Id": "S_ANTENNA3",
+							"Parent": "S_ANTENNA0",
+							"Price": 1
+						},
+						{
+							"Id": "S_BARREL1",
+							"Parent": "S_SPARKPLUG",
+							"Price": 1
+						},
+						{
+							"Id": "S_WATERVALVE0",
+							"Parent": "S_BARREL1",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Decorative Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "HOLO_SMALL1",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "STANDINGSIGN",
+							"Parent": "HOLO_SMALL1",
+							"Price": 3
+						},
+						{
+							"Id": "HOLO_MED1",
+							"Parent": "STANDINGSIGN",
+							"Price": 3
+						},
+						{
+							"Id": "HOLO_MED2",
+							"Parent": "HOLO_MED1",
+							"Price": 3
+						},
+						{
+							"Id": "HOLO_EXP",
+							"Parent": "HOLO_MED2",
+							"Price": 5
+						},
+						{
+							"Id": "HOLO_WAR",
+							"Parent": "HOLO_MED2",
+							"Price": 5
+						},
+						{
+							"Id": "HOLO_TRA",
+							"Parent": "HOLO_MED2",
+							"Price": 5
+						},
+						{
+							"Id": "HOLO_SMALL3",
+							"Parent": "HOLO_MED1",
+							"Price": 2
+						},
+						{
+							"Id": "HOLO_SMALL2",
+							"Parent": "HOLO_MED1",
+							"Price": 2
+						},
+						{
+							"Id": "BILLBOARD",
+							"Parent": "STANDINGSIGN",
+							"Price": 3
+						},
+						{
+							"Id": "SHIPARMS",
+							"Parent": "BILLBOARD",
+							"Price": 10
+						},
+						{
+							"Id": "MAPTABLE",
+							"Parent": "BILLBOARD",
+							"Price": 8
+						},
+						{
+							"Id": "LIGHT_TALL",
+							"Parent": "HOLO_SMALL1",
+							"Price": 3
+						},
+						{
+							"Id": "LIGHTFRAME",
+							"Parent": "LIGHT_TALL",
+							"Price": 1
+						},
+						{
+							"Id": "LIGHT_PLINTH",
+							"Parent": "LIGHT_TALL",
+							"Price": 3
+						},
+						{
+							"Id": "LIGHT_VERT",
+							"Parent": "LIGHT_TALL",
+							"Price": 3
+						},
+						{
+							"Id": "CONT_S",
+							"Parent": "HOLO_SMALL1",
+							"Price": 1
+						},
+						{
+							"Id": "PLANTBOX",
+							"Parent": "CONT_S",
+							"Price": 3
+						},
+						{
+							"Id": "PLANTER_S",
+							"Parent": "CONT_S",
+							"Price": 1
+						},
+						{
+							"Id": "SERVERBOX1",
+							"Parent": "CONT_S",
+							"Price": 5
+						},
+						{
+							"Id": "CRATEFRAME",
+							"Parent": "SERVERBOX1",
+							"Price": 1
+						},
+						{
+							"Id": "STATIONCRATE",
+							"Parent": "SERVERBOX1",
+							"Price": 2
+						},
+						{
+							"Id": "HOLOFILES",
+							"Parent": "SERVERBOX1",
+							"Price": 5
+						},
+						{
+							"Id": "POWERBOX",
+							"Parent": "HOLOFILES",
+							"Price": 5
+						},
+						{
+							"Id": "ARCHIVE",
+							"Parent": "HOLOFILES",
+							"Price": 3
+						},
+						{
+							"Id": "SERVERBOX2",
+							"Parent": "HOLOFILES",
+							"Price": 5
+						}
+					]
+				},
+				{
+					"Name": "Decorative Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "B_ANTENNA3",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "B_ANTENNA1",
+							"Parent": "B_ANTENNA3",
+							"Price": 1
+						},
+						{
+							"Id": "B_ANTENNA2",
+							"Parent": "B_ANTENNA1",
+							"Price": 1
+						},
+						{
+							"Id": "B_ANTENNA0",
+							"Parent": "B_ANTENNA2",
+							"Price": 1
+						},
+						{
+							"Id": "B_SAIL3",
+							"Parent": "B_ANTENNA3",
+							"Price": 1
+						},
+						{
+							"Id": "B_SAIL1",
+							"Parent": "B_SAIL3",
+							"Price": 1
+						},
+						{
+							"Id": "B_SAIL2",
+							"Parent": "B_SAIL3",
+							"Price": 1
+						},
+						{
+							"Id": "B_SAIL0",
+							"Parent": "B_SAIL2",
+							"Price": 1
+						},
+						{
+							"Id": "B_CANOPY_WALL0",
+							"Parent": "B_ANTENNA3",
+							"Price": 1
+						},
+						{
+							"Id": "B_LARGETRYE0",
+							"Parent": "B_CANOPY_WALL0",
+							"Price": 1
+						},
+						{
+							"Id": "B_CARRIAGEWHEEL",
+							"Parent": "B_CANOPY_WALL0",
+							"Price": 1
+						},
+						{
+							"Id": "B_STREETLAMP0",
+							"Parent": "B_ANTENNA3",
+							"Price": 1
+						},
+						{
+							"Id": "B_WATERTOWER",
+							"Parent": "B_STREETLAMP0",
+							"Price": 1
+						},
+						{
+							"Id": "B_SCISSORLIFT",
+							"Parent": "B_WATERTOWER",
+							"Price": 1
+						},
+						{
+							"Id": "B_PALLET_BRICK",
+							"Parent": "B_ANTENNA3",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALLHANGING3",
+							"Parent": "B_PALLET_BRICK",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALLHANGING2",
+							"Parent": "B_PALLET_BRICK",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALLHANGING1",
+							"Parent": "B_PALLET_BRICK",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Fossil Displays",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "FOS_QUAD",
+							"Parent": null,
+							"Price": 8
+						},
+						{
+							"Id": "FOS_WORM",
+							"Parent": "FOS_QUAD",
+							"Price": 8
+						},
+						{
+							"Id": "FOS_BI",
+							"Parent": "FOS_QUAD",
+							"Price": 8
+						},
+						{
+							"Id": "FOS_BIRD",
+							"Parent": "FOS_QUAD",
+							"Price": 8
+						},
+						{
+							"Id": "FOS_GRUN",
+							"Parent": "FOS_QUAD",
+							"Price": 8
+						}
+					]
+				},
+				{
+					"Name": "Illumination",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "SMALLLIGHT",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "WALLLIGHTWHITE",
+							"Parent": "SMALLLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "WALLLIGHTBLUE",
+							"Parent": "WALLLIGHTWHITE",
+							"Price": 1
+						},
+						{
+							"Id": "WALLLIGHTYELLOW",
+							"Parent": "WALLLIGHTBLUE",
+							"Price": 1
+						},
+						{
+							"Id": "WALLLIGHTGREEN",
+							"Parent": "WALLLIGHTBLUE",
+							"Price": 1
+						},
+						{
+							"Id": "WALLLIGHTRED",
+							"Parent": "WALLLIGHTWHITE",
+							"Price": 1
+						},
+						{
+							"Id": "WALLLIGHTPINK",
+							"Parent": "WALLLIGHTRED",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDLIGHT",
+							"Parent": "SMALLLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDLIGHT2",
+							"Parent": "BUILDLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDLIGHT3",
+							"Parent": "BUILDLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "S_STREETLAMP0",
+							"Parent": "BUILDLIGHT3",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDLABLAMP",
+							"Parent": "SMALLLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "S_TABLELAMP0",
+							"Parent": "SMALLLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALLLIGHT0",
+							"Parent": "SMALLLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "S_SIGN_BAR0",
+							"Parent": "S_WALLLIGHT0",
+							"Price": 1
+						},
+						{
+							"Id": "CEILINGLIGHT",
+							"Parent": "SMALLLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "S_HANGLAMP0",
+							"Parent": "CEILINGLIGHT",
+							"Price": 1
+						},
+						{
+							"Id": "S_HANGLAMP1",
+							"Parent": "S_HANGLAMP0",
+							"Price": 1
+						},
+						{
+							"Id": "S_HANGLAMP2",
+							"Parent": "S_HANGLAMP0",
+							"Price": 1
+						},
+						{
+							"Id": "S_HANGLAMP3",
+							"Parent": "S_HANGLAMP0",
+							"Price": 1
+						},
+						{
+							"Id": "S_LIGHTSTRIP0",
+							"Parent": "CEILINGLIGHT",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Industrial Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "U_POWERLINE",
+							"Parent": null,
+							"Price": 0
+						},
+						{
+							"Id": "U_BIOGENERATOR",
+							"Parent": "U_POWERLINE",
+							"Price": 1
+						},
+						{
+							"Id": "POWERLINE_HIDER",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 1
+						},
+						{
+							"Id": "U_SOLAR_S",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 8
+						},
+						{
+							"Id": "U_GENERATOR_S",
+							"Parent": "U_SOLAR_S",
+							"Price": 10
+						},
+						{
+							"Id": "U_BATTERY_S",
+							"Parent": "U_BIOGENERATOR",
+							"Price": 3
+						},
+						{
+							"Id": "U_EXTRACTOR_S",
+							"Parent": "U_POWERLINE",
+							"Price": 10
+						},
+						{
+							"Id": "U_GASEXTRACTOR",
+							"Parent": "U_EXTRACTOR_S",
+							"Price": 10
+						},
+						{
+							"Id": "U_SILO_S",
+							"Parent": "U_EXTRACTOR_S",
+							"Price": 10
+						},
+						{
+							"Id": "U_PIPELINE",
+							"Parent": "U_EXTRACTOR_S",
+							"Price": 1
+						},
+						{
+							"Id": "U_SWITCHWALL",
+							"Parent": "U_POWERLINE",
+							"Price": 1
+						},
+						{
+							"Id": "U_SWITCHPRESS",
+							"Parent": "U_SWITCHWALL",
+							"Price": 1
+						},
+						{
+							"Id": "U_SWITCHPROX",
+							"Parent": "U_SWITCHWALL",
+							"Price": 1
+						},
+						{
+							"Id": "U_SWITCHBUTTON",
+							"Parent": "U_SWITCHWALL",
+							"Price": 1
+						},
+						{
+							"Id": "U_TRANSISTOR1",
+							"Parent": "U_SWITCHWALL",
+							"Price": 1
+						},
+						{
+							"Id": "U_TRANSISTOR2",
+							"Parent": "U_SWITCHWALL",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Agricultural Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "PLANTER",
+							"Parent": null,
+							"Price": 3
+						},
+						{
+							"Id": "PLANTPOT",
+							"Parent": "PLANTER",
+							"Price": 1
+						},
+						{
+							"Id": "CARBONPLANTER",
+							"Parent": "PLANTPOT",
+							"Price": 1
+						},
+						{
+							"Id": "PLANTPOT1",
+							"Parent": "PLANTPOT",
+							"Price": 1
+						},
+						{
+							"Id": "PLANTPOT2",
+							"Parent": "PLANTPOT",
+							"Price": 1
+						},
+						{
+							"Id": "PLANTPOT3",
+							"Parent": "PLANTPOT",
+							"Price": 1
+						},
+						{
+							"Id": "PLANTERMEGA",
+							"Parent": "PLANTER",
+							"Price": 10
+						},
+						{
+							"Id": "TOXICPLANT",
+							"Parent": "PLANTER",
+							"Price": 3
+						},
+						{
+							"Id": "SACVENOMPLANT",
+							"Parent": "TOXICPLANT",
+							"Price": 3
+						},
+						{
+							"Id": "SNOWPLANT",
+							"Parent": "PLANTER",
+							"Price": 3
+						},
+						{
+							"Id": "GRAVPLANT",
+							"Parent": "SNOWPLANT",
+							"Price": 3
+						},
+						{
+							"Id": "RADIOPLANT",
+							"Parent": "PLANTER",
+							"Price": 3
+						},
+						{
+							"Id": "POOPPLANT",
+							"Parent": "RADIOPLANT",
+							"Price": 3
+						},
+						{
+							"Id": "BARRENPLANT",
+							"Parent": "PLANTER",
+							"Price": 3
+						},
+						{
+							"Id": "CREATUREPLANT",
+							"Parent": "BARRENPLANT",
+							"Price": 3
+						},
+						{
+							"Id": "LUSHPLANT",
+							"Parent": "PLANTER",
+							"Price": 3
+						},
+						{
+							"Id": "PEARLPLANT",
+							"Parent": "LUSHPLANT",
+							"Price": 3
+						},
+						{
+							"Id": "SCORCHEDPLANT",
+							"Parent": "PLANTER",
+							"Price": 3
+						},
+						{
+							"Id": "NIPPLANT",
+							"Parent": "SCORCHEDPLANT",
+							"Price": 3
+						}
+					]
+				},
+				{
+					"Name": "Timber Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "T_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "T_FLOOR",
+							"Parent": "T_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "T_GFLOOR",
+							"Parent": "T_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "T_FLOOR_Q",
+							"Parent": "T_GFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_RAMP",
+							"Parent": "T_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_RAMP_H",
+							"Parent": "T_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "T_RAMP_Q_TOP",
+							"Parent": "T_RAMP_H",
+							"Price": 3
+						},
+						{
+							"Id": "T_TRIFLOOR",
+							"Parent": "T_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_TRIFLOOR_Q",
+							"Parent": "T_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_H",
+							"Parent": "T_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALLDIAGONAL",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_Q",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_Q1",
+							"Parent": "T_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_Q_H",
+							"Parent": "T_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_Q_H1",
+							"Parent": "T_WALL_Q_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_CHEV_WALL",
+							"Parent": "T_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "T_CHEV_DOOR",
+							"Parent": "T_CHEV_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "T_CHEV_WALL_H_C",
+							"Parent": "T_CHEV_WALL",
+							"Price": 3
+						},
+						{
+							"Id": "T_CHEV_WIN0",
+							"Parent": "T_CHEV_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "T_CHEV_WIN1",
+							"Parent": "T_CHEV_WIN0",
+							"Price": 1
+						},
+						{
+							"Id": "T_CHEV_WIN2",
+							"Parent": "T_CHEV_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "T_DOOR_H",
+							"Parent": "T_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "T_DOORWINDOW",
+							"Parent": "T_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "T_WALL_WIN1",
+							"Parent": "T_DOORWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_WIN2",
+							"Parent": "T_WALL_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_WIN3",
+							"Parent": "T_WALL_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "T_WALL_WINDOW",
+							"Parent": "T_DOORWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "T_DOOR",
+							"Parent": "T_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "T_DOOR1",
+							"Parent": "T_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "T_GDOOR",
+							"Parent": "T_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "T_ARCH",
+							"Parent": "T_DOOR_H",
+							"Price": 1
+						},
+						{
+							"Id": "T_ARCH_H",
+							"Parent": "T_ARCH",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Timber Roofing",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "T_ROOF6",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF_M",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_M_WIN",
+							"Parent": "T_ROOF_M",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_M_Q",
+							"Parent": "T_ROOF_M",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_E_Q",
+							"Parent": "T_ROOF_M_Q",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_C",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_IC",
+							"Parent": "T_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_M_CAP",
+							"Parent": "T_ROOF6",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF_E_CAP",
+							"Parent": "T_ROOF_M_CAP",
+							"Price": 1
+						},
+						{
+							"Id": "T_ROOF1",
+							"Parent": "T_ROOF6",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF2",
+							"Parent": "T_ROOF1",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF4",
+							"Parent": "T_ROOF2",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF0",
+							"Parent": "T_ROOF6",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF7",
+							"Parent": "T_ROOF0",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF3",
+							"Parent": "T_ROOF6",
+							"Price": 2
+						},
+						{
+							"Id": "T_ROOF5",
+							"Parent": "T_ROOF3",
+							"Price": 2
+						}
+					]
+				},
+				{
+					"Name": "Stone Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "S_FLOOR",
+							"Parent": "S_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "S_GFLOOR",
+							"Parent": "S_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "S_FLOOR_Q",
+							"Parent": "S_GFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_RAMP",
+							"Parent": "S_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_RAMP_H",
+							"Parent": "S_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "S_RAMP_Q_TOP",
+							"Parent": "S_RAMP_H",
+							"Price": 3
+						},
+						{
+							"Id": "S_TRIFLOOR",
+							"Parent": "S_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_TRIFLOOR_Q",
+							"Parent": "S_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_H",
+							"Parent": "S_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALLDIAGONAL",
+							"Parent": "S_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_Q",
+							"Parent": "S_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_Q1",
+							"Parent": "S_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_Q_H",
+							"Parent": "S_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_Q_H1",
+							"Parent": "S_WALL_Q_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_CHEV_WALL",
+							"Parent": "S_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "S_CHEV_DOOR",
+							"Parent": "S_CHEV_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "S_CHEV_WALL_H_C",
+							"Parent": "S_CHEV_WALL",
+							"Price": 3
+						},
+						{
+							"Id": "S_WALL_SUPPORTS",
+							"Parent": "S_CHEV_WALL_H_C",
+							"Price": 1
+						},
+						{
+							"Id": "S_CHEV_WIN0",
+							"Parent": "S_CHEV_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "S_CHEV_WIN2",
+							"Parent": "S_CHEV_WIN0",
+							"Price": 1
+						},
+						{
+							"Id": "S_CHEV_WIN1",
+							"Parent": "S_CHEV_WIN2",
+							"Price": 1
+						},
+						{
+							"Id": "S_DOOR_H",
+							"Parent": "S_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "S_DOORWINDOW",
+							"Parent": "S_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "S_WALL_WIN1",
+							"Parent": "S_DOORWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_WIN2",
+							"Parent": "S_WALL_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_WIN3",
+							"Parent": "S_WALL_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "S_WALL_WINDOW",
+							"Parent": "S_DOORWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "S_DOOR",
+							"Parent": "S_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "S_DOOR1",
+							"Parent": "S_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "S_GDOOR",
+							"Parent": "S_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "S_ARCH",
+							"Parent": "S_DOOR_H",
+							"Price": 1
+						},
+						{
+							"Id": "S_ARCH_H",
+							"Parent": "S_ARCH",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Stone Roofing",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S_ROOF3",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF_M",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_M_WIN",
+							"Parent": "S_ROOF_M",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_M_Q",
+							"Parent": "S_ROOF_M",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_E_Q",
+							"Parent": "S_ROOF_M_Q",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_C",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_IC",
+							"Parent": "S_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_M_CAP",
+							"Parent": "S_ROOF3",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF_E_CAP",
+							"Parent": "S_ROOF_M_CAP",
+							"Price": 1
+						},
+						{
+							"Id": "S_ROOF2",
+							"Parent": "S_ROOF3",
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF1",
+							"Parent": "S_ROOF2",
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF4",
+							"Parent": "S_ROOF1",
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF0",
+							"Parent": "S_ROOF3",
+							"Price": 2
+						},
+						{
+							"Id": "S_ROOF5",
+							"Parent": "S_ROOF3",
+							"Price": 2
+						}
+					]
+				},
+				{
+					"Name": "Alloy Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "F_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "F_FLOOR",
+							"Parent": "F_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "F_GFLOOR",
+							"Parent": "F_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "F_FLOOR_Q",
+							"Parent": "F_GFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_RAMP",
+							"Parent": "F_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_RAMP_H",
+							"Parent": "F_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "F_RAMP_Q_TOP",
+							"Parent": "F_RAMP_H",
+							"Price": 3
+						},
+						{
+							"Id": "F_TRIFLOOR",
+							"Parent": "F_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_TRIFLOOR_Q",
+							"Parent": "F_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_H",
+							"Parent": "F_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALLDIAGONAL",
+							"Parent": "F_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_Q",
+							"Parent": "F_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_Q1",
+							"Parent": "F_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_Q_H",
+							"Parent": "F_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_Q_H1",
+							"Parent": "F_WALL_Q_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_CHEV_WALL",
+							"Parent": "F_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "F_CHEV_DOOR",
+							"Parent": "F_CHEV_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "F_CHEV_WALL_H_C",
+							"Parent": "F_CHEV_WALL",
+							"Price": 3
+						},
+						{
+							"Id": "F_CHEV_WIN0",
+							"Parent": "F_CHEV_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "F_CHEV_WIN1",
+							"Parent": "F_CHEV_WIN0",
+							"Price": 1
+						},
+						{
+							"Id": "F_CHEV_WIN2",
+							"Parent": "F_CHEV_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "F_DOOR_H",
+							"Parent": "F_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "F_DOORWINDOW",
+							"Parent": "F_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "F_WALL_WIN1",
+							"Parent": "F_DOORWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_WIN2",
+							"Parent": "F_WALL_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_WIN3",
+							"Parent": "F_WALL_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "F_WALL_WINDOW",
+							"Parent": "F_DOORWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "F_DOOR",
+							"Parent": "F_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "F_DOOR1",
+							"Parent": "F_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "F_GDOOR",
+							"Parent": "F_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "F_ARCH",
+							"Parent": "F_DOOR_H",
+							"Price": 1
+						},
+						{
+							"Id": "F_ARCH_H",
+							"Parent": "F_ARCH",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Alloy Roofing",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "F_ROOF7",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF_M",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_M_WIN",
+							"Parent": "F_ROOF_M",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_M_Q",
+							"Parent": "F_ROOF_M",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_E_Q",
+							"Parent": "F_ROOF_M_Q",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_C",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_IC",
+							"Parent": "F_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_M_CAP",
+							"Parent": "F_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF_E_CAP",
+							"Parent": "F_ROOF_M_CAP",
+							"Price": 1
+						},
+						{
+							"Id": "F_ROOF1",
+							"Parent": "F_ROOF7",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF0",
+							"Parent": "F_ROOF1",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF3",
+							"Parent": "F_ROOF0",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF2",
+							"Parent": "F_ROOF7",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF5",
+							"Parent": "F_ROOF7",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF6",
+							"Parent": "F_ROOF5",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF8",
+							"Parent": "F_ROOF5",
+							"Price": 2
+						},
+						{
+							"Id": "F_ROOF4",
+							"Parent": "F_ROOF7",
+							"Price": 2
+						}
+					]
+				},
+				{
+					"Name": "Salvaged Structures",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "B_WALL",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "B_FLOOR",
+							"Parent": "B_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "B_GFLOOR",
+							"Parent": "B_FLOOR",
+							"Price": 3
+						},
+						{
+							"Id": "B_FLOOR_Q",
+							"Parent": "B_GFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_RAMP",
+							"Parent": "B_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_RAMP_H",
+							"Parent": "B_RAMP",
+							"Price": 1
+						},
+						{
+							"Id": "B_RAMP_Q_TOP",
+							"Parent": "B_RAMP_H",
+							"Price": 3
+						},
+						{
+							"Id": "B_TRIFLOOR",
+							"Parent": "B_FLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_TRIFLOOR_Q",
+							"Parent": "B_TRIFLOOR",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_H",
+							"Parent": "B_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALLDIAGONAL",
+							"Parent": "B_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_Q",
+							"Parent": "B_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_Q1",
+							"Parent": "B_WALL_Q",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_Q_H",
+							"Parent": "B_WALL_H",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_Q_H1",
+							"Parent": "B_WALL_Q_H",
+							"Price": 1
+						},
+						{
+							"Id": "B_CHEV_WALL",
+							"Parent": "B_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "B_CHEV_DOOR",
+							"Parent": "B_CHEV_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "B_CHEV_WALL_H_C",
+							"Parent": "B_CHEV_WALL",
+							"Price": 3
+						},
+						{
+							"Id": "B_CHEV_WIN0",
+							"Parent": "B_CHEV_WALL",
+							"Price": 1
+						},
+						{
+							"Id": "B_CHEV_WIN1",
+							"Parent": "B_CHEV_WIN0",
+							"Price": 1
+						},
+						{
+							"Id": "B_CHEV_WIN2",
+							"Parent": "B_CHEV_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "B_DOOR_H",
+							"Parent": "B_WALL",
+							"Price": 2
+						},
+						{
+							"Id": "B_DOORWINDOW",
+							"Parent": "B_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "B_WALL_WIN1",
+							"Parent": "B_DOORWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_WIN2",
+							"Parent": "B_WALL_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_WIN3",
+							"Parent": "B_WALL_WIN1",
+							"Price": 1
+						},
+						{
+							"Id": "B_WALL_WINDOW",
+							"Parent": "B_DOORWINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "B_DOOR",
+							"Parent": "B_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "B_DOOR1",
+							"Parent": "B_DOOR",
+							"Price": 2
+						},
+						{
+							"Id": "B_GDOOR",
+							"Parent": "B_DOOR_H",
+							"Price": 2
+						},
+						{
+							"Id": "B_ARCH",
+							"Parent": "B_DOOR_H",
+							"Price": 1
+						},
+						{
+							"Id": "B_ARCH_H",
+							"Parent": "B_ARCH",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Salvaged Roofing",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "B_ROOF7",
+							"Parent": null,
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF_M",
+							"Parent": "B_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_M_WIN",
+							"Parent": "B_ROOF_M",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_M_Q",
+							"Parent": "B_ROOF_M",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_E_Q",
+							"Parent": "B_ROOF_M_Q",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_C",
+							"Parent": "B_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_IC",
+							"Parent": "B_ROOF_C",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_M_CAP",
+							"Parent": "B_ROOF7",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF_E_CAP",
+							"Parent": "B_ROOF_M_CAP",
+							"Price": 1
+						},
+						{
+							"Id": "B_ROOF1",
+							"Parent": "B_ROOF7",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF0",
+							"Parent": "B_ROOF1",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF3",
+							"Parent": "B_ROOF0",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF2",
+							"Parent": "B_ROOF7",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF5",
+							"Parent": "B_ROOF7",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF6",
+							"Parent": "B_ROOF5",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF8",
+							"Parent": "B_ROOF5",
+							"Price": 2
+						},
+						{
+							"Id": "B_ROOF4",
+							"Parent": "B_ROOF7",
+							"Price": 2
+						}
+					]
+				},
+				{
+					"Name": "Primitive Shapes",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "WEDGESHAPE",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "WEDGESMALLSHAPE",
+							"Parent": "WEDGESHAPE",
+							"Price": 1
+						},
+						{
+							"Id": "PYRAMIDSHAPE",
+							"Parent": "WEDGESMALLSHAPE",
+							"Price": 1
+						},
+						{
+							"Id": "PIPE",
+							"Parent": "WEDGESHAPE",
+							"Price": 1
+						},
+						{
+							"Id": "CUBESOLID",
+							"Parent": "PIPE",
+							"Price": 1
+						},
+						{
+							"Id": "CUBESHAPE",
+							"Parent": "CUBESOLID",
+							"Price": 1
+						},
+						{
+							"Id": "CYLINDERSHAPE",
+							"Parent": "PIPE",
+							"Price": 1
+						},
+						{
+							"Id": "SPHERESHAPE",
+							"Parent": "CYLINDERSHAPE",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Storage Units",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "CONTAINER0",
+							"Parent": null,
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER1",
+							"Parent": "CONTAINER0",
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER2",
+							"Parent": "CONTAINER1",
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER3",
+							"Parent": "CONTAINER1",
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER4",
+							"Parent": "CONTAINER0",
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER5",
+							"Parent": "CONTAINER4",
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER6",
+							"Parent": "CONTAINER4",
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER7",
+							"Parent": "CONTAINER0",
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER8",
+							"Parent": "CONTAINER7",
+							"Price": 5
+						},
+						{
+							"Id": "CONTAINER9",
+							"Parent": "CONTAINER7",
+							"Price": 5
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "SpecialBaseParts",
+			"Name": "Advaced Construction Modules",
+			"Trees": [
+				{
+					"Name": null,
+					"Cost": null,
+					"Nodes": [
+						{
+							"Id": "CONTAINER0",
+							"Parent": null,
+							"Price": 5
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "SuitTech",
+			"Name": "Exosuit Upgrades",
+			"Trees": [
+				{
+					"Name": "Craftable Upgrade Blueprints",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "ENERGY",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "POWERGLOVE",
+							"Parent": "ENERGY",
+							"Price": 80
+						},
+						{
+							"Id": "SUIT_REFINER",
+							"Parent": "POWERGLOVE",
+							"Price": 360
+						},
+						{
+							"Id": "SUIT_REFINER2",
+							"Parent": "SUIT_REFINER",
+							"Price": 580
+						},
+						{
+							"Id": "SUIT_ROCKET",
+							"Parent": "POWERGLOVE",
+							"Price": 90
+						},
+						{
+							"Id": "SUMMON_SUIT",
+							"Parent": "SUIT_ROCKET",
+							"Price": 640
+						},
+						{
+							"Id": "FISH_SKIFF",
+							"Parent": "POWERGLOVE",
+							"Price": 90
+						},
+						{
+							"Id": "PROTECT",
+							"Parent": "ENERGY",
+							"Price": 1
+						},
+						{
+							"Id": "UT_HOT",
+							"Parent": "PROTECT",
+							"Price": 160
+						},
+						{
+							"Id": "UT_COLD",
+							"Parent": "PROTECT",
+							"Price": 160
+						},
+						{
+							"Id": "UT_TOX",
+							"Parent": "PROTECT",
+							"Price": 160
+						},
+						{
+							"Id": "UT_RAD",
+							"Parent": "PROTECT",
+							"Price": 160
+						},
+						{
+							"Id": "UT_WATER",
+							"Parent": "PROTECT",
+							"Price": 120
+						},
+						{
+							"Id": "PRESSURE_SUIT",
+							"Parent": "UT_WATER",
+							"Price": 320
+						},
+						{
+							"Id": "UT_PROTECT",
+							"Parent": "PROTECT",
+							"Price": 120
+						},
+						{
+							"Id": "UT_ENERGY",
+							"Parent": "ENERGY",
+							"Price": 120
+						},
+						{
+							"Id": "FOOD_UNIT",
+							"Parent": "UT_ENERGY",
+							"Price": 350
+						},
+						{
+							"Id": "UT_WATERENERGY",
+							"Parent": "UT_ENERGY",
+							"Price": 240
+						},
+						{
+							"Id": "JET1",
+							"Parent": "ENERGY",
+							"Price": 1
+						},
+						{
+							"Id": "UT_JET",
+							"Parent": "JET1",
+							"Price": 90
+						},
+						{
+							"Id": "UT_MIDAIR",
+							"Parent": "UT_JET",
+							"Price": 460
+						},
+						{
+							"Id": "UT_JUMP",
+							"Parent": "JET1",
+							"Price": 200
+						},
+						{
+							"Id": "UT_WATERJET",
+							"Parent": "JET1",
+							"Price": 350
+						},
+						{
+							"Id": "UT_TRANSLATE1",
+							"Parent": "ENERGY",
+							"Price": 90
+						},
+						{
+							"Id": "UT_TRANSLATE2",
+							"Parent": "UT_TRANSLATE1",
+							"Price": 310
+						},
+						{
+							"Id": "UT_TRANSLATE3",
+							"Parent": "UT_TRANSLATE2",
+							"Price": 580
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "ShipTech",
+			"Name": "Starship Upgrades",
+			"Trees": [
+				{
+					"Name": "Craftable Upgrade Blueprints",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "SHIPJUMP1",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "UT_PULSEFUEL",
+							"Parent": "SHIPJUMP1",
+							"Price": 460
+						},
+						{
+							"Id": "UT_SHIPDRIFT",
+							"Parent": "UT_PULSEFUEL",
+							"Price": 460
+						},
+						{
+							"Id": "UT_PULSESPEED",
+							"Parent": "UT_PULSEFUEL",
+							"Price": 460
+						},
+						{
+							"Id": "SHIP_TELEPORT",
+							"Parent": "SHIPJUMP1",
+							"Price": 150
+						},
+						{
+							"Id": "SHIPSCAN_COMBAT",
+							"Parent": "SHIP_TELEPORT",
+							"Price": 150
+						},
+						{
+							"Id": "SHIPSCAN_ECON",
+							"Parent": "SHIP_TELEPORT",
+							"Price": 150
+						},
+						{
+							"Id": "CARGOSHIELD",
+							"Parent": "SHIPSCAN_ECON",
+							"Price": 240
+						},
+						{
+							"Id": "HYPERDRIVE",
+							"Parent": "SHIPJUMP1",
+							"Price": 1
+						},
+						{
+							"Id": "UT_QUICKWARP",
+							"Parent": "HYPERDRIVE",
+							"Price": 240
+						},
+						{
+							"Id": "HDRIVEBOOST1",
+							"Parent": "HYPERDRIVE",
+							"Price": 80
+						},
+						{
+							"Id": "HDRIVEBOOST2",
+							"Parent": "HDRIVEBOOST1",
+							"Price": 120
+						},
+						{
+							"Id": "HDRIVEBOOST3",
+							"Parent": "HDRIVEBOOST2",
+							"Price": 200
+						},
+						{
+							"Id": "HDRIVEBOOST4",
+							"Parent": "HDRIVEBOOST3",
+							"Price": 200
+						},
+						{
+							"Id": "LAUNCHER",
+							"Parent": "SHIPJUMP1",
+							"Price": 1
+						},
+						{
+							"Id": "WATER_LANDER",
+							"Parent": "LAUNCHER",
+							"Price": 240
+						},
+						{
+							"Id": "UT_LAUNCHER",
+							"Parent": "LAUNCHER",
+							"Price": 120
+						},
+						{
+							"Id": "UT_LAUNCHCHARGE",
+							"Parent": "UT_LAUNCHER",
+							"Price": 460
+						},
+						{
+							"Id": "SHIPSHIELD",
+							"Parent": "SHIPJUMP1",
+							"Price": 1
+						},
+						{
+							"Id": "UT_SHIPSHIELD",
+							"Parent": "SHIPSHIELD",
+							"Price": 85
+						},
+						{
+							"Id": "SHIPGUN1",
+							"Parent": "SHIPJUMP1",
+							"Price": 1
+						},
+						{
+							"Id": "UT_SHIPGUN",
+							"Parent": "SHIPGUN1",
+							"Price": 75
+						},
+						{
+							"Id": "SHIPROCKETS",
+							"Parent": "SHIPGUN1",
+							"Price": 100
+						},
+						{
+							"Id": "UT_ROCKETS",
+							"Parent": "SHIPROCKETS",
+							"Price": 50
+						},
+						{
+							"Id": "SHIPLAS1",
+							"Parent": "SHIPGUN1",
+							"Price": 150
+						},
+						{
+							"Id": "UT_SHIPLAS",
+							"Parent": "SHIPLAS1",
+							"Price": 120
+						},
+						{
+							"Id": "SHIPSHOTGUN",
+							"Parent": "SHIPGUN1",
+							"Price": 150
+						},
+						{
+							"Id": "UT_SHIPSHOT",
+							"Parent": "SHIPSHOTGUN",
+							"Price": 120
+						},
+						{
+							"Id": "SHIPMINIGUN",
+							"Parent": "SHIPGUN1",
+							"Price": 150
+						},
+						{
+							"Id": "UT_SHIPMINI",
+							"Parent": "SHIPMINIGUN",
+							"Price": 120
+						},
+						{
+							"Id": "SHIPPLASMA",
+							"Parent": "SHIPGUN1",
+							"Price": 150
+						},
+						{
+							"Id": "UT_SHIPBLOB",
+							"Parent": "SHIPPLASMA",
+							"Price": 120
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "WeapTech",
+			"Name": "Multi-Tool Upgrades",
+			"Trees": [
+				{
+					"Name": "Craftable Upgrade Blueprints",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "LASER",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "BOLT",
+							"Parent": "LASER",
+							"Price": 1
+						},
+						{
+							"Id": "UT_BOLT",
+							"Parent": "BOLT",
+							"Price": 90
+						},
+						{
+							"Id": "UT_BOLTBOUNCE",
+							"Parent": "UT_BOLT",
+							"Price": 90
+						},
+						{
+							"Id": "GRENADE",
+							"Parent": "BOLT",
+							"Price": 150
+						},
+						{
+							"Id": "TERRAIN_GREN",
+							"Parent": "GRENADE",
+							"Price": 150
+						},
+						{
+							"Id": "STUN_GREN",
+							"Parent": "GRENADE",
+							"Price": 150
+						},
+						{
+							"Id": "RAILGUN",
+							"Parent": "BOLT",
+							"Price": 250
+						},
+						{
+							"Id": "UT_RAIL_STUN",
+							"Parent": "RAILGUN",
+							"Price": 180
+						},
+						{
+							"Id": "UT_RAIL",
+							"Parent": "RAILGUN",
+							"Price": 180
+						},
+						{
+							"Id": "SHOTGUN",
+							"Parent": "BOLT",
+							"Price": 250
+						},
+						{
+							"Id": "UT_SHOT",
+							"Parent": "SHOTGUN",
+							"Price": 180
+						},
+						{
+							"Id": "SMG",
+							"Parent": "BOLT",
+							"Price": 250
+						},
+						{
+							"Id": "UT_SMG",
+							"Parent": "SMG",
+							"Price": 180
+						},
+						{
+							"Id": "UT_SMGBOUNCE",
+							"Parent": "UT_SMG",
+							"Price": 180
+						},
+						{
+							"Id": "UT_SMG_DOT",
+							"Parent": "UT_SMG",
+							"Price": 180
+						},
+						{
+							"Id": "CANNON",
+							"Parent": "BOLT",
+							"Price": 250
+						},
+						{
+							"Id": "UT_CANNON",
+							"Parent": "CANNON",
+							"Price": 180
+						},
+						{
+							"Id": "GROUND_SHIELD",
+							"Parent": "LASER",
+							"Price": 80
+						},
+						{
+							"Id": "SCOPE",
+							"Parent": "GROUND_SHIELD",
+							"Price": 80
+						},
+						{
+							"Id": "STEALTH",
+							"Parent": "GROUND_SHIELD",
+							"Price": 80
+						},
+						{
+							"Id": "UT_STUNDMG",
+							"Parent": "GROUND_SHIELD",
+							"Price": 180
+						},
+						{
+							"Id": "TERRAINEDITOR",
+							"Parent": "LASER",
+							"Price": 50
+						},
+						{
+							"Id": "STRONGLASER",
+							"Parent": "TERRAINEDITOR",
+							"Price": 75
+						},
+						{
+							"Id": "UT_MINER",
+							"Parent": "STRONGLASER",
+							"Price": 460
+						},
+						{
+							"Id": "FISHLASER",
+							"Parent": "STRONGLASER",
+							"Price": 1
+						},
+						{
+							"Id": "GRAVITYGUN",
+							"Parent": "STRONGLASER",
+							"Price": 520
+						},
+						{
+							"Id": "UT_SCAN",
+							"Parent": "LASER",
+							"Price": 120
+						},
+						{
+							"Id": "UT_SURVEY",
+							"Parent": "UT_SCAN",
+							"Price": 320
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "ExocraftTech",
+			"Name": "Vehicle Upgrades",
+			"Trees": [
+				{
+					"Name": "Exocraft Upgrades",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "VEHICLE_ENGINE",
+							"Parent": null,
+							"Price": 120
+						},
+						{
+							"Id": "EXO_PROT_COLD",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "EXO_PROT_TOX",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "EXO_PROT_RAD",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "EXO_PROT_HOT",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "VEHICLE_SCAN",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "VEHICLE_SCOPE",
+							"Parent": "VEHICLE_SCAN",
+							"Price": 320
+						},
+						{
+							"Id": "VEHICLE_SCAN1",
+							"Parent": "VEHICLE_SCAN",
+							"Price": 210
+						},
+						{
+							"Id": "VEHICLE_SCAN2",
+							"Parent": "VEHICLE_SCAN1",
+							"Price": 320
+						},
+						{
+							"Id": "VEHICLE_BOOST",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 180
+						},
+						{
+							"Id": "EXO_RECHARGE",
+							"Parent": "VEHICLE_BOOST",
+							"Price": 120
+						},
+						{
+							"Id": "EXO_PLOUGH",
+							"Parent": "VEHICLE_BOOST",
+							"Price": 480
+						},
+						{
+							"Id": "VEHICLE_LASER",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 180
+						},
+						{
+							"Id": "VEHICLE_LASER1",
+							"Parent": "VEHICLE_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "EXO_REFINER",
+							"Parent": "VEHICLE_LASER1",
+							"Price": 480
+						},
+						{
+							"Id": "VEHICLE_GUN",
+							"Parent": "VEHICLE_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "VEHICLE_FLAME",
+							"Parent": "VEHICLE_GUN",
+							"Price": 480
+						}
+					]
+				},
+				{
+					"Name": "Nautilon Upgrades",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "SUB_ENGINE",
+							"Parent": null,
+							"Price": 120
+						},
+						{
+							"Id": "SUB_BINOCS",
+							"Parent": "SUB_ENGINE",
+							"Price": 10
+						},
+						{
+							"Id": "SUB_RECHARGE",
+							"Parent": "SUB_BINOCS",
+							"Price": 350
+						},
+						{
+							"Id": "SUB_LASER",
+							"Parent": "SUB_BINOCS",
+							"Price": 450
+						},
+						{
+							"Id": "SUB_GUN",
+							"Parent": "SUB_BINOCS",
+							"Price": 250
+						},
+						{
+							"Id": "SUB_MINER",
+							"Parent": "SUB_GUN",
+							"Price": 390
+						}
+					]
+				},
+				{
+					"Name": "Minotaur Upgrades",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "MECH_ENGINE",
+							"Parent": null,
+							"Price": 120
+						},
+						{
+							"Id": "MECH_PROT",
+							"Parent": "MECH_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "MECH_BOOST",
+							"Parent": "MECH_PROT",
+							"Price": 180
+						},
+						{
+							"Id": "MECH_FUEL",
+							"Parent": "MECH_BOOST",
+							"Price": 120
+						},
+						{
+							"Id": "MECH_LASER",
+							"Parent": "MECH_ENGINE",
+							"Price": 180
+						},
+						{
+							"Id": "MECH_LASER1",
+							"Parent": "MECH_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "MECH_GUN",
+							"Parent": "MECH_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "MECH_MINER",
+							"Parent": "MECH_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "MECH_SCAN",
+							"Parent": "MECH_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "MECH_PILOT",
+							"Parent": "MECH_SCAN",
+							"Price": 480
+						},
+						{
+							"Id": "MECH_SENT_HEAD",
+							"Parent": "MECH_PILOT",
+							"Price": 480
+						},
+						{
+							"Id": "MECH_SENT_L_ARM",
+							"Parent": "MECH_SENT_HEAD",
+							"Price": 500
+						},
+						{
+							"Id": "MECH_SENT_R_ARM",
+							"Parent": "MECH_SENT_HEAD",
+							"Price": 500
+						},
+						{
+							"Id": "MECH_SENT_LEGS",
+							"Parent": "MECH_SENT_HEAD",
+							"Price": 500
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "CraftProducts",
+			"Name": "Product Recipes",
+			"Trees": [
+				{
+					"Name": "Components & Devices",
+					"Cost": {
+						"Type": "Product",
+						"Id": "FACT_TOKEN"
+					},
+					"Nodes": [
+						{
+							"Id": "PRODFUEL2",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "JELLY",
+							"Parent": "PRODFUEL2",
+							"Price": 1
+						},
+						{
+							"Id": "NANOTUBES",
+							"Parent": "JELLY",
+							"Price": 1
+						},
+						{
+							"Id": "HYDRALIC",
+							"Parent": "NANOTUBES",
+							"Price": 1
+						},
+						{
+							"Id": "MICROCHIP",
+							"Parent": "JELLY",
+							"Price": 1
+						},
+						{
+							"Id": "COMPUTER",
+							"Parent": "MICROCHIP",
+							"Price": 1
+						},
+						{
+							"Id": "CARBON_SEAL",
+							"Parent": "JELLY",
+							"Price": 1
+						},
+						{
+							"Id": "BIO",
+							"Parent": "CARBON_SEAL",
+							"Price": 1
+						},
+						{
+							"Id": "CASING",
+							"Parent": "JELLY",
+							"Price": 1
+						},
+						{
+							"Id": "MAGNET",
+							"Parent": "CASING",
+							"Price": 1
+						},
+						{
+							"Id": "MIRROR",
+							"Parent": "JELLY",
+							"Price": 1
+						},
+						{
+							"Id": "POWERCELL",
+							"Parent": "PRODFUEL2",
+							"Price": 1
+						},
+						{
+							"Id": "SHIPCHARGE",
+							"Parent": "POWERCELL",
+							"Price": 1
+						},
+						{
+							"Id": "LAUNCHFUEL",
+							"Parent": "POWERCELL",
+							"Price": 1
+						},
+						{
+							"Id": "SUBFUEL",
+							"Parent": "LAUNCHFUEL",
+							"Price": 1
+						},
+						{
+							"Id": "GRENFUEL1",
+							"Parent": "POWERCELL",
+							"Price": 1
+						},
+						{
+							"Id": "HYPERFUEL1",
+							"Parent": "PRODFUEL2",
+							"Price": 999
+						},
+						{
+							"Id": "ACCESS1",
+							"Parent": "HYPERFUEL1",
+							"Price": 1
+						},
+						{
+							"Id": "ACCESS2",
+							"Parent": "ACCESS1",
+							"Price": 1
+						},
+						{
+							"Id": "HYPERFUEL2",
+							"Parent": "ACCESS2",
+							"Price": 1
+						},
+						{
+							"Id": "ACCESS3",
+							"Parent": "ACCESS2",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Valuable Products",
+					"Cost": {
+						"Type": "Product",
+						"Id": "FACT_TOKEN"
+					},
+					"Nodes": [
+						{
+							"Id": "FARMPROD1",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "FARMPROD2",
+							"Parent": "FARMPROD1",
+							"Price": 1
+						},
+						{
+							"Id": "FARMPROD6",
+							"Parent": "FARMPROD2",
+							"Price": 1
+						},
+						{
+							"Id": "FARMPROD7",
+							"Parent": "FARMPROD6",
+							"Price": 1
+						},
+						{
+							"Id": "FARMPROD3",
+							"Parent": "FARMPROD2",
+							"Price": 1
+						},
+						{
+							"Id": "FARMPROD8",
+							"Parent": "FARMPROD3",
+							"Price": 1
+						},
+						{
+							"Id": "FARMPROD5",
+							"Parent": "FARMPROD2",
+							"Price": 1
+						},
+						{
+							"Id": "FARMPROD4",
+							"Parent": "FARMPROD5",
+							"Price": 1
+						},
+						{
+							"Id": "FARMPROD9",
+							"Parent": "FARMPROD5",
+							"Price": 1
+						},
+						{
+							"Id": "REACTION1",
+							"Parent": "FARMPROD1",
+							"Price": 1
+						},
+						{
+							"Id": "REACTION2",
+							"Parent": "REACTION1",
+							"Price": 1
+						},
+						{
+							"Id": "COMPOUND1",
+							"Parent": "REACTION2",
+							"Price": 1
+						},
+						{
+							"Id": "COMPOUND4",
+							"Parent": "COMPOUND1",
+							"Price": 1
+						},
+						{
+							"Id": "REACTION3",
+							"Parent": "REACTION1",
+							"Price": 1
+						},
+						{
+							"Id": "COMPOUND2",
+							"Parent": "REACTION3",
+							"Price": 1
+						},
+						{
+							"Id": "COMPOUND5",
+							"Parent": "COMPOUND2",
+							"Price": 1
+						},
+						{
+							"Id": "COMPOUND3",
+							"Parent": "REACTION3",
+							"Price": 1
+						},
+						{
+							"Id": "COMPOUND6",
+							"Parent": "COMPOUND3",
+							"Price": 1
+						},
+						{
+							"Id": "ALLOY1",
+							"Parent": "REACTION1",
+							"Price": 1
+						},
+						{
+							"Id": "ALLOY2",
+							"Parent": "ALLOY1",
+							"Price": 1
+						},
+						{
+							"Id": "ALLOY3",
+							"Parent": "ALLOY1",
+							"Price": 1
+						},
+						{
+							"Id": "ALLOY4",
+							"Parent": "ALLOY1",
+							"Price": 1
+						},
+						{
+							"Id": "ALLOY5",
+							"Parent": "ALLOY1",
+							"Price": 1
+						},
+						{
+							"Id": "ALLOY8",
+							"Parent": "ALLOY5",
+							"Price": 1
+						},
+						{
+							"Id": "ALLOY6",
+							"Parent": "ALLOY1",
+							"Price": 1
+						},
+						{
+							"Id": "ALLOY7",
+							"Parent": "ALLOY6",
+							"Price": 1
+						},
+						{
+							"Id": "MEGAPROD1",
+							"Parent": "FARMPROD1",
+							"Price": 1
+						},
+						{
+							"Id": "MEGAPROD2",
+							"Parent": "MEGAPROD1",
+							"Price": 1
+						},
+						{
+							"Id": "ULTRAPROD1",
+							"Parent": "MEGAPROD2",
+							"Price": 1
+						},
+						{
+							"Id": "MEGAPROD3",
+							"Parent": "MEGAPROD1",
+							"Price": 1
+						},
+						{
+							"Id": "ULTRAPROD2",
+							"Parent": "MEGAPROD3",
+							"Price": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "FreighterTech",
+			"Name": "Capital Ship Research",
+			"Trees": [
+				{
+					"Name": "Craftable Upgrade Blueprints",
+					"Cost": {
+						"Type": "Product",
+						"Id": "FRIG_TOKEN"
+					},
+					"Nodes": [
+						{
+							"Id": "FRIGATE_FUEL_1",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "FRIG_BOOST_SPD",
+							"Parent": "FRIGATE_FUEL_1",
+							"Price": 1
+						},
+						{
+							"Id": "FRIG_BOOST_TRA",
+							"Parent": "FRIG_BOOST_SPD",
+							"Price": 1
+						},
+						{
+							"Id": "FRIG_BOOST_EXP",
+							"Parent": "FRIG_BOOST_SPD",
+							"Price": 1
+						},
+						{
+							"Id": "FRIG_BOOST_MIN",
+							"Parent": "FRIG_BOOST_SPD",
+							"Price": 1
+						},
+						{
+							"Id": "FRIG_BOOST_COM",
+							"Parent": "FRIG_BOOST_SPD",
+							"Price": 1
+						},
+						{
+							"Id": "F_HDRIVEBOOST1",
+							"Parent": "FRIGATE_FUEL_1",
+							"Price": 4
+						},
+						{
+							"Id": "F_HACCESS1",
+							"Parent": "F_HDRIVEBOOST1",
+							"Price": 4
+						},
+						{
+							"Id": "F_HACCESS2",
+							"Parent": "F_HACCESS1",
+							"Price": 8
+						},
+						{
+							"Id": "F_HACCESS3",
+							"Parent": "F_HACCESS2",
+							"Price": 12
+						},
+						{
+							"Id": "F_HACCESS4",
+							"Parent": "F_HACCESS3",
+							"Price": 12
+						},
+						{
+							"Id": "F_HDRIVEBOOST2",
+							"Parent": "F_HDRIVEBOOST1",
+							"Price": 8
+						},
+						{
+							"Id": "F_HDRIVEBOOST3",
+							"Parent": "F_HDRIVEBOOST2",
+							"Price": 12
+						},
+						{
+							"Id": "F_TELEPORT",
+							"Parent": "FRIGATE_FUEL_1",
+							"Price": 5
+						},
+						{
+							"Id": "F_SCANNER",
+							"Parent": "F_TELEPORT",
+							"Price": 4
+						}
+					]
+				},
+				{
+					"Name": "Freighter Construction Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "FRIG_TOKEN"
+					},
+					"Nodes": [
+						{
+							"Id": "FRE_CORR_A",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "FRE_FACE_DOOR_A",
+							"Parent": "FRE_CORR_A",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_CORR_A_GLAS",
+							"Parent": "FRE_FACE_DOOR_A",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_CORR_STA",
+							"Parent": "FRE_CORR_A_GLAS",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_LADDER",
+							"Parent": "FRE_CORR_STA",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_EXT_PLATFOR",
+							"Parent": "FRE_CORR_A_GLAS",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_EXT_WALKWAY",
+							"Parent": "FRE_CORR_A_GLAS",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_EXT_W_STA",
+							"Parent": "FRE_CORR_A_GLAS",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_CORR_G_STA",
+							"Parent": "FRE_EXT_W_STA",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_FACE_WINDOW",
+							"Parent": "FRE_FACE_DOOR_A",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_FACE_WALL",
+							"Parent": "FRE_FACE_WINDOW",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_CORR_B",
+							"Parent": "FRE_CORR_A",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_B",
+							"Parent": "FRE_CORR_B",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_CORR_STA_B",
+							"Parent": "FRE_ROOM_B",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_FLEET",
+							"Parent": "FRE_CORR_A",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_TECH",
+							"Parent": "FRE_ROOM_FLEET",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_SCAN",
+							"Parent": "FRE_ROOM_FLEET",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_SHOP",
+							"Parent": "FRE_ROOM_FLEET",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_DRESS",
+							"Parent": "FRE_ROOM_SHOP",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_TELEPO",
+							"Parent": "FRE_ROOM_SHOP",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_PLANT1",
+							"Parent": "FRE_CORR_A",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_PLANT0",
+							"Parent": "FRE_ROOM_PLANT1",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_BIO",
+							"Parent": "FRE_ROOM_PLANT0",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_COOK",
+							"Parent": "FRE_ROOM_PLANT1",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_REFINE",
+							"Parent": "FRE_CORR_A",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_IND",
+							"Parent": "FRE_ROOM_REFINE",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_EXTR",
+							"Parent": "FRE_ROOM_REFINE",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_VEHICL",
+							"Parent": "FRE_ROOM_REFINE",
+							"Price": 1
+						},
+						{
+							"Id": "FRE_ROOM_STORE0",
+							"Parent": "FRE_ROOM_REFINE",
+							"Price": 1
+						}
+					]
+				},
+				{
+					"Name": "Freighter Recolouring",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "FREIGHT_PAINT",
+							"Parent": null,
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_RED",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_ORANGE",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_YELLOW",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_GREEN",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_CYAN",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_BLUE",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_PURPLE",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_PINK",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_WHITE",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						},
+						{
+							"Id": "FREIGHT_BLACK",
+							"Parent": "FREIGHT_PAINT",
+							"Price": 5000
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "S9BaseParts",
+			"Name": "Advanced Construction Modules",
+			"Trees": [
+				{
+					"Name": "Utopia Research Stations",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "S9_BUILDERTREE",
+							"Parent": null,
+							"Price": 15
+						},
+						{
+							"Id": "S9_EXOCRAFTTREE",
+							"Parent": "S9_BUILDERTREE",
+							"Price": 15
+						},
+						{
+							"Id": "S9_WEAPONTREE",
+							"Parent": "S9_BUILDERTREE",
+							"Price": 15
+						},
+						{
+							"Id": "S9_SHIPTREE",
+							"Parent": "S9_BUILDERTREE",
+							"Price": 15
+						}
+					]
+				},
+				{
+					"Name": "Technology Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BUILDBEACON",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "HEALTHSTATION",
+							"Parent": "BUILDBEACON",
+							"Price": 5
+						},
+						{
+							"Id": "SHIELDSTATION",
+							"Parent": "HEALTHSTATION",
+							"Price": 3
+						},
+						{
+							"Id": "COOKER",
+							"Parent": "BUILDBEACON",
+							"Price": 10
+						},
+						{
+							"Id": "CREATURE_FARM",
+							"Parent": "COOKER",
+							"Price": 10
+						},
+						{
+							"Id": "CREATURE_FEED",
+							"Parent": "COOKER",
+							"Price": 10
+						},
+						{
+							"Id": "O2_HARVESTER",
+							"Parent": "BUILDBEACON",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDHARVESTER",
+							"Parent": "O2_HARVESTER",
+							"Price": 1
+						},
+						{
+							"Id": "BUILDGASHARVEST",
+							"Parent": "BUILDHARVESTER",
+							"Price": 1
+						},
+						{
+							"Id": "DRESSING_TABLE",
+							"Parent": "BUILDBEACON",
+							"Price": 10
+						},
+						{
+							"Id": "BUILDTERMINAL",
+							"Parent": "BUILDBEACON",
+							"Price": 10
+						},
+						{
+							"Id": "BUILDSAVE",
+							"Parent": "BUILDTERMINAL",
+							"Price": 2
+						},
+						{
+							"Id": "BUILDSIGNAL",
+							"Parent": "BUILDBEACON",
+							"Price": 1
+						},
+						{
+							"Id": "MESSAGEMODULE",
+							"Parent": "BUILDSIGNAL",
+							"Price": 1
+						},
+						{
+							"Id": "MESSAGE",
+							"Parent": "MESSAGEMODULE",
+							"Price": 1
+						},
+						{
+							"Id": "BUILD_REFINER1",
+							"Parent": "BUILDBEACON",
+							"Price": 10
+						},
+						{
+							"Id": "BUILD_REFINER2",
+							"Parent": "BUILD_REFINER1",
+							"Price": 10
+						},
+						{
+							"Id": "BUILD_REFINER3",
+							"Parent": "BUILD_REFINER2",
+							"Price": 10
+						},
+						{
+							"Id": "BUILDANTIMATTER",
+							"Parent": "BUILD_REFINER2",
+							"Price": 20
+						},
+						{
+							"Id": "LIGHTBOX",
+							"Parent": "BUILDBEACON",
+							"Price": 1
+						},
+						{
+							"Id": "L_FLOOR_Q",
+							"Parent": "LIGHTBOX",
+							"Price": 1
+						},
+						{
+							"Id": "NOISEBOX",
+							"Parent": "LIGHTBOX",
+							"Price": 10
+						},
+						{
+							"Id": "BYTEBEAT",
+							"Parent": "NOISEBOX",
+							"Price": 10
+						},
+						{
+							"Id": "BYTEBEATSWITCH",
+							"Parent": "BYTEBEAT",
+							"Price": 2
+						},
+						{
+							"Id": "U_BYTEBEATLINE",
+							"Parent": "BYTEBEAT",
+							"Price": 0
+						},
+						{
+							"Id": "SPAWNER_BALL",
+							"Parent": "LIGHTBOX",
+							"Price": 10
+						}
+					]
+				},
+				{
+					"Name": "Transport Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "GARAGE_M",
+							"Parent": null,
+							"Price": 4
+						},
+						{
+							"Id": "SUMMON_GARAGE",
+							"Parent": "GARAGE_M",
+							"Price": 12
+						},
+						{
+							"Id": "FRE_ROOM_VEHICL",
+							"Parent": "SUMMON_GARAGE",
+							"Price": 1
+						},
+						{
+							"Id": "GARAGE_S",
+							"Parent": "GARAGE_M",
+							"Price": 8
+						},
+						{
+							"Id": "GARAGE_MECH",
+							"Parent": "GARAGE_M",
+							"Price": 10
+						},
+						{
+							"Id": "GARAGE_SUB",
+							"Parent": "GARAGE_M",
+							"Price": 10
+						},
+						{
+							"Id": "GARAGE_B",
+							"Parent": "GARAGE_M",
+							"Price": 10
+						},
+						{
+							"Id": "GARAGE_L",
+							"Parent": "GARAGE_M",
+							"Price": 8
+						},
+						{
+							"Id": "RACE_START",
+							"Parent": "GARAGE_M",
+							"Price": 10
+						},
+						{
+							"Id": "RACE_RAMP",
+							"Parent": "RACE_START",
+							"Price": 10
+						},
+						{
+							"Id": "RACE_BOOSTER",
+							"Parent": "RACE_START",
+							"Price": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "S9ExoTech",
+			"Name": "Vehicle Upgrades",
+			"Trees": [
+				{
+					"Name": "Craftable Upgrade Blueprints",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "VEHICLE_ENGINE",
+							"Parent": null,
+							"Price": 120
+						},
+						{
+							"Id": "SUB_ENGINE",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "SUB_BINOCS",
+							"Parent": "SUB_ENGINE",
+							"Price": 10
+						},
+						{
+							"Id": "SUB_RECHARGE",
+							"Parent": "SUB_BINOCS",
+							"Price": 350
+						},
+						{
+							"Id": "SUB_LASER",
+							"Parent": "SUB_BINOCS",
+							"Price": 450
+						},
+						{
+							"Id": "SUB_GUN",
+							"Parent": "SUB_BINOCS",
+							"Price": 250
+						},
+						{
+							"Id": "EXO_PROT_COLD",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "EXO_PROT_TOX",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "EXO_PROT_RAD",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "EXO_PROT_HOT",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "VEHICLE_SCAN",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "VEHICLE_SCAN1",
+							"Parent": "VEHICLE_SCAN",
+							"Price": 210
+						},
+						{
+							"Id": "VEHICLE_SCAN2",
+							"Parent": "VEHICLE_SCAN1",
+							"Price": 320
+						},
+						{
+							"Id": "VEHICLE_BOOST",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 180
+						},
+						{
+							"Id": "EXO_RECHARGE",
+							"Parent": "VEHICLE_BOOST",
+							"Price": 120
+						},
+						{
+							"Id": "VEHICLE_LASER",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 180
+						},
+						{
+							"Id": "VEHICLE_LASER1",
+							"Parent": "VEHICLE_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "VEHICLE_GUN",
+							"Parent": "VEHICLE_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "MECH_ENGINE",
+							"Parent": "VEHICLE_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "MECH_PROT",
+							"Parent": "MECH_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "MECH_BOOST",
+							"Parent": "MECH_PROT",
+							"Price": 180
+						},
+						{
+							"Id": "MECH_FUEL",
+							"Parent": "MECH_BOOST",
+							"Price": 120
+						},
+						{
+							"Id": "MECH_SCAN",
+							"Parent": "MECH_ENGINE",
+							"Price": 120
+						},
+						{
+							"Id": "MECH_PILOT",
+							"Parent": "MECH_SCAN",
+							"Price": 480
+						},
+						{
+							"Id": "MECH_LASER",
+							"Parent": "MECH_ENGINE",
+							"Price": 180
+						},
+						{
+							"Id": "MECH_LASER1",
+							"Parent": "MECH_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "MECH_GUN",
+							"Parent": "MECH_LASER",
+							"Price": 210
+						},
+						{
+							"Id": "MECH_MINER",
+							"Parent": "MECH_LASER",
+							"Price": 210
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "S9ShipTech",
+			"Name": "Starship Upgrades",
+			"Trees": [
+				{
+					"Name": "Craftable Upgrade Blueprints",
+					"Cost": {
+						"Type": "Currency",
+						"Id": "Nanites"
+					},
+					"Nodes": [
+						{
+							"Id": "SHIPJUMP1",
+							"Parent": null,
+							"Price": 1
+						},
+						{
+							"Id": "UT_PULSEFUEL",
+							"Parent": "SHIPJUMP1",
+							"Price": 460
+						},
+						{
+							"Id": "UT_SHIPDRIFT",
+							"Parent": "UT_PULSEFUEL",
+							"Price": 460
+						},
+						{
+							"Id": "UT_PULSESPEED",
+							"Parent": "UT_PULSEFUEL",
+							"Price": 460
+						},
+						{
+							"Id": "SHIP_TELEPORT",
+							"Parent": "SHIPJUMP1",
+							"Price": 150
+						},
+						{
+							"Id": "SHIPSCAN_COMBAT",
+							"Parent": "SHIP_TELEPORT",
+							"Price": 150
+						},
+						{
+							"Id": "SHIPSCAN_ECON",
+							"Parent": "SHIP_TELEPORT",
+							"Price": 150
+						},
+						{
+							"Id": "CARGOSHIELD",
+							"Parent": "SHIPSCAN_ECON",
+							"Price": 240
+						},
+						{
+							"Id": "HYPERDRIVE",
+							"Parent": "SHIPJUMP1",
+							"Price": 1
+						},
+						{
+							"Id": "UT_QUICKWARP",
+							"Parent": "HYPERDRIVE",
+							"Price": 240
+						},
+						{
+							"Id": "HDRIVEBOOST1",
+							"Parent": "HYPERDRIVE",
+							"Price": 80
+						},
+						{
+							"Id": "HDRIVEBOOST2",
+							"Parent": "HDRIVEBOOST1",
+							"Price": 120
+						},
+						{
+							"Id": "HDRIVEBOOST3",
+							"Parent": "HDRIVEBOOST2",
+							"Price": 200
+						},
+						{
+							"Id": "LAUNCHER",
+							"Parent": "SHIPJUMP1",
+							"Price": 1
+						},
+						{
+							"Id": "UT_LAUNCHER",
+							"Parent": "LAUNCHER",
+							"Price": 120
+						},
+						{
+							"Id": "UT_LAUNCHCHARGE",
+							"Parent": "UT_LAUNCHER",
+							"Price": 460
+						},
+						{
+							"Id": "SHIPSHIELD",
+							"Parent": "SHIPJUMP1",
+							"Price": 1
+						},
+						{
+							"Id": "UT_SHIPSHIELD",
+							"Parent": "SHIPSHIELD",
+							"Price": 85
+						},
+						{
+							"Id": "SHIPGUN1",
+							"Parent": "SHIPJUMP1",
+							"Price": 1
+						},
+						{
+							"Id": "UT_SHIPGUN",
+							"Parent": "SHIPGUN1",
+							"Price": 75
+						},
+						{
+							"Id": "SHIPROCKETS",
+							"Parent": "SHIPGUN1",
+							"Price": 100
+						},
+						{
+							"Id": "UT_ROCKETS",
+							"Parent": "SHIPROCKETS",
+							"Price": 50
+						},
+						{
+							"Id": "SHIPLAS1",
+							"Parent": "SHIPGUN1",
+							"Price": 150
+						},
+						{
+							"Id": "UT_SHIPLAS",
+							"Parent": "SHIPLAS1",
+							"Price": 120
+						},
+						{
+							"Id": "SHIPSHOTGUN",
+							"Parent": "SHIPGUN1",
+							"Price": 150
+						},
+						{
+							"Id": "UT_SHIPSHOT",
+							"Parent": "SHIPSHOTGUN",
+							"Price": 120
+						},
+						{
+							"Id": "SHIPMINIGUN",
+							"Parent": "SHIPGUN1",
+							"Price": 150
+						},
+						{
+							"Id": "UT_SHIPMINI",
+							"Parent": "SHIPMINIGUN",
+							"Price": 120
+						},
+						{
+							"Id": "SHIPPLASMA",
+							"Parent": "SHIPGUN1",
+							"Price": 150
+						},
+						{
+							"Id": "UT_SHIPBLOB",
+							"Parent": "SHIPPLASMA",
+							"Price": 120
+						}
+					]
+				}
+			]
+		},
+		{
+			"Id": "CorvetteParts",
+			"Name": "Corvette Modules",
+			"Trees": [
+				{
+					"Name": null,
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BIG_COK1X2_A",
+							"Parent": null,
+							"Price": null
+						},
+						{
+							"Id": "BIG_COK1X2_B",
+							"Parent": "BIG_COK1X2_A",
+							"Price": null
+						},
+						{
+							"Id": "BIG_COK1X2_D",
+							"Parent": "BIG_COK1X2_B",
+							"Price": null
+						}
+					]
+				},
+				{
+					"Name": "Habitation Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BIG_HAB1X2_A",
+							"Parent": null,
+							"Price": null
+						},
+						{
+							"Id": "BIG_HAB1X2_B",
+							"Parent": "BIG_HAB1X2_A",
+							"Price": null
+						},
+						{
+							"Id": "BIG_HAB1X2_C",
+							"Parent": "BIG_HAB1X2_B",
+							"Price": null
+						}
+					]
+				},
+				{
+					"Name": "Hull Plating",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BIG_STR1X1_A_N",
+							"Parent": null,
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_A_NE",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_B_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_B_NE",
+							"Parent": "BIG_STR1X1_B_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_C_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_C_NE",
+							"Parent": "BIG_STR1X1_C_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_D_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_D_NE",
+							"Parent": "BIG_STR1X1_D_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_E_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_E_NE",
+							"Parent": "BIG_STR1X1_E_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_F_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_F_NE",
+							"Parent": "BIG_STR1X1_F_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_G_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_G_NE",
+							"Parent": "BIG_STR1X1_G_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_H_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_H_NE",
+							"Parent": "BIG_STR1X1_H_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_I_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_I_NE",
+							"Parent": "BIG_STR1X1_I_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_J_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_J_NE",
+							"Parent": "BIG_STR1X1_J_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_K_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_K_NE",
+							"Parent": "BIG_STR1X1_K_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_L_N",
+							"Parent": "BIG_STR1X1_A_N",
+							"Price": null
+						},
+						{
+							"Id": "BIG_STR1X1_L_NE",
+							"Parent": "BIG_STR1X1_L_N",
+							"Price": null
+						}
+					]
+				},
+				{
+					"Name": "Wings",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BIG_WNG1X2_A",
+							"Parent": null,
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_B",
+							"Parent": "BIG_WNG1X2_A",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_C",
+							"Parent": "BIG_WNG1X2_B",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_D",
+							"Parent": "BIG_WNG1X2_C",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_E",
+							"Parent": "BIG_WNG1X2_A",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_F",
+							"Parent": "BIG_WNG1X2_E",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_G",
+							"Parent": "BIG_WNG1X2_F",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_H",
+							"Parent": "BIG_WNG1X2_A",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_I",
+							"Parent": "BIG_WNG1X2_H",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_J",
+							"Parent": "BIG_WNG1X2_I",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_K",
+							"Parent": "BIG_WNG1X2_A",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_L",
+							"Parent": "BIG_WNG1X2_K",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WNG1X2_M",
+							"Parent": "BIG_WNG1X2_L",
+							"Price": null
+						}
+					]
+				},
+				{
+					"Name": "Reactors",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BIG_GEN1X1_0",
+							"Parent": null,
+							"Price": null
+						},
+						{
+							"Id": "BIG_GEN1X1_1",
+							"Parent": "BIG_GEN1X1_0",
+							"Price": null
+						},
+						{
+							"Id": "BIG_GEN1X1_2",
+							"Parent": "BIG_GEN1X1_1",
+							"Price": null
+						},
+						{
+							"Id": "BIG_GEN1X1_3",
+							"Parent": "BIG_GEN1X1_0",
+							"Price": null
+						},
+						{
+							"Id": "BIG_GEN1X1_4",
+							"Parent": "BIG_GEN1X1_3",
+							"Price": null
+						},
+						{
+							"Id": "BIG_GEN1X1_5",
+							"Parent": "BIG_GEN1X1_4",
+							"Price": null
+						}
+					]
+				},
+				{
+					"Name": "Additional Modules",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BIG_TUR1X1_A",
+							"Parent": null,
+							"Price": null
+						},
+						{
+							"Id": "BIG_LND1X1_A",
+							"Parent": "BIG_TUR1X1_A",
+							"Price": null
+						},
+						{
+							"Id": "BIG_ALK1X1_A",
+							"Parent": "BIG_TUR1X1_A",
+							"Price": null
+						},
+						{
+							"Id": "BIG_ALK1X1_B",
+							"Parent": "BIG_ALK1X1_A",
+							"Price": null
+						}
+					]
+				},
+				{
+					"Name": "Furnishings and Utilities",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BIG_WALL_TOIL0",
+							"Parent": null,
+							"Price": null
+						},
+						{
+							"Id": "BIG_WALL_CARG0",
+							"Parent": "BIG_WALL_TOIL0",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WALL_TECH0",
+							"Parent": "BIG_WALL_CARG0",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WALL_KITC0",
+							"Parent": "BIG_WALL_TOIL0",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WALL_BUNK0",
+							"Parent": "BIG_WALL_KITC0",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WALL_MED0",
+							"Parent": "BIG_WALL_BUNK0",
+							"Price": null
+						}
+					]
+				},
+				{
+					"Name": "Internal Configuration",
+					"Cost": {
+						"Type": "Product",
+						"Id": "BP_SALVAGE"
+					},
+					"Nodes": [
+						{
+							"Id": "BIG_STAIRS0",
+							"Parent": null,
+							"Price": null
+						},
+						{
+							"Id": "BIG_DOOR0",
+							"Parent": "BIG_STAIRS0",
+							"Price": null
+						},
+						{
+							"Id": "BIG_WALL_WIN0",
+							"Parent": "BIG_DOOR0",
+							"Price": null
+						}
+					]
+				}
+			]
+		}
+	]
+}

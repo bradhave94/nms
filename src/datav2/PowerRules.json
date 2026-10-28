@@ -1,11 +1,12 @@
 {
 	"Provenance": {
-		"SteamBuildId": "25320008",
-		"CompilerVersion": "7.03.2.2",
-		"ObservedDate": "2026-09-22",
+		"GameVersion": "7.10",
+		"ObservedDate": "2026-10-28",
+		"SteamBuildId": "26271400",
+		"CompilerVersion": "7.10.0.1",
 		"Sources": {
-			"gcskyglobals.globals.MXML": "ffd181559be7d39c70caaec44defb7af00ec9b9ee1563484776f948b5066a2d2",
-			"regionhotspotstable.MXML": "630a0f32b4457334a51aecb014355869f4d519739a91fb483b1387a8c3d4209e"
+			"gcskyglobals.globals.MXML": "8efcf079684eb172906ba355bbbfae47ff74f660ba11dc3241f4509ba8c770d6",
+			"regionhotspotstable.MXML": "d6f51a7d5fbe46150b0182f3af64e77af9bf3da714b9600090d9e4a133b54571"
 		}
 	},
 	"DayCycleSeconds": 1800,

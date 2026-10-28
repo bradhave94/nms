@@ -1,0 +1,116 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
+import { getItemPage } from '@utils/playerUnlocks';
+import { researchAnchor, treeCurrency, visibleResearchGroups } from '@utils/referenceData';
+import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
+import '../assets/css/creatures.css';
+
+const groups = visibleResearchGroups();
+const blueprintCount = new Set(
+	groups.flatMap((group) => group.Trees.flatMap((tree) => tree.Nodes.filter((node) => getItemPage(node.Id)).map((node) => node.Id))),
+).size;
+
+const title = withSiteTitle("Research Trees and Blueprint Costs in No Man's Sky");
+const description = `Every No Man's Sky research tree: ${blueprintCount} blueprints from the Construction Research Station, Anomaly terminals and more, with costs and unlock order.`;
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Research trees' }];
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/research-trees/', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: "No Man's Sky research trees",
+	collectionDescription: description,
+	collectionPath: '/research-trees',
+	currentPage: 1,
+	breadcrumbs,
+	items: groups.map((group, index) => ({
+		name: group.Name ?? group.Id,
+		url: `${canonicalUrl}#${researchAnchor(group)}`,
+		position: index + 1,
+	})),
+});
+---
+
+<Layout {title} {description} slug="research-trees" {structuredData} {breadcrumbs}>
+	<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+	<div class="cr-wrap">
+		<header class="cr-head">
+			<div class="min-w-0">
+				<h1 class="cr-title">Research trees</h1>
+				<p class="cr-lead">
+					The {blueprintCount} blueprints sold at research stations and terminals, tree by tree. Each one unlocks after the blueprint above it, and costs the tree's currency.
+				</p>
+			</div>
+		</header>
+
+		<nav class="rt-jump" aria-label="Research stations">
+			<ul>
+				{groups.map((group) => <li><a href={`#${researchAnchor(group)}`}>{group.Name}</a></li>)}
+			</ul>
+		</nav>
+
+		{groups.map((group) => (
+			<section class="cr-section" id={researchAnchor(group)} aria-labelledby={`${researchAnchor(group)}-heading`}>
+				<h2 class="section-title" id={`${researchAnchor(group)}-heading`}>
+					{group.Name} <span class="count tabular">{group.Trees.length} {group.Trees.length === 1 ? 'tree' : 'trees'}</span>
+				</h2>
+				{group.Trees.map((tree) => {
+					const currency = treeCurrency(tree);
+					const nodes = tree.Nodes.map((node) => ({ node, page: getItemPage(node.Id), after: getItemPage(node.Parent) })).filter((row) => row.page);
+					return (
+						<details class="cr-details">
+							<summary>
+								<h3 class="m-0 text-[1.0625rem] font-semibold">{tree.Name || group.Name}</h3>
+								<span class="cr-sum-meta tabular">
+									{nodes.length} blueprints{currency && ` · ${currency.name}`}
+								</span>
+							</summary>
+							<div class="cr-details-body">
+								<table class="cr-table stack">
+									<thead>
+										<tr>
+											<th scope="col">Blueprint</th>
+											<th scope="col" class="num">Cost</th>
+											<th scope="col">Unlocks after</th>
+										</tr>
+									</thead>
+									<tbody>
+										{nodes.map(({ node, page, after }) => {
+											// The game's RecipeCost / FragmentCost for the blueprint, paid in the tree's currency.
+											const price = node.Price;
+											return (
+												<tr>
+													<th scope="row">
+														<span class="rt-item">
+															{page!.icon && <img src={`${SITE.imageBaseUrl}${toWebp(page!.icon)}`} alt="" width="32" height="32" loading="lazy" />}
+															<a href={page!.url} class="link">{page!.name}</a>
+														</span>
+													</th>
+													<td data-label="Cost" class="num">{price !== null && currency ? `${price.toLocaleString('en-US')} ${currency.name}` : '—'}</td>
+													<td data-label="Unlocks after">{after ? <a href={after.url} class="link">{after.name}</a> : 'Start of tree'}</td>
+												</tr>
+											);
+										})}
+									</tbody>
+								</table>
+							</div>
+						</details>
+					);
+				})}
+			</section>
+		))}
+	</div>
+</Layout>
+
+<style>
+	.rt-jump ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.5rem; padding: 0; list-style: none; }
+	.rt-jump a { display: inline-flex; padding: .3rem .7rem; border: 1px solid var(--color-line-strong); border-radius: 999px; font-size: .875rem; color: var(--color-ink); }
+	.rt-jump a:hover { border-color: var(--color-dim); }
+	.rt-item { display: inline-flex; align-items: center; gap: .55rem; }
+	.rt-item img { width: 2rem; height: 2rem; flex: none; }
+</style>
