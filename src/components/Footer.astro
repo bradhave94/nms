@@ -1,17 +1,18 @@
 ---
 import { SITE } from '@config';
-import { toolsNav, calculatorsNav, catalogsNav, moreNav, footerExtraNav } from '../config/nav';
+import { toolsNav, calculatorsNav, catalogsNav, referenceNav, moreNav, footerExtraNav } from '../config/nav';
 
 const columns = [
 	{ title: 'Tools', items: [...toolsNav, ...calculatorsNav.slice(1)] },
 	{ title: 'Catalogs', items: catalogsNav },
+	{ title: 'Reference', items: referenceNav },
 	{ title: 'More', items: [...moreNav, ...footerExtraNav] },
 ];
 ---
 
 <footer class="border-t border-[#141c26] bg-[#05080b] lg:pl-56">
 	<div class="mx-auto max-w-6xl px-6 pt-12 pb-28 lg:pb-32">
-		<nav class="grid gap-8 sm:grid-cols-[1fr_2fr_1fr]" aria-label="Footer">
+		<nav class="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1fr_2fr_1fr_1fr]" aria-label="Footer">
 			{columns.map((col) => (
 				<div>
 					<p class="m-0 mb-3 text-sm font-semibold text-dim">{col.title}</p>
