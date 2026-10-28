@@ -59,6 +59,7 @@ export default {
       { phase: 'test', run: 'pnpm run check:all' },         // type-check + lint
       { phase: 'build', run: 'pnpm run build' },
       { phase: 'check', run: 'pnpm run test:new-items' },   // reads dist/client/new/
+      { phase: 'check', run: 'pnpm run test:player-unlocks' }, // reads dist/client/titles/
       { phase: 'check', run: 'pnpm run test:legacy-redirects' },
       { phase: 'audit', run: 'node scripts/seo-audit.mjs' },
     ],

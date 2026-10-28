@@ -34,6 +34,7 @@ export const catalogsNav: NavItem[] = [
 	{ name: 'Raw materials', href: '/raw/', icon: 'bolt' },
 	{ name: 'Starships', href: '/starships/', icon: 'paper-airplane' },
 	{ name: 'Technology', href: '/technology/', icon: 'cog' },
+	{ name: 'Titles', href: '/titles/', icon: 'sparkles' },
 	{ name: 'Upgrades', href: '/upgrades/', icon: 'wrench' },
 ];
 
