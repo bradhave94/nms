@@ -43,6 +43,10 @@ export const referenceNav: NavItem[] = [
 	{ name: 'Frigate traits', href: '/frigate-traits/', icon: 'rocket-launch' },
 	{ name: 'Settlement perks', href: '/settlement-perks/', icon: 'home-modern' },
 	{ name: 'Research trees', href: '/research-trees/', icon: 'beaker' },
+	{ name: 'Expeditions', href: '/expeditions/', icon: 'globe-alt' },
+	{ name: 'Milestones and ranks', href: '/milestones/', icon: 'shield' },
+	{ name: 'Inventory slots', href: '/inventory-slots/', icon: 'archive-box' },
+	{ name: 'Trading', href: '/trading/', icon: 'scale' },
 ];
 
 export const moreNav: NavItem[] = [

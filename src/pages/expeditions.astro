@@ -1,0 +1,110 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
+import { expeditionAnchor, expeditions } from '@utils/progressionData';
+import { titleParts } from '@utils/playerUnlocks';
+import { SITE } from '@config';
+import { toWebp } from '@utils/icons';
+import '../assets/css/creatures.css';
+
+const list = expeditions();
+
+const title = withSiteTitle("Every No Man's Sky Expedition and Its Rewards");
+const description = `All ${list.length} No Man's Sky expeditions, from The Pioneers to ${list.at(-1)?.name}, with the rewards from each phase and the title each one grants.`;
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Expeditions' }];
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/expeditions/', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: "No Man's Sky expeditions",
+	collectionDescription: description,
+	collectionPath: '/expeditions',
+	currentPage: 1,
+	breadcrumbs,
+	items: list.map((expedition, index) => ({
+		name: `Expedition ${expedition.number}: ${expedition.name}`,
+		url: `${canonicalUrl}#${expeditionAnchor(expedition.number)}`,
+		position: index + 1,
+	})),
+});
+---
+
+<Layout {title} {description} slug="expeditions" {structuredData} {breadcrumbs}>
+	<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+	<div class="cr-wrap">
+		<header class="cr-head">
+			<div class="min-w-0">
+				<h1 class="cr-title">Expeditions</h1>
+				<p class="cr-lead">
+					All {list.length} expeditions so far, the rewards the game lists for each phase, and the title each one grants.
+				</p>
+			</div>
+		</header>
+
+		<nav class="ex-jump" aria-label="Expeditions">
+			<ul>
+				{list.map((expedition) => <li><a href={`#${expeditionAnchor(expedition.number)}`}>{expedition.number}. {expedition.name}</a></li>)}
+			</ul>
+		</nav>
+
+		{list.map((expedition) => {
+			const [before, after] = titleParts(expedition.title ?? '');
+			return (
+				<section class="cr-section" id={expeditionAnchor(expedition.number)} aria-labelledby={`${expeditionAnchor(expedition.number)}-heading`}>
+					<h2 class="section-title" id={`${expeditionAnchor(expedition.number)}-heading`}>
+						Expedition {expedition.number}: {expedition.name}
+					</h2>
+					{expedition.description && <p>{expedition.description}</p>}
+					{expedition.title && (
+						<p class="ex-title">
+							Title:{' '}
+							{expedition.titleAnchor ? (
+								<a class="link" href={`/titles/#${expedition.titleAnchor}`}>{before}<span class="ex-name">Traveller</span>{after}</a>
+							) : (
+								<>{before}<span class="ex-name">Traveller</span>{after}</>
+							)}
+						</p>
+					)}
+					{expedition.phases.length > 0 ? (
+						<div class="ex-phases">
+							{expedition.phases.map(({ phase, rewards }) => (
+								<div class="ex-phase">
+									<h3 class="cr-h3">{phase ? `Phase ${phase}` : 'Other rewards'}</h3>
+									<ul class="ex-rewards">
+										{rewards.map(({ item, switchOnly }) => (
+											<li>
+												{item.icon && <img src={`${SITE.imageBaseUrl}${toWebp(item.icon)}`} alt="" width="32" height="32" loading="lazy" />}
+												<a class="link" href={item.url}>{item.name}</a>
+												{switchOnly && <span class="ex-note"> (Nintendo Switch only)</span>}
+											</li>
+										))}
+									</ul>
+								</div>
+							))}
+						</div>
+					) : (
+						<p class="cr-note">No redeemable rewards are listed for this expedition.</p>
+					)}
+				</section>
+			);
+		})}
+	</div>
+</Layout>
+
+<style>
+	.ex-jump ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1.5rem; padding: 0; list-style: none; }
+	.ex-jump a { display: inline-flex; padding: .3rem .7rem; border: 1px solid var(--color-line-strong); border-radius: 999px; font-size: .875rem; color: var(--color-ink); }
+	.ex-jump a:hover { border-color: var(--color-dim); }
+	.ex-title { margin: 0 0 1rem; color: var(--color-ink); }
+	.ex-name { color: var(--color-dim); font-style: italic; }
+	.ex-phases { display: grid; gap: 0 2rem; grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr)); }
+	.ex-phases .cr-h3 { margin-top: .75rem; font-size: 1rem; }
+	.ex-rewards { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; }
+	.ex-rewards li { display: flex; align-items: center; gap: .5rem; font-size: .9375rem; }
+	.ex-rewards img { width: 2rem; height: 2rem; flex: none; }
+	.ex-note { color: var(--color-dim); font-size: .8125rem; }
+</style>

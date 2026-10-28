@@ -1,0 +1,126 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
+import { CLASSES, classOdds, multiToolMaxSlots, shipMaxSlots, shipStatTables, weaponStatTables } from '@utils/progressionData';
+import '../assets/css/creatures.css';
+
+const ships = shipMaxSlots();
+const odds = classOdds();
+const shipStats = shipStatTables();
+const weaponStats = weaponStatTables();
+
+const title = withSiteTitle("Max Inventory Slots by Ship and Class in No Man's Sky");
+const description = "The most inventory and tech slots every No Man's Sky starship type and the Multi-Tool can reach by class, the odds of each class, and base stat ranges.";
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Inventory slots' }];
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/inventory-slots/', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: "No Man's Sky inventory slots and classes",
+	collectionDescription: description,
+	collectionPath: '/inventory-slots',
+	currentPage: 1,
+	breadcrumbs,
+	items: [
+		{ name: 'Starship max slots', url: `${canonicalUrl}#starships`, position: 1 },
+		{ name: 'Multi-Tool max slots', url: `${canonicalUrl}#multi-tool`, position: 2 },
+		{ name: 'Class odds', url: `${canonicalUrl}#class-odds`, position: 3 },
+		{ name: 'Base stats by class', url: `${canonicalUrl}#base-stats`, position: 4 },
+	],
+});
+---
+
+<Layout {title} {description} slug="inventory-slots" {structuredData} {breadcrumbs}>
+	<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+	<div class="cr-wrap">
+		<header class="cr-head">
+			<div class="min-w-0">
+				<h1 class="cr-title">Inventory slots</h1>
+				<p class="cr-lead">
+					The most slots each starship type and the Multi-Tool can be upgraded to at each class, how likely each class is, and the base stat ranges a class rolls.
+				</p>
+			</div>
+		</header>
+
+		<section class="cr-section" id="starships" aria-labelledby="starships-heading">
+			<h2 class="section-title" id="starships-heading">Starship max slots</h2>
+			<p>General inventory / technology slots once fully upgraded. For most types the limit rises with class.</p>
+			<table class="cr-table stack is-table">
+				<thead>
+					<tr><th scope="col">Type</th>{CLASSES.map((grade) => <th scope="col" class="num">{grade}-class</th>)}</tr>
+				</thead>
+				<tbody>
+					{ships.map((ship) => (
+						<tr>
+							<th scope="row">{ship.label}</th>
+							{CLASSES.map((grade) => (
+								<td data-label={`${grade}-class`} class="num">{ship.general[grade]} / {ship.tech[grade]}{ship.cargo && ` / ${ship.cargo[grade]}`}</td>
+							))}
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</section>
+
+		<section class="cr-section" id="multi-tool" aria-labelledby="multi-tool-heading">
+			<h2 class="section-title" id="multi-tool-heading">Multi-Tool max slots</h2>
+			<table class="cr-table stack is-table">
+				<thead><tr><th scope="col">Multi-Tool</th>{CLASSES.map((grade) => <th scope="col" class="num">{grade}-class</th>)}</tr></thead>
+				<tbody>
+					<tr>
+						<th scope="row">Any type</th>
+						{CLASSES.map((grade) => <td data-label={`${grade}-class`} class="num">{multiToolMaxSlots[grade]}</td>)}
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="cr-section" id="class-odds" aria-labelledby="class-odds-heading">
+			<h2 class="section-title" id="class-odds-heading">Class odds</h2>
+			<p>The game's chance of each class by a system's wealth.</p>
+			<table class="cr-table stack is-table">
+				<thead><tr><th scope="col">System</th>{CLASSES.map((grade) => <th scope="col" class="num">{grade}-class</th>)}</tr></thead>
+				<tbody>
+					{odds.map((row) => (
+						<tr>
+							<th scope="row">{row.wealth}</th>
+							{CLASSES.map((grade) => <td data-label={`${grade}-class`} class="num">{row.odds[grade]}%</td>)}
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</section>
+
+		<section class="cr-section" id="base-stats" aria-labelledby="base-stats-heading">
+			<h2 class="section-title" id="base-stats-heading">Base stats by class</h2>
+			<p>The range a new ship or Multi-Tool rolls for each base stat at each class, as the game stores it.</p>
+			{[{ heading: 'Starships', tables: shipStats }, { heading: 'Multi-Tools', tables: weaponStats }].map((group) => (
+				<>
+					<h3 class="cr-h3">{group.heading}</h3>
+					{group.tables.map((table) => (
+						<details class="cr-details">
+							<summary><h4 class="m-0 text-[1rem] font-semibold">{table.label}</h4></summary>
+							<div class="cr-details-body">
+								<table class="cr-table stack is-table">
+									<thead><tr><th scope="col">Stat</th>{CLASSES.map((grade) => <th scope="col" class="num">{grade}-class</th>)}</tr></thead>
+									<tbody>
+										{table.rows.map((row) => (
+											<tr>
+												<th scope="row">{row.stat}</th>
+												{CLASSES.map((grade) => <td data-label={`${grade}-class`} class="num">{row.byClass[grade]}</td>)}
+											</tr>
+										))}
+									</tbody>
+								</table>
+							</div>
+						</details>
+					))}
+				</>
+			))}
+		</section>
+	</div>
+</Layout>

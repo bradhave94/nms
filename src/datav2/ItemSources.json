@@ -4,139 +4,208 @@
 			"Number": 1,
 			"Remix": 0,
 			"DisplayNumber": 1,
-			"Name": "The Pioneers"
+			"Name": "The Pioneers",
+			"Description": "Blaze a trail as one of the first of a new group of pioneers.",
+			"FinalReward": "RS_S1_COMPLETE",
+			"Title": "Pioneer %NAME%"
 		},
 		{
 			"Number": 2,
 			"Remix": 0,
 			"DisplayNumber": 2,
-			"Name": "Beachhead"
+			"Name": "Beachhead",
+			"Description": "Delve into the mystery of a starship from another universe...",
+			"FinalReward": "RS_S2_COMPLETE",
+			"Title": "Paragon %NAME%"
 		},
 		{
 			"Number": 3,
 			"Remix": 0,
 			"DisplayNumber": 3,
-			"Name": "The Cartographers"
+			"Name": "The Cartographers",
+			"Description": "Explore a planet in detail as you struggle to escape its surface.",
+			"FinalReward": "RS_S3_COMPLETE",
+			"Title": "Globemaster %NAME%"
 		},
 		{
 			"Number": 4,
 			"Remix": 0,
 			"DisplayNumber": 4,
-			"Name": "Emergence"
+			"Name": "Emergence",
+			"Description": "Face the titan worm and its many-mouthed vessels.",
+			"FinalReward": "RS_S4_COMPLETE",
+			"Title": "Worm Lord %NAME%"
 		},
 		{
 			"Number": 9,
 			"Remix": 0,
 			"DisplayNumber": 5,
-			"Name": "Exobiology"
+			"Name": "Exobiology",
+			"Description": "Befriend, nurture, and interact with the creatures of the universe in a gentle journey of discovery.",
+			"FinalReward": "RS_S5_COMPLETE",
+			"Title": "Exobiologist %NAME%"
 		},
 		{
 			"Number": 10,
 			"Remix": 0,
 			"DisplayNumber": 6,
-			"Name": "The Blighted"
+			"Name": "The Blighted",
+			"Description": "Hunt down a rampaging pirate faction and uncover their secret treasure.",
+			"FinalReward": "RS_S6_COMPLETE",
+			"Title": "%NAME%, Hunter of the Blight"
 		},
 		{
 			"Number": 11,
 			"Remix": 0,
 			"DisplayNumber": 7,
-			"Name": "Leviathan"
+			"Name": "Leviathan",
+			"Description": "DEATH IS NOT THE END SLASH THE LOOP CONTINUES",
+			"FinalReward": "RS_S7_COMPLETE",
+			"Title": "Looper %NAME%"
 		},
 		{
 			"Number": 12,
 			"Remix": 0,
 			"DisplayNumber": 8,
-			"Name": "Polestar"
+			"Name": "Polestar",
+			"Description": "Cruise across the galaxy on an interstellar freighter voyage.",
+			"FinalReward": "RS_S8_COMPLETE",
+			"Title": "%NAME%, the Seeker"
 		},
 		{
 			"Number": 17,
 			"Remix": 0,
 			"DisplayNumber": 9,
-			"Name": "Utopia"
+			"Name": "Utopia",
+			"Description": "The Utopia Foundation welcomes all contributors to our ambitious new communal habitation project.",
+			"FinalReward": "RS_S9_COMPLETE",
+			"Title": "Utopia Dignitary %NAME%"
 		},
 		{
 			"Number": 18,
 			"Remix": 0,
 			"DisplayNumber": 10,
-			"Name": "Singularity"
+			"Name": "Singularity",
+			"Description": "Solve a mystery that echoes deep within the fabric of reality",
+			"FinalReward": "RS_S10_COMPLETE",
+			"Title": "%NAME%, the Construct"
 		},
 		{
 			"Number": 19,
 			"Remix": 0,
 			"DisplayNumber": 11,
-			"Name": "Voyagers"
+			"Name": "Voyagers",
+			"Description": "Explore the universe and catalogue its marvels",
+			"FinalReward": "RS_S11_COMPLETE",
+			"Title": "%NAME%, the Intrepid"
 		},
 		{
 			"Number": 24,
 			"Remix": 0,
 			"DisplayNumber": 12,
-			"Name": "Omega"
+			"Name": "Omega",
+			"Description": "Begin a journey that has no end, on an infinite road into the stars.",
+			"FinalReward": "RS_S12_COMPLETE",
+			"Title": "%NAME%, the Starborn"
 		},
 		{
 			"Number": 26,
 			"Remix": 0,
 			"DisplayNumber": 13,
-			"Name": "Adrift"
+			"Name": "Adrift",
+			"Description": "Alone in an empty universe, the Adrift Expedition redefines what it means to survive among the stars...",
+			"FinalReward": "RS_S13_COMPLETE",
+			"Title": "%NAME% the Drifter"
 		},
 		{
 			"Number": 27,
 			"Remix": 0,
 			"DisplayNumber": 14,
-			"Name": "Liquidators"
+			"Name": "Liquidators",
+			"Description": "The vile brood spread their corruption across the universe... Join the Liquidators Expedition and purge the rot from the stars!",
+			"FinalReward": "RS_S14_COMPLETE",
+			"Title": "Broodling %NAME%"
 		},
 		{
 			"Number": 28,
 			"Remix": 0,
 			"DisplayNumber": 15,
-			"Name": "Aquarius"
+			"Name": "Aquarius",
+			"Description": "Join the Aquarius Expedition to catch fish, gather stories, and think about the one that got away...",
+			"FinalReward": "RS_S15_COMPLETE",
+			"Title": "%NAME% the Fisher"
 		},
 		{
 			"Number": 29,
 			"Remix": 0,
 			"DisplayNumber": 16,
-			"Name": "The Cursed"
+			"Name": "The Cursed",
+			"Description": "Join the Cursed Expedition to travel beyond the boundaries and cross over into a universe of haunting anomalies...",
+			"FinalReward": "RS_S16_COMPLETE",
+			"Title": "%NAME% the Haunted"
 		},
 		{
 			"Number": 36,
 			"Remix": 0,
 			"DisplayNumber": 17,
-			"Name": "Titan"
+			"Name": "Titan",
+			"Description": "Join the Titan Expedition on a voyage through a dazzling array of new worlds and new stars...",
+			"FinalReward": "RS_S17_COMPLETE",
+			"Title": "%NAME%, Surveyor of Worlds"
 		},
 		{
 			"Number": 37,
 			"Remix": 0,
 			"DisplayNumber": 18,
-			"Name": "Relics"
+			"Name": "Relics",
+			"Description": "Join the Relics Expedition to unearth ancient treasures and recreate the lost beasts of the past...",
+			"FinalReward": "RS_S18_COMPLETE",
+			"Title": "Excavator %NAME%"
 		},
 		{
 			"Number": 38,
 			"Remix": 0,
 			"DisplayNumber": 19,
-			"Name": "Corvette"
+			"Name": "Corvette",
+			"Description": "Design, assemble and upgrade a habitable starship: your home in the stars and your refuge from the Sentinel horde.",
+			"FinalReward": "RS_S19_COMPLETE",
+			"Title": "Shipwright %NAME%"
 		},
 		{
 			"Number": 39,
 			"Remix": 0,
 			"DisplayNumber": 20,
-			"Name": "Breach"
+			"Name": "Breach",
+			"Description": "Sail through the stars, confronting both the awe and the horror that lurks in deep space...",
+			"FinalReward": "RS_S20_COMPLETE",
+			"Title": "%NAME%, the Celestial"
 		},
 		{
 			"Number": 45,
 			"Remix": 0,
 			"DisplayNumber": 21,
-			"Name": "Remnant"
+			"Name": "Remnant",
+			"Description": "Sign up for heavy-duty industrial salvage! Drive cross-country and strip the desert of industrial waste. Collect material with the powerful Gravitino Coil and transport your haul across the planet.",
+			"FinalReward": "RS_S21_COMPLETE",
+			"Title": "Mag-Field Expert %NAME%"
 		},
 		{
 			"Number": 46,
 			"Remix": 0,
 			"DisplayNumber": 22,
-			"Name": "Swarm"
+			"Name": "Swarm",
+			"Description": "A new threat has surfaced. The Traveller soul is fragmented, and something terrible hangs in the sky...",
+			"FinalReward": "RS_S22_COMPLETE",
+			"Title": "%NAME%, the Fragmented"
 		},
 		{
 			"Number": 47,
 			"Remix": 0,
 			"DisplayNumber": 23,
-			"Name": "Our Journey Continues"
+			"Name": "Our Journey Continues",
+			"Description": "Travel through iterations of an infinite universe on a special anniversary expedition.",
+			"FinalReward": "RS_S23_COMPLETE",
+			"Title": "Time Traveller %NAME%"
 		}
 	],
 	"Exchanges": [

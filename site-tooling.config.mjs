@@ -61,6 +61,7 @@ export default {
       { phase: 'check', run: 'pnpm run test:new-items' },   // reads dist/client/new/
       { phase: 'check', run: 'pnpm run test:player-unlocks' }, // reads dist/client/titles/
       { phase: 'check', run: 'pnpm run test:reference-pages' }, // reads the reference pages and item "How to get" sections
+      { phase: 'check', run: 'pnpm run test:progression-pages' }, // reads /expeditions, /milestones, /inventory-slots, /trading
       { phase: 'check', run: 'pnpm run test:legacy-redirects' },
       { phase: 'audit', run: 'node scripts/seo-audit.mjs' },
     ],

@@ -84,7 +84,10 @@
 		"FrigateTraits": 178,
 		"SettlementPerks": 90,
 		"ItemSources": 1,
-		"ResearchTrees": 1
+		"ResearchTrees": 1,
+		"Milestones": 1,
+		"Inventory": 1,
+		"Trading": 1
 	},
 	"localizationCount": 84964,
 	"sources": {
@@ -132,6 +135,9 @@
 		"costtable.MXML": "62a02e7c5726dddbc43e6c14d2da5e7d36b5c973ae8c33893f14d32b8e9c0daf",
 		"nms_dialog_gcalienpuzzletable.MXML": "beb542a51f5759474d87cbb7104d4154a6c44ea9e2997ebb968519a3efc0c4b9",
 		"unlockableitemtrees.MXML": "64b80c49b288844dddef98e7eacfcedf98c495b15939b969032ecd522fe0036a",
+		"journeymilestonetable.MXML": "d4fbafc866c4abc3b07c48b25bf06753b95192803494c562481c10cd3d1af473",
+		"inventorytable.MXML": "ac85753cd8b06592afffd3f38732b36b07285b9d3d48f994422281ddbf897eaf",
+		"tradingclassdatatable.MXML": "7becc91443b798f5a02dd3156f4e21427e59f21043fc0dd4217de386e328046f",
 		"gccreatureglobals.MXML": "4d542dd6f920c7f8de57af2b236e72e21ef1f394dc040a878fd5ece8c8444a2f"
 	},
 	"outputs": {
@@ -146,9 +152,11 @@
 		"Fish.json": "991ed1f3ca74d48d7c793135a690cde478815449b80d0fd58ebadc4da05a61b5",
 		"Food.json": "a94ebce418ff1ce625d9a2dd168116e6edcd87e913d09715d9a87de25d1a340d",
 		"FrigateTraits.json": "a016faf3f678137698c3d5fdb9b1c131953de07239cb80f5c41f59c515fcc504",
-		"ItemSources.json": "e888ae74847e3d496299a20b664d2055729a61be7ea847ce4a1ed1ed68d919b6",
+		"Inventory.json": "ef981292b4f12ce25de5fe7a09d7fb1b9b10aef301e703a66a268277d8e4075e",
+		"ItemSources.json": "18f212045136b2d6df047903f6b48e83f69b49619c376a45315ea8f67188985b",
 		"localization.json": "69e33d0f4956e2da45749c1f72ce356d0bb7621ab368129a356d750fee076aaf",
-		"new.json": "672be33b8f2b01b9edd776030f0444ee974957c54b2890a6913f35454e4e05b1",
+		"Milestones.json": "06b126e913ec30d3d194d7309e19d9193e1fdab757f77b069626f73560f5bb03",
+		"new.json": "418e5c4db02565727d3e7b28ce1d0968045b3b274e8d8e15b9816a0052040a87",
 		"none.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
 		"NutrientProcessor.json": "5cd92d03221d680c03c7160a362cb54df235c6719dca0474d3762a3e8b16b93b",
 		"Others.json": "87ffd177891d984dc5f5b2ae4edb32230f58ddfa3d5475ed1641a1805cdb69ba",
@@ -163,6 +171,7 @@
 		"TechnologyModule.json": "22ef116bc95139afef7d532ada3aeb50b201d7af5bc0e2cbdfa1f53b6d075359",
 		"Titles.json": "477ca552f0ef2adecb7c848a8d391664a034579776b8445a65368ee9df4d59c3",
 		"Trade.json": "9edfae4e8d15c2329e25e8044a5bd3b2364f9b2a3891b37a4c681a8e8dfcd2fa",
+		"Trading.json": "2cddf11ac1fea12d586867684c732fec5f5fe778dec61ad3f3929dd4249bf66c",
 		"Upgrades.json": "78e3a41cfa810cb87812f2839b90483cd66aa251190b97c58375e29f3b24ba08"
 	}
 }

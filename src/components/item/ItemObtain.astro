@@ -22,7 +22,7 @@ const hasAny = obtain.length + blueprints.length + trades.length > 0;
 			<ul class="obtain-list">
 				{obtain.map((line) =>
 					line.kind === 'text' ? (
-						<li>{line.text}</li>
+						<li>{line.href ? <a class="link" href={line.href}>{line.text}</a> : line.text}</li>
 					) : (
 						<li>
 							{line.currency ? `Buy ${line.amount} from ${line.who} for ` : `Trade `}
