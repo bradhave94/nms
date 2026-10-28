@@ -19,9 +19,12 @@ import CookedToCreate from '@components/item/CookedToCreate.astro';
 import UsedToCreate from '@components/item/UsedToCreate.astro';
 import ItemFaq from '@components/item/ItemFaq.astro';
 import ItemWhereToFind from '@components/item/ItemWhereToFind.astro';
+import ItemObtain from '@components/item/ItemObtain.astro';
 import NitroAd from '@components/ads/NitroAd.astro';
 import { getItemUpdateMeta } from '@utils/updateChanges';
 import { getById, getSlug } from '@utils/lookup.js';
+import { blueprintPrice } from '@utils/referenceData';
+import { toWebp } from '@utils/icons';
 import type { Item } from '@utils/lookup.js';
 import { getGrowTimeHeader, getPlantGrowTime } from '@utils/plantGrowTime.js';
 import { createArray } from '@utils/recipeTree';
@@ -119,13 +122,22 @@ const blueprintIconByType: Record<string, string> = {
   nanites: `${SITE.imageBaseUrl}TECHFRAG_R.webp`,
   factoryoverride: `${SITE.imageBaseUrl}FACT_TOKEN.webp`,
 };
-const blueprintCost = extra.BlueprintCost ?? 0;
-const blueprintIcon = extra.BlueprintCostType ? blueprintIconByType[extra.BlueprintCostType.toLowerCase()] : undefined;
-if (blueprintCost > 0 && blueprintIcon) {
-  pills.push({
-    label: `Blueprint ${blueprintCost.toLocaleString()}${extra.BlueprintCostType && extra.BlueprintCostType !== 'None' ? ` ${extra.BlueprintCostType}` : ''}`,
-    icon: blueprintIcon,
-  });
+// The extractor stores 1 as every technology's BlueprintCost. When a research tree sells the
+// blueprint, show the game's price in that tree's currency (Nanites, Salvaged Frigate Modules…);
+// otherwise keep the item's own value, except the placeholder 1.
+const research = blueprintPrice(item.Id);
+if (research) {
+  const icon = research.currency.id === 'Nanites' ? blueprintIconByType.nanites : research.currency.icon ? `${SITE.imageBaseUrl}${toWebp(research.currency.icon)}` : undefined;
+  if (icon) pills.push({ label: `Blueprint ${research.price.toLocaleString()} ${research.currency.name}`, icon });
+} else {
+  const blueprintCost = extra.BlueprintCostType === 'Nanites' && extra.BlueprintCost === 1 ? 0 : (extra.BlueprintCost ?? 0);
+  const blueprintIcon = extra.BlueprintCostType ? blueprintIconByType[extra.BlueprintCostType.toLowerCase()] : undefined;
+  if (blueprintCost > 0 && blueprintIcon) {
+    pills.push({
+      label: `Blueprint ${blueprintCost.toLocaleString()}${extra.BlueprintCostType && extra.BlueprintCostType !== 'None' ? ` ${extra.BlueprintCostType}` : ''}`,
+      icon: blueprintIcon,
+    });
+  }
 }
 
 // ── Details (right column) ──
@@ -294,6 +306,7 @@ const aboutInMain = mainWeight === 0 && !hasUses;
     <div class="item-main">
       {aboutInMain && <ItemAbout description={item.Description} facts={facts} />}
       <ItemWhereToFind itemName={item.Name} paragraphs={whereToFind} />
+      <ItemObtain item={item} />
       {showTree && <CraftingSection item={item} data={craftTree} rawItems={rawItems} isFoodItem={isFoodItem} />}
       <RefiningSection item={item} rows={refineRows} />
       <CookingSection item={item} rows={cookRows} />

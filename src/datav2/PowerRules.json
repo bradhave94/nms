@@ -2,6 +2,7 @@
 	"Provenance": {
 		"GameVersion": "7.10",
 		"ObservedDate": "2026-10-28",
+		"SteamBuildId": "26271400",
 		"CompilerVersion": "7.10.0.1",
 		"Sources": {
 			"gcskyglobals.globals.MXML": "8efcf079684eb172906ba355bbbfae47ff74f660ba11dc3241f4509ba8c770d6",

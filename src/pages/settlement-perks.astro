@@ -1,0 +1,85 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
+import { effectRange, groupPerks, perkName, templateText } from '@utils/referenceData';
+import '../assets/css/creatures.css';
+
+const groups = groupPerks();
+const shown = groups.reduce((sum, group) => sum + group.perks.length, 0);
+
+const title = withSiteTitle("Settlement Perks in No Man's Sky: Every Effect");
+const description = `All ${shown} No Man's Sky settlement perks and what they change: happiness, production, upkeep, population and Sentinel presence.`;
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Settlement perks' }];
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/settlement-perks/', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: "No Man's Sky settlement perks",
+	collectionDescription: description,
+	collectionPath: '/settlement-perks',
+	currentPage: 1,
+	breadcrumbs,
+	items: groups.map((group, index) => ({ name: group.heading, url: `${canonicalUrl}#${group.key}`, position: index + 1 })),
+});
+---
+
+<Layout {title} {description} slug="settlement-perks" {structuredData} {breadcrumbs}>
+	<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+	<div class="cr-wrap">
+		<header class="cr-head">
+			<div class="min-w-0">
+				<h1 class="cr-title">Settlement perks</h1>
+				<p class="cr-lead">
+					Every perk a settlement can have and the stats each one moves, in the game's own units. Where a perk shows a range, the game picks a value in it.
+				</p>
+			</div>
+		</header>
+
+		{groups.map((group) => (
+			<section class="cr-section" id={group.key} aria-labelledby={`${group.key}-heading`}>
+				<h2 class="section-title" id={`${group.key}-heading`}>
+					{group.heading} <span class="count tabular">{group.perks.length}</span>
+				</h2>
+				<p>{group.lead}</p>
+				<table class="cr-table stack">
+					<thead>
+						<tr>
+							<th scope="col">Perk</th>
+							<th scope="col">Effect</th>
+							<th scope="col">In game</th>
+						</tr>
+					</thead>
+					<tbody>
+						{group.perks.map((perk) => (
+							<tr>
+								<th scope="row">{perkName(perk.Name)}</th>
+								<td data-label="Effect">
+									<span class="sp-effects">
+										{perk.Effects.length
+											? perk.Effects.map((effect) => (
+													<span class={effect.Strength.startsWith('Negative') ? 'sp-bad' : 'sp-good'}>
+														{effect.Label} {effectRange(effect)}
+													</span>
+												))
+											: '—'}
+									</span>
+								</td>
+								<td data-label="In game">{templateText(perk.Description, '—')}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</section>
+		))}
+	</div>
+</Layout>
+
+<style>
+	.sp-effects { display: flex; flex-direction: column; gap: .15rem; }
+	.sp-good { color: #86efac; }
+	.sp-bad { color: #fda4af; }
+</style>
