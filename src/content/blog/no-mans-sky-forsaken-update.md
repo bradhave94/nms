@@ -2,7 +2,7 @@
 title: "No Man's Sky Forsaken Update 7.10: Traders, Mementos & More"
 description: "What the No Man's Sky Forsaken update (7.10) adds: forsaken traders, haunting mementos, biomechanical corvette parts, courier missions and seamless warping."
 pubDate: 2026-10-28
-updatedDate: 2026-10-28
+updatedDate: 2026-10-29
 heroImage: "/images/blog/no-mans-sky-forsaken-update.webp"
 category: "blog"
 tags:
@@ -29,9 +29,9 @@ faqs:
   - question: "Where do you find haunting mementos?"
     answer: "Hello Games lists infested outposts, deep-space hulks, derelict freighters and planetary digsites. Harvesting them for too long attracts hostile boundary horrors."
   - question: "Where are forsaken traders?"
-    answer: "They can be summoned at space outposts, according to the patch notes. They trade corvette modules for mementos and sell the Larva Cannon Multi-Tool for preserved grubs."
+    answer: "You summon them at deep-space outposts. They swap corvette modules for an offering of mementos, and the Larva Cannon Multi-Tool costs 5 Preserved Grubs."
   - question: "How do you get the Larva Tank helmet?"
-    answer: "Hello Games says Travellers who dedicate themselves to harvesting haunting mementos can claim it, along with the Mind Harvester title. The exact requirement isn't published."
+    answer: "Gather 20 haunting mementos. That unlocks the Mind Harvester title, and the title unlocks the Larva Tank helmet."
   - question: "What do you need for space courier missions?"
     answer: "A corvette and a Gravitino Coil. The missions are picked up at deep-space outposts."
   - question: "Is Forsaken on iOS?"
@@ -40,7 +40,7 @@ faqs:
 
 The No Man's Sky Forsaken update is version 7.10, and it landed on 28 October 2026, right in time for Halloween. It's a spooky one: you scavenge haunted wrecks for mementos, trade them to strange new aliens, and bolt the results onto your corvette. It also sneaks in a pile of long-requested quality-of-life changes, and No Man's Sky launched on iPhone and iPad the same day.
 
-This post sticks to what Hello Games has actually published. The update isn't in our item database yet, so the new items don't have pages on this site. I'll add links once the data is extracted.
+This post sticks to what Hello Games has published and what's in the 7.10 game files. The update is now in our item database, so the new parts and mementos link to their own pages, and the full list is on the [new items page](/new/).
 
 ## What the Forsaken update adds
 
@@ -61,7 +61,16 @@ This is the core loop. Haunting mementos are described as "bizarre, horrifying b
 
 Don't hang around while you harvest them. The patch notes say prolonged exposure draws hostile boundary horrors.
 
-Forsaken traders can be summoned at space outposts. They collect mementos and pay you in corvette modules: cockpits, habs and biomechanical hull structures. Hello Games hasn't published exchange rates or a full stock list, so I won't guess at prices.
+There are six mementos in the 7.10 data, each a different nasty thing in a jar of formaldehyde:
+
+- [Preserved Brain](/curiosities/SPOOK_PACKAGE1/)
+- [Preserved Grub](/curiosities/SPOOK_PACKAGE2/)
+- [Preserved Sample](/curiosities/SPOOK_PACKAGE3/)
+- [Preserved Eyeball](/curiosities/SPOOK_PACKAGE4/)
+- [Preserved Egg](/curiosities/SPOOK_PACKAGE5/)
+- [Preserved Horror](/curiosities/SPOOK_PACKAGE6/)
+
+Forsaken traders are summoned at deep-space outposts. They collect mementos and pay you in corvette modules: cockpits, habs and biomechanical hull structures. There's no fixed price list. You pick a piece, build an offering out of mementos, and the trader judges it on a scale that runs from "Unacceptable" up to "Pleasing." The game files don't say which offering clears the bar for which piece, so I won't guess.
 
 ## Biomechanical corvette modules and cockpits
 
@@ -71,18 +80,18 @@ Four cockpits are named in the update:
 
 | Cockpit | What Hello Games says |
 |---|---|
-| Vantage-class | Ultra-wide, with a broad view of space and a minimalist interior |
-| Hornet-class | Segmented, insect-like panels, in three variants |
-| Viper-class | Underlit leather-bound panels and a gridded viewport, in three variants |
-| Mantis-class | Square-cornered panels and titanium bars, with three vent and fuselage varieties |
+| [Vantage-class](/corvette/B_COK_E/) | Ultra-wide, with a broad view of space and a minimalist interior |
+| [Hornet-class](/corvette/B_COK_C1/) | Segmented, insect-like panels, in three variants (i, ii and iii) |
+| [Viper-class](/corvette/B_COK_C4/) | Underlit leather-bound panels and a gridded viewport, in three variants |
+| [Mantis-class](/corvette/B_COK_C7/) | Square-cornered panels and titanium bars, with three vent and fuselage varieties |
 
-There's also a new interior set. Legion-class habitation modules are cruiser-style, with narrow ceilings, recessed lighting and stark angles. Hello Games' Steam post says this set was "inspired by a distant galaxy."
+There's also a new interior set. [Legion-class habitation modules](/corvette/B_HAB_D/) are cruiser-style, with narrow ceilings, recessed lighting and stark angles. Hello Games' Steam post says this set was "inspired by a distant galaxy."
 
 ## Larva Cannon and the Larva Tank helmet
 
-Forsaken traders also sell a living Multi-Tool, the Larva Cannon, made from a larval exoskeleton. You pay for it with preserved grubs. The required quantity isn't listed.
+Forsaken traders also sell a living Multi-Tool, the Larva Cannon, made from a larval exoskeleton. You pay for it with [Preserved Grubs](/curiosities/SPOOK_PACKAGE2/): the "Make Offering" option asks for 5. Don't trade all your grubs for modules if you want the gun.
 
-Dedicated memento hunters can unlock the Larva Tank helmet. It swaps your head for a parasitic larva writhing in an aquatic tank, which is exactly as gross as it sounds. It comes with the player title Mind Harvester. Hello Games doesn't say how many mementos you need.
+Dedicated memento hunters can unlock the [Larva Tank](/other/GRUB_HAT/) helmet. It swaps your head for a parasitic larva writhing in an aquatic tank, which is exactly as gross as it sounds. The game files spell out the requirement: gather 20 haunting mementos to earn the [Mind Harvester title](/titles/#t-spookpackage), and the title unlocks the helmet. You put it on at an Appearance Modifier.
 
 ## Space courier missions
 
@@ -114,7 +123,7 @@ A few smaller changes from the patch notes:
 - Exterior space station decoration parts are now in the Catalogue.
 - Planetary trading outposts have a corvette landing pad.
 - The [Oxygen Harvester](/technology/O2_HARVESTER/) can be built anywhere on a planet's surface, not just inside a base.
-- The research trees at the Construction Research Station have a cleaner layout.
+- The [research trees](/research-trees/) at the Construction Research Station have a cleaner layout.
 
 There's also a long list of UI, audio, multiplayer and performance fixes. Highlights include a fix for the void egg not attracting more living ships after Starbirth, fixes for freighter battles spawning in the wrong place or without pirates, and a fix for rare stack loss or duplication when moving items between inventories. The full list is on the official page.
 
