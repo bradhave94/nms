@@ -1,8 +1,8 @@
 ---
-title: "NMS Expedition 23 Rewards & End Date (Oct 28)"
-description: "Expedition 23 Our Journey Continues ends October 28, 2026. All six exclusive rewards, what each phase unlocks, how to start, and how to redeem on any save."
+title: "NMS Expedition 23 Rewards Recap (Ended Oct 28)"
+description: "Expedition 23 Our Journey Continues ran Sept 16 to Oct 28, 2026. All six exclusive rewards, what each phase unlocked, and how to redeem them on any save."
 pubDate: 2026-09-17
-updatedDate: 2026-10-24
+updatedDate: 2026-10-30
 heroImage: "/images/blog/nms-expedition-23-our-journey-continues.webp"
 category: "blog"
 tags:
@@ -25,29 +25,31 @@ relatedLinks:
   - label: "Returning player guide 2026"
     href: "/blog/no-mans-sky-returning-player-guide-2026/"
 faqs:
-  - question: "How do I start Expedition 23 in No Man's Sky?"
-    answer: "From the Expedition Terminus on the Space Anomaly, or start a fresh new save. A fresh expedition save can convert to Normal Mode later. Official Hello Games wording."
-  - question: "When does Our Journey Continues end?"
-    answer: "Fandom lists the end as Wednesday, October 28, 2026. Hello Games only says it runs about six weeks from the September 16, 2026 launch, and has not posted an end time."
+  - question: "Can I still start Expedition 23 in No Man's Sky?"
+    answer: "No. It ended October 28, 2026. While it ran, you started it from the Expedition Terminus on the Space Anomaly or a fresh new save, and an expedition save could convert to Normal Mode afterwards."
+  - question: "When did Our Journey Continues end?"
+    answer: "Wednesday, October 28, 2026, per Fandom. Hello Games said it would run about six weeks from the September 16, 2026 launch, which lands on the same day."
   - question: "What are the Expedition 23 exclusive rewards?"
     answer: "Official list: nine framed update artworks, an astronaut bobblehead cockpit companion, the Starbound v0.27 Multi-Tool, the Golden Rasamama S36 starter ship, a vintage Sentinel Interceptor, and a diplodocus companion. Fandom also lists phase cosmetics (Time Traveller title, decal, banner) and a Diplo Companion Egg for full completion."
   - question: "How do I redeem Expedition 23 rewards on my main save?"
-    answer: "Claim phase rewards in the expedition Log, then visit the Quicksilver Synthesis Companion on the Space Anomaly. Exclusive rewards are redeemable across all save games."
+    answer: "If you claimed them in the expedition Log before it ended, visit the Quicksilver Synthesis Companion on the Space Anomaly. Hello Games says the exclusives are redeemable across all save games."
   - question: "Is this a full milestone walkthrough?"
     answer: "Mostly. Fandom now has real Requirement text for nearly every milestone across Phases 1-5. A few reward or step cells still show ??? (Pathfinder First Clue, Expeditions Myth Beacon detail, some base-parts packs, Our Journey Continues date). Those stay marked as unknown."
   - question: "Does this replace the Swarm expedition guide?"
     answer: "No. Swarm is Expedition 22. This page is only for Expedition 23: Our Journey Continues."
 ---
 
-Expedition 23 is live. **Our Journey Continues** is the 10th anniversary expedition. Ten years of updates, developer commentary on the milestones, and a stack of exclusive cosmetics that lean hard into nostalgia.
+**Expedition 23 is over.** It ran from September 16 to October 28, 2026. If you missed it, you can't start it anymore. The rewards below are a record of what it paid out.
 
-This guide covers rewards, schedule, start path, redeem steps, and the per-milestone objectives now filled on Fandom. The wiki page is still marked stub, and a handful of cells still say ???. We copy what is citeable and leave the blanks alone.
+**Our Journey Continues** was the 10th anniversary expedition. Ten years of updates, developer commentary on the milestones, and a stack of exclusive cosmetics that leaned hard into nostalgia.
+
+This page is now a recap: rewards, schedule, how it started, redeem steps, and the per-milestone objectives from Fandom. The wiki page is still marked stub, and a handful of cells still say ???. We copy what is citeable and leave the blanks alone.
 
 If you still need Expedition 22, that lives on the [Swarm expedition guide](/blog/nms-swarm-expedition-guide/). This page does not replace it. For the 7.0 station and salvage context that shipped right before this expedition, see the [Cosmos update](/blog/nms-cosmos-update/).
 
-## When does Expedition 23 end?
+## When did Expedition 23 end?
 
-**Wednesday, October 28, 2026**, per the Fandom wiki. Hello Games' own post only says the expedition "will run for approximately six weeks" from its September 16 launch, and six weeks from September 16 is October 28. There's no official end time, so don't leave the last phase for the final evening.
+**Wednesday, October 28, 2026**, per the Fandom wiki. Hello Games' own post only said the expedition "will run for approximately six weeks" from its September 16 launch, and six weeks from September 16 is October 28.
 
 | | |
 | --- | --- |
@@ -55,11 +57,11 @@ If you still need Expedition 22, that lives on the [Swarm expedition guide](/blo
 | Length | About six weeks (official) |
 | End | Wednesday, October 28, 2026 (Fandom) |
 
-Hello Games says the exclusives you earn can be redeemed on all save games through the Quicksilver Synthesis Companion on the Space Anomaly. See [how to redeem](#how-to-redeem-rewards).
+Hello Games says the exclusives you earned can be redeemed on all save games through the Quicksilver Synthesis Companion on the Space Anomaly. See [how to redeem](#how-to-redeem-rewards).
 
 ## What are the Expedition 23 rewards?
 
-Hello Games lists six exclusive rewards. Fandom maps them to phases like this:
+Hello Games listed six exclusive rewards. Fandom maps them to phases like this:
 
 | When you get it (Fandom) | Reward (official) |
 | --- | --- |
@@ -72,20 +74,20 @@ Hello Games lists six exclusive rewards. Fandom maps them to phases like this:
 
 The [full rewards breakdown](#expedition-23-rewards-in-detail) below has Hello Games' notes on each one.
 
-## How to start Expedition 23
+## How Expedition 23 started
 
-Two ways in, per Hello Games:
+While it ran, there were two ways in, per Hello Games:
 
 1. **Expedition Terminus** aboard the Space Anomaly
 2. **Fresh new save** (convertible to Normal Mode later)
 
-Usual expedition habits still apply: pin the active milestone, follow the Expedition route on the galaxy map (not the galactic core path), and land at each rendezvous so it stays on your teleporter list.
+Usual expedition habits applied: pin the active milestone, follow the Expedition route on the galaxy map (not the galactic core path), and land at each rendezvous so it stays on your teleporter list.
 
-Hello Games was blunt about spoilers. They resurrected older versions of systems and hid easter eggs for long-term players. Newer Travellers get a time capsule. Some mechanics will feel dated until a later phase unlocks the modern version. That is the point.
+Hello Games was blunt about spoilers. They resurrected older versions of systems and hid easter eggs for long-term players. Newer Travellers got a time capsule. Some mechanics felt dated until a later phase unlocked the modern version. That was the point.
 
 ### Spawn and starting blueprints
 
-Fandom: you spawn in the **Paroi Major** system, next to a starship with broken parts. Starting blueprints on that save:
+Fandom: you spawned in the **Paroi Major** system, next to a starship with broken parts. Starting blueprints on that save:
 
 - [Carbon Nanotubes](/products/NANOTUBES/)
 - [Antimatter Housing](/products/AM_HOUSING/)
@@ -100,7 +102,7 @@ Fandom: you spawn in the **Paroi Major** system, next to a starship with broken 
 - [Life Support Gel](/products/PRODFUEL2/)
 - [Projectile Ammunition](/products/AMMO/)
 
-Each completed milestone also unlocks a **Journey Records** developer commentary (Sean Murray) in Catalog & Guide. That is unique to this expedition.
+Each completed milestone also unlocked a **Journey Records** developer commentary (Sean Murray) in Catalog & Guide. That was unique to this expedition.
 
 ## Expedition 23 rewards in detail
 
@@ -128,7 +130,7 @@ Fandom maps those into phase completion rewards and adds a few cosmetics. Treat 
 
 Redeem path is separate from claiming in the Log. See below.
 
-## Milestone objectives (WIP)
+## Milestone objectives
 
 Requirement text and key rewards below come from the Fandom wiki (revid 1334077, still stub; end date rechecked at revid 1334259 on October 24, 2026). Hello Games does not publish per-milestone objectives on the official post. Cells that still show ??? on Fandom stay marked here.
 
@@ -218,23 +220,23 @@ Full clear also awards the Diplo Companion Egg (Fandom), matching Hello Games' d
 
 ## How to redeem rewards
 
-1. Finish the milestones for a phase.
-2. Claim the phase rewards in the expedition Log.
-3. On **any** save, go to the Space Anomaly → **Quicksilver Synthesis Companion**.
-4. Redeem the exclusives you earned. Official note: they are available across all save games.
+The expedition is closed, so this only helps if you finished phases and claimed them in the expedition Log before October 28.
+
+1. On **any** save, go to the Space Anomaly → **Quicksilver Synthesis Companion**.
+2. Redeem the exclusives you earned. Official note: they are available across all save games.
 
 [Quicksilver](/other/QUICKSILVER/) is the Anomaly currency you already know. The Companion is where expedition exclusives show up after you unlock them. The diplodocus / Diplo egg sits in the same companion ecosystem as other pets; see [Companions](/creatures/companions/) if you need the broader pet loop.
 
-Fresh expedition saves can convert to Normal after you are done. That is the usual expedition off-ramp.
+If you played on a fresh expedition save, it can convert to Normal Mode. That is the usual expedition off-ramp.
 
-## What this guide still leaves open
+## What Fandom still leaves open
 
 - Exact contents of the ??? reward packs (First Clue, NEXT / Frontiers base parts)
 - Myth Beacon deploy detail for Expeditions
 - Bug workarounds from Experimental patch notes or Steam threads
 - Step-by-step farm routes beyond what Fandom already notes (Fractal / Interceptor planet tips above)
 
-When those ??? cells clear, we will patch this post again.
+If those ??? cells ever clear, we will patch this post.
 
 ## Related
 
@@ -247,17 +249,17 @@ When those ??? cells clear, we will patch this post again.
 
 ## FAQ
 
-**How do I start Expedition 23?**  
-Expedition Terminus on the Space Anomaly, or a fresh save. Official.
+**Can I still start Expedition 23?**  
+No. It ended October 28, 2026. While it ran, you started from the Expedition Terminus on the Space Anomaly or a fresh save.
 
-**When does it end?**  
-Wednesday, October 28, 2026 (Fandom). Hello Games says about six weeks from the September 16 launch.
+**When did it end?**  
+Wednesday, October 28, 2026 (Fandom). Hello Games said about six weeks from the September 16 launch.
 
-**What do I unlock?**  
+**What did it unlock?**  
 Nine framed artworks, astronaut bobblehead, Starbound v0.27 Multi-Tool, Golden Rasamama S36, vintage Sentinel Interceptor, diplodocus companion. Plus Fandom's Time Traveller title, decal, banner, and Diplo egg on full clear.
 
 **Redeem on main save?**  
-Quicksilver Synthesis Companion on the Anomaly. All saves.
+Quicksilver Synthesis Companion on the Anomaly, for exclusives you earned before it ended. All saves.
 
 **Full walkthrough here?**  
 Objectives and key rewards for Phases 1-5 are in the tables above, from Fandom. A few ??? cells remain. Final milestone is Confront the Atlas, not a fifth rendezvous.
