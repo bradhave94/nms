@@ -166,6 +166,91 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 			'Quartzite and Lithium both come from purple star systems, so that route only helps once you can reach them. See the [Lithium guide](/blog/how-to-get-lithium-no-mans-sky/).',
 		],
 	},
+	// Where-to-find copy: GSC 2026-10-03 to 2026-10-30, CTR under 0.6% at position 6-8.
+	// Facts: in-game descriptions, pin text, and recipes in src/datav2.
+	STELLAR2: {
+		title: 'Chromatic Metal NMS: How to Make It (Refiner Recipes)',
+		description:
+			"How to make Chromatic Metal in No Man's Sky: refine Copper, Cadmium, Emeril, Indium, or Quartzite. 2 Indium or 2 Quartzite makes 4.",
+		relatedLinks: [
+			{
+				label: 'How to make Chromatic Metal',
+				href: '/blog/how-to-make-chromatic-metal-no-mans-sky/',
+			},
+		],
+		whereToFind: [
+			'Chromatic Metal is made in a Refiner, not mined. Its in-game text says it comes from the stellar metals Copper, Cadmium, Emeril and Indium, and that the rarer the metal, the more Chromatic Metal it produces. The [how to make Chromatic Metal](/blog/how-to-make-chromatic-metal-no-mans-sky/) guide picks which recipe to run.',
+			'2 [Copper](/raw/YELLOW2/) makes 1 (planets orbiting yellow stars). 2 [Cadmium](/raw/RED2/) makes 1 (red stars), 2 [Emeril](/raw/GREEN2/) makes 3 (green), and 2 [Indium](/raw/BLUE2/) makes 4 (blue). 2 [Quartzite](/raw/PURPLE2/) makes 4 (purple stars). 1 [Activated Copper](/raw/EX_YELLOW/), 1 [Activated Emeril](/raw/EX_GREEN/), 1 [Activated Indium](/raw/EX_BLUE/), or 1 [Activated Quartzite](/raw/EX_PURPLE/) makes the same as 2 of that plain metal. 1 [Activated Cadmium](/raw/EX_RED/) makes 2.',
+			'In a Medium Refiner, 1 plain metal plus 1 [Pure Ferrite](/raw/LAND2/) makes 1 from Copper, 2 from Cadmium, 3 from Emeril, 4 from Indium, and 4 from Quartzite. A Large Refiner turns 1 [Silver](/raw/ASTEROID1/), 1 [Gold](/raw/ASTEROID2/) and 1 Indium or Quartzite into 30.',
+		],
+	},
+	PLANT_POOP: {
+		title: 'Faecium NMS: Where to Get It and How to Farm It',
+		description:
+			"Where to get Faecium in No Man's Sky: harvest a Gutrot Flower, feed creatures, or refine Mordite. One Faecium plus Oxygen makes three.",
+		whereToFind: [
+			'Faecium comes from the [Gutrot Flower](/products/POOPPLANT/), or, as the item text puts it, less desirably from the faecal matter of some species. Feeding creatures encourages faecium crystals.',
+			'To farm it, plant Gutrot Flowers in a Hydroponics Tray. The plant text says they yield Faecium and take about 4 hours to grow, which replaces feeding creatures and harvesting their droppings.',
+			'To refine it, 3 [Mordite](/raw/CREATURE1/) makes 1 Faecium. In a Medium Refiner, 1 Faecium plus 1 [Oxygen](/raw/OXYGEN/) makes 3, and 1 [Di-hydrogen](/raw/LAUNCHSUB/) plus 1 [Carbon](/raw/FUEL1/) makes 1.',
+		],
+	},
+	LAUNCHSUB2: {
+		title: 'Deuterium NMS: How to Make It and Refine It',
+		description:
+			"How to make Deuterium in No Man's Sky: refine Di-hydrogen with Tritium or Silicate Powder in a multi-input refiner. It very rarely occurs naturally.",
+		whereToFind: [
+			'Deuterium very rarely occurs naturally. Its in-game text says most of the supply comes from processing Di-hydrogen and Tritium in a Refiner.',
+			'The pin text names both recipes: process [Di-hydrogen](/raw/LAUNCHSUB/) with [Tritium](/raw/ROCKETSUB/) or [Silicate Powder](/raw/SAND1/) in a multi-input refiner. Each one is 1 plus 1, and it makes 1 Deuterium.',
+			'Di-hydrogen is the large blue crystals common to all worlds. Tritium is mined from asteroids. Silicate Powder comes from the Terrain Manipulator on rocky worlds.',
+		],
+	},
+	ROCKETSUB: {
+		title: 'Tritium NMS: Where to Find It (Asteroids)',
+		description:
+			"Where to find Tritium in No Man's Sky: mine it from asteroids with starship weapons. Scan in space for tritium-rich asteroids in planetary rings.",
+		whereToFind: [
+			'Tritium is abundant in interstellar asteroid fields. Mine it from asteroids with starship weaponry, and scan for tritium-rich asteroids, per its in-game text.',
+			'The pin text adds that those fields sit in rings around planets, or at intervals during interstellar flight. No refiner recipe outputs Tritium.',
+		],
+	},
+	ALLOY1: {
+		title: 'Aronium NMS: How to Make It (Recipe and Value)',
+		description:
+			"How to make Aronium in No Man's Sky: craft 50 Paraffinium and 50 Ionised Cobalt, or refine it in a Large Refiner. Base value is 25,000 Units.",
+		whereToFind: [
+			'Aronium is crafted from 50 [Paraffinium](/raw/LUSH1/) and 50 [Ionised Cobalt](/raw/CAVE2/). Its text calls it a lightweight alloy in high demand on the Galactic Trade Network. Base value is 25,000 Units.',
+			'Paraffinium is typically found on planets with a tropical environment, in large deposits or in common minerals you inspect with the Analysis Visor.',
+			'A Large Refiner makes it too. 30 Paraffinium and 30 Ionised Cobalt, plus 5 [Platinum](/raw/ASTEROID3/), 10 [Gold](/raw/ASTEROID2/), 20 [Silver](/raw/ASTEROID1/), or 20 [Tritium](/raw/ROCKETSUB/), makes 1. Each of those also works with 60 [Cobalt](/raw/CAVE1/) instead of the Ionised Cobalt. The pin text says refining this alloy needs a Large Refiner.',
+		],
+	},
+	LAND1: {
+		title: 'Ferrite Dust NMS: Where to Find It and How to Make It',
+		description:
+			"Where to find Ferrite Dust in No Man's Sky: mine rocks with the Mining Laser, or refine 1 local mineral into 1 Ferrite Dust. Rusted Metal makes 2.",
+		whereToFind: [
+			'Ferrite Dust is found in rock formations and other geological spots, and extracted with a Mining Laser, per its in-game text. The pin text says to harvest it from small rocks.',
+			'A Refiner can make it too. 1 [Paraffinium](/raw/LUSH1/), [Pyrite](/raw/DUSTY1/), [Ammonia](/raw/TOXIC1/), [Uranium](/raw/RADIO1/), [Dioxite](/raw/COLD1/), [Phosphorus](/raw/HOT1/), [Crystallised Helium](/raw/GASGIANT1/), or [Lithium](/raw/WATERWORLD1/) makes 1 Ferrite Dust. 1 [Rusted Metal](/raw/SPACEGUNK3/) makes 2.',
+		],
+	},
+	HOT1: {
+		title: 'Phosphorus NMS: Where to Find It and How to Make It',
+		description:
+			"Where to find Phosphorus in No Man's Sky: large deposits on scorched planets, or refine Dioxite, Solanium and Salt, or Methane and Di-hydrogen.",
+		whereToFind: [
+			'Phosphorus is typically found in large deposits, or in common minerals you inspect with an Analysis Visor, on planets with a scorched environment. The pin text says common ferrite rocks may yield it after that inspection.',
+			'To refine it in a Medium Refiner, 2 [Dioxite](/raw/COLD1/) plus 1 [Ferrite Dust](/raw/LAND1/) or 1 [Pure Ferrite](/raw/LAND2/) makes 1. 2 [Solanium](/raw/PLANT_HOT/) plus 1 [Salt](/raw/WATER1/) makes 1. 1 [Methane](/products/GAS4/) plus 1 [Di-hydrogen](/raw/LAUNCHSUB/) makes 1.',
+		],
+	},
+	BAIT_BASIC: {
+		title: 'Creature Pellets NMS: How to Make Them (Recipe)',
+		description:
+			"How to make Creature Pellets in No Man's Sky. The crafting recipe is 60 Carbon, and a Nutrient Processor turns 1 Carbon into 1 pellet.",
+		whereToFind: [
+			'Creature Pellets are made, not found. The crafting recipe is 60 [Carbon](/raw/FUEL1/). The Mining Laser harvests Carbon from trees, plants, and other vegetation.',
+			'A [Nutrient Processor](/technology/COOKER/) makes them too: 1 Carbon makes 1 Creature Pellet. Other Prepare Bait recipes use 1 [Mordite](/raw/CREATURE1/) plus a raw meat, or 1 [Faecium](/raw/PLANT_POOP/) plus a harvested plant.',
+			'The item text says this bait attracts creatures and makes them yield Faecium. Once a creature has been fed, it may be tamed or farmed, and dropping bait may calm an angry one.',
+		],
+	},
 	// Links only. Generated titles and descriptions stay in place.
 	AM_HOUSING: {
 		relatedLinks: [

@@ -1,6 +1,6 @@
 ---
-title: "No Man's Sky Waste Processing Guide: Scrap Worlds, Plants, and Volatile Waste"
-description: "How waste processing works in No Man's Sky: scrap worlds, volatile waste, Waste Processing Plants, and when to use the Colossus furnace."
+title: "Industrial Waste NMS: Find Waste Processing Plants"
+description: "Industrial waste in No Man's Sky sits on planets that already have salvageable scrap, in small piles and large heaps. Haul it to a Waste Processing Plant."
 pubDate: 2026-08-25
 updatedDate: 2026-08-25
 heroImage: "/images/blog/nms-waste-processing-guide.webp"

@@ -1,6 +1,6 @@
 ---
-title: "No Man's Sky Xeno Arena: Beginner's Guide to Creature Battles"
-description: "How to start creature battles in No Man's Sky Xeno Arena: affinities, Holo-Arena locations, evolving with Retroviral Pellets, and Arena League rewards."
+title: "NMS Xeno Arena: Holo-Arena Battles, Affinities & Rewards"
+description: "Holo-Arena tables are at space stations, planetary outposts, archives, some settlements, and the Space Anomaly. Affinities and rewards for Xeno Arena battles."
 pubDate: 2026-04-18
 updatedDate: 2026-10-23
 heroImage: "/images/blog/xeno-arena-guide.webp"
