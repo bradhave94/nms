@@ -1,0 +1,10 @@
+services:
+  dev:
+    command: pnpm run dev --host 0.0.0.0 --port "$PORT"
+    port: 4321
+    env:
+      ASTRO_DEV_BACKGROUND: "1"
+    health: /alliances/
+    portal:
+      title: No Man's Sky Recipes
+      description: Development site with a local-only alliance database. No production data or admin token.

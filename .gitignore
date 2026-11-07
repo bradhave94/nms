@@ -42,3 +42,6 @@ pnpm-debug.log*
 # Wrangler local state and dev secrets
 .wrangler/
 .dev.vars*
+
+# Generated orb portal links (service definitions stay tracked)
+.amp/portals/

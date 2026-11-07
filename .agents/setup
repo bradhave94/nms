@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+repo_root="$PWD"
+toolchain="$HOME/.local/share/nms-orb"
+bin="$toolchain/node_modules/.bin"
+node_major="$(tr -d '[:space:]' < .nvmrc)"
+pnpm_version="$(node -p 'require("./package.json").packageManager.split("@")[1]')"
+# Astro's locked Vite plugin bundles workerd 2026-10-19, older than wrangler.jsonc's
+# 2026-10-22 compatibility date. Override only the orb runtime, not production.
+workerd_version="1.20261107.1"
+
+echo "Preparing Node $node_major, pnpm $pnpm_version and the local Workers runtime"
+SECONDS=0
+if [[ ! -x "$bin/node" ]] \
+  || [[ "$("$bin/node" -p 'process.versions.node.split(".")[0]')" != "$node_major" ]] \
+  || [[ ! -x "$bin/pnpm" ]] \
+  || [[ "$("$bin/pnpm" --version)" != "$pnpm_version" ]] \
+  || [[ ! -x "$bin/workerd" ]] \
+  || [[ "$(node -p "require('$toolchain/node_modules/workerd/package.json').version")" != "$workerd_version" ]]; then
+  npm install --prefix "$toolchain" --no-audit --no-fund \
+    "node@$node_major" "pnpm@$pnpm_version" "workerd@$workerd_version"
+fi
+export PATH="$bin:$PATH"
+export MINIFLARE_WORKERD_PATH="$bin/workerd"
+
+# Amp and supervised services use new login shells, not this setup process.
+# Scope the environment to this checkout and avoid duplicate PATH entries.
+marker="# No Man's Sky orb environment"
+if ! grep -Fqx "$marker" "$HOME/.bash_profile" 2>/dev/null; then
+  cat >> "$HOME/.bash_profile" <<EOF
+
+$marker
+if [[ "\$PWD/" == "$repo_root/"* ]]; then
+  case ":\$PATH:" in
+    *":$bin:"*) ;;
+    *) export PATH="$bin:\$PATH" ;;
+  esac
+  export MINIFLARE_WORKERD_PATH="$bin/workerd"
+fi
+EOF
+fi
+echo "Toolchain ready in ${SECONDS}s ($(node --version), pnpm $(pnpm --version))"
+
+echo "Installing repository dependencies from the lockfile"
+SECONDS=0
+CI=true pnpm install --frozen-lockfile
+echo "Dependencies ready in ${SECONDS}s"
+
+echo "Applying local-only alliance database migrations"
+SECONDS=0
+CLOUDFLARE_SEND_METRICS=false pnpm exec wrangler d1 migrations apply nms-alliances --local
+echo "Local database ready in ${SECONDS}s"
