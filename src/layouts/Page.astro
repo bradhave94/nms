@@ -31,6 +31,7 @@ import { getGrowTimeHeader, getPlantGrowTime } from '@utils/plantGrowTime.js';
 import { createArray } from '@utils/recipeTree';
 import { formatSignedPercent, formatFoodEffectStats } from '@utils/itemFormatters';
 import { buildItemRecipeView, findItemGuide, getItemCategory, type HeaderPill, type ItemFact } from '@utils/itemPageContext';
+import { displayedStack } from '@utils/stackSize';
 import type { ItemPageSchemaResult } from '@utils/itemPageSchema';
 import { SITE } from '@config';
 import '../assets/css/item.css';
@@ -116,8 +117,9 @@ if (!fishTier && extra.Rarity && RARITY_TIERS[extra.Rarity]) pills.push({ label:
 // the group usually already names the tier ("Legendary Fish"); colour that pill instead of adding a second one
 if (fishTier && cleanGroup && cleanGroup.toLowerCase().includes(String(extra.Quality).toLowerCase())) pills[0] = { ...pills[0], tier: fishTier };
 else if (fishTier) pills.push({ label: `${extra.Quality} fish`, tier: fishTier });
-// Substances store a stack multiplier of 1 here, not their real stack size, so only show real stacks.
-if (typeof extra.MaxStackSize === 'number' && extra.MaxStackSize > 1) pills.push({ label: `Max stack ${extra.MaxStackSize.toLocaleString()}` });
+// MaxStackSize is the game's StackMultiplier; show the Normal-difficulty Exosuit stack.
+const stack = displayedStack(extra);
+if (stack) pills.push({ label: `Max stack ${stack.exosuit.toLocaleString()}` });
 if (view.waysToMake > 1) pills.push({ label: `${view.waysToMake} ways to make it` });
 // The blueprint price where a research tree sells it, in that tree's currency (Nanites, Salvaged
 // Frigate Modules, Factory Override Units…). An item's own BlueprintCostType can't say which
@@ -134,6 +136,7 @@ const addFact = (label: string, value: string | undefined | null, href?: string)
   if (value) facts.push({ label, value, ...(href ? { href } : {}) });
 };
 const yesNo = (value: boolean | undefined) => (value === true ? 'Yes' : value === false ? 'No' : undefined);
+if (stack?.freighter) addFact('Freighter / storage', stack.freighter.toLocaleString());
 if (extra.Rarity && extra.Rarity !== 'None' && (fishTier || !RARITY_TIERS[extra.Rarity])) addFact(fishTier ? 'Item rarity' : 'Rarity', humanize(extra.Rarity));
 if (extra.Legality && extra.Legality !== 'None') addFact('Legality', extra.Legality);
 if (extra.OnlyFoundInPurpleSystems === true) addFact('Source', 'Purple systems only');

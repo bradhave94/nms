@@ -1,0 +1,112 @@
+{
+  "sourceFile": "METADATA/GAMESTATE/DIFFICULTYCONFIG.MBIN",
+  "sourcePak": "NMSARC.MetadataEtc.pak",
+  "template": "cGcDifficultyConfig",
+  "compiler": "MBINCompiler 7.10.0.1",
+  "comment": "The Normal difficulty preset sets InventoryStackLimitsDifficulty to High (loc id INV_SIZE_EASY), not the option named Normal. Effective stack is min(item StackMultiplier * Max*StackSizes[inventory], *StackLimit). Survival and Permadeath use the Normal option instead.",
+  "normalPresetOption": "High",
+  "options": {
+    "High": {
+      "substanceStackLimit": 9999,
+      "productStackLimit": 9999,
+      "substances": {
+        "Default": 9999,
+        "Personal": 9999,
+        "PersonalCargo": 9999,
+        "Ship": 9999,
+        "ShipCargo": 9999,
+        "Freighter": 9999,
+        "FreighterCargo": 9999,
+        "Vehicle": 9999,
+        "Chest": 9999,
+        "BaseCapsule": 9999,
+        "MaintenanceObject": 9999,
+        "UIPopup": 9999,
+        "SeasonTransfer": 9999
+      },
+      "products": {
+        "Default": 5,
+        "Personal": 10,
+        "PersonalCargo": 10,
+        "Ship": 10,
+        "ShipCargo": 10,
+        "Freighter": 20,
+        "FreighterCargo": 20,
+        "Vehicle": 10,
+        "Chest": 20,
+        "BaseCapsule": 100,
+        "MaintenanceObject": 10,
+        "UIPopup": 1,
+        "SeasonTransfer": 20
+      }
+    },
+    "Normal": {
+      "substanceStackLimit": 9999,
+      "productStackLimit": 9999,
+      "substances": {
+        "Default": 500,
+        "Personal": 500,
+        "PersonalCargo": 500,
+        "Ship": 1000,
+        "ShipCargo": 1000,
+        "Freighter": 2000,
+        "FreighterCargo": 2000,
+        "Vehicle": 1000,
+        "Chest": 1000,
+        "BaseCapsule": 2000,
+        "MaintenanceObject": 250,
+        "UIPopup": 250,
+        "SeasonTransfer": 9999
+      },
+      "products": {
+        "Default": 5,
+        "Personal": 10,
+        "PersonalCargo": 10,
+        "Ship": 10,
+        "ShipCargo": 10,
+        "Freighter": 10,
+        "FreighterCargo": 20,
+        "Vehicle": 10,
+        "Chest": 20,
+        "BaseCapsule": 100,
+        "MaintenanceObject": 10,
+        "UIPopup": 1,
+        "SeasonTransfer": 20
+      }
+    },
+    "Low": {
+      "substanceStackLimit": 9999,
+      "productStackLimit": 9999,
+      "substances": {
+        "Default": 150,
+        "Personal": 300,
+        "PersonalCargo": 300,
+        "Ship": 300,
+        "ShipCargo": 750,
+        "Freighter": 750,
+        "FreighterCargo": 750,
+        "Vehicle": 300,
+        "Chest": 1000,
+        "BaseCapsule": 1250,
+        "MaintenanceObject": 150,
+        "UIPopup": 150,
+        "SeasonTransfer": 9999
+      },
+      "products": {
+        "Default": 3,
+        "Personal": 3,
+        "PersonalCargo": 5,
+        "Ship": 3,
+        "ShipCargo": 5,
+        "Freighter": 5,
+        "FreighterCargo": 10,
+        "Vehicle": 3,
+        "Chest": 10,
+        "BaseCapsule": 50,
+        "MaintenanceObject": 5,
+        "UIPopup": 1,
+        "SeasonTransfer": 20
+      }
+    }
+  }
+}
