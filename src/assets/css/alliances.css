@@ -111,21 +111,9 @@
 	:is(.alliances, .site-form) .card .focuses { margin-top: auto; padding-top: 1rem; font-size: .875rem; color: var(--color-dim); }
 
 	/* Detail page */
-	/* Portal address: the glyphs as pressed in game, hex digit underneath, grouped in fours */
-	:is(.alliances, .site-form) .glyphs { display: flex; flex-wrap: wrap; gap: .5rem .75rem; margin-top: .75rem; }
-	:is(.alliances, .site-form) .glyph-group { display: flex; gap: .25rem; }
+	:is(.alliances, .site-form) .portal-help { margin-top: .25rem; }
 	:is(.alliances, .site-form) .steps :is(.portal-key, .portal-help-steps) li { counter-increment: none; padding-left: 0; }
 	:is(.alliances, .site-form) .steps :is(.portal-key, .portal-help-steps) li::before { content: none; }
-	:is(.alliances, .site-form) .glyph {
-		display: flex; flex-direction: column; align-items: center; gap: .125rem; width: 3rem; padding: .375rem 0 .25rem; border-radius: 8px; border: 1px solid var(--color-line-strong); background: #0b1622;
-	}
-	:is(.alliances, .site-form) .glyph img { width: 2.5rem; height: 2.5rem; }
-	:is(.alliances, .site-form) .glyph-hex { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .8rem; font-weight: 600; line-height: 1; color: var(--color-glow); }
-	:is(.alliances, .site-form) .portal-tools { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin-top: .75rem; }
-	:is(.alliances, .site-form) .portal-hex { color: var(--color-ink); letter-spacing: .05em; }
-	:is(.alliances, .site-form) .portal-copy { min-height: 36px; padding: .25rem .875rem; font-size: .875rem; }
-	:is(.alliances, .site-form) .portal-copy-status { font-size: .875rem; color: var(--color-dim); }
-	:is(.alliances, .site-form) .portal-help { margin-top: .75rem; }
 	:is(.alliances, .site-form) .portal-help summary { width: fit-content; padding: .375rem 0; cursor: pointer; color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
 	:is(.alliances, .site-form) .portal-help-steps { margin: .5rem 0 0; padding-left: 1.25rem; list-style: decimal; display: grid; gap: .375rem; }
 	:is(.alliances, .site-form) .portal-key-heading { margin: 1rem 0 0; font-size: 1rem; font-weight: 600; color: var(--color-ink); }
@@ -133,6 +121,7 @@
 	:is(.alliances, .site-form) .portal-key a { display: flex; align-items: center; gap: .5rem; min-height: 44px; padding: .25rem .5rem; border-radius: 8px; border: 1px solid var(--color-line); background: #0b1622; color: var(--color-ink); text-decoration: none; }
 	:is(.alliances, .site-form) .portal-key a:hover { border-color: var(--color-accent); }
 	:is(.alliances, .site-form) .portal-key img { width: 2rem; height: 2rem; flex: none; }
+	:is(.alliances, .site-form) .portal-key-hex { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .8rem; font-weight: 600; color: var(--color-glow); }
 	:is(.alliances, .site-form) .portal-key-name { font-size: .875rem; }
 	:is(.alliances, .site-form) .steps { counter-reset: step; display: grid; gap: 1rem; list-style: none; padding-left: 0; margin: 0; }
 	:is(.alliances, .site-form) .steps li { counter-increment: step; position: relative; padding-left: 2.5rem; line-height: 1.5; color: #cfd9e4; overflow-wrap: anywhere; }

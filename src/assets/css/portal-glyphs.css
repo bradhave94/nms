@@ -1,0 +1,40 @@
+/* Portal addresses as glyphs (renderPortalAddressHtml in src/utils/portalGlyphs.ts), used on
+   alliance pages and in blog posts. Three groups of four glyphs: one row with dividers when the
+   address's own width fits all three, otherwise one group per line. Groups never split. */
+.portal-address {
+	--tile: 2.125rem; --tile-gap: .25rem;
+	display: block; container-type: inline-size;
+	/* Size containment ignores the tiles, so keep at least one group's width (e.g. in table cells). */
+	min-width: calc(var(--tile) * 4 + var(--tile-gap) * 3);
+	margin: .75rem 0;
+}
+.portal-address--sm { --tile: 1.75rem; --tile-gap: .1875rem; margin: .5rem 0; }
+.portal-address .glyph-groups { display: flex; flex-direction: column; align-items: flex-start; gap: .375rem; }
+.portal-address .glyph-group { display: flex; gap: var(--tile-gap); }
+.portal-address .glyph {
+	display: grid; place-items: center; width: var(--tile); height: var(--tile); border-radius: 6px;
+	border: 1px solid var(--color-line-strong, #3a4658); background: #0b1622;
+}
+.portal-address .glyph img { display: block; width: calc(var(--tile) - .375rem); height: calc(var(--tile) - .375rem); margin: 0; }
+/* Row width: 3 groups + 2 dividers (2px) with .5rem either side: 30.25rem default, 25rem small. */
+@container (min-width: 30.25rem) {
+	.portal-address:not(.portal-address--sm) .glyph-groups { flex-direction: row; gap: 0; }
+	.portal-address:not(.portal-address--sm) .glyph-group + .glyph-group { margin-left: .5rem; padding-left: .5rem; border-left: 2px solid var(--color-dim, #9fb0c3); }
+}
+@container (min-width: 25rem) {
+	.portal-address--sm .glyph-groups { flex-direction: row; gap: 0; }
+	.portal-address--sm .glyph-group + .glyph-group { margin-left: .5rem; padding-left: .5rem; border-left: 2px solid var(--color-dim, #9fb0c3); }
+}
+.portal-address .portal-hex-line { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-top: .5rem; }
+.portal-address .portal-hex {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .95em; letter-spacing: .05em;
+	color: var(--color-ink, #e8eef5); white-space: nowrap;
+}
+.portal-address .portal-copy {
+	display: inline-grid; place-items: center; width: 2rem; height: 2rem; padding: 0; border-radius: 6px; cursor: pointer;
+	border: 1px solid var(--color-line-strong, #3a4658); background: var(--color-panel-2, #0e141c); color: var(--color-ink, #e8eef5);
+}
+.portal-address .portal-copy[hidden] { display: none; }
+.portal-address .portal-copy:hover { border-color: var(--color-accent, #ffc356); color: var(--color-accent, #ffc356); }
+.portal-address .portal-copy-status { font-size: .875rem; color: var(--color-dim, #9fb0c3); }
+.portal-address .portal-copy-status:empty { display: none; }

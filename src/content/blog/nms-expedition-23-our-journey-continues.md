@@ -185,8 +185,8 @@ Requirement text and key rewards below come from the Fandom wiki (revid 1334077,
 | Leviathian *(wiki spelling; phase screenshot often reads Leviathan)* | Assemble the Whalesong Flute (meet the Leviathan creature in deep space) | Amplified Warp Shielding; Scanner Room plans; salvaged freighter gear |
 | Endurance | Construct a Scanner Room on your freighter | Trade Rocket plans; inventory slots |
 | Waypoint | Launch a Trade Rocket | Multi-Tool inventory slots; Sub-Light Amplifier; S-class Scanning upgrade |
-| Fractal | Discover a creature with an internal temperature higher than 113°F. Fandom note: scan **Q. Scrofolsia** on planet **Anhoeb** (glyph `1048F808F6D2`) in starting system **Paroi Major** (116.9°F) | Starship inventory slots; Glitches |
-| Interceptor | Eliminate 1 Corrupt Sentinel. Fandom note: planet **Noder XVI** (glyph `3048F808F6D2`) in **Paroi Major** | [Echo Locator](/curiosities/CHART_ROBOT/); [Scan Harmoniser](/upgrades/UT_BUI_SCAN/) plans; Wonder Projector plans |
+| Fractal | Discover a creature with an internal temperature higher than 113°F. Fandom note: scan **Q. Scrofolsia** on planet **Anhoeb** in starting system **Paroi Major** (116.9°F). Portal address: `portal:1048F808F6D2` | Starship inventory slots; Glitches |
+| Interceptor | Eliminate 1 Corrupt Sentinel. Fandom note: planet **Noder XVI** in **Paroi Major**. Portal address: `portal:3048F808F6D2` | [Echo Locator](/curiosities/CHART_ROBOT/); [Scan Harmoniser](/upgrades/UT_BUI_SCAN/) plans; Wonder Projector plans |
 | Echoes | Install a Scan Harmoniser (use Echo Locator to find an Autophage Camp; use Scan Harmoniser to uncover and talk to an Autophage) | [Atlantideum](/raw/ROBOT2/); Autophage words |
 | More Will Follow: IV | Reach the 4th rendezvous: Portal at **(-28.10, -32.29)** on planet **Hefleeto E37** in system **Gagqoid-Eymo** | New space stations; starship components |
 | Orbital | Assemble a new Starship | S-class Scanning upgrade; Aqua-Jets plans |
