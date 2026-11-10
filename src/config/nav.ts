@@ -9,6 +9,7 @@ export interface NavItem {
 export const toolsNav: NavItem[] = [
 	{ name: 'Refining', href: '/refining/', icon: 'funnel' },
 	{ name: 'Cooking', href: '/cooking/', icon: 'beaker' },
+	{ name: 'Nutrient Ingestor', href: '/nutrient-ingestor/', icon: 'cake' },
 	{ name: 'Crafting', href: '/crafting-guide/', icon: 'wrench-screwdriver' },
 ];
 
