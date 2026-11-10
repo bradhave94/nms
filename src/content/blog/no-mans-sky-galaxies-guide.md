@@ -481,7 +481,11 @@ Carry [Repair Kits](/products/REPAIRKIT). Craft them from [Di-hydrogen Jelly](/p
 
 Use a junk ship for transitions. Keep a cheap shuttle around just for centre jumps and let it take the upgrade-module damage. Repair it on arrival and switch back to your main ship at the next station.
 
-Use portal addresses. With all 16 glyphs, `100104005005` drops you in a system very close to the centre in most galaxies, which skips the long approach. The wiki also lists gateway systems for each galaxy.
+Use portal addresses. With all 16 glyphs, this address drops you in a system very close to the centre in most galaxies, which skips the long approach:
+
+`portal:100104005005`
+
+The wiki also lists gateway systems for each galaxy.
 
 Keep a [Hyperdrive Augmentation](/technology) on standby for the jump. The base [Hyperdrive](/technology/HYPERDRIVE) is fine, but don't show up at the centre with an empty tank. Bring one [Warp Cell](/products/HYPERFUEL1) for the jump and another for your first warp on the other side.
 

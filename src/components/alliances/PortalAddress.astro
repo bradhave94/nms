@@ -1,41 +1,21 @@
 ---
 /**
- * A portal address as the glyphs you press in game, with each glyph's hex digit underneath,
- * a copy button for the hex, and a short "how to use it" with the full glyph key.
+ * A portal address as the glyphs you press in game (shared markup: renderPortalAddressHtml),
+ * with the hex and a copy button underneath, then a short "how to use it" with the glyph key.
  */
-import { PORTAL_GLYPHS, glyphForHex } from '@utils/portalGlyphs';
+import '@assets/css/portal-glyphs.css';
+import { PORTAL_GLYPHS, renderPortalAddressHtml } from '@utils/portalGlyphs';
 
 interface Props {
 	address: string;
-	id?: string;
 }
 
-const { address, id = 'portal-address' } = Astro.props;
-const hex = address.toUpperCase().replace(/[^0-9A-F]/g, '');
-const glyphs = hex.split('').map((digit) => ({ digit, glyph: glyphForHex(digit) }));
-const grouped = hex.match(/.{1,4}/g)?.join(' ') ?? hex;
-const groups = Array.from({ length: Math.ceil(glyphs.length / 4) }, (_, i) => glyphs.slice(i * 4, i * 4 + 4));
+const { address } = Astro.props;
+const html = renderPortalAddressHtml(address);
 ---
 
-<div class="portal-address" data-portal-address={hex}>
-	<p class="sr-only">Portal address, left to right: {glyphs.map(({ digit, glyph }) => (glyph ? `${digit} (${glyph.name})` : digit)).join(', ')}.</p>
-	<div class="glyphs" aria-hidden="true">
-		{groups.map((group) => (
-			<span class="glyph-group">
-				{group.map(({ digit, glyph }) => (
-					<span class="glyph">
-						{glyph && <img src={glyph.image} alt="" width="40" height="40" loading="lazy" decoding="async" />}
-						<span class="glyph-hex">{digit}</span>
-					</span>
-				))}
-			</span>
-		))}
-	</div>
-	<div class="portal-tools">
-		<span class="portal-hex font-mono" id={`${id}-hex`}>{grouped}</span>
-		<button type="button" class="btn-quiet portal-copy" data-copy={hex} aria-describedby={`${id}-hex`} hidden>Copy address</button>
-		<span class="portal-copy-status" role="status"></span>
-	</div>
+<div class="portal-address-block">
+	<Fragment set:html={html} />
 	<details class="portal-help">
 		<summary>How to use this address</summary>
 		<ol class="portal-help-steps">
@@ -51,7 +31,7 @@ const groups = Array.from({ length: Math.ceil(glyphs.length / 4) }, (_, i) => gl
 				<li>
 					<a href={glyph.href}>
 						<img src={glyph.image} alt="" width="32" height="32" loading="lazy" decoding="async" />
-						<span class="glyph-hex">{glyph.hex}</span>
+						<span class="portal-key-hex">{glyph.hex}</span>
 						<span class="portal-key-name">{glyph.name}</span>
 					</a>
 				</li>
@@ -61,17 +41,5 @@ const groups = Array.from({ length: Math.ceil(glyphs.length / 4) }, (_, i) => gl
 </div>
 
 <script>
-	for (const button of document.querySelectorAll<HTMLButtonElement>('.portal-copy')) {
-		if (!navigator.clipboard) continue;
-		button.hidden = false;
-		const status = button.parentElement?.querySelector('.portal-copy-status');
-		button.addEventListener('click', async () => {
-			try {
-				await navigator.clipboard.writeText(button.dataset.copy ?? '');
-				if (status) status.textContent = 'Address copied';
-			} catch {
-				if (status) status.textContent = "Couldn't copy. Select the address and copy it instead.";
-			}
-		});
-	}
+	import '../../scripts/portalCopy';
 </script>

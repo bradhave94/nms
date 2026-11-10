@@ -1,5 +1,6 @@
 ---
 import '../assets/css/blog.css';
+import '../assets/css/portal-glyphs.css';
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import Accordion from '@components/Accordion.astro';
@@ -7,6 +8,7 @@ import NitroAd from '@components/ads/NitroAd.astro';
 import { buildGuideStructuredData } from '@utils/guideStructuredData.js';
 import { getSiteOrigin } from '@utils/structuredData.js';
 import { withSiteTitle } from '@utils/seo.js';
+import { renderPortalCodes } from '@utils/portalGlyphs';
 import { fixSkippedHeadings, formatPostDate, groupRelatedLinks, isoDay, laterUpdate, tagLabel } from '@utils/blog.js';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
@@ -60,7 +62,7 @@ const relatedPosts = related.posts.flatMap((link) => {
 	return post && post.id !== guide.id ? [{ ...link, post }] : [];
 });
 const hasRelated = related.items.length + related.tools.length + relatedPosts.length > 0;
-const bodyHtml = fixSkippedHeadings(await Astro.slots.render('default'));
+const bodyHtml = renderPortalCodes(fixSkippedHeadings(await Astro.slots.render('default')), guide.id);
 ---
 
 <Layout
@@ -151,6 +153,10 @@ const bodyHtml = fixSkippedHeadings(await Astro.slots.render('default'));
 							position: 'top-right',
 						},
 					});
+				</script>
+				<script>
+					// Copy buttons on `portal:` addresses (renderPortalCodes in src/utils/portalGlyphs.ts).
+					import '../scripts/portalCopy';
 				</script>
 				<script>
 					// Wrap each table so it scrolls sideways on phones; a scrolling wrapper gets a tab stop
