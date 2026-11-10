@@ -9,6 +9,7 @@ import { SITE } from '@config';
 import { getApprovedAllianceBySlug, type PublicAlliance } from '@utils/alliancesDb';
 import { notFoundResponse } from '@utils/notFound';
 import { toWebp } from '@utils/icons';
+import PortalAddress from '@components/alliances/PortalAddress.astro';
 
 export const prerender = false;
 
@@ -49,8 +50,6 @@ const communityItems = findCommunityBanners(alliance.name);
 const galaxyNumber = findGalaxy(alliance.galaxy)?.number;
 const platformsText = alliance.platforms.length > 0 ? alliance.platforms.join(', ') : 'All platforms';
 const colourName = ALLIANCE_COLOURS.find((colour) => colour.hex === alliance.color.toLowerCase())?.name;
-// The portal address as the game shows it: 12 glyphs, read here in groups of four.
-const glyphGroups = alliance.portalGlyphs ? (alliance.portalGlyphs.toUpperCase().match(/.{1,4}/g) ?? []) : [];
 const listedOn = alliance.approvedAt
 	? new Date(alliance.approvedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
 	: undefined;
@@ -87,14 +86,7 @@ const listedOn = alliance.approvedAt
 						<li>
 							Find the <strong>{alliance.joinSystem}</strong> system.
 							{alliance.portalGlyphs ? <> The quickest route is a portal. Dial this address:</> : <> Ask the alliance for directions if you can't find it on the Galaxy Map.</>}
-							{glyphGroups.length > 0 && (
-								<p class="glyphs">
-									<span class="sr-only">Portal address {glyphGroups.join('').split('').join(' ')}</span>
-									{glyphGroups.map((group) => (
-										<span class="glyph-group" aria-hidden="true">{group.split('').map((glyph) => <span class="glyph">{glyph}</span>)}</span>
-									))}
-								</p>
-							)}
+							{alliance.portalGlyphs && <PortalAddress address={alliance.portalGlyphs} />}
 						</li>
 						<li>Dock at the space station, go to the Station Core and choose to join the alliance.</li>
 					</ol>

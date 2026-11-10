@@ -122,7 +122,7 @@ const describedBy = (field: keyof AllianceInput, help?: string) =>
 				<input id="alliance-glyphs" type="text" name="portalGlyphs" value={values.portalGlyphs} maxlength="16"
 					autocapitalize="characters" spellcheck="false" placeholder="e.g. 0123 4567 89AB"
 					aria-invalid={invalid('portalGlyphs')} aria-describedby={describedBy('portalGlyphs', 'glyphs-help')} />
-				<p id="glyphs-help" class="help">The 12 glyphs as hex (0–9, A–F), for a portal on a planet in that system.</p>
+				<p id="glyphs-help" class="help">The 12 glyphs as hex (0–9, A–F), for a portal on a planet in that system. Each glyph is one digit in the game's glyph order: Glyph One is 0, Glyph Two is 1, and so on up to Glyph Sixteen, which is F.</p>
 				{errors.portalGlyphs && <p id="portalGlyphs-error" class="field-error">{errors.portalGlyphs}</p>}
 			</div>
 		</div>
