@@ -33,7 +33,7 @@ const bonus = getIngestorBonus(item);
 				</div>
 			</dl>
 			<p class="m-0 mt-3 text-[.9rem] text-dim">
-				Load {item.Name} into the <a class="link" href={getSlug(INGESTOR_TECH_ID)}>Nutrient Ingestor</a> Exosuit technology for this bonus. The game shows its strength as a percentage when the Ingestor uses it.{' '}
+				Load {item.Name} into the <a class="link" href={getSlug(INGESTOR_TECH_ID)}>Nutrient Ingestor</a> Exosuit technology for this bonus. Its strength isn't listed: the game keeps one range per stat, not a number per food.{' '}
 				<a class="link" href={`${INGESTOR_PATH}#${statAnchor(bonus.stat)}`}>Other foods that boost {bonus.statName}</a>
 			</p>
 		</div>

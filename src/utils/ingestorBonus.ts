@@ -10,7 +10,9 @@
 // (bradhave94/nms-data-extractor#4). Until then src/data/ingestorBonuses.json is that parser's
 // output for the 7.10 tables; datav2 values win when present.
 import snapshot from '../data/ingestorBonuses.json';
-import { getById, getSlug, type Item } from '@utils/lookup.js';
+import food from '../datav2/Food.json';
+import fish from '../datav2/Fish.json';
+import { getSlug, type Item } from '@utils/lookup.js';
 
 export interface IngestorBonus {
 	stat: string;
@@ -33,8 +35,9 @@ export const BASE_FOOD_DURATION_SECONDS = 600;
 
 export function getIngestorBonus(item: Pick<Item, 'Id'> & FoodBonusFields): IngestorBonus | undefined {
 	const { FoodBonusStat: stat, FoodBonusStatName: statName, FoodBonusDurationSeconds: duration } = item;
-	if (stat && statName && typeof duration === 'number' && duration > 0) {
-		return { stat, statName, durationSeconds: duration };
+	// Once the extractor fills these in (any datav2 item has a label), datav2 is the only source.
+	if (stat && statName) {
+		return typeof duration === 'number' && duration > 0 ? { stat, statName, durationSeconds: duration } : undefined;
 	}
 	return SNAPSHOT[item.Id];
 }
@@ -74,13 +77,12 @@ export interface IngestorGroup {
 	rows: IngestorRow[];
 }
 
-/** Every item with a bonus, grouped by stat (largest group first), longest-lasting first in each. */
+/** Every food and fish with a bonus, grouped by stat (largest group first), longest-lasting first in each. */
 export function ingestorGroups(): IngestorGroup[] {
 	const groups = new Map<string, IngestorGroup>();
-	for (const id of Object.keys(SNAPSHOT)) {
-		const item = getById(id);
-		if (!item) continue;
-		const bonus = getIngestorBonus(item as Item & FoodBonusFields);
+	const items = [...(food as Array<Item & FoodBonusFields>), ...(fish as Array<Item & FoodBonusFields>)];
+	for (const item of items) {
+		const bonus = getIngestorBonus(item);
 		if (!bonus) continue;
 		const href = getSlug(item);
 		let group = groups.get(bonus.stat);
@@ -89,7 +91,7 @@ export function ingestorGroups(): IngestorGroup[] {
 			groups.set(bonus.stat, group);
 		}
 		group.rows.push({
-			id,
+			id: item.Id,
 			name: item.Name,
 			icon: item.Icon,
 			href,

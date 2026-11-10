@@ -19,7 +19,7 @@ const groups = ingestorGroups();
 const total = groups.reduce((sum, group) => sum + group.rows.length, 0);
 
 const title = withSiteTitle("Nutrient Ingestor Food Bonuses in No Man's Sky");
-const description = `Which Exosuit stat each of ${total} No Man's Sky foods and fish boosts in the Nutrient Ingestor, and how long one unit lasts, grouped by stat.`;
+const description = `The Exosuit or Multi-tool stat each of ${total} No Man's Sky foods and fish boosts in the Nutrient Ingestor, and how long one unit lasts.`;
 const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Cooking', href: '/cooking/' }, { name: 'Nutrient Ingestor bonuses' }];
 
 const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
@@ -47,9 +47,8 @@ const structuredData = buildCollectionStructuredData({
 					uses them one unit at a time for a temporary bonus. Each of these {total} items boosts one stat.
 				</p>
 				<p class="cr-lead">
-					One unit lasts {formatIngestorDuration(BASE_FOOD_DURATION_SECONDS)} times the item's cooking value, so finished dishes
-					last longer than raw ingredients. How strong the bonus is varies by dish; the game shows it as a percentage when the
-					Ingestor uses it, and doesn't store a fixed number per food.
+					One unit lasts {formatIngestorDuration(BASE_FOOD_DURATION_SECONDS)} times the item's cooking value, a number the game gives
+					each food. The bonus strength isn't listed: the game keeps one strength range per stat, not a number per food.
 				</p>
 			</div>
 		</header>
@@ -66,7 +65,7 @@ const structuredData = buildCollectionStructuredData({
 		{groups.map((group) => (
 			<section class="cr-section" id={group.anchor} aria-labelledby={`${group.anchor}-heading`}>
 				<h2 class="section-title" id={`${group.anchor}-heading`}>
-					{group.statName} <span class="count tabular">{group.rows.length}</span>
+					{group.statName} <span class="count tabular">{group.rows.length}<span class="sr-only"> items</span></span>
 				</h2>
 				<table class="cr-table stack">
 					<caption class="sr-only">Foods and fish that boost {group.statName}, longest-lasting first</caption>
