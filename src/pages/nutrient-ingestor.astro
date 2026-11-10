@@ -1,0 +1,109 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { buildCollectionStructuredData, getSiteOrigin } from '@utils/structuredData.js';
+import { withSiteTitle } from '@utils/seo.js';
+import { getSlug } from '@utils/lookup.js';
+import { toWebp } from '@utils/icons';
+import {
+	BASE_FOOD_DURATION_SECONDS,
+	INGESTOR_TECH_ID,
+	formatIngestorDuration,
+	ingestorGroups,
+	isoDuration,
+} from '@utils/ingestorBonus';
+import { SITE } from '@config';
+import '../assets/css/creatures.css';
+
+const groups = ingestorGroups();
+const total = groups.reduce((sum, group) => sum + group.rows.length, 0);
+
+const title = withSiteTitle("Nutrient Ingestor Food Bonuses in No Man's Sky");
+const description = `Which Exosuit stat each of ${total} No Man's Sky foods and fish boosts in the Nutrient Ingestor, and how long one unit lasts, grouped by stat.`;
+const breadcrumbs = [{ name: 'Home', href: '/' }, { name: 'Cooking', href: '/cooking/' }, { name: 'Nutrient Ingestor bonuses' }];
+
+const siteOrigin = getSiteOrigin(Astro.site, Astro.url);
+const canonicalUrl = new URL('/nutrient-ingestor/', siteOrigin).toString();
+const structuredData = buildCollectionStructuredData({
+	siteOrigin,
+	canonicalUrl,
+	collectionName: "No Man's Sky Nutrient Ingestor food bonuses",
+	collectionDescription: description,
+	collectionPath: '/nutrient-ingestor',
+	currentPage: 1,
+	breadcrumbs,
+	items: groups.map((group, index) => ({ name: group.statName, url: `${canonicalUrl}#${group.anchor}`, position: index + 1 })),
+});
+---
+
+<Layout {title} {description} slug="nutrient-ingestor" {structuredData} {breadcrumbs}>
+	<Breadcrumbs items={breadcrumbs} className="max-w-[1180px] pt-3 mb-1 lg:px-8" />
+	<div class="cr-wrap">
+		<header class="cr-head">
+			<div class="min-w-0">
+				<h1 class="cr-title">Nutrient Ingestor food bonuses</h1>
+				<p class="cr-lead">
+					Load cooked food or fish into the <a class="link" href={getSlug(INGESTOR_TECH_ID)}>Nutrient Ingestor</a>, an Exosuit technology, and it
+					uses them one unit at a time for a temporary bonus. Each of these {total} items boosts one stat.
+				</p>
+				<p class="cr-lead">
+					One unit lasts {formatIngestorDuration(BASE_FOOD_DURATION_SECONDS)} times the item's cooking value, so finished dishes
+					last longer than raw ingredients. How strong the bonus is varies by dish; the game shows it as a percentage when the
+					Ingestor uses it, and doesn't store a fixed number per food.
+				</p>
+			</div>
+		</header>
+
+		<nav class="ni-jump" aria-labelledby="ni-jump-title">
+			<h2 id="ni-jump-title" class="ni-jump-title">Jump to a stat</h2>
+			<ul>
+				{groups.map((group) => (
+					<li><a class="link" href={`#${group.anchor}`}>{group.statName}</a> <span class="text-dim tabular">({group.rows.length})</span></li>
+				))}
+			</ul>
+		</nav>
+
+		{groups.map((group) => (
+			<section class="cr-section" id={group.anchor} aria-labelledby={`${group.anchor}-heading`}>
+				<h2 class="section-title" id={`${group.anchor}-heading`}>
+					{group.statName} <span class="count tabular">{group.rows.length}</span>
+				</h2>
+				<table class="cr-table stack">
+					<caption class="sr-only">Foods and fish that boost {group.statName}, longest-lasting first</caption>
+					<thead>
+						<tr>
+							<th scope="col">Item</th>
+							<th scope="col">Type</th>
+							<th scope="col" class="num">Lasts per unit</th>
+						</tr>
+					</thead>
+					<tbody>
+						{group.rows.map((row) => (
+							<tr>
+								<th scope="row">
+									<a class="ni-item link" href={row.href}>
+										<img src={`${SITE.imageBaseUrl}${toWebp(row.icon)}`} alt="" width="32" height="32" loading="lazy" />
+										{row.name}
+									</a>
+								</th>
+								<td data-label="Type">{row.kind}</td>
+								<td data-label="Lasts per unit" class="num">
+									<time datetime={isoDuration(row.durationSeconds)}>{formatIngestorDuration(row.durationSeconds)}</time>
+								</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</section>
+		))}
+	</div>
+</Layout>
+
+<style>
+	.ni-jump { margin: 0 0 2rem; }
+	.ni-jump-title { margin: 0 0 .5rem; font-size: 1rem; font-weight: 600; }
+	.ni-jump ul { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin: 0; padding: 0; list-style: none; }
+	.ni-jump li { min-height: 24px; display: flex; align-items: center; gap: .3rem; }
+	.ni-item { display: inline-flex; align-items: center; gap: .6rem; min-height: 32px; }
+	.ni-item img { width: 2rem; height: 2rem; flex: none; }
+</style>

@@ -1,0 +1,41 @@
+---
+// "Nutrient Ingestor bonus": the Exosuit stat this food or fish boosts and how long one unit lasts.
+import {
+	INGESTOR_PATH,
+	INGESTOR_TECH_ID,
+	formatIngestorDuration,
+	getIngestorBonus,
+	isoDuration,
+	statAnchor,
+} from '@utils/ingestorBonus';
+import { getSlug } from '@utils/lookup.js';
+
+interface Props {
+	item: { Id: string; Name: string };
+}
+
+const { item } = Astro.props;
+const bonus = getIngestorBonus(item);
+---
+
+{bonus && (
+	<section id="nutrient-ingestor" class="item-section" aria-labelledby="nutrient-ingestor-title">
+		<h2 id="nutrient-ingestor-title" class="m-0 mb-3 text-[1.15rem] font-semibold">Nutrient Ingestor bonus</h2>
+		<div class="panel px-4 py-3">
+			<dl class="m-0 grid gap-x-6 gap-y-1 sm:grid-cols-2">
+				<div>
+					<dt class="text-[.85rem] text-dim">Boosts</dt>
+					<dd class="m-0 text-ink">{bonus.statName}</dd>
+				</div>
+				<div>
+					<dt class="text-[.85rem] text-dim">Lasts per unit</dt>
+					<dd class="m-0 tabular text-ink"><time datetime={isoDuration(bonus.durationSeconds)}>{formatIngestorDuration(bonus.durationSeconds)}</time></dd>
+				</div>
+			</dl>
+			<p class="m-0 mt-3 text-[.9rem] text-dim">
+				Load {item.Name} into the <a class="link" href={getSlug(INGESTOR_TECH_ID)}>Nutrient Ingestor</a> Exosuit technology for this bonus. The game shows its strength as a percentage when the Ingestor uses it.{' '}
+				<a class="link" href={`${INGESTOR_PATH}#${statAnchor(bonus.stat)}`}>Other foods that boost {bonus.statName}</a>
+			</p>
+		</div>
+	</section>
+)}

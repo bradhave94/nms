@@ -1,0 +1,2932 @@
+{
+	"FOOD_B_APPLE": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_BUG": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_BURN": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_B_CACTUS": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_CARAMEL": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_CAT": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_CHEESE": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_CHOCO": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_CREAM": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_DOUGH": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 120.0
+	},
+	"FOOD_B_FIEND": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_FISH": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_FLOWER": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_HERB": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_HONEY": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_HOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_JAM": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_MEAT": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_MILK": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_MUSHROOM": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_PLAIN": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 240.0
+	},
+	"FOOD_B_SALT": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_VEG": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_WEIRD": {
+		"stat": "Suit_AutoTranslator",
+		"statName": "Words Translated",
+		"durationSeconds": 396.0
+	},
+	"FOOD_B_WORM": {
+		"stat": "Suit_Protection_RadDrain",
+		"statName": "Radiation Resistance",
+		"durationSeconds": 396.0
+	},
+	"FOOD_CB_APPLE": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_BUGJAM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_CACTUS": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_CARM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_CHOC": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_CREAM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_CUST": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_FCUST": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_HONEY": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_JAM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_JGLITCH": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_JHOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CB_SCUST": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_APPLE": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_BLOB": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_BUGJAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_CACTUS": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_CARM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_CHOC": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_CREAM": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_CUST": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_FCUST": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_HONEY": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_JAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_JGLITCH": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_JHOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_PCAT": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CG_SCUST": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_APPLE": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_BLOBBUT": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_BUGJAM": {
+		"stat": "Weapon_Scan_Recharge_Time",
+		"statName": "Recharge Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_CACTUS": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_CARM": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_CHOC": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_CREAM": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_CUST": {
+		"stat": "Weapon_Scan_Recharge_Time",
+		"statName": "Recharge Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_FCUST": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_HONEY": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_JAM": {
+		"stat": "Weapon_Scan_Recharge_Time",
+		"statName": "Recharge Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_JGLITCH": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_JHOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_MCUST": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_PCATBUT": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CK_SCUST": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_APPLE": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_BLOBBUT": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_BUGJAM": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_CACTUS": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_CARM": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_CHOC": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_CREAM": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_HONEY": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_JAM": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_JGLITCH": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_JHOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CM_PCATBUT": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_APPLE": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_BUGJAM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_CACTUS": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_CARM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_CHOC": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_CREAM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_CUST": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_FCUST": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_HONEY": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_JAM": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_JGLITCH": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_JHOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_CP_SCUST": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_AJAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_BJAM": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_BLOB": {
+		"stat": "Weapon_Laser_Mining_Speed",
+		"statName": "Mining Speed",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_CARM": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_CHOC": {
+		"stat": "Weapon_Scan_Recharge_Time",
+		"statName": "Recharge Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_CJAM": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_CUST": {
+		"stat": "Weapon_Laser_Mining_Speed",
+		"statName": "Mining Speed",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_FCUST": {
+		"stat": "Weapon_Laser_Mining_Speed",
+		"statName": "Mining Speed",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_HON": {
+		"stat": "Weapon_Laser_Mining_Speed",
+		"statName": "Mining Speed",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_HONB": {
+		"stat": "Weapon_Laser_Mining_Speed",
+		"statName": "Mining Speed",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_JAM": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_MCUST": {
+		"stat": "Weapon_Scan_Recharge_Time",
+		"statName": "Recharge Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_MEAT": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_PCAT": {
+		"stat": "Weapon_Scan_Recharge_Time",
+		"statName": "Recharge Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_DNUT_SCUST": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_EGGPIE": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 390.0
+	},
+	"FOOD_EGGPIE_B": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 390.0
+	},
+	"FOOD_EGGPIE_BUG": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 390.0
+	},
+	"FOOD_EGGPIE_G": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 390.0
+	},
+	"FOOD_EGGPIE_GM": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 390.0
+	},
+	"FOOD_EGGPIE_M": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 390.0
+	},
+	"FOOD_EGGPIE_MU": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 390.0
+	},
+	"FOOD_F_CHIPS": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 450.0
+	},
+	"FOOD_F_CLAM": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_CRAB": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 360.0
+	},
+	"FOOD_F_EEL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_EGGS": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 450.0
+	},
+	"FOOD_F_JEELS": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 450.0
+	},
+	"FOOD_F_JELLY": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_LARGE1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_LARGE2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_LARGE3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_MED1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 300.0
+	},
+	"FOOD_F_MED2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 300.0
+	},
+	"FOOD_F_MED3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 300.0
+	},
+	"FOOD_F_MIX": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 510.0
+	},
+	"FOOD_F_OCTOPUS": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_PIE": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 510.0
+	},
+	"FOOD_F_PRAWN": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_RICE": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 450.0
+	},
+	"FOOD_F_S15": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 450.0
+	},
+	"FOOD_F_SMALL1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 270.0
+	},
+	"FOOD_F_SMALL2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 270.0
+	},
+	"FOOD_F_SMALL3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 270.0
+	},
+	"FOOD_F_SNAIL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 360.0
+	},
+	"FOOD_F_SQUID": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_STARFISH": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_STEW": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 480.0
+	},
+	"FOOD_F_STEW2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 600.0
+	},
+	"FOOD_F_TURTLE": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_WORM": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 330.0
+	},
+	"FOOD_F_XL1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 360.0
+	},
+	"FOOD_F_XL2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 360.0
+	},
+	"FOOD_F_XL3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 360.0
+	},
+	"FOOD_ICE": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_APPLE": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_BONE": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_BUG": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_CARM": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_CHOC": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_FIEND": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_FISH": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_FRUIT": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_GLITCH": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_GRAH": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_HONEY": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_HOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_ICE_STAR": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_JAM_BUG": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 480.0
+	},
+	"FOOD_JAM_CAT": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 480.0
+	},
+	"FOOD_JAM_CRAB": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 480.0
+	},
+	"FOOD_JAM_DUST": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 480.0
+	},
+	"FOOD_JAM_GLITCH": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 480.0
+	},
+	"FOOD_JAM_HOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 480.0
+	},
+	"FOOD_JAM_RAD": {
+		"stat": "Suit_Protection_RadDrain",
+		"statName": "Radiation Resistance",
+		"durationSeconds": 480.0
+	},
+	"FOOD_J_ALL3": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 360.0
+	},
+	"FOOD_J_DUST": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 420.0
+	},
+	"FOOD_J_HOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 420.0
+	},
+	"FOOD_J_LUSH": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 420.0
+	},
+	"FOOD_J_SALT": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 540.0
+	},
+	"FOOD_MC_APPLE": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_BLOB": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_BUGJAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_CACTUS": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_CARM": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_CHOC": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_CREAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_CUST": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_HONEY": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_JAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_JGLITCH": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_JHOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MC_PCAT": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MEAT_STEW": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 480.0
+	},
+	"FOOD_MM_APPLE": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_BLOB": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_BUGJAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_CACTUS": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_CARM": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_CHOC": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_CREAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_CUST": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_HONEY": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_JAM": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_JGLITCH": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_JHOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_MM_PCAT": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 600.0
+	},
+	"FOOD_M_BALL": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_BEETLE": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_BLOB": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_BONE": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_BUG": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_CAT": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_COW": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_CRAB": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_DIGGER": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_DIPLO": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_DRILL": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_FIEND": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_FISH": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_FLYER": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_GEK": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_GRUB": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_HORROR": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 60.0
+	},
+	"FOOD_M_MEAT": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 60.0
+	},
+	"FOOD_M_MOLE": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_REX": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_M_STRIDER": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_ORGAN_STEW": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 390.0
+	},
+	"FOOD_PIE_BALL": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_BEET": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_BERRY": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_BMEAT": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_BONE": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_BUGJAM": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CACTUS": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CARM": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CAT": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CHEESE": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CHOC": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CRAB": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CRABJ": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CREAM": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_CUST": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_DIG": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_DRILL": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_FIEND": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_FISH": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 480.0
+	},
+	"FOOD_PIE_GEK": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_GLOW": {
+		"stat": "Suit_Protection_RadDrain",
+		"statName": "Radiation Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_GREASE": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_HONEY": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_JAM": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_MCUST": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_MEAT": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 480.0
+	},
+	"FOOD_PIE_MOLE": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_MUSH": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_ORGAN": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_ROOTS": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_SCUST": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_SMEAT": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 480.0
+	},
+	"FOOD_PIE_VCHEE": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 600.0
+	},
+	"FOOD_PIE_VEG": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 480.0
+	},
+	"FOOD_PIE_WEIRD": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 600.0
+	},
+	"FOOD_P_ALL1": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 120.0
+	},
+	"FOOD_P_ALL2": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 120.0
+	},
+	"FOOD_P_ALL3": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 120.0
+	},
+	"FOOD_P_CAVE": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_COLDFARM": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_COLDWILD": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 150.0
+	},
+	"FOOD_P_DEATH": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_DUSTFARM": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_DUSTWILD": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 150.0
+	},
+	"FOOD_P_GLITCH": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 210.0
+	},
+	"FOOD_P_HOTFARM": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_HOTWILD": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 150.0
+	},
+	"FOOD_P_LUSHFARM": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_LUSHWILD": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 150.0
+	},
+	"FOOD_P_POOP": {
+		"stat": "Suit_AutoTranslator",
+		"statName": "Words Translated",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_RADFARM": {
+		"stat": "Suit_Protection_RadDrain",
+		"statName": "Radiation Resistance",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_RADWILD": {
+		"stat": "Suit_Protection_RadDrain",
+		"statName": "Radiation Resistance",
+		"durationSeconds": 150.0
+	},
+	"FOOD_P_STELLAR": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 240.0
+	},
+	"FOOD_P_TOXFARM": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 180.0
+	},
+	"FOOD_P_TOXWILD": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 150.0
+	},
+	"FOOD_P_WATER": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"FOOD_R_BBUTTER": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_BCAKEMIX": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 240.0
+	},
+	"FOOD_R_BCHEESE": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_BCREAM": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_BCUSTARD": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_BLOBBUT": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 480.0
+	},
+	"FOOD_R_BLOBGEK": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_BONEMILK": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_BREAD": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_BUTTER": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_CAKEMIX": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 240.0
+	},
+	"FOOD_R_CARAMEL": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_CHEESE": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_CHOC": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_CREAM": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_CUSTARD": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_DONUT": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_DOUGH": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_EGGS": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 240.0
+	},
+	"FOOD_R_EYEBALLS": {
+		"stat": "Suit_AutoTranslator",
+		"statName": "Words Translated",
+		"durationSeconds": 600.0
+	},
+	"FOOD_R_EYEICE": {
+		"stat": "Suit_Protection_ColdDrain",
+		"statName": "Cold Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_R_EYESTEW": {
+		"stat": "Suit_AutoTranslator",
+		"statName": "Words Translated",
+		"durationSeconds": 600.0
+	},
+	"FOOD_R_FCUSTARD": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_R_FLOUR": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 1080.0
+	},
+	"FOOD_R_FOSSIL": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 180.0
+	},
+	"FOOD_R_GBUTTER": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_GCAKEMIX": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 240.0
+	},
+	"FOOD_R_GCHEESE": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 480.0
+	},
+	"FOOD_R_GCREAM": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_GOIL": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_GONUT": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 480.0
+	},
+	"FOOD_R_HONEY": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_HONEYBUT": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_HONEYGEK": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 480.0
+	},
+	"FOOD_R_HORROR": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 450.0
+	},
+	"FOOD_R_MCAKEMIX": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 240.0
+	},
+	"FOOD_R_MCUSTARD": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_R_MEAT": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_MERINGUE": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 420.0
+	},
+	"FOOD_R_MERMIX": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 240.0
+	},
+	"FOOD_R_MMERMIX": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 240.0
+	},
+	"FOOD_R_OIL": {
+		"stat": "Suit_Jetpack_Tank",
+		"statName": "Jetpack Tanks",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_PASTRY": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_PCAKEMIX": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 240.0
+	},
+	"FOOD_R_PCATBUT": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 480.0
+	},
+	"FOOD_R_PCATGEK": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_PIECASE": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_SCUSTARD": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_R_SMOKED": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_SUGAR": {
+		"stat": "Suit_Energy_Regen",
+		"statName": "Solar Panel Power",
+		"durationSeconds": 300.0
+	},
+	"FOOD_R_SWEETBUT": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 360.0
+	},
+	"FOOD_R_SWEETGEK": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 480.0
+	},
+	"FOOD_R_VEG": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 300.0
+	},
+	"FOOD_STEW_BALL": {
+		"stat": "Weapon_Laser_Mining_Speed",
+		"statName": "Mining Speed",
+		"durationSeconds": 390.0
+	},
+	"FOOD_STEW_BEET": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 390.0
+	},
+	"FOOD_STEW_BONE": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 390.0
+	},
+	"FOOD_STEW_BUG": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 390.0
+	},
+	"FOOD_STEW_DIG": {
+		"stat": "Weapon_Laser_Mining_Speed",
+		"statName": "Mining Speed",
+		"durationSeconds": 390.0
+	},
+	"FOOD_STEW_DRILL": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 390.0
+	},
+	"FOOD_STEW_EVIL": {
+		"stat": "Suit_Protection_ToxDrain",
+		"statName": "Toxic Resistance",
+		"durationSeconds": 390.0
+	},
+	"FOOD_STEW_FOSS": {
+		"stat": "Weapon_Laser_MiningBonus",
+		"statName": "Resources Mined",
+		"durationSeconds": 396.0
+	},
+	"FOOD_STEW_M_CH": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_M_CR": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_M_HOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_M_VEG": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_O_CH": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_O_CR": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_O_HOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_O_VEG": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_V_CH": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_V_CR": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_V_HOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 600.0
+	},
+	"FOOD_STEW_V_VEG": {
+		"stat": "Suit_Armour_Shield_Strength",
+		"statName": "Shield Strength",
+		"durationSeconds": 600.0
+	},
+	"FOOD_S_CHEESE": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 420.0
+	},
+	"FOOD_S_CREAM": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 420.0
+	},
+	"FOOD_S_HOT": {
+		"stat": "Suit_Protection_HeatDrain",
+		"statName": "Heat Resistance",
+		"durationSeconds": 420.0
+	},
+	"FOOD_S_VEG": {
+		"stat": "Suit_Protection",
+		"statName": "Hazard Protection Battery",
+		"durationSeconds": 420.0
+	},
+	"FOOD_VEG_STEW": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 480.0
+	},
+	"FOOD_V_BLOB": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_BONE": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_BUG": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_CAT": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_COW": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_CRAB": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_DIPLO": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_EGG": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 90.0
+	},
+	"FOOD_V_FLYER": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_V_GEK": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_MILK": {
+		"stat": "Suit_Stamina_Recovery",
+		"statName": "Sprint Recovery Time",
+		"durationSeconds": 90.0
+	},
+	"FOOD_V_MOLE": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_PCAT": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_REX": {
+		"stat": "Suit_Energy",
+		"statName": "Life Support Tanks",
+		"durationSeconds": 60.0
+	},
+	"FOOD_V_ROBOT": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_V_STRIDER": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"FOOD_W_CASE": {
+		"stat": "Weapon_Scan_Discovery_Mineral",
+		"statName": "Mineral Analysis Rewards",
+		"durationSeconds": 120.0
+	},
+	"FOOD_W_MEAT": {
+		"stat": "Weapon_Scan_Discovery_Flora",
+		"statName": "Flora Analysis Rewards",
+		"durationSeconds": 120.0
+	},
+	"FOOD_W_SWEETM": {
+		"stat": "Suit_Stamina_Strength",
+		"statName": "Sprint Distance",
+		"durationSeconds": 120.0
+	},
+	"F_ALL_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_ALL_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ALL_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ALL_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_ALL_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_ALL_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_ALL_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_ALL_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_ALL_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_ALL_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ALL_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_ALL_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_ALL_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_ALL_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_ALL_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_ALL_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_ALL_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_ALL_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_ALL_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ALL_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ALL_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_COLD_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_COLD_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_COLD_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_COLD_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_COLD_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_COLD_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_COLD_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_COLD_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_COLD_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_COLD_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_COLD_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_COLD_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_COLD_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_COLD_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_COLD_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_COLD_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_COLD_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_COLD_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_COLD_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_COLD_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_COLD_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_DEEP_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_DEEP_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DEEP_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DEEP_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_DEEP_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_DEEP_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_DEEP_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_DEEP_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_DEEP_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_DEEP_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DEEP_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_DEEP_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_DEEP_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_DEEP_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_DEEP_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_DEEP_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_DEEP_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_DEEP_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_DEEP_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DEEP_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DEEP_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_DUST_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_DUST_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DUST_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DUST_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_DUST_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_DUST_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_DUST_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_DUST_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_DUST_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_DUST_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DUST_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_DUST_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_DUST_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_DUST_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_DUST_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_DUST_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_DUST_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_DUST_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_DUST_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DUST_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_DUST_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_GAS_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_GAS_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_GAS_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_GAS_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_GAS_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_GAS_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_GAS_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_GAS_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_GAS_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_GAS_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_GAS_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_GAS_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_GAS_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_GAS_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_GAS_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_GAS_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_GAS_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_GAS_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_GAS_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_GAS_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_GAS_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_HOT_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_HOT_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_HOT_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_HOT_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_HOT_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_HOT_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_HOT_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_HOT_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_HOT_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_HOT_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_HOT_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_HOT_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_HOT_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_HOT_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_HOT_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_HOT_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_HOT_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_HOT_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_HOT_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_HOT_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_HOT_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_LUSH_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_LUSH_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_LUSH_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_LUSH_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_LUSH_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_LUSH_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_LUSH_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_LUSH_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_LUSH_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_LUSH_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_LUSH_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_LUSH_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_LUSH_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_LUSH_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_LUSH_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_LUSH_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_LUSH_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_LUSH_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_LUSH_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_LUSH_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_LUSH_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_ODD_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_ODD_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ODD_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ODD_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_ODD_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_ODD_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_ODD_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_ODD_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_ODD_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_ODD_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ODD_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_ODD_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_ODD_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_ODD_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_ODD_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_ODD_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_ODD_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_ODD_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_ODD_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ODD_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_ODD_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_RAD_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_RAD_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_RAD_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_RAD_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_RAD_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_RAD_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_RAD_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_RAD_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_RAD_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_RAD_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_RAD_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_RAD_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_RAD_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_RAD_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_RAD_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_RAD_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_RAD_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_RAD_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_RAD_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_RAD_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_RAD_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_TOX_COM_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_TOX_COM_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_TOX_COM_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_TOX_COM_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_TOX_COM_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_TOX_COM_S3": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 30.0
+	},
+	"F_TOX_COM_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_TOX_EPIC_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_TOX_EPIC_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	},
+	"F_TOX_EPIC_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_TOX_EPIC_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 210.0
+	},
+	"F_TOX_LEG_L1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_TOX_LEG_M1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 210.0
+	},
+	"F_TOX_LEG_S1": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 180.0
+	},
+	"F_TOX_LEG_XL": {
+		"stat": "Weapon_Scan_Discovery_Creature",
+		"statName": "Fauna Analysis Rewards",
+		"durationSeconds": 234.0
+	},
+	"F_TOX_RARE_L1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 120.0
+	},
+	"F_TOX_RARE_M1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_TOX_RARE_M2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 90.0
+	},
+	"F_TOX_RARE_S1": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_TOX_RARE_S2": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 60.0
+	},
+	"F_TOX_RARE_XL": {
+		"stat": "Suit_Protection_WaterDrain",
+		"statName": "Breathing Efficiency",
+		"durationSeconds": 180.0
+	}
+}
