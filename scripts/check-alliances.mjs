@@ -86,6 +86,7 @@ assert.equal(slugify('Élan Vital'), 'elan-vital');
 assert.equal(slugify('日本人コミュニティ'), 'alliance');
 assert.equal(slugify('Submit'), 'submit-alliance');
 assert.equal(slugify('admin'), 'admin-alliance');
+assert.equal(slugify('Views'), 'views-alliance');
 
 // Galaxies: all 256, canonical names, unknown names rejected.
 assert.equal(GALAXIES.length, 256);

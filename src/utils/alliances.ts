@@ -57,7 +57,7 @@ const COLOUR_HEXES = new Set<string>(ALLIANCE_COLOURS.map((colour) => colour.hex
 const MAX_FOCUSES = 4;
 
 // Static routes under /alliances/ that a generated slug must not shadow.
-const RESERVED_SLUGS = new Set(['submit', 'admin']);
+const RESERVED_SLUGS = new Set(['submit', 'admin', 'views']);
 
 export type AllianceInput = {
 	name: string;
