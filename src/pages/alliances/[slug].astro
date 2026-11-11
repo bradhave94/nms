@@ -147,3 +147,23 @@ const listedOn = alliance.approvedAt
 		</div>
 	</div>
 </Layout>
+
+<script is:inline define:vars={{ allianceSlug: alliance.slug }}>
+	const endpoint = '/alliances/views/';
+	const body = new URLSearchParams({ slug: allianceSlug });
+	try {
+		if (navigator.sendBeacon) {
+			navigator.sendBeacon(endpoint, body);
+		} else {
+			fetch(endpoint, {
+				method: 'POST',
+				body,
+				credentials: 'same-origin',
+				mode: 'same-origin',
+				keepalive: true,
+			});
+		}
+	} catch {
+		// Visit counting is best-effort and must not affect the page.
+	}
+</script>

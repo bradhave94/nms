@@ -14,7 +14,6 @@ import {
 	type AllianceStatus,
 } from './alliances';
 import { ALLIANCE_SEEDS } from './allianceSeeds';
-import popularity from '../data/alliancePopularity.json' with { type: 'json' };
 
 /** What the public pages may see: everything except the private moderator contact. */
 export type PublicAlliance = Omit<Alliance, 'contact'>;
@@ -119,19 +118,6 @@ const inputColumns = (input: AllianceInput) => ({
 
 const escapeLike = (value: string): string => value.replace(/[\\%_]/g, (match) => `\\${match}`);
 
-const visitorCount = (slug: string): number => {
-	const count = (popularity.visitors as Record<string, number>)[slug];
-	return typeof count === 'number' && Number.isFinite(count) ? count : 0;
-};
-
-const byPopularity = (a: PublicAlliance, b: PublicAlliance): number => {
-	const visitorsDelta = visitorCount(b.slug) - visitorCount(a.slug);
-	if (visitorsDelta !== 0) return visitorsDelta;
-	const approvedDelta = (b.approvedAt ?? '').localeCompare(a.approvedAt ?? '');
-	if (approvedDelta !== 0) return approvedDelta;
-	return b.id - a.id;
-};
-
 /** One-way hash so rate limiting never stores a raw IP address. */
 export const hashSubmitter = (clientAddress: string): string =>
 	createHash('sha256').update(`nms-alliances:${clientAddress}`).digest('hex');
@@ -160,13 +146,17 @@ export const listApprovedAlliances = async (filters: AllianceFilters = {}): Prom
 		where.push('EXISTS (SELECT 1 FROM json_each(alliances.focuses) WHERE value = ?)');
 		args.push(filters.focus);
 	}
-	const orderBy = filters.sort === 'name' ? 'name COLLATE NOCASE ASC' : 'approved_at DESC, id DESC';
+	const orderBy =
+		filters.sort === 'name'
+			? 'name COLLATE NOCASE ASC'
+			: filters.sort === 'newest'
+				? 'approved_at DESC, id DESC'
+				: 'page_views DESC, approved_at DESC, id DESC';
 	const result = await (await db()).execute({
 		sql: `SELECT * FROM alliances WHERE ${where.join(' AND ')} ORDER BY ${orderBy}`,
 		args,
 	});
-	const alliances = result.rows.map(toPublicAlliance);
-	return filters.sort === 'popular' ? [...alliances].sort(byPopularity) : alliances;
+	return result.rows.map(toPublicAlliance);
 };
 
 export const listApprovedGalaxies = async (): Promise<Array<{ galaxy: string; count: number }>> => {
@@ -184,6 +174,14 @@ export const getApprovedAllianceBySlug = async (slug: string): Promise<PublicAll
 	});
 	const row = result.rows[0];
 	return row ? toPublicAlliance(row) : undefined;
+};
+
+/** Adds one to the running visit total for an approved listing. Unknown or unapproved slugs are ignored. */
+export const incrementAlliancePageViews = async (slug: string): Promise<void> => {
+	await (await db()).execute({
+		sql: `UPDATE alliances SET page_views = page_views + 1 WHERE slug = ? AND status = 'approved'`,
+		args: [slug],
+	});
 };
 
 export const countRecentSubmissions = async (submitterHash: string, hours: number): Promise<number> => {
