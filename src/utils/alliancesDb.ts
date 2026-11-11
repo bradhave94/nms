@@ -14,6 +14,7 @@ import {
 	type AllianceStatus,
 } from './alliances';
 import { ALLIANCE_SEEDS } from './allianceSeeds';
+import popularity from '../data/alliancePopularity.json' with { type: 'json' };
 
 /** What the public pages may see: everything except the private moderator contact. */
 export type PublicAlliance = Omit<Alliance, 'contact'>;
@@ -23,7 +24,7 @@ export type AllianceFilters = {
 	galaxy?: string;
 	platform?: string;
 	focus?: string;
-	sort?: 'newest' | 'name';
+	sort?: 'popular' | 'newest' | 'name';
 };
 
 type Row = Record<string, unknown>;
@@ -118,6 +119,19 @@ const inputColumns = (input: AllianceInput) => ({
 
 const escapeLike = (value: string): string => value.replace(/[\\%_]/g, (match) => `\\${match}`);
 
+const visitorCount = (slug: string): number => {
+	const count = (popularity.visitors as Record<string, number>)[slug];
+	return typeof count === 'number' && Number.isFinite(count) ? count : 0;
+};
+
+const byPopularity = (a: PublicAlliance, b: PublicAlliance): number => {
+	const visitorsDelta = visitorCount(b.slug) - visitorCount(a.slug);
+	if (visitorsDelta !== 0) return visitorsDelta;
+	const approvedDelta = (b.approvedAt ?? '').localeCompare(a.approvedAt ?? '');
+	if (approvedDelta !== 0) return approvedDelta;
+	return b.id - a.id;
+};
+
 /** One-way hash so rate limiting never stores a raw IP address. */
 export const hashSubmitter = (clientAddress: string): string =>
 	createHash('sha256').update(`nms-alliances:${clientAddress}`).digest('hex');
@@ -151,7 +165,8 @@ export const listApprovedAlliances = async (filters: AllianceFilters = {}): Prom
 		sql: `SELECT * FROM alliances WHERE ${where.join(' AND ')} ORDER BY ${orderBy}`,
 		args,
 	});
-	return result.rows.map(toPublicAlliance);
+	const alliances = result.rows.map(toPublicAlliance);
+	return filters.sort === 'popular' ? [...alliances].sort(byPopularity) : alliances;
 };
 
 export const listApprovedGalaxies = async (): Promise<Array<{ galaxy: string; count: number }>> => {

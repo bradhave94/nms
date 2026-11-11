@@ -25,6 +25,7 @@
 		"test:power": "node --experimental-strip-types scripts/check-base-power.mjs",
 		"test:alliances": "node --experimental-strip-types scripts/check-alliances.mjs",
 		"data:galaxies": "node scripts/fetch-galaxies.mjs",
+    "data:alliance-popularity": "node scripts/update-alliance-popularity.mjs",
 		"data:check": "node scripts/import-extractor-data.mjs --check",
 		"data:sync": "node scripts/import-extractor-data.mjs --sync",
 		"data:icons": "node scripts/icon-webp.mjs",
