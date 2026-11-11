@@ -85,6 +85,10 @@
 		color: var(--color-ink);
 	}
 
+	/* JS auto-applies filters, so the Filter submit is only needed without JS. */
+	.alliances form[aria-label="Filter alliances"][data-auto-apply] button[type="submit"] { display: none; }
+	.alliances form[aria-label="Filter alliances"][data-auto-apply]:not(:has([data-filter-actions] a)) [data-filter-actions] { display: none; }
+
 	/* Keep the hidden attribute working on elements these styles give a display value. */
 	:is(.alliances, .site-form) [hidden] { display: none !important; }
 

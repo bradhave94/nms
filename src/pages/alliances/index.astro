@@ -89,7 +89,7 @@ const location = (alliance: PublicAlliance) =>
 			<a class="btn-primary" href="/alliances/submit/">List your alliance</a>
 		</header>
 
-		<form method="get" class="panel mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(4,minmax(0,1fr))_auto] lg:items-end" role="search" aria-label="Filter alliances">
+		<form method="get" class="panel mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(4,minmax(0,1fr))] lg:items-end" role="search" aria-label="Filter alliances">
 			<div class="sm:col-span-2 lg:col-span-1">
 				<label for="filter-q">Search</label>
 				<input id="filter-q" type="search" name="q" value={filters.q ?? ''} placeholder="Name, tag or region" />
@@ -125,11 +125,74 @@ const location = (alliance: PublicAlliance) =>
 					<option value="name" selected={filters.sort === 'name'}>A–Z</option>
 				</select>
 			</div>
-			<div class="flex gap-2">
+			<div class="flex gap-2 sm:col-span-2 lg:col-span-5" data-filter-actions>
 				<button type="submit" class="btn-quiet">Filter</button>
 				{isFiltered && <a class="btn-quiet" href="/alliances/">Clear</a>}
 			</div>
 		</form>
+		<script is:inline>
+			(() => {
+				const form = document.querySelector('form[aria-label="Filter alliances"]');
+				if (!(form instanceof HTMLFormElement)) return;
+				form.dataset.autoApply = '';
+
+				const search = form.querySelector('#filter-q');
+				const path = '/alliances/';
+				const current = () => `${location.pathname}${location.search}`;
+				const nextUrl = () => {
+					const params = new URLSearchParams(new FormData(form));
+					for (const key of [...params.keys()]) {
+						if (!(params.get(key) || '').trim()) params.delete(key);
+					}
+					if (params.get('sort') === 'popular') params.delete('sort');
+					const query = params.toString();
+					return query ? `${path}?${query}` : path;
+				};
+				const apply = () => {
+					const next = nextUrl();
+					if (next === current()) return;
+					if (document.activeElement === search) {
+						try { sessionStorage.setItem('alliance-filter-focus', 'q'); } catch { /* private mode */ }
+					}
+					location.assign(next);
+				};
+
+				for (const select of form.querySelectorAll('select')) {
+					select.addEventListener('change', apply);
+				}
+				let timer = 0;
+				if (search instanceof HTMLInputElement) {
+					const applySoon = () => {
+						window.clearTimeout(timer);
+						timer = window.setTimeout(apply, 400);
+					};
+					search.addEventListener('input', applySoon);
+					search.addEventListener('change', () => {
+						window.clearTimeout(timer);
+						apply();
+					});
+					search.addEventListener('keydown', (event) => {
+						if (event.key !== 'Enter') return;
+						event.preventDefault();
+						window.clearTimeout(timer);
+						apply();
+					});
+				}
+				form.addEventListener('submit', (event) => {
+					event.preventDefault();
+					window.clearTimeout(timer);
+					apply();
+				});
+
+				try {
+					if (sessionStorage.getItem('alliance-filter-focus') === 'q' && search instanceof HTMLInputElement) {
+						sessionStorage.removeItem('alliance-filter-focus');
+						search.focus();
+						search.setSelectionRange(search.value.length, search.value.length);
+					}
+				} catch { /* private mode */ }
+			})();
+		</script>
 
 		{loadFailed ? (
 			<p class="notice error" role="alert">The directory couldn't load right now. Please try again in a minute.</p>
