@@ -22,7 +22,7 @@ const filters: AllianceFilters = {
 	galaxy: params.get('galaxy')?.trim().slice(0, 40) || undefined,
 	platform: pick(params.get('platform'), PLATFORMS),
 	focus: pick(params.get('focus'), FOCUSES),
-	sort: params.get('sort') === 'name' ? 'name' : 'newest',
+	sort: pick(params.get('sort'), ['popular', 'newest', 'name'] as const) ?? 'popular',
 };
 const isFiltered = Boolean(filters.q || filters.galaxy || filters.platform || filters.focus);
 
@@ -120,6 +120,7 @@ const location = (alliance: PublicAlliance) =>
 			<div>
 				<label for="filter-sort">Sort</label>
 				<select id="filter-sort" name="sort">
+					<option value="popular" selected={filters.sort === 'popular'}>Popular</option>
 					<option value="newest" selected={filters.sort === 'newest'}>Newest</option>
 					<option value="name" selected={filters.sort === 'name'}>A–Z</option>
 				</select>
