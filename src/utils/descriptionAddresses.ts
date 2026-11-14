@@ -111,17 +111,37 @@ const escapeHtml = (text: string): string =>
 	text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 /**
+ * Coordinates don't name a planet, so a converted address starts with planet glyph 0. When the
+ * listing's saved portal address is the same system (the last 11 glyphs match), use its planet
+ * glyph so the description's glyphs and the join steps' glyphs are identical. Portal codes typed
+ * in full are left as written.
+ */
+export const withSavedPlanet = (
+	address: DescriptionAddress,
+	savedPortal: string,
+): DescriptionAddress & { planetFromSaved: boolean } => {
+	const saved = savedPortal.toUpperCase().replace(/[\s:-]/g, '');
+	if (address.kind === 'galactic' && /^[0-9A-F]{12}$/.test(saved) && saved.slice(1) === address.portal.slice(1)) {
+		return { ...address, portal: saved, planetFromSaved: true };
+	}
+	return { ...address, planetFromSaved: false };
+};
+
+/**
  * The description as escaped HTML, unchanged, with each address it contains followed by its
  * glyphs (and a note when they were converted from galactic coordinates). Phrasing content only,
- * so it stays valid inside the description paragraph.
+ * so it stays valid inside the description paragraph. `savedPortal` is the listing's own portal
+ * address, used for the planet glyph of matching coordinates (withSavedPlanet).
  */
-export const renderDescriptionWithGlyphs = (description: string): string => {
+export const renderDescriptionWithGlyphs = (description: string, savedPortal = ''): string => {
+	const saved = savedPortal.toUpperCase().replace(/[\s:-]/g, '');
 	let html = '';
 	let cursor = 0;
-	for (const address of findDescriptionAddresses(description)) {
+	for (const found of findDescriptionAddresses(description)) {
+		const address = withSavedPlanet(found, saved);
 		html += escapeHtml(description.slice(cursor, address.end));
 		html += `<span class="description-portal">`;
-		if (address.kind === 'galactic') {
+		if (address.kind === 'galactic' && !address.planetFromSaved) {
 			html += `<span class="description-portal-note">Portal glyphs for the coordinates ${escapeHtml(address.text)} (the first glyph, the planet, is 0 because coordinates don't name a planet):</span>`;
 		}
 		html += renderPortalAddressHtml(address.portal);

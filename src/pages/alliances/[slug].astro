@@ -53,7 +53,7 @@ const galaxyNumber = findGalaxy(alliance.galaxy)?.number;
 const platformsText = alliance.platforms.length > 0 ? alliance.platforms.join(', ') : 'All platforms';
 const colourName = ALLIANCE_COLOURS.find((colour) => colour.hex === alliance.color.toLowerCase())?.name;
 // Addresses pasted into the description get their glyphs underneath; the text itself is unchanged.
-const descriptionHtml = renderDescriptionWithGlyphs(alliance.description);
+const descriptionHtml = renderDescriptionWithGlyphs(alliance.description, alliance.portalGlyphs);
 const listedOn = alliance.approvedAt
 	? new Date(alliance.approvedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
 	: undefined;

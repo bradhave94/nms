@@ -57,4 +57,17 @@ assert.ok(html.includes('data-portal-address="0077FD9F2C75"'));
 assert.ok(html.endsWith('</span>\nSee you!'));
 assert.equal(renderDescriptionWithGlyphs('No address <here>'), 'No address &lt;here&gt;');
 
+// Coordinates take the planet glyph from the listing's saved address when it's the same system.
+const mpc = 'Galactic Address: 0474:007C:01F1:0077';
+const withSaved = renderDescriptionWithGlyphs(mpc, '1077FD9F2C75');
+assert.ok(withSaved.includes('data-portal-address="1077FD9F2C75"'), 'uses saved planet glyph');
+assert.ok(!withSaved.includes('description-portal-note'), 'no planet note when the saved address matches');
+assert.ok(renderDescriptionWithGlyphs(mpc, '1077-fd9f 2c75').includes('data-portal-address="1077FD9F2C75"'), 'saved address normalised');
+const otherSystem = renderDescriptionWithGlyphs(mpc, '1078FD9F2C75');
+assert.ok(otherSystem.includes('data-portal-address="0077FD9F2C75"') && otherSystem.includes('description-portal-note'), 'different system keeps 0 and the note');
+const noSaved = renderDescriptionWithGlyphs(mpc, '');
+assert.ok(noSaved.includes('data-portal-address="0077FD9F2C75"') && noSaved.includes('description-portal-note'), 'no saved address keeps 0 and the note');
+const typed = renderDescriptionWithGlyphs('Portal: 0077FD9F2C75', '1077FD9F2C75');
+assert.ok(typed.includes('data-portal-address="0077FD9F2C75"') && !typed.includes('data-portal-address="1077'), 'full portal codes stay as written');
+
 console.warn('Description address checks passed.');
