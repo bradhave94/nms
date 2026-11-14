@@ -23,7 +23,7 @@
 		"test:route-eligible": "node --experimental-strip-types scripts/check-route-eligible.mjs",
 		"test:data-import": "node scripts/check-import-safety.mjs",
 		"test:power": "node --experimental-strip-types scripts/check-base-power.mjs",
-		"test:alliances": "node --experimental-strip-types scripts/check-alliances.mjs",
+		"test:alliances": "node --experimental-strip-types scripts/check-alliances.mjs && node --experimental-strip-types scripts/check-description-addresses.mjs",
 		"data:galaxies": "node scripts/fetch-galaxies.mjs",
 		"data:alliance-page-views": "node scripts/seed-alliance-page-views.mjs",
 		"data:check": "node scripts/import-extractor-data.mjs --check",
