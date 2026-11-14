@@ -1,5 +1,6 @@
 ---
 import '@assets/css/alliances.css';
+import '@assets/css/portal-glyphs.css';
 import Layout from '@layouts/Layout.astro';
 import Breadcrumbs from '@components/Breadcrumbs.astro';
 import { ALLIANCE_COLOURS, findGalaxy } from '@utils/alliances';
@@ -10,6 +11,7 @@ import { getApprovedAllianceBySlug, type PublicAlliance } from '@utils/alliances
 import { notFoundResponse } from '@utils/notFound';
 import { toWebp } from '@utils/icons';
 import PortalAddress from '@components/alliances/PortalAddress.astro';
+import { renderDescriptionWithGlyphs } from '@utils/descriptionAddresses';
 
 export const prerender = false;
 
@@ -50,6 +52,8 @@ const communityItems = findCommunityBanners(alliance.name);
 const galaxyNumber = findGalaxy(alliance.galaxy)?.number;
 const platformsText = alliance.platforms.length > 0 ? alliance.platforms.join(', ') : 'All platforms';
 const colourName = ALLIANCE_COLOURS.find((colour) => colour.hex === alliance.color.toLowerCase())?.name;
+// Addresses pasted into the description get their glyphs underneath; the text itself is unchanged.
+const descriptionHtml = renderDescriptionWithGlyphs(alliance.description);
 const listedOn = alliance.approvedAt
 	? new Date(alliance.approvedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
 	: undefined;
@@ -70,7 +74,7 @@ const listedOn = alliance.approvedAt
 			<div class="min-w-0 space-y-6">
 				<section class="panel" aria-labelledby="about-heading">
 					<h2 id="about-heading">About</h2>
-					<p class="description mt-4">{alliance.description}</p>
+					<p class="description mt-4" set:html={descriptionHtml} />
 					{alliance.focuses.length > 0 && (
 						<p class="help mt-4">Focus: {alliance.focuses.join(' · ')}</p>
 					)}
@@ -147,6 +151,11 @@ const listedOn = alliance.approvedAt
 		</div>
 	</div>
 </Layout>
+
+<script>
+	// Copy buttons on addresses found in the description (no-op when there are none).
+	import '../../scripts/portalCopy';
+</script>
 
 <script is:inline define:vars={{ allianceSlug: alliance.slug }}>
 	const endpoint = '/alliances/views/';
