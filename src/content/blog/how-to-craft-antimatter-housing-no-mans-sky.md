@@ -1,8 +1,8 @@
 ---
-title: "Craft Antimatter Housing (NMS)"
-description: "Craft Antimatter Housing in No Man's Sky: Awakenings blueprint unlock, Oxygen + Ferrite Dust recipe, and Warp Cell fuel."
+title: "How to Get Antimatter Housing in No Man's Sky (Recipe)"
+description: "How to get Antimatter Housing in No Man's Sky: Awakenings unlocks the blueprint. Craft it from 30 Oxygen and 50 Ferrite Dust."
 pubDate: 2026-09-14
-updatedDate: 2026-10-09
+updatedDate: 2026-11-16
 heroImage: "/images/blog/how-to-craft-antimatter-housing-no-mans-sky.webp"
 category: "blog"
 tags:
