@@ -89,11 +89,17 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 			},
 		],
 	},
+	// GSC 2026-10-17 to 2026-11-13
 	TRA_ALLOY5: {
-		title: 'Superconducting Fiber NMS (Fibre)',
+		title: 'Superconducting Fibre NMS: Where to Find It (Fiber)',
 		description:
-			'Superconducting Fiber (Fibre) NMS: how to get this trade good, what it sells for, and every recipe or use tied to Superconducting Fibre.',
-		relatedLinks: [{ label: 'all products', href: '/products/' }],
+			"Where to find Superconducting Fibre (Fiber) in No Man's Sky: buy this Alloy trade good at a space station trade terminal. Base value is 50,000 Units.",
+		relatedLinks: [{ label: 'Trading routes', href: '/trading/' }],
+		whereToFind: [
+			'Superconducting Fibre is a trade good, not a crafted part. The pin objective says to purchase it from Space Station Trade Terminals. No recipe in the game data makes it or spends it.',
+			'The in-game text calls it a densely layered package of superconducting fibres: powerful, flexible and water-resistant, and vital in the creation of many scientific components. Base value is 50,000 Units.',
+			'Its trade category is Alloy, which the game names Advanced Materials. The Advanced Materials economy sells Alloy goods, and the galaxy map also calls that economy Alchemical, Metal Processing or Material Fusion. Scientific economies need them. The [trading routes](/trading/) page lists the loops.',
+		],
 	},
 	FRIG_BOOST_TRA: {
 		title: 'Mind Control Device (NMS): Crafting Recipe and Uses',
@@ -106,10 +112,54 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 		title: 'Nitrogen NMS: Where to Find It and How to Refine It',
 		description:
 			"Where to find Nitrogen in No Man's Sky: harvest it from Lush and Toxic planet atmospheres, or refine it from Radon or Methane. Every Nitrogen recipe.",
+		// Guide link: GSC 2026-10-17 to 2026-11-13
+		relatedLinks: [
+			{
+				label: 'How to get Nitrogen, Sulphurine and Radon',
+				href: '/blog/how-to-get-nitrogen-sulphurine-radon-no-mans-sky/',
+			},
+		],
 		whereToFind: [
 			"The game's own text says Nitrogen is readily harvested from the atmospheres of Lush and Toxic planets. If you're on one of those, that's your source.",
 			'Anywhere else, refine it. 3 [Radon](/products/GAS2/) or 3 [Methane](/products/GAS4/) make 1 Nitrogen in a Portable Refiner. In a Medium Refiner, 1 Radon or Methane plus 1 [Oxygen](/raw/OXYGEN/) also makes 1, so you spend a third of the gas.',
 			'Per their in-game text, Radon comes from Radioactive and Frozen atmospheres, and Methane from equipment deployed on gas worlds.',
+			'The [how to get Nitrogen, Sulphurine and Radon](/blog/how-to-get-nitrogen-sulphurine-radon-no-mans-sky/) guide covers harvesters, the refiner swaps and what each gas is for.',
+		],
+	},
+	// GSC 2026-10-17 to 2026-11-13
+	GAS2: {
+		title: 'Radon NMS: Where to Find It and How to Refine It',
+		description:
+			"Where to find Radon in No Man's Sky: harvest it from Radioactive and Frozen atmospheres, or refine it from Sulphurine. It crafts Enriched Carbon.",
+		relatedLinks: [
+			{
+				label: 'How to get Nitrogen, Sulphurine and Radon',
+				href: '/blog/how-to-get-nitrogen-sulphurine-radon-no-mans-sky/',
+			},
+		],
+		whereToFind: [
+			"The game's own text says Radon is found in both Radioactive and Frozen atmospheres, produced by the decay of other high-energy elements. The pin text says to extract it with an Atmosphere Harvester on radioactive or frozen planets.",
+			'To refine it, 3 [Sulphurine](/products/GAS1/) makes 1 Radon in a Portable Refiner. In a Medium Refiner, 1 Sulphurine plus 1 [Oxygen](/raw/OXYGEN/) also makes 1, so you spend a third of the gas. 1 Sulphurine plus 1 [Chromatic Metal](/raw/STELLAR2/) does the same.',
+			'Crafted, 250 Radon plus 50 [Condensed Carbon](/raw/FUEL2/) makes 1 [Enriched Carbon](/products/REACTION2/), worth 50,000 Units. A Large Refiner makes 1 from 100 Radon, 20 [Carbon](/raw/FUEL1/) and 10 [Salt](/raw/WATER1/). 1 Radon plus 1 [Ferrite Dust](/raw/LAND1/) refines into 1 [Uranium](/raw/RADIO1/). Base value is 20 Units.',
+			'The [how to get Nitrogen, Sulphurine and Radon](/blog/how-to-get-nitrogen-sulphurine-radon-no-mans-sky/) guide covers harvesters, the refiner swaps and what each gas is for.',
+		],
+	},
+	// GSC 2026-10-17 to 2026-11-13
+	GAS1: {
+		title: 'Sulphurine NMS: Where to Find It and How to Refine It',
+		description:
+			"Where to find Sulphurine in No Man's Sky: harvest it from Scorched and Desert atmospheres, or refine it from Nitrogen. It crafts Thermic Condensate.",
+		relatedLinks: [
+			{
+				label: 'How to get Nitrogen, Sulphurine and Radon',
+				href: '/blog/how-to-get-nitrogen-sulphurine-radon-no-mans-sky/',
+			},
+		],
+		whereToFind: [
+			"The game's own text says Sulphurine can be extracted from the atmospheres of Scorched and Desert planets, and that high concentrations are extremely hazardous to organic life. The pin text says to deploy an Atmosphere Harvester on scorched or barren worlds.",
+			'To refine it, 3 [Nitrogen](/products/GAS3/) makes 1 Sulphurine in a Portable Refiner. In a Medium Refiner, 1 Nitrogen plus 1 [Oxygen](/raw/OXYGEN/) also makes 1, so you spend a third of the gas. 1 Nitrogen plus 1 [Chromatic Metal](/raw/STELLAR2/) does the same.',
+			'Crafted, 250 Sulphurine plus 50 [Condensed Carbon](/raw/FUEL2/) makes 1 [Thermic Condensate](/products/REACTION1/), worth 50,000 Units. A Large Refiner makes 1 from 100 Sulphurine, 20 [Carbon](/raw/FUEL1/) and 10 [Salt](/raw/WATER1/). 1 Sulphurine plus 1 [Ferrite Dust](/raw/LAND1/) refines into 1 [Paraffinium](/raw/LUSH1/). Base value is 20 Units.',
+			'The [how to get Nitrogen, Sulphurine and Radon](/blog/how-to-get-nitrogen-sulphurine-radon-no-mans-sky/) guide covers harvesters, the refiner swaps and what each gas is for.',
 		],
 	},
 	ASTEROID3: {
@@ -251,12 +301,35 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 			'The item text says this bait attracts creatures and makes them yield Faecium. Once a creature has been fed, it may be tamed or farmed, and dropping bait may calm an angry one.',
 		],
 	},
-	// Links only. Generated titles and descriptions stay in place.
+	// GSC 2026-10-17 to 2026-11-13. The guide link stays.
 	AM_HOUSING: {
+		title: 'Antimatter Housing NMS: Recipe and Blueprint',
+		description:
+			'Craft Antimatter Housing from 30 Oxygen and 50 Ferrite Dust. 1 Housing plus 1 Antimatter makes a Warp Cell for the starship hyperdrive.',
 		relatedLinks: [
 			{
 				label: 'How to craft Antimatter Housing',
 				href: '/blog/how-to-craft-antimatter-housing-no-mans-sky/',
+			},
+		],
+	},
+	// GSC 2026-10-17 to 2026-11-13
+	LAUNCHSUB: {
+		title: 'Di-hydrogen NMS: Where to Find It and Di-hydrogen Jelly',
+		description:
+			"Where to find Di-hydrogen in No Man's Sky: large blue crystals, common to all worlds. 30 refines into 1 Di-hydrogen Jelly. It also refines into Deuterium.",
+		whereToFind: [
+			'Di-hydrogen is common to all worlds. Its in-game text says it is found as large blue crystals, and that it is a key component of Starship Launch Fuel. The pin text says to locate the crystals with the Scanner and harvest them with the Mining Laser. Large deposits may need an Advanced Mining Laser.',
+			'30 Di-hydrogen makes 1 [Di-hydrogen Jelly](/products/JELLY/) in a Portable Refiner. Crafting the jelly takes 40. Refining 1 jelly returns 40 Di-hydrogen. [Starship Launch Fuel](/products/LAUNCHFUEL/) is crafted from 40 Di-hydrogen and 1 [Metal Plating](/products/CASING/).',
+			'To make [Deuterium](/raw/LAUNCHSUB2/), process 1 Di-hydrogen with 1 [Tritium](/raw/ROCKETSUB/) or 1 [Silicate Powder](/raw/SAND1/) in a multi-input refiner. Each recipe makes 1.',
+		],
+	},
+	// Links only. GSC 2026-10-17 to 2026-11-13. Generated title and description stay in place.
+	FOOD_DNUT_AJAM: {
+		relatedLinks: [
+			{
+				label: 'How to make Anomalous Doughnuts',
+				href: '/blog/anomalous-doughnut-no-mans-sky/',
 			},
 		],
 	},
