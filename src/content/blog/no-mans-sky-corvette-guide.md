@@ -1,6 +1,6 @@
 ---
-title: "NMS Corvette Guide: How to Build One, Parts & Best Modules"
-description: "How to build a Corvette in No Man's Sky: find the Workshop, the 10 parts you need, how to skip the 7.6M Unit bill with salvage, and the modules worth it."
+title: "NMS Corvette Building Guide: Parts List & Best Modules"
+description: "How to build a Corvette in No Man's Sky: every part you need and what it costs, where to salvage parts free, and the best cockpit, reactor and engine modules."
 pubDate: 2025-11-29
 updatedDate: 2025-11-29
 heroImage: "/images/blog/corvette-guide.webp"

@@ -1,6 +1,6 @@
 ---
-title: "NMS Galaxy List: All 256 Galaxies and the 4 Galaxy Types"
-description: "All 256 No Man's Sky galaxies in order, the four galaxy types (Norm, Lush, Harsh, Empty) and what they change, and how to jump to the next galaxy."
+title: "NMS Galaxy Types and Full Galaxy List (All 256 in Order)"
+description: "The 4 No Man's Sky galaxy types (Norm, Lush, Harsh, Empty) and how each changes planets, plus all 256 galaxies in order and how to reach the next one."
 pubDate: 2026-05-03
 updatedDate: 2026-10-24
 heroImage: "/images/blog/galaxies-guide.webp"
