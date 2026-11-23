@@ -248,6 +248,12 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 		title: 'Deuterium NMS: How to Make It and Refine It',
 		description:
 			"How to make Deuterium in No Man's Sky: refine Di-hydrogen with Tritium or Silicate Powder in a multi-input refiner. It very rarely occurs naturally.",
+		relatedLinks: [
+			{
+				label: 'Starship fuel guide: Deuterium, Tritium and Di-hydrogen',
+				href: '/blog/how-to-get-deuterium-tritium-di-hydrogen-no-mans-sky/',
+			},
+		],
 		whereToFind: [
 			'Deuterium very rarely occurs naturally. Its in-game text says most of the supply comes from processing Di-hydrogen and Tritium in a Refiner.',
 			'The pin text names both recipes: process [Di-hydrogen](/raw/LAUNCHSUB/) with [Tritium](/raw/ROCKETSUB/) or [Silicate Powder](/raw/SAND1/) in a multi-input refiner. Each one is 1 plus 1, and it makes 1 Deuterium.',
@@ -258,6 +264,12 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 		title: 'Tritium NMS: Where to Find It (Asteroids)',
 		description:
 			"Where to find Tritium in No Man's Sky: mine it from asteroids with starship weapons. Scan in space for tritium-rich asteroids in planetary rings.",
+		relatedLinks: [
+			{
+				label: 'Starship fuel guide: Deuterium, Tritium and Di-hydrogen',
+				href: '/blog/how-to-get-deuterium-tritium-di-hydrogen-no-mans-sky/',
+			},
+		],
 		whereToFind: [
 			'Tritium is abundant in interstellar asteroid fields. Mine it from asteroids with starship weaponry, and scan for tritium-rich asteroids, per its in-game text.',
 			'The pin text adds that those fields sit in rings around planets, or at intervals during interstellar flight. No refiner recipe outputs Tritium.',
@@ -318,6 +330,12 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 		title: 'Di-hydrogen NMS: Where to Find It and Di-hydrogen Jelly',
 		description:
 			"Where to find Di-hydrogen in No Man's Sky: large blue crystals, common to all worlds. 30 refines into 1 Di-hydrogen Jelly. It also refines into Deuterium.",
+		relatedLinks: [
+			{
+				label: 'Starship fuel guide: Deuterium, Tritium and Di-hydrogen',
+				href: '/blog/how-to-get-deuterium-tritium-di-hydrogen-no-mans-sky/',
+			},
+		],
 		whereToFind: [
 			'Di-hydrogen is common to all worlds. Its in-game text says it is found as large blue crystals, and that it is a key component of Starship Launch Fuel. The pin text says to locate the crystals with the Scanner and harvest them with the Mining Laser. Large deposits may need an Advanced Mining Laser.',
 			'30 Di-hydrogen makes 1 [Di-hydrogen Jelly](/products/JELLY/) in a Portable Refiner. Crafting the jelly takes 40. Refining 1 jelly returns 40 Di-hydrogen. [Starship Launch Fuel](/products/LAUNCHFUEL/) is crafted from 40 Di-hydrogen and 1 [Metal Plating](/products/CASING/).',
