@@ -2,7 +2,7 @@
 title: "How to Fish in No Man's Sky: Get the Fishing Rig & Bait"
 description: "Buy the Fishing Rig blueprint from Iteration Eos for 1 Nanite, craft it, install it on your Multi-Tool, then bait the line and cast into water to start."
 pubDate: 2024-12-20
-updatedDate: 2026-10-19
+updatedDate: 2026-11-25
 heroImage: "/images/blog/fishing-guide.webp"
 category: "blog"
 tags:
@@ -12,6 +12,8 @@ tags:
   - guide
 featured: false
 relatedLinks:
+  - label: "Holiday expeditions 2026"
+    href: "/blog/nms-holiday-expeditions-2026/"
   - label: "Chromatic Metal recipes"
     href: "/raw/STELLAR2/"
   - label: "All fish items"
@@ -38,6 +40,8 @@ faqs:
 ---
 
 Fishing was added in the Aquarius update (version 5.10, September 2024), and it's better than it has any right to be. To start, buy the Fishing Rig blueprint from Iteration Eos at the Space Anomaly for 1 Nanite, craft it, and install it on your Multi-Tool. There are over 200 [fish](/fish) spread across seven biomes and four rarity tiers, and water depth decides how big a fish you catch.
+
+The Aquarius expedition is back as a holiday redux from 25 November to 9 December 2026, if you still want the deep-sea diving suit and the Lost Angler's Rig. Dates and the other re-runs are in the [NMS holiday expeditions 2026](/blog/nms-holiday-expeditions-2026/) post.
 
 ## Getting the Fishing Rig
 

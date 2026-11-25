@@ -2,7 +2,7 @@
 title: "NMS Expedition 23 Rewards Recap (Ended Oct 28)"
 description: "Expedition 23 Our Journey Continues ran Sept 16 to Oct 28, 2026. All six exclusive rewards, what each phase unlocked, and how to redeem them on any save."
 pubDate: 2026-09-17
-updatedDate: 2026-10-30
+updatedDate: 2026-11-25
 heroImage: "/images/blog/nms-expedition-23-our-journey-continues.webp"
 category: "blog"
 tags:
@@ -14,6 +14,8 @@ tags:
   - quicksilver
 featured: false
 relatedLinks:
+  - label: "Holiday expeditions 2026"
+    href: "/blog/nms-holiday-expeditions-2026/"
   - label: "Swarm expedition guide"
     href: "/blog/nms-swarm-expedition-guide/"
   - label: "Cosmos update"
@@ -26,7 +28,7 @@ relatedLinks:
     href: "/blog/no-mans-sky-returning-player-guide-2026/"
 faqs:
   - question: "Can I still start Expedition 23 in No Man's Sky?"
-    answer: "No. It ended October 28, 2026. While it ran, you started it from the Expedition Terminus on the Space Anomaly or a fresh new save, and an expedition save could convert to Normal Mode afterwards."
+    answer: "The original run ended 28 October 2026. Hello Games is re-running a remixed Our Journey Continues from 23 December 2026 to 6 January 2027. See the holiday expeditions 2026 post for the full schedule. The usual start methods from the first run were the Expedition Terminus on the Space Anomaly, or a fresh save that can later convert to Normal Mode."
   - question: "When did Our Journey Continues end?"
     answer: "Wednesday, October 28, 2026, per Fandom. Hello Games said it would run about six weeks from the September 16, 2026 launch, which lands on the same day."
   - question: "What are the Expedition 23 exclusive rewards?"
@@ -39,7 +41,9 @@ faqs:
     answer: "No. Swarm is Expedition 22. This page is only for Expedition 23: Our Journey Continues."
 ---
 
-**Expedition 23 is over.** It ran from September 16 to October 28, 2026. If you missed it, you can't start it anymore. The rewards below are a record of what it paid out.
+**Update, 25 November 2026:** Hello Games is re-running Our Journey Continues as a remixed holiday expedition from 23 December 2026 to 6 January 2027. Dates, the rest of the holiday lineup, and patch 7.15 are in the [NMS holiday expeditions 2026](/blog/nms-holiday-expeditions-2026/) post.
+
+The original run ended 28 October 2026. The rewards below are a record of what that expedition paid out, and they are the same exclusives the holiday post is offering another chance to earn.
 
 **Our Journey Continues** was the 10th anniversary expedition. Ten years of updates, developer commentary on the milestones, and a stack of exclusive cosmetics that leaned hard into nostalgia.
 
@@ -250,7 +254,7 @@ If those ??? cells ever clear, we will patch this post.
 ## FAQ
 
 **Can I still start Expedition 23?**  
-No. It ended October 28, 2026. While it ran, you started from the Expedition Terminus on the Space Anomaly or a fresh save.
+The original run ended 28 October 2026. A remixed holiday redux runs from 23 December 2026 to 6 January 2027. See the [holiday expeditions 2026](/blog/nms-holiday-expeditions-2026/) post. The usual start methods from the first run were the Expedition Terminus on the Space Anomaly, or a fresh save.
 
 **When did it end?**  
 Wednesday, October 28, 2026 (Fandom). Hello Games said about six weeks from the September 16 launch.

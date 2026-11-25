@@ -2,7 +2,7 @@
 title: "NMS Swarm Expedition Guide & Rewards"
 description: "NMS Swarm expedition (Expedition 22) walkthrough: factions, rewards, phases, and Hive of Glass boss tips. Includes Corrupted Ichor and Direwasp loot."
 pubDate: 2026-06-04
-updatedDate: 2026-06-04
+updatedDate: 2026-11-25
 heroImage: "/images/blog/nms-swarm-expedition-guide.webp"
 category: "blog"
 tags:
@@ -14,6 +14,8 @@ tags:
   - update-6-4
 featured: false
 relatedLinks:
+  - label: "Holiday expeditions 2026"
+    href: "/blog/nms-holiday-expeditions-2026/"
   - label: "New items in update 6.4"
     href: "/new"
   - label: "Gravitino Coil guide"
@@ -41,7 +43,9 @@ faqs:
     answer: "The full Direwasp cosmetic set (Helm, Chestpiece, Plating, Gloves, Cuisses, Boots), the Direwasp Disintegrator rifle multi-tool, the Direwasp Flightpack jetpack, team-specific flags, all three faction posters, a Swarm Decal, and the title 'the Fragmented'. All rewards transfer to your main save after the expedition."
 ---
 
-Expedition 22, The Swarm, launched with update 6.4 on May 27, 2026. You have roughly eight weeks. It's shorter than most expeditions and much heavier on space combat. The whole community works toward one goal, and it ends with a boss fight against a ship that Hello Games says can destroy a space station.
+**Update, 25 November 2026:** Hello Games is re-running The Swarm as a remixed holiday expedition from 6 to 20 January 2027. Dates and the rest of the holiday lineup are in the [NMS holiday expeditions 2026](/blog/nms-holiday-expeditions-2026/) post. The walkthrough below is from the original run, which launched with update 6.4 on 27 May 2026 and lasted about eight weeks. Patch 7.15 says the remixed version has been rebalanced, so treat this as a map, not a script.
+
+The Swarm is shorter than most expeditions and much heavier on space combat. The whole community works toward one goal, and it ends with a boss fight against a ship that Hello Games says can destroy a space station.
 
 ## What is the Swarm expedition?
 
