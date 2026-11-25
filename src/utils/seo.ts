@@ -354,7 +354,20 @@ const ITEM_META_OVERRIDES: Record<string, ItemMetaOverride> = {
 	GRAVITYGUN: {
 		relatedLinks: [
 			{ label: 'Gravitino Coil guide', href: '/blog/gravitino-coil-guide-no-mans-sky/' },
+			{ label: 'Holiday expeditions 2026', href: '/blog/nms-holiday-expeditions-2026/' },
 			{ label: 'Gravitino Ball', href: '/curiosities/GRAVBALL/' },
+		],
+	},
+	EXPD_SHIP23A: {
+		relatedLinks: [
+			{ label: 'Holiday expeditions 2026', href: '/blog/nms-holiday-expeditions-2026/' },
+			{ label: 'Expedition 23 recap', href: '/blog/nms-expedition-23-our-journey-continues/' },
+		],
+	},
+	EXPD_EGG_23: {
+		relatedLinks: [
+			{ label: 'Holiday expeditions 2026', href: '/blog/nms-holiday-expeditions-2026/' },
+			{ label: 'Expedition 23 recap', href: '/blog/nms-expedition-23-our-journey-continues/' },
 		],
 	},
 	AF_METAL: {
